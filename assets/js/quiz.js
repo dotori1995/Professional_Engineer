@@ -10,6 +10,8 @@
   let secs = 0, timerId = 0;
   let checked = new Set(), notes = '';
   let shuffle = params.get('shuffle') === '1' || localStorage.getItem('pe-quiz-shuffle') === '1';
+  let impOnly = false;
+  try { impOnly = localStorage.getItem('pe-imp-only') === '1'; } catch (e) {}
 
   const loadStore = () => { try { return JSON.parse(localStorage.getItem(STORE) || '{}'); } catch (e) { return {}; } };
   const saveStore = s => { try { localStorage.setItem(STORE, JSON.stringify(s)); } catch (e) {} };
@@ -30,11 +32,13 @@
 
   function buildPool(keepId) {
     let list = baseList();
+    if (impOnly) list = list.filter(x => PE.isImportant(x));
     pool = shuffle ? shuffled(list) : list.slice();
     idx = keepId ? Math.max(0, pool.findIndex(x => x.id === keepId)) : 0;
     if (keepId && idx < 0) idx = 0;
     const btn = $('shuffleBtn');
     if (btn) btn.setAttribute('aria-pressed', String(shuffle));
+    const ib = $('impOnly'); if (ib) { ib.setAttribute('aria-pressed', String(impOnly)); ib.classList.toggle('on', impOnly); }
     updateProgress();
   }
 
@@ -99,7 +103,7 @@
       primary.disabled = true; skip.hidden = true;
       return;
     }
-    const name = PE.esc(PE.name(t));
+    const name = PE.nameHtml(t);
     const prev = resultOf(t.id);
     const prevHtml = prev ? `<div class="wmeta">이전 ${prev.score}/${prev.total} · 놓친 ${prev.missed.length}개</div>` : '';
 
@@ -236,6 +240,13 @@
   $('shuffleBtn').addEventListener('click', () => {
     shuffle = !shuffle;
     localStorage.setItem('pe-quiz-shuffle', shuffle ? '1' : '0');
+    const keep = t && t.id;
+    buildPool(keep);
+    openTopic(idx);
+  });
+  $('impOnly') && $('impOnly').addEventListener('click', () => {
+    impOnly = !impOnly;
+    try { localStorage.setItem('pe-imp-only', impOnly ? '1' : '0'); } catch (e) {}
     const keep = t && t.id;
     buildPool(keep);
     openTopic(idx);

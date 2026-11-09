@@ -6,7 +6,7 @@ permalink: /sw.js
 const VERSION = 'pe-{{ site.time | date: "%Y%m%d%H%M%S" }}';
 const BASE = '{{ site.baseurl }}';
 const PRECACHE = [
-  BASE + '/', BASE + '/cards/', BASE + '/quiz/', BASE + '/topic/', BASE + '/data.json', BASE + '/glossary.json',
+  BASE + '/', BASE + '/cards/', BASE + '/quiz/', BASE + '/topic/', BASE + '/data.json', BASE + '/glossary.json', BASE + '/important.json',
   BASE + '/assets/css/style.css', BASE + '/assets/js/app.js', BASE + '/assets/js/list.js',
   BASE + '/assets/js/cards.js', BASE + '/assets/js/quiz.js', BASE + '/assets/js/topic.js',
   BASE + '/assets/icons/icon-192.png', BASE + '/manifest.webmanifest'

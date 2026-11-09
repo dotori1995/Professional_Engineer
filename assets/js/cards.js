@@ -6,13 +6,18 @@
   let all = [], deck = [], idx = 0, flipped = false;
   let domain = '';
   let shuffle = params.get('shuffle') === '1' || localStorage.getItem('pe-shuffle') === '1';
+  let impOnly = false;
+  try { impOnly = localStorage.getItem('pe-imp-only') === '1'; } catch (e) {}
 
   function shuffled(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
   function build(keepId) {
-    const d = all.filter(t => t.domain === domain);
+    let d = all.filter(t => t.domain === domain);
+    if (impOnly) d = d.filter(t => PE.isImportant(t));
     deck = shuffle ? shuffled(d) : d;
     idx = keepId ? Math.max(0, deck.findIndex(t => t.id === keepId)) : 0;
+    if (idx < 0) idx = 0;
     $('shuffleBtn').setAttribute('aria-pressed', String(shuffle));
+    const ib = $('impOnly'); if (ib) { ib.setAttribute('aria-pressed', String(impOnly)); ib.classList.toggle('on', impOnly); }
     show();
   }
   function show() {
@@ -23,10 +28,10 @@
     ['prevBtn', 'nextBtn'].forEach(b => $(b).disabled = !n);
     if (!n) { front.innerHTML = '<div class="empty">카드가 없어요</div>'; return; }
     const t = deck[idx];
-    front.innerHTML = `<div class="code">${PE.esc(t.id)}${PE.reviewFixed(t) ? ' <span class="badge fix">검토 수정</span>' : ''}</div>
-      <h2>${PE.esc(PE.name(t))}</h2>
-      <div class="tap">👆 탭해서 정의·키워드·목차 보기</div>`;
-    back.innerHTML = `<div class="code">${PE.esc(t.id)}${PE.reviewFixed(t) ? ' <span class="badge fix">검토 수정</span>' : ''}</div><h3>${PE.esc(PE.name(t))}</h3>
+    front.innerHTML = `<div class="code">${PE.esc(t.id)}${PE.isImportant(t) ? ' <span class="badge star-badge">중요</span>' : ''}${PE.reviewFixed(t) ? ' <span class="badge fix">검토 수정</span>' : ''}</div>
+      <h2>${PE.nameHtml(t)}</h2>
+      <div class="tap">탭해서 정의·키워드·목차 보기</div>`;
+    back.innerHTML = `<div class="code">${PE.esc(t.id)}${PE.isImportant(t) ? ' <span class="badge star-badge">중요</span>' : ''}${PE.reviewFixed(t) ? ' <span class="badge fix">검토 수정</span>' : ''}</div><h3>${PE.nameHtml(t)}</h3>
       <div class="label">정의</div><p class="def">${PE.esc(t.definition || '-')}</p>
       ${t.dueum ? `<div class="dueum-box">💡 ${PE.esc(t.dueum)}</div>` : ''}
       ${(t.keywords || []).length ? `<div class="label">키워드</div><ul class="kw">${t.keywords.map(k => `<li>${PE.gl(k)}</li>`).join('')}</ul>` : ''}
@@ -52,6 +57,10 @@
   $('nextBtn').addEventListener('click', () => go(1));
   $('flipBtn').addEventListener('click', flip);
   $('shuffleBtn').addEventListener('click', () => { shuffle = !shuffle; localStorage.setItem('pe-shuffle', shuffle ? '1' : '0'); build(deck[idx] && deck[idx].id); });
+  $('impOnly') && $('impOnly').addEventListener('click', () => {
+    impOnly = !impOnly; try { localStorage.setItem('pe-imp-only', impOnly ? '1' : '0'); } catch (e) {}
+    build(deck[idx] && deck[idx].id);
+  });
   // 스와이프
   let sx = 0, sy = 0, moved = false;
   card.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; moved = false; }, { passive: true });

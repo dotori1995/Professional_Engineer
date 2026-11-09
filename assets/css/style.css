@@ -297,3 +297,11 @@ html.dr-open,html.dr-open body{overflow:hidden}
 .fitbox.tight2 .outline{display:none}
 .lbl.must-lbl{display:flex;align-items:center;gap:.4em;font-size:.95em;font-weight:800;color:#fff;background:var(--accent);border-radius:8px;padding:.3em .6em;margin:.7em 0 .3em}
 .lbl.must-lbl .wnote{color:#fff;opacity:.9;font-weight:600;font-size:.78em;background:rgba(255,255,255,.2);border-radius:999px;padding:.05em .5em;margin-left:auto}
+
+/* 중요 토픽 별표 */
+.star{color:#d4a017;font-weight:800;margin-right:.15em;text-shadow:0 0 0.4px #b8860b}
+:root[data-theme=dark] .star{color:#f0c14b}
+.badge.star-badge{background:#fff3cd;color:#9a6b00;margin-left:4px}
+:root[data-theme=dark] .badge.star-badge{background:#3a2e10;color:#f0c14b}
+.item h3 .star,.dr-topics .star,.wtitle .star,.flash h2 .star,.flash h3 .star,.topic h1 .star{font-size:1.05em}
+.page-home .controls .chips{padding:6px 0 0}

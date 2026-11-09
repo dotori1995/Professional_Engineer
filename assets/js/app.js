@@ -8,7 +8,12 @@
     GL = g || {}; const keys = Object.keys(GL).sort((a, b) => b.length - a.length).map(k => k.replace(/[.*+?^${}()|[\]\\\/-]/g, '\\$&'));
     GLRE = keys.length ? new RegExp('(?<![A-Za-z0-9])(' + keys.join('|') + ')(?![A-Za-z0-9])', 'g') : null;
   }).catch(() => {});
-  PE.load = () => Promise.all([fetch(PE.data).then(r => r.json()), PE.loadGlossary()]).then(([d]) => { PE.all = d; PE.resolveDomain(d); PE.buildDrawer(d); return d; });
+  PE.important = {};
+  PE.loadImportant = () => fetch(PE.base + '/important.json').then(r => r.ok ? r.json() : {}).then(o => { PE.important = o || {}; }).catch(() => { PE.important = {}; });
+  PE.isImportant = t => !!(t && PE.important[t.id]);
+  PE.starHtml = t => PE.isImportant(t) ? '<span class="star" title="중요 토픽" aria-label="중요">★</span>' : '';
+  PE.nameHtml = t => PE.starHtml(t) + PE.esc(PE.name(t));
+  PE.load = () => Promise.all([fetch(PE.data).then(r => r.json()), PE.loadGlossary(), PE.loadImportant()]).then(([d]) => { PE.all = d; PE.resolveDomain(d); PE.buildDrawer(d); return d; });
   // 현재 도메인: URL ?d= → localStorage → 첫 도메인. 바꾸는 곳은 햄버거 메뉴(☰)뿐
   PE.setDomain = d => { PE.cur = d; try { localStorage.setItem('pe-dom', d); } catch (e) {} const el = document.getElementById('curDom'); if (el) el.textContent = ' · ' + d;
     document.querySelectorAll('[data-nav]').forEach(a => { const u = new URL(a.href, location.href); u.searchParams.set('d', d); a.href = u.pathname + u.search; }); };
@@ -21,7 +26,7 @@
       const m = metaOf(code), ts = list.filter(t => t.domain === code), q = '?d=' + encodeURIComponent(code);
       return `<details class="dr-dom"${code === PE.cur ? ' open' : ''}><summary><b>${PE.esc(code)}</b> ${PE.esc(m.name)} <span class="dr-n">${ts.length}</span></summary>
         <div class="dr-links"><a href="${PE.url('/')}${q}">목록</a><a href="${PE.url('/cards/')}${q}">카드</a><a href="${PE.url('/quiz/')}${q}">서술</a></div>
-        <ul class="dr-topics">${ts.map(t => `<li><a href="${PE.topicUrl(t.id)}&d=${encodeURIComponent(code)}"><span class="dr-id">${PE.esc(t.id)}</span> ${PE.esc(PE.name(t))}</a></li>`).join('')}</ul></details>`;
+        <ul class="dr-topics">${ts.map(t => `<li><a href="${PE.topicUrl(t.id)}&d=${encodeURIComponent(code)}"><span class="dr-id">${PE.esc(t.id)}</span> ${PE.nameHtml(t)}</a></li>`).join('')}</ul></details>`;
     }).join('');
   };
   const drawer = document.getElementById('drawer'), menuBtn = document.getElementById('menuBtn');

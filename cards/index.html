@@ -7,7 +7,8 @@ script: /assets/js/cards.js
 ---
 <section class="card-tools">
   <div class="chips" role="group" aria-label="카드 옵션">
-    <button type="button" class="chip toggle" id="shuffleBtn" aria-pressed="false">🔀 섞기</button>
+    <button type="button" class="chip toggle" id="shuffleBtn" aria-pressed="false">섞기</button>
+    <button type="button" class="chip toggle" id="impOnly" aria-pressed="false">중요만</button>
   </div>
   <div class="progress"><div class="bar" id="bar"></div></div>
   <p class="meta prow"><span id="progress">불러오는 중…</span><span>탭: 뒤집기 · 스와이프: 이동</span></p>
@@ -22,6 +23,6 @@ script: /assets/js/cards.js
 
 <div class="card-actions">
   <button type="button" class="btn ghost nav" id="prevBtn" aria-label="이전 카드">◀</button>
-  <button type="button" class="btn ghost" id="flipBtn">🔄 뒤집기</button>
+  <button type="button" class="btn ghost" id="flipBtn">뒤집기</button>
   <button type="button" class="btn ghost nav" id="nextBtn" aria-label="다음 카드">▶</button>
 </div>

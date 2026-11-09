@@ -13,8 +13,8 @@
     const draw = () => {
       el.innerHTML = `
         <div class="fitbox" id="fb">
-          <div class="thead"><span class="badge code">${PE.esc(t.id)}</span></div>
-          <h1>${PE.esc(PE.name(t))}</h1>
+          <div class="thead"><span class="badge code">${PE.esc(t.id)}</span>${PE.isImportant(t) ? ' <span class="badge star-badge">중요</span>' : ''}</div>
+          <h1>${PE.nameHtml(t)}</h1>
           <div class="lbl">정의</div><div class="def">${PE.gl(t.definition || '-')}</div>
           ${t.dueum ? `<div class="dueum-box">💡 ${PE.esc(t.dueum)}</div>` : ''}
           ${(t.keywords || []).length ? `<div class="lbl">키워드</div><ul class="kw">${t.keywords.map(k => `<li>${PE.gl(k)}</li>`).join('')}</ul>` : ''}
