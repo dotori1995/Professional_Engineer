@@ -22,6 +22,30 @@ domains:
   - key: nw
     code: NW
     name: 네트워크
+  - key: se
+    code: SE
+    name: 보안
+  - key: db
+    code: DB
+    name: 데이터베이스
+  - key: ca
+    code: CA
+    name: 컴퓨터구조
+  - key: os
+    code: OS
+    name: 운영체제
+  - key: ds
+    code: DS
+    name: 자료구조
+  - key: al
+    code: AL
+    name: 알고리즘
+  - key: ai
+    code: AI
+    name: 인공지능
+  - key: st
+    code: ST
+    name: 통계
 
 markdown: kramdown
 exclude:
