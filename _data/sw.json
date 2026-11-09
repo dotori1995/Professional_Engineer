@@ -29323,7 +29323,7 @@
  {
   "id": "SW_282",
   "code": "SW_282",
-  "title": "사실상표준 공식적표준(SW_282)",
+  "title": "사실상 표준과 공식 표준(De facto vs De jure Standard)",
   "subtitle": "사실상 표준(de facto standard)/ 공식적 표준(de jure standard)",
   "domain": "SW",
   "category": "SW > 기타",
@@ -29393,8 +29393,8 @@
    "구성·유형",
    "활용·시사점"
   ],
-  "name": "사실상표준 공식적표준(SW_282)",
-  "en": "사실상표준 공식적표준",
+  "name": "사실상 표준과 공식 표준(De facto vs De jure Standard)",
+  "en": "De facto and De jure Standards",
   "keywords_must": [
    "사실상표준 공식적표준",
    "개념·정의",

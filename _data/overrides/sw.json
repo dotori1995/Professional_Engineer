@@ -27540,9 +27540,9 @@
   "quiz_avoid": []
  },
  "SW_282": {
-  "name": "사실상표준 공식적표준(SW_282)",
-  "en": "사실상표준 공식적표준",
-  "title": "사실상표준 공식적표준(SW_282)",
+  "name": "사실상 표준과 공식 표준(De facto vs De jure Standard)",
+  "en": "De facto and De jure Standards",
+  "title": "사실상 표준과 공식 표준(De facto vs De jure Standard)",
   "definition": "세계 표준화 기관이나 공인기관에서 지정된 표준은 아니지만 시장형성과정에서 생성되는 표준",
   "outline": [
    "사실상표준 공식적표준의 개념",
