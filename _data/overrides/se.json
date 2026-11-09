@@ -18656,5 +18656,882 @@
    "HSM": "Hardware Security Module",
    "EV": "Extended Validation"
   }
+ },
+ "SE_267": {
+  "title": "서버 이름 표시(SNI, Server Name Indication)",
+  "category": "SE > 신토픽 > SNI",
+  "definition": "하나의 IP 주소에 여러 HTTPS 도메인을 운영할 때 서버가 알맞은 인증서를 고르도록, 클라이언트가 TLS 핸드셰이크의 ClientHello에 접속할 호스트 이름을 담아 보내는 TLS 확장 필드",
+  "keywords": [
+   "동작 위치: TLS ClientHello · 평문 전송 · 가상 호스팅 인증서 선택",
+   "SNI 차단: 심층 패킷 분석(DPI) · 불법 사이트 목록 대조 · 통신사 접속 차단",
+   "차단 우회: 암호화된 SNI(ESNI) · 암호화된 ClientHello(ECH) · VPN·DNS over HTTPS",
+   "쟁점: 검열·감시 우려 · 프라이버시"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "문제",
+      "items": [
+       "서버는 암호 연결 전에 어떤 도메인 인증서를 줄지 알 수 없음"
+      ]
+     },
+     {
+      "title": "해결",
+      "items": [
+       "클라이언트가 핸드셰이크 첫 메시지에 호스트 이름을 알려 인증서 선택"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "차단 방식",
+    "subsections": [
+     {
+      "title": "1 핸드셰이크 시작",
+      "items": [
+       "브라우저가 서버명을 담은 ClientHello 전송"
+      ]
+     },
+     {
+      "title": "2 패킷 분석",
+      "items": [
+       "차단 시스템이 DPI로 서버명 추출"
+      ]
+     },
+     {
+      "title": "3 대조·차단",
+      "items": [
+       "불법 사이트 목록과 일치하면 연결 차단 또는 안내 페이지 연결"
+      ]
+     },
+     {
+      "title": "배경",
+      "items": [
+       "HTTPS는 URL이 암호화되어 기존 URL 차단이 무력화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "암호화 확장",
+    "subsections": [
+     {
+      "title": "초기 초안",
+      "items": [
+       "ESNI는 TLS 1.3 전제로 SNI만 암호화하는 초안(2018), 이후 폐기"
+      ]
+     },
+     {
+      "title": "후속 표준",
+      "items": [
+       "ECH는 ClientHello 전체를 암호화해 서버명 은닉, 주요 브라우저 지원 확대"
+      ]
+     },
+     {
+      "title": "영향",
+      "items": [
+       "검열 회피와 프라이버시 강화, 보안 장비의 트래픽 가시성 저하"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 문제",
+   "- 해결",
+   "차단 방식",
+   "- 1 핸드셰이크 시작",
+   "- 2 패킷 분석",
+   "- 3 대조·차단",
+   "- 배경",
+   "암호화 확장",
+   "- 초기 초안",
+   "- 후속 표준",
+   "- 영향"
+  ],
+  "name": "서버 이름 표시(SNI, Server Name Indication)",
+  "en": "Server Name Indication",
+  "keywords_must": [
+   "TLS ClientHello",
+   "평문 전송",
+   "가상 호스팅 인증서 선택",
+   "심층 패킷 분석(DPI)",
+   "불법 사이트 목록 대조",
+   "통신사 접속 차단",
+   "암호화된 SNI(ESNI)",
+   "암호화된 ClientHello(ECH)",
+   "VPN·DNS over HTTPS",
+   "검열·감시 우려",
+   "프라이버시"
+  ],
+  "keywords_ref": [
+   "2019.2 방송통신위원회 해외 불법 사이트 SNI 차단",
+   "URL 차단 한계(HTTPS)",
+   "ESNI 2018 IETF 초안·Firefox 시험 지원",
+   "ECH로 대체 표준화",
+   "TLS 1.3",
+   "도메인 프론팅(Domain Fronting)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "TLS ClientHello",
+   "평문 전송",
+   "가상 호스팅 인증서 선택",
+   "심층 패킷 분석(DPI)",
+   "불법 사이트 목록 대조",
+   "통신사 접속 차단",
+   "암호화된 SNI(ESNI)",
+   "암호화된 ClientHello(ECH)",
+   "VPN·DNS over HTTPS",
+   "검열·감시 우려",
+   "프라이버시"
+  ],
+  "gloss": {
+   "ECH": "Encrypted Client Hello",
+   "ESNI": "Encrypted Server Name Indication",
+   "DPI": "Deep Packet Inspection"
+  }
+ },
+ "SE_268": {
+  "title": "영지식 증명(ZKP, Zero-Knowledge Proof)",
+  "category": "SE > 보안",
+  "definition": "증명자가 어떤 비밀이나 명제가 참이라는 사실 외에는 아무 정보도 드러내지 않고 검증자에게 그 사실을 납득시키는 암호 프로토콜",
+  "keywords": [
+   "참여자: 증명자(Prover) · 검증자(Verifier)",
+   "3대 성질: 완전성(Completeness) · 건전성(Soundness) · 영지식성(Zero-Knowledge)",
+   "방식: 대화형 증명 · 비대화형 증명",
+   "발전: zk-SNARK · zk-STARK"
+  ],
+  "sections": [
+   {
+    "title": "3대 성질",
+    "subsections": [
+     {
+      "title": "완전성",
+      "items": [
+       "명제가 참이면 정직한 증명자가 정직한 검증자를 납득시킬 수 있음"
+      ]
+     },
+     {
+      "title": "건전성",
+      "items": [
+       "명제가 거짓이면 어떤 부정직한 증명자도 검증자를 속일 수 없음"
+      ]
+     },
+     {
+      "title": "영지식성",
+      "items": [
+       "검증자는 명제의 참·거짓 외에 아무것도 알 수 없음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동굴 예시(대화형)",
+    "subsections": [
+     {
+      "title": "1 위치",
+      "items": [
+       "검증자(Bob)는 입구 밖, 증명자(Alice)는 두 갈래 통로 중 하나로 들어감"
+      ]
+     },
+     {
+      "title": "2 도전",
+      "items": [
+       "Bob이 왼쪽·오른쪽 중 나올 통로를 무작위 요청"
+      ]
+     },
+     {
+      "title": "3 응답",
+      "items": [
+       "문 열쇠를 아는 Alice는 항상 성공, 모르면 성공 확률 1/2"
+      ]
+     },
+     {
+      "title": "4 반복",
+      "items": [
+       "n회 모두 성공하면 속였을 확률 1/2^n"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "비대화형 발전",
+    "subsections": [
+     {
+      "title": "zk-SNARK",
+      "items": [
+       "증명 크기가 작고 검증이 빠르며 비대화형, 신뢰 설정 필요"
+      ]
+     },
+     {
+      "title": "zk-STARK",
+      "items": [
+       "신뢰 설정 없이 해시 기반으로 투명하고 양자 내성, 증명 크기 큼"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "블록체인 익명 거래·확장성(롤업), 나이·자격만 증명하는 선택적 공개 인증"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "3대 성질",
+   "- 완전성",
+   "- 건전성",
+   "- 영지식성",
+   "동굴 예시(대화형)",
+   "- 1 위치",
+   "- 2 도전",
+   "- 3 응답",
+   "- 4 반복",
+   "비대화형 발전",
+   "- zk-SNARK",
+   "- zk-STARK",
+   "- 활용"
+  ],
+  "name": "영지식 증명(ZKP, Zero-Knowledge Proof)",
+  "en": "Zero-Knowledge Proof",
+  "keywords_must": [
+   "증명자(Prover)",
+   "검증자(Verifier)",
+   "완전성(Completeness)",
+   "건전성(Soundness)",
+   "영지식성(Zero-Knowledge)",
+   "대화형 증명",
+   "비대화형 증명",
+   "zk-SNARK",
+   "zk-STARK"
+  ],
+  "keywords_ref": [
+   "알리바바 동굴 예시: n회 반복 시 속일 확률 1/2^n",
+   "피아트-샤미르 변환",
+   "신뢰 설정(Trusted Setup)",
+   "지캐시(Zcash) 익명 거래",
+   "영지식 롤업(zk-Rollup)",
+   "자기주권 신원(SSI) 선택적 공개"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "증명자(Prover)",
+   "검증자(Verifier)",
+   "완전성(Completeness)",
+   "건전성(Soundness)",
+   "영지식성(Zero-Knowledge)",
+   "대화형 증명",
+   "비대화형 증명",
+   "zk-SNARK",
+   "zk-STARK"
+  ],
+  "gloss": {
+   "zk-SNARK": "Zero-Knowledge Succinct Non-interactive Argument of Knowledge",
+   "zk-STARK": "Zero-Knowledge Scalable Transparent Argument of Knowledge",
+   "SSI": "Self-Sovereign Identity"
+  }
+ },
+ "SE_269": {
+  "title": "데브섹옵스(DevSecOps)",
+  "category": "SE > 신규 > 보안 > DevSecOps",
+  "definition": "개발(Dev)과 운영(Ops)을 통합한 데브옵스의 모든 단계에 보안을 내재화해, 설계부터 배포·운영까지 보안 점검을 자동화하고 개발·보안·운영 팀이 책임을 공유하는 개발 문화와 프로세스",
+  "keywords": [
+   "핵심 원칙: 시프트 레프트(Shift Left) · 보안 자동화 · 책임 공유",
+   "단계별 보안: 위협 모델링 · 정적 분석(SAST) · 소프트웨어 구성 분석(SCA) · 동적 분석(DAST) · 코드형 인프라(IaC) 점검",
+   "운영 보안: 컨테이너 이미지 스캔 · 비밀 정보 스캐닝 · 런타임 모니터링"
+  ],
+  "sections": [
+   {
+    "title": "생명주기별 보안",
+    "subsections": [
+     {
+      "title": "계획",
+      "items": [
+       "보안 요구사항, 위협 모델링"
+      ]
+     },
+     {
+      "title": "코드",
+      "items": [
+       "시큐어 코딩, IDE 정적 분석, 비밀 정보 커밋 차단"
+      ]
+     },
+     {
+      "title": "빌드",
+      "items": [
+       "SAST, 오픈소스 취약점 SCA, SBOM 생성"
+      ]
+     },
+     {
+      "title": "테스트",
+      "items": [
+       "DAST, 침투 테스트"
+      ]
+     },
+     {
+      "title": "배포",
+      "items": [
+       "IaC·컨테이너 이미지 스캔, 서명·체크섬 검증"
+      ]
+     },
+     {
+      "title": "운영",
+      "items": [
+       "런타임 모니터링, 취약점 관리, 사고 대응"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "파이프라인 보안",
+    "subsections": [
+     {
+      "title": "버전 관리",
+      "items": [
+       "코드·설정 검증 후 커밋"
+      ]
+     },
+     {
+      "title": "CI 서버",
+      "items": [
+       "지속 스캔과 감사 검증, 실패 시 전체 중단·보안팀 보고"
+      ]
+     },
+     {
+      "title": "승격",
+      "items": [
+       "테스트·스테이징·운영 환경 순 배포, 감사 로그 기록"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "도입 효과",
+    "subsections": [
+     {
+      "title": "조기 발견",
+      "items": [
+       "수정 비용이 낮은 단계에서 취약점 제거"
+      ]
+     },
+     {
+      "title": "지속 검증",
+      "items": [
+       "배포마다 보안·규제 준수 자동 점검"
+      ]
+     },
+     {
+      "title": "협업",
+      "items": [
+       "보안이 병목이 아닌 공동 책임으로 전환"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "생명주기별 보안",
+   "- 계획",
+   "- 코드",
+   "- 빌드",
+   "- 테스트",
+   "- 배포",
+   "- 운영",
+   "파이프라인 보안",
+   "- 버전 관리",
+   "- CI 서버",
+   "- 승격",
+   "도입 효과",
+   "- 조기 발견",
+   "- 지속 검증",
+   "- 협업"
+  ],
+  "name": "데브섹옵스(DevSecOps)",
+  "en": "Development, Security and Operations",
+  "keywords_must": [
+   "시프트 레프트(Shift Left)",
+   "보안 자동화",
+   "책임 공유",
+   "위협 모델링",
+   "정적 분석(SAST)",
+   "소프트웨어 구성 분석(SCA)",
+   "동적 분석(DAST)",
+   "코드형 인프라(IaC) 점검",
+   "컨테이너 이미지 스캔",
+   "비밀 정보 스캐닝",
+   "런타임 모니터링"
+  ],
+  "keywords_ref": [
+   "데브옵스는 개발·운영 통합, 데브섹옵스는 보안팀까지 통합",
+   "CI/CD 파이프라인 보안 게이트",
+   "소프트웨어 자재 명세서(SBOM)",
+   "도구: Jenkins·Selenium·Terraform·Nessus·OSSEC",
+   "감사 실패 시 빌드 중단",
+   "공급망 보안"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "시프트 레프트(Shift Left)",
+   "보안 자동화",
+   "책임 공유",
+   "위협 모델링",
+   "정적 분석(SAST)",
+   "소프트웨어 구성 분석(SCA)",
+   "동적 분석(DAST)",
+   "코드형 인프라(IaC) 점검",
+   "컨테이너 이미지 스캔",
+   "비밀 정보 스캐닝",
+   "런타임 모니터링"
+  ],
+  "gloss": {
+   "SAST": "Static Application Security Testing",
+   "DAST": "Dynamic Application Security Testing",
+   "SCA": "Software Composition Analysis",
+   "IaC": "Infrastructure as Code",
+   "SBOM": "Software Bill of Materials",
+   "CI/CD": "Continuous Integration/Continuous Delivery"
+  }
+ },
+ "SE_270": {
+  "title": "무자각 지속 인증(Implicit Continuous Authentication)",
+  "category": "SE > 신규 > 보안 > 무자각 지속 인증",
+  "definition": "최초 인증 이후에도 사용자의 명시적 개입 없이 행위·생체·환경 정보를 지속 수집해 프로파일과 비교함으로써 세션 내내 사용자 신원을 확인하는 인증 기술",
+  "keywords": [
+   "특징: 보안성 강화(세션 탈취 대응) · 명시적 미고지(무자각) · 지속적 신원 확인",
+   "인증 절차: 관찰 · 프로파일 생성·갱신 · 비교 · 결정",
+   "인증 수단: 얼굴 · 음성 · 걸음걸이 · 키스트로크 · 마우스·터치 동역학"
+  ],
+  "sections": [
+   {
+    "title": "인증 절차",
+    "subsections": [
+     {
+      "title": "1 관찰",
+      "items": [
+       "사용자 특화 속성 데이터 수집, 상호작용 무자각 모니터링"
+      ]
+     },
+     {
+      "title": "2 프로파일 생성·갱신",
+      "items": [
+       "기존 프로파일이 없으면 생성, 있으면 수집 데이터로 갱신"
+      ]
+     },
+     {
+      "title": "3 비교",
+      "items": [
+       "패턴 매칭과 머신러닝으로 본인 여부 분석"
+      ]
+     },
+     {
+      "title": "4 결정",
+      "items": [
+       "승인·거부·재인증 요청, 부당 거부 시 프로파일 갱신·재학습"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "인증 수단",
+    "subsections": [
+     {
+      "title": "얼굴·음성",
+      "items": [
+       "얼굴 특징 이미지, 화자 신경망 인식"
+      ]
+     },
+     {
+      "title": "걸음걸이",
+      "items": [
+       "가속도 센서 기반 보행 패턴"
+      ]
+     },
+     {
+      "title": "키스트로크",
+      "items": [
+       "입력 리듬과 간격"
+      ]
+     },
+     {
+      "title": "마우스·터치",
+      "items": [
+       "이동 각도·속도, 터치 위치·스와이프 압력"
+      ]
+     },
+     {
+      "title": "문체·위치",
+      "items": [
+       "입력 언어 습관, 생활 장소·이동 패턴"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "효과와 고려 사항",
+    "subsections": [
+     {
+      "title": "보안",
+      "items": [
+       "최초 인증 후 세션 탈취·무인 단말 도용 차단"
+      ]
+     },
+     {
+      "title": "편의",
+      "items": [
+       "추가 인증 단계 없이 동작"
+      ]
+     },
+     {
+      "title": "고려",
+      "items": [
+       "오거부에 따른 불편, 행위·위치 정보 수집의 개인정보 침해"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "인증 절차",
+   "- 1 관찰",
+   "- 2 프로파일 생성·갱신",
+   "- 3 비교",
+   "- 4 결정",
+   "인증 수단",
+   "- 얼굴·음성",
+   "- 걸음걸이",
+   "- 키스트로크",
+   "- 마우스·터치",
+   "- 문체·위치",
+   "효과와 고려 사항",
+   "- 보안",
+   "- 편의",
+   "- 고려"
+  ],
+  "name": "무자각 지속 인증(Implicit Continuous Authentication)",
+  "en": "Implicit Continuous Authentication",
+  "keywords_must": [
+   "보안성 강화(세션 탈취 대응)",
+   "명시적 미고지(무자각)",
+   "지속적 신원 확인",
+   "관찰",
+   "프로파일 생성·갱신",
+   "비교",
+   "결정",
+   "얼굴",
+   "음성",
+   "걸음걸이",
+   "키스트로크",
+   "마우스·터치 동역학"
+  ],
+  "keywords_ref": [
+   "위치·문체 기반 인증",
+   "머신러닝 본인 여부 분석",
+   "오거부 시 재인증 요청·프로파일 재학습",
+   "명시적 인증과 결합",
+   "오탐(FP)·미탐 관리",
+   "행위 기반 인증(Behavioral Biometrics)",
+   "개인정보 수집 동의"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "보안성 강화(세션 탈취 대응)",
+   "명시적 미고지(무자각)",
+   "지속적 신원 확인",
+   "관찰",
+   "프로파일 생성·갱신",
+   "비교",
+   "결정",
+   "얼굴",
+   "음성",
+   "걸음걸이",
+   "키스트로크",
+   "마우스·터치 동역학"
+  ],
+  "gloss": {
+   "FP": "False Positive"
+  }
+ },
+ "SE_271": {
+  "title": "프리크라임 시스템(Pre-Crime System)",
+  "category": "SE > 신규 > 보안 > Pre-Crime 프리크라임 시스템",
+  "definition": "빅데이터·사물인터넷(IoT)·인공지능을 활용해 공공·민간 데이터를 수집·분석함으로써 범죄 발생 위험 지역·시간을 예측하고 순찰·자원을 배치해 범죄를 사전에 예방하는 스마트 치안 시스템",
+  "keywords": [
+   "처리 단계: 범죄 정보 수집 · 범죄 데이터 분석 · 사전 예측·대응",
+   "수집 데이터: CCTV·IoT 센서 · 범죄 통계·112 신고 · 지리정보(GIS)·유동 인구",
+   "분석 기술: 빅데이터 실시간 처리 · 머신러닝 회귀·의사결정 트리 · 딥러닝(CNN·LSTM)",
+   "쟁점: 데이터 편향성 · 개인정보 침해 · 예측 결과 오남용"
+  ],
+  "sections": [
+   {
+    "title": "구성",
+    "subsections": [
+     {
+      "title": "수집",
+      "items": [
+       "공공·민간 데이터, SNS, CCTV, 범죄 통계, 항공사진·교통 정보"
+      ]
+     },
+     {
+      "title": "분석",
+      "items": [
+       "배치·실시간 처리, 머신러닝·인공지능, NoSQL 저장"
+      ]
+     },
+     {
+      "title": "예측·대응",
+      "items": [
+       "범죄 위험 예보, 치안 자원 최적화, 안면인식 범죄 탐지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분석 기법",
+    "subsections": [
+     {
+      "title": "통계",
+      "items": [
+       "선형 회귀, 빈도·상관·연계 분석"
+      ]
+     },
+     {
+      "title": "머신러닝",
+      "items": [
+       "그래디언트 부스팅, 의사결정 트리"
+      ]
+     },
+     {
+      "title": "딥러닝",
+      "items": [
+       "CNN 영상 분석, LSTM 시계열 예측"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "성공 전략",
+    "subsections": [
+     {
+      "title": "데이터",
+      "items": [
+       "기관 간 데이터 연계와 품질 관리"
+      ]
+     },
+     {
+      "title": "공정성",
+      "items": [
+       "편향 검증, 알고리즘 설명 가능성"
+      ]
+     },
+     {
+      "title": "보호",
+      "items": [
+       "가명처리·목적 제한, 예측 결과는 수사 보조로만 활용"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "구성",
+   "- 수집",
+   "- 분석",
+   "- 예측·대응",
+   "분석 기법",
+   "- 통계",
+   "- 머신러닝",
+   "- 딥러닝",
+   "성공 전략",
+   "- 데이터",
+   "- 공정성",
+   "- 보호"
+  ],
+  "name": "프리크라임 시스템(Pre-Crime System)",
+  "en": "Pre-Crime System",
+  "keywords_must": [
+   "범죄 정보 수집",
+   "범죄 데이터 분석",
+   "사전 예측·대응",
+   "CCTV·IoT 센서",
+   "범죄 통계·112 신고",
+   "지리정보(GIS)·유동 인구",
+   "빅데이터 실시간 처리",
+   "머신러닝 회귀·의사결정 트리",
+   "딥러닝(CNN·LSTM)",
+   "데이터 편향성",
+   "개인정보 침해",
+   "예측 결과 오남용"
+  ],
+  "keywords_ref": [
+   "경찰청 범죄 위험도 예측 분석 시스템(Pre-CAS)",
+   "수집: Flume·Sqoop",
+   "분석: Kafka·Spark·Storm",
+   "시각화: OLAP·R",
+   "재범 예측",
+   "안면인식 범죄 탐지",
+   "미국 PredPol"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "범죄 정보 수집",
+   "범죄 데이터 분석",
+   "사전 예측·대응",
+   "CCTV·IoT 센서",
+   "범죄 통계·112 신고",
+   "지리정보(GIS)·유동 인구",
+   "빅데이터 실시간 처리",
+   "머신러닝 회귀·의사결정 트리",
+   "딥러닝(CNN·LSTM)",
+   "데이터 편향성",
+   "개인정보 침해",
+   "예측 결과 오남용"
+  ],
+  "gloss": {
+   "GIS": "Geographic Information System",
+   "OLAP": "Online Analytical Processing",
+   "LSTM": "Long Short-Term Memory",
+   "CNN": "Convolutional Neural Network"
+  }
+ },
+ "SE_273": {
+  "title": "슬랙 공간(Slack Space)",
+  "category": "SE > 암호화 > 슬랙 공간 (Slack Space Area)",
+  "definition": "저장 매체의 물리적 할당 단위와 논리적으로 실제 사용하는 크기의 차이로 생기는, 할당은 되었지만 사용되지 않는 공간으로 디지털 포렌식에서 삭제 파일 흔적 복구와 정보 은닉 탐지 대상이 된다",
+  "keywords": [
+   "종류: 램 슬랙(RAM Slack) · 드라이브 슬랙(Drive Slack) · 파일 시스템 슬랙 · 볼륨 슬랙",
+   "발생 단위: 섹터(512바이트) · 클러스터",
+   "포렌식 활용: 삭제 파일 파편 복구 · 은닉 데이터 탐지 · 데이터 카빙"
+  ],
+  "sections": [
+   {
+    "title": "램 슬랙",
+    "subsections": [
+     {
+      "title": "발생 위치",
+      "items": [
+       "파일 끝 섹터에서 실제 데이터 뒤 나머지 바이트"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "섹터 단위 기록 특성상 남는 부분을 0으로 채움(과거에는 메모리 잔여 데이터 기록)"
+      ]
+     },
+     {
+      "title": "예",
+      "items": [
+       "712바이트 파일의 두 번째 섹터는 200바이트 기록 후 312바이트를 0으로 채움"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "드라이브·파일 시스템 슬랙",
+    "subsections": [
+     {
+      "title": "드라이브 슬랙",
+      "items": [
+       "클러스터 중 파일이 쓰지 않은 나머지 섹터, 이전 파일 데이터가 남아 있음"
+      ]
+     },
+     {
+      "title": "파일 시스템 슬랙",
+      "items": [
+       "볼륨 크기가 클러스터 배수가 아니라 마지막에 남는 영역"
+      ]
+     },
+     {
+      "title": "예",
+      "items": [
+       "1,002KB 볼륨에 4KB 클러스터면 끝 2KB 사용 불가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "볼륨 슬랙과 포렌식",
+    "subsections": [
+     {
+      "title": "볼륨 슬랙",
+      "items": [
+       "전체 볼륨과 할당 파티션 크기 차이, 파티션 조정으로 크기 변경 가능"
+      ]
+     },
+     {
+      "title": "포렌식",
+      "items": [
+       "슬랙의 잔여 데이터로 삭제 파일 파편 복구"
+      ]
+     },
+     {
+      "title": "은닉 탐지",
+      "items": [
+       "악성 코드·기밀을 슬랙에 숨기는 안티포렌식 탐지"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "램 슬랙",
+   "- 발생 위치",
+   "- 동작",
+   "- 예",
+   "드라이브·파일 시스템 슬랙",
+   "- 드라이브 슬랙",
+   "- 파일 시스템 슬랙",
+   "- 예",
+   "볼륨 슬랙과 포렌식",
+   "- 볼륨 슬랙",
+   "- 포렌식",
+   "- 은닉 탐지"
+  ],
+  "name": "슬랙 공간(Slack Space)",
+  "en": "Slack Space",
+  "keywords_must": [
+   "램 슬랙(RAM Slack)",
+   "드라이브 슬랙(Drive Slack)",
+   "파일 시스템 슬랙",
+   "볼륨 슬랙",
+   "섹터(512바이트)",
+   "클러스터",
+   "삭제 파일 파편 복구",
+   "은닉 데이터 탐지",
+   "데이터 카빙"
+  ],
+  "keywords_ref": [
+   "예: 2KB 클러스터에 712바이트 파일 → 섹터 2개 기록, 나머지 섹터는 드라이브 슬랙",
+   "램 슬랙은 0으로 채움(윈도우 95B 이후)",
+   "안티포렌식 은닉(슬랙 이용)",
+   "볼륨 슬랙은 파티션 크기 조정으로 변동",
+   "4KB 섹터(Advanced Format)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "램 슬랙(RAM Slack)",
+   "드라이브 슬랙(Drive Slack)",
+   "파일 시스템 슬랙",
+   "볼륨 슬랙",
+   "섹터(512바이트)",
+   "클러스터",
+   "삭제 파일 파편 복구",
+   "은닉 데이터 탐지",
+   "데이터 카빙"
+  ],
+  "gloss": {
+   "RAM": "Random Access Memory"
+  }
  }
 }
