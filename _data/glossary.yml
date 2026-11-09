@@ -44,7 +44,7 @@ ANSI: American National Standards Institute
 AoA: Angle of Arrival
 AODV: Ad hoc On-demand Distance Vector
 AOP: Aspect-Oriented Programming
-AP: Access Point
+AP: [Access Point, Application Processor]
 APIPA: Automatic Private IP Addressing
 APS: Automatic Protection Switching
 APTEEN: Adaptive Periodic Threshold-sensitive Energy Efficient sensor Network
@@ -55,7 +55,7 @@ ARM: Asynchronous Response Mode
 ARMA: Autoregressive Moving Average
 ARP: Address Resolution Protocol
 ARQ: Automatic Repeat reQuest
-AS: Autonomous System
+AS: [Autonomous System, Application Server]
 ASBR: Autonomous System Boundary Router
 ASCII: American Standard Code for Information Interchange
 ASIC: Application-Specific Integrated Circuit
@@ -173,7 +173,7 @@ DEMUX: Demultiplexer
 DENM: Decentralized Environmental Notification Message
 DER: Distinguished Encoding Rules
 DevRel: Developer Relations
-DF: Don't Fragment
+DF: ["Don't Fragment", Degrees of Freedom]
 DFT: Discrete Fourier Transform
 DGPS: Differential GPS
 DHCP: Dynamic Host Configuration Protocol
@@ -240,7 +240,7 @@ ECDSA: Elliptic Curve Digital Signature Algorithm
 ECG: Electrocardiogram
 ECN: Explicit Congestion Notification
 ECU: Electronic Control Unit
-EDA: Event-Driven Architecture
+EDA: [Event-Driven Architecture, Exploratory Data Analysis]
 EDCA: Enhanced Distributed Channel Access
 EDFA: Erbium-Doped Fiber Amplifier
 EDNS0: Extension Mechanisms for DNS version 0
@@ -290,7 +290,7 @@ FMC: Fixed Mobile Convergence
 FMEA: Failure Mode and Effects Analysis
 FMS: Fixed Mobile Substitution
 FOTA: Firmware Over-The-Air
-FP: Function Point
+FP: [Function Point, False Positive, Frequent Pattern]
 FPC: Finite Population Correction
 FPR: False Positive Rate
 FQDN: Fully Qualified Domain Name
@@ -397,7 +397,7 @@ ITU: International Telecommunication Union
 IVI: In-Vehicle Infotainment
 IVN: In-Vehicle Network
 IVS: In-Vehicle System
-IX: Internet eXchange
+IX: [Internet eXchange, Intention Exclusive Lock]
 IXFR: Incremental Zone Transfer
 IXP: Internet Exchange Point
 JID: Jabber ID
@@ -666,7 +666,7 @@ QUIC: Quick UDP Internet Connections
 RACI: Responsible Accountable Consulted Informed
 RAD: Rapid Application Development
 RADIUS: Remote Authentication Dial-In User Service
-RAM: Responsibility Assignment Matrix
+RAM: [Random Access Memory, Responsibility Assignment Matrix]
 RAN: Radio Access Network
 RARP: Reverse Address Resolution Protocol
 RCSI: Read Committed Snapshot Isolation
@@ -727,7 +727,7 @@ SA: Standalone
 SABM: Set Asynchronous Balanced Mode
 SACK: Selective Acknowledgment
 SAE: Society of Automotive Engineers
-SAM: Slot Availability Mask
+SAM: [Slot Availability Mask, Spatial Access Method, Software Asset Management]
 SAP: Service Access Point
 SAR: Specific Absorption Rate
 SARIMA: Seasonal ARIMA
@@ -803,7 +803,7 @@ SSL: Secure Sockets Layer
 SSM: Source-Specific Multicast
 SSP: Supply-Side Platform
 SSRC: Synchronization Source
-SST: Slice/Service Type
+SST: [Slice/Service Type, Total Sum of Squares]
 STL: Seasonal-Trend decomposition using Loess
 STM: Synchronous Transport Module
 STP: Spanning Tree Protocol
