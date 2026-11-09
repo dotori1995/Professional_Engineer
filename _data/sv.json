@@ -23452,58 +23452,91 @@
   ],
   "en": "Digital OnePass",
   "dueum": null,
-  "name": "차세대 전자정부 인증(Digital OnePass)",
-  "title": "차세대 전자정부 인증(Digital OnePass)",
-  "definition": "하나의 아이디로 본인이 선택한 인증수단을 이용, 여러 전자정부 서비스를 이용할 수 있는 본인 인증 서비스",
+  "name": "디지털 원패스(Digital OnePass)",
+  "title": "디지털 원패스(Digital OnePass)",
+  "definition": "행정안전부가 제공한 전자정부 통합 인증 서비스로, 하나의 아이디와 사용자가 선택한 지문·얼굴·패턴·PIN·공동인증서 등 인증수단으로 여러 전자정부 사이트에 로그인하게 한 공공 SSO이며 2025년 12월 30일 서비스가 종료됨",
   "keywords_must": [
-   "본인이 선택한 인증수단 사용",
-   "정부민원 서비스를 위한 SSO",
-   "지식기반",
-   "소지기반",
-   "생체 특성기반",
-   "SSO",
-   "인증(Digital OnePass)"
+   "전자정부 SSO",
+   "사용자 선택 인증수단",
+   "지식 기반 인증(PIN·패턴)",
+   "소지 기반 인증(공동인증서·휴대폰)",
+   "생체 기반 인증(지문·얼굴)",
+   "다중 인증(MFA)",
+   "FIDO 생체 인증",
+   "ISO/IEC 29115 인증 보증 수준(LoA)",
+   "연계 기관 인증 위임"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "간편인증(민간 인증서)",
+   "정부 통합인증(Any-ID)",
+   "모바일 신분증",
+   "NIST SP 800-63",
+   "공동인증서"
+  ],
   "keywords": [
-   "핵심: 본인이 선택한 인증수단 사용 · 정부민원 서비스를 위한 SSO · 지식기반",
-   "기술: 소지기반 · 생체 특성기반 · SSO",
-   "운영: 인증(Digital OnePass)"
+   "개념: 하나의 아이디 + 선택형 인증수단 → 여러 전자정부 서비스 로그인",
+   "인증 요소: 지식(PIN·패턴) · 소지(인증서·휴대폰) · 생체(지문·얼굴) → 조합 시 MFA",
+   "인증 강도: ISO/IEC 29115 LoA 1~4 · 서비스 중요도별 수단 선택"
   ],
   "outline": [
-   "디지털 원패스 개요",
-   "- 원패스 개념",
-   "- 개념도",
-   "원패스 구성·기술",
-   "- 인증 연계",
-   "- 연계 표준",
-   "적용·시사점",
-   "- 차세대 전자정부 인증 요점"
+   "개념과 구조",
+   "- 개념: 공공 SSO",
+   "- 구조: 인증 위임",
+   "인증수단과 강도",
+   "- 수단: 3대 인증 요소",
+   "- 강도: LoA 선택",
+   "서비스 종료와 대체",
+   "- 종료: 2025년 말",
+   "- 대체: 간편인증·통합인증"
   ],
   "sections": [
    {
-    "title": "차세대 전자정부 인증 핵심",
+    "title": "개념과 구조",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 공공 SSO",
       "items": [
-       "본인이 선택한 인증수단 사용: 차세대 전자정부 인증에서 본인이 선택한 인증수단 사용을 다루는 핵심 암기 포인트",
-       "정부민원 서비스를 위한 SSO: 차세대 전자정부 인증에서 정부민원 서비스를 위한 SSO를 다루는 핵심 암기 포인트",
-       "지식기반: 차세대 전자정부 인증에서 지식기반을 다루는 핵심 암기 포인트",
-       "소지기반: 차세대 전자정부 인증에서 소지기반을 다루는 핵심 암기 포인트"
+       "기관마다 따로 가입·로그인하던 불편을 없애기 위해 원패스 계정 하나로 연계 기관 로그인을 위임 처리"
+      ]
+     },
+     {
+      "title": "구조: 인증 위임",
+      "items": [
+       "연계 기관 사이트가 원패스 인증 서버로 사용자를 보내고 인증 결과만 받아 세션 생성, 기관은 비밀번호를 보관하지 않음"
       ]
      }
     ]
    },
    {
-    "title": "차세대 전자정부 인증 구성·기술",
+    "title": "인증수단과 강도",
     "subsections": [
      {
-      "title": null,
+      "title": "수단: 3대 인증 요소",
       "items": [
-       "생체 특성기반: 차세대 전자정부 인증에서 생체 특성기반을 다루는 핵심 암기 포인트",
-       "SSO: 한 번 로그인으로 다중 시스템에 접근하는 인증",
-       "인증(Digital OnePass): 차세대 전자정부 인증에서 인증(Digital OnePass)을 다루는 핵심 암기 포인트"
+       "지식 기반 인증(PIN·패턴), 소지 기반 인증(공동인증서·휴대폰), 생체 기반 인증(지문·얼굴)을 FIDO 방식으로 지원"
+      ]
+     },
+     {
+      "title": "강도: LoA 선택",
+      "items": [
+       "ISO/IEC 29115 인증 보증 수준(LoA): 정보자산 가치가 높은 서비스일수록 높은 수준과 다중 인증(MFA) 적용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "서비스 종료와 대체",
+    "subsections": [
+     {
+      "title": "종료: 2025년 말",
+      "items": [
+       "민간 간편인증 확산으로 이용이 줄어 2025년 12월 30일 종료, 회원은 기관별 아이디 전환 또는 재가입"
+      ]
+     },
+     {
+      "title": "대체: 간편인증·통합인증",
+      "items": [
+       "간편인증(민간 인증서)·공동인증서·아이핀으로 대체, 정부 통합인증(Any-ID)과 모바일 신분증으로 공공 인증 재편"
       ]
      }
     ]
@@ -23512,20 +23545,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "본인이 선택한 인증수단 사용",
-   "정부민원 서비스를 위한 SSO",
-   "지식기반",
-   "소지기반",
-   "생체 특성기반",
-   "SSO",
-   "인증(Digital OnePass)"
+   "전자정부 SSO",
+   "사용자 선택 인증수단",
+   "지식 기반 인증(PIN·패턴)",
+   "소지 기반 인증(공동인증서·휴대폰)",
+   "생체 기반 인증(지문·얼굴)",
+   "다중 인증(MFA)",
+   "FIDO 생체 인증",
+   "ISO/IEC 29115 인증 보증 수준(LoA)",
+   "연계 기관 인증 위임"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_280",
@@ -23540,54 +23576,96 @@
   "dueum": null,
   "name": "기술 수명 주기(Technology Life Cycle)",
   "title": "기술 수명 주기(Technology Life Cycle)",
-  "definition": "넓은 의미에서 기술수명주기는 기술예측(Technology forecasting)의 한 수단이며, 기술예측이란 향후 기술의가치변화, 발전방향, 경쟁구조 등을 파악하여 의사결정 등에 활용하기 위한 지표(H.Ernst 1997).",
+  "definition": "기술의 성능·경제적 성과와 시장 수용이 시간에 따라 도입·성장·성숙·쇠퇴의 일정한 패턴으로 변하는 과정을 모형화해 기술 가치평가·투자 시점·대체 기술 전환 판단에 활용하는 기술 예측 도구",
   "keywords_must": [
-   "S-Curve",
-   "기술수용주기 이론",
-   "Gartner's Hype Cycle",
-   "기술수명 분석의 목적",
-   "기술수명주기 이론 유형",
-   "수명주기(Technology life cycle)",
-   "라이센싱(Licensing)"
+   "기술 S-곡선(S-Curve)",
+   "기술 수용 주기(Technology Adoption Life Cycle)",
+   "하이프 사이클(Hype Cycle)",
+   "캐즘(Chasm)",
+   "혁신 확산 이론(로저스)",
+   "혁신가·조기 수용자·조기 다수·후기 다수·지각 수용자",
+   "기술 불연속(Discontinuity)",
+   "경제적 유효 수명",
+   "6단계(연구개발~쇠퇴)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "제품 수명 주기(PLC)",
+   "기술 예측(Technology Forecasting)",
+   "기술 가치평가",
+   "특허 분석",
+   "파괴적 혁신"
+  ],
   "keywords": [
-   "핵심: S-Curve · 기술수용주기 이론 · Gartner's Hype Cycle",
-   "기술: 기술수명 분석의 목적 · 기술수명주기 이론 유형 · 수명주기(Technology life cycle)",
-   "운영: 라이센싱(Licensing)"
+   "구성 개념: 성장 곡선(S-Curve) + 기술 확산(수용 메커니즘)",
+   "이론 유형: S-Curve(성장) · 기술 수용 주기(확산·캐즘) · 하이프 사이클(기대 심리)",
+   "단계: 연구개발 → 도입 → 성장 → 성숙 → 포화 → 쇠퇴"
   ],
   "outline": [
-   "기술 가치변화, 발전방향, 경쟁구조 등에 대한 예측, 기술수명주기의 개요",
-   "- 기술수명주기(Technology Life Cycle) 의 정의",
-   "- 기술수명 분석의 목적",
-   "기술수명주기 이론 유형과 단계",
-   "- 기술수명주기 이론 유형",
-   "- 기술수명주기 이론 단계"
+   "개념과 분석 목적",
+   "- 개념: 기술 예측 수단",
+   "- 목적: 투자·가치평가",
+   "이론 유형",
+   "- 성장: S-곡선",
+   "- 확산: 수용 주기·캐즘",
+   "- 기대: 하이프 사이클",
+   "수명 단계와 활용",
+   "- 단계: 6단계 구분",
+   "- 활용: 전략 결정"
   ],
   "sections": [
    {
-    "title": "기술 수명 주기 핵심",
+    "title": "개념과 분석 목적",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 기술 예측 수단",
       "items": [
-       "S-Curve: S-Curve를 기술 수명 주기 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "기술수용주기 이론: 기술 수명 주기에서 기술수용주기 이론을 다루는 핵심 암기 포인트",
-       "Gartner's Hype Cycle: 기술 수명 주기에서 Gartner's Hype Cycle를 다루는 핵심 암기 포인트",
-       "기술수명 분석의 목적: 기술 수명 주기에서 기술수명 분석의 목적을 다루는 핵심 암기 포인트"
+       "기술 예측(Technology Forecasting)의 한 방법으로 기술 가치 변화·발전 방향·경쟁 구조를 파악"
+      ]
+     },
+     {
+      "title": "목적: 투자·가치평가",
+      "items": [
+       "경제적 유효 수명: 기술 수명 단축으로 R&D 회수 위험이 커져 기술가치평가의 핵심 변수, 성숙기 수익 극대화 전략 수립"
       ]
      }
     ]
    },
    {
-    "title": "기술 수명 주기 구성·기술",
+    "title": "이론 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "성장: S-곡선",
       "items": [
-       "기술수명주기 이론 유형: 기술 수명 주기에서 기술수명주기 이론 유형을 다루는 핵심 암기 포인트",
-       "수명주기(Technology life cycle): 기술 수명 주기에서 수명주기(Technology life cycle)를 다루는 핵심 암기 포인트",
-       "라이센싱(Licensing): 기술 수명 주기에서 라이센싱(Licensing)을 다루는 핵심 암기 포인트"
+       "기술 S-곡선(S-Curve): 초기 느린 개선 → 급성장 → 물리적 한계로 정체, 기술 불연속(Discontinuity) 시점에 신기술로 갈아탐"
+      ]
+     },
+     {
+      "title": "확산: 수용 주기·캐즘",
+      "items": [
+       "기술 수용 주기: 혁신가·조기 수용자·조기 다수·후기 다수·지각 수용자 순 확산, 조기 수용자와 조기 다수 사이 캐즘(Chasm)이 생존 관문"
+      ]
+     },
+     {
+      "title": "기대: 하이프 사이클",
+      "items": [
+       "하이프 사이클(Hype Cycle): 기술 촉발 → 기대 정점 → 환멸 계곡 → 계몽 경사 → 생산성 안정기"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "수명 단계와 활용",
+    "subsections": [
+     {
+      "title": "단계: 6단계 구분",
+      "items": [
+       "연구개발기 → 도입기 → 성장기 → 성숙기 → 포화기 → 쇠퇴기, 제품 수명 주기보다 짧고 단계별 성과 폭이 큼"
+      ]
+     },
+     {
+      "title": "활용: 전략 결정",
+      "items": [
+       "성장기에는 표준·점유율 선점, 성숙기에는 원가 경쟁과 차세대 기술 준비, 특허 출원 추이로 현재 단계 추정"
       ]
      }
     ]
@@ -23596,20 +23674,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "S-Curve",
-   "기술수용주기 이론",
-   "Gartner's Hype Cycle",
-   "기술수명 분석의 목적",
-   "기술수명주기 이론 유형",
-   "수명주기(Technology life cycle)",
-   "라이센싱(Licensing)"
+   "기술 S-곡선(S-Curve)",
+   "기술 수용 주기(Technology Adoption Life Cycle)",
+   "하이프 사이클(Hype Cycle)",
+   "캐즘(Chasm)",
+   "혁신 확산 이론(로저스)",
+   "혁신가·조기 수용자·조기 다수·후기 다수·지각 수용자",
+   "기술 불연속(Discontinuity)",
+   "경제적 유효 수명",
+   "6단계(연구개발~쇠퇴)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_281_0",
@@ -23622,55 +23703,91 @@
   ],
   "en": "Digital Maturity",
   "dueum": null,
-  "name": "디지털성숙도(Digital Maturity)",
-  "title": "디지털성숙도(Digital Maturity)",
-  "definition": "지속적으로 발생하는 디지털 변화에 현재의 조직이 얼마나 잘 적응하고 어느 수준에 해당하는지 평가 할 수 있는 디지털 전환 정도",
+  "name": "디지털 성숙도(Digital Maturity)",
+  "title": "디지털 성숙도(Digital Maturity)",
+  "definition": "조직이 디지털 기술 활용 수준과 이를 이끄는 리더십·조직 역량을 얼마나 갖추었는지 평가해 디지털 전환의 현재 위치를 진단하고 다음 단계 과제를 정하는 척도",
   "keywords_must": [
-   "Beginners(초보자)",
-   "Fashionistas(패셔니스타)",
-   "Conservatives(보수주의자)",
-   "Digital Masters(마스터)",
-   "디지털 성숙도 유형",
-   "디지털 성숙도 유형 별 상세설명",
-   "성숙도(Digital Maturity)"
+   "디지털 집약도(Digital Intensity)",
+   "변혁 관리 집약도(Transformation Management Intensity)",
+   "초보자(Beginners)",
+   "패셔니스타(Fashionistas)",
+   "보수주의자(Conservatives)",
+   "디지털 마스터(Digital Masters)",
+   "디지털 피벗(Digital Pivot)",
+   "성숙도 진단 모델",
+   "초기·개발·성숙 3단계"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "MIT·캡제미니 연구",
+   "디지털 전환(DX)",
+   "CMMI 성숙도 개념",
+   "디지털 역량 지수",
+   "조직 문화 변화"
+  ],
   "keywords": [
-   "핵심: Beginners(초보자) · Fashionistas(패셔니스타) · Conservatives(보수주의자)",
-   "기술: Digital Masters(마스터) · 디지털 성숙도 유형 · 디지털 성숙도 유형 별 상세설명",
-   "운영: 성숙도(Digital Maturity)"
+   "평가 2축: 디지털 집약도(기술 활용) × 변혁 관리 집약도(리더십·거버넌스)",
+   "4유형: 초보자(둘 다 낮음) · 패셔니스타(기술↑ 관리↓) · 보수주의자(관리↑ 기술↓) · 디지털 마스터(둘 다 높음)",
+   "활용: 현 수준 진단 → 디지털 피벗 과제 선정 → 단계적 고도화"
   ],
   "outline": [
-   "디지털 전환 평가 및 척도, 디지털 성숙도(Digital Maturity)의 개념",
-   "- 디지털성숙도 요점",
-   "디지털 성숙도 유형 및 유형별 특징",
-   "- 디지털 성숙도 유형",
-   "- 디지털 성숙도 유형 별 상세설명"
+   "개념과 평가 축",
+   "- 개념: 전환 진척 척도",
+   "- 2축: 기술·관리",
+   "4가지 유형",
+   "- 하위: 초보·보수",
+   "- 상위: 패셔니스타·마스터",
+   "활용과 진단 방법",
+   "- 과제: 디지털 피벗",
+   "- 진단: 단계 모델"
   ],
   "sections": [
    {
-    "title": "디지털성숙도 핵심",
+    "title": "개념과 평가 축",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 전환 진척 척도",
       "items": [
-       "Beginners(초보자): Beginners를 디지털성숙도 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Fashionistas(패셔니스타): Fashionistas를 디지털성숙도 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Conservatives(보수주의자): Conservatives를 디지털성숙도 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Digital Masters(마스터): 디지털성숙도에서 Digital Masters(마스터)를 다루는 핵심 암기 포인트"
+       "끊임없는 디지털 변화에 조직이 얼마나 적응했는지를 측정해 체계적 준비 방향을 제시"
+      ]
+     },
+     {
+      "title": "2축: 기술·관리",
+      "items": [
+       "디지털 집약도(Digital Intensity)는 고객 경험·운영의 기술 활용, 변혁 관리 집약도(Transformation Management Intensity)는 비전·거버넌스·조직 몰입"
       ]
      }
     ]
    },
    {
-    "title": "디지털성숙도 구성·기술",
+    "title": "4가지 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "하위: 초보·보수",
       "items": [
-       "디지털 성숙도 유형: 디지털성숙도에서 디지털 성숙도 유형을 다루는 핵심 암기 포인트",
-       "디지털 성숙도 유형 별 상세설명: 디지털성숙도에서 디지털 성숙도 유형 별 상세설명을 다루는 핵심 암기 포인트",
-       "성숙도(Digital Maturity): 디지털성숙도에서 성숙도(Digital Maturity)를 다루는 핵심 암기 포인트"
+       "초보자(Beginners)는 변화 관리 준비 부족, 보수주의자(Conservatives)는 통제·거버넌스는 강하나 디지털 활용이 낮음"
+      ]
+     },
+     {
+      "title": "상위: 패셔니스타·마스터",
+      "items": [
+       "패셔니스타(Fashionistas)는 기술 도입은 많으나 조정 없이 산발적, 디지털 마스터(Digital Masters)는 두 축 모두 높아 수익성 우위"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용과 진단 방법",
+    "subsections": [
+     {
+      "title": "과제: 디지털 피벗",
+      "items": [
+       "디지털 피벗(Digital Pivot): 성숙을 촉진하는 중점 과제(데이터·고객 경험·운영 혁신)를 선정해 DX 추진"
+      ]
+     },
+     {
+      "title": "진단: 단계 모델",
+      "items": [
+       "초기·개발·성숙 3단계 등 다양한 성숙도 진단 모델로 정기 측정, 유형별로 부족한 축부터 보완"
       ]
      }
     ]
@@ -23679,20 +23796,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Beginners(초보자)",
-   "Fashionistas(패셔니스타)",
-   "Conservatives(보수주의자)",
-   "Digital Masters(마스터)",
-   "디지털 성숙도 유형",
-   "디지털 성숙도 유형 별 상세설명",
-   "성숙도(Digital Maturity)"
+   "디지털 집약도(Digital Intensity)",
+   "변혁 관리 집약도(Transformation Management Intensity)",
+   "초보자(Beginners)",
+   "패셔니스타(Fashionistas)",
+   "보수주의자(Conservatives)",
+   "디지털 마스터(Digital Masters)",
+   "디지털 피벗(Digital Pivot)",
+   "성숙도 진단 모델",
+   "초기·개발·성숙 3단계"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_281_1",
@@ -23703,74 +23823,100 @@
    335,
    336
   ],
-  "en": "TAM Technology Acceptance Model",
+  "en": "Technology Acceptance Model",
   "dueum": null,
-  "name": "기술수용모델(TAM Technology Acceptance Model) 133회",
-  "title": "기술수용모델(TAM Technology Acceptance Model) 133회",
-  "definition": "사회 심리학 분야의 합리적 행위 이론 (TRA, Theory of Reasoned Action)를 기반하여 정보기술 이용자의 행위를 설명하고 예측하는 모델",
+  "name": "기술 수용 모델(TAM, Technology Acceptance Model)",
+  "title": "기술 수용 모델(TAM, Technology Acceptance Model)",
+  "definition": "합리적 행위 이론을 바탕으로 데이비스가 제안한 모델로, 사용자가 정보기술을 받아들이는 행동을 인지된 유용성과 인지된 용이성이 이용 태도와 행동 의도를 거쳐 실제 사용에 이르는 인과 구조로 설명·예측함",
   "keywords_must": [
-   "유용성",
-   "용이성",
-   "태도",
-   "행동",
-   "TAM2",
-   "TAM3",
-   "기술수용모델 구성도",
-   "기술수용모델 구성 요소 상세 설명",
-   "TAM"
+   "합리적 행위 이론(TRA)",
+   "인지된 유용성(PU, Perceived Usefulness)",
+   "인지된 용이성(PEOU, Perceived Ease of Use)",
+   "이용 태도(Attitude Toward Using)",
+   "행동 의도(BI, Behavioral Intention)",
+   "외부 변수",
+   "TAM2(확장 모델)",
+   "주관적 규범",
+   "통합 기술 수용 이론(UTAUT)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "데이비스(1989)",
+   "계획된 행동 이론(TPB)",
+   "혁신 확산 이론",
+   "TAM3",
+   "UTAUT2"
+  ],
   "keywords": [
-   "핵심: 유용성 · 용이성 · 태도",
-   "기술: 행동 · TAM2 · TAM3",
-   "운영: 기술수용모델 구성도 · 기술수용모델 구성 요소 상세 설명 · TAM"
+   "인과 경로: 외부 변수 → PU·PEOU → 이용 태도 → 행동 의도 → 실제 사용 (PEOU → PU)",
+   "TAM2 외부 요인: 주관적 규범 · 사회적 이미지 · 업무 관련성 · 결과 품질 · 결과 입증 가능성",
+   "발전: TRA → TAM(1989) → TAM2(2000) → UTAUT(2003) → TAM3·UTAUT2"
   ],
   "outline": [
-   "기술수용모델 (TAM) 개념",
-   "- 기술수용모델 요점",
-   "기술수용모델 구성 요소",
-   "- 기술수용모델 구성도",
-   "- 기술수용모델 구성 요소 상세 설명",
-   "발전된 기술 수용 모델",
-   "- 확장된 기술 수용 모델 (TAM2, Extended Technolog…",
-   "- 포괄적 기술 수용 모델 (TAM3, Extended Technolog…"
+   "이론 기반과 구성 변수",
+   "- 기반: 합리적 행위",
+   "- 핵심 변수: 유용성·용이성",
+   "- 결과 변수: 태도·의도",
+   "확장 모델",
+   "- 2세대: 사회·인지 요인",
+   "- UTAUT: 통합 이론",
+   "활용과 한계",
+   "- 활용: 도입 예측",
+   "- 한계: 단순성"
   ],
   "sections": [
    {
-    "title": "기술수용모델 핵심",
+    "title": "이론 기반과 구성 변수",
     "subsections": [
      {
-      "title": null,
+      "title": "기반: 합리적 행위",
       "items": [
-       "유용성: 기술수용모델에서 유용성을 다루는 핵심 암기 포인트",
-       "용이성: 기술수용모델에서 용이성을 다루는 핵심 암기 포인트",
-       "태도: 기술수용모델에서 태도를 다루는 핵심 암기 포인트",
-       "행동: 기술수용모델에서 행동을 다루는 핵심 암기 포인트"
+       "합리적 행위 이론(TRA): 신념 → 태도 → 의도 → 행동 구조를 정보기술 수용에 적용"
+      ]
+     },
+     {
+      "title": "핵심 변수: 유용성·용이성",
+      "items": [
+       "인지된 유용성(PU)은 업무 성과 향상 기대, 인지된 용이성(PEOU)은 노력 없이 쓸 수 있다는 믿음이며 PEOU가 PU에도 영향"
+      ]
+     },
+     {
+      "title": "결과 변수: 태도·의도",
+      "items": [
+       "이용 태도가 행동 의도(BI)를 결정하고 행동 의도가 실제 사용으로 이어짐"
       ]
      }
     ]
    },
    {
-    "title": "기술수용모델 구성·기술",
+    "title": "확장 모델",
     "subsections": [
      {
-      "title": null,
+      "title": "2세대: 사회·인지 요인",
       "items": [
-       "TAM2: TAM2를 기술수용모델 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "TAM3: TAM3를 기술수용모델 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "기술수용모델 구성도: 기술수용모델의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "기술수용모델 구성 요소 상세 설명: 기술수용모델에서 기술수용모델 구성 요소 상세 설명을 다루는 핵심 암기 포인트"
+       "주관적 규범·사회적 이미지 등 사회적 영향과 업무 관련성·결과 품질·결과 입증 가능성 같은 인지적 요인 추가, 이용 태도 변수 제외"
+      ]
+     },
+     {
+      "title": "UTAUT: 통합 이론",
+      "items": [
+       "통합 기술 수용 이론(UTAUT): 성과 기대·노력 기대·사회적 영향·촉진 조건 4요인으로 8개 수용 이론 통합"
       ]
      }
     ]
    },
    {
-    "title": "기술수용모델 운영",
+    "title": "활용과 한계",
     "subsections": [
      {
-      "title": null,
+      "title": "활용: 도입 예측",
       "items": [
-       "TAM: TAM를 기술수용모델 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "신규 시스템·서비스 도입 전 설문으로 수용 의도 측정, 교육·UI 개선 등 용이성 제고 전략 수립"
+      ]
+     },
+     {
+      "title": "한계: 단순성",
+      "items": [
+       "변수가 적어 설명력이 제한되고 자기 보고 의도와 실제 행동 간 차이, 조직 강제 사용 상황 설명 부족"
       ]
      }
     ]
@@ -23779,15 +23925,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "유용성",
-   "용이성",
-   "태도",
-   "행동",
-   "TAM2",
-   "TAM3",
-   "기술수용모델 구성도",
-   "기술수용모델 구성 요소 상세 설명",
-   "TAM"
+   "합리적 행위 이론(TRA)",
+   "인지된 유용성(PU, Perceived Usefulness)",
+   "인지된 용이성(PEOU, Perceived Ease of Use)",
+   "이용 태도(Attitude Toward Using)",
+   "행동 의도(BI, Behavioral Intention)",
+   "외부 변수",
+   "TAM2(확장 모델)",
+   "주관적 규범",
+   "통합 기술 수용 이론(UTAUT)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -23796,8 +23942,12 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "TAM": "Technology Acceptance Model"
-  }
+   "TAM": "Technology Acceptance Model",
+   "TAM2": "Extended Technology Acceptance Model",
+   "UTAUT": "Unified Theory of Acceptance and Use of Technology",
+   "TRA": "Theory of Reasoned Action"
+  },
+  "hand": true
  },
  {
   "id": "SV_282",
