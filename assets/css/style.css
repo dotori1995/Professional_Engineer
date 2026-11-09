@@ -305,3 +305,4 @@ html.dr-open,html.dr-open body{overflow:hidden}
 :root[data-theme=dark] .badge.star-badge{background:#3a2e10;color:#f0c14b}
 .item h3 .star,.dr-topics .star,.wtitle .star,.flash h2 .star,.flash h3 .star,.topic h1 .star{font-size:1.05em}
 .page-home .controls .chips{padding:6px 0 0}
+.wtopic{margin-left:.6em;padding:.15em .6em;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font-size:.85em;text-decoration:none}

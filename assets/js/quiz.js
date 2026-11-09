@@ -131,7 +131,7 @@
       const refHtml = ref.map((k, i) => kwChip('r', i, k)).join('');
       const got = must.filter((_, i) => checked.has('m' + i)).length;
       quiz.innerHTML = `
-        <div class="wbar"><span class="wtype">답안</span><span class="wscore" id="wScore">${got}/${must.length} 필수</span></div>
+        <div class="wbar"><span class="wtype">답안</span><span class="wscore" id="wScore">${got}/${must.length} 필수</span><a class="wtopic" href="${PE.topicUrl(t.id)}">토픽</a></div>
         ${notes.trim() ? `<div class="lbl">내가 적은 것 <span class="wnote">${autoIds.size ? '적은 키워드는 자동 체크됨' : '자동 일치 없음'}</span></div><div class="wnotes">${PE.esc(notes)}</div>` : ''}
         <div class="wtitle-sm">${name}</div>
         <div class="lbl">개념·정의</div>
@@ -159,7 +159,7 @@
     const got = must.filter((_, i) => checked.has('m' + i));
     const missed = must.filter((_, i) => !checked.has('m' + i));
     quiz.innerHTML = `
-      <div class="wbar"><span class="wtype">결과</span></div>
+      <div class="wbar"><span class="wtype">결과</span><a class="wtopic" href="${PE.topicUrl(t.id)}">토픽</a></div>
       <div class="wresult">
         <div class="wbig">${got.length}<span>/${must.length}</span></div>
         <div class="wbig-l">필수 키워드</div>
