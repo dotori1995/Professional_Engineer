@@ -2771,75 +2771,87 @@
    33,
    37
   ],
-  "en": "Web Services WSDL SOAP UDDI",
+  "en": "Web Service",
   "dueum": null,
-  "name": "웹서비스(WSDL·SOAP·UDDI)",
-  "title": "웹서비스(WSDL·SOAP·UDDI)",
-  "definition": "SOAP, WSDL, UDDI 등의 표준 기술을 이용하여 네트워크에 연결된 다른 컴퓨터간의 상호작용을 하기 위한",
+  "name": "웹 서비스(Web Service: WSDL·SOAP·UDDI)",
+  "title": "웹 서비스(Web Service: WSDL·SOAP·UDDI)",
+  "definition": "네트워크상의 이기종 시스템이 XML 기반 표준인 SOAP으로 메시지를 교환하고 WSDL로 인터페이스를 기술하며 UDDI 레지스트리에 등록·검색해 상호운용하는 SOA 구현 기술",
   "keywords_must": [
-   "기술요소 - UDDI",
-   "SOPA",
-   "XML",
-   "REST",
-   "WSDL",
-   "웹 서비스의 구성도",
-   "SOAP",
-   "UDDI",
-   "과정",
-   "UDDI데이터 범주 White 페이지"
+   "SOAP(Simple Object Access Protocol)",
+   "WSDL(Web Services Description Language)",
+   "UDDI(Universal Description, Discovery and Integration)",
+   "XML·XML 스키마",
+   "게시·검색·바인딩(Publish·Find·Bind)",
+   "서비스 제공자·요청자·레지스트리",
+   "SOA(Service Oriented Architecture)",
+   "RESTful 웹 서비스 비교"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "SOAP Envelope·Header·Body",
+   "WS-Security",
+   "WS-* 스택(WS-ReliableMessaging)",
+   "ESB(Enterprise Service Bus)",
+   "EAI 대비 표준 기반 통합"
+  ],
   "keywords": [
-   "핵심: 기술요소 - UDDI · SOPA · XML",
-   "기술: REST · WSDL · 웹 서비스의 구성도",
-   "운영: SOAP · UDDI · 과정"
+   "3대 표준: SOAP(메시지) · WSDL(기술) · UDDI(등록·검색)",
+   "역할: 서비스 제공자 · 서비스 요청자 · 서비스 레지스트리",
+   "비교: SOAP(XML·WS-* 보안) ↔ REST(HTTP 메서드·JSON 경량)"
   ],
   "outline": [
-   "표준 메시지를 통한 개방형 분산 컴퓨팅 아키텍쳐",
-   "- 웹 서비스(Web Service)의 정의",
-   "웹 서비스(Web Service)의 구성 및 역할",
-   "- 웹 서비스의 구성도",
-   "웹 서비스(Web Service)의 주요 기술 요소의 스택과 상세 설명",
-   "- 웹 서비스의 주요 기술 요소 스택",
-   "- 웹 서비스의 주요 기술 요소 상세 설명"
+   "개념과 아키텍처",
+   "- 3주체: 제공자·요청자·레지스트리",
+   "표준 기술요소",
+   "- SOAP: XML 메시지 프로토콜",
+   "- WSDL·UDDI: 기술과 등록",
+   "SOAP과 REST 비교",
+   "- 구조: 메시지 중심 vs 자원 중심",
+   "- 보안·신뢰성: WS-* vs HTTPS·OAuth"
   ],
   "sections": [
    {
-    "title": "웹서비스 핵심",
+    "title": "개념과 아키텍처",
     "subsections": [
      {
-      "title": null,
+      "title": "3주체: 제공자·요청자·레지스트리",
       "items": [
-       "기술요소 - UDDI: 웹서비스에서 기술요소 - UDDI를 다루는 핵심 암기 포인트",
-       "SOPA: SOPA를 웹서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "XML: XML를 웹서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "REST: 자원·동사·무상태로 웹 API를 설계하는 아키텍처 스타일 (웹서비스/65cc)"
+       "게시·검색·바인딩(Publish·Find·Bind): 제공자가 WSDL을 UDDI에 게시 → 요청자가 검색 → SOAP으로 호출",
+       "SOA(Service Oriented Architecture): 서비스 단위 재사용과 느슨한 결합을 위한 구현 기반"
       ]
      }
     ]
    },
    {
-    "title": "웹서비스 구성·기술",
+    "title": "표준 기술요소",
     "subsections": [
      {
-      "title": null,
+      "title": "SOAP: XML 메시지 프로토콜",
       "items": [
-       "WSDL: WSDL를 웹서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "웹 서비스의 구성도: 웹서비스의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "SOAP: SOAP를 웹서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "UDDI: UDDI를 웹서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "SOAP(Simple Object Access Protocol): Envelope·Header·Body 구조, HTTP·SMTP 위 전송, W3C SOAP 1.2"
+      ]
+     },
+     {
+      "title": "WSDL·UDDI: 기술과 등록",
+      "items": [
+       "WSDL(Web Services Description Language): types·message·portType(interface)·binding·service로 연산과 주소 기술",
+       "UDDI(Universal Description, Discovery and Integration): 화이트·옐로·그린 페이지로 기업·분류·기술 정보 제공"
       ]
      }
     ]
    },
    {
-    "title": "웹서비스 운영",
+    "title": "SOAP과 REST 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "구조: 메시지 중심 vs 자원 중심",
       "items": [
-       "과정: 웹서비스에서 과정을 다루는 핵심 암기 포인트",
-       "UDDI데이터 범주 White 페이지: 웹서비스에서 UDDI데이터 범주 White 페이지를 다루는 핵심 암기 포인트"
+       "RESTful 웹 서비스: URI 자원과 GET·POST·PUT·DELETE, JSON 경량 포맷으로 모바일·오픈 API에 주류"
+      ]
+     },
+     {
+      "title": "보안·신뢰성: WS-* vs HTTPS·OAuth",
+      "items": [
+       "WS-Security: 메시지 수준 서명·암호화, 금융·기업 간 B2B 연계는 여전히 SOAP 사용"
       ]
      }
     ]
@@ -2848,23 +2860,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "기술요소 - UDDI",
-   "SOPA",
-   "XML",
-   "REST",
-   "WSDL",
-   "웹 서비스의 구성도",
-   "SOAP",
-   "UDDI",
-   "과정",
-   "UDDI데이터 범주 White 페이지"
+   "SOAP(Simple Object Access Protocol)",
+   "WSDL(Web Services Description Language)",
+   "UDDI(Universal Description, Discovery and Integration)",
+   "XML·XML 스키마",
+   "게시·검색·바인딩(Publish·Find·Bind)",
+   "서비스 제공자·요청자·레지스트리",
+   "SOA(Service Oriented Architecture)",
+   "RESTful 웹 서비스 비교"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_027_01",
@@ -2877,75 +2888,87 @@
   ],
   "en": "Web Performance Management",
   "dueum": null,
-  "name": "웹기반 서비스 성능관리(Web Performance Management)",
-  "title": "웹기반 서비스 성능관리(Web Performance Management)",
-  "definition": "전환율은 원하는 사이트에서 고객이 취하는 확률이며 반송률은 한 페이만 보고 고객이 떠나는 확률",
+  "name": "웹 기반 서비스 성능관리(Web Performance Management)",
+  "title": "웹 기반 서비스 성능관리(Web Performance Management)",
+  "definition": "웹 서비스의 응답속도와 사용자 체감 성능을 클라이언트·네트워크·서버 구간별로 측정하고 병목을 제거해 전환율을 높이고 이탈률을 낮추는 관리 활동으로, 프론트엔드 최적화가 체감 성능의 대부분을 좌우함",
   "keywords_must": [
-   "페이지의 무게",
-   "네트워크 상태",
-   "호스팅 위치",
-   "HTTP 요청을 최소화",
-   "헤더에 만료기간 추가",
-   "CSS Expression 지양",
-   "Gzip 컴포넌트 활용",
-   "자바스크립트 최소화 및 중복 제거",
-   "CSS",
-   "HTTP"
+   "페이지 무게(Page Weight)",
+   "네트워크 지연(Latency)",
+   "호스팅 위치·CDN(Content Delivery Network)",
+   "HTTP 요청 최소화",
+   "캐시 만료 헤더(Expires·Cache-Control)",
+   "Gzip·Brotli 압축",
+   "자바스크립트·CSS 최소화(Minify)",
+   "코어 웹 바이탈(Core Web Vitals: LCP·INP·CLS)",
+   "전환율·이탈률(Conversion·Bounce Rate)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "야후 YSlow 규칙·구글 PageSpeed",
+   "CSS Expression 지양",
+   "이미지 지연 로딩(Lazy Loading)",
+   "HTTP/2·HTTP/3",
+   "RUM(Real User Monitoring)·APM"
+  ],
   "keywords": [
-   "핵심: 페이지의 무게 · 네트워크 상태 · 호스팅 위치",
-   "기술: HTTP 요청을 최소화 · 헤더에 만료기간 추가 · CSS Expression 지양",
-   "운영: Gzip 컴포넌트 활용 · 자바스크립트 최소화 및 중복 제거 · CSS"
+   "저하 요인: 클라이언트(페이지 무게) · 네트워크(연결 상태) · 서버(호스팅 위치)",
+   "프론트 최적화: 요청 최소화 · 만료 헤더 · Gzip · JS·CSS 최소화·중복 제거 · CSS Expression 지양",
+   "측정: Core Web Vitals(LCP·INP·CLS) · RUM · APM"
   ],
   "outline": [
-   "웹기반 서비스의 성능관리가 중요한 이유",
-   "- 웹기반 서비스 성능관리 요점",
-   "웹 성능저하 요인",
-   "- 시스템 구간에 따른 병목 구간 점검",
-   "- 구간 별 웹 성능 저하 요인",
-   "프론트-엔드 관점에서의 웹 최적화 방안 6가지 설명",
-   "- 웹기반 서비스 성능관리 요점",
-   "프론트 앤드 웹 성능 최적화 개선 성공 사례",
-   "- 웹기반 서비스 성능관리 요점"
+   "성능관리의 중요성",
+   "- 비즈니스 영향: 전환율·이탈률",
+   "구간별 성능 저하 요인",
+   "- 클라이언트·네트워크",
+   "- 서버: 호스팅 위치",
+   "프론트엔드 최적화 방안",
+   "- 요청·전송량 감소",
+   "- 캐시·렌더링 최적화"
   ],
   "sections": [
    {
-    "title": "웹기반 서비스 성능관리 핵심",
+    "title": "성능관리의 중요성",
     "subsections": [
      {
-      "title": null,
+      "title": "비즈니스 영향: 전환율·이탈률",
       "items": [
-       "페이지의 무게: 웹기반 서비스 성능관리에서 페이지의 무게를 다루는 핵심 암기 포인트",
-       "네트워크 상태: 웹기반 서비스 성능관리에서 네트워크 상태를 다루는 핵심 암기 포인트",
-       "호스팅 위치: 웹기반 서비스 성능관리에서 호스팅 위치를 다루는 핵심 암기 포인트",
-       "HTTP 요청을 최소화: 웹기반 서비스 성능관리에서 HTTP 요청을 최소화를 다루는 핵심 암기 포인트"
+       "전환율·이탈률(Conversion·Bounce Rate): 로딩 지연이 길수록 한 페이지만 보고 떠나는 이탈률 증가, 모바일 퍼스트로 중요성 확대",
+       "코어 웹 바이탈(Core Web Vitals): LCP 2.5초 이하·INP 200ms 이하·CLS 0.1 이하가 구글 권장 기준"
       ]
      }
     ]
    },
    {
-    "title": "웹기반 서비스 성능관리 구성·기술",
+    "title": "구간별 성능 저하 요인",
     "subsections": [
      {
-      "title": null,
+      "title": "클라이언트·네트워크",
       "items": [
-       "헤더에 만료기간 추가: 웹기반 서비스 성능관리에서 헤더에 만료기간 추가를 다루는 핵심 암기 포인트",
-       "CSS Expression 지양: 웹기반 서비스 성능관리에서 CSS Expression 지양을 다루는 핵심 암기 포인트",
-       "Gzip 컴포넌트 활용: 웹기반 서비스 성능관리에서 Gzip 컴포넌트 활용을 다루는 핵심 암기 포인트",
-       "자바스크립트 최소화 및 중복 제거: 웹기반 서비스 성능관리에서 자바스크립트 최소화 및 중복 제거를 다루는 핵심 암기 포인트"
+       "페이지 무게(Page Weight): 큰 JS·고화질 이미지·비디오·무거운 CSS가 로드 시간 증가",
+       "네트워크 지연(Latency): 로컬 장비·ISP 품질, 모바일 망의 낮은 대역폭"
+      ]
+     },
+     {
+      "title": "서버: 호스팅 위치",
+      "items": [
+       "호스팅 위치·CDN: 사용자와 서버 거리가 멀수록 RTT 증가, CDN 엣지 캐시로 단축"
       ]
      }
     ]
    },
    {
-    "title": "웹기반 서비스 성능관리 운영",
+    "title": "프론트엔드 최적화 방안",
     "subsections": [
      {
-      "title": null,
+      "title": "요청·전송량 감소",
       "items": [
-       "CSS: CSS를 웹기반 서비스 성능관리 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HTTP: 요청/응답 기반의 웹 응용 계층 프로토콜 (웹기반 서비스 성능관리/11de)"
+       "HTTP 요청 최소화: 파일 병합·CSS 스프라이트, HTTP/2 다중화로 연결 오버헤드 감소",
+       "Gzip·Brotli 압축 및 JS·CSS 최소화: 공백·주석 제거, 중복 스크립트 제거"
+      ]
+     },
+     {
+      "title": "캐시·렌더링 최적화",
+      "items": [
+       "캐시 만료 헤더(Expires·Cache-Control): 정적 자원 재다운로드 방지, CSS Expression은 반복 평가로 렌더링 지연을 유발해 지양"
       ]
      }
     ]
@@ -2954,16 +2977,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "페이지의 무게",
-   "네트워크 상태",
-   "호스팅 위치",
-   "HTTP 요청을 최소화",
-   "헤더에 만료기간 추가",
-   "CSS Expression 지양",
-   "Gzip 컴포넌트 활용",
-   "자바스크립트 최소화 및 중복 제거",
-   "CSS",
-   "HTTP"
+   "페이지 무게(Page Weight)",
+   "네트워크 지연(Latency)",
+   "호스팅 위치·CDN(Content Delivery Network)",
+   "HTTP 요청 최소화",
+   "캐시 만료 헤더(Expires·Cache-Control)",
+   "Gzip·Brotli 압축",
+   "자바스크립트·CSS 최소화(Minify)",
+   "코어 웹 바이탈(Core Web Vitals: LCP·INP·CLS)",
+   "전환율·이탈률(Conversion·Bounce Rate)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -2971,6 +2993,7 @@
   "note": null,
   "review": null,
   "warnings": [],
+  "hand": true,
   "gloss": {
    "CSS": "Cascading Style Sheets"
   }
@@ -2988,51 +3011,81 @@
   "dueum": null,
   "name": "기술 푸시(Technology Push)",
   "title": "기술 푸시(Technology Push)",
-  "definition": "기업이 기술 중심으로 전략을 세워 제품을 만들어 시장에 일방적으로 공급하는 기술 중심 전략",
+  "definition": "시장 수요보다 기업의 연구개발 성과와 기술 역량을 출발점으로 신제품을 개발해 시장에 공급하고 수요를 창출하는 기술 중심 혁신 전략으로, 고객 요구에서 출발하는 시장 견인(Market Pull)과 대비됨",
   "keywords_must": [
-   "기업 기술 중심",
-   "기술 푸시의 핵심 요소",
-   "기술 푸시의 구조",
-   "핵심 요소",
-   "구조",
-   "기술 푸시 표준"
+   "시장 견인(Market Pull)",
+   "연구개발 주도(R&D-driven)",
+   "급진적 혁신(Radical Innovation)",
+   "점진적 혁신(Incremental Innovation)",
+   "선형 혁신 모델(Linear Model)",
+   "수요 창출(Demand Creation)",
+   "기술성숙도(TRL, Technology Readiness Level)",
+   "캐즘(Chasm)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "3M 포스트잇·트랜지스터 사례",
+   "상호작용 모델(Coupling Model)",
+   "오픈 이노베이션",
+   "기술 수용 주기",
+   "죽음의 계곡(Valley of Death)"
+  ],
   "keywords": [
-   "핵심: 기업 기술 중심 · 기술 푸시의 핵심 요소 · 기술 푸시의 구조",
-   "기술: 핵심 요소 · 구조 · 기술 푸시 표준"
+   "비교: 기술 푸시(기술→시장) ↔ 시장 견인(수요→기술)",
+   "특성: 급진적 혁신 · 수요 창출 · 높은 불확실성 · 캐즘 위험",
+   "연계: TRL · 결합 모델(Coupling) · 오픈 이노베이션"
   ],
   "outline": [
-   "기술 혁신의 아이디어의 원천에 따른 Push Technology 개념",
-   "- 기술 푸시의 정의",
-   "- 기술 푸시의 등장 배경",
-   "Market Pull 과의 비교를 통한 Technology Push",
-   "- 기술 푸시의 핵심 요소",
-   "- 기술 푸시의 구조"
+   "개념과 혁신 원천",
+   "- 선형 모델: 기초연구→개발→생산→시장",
+   "시장 견인과 비교",
+   "- 출발점·혁신 유형",
+   "- 사례: 트랜지스터 vs 고객 맞춤 개선",
+   "위험과 보완 전략",
+   "- 위험: 캐즘·죽음의 계곡",
+   "- 보완: TRL 관리·결합 모델"
   ],
   "sections": [
    {
-    "title": "기술 푸시 핵심",
+    "title": "개념과 혁신 원천",
     "subsections": [
      {
-      "title": null,
+      "title": "선형 모델: 기초연구→개발→생산→시장",
       "items": [
-       "기업 기술 중심: 기술 푸시에서 기업 기술 중심을 다루는 핵심 암기 포인트",
-       "기술 푸시의 핵심 요소: 기술 푸시에서 기술 푸시의 핵심 요소를 다루는 핵심 암기 포인트",
-       "기술 푸시의 구조: 기술 푸시에서 기술 푸시의 구조를 다루는 핵심 암기 포인트",
-       "핵심 요소: 기술 푸시에서 핵심 요소를 다루는 핵심 암기 포인트"
+       "연구개발 주도(R&D-driven): 신기술 발견이 제품 아이디어의 원천, 1950~60년대 선형 혁신 모델의 1세대"
       ]
      }
     ]
    },
    {
-    "title": "기술 푸시 구성·기술",
+    "title": "시장 견인과 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "출발점·혁신 유형",
       "items": [
-       "구조: 기술 푸시에서 구조를 다루는 핵심 암기 포인트",
-       "기술 푸시 표준: 기술 푸시 상호운용·품질을 맞추는 규격·기준"
+       "기술 푸시는 급진적 혁신(Radical Innovation)으로 새 시장 창출, 시장 견인은 고객 요구 반영한 점진적 혁신 중심"
+      ]
+     },
+     {
+      "title": "사례: 트랜지스터 vs 고객 맞춤 개선",
+      "items": [
+       "기술 푸시 사례: 트랜지스터·레이저·3M 포스트잇, 시장 견인 사례: 소비자 불만 기반 가전 기능 개선"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "위험과 보완 전략",
+    "subsections": [
+     {
+      "title": "위험: 캐즘·죽음의 계곡",
+      "items": [
+       "캐즘(Chasm): 초기 수용자 이후 주류 시장으로 넘어가지 못하는 단절, 사업화 전 자금 고갈(죽음의 계곡)"
+      ]
+     },
+     {
+      "title": "보완: TRL 관리·결합 모델",
+      "items": [
+       "기술성숙도(TRL, Technology Readiness Level): 9단계로 기술 완성도를 측정해 사업화 시점 판단, 수요와 기술을 함께 보는 결합 모델 적용"
       ]
      }
     ]
@@ -3041,19 +3094,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "기업 기술 중심",
-   "기술 푸시의 핵심 요소",
-   "기술 푸시의 구조",
-   "핵심 요소",
-   "구조",
-   "기술 푸시 표준"
+   "시장 견인(Market Pull)",
+   "연구개발 주도(R&D-driven)",
+   "급진적 혁신(Radical Innovation)",
+   "점진적 혁신(Incremental Innovation)",
+   "선형 혁신 모델(Linear Model)",
+   "수요 창출(Demand Creation)",
+   "기술성숙도(TRL, Technology Readiness Level)",
+   "캐즘(Chasm)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_029",
@@ -3065,72 +3121,84 @@
    27
   ],
   "en": "Webcasting",
-  "dueum": "NA",
+  "dueum": null,
   "name": "웹캐스팅(Webcasting)",
   "title": "웹캐스팅(Webcasting)",
-  "definition": "여러 명의 인터넷 사용자들에게 동시에 비디오나 오디오 생중계를 보내는 프로그램 방식",
+  "definition": "웹(Web)과 방송(Broadcasting)의 합성어로, 인터넷을 통해 다수 사용자에게 오디오·비디오를 생중계하거나 사용자가 미리 선택한 정보를 푸시 방식으로 자동 전달하는 서비스",
   "keywords_must": [
-   "웹방송",
-   "푸시",
-   "웹캐스팅의 핵심 요소",
-   "웹캐스팅의 구조",
-   "웹캐스팅 아키텍처",
-   "웹캐스팅 표준",
-   "웹캐스팅 보안",
-   "HTTP",
-   "REST",
-   "인증"
+   "푸시 기술(Push Technology)",
+   "스트리밍(Streaming)",
+   "IP 멀티캐스트(IP Multicast)",
+   "압축 코덱(MPEG·H.264)",
+   "주문형 서비스(VOD)",
+   "생방송 서비스(Live)",
+   "푸시형 서비스",
+   "웹캐스팅 포털"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "RTSP·RTMP",
+   "HLS·MPEG-DASH 적응형 스트리밍",
+   "CDN",
+   "채널 구독(PointCast)",
+   "OTT 진화"
+  ],
   "keywords": [
-   "핵심: 웹방송 · 푸시 · 웹캐스팅의 핵심 요소",
-   "기술: 웹캐스팅의 구조 · 웹캐스팅 아키텍처 · 웹캐스팅 표준",
-   "운영: 웹캐스팅 보안 · HTTP · REST"
+   "기술: 푸시 · 스트리밍 · IP 멀티캐스트 · 압축(MPEG)",
+   "서비스: 주문형(VOD) · 생방송 · 푸시형 · 포털"
   ],
   "outline": [
-   "WWW 과 브로드캐스팅 합성어, Web Casting 개념",
-   "- 웹캐스팅 요점",
-   "Web Casting 주요기술 및 서비스 유형",
-   "- 웹캐스팅의 핵심 요소",
-   "- 웹캐스팅의 구조"
+   "개념과 전달 방식",
+   "- 전달: 푸시 vs 풀",
+   "주요 기술",
+   "- 전송: 스트리밍·멀티캐스트",
+   "- 압축: MPEG 계열 코덱",
+   "서비스 유형",
+   "- 실시간·주문형",
+   "- 푸시형·포털"
   ],
   "sections": [
    {
-    "title": "웹캐스팅 핵심",
+    "title": "개념과 전달 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "전달: 푸시 vs 풀",
       "items": [
-       "웹방송: 웹캐스팅에서 웹방송을 다루는 핵심 암기 포인트",
-       "푸시: 웹캐스팅에서 푸시를 다루는 핵심 암기 포인트",
-       "웹캐스팅의 핵심 요소: 웹캐스팅에서 웹캐스팅의 핵심 요소를 다루는 핵심 암기 포인트",
-       "웹캐스팅의 구조: 웹캐스팅에서 웹캐스팅의 구조를 다루는 핵심 암기 포인트"
+       "푸시 기술(Push Technology): 가입 클라이언트에 사전 선택한 정보·SW를 서버가 자동 전송, 1990년대 PointCast가 대표"
       ]
      }
     ]
    },
    {
-    "title": "웹캐스팅 구성·기술",
+    "title": "주요 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "전송: 스트리밍·멀티캐스트",
       "items": [
-       "웹캐스팅 아키텍처: 웹캐스팅의 계층·모듈 배치와 상호작용 구조",
-       "웹캐스팅 표준: 웹캐스팅 상호운용·품질을 맞추는 규격·기준",
-       "웹캐스팅 보안: 웹캐스팅에서 웹캐스팅 보안을 다루는 핵심 암기 포인트",
-       "HTTP: 요청/응답 기반의 웹 응용 계층 프로토콜 (웹캐스팅/d3e0)"
+       "스트리밍(Streaming): 전체 다운로드 없이 수신과 동시에 재생, HLS·MPEG-DASH 적응형 비트레이트",
+       "IP 멀티캐스트(IP Multicast): 그룹 주소(224.0.0.0/4)로 1:N 동시 전송해 대역폭 절감"
+      ]
+     },
+     {
+      "title": "압축: MPEG 계열 코덱",
+      "items": [
+       "압축 코덱(MPEG·H.264): 영상·음성을 압축해 전송량 감소, 최근 H.265·AV1 활용"
       ]
      }
     ]
    },
    {
-    "title": "웹캐스팅 운영",
+    "title": "서비스 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "실시간·주문형",
       "items": [
-       "REST: 자원·동사·무상태로 웹 API를 설계하는 아키텍처 스타일 (웹캐스팅/e2f4)",
-       "인증: 웹캐스팅에서 인증을 다루는 핵심 암기 포인트"
+       "생방송 서비스(Live): 공연·스포츠·기업 IR을 실시간 중계, 주문형 서비스(VOD)는 시간·장소 제약 없이 재생"
+      ]
+     },
+     {
+      "title": "푸시형·포털",
+      "items": [
+       "푸시형 서비스: 등록 회원에게 뉴스·주가 자동 전송, 웹캐스팅 포털은 프로그램 검색·안내 제공"
       ]
      }
     ]
@@ -3139,23 +3207,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "웹방송",
-   "푸시",
-   "웹캐스팅의 핵심 요소",
-   "웹캐스팅의 구조",
-   "웹캐스팅 아키텍처",
-   "웹캐스팅 표준",
-   "웹캐스팅 보안",
-   "HTTP",
-   "REST",
-   "인증"
+   "푸시 기술(Push Technology)",
+   "스트리밍(Streaming)",
+   "IP 멀티캐스트(IP Multicast)",
+   "압축 코덱(MPEG·H.264)",
+   "주문형 서비스(VOD)",
+   "생방송 서비스(Live)",
+   "푸시형 서비스",
+   "웹캐스팅 포털"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_030",
@@ -3167,58 +3234,80 @@
    30
   ],
   "en": "Web Syndication",
-  "dueum": "NA",
+  "dueum": null,
   "name": "웹 신디케이션(Web Syndication)",
   "title": "웹 신디케이션(Web Syndication)",
-  "definition": "웹사이트의 컨텐츠를 XML 파일 형태로 외부에 제공하는 기술 웹사이트의 내용을 다른 사이트나 사용자가 받아 볼 수 있도록 피드(내용의 요약정보나 링크)를 만드는 기술",
+  "definition": "웹사이트가 콘텐츠의 요약·링크를 RSS·Atom 같은 XML 피드로 공개해 다른 사이트나 사용자가 방문하지 않고도 구독·수집해 이용할 수 있게 하는 콘텐츠 배포 기술",
   "keywords_must": [
-   "개방",
-   "피드",
-   "Aggregator",
-   "OPML",
-   "Web syndication 개념도",
-   "Web syndication 구현 기술"
+   "피드(Feed)",
+   "RSS(Really Simple Syndication)",
+   "아톰(Atom Syndication Format, RFC 4287)",
+   "아톰 출판 프로토콜(AtomPub, RFC 5023)",
+   "피드 리더·애그리게이터(Reader·Aggregator)",
+   "OPML(Outline Processor Markup Language)",
+   "팟캐스팅(Podcasting)",
+   "구독 기반 풀(Pull) 방식"
   ],
   "keywords_ref": [
-   "RSS",
-   "XML",
-   "ATOM"
+   "RSS 2.0",
+   "JSON Feed",
+   "웹 2.0 개방",
+   "메타블로그",
+   "enclosure 태그"
   ],
   "keywords": [
-   "핵심: 개방 · 피드 · Aggregator",
-   "기술: OPML · Web syndication 개념도 · Web syndication 구현 기술",
-   "참고: RSS · XML · ATOM"
+   "포맷: RSS 2.0 · Atom(RFC 4287) · JSON Feed",
+   "구성: 피드 · 리더·애그리게이터 · OPML(구독 목록) · AtomPub(게시)",
+   "특징: 개방 · 구독 기반 Pull · 정확한 타겟팅"
   ],
   "outline": [
-   "Web Syndication 개념도 및 구현 기술",
-   "- Web syndication 개념도",
-   "- Web syndication 구현 기술",
-   "Web Syndication 기술 비교",
-   "- 웹 신디케이션 요점"
+   "배포 방식",
+   "- 개방·구독·타겟팅",
+   "구현 기술",
+   "- 피드 포맷: RSS·Atom",
+   "- 수집·관리: 리더·OPML",
+   "활용",
+   "- 팟캐스팅·메타블로그"
   ],
   "sections": [
    {
-    "title": "웹 신디케이션 핵심",
+    "title": "배포 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "개방·구독·타겟팅",
       "items": [
-       "개방: 웹 신디케이션에서 개방을 다루는 핵심 암기 포인트",
-       "피드: 웹 신디케이션에서 피드를 다루는 핵심 암기 포인트",
-       "Aggregator: Aggregator를 웹 신디케이션 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OPML: OPML를 웹 신디케이션 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "구독 기반 풀(Pull) 방식: 사용자가 원하는 피드만 구독해 로그인·방문 없이 새 글 수신, 원하는 사람에게만 정확히 배포"
       ]
      }
     ]
    },
    {
-    "title": "웹 신디케이션 구성·기술",
+    "title": "구현 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "피드 포맷: RSS·Atom",
       "items": [
-       "Web syndication 개념도: 웹 신디케이션의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "Web syndication 구현 기술: 웹 신디케이션에서 Web syndication 구현 기술을 다루는 핵심 암기 포인트"
+       "RSS(Really Simple Syndication): channel·item(title·link·description) 구조의 XML, RSS 2.0이 사실상 표준",
+       "아톰(Atom Syndication Format, RFC 4287): IETF 표준 피드 포맷, 아톰 출판 프로토콜(AtomPub, RFC 5023)로 글 게시·수정"
+      ]
+     },
+     {
+      "title": "수집·관리: 리더·OPML",
+      "items": [
+       "피드 리더·애그리게이터(Reader·Aggregator): 여러 피드를 주기적으로 폴링해 한 화면에 통합(Feedly)",
+       "OPML(Outline Processor Markup Language): 구독 피드 목록을 XML로 내보내고 가져오는 형식"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": "팟캐스팅·메타블로그",
+      "items": [
+       "팟캐스팅(Podcasting): RSS enclosure 태그에 오디오 파일을 첨부해 에피소드 자동 배포",
+       "메타블로그: 여러 블로그 피드를 모아 하나의 포털로 재배포, 뉴스 사이트 콘텐츠 제휴"
       ]
      }
     ]
@@ -3227,19 +3316,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "개방",
-   "피드",
-   "Aggregator",
-   "OPML",
-   "Web syndication 개념도",
-   "Web syndication 구현 기술"
+   "피드(Feed)",
+   "RSS(Really Simple Syndication)",
+   "아톰(Atom Syndication Format, RFC 4287)",
+   "아톰 출판 프로토콜(AtomPub, RFC 5023)",
+   "피드 리더·애그리게이터(Reader·Aggregator)",
+   "OPML(Outline Processor Markup Language)",
+   "팟캐스팅(Podcasting)",
+   "구독 기반 풀(Pull) 방식"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_031",
@@ -3250,55 +3342,87 @@
    31,
    31
   ],
-  "en": "IT",
-  "dueum": "[환수현전]",
-  "name": "자원 대상전략(IT)",
-  "title": "자원 대상전략(IT)",
-  "definition": "빠른 기술 변화, 시장 요구사항 변화 대응 위해 기업 IT 자원 중 클라우드화 효과 높은 자원 선정하고 클라우드로 전환하는 디지털 트랜스포메이션 활동",
+  "en": "Cloud Migration Strategy",
+  "dueum": "환수현전(환경분석·수요분석·현황분석·전략계획)",
+  "name": "IT 자원 클라우드 전환 전략(Cloud Migration Strategy)",
+  "title": "IT 자원 클라우드 전환 전략(Cloud Migration Strategy)",
+  "definition": "기업 IT 자원 중 클라우드화 효과가 큰 대상을 환경·수요·현황 분석으로 선정하고 단기·장기 전환 로드맵을 수립해 서비스 연속성을 보장하며 클라우드로 이전하는 전략 수립 활동",
   "keywords_must": [
-   "환경분석",
-   "수요분석",
-   "현황분석",
-   "전략계획",
-   "클라우드 전환 정의",
-   "클라우드 전환 필요성"
+   "환경분석(Environment Analysis)",
+   "수요분석(Demand Analysis)",
+   "현황분석(As-Is Analysis)",
+   "전략계획(로드맵 수립)",
+   "전환 대상 선정(Workload Assessment)",
+   "6R 전환 전략(Rehost·Refactor 등)",
+   "기술부채(Technical Debt) 해소",
+   "TCO(Total Cost of Ownership) 분석"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "클라우드 적합성 평가",
+   "파일럿·PoC",
+   "보안정책·법규 검토",
+   "병행 운영",
+   "클라우드 컴퓨팅법"
+  ],
   "keywords": [
-   "핵심: 환경분석 · 수요분석 · 현황분석",
-   "기술: 전략계획 · 클라우드 전환 정의 · 클라우드 전환 필요성"
+   "단계: 환경분석 → 수요분석 → 현황분석 → 전략계획",
+   "전략: 6R(Rehost·Replatform·Refactor·Repurchase·Retire·Retain)",
+   "판단: TCO · 기술부채 · 적합성 평가 · 규제·보안정책"
   ],
   "outline": [
-   "IT 경영전략 성공 위한 클라우드 전환 개요",
-   "- 클라우드 전환 정의",
-   "- 클라우드 전환 필요성",
-   "클라우드 마이그레이션 전략 설명",
-   "- 클라우드 마이그레이션 전략 단계",
-   "- 클라우드 마이그레이션 전략 상세 설명"
+   "전환 필요성",
+   "- 기대효과: 비용 절감·민첩성",
+   "전략 수립 4단계",
+   "- 환경·수요분석",
+   "- 현황분석·전략계획",
+   "전환 방식과 고려사항",
+   "- 6R: 이전 방식 선택",
+   "- 고려사항: 연속성·보안"
   ],
   "sections": [
    {
-    "title": "자원 대상전략 핵심",
+    "title": "전환 필요성",
     "subsections": [
      {
-      "title": null,
+      "title": "기대효과: 비용 절감·민첩성",
       "items": [
-       "환경분석: 자원 대상전략에서 환경분석을 다루는 핵심 암기 포인트",
-       "수요분석: 자원 대상전략에서 수요분석을 다루는 핵심 암기 포인트",
-       "현황분석: 자원 대상전략에서 현황분석을 다루는 핵심 암기 포인트",
-       "전략계획: 자원 대상전략에서 전략계획을 다루는 핵심 암기 포인트"
+       "TCO(Total Cost of Ownership) 분석: 구축·유지비 대비 클라우드 종량제 비용 비교, 빠른 시장 요구 반영과 운영 편의성 증대"
       ]
      }
     ]
    },
    {
-    "title": "자원 대상전략 구성·기술",
+    "title": "전략 수립 4단계",
     "subsections": [
      {
-      "title": null,
+      "title": "환경·수요분석",
       "items": [
-       "클라우드 전환 정의: 자원 대상전략에서 클라우드 전환 정의를 다루는 핵심 암기 포인트",
-       "클라우드 전환 필요성: 자원 대상전략에서 클라우드 전환 필요성을 다루는 핵심 암기 포인트"
+       "환경분석(Environment Analysis): 국내외 클라우드 서비스·제품, 얼리어답터 사례, 기술·시장 동향 조사",
+       "수요분석(Demand Analysis): 경영 프로세스 변화 요구와 기존 시스템 기술부채 제거를 위한 현대화 요구 파악"
+      ]
+     },
+     {
+      "title": "현황분석·전략계획",
+      "items": [
+       "현황분석(As-Is Analysis): 법·규제 제약, 보안정책, 인프라 성숙도 등 내부 성공요건 점검",
+       "전략계획(로드맵 수립): 단기 성공 가능한 파일럿 과제부터 장기 전환까지 단계별 로드맵 작성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "전환 방식과 고려사항",
+    "subsections": [
+     {
+      "title": "6R: 이전 방식 선택",
+      "items": [
+       "6R 전환 전략: 그대로 이전(Rehost), 일부 최적화(Replatform), 클라우드 네이티브 재설계(Refactor), SaaS 교체(Repurchase), 폐기(Retire), 유지(Retain)"
+      ]
+     },
+     {
+      "title": "고려사항: 연속성·보안",
+      "items": [
+       "병행 운영과 롤백 계획으로 서비스 중단 최소화, 데이터 국외 이전·보안인증(CSAP) 요건 확인"
       ]
      }
     ]
@@ -3307,19 +3431,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "환경분석",
-   "수요분석",
-   "현황분석",
-   "전략계획",
-   "클라우드 전환 정의",
-   "클라우드 전환 필요성"
+   "환경분석(Environment Analysis)",
+   "수요분석(Demand Analysis)",
+   "현황분석(As-Is Analysis)",
+   "전략계획(로드맵 수립)",
+   "전환 대상 선정(Workload Assessment)",
+   "6R 전환 전략(Rehost·Refactor 등)",
+   "기술부채(Technical Debt) 해소",
+   "TCO(Total Cost of Ownership) 분석"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_032",
@@ -3332,61 +3459,84 @@
   ],
   "en": "Utility Computing",
   "dueum": null,
-  "name": "디지털서비스(Utility Computing)",
-  "title": "디지털서비스(Utility Computing)",
-  "definition": "서버, 스토리지, 네트워크, H/W, S/W 등의 IT 자원을 하나의 서비스 개념으로 보고 구입 또는 자체 개발을하지 않고, 서비스 공급자와의 계약을 통하여 실제로 사용한 양만큼(pay-as-you-use, Payper-Use)요금을지불하는 컴퓨팅 패러다임",
+  "name": "유틸리티 컴퓨팅(Utility Computing)",
+  "title": "유틸리티 컴퓨팅(Utility Computing)",
+  "definition": "서버·스토리지·네트워크·소프트웨어 등 IT 자원을 전기·수도처럼 서비스로 제공받고 실제 사용한 만큼만 요금을 내는(Pay-per-Use) 컴퓨팅 패러다임으로, 클라우드 컴퓨팅 과금 모델의 기반이 됨",
   "keywords_must": [
-   "자율컴퓨팅",
-   "유틸리티 컴퓨팅의 구성도",
-   "SON(자가 조직 N/W)",
-   "ROI(투자수익률: Return of Investment)",
-   "TCO(소유총비용: Total Cost of Ownership)",
-   "디지털서비스 표준"
+   "종량제(Pay-per-Use)",
+   "온디맨드(On-Demand) 자원 할당",
+   "가상화(Virtualization)",
+   "그리드 컴퓨팅(Grid Computing)",
+   "자원 관리·프로비저닝 자동화",
+   "미터링·빌링(Metering·Billing)",
+   "서비스 수준 협약(SLA)",
+   "자율 컴퓨팅(Autonomic Computing)"
   ],
   "keywords_ref": [
-   "SON",
-   "ROI(투자수익률",
-   "TCO(소유총비용",
-   "ROI"
+   "TCO·ROI 관리",
+   "IT 아웃소싱",
+   "클러스터링",
+   "클라우드 컴퓨팅 비교",
+   "서비스 관리 계층"
   ],
   "keywords": [
-   "핵심: 자율컴퓨팅 · 유틸리티 컴퓨팅의 구성도 · SON(자가 조직 N/W)",
-   "기술: ROI(투자수익률: Return of Investment) · TCO(소유총비용: Total Cost of Ownership) · 디지털서비스 표준",
-   "참고: SON · ROI(투자수익률 · TCO(소유총비용"
+   "구성: 서비스 관리(빌링·모니터링·보안) · 서비스 자원관리(가상화·자동화) · 서비스 자원(서버·스토리지)",
+   "기반기술: 가상화 · 그리드 · 클러스터 · 자율 컴퓨팅",
+   "비교: 유틸리티(과금 모델) ↔ 그리드(분산 연산) ↔ 클라우드(서비스 제공 형태)"
   ],
   "outline": [
-   "IT 자원, 서비스를 사용한 만큼 비용을 지불하는 개념의 컴퓨팅 패러다임",
-   "- 유틸리티 컴퓨팅(Utility Computing)의 정의",
-   "- 유틸리티 컴퓨팅의 등장배경",
-   "유틸리티 컴퓨팅의 구성요소 및 기반기술",
-   "- 유틸리티 컴퓨팅의 구성도",
-   "- 유틸리티 컴퓨팅의 구성요소",
-   "컴퓨팅 패러다임간 비교",
-   "- 디지털서비스 요점"
+   "등장 배경",
+   "- 배경: IT 투자 효율 관리",
+   "구성요소와 기반기술",
+   "- 3계층: 서비스 관리·자원관리·자원",
+   "- 기반기술: 가상화·그리드·자율 컴퓨팅",
+   "클라우드 컴퓨팅과 비교",
+   "- 관점: 과금 모델 vs 서비스 형태",
+   "- 계약: SLA 기반 품질 보장"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: IT 투자 효율 관리",
       "items": [
-       "자율컴퓨팅: 디지털서비스에서 자율컴퓨팅을 다루는 핵심 암기 포인트",
-       "유틸리티 컴퓨팅의 구성도: 디지털서비스의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "SON(자가 조직 N/W): SON를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ROI(투자수익률: Return of Investment): 투자 대비 회수 효과를 나타내는 지표"
+       "TCO·ROI 관리: IT 투자 수익 측정이 불확실해 소유 대신 사용량 기반 비용 구조로 전환, 아웃소싱으로 확대"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "구성요소와 기반기술",
     "subsections": [
      {
-      "title": null,
+      "title": "3계층: 서비스 관리·자원관리·자원",
       "items": [
-       "TCO(소유총비용: Total Cost of Ownership): 도입부터 폐기까지 총소유비용",
-       "디지털서비스 표준: 디지털서비스 상호운용·품질을 맞추는 규격·기준"
+       "미터링·빌링(Metering·Billing): 서비스 관리 계층에서 사용량 측정·과금·모니터링·보안 수행",
+       "자원 관리·프로비저닝 자동화: 가상화·분할·최적화로 자원을 동적으로 배분하는 핵심 계층"
+      ]
+     },
+     {
+      "title": "기반기술: 가상화·그리드·자율 컴퓨팅",
+      "items": [
+       "그리드 컴퓨팅(Grid Computing): 분산 자원을 묶어 대규모 연산 제공, 자율 컴퓨팅은 자원 장애·부하에 스스로 대응"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "클라우드 컴퓨팅과 비교",
+    "subsections": [
+     {
+      "title": "관점: 과금 모델 vs 서비스 형태",
+      "items": [
+       "유틸리티 컴퓨팅은 종량 과금 개념, 클라우드 컴퓨팅은 이를 IaaS·PaaS·SaaS로 셀프서비스 제공하는 구현 형태"
+      ]
+     },
+     {
+      "title": "계약: SLA 기반 품질 보장",
+      "items": [
+       "서비스 수준 협약(SLA): 가용성·응답시간을 계약으로 보장하고 미달 시 요금 감면"
       ]
      }
     ]
@@ -3395,19 +3545,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "자율컴퓨팅",
-   "유틸리티 컴퓨팅의 구성도",
-   "SON(자가 조직 N/W)",
-   "ROI(투자수익률: Return of Investment)",
-   "TCO(소유총비용: Total Cost of Ownership)",
-   "디지털서비스 표준"
+   "종량제(Pay-per-Use)",
+   "온디맨드(On-Demand) 자원 할당",
+   "가상화(Virtualization)",
+   "그리드 컴퓨팅(Grid Computing)",
+   "자원 관리·프로비저닝 자동화",
+   "미터링·빌링(Metering·Billing)",
+   "서비스 수준 협약(SLA)",
+   "자율 컴퓨팅(Autonomic Computing)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_033",
@@ -3420,57 +3573,82 @@
   ],
   "en": "Public Cloud Service Models",
   "dueum": null,
-  "name": "퍼블릭 클라우드 서비스 분류(Public Cloud)",
-  "title": "퍼블릭 클라우드 서비스 분류(Public Cloud)",
-  "definition": "누구나 인터넷/네트워크에 접속하여 결제만으로 서비스에 접근할 수 있고 사용한 만큼 지불(Pay as you Go)하는구조를 갖는 공중 인프라",
+  "name": "퍼블릭 클라우드 서비스 분류(Public Cloud Service Models)",
+  "title": "퍼블릭 클라우드 서비스 분류(Public Cloud Service Models)",
+  "definition": "클라우드 서비스 제공자(CSP)가 인터넷을 통해 불특정 다수에게 가상화된 IT 자원을 온디맨드·종량제로 제공하는 퍼블릭 클라우드를 제공 계층에 따라 IaaS·PaaS·SaaS 등 XaaS로 분류한 서비스 모델 (NIST SP 800-145)",
   "keywords_must": [
-   "XaaS 기반",
-   "On Demand(원하는 즉시)",
-   "Storage",
-   "CSB(Cloud Service Broker)",
-   "Open Stack",
-   "참여",
-   "공유"
+   "NIST SP 800-145",
+   "IaaS(Infrastructure as a Service)",
+   "PaaS(Platform as a Service)",
+   "SaaS(Software as a Service)",
+   "온디맨드 셀프서비스(On-demand Self-service)",
+   "자원 풀링(Resource Pooling)·멀티테넌시",
+   "신속한 탄력성(Rapid Elasticity)",
+   "측정 서비스(Measured Service)",
+   "책임 공유 모델(Shared Responsibility)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "광범위한 네트워크 접근(Broad Network Access)",
+   "CSB(Cloud Service Broker)",
+   "오픈스택(OpenStack)",
+   "벤더 종속(Lock-in)",
+   "데이터 주권·CSAP"
+  ],
   "keywords": [
-   "핵심: XaaS 기반 · On Demand(원하는 즉시) · Storage",
-   "기술: CSB(Cloud Service Broker) · Open Stack · 참여",
-   "운영: 공유"
+   "NIST 5대 특성: 온디맨드 셀프서비스 · 광범위 네트워크 접근 · 자원 풀링 · 신속한 탄력성 · 측정 서비스",
+   "서비스 모델: IaaS(인프라) · PaaS(플랫폼) · SaaS(애플리케이션) · XaaS",
+   "한계: 보안·데이터 주권 · 벤더 종속 · 성능 예측성"
   ],
   "outline": [
-   "Public Cloud 의 개요",
-   "- Public Cloud 의 정의",
-   "Cloud Computing 의 분류 및 비교",
-   "- 서비스 대상에 따른 클라우드 컴퓨팅의 분류",
-   "- 서비스 대상에 따른 클라우드컴퓨팅의 비교.",
-   "Public Cloud 서비스의 구축단계 및 사례",
-   "- Public Cloud 서비스의 구축단계"
+   "클라우드 특성(NIST)",
+   "- 5대 특성: 셀프서비스·탄력성·측정",
+   "서비스 모델 분류",
+   "- 계층별: IaaS·PaaS·SaaS",
+   "- 관리 경계: 책임 공유 모델",
+   "한계와 대응",
+   "- 한계: 보안·종속·규제"
   ],
   "sections": [
    {
-    "title": "퍼블릭 클라우드 서비스 분류 핵심",
+    "title": "클라우드 특성(NIST)",
     "subsections": [
      {
-      "title": null,
+      "title": "5대 특성: 셀프서비스·탄력성·측정",
       "items": [
-       "XaaS 기반: 퍼블릭 클라우드 서비스 분류에서 XaaS 기반을 다루는 핵심 암기 포인트",
-       "On Demand(원하는 즉시): 퍼블릭 클라우드 서비스 분류에서 On Demand(원하는 즉시)를 다루는 핵심 암기 포인트",
-       "Storage: Storage를 퍼블릭 클라우드 서비스 분류 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CSB(Cloud Service Broker): 요청을 중개해 대상 자원에 연결하는 중재 컴포넌트"
+       "온디맨드 셀프서비스(On-demand Self-service): 사용자가 콘솔·API로 즉시 자원 생성",
+       "자원 풀링(Resource Pooling)·멀티테넌시: 가상화로 물리 자원을 여러 고객이 공유",
+       "신속한 탄력성·측정 서비스: 수요에 따라 자동 증감, 사용량 미터링으로 종량 과금"
       ]
      }
     ]
    },
    {
-    "title": "퍼블릭 클라우드 서비스 분류 구성·기술",
+    "title": "서비스 모델 분류",
     "subsections": [
      {
-      "title": null,
+      "title": "계층별: IaaS·PaaS·SaaS",
       "items": [
-       "Open Stack: 퍼블릭 클라우드 서비스 분류에서 Open Stack를 다루는 핵심 암기 포인트",
-       "참여: 퍼블릭 클라우드 서비스 분류에서 참여를 다루는 핵심 암기 포인트",
-       "공유: 퍼블릭 클라우드 서비스 분류에서 공유를 다루는 핵심 암기 포인트"
+       "IaaS(Infrastructure as a Service): 가상 서버·스토리지·네트워크 제공, OS부터 사용자 관리(AWS EC2)",
+       "PaaS(Platform as a Service): 런타임·미들웨어·DB까지 제공, 사용자는 코드와 데이터만 관리",
+       "SaaS(Software as a Service): 완성된 애플리케이션을 웹으로 제공(Microsoft 365·Salesforce)"
+      ]
+     },
+     {
+      "title": "관리 경계: 책임 공유 모델",
+      "items": [
+       "책임 공유 모델(Shared Responsibility): IaaS→SaaS로 갈수록 CSP 관리 범위 확대, 데이터·계정 관리는 항상 고객 책임"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한계와 대응",
+    "subsections": [
+     {
+      "title": "한계: 보안·종속·규제",
+      "items": [
+       "벤더 종속(Lock-in): 독자 API·데이터 이전 비용, 멀티 클라우드·CSB로 완화",
+       "데이터 주권·CSAP: 공공 이용 시 클라우드 보안인증(CSAP) 필요, 국외 리전 저장 규제"
       ]
      }
     ]
@@ -3479,20 +3657,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "XaaS 기반",
-   "On Demand(원하는 즉시)",
-   "Storage",
-   "CSB(Cloud Service Broker)",
-   "Open Stack",
-   "참여",
-   "공유"
+   "NIST SP 800-145",
+   "IaaS(Infrastructure as a Service)",
+   "PaaS(Platform as a Service)",
+   "SaaS(Software as a Service)",
+   "온디맨드 셀프서비스(On-demand Self-service)",
+   "자원 풀링(Resource Pooling)·멀티테넌시",
+   "신속한 탄력성(Rapid Elasticity)",
+   "측정 서비스(Measured Service)",
+   "책임 공유 모델(Shared Responsibility)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_034",
@@ -3507,69 +3688,85 @@
   "dueum": null,
   "name": "프라이빗 클라우드(Private Cloud)",
   "title": "프라이빗 클라우드(Private Cloud)",
-  "definition": "기업 내부와 같이 폐쇄된 환경에서 특정 사용자만 사용하는 클라우드 서비스(Internal Cloud라고도 함)",
+  "definition": "단일 조직이 전용으로 사용하도록 자체 데이터센터나 외부 전용 인프라에 구축해 가상화·자동화·셀프서비스 포털을 갖추고 내부 보안정책과 규제를 직접 통제하는 클라우드 배치 모델",
   "keywords_must": [
-   "Service Catalogue",
-   "Management & Monitoring",
-   "Virtual Servers",
-   "Virtual Storage",
-   "Virtual Networks",
-   "DataBases",
-   "Firewall",
-   "DMZ",
-   "IaaS",
-   "PaaS"
+   "단일 테넌트(Single Tenant)",
+   "온프레미스(On-premises)·호스티드(Hosted)",
+   "서비스 카탈로그(Service Catalogue)",
+   "셀프서비스 포털(Self-service Portal)",
+   "관리·모니터링(Management & Monitoring)",
+   "가상 서버·스토리지·네트워크",
+   "방화벽·DMZ(Demilitarized Zone)",
+   "오픈스택·VMware vSphere",
+   "차지백(Chargeback)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "컴플라이언스·데이터 주권",
+   "높은 초기 투자(CAPEX)",
+   "HCI(Hyper-Converged Infrastructure)",
+   "가상 사설 클라우드(VPC) 비교",
+   "하이브리드 확장"
+  ],
   "keywords": [
-   "핵심: Service Catalogue · Management & Monitoring · Virtual Servers",
-   "기술: Virtual Storage · Virtual Networks · DataBases",
-   "운영: Firewall · DMZ · IaaS"
+   "구성: 서비스 카탈로그 · 셀프서비스 포털 · 관리·모니터링 · 가상 서버·스토리지·네트워크 · DB",
+   "보안: 방화벽 · DMZ · 내부 접근통제",
+   "구축: 오픈스택 · VMware · HCI"
   ],
   "outline": [
-   "기업 자체 운영 IDC, Private Cloud 의 개요",
-   "- Private Cloud 의 정의",
-   "Private Cloud 구축 고려사항 및 적용 전략",
-   "- 프라이빗 클라우드의 핵심 요소",
-   "- 프라이빗 클라우드의 구조"
+   "도입 배경",
+   "- 배경: 보안·규제 통제 요구",
+   "아키텍처 구성요소",
+   "- 서비스 계층: 카탈로그·포털",
+   "- 인프라 계층: 가상 자원·보안",
+   "구축 방식과 적용 전략",
+   "- 방식: 온프레미스 vs 호스티드",
+   "- 전략: 단계적 전환·하이브리드"
   ],
   "sections": [
    {
-    "title": "프라이빗 클라우드 핵심",
+    "title": "도입 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 보안·규제 통제 요구",
       "items": [
-       "Service Catalogue: 프라이빗 클라우드에서 Service Catalogue를 다루는 핵심 암기 포인트",
-       "Management & Monitoring: 프라이빗 클라우드에서 Management & Monitoring를 다루는 핵심 암기 포인트",
-       "Virtual Servers: 프라이빗 클라우드에서 Virtual Servers를 다루는 핵심 암기 포인트",
-       "Virtual Storage: 프라이빗 클라우드에서 Virtual Storage를 다루는 핵심 암기 포인트"
+       "단일 테넌트(Single Tenant): 자원을 다른 고객과 공유하지 않아 금융·공공의 컴플라이언스·데이터 주권 충족",
+       "퍼블릭 한계 보완: 민감 데이터 외부 저장 우려, 성능 예측성 확보"
       ]
      }
     ]
    },
    {
-    "title": "프라이빗 클라우드 구성·기술",
+    "title": "아키텍처 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "서비스 계층: 카탈로그·포털",
       "items": [
-       "Virtual Networks: 프라이빗 클라우드에서 Virtual Networks를 다루는 핵심 암기 포인트",
-       "DataBases: DataBases를 프라이빗 클라우드 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Firewall: Firewall를 프라이빗 클라우드 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "DMZ: 외부 공개 서비스를 내부망과 분리한 완충 구역"
+       "서비스 카탈로그(Service Catalogue): VM 사양·DB·미들웨어 표준 템플릿 목록, 셀프서비스 포털로 신청·자동 프로비저닝",
+       "관리·모니터링(Management & Monitoring): 용량·성능 감시, 부서별 사용량 차지백(Chargeback)"
+      ]
+     },
+     {
+      "title": "인프라 계층: 가상 자원·보안",
+      "items": [
+       "가상 서버·스토리지·네트워크: 하이퍼바이저·SDS·SDN으로 자원 풀 구성",
+       "방화벽·DMZ(Demilitarized Zone): 외부 공개 서비스는 DMZ에 두고 내부망과 분리"
       ]
      }
     ]
    },
    {
-    "title": "프라이빗 클라우드 운영",
+    "title": "구축 방식과 적용 전략",
     "subsections": [
      {
-      "title": null,
+      "title": "방식: 온프레미스 vs 호스티드",
       "items": [
-       "IaaS: 가상머신·스토리지·네트워크를 온디맨드로 제공하는 클라우드 모델",
-       "PaaS: 런타임·미들웨어를 제공해 앱 배포에 집중하게 하는 모델"
+       "온프레미스(On-premises)는 자체 센터에 구축, 호스티드(Hosted)는 사업자 센터의 전용 장비 임대"
+      ]
+     },
+     {
+      "title": "전략: 단계적 전환·하이브리드",
+      "items": [
+       "오픈스택·VMware vSphere·HCI로 표준화 후 비핵심 업무는 퍼블릭과 연동하는 하이브리드로 확장"
       ]
      }
     ]
@@ -3578,23 +3775,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Service Catalogue",
-   "Management & Monitoring",
-   "Virtual Servers",
-   "Virtual Storage",
-   "Virtual Networks",
-   "DataBases",
-   "Firewall",
-   "DMZ",
-   "IaaS",
-   "PaaS"
+   "단일 테넌트(Single Tenant)",
+   "온프레미스(On-premises)·호스티드(Hosted)",
+   "서비스 카탈로그(Service Catalogue)",
+   "셀프서비스 포털(Self-service Portal)",
+   "관리·모니터링(Management & Monitoring)",
+   "가상 서버·스토리지·네트워크",
+   "방화벽·DMZ(Demilitarized Zone)",
+   "오픈스택·VMware vSphere",
+   "차지백(Chargeback)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_035",
@@ -3609,54 +3806,83 @@
   "dueum": null,
   "name": "하이브리드 클라우드(Hybrid Cloud)",
   "title": "하이브리드 클라우드(Hybrid Cloud)",
-  "definition": "on-premise 컴퓨팅, 프라이빗 클라우드, 퍼블릭 클라우드 모두를 효과적으로 혼용하는 컴퓨팅 플랫폼",
+  "definition": "온프레미스·프라이빗 클라우드와 퍼블릭 클라우드를 네트워크와 통합 관리 체계로 연결해 워크로드와 데이터를 상호 이동·연계하며 퍼블릭의 효율성과 프라이빗의 보안성을 함께 확보하는 클라우드 배치 모델",
   "keywords_must": [
-   "하이브리드 클라우드의 핵심 요소",
-   "하이브리드 클라우드의 구조",
-   "하이브리드 클라우드 아키텍처",
-   "사설(Private)",
-   "공용(Public)",
-   "하이브리드(Hybrid)",
-   "IaaS"
+   "클라우드 버스팅(Cloud Bursting)",
+   "워크로드 이동성(Workload Portability)",
+   "전용 회선 연결(AWS Direct Connect·ExpressRoute)",
+   "VPN 연결",
+   "통합 관리 플랫폼(CMP)",
+   "컨테이너·쿠버네티스 기반 이식성",
+   "데이터 거버넌스·규제 준수",
+   "재해복구(DR) 활용"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "AWS Outposts·Azure Arc·Google Anthos",
+   "멀티 클라우드와 차이",
+   "아이덴티티 통합(Federation)",
+   "데이터 중력(Data Gravity)",
+   "네트워크 지연"
+  ],
   "keywords": [
-   "핵심: 하이브리드 클라우드의 핵심 요소 · 하이브리드 클라우드의 구조 · 하이브리드 클라우드 아키텍처",
-   "기술: 사설(Private) · 공용(Public) · 하이브리드(Hybrid)",
-   "운영: IaaS"
+   "연결: 전용 회선 · VPN · 통합 ID · CMP",
+   "활용: 클라우드 버스팅 · DR · 개발·테스트 분리 · 민감 데이터 온프레미스 유지",
+   "기술: 컨테이너·쿠버네티스 · Outposts·Azure Arc·Anthos"
   ],
   "outline": [
-   "Public 의 효율성과 Private 의 보안성 장점 결합",
-   "- 하이브리드 클라우드의 정의",
-   "- 하이브리드 클라우드의 등장 배경",
-   "하이브리드 클라우드의 시스템 구성",
-   "- 하이브리드 클라우드의 핵심 요소",
-   "- 하이브리드 클라우드의 구조"
+   "부각 배경",
+   "- 배경: 유연성과 컴플라이언스 동시 요구",
+   "시스템 구성",
+   "- 연결: 전용 회선·VPN",
+   "- 통합 관리: CMP·컨테이너",
+   "활용 유형과 고려사항",
+   "- 활용: 버스팅·DR",
+   "- 고려사항: 보안 경계·데이터 이동"
   ],
   "sections": [
    {
-    "title": "하이브리드 클라우드 핵심",
+    "title": "부각 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 유연성과 컴플라이언스 동시 요구",
       "items": [
-       "하이브리드 클라우드의 핵심 요소: 하이브리드 클라우드에서 하이브리드 클라우드의 핵심 요소를 다루는 핵심 암기 포인트",
-       "하이브리드 클라우드의 구조: 하이브리드 클라우드에서 하이브리드 클라우드의 구조를 다루는 핵심 암기 포인트",
-       "하이브리드 클라우드 아키텍처: 하이브리드 클라우드의 계층·모듈 배치와 상호작용 구조",
-       "사설(Private): 하이브리드 클라우드에서 사설(Private)을 다루는 핵심 암기 포인트"
+       "퍼블릭은 확장성, 프라이빗은 안정성·규제 준수에 유리해 핵심 시스템은 내부에, 변동 업무는 퍼블릭에 배치"
       ]
      }
     ]
    },
    {
-    "title": "하이브리드 클라우드 구성·기술",
+    "title": "시스템 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "연결: 전용 회선·VPN",
       "items": [
-       "공용(Public): 하이브리드 클라우드에서 공용(Public)을 다루는 핵심 암기 포인트",
-       "하이브리드(Hybrid): 하이브리드 클라우드에서 하이브리드(Hybrid)를 다루는 핵심 암기 포인트",
-       "IaaS: 가상머신·스토리지·네트워크를 온디맨드로 제공하는 클라우드 모델 (하이브리드 클라우드/4d41)"
+       "전용 회선 연결(AWS Direct Connect·ExpressRoute): 저지연·고대역 사설 연결, 백업 경로로 IPsec VPN"
+      ]
+     },
+     {
+      "title": "통합 관리: CMP·컨테이너",
+      "items": [
+       "통합 관리 플랫폼(CMP): 이기종 자원 프로비저닝·모니터링·비용을 단일 콘솔로 관리",
+       "컨테이너·쿠버네티스 기반 이식성: 동일 이미지를 양쪽 환경에 배포, Azure Arc·Google Anthos로 일관 운영"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용 유형과 고려사항",
+    "subsections": [
+     {
+      "title": "활용: 버스팅·DR",
+      "items": [
+       "클라우드 버스팅(Cloud Bursting): 평소 내부 자원 사용, 피크 시 초과 부하만 퍼블릭으로 확장",
+       "재해복구(DR) 활용: 온프레미스 운영, 퍼블릭에 대기 환경을 두어 구축비 절감"
+      ]
+     },
+     {
+      "title": "고려사항: 보안 경계·데이터 이동",
+      "items": [
+       "데이터 거버넌스·규제 준수: 데이터 분류 후 배치, 네트워크 지연과 데이터 송신(egress) 비용 고려"
       ]
      }
     ]
@@ -3665,20 +3891,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "하이브리드 클라우드의 핵심 요소",
-   "하이브리드 클라우드의 구조",
-   "하이브리드 클라우드 아키텍처",
-   "사설(Private)",
-   "공용(Public)",
-   "하이브리드(Hybrid)",
-   "IaaS"
+   "클라우드 버스팅(Cloud Bursting)",
+   "워크로드 이동성(Workload Portability)",
+   "전용 회선 연결(AWS Direct Connect·ExpressRoute)",
+   "VPN 연결",
+   "통합 관리 플랫폼(CMP)",
+   "컨테이너·쿠버네티스 기반 이식성",
+   "데이터 거버넌스·규제 준수",
+   "재해복구(DR) 활용"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_036_0",
@@ -3689,73 +3917,86 @@
    35,
    38
   ],
-  "en": "CSB",
+  "en": "Cloud Service Brokerage",
   "dueum": null,
-  "name": "디지털서비스(CSB)",
-  "title": "디지털서비스(CSB)",
-  "definition": "클라우드 서비스 제공자와 클라우드 서비스 사용자 사이에서 서비스를 중개하여 사용자에게 서비스 제공자가등록한 서비스를 기반으로 서비스를 연결해주는 서비스",
+  "name": "클라우드 서비스 브로커리지(CSB, Cloud Service Brokerage)",
+  "title": "클라우드 서비스 브로커리지(CSB, Cloud Service Brokerage)",
+  "definition": "여러 클라우드 서비스 제공자(CSP)와 이용자(CSC) 사이에서 서비스를 중개·결합·차익거래해 이종 멀티 클라우드의 선택·통합·관리를 대행하는 서비스 또는 사업자 (2009년 가트너 제시, NIST 클라우드 참조 아키텍처의 Cloud Broker)",
   "keywords_must": [
-   "중계",
-   "결합",
-   "차익거래",
-   "클라우드 컴퓨팅법",
-   "CSC",
-   "CSP",
+   "중개(Intermediation)",
+   "결합(Aggregation)",
+   "차익거래(Arbitrage)",
+   "CSP(Cloud Service Provider)",
+   "CSC(Cloud Service Customer)",
+   "NIST 클라우드 브로커(Cloud Broker)",
    "이종 멀티 클라우드",
-   "디지털서비스 아키텍처",
-   "디지털서비스 표준"
+   "클라우드 컴퓨팅법(클라우드컴퓨팅 발전 및 이용자 보호에 관한 법률)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "가트너 2009",
+   "서비스 카탈로그·통합 과금",
+   "SSO·통합 보안",
+   "MSP·CMP와 비교",
+   "CompatibleOne 브로커 프로젝트"
+  ],
   "keywords": [
-   "핵심: 중계 · 결합 · 차익거래",
-   "기술: 클라우드 컴퓨팅법 · CSC · CSP",
-   "운영: 이종 멀티 클라우드 · 디지털서비스 아키텍처 · 디지털서비스 표준"
+   "NIST 3유형: 중개 · 결합 · 차익거래",
+   "주체: CSC(이용자) · CSB(브로커) · CSP(제공자)",
+   "기능: 서비스 카탈로그 · 통합 과금 · SSO · 정책·SLA 관리"
   ],
   "outline": [
-   "디지털서비스의 개요",
-   "- 디지털서비스의 정의",
-   "- 디지털서비스의 특징",
-   "디지털서비스의 구성과 기술",
-   "- 디지털서비스의 핵심 요소",
-   "디지털서비스의 적용",
-   "- 디지털서비스 요점"
+   "등장 배경",
+   "- 배경: 멀티 클라우드 복잡성",
+   "서비스 유형(NIST)",
+   "- 중개: 부가 기능 강화",
+   "- 결합·차익거래",
+   "구성과 제도",
+   "- 기능: 카탈로그·과금·정책",
+   "- 제도: 클라우드 컴퓨팅법"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 멀티 클라우드 복잡성",
       "items": [
-       "중계: 디지털서비스에서 중계를 다루는 핵심 암기 포인트",
-       "결합: 디지털서비스에서 결합을 다루는 핵심 암기 포인트",
-       "차익거래: 디지털서비스에서 차익거래를 다루는 핵심 암기 포인트",
-       "클라우드 컴퓨팅법: 디지털서비스에서 클라우드 컴퓨팅법을 다루는 핵심 암기 포인트"
+       "이종 멀티 클라우드: CSP별 API·과금·보안 체계가 달라 이용자의 선택·관리 부담 증가, 가트너가 2009년 CSB 개념 제시"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "서비스 유형(NIST)",
     "subsections": [
      {
-      "title": null,
+      "title": "중개: 부가 기능 강화",
       "items": [
-       "CSC: CSC를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CSP: CSP를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "이종 멀티 클라우드: 디지털서비스에서 이종 멀티 클라우드를 다루는 핵심 암기 포인트",
-       "디지털서비스 아키텍처: 디지털서비스의 계층·모듈 배치와 상호작용 구조"
+       "중개(Intermediation): 기존 서비스에 ID 관리·성능 보고·보안 같은 부가가치를 더해 제공"
+      ]
+     },
+     {
+      "title": "결합·차익거래",
+      "items": [
+       "결합(Aggregation): 여러 CSP 서비스를 하나로 통합하고 데이터 연동·보안을 보장",
+       "차익거래(Arbitrage): 결합과 유사하나 고정되지 않고 가격·성능에 따라 CSP를 동적으로 선택"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "구성과 제도",
     "subsections": [
      {
-      "title": null,
+      "title": "기능: 카탈로그·과금·정책",
       "items": [
-       "디지털서비스 표준: 디지털서비스 상호운용·품질을 맞추는 규격·기준 (디지털서비스/4b55)"
+       "서비스 카탈로그·통합 과금: 여러 CSP 상품을 단일 포털에서 비교·신청하고 청구를 통합"
+      ]
+     },
+     {
+      "title": "제도: 클라우드 컴퓨팅법",
+      "items": [
+       "클라우드 컴퓨팅법: 2015년 시행, 공공기관 클라우드 이용 촉진과 이용자 정보 보호 규정"
       ]
      }
     ]
@@ -3764,22 +4005,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "중계",
-   "결합",
-   "차익거래",
-   "클라우드 컴퓨팅법",
-   "CSC",
-   "CSP",
+   "중개(Intermediation)",
+   "결합(Aggregation)",
+   "차익거래(Arbitrage)",
+   "CSP(Cloud Service Provider)",
+   "CSC(Cloud Service Customer)",
+   "NIST 클라우드 브로커(Cloud Broker)",
    "이종 멀티 클라우드",
-   "디지털서비스 아키텍처",
-   "디지털서비스 표준"
+   "클라우드 컴퓨팅법(클라우드컴퓨팅 발전 및 이용자 보호에 관한 법률)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_036_1",
@@ -3792,73 +4033,86 @@
   ],
   "en": "Cloud Service Provider",
   "dueum": null,
-  "name": "클라우드 서비스 제공자(CSP)",
-  "title": "클라우드 서비스 제공자(CSP)",
-  "definition": "권한이 있는 사용자가 클라우드를 통해 서비스를 이용할 수 있고, 사용량에 따라 컴퓨터 자원을 유동적으로제공하는 클라우드 서비스 제공자",
+  "name": "클라우드 서비스 제공자(CSP, Cloud Service Provider)",
+  "title": "클라우드 서비스 제공자(CSP, Cloud Service Provider)",
+  "definition": "인터넷을 통해 컴퓨팅·스토리지·네트워크·소프트웨어 자원을 사용량에 따라 탄력적으로 제공하는 사업자로, 이용 기관은 클라우드 아웃소싱 계약·위험평가·모니터링으로 CSP 리스크를 관리해야 함",
   "keywords_must": [
-   "클라우드 서비스 제공자 아키텍처",
-   "클라우드 서비스 제공자 표준",
-   "클라우드 서비스 제공자 보안",
-   "클라우드 서비스 제공자 성능",
-   "클라우드 서비스 제공자 상호운용",
-   "MFA",
-   "책임공유모델(Shared Responsibility Model)",
-   "책임공유모델(SRM)",
-   "IaaS"
+   "클라우드 아웃소싱(Cloud Outsourcing)",
+   "적합성 평가(Due Diligence)",
+   "서면 계약(데이터 처리·저장 위치)",
+   "서브 아웃소싱(Sub-outsourcing)",
+   "집중 위험(Concentration Risk)",
+   "출구 전략(Exit Strategy)",
+   "감사권(Right to Audit)",
+   "비즈니스 연속성 관리(BCM)",
+   "SLA(Service Level Agreement)"
   ],
   "keywords_ref": [
-   "SRM"
+   "EBA 클라우드 아웃소싱 가이드라인",
+   "금융권 클라우드 이용 가이드",
+   "아웃소싱 레지스터",
+   "책임 공유 모델",
+   "CSAP·ISO/IEC 27017"
   ],
   "keywords": [
-   "핵심: 클라우드 서비스 제공자 아키텍처 · 클라우드 서비스 제공자 표준 · 클라우드 서비스 제공자 보안",
-   "기술: 클라우드 서비스 제공자 성능 · 클라우드 서비스 제공자 상호운용 · MFA",
-   "운영: 책임공유모델(Shared Responsibility Model) · 책임공유모델(SRM) · IaaS",
-   "참고: SRM"
+   "요구사항: 레지스터 등록 · 적합성 평가 · 서면 계약 · 서브 아웃소싱 · 당국 보고",
+   "리스크: 집중 위험 · 데이터 위치 · 종속(Lock-in) · 가용성 장애",
+   "대응: 출구 전략 · 감사권 · SLA · 멀티 클라우드 · BCM"
   ],
   "outline": [
-   "클라우드 아웃소싱에 대한 요구사항",
-   "- 클라우드 서비스 제공자 요점",
-   "클라우드 리스크 관리시 고려사항",
-   "- 클라우드 서비스 제공자 요점",
-   "클라우드 리스크 대응방안",
-   "- 클라우드 서비스 제공자 요점"
+   "클라우드 아웃소싱 요구사항",
+   "- 계약: 적합성 평가·서면 계약",
+   "- 보고·관리: 당국 보고·모니터링",
+   "리스크 관리 고려사항",
+   "- 위험: 집중·종속·장애",
+   "리스크 대응방안",
+   "- 계약적 대응: 감사권·SLA",
+   "- 기술적 대응: 출구 전략·이중화"
   ],
   "sections": [
    {
-    "title": "클라우드 서비스 제공자 핵심",
+    "title": "클라우드 아웃소싱 요구사항",
     "subsections": [
      {
-      "title": null,
+      "title": "계약: 적합성 평가·서면 계약",
       "items": [
-       "클라우드 서비스 제공자 아키텍처: 클라우드 서비스 제공자의 계층·모듈 배치와 상호작용 구조",
-       "클라우드 서비스 제공자 표준: 클라우드 서비스 제공자 상호운용·품질을 맞추는 규격·기준",
-       "클라우드 서비스 제공자 보안: 클라우드 서비스 제공자에서 클라우드 서비스 제공자 보안을 다루는 핵심 암기 포인트",
-       "클라우드 서비스 제공자 성능: 클라우드 서비스 제공자에서 클라우드 서비스 제공자 성능을 다루는 핵심 암기 포인트"
+       "적합성 평가(Due Diligence): CSP 평판·재무·보안인증 확인 후 아웃소싱 레지스터에 계약 정보 등록",
+       "서면 계약(데이터 처리·저장 위치): 처리 위치, 서브 아웃소싱 허용 여부, 계약 종료 가능성 명시"
+      ]
+     },
+     {
+      "title": "보고·관리: 당국 보고·모니터링",
+      "items": [
+       "금융권은 중요 업무 클라우드 이용 계획을 감독당국에 보고, API 보안·규정 준수 지속 모니터링"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 서비스 제공자 구성·기술",
+    "title": "리스크 관리 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "위험: 집중·종속·장애",
       "items": [
-       "클라우드 서비스 제공자 상호운용: 클라우드 서비스 제공자에서 클라우드 서비스 제공자 상호운용을 다루는 핵심 암기 포인트",
-       "MFA: 둘 이상 인증 요소를 결합해 계정 탈취를 완화",
-       "책임공유모델(Shared Responsibility Model): 클라우드 서비스 제공자에서 책임공유모델(Shared Responsibility Model)을 다루는 핵심 암기 포인트",
-       "책임공유모델(SRM): 클라우드 서비스 제공자에서 책임공유모델(SRM)을 다루는 핵심 암기 포인트"
+       "집중 위험(Concentration Risk): 다수 금융사가 동일 CSP를 쓸 때 단일 장애가 시스템 위험으로 확산",
+       "벤더 종속과 리전 장애: 독자 서비스 의존, 리전 전체 중단 시 서비스 불가"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 서비스 제공자 운영",
+    "title": "리스크 대응방안",
     "subsections": [
      {
-      "title": null,
+      "title": "계약적 대응: 감사권·SLA",
       "items": [
-       "IaaS: 가상머신·스토리지·네트워크를 온디맨드로 제공하는 클라우드 모델 (클라우드 서비스 제공자/f3e3)"
+       "감사권(Right to Audit): 이용 기관·당국의 현장 감사 권한 확보, SLA에 가용성·보상 조항 포함"
+      ]
+     },
+     {
+      "title": "기술적 대응: 출구 전략·이중화",
+      "items": [
+       "출구 전략(Exit Strategy): 데이터 반환·이전 절차 사전 정의, 멀티 리전·멀티 클라우드로 BCM 확보"
       ]
      }
     ]
@@ -3867,22 +4121,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "클라우드 서비스 제공자 아키텍처",
-   "클라우드 서비스 제공자 표준",
-   "클라우드 서비스 제공자 보안",
-   "클라우드 서비스 제공자 성능",
-   "클라우드 서비스 제공자 상호운용",
-   "MFA",
-   "책임공유모델(Shared Responsibility Model)",
-   "책임공유모델(SRM)",
-   "IaaS"
+   "클라우드 아웃소싱(Cloud Outsourcing)",
+   "적합성 평가(Due Diligence)",
+   "서면 계약(데이터 처리·저장 위치)",
+   "서브 아웃소싱(Sub-outsourcing)",
+   "집중 위험(Concentration Risk)",
+   "출구 전략(Exit Strategy)",
+   "감사권(Right to Audit)",
+   "비즈니스 연속성 관리(BCM)",
+   "SLA(Service Level Agreement)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_036_2",
@@ -3895,73 +4150,93 @@
   ],
   "en": "Cloud Management Platform",
   "dueum": null,
-  "name": "클라우드 관리 플랫폼(CMP)",
-  "title": "클라우드 관리 플랫폼(CMP)",
-  "definition": "기업이 클라우드 컴퓨팅 리소스를 모니터링하고 제어하는 데 사용할 수 있는 통합소프트웨어 도구 모음을 제공하는 플랫폼(Platform)",
+  "name": "클라우드 관리 플랫폼(CMP, Cloud Management Platform)",
+  "title": "클라우드 관리 플랫폼(CMP, Cloud Management Platform)",
+  "definition": "퍼블릭·프라이빗·하이브리드 등 이기종 멀티 클라우드 자원을 단일 콘솔에서 프로비저닝·모니터링·비용 관리·거버넌스·자동화할 수 있도록 통합 제공하는 관리 소프트웨어 플랫폼",
   "keywords_must": [
-   "자원 모니터링 및 리소스 관리",
-   "동적 사용량 미터링",
-   "과금",
-   "거버넌스",
-   "워크 플로우 자동화",
-   "동적 사용량 미터링/과금",
-   "CAPEX",
-   "OPEX",
-   "플랫폼(Cloud Management Platform)"
+   "멀티·하이브리드 클라우드 통합 관리",
+   "셀프서비스 포털·서비스 카탈로그",
+   "프로비저닝·오케스트레이션(Orchestration)",
+   "자원 모니터링(Resource Monitoring)",
+   "미터링·과금(Chargeback)",
+   "거버넌스·정책 관리(Governance)",
+   "비용 최적화(FinOps)",
+   "워크플로 자동화(Workflow Automation)",
+   "CSP API 추상화"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "매니지드 서비스(MSP)",
+   "IaC(Terraform) 연계",
+   "태깅·비용 할당",
+   "보안 컴플라이언스 점검(CSPM)",
+   "선정 기준(확장성·호환성·보안)"
+  ],
   "keywords": [
-   "핵심: 자원 모니터링 및 리소스 관리 · 동적 사용량 미터링 · 과금",
-   "기술: 거버넌스 · 워크 플로우 자동화 · 동적 사용량 미터링/과금",
-   "운영: CAPEX · OPEX · 플랫폼(Cloud Management Platform)"
+   "필수 기능: 통합 관리 · 프로비저닝 · 모니터링 · 미터링·과금 · 거버넌스 · 자동화",
+   "선정 기준: 멀티 CSP 지원 · 확장성 · 보안·컴플라이언스 · 비용 가시성",
+   "효과: 운영 효율 · 비용 절감(FinOps) · 표준화"
   ],
   "outline": [
-   "구축보다 중요한 클라우드 관리. 클라우드 관리 플랫폼(Cloud",
-   "- 클라우드 관리 플랫폼(Cloud Management Platform)…",
-   "- 클라우드 관리 플랫폼(Cloud Management Platform)…",
-   "클라우드 관리 플랫폼(Cloud Management Platform)의 필수 기능",
-   "- 운영자 관점의 클라우드 관리 플랫폼(Cloud Management P…",
-   "클라우드 관리 플랫폼(Cloud Management Platform)의 선정 기준",
-   "- 클라우드 관리 플랫폼 요점",
-   "클라우드 관리 플랫폼(Cloud Management Platform)의 기대효과",
-   "- 클라우드 관리 플랫폼 요점"
+   "도입 필요성",
+   "- 시장: 클라우드 수요·매니지드 수요 증가",
+   "- 기술: 멀티 클라우드·전문인력 부족",
+   "필수 기능",
+   "- 운영: 프로비저닝·모니터링·자동화",
+   "- 비용·통제: 과금·거버넌스",
+   "선정 기준·기대효과",
+   "- 선정 기준: 호환성·확장성·보안",
+   "- 기대효과: 비용 최적화·표준화"
   ],
   "sections": [
    {
-    "title": "클라우드 관리 플랫폼 핵심",
+    "title": "도입 필요성",
     "subsections": [
      {
-      "title": null,
+      "title": "시장: 클라우드 수요·매니지드 수요 증가",
       "items": [
-       "자원 모니터링 및 리소스 관리: 클라우드 관리 플랫폼에서 자원 모니터링 및 리소스 관리를 다루는 핵심 암기 포인트",
-       "동적 사용량 미터링: 클라우드 관리 플랫폼에서 동적 사용량 미터링을 다루는 핵심 암기 포인트",
-       "과금: 클라우드 관리 플랫폼에서 과금을 다루는 핵심 암기 포인트",
-       "거버넌스: 클라우드 관리 플랫폼에서 거버넌스를 다루는 핵심 암기 포인트"
+       "코로나19 이후 클라우드 전환 가속, 매니지드 서비스(MSP) 수요 증가로 통합 운영 도구 필요"
+      ]
+     },
+     {
+      "title": "기술: 멀티 클라우드·전문인력 부족",
+      "items": [
+       "CSP API 추상화: AWS·Azure·GCP·온프레미스의 서로 다른 API를 공통 인터페이스로 묶어 운영 복잡도 해소"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 관리 플랫폼 구성·기술",
+    "title": "필수 기능",
     "subsections": [
      {
-      "title": null,
+      "title": "운영: 프로비저닝·모니터링·자동화",
       "items": [
-       "워크 플로우 자동화: 클라우드 관리 플랫폼에서 워크 플로우 자동화를 다루는 핵심 암기 포인트",
-       "동적 사용량 미터링/과금: 클라우드 관리 플랫폼에서 동적 사용량 미터링/과금을 다루는 핵심 암기 포인트",
-       "CAPEX: CAPEX를 클라우드 관리 플랫폼 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OPEX: OPEX를 클라우드 관리 플랫폼 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "셀프서비스 포털·서비스 카탈로그: 승인 워크플로를 거쳐 표준 템플릿으로 자원 자동 생성",
+       "자원 모니터링(Resource Monitoring): CPU·메모리·장애를 통합 대시보드로 감시, 워크플로 자동화로 조치"
+      ]
+     },
+     {
+      "title": "비용·통제: 과금·거버넌스",
+      "items": [
+       "미터링·과금(Chargeback): 부서·프로젝트별 사용량 측정과 비용 배분, 태깅 기반 비용 할당",
+       "거버넌스·정책 관리(Governance): 리전·인스턴스 유형 제한, 권한·보안 정책 일괄 적용"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 관리 플랫폼 운영",
+    "title": "선정 기준·기대효과",
     "subsections": [
      {
-      "title": null,
+      "title": "선정 기준: 호환성·확장성·보안",
       "items": [
-       "플랫폼(Cloud Management Platform): 클라우드 관리 플랫폼에서 플랫폼(Cloud Management Platform)을 다루는 핵심 암기 포인트"
+       "지원 CSP 범위, IaC(Terraform) 연계, 보안 컴플라이언스 점검(CSPM) 기능, 벤더 지원 역량 검토"
+      ]
+     },
+     {
+      "title": "기대효과: 비용 최적화·표준화",
+      "items": [
+       "비용 최적화(FinOps): 유휴 자원 탐지·예약 인스턴스 추천으로 비용 절감, 운영 절차 표준화"
       ]
      }
     ]
@@ -3970,15 +4245,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "자원 모니터링 및 리소스 관리",
-   "동적 사용량 미터링",
-   "과금",
-   "거버넌스",
-   "워크 플로우 자동화",
-   "동적 사용량 미터링/과금",
-   "CAPEX",
-   "OPEX",
-   "플랫폼(Cloud Management Platform)"
+   "멀티·하이브리드 클라우드 통합 관리",
+   "셀프서비스 포털·서비스 카탈로그",
+   "프로비저닝·오케스트레이션(Orchestration)",
+   "자원 모니터링(Resource Monitoring)",
+   "미터링·과금(Chargeback)",
+   "거버넌스·정책 관리(Governance)",
+   "비용 최적화(FinOps)",
+   "워크플로 자동화(Workflow Automation)",
+   "CSP API 추상화"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -3986,6 +4261,7 @@
   "note": null,
   "review": null,
   "warnings": [],
+  "hand": true,
   "gloss": {
    "CMP": "Cloud Management Platform"
   }
@@ -3999,58 +4275,86 @@
    39,
    41
   ],
-  "en": "PersonalCloud",
+  "en": "Personal Cloud",
   "dueum": null,
-  "name": "클라우드(PersonalCloud)",
-  "title": "클라우드(PersonalCloud)",
-  "definition": "웹 기반 온라인 저장소·애플리케이션·웹톱으로 개인화 콘텐츠와 파일 동기화를 제공하는 개인 클라우드형 서비스 환경이다.",
+  "name": "퍼스널 클라우드(Personal Cloud)",
+  "title": "퍼스널 클라우드(Personal Cloud)",
+  "definition": "개인의 사진·문서·연락처 등 콘텐츠를 클라우드에 저장·동기화·통합해 단말에 관계없이 언제 어디서나 접근하게 하고, 콘텐츠 분석으로 개인화 서비스를 제공하는 사용자 중심형(User-Centric) 클라우드 서비스",
   "keywords_must": [
-   "웹기반 어플리케이션",
-   "개인화 컨텐츠서비스",
-   "프라이버시 서비스",
+   "온라인 저장소(Online Storage)",
+   "다중 단말 동기화(Sync)",
+   "웹 기반 애플리케이션(SaaS)",
    "웹톱(Webtop)",
-   "온라인 저장소",
-   "웹 애플리케이션",
-   "개인화 콘텐츠",
-   "동기화"
+   "개인화 콘텐츠 서비스",
+   "콘텐츠 공유·백업",
+   "종단간 암호화(E2EE)",
+   "프라이버시 보호 서비스"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "N-스크린",
+   "아이클라우드·구글 드라이브·네이버 MYBOX",
+   "개인용 NAS",
+   "랜섬웨어 대비 버전 관리",
+   "데이터 이동권"
+  ],
   "keywords": [
-   "핵심: 웹기반 어플리케이션 · 개인화 컨텐츠서비스 · 프라이버시 서비스",
-   "기술: 웹톱(Webtop) · 온라인 저장소 · 웹 애플리케이션",
-   "운영: 개인화 콘텐츠 · 동기화"
+   "핵심 기술: 온라인 저장소 · 웹 기반 애플리케이션 · 웹톱 · 동기화",
+   "필수 서비스: 개인화 콘텐츠 · 공유·백업 · 프라이버시 보호"
   ],
   "outline": [
-   "퍼스널 클라우드의 핵심 기술 및 필수 서비스",
-   "- 퍼스널 클라우드의 핵심 기술",
-   "퍼스널 클라우드 서비스 현황 및 발전방향",
-   "- 클라우드 요점"
+   "서비스 성격",
+   "- 사용자 중심: 단말 독립·즉시 이용",
+   "구현 기술",
+   "- 저장·백업: 온라인 저장소",
+   "- 실행 환경: 웹 앱·웹톱",
+   "서비스와 보안 과제",
+   "- 서비스: 개인화·공유",
+   "- 과제: 프라이버시 보호"
   ],
   "sections": [
    {
-    "title": "클라우드 핵심",
+    "title": "서비스 성격",
     "subsections": [
      {
-      "title": null,
+      "title": "사용자 중심: 단말 독립·즉시 이용",
       "items": [
-       "웹기반 어플리케이션: 클라우드에서 웹기반 어플리케이션을 다루는 핵심 암기 포인트",
-       "개인화 컨텐츠서비스: 클라우드에서 개인화 컨텐츠서비스를 다루는 핵심 암기 포인트",
-       "프라이버시 서비스: 클라우드에서 프라이버시 서비스를 다루는 핵심 암기 포인트",
-       "웹톱(Webtop): 클라우드에서 웹톱(Webtop)을 다루는 핵심 암기 포인트"
+       "다중 단말 동기화(Sync): PC·스마트폰·태블릿 간 파일·연락처·일정을 자동 동기화해 N-스크린 이용",
+       "SW-데이터 연동: 웹 애플리케이션이 클라우드 저장 데이터를 바로 열람·편집"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 구성·기술",
+    "title": "구현 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "저장·백업: 온라인 저장소",
       "items": [
-       "온라인 저장소: 클라우드에서 온라인 저장소를 다루는 핵심 암기 포인트",
-       "웹 애플리케이션: 클라우드에서 웹 애플리케이션을 다루는 핵심 암기 포인트",
-       "개인화 콘텐츠: 클라우드에서 개인화 콘텐츠를 다루는 핵심 암기 포인트",
-       "동기화: 클라우드에서 동기화를 다루는 핵심 암기 포인트"
+       "온라인 저장소(Online Storage): 원격 저장 공간과 외부 백업으로 기기 분실·바이러스 손상에 대비, 버전 관리로 랜섬웨어 복구"
+      ]
+     },
+     {
+      "title": "실행 환경: 웹 앱·웹톱",
+      "items": [
+       "웹 기반 애플리케이션(SaaS): 설치 없이 브라우저로 문서·사진 편집, 로컬 컴퓨팅 자원 불필요",
+       "웹톱(Webtop): 바탕화면·파일 탐색기 같은 데스크톱 환경을 웹 브라우저에서 제공"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "서비스와 보안 과제",
+    "subsections": [
+     {
+      "title": "서비스: 개인화·공유",
+      "items": [
+       "개인화 콘텐츠 서비스: 사진 얼굴·장소 자동 분류, 추억 앨범 추천, 링크 기반 공유"
+      ]
+     },
+     {
+      "title": "과제: 프라이버시 보호",
+      "items": [
+       "종단간 암호화(E2EE): 사업자도 열람 불가한 암호화 옵션, 계정 탈취 대비 2단계 인증"
       ]
      }
     ]
@@ -4059,21 +4363,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "웹기반 어플리케이션",
-   "개인화 컨텐츠서비스",
-   "프라이버시 서비스",
+   "온라인 저장소(Online Storage)",
+   "다중 단말 동기화(Sync)",
+   "웹 기반 애플리케이션(SaaS)",
    "웹톱(Webtop)",
-   "온라인 저장소",
-   "웹 애플리케이션",
-   "개인화 콘텐츠",
-   "동기화"
+   "개인화 콘텐츠 서비스",
+   "콘텐츠 공유·백업",
+   "종단간 암호화(E2EE)",
+   "프라이버시 보호 서비스"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_038",
@@ -4088,76 +4393,92 @@
   "dueum": null,
   "name": "오픈스택(OpenStack)",
   "title": "오픈스택(OpenStack)",
-  "definition": "퍼블릭 및 프라이빗 클라우드 컴퓨팅 플랫폼을 구축하는데 필요한 모든 소프트웨어 블록을 개발하는 오픈소스 프로젝트",
+  "definition": "컴퓨트·스토리지·네트워크 자원 풀을 API와 대시보드로 제어해 퍼블릭·프라이빗 IaaS 클라우드를 구축하는 오픈소스 클라우드 플랫폼으로, 2010년 NASA와 랙스페이스가 시작해 현재 OpenInfra 재단이 관리함",
   "keywords_must": [
-   "Nova: Compute 인스턴스 제어",
-   "운영하는 SW",
-   "관리",
-   "쿠베네테스",
-   "KVM",
-   "My-SQL",
-   "오픈 스택(Open Stack) 목적",
-   "VMW",
-   "ESX"
+   "노바(Nova, Compute)",
+   "스위프트(Swift, Object Storage)",
+   "신더(Cinder, Block Storage)",
+   "뉴트론(Neutron, Networking)",
+   "키스톤(Keystone, Identity)",
+   "글랜스(Glance, Image)",
+   "호라이즌(Horizon, Dashboard)",
+   "하이퍼바이저 연동(KVM)",
+   "6개월 릴리스 주기"
   ],
   "keywords_ref": [
-   "Nova",
-   "SQL"
+   "히트(Heat, Orchestration)",
+   "실로미터(Ceilometer, Telemetry)",
+   "매그넘(Magnum, 컨테이너 오케스트레이션)",
+   "메시지 큐(RabbitMQ)·DB(MySQL)",
+   "OpenInfra Foundation"
   ],
   "keywords": [
-   "핵심: Nova: Compute 인스턴스 제어 · 운영하는 SW · 관리",
-   "기술: 쿠베네테스 · KVM · My-SQL",
-   "운영: 오픈 스택(Open Stack) 목적 · VMW · ESX",
-   "참고: Nova · SQL"
+   "컴퓨트·이미지: Nova · Glance",
+   "스토리지·네트워크: Swift · Cinder · Neutron",
+   "공통: Keystone(인증) · Horizon(대시보드) · Heat(오케스트레이션)"
   ],
   "outline": [
-   "IaaS 형태의 클라우드 컴퓨팅 오픈소스 프로젝트, 오픈스택의 개요",
-   "- 오픈스택의 정의",
-   "- 오픈 스택(Open Stack) 목적",
-   "오픈스택 개념 및 유형",
-   "- 오픈스택 개념도",
-   "- 오픈스택 유형별 구성요소",
-   "오픈 스택(Open Stack) 구성도 및 주요 프로젝트",
-   "- 오픈 스택 구성도",
-   "- 오픈스택 주요 프로젝트",
-   "- 주요 오픈 소스 클라우드 플랫폼"
+   "목적과 특징",
+   "- 목적: 벤더 독립 IaaS 표준",
+   "핵심 컴포넌트",
+   "- 컴퓨트·이미지: Nova·Glance",
+   "- 스토리지·네트워크: Swift·Cinder·Neutron",
+   "- 공통 서비스: Keystone·Horizon",
+   "구축 고려사항",
+   "- 운영 복잡도: 버전 업그레이드",
+   "- 연계: 쿠버네티스·컨테이너"
   ],
   "sections": [
    {
-    "title": "오픈스택 핵심",
+    "title": "목적과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "목적: 벤더 독립 IaaS 표준",
       "items": [
-       "Nova: Compute 인스턴스 제어: 오픈스택에서 Nova: Compute 인스턴스 제어를 다루는 핵심 암기 포인트",
-       "운영하는 SW: 오픈스택에서 운영하는 SW를 다루는 핵심 암기 포인트",
-       "관리: 오픈스택에서 관리를 다루는 핵심 암기 포인트",
-       "쿠베네테스: 오픈스택에서 쿠베네테스를 다루는 핵심 암기 포인트"
+       "구현 기술 독립: 특정 벤더에 종속되지 않고 클라우드 간 데이터·애플리케이션 이전을 쉽게 하는 산업 표준 지향",
+       "6개월 릴리스 주기: 알파벳 순 코드명(Austin→Kilo→… 2023년부터 연도.회차 표기)으로 정기 배포"
       ]
      }
     ]
    },
    {
-    "title": "오픈스택 구성·기술",
+    "title": "핵심 컴포넌트",
     "subsections": [
      {
-      "title": null,
+      "title": "컴퓨트·이미지: Nova·Glance",
       "items": [
-       "KVM: KVM를 오픈스택 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "My-SQL: My-SQL를 오픈스택 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "오픈 스택(Open Stack) 목적: 오픈스택에서 오픈 스택(Open Stack) 목적을 다루는 핵심 암기 포인트",
-       "VMW: VMW를 오픈스택 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "노바(Nova, Compute): 가상머신 인스턴스 생성·스케줄링·수명주기 관리, KVM·Xen·VMware 하이퍼바이저 연동",
+       "글랜스(Glance, Image): VM 디스크 이미지 저장·카탈로그 관리"
+      ]
+     },
+     {
+      "title": "스토리지·네트워크: Swift·Cinder·Neutron",
+      "items": [
+       "스위프트(Swift, Object Storage): 다중 복제 분산 객체 저장소, 신더(Cinder)는 VM에 붙이는 블록 볼륨 제공",
+       "뉴트론(Neutron, Networking): 가상 네트워크·서브넷·라우터·보안그룹 제공(SDN 플러그인)"
+      ]
+     },
+     {
+      "title": "공통 서비스: Keystone·Horizon",
+      "items": [
+       "키스톤(Keystone, Identity): 사용자·프로젝트 인증과 토큰 발급, 서비스 카탈로그 제공"
       ]
      }
     ]
    },
    {
-    "title": "오픈스택 운영",
+    "title": "구축 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "운영 복잡도: 버전 업그레이드",
       "items": [
-       "ESX: ESX를 오픈스택 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "컴포넌트가 많아 설치·업그레이드 난도가 높음, 메시지 큐(RabbitMQ)·DB(MySQL) 이중화 필요"
+      ]
+     },
+     {
+      "title": "연계: 쿠버네티스·컨테이너",
+      "items": [
+       "매그넘(Magnum)으로 쿠버네티스 클러스터를 프로비저닝하거나 OpenStack 위에 컨테이너 플랫폼 구성"
       ]
      }
     ]
@@ -4166,22 +4487,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Nova: Compute 인스턴스 제어",
-   "운영하는 SW",
-   "관리",
-   "쿠베네테스",
-   "KVM",
-   "My-SQL",
-   "오픈 스택(Open Stack) 목적",
-   "VMW",
-   "ESX"
+   "노바(Nova, Compute)",
+   "스위프트(Swift, Object Storage)",
+   "신더(Cinder, Block Storage)",
+   "뉴트론(Neutron, Networking)",
+   "키스톤(Keystone, Identity)",
+   "글랜스(Glance, Image)",
+   "호라이즌(Horizon, Dashboard)",
+   "하이퍼바이저 연동(KVM)",
+   "6개월 릴리스 주기"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_041",
@@ -4196,77 +4518,83 @@
   "dueum": null,
   "name": "클라우드 스토리지 가상화(Cloud Storage Virtualization)",
   "title": "클라우드 스토리지 가상화(Cloud Storage Virtualization)",
-  "definition": "인터넷 상의 '어딘가'에 위치하는 저장 공간에 내 정보를 보관해 두고, 이것을 내가 필요할 때 내가 가지고있는 각종 단말기를 통해서 불러올 수 있는 기술",
+  "definition": "이기종 물리 저장장치를 가상화 계층으로 추상화해 하나의 논리적 스토리지 풀로 통합하고, 네트워크를 통해 블록·파일·객체 형태로 필요한 만큼 할당·확장해 제공하는 클라우드 저장 기술",
   "keywords_must": [
-   "DAS",
-   "NAS",
-   "SAN",
-   "클라우드 스토리지 기능",
-   "클라우드 스토리지 가상화 아키텍처",
-   "클라우드 스토리지 가상화 표준",
-   "SCSI",
-   "LAN",
-   "국내",
-   "적은용량, 데이터 공유 불필요 시 사용장점"
+   "DAS(Direct Attached Storage)",
+   "NAS(Network Attached Storage)",
+   "SAN(Storage Area Network)",
+   "스토리지 풀링(Storage Pooling)",
+   "씬 프로비저닝(Thin Provisioning)",
+   "블록·파일·객체 스토리지",
+   "분산 파일 시스템(HDFS·Ceph)",
+   "소프트웨어 정의 스토리지(SDS)"
   ],
   "keywords_ref": [
-   "국외",
-   "CAS(Content Addressed Storage)",
-   "MPS",
-   "TCO"
+   "iSCSI·FC·NFS·SMB",
+   "중복 제거(Deduplication)",
+   "계층화(Tiering)",
+   "복제·스냅샷",
+   "아마존 S3·EBS"
   ],
   "keywords": [
-   "핵심: DAS · NAS · SAN",
-   "기술: 클라우드 스토리지 기능 · 클라우드 스토리지 가상화 아키텍처 · 클라우드 스토리지 가상화 표준",
-   "운영: SCSI · LAN · 국내",
-   "참고: 국외 · CAS(Content Addressed Storage) · MPS"
+   "연결 방식: DAS(직접 연결) · NAS(파일 공유) · SAN(블록 전용망)",
+   "가상화: 스토리지 풀링 · 씬 프로비저닝 · 계층화 · 중복 제거",
+   "제공 형태: 블록(EBS) · 파일(EFS) · 객체(S3)"
   ],
   "outline": [
-   "클라우드 스토리지(Cloud Storage)의 개요",
-   "- 클라우드 스토리지(Cloud Storage)의 정의",
-   "- 클라우드 스토리지(Cloud Storage)의 발전배경",
-   "클라우드 스토리지 기능 및 플랫폼, 핵심기술",
-   "- 클라우드 스토리지 기능",
-   "클라우드 스토리지 가상화 적용 사례",
-   "- 클라우드 스토리지 가상화 요점"
+   "발전 배경",
+   "- 배경: 비정형 데이터 급증·비용 효율",
+   "스토리지 연결 방식",
+   "- 직접·파일 공유: DAS·NAS",
+   "- 블록 전용망: SAN",
+   "가상화 핵심기술",
+   "- 풀링·할당: 씬 프로비저닝",
+   "- 분산 저장: Ceph·HDFS·SDS"
   ],
   "sections": [
    {
-    "title": "클라우드 스토리지 가상화 핵심",
+    "title": "발전 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 비정형 데이터 급증·비용 효율",
       "items": [
-       "DAS: DAS를 클라우드 스토리지 가상화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "NAS: NAS를 클라우드 스토리지 가상화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "SAN: SAN를 클라우드 스토리지 가상화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "클라우드 스토리지 기능: 클라우드 스토리지 가상화에서 클라우드 스토리지 기능을 다루는 핵심 암기 포인트"
+       "모바일·빅데이터로 정형·비정형 데이터가 급증하고 저장 비용 효율과 확장 유연성 요구 증가"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 스토리지 가상화 구성·기술",
+    "title": "스토리지 연결 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "직접·파일 공유: DAS·NAS",
       "items": [
-       "클라우드 스토리지 가상화 아키텍처: 클라우드 스토리지 가상화의 계층·모듈 배치와 상호작용 구조",
-       "클라우드 스토리지 가상화 표준: 클라우드 스토리지 가상화 상호운용·품질을 맞추는 규격·기준",
-       "SCSI: SCSI를 클라우드 스토리지 가상화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "LAN: LAN를 클라우드 스토리지 가상화 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "DAS(Direct Attached Storage): SCSI·FC 케이블로 서버에 직결, 성능은 좋으나 공유 불가·확장 한계",
+       "NAS(Network Attached Storage): LAN으로 NFS·SMB 파일 공유, 설치 쉽고 이기종 OS 공유"
+      ]
+     },
+     {
+      "title": "블록 전용망: SAN",
+      "items": [
+       "SAN(Storage Area Network): FC·iSCSI 전용망으로 블록 단위 고속 접근, 다수 서버의 통합 스토리지"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 스토리지 가상화 운영",
+    "title": "가상화 핵심기술",
     "subsections": [
      {
-      "title": null,
+      "title": "풀링·할당: 씬 프로비저닝",
       "items": [
-       "국내: 클라우드 스토리지 가상화에서 국내를 다루는 핵심 암기 포인트",
-       "적은용량, 데이터 공유 불필요 시 사용장점: 클라우드 스토리지 가상화에서 적은용량, 데이터 공유 불필요 시 사용장점을 다루는 핵심 암기 포인트"
+       "스토리지 풀링(Storage Pooling): 여러 장치를 하나의 논리 풀로 묶어 볼륨 단위 할당",
+       "씬 프로비저닝(Thin Provisioning): 논리 용량은 크게 보이되 실제 기록량만큼만 물리 공간 사용"
+      ]
+     },
+     {
+      "title": "분산 저장: Ceph·HDFS·SDS",
+      "items": [
+       "분산 파일 시스템(HDFS·Ceph): 범용 서버에 데이터를 3중 복제·분산 저장, SDS로 HW 종속 탈피"
       ]
      }
     ]
@@ -4275,23 +4603,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "DAS",
-   "NAS",
-   "SAN",
-   "클라우드 스토리지 기능",
-   "클라우드 스토리지 가상화 아키텍처",
-   "클라우드 스토리지 가상화 표준",
-   "SCSI",
-   "LAN",
-   "국내",
-   "적은용량, 데이터 공유 불필요 시 사용장점"
+   "DAS(Direct Attached Storage)",
+   "NAS(Network Attached Storage)",
+   "SAN(Storage Area Network)",
+   "스토리지 풀링(Storage Pooling)",
+   "씬 프로비저닝(Thin Provisioning)",
+   "블록·파일·객체 스토리지",
+   "분산 파일 시스템(HDFS·Ceph)",
+   "소프트웨어 정의 스토리지(SDS)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_043",
@@ -4304,62 +4631,94 @@
   ],
   "en": "ISO/IEC 27017",
   "dueum": null,
-  "name": "클라우드 보안(ISO/IEC 27017)",
-  "title": "클라우드 보안(ISO/IEC 27017)",
-  "definition": "불확실한 클라우드 가시성 ISO/IEC ① 클라우드 신뢰성 확보 클라우드 정보 유출 사고 ② 클라우드 보안사고 방지",
+  "name": "클라우드 서비스 정보보호 통제(ISO/IEC 27017)",
+  "title": "클라우드 서비스 정보보호 통제(ISO/IEC 27017)",
+  "definition": "ISO/IEC 27002의 통제항목을 클라우드 환경에 맞게 구체화하고 클라우드 고유 통제 7개를 추가해 클라우드 서비스 제공자(CSP)와 이용자(CSC)의 역할별 정보보호 통제를 제시하는 국제 표준 (2015년 제정)",
   "keywords_must": [
-   "클라우드 보안 인증제도",
-   "ISO/IEC 27017 의 목적",
-   "ISO/IEC 27017 의 표준구성",
-   "클라우드 보안 아키텍처",
-   "ISO",
-   "IEC",
-   "ISO/IEC 국제기구 - ISO/IEC 국제기구",
-   "IaaS"
+   "ISO/IEC 27002 기반",
+   "CSP·CSC 역할별 지침",
+   "클라우드 고유 통제(CLD 7개)",
+   "책임 공유(Shared Roles and Responsibilities)",
+   "가상 환경 분리(Segregation in Virtual Environment)",
+   "고객 자산 반환·삭제(Removal of Assets)",
+   "가상머신 강화(VM Hardening)",
+   "관리자 운영 보안(Administrator's Operational Security)",
+   "클라우드 서비스 모니터링"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "ISO/IEC 27001 인증 연계",
+   "ISO/IEC 27018(개인정보)",
+   "가상·물리 네트워크 보안 일관성(CLD.13.1.4)",
+   "암호키 이용자 관리",
+   "CSAP"
+  ],
   "keywords": [
-   "핵심: 클라우드 보안 인증제도 · ISO/IEC 27017 의 목적 · ISO/IEC 27017 의 표준구성",
-   "기술: 클라우드 보안 아키텍처 · ISO · IEC",
-   "운영: ISO/IEC 국제기구 - ISO/IEC 국제기구 · IaaS"
+   "기반: ISO/IEC 27002 통제 확장 + 클라우드 고유 통제 7개",
+   "고유 통제: 책임 공유 · 자산 반환 · 가상 환경 분리 · VM 강화 · 관리자 운영 보안 · 모니터링 · 네트워크 일관성",
+   "연계: ISO/IEC 27001 · 27018 · CSAP"
   ],
   "outline": [
-   "클라우드 서비스 보안 국제 표준, ISO/IEC 27017 의 필요성",
-   "- 클라우드 보안 요점",
-   "클라우드 서비스 보안 국제 표준, ISO/IEC 27017 의 개념",
-   "- ISO/IEC 27017 의 정의",
-   "- ISO/IEC 27017 의 목적",
-   "- ISO/IEC 27017 의 표준구성",
-   "ISO/IEC 27017 의 통제항목(정조인자 접암물운 통개공사연법)",
-   "- 클라우드 보안 요점",
-   "클라우드 보안 표준 비교",
-   "- 클라우드 보안 요점"
+   "필요성과 목적",
+   "- 도입 문제: 가시성·유출·운영 이슈",
+   "- 목적: 역할별 통제 지침",
+   "통제 구성",
+   "- 27002 확장: 14개 도메인",
+   "- 클라우드 고유 통제: CLD 7개",
+   "인증과 활용",
+   "- 인증: 27001과 함께 심사",
+   "- 연계 표준: 27018·CSAP"
   ],
   "sections": [
    {
-    "title": "클라우드 보안 핵심",
+    "title": "필요성과 목적",
     "subsections": [
      {
-      "title": null,
+      "title": "도입 문제: 가시성·유출·운영 이슈",
       "items": [
-       "클라우드 보안 인증제도: 클라우드 보안에서 클라우드 보안 인증제도를 다루는 핵심 암기 포인트",
-       "ISO/IEC 27017 의 목적: 클라우드 보안에서 ISO/IEC 27017 의 목적을 다루는 핵심 암기 포인트",
-       "ISO/IEC 27017 의 표준구성: 클라우드 보안 상호운용·품질을 맞추는 규격·기준",
-       "클라우드 보안 아키텍처: 클라우드 보안의 계층·모듈 배치와 상호작용 구조"
+       "클라우드 보안 우려가 도입 장벽, 국제 표준 인증으로 신뢰성 확보·사고 방지·법적 컴플라이언스 대응"
+      ]
+     },
+     {
+      "title": "목적: 역할별 통제 지침",
+      "items": [
+       "CSP·CSC 역할별 지침: 각 통제마다 제공자와 이용자가 수행할 사항을 나누어 제시"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 보안 구성·기술",
+    "title": "통제 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "27002 확장: 14개 도메인",
       "items": [
-       "ISO: ISO를 클라우드 보안 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "IEC: IEC를 클라우드 보안 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ISO/IEC 국제기구 - ISO/IEC 국제기구: 클라우드 보안에서 ISO/IEC 국제기구 - ISO/IEC 국제기구를 다루는 핵심 암기 포인트",
-       "IaaS: 가상머신·스토리지·네트워크를 온디맨드로 제공하는 클라우드 모델 (클라우드 보안/0351)"
+       "정보보호정책·조직·인적보안·자산관리·접근통제·암호화·물리·운영·통신 보안 등 기존 도메인에 클라우드 지침 추가",
+       "암호화 통제: 이용자가 암호키를 독립적으로 저장·관리하는 기능 제공"
+      ]
+     },
+     {
+      "title": "클라우드 고유 통제: CLD 7개",
+      "items": [
+       "가상 환경 분리(Segregation in Virtual Environment): 멀티테넌트 간 자원 분리, CSP 내부 관리 자원과 고객 자원 분리",
+       "고객 자산 반환·삭제(Removal of Assets): 계약 종료 시 고객 데이터 반환·안전 삭제",
+       "가상머신 강화(VM Hardening): 불필요 포트·서비스 제거, 관리자 운영 보안은 중요 작업 절차 문서화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "인증과 활용",
+    "subsections": [
+     {
+      "title": "인증: 27001과 함께 심사",
+      "items": [
+       "ISO/IEC 27001 인증 연계: 27017은 단독 인증이 아니라 27001 ISMS 심사 시 확장 통제로 평가"
+      ]
+     },
+     {
+      "title": "연계 표준: 27018·CSAP",
+      "items": [
+       "ISO/IEC 27018은 퍼블릭 클라우드 개인정보(PII) 보호, 국내 공공 분야는 CSAP 인증 병행"
       ]
      }
     ]
@@ -4368,21 +4727,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "클라우드 보안 인증제도",
-   "ISO/IEC 27017 의 목적",
-   "ISO/IEC 27017 의 표준구성",
-   "클라우드 보안 아키텍처",
-   "ISO",
-   "IEC",
-   "ISO/IEC 국제기구 - ISO/IEC 국제기구",
-   "IaaS"
+   "ISO/IEC 27002 기반",
+   "CSP·CSC 역할별 지침",
+   "클라우드 고유 통제(CLD 7개)",
+   "책임 공유(Shared Roles and Responsibilities)",
+   "가상 환경 분리(Segregation in Virtual Environment)",
+   "고객 자산 반환·삭제(Removal of Assets)",
+   "가상머신 강화(VM Hardening)",
+   "관리자 운영 보안(Administrator's Operational Security)",
+   "클라우드 서비스 모니터링"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_044",
@@ -4393,61 +4754,91 @@
    58,
    62
   ],
-  "en": "XaaS Everything",
+  "en": "Everything as a Service",
   "dueum": null,
-  "name": "디지털서비스(XaaS(Everything))",
-  "title": "디지털서비스(XaaS(Everything))",
-  "definition": "서비스 형태로 제공될 수 있는 모든 IT 요소를 총칭함. Everything as a Service",
+  "name": "XaaS(Everything as a Service)",
+  "title": "XaaS(Everything as a Service)",
+  "definition": "인프라·플랫폼·소프트웨어뿐 아니라 데이터·보안·네트워크·데스크톱 등 거의 모든 IT 요소를 클라우드에서 온디맨드·종량제 서비스로 제공하는 개념의 총칭",
   "keywords_must": [
-   "AaaS(Architecture as a Service)",
-   "BaaS(Business as a Service)",
-   "Paas(Platform as a Service)",
-   "DCaaS(Data-Center as a Service)",
+   "IaaS(Infrastructure as a Service)",
+   "PaaS(Platform as a Service)",
    "SaaS(Software as a Service)",
-   "FaaS(Framework as a Service)",
-   "HaaS(Hardware as a Service)",
-   "CaaS(Communications as a Service)"
+   "FaaS(Function as a Service)",
+   "CaaS(Container as a Service)",
+   "DaaS(Desktop as a Service)",
+   "SECaaS(Security as a Service)",
+   "IDaaS(Identity as a Service)",
+   "BaaS(Backend as a Service)",
+   "NaaS(Network as a Service)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "DBaaS",
+   "BPaaS(Business Process as a Service)",
+   "서비스 카탈로그·SLA 품질지표",
+   "종량제(Pay-per-Use)",
+   "서비타이제이션"
+  ],
   "keywords": [
-   "핵심: AaaS(Architecture as a Service) · BaaS(Business as a Service) · Paas(Platform as a Service)",
-   "기술: DCaaS(Data-Center as a Service) · SaaS(Software as a Service) · FaaS(Framework as a Service)",
-   "운영: HaaS(Hardware as a Service) · CaaS(Communications as a Service)"
+   "기본 3계층: IaaS · PaaS · SaaS",
+   "확장: FaaS · CaaS · BaaS · DaaS · DBaaS · NaaS",
+   "보안·ID: SECaaS · IDaaS"
   ],
   "outline": [
-   "디지털서비스의 개요",
-   "- 디지털서비스의 정의",
-   "- 디지털서비스의 특징",
-   "디지털서비스의 구성과 기술",
-   "- 디지털서비스의 핵심 요소",
-   "디지털서비스의 적용",
-   "- 디지털서비스 요점"
+   "확산 배경",
+   "- 소유에서 이용으로: 온디맨드·종량제",
+   "분류와 상세 종류",
+   "- 인프라·플랫폼 계열",
+   "- 애플리케이션·사용자 계열",
+   "관리 고려사항",
+   "- 품질: 서비스별 SLA·카탈로그",
+   "- 위험: 종속·비용 통제"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "확산 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "소유에서 이용으로: 온디맨드·종량제",
       "items": [
-       "AaaS(Architecture as a Service): AaaS를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "BaaS(Business as a Service): 인증·DB 등 백엔드 기능을 API로 제공하는 서비스",
-       "Paas(Platform as a Service): Paas를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "DCaaS(Data-Center as a Service): DCaaS를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "유지보수·인력·인프라를 직접 보유하지 않고 필요한 기능만 구독, 확장성과 빠른 도입이 장점"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "분류와 상세 종류",
     "subsections": [
      {
-      "title": null,
+      "title": "인프라·플랫폼 계열",
       "items": [
-       "SaaS(Software as a Service): 완성 애플리케이션을 구독형으로 제공하는 클라우드 모델",
-       "FaaS(Framework as a Service): 이벤트 단위 함수만 배포·과금하는 서버리스 실행 모델",
-       "HaaS(Hardware as a Service): HaaS를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CaaS(Communications as a Service): CaaS를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "FaaS(Function as a Service): 이벤트 발생 시 함수 단위 실행·과금(AWS Lambda)",
+       "CaaS(Container as a Service): 컨테이너 클러스터 관리형 제공(EKS·GKE)",
+       "NaaS(Network as a Service): VPN·대역폭·SD-WAN을 구독형으로 제공"
+      ]
+     },
+     {
+      "title": "애플리케이션·사용자 계열",
+      "items": [
+       "BaaS(Backend as a Service): 인증·DB·푸시 등 모바일 백엔드 제공(Firebase)",
+       "DaaS(Desktop as a Service): 가상 데스크톱을 클라우드에서 제공(Amazon WorkSpaces)",
+       "SECaaS·IDaaS: 보안 기능(WAF·백신)과 SSO·MFA 인증을 서비스로 제공(Okta)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "관리 고려사항",
+    "subsections": [
+     {
+      "title": "품질: 서비스별 SLA·카탈로그",
+      "items": [
+       "서비스 카탈로그·SLA 품질지표: 가용성·응답시간·복구시간(RTO) 등 서비스별 지표를 계약에 명시"
+      ]
+     },
+     {
+      "title": "위험: 종속·비용 통제",
+      "items": [
+       "다수 구독 누적에 따른 비용 증가와 벤더 종속, 데이터 위치·보안 책임 경계 확인 필요"
       ]
      }
     ]
@@ -4456,21 +4847,27 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "AaaS(Architecture as a Service)",
-   "BaaS(Business as a Service)",
-   "Paas(Platform as a Service)",
-   "DCaaS(Data-Center as a Service)",
+   "IaaS(Infrastructure as a Service)",
+   "PaaS(Platform as a Service)",
    "SaaS(Software as a Service)",
-   "FaaS(Framework as a Service)",
-   "HaaS(Hardware as a Service)",
-   "CaaS(Communications as a Service)"
+   "FaaS(Function as a Service)",
+   "CaaS(Container as a Service)",
+   "DaaS(Desktop as a Service)",
+   "SECaaS(Security as a Service)",
+   "IDaaS(Identity as a Service)",
+   "BaaS(Backend as a Service)",
+   "NaaS(Network as a Service)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "RTO": "Recovery Time Objective"
+  },
+  "hand": true
  },
  {
   "id": "SV_045",
@@ -4483,55 +4880,87 @@
   ],
   "en": "Platform as a Service",
   "dueum": null,
-  "name": "플랫폼 서비스(PaaS)",
-  "title": "플랫폼 서비스(PaaS)",
-  "definition": "클라우드에서 고객의 어플리케이션을 개발, 테스트, 구축할 수 있는 통합된 플랫폼 모델",
+  "name": "플랫폼 서비스(PaaS, Platform as a Service)",
+  "title": "플랫폼 서비스(PaaS, Platform as a Service)",
+  "definition": "운영체제·런타임·미들웨어·DB 등 애플리케이션 개발·실행 환경을 클라우드 서비스로 제공해 개발자가 인프라 관리 없이 코드 작성·빌드·배포·확장에 집중하게 하는 클라우드 서비스 모델",
   "keywords_must": [
-   "클라우드",
-   "과금",
-   "개발플랫폼",
-   "PaaS-TA",
-   "개발관점",
-   "플랫폼 서비스 아키텍처"
+   "런타임·미들웨어 제공",
+   "빌드팩(Buildpack)",
+   "자동 확장(Auto Scaling)",
+   "서비스 브로커(Service Broker)",
+   "CI/CD·DevOps 지원",
+   "멀티테넌시(Multi-tenancy)",
+   "클라우드 파운드리(Cloud Foundry)",
+   "오픈시프트(OpenShift)",
+   "파스-타(PaaS-TA)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "Heroku·Google App Engine",
+   "12-Factor App",
+   "컨테이너 기반 PaaS(쿠버네티스)",
+   "aPaaS·iPaaS",
+   "벤더 종속(Lock-in)"
+  ],
   "keywords": [
-   "핵심: 클라우드 · 과금 · 개발플랫폼",
-   "기술: PaaS-TA · 개발관점 · 플랫폼 서비스 아키텍처"
+   "기능: 런타임·미들웨어 · 빌드팩 · 서비스 브로커 · 자동 확장 · CI/CD",
+   "오픈 PaaS: Cloud Foundry · OpenShift · PaaS-TA(한국형)",
+   "비교: IaaS(OS부터 관리) ↔ PaaS(코드·데이터만 관리) ↔ SaaS(사용만)"
   ],
   "outline": [
-   "PaaS 오픈소스 비교",
-   "- Open Cloud Foundry",
-   "- OpenShift 특징",
-   "구성 요소 대비",
-   "- 빌드·배포 파이프라인",
-   "- 오케스트레이션",
-   "선택 기준·시사점",
-   "- 플랫폼 서비스 요점"
+   "관리 범위와 장점",
+   "- 관리 범위: 코드·데이터만 사용자 책임",
+   "기능별 구성요소",
+   "- 개발·배포: 빌드팩·CI/CD",
+   "- 운영: 서비스 브로커·자동 확장",
+   "오픈소스 플랫폼 동향",
+   "- 글로벌: Cloud Foundry·OpenShift",
+   "- 국내: 한국형 개방 플랫폼 파스-타"
   ],
   "sections": [
    {
-    "title": "플랫폼 서비스 핵심",
+    "title": "관리 범위와 장점",
     "subsections": [
      {
-      "title": null,
+      "title": "관리 범위: 코드·데이터만 사용자 책임",
       "items": [
-       "클라우드: 플랫폼 서비스에서 클라우드를 다루는 핵심 암기 포인트",
-       "과금: 플랫폼 서비스에서 과금을 다루는 핵심 암기 포인트",
-       "개발플랫폼: 플랫폼 서비스에서 개발플랫폼을 다루는 핵심 암기 포인트",
-       "PaaS-TA: PaaS-TA를 플랫폼 서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "런타임·미들웨어 제공: OS 패치·미들웨어 설치를 CSP가 담당해 개발 생산성 향상",
+       "멀티테넌시(Multi-tenancy): 하나의 플랫폼을 여러 고객 앱이 격리 공유해 비용 절감"
       ]
      }
     ]
    },
    {
-    "title": "플랫폼 서비스 구성·기술",
+    "title": "기능별 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "개발·배포: 빌드팩·CI/CD",
       "items": [
-       "개발관점: 플랫폼 서비스에서 개발관점을 다루는 핵심 암기 포인트",
-       "플랫폼 서비스 아키텍처: 플랫폼 서비스의 계층·모듈 배치와 상호작용 구조"
+       "빌드팩(Buildpack): 소스 코드 언어를 감지해 런타임·의존성을 자동 구성(cf push 한 번으로 배포)",
+       "CI/CD·DevOps 지원: 빌드·테스트·배포 파이프라인과 롤링 업데이트 제공"
+      ]
+     },
+     {
+      "title": "운영: 서비스 브로커·자동 확장",
+      "items": [
+       "서비스 브로커(Service Broker): DB·메시지 큐 같은 백엔드 서비스를 앱에 바인딩(Open Service Broker API)",
+       "자동 확장(Auto Scaling): 부하에 따라 앱 인스턴스 수를 자동 조정, 로깅·모니터링 통합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "오픈소스 플랫폼 동향",
+    "subsections": [
+     {
+      "title": "글로벌: Cloud Foundry·OpenShift",
+      "items": [
+       "클라우드 파운드리(Cloud Foundry)는 빌드팩 중심, 오픈시프트(OpenShift)는 쿠버네티스 기반 레드햇 PaaS"
+      ]
+     },
+     {
+      "title": "국내: 한국형 개방 플랫폼 파스-타",
+      "items": [
+       "파스-타(PaaS-TA): 2016년 과기정통부·NIA 주도로 Cloud Foundry 기반 개발한 한국형 개방형 PaaS"
       ]
      }
     ]
@@ -4540,19 +4969,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "클라우드",
-   "과금",
-   "개발플랫폼",
-   "PaaS-TA",
-   "개발관점",
-   "플랫폼 서비스 아키텍처"
+   "런타임·미들웨어 제공",
+   "빌드팩(Buildpack)",
+   "자동 확장(Auto Scaling)",
+   "서비스 브로커(Service Broker)",
+   "CI/CD·DevOps 지원",
+   "멀티테넌시(Multi-tenancy)",
+   "클라우드 파운드리(Cloud Foundry)",
+   "오픈시프트(OpenShift)",
+   "파스-타(PaaS-TA)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_046",
@@ -4565,71 +4998,86 @@
   ],
   "en": "Backend as a Service",
   "dueum": null,
-  "name": "백엔드 서비스(BaaS)",
-  "title": "백엔드 서비스(BaaS)",
-  "definition": "모바일 어플리케이션 백엔드로 연결하는 데이터, 접속제어 기능들을 API로 연결 제공하는 서비스",
+  "name": "백엔드 서비스(BaaS, Backend as a Service)",
+  "title": "백엔드 서비스(BaaS, Backend as a Service)",
+  "definition": "모바일·웹 앱 개발에 필요한 데이터 저장·사용자 인증·푸시 알림·파일 저장 등 서버 측 기능을 클라우드에서 API·SDK로 제공해 개발자가 서버를 직접 구축하지 않고 프론트엔드 개발에 집중하게 하는 서비스 (MBaaS라고도 함)",
   "keywords_must": [
-   "모바일앱",
-   "API 연결",
-   "데이터 저장소",
-   "Push 사용자",
-   "관리",
-   "소셜 인증",
-   "Location",
-   "Billing",
-   "BaaS의 개념도",
-   "BaaS의 주요기능"
+   "데이터 저장소 API(NoSQL)",
+   "사용자 관리·인증(OAuth·소셜 로그인)",
+   "푸시 알림(APNs·FCM)",
+   "파일·미디어 스토리지",
+   "위치 기반 서비스(Location)",
+   "사용량 과금(API 호출·사용자 수)",
+   "멀티테넌시(Multi-tenancy)",
+   "SDK 제공"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "파이어베이스(Firebase)",
+   "수파베이스(Supabase)·AWS Amplify",
+   "서버리스·FaaS 비교",
+   "벤더 종속",
+   "실시간 DB 동기화"
+  ],
   "keywords": [
-   "핵심: 모바일앱 · API 연결 · 데이터 저장소",
-   "기술: Push 사용자 · 관리 · 소셜 인증",
-   "운영: Location · Billing · BaaS의 개념도"
+   "주요 기능: 데이터 저장소 · 사용자 관리 · 소셜 인증 · 푸시 · 위치 · 과금",
+   "핵심기술: 푸시(APNs·FCM) · 가상화 · 클라우드 스토리지 · 멀티테넌시",
+   "사례: Firebase · Supabase · AWS Amplify"
   ],
   "outline": [
-   "모바일 어플리케이션, BaaS(Backend as a Service)의 개요",
-   "- 백엔드 서비스 요점",
-   "BaaS 의 개념도 및 주요기능",
-   "- BaaS 의 개념도",
-   "- BaaS 의 주요기능"
+   "특성",
+   "- 모바일 특화: 서버 없이 백엔드 연결",
+   "주요 기능",
+   "- 데이터·사용자: 저장소·인증",
+   "- 메시징·위치: 푸시·Location",
+   "기반기술과 고려사항",
+   "- 기반: 가상화·멀티테넌시",
+   "- 고려사항: 종속·복잡 로직"
   ],
   "sections": [
    {
-    "title": "백엔드 서비스 핵심",
+    "title": "특성",
     "subsections": [
      {
-      "title": null,
+      "title": "모바일 특화: 서버 없이 백엔드 연결",
       "items": [
-       "모바일앱: 백엔드 서비스에서 모바일앱을 다루는 핵심 암기 포인트",
-       "API 연결: 백엔드 서비스에서 API 연결을 다루는 핵심 암기 포인트",
-       "데이터 저장소: 백엔드 서비스에서 데이터 저장소를 다루는 핵심 암기 포인트",
-       "Push 사용자: 백엔드 서비스에서 Push 사용자를 다루는 핵심 암기 포인트"
+       "SDK 제공: iOS·Android·웹 SDK로 몇 줄 코드만에 DB·인증 연결, 서버 개발·운영 인력 절감",
+       "사용량 과금: API 호출 수·활성 사용자 수·저장 용량 기준 종량 과금"
       ]
      }
     ]
    },
    {
-    "title": "백엔드 서비스 구성·기술",
+    "title": "주요 기능",
     "subsections": [
      {
-      "title": null,
+      "title": "데이터·사용자: 저장소·인증",
       "items": [
-       "관리: 백엔드 서비스에서 관리를 다루는 핵심 암기 포인트",
-       "소셜 인증: 백엔드 서비스에서 소셜 인증을 다루는 핵심 암기 포인트",
-       "Location: Location를 백엔드 서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Billing: Billing를 백엔드 서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "데이터 저장소 API(NoSQL): 문서형 DB에 JSON 저장·조회, 실시간 동기화(Firestore)",
+       "사용자 관리·인증: OAuth 기반 가입·로그인, 구글·애플 소셜 로그인, 역할 기반 접근제어"
+      ]
+     },
+     {
+      "title": "메시징·위치: 푸시·Location",
+      "items": [
+       "푸시 알림(APNs·FCM): 특정 기기·주제 구독자에게 알림 전송, 구 GCM은 FCM으로 대체",
+       "위치 기반 서비스(Location): GIS 좌표 저장·주변 검색 API"
       ]
      }
     ]
    },
    {
-    "title": "백엔드 서비스 운영",
+    "title": "기반기술과 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "기반: 가상화·멀티테넌시",
       "items": [
-       "BaaS의 개념도: 백엔드 서비스의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "BaaS의 주요기능: 백엔드 서비스에서 BaaS의 주요기능을 다루는 핵심 암기 포인트"
+       "멀티테넌시(Multi-tenancy): 여러 앱이 같은 백엔드 자원을 격리 공유, 가상화·씬 프로비저닝으로 효율화"
+      ]
+     },
+     {
+      "title": "고려사항: 종속·복잡 로직",
+      "items": [
+       "독자 데이터 모델로 이전이 어려운 벤더 종속, 복잡한 비즈니스 로직은 FaaS(Cloud Functions)로 보완"
       ]
      }
     ]
@@ -4638,23 +5086,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "모바일앱",
-   "API 연결",
-   "데이터 저장소",
-   "Push 사용자",
-   "관리",
-   "소셜 인증",
-   "Location",
-   "Billing",
-   "BaaS의 개념도",
-   "BaaS의 주요기능"
+   "데이터 저장소 API(NoSQL)",
+   "사용자 관리·인증(OAuth·소셜 로그인)",
+   "푸시 알림(APNs·FCM)",
+   "파일·미디어 스토리지",
+   "위치 기반 서비스(Location)",
+   "사용량 과금(API 호출·사용자 수)",
+   "멀티테넌시(Multi-tenancy)",
+   "SDK 제공"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_047",
@@ -4665,56 +5112,88 @@
    56,
    57
   ],
-  "en": "DaaS Data center as a Service",
+  "en": "Data Center as a Service",
   "dueum": null,
-  "name": "데이터(DaaS(Data center as a Service))",
-  "title": "데이터(DaaS(Data center as a Service))",
-  "definition": "클라우드 서비스 공급자가 물리적 데이터 센터 시설 및 인프라를 사용자에게 아웃소싱 형태로 전달하는 서비스",
+  "name": "데이터센터 서비스(DCaaS, Data Center as a Service)",
+  "title": "데이터센터 서비스(DCaaS, Data Center as a Service)",
+  "definition": "클라우드·데이터센터 사업자가 전력·냉각·랙·네트워크 등 물리 데이터센터 시설과 인프라를 고객에게 서비스 형태로 아웃소싱해 제공하고 운영·모니터링·이전까지 지원하는 서비스",
   "keywords_must": [
-   "Managed Services",
-   "Automation",
-   "Build",
-   "Depoly",
-   "데이터 아키텍처",
-   "ICC",
-   "IBM"
+   "매니지드 서비스(Managed Services)",
+   "자동화(Automation)",
+   "구축·배치·통합·이전(Build·Deploy·Integrate & Migrate)",
+   "자문·평가(Advisory & Assessment)",
+   "코로케이션(Colocation)",
+   "비즈니스 연속성(BCP·DR)",
+   "PUE(Power Usage Effectiveness)",
+   "티어 등급(Uptime Institute Tier I~IV)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "KT ICC(Internet Computing Center)",
+   "차세대 데이터센터(NGDC)",
+   "IDC 상면 임대",
+   "모듈형 데이터센터",
+   "그린 데이터센터"
+  ],
   "keywords": [
-   "핵심: Managed Services · Automation · Build",
-   "기술: Depoly · 데이터 아키텍처 · ICC",
-   "운영: IBM"
+   "요소기술: 매니지드 서비스 · 자동화 · 구축·이전 · 자문·평가",
+   "품질: 티어 I~IV 가용성 · PUE · BCP·DR"
   ],
   "outline": [
-   "데이터센터 아웃소싱, DCaaS 의 개요",
-   "- 데이터 요점",
-   "DCaaS 대표사례",
-   "- 데이터 요점"
+   "개념과 효용",
+   "- 효용: 대용량·보안·연속성",
+   "요소기술",
+   "- 운영: 매니지드·자동화",
+   "- 전환: 구축·이전·자문",
+   "품질 지표와 사례",
+   "- 지표: 티어·PUE",
+   "- 사례: KT ICC·NGDC"
   ],
   "sections": [
    {
-    "title": "데이터 핵심",
+    "title": "개념과 효용",
     "subsections": [
      {
-      "title": null,
+      "title": "효용: 대용량·보안·연속성",
       "items": [
-       "Managed Services: 데이터에서 Managed Services를 다루는 핵심 암기 포인트",
-       "Automation: Automation를 데이터 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Build: Build를 데이터 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Depoly: Depoly를 데이터 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "코로케이션(Colocation): 고객 장비를 사업자 센터에 입주시키고 전력·냉각·회선 제공, 초기 투자 절감",
+       "비즈니스 연속성(BCP·DR): 이중 전원·원격 백업센터로 재해 시 서비스 지속"
       ]
      }
     ]
    },
    {
-    "title": "데이터 구성·기술",
+    "title": "요소기술",
     "subsections": [
      {
-      "title": null,
+      "title": "운영: 매니지드·자동화",
       "items": [
-       "데이터 아키텍처: 데이터의 계층·모듈 배치와 상호작용 구조",
-       "ICC: ICC를 데이터 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "IBM: IBM를 데이터 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "매니지드 서비스(Managed Services): 스토리지·네트워크·컴퓨트 운영, 모니터링과 정기 리포트 제공",
+       "자동화(Automation): 인프라 프로비저닝·사용량 측정 자동 처리"
+      ]
+     },
+     {
+      "title": "전환: 구축·이전·자문",
+      "items": [
+       "구축·배치·통합·이전: 데이터센터 통합·변경·마이그레이션 수행",
+       "자문·평가(Advisory & Assessment): 인프라 평가, ROI 분석, 고수준 설계 지원"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "품질 지표와 사례",
+    "subsections": [
+     {
+      "title": "지표: 티어·PUE",
+      "items": [
+       "티어 등급(Uptime Institute): Tier III 동시 유지보수 가능 99.982%, Tier IV 내결함성 99.995%",
+       "PUE(Power Usage Effectiveness): 총 전력/IT 전력, 1.0에 가까울수록 효율적"
+      ]
+     },
+     {
+      "title": "사례: KT ICC·NGDC",
+      "items": [
+       "KT ICC는 다운로드·캐시·스트리밍 인프라 제공, HP·IBM은 차세대 데이터센터(NGDC)로 서비스화 추진"
       ]
      }
     ]
@@ -4723,20 +5202,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Managed Services",
-   "Automation",
-   "Build",
-   "Depoly",
-   "데이터 아키텍처",
-   "ICC",
-   "IBM"
+   "매니지드 서비스(Managed Services)",
+   "자동화(Automation)",
+   "구축·배치·통합·이전(Build·Deploy·Integrate & Migrate)",
+   "자문·평가(Advisory & Assessment)",
+   "코로케이션(Colocation)",
+   "비즈니스 연속성(BCP·DR)",
+   "PUE(Power Usage Effectiveness)",
+   "티어 등급(Uptime Institute Tier I~IV)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_048",
@@ -4747,80 +5228,89 @@
    58,
    59
   ],
-  "en": "DaaS Desktop as a Service",
+  "en": "Desktop as a Service",
   "dueum": null,
-  "name": "디지털서비스(DaaS(Desktop as a Service))",
-  "title": "디지털서비스(DaaS(Desktop as a Service))",
-  "definition": "데스크탑 가상화(VDI, Virtual Desktop Infrastructure)를 클라우드 기술로 구현, 서비스 공급자가 아웃소싱 형태로 제공하는서비스 1. 필요 자원의 공급 유연화, 확장성 증대 2. 긴급 상황에 대비한 접근성 확보 3. VDI 편의측면 문제점 해결, ROI효율 확대",
+  "name": "서비스형 데스크톱(DaaS, Desktop as a Service)",
+  "title": "서비스형 데스크톱(DaaS, Desktop as a Service)",
+  "definition": "가상 데스크톱 인프라(VDI)를 클라우드 사업자가 구축·운영하고 사용자는 네트워크로 접속해 월 구독형으로 개인 데스크톱 환경을 이용하는 서비스형 데스크톱 가상화 모델",
   "keywords_must": [
-   "데스크탑 가상화",
-   "VDI",
-   "SaaS",
-   "PaaS",
-   "데스크톱 클라이언트",
-   "가상 데스크톱 에이전트",
-   "가상 머신 풀",
-   "데스크톱 연결 브로커 접근 게이트웨이",
-   "인증 서버",
-   "GUI"
+   "VDI(Virtual Desktop Infrastructure)",
+   "연결 브로커(Connection Broker)",
+   "화면 전송 프로토콜(RDP·PCoIP·Blast)",
+   "하이퍼바이저(Hypervisor)",
+   "가상 머신 풀(VM Pool)",
+   "접근 게이트웨이(Access Gateway)",
+   "인증 서버(AD·MFA)",
+   "망분리(논리적 망분리)",
+   "구독형 과금"
   ],
   "keywords_ref": [
-   "OSI",
-   "IRP",
-   "FTP"
+   "Amazon WorkSpaces·Azure Virtual Desktop·Windows 365",
+   "씬 클라이언트·제로 클라이언트",
+   "영구·비영구 데스크톱",
+   "스마트워크·재택근무",
+   "데이터 유출 방지"
   ],
   "keywords": [
-   "핵심: 데스크탑 가상화 · VDI · SaaS",
-   "기술: PaaS · 데스크톱 클라이언트 · 가상 데스크톱 에이전트",
-   "운영: 가상 머신 풀 · 데스크톱 연결 브로커 접근 게이트웨이 · 인증 서버",
-   "참고: OSI · IRP · FTP"
+   "구성: 데스크톱 클라이언트 · 접근 게이트웨이 · 인증 서버 · 연결 브로커 · VM 풀 · 하이퍼바이저",
+   "프로토콜: RDP · PCoIP · Blast · HDX",
+   "비교: 온프레미스 VDI(자체 구축) ↔ DaaS(사업자 운영·구독)"
   ],
   "outline": [
-   "클라우드 기반 데스크톱 가상화 기술, DaaS 의 개념",
-   "- 디지털서비스 요점",
-   "DaaS 의 구성도 및 구성요소",
-   "- DaaS 의 구성도",
-   "- DaaS 의 구성요소",
-   "DaaS 활용분야",
-   "- 디지털서비스 요점"
+   "도입 필요성",
+   "- 필요성: 유연한 공급·접근성·보안",
+   "접속·자원 구성",
+   "- 접속: 클라이언트·게이트웨이·인증",
+   "- 자원: 브로커·VM 풀·하이퍼바이저",
+   "기대효과와 고려사항",
+   "- 효과: 데이터 유출 방지·관리 일원화",
+   "- 고려사항: 네트워크 품질·라이선스"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "도입 필요성",
     "subsections": [
      {
-      "title": null,
+      "title": "필요성: 유연한 공급·접근성·보안",
       "items": [
-       "데스크탑 가상화: 디지털서비스에서 데스크탑 가상화를 다루는 핵심 암기 포인트",
-       "VDI: VDI를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "SaaS: 완성 애플리케이션을 구독형으로 제공하는 클라우드 모델 (디지털서비스/a1e6)",
-       "PaaS: 런타임·미들웨어를 제공해 앱 배포에 집중하게 하는 모델 (디지털서비스/0ed4)"
+       "망분리(논리적 망분리): 공공기관·대규모 기업의 인터넷망 분리 의무화로 가상 데스크톱 수요 확대",
+       "VDI 구축·운영 부담 해소: 초기 서버·스토리지 투자 없이 사용자 수만큼 구독, 재택·긴급 상황 원격 근무 지원"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "접속·자원 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "접속: 클라이언트·게이트웨이·인증",
       "items": [
-       "데스크톱 클라이언트: 디지털서비스에 접속하는 사용자 측 단말·앱",
-       "가상 데스크톱 에이전트: 디지털서비스 단말·노드에서 상태 수집·제어를 수행하는 에이전트",
-       "가상 머신 풀: 디지털서비스에서 재사용하는 자원 집합을 관리하는 풀",
-       "데스크톱 연결 브로커 접근 게이트웨이: 외부 진입 트래픽을 인증·라우팅·제한하는 관문"
+       "접근 게이트웨이(Access Gateway): 외부 접속을 TLS로 중계, 인증 서버(AD·MFA)로 사용자 확인",
+       "화면 전송 프로토콜(RDP·PCoIP·Blast): 화면만 압축 전송하고 키보드·마우스 입력 리디렉션"
+      ]
+     },
+     {
+      "title": "자원: 브로커·VM 풀·하이퍼바이저",
+      "items": [
+       "연결 브로커(Connection Broker): 사용자에게 VM을 할당·연결하고 세션 상태 모니터링",
+       "가상 머신 풀(VM Pool): 템플릿 기반 VM 묶음, 비영구형은 로그오프 시 초기화"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "기대효과와 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "효과: 데이터 유출 방지·관리 일원화",
       "items": [
-       "인증 서버: 신원 확인·토큰 발급을 담당하는 인증 서버",
-       "GUI: 그래픽 인터페이스로 데스크톱·앱을 조작하는 표현 계층"
+       "데이터가 단말에 남지 않아 유출 방지, OS 패치·백업을 중앙에서 일괄 처리"
+      ]
+     },
+     {
+      "title": "고려사항: 네트워크 품질·라이선스",
+      "items": [
+       "지연에 민감해 회선 품질 확보 필요, 윈도우 VDA 등 라이선스 정책 확인"
       ]
      }
     ]
@@ -4829,23 +5319,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "데스크탑 가상화",
-   "VDI",
-   "SaaS",
-   "PaaS",
-   "데스크톱 클라이언트",
-   "가상 데스크톱 에이전트",
-   "가상 머신 풀",
-   "데스크톱 연결 브로커 접근 게이트웨이",
-   "인증 서버",
-   "GUI"
+   "VDI(Virtual Desktop Infrastructure)",
+   "연결 브로커(Connection Broker)",
+   "화면 전송 프로토콜(RDP·PCoIP·Blast)",
+   "하이퍼바이저(Hypervisor)",
+   "가상 머신 풀(VM Pool)",
+   "접근 게이트웨이(Access Gateway)",
+   "인증 서버(AD·MFA)",
+   "망분리(논리적 망분리)",
+   "구독형 과금"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_049",
@@ -4856,73 +5346,96 @@
    60,
    64
   ],
-  "en": "SecaaS",
+  "en": "Security as a Service",
   "dueum": null,
-  "name": "디지털서비스(SecaaS)",
-  "title": "디지털서비스(SecaaS)",
-  "definition": "보안기능을 크라우드 서비스 형태로 제공하는 것으로 클라우드 인프라를 통해 전문화된 보안 서비스를제공하는 클라우드 보안 서비스",
+  "name": "서비스형 보안(SECaaS, Security as a Service)",
+  "title": "서비스형 보안(SECaaS, Security as a Service)",
+  "definition": "백신·방화벽·웹 보안·ID 관리·보안관제 등 보안 기능을 클라우드 인프라에서 구독형 서비스로 제공하는 모델로, 클라우드 자산 보호(For Cloud)와 기존 IT 환경 보호(Through Cloud)를 모두 포함함",
   "keywords_must": [
-   "클라우드기반",
-   "보안관리",
-   "보안솔루션",
-   "데이터보안",
-   "접근제어",
-   "CASB",
-   "SecaaS(Security As A Service)의 개념",
-   "SecaaS 아키텍처",
-   "DLP"
+   "클라우드를 위한 보안(Security for Cloud)",
+   "클라우드를 통한 보안(Security through Cloud)",
+   "CSA SECaaS 10대 카테고리",
+   "IAM(Identity and Access Management)",
+   "웹 보안 게이트웨이(SWG)",
+   "이메일 보안",
+   "보안관제·SIEM",
+   "암호화·키 관리",
+   "CASB(Cloud Access Security Broker)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "침입 관리(IDS/IPS)",
+   "DLP(Data Loss Prevention)",
+   "취약점 스캐닝",
+   "BC/DR",
+   "SASE(Secure Access Service Edge)"
+  ],
   "keywords": [
-   "핵심: 클라우드기반 · 보안관리 · 보안솔루션",
-   "기술: 데이터보안 · 접근제어 · CASB",
-   "운영: SecaaS(Security As A Service)의 개념 · SecaaS 아키텍처 · DLP"
+   "유형: 클라우드를 위한 보안 · 클라우드를 통한 보안",
+   "CSA 카테고리: IAM · DLP · 웹 보안 · 이메일 보안 · 보안 평가 · 침입 관리 · SIEM · 암호화 · BC/DR · 네트워크 보안",
+   "비교: SECaaS(보안 기능 제공) ↔ CASB(클라우드 이용 통제 중개)"
   ],
   "outline": [
-   "클라우드 기반의 보안 서비스 (SecaaS: Security As A",
-   "- SecaaS(Security As A Service)의 개념",
-   "- 가트너에서 제시한 클라우드 환경의 보안이슈",
-   "SecaaS 아키텍처와 보안서비스요소",
-   "- SecaaS 아키텍처",
-   "SecaaS 와 CASB 비교",
-   "- 디지털서비스 요점"
+   "도입 효과",
+   "- 효과: 비용 절감·최신 위협 대응",
+   "- 유형: For Cloud·Through Cloud",
+   "서비스 요소(CSA 10대 카테고리)",
+   "- 접근·데이터: IAM·DLP·암호화",
+   "- 위협 대응: 웹·메일·관제",
+   "CASB 비교와 동향",
+   "- 비교: 보안 기능 vs 이용 통제 중개",
+   "- 동향: SASE 통합"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "도입 효과",
     "subsections": [
      {
-      "title": null,
+      "title": "효과: 비용 절감·최신 위협 대응",
       "items": [
-       "클라우드기반: 디지털서비스에서 클라우드기반을 다루는 핵심 암기 포인트",
-       "보안관리: 디지털서비스에서 보안관리를 다루는 핵심 암기 포인트",
-       "보안솔루션: 디지털서비스에서 보안솔루션을 다루는 핵심 암기 포인트",
-       "데이터보안: 디지털서비스에서 데이터보안을 다루는 핵심 암기 포인트"
+       "보안 장비 구축·운영 비용 없이 구독, 위협 인텔리전스가 실시간 갱신돼 지능형 공격 차단에 유리"
+      ]
+     },
+     {
+      "title": "유형: For Cloud·Through Cloud",
+      "items": [
+       "클라우드를 위한 보안(Security for Cloud): 클라우드 서비스·저장 데이터 보호",
+       "클라우드를 통한 보안(Security through Cloud): 온프레미스 IT를 클라우드 보안 서비스로 보호"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "서비스 요소(CSA 10대 카테고리)",
     "subsections": [
      {
-      "title": null,
+      "title": "접근·데이터: IAM·DLP·암호화",
       "items": [
-       "접근제어: 디지털서비스에서 접근제어를 다루는 핵심 암기 포인트",
-       "CASB: CASB를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "SecaaS(Security As A Service)의 개념: 디지털서비스에서 SecaaS(Security As A Service)의 개념을 다루는 핵심 암기 포인트",
-       "SecaaS 아키텍처: 디지털서비스의 계층·모듈 배치와 상호작용 구조 (디지털서비스/8d7b)"
+       "IAM(Identity and Access Management): SSO·MFA·권한 관리, DLP는 민감정보 유출 차단",
+       "암호화·키 관리: 저장·전송 데이터 암호화와 키 수명주기 관리"
+      ]
+     },
+     {
+      "title": "위협 대응: 웹·메일·관제",
+      "items": [
+       "웹 보안 게이트웨이(SWG): URL 필터링·악성코드 검사, 이메일 보안은 스팸·피싱 차단",
+       "보안관제·SIEM: 로그 통합 분석과 이벤트 상관 분석으로 침해 탐지"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "CASB 비교와 동향",
     "subsections": [
      {
-      "title": null,
+      "title": "비교: 보안 기능 vs 이용 통제 중개",
       "items": [
-       "DLP: DLP를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "CASB(Cloud Access Security Broker): 사용 중인 클라우드 앱 가시성·접근통제·DLP·이상탐지·감사를 수행하는 중개 계층"
+      ]
+     },
+     {
+      "title": "동향: SASE 통합",
+      "items": [
+       "SASE(Secure Access Service Edge): SD-WAN과 SWG·CASB·ZTNA를 하나의 클라우드 서비스로 통합(가트너 2019)"
       ]
      }
     ]
@@ -4931,22 +5444,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "클라우드기반",
-   "보안관리",
-   "보안솔루션",
-   "데이터보안",
-   "접근제어",
-   "CASB",
-   "SecaaS(Security As A Service)의 개념",
-   "SecaaS 아키텍처",
-   "DLP"
+   "클라우드를 위한 보안(Security for Cloud)",
+   "클라우드를 통한 보안(Security through Cloud)",
+   "CSA SECaaS 10대 카테고리",
+   "IAM(Identity and Access Management)",
+   "웹 보안 게이트웨이(SWG)",
+   "이메일 보안",
+   "보안관제·SIEM",
+   "암호화·키 관리",
+   "CASB(Cloud Access Security Broker)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_050_1",
@@ -4957,74 +5471,82 @@
    66,
    67
   ],
-  "en": "NaaS Network as a Service",
+  "en": "Network as a Service",
   "dueum": null,
-  "name": "디지털서비스(NaaS(Network as a Service))",
-  "title": "디지털서비스(NaaS(Network as a Service))",
-  "definition": "디지털서비스(NaaS(Network as a Service))의 시험 핵심 개념을 키워드 중심으로 정리한 디지털서비스 토픽이다.",
+  "name": "서비스형 네트워크(NaaS, Network as a Service)",
+  "title": "서비스형 네트워크(NaaS, Network as a Service)",
+  "definition": "라우터·방화벽·WAN 회선 등 네트워크 인프라와 관리 기능을 직접 소유하지 않고 구독·사용량 기반으로 제공받아 필요에 따라 대역폭과 기능을 즉시 확장·변경하는 서비스 모델",
   "keywords_must": [
-   "On-Promise",
-   "Cloud",
-   "Hybrid",
-   "NaaS 정점",
-   "NaaS 유형",
-   "NaaS 제공 서비스",
-   "VPN",
-   "MPLS",
-   "WAN"
+   "구독형 소비 모델(Subscription)",
+   "SD-WAN(Software-Defined WAN)",
+   "SDN(Software-Defined Networking)",
+   "NFV(Network Functions Virtualization)",
+   "MANO(Management and Orchestration)",
+   "온프레미스·클라우드·하이브리드 NaaS",
+   "VPN·MPLS 대체",
+   "DDoS 보호",
+   "멀티테넌시"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "SASE·웹 보안 게이트웨이",
+   "대역폭 온디맨드(Bandwidth on Demand)",
+   "화이트박스 스위치",
+   "레거시 호환성",
+   "공급자 종속"
+  ],
   "keywords": [
-   "핵심: On-Promise · Cloud · Hybrid",
-   "기술: NaaS 정점 · NaaS 유형 · NaaS 제공 서비스",
-   "운영: VPN · MPLS · WAN"
+   "유형: 온프레미스 NaaS · 클라우드 NaaS · 하이브리드 NaaS",
+   "제공 서비스: SD-WAN · VPN · DDoS 보호 · 웹 보안 게이트웨이 · 멀티 클라우드 연결",
+   "기반기술: SDN · NFV · MANO"
   ],
   "outline": [
-   "서비스형 네트워크, NaaS 개념",
-   "- NaaS(Network as a Service) 정의",
-   "- NaaS 정점",
-   "NaaS 유형 및 제공 서비스",
-   "- NaaS 유형",
-   "- NaaS 제공 서비스",
-   "NaaS 의 향후 과제",
-   "- 디지털서비스 요점"
+   "장점",
+   "- 효과: 유연성·비용 절감·확장성",
+   "유형과 제공 서비스",
+   "- 유형: 운영 주체별",
+   "- 서비스: SD-WAN·보안",
+   "향후 과제",
+   "- 과제: 레거시 호환·종속"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "장점",
     "subsections": [
      {
-      "title": null,
+      "title": "효과: 유연성·비용 절감·확장성",
       "items": [
-       "On-Promise: On-Promise를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Cloud: Cloud를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Hybrid: Hybrid를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "NaaS 정점: 디지털서비스에서 NaaS 정점을 다루는 핵심 암기 포인트"
+       "구독형 소비 모델(Subscription): 장비 구매(CAPEX) 대신 월 사용료, 최신 기능 자동 업데이트",
+       "VPN·MPLS 대체: 고가 전용회선 중심의 레거시 WAN을 인터넷 기반 가상 오버레이로 전환"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "유형과 제공 서비스",
     "subsections": [
      {
-      "title": null,
+      "title": "유형: 운영 주체별",
       "items": [
-       "NaaS 유형: 디지털서비스에서 NaaS 유형을 다루는 핵심 암기 포인트",
-       "NaaS 제공 서비스: 디지털서비스에서 NaaS 제공 서비스를 다루는 핵심 암기 포인트",
-       "VPN: 공중망 위에 암호화 터널을 만드는 가상사설망",
-       "MPLS: MPLS를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "온프레미스 NaaS는 내부가 제어 유지, 클라우드 NaaS는 외부 사업자가 가상 인프라 제공, 하이브리드는 혼합 운영"
+      ]
+     },
+     {
+      "title": "서비스: SD-WAN·보안",
+      "items": [
+       "SD-WAN(Software-Defined WAN): 중앙 컨트롤러가 애플리케이션별로 회선을 선택하는 가상 WAN",
+       "MANO(Management and Orchestration): ETSI NFV 표준의 가상 네트워크 기능 자동 배치·관리",
+       "DDoS 보호: 대규모 공격 트래픽을 사업자 스크러빙 센터에서 자동 차단"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "향후 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "과제: 레거시 호환·종속",
       "items": [
-       "WAN: WAN를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "구형 장비·온프레미스 데이터센터와 호환성 확보, 특정 공급자 종속과 서비스 품질(SLA) 보장"
       ]
      }
     ]
@@ -5033,22 +5555,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "On-Promise",
-   "Cloud",
-   "Hybrid",
-   "NaaS 정점",
-   "NaaS 유형",
-   "NaaS 제공 서비스",
-   "VPN",
-   "MPLS",
-   "WAN"
+   "구독형 소비 모델(Subscription)",
+   "SD-WAN(Software-Defined WAN)",
+   "SDN(Software-Defined Networking)",
+   "NFV(Network Functions Virtualization)",
+   "MANO(Management and Orchestration)",
+   "온프레미스·클라우드·하이브리드 NaaS",
+   "VPN·MPLS 대체",
+   "DDoS 보호",
+   "멀티테넌시"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_051",
@@ -5061,59 +5584,84 @@
   ],
   "en": "Intercloud",
   "dueum": null,
-  "name": "클라우드(Intercloud)",
-  "title": "클라우드(Intercloud)",
-  "definition": "둘 이상의 클라우드 서비스 제공자 간의 인터페이스, NW 프로토콜, 상호호환성 연동을 가능하게 하는 기술",
+  "name": "인터클라우드(Intercloud)",
+  "title": "인터클라우드(Intercloud)",
+  "definition": "서로 다른 클라우드 서비스 제공자 간 인터페이스·네트워크 프로토콜·상호운용성을 연동해 이기종 클라우드 인프라를 하나처럼 연결하고 자원을 동적으로 공유하는 '클라우드의 클라우드' 기술",
   "keywords_must": [
-   "대등",
-   "연합",
-   "중계",
-   "멀티",
-   "클라우드의 핵심 요소",
-   "클라우드의 구조",
-   "유사 클라우드(하이브리드, 멀티, 메타)"
+   "대등 접속(Peering)",
+   "연합(Federation)",
+   "중개(Intermediary)",
+   "상호운용성(Interoperability)",
+   "이식성(Portability)",
+   "동적 자원 할당",
+   "클라우드 간 SLA",
+   "IEEE P2302(인터클라우드 상호운용성 표준)"
   ],
   "keywords_ref": [
-   "APIM"
+   "하이브리드·멀티·메타 클라우드 비교",
+   "시스코 인터클라우드(2017년 종료)",
+   "클라우드 브로커",
+   "개방형 API(OCCI)",
+   "신원 연합(Identity Federation)"
   ],
   "keywords": [
-   "핵심: 대등 · 연합 · 중계",
-   "기술: 멀티 · 클라우드의 핵심 요소 · 클라우드의 구조",
-   "운영: 유사 클라우드(하이브리드, 멀티, 메타)",
-   "참고: APIM"
+   "유형: 대등 접속(Peering) · 연합(Federation) · 중개(Intermediary)",
+   "비교: 인터클라우드(CSP 간 연동) · 하이브리드(공용+사설) · 멀티(다수 CSP 병용) · 메타(조합 프로비저닝)",
+   "표준: IEEE P2302 · OCCI · 신원 연합"
   ],
   "outline": [
-   "인터클라우드 구성도 및 유형",
-   "- 클라우드의 정의",
-   "- 클라우드의 등장 배경",
-   "인터클라우드와 유사 클라우드 비교",
-   "- 클라우드의 핵심 요소",
-   "- 클라우드의 구조"
+   "등장 배경",
+   "- 배경: 단일 CSP 자원 한계",
+   "구성과 유형",
+   "- 직접 연계: 대등 접속",
+   "- 다자 연계: 연합·중개",
+   "유사 개념 비교와 과제",
+   "- 비교: 하이브리드·멀티·메타",
+   "- 과제: 표준·보안·SLA"
   ],
   "sections": [
    {
-    "title": "클라우드 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 단일 CSP 자원 한계",
       "items": [
-       "대등: 클라우드에서 대등을 다루는 핵심 암기 포인트",
-       "연합: 클라우드에서 연합을 다루는 핵심 암기 포인트",
-       "중계: 클라우드에서 중계를 다루는 핵심 암기 포인트",
-       "멀티: 클라우드에서 멀티를 다루는 핵심 암기 포인트"
+       "상호운용성(Interoperability): 특정 CSP 자원 부족·장애 시 다른 CSP 자원을 끌어 쓰는 인터넷 같은 클라우드 연동망 필요"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 구성·기술",
+    "title": "구성과 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "직접 연계: 대등 접속",
       "items": [
-       "클라우드의 핵심 요소: 클라우드에서 클라우드의 핵심 요소를 다루는 핵심 암기 포인트",
-       "클라우드의 구조: 클라우드에서 클라우드의 구조를 다루는 핵심 암기 포인트",
-       "유사 클라우드(하이브리드, 멀티, 메타): 클라우드에서 유사 클라우드(하이브리드, 멀티, 메타)를 다루는 핵심 암기 포인트"
+       "대등 접속(Peering): 두 CSP가 직접 계약·연결해 자원을 상호 제공"
+      ]
+     },
+     {
+      "title": "다자 연계: 연합·중개",
+      "items": [
+       "연합(Federation): 여러 CSP가 동적 자원 할당으로 논리적 하나의 서비스를 제공",
+       "중개(Intermediary): 브로커가 여러 CSP 자원을 연계해 단일 사업자처럼 서비스"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유사 개념 비교와 과제",
+    "subsections": [
+     {
+      "title": "비교: 하이브리드·멀티·메타",
+      "items": [
+       "하이브리드는 공용+사설 혼용, 멀티는 이용 기업이 다수 CSP를 병용, 메타는 여러 인프라를 엮어 최적 조합 프로비저닝"
+      ]
+     },
+     {
+      "title": "과제: 표준·보안·SLA",
+      "items": [
+       "IEEE P2302(인터클라우드 상호운용성 표준) 정착, 신원 연합과 CSP 간 SLA·과금 정산 체계 필요"
       ]
      }
     ]
@@ -5122,20 +5670,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "대등",
-   "연합",
-   "중계",
-   "멀티",
-   "클라우드의 핵심 요소",
-   "클라우드의 구조",
-   "유사 클라우드(하이브리드, 멀티, 메타)"
+   "대등 접속(Peering)",
+   "연합(Federation)",
+   "중개(Intermediary)",
+   "상호운용성(Interoperability)",
+   "이식성(Portability)",
+   "동적 자원 할당",
+   "클라우드 간 SLA",
+   "IEEE P2302(인터클라우드 상호운용성 표준)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_052",
@@ -5150,70 +5700,78 @@
   "dueum": null,
   "name": "메타클라우드(Metacloud)",
   "title": "메타클라우드(Metacloud)",
-  "definition": "클라우드 서비스를 사용자(개발자)에 맞게 개발, 실행환경, 환경설정 등을 개발자의 요구에 맞게, 자유롭게 구성할 수 있도록 제시하는 통합 클라우드 시스템 모델",
+  "definition": "표준 API와 자원 템플릿으로 응용 프로그램을 특정 클라우드에 종속되지 않게 개발하고, 실행 시 여러 클라우드 서비스 중 최적의 조합을 선택·프로비저닝·이전해 Lock-in 문제를 완화하는 통합 클라우드 시스템 모델",
   "keywords_must": [
-   "Lock-in 문제 완화",
-   "클라우드 시스템 모델",
-   "Metacloud 개념도",
-   "Metacloud 기술요소",
-   "메타클라우드 프로토콜",
-   "메타클라우드 표준",
-   "IaaS",
-   "PaaS",
-   "SaaS",
-   "탄력성(Elasticity)"
+   "벤더 종속(Lock-in) 해소",
+   "MetaCloud API",
+   "자원 템플릿(Resource Templates)",
+   "프로비저닝 전략(Provisioning Strategy)",
+   "자원 모니터링(Resource Monitoring)",
+   "MetaCloud 프록시(Proxy)",
+   "마이그레이션(Migration)",
+   "멀티 클라우드 최적 조합",
+   "QoS 정보 생성"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "지식 베이스(Knowledge Base)",
+   "개발 단계·실행 단계 구분",
+   "멀티클라우드·인터클라우드 비교",
+   "클라우드 브로커",
+   "이식성(Portability)"
+  ],
   "keywords": [
-   "핵심: Lock-in 문제 완화 · 클라우드 시스템 모델 · Metacloud 개념도",
-   "기술: Metacloud 기술요소 · 메타클라우드 프로토콜 · 메타클라우드 표준",
-   "운영: IaaS · PaaS · SaaS"
+   "개발 단계: MetaCloud API · 자원 템플릿",
+   "실행 단계: 프로비저닝 전략 · 자원 모니터링 · 프록시 · 마이그레이션",
+   "목표: Lock-in 해소 · 최적 조합 · QoS 기반 선택"
   ],
   "outline": [
-   "통합 클라우드 시스템 모델을 통한 Lock-in 문제해결",
-   "- Metacloud 의 정의",
-   "- Metacloud 등장배경",
-   "Metacloud 의 개념도 및 기술요소",
-   "- Metacloud 개념도",
-   "- Metacloud 기술요소"
+   "등장 배경",
+   "- 배경: 특정 API 종속 문제",
+   "개념도와 기술요소",
+   "- 개발: 표준 API·템플릿",
+   "- 실행: 프로비저닝·모니터링·프록시",
+   "유사 개념 비교",
+   "- 비교: 멀티·인터 클라우드"
   ],
   "sections": [
    {
-    "title": "메타클라우드 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 특정 API 종속 문제",
       "items": [
-       "Lock-in 문제 완화: 메타클라우드에서 Lock-in 문제 완화를 다루는 핵심 암기 포인트",
-       "클라우드 시스템 모델: 메타클라우드에서 클라우드 시스템 모델을 다루는 핵심 암기 포인트",
-       "Metacloud 개념도: 메타클라우드의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "Metacloud 기술요소: 메타클라우드에서 Metacloud 기술요소를 다루는 핵심 암기 포인트"
+       "벤더 종속(Lock-in) 해소: 특정 CSP API로 만든 앱은 이전 시 전면 재개발 필요, 이를 해결하는 추상화 모델 등장"
       ]
      }
     ]
    },
    {
-    "title": "메타클라우드 구성·기술",
+    "title": "개념도와 기술요소",
     "subsections": [
      {
-      "title": null,
+      "title": "개발: 표준 API·템플릿",
       "items": [
-       "메타클라우드 프로토콜: 메타클라우드에서 메타클라우드 프로토콜을 다루는 핵심 암기 포인트",
-       "메타클라우드 표준: 메타클라우드 상호운용·품질을 맞추는 규격·기준",
-       "IaaS: 가상머신·스토리지·네트워크를 온디맨드로 제공하는 클라우드 모델 (메타클라우드/a0e9)",
-       "PaaS: 런타임·미들웨어를 제공해 앱 배포에 집중하게 하는 모델 (메타클라우드/16fe)"
+       "MetaCloud API: 표준화된 클라우드 프로그래밍 API로 CSP 독립적인 애플리케이션 작성",
+       "자원 템플릿(Resource Templates): VM·스토리지 등 필요한 자원 유형과 요구 수준을 선언적으로 기술"
+      ]
+     },
+     {
+      "title": "실행: 프로비저닝·모니터링·프록시",
+      "items": [
+       "프로비저닝 전략(Provisioning Strategy): 요구사항·비용에 맞는 CSP 인스턴스를 선택해 자원 할당",
+       "MetaCloud 프록시(Proxy): 앱과 CSP 사이 중재자, 수집 데이터를 자원 모니터링에 넘겨 CSP별 QoS 정보 생성",
+       "마이그레이션(Migration): QoS 저하나 가격 변동 시 다른 CSP로 앱·데이터 이전"
       ]
      }
     ]
    },
    {
-    "title": "메타클라우드 운영",
+    "title": "유사 개념 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "비교: 멀티·인터 클라우드",
       "items": [
-       "SaaS: 완성 애플리케이션을 구독형으로 제공하는 클라우드 모델 (메타클라우드/fb09)",
-       "탄력성(Elasticity): 수요에 따라 자원을 자동 증감하는 능력"
+       "멀티클라우드는 이용자가 여러 CSP를 직접 관리, 메타클라우드는 추상화 계층이 최적 조합을 자동 선택"
       ]
      }
     ]
@@ -5222,23 +5780,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Lock-in 문제 완화",
-   "클라우드 시스템 모델",
-   "Metacloud 개념도",
-   "Metacloud 기술요소",
-   "메타클라우드 프로토콜",
-   "메타클라우드 표준",
-   "IaaS",
-   "PaaS",
-   "SaaS",
-   "탄력성(Elasticity)"
+   "벤더 종속(Lock-in) 해소",
+   "MetaCloud API",
+   "자원 템플릿(Resource Templates)",
+   "프로비저닝 전략(Provisioning Strategy)",
+   "자원 모니터링(Resource Monitoring)",
+   "MetaCloud 프록시(Proxy)",
+   "마이그레이션(Migration)",
+   "멀티 클라우드 최적 조합",
+   "QoS 정보 생성"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_053_00",
