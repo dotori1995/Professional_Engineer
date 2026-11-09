@@ -11946,9 +11946,10 @@
   },
   "DB": {
    "sheet_topics": 195,
-   "matched": 0,
-   "unmatched": 195,
-   "site_domain_present": false
+   "matched": 54,
+   "unmatched": 141,
+   "site_domain_present": true,
+   "note": "DB site topics come from PDFs only; stars on PDF topics matching sheet titles"
   },
   "DS": {
    "sheet_topics": 21,

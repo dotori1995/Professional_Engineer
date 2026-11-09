@@ -1,0 +1,5455 @@
+[
+ {
+  "id": "DB_002",
+  "code": "DB_002",
+  "domain": "DB",
+  "category": "DB > 트랜잭션",
+  "title": "트랜잭션(Transaction)",
+  "subtitle": "",
+  "name": "트랜잭션(Transaction)",
+  "en": "Transaction",
+  "definition": "데이터베이스 상태를 변화시키는 하나 이상의 연산을 묶은 논리적 작업 단위(Logical Unit of Work)로, 전부 수행되거나 전혀 수행되지 않아야 하며 ACID 특성을 보장한다.",
+  "keywords": [
+   "특성: 원자성(Atomicity) · 일관성(Consistency) · 고립성(Isolation) · 지속성(Durability)",
+   "상태: 활동(Active) · 부분완료(Partially Committed) · 완료(Committed) · 실패(Failed) · 철회(Aborted)",
+   "연산: COMMIT · ROLLBACK · SAVEPOINT",
+   "보장: 회복 기법(원자성·지속성) · 동시성 제어(고립성) · 무결성 제약(일관성)"
+  ],
+  "keywords_must": [
+   "원자성(Atomicity)",
+   "일관성(Consistency)",
+   "고립성(Isolation)",
+   "지속성(Durability)",
+   "All or Nothing",
+   "부분완료(Partially Committed)",
+   "철회(Aborted)",
+   "COMMIT·ROLLBACK",
+   "직렬성(Serializability)",
+   "BASE(기본 가용·유연 상태·최종 일관성)"
+  ],
+  "keywords_ref": [
+   "활동(Active)",
+   "실패(Failed)",
+   "SAVEPOINT",
+   "회복 관리자(Recovery Manager)",
+   "동시성 제어(Concurrency Control)"
+  ],
+  "outline": [
+   "트랜잭션의 개요",
+   "- 논리적 작업 단위",
+   "- ACID 특성",
+   "트랜잭션 상태 전이",
+   "- 활동·부분완료·완료",
+   "- 실패·철회",
+   "ACID 보장 방법과 BASE 비교",
+   "- DBMS 구성요소별 보장",
+   "- ACID vs BASE"
+  ],
+  "sections": [
+   {
+    "title": "ACID 특성",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "원자성: All or Nothing, 일부만 반영 금지 → 회복 관리자(UNDO)",
+       "일관성: 실행 전후 무결성 제약 유지(예: A+B=100) → 무결성 제약·DBA",
+       "고립성: 동시 실행 트랜잭션의 중간 결과 비공개 → 동시성 제어(Lock·MVCC)",
+       "지속성: 완료 결과는 장애 후에도 유지 → 로그·REDO"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "상태 전이",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "활동 → 부분완료(마지막 연산 실행) → 완료(COMMIT)",
+       "활동·부분완료 → 실패 → 철회(ROLLBACK 후 재시작 또는 폐기)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "ACID vs BASE",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "ACID: 강한 일관성·RDBMS / BASE: 기본 가용성·유연한 상태·최종 일관성·NoSQL"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "원자성(Atomicity)",
+   "일관성(Consistency)",
+   "고립성(Isolation)",
+   "지속성(Durability)",
+   "All or Nothing",
+   "부분완료(Partially Committed)",
+   "철회(Aborted)",
+   "COMMIT·ROLLBACK",
+   "직렬성(Serializability)",
+   "BASE(기본 가용·유연 상태·최종 일관성)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_003",
+  "code": "DB_003",
+  "domain": "DB",
+  "category": "DB > DB 기본",
+  "title": "데이터 독립성(Data Independence)",
+  "subtitle": "",
+  "name": "데이터 독립성(Data Independence)",
+  "en": "Data Independence",
+  "definition": "하위 단계 스키마를 변경해도 상위 단계 스키마와 응용 프로그램에 영향을 주지 않는 성질로, ANSI/SPARC 3단계 스키마와 단계 간 사상(Mapping)으로 보장한다.",
+  "keywords": [
+   "구조: ANSI/SPARC 3단계 · 외부 스키마 · 개념 스키마 · 내부 스키마",
+   "종류: 논리적 데이터 독립성 · 물리적 데이터 독립성",
+   "사상: 외부-개념 사상(응용 인터페이스) · 개념-내부 사상(저장 인터페이스)",
+   "효과: 응용 프로그램 영향 최소화 · 유지보수성"
+  ],
+  "keywords_must": [
+   "ANSI/SPARC 3단계 구조(3-Level Architecture)",
+   "외부 스키마(External Schema)",
+   "개념 스키마(Conceptual Schema)",
+   "내부 스키마(Internal Schema)",
+   "논리적 데이터 독립성(Logical Data Independence)",
+   "물리적 데이터 독립성(Physical Data Independence)",
+   "외부-개념 사상(External-Conceptual Mapping)",
+   "개념-내부 사상(Conceptual-Internal Mapping)"
+  ],
+  "keywords_ref": [
+   "서브스키마(Subschema)·사용자 뷰",
+   "저장 스키마(Storage Schema)",
+   "DBMS 카탈로그(Catalog)",
+   "분산 투명성(Distribution Transparency)"
+  ],
+  "outline": [
+   "데이터 독립성의 개념",
+   "- 3단계 구조의 독립성 지원",
+   "- 논리적·물리적 독립성",
+   "데이터 독립성과 구조 간 사상",
+   "- 외부-개념 사상",
+   "- 개념-내부 사상",
+   "ANSI/SPARC 3단계 스키마",
+   "- 외부 스키마·개념 스키마·내부 스키마",
+   "- 스키마 관리의 중요성"
+  ],
+  "sections": [
+   {
+    "title": "종류",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "논리적 독립성: 개념 스키마 변경(속성 추가 등)이 외부 스키마·응용에 영향 없음 → 외부-개념 사상",
+       "물리적 독립성: 내부 스키마 변경(인덱스·저장 구조)이 개념 스키마에 영향 없음 → 개념-내부 사상"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "3단계 스키마",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "외부: 사용자·응용 관점 뷰(서브스키마), 여러 개",
+       "개념: 조직 전체 관점의 논리 구조·제약조건, 하나",
+       "내부: 저장 장치 관점의 물리 구조(레코드·인덱스)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "의의",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "논리적 독립성이 물리적 독립성보다 달성이 어려움",
+       "분산 DB에서는 분산 투명성으로 확장"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "ANSI/SPARC 3단계 구조(3-Level Architecture)",
+   "외부 스키마(External Schema)",
+   "개념 스키마(Conceptual Schema)",
+   "내부 스키마(Internal Schema)",
+   "논리적 데이터 독립성(Logical Data Independence)",
+   "물리적 데이터 독립성(Physical Data Independence)",
+   "외부-개념 사상(External-Conceptual Mapping)",
+   "개념-내부 사상(Conceptual-Internal Mapping)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_005",
+  "code": "DB_005",
+  "domain": "DB",
+  "category": "DB > 트랜잭션",
+  "title": "고립화 수준(Isolation Level)",
+  "subtitle": "",
+  "name": "고립화 수준(Isolation Level)",
+  "en": "Transaction Isolation Level",
+  "definition": "동시에 실행되는 트랜잭션이 서로의 중간 결과를 어디까지 볼 수 있는지 정한 수준으로, ANSI/ISO SQL-92가 Read Uncommitted부터 Serializable까지 4단계로 표준화했다.",
+  "keywords": [
+   "문제: Dirty Read · Non-Repeatable Read · Phantom Read",
+   "단계: Read Uncommitted → Read Committed → Repeatable Read → Serializable",
+   "관계: 수준↑ → 일관성↑ · 동시성(병행성)↓",
+   "구현: 공유·배타 Lock 유지 기간 · MVCC 스냅숏"
+  ],
+  "keywords_must": [
+   "Read Uncommitted",
+   "Read Committed",
+   "Repeatable Read",
+   "Serializable",
+   "Dirty Read",
+   "Non-Repeatable Read",
+   "Phantom Read",
+   "SQL-92 표준",
+   "일관성·동시성 상충(Consistency vs Concurrency)"
+  ],
+  "keywords_ref": [
+   "공유 Lock(Shared Lock)",
+   "MVCC(Multi-Version Concurrency Control)",
+   "Snapshot Isolation",
+   "Oracle 기본 Read Committed · MySQL InnoDB 기본 Repeatable Read"
+  ],
+  "outline": [
+   "Isolation Level 개요",
+   "- SQL-92 표준",
+   "- 고일저병(고립↑·일관성↑·병행성↓)",
+   "Isolation Level 기준 허용 현상",
+   "- Dirty·Non-Repeatable·Phantom Read",
+   "- 4단계 비교표",
+   "Isolation Level 설정 시 고려사항",
+   "- 업무 특성별 선택",
+   "- DBMS 기본값 차이"
+  ],
+  "sections": [
+   {
+    "title": "허용 현상",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Read Uncommitted: 미완료 데이터 읽기 허용 → Dirty·Non-Repeatable·Phantom 모두 발생",
+       "Read Committed: 완료 데이터만 읽음 → Non-Repeatable·Phantom 발생",
+       "Repeatable Read: 읽은 행 재조회 보장 → Phantom 발생",
+       "Serializable: 범위 Lock·직렬 실행 효과 → 모두 방지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "현상 정의",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Dirty Read: 롤백될 수 있는 미완료 값 읽기",
+       "Non-Repeatable Read: 같은 행 재조회 시 값 변경(UPDATE)",
+       "Phantom Read: 같은 범위 재조회 시 행 추가·삭제(INSERT/DELETE)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "고려사항",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "정합성 중요(금융) → 높은 수준, 조회 위주·대량 동시 처리 → Read Committed",
+       "Oracle 기본 Read Committed, MySQL InnoDB 기본 Repeatable Read(MVCC)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "Read Uncommitted",
+   "Read Committed",
+   "Repeatable Read",
+   "Serializable",
+   "Dirty Read",
+   "Non-Repeatable Read",
+   "Phantom Read",
+   "SQL-92 표준",
+   "일관성·동시성 상충(Consistency vs Concurrency)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_006",
+  "code": "DB_006",
+  "domain": "DB",
+  "category": "DB > 트랜잭션",
+  "title": "팬텀 충돌(Phantom Conflict)",
+  "subtitle": "",
+  "name": "팬텀 충돌(Phantom Conflict)",
+  "en": "Phantom Conflict",
+  "definition": "트랜잭션이 특정 범위의 데이터를 읽는 동안 다른 트랜잭션이 그 범위에 행을 삽입·삭제해, 다시 읽을 때 없던 가상 튜플(팬텀)이 나타나거나 사라져 일관성이 깨지는 현상.",
+  "keywords": [
+   "원인: 가상 튜플(Phantom Tuple) · 튜플 단위 Lock의 한계",
+   "현상: 범위 재조회 시 행 증감 · 실행 순서별 결과 상이",
+   "해결: Locking 단위 확대(릴레이션) · 인덱스 Locking · Predicate Lock",
+   "Isolation: Serializable에서만 방지"
+  ],
+  "keywords_must": [
+   "팬텀 튜플(Phantom Tuple)",
+   "Phantom Read",
+   "범위 질의(Range Query)",
+   "튜플 단위 Lock 한계",
+   "Locking 단위 확대(Lock Granularity)",
+   "인덱스 Locking(Index Locking)",
+   "프레디킷 Lock(Predicate Lock)",
+   "Serializable",
+   "직렬성 위반(Non-serializable)"
+  ],
+  "keywords_ref": [
+   "Next-Key Lock(InnoDB)",
+   "Gap Lock",
+   "Repeatable Read에서 발생",
+   "병행성 감소"
+  ],
+  "outline": [
+   "팬텀 충돌의 개요",
+   "- 가상 데이터로 인한 충돌",
+   "- 읽기·삭제 시 영향",
+   "팬텀 충돌 발생 사례",
+   "- 집계 질의 T1 vs 삽입 T2",
+   "- 실행 순서별 결과 상이",
+   "팬텀 충돌 해결 방법",
+   "- Locking 단위 확대·인덱스 Locking",
+   "- Isolation Level 설정"
+  ],
+  "sections": [
+   {
+    "title": "발생 사례",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "T1: SELECT SUM(급여) FROM 교수 WHERE 부서='컴공', T2: 같은 부서 교수 INSERT",
+       "공통 접근 튜플이 없어 Lock 충돌이 없지만 T1→T2와 T2→T1 결과가 달라 직렬성 위반"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "해결 방법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Locking 단위를 튜플에서 릴레이션으로 확대 → 병행성 감소",
+       "인덱스 Locking: 조건에 해당하는 인덱스 구간(리프 노드)을 Lock, 인덱스 필요",
+       "InnoDB는 Next-Key(레코드+Gap) Lock으로 방지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Isolation Level",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Read Uncommitted·Read Committed·Repeatable Read에서 발생, Serializable에서 방지"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "팬텀 튜플(Phantom Tuple)",
+   "Phantom Read",
+   "범위 질의(Range Query)",
+   "튜플 단위 Lock 한계",
+   "Locking 단위 확대(Lock Granularity)",
+   "인덱스 Locking(Index Locking)",
+   "프레디킷 Lock(Predicate Lock)",
+   "Serializable",
+   "직렬성 위반(Non-serializable)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_012",
+  "code": "DB_012",
+  "domain": "DB",
+  "category": "DB > DB 유형",
+  "title": "분산 데이터베이스(Distributed Database)",
+  "subtitle": "",
+  "name": "분산 데이터베이스(Distributed Database)",
+  "en": "Distributed Database",
+  "definition": "논리적으로는 하나의 데이터베이스이지만 물리적으로는 네트워크로 연결된 여러 사이트에 분산 저장·관리되는 데이터베이스로, 분산 투명성을 제공한다.",
+  "keywords": [
+   "목적: 처리 지역화 · 관리 지역화 · 부하 분산·병렬 처리 · 가용성·신뢰성(복제)",
+   "구조: 분산 DBMS · 지역 DBMS · 전역 스키마 · 분할·할당 스키마",
+   "설계: Top Down · Bottom Up · Hybrid",
+   "분할: 수평(Horizontal) · 수직(Vertical) · 혼합(Hybrid)"
+  ],
+  "keywords_must": [
+   "분산 투명성(Distribution Transparency)",
+   "전역 스키마(Global Schema)",
+   "분할 스키마(Fragmentation Schema)",
+   "할당 스키마(Allocation Schema)",
+   "수평 분할(Horizontal Fragmentation)",
+   "수직 분할(Vertical Fragmentation)",
+   "Top Down 설계",
+   "Bottom Up 설계",
+   "2단계 커밋(2PC, Two-Phase Commit)",
+   "복제(Replication)"
+  ],
+  "keywords_ref": [
+   "지역 DBMS(Local DBMS)",
+   "게이트웨이(Gateway, 이기종 연동)",
+   "분산 질의 최적화(Semi-join)",
+   "분산 교착상태(Distributed Deadlock)"
+  ],
+  "outline": [
+   "분산 DB 개요",
+   "- 논리적 통합·물리적 분산",
+   "- 처리·관리 지역화, 부하 분산, 가용성",
+   "분산 DB 구조와 설계 전략",
+   "- 분산 DBMS·지역 DBMS",
+   "- Top Down·Bottom Up·Hybrid",
+   "- 수평·수직·혼합 분할",
+   "분산 DB 구축 시 고려사항",
+   "- 네트워크·보안·백업",
+   "- 2PC·복제"
+  ],
+  "sections": [
+   {
+    "title": "구조",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "분산 DBMS: 지역 DBMS들을 하나의 광역 DBMS로 관리",
+       "지역 DBMS: 질의 처리기·동시성·보안·복구·저장 관리 모듈, ACID 지원",
+       "스키마: 전역 → 분할 → 할당 → 지역 스키마"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "설계와 분할",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Top Down: 신규 구축, 전체 설계 후 분산 / Bottom Up: 기존 DB 통합(게이트웨이) / Hybrid: 혼합",
+       "수평: 튜플(레코드) 단위 분할(지역별 고객) / 수직: 속성 단위 분할(기본정보 중앙·변동정보 지역) / 혼합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "고려사항",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "광대역 네트워크, 통합 보안·역할별 권한, 백업·복구 체계",
+       "분산 트랜잭션 원자성은 2PC, 가용성은 복제로 확보"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "분산 투명성(Distribution Transparency)",
+   "전역 스키마(Global Schema)",
+   "분할 스키마(Fragmentation Schema)",
+   "할당 스키마(Allocation Schema)",
+   "수평 분할(Horizontal Fragmentation)",
+   "수직 분할(Vertical Fragmentation)",
+   "Top Down 설계",
+   "Bottom Up 설계",
+   "2단계 커밋(2PC, Two-Phase Commit)",
+   "복제(Replication)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_015",
+  "code": "DB_015",
+  "domain": "DB",
+  "category": "DB > DB 유형",
+  "title": "로우 기반·칼럼 기반 DBMS(Row-oriented vs Column-oriented DBMS)",
+  "subtitle": "",
+  "name": "로우 기반·칼럼 기반 DBMS(Row-oriented vs Column-oriented DBMS)",
+  "en": "Row-oriented vs Column-oriented DBMS",
+  "definition": "로우 기반 DBMS는 레코드 단위로 연속 저장해 OLTP에, 칼럼 기반 DBMS는 같은 칼럼 값을 모아 저장해 압축·집계가 유리하여 DW·OLAP에 적합한 저장 구조이다.",
+  "keywords": [
+   "로우 기반: 레코드 단위 저장 · INSERT·UPDATE 유리 · OLTP · SELECT *",
+   "칼럼 기반: 칼럼별 파일 · 압축 효율↑ · 범위·집계 질의 · SELECT SUM(COL)",
+   "압축: RLE · Dictionary Encoding · Bitmap",
+   "제품: Oracle·DB2(로우) / Vertica·SAP HANA·Redshift(칼럼)"
+  ],
+  "keywords_must": [
+   "로우 기반 저장(Row-oriented Storage)",
+   "칼럼 기반 저장(Column-oriented Storage)",
+   "OLTP(Online Transaction Processing)",
+   "OLAP(Online Analytical Processing)",
+   "압축 효율(Compression Ratio)",
+   "집계 질의(Aggregation Query)",
+   "칼럼 선택 읽기(Column Pruning)",
+   "데이터 웨어하우스(Data Warehouse)",
+   "랜덤 액세스(Random Access)"
+  ],
+  "keywords_ref": [
+   "RLE(Run-Length Encoding)",
+   "사전 인코딩(Dictionary Encoding)",
+   "Late Materialization",
+   "하이브리드 저장(HTAP)"
+  ],
+  "outline": [
+   "로우·칼럼 기반 DBMS 개요",
+   "- 저장 단위 차이",
+   "로우 기반·칼럼 기반 DBMS 비교",
+   "- 구조·데이터 조작",
+   "- 압축 효율·질의 형태",
+   "- 용도·업무 성격·조회 데이터",
+   "칼럼 기반 DBMS 활용",
+   "- DW·BI 대용량 분석",
+   "- HTAP"
+  ],
+  "sections": [
+   {
+    "title": "비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "구조: 한 페이지에 여러 레코드 / 칼럼별 파일에 동일 칼럼 값 연속",
+       "조작: 레코드 추가·삭제 유리 / 수정 시 여러 파일 수정 필요",
+       "압축: 레코드 단위라 낮음 / 동일 도메인 연속으로 높음",
+       "질의: 인덱스로 특정 레코드 랜덤 액세스 / 칼럼 범위 선택·집계"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "용도",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "로우: 실시간 거래 OLTP, 일부 행의 전체 칼럼 조회",
+       "칼럼: 읽기 중심 대용량 DW·OLAP, 전체 행의 일부 칼럼 집계"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "칼럼형: Vertica·SAP HANA·Amazon Redshift·Google BigQuery",
+       "행·열 저장을 함께 쓰는 HTAP로 실시간 분석"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "로우 기반 저장(Row-oriented Storage)",
+   "칼럼 기반 저장(Column-oriented Storage)",
+   "OLTP(Online Transaction Processing)",
+   "OLAP(Online Analytical Processing)",
+   "압축 효율(Compression Ratio)",
+   "집계 질의(Aggregation Query)",
+   "칼럼 선택 읽기(Column Pruning)",
+   "데이터 웨어하우스(Data Warehouse)",
+   "랜덤 액세스(Random Access)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_016",
+  "code": "DB_016",
+  "domain": "DB",
+  "category": "DB > NoSQL",
+  "title": "NoSQL과 CAP 이론(NoSQL and CAP Theorem)",
+  "subtitle": "",
+  "name": "NoSQL과 CAP 이론(NoSQL and CAP Theorem)",
+  "en": "NoSQL and CAP Theorem",
+  "definition": "NoSQL(Not only SQL)은 고정 스키마 없이 수평 확장(Scale-out)과 대용량·고가용 처리에 최적화된 비관계형 DBMS이며, CAP 이론은 분산 시스템이 일관성·가용성·분할 내성 중 둘만 동시에 보장할 수 있다는 정리이다.",
+  "keywords": [
+   "특징: 스키마리스(Schema-less) · 수평 확장 · 비관계형 · 조회 성능 · BASE",
+   "CAP: 일관성(Consistency) · 가용성(Availability) · 분할 내성(Partition Tolerance)",
+   "조합: CP/AP 선택(HBase는 CP, Cassandra는 가용성 우선) · CA는 단일 노드",
+   "BASE: Basically Available · Soft state · Eventually consistent"
+  ],
+  "keywords_must": [
+   "스키마리스(Schema-less)",
+   "수평 확장(Scale-out)",
+   "일관성(Consistency)",
+   "가용성(Availability)",
+   "분할 내성(Partition Tolerance)",
+   "BASE(기본 가용·유연 상태·최종 일관성)",
+   "최종 일관성(Eventual Consistency)",
+   "CP/AP 시스템",
+   "Brewer 정리(Brewer's Theorem)"
+  ],
+  "keywords_ref": [
+   "Key-Value·Document·Column Family·Graph",
+   "PACELC",
+   "샤딩(Sharding)",
+   "Quorum(N·R·W)",
+   "비정규화(Denormalization)"
+  ],
+  "outline": [
+   "NoSQL 개요",
+   "- 비관계형·스키마리스",
+   "- 등장 배경(빅데이터·웹 스케일)",
+   "CAP 이론",
+   "- C·A·P 정의",
+   "- CP/AP/CA 조합과 제품",
+   "ACID · BASE 비교",
+   "- 강한 일관성 vs 최종 일관성",
+   "- 데이터 모델링 패턴"
+  ],
+  "sections": [
+   {
+    "title": "CAP 이론",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "C: 모든 노드가 같은 시점에 같은 데이터 응답",
+       "A: 일부 노드 장애에도 모든 요청에 응답",
+       "P: 네트워크 분할(메시지 손실)에도 시스템 동작",
+       "분산 환경에서 P는 필수 → 실질적 선택은 CP/AP 중 하나"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "ACID vs BASE",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "ACID: 강한 일관성·트랜잭션 중심·RDBMS",
+       "BASE: 가용성 우선·Soft state·최종 일관성·NoSQL"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "모델링 패턴",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "쿼리 중심 설계, 비정규화(중복 허용), Aggregation, Application-side Join, Index Table"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "스키마리스(Schema-less)",
+   "수평 확장(Scale-out)",
+   "일관성(Consistency)",
+   "가용성(Availability)",
+   "분할 내성(Partition Tolerance)",
+   "BASE(기본 가용·유연 상태·최종 일관성)",
+   "최종 일관성(Eventual Consistency)",
+   "CP/AP 시스템",
+   "Brewer 정리(Brewer's Theorem)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_017",
+  "code": "DB_017",
+  "domain": "DB",
+  "category": "DB > NoSQL",
+  "title": "NoSQL 데이터 모델(NoSQL Data Model)",
+  "subtitle": "",
+  "name": "NoSQL 데이터 모델(NoSQL Data Model)",
+  "en": "NoSQL Data Model",
+  "definition": "NoSQL이 데이터를 저장·조회하는 구조 유형으로, Key-Value·Ordered Key-Value·Column Family·Document·Graph 모델이 있으며 접근 패턴(쿼리) 중심으로 설계한다.",
+  "keywords": [
+   "Key-Value: Redis · DynamoDB · Memcached",
+   "Column Family: Cassandra · HBase",
+   "Document: MongoDB · CouchDB(JSON·BSON)",
+   "Graph: Neo4j · AllegroGraph(Node·Edge)"
+  ],
+  "keywords_must": [
+   "Key-Value Store",
+   "Ordered Key-Value Store",
+   "Column Family Store",
+   "Document Store",
+   "Graph Store",
+   "Get·Put·Delete",
+   "비정규화(Denormalization)",
+   "Application-side Join",
+   "Secondary Index"
+  ],
+  "keywords_ref": [
+   "JSON·BSON",
+   "Row Key·Column Qualifier",
+   "쿼리 결과 디자인",
+   "도메인 모델"
+  ],
+  "outline": [
+   "NoSQL 데이터 모델의 필요성",
+   "- 요구사항을 모델로 반영",
+   "NoSQL 데이터 모델 유형",
+   "- Key-Value·Ordered Key-Value",
+   "- Column Family·Document·Graph",
+   "NoSQL 데이터 모델링",
+   "- 절차: 도메인 모델 → 쿼리 결과 디자인 → 패턴 적용 → 최적화",
+   "- 고려사항"
+  ],
+  "sections": [
+   {
+    "title": "모델 유형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Key-Value: 유일 Key에 Value 하나, Get·Put·Delete",
+       "Ordered Key-Value: Key 기준 정렬 저장, 범위 검색",
+       "Column Family: Row Key 안에 (Column, Value) 다수, 희소 대용량",
+       "Document: Value가 JSON 등 문서, 중첩 구조 질의",
+       "Graph: 노드·간선·속성으로 관계 탐색"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "모델링 절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "도메인 모델 파악(ERD) → 쿼리 결과 디자인 → 패턴으로 테이블 재정의(Put/Get) → Secondary Index 최적화 → 후보 NoSQL 선정·부하 테스트"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "고려사항",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "비즈니스 쿼리 먼저 정의, 액세스 패턴 기반 설계",
+       "조인 미지원 → 비정규화·Aggregation으로 보완"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "Key-Value Store",
+   "Ordered Key-Value Store",
+   "Column Family Store",
+   "Document Store",
+   "Graph Store",
+   "Get·Put·Delete",
+   "비정규화(Denormalization)",
+   "Application-side Join",
+   "Secondary Index"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_018",
+  "code": "DB_018",
+  "domain": "DB",
+  "category": "DB > NoSQL",
+  "title": "PACELC 이론(PACELC Theorem)",
+  "subtitle": "",
+  "name": "PACELC 이론(PACELC Theorem)",
+  "en": "PACELC Theorem",
+  "definition": "CAP 이론이 장애 상황만 고려한 한계를 보완해, 분할(P) 시 가용성(A)과 일관성(C) 중 하나를, 정상(Else) 시 지연시간(L)과 일관성(C) 중 하나를 선택한다고 설명하는 분산 DB 분류 이론.",
+  "keywords": [
+   "장애 시: Partition → Availability vs Consistency",
+   "정상 시: Else → Latency vs Consistency",
+   "유형: PA/EL · PC/EC · PA/EC · PC/EL",
+   "제안: Daniel Abadi(예일대)"
+  ],
+  "keywords_must": [
+   "Partition(분할)",
+   "Else(정상 상황)",
+   "Latency(지연시간)",
+   "PA/EL(Cassandra·DynamoDB)",
+   "PC/EC(HBase·BigTable)",
+   "PA/EC(MongoDB)",
+   "PC/EL(PNUTS)",
+   "CAP 이론 한계",
+   "Daniel Abadi"
+  ],
+  "keywords_ref": [
+   "최종 일관성(Eventual Consistency)",
+   "복제 지연(Replication Lag)",
+   "Quorum",
+   "Tunable Consistency"
+  ],
+  "outline": [
+   "PACELC 개요",
+   "- 정상·장애 상황 모두 고려",
+   "- CAP 이론의 한계",
+   "PACELC 구성",
+   "- 장애 시 A↔C 선택",
+   "- 정상 시 L↔C 선택",
+   "PACELC 기반 NoSQL 유형",
+   "- PA/EL·PC/EC·PA/EC·PC/EL",
+   "- 제품 사례"
+  ],
+  "sections": [
+   {
+    "title": "CAP 한계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "CA는 네트워크 장애 가능성 0 가정 → 분산 환경에서 불가",
+       "장애 상황만 설명, 정상 시 지연과 일관성의 상충을 설명 못함"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "PA/EL: 장애 시 가용성, 정상 시 지연 우선(Cassandra·DynamoDB·Riak)",
+       "PC/EC: 항상 일관성 우선(HBase·BigTable·VoltDB)",
+       "PA/EC: 장애 시 가용성, 정상 시 일관성(MongoDB)",
+       "PC/EL: 장애 시 일관성, 정상 시 지연(Yahoo PNUTS)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "설계 시사점",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "업무의 일관성 요구와 응답 지연 허용치로 NoSQL 선택",
+       "Cassandra는 Consistency Level로 조정 가능"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "Partition(분할)",
+   "Else(정상 상황)",
+   "Latency(지연시간)",
+   "PA/EL(Cassandra·DynamoDB)",
+   "PC/EC(HBase·BigTable)",
+   "PA/EC(MongoDB)",
+   "PC/EL(PNUTS)",
+   "CAP 이론 한계",
+   "Daniel Abadi"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_019",
+  "code": "DB_019",
+  "domain": "DB",
+  "category": "DB > DB 유형",
+  "title": "공간 데이터베이스(Spatial Database)",
+  "subtitle": "",
+  "name": "공간 데이터베이스(Spatial Database)",
+  "en": "Spatial Database",
+  "definition": "좌표로 표현되는 공간 데이터와 문자·숫자의 비공간(속성) 데이터를 함께 저장하고, 공간 연산자·공간 색인으로 위치 기반 질의를 처리하는 데이터베이스.",
+  "keywords": [
+   "데이터 타입: 벡터(Vector: 점·선·면) · 래스터(Raster: 격자·셀)",
+   "공간 연산: 포함 · 겹침 · 최소거리 · 위상 연산 · 시공간 연산",
+   "공간 색인: R-Tree · R*-Tree · Quad-Tree · Grid",
+   "처리: 공간 질의 + 속성 질의 통합"
+  ],
+  "keywords_must": [
+   "벡터 데이터(Vector Data)",
+   "래스터 데이터(Raster Data)",
+   "공간 연산자(Spatial Operator)",
+   "위상 관계(Topology)",
+   "R-Tree",
+   "R*-Tree",
+   "MBR(Minimum Bounding Rectangle)",
+   "통합 질의 처리",
+   "공간 데이터 클러스터링"
+  ],
+  "keywords_ref": [
+   "Quad-Tree",
+   "OGC 표준(Simple Features)",
+   "PostGIS",
+   "GIS(Geographic Information System)"
+  ],
+  "outline": [
+   "공간 DB 개요",
+   "- 공간·비공간 데이터 집합",
+   "- 비정형·대량·위상 특성",
+   "공간 DB 구성요소",
+   "- 공간 연산자·공간 질의 처리",
+   "- 공간 파일 시스템·공간 색인",
+   "공간 데이터 타입",
+   "- 벡터 vs 래스터 비교"
+  ],
+  "sections": [
+   {
+    "title": "구성요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "공간 연산자: 2차원(포함·겹침·최소거리), 2.5·3차원(가시지역·최적경로), 시공간, 위상",
+       "공간 질의 처리: 질의 계획 수립, 공간 질의와 속성 질의 분리 후 결과 통합",
+       "공간 파일 시스템: 가변 길이 처리·클러스터링",
+       "공간 색인: R-Tree 계열(MBR로 객체 포함)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "벡터 vs 래스터",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "벡터: 점·선·면 좌표, 정밀·용량 작음·위상 표현 용이",
+       "래스터: 격자 셀 값, 위성영상·연속 데이터, 중첩 분석 용이·용량 큼"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "GIS·LBS(Location-Based Service)·자율주행 지도·스마트시티"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "벡터 데이터(Vector Data)",
+   "래스터 데이터(Raster Data)",
+   "공간 연산자(Spatial Operator)",
+   "위상 관계(Topology)",
+   "R-Tree",
+   "R*-Tree",
+   "MBR(Minimum Bounding Rectangle)",
+   "통합 질의 처리",
+   "공간 데이터 클러스터링"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_023",
+  "code": "DB_023",
+  "domain": "DB",
+  "category": "DB > DB 유형",
+  "title": "인메모리 데이터베이스(In-Memory Database)",
+  "subtitle": "",
+  "name": "인메모리 데이터베이스(In-Memory Database)",
+  "en": "In-Memory Database",
+  "definition": "디스크 대신 주기억장치(Main Memory)에 데이터를 상주시켜 처리하는 DBMS로, 실시간 BI·RTE(Real Time Enterprise)를 위해 디스크 기반보다 빠르고 예측 가능한 성능을 제공한다.",
+  "keywords": [
+   "기술요소: 메인 메모리 저장 · 데이터 영구성(Persistence) · 압축 · 컬럼 지향 저장 · 병렬 처리",
+   "영속성: Savepoint · 로그 · NVRAM · 복제",
+   "한계: Durability 보장 어려움 · 메모리 비용",
+   "제품: SAP HANA · Oracle TimesTen · Redis · Altibase"
+  ],
+  "keywords_must": [
+   "메인 메모리(Main Memory) 상주",
+   "데이터 영구성(Persistence)",
+   "Savepoint(Checkpoint)",
+   "트랜잭션 로그(Redo Log)",
+   "데이터 압축(Dictionary Encoding)",
+   "컬럼 지향 저장(Column Store)",
+   "병렬 처리(Multi-core)",
+   "RTE(Real Time Enterprise)",
+   "NVRAM(Non-Volatile Memory)"
+  ],
+  "keywords_ref": [
+   "SAP HANA",
+   "Oracle TimesTen",
+   "하이브리드 MMDB",
+   "실시간 BI(Business Intelligence)",
+   "T-Tree 인덱스"
+  ],
+  "outline": [
+   "인메모리 DB 개요",
+   "- 메인 메모리 기반 DBMS",
+   "- 실시간 BI·RTE",
+   "인메모리 DB 기술요소",
+   "- 메인 메모리 저장·영구성 지원",
+   "- 압축·컬럼 지향·병렬 처리",
+   "인메모리 DB 아키텍처와 고려사항",
+   "- 디스크 DB 비교",
+   "- 장애 복구"
+  ],
+  "sections": [
+   {
+    "title": "기술요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "메인 메모리 저장: 디스크보다 수십만 배 빠른 접근, 용량 한계",
+       "영구성: ACID 중 D가 취약 → Savepoint 페이지 주기적 디스크 저장(HANA 기본 5분) + 로그",
+       "압축: 날짜·문자형을 정수 사전으로 변환해 메모리·이동 최소화",
+       "컬럼 저장·멀티코어 병렬로 집계 가속"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "디스크 DB 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "디스크 DB: 버퍼 캐시·디스크 I/O 최적화, B+Tree",
+       "인메모리 DB: 메모리 구조 최적 인덱스(T-Tree 등), I/O 병목 제거"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "고려사항",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "전원 장애 대비 로그·스냅숏·복제(HA)",
+       "메모리 용량 산정·비용, 데이터 온도에 따른 계층화"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "메인 메모리(Main Memory) 상주",
+   "데이터 영구성(Persistence)",
+   "Savepoint(Checkpoint)",
+   "트랜잭션 로그(Redo Log)",
+   "데이터 압축(Dictionary Encoding)",
+   "컬럼 지향 저장(Column Store)",
+   "병렬 처리(Multi-core)",
+   "RTE(Real Time Enterprise)",
+   "NVRAM(Non-Volatile Memory)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_031_1",
+  "code": "DB_031_1",
+  "domain": "DB",
+  "category": "DB > DB 유형",
+  "title": "그래프 DB·벡터 DB(Graph Database and Vector Database)",
+  "subtitle": "",
+  "name": "그래프 DB·벡터 DB(Graph Database and Vector Database)",
+  "en": "Graph Database and Vector Database",
+  "definition": "그래프 DB는 데이터를 노드와 간선으로 저장해 관계 탐색에 강한 DB이고, 벡터 DB는 임베딩 벡터를 저장하고 ANN(Approximate Nearest Neighbor) 검색으로 유사도 질의를 처리하는 DB이다.",
+  "keywords": [
+   "그래프 구성: 노드/정점(Vertex) · 간선(Edge) · 프로퍼티(Property) · 레이블",
+   "그래프 제품: Neo4j(Cypher) · Amazon Neptune · JanusGraph",
+   "벡터 색인: HNSW · LSH · Product Quantization · Random Projection",
+   "유사도: 코사인 유사도 · 유클리드 거리 · 맨해튼 거리 · 내적"
+  ],
+  "keywords_must": [
+   "노드/정점(Vertex)",
+   "간선(Edge)",
+   "프로퍼티(Property)",
+   "Cypher·Gremlin",
+   "임베딩(Embedding)",
+   "ANN(Approximate Nearest Neighbor)",
+   "HNSW(Hierarchical Navigable Small World)",
+   "LSH(Locality-Sensitive Hashing)",
+   "PQ(Product Quantization)",
+   "코사인 유사도(Cosine Similarity)"
+  ],
+  "keywords_ref": [
+   "Random Projection",
+   "유클리드 거리(Euclidean Distance)",
+   "RAG(Retrieval-Augmented Generation)",
+   "Neo4j·Pinecone·Milvus",
+   "Index-free Adjacency"
+  ],
+  "outline": [
+   "그래프 DB",
+   "- 개념·특징",
+   "- 노드·간선·프로퍼티, 저장·처리 엔진·질의 언어",
+   "- 종류: Neo4j 등",
+   "벡터 DB",
+   "- 임베딩 저장·유사도 검색",
+   "- 인덱싱: HNSW·LSH·PQ",
+   "- 유사도 측정 방법",
+   "그래프 DB · 벡터 DB 비교"
+  ],
+  "sections": [
+   {
+    "title": "그래프 DB",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "구성요소: Graph Storage·Graph Processing Engine·Graph Query Language",
+       "Index-free Adjacency로 다단계 관계 탐색이 조인보다 빠름",
+       "활용: SNS 관계, 추천, 사기 탐지, 지식 그래프"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "벡터 DB",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "HNSW: 계층형 근접 그래프 탐색, 정확도·속도 우수",
+       "LSH: 유사 벡터를 같은 버킷에 해싱",
+       "PQ: 벡터를 부분 공간으로 양자화해 메모리 절감, Random Projection: 저차원 투영",
+       "활용: RAG·의미 검색·이미지 검색"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유사도 측정",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "코사인: 방향(각도) 유사, 텍스트 임베딩",
+       "유클리드: 직선 거리, 맨해튼: 축별 거리 합, 내적: 크기·방향 모두 반영"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "노드/정점(Vertex)",
+   "간선(Edge)",
+   "프로퍼티(Property)",
+   "Cypher·Gremlin",
+   "임베딩(Embedding)",
+   "ANN(Approximate Nearest Neighbor)",
+   "HNSW(Hierarchical Navigable Small World)",
+   "LSH(Locality-Sensitive Hashing)",
+   "PQ(Product Quantization)",
+   "코사인 유사도(Cosine Similarity)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_032",
+  "code": "DB_032",
+  "domain": "DB",
+  "category": "DB > 데이터 모델링",
+  "title": "데이터 모델링(Data Modeling)",
+  "subtitle": "",
+  "name": "데이터 모델링(Data Modeling)",
+  "en": "Data Modeling",
+  "definition": "현실 세계의 업무 데이터를 추상화해 요구사항 분석 → 개념 → 논리 → 물리 모델 순으로 데이터 구조·관계·제약을 정의하는 데이터베이스 설계 과정.",
+  "keywords": [
+   "단계: 요구사항 분석 → 개념 모델링 → 논리 모델링 → 물리 모델링((요)개논물)",
+   "산출물: ERD · 관계 스키마 · 테이블 정의서(DDL)",
+   "요소: 엔티티 · 속성 · 관계 · 식별자",
+   "NoSQL: 도메인 모델 → 쿼리 결과 디자인 → 패턴 모델링 → 최적화"
+  ],
+  "keywords_must": [
+   "요구사항 분석",
+   "개념적 모델링(Conceptual Modeling)",
+   "논리적 모델링(Logical Modeling)",
+   "물리적 모델링(Physical Modeling)",
+   "ERD(Entity Relationship Diagram)",
+   "정규화(Normalization)",
+   "반정규화(Denormalization)",
+   "추상화(Abstraction)",
+   "DBMS 독립성"
+  ],
+  "keywords_ref": [
+   "주제영역(Subject Area)",
+   "테이블 정의서",
+   "Secondary Index",
+   "쿼리 결과 디자인"
+  ],
+  "outline": [
+   "데이터 모델링의 개요",
+   "- 데이터 표현 추상화",
+   "- 요구사항 분석 → 개념 → 논리 → 물리 모델링",
+   "모델링 단계별 상세",
+   "- 개념: 주제영역·핵심 데이터 집합",
+   "- 논리: 정규화·키·관계",
+   "- 물리: 특정 DBMS 저장 구조",
+   "NoSQL 데이터 모델링 절차",
+   "- 도메인 모델 → 쿼리 디자인 → 패턴 → 최적화"
+  ],
+  "sections": [
+   {
+    "title": "단계별 특징",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "요구사항 분석: 업무 개선·신규 기능 요구 분석",
+       "개념: 주제영역·핵심 엔티티·관계 정의, DBMS 독립(ERD)",
+       "논리: 업무 규칙을 관계 스키마로, 정규화·식별자 확정",
+       "물리: 특정 DBMS의 테이블·인덱스·파티션·반정규화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "좋은 모델 조건",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "완전성·중복 배제·업무 규칙 표현·데이터 재사용·의사소통·통합성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "NoSQL 모델링",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "도메인 모델 → 쿼리 결과 디자인 → Put/Get 패턴으로 재정의 → Secondary Index 최적화 → 후보 선정·부하 테스트"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "요구사항 분석",
+   "개념적 모델링(Conceptual Modeling)",
+   "논리적 모델링(Logical Modeling)",
+   "물리적 모델링(Physical Modeling)",
+   "ERD(Entity Relationship Diagram)",
+   "정규화(Normalization)",
+   "반정규화(Denormalization)",
+   "추상화(Abstraction)",
+   "DBMS 독립성"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_033",
+  "code": "DB_033",
+  "domain": "DB",
+  "category": "DB > 정규화",
+  "title": "이상현상(Anomaly)",
+  "subtitle": "",
+  "name": "이상현상(Anomaly)",
+  "en": "Anomaly",
+  "definition": "정규화되지 않은 릴레이션에서 데이터 중복과 부적절한 함수 종속 때문에 삽입·갱신·삭제 시 발생하는 비합리적 현상으로, 정규화로 해결한다.",
+  "keywords": [
+   "종류: 삽입 이상 · 갱신 이상 · 삭제 이상",
+   "원인: 데이터 중복 · 여러 사실을 한 릴레이션에 표현 · 부분·이행 함수 종속",
+   "해결: 정규화(무손실 분해)",
+   "예: 수강지도(학번, 지도교수, 학과, 과목번호, 성적)"
+  ],
+  "keywords_must": [
+   "삽입 이상(Insertion Anomaly)",
+   "갱신 이상(Update Anomaly)",
+   "삭제 이상(Deletion Anomaly)",
+   "데이터 중복(Redundancy)",
+   "데이터 불일치(Inconsistency)",
+   "함수적 종속성(Functional Dependency)",
+   "부분 함수 종속",
+   "이행 함수 종속",
+   "무손실 분해(Lossless Decomposition)"
+  ],
+  "keywords_ref": [
+   "1NF·2NF·3NF·BCNF",
+   "결정자(Determinant)",
+   "정보 손실",
+   "릴레이션 분해"
+  ],
+  "outline": [
+   "이상현상의 개요",
+   "- 정규화가 필요한 이유",
+   "- 발생 원인",
+   "이상현상의 종류와 예시",
+   "- 삽입·갱신·삭제 이상",
+   "- 수강지도 릴레이션 예",
+   "정규화를 통한 해결",
+   "- 1NF → 2NF → 3NF 분해"
+  ],
+  "sections": [
+   {
+    "title": "종류",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "삽입 이상: 원치 않는 정보까지 함께 넣어야 삽입 가능",
+       "갱신 이상: 중복 값 중 일부만 갱신되어 불일치",
+       "삭제 이상: 튜플 삭제 시 필요한 정보까지 함께 삭제"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "예시",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "수강지도(학번, 지도교수, 학과, 과목번호, 성적): 성적 입력에 지도교수 필요, 지도교수 변경 시 일부 행만 변경, 학생 삭제 시 교수 정보 소실"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "해결",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "부분 종속 제거(2NF) → 학생(학번, 지도교수, 학과)·수강(학번, 과목번호, 성적)",
+       "이행 종속 제거(3NF) → 지도교수→학과 분리"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "삽입 이상(Insertion Anomaly)",
+   "갱신 이상(Update Anomaly)",
+   "삭제 이상(Deletion Anomaly)",
+   "데이터 중복(Redundancy)",
+   "데이터 불일치(Inconsistency)",
+   "함수적 종속성(Functional Dependency)",
+   "부분 함수 종속",
+   "이행 함수 종속",
+   "무손실 분해(Lossless Decomposition)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_034_0",
+  "code": "DB_034_0",
+  "domain": "DB",
+  "category": "DB > 데이터 모델링",
+  "title": "개체-관계 다이어그램과 확장 ERD(ERD and EERD)",
+  "subtitle": "",
+  "name": "개체-관계 다이어그램과 확장 ERD(ERD and EERD)",
+  "en": "ERD and Enhanced ERD",
+  "definition": "ERD(Entity Relationship Diagram)는 개체·관계·속성으로 데이터 구조를 표현하는 개념 데이터 모델이고, EERD는 여기에 일반화·세분화·집단화·상속 개념을 추가한 확장 모델이다.",
+  "keywords": [
+   "ERD 요소: 개체(Entity) · 관계(Relationship) · 속성(Attribute)",
+   "EERD 개념: 일반화(Generalization) · 세분화(Specialization) · 집단화(Aggregation) · 상속(Inheritance)",
+   "표기법: Chen · IE(Crow's Foot) · Barker · UML",
+   "작성: 주제영역 → 엔티티 → 관계 → 식별자 → 속성"
+  ],
+  "keywords_must": [
+   "개체(Entity)",
+   "관계(Relationship)",
+   "속성(Attribute)",
+   "카디널리티(Cardinality)",
+   "일반화(Generalization)",
+   "세분화(Specialization)",
+   "집단화(Aggregation)",
+   "상속(Inheritance)",
+   "슈퍼타입·서브타입(Supertype·Subtype)",
+   "IE 표기법(Crow's Foot)"
+  ],
+  "keywords_ref": [
+   "Chen 표기법",
+   "배타적·포괄적 서브타입(Exclusive·Inclusive)",
+   "참여도(Optionality)",
+   "약한 개체(Weak Entity)"
+  ],
+  "outline": [
+   "ERD 개요",
+   "- ER 모델링의 산출물",
+   "- 개념·시맨틱 데이터 모델",
+   "ERD 기본요소와 작성 절차",
+   "- 개체·관계·속성",
+   "- 작성 절차·표기법",
+   "EERD",
+   "- 일반화·세분화·집단화",
+   "- 상속·서브타입 제약"
+  ],
+  "sections": [
+   {
+    "title": "ERD 요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "개체: 관리 대상 사물·사건(사각형), 명사형",
+       "관계: 개체 간 연관(마름모), 카디널리티 1:1·1:N·M:N",
+       "속성: 더 이상 쪼갤 수 없는 성질(타원), 식별자 밑줄"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "EERD 개념",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "일반화: 하위 개체 공통점 → 상위(Bottom-up), 세분화: 상위 → 하위(Top-down)",
+       "집단화: 관계 자체를 상위 개체로 취급",
+       "상속: 서브타입이 슈퍼타입 속성·관계 승계, 배타/포괄·전체/부분 제약"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "작성 절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "주제영역 정의 → 엔티티 도출 → 관계 정의 → 식별자 → 속성 → 정규화 검증"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "개체(Entity)",
+   "관계(Relationship)",
+   "속성(Attribute)",
+   "카디널리티(Cardinality)",
+   "일반화(Generalization)",
+   "세분화(Specialization)",
+   "집단화(Aggregation)",
+   "상속(Inheritance)",
+   "슈퍼타입·서브타입(Supertype·Subtype)",
+   "IE 표기법(Crow's Foot)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_034_1",
+  "code": "DB_034_1",
+  "domain": "DB",
+  "category": "DB > 데이터 모델링",
+  "title": "엔티티(Entity)",
+  "subtitle": "",
+  "name": "엔티티(Entity)",
+  "en": "Entity",
+  "definition": "업무에 필요하고 유용한 정보를 저장·관리하기 위해 사물·개념의 공통 특성을 가진 인스턴스의 집합으로, 식별자로 구분되고 속성과 관계를 가진다.",
+  "keywords": [
+   "자격요건: 업무 필요성 · 식별성 · 집합성 · 프로세스 활용 · 속성 보유 · 관계성(업식집프속관)",
+   "유무형 분류: 유형 엔티티 · 개념 엔티티 · 사건 엔티티",
+   "발생시점 분류: 기본(키) · 중심 · 행위 엔티티",
+   "도출: 후보 도출 → 정제 → 확정 → 엔티티 기술서"
+  ],
+  "keywords_must": [
+   "식별성(Identifiability)",
+   "집합성(인스턴스 2개 이상)",
+   "업무 필요성",
+   "프로세스 활용(CRUD)",
+   "유형 엔티티(Tangible Entity)",
+   "개념 엔티티(Conceptual Entity)",
+   "사건 엔티티(Event Entity)",
+   "기본 엔티티(Fundamental/Key Entity)",
+   "중심 엔티티(Main Entity)",
+   "행위 엔티티(Active Entity)"
+  ],
+  "keywords_ref": [
+   "인스턴스(Instance)",
+   "속성(Attribute)",
+   "식별자(Identifier)",
+   "엔티티 기술서",
+   "CRUD 매트릭스"
+  ],
+  "outline": [
+   "엔티티의 개요",
+   "- 인스턴스의 집합",
+   "- 엔티티 자격요건(업식집프속관)",
+   "엔티티 도출 절차",
+   "- 후보 도출·정제·확정",
+   "엔티티 유형",
+   "- 유무형: 유형 엔티티·개념 엔티티·사건 엔티티",
+   "- 발생시점: 기본·중심·행위"
+  ],
+  "sections": [
+   {
+    "title": "자격요건",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "업무 필요성, 식별자로 유일 식별, 인스턴스 2개 이상(집합성), 업무 프로세스에 활용(CRUD 확인)",
+       "속성 보유, 다른 엔티티와 1개 이상 관계(통계·코드성은 예외)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "도출 절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "업무 문서에서 행위·행위 결과로 후보 도출 → 유사·중복 후보 정제 → 순수성·동질성·독립성 확인 후 확정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "유형: 사원·물품, 개념: 조직·보험상품, 사건: 주문·청구·수납",
+       "기본(키): 사원·부서·고객·상품, 중심: 계약·주문·예금원장, 행위: 주문목록·변경이력(2개 이상 부모)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "식별성(Identifiability)",
+   "집합성(인스턴스 2개 이상)",
+   "업무 필요성",
+   "프로세스 활용(CRUD)",
+   "유형 엔티티(Tangible Entity)",
+   "개념 엔티티(Conceptual Entity)",
+   "사건 엔티티(Event Entity)",
+   "기본 엔티티(Fundamental/Key Entity)",
+   "중심 엔티티(Main Entity)",
+   "행위 엔티티(Active Entity)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_035",
+  "code": "DB_035",
+  "domain": "DB",
+  "category": "DB > 정규화",
+  "title": "암스트롱 공리(Armstrong's Axioms)",
+  "subtitle": "",
+  "name": "암스트롱 공리(Armstrong's Axioms)",
+  "en": "Armstrong's Axioms",
+  "definition": "릴레이션의 속성 집합 X, Y, Z에 대해 주어진 함수적 종속성 집합 F로부터 성립하는 모든 함수 종속(폐포 F+)을 추론하는 건전(Sound)하고 완전(Complete)한 추론 규칙.",
+  "keywords": [
+   "기본 규칙: 재귀성(반사) · 부가성(확장) · 이행성",
+   "유도 규칙: 분해 · 합집합 · 의사이행",
+   "특징: 정당성(Sound) · 완전성(Complete) · 폐포(Closure F+)",
+   "활용: 후보키 도출 · 정규화 · 최소 커버"
+  ],
+  "keywords_must": [
+   "재귀성 규칙(Reflexivity): Y⊆X → X→Y",
+   "부가성 규칙(Augmentation): X→Y → XZ→YZ",
+   "이행성 규칙(Transitivity): X→Y, Y→Z → X→Z",
+   "분해 규칙(Decomposition): X→YZ → X→Y, X→Z",
+   "합집합 규칙(Union): X→Y, X→Z → X→YZ",
+   "의사이행 규칙(Pseudo-transitivity): X→Y, WY→Z → WX→Z",
+   "폐포(Closure, F+)",
+   "정당성(Soundness)",
+   "완전성(Completeness)"
+  ],
+  "keywords_ref": [
+   "속성 폐포(Attribute Closure, X+)",
+   "최소 커버(Minimal Cover)",
+   "후보키(Candidate Key)",
+   "함수적 종속성(Functional Dependency)"
+  ],
+  "outline": [
+   "암스트롱 공리의 개요",
+   "- 함수 종속 추론 규칙",
+   "- 폐포·정당성·완전성",
+   "암스트롱 공리의 구성",
+   "- 기본 규칙: 재귀·부가·이행",
+   "- 유도 규칙: 분해·합집합·의사이행",
+   "암스트롱 공리의 활용",
+   "- 속성 폐포로 후보키 판단",
+   "- 정규화"
+  ],
+  "sections": [
+   {
+    "title": "기본 규칙",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "재귀성: Y⊆X면 X→Y(자명한 종속)",
+       "부가성: X→Y면 XZ→YZ",
+       "이행성: X→Y, Y→Z면 X→Z"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유도 규칙",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "분해: X→YZ면 X→Y, X→Z",
+       "합집합: X→Y, X→Z면 X→YZ",
+       "의사이행: X→Y, WY→Z면 WX→Z"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "속성 폐포 X+가 전체 속성이면 X는 슈퍼키 → 후보키 판단",
+       "최소 커버 계산 후 3NF 합성·BCNF 분해"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "재귀성 규칙(Reflexivity): Y⊆X → X→Y",
+   "부가성 규칙(Augmentation): X→Y → XZ→YZ",
+   "이행성 규칙(Transitivity): X→Y, Y→Z → X→Z",
+   "분해 규칙(Decomposition): X→YZ → X→Y, X→Z",
+   "합집합 규칙(Union): X→Y, X→Z → X→YZ",
+   "의사이행 규칙(Pseudo-transitivity): X→Y, WY→Z → WX→Z",
+   "폐포(Closure, F+)",
+   "정당성(Soundness)",
+   "완전성(Completeness)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_038",
+  "code": "DB_038",
+  "domain": "DB",
+  "category": "DB > 데이터 모델링",
+  "title": "연결 함정(Connection Trap)",
+  "subtitle": "",
+  "name": "연결 함정(Connection Trap)",
+  "en": "Connection Trap",
+  "definition": "ER 모델에서 개체 간 관계가 모두 연결된 것처럼 보이지만 실제로는 관계가 모호하거나 일부 누락되어 원하는 질의 결과를 얻을 수 없는 관계성 설계 오류.",
+  "keywords": [
+   "종류: 부채꼴 함정(Fan Trap) · 균열 함정(Chasm Trap)",
+   "부채꼴: 한 개체에서 1:N 관계가 둘 이상 펼쳐져 관계 모호",
+   "균열: 부분 참여(선택적) 관계 경로로 관계 미존재",
+   "해결: 관계 재구성(n:1·1:n 변환) · 직접 관계 추가"
+  ],
+  "keywords_must": [
+   "부채꼴 함정(Fan Trap)",
+   "균열 함정(Chasm Trap)",
+   "관계성 모호",
+   "관계성 미존재(누락)",
+   "1:N 관계",
+   "부분 참여(Partial Participation)",
+   "관계 재구성",
+   "직접 관계 추가",
+   "무손실 분해(Lossless Decomposition)"
+  ],
+  "keywords_ref": [
+   "단과대학-학과-교수 예",
+   "학생-교수-학과 예",
+   "선택적 관계(Optionality)",
+   "ER 모델 검증"
+  ],
+  "outline": [
+   "연결 함정의 개요",
+   "- 관계성 의미 불분명 현상",
+   "- 부채꼴·균열 함정",
+   "부채꼴 함정의 문제점과 해결",
+   "- 1:N 관계가 부채꼴로 펼쳐짐",
+   "- 중심 개체 변경으로 해결",
+   "균열 함정의 문제점과 해결",
+   "- 부분 참여 경로 단절",
+   "- 직접 관계 추가"
+  ],
+  "sections": [
+   {
+    "title": "부채꼴 함정",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "단과대학 1:N 교수, 단과대학 1:N 학과 → 교수가 속한 학과를 알 수 없음",
+       "해결: 학과 중심으로 단과대학 1:N 학과 1:N 교수로 재구성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "균열 함정",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "학과 1:N 교수 1:N 학생(지도) → 지도교수 미배정 학생은 학과를 알 수 없음",
+       "해결: 학과와 학생 사이 직접 관계(소속) 추가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "예방",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "관계 경로별 질의 시나리오로 ER 모델 검증, 참여도(필수·선택) 명시"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "부채꼴 함정(Fan Trap)",
+   "균열 함정(Chasm Trap)",
+   "관계성 모호",
+   "관계성 미존재(누락)",
+   "1:N 관계",
+   "부분 참여(Partial Participation)",
+   "관계 재구성",
+   "직접 관계 추가",
+   "무손실 분해(Lossless Decomposition)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_041",
+  "code": "DB_041",
+  "domain": "DB",
+  "category": "DB > 데이터 모델링",
+  "title": "자기참조 관계(Self-Referencing Relationship)",
+  "subtitle": "",
+  "name": "자기참조 관계(Self-Referencing Relationship)",
+  "en": "Self-Referencing Relationship",
+  "definition": "하나의 엔티티 타입 안에서 인스턴스가 같은 엔티티의 다른 인스턴스를 참조하는 순환(재귀) 관계로, 조직·메뉴·BOM 같은 계층 구조를 표현한다.",
+  "keywords": [
+   "구성 방법: 통합형(단일 엔티티) · 복합형(다중 엔티티)",
+   "유형: 1:1 · 1:M · M:N 자기참조",
+   "M:N 해소: 관계 엔티티(구성·BOM 엔티티) 분리",
+   "질의: 계층형 질의(CONNECT BY) · 재귀 CTE(WITH RECURSIVE)"
+  ],
+  "keywords_must": [
+   "재귀 관계(Recursive Relationship)",
+   "순환 관계",
+   "통합형(단일 엔티티)",
+   "복합형(다중 엔티티)",
+   "1:M 자기참조(조직·메뉴)",
+   "M:N 자기참조(부품 구성)",
+   "BOM(Bill of Materials)",
+   "관계 엔티티(Associative Entity)",
+   "계층형 질의(Hierarchical Query)"
+  ],
+  "keywords_ref": [
+   "상위 식별자(Parent ID)",
+   "CONNECT BY PRIOR",
+   "WITH RECURSIVE",
+   "Q&A 게시판"
+  ],
+  "outline": [
+   "자기참조 관계의 개요",
+   "- 동일 엔티티 내 자기 참조",
+   "- 통합형·복합형",
+   "관계 유형별 종류",
+   "- 1:1(관련사건)",
+   "- 1:M(조직·게시판)",
+   "- M:N(BOM)",
+   "M:N 자기참조 해결과 장단점",
+   "- 관계 엔티티로 해소",
+   "- 조인 필요·쿼리 복잡"
+  ],
+  "sections": [
+   {
+    "title": "구성 방법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "복합형: 레벨별 엔티티 분리 → 레벨 추가 시 엔티티·SQL 수정 필요",
+       "통합형: 한 엔티티에 상위 식별자 컬럼 → 확장성 우수"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "1:1: 사건-관련사건, 1:M: 조직-하위조직·메뉴·Q&A",
+       "M:N: 부품이 여러 상위 부품의 구성품(BOM)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "M:N 해소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "부품 엔티티 + 부품구성(상위부품, 하위부품, 수량) 관계 엔티티로 분리",
+       "장점: M:N 물리 구현 가능 / 단점: 항상 조인·재귀 질의 필요"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "재귀 관계(Recursive Relationship)",
+   "순환 관계",
+   "통합형(단일 엔티티)",
+   "복합형(다중 엔티티)",
+   "1:M 자기참조(조직·메뉴)",
+   "M:N 자기참조(부품 구성)",
+   "BOM(Bill of Materials)",
+   "관계 엔티티(Associative Entity)",
+   "계층형 질의(Hierarchical Query)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_042",
+  "code": "DB_042",
+  "domain": "DB",
+  "category": "DB > 무결성",
+  "title": "데이터 무결성 제약조건(Integrity Constraint)",
+  "subtitle": "",
+  "name": "데이터 무결성 제약조건(Integrity Constraint)",
+  "en": "Data Integrity Constraint",
+  "definition": "데이터베이스에 저장된 값이 현실 세계의 실제 값과 일치하는 정확성·일관성을 유지하도록, 데이터가 만족해야 할 규칙을 정의하고 위반 시 조치하는 제약조건.",
+  "keywords": [
+   "유형: 개체 · 참조 · 속성(도메인) · 사용자 정의 · 키 무결성(개참속사키)",
+   "규정 요소: 규정 이름 · 검사 시기 · 제약조건 · 위반 조치",
+   "구현: PK · FK · CHECK · NOT NULL · UNIQUE · Trigger",
+   "위반 조치: RESTRICT · CASCADE · SET NULL · SET DEFAULT"
+  ],
+  "keywords_must": [
+   "개체 무결성(Entity Integrity)",
+   "참조 무결성(Referential Integrity)",
+   "속성 무결성(Domain Integrity)",
+   "사용자 정의 무결성(User-defined Integrity)",
+   "키 무결성(Key Integrity)",
+   "기본키(Primary Key)",
+   "외래키(Foreign Key)",
+   "CHECK 제약",
+   "트리거(Trigger)",
+   "CASCADE·RESTRICT·SET NULL"
+  ],
+  "keywords_ref": [
+   "NOT NULL·UNIQUE",
+   "규정 이름·검사 시기·위반 조치",
+   "정확성(Accuracy)",
+   "Assertion"
+  ],
+  "outline": [
+   "데이터 무결성의 개요",
+   "- 정확성·일관성 유지",
+   "- 무결성 규정 4요소",
+   "데이터 무결성 유형",
+   "- 개체·참조·속성",
+   "- 사용자 정의·키",
+   "무결성 구현 방법",
+   "- 선언적 제약(DDL)",
+   "- 절차적 방법(Trigger·응용)"
+  ],
+  "sections": [
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "개체: 기본키는 NULL·중복 불가",
+       "참조: 외래키는 NULL이거나 참조 릴레이션 기본키 값",
+       "속성(도메인): 속성 값은 정의된 도메인(타입·범위) 내",
+       "사용자 정의: 업무 규칙 준수(CHECK·Trigger)",
+       "키: 릴레이션에 중복 튜플 불가(후보키 유일)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "규정 요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "규정 이름, 검사 시기(트랜잭션·연산 유형), 제약조건, 위반 조치"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구현",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "선언적: PRIMARY KEY·FOREIGN KEY·CHECK·NOT NULL·UNIQUE·DEFAULT",
+       "절차적: Trigger·Stored Procedure·응용 로직(성능 저하 고려)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "개체 무결성(Entity Integrity)",
+   "참조 무결성(Referential Integrity)",
+   "속성 무결성(Domain Integrity)",
+   "사용자 정의 무결성(User-defined Integrity)",
+   "키 무결성(Key Integrity)",
+   "기본키(Primary Key)",
+   "외래키(Foreign Key)",
+   "CHECK 제약",
+   "트리거(Trigger)",
+   "CASCADE·RESTRICT·SET NULL"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_043_0",
+  "code": "DB_043_0",
+  "domain": "DB",
+  "category": "DB > 무결성",
+  "title": "데이터 무결성 유지 방법(Maintaining Data Integrity)",
+  "subtitle": "",
+  "name": "데이터 무결성 유지 방법(Maintaining Data Integrity)",
+  "en": "Maintaining Data Integrity",
+  "definition": "동시 실행과 장애 상황에서도 데이터 무결성을 유지하기 위해 적용하는 동시성 제어 기법(2PL·타임스탬프·낙관적 검증)과 회복 기법(로그 기반·체크포인트·그림자 페이지).",
+  "keywords": [
+   "동시성 제어: 2PL · 타임스탬프 순서 · 낙관적 검증 · MVCC",
+   "회복 기법: 로그 기반(즉시·지연 갱신) · 체크포인트 · 그림자 페이지",
+   "제약: 선언적 제약 · 트리거",
+   "효과: 정확성 · 일관성 · 신뢰성(성능 저하 감안)"
+  ],
+  "keywords_must": [
+   "2단계 로킹(2PL, Two-Phase Locking)",
+   "타임스탬프 순서(Timestamp Ordering)",
+   "낙관적 검증(Optimistic Validation)",
+   "즉시 갱신(Immediate Update)",
+   "지연 갱신(Deferred Update)",
+   "체크포인트(Checkpoint)",
+   "그림자 페이지(Shadow Paging)",
+   "UNDO·REDO",
+   "참조 무결성(Referential Integrity)"
+  ],
+  "keywords_ref": [
+   "MVCC(Multi-Version Concurrency Control)",
+   "WAL(Write-Ahead Logging)",
+   "FK 인덱스 생성",
+   "트리거(Trigger)"
+  ],
+  "outline": [
+   "데이터 무결성 유지 방법의 개요",
+   "- 동시성 제어와 회복",
+   "동시성 제어 기법",
+   "- 2PL·타임스탬프·낙관적 검증",
+   "DB 회복 기법",
+   "- 즉시 갱신·지연 갱신",
+   "- 체크포인트·그림자 페이지",
+   "무결성 확보 목적과 사례",
+   "- 고객-주문 참조 무결성"
+  ],
+  "sections": [
+   {
+    "title": "동시성 제어",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "2PL: Lock 확장 단계와 Unlock 수축 단계 분리 → 직렬성 보장",
+       "타임스탬프: 트랜잭션 시작 순서로 실행 순서 결정",
+       "낙관적 검증: 실행 후 종료 시점에 일괄 검사"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "회복 기법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "즉시 갱신: 실행 중 DB 반영, Commit 전 장애 UNDO·후 REDO",
+       "지연 갱신: 부분 완료 후 반영, 장애 시 REDO만(UNDO 불필요)",
+       "체크포인트: 검사점 이후 로그만 처리, 그림자 페이지: 현재·그림자 페이지 테이블 교체"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "사례",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "주문 입력 전 고객 존재 필요(FK), FK 컬럼 인덱스 없으면 Lock·성능 문제"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "2단계 로킹(2PL, Two-Phase Locking)",
+   "타임스탬프 순서(Timestamp Ordering)",
+   "낙관적 검증(Optimistic Validation)",
+   "즉시 갱신(Immediate Update)",
+   "지연 갱신(Deferred Update)",
+   "체크포인트(Checkpoint)",
+   "그림자 페이지(Shadow Paging)",
+   "UNDO·REDO",
+   "참조 무결성(Referential Integrity)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_043_1",
+  "code": "DB_043_1",
+  "domain": "DB",
+  "category": "DB > 무결성",
+  "title": "릴레이션 무결성 제약(Relation Integrity Constraint)",
+  "subtitle": "",
+  "name": "릴레이션 무결성 제약(Relation Integrity Constraint)",
+  "en": "Relation Integrity Constraint",
+  "definition": "릴레이션에 삽입·삭제·갱신 연산을 수행하기 전후 상태의 정확성을 유지하기 위해 의미적 관계를 명세한 규칙으로, 적용 상태·범위·시점에 따라 분류한다.",
+  "keywords": [
+   "상태 기준: 상태 제약(State) · 과도 제약(Transition)",
+   "범위 기준: 집합 제약(Set) · 튜플 제약(Tuple)",
+   "시점 기준: 즉시 제약(Immediate) · 지연 제약(Deferred)",
+   "구현: CHECK · ASSERTION · TRIGGER · DEFERRABLE"
+  ],
+  "keywords_must": [
+   "상태 제약(State Constraint)",
+   "과도 제약(Transition Constraint)",
+   "집합 제약(Set Constraint)",
+   "튜플 제약(Tuple Constraint)",
+   "즉시 제약(Immediate Constraint)",
+   "지연 제약(Deferred Constraint)",
+   "정적 제약·동적 제약",
+   "CHECK 절",
+   "트리거(Trigger)"
+  ],
+  "keywords_ref": [
+   "ASSERTION",
+   "DEFERRABLE INITIALLY DEFERRED",
+   "OLD·NEW 값 비교",
+   "도메인 무결성(Domain Integrity)"
+  ],
+  "outline": [
+   "릴레이션 무결성 제약의 개요",
+   "- 연산 전후 정확성 유지 규칙",
+   "릴레이션 무결성 제약 유형",
+   "- 상태: 상태·과도 제약",
+   "- 범위: 집합·튜플 제약",
+   "- 시점: 즉시·지연 제약",
+   "제약 사례와 구현",
+   "- CHECK·TRIGGER 예",
+   "- DBMS 구현 방법"
+  ],
+  "sections": [
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "상태 제약: 특정 시점에 만족해야 하는 정적 조건",
+       "과도 제약: 상태 변환 전후를 비교하는 동적 조건(새 급여 > 이전 급여)",
+       "집합 제약: 튜플 집합 전체 대상(평균·합계 조건), 튜플 제약: 처리 중 튜플만 대상",
+       "즉시 제약: 연산 직후 검사, 지연 제약: COMMIT 시점 검사"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "사례",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "상태: CHILD.FAMILY_NM = PARENT.FAMILY_NM",
+       "과도: WHEN UPDATE EMP.SAL CHECK(NEWSAL > OLDSAL)",
+       "지연: 상호 참조 FK를 트랜잭션 종료 시 검사"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구현",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "선언적: CHECK·FK·ASSERTION, 절차적: TRIGGER(BEFORE/AFTER, OLD/NEW)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "상태 제약(State Constraint)",
+   "과도 제약(Transition Constraint)",
+   "집합 제약(Set Constraint)",
+   "튜플 제약(Tuple Constraint)",
+   "즉시 제약(Immediate Constraint)",
+   "지연 제약(Deferred Constraint)",
+   "정적 제약·동적 제약",
+   "CHECK 절",
+   "트리거(Trigger)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_044",
+  "code": "DB_044",
+  "domain": "DB",
+  "category": "DB > 회복",
+  "title": "REDO와 UNDO(Redo and Undo)",
+  "subtitle": "",
+  "name": "REDO와 UNDO(Redo and Undo)",
+  "en": "Redo and Undo",
+  "definition": "장애 발생 시 로그를 이용해 완료(Commit)된 트랜잭션의 변경은 재실행(REDO)해 지속성을 보장하고, 미완료 트랜잭션의 변경은 취소(UNDO)해 원자성을 보장하는 회복 연산.",
+  "keywords": [
+   "REDO: 완료 트랜잭션 재실행 · After Image · 지속성",
+   "UNDO: 미완료 트랜잭션 취소 · Before Image · 원자성",
+   "로그: <Ti start> · <Ti, X, old, new> · <Ti commit>",
+   "적용: 즉시 갱신(UNDO+REDO) · 지연 갱신(REDO only)"
+  ],
+  "keywords_must": [
+   "REDO(재실행)",
+   "UNDO(취소)",
+   "After Image(갱신 후 값)",
+   "Before Image(갱신 전 값)",
+   "REDO 로그(Redo Log)",
+   "UNDO 세그먼트(Undo Segment)",
+   "WAL(Write-Ahead Logging)",
+   "멱등성(Idempotent)",
+   "지속성·원자성 보장"
+  ],
+  "keywords_ref": [
+   "Roll Forward·Roll Back",
+   "로그 버퍼(Log Buffer)",
+   "읽기 일관성(Read Consistency)",
+   "Flashback"
+  ],
+  "outline": [
+   "데이터 회복의 개요",
+   "- 장애 이전 일관된 상태로 복원",
+   "- REDO·UNDO 정의",
+   "REDO·UNDO 동작",
+   "- REDO: 로그 재수행",
+   "- UNDO: 미완료 작업 취소",
+   "REDO·UNDO 비교",
+   "- 기록 값·보장 특성·사용 시점"
+  ],
+  "sections": [
+   {
+    "title": "동작",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "REDO: 장애 시점까지 로그에 Commit이 있는 트랜잭션을 After Image로 재수행(Roll Forward)",
+       "UNDO: Commit이 없는 트랜잭션을 Before Image로 역순 취소(Roll Back)",
+       "WAL: 데이터 페이지보다 로그를 먼저 디스크에 기록"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "REDO: 변경 후 값, 지속성, 장애 복구·Roll Forward",
+       "UNDO: 변경 전 값, 원자성, Rollback·읽기 일관성(Oracle Undo Segment)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "회복 기법 연계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "즉시 갱신: UNDO·REDO 모두, 지연 갱신: REDO만, 체크포인트로 처리 범위 축소"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "REDO(재실행)",
+   "UNDO(취소)",
+   "After Image(갱신 후 값)",
+   "Before Image(갱신 전 값)",
+   "REDO 로그(Redo Log)",
+   "UNDO 세그먼트(Undo Segment)",
+   "WAL(Write-Ahead Logging)",
+   "멱등성(Idempotent)",
+   "지속성·원자성 보장"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_045",
+  "code": "DB_045",
+  "domain": "DB",
+  "category": "DB > 회복",
+  "title": "데이터베이스 장애(Database Failure)",
+  "subtitle": "",
+  "name": "데이터베이스 장애(Database Failure)",
+  "en": "Database Failure",
+  "definition": "데이터베이스가 트랜잭션을 더 이상 수행할 수 없는 중단 사태로, 원인에 따라 DBMS가 자동 복구하거나 백업·아카이브 로그로 복구한다.",
+  "keywords": [
+   "유형: 사용자 실수 · 미디어 장애 · 구문 장애 · 사용자 프로세스 장애 · 인스턴스 장애",
+   "자동 복구: 구문 · 사용자 프로세스 · 인스턴스 장애(Instance Recovery)",
+   "백업 복구: 사용자 실수 · 미디어 장애",
+   "로그 모드: ARCHIVELOG(완전 복구) · NOARCHIVELOG(백업 시점 복구)"
+  ],
+  "keywords_must": [
+   "사용자 실수(User Error)",
+   "미디어 장애(Media Failure)",
+   "구문 장애(Statement Failure)",
+   "사용자 프로세스 장애(User Process Failure)",
+   "인스턴스 장애(Instance Failure)",
+   "인스턴스 복구(Roll Forward·Roll Back)",
+   "ARCHIVELOG 모드",
+   "완전 복구(Complete Recovery)",
+   "불완전 복구(Incomplete Recovery, PITR)"
+  ],
+  "keywords_ref": [
+   "PMON·SMON(Oracle)",
+   "Flashback",
+   "트랜잭션 장애·시스템 장애·미디어 장애",
+   "Point-in-Time Recovery"
+  ],
+  "outline": [
+   "DB 장애의 개요",
+   "- 트랜잭션 수행 불가 사태",
+   "- 로그 모드별 복구 범위",
+   "장애 유형별 원인",
+   "- 사용자 실수·미디어·구문",
+   "- 사용자 프로세스·인스턴스",
+   "장애 유형별 복구 방법",
+   "- 자동 복구 vs 백업 복구"
+  ],
+  "sections": [
+   {
+    "title": "유형·원인",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "사용자 실수: 테이블 삭제·잘못된 Commit",
+       "미디어: 디스크·컨트롤러 고장, 파일 삭제",
+       "구문: 프로그램·권한 오류, 할당량·공간 부족",
+       "사용자 프로세스: 클라이언트 비정상 종료·네트워크 단절",
+       "인스턴스: 정전·OS 장애·백그라운드 프로세스 중단"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "복구",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "구문·프로세스: DB 손상 없음, 자동 Rollback(PMON)",
+       "인스턴스: 재기동 시 SMON이 REDO 후 UNDO",
+       "미디어·사용자 실수: 백업 복원 + 아카이브 로그 적용(완전·시점 복구)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "사용자 실수(User Error)",
+   "미디어 장애(Media Failure)",
+   "구문 장애(Statement Failure)",
+   "사용자 프로세스 장애(User Process Failure)",
+   "인스턴스 장애(Instance Failure)",
+   "인스턴스 복구(Roll Forward·Roll Back)",
+   "ARCHIVELOG 모드",
+   "완전 복구(Complete Recovery)",
+   "불완전 복구(Incomplete Recovery, PITR)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_046",
+  "code": "DB_046",
+  "domain": "DB",
+  "category": "DB > 회복",
+  "title": "데이터베이스 백업(Database Backup)",
+  "subtitle": "",
+  "name": "데이터베이스 백업(Database Backup)",
+  "en": "Database Backup",
+  "definition": "장애 발생 시 데이터베이스를 복구할 수 있도록 데이터 파일·컨트롤 파일·로그 파일 등 복구 대상 파일의 사본을 주기적으로 확보하는 활동.",
+  "keywords": [
+   "대상(Oracle): 데이터 파일 · 컨트롤 파일 · Redo 로그 · 아카이브 로그 · 파라미터 · 패스워드 파일",
+   "방식: 닫힌 백업(Cold) · 열린 백업(Hot)",
+   "범위: 전체(Full) · 증분(Incremental) · 차등(Differential)",
+   "복구: 완전 복구 · 불완전 복구(시점 복구)"
+  ],
+  "keywords_must": [
+   "데이터 파일(Data File)",
+   "컨트롤 파일(Control File)",
+   "Redo 로그 파일",
+   "아카이브 로그(Archive Log)",
+   "닫힌 백업(Cold Backup)",
+   "열린 백업(Hot Backup)",
+   "전체 백업(Full Backup)",
+   "증분 백업(Incremental Backup)",
+   "완전 복구(Complete Recovery)",
+   "불완전 복구(Incomplete Recovery)"
+  ],
+  "keywords_ref": [
+   "RMAN(Recovery Manager)",
+   "논리 백업(Export·mysqldump)",
+   "RPO/RTO",
+   "스냅숏 백업",
+   "파라미터 파일(SPFILE)"
+  ],
+  "outline": [
+   "DB 장애와 백업의 개념",
+   "- 원인·복구 방법별 백업 파일",
+   "백업 대상 파일",
+   "- 데이터·컨트롤·Redo 로그",
+   "- 파라미터·패스워드 파일",
+   "복구 유형별 필요 파일",
+   "- 완전 복구",
+   "- 불완전 복구"
+  ],
+  "sections": [
+   {
+    "title": "필요 파일",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "장애 복구용: 데이터 파일·컨트롤 파일·Redo 로그",
+       "로그 정보: 장애 시점 로그 + 백업 이후 아카이브 로그",
+       "완전 복구: 백업 데이터 파일 + 모든 아카이브·현재 Redo 로그 + 장애 시점 컨트롤 파일",
+       "불완전 복구: 백업 데이터 파일 전체 + 특정 시점까지 아카이브 로그"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "방식",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Cold: DB 종료 후 일관된 사본, Hot: 운영 중 ARCHIVELOG 모드에서 백업",
+       "전체·증분·차등 조합으로 RPO/RTO 목표 충족"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "데이터 파일(Data File)",
+   "컨트롤 파일(Control File)",
+   "Redo 로그 파일",
+   "아카이브 로그(Archive Log)",
+   "닫힌 백업(Cold Backup)",
+   "열린 백업(Hot Backup)",
+   "전체 백업(Full Backup)",
+   "증분 백업(Incremental Backup)",
+   "완전 복구(Complete Recovery)",
+   "불완전 복구(Incomplete Recovery)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_047",
+  "code": "DB_047",
+  "domain": "DB",
+  "category": "DB > 회복",
+  "title": "로그 기반 회복 기법(Log-based Recovery)",
+  "subtitle": "",
+  "name": "로그 기반 회복 기법(Log-based Recovery)",
+  "en": "Log-based Recovery",
+  "definition": "데이터베이스 변경 내역을 로그에 기록하고 장애 발생 시 로그를 이용해 REDO·UNDO를 수행하는 회복 기법으로, 반영 시점에 따라 즉시 갱신과 지연 갱신으로 나뉜다.",
+  "keywords": [
+   "유형: 즉시 갱신(Immediate Update) · 지연 갱신(Deferred Update)",
+   "즉시 갱신: 실행 중 DB 반영 → UNDO·REDO",
+   "지연 갱신: Commit 시 DB 반영 → REDO만",
+   "특징: 운영 부하 경감 · 로그 전체 검색 오버헤드"
+  ],
+  "keywords_must": [
+   "즉시 갱신(Immediate Update)",
+   "지연 갱신(Deferred Update)",
+   "UNDO",
+   "REDO",
+   "로그 레코드(Log Record)",
+   "<Ti start>·<Ti commit>",
+   "WAL(Write-Ahead Logging)",
+   "로그 검색 오버헤드",
+   "체크포인트(Checkpoint) 연계"
+  ],
+  "keywords_ref": [
+   "NO-UNDO/REDO",
+   "UNDO/REDO",
+   "부분 완료(Partially Committed)",
+   "로그 무시(미완료 트랜잭션)"
+  ],
+  "outline": [
+   "로그 기반 회복의 개요",
+   "- 로그 기록·회복",
+   "- 운영 부하 경감·속도 저하",
+   "로그 기반 회복 유형",
+   "- 즉시 갱신",
+   "- 지연 갱신",
+   "즉시·지연 갱신 비교",
+   "- 장애 회복 방식·장단점"
+  ],
+  "sections": [
+   {
+    "title": "즉시 갱신",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "트랜잭션 수행 중 변경을 로그와 DB에 즉시 반영",
+       "장애 시 Commit 완료 트랜잭션 REDO, 미완료 트랜잭션 UNDO(UNDO/REDO)",
+       "장점: 변경 즉시 반영 / 단점: 동시성 제어 중요, 로그 검색 부하"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "지연 갱신",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "수행 중 로그만 기록, Commit 시점에 DB 반영",
+       "장애 시 Commit 완료 트랜잭션만 REDO, 미완료는 로그 무시(NO-UNDO/REDO)",
+       "장점: 완료 전 DB 부하 적음 / 단점: 반영 시 전체 REDO"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "선정",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "운영 시와 복원 시 성능을 함께 고려, 체크포인트로 회복 범위 축소"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "즉시 갱신(Immediate Update)",
+   "지연 갱신(Deferred Update)",
+   "UNDO",
+   "REDO",
+   "로그 레코드(Log Record)",
+   "<Ti start>·<Ti commit>",
+   "WAL(Write-Ahead Logging)",
+   "로그 검색 오버헤드",
+   "체크포인트(Checkpoint) 연계"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_048",
+  "code": "DB_048",
+  "domain": "DB",
+  "category": "DB > 회복",
+  "title": "체크포인트 회복 기법(Checkpoint Recovery)",
+  "subtitle": "",
+  "name": "체크포인트 회복 기법(Checkpoint Recovery)",
+  "en": "Checkpoint Recovery",
+  "definition": "로그에 주기적으로 검사점(Checkpoint)을 기록하고 장애 발생 시 마지막 검사점 이후의 트랜잭션만 REDO·UNDO하여 회복 시간을 줄이는 기법.",
+  "keywords": [
+   "검사점: 버퍼의 로그·변경 페이지를 디스크에 기록 · <checkpoint L>",
+   "회복 대상: 검사점 이후 Commit → REDO · 미완료 → UNDO",
+   "장점: 로그 전체 검색 불필요 · 회복 시간 단축",
+   "단점: 검사점 수행 중 부하 · 주기 결정 어려움"
+  ],
+  "keywords_must": [
+   "검사점(Checkpoint)",
+   "<checkpoint L> 활동 트랜잭션 목록",
+   "UNDO 리스트",
+   "REDO 리스트",
+   "<Ti start>·<Ti commit>",
+   "회복 시간 단축",
+   "검사점 주기",
+   "퍼지 체크포인트(Fuzzy Checkpoint)",
+   "Dirty Page Flush"
+  ],
+  "keywords_ref": [
+   "즉시 갱신 연계",
+   "ARIES",
+   "증분 체크포인트(Incremental Checkpoint)",
+   "DBWR·CKPT(Oracle)"
+  ],
+  "outline": [
+   "체크포인트 회복의 개요",
+   "- 검사점 이후만 회복",
+   "- 주기적 생성·회복 효율",
+   "체크포인트 회복 절차",
+   "- 검사점 기록",
+   "- 장애 시 REDO·UNDO 선정",
+   "REDO·UNDO 선정 기준",
+   "- UNDO 리스트 초기화",
+   "- commit → REDO, start → UNDO"
+  ],
+  "sections": [
+   {
+    "title": "선정 기준",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "검사점 시점에 활동 중인 트랜잭션을 모두 UNDO 리스트에 넣음",
+       "검사점 이후 로그를 순방향 탐색: <Ti start>는 UNDO 추가, <Ti commit>은 UNDO에서 REDO로 이동",
+       "UNDO 리스트는 역방향 취소, REDO 리스트는 순방향 재실행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "장단점",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "장점: 검사점 이전 완료 트랜잭션은 회복 불필요 → 운영·회복 효율",
+       "단점: 검사점 생성 시 I/O 부하, 주기가 길면 회복 비용 증가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "개선",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "퍼지 체크포인트: 트랜잭션 중단 없이 Dirty Page 목록만 기록(ARIES)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "검사점(Checkpoint)",
+   "<checkpoint L> 활동 트랜잭션 목록",
+   "UNDO 리스트",
+   "REDO 리스트",
+   "<Ti start>·<Ti commit>",
+   "회복 시간 단축",
+   "검사점 주기",
+   "퍼지 체크포인트(Fuzzy Checkpoint)",
+   "Dirty Page Flush"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_049",
+  "code": "DB_049",
+  "domain": "DB",
+  "category": "DB > 회복",
+  "title": "그림자 페이지 회복 기법(Shadow Paging)",
+  "subtitle": "",
+  "name": "그림자 페이지 회복 기법(Shadow Paging)",
+  "en": "Shadow Paging",
+  "definition": "트랜잭션 시작 시 현재 페이지 테이블과 동일한 그림자 페이지 테이블을 디스크에 보관하고, 장애 시 현재 페이지 테이블을 그림자 페이지 테이블로 교체해 회복하는 비로그 회복 기법.",
+  "keywords": [
+   "구성: 현재 페이지 테이블(메모리) · 그림자 페이지 테이블(디스크)",
+   "갱신: 저장 → 생성 → 기록 → 반영",
+   "회복: 제거 → 변경(교체) → 복구",
+   "특징: UNDO 불필요 · 로그 불필요(단일 사용자) · 다중 사용자는 로그 병행"
+  ],
+  "keywords_must": [
+   "현재 페이지 테이블(Current Page Table)",
+   "그림자 페이지 테이블(Shadow Page Table)",
+   "Copy-on-Write",
+   "페이지 테이블 교체",
+   "NO-UNDO/NO-REDO",
+   "가비지 페이지(Garbage Collection)",
+   "데이터 단편화(Fragmentation)",
+   "로그 병행 적용"
+  ],
+  "keywords_ref": [
+   "원자적 포인터 교체",
+   "스냅숏(Snapshot)",
+   "다중 사용자 환경 한계",
+   "저장 공간 증가"
+  ],
+  "outline": [
+   "그림자 페이지 기법의 개요",
+   "- 페이지 단위 복사본 보관",
+   "- 백업 데이터·병행 적용",
+   "그림자 페이지 기법 동작",
+   "- 갱신: 현재 테이블 갱신 후 반영",
+   "- 회복: 그림자 테이블로 교체",
+   "장단점",
+   "- 로그 부하 없음",
+   "- 단편화·공간·다중 사용자 한계"
+  ],
+  "sections": [
+   {
+    "title": "갱신 과정",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "저장: 현재 테이블은 메모리, 그림자 테이블은 디스크",
+       "생성: 트랜잭션 시작 시 동일한 그림자 테이블 생성",
+       "기록: 변경은 새 페이지에 쓰고 현재 테이블만 갱신",
+       "반영: 성공 시 현재 테이블을 그림자 테이블로 반영"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "회복 과정",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "제거: 메모리의 현재 페이지 테이블 폐기",
+       "변경: 디스크의 그림자 페이지 테이블을 현재 테이블로 사용 → 즉시 복구"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "장단점",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "장점: UNDO·REDO 불필요, 회복 빠름",
+       "단점: 페이지 단편화·가비지 수집, 저장 공간 증가, 동시 트랜잭션은 로그·체크포인트 병행"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "현재 페이지 테이블(Current Page Table)",
+   "그림자 페이지 테이블(Shadow Page Table)",
+   "Copy-on-Write",
+   "페이지 테이블 교체",
+   "NO-UNDO/NO-REDO",
+   "가비지 페이지(Garbage Collection)",
+   "데이터 단편화(Fragmentation)",
+   "로그 병행 적용"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_050",
+  "code": "DB_050",
+  "domain": "DB",
+  "category": "DB > 회복",
+  "title": "ARIES(Algorithm for Recovery and Isolation Exploiting Semantics)",
+  "subtitle": "",
+  "name": "ARIES(Algorithm for Recovery and Isolation Exploiting Semantics)",
+  "en": "Algorithm for Recovery and Isolation Exploiting Semantics",
+  "definition": "Steal·No-Force 버퍼 정책 환경에서 WAL과 LSN 기반 로그를 이용해 분석(Analysis)·REDO·UNDO 3단계로 장애를 복구하는 대표적 회복 알고리즘.",
+  "keywords": [
+   "원칙: WAL · Repeating History(REDO 시 전체 재현) · UNDO 중 로깅(CLR)",
+   "구성: 로그 · LSN · 트랜잭션 테이블 · Dirty Page Table",
+   "단계: 분석(Analysis) → REDO → UNDO",
+   "버퍼 정책: Steal · No-Force"
+  ],
+  "keywords_must": [
+   "WAL(Write-Ahead Logging)",
+   "LSN(Log Sequence Number)",
+   "트랜잭션 테이블(Transaction Table)",
+   "Dirty Page Table",
+   "분석 단계(Analysis Phase)",
+   "REDO 단계",
+   "UNDO 단계",
+   "CLR(Compensation Log Record)",
+   "Steal·No-Force",
+   "Fuzzy Checkpoint"
+  ],
+  "keywords_ref": [
+   "recLSN·pageLSN",
+   "Last LSN(PrevLSN)",
+   "Repeating History",
+   "IBM DB2·SQL Server 적용"
+  ],
+  "outline": [
+   "ARIES 개요",
+   "- Steal·No-Force 환경 회복",
+   "- WAL·LSN",
+   "ARIES 구성요소",
+   "- 로그·LSN",
+   "- 트랜잭션 테이블·Dirty Page Table",
+   "ARIES 회복 절차",
+   "- 분석: 체크포인트부터 로그 스캔",
+   "- REDO: 최소 recLSN 지점부터 재실행",
+   "- UNDO: 미완료 트랜잭션 역순 취소"
+  ],
+  "sections": [
+   {
+    "title": "구성요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "로그: 갱신·Commit·Abort·End 기록(Page ID, Transaction ID)",
+       "LSN: 로그 레코드 순차 번호, 페이지에 pageLSN 기록",
+       "트랜잭션 테이블: 진행 트랜잭션 상태와 Last LSN",
+       "Dirty Page Table: 버퍼의 Dirty Page와 최초 변경 LSN(recLSN)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "회복 절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "분석: 마지막 체크포인트부터 로그를 읽어 두 테이블 재구성",
+       "REDO: Dirty Page Table의 가장 작은 LSN부터 모든 갱신 재실행(Repeating History)",
+       "UNDO: Commit되지 않은 트랜잭션을 최신 LSN부터 역순 취소, CLR 기록"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "WAL(Write-Ahead Logging)",
+   "LSN(Log Sequence Number)",
+   "트랜잭션 테이블(Transaction Table)",
+   "Dirty Page Table",
+   "분석 단계(Analysis Phase)",
+   "REDO 단계",
+   "UNDO 단계",
+   "CLR(Compensation Log Record)",
+   "Steal·No-Force",
+   "Fuzzy Checkpoint"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_051",
+  "code": "DB_051",
+  "domain": "DB",
+  "category": "DB > 회복",
+  "title": "버퍼 관리 정책(Steal·Force Policy)",
+  "subtitle": "",
+  "name": "버퍼 관리 정책(Steal·Force Policy)",
+  "en": "Buffer Management Policy: Steal and Force",
+  "definition": "트랜잭션이 변경한 버퍼 페이지를 언제 디스크에 기록할지 정하는 정책으로, Commit 전 기록 허용 여부(Steal)와 Commit 시 강제 기록 여부(Force)에 따라 UNDO·REDO 필요성이 결정된다.",
+  "keywords": [
+   "Steal: 미완료 변경 페이지 디스크 기록 허용 → UNDO 필요",
+   "No-Steal: Commit 전 기록 금지 → UNDO 불필요",
+   "Force: Commit 시 변경 페이지 즉시 기록 → REDO 불필요",
+   "No-Force: Commit 시 로그만 기록 → REDO 필요"
+  ],
+  "keywords_must": [
+   "Steal",
+   "No-Steal",
+   "Force",
+   "No-Force",
+   "Steal/No-Force(UNDO+REDO)",
+   "No-Steal/Force(No UNDO·No REDO)",
+   "WAL(Write-Ahead Logging)",
+   "버퍼 풀(Buffer Pool)",
+   "Dirty Page"
+  ],
+  "keywords_ref": [
+   "ARIES",
+   "비손실성·적시성",
+   "LRU 교체",
+   "체크포인트(Checkpoint)"
+  ],
+  "outline": [
+   "버퍼 관리 정책의 개요",
+   "- 메모리 버퍼 기록 시점 정책",
+   "- 비손실성·적시성",
+   "Steal · Force",
+   "- Steal·No-Steal",
+   "- Force·No-Force",
+   "정책 조합과 ARIES",
+   "- 4가지 조합별 UNDO·REDO",
+   "- Steal·No-Force 기반 ARIES"
+  ],
+  "sections": [
+   {
+    "title": "조합",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Steal/No-Force: UNDO·REDO 모두 필요, 버퍼 유연·Commit 빠름 → 상용 DBMS 대부분",
+       "Steal/Force: UNDO만 필요",
+       "No-Steal/No-Force: REDO만 필요",
+       "No-Steal/Force: 회복 연산 불필요하나 버퍼 부족·Commit 지연"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "ARIES 연계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Steal·No-Force 환경에서 WAL로 기록한 LSN을 이용해 분석·REDO·UNDO 수행"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "Steal",
+   "No-Steal",
+   "Force",
+   "No-Force",
+   "Steal/No-Force(UNDO+REDO)",
+   "No-Steal/Force(No UNDO·No REDO)",
+   "WAL(Write-Ahead Logging)",
+   "버퍼 풀(Buffer Pool)",
+   "Dirty Page"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_052",
+  "code": "DB_052",
+  "domain": "DB",
+  "category": "DB > 동시성 제어",
+  "title": "동시성 제어 문제점(Concurrency Control Problems)",
+  "subtitle": "",
+  "name": "동시성 제어 문제점(Concurrency Control Problems)",
+  "en": "Concurrency Control Problems",
+  "definition": "다중 사용자 환경에서 여러 트랜잭션이 동시에 실행될 때 동시성 제어가 없으면 발생하는 갱신 손실·현황 파악 오류·모순성·연쇄 복귀 문제로, Locking 등 기법으로 직렬성을 보장해 방지한다.",
+  "keywords": [
+   "문제: 갱신 손실 · 현황 파악 오류 · 모순성 · 연쇄 복귀(갱현모연)",
+   "기법: Locking · 2PL · 타임스탬프 · 낙관적 검증 · MVCC",
+   "목표: 직렬 가능성(Serializability) · 일관성",
+   "부작용: 교착상태(Deadlock) · 기아(Starvation)"
+  ],
+  "keywords_must": [
+   "갱신 손실(Lost Update)",
+   "현황 파악 오류(Dirty Read)",
+   "모순성(Inconsistency)",
+   "연쇄 복귀(Cascading Rollback)",
+   "직렬 가능성(Serializability)",
+   "Locking 기법",
+   "2단계 로킹(2PL, Two-Phase Locking)",
+   "타임스탬프 순서(Timestamp Ordering)",
+   "낙관적 검증(Optimistic Validation)",
+   "MVCC(Multi-Version Concurrency Control)"
+  ],
+  "keywords_ref": [
+   "Unrepeatable Read",
+   "교착상태(Deadlock)",
+   "회복 가능 스케줄(Recoverable Schedule)",
+   "병행 제어(Concurrency Control)"
+  ],
+  "outline": [
+   "동시성 제어의 개요",
+   "- 다중 사용자 동시 실행 지원",
+   "- 트랜잭션 직렬화 보장",
+   "동시성 제어 미적용 시 문제점",
+   "- 갱신 손실·현황 파악 오류",
+   "- 모순성·연쇄 복귀",
+   "동시성 제어 기법",
+   "- Locking·2PL",
+   "- 타임스탬프·낙관적 검증·MVCC"
+  ],
+  "sections": [
+   {
+    "title": "문제점",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "갱신 손실: 먼저 갱신한 값을 다른 트랜잭션이 덮어씀",
+       "현황 파악 오류: 미완료 중간 결과를 다른 트랜잭션이 참조",
+       "모순성: 동시 실행으로 DB가 일관성 없는 상태(집계 중 변경)",
+       "연쇄 복귀: 한 트랜잭션 취소 시 그 결과를 읽은 트랜잭션도 연쇄 취소"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "제어 기법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Locking: 상호 배제로 자원 독점, 2PL: 확장·수축 단계 분리",
+       "타임스탬프: 시작 순서로 직렬화, 낙관적 검증: 종료 시 일괄 검사",
+       "MVCC: 다중 버전으로 읽기·쓰기 비차단"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "갱신 손실(Lost Update)",
+   "현황 파악 오류(Dirty Read)",
+   "모순성(Inconsistency)",
+   "연쇄 복귀(Cascading Rollback)",
+   "직렬 가능성(Serializability)",
+   "Locking 기법",
+   "2단계 로킹(2PL, Two-Phase Locking)",
+   "타임스탬프 순서(Timestamp Ordering)",
+   "낙관적 검증(Optimistic Validation)",
+   "MVCC(Multi-Version Concurrency Control)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_053",
+  "code": "DB_053",
+  "domain": "DB",
+  "category": "DB > 동시성 제어",
+  "title": "로킹 기법(Locking)",
+  "subtitle": "",
+  "name": "로킹 기법(Locking)",
+  "en": "Locking",
+  "definition": "트랜잭션이 사용하는 데이터 항목에 잠금(Lock)을 설정해 해제(Unlock) 전까지 독점적으로 사용하게 하는 상호 배제 기반 동시성 제어 기법.",
+  "keywords": [
+   "Lock 종류: 공유 Lock(S, Read) · 배타 Lock(X, Write)",
+   "Locking 단위: DB · 테이블 · 페이지 · 행(단위↑ 병행성↓·관리 단순)",
+   "규약: 2PL(확장·수축 단계)로 직렬성 보장",
+   "교착상태: 예방(Wait-Die·Wound-Wait) · 탐지(Wait-for Graph) · 회피"
+  ],
+  "keywords_must": [
+   "공유 Lock(Shared Lock)",
+   "배타 Lock(Exclusive Lock)",
+   "Lock 호환성(Lock Compatibility)",
+   "Locking 단위(Lock Granularity)",
+   "상호 배제(Mutual Exclusion)",
+   "교착상태(Deadlock)",
+   "Wait-Die",
+   "Wound-Wait",
+   "Wait-for Graph",
+   "Lock Escalation"
+  ],
+  "keywords_ref": [
+   "의도 Lock(Intention Lock: IS/IX/SIX)",
+   "다중 단위 Locking(Multiple Granularity)",
+   "Timeout",
+   "기아(Starvation)"
+  ],
+  "outline": [
+   "Locking 기법의 개요",
+   "- 상호 배제 기반 동시성 제어",
+   "- 공유·배타 Lock",
+   "Locking 단위와 규약",
+   "- 단위별 병행성·관리 비용",
+   "- 규약 준수에도 모순 사례 → 2PL",
+   "교착상태 해결 방법",
+   "- 예방: Wait-Die·Wound-Wait",
+   "- 탐지·회복"
+  ],
+  "sections": [
+   {
+    "title": "Lock 종류",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "공유 Lock: 읽기만, 다른 트랜잭션도 S 가능(S-S 호환)",
+       "배타 Lock: 읽기·쓰기, 다른 트랜잭션 모든 Lock 불가",
+       "단위 클수록 병행성↓·오버헤드↓, 작을수록 병행성↑·관리 복잡"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "교착상태 예방",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Wait-Die(비선점): 오래된 트랜잭션은 대기, 젊은 트랜잭션은 철회(Die)",
+       "Wound-Wait(선점): 오래된 트랜잭션이 젊은 쪽을 철회(Wound), 젊은 쪽은 대기",
+       "탐지: Wait-for Graph 사이클 발견 시 희생자 선택 후 Rollback"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Lock만으로는 직렬성 보장 불가 → 2PL 필요, Lock 경합·Escalation 고려"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "공유 Lock(Shared Lock)",
+   "배타 Lock(Exclusive Lock)",
+   "Lock 호환성(Lock Compatibility)",
+   "Locking 단위(Lock Granularity)",
+   "상호 배제(Mutual Exclusion)",
+   "교착상태(Deadlock)",
+   "Wait-Die",
+   "Wound-Wait",
+   "Wait-for Graph",
+   "Lock Escalation"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_054",
+  "code": "DB_054",
+  "domain": "DB",
+  "category": "DB > 동시성 제어",
+  "title": "2단계 로킹(2PL, Two-Phase Locking)",
+  "subtitle": "",
+  "name": "2단계 로킹(2PL, Two-Phase Locking)",
+  "en": "Two-Phase Locking",
+  "definition": "모든 트랜잭션이 Lock만 획득하는 확장 단계와 Unlock만 수행하는 수축 단계로 나누어 잠금 연산을 수행하게 함으로써 직렬 가능성을 보장하는 동시성 제어 규약.",
+  "keywords": [
+   "단계: 확장 단계(Growing) → Lock Point → 수축 단계(Shrinking)",
+   "보장: 직렬 가능성(충분조건, 역은 불성립)",
+   "문제: 교착상태 · 연쇄 복귀",
+   "변형: Basic · Conservative(Static) · Strict · Rigorous 2PL"
+  ],
+  "keywords_must": [
+   "확장 단계(Growing Phase)",
+   "수축 단계(Shrinking Phase)",
+   "Lock Point",
+   "직렬 가능성(Serializability)",
+   "교착상태(Deadlock)",
+   "연쇄 복귀(Cascading Rollback)",
+   "Conservative 2PL(Static 2PL)",
+   "Strict 2PL",
+   "Rigorous 2PL"
+  ],
+  "keywords_ref": [
+   "공유·배타 Lock(S·X Lock)",
+   "Wait-Die·Wound-Wait",
+   "Commit 시 Lock 해제",
+   "Basic 2PL"
+  ],
+  "outline": [
+   "2PL 개요",
+   "- 확장·수축 단계",
+   "- 2단계 로킹 규약 정리",
+   "2PL 동작과 예제",
+   "- Lock Point",
+   "- 직렬성 보장 예",
+   "2PL 문제점과 변형",
+   "- 교착상태·연쇄 복귀",
+   "- Conservative·Strict·Rigorous 2PL"
+  ],
+  "sections": [
+   {
+    "title": "규약",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "확장 단계: Lock만 가능, Unlock 불가",
+       "수축 단계: Unlock만 가능, Lock 불가",
+       "모든 Lock 연산이 첫 Unlock보다 앞서면 2PL 준수 → 모든 트랜잭션이 준수하면 직렬성 보장"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "변형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Conservative: 시작 전 필요한 Lock 모두 획득 → 교착상태 없음",
+       "Strict: 배타 Lock을 Commit·Abort까지 유지 → 연쇄 복귀 방지",
+       "Rigorous: 공유·배타 Lock 모두 Commit까지 유지 → Commit 순서 = 직렬 순서"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "문제",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "교착상태 가능 → 예방·탐지 병행, Lock 유지로 병행성 저하"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "확장 단계(Growing Phase)",
+   "수축 단계(Shrinking Phase)",
+   "Lock Point",
+   "직렬 가능성(Serializability)",
+   "교착상태(Deadlock)",
+   "연쇄 복귀(Cascading Rollback)",
+   "Conservative 2PL(Static 2PL)",
+   "Strict 2PL",
+   "Rigorous 2PL"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_055",
+  "code": "DB_055",
+  "domain": "DB",
+  "category": "DB > 동시성 제어",
+  "title": "Strict 2PL·Rigorous 2PL(Strict and Rigorous Two-Phase Locking)",
+  "subtitle": "",
+  "name": "Strict 2PL·Rigorous 2PL(Strict and Rigorous Two-Phase Locking)",
+  "en": "Strict and Rigorous Two-Phase Locking",
+  "definition": "2PL의 변형으로, Strict 2PL은 배타 Lock을 트랜잭션 완료까지 유지해 연쇄 복귀를 막고, Rigorous 2PL은 공유·배타 Lock 모두를 완료까지 유지해 Commit 순서로 직렬화하는 기법.",
+  "keywords": [
+   "Strict 2PL: Lock-X만 Commit·Abort까지 유지",
+   "Rigorous 2PL: Lock-S·Lock-X 모두 Commit까지 유지",
+   "공통: 연쇄 복귀 없음 · 교착상태 가능",
+   "비교: Conservative 2PL(사전 일괄 Lock → 교착상태 없음)"
+  ],
+  "keywords_must": [
+   "Strict 2PL",
+   "Rigorous 2PL",
+   "Conservative 2PL(Static 2PL)",
+   "공유 Lock(Lock-S)",
+   "배타 Lock(Lock-X)",
+   "연쇄 복귀 방지(Cascadeless)",
+   "엄격 스케줄(Strict Schedule)",
+   "교착상태(Deadlock) 가능",
+   "Commit 순서 직렬화"
+  ],
+  "keywords_ref": [
+   "상용 DBMS 대부분 Strict 2PL",
+   "Wait-Die·Wound-Wait",
+   "회복 가능 스케줄(Recoverable)",
+   "Lock 유지 시간 증가"
+  ],
+  "outline": [
+   "2PL 변형 기법",
+   "- Strict·Rigorous·Conservative",
+   "Strict 2PL · Rigorous 2PL 비교",
+   "- 개념·Locking 수준",
+   "- Deadlock·연쇄 복귀",
+   "S-Lock · X-Lock",
+   "- 호환성",
+   "교착상태 해결 방법",
+   "- 예방·탐지"
+  ],
+  "sections": [
+   {
+    "title": "비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Strict: X-Lock만 완료까지 유지, Rigorous보다 덜 제한적",
+       "Rigorous: 모든 Lock 완료까지 유지, 더 제한적이나 구현 단순·Commit 순서 = 직렬 순서",
+       "둘 다 연쇄 복귀 없음, Deadlock은 발생 가능"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Conservative",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "필요한 모든 Lock을 시작 전에 획득 → 교착상태 없음, 사전 파악 어려워 실무 적용 곤란"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "교착상태 대응",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Wait-Die·Wound-Wait 예방, Wait-for Graph 탐지 후 희생자 Rollback"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "Strict 2PL",
+   "Rigorous 2PL",
+   "Conservative 2PL(Static 2PL)",
+   "공유 Lock(Lock-S)",
+   "배타 Lock(Lock-X)",
+   "연쇄 복귀 방지(Cascadeless)",
+   "엄격 스케줄(Strict Schedule)",
+   "교착상태(Deadlock) 가능",
+   "Commit 순서 직렬화"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_057",
+  "code": "DB_057",
+  "domain": "DB",
+  "category": "DB > 동시성 제어",
+  "title": "타임스탬프 순서 기법(Timestamp Ordering)",
+  "subtitle": "",
+  "name": "타임스탬프 순서 기법(Timestamp Ordering)",
+  "en": "Timestamp Ordering",
+  "definition": "DBMS가 트랜잭션마다 유일한 타임스탬프를 부여하고 상충 연산을 타임스탬프 순서대로 실행해 직렬 가능성을 보장하는 비잠금 동시성 제어 기법.",
+  "keywords": [
+   "생성: 시스템 시계(System Clock) · 논리적 계수기(Logical Counter)",
+   "항목 타임스탬프: read_TS(X) · write_TS(X)",
+   "특징: 교착상태 없음 · 연쇄 복귀 가능 · 철회 후 재시작",
+   "개선: Thomas Write Rule · 다중 버전(MVTO)"
+  ],
+  "keywords_must": [
+   "타임스탬프(Timestamp)",
+   "시스템 시계(System Clock)",
+   "논리적 계수기(Logical Counter)",
+   "read_TS(X)",
+   "write_TS(X)",
+   "직렬 가능성(Serializability)",
+   "교착상태 없음(Deadlock-free)",
+   "연쇄 복귀(Cascading Rollback)",
+   "Thomas Write Rule"
+  ],
+  "keywords_ref": [
+   "MVTO(Multi-Version Timestamp Ordering)",
+   "Strict Timestamp Ordering",
+   "기아(Starvation)",
+   "재시작(Restart)"
+  ],
+  "outline": [
+   "타임스탬프 순서 기법의 개요",
+   "- 실행 순서를 미리 결정",
+   "- 직렬성·교착상태 방지·연쇄 복귀",
+   "타임스탬프 생성과 종류",
+   "- 시스템 시계·논리적 계수기",
+   "- read_TS·write_TS",
+   "타임스탬프 순서 규칙",
+   "- Read·Write 연산 검사",
+   "- Thomas Write Rule"
+  ],
+  "sections": [
+   {
+    "title": "순서 규칙",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Read(X): TS(T) < write_TS(X)이면 철회, 아니면 실행 후 read_TS 갱신",
+       "Write(X): TS(T) < read_TS(X) 또는 < write_TS(X)이면 철회, 아니면 실행 후 write_TS 갱신",
+       "철회된 트랜잭션은 새 타임스탬프로 재시작"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "특징",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "대기가 없어 교착상태 없음",
+       "미완료 값 읽기 허용 시 연쇄 복귀 → Strict TO로 방지",
+       "Thomas Write Rule: 이미 늦은 Write는 철회 대신 무시"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "타임스탬프(Timestamp)",
+   "시스템 시계(System Clock)",
+   "논리적 계수기(Logical Counter)",
+   "read_TS(X)",
+   "write_TS(X)",
+   "직렬 가능성(Serializability)",
+   "교착상태 없음(Deadlock-free)",
+   "연쇄 복귀(Cascading Rollback)",
+   "Thomas Write Rule"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_058",
+  "code": "DB_058",
+  "domain": "DB",
+  "category": "DB > 동시성 제어",
+  "title": "다중 버전 동시성 제어(MVCC, Multi-Version Concurrency Control)",
+  "subtitle": "",
+  "name": "다중 버전 동시성 제어(MVCC, Multi-Version Concurrency Control)",
+  "en": "Multi-Version Concurrency Control",
+  "definition": "데이터 항목의 여러 버전을 유지하고 트랜잭션 시작 시점에 맞는 일관된 버전을 읽게 하여, 읽기와 쓰기가 서로를 차단하지 않으면서 직렬 가능성을 보장하는 동시성 제어 기법.",
+  "keywords": [
+   "원리: 변경 시 이전 값을 Undo 영역에 저장 → 시작 시점 일관 버전(CR Copy) 생성",
+   "유형: 다중 버전 타임스탬프(MVTO) · 다중 버전 2PL(MV2PL)",
+   "정책: 다중 버전 읽기 일관성 · Isolation Level",
+   "이슈: Snapshot too old · Undo 공간 · 버전 정리(Vacuum)"
+  ],
+  "keywords_must": [
+   "다중 버전(Multi-Version)",
+   "Undo 영역(Undo Segment)",
+   "CR Copy(Consistent Read)",
+   "읽기 일관성(Read Consistency)",
+   "MVTO(Multi-Version Timestamp Ordering)",
+   "MV2PL(Multi-Version Two-Phase Locking)",
+   "스냅숏 격리(Snapshot Isolation)",
+   "읽기·쓰기 비차단",
+   "Snapshot too old(ORA-01555)"
+  ],
+  "keywords_ref": [
+   "Rollback Segment",
+   "Vacuum(PostgreSQL)",
+   "tempdb 버전 저장소(SQL Server)",
+   "Write Skew"
+  ],
+  "outline": [
+   "MVCC 개요",
+   "- 버전 비교로 직렬성 보장",
+   "MVCC 동작 원리",
+   "- Undo 영역 저장",
+   "- 시작 시점 CR Copy 읽기",
+   "MVCC 유형과 정책",
+   "- MVTO·MV2PL",
+   "- 다중 버전 읽기 일관성·Isolation Level"
+  ],
+  "sections": [
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "MVTO: Read는 TS(Ti) 이하 최대 버전 반환, 이후 트랜잭션이 읽은 버전에 대한 늦은 Write는 거부",
+       "MV2PL: 쓰기는 2PL Lock, 읽기는 Commit된 버전 사용(인증 Lock)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "DBMS 구현",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Oracle: Undo Segment로 CR 블록 생성",
+       "PostgreSQL: 튜플 다중 버전(xmin·xmax) + Vacuum",
+       "SQL Server: tempdb 버전 저장소(RCSI)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "이슈",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "장기 쿼리 시 Undo 덮어쓰기로 Snapshot too old",
+       "Snapshot Isolation은 Write Skew 이상 가능"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "다중 버전(Multi-Version)",
+   "Undo 영역(Undo Segment)",
+   "CR Copy(Consistent Read)",
+   "읽기 일관성(Read Consistency)",
+   "MVTO(Multi-Version Timestamp Ordering)",
+   "MV2PL(Multi-Version Two-Phase Locking)",
+   "스냅숏 격리(Snapshot Isolation)",
+   "읽기·쓰기 비차단",
+   "Snapshot too old(ORA-01555)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_059",
+  "code": "DB_059",
+  "domain": "DB",
+  "category": "DB > 동시성 제어",
+  "title": "낙관적 검증 기법(Optimistic Validation)",
+  "subtitle": "",
+  "name": "낙관적 검증 기법(Optimistic Validation)",
+  "en": "Optimistic Concurrency Control",
+  "definition": "트랜잭션 수행 중에는 검사 없이 지역 사본에만 갱신하고, 종료 시 확인 단계에서 직렬 가능성 위반 여부를 일괄 검사해 통과하면 반영하고 위반하면 철회하는 동시성 제어 기법.",
+  "keywords": [
+   "단계: 판독(Read) → 확인(Validation) → 기록(Write)",
+   "타임스탬프: Start(Ti) · Validation(Ti) · Finish(Ti)",
+   "특징: 교착상태 없음 · 연쇄 복귀 없음 · 순환적 재시작(기아)",
+   "적합: 읽기 위주 · 충돌이 적은 환경"
+  ],
+  "keywords_must": [
+   "판독 단계(Read Phase)",
+   "확인 단계(Validation Phase)",
+   "기록 단계(Write Phase)",
+   "지역 사본(Local Copy)",
+   "Start(Ti)·Validation(Ti)·Finish(Ti)",
+   "Finish(Ti) < Start(Tk)",
+   "교착상태 없음(No Deadlock)",
+   "연쇄 복귀 없음",
+   "순환적 재시작(Cyclic Restart)"
+  ],
+  "keywords_ref": [
+   "낙관적 Lock(Version 컬럼)",
+   "비관적 동시성 제어(Pessimistic)",
+   "충돌 빈도",
+   "기아(Starvation)"
+  ],
+  "outline": [
+   "낙관적 검증 기법의 개요",
+   "- 종료 시 일괄 검사",
+   "- 교착상태·연쇄 복귀 없음",
+   "처리 단계",
+   "- 판독·확인·기록 단계",
+   "유효성 검사 조건",
+   "- Finish(Ti) < Start(Tk)",
+   "- Start(Tk) < Finish(Ti) < Validation(Tk)"
+  ],
+  "sections": [
+   {
+    "title": "처리 단계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "판독: 갱신은 지역 사본에만 수행",
+       "확인: DB 반영 전 직렬 가능성 위반 검사",
+       "기록: 통과 시 DB 반영, 실패 시 결과 취소·재시작"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유효성 조건",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Finish(Ti) < Start(Tk): Ti가 Tk 시작 전에 완료",
+       "Start(Tk) < Finish(Ti) < Validation(Tk): Ti가 쓴 항목과 Tk가 읽은 항목이 겹치지 않아야 함",
+       "둘 다 아니면 Tk 철회"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "충돌 적은 읽기 위주 환경에 유리, 충돌 많으면 재시작 비용 증가",
+       "응용 수준: Version 컬럼 비교 갱신(JPA @Version)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "판독 단계(Read Phase)",
+   "확인 단계(Validation Phase)",
+   "기록 단계(Write Phase)",
+   "지역 사본(Local Copy)",
+   "Start(Ti)·Validation(Ti)·Finish(Ti)",
+   "Finish(Ti) < Start(Tk)",
+   "교착상태 없음(No Deadlock)",
+   "연쇄 복귀 없음",
+   "순환적 재시작(Cyclic Restart)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_060",
+  "code": "DB_060",
+  "domain": "DB",
+  "category": "DB > 정규화",
+  "title": "함수적 종속성(Functional Dependency)",
+  "subtitle": "",
+  "name": "함수적 종속성(Functional Dependency)",
+  "en": "Functional Dependency",
+  "definition": "릴레이션의 속성 집합 X, Y에 대해 모든 튜플에서 X 값이 Y 값을 유일하게 결정할 때(X→Y) 성립하는 제약으로, 정규화의 기본 이론이다.",
+  "keywords": [
+   "표기: X → Y(결정자 → 종속자)",
+   "유형: 완전 · 부분 · 이행 · 결정자 · 다중값 · 조인 종속(완부이결다조)",
+   "정규형 대응: 2NF(부분) · 3NF(이행) · BCNF(결정자) · 4NF(다중값) · 5NF(조인)",
+   "추론: 암스트롱 공리"
+  ],
+  "keywords_must": [
+   "결정자(Determinant)",
+   "종속자(Dependent)",
+   "완전 함수 종속(Full FD)",
+   "부분 함수 종속(Partial FD)",
+   "이행 함수 종속(Transitive FD)",
+   "결정자 함수 종속(BCNF)",
+   "다중값 종속(MVD, Multi-Valued Dependency)",
+   "조인 종속(JD, Join Dependency)",
+   "암스트롱 공리(Armstrong's Axioms)"
+  ],
+  "keywords_ref": [
+   "X→→Y 표기",
+   "자명한 종속(Trivial FD)",
+   "후보키(Candidate Key)",
+   "함수 종속 다이어그램"
+  ],
+  "outline": [
+   "함수적 종속성의 개요",
+   "- 정규화의 기본 이론",
+   "- 결정자·종속자",
+   "함수적 종속성 유형",
+   "- 완전·부분·이행",
+   "- 결정자·다중값·조인 종속",
+   "추론 규칙과 정규형 관계",
+   "- 암스트롱 공리",
+   "- 2NF~5NF 대응"
+  ],
+  "sections": [
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "완전: X의 진부분집합으로는 Y를 결정 못함",
+       "부분: 복합 키의 일부가 Y 결정 → 2NF 위반",
+       "이행: A→X, X→Y이면 A→Y → 3NF 위반",
+       "결정자: 후보키가 아닌 결정자 존재 → BCNF 위반",
+       "다중값: X→→Y, 독립 다중값 속성 → 4NF, 조인: 3개 이상 분해 시 무손실 → 5NF"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "예",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "주민번호 → 이름, 성별 / (학번, 과목번호) → 성적"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "결정자(Determinant)",
+   "종속자(Dependent)",
+   "완전 함수 종속(Full FD)",
+   "부분 함수 종속(Partial FD)",
+   "이행 함수 종속(Transitive FD)",
+   "결정자 함수 종속(BCNF)",
+   "다중값 종속(MVD, Multi-Valued Dependency)",
+   "조인 종속(JD, Join Dependency)",
+   "암스트롱 공리(Armstrong's Axioms)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_061",
+  "code": "DB_061",
+  "domain": "DB",
+  "category": "DB > 정규화",
+  "title": "제1정규형(1NF, First Normal Form)",
+  "subtitle": "",
+  "name": "제1정규형(1NF, First Normal Form)",
+  "en": "First Normal Form",
+  "definition": "릴레이션의 모든 속성 도메인이 더 이상 분해할 수 없는 원자값(Atomic Value)만 갖도록 반복 속성·다중값 속성을 제거해 별도 릴레이션으로 분리한 정규형.",
+  "keywords": [
+   "조건: 원자값 · 반복 그룹(Repeating Group) 제거 · 다중값 속성 제거",
+   "방법: 반복 속성을 별도 엔티티로 분리 · 기본키 확장",
+   "잔존 문제: 부분 함수 종속 → 2NF 필요",
+   "예: 회원-카드분실, 제품-주문 반복"
+  ],
+  "keywords_must": [
+   "원자값(Atomic Value)",
+   "반복 그룹(Repeating Group)",
+   "다중값 속성(Multi-valued Attribute)",
+   "복합 속성 분해",
+   "별도 엔티티 분리",
+   "기본키(Primary Key) 확장",
+   "이상현상(Anomaly)",
+   "부분 함수 종속(Partial FD)"
+  ],
+  "keywords_ref": [
+   "비정규형(UNF, Unnormalized Form)",
+   "NF²(Non-First Normal Form)",
+   "JSON 컬럼",
+   "행 반복"
+  ],
+  "outline": [
+   "1차 정규화의 개요",
+   "- 원자값 구성",
+   "- 반복 속성 분리 원칙",
+   "1차 정규화 적용 사례",
+   "- 회원-카드 분실 정보 반복",
+   "- 제품-주문 반복 속성",
+   "1차 정규화 이후 문제",
+   "- 부분 함수 종속 잔존"
+  ],
+  "sections": [
+   {
+    "title": "원칙",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "모든 속성은 하나의 값만 가짐(다중값·반복 그룹 금지)",
+       "반복되는 속성 집단은 별도 엔티티로 분리하고 부모 키를 상속"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "사례",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "회원(회원번호, 회원명, 전화번호, {카드번호, 분실일자}) → 회원 + 카드분실(회원번호, 카드번호, 분실일자)",
+       "분리 전: 분실 입력 시 회원정보 중복 입력, 수정 시 반복 수정, 삭제 시 회원정보 소실"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "이후",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "카드번호 → 카드명 같은 부분 함수 종속이 남으면 2NF로 분해"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "원자값(Atomic Value)",
+   "반복 그룹(Repeating Group)",
+   "다중값 속성(Multi-valued Attribute)",
+   "복합 속성 분해",
+   "별도 엔티티 분리",
+   "기본키(Primary Key) 확장",
+   "이상현상(Anomaly)",
+   "부분 함수 종속(Partial FD)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_062",
+  "code": "DB_062",
+  "domain": "DB",
+  "category": "DB > 정규화",
+  "title": "제2정규형(2NF, Second Normal Form)",
+  "subtitle": "",
+  "name": "제2정규형(2NF, Second Normal Form)",
+  "en": "Second Normal Form",
+  "definition": "1NF를 만족하고, 기본키에 속하지 않는 모든 속성이 기본키 전체에 완전 함수 종속되도록 부분 함수 종속을 제거한 정규형.",
+  "keywords": [
+   "조건: 1NF + 부분 함수 종속 제거 → 완전 함수 종속",
+   "대상: 복합 기본키(Composite Key)의 일부에 종속된 속성",
+   "방법: 키 일부와 그 종속 속성을 별도 릴레이션으로 분해",
+   "잔존 문제: 이행 함수 종속 → 3NF"
+  ],
+  "keywords_must": [
+   "부분 함수 종속(Partial FD)",
+   "완전 함수 종속(Full FD)",
+   "복합 기본키(Composite Key)",
+   "무손실 분해(Lossless Decomposition)",
+   "프로젝션(Projection)",
+   "삽입 이상(Insertion Anomaly)",
+   "갱신 이상(Update Anomaly)",
+   "삭제 이상(Deletion Anomaly)"
+  ],
+  "keywords_ref": [
+   "단일 속성 키는 자동 2NF",
+   "이행 함수 종속(Transitive FD)",
+   "반정규화(Denormalization)",
+   "자연 조인(Natural Join) 복원"
+  ],
+  "outline": [
+   "2차 정규화의 개요",
+   "- 부분 함수 종속 제거",
+   "- 미적용 시 이상현상",
+   "2차 정규화 사례",
+   "- 결정자별 릴레이션 분리",
+   "2차 정규화와 반정규화",
+   "- 조인 증가 시 반정규화 검토"
+  ],
+  "sections": [
+   {
+    "title": "조건",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "(학번, 과목번호) → 성적 이지만 학번 → 학과처럼 키 일부에 종속되면 2NF 위반",
+       "단일 속성 기본키면 부분 종속이 없어 1NF이면 2NF"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분해 예",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "수강(학번, 과목번호, 성적, 학과) → 수강(학번, 과목번호, 성적) + 학생(학번, 학과)",
+       "분해 결과는 자연 조인으로 원래 릴레이션 복원(무손실)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "효과",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "삽입·갱신·삭제 이상 감소, 조인 증가로 조회 성능 저하 시 반정규화 검토"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "부분 함수 종속(Partial FD)",
+   "완전 함수 종속(Full FD)",
+   "복합 기본키(Composite Key)",
+   "무손실 분해(Lossless Decomposition)",
+   "프로젝션(Projection)",
+   "삽입 이상(Insertion Anomaly)",
+   "갱신 이상(Update Anomaly)",
+   "삭제 이상(Deletion Anomaly)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_063",
+  "code": "DB_063",
+  "domain": "DB",
+  "category": "DB > 정규화",
+  "title": "제3정규형(3NF, Third Normal Form)",
+  "subtitle": "",
+  "name": "제3정규형(3NF, Third Normal Form)",
+  "en": "Third Normal Form",
+  "definition": "2NF를 만족하고, 기본키가 아닌 모든 속성이 기본키에 이행적으로 함수 종속되지 않도록 이행 함수 종속을 제거한 정규형.",
+  "keywords": [
+   "조건: 2NF + 이행 함수 종속 제거",
+   "이행 종속: A→B, B→C ⇒ A→C",
+   "방법: 프로젝션으로 B→C를 별도 릴레이션 분리",
+   "예: 지도(학번, 지도교수, 학과) → 학생지도 + 지도교수학과"
+  ],
+  "keywords_must": [
+   "이행 함수 종속(Transitive FD)",
+   "A→B, B→C ⇒ A→C",
+   "일반 속성 간 종속",
+   "프로젝션 분해(Projection)",
+   "종속성 보존(Dependency Preservation)",
+   "무손실 분해(Lossless Decomposition)",
+   "2NF 이상현상",
+   "BCNF 비교"
+  ],
+  "keywords_ref": [
+   "3NF 합성 알고리즘(Synthesis)",
+   "최소 커버(Minimal Cover)",
+   "결정자(Determinant)",
+   "실무 정규화 목표 수준"
+  ],
+  "outline": [
+   "3차 정규화의 개요",
+   "- 이행 함수 종속 제거",
+   "- 정규화 방법",
+   "3차 정규화 사례",
+   "- 지도(학번, 지도교수, 학과)",
+   "- 학생지도·지도교수학과로 분해",
+   "3NF 한계",
+   "- 결정자가 후보키 아닌 경우 → BCNF"
+  ],
+  "sections": [
+   {
+    "title": "사례",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "FD: 학번 → 지도교수, 지도교수 → 학과 ⇒ 학번 → 학과(이행)",
+       "분해: R1 학생지도(학번, 지도교수), R2 지도교수학과(지도교수, 학과)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "특징",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "3NF 분해는 무손실이면서 종속성 보존이 항상 가능",
+       "실무 OLTP 모델의 일반적인 목표 정규형"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "키가 아닌 결정자가 키 속성을 결정하는 경우 이상현상 잔존 → BCNF"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "이행 함수 종속(Transitive FD)",
+   "A→B, B→C ⇒ A→C",
+   "일반 속성 간 종속",
+   "프로젝션 분해(Projection)",
+   "종속성 보존(Dependency Preservation)",
+   "무손실 분해(Lossless Decomposition)",
+   "2NF 이상현상",
+   "BCNF 비교"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_064",
+  "code": "DB_064",
+  "domain": "DB",
+  "category": "DB > 정규화",
+  "title": "보이스-코드 정규형(BCNF, Boyce-Codd Normal Form)",
+  "subtitle": "",
+  "name": "보이스-코드 정규형(BCNF, Boyce-Codd Normal Form)",
+  "en": "Boyce-Codd Normal Form",
+  "definition": "3NF를 강화해 릴레이션의 모든 결정자가 후보키가 되도록, 후보키가 아닌 결정자에 의한 함수 종속을 제거한 정규형(3.5NF).",
+  "keywords": [
+   "조건: 모든 결정자 = 후보키 (X→Y면 X는 슈퍼키)",
+   "발생 상황: 후보키가 여럿이고 서로 겹침 · 비키 속성이 키 일부를 결정",
+   "방법: 결정자와 종속 속성을 분리",
+   "한계: 종속성 보존이 안 될 수 있음"
+  ],
+  "keywords_must": [
+   "결정자(Determinant)",
+   "후보키(Candidate Key)",
+   "슈퍼키(Super Key)",
+   "결정자 함수 종속",
+   "중첩 후보키(Overlapping Candidate Keys)",
+   "프로젝션 분해",
+   "종속성 보존 손실",
+   "3.5NF"
+  ],
+  "keywords_ref": [
+   "수강(학번, 과목, 교수) 예",
+   "교수 → 과목",
+   "삽입·갱신·삭제 이상",
+   "4NF(다중값 종속)"
+  ],
+  "outline": [
+   "BCNF 개요",
+   "- 결정자 함수 종속 제거",
+   "- 이상현상 방지 목적",
+   "BCNF 정규화 과정",
+   "- 비즈니스 제약 분석",
+   "- 이상현상 사례",
+   "이상현상 해결",
+   "- 교수가 결정자이나 후보키 아님",
+   "- 학번-교수·교수-과목 분해"
+  ],
+  "sections": [
+   {
+    "title": "사례",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "제약: 학생은 과목당 한 교수, 교수는 한 과목만, 과목은 여러 교수 담당",
+       "수강(학번, 과목, 교수): 키 (학번, 과목), 교수 → 과목인데 교수는 후보키 아님"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "이상현상",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "삽입: 새 교수-과목 정보 입력에 학번 필요",
+       "갱신: 교수 담당 과목 변경 시 모든 튜플 수정",
+       "삭제: 수강 취소 시 교수 담당 과목 정보 소실"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "해결",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "(학번, 교수) + (교수, 과목)으로 분해, 단 FD (학번, 과목) → 교수는 보존 안 됨"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "결정자(Determinant)",
+   "후보키(Candidate Key)",
+   "슈퍼키(Super Key)",
+   "결정자 함수 종속",
+   "중첩 후보키(Overlapping Candidate Keys)",
+   "프로젝션 분해",
+   "종속성 보존 손실",
+   "3.5NF"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_065",
+  "code": "DB_065",
+  "domain": "DB",
+  "category": "DB > 정규화",
+  "title": "제4정규형(4NF, Fourth Normal Form)",
+  "subtitle": "",
+  "name": "제4정규형(4NF, Fourth Normal Form)",
+  "en": "Fourth Normal Form",
+  "definition": "BCNF를 만족하고, 한 릴레이션에 서로 독립적인 둘 이상의 다치 종속(MVD)이 존재하지 않도록 다치 종속을 제거한 정규형.",
+  "keywords": [
+   "조건: BCNF + 비자명 다치 종속 제거(X→→Y면 X는 슈퍼키)",
+   "다치 종속: X가 Y 값의 집합을 결정 · 이중 화살표(→→)",
+   "예: 사원→→프로젝트, 사원→→기술",
+   "방법: 독립 다치 속성별로 릴레이션 분해"
+  ],
+  "keywords_must": [
+   "다치 종속(MVD, Multi-Valued Dependency)",
+   "이중 화살표(X→→Y)",
+   "독립적 다중값 속성",
+   "비자명 다치 종속(Non-trivial MVD)",
+   "릴레이션 분해",
+   "삽입·수정·삭제 이상",
+   "Fagin 정리",
+   "데이터 무결성 확보"
+  ],
+  "keywords_ref": [
+   "사원-프로젝트·사원-기술 분리",
+   "함수 종속은 다치 종속의 특수형",
+   "조인 종속(Join Dependency)",
+   "5NF"
+  ],
+  "outline": [
+   "4차 정규화의 개요",
+   "- 다치 종속 제거",
+   "- 다치 종속 정의·표기",
+   "4차 정규화 과정",
+   "- 사원·프로젝트·기술 예",
+   "- 이상현상과 원인",
+   "4차 정규화 효과",
+   "- 무결성 확보·중복 제거"
+  ],
+  "sections": [
+   {
+    "title": "사례",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "사원기술프로젝트(사원, 프로젝트, 기술): 프로젝트와 기술은 서로 무관",
+       "입력 이상: 새 프로젝트 입력 시 무관한 기술 코드 필요",
+       "수정 이상: 프로젝트 변경 시 보유 기술 수만큼 반복 수정",
+       "삭제 이상: 기술 삭제 시 프로젝트 정보까지 삭제"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "해결",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "사원-프로젝트, 사원-기술로 분해 → 각 릴레이션에 하나의 다치 종속만 존재",
+       "Fagin 정리: R(X,Y,Z)에서 X→→Y이면 (X,Y)·(X,Z)로 무손실 분해 가능"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "다치 종속(MVD, Multi-Valued Dependency)",
+   "이중 화살표(X→→Y)",
+   "독립적 다중값 속성",
+   "비자명 다치 종속(Non-trivial MVD)",
+   "릴레이션 분해",
+   "삽입·수정·삭제 이상",
+   "Fagin 정리",
+   "데이터 무결성 확보"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_066",
+  "code": "DB_066",
+  "domain": "DB",
+  "category": "DB > 정규화",
+  "title": "제5정규형(5NF, Fifth Normal Form)",
+  "subtitle": "",
+  "name": "제5정규형(5NF, Fifth Normal Form)",
+  "en": "Fifth Normal Form",
+  "definition": "4NF를 만족하고, 릴레이션의 모든 조인 종속(JD)이 후보키에 의해서만 함축되도록 하여 더 이상 무손실 분해할 수 없게 만든 정규형(PJNF, Project-Join Normal Form).",
+  "keywords": [
+   "조건: 4NF + 후보키를 통하지 않는 조인 종속 제거",
+   "조인 종속: 둘로는 무손실 분해 불가, 셋 이상으로 분해 시 복원 가능",
+   "예: 판매자·회사·생산품 → 판매자-회사 · 회사-생산품 · 판매자-생산품",
+   "한계: 테이블·조인 증가 → 실무는 3NF·BCNF까지"
+  ],
+  "keywords_must": [
+   "조인 종속(JD, Join Dependency)",
+   "PJNF(Project-Join Normal Form)",
+   "무손실 조인(Lossless Join)",
+   "3개 이상 프로젝션 분해",
+   "후보키 함축",
+   "순환 제약(Cyclic Constraint)",
+   "조인 연산 증가",
+   "반정규화(Denormalization)"
+  ],
+  "keywords_ref": [
+   "판매자-회사-생산품 예",
+   "공간 비효율",
+   "업무 규칙 수용 난이도",
+   "DKNF(Domain-Key Normal Form)"
+  ],
+  "outline": [
+   "5차 정규화의 개요",
+   "- 조인 종속 제거",
+   "- PJNF",
+   "5차 정규화의 문제점과 해결 방안",
+   "- 성능 저하·업무 복잡도·공간 비효율",
+   "- 실무는 3NF·BCNF 후 튜닝",
+   "5차 정규화 사례",
+   "- 판매자·회사·생산품 3분해"
+  ],
+  "sections": [
+   {
+    "title": "조건",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "R의 모든 JD *(R1, …, Rn)에서 각 Ri가 R의 슈퍼키를 포함하면 5NF",
+       "둘로 나누면 가짜 튜플 발생, 세 개로 나눠 조인하면 원래대로 복원되는 경우가 대상"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "사례",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "판매자가 회사의 생산품을 판매하는 순환 업무 규칙 → (판매자, 회사), (회사, 생산품), (판매자, 생산품)으로 분해"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "실무 고려",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "테이블 증가·조인 증가로 응답 지연 → 필요 시 반정규화 병행"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "조인 종속(JD, Join Dependency)",
+   "PJNF(Project-Join Normal Form)",
+   "무손실 조인(Lossless Join)",
+   "3개 이상 프로젝션 분해",
+   "후보키 함축",
+   "순환 제약(Cyclic Constraint)",
+   "조인 연산 증가",
+   "반정규화(Denormalization)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_067",
+  "code": "DB_067",
+  "domain": "DB",
+  "category": "DB > 정규화",
+  "title": "반정규화(Denormalization)",
+  "subtitle": "",
+  "name": "반정규화(Denormalization)",
+  "en": "Denormalization",
+  "definition": "정규화된 데이터 모델에서 조인 증가로 인한 성능 저하를 해결하기 위해 데이터 중복을 허용하며 테이블·컬럼·관계를 통합·분할·추가하는 성능 중심 모델링 기법.",
+  "keywords": [
+   "필요성: 검색 성능 향상 · 모델 이해 · 개발 생산성",
+   "절차: 대상 조사 → 다른 방법 검토 → 반정규화 적용",
+   "기법: 테이블(병합·분할·추가) · 컬럼(중복·파생·이력) · 관계(중복 관계)",
+   "대안: 뷰 · 클러스터링 · 인덱스 조정 · 파티셔닝"
+  ],
+  "keywords_must": [
+   "테이블 병합(1:1·1:N·슈퍼/서브타입)",
+   "테이블 수직 분할",
+   "테이블 수평 분할",
+   "중복 테이블 추가",
+   "통계 테이블 추가",
+   "이력 테이블 추가",
+   "중복 컬럼(Duplicated Column)",
+   "파생 컬럼(Derived Column)",
+   "중복 관계 추가",
+   "데이터 정합성(Consistency) 저하"
+  ],
+  "keywords_ref": [
+   "부분 테이블 추가",
+   "트리거 동기화",
+   "뷰(View)·클러스터링",
+   "인덱스 조정",
+   "파티셔닝(Partitioning)"
+  ],
+  "outline": [
+   "반정규화의 개요",
+   "- 성능 향상 위한 중복 허용",
+   "- 필요성·장단점",
+   "반정규화 절차",
+   "- 대상 조사: 범위 처리 빈도·조인 수",
+   "- 다른 방법 유도 검토",
+   "- 반정규화 적용",
+   "반정규화 주요 기법",
+   "- 테이블·컬럼·관계"
+  ],
+  "sections": [
+   {
+    "title": "절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "대상 조사: 처리 빈도·대량 범위 처리·통계성 프로세스·조인 개수",
+       "다른 방법 검토: 뷰·클러스터링·인덱스 조정·응용 처리·파티셔닝",
+       "적용: 테이블·속성·관계 반정규화 + 정합성 유지 방안(트리거·배치)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "테이블 병합: 1:1·1:N·슈퍼/서브타입·코드 테이블 병합으로 조인 감소",
+       "테이블 분할: 수직(접근 빈도별 컬럼)·수평(값 범위별 행)",
+       "테이블 추가: 중복·통계·이력·부분 테이블",
+       "컬럼: 중복·파생(합계)·이력·PK 분리, 관계: 중복 관계 추가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "장단점",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "장점: 조인 감소·조회 성능·개발 단순화",
+       "단점: 입력·수정 성능 저하, 정합성·무결성 훼손 위험"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "테이블 병합(1:1·1:N·슈퍼/서브타입)",
+   "테이블 수직 분할",
+   "테이블 수평 분할",
+   "중복 테이블 추가",
+   "통계 테이블 추가",
+   "이력 테이블 추가",
+   "중복 컬럼(Duplicated Column)",
+   "파생 컬럼(Derived Column)",
+   "중복 관계 추가",
+   "데이터 정합성(Consistency) 저하"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_081_1",
+  "code": "DB_081_1",
+  "domain": "DB",
+  "category": "DB > SQL",
+  "title": "정적 SQL·동적 SQL(Static SQL vs Dynamic SQL)",
+  "subtitle": "",
+  "name": "정적 SQL·동적 SQL(Static SQL vs Dynamic SQL)",
+  "en": "Static SQL vs Dynamic SQL",
+  "definition": "정적 SQL은 프로그램에 고정 작성되어 컴파일 시점에 구문 분석·검증되는 SQL이고, 동적 SQL은 런타임에 문자열로 SQL 구문을 조립해 실행하는 SQL이다.",
+  "keywords": [
+   "정적: 하드 코딩 · Precompile 검증 · Cursor 선언 · 컬럼·WHERE 고정",
+   "동적: 문자열 변수 조립 · 런타임 파싱 · 조건별 구문 변경",
+   "실행계획: 정적은 NVL 조건 분할(Concatenation) · 동적은 필요 조건만",
+   "위험: 동적 SQL의 SQL Injection · 하드 파싱"
+  ],
+  "keywords_must": [
+   "정적 SQL(Static SQL)",
+   "동적 SQL(Dynamic SQL)",
+   "Precompile(Embedded SQL)",
+   "커서(Cursor)",
+   "런타임 구문 조립",
+   "EXECUTE IMMEDIATE",
+   "바인드 변수(Bind Variable)",
+   "하드 파싱(Hard Parsing)",
+   "SQL Injection",
+   "옵티마이저(Optimizer) 실행계획"
+  ],
+  "keywords_ref": [
+   "NVL·IS NULL 조건 분기",
+   "CONCATENATION 실행계획",
+   "PreparedStatement",
+   "MyBatis 동적 SQL"
+  ],
+  "outline": [
+   "정적·동적 SQL 개념",
+   "- 고정 vs 런타임 조립",
+   "- Precompile 검증 여부",
+   "정적·동적 SQL 상세 비교",
+   "- SQL 구성·개발 패턴",
+   "- 컬럼 구성·실행계획",
+   "- 성능·보안",
+   "활용 시 고려사항",
+   "- 바인드 변수·Injection 방지"
+  ],
+  "sections": [
+   {
+    "title": "비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "구성: 정적은 Cursor 선언 후 BEGIN-END 루프 / 동적은 String 변수에 SQL 저장 후 실행",
+       "변경: 정적은 컬럼·WHERE 고정 / 동적은 조건별 자유 구성",
+       "검증: 정적은 컴파일 시 구문·객체 검사 / 동적은 실행 시 검사"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "실행계획",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "정적: 선택 조건을 NVL로 처리 → IS NULL·IS NOT NULL로 실행계획 분할, 하드 파싱 장시간",
+       "동적: 실제 입력 조건만 포함해 단순한 액세스 경로"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "고려사항",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "동적 SQL은 바인드 변수로 커서 공유·SQL Injection 방지"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "정적 SQL(Static SQL)",
+   "동적 SQL(Dynamic SQL)",
+   "Precompile(Embedded SQL)",
+   "커서(Cursor)",
+   "런타임 구문 조립",
+   "EXECUTE IMMEDIATE",
+   "바인드 변수(Bind Variable)",
+   "하드 파싱(Hard Parsing)",
+   "SQL Injection",
+   "옵티마이저(Optimizer) 실행계획"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_082",
+  "code": "DB_082",
+  "domain": "DB",
+  "category": "DB > 분산 DB",
+  "title": "2단계 커밋(2PC, Two-Phase Commit)",
+  "subtitle": "",
+  "name": "2단계 커밋(2PC, Two-Phase Commit)",
+  "en": "Two-Phase Commit",
+  "definition": "분산 트랜잭션에 참여한 모든 노드가 함께 Commit하거나 함께 Rollback하도록 조정자가 준비(Prepare) 단계와 확정(Commit) 단계로 합의를 진행하는 원자성 보장 프로토콜.",
+  "keywords": [
+   "구성: 조정자(Global Coordinator) · 지역 노드(Local Coordinator) · Commit Point Site · 클라이언트",
+   "Phase 1: Prepare 요청 → 참여자 Ready(Yes)/Abort(No) 투표",
+   "Phase 2: 전원 Yes → Global Commit · 하나라도 No → Global Abort",
+   "한계: 블로킹(조정자 장애) → 3PC"
+  ],
+  "keywords_must": [
+   "조정자(Global Coordinator)",
+   "참여자(Participant)",
+   "Commit Point Site",
+   "준비 단계(Prepare Phase)",
+   "확정 단계(Commit Phase)",
+   "투표(Vote Yes/No)",
+   "Global Commit·Global Abort",
+   "블로킹 문제(Blocking)",
+   "3PC(Three-Phase Commit)",
+   "XA 표준(X/Open XA)"
+  ],
+  "keywords_ref": [
+   "In-doubt 트랜잭션",
+   "Pre-Commit 단계",
+   "SAGA 패턴",
+   "분산 원자성"
+  ],
+  "outline": [
+   "2PC 개요",
+   "- 분산 원자성 보장",
+   "- 필요성·특징",
+   "분산 트랜잭션 구성요소",
+   "- 조정자·지역 노드·Commit Point Site",
+   "2PC 동작 절차",
+   "- Phase 1 Prepare",
+   "- Phase 2 Commit/Abort",
+   "2PC 한계와 개선",
+   "- 블로킹 → 3PC·SAGA"
+  ],
+  "sections": [
+   {
+    "title": "동작",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Phase 1: 조정자가 Prepare 전송, 참여자는 로그 기록 후 Ready 또는 Abort 응답",
+       "Phase 2: 전원 Ready면 Commit, 하나라도 Abort·Timeout이면 Rollback 전파, 참여자 ACK"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Commit Point Site: 가장 먼저 Commit·Rollback하는 핵심 데이터 보유 노드",
+       "지역 노드: 조정자 결정에 따라 지역 트랜잭션 수행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한계·개선",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "조정자 장애 시 참여자가 In-doubt 상태로 대기(블로킹), 메시지 오버헤드",
+       "3PC: Pre-Commit 단계 추가로 비블로킹, MSA는 SAGA 보상 트랜잭션"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "조정자(Global Coordinator)",
+   "참여자(Participant)",
+   "Commit Point Site",
+   "준비 단계(Prepare Phase)",
+   "확정 단계(Commit Phase)",
+   "투표(Vote Yes/No)",
+   "Global Commit·Global Abort",
+   "블로킹 문제(Blocking)",
+   "3PC(Three-Phase Commit)",
+   "XA 표준(X/Open XA)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_083",
+  "code": "DB_083",
+  "domain": "DB",
+  "category": "DB > 분산 DB",
+  "title": "분산 투명성(Distribution Transparency)",
+  "subtitle": "",
+  "name": "분산 투명성(Distribution Transparency)",
+  "en": "Distribution Transparency",
+  "definition": "분산 데이터베이스의 사용자와 응용이 데이터의 위치·복제·분할·병행 처리·장애를 의식하지 않고 하나의 논리적 DB처럼 사용할 수 있게 하는 성질.",
+  "keywords": [
+   "종류: 위치 · 복제 · 병행 · 분할 · 장애 투명성(위복병분장)",
+   "구현: 분산 데이터 사전(DD/D) · Locking·Time Stamp · 2PC",
+   "적용 기법: 테이블 위치 분산 · 분할(Fragmentation) 분산 · 복제(Replication) 분산",
+   "효과: 응용 단순화 · 자원 활용 극대화 · 병목 방지"
+  ],
+  "keywords_must": [
+   "위치 투명성(Location Transparency)",
+   "복제 투명성(Replication Transparency)",
+   "병행 투명성(Concurrency Transparency)",
+   "분할 투명성(Fragmentation Transparency)",
+   "장애 투명성(Failure Transparency)",
+   "분산 데이터 사전(Distributed Data Dictionary)",
+   "2PC(Two-Phase Commit)",
+   "테이블 위치 분산",
+   "테이블 복제 분산"
+  ],
+  "keywords_ref": [
+   "지역 사상 투명성(Local Mapping)",
+   "이질성 투명성(Heterogeneity)",
+   "Synonym·DB Link",
+   "분산 데이터 독립성"
+  ],
+  "outline": [
+   "분산 투명성의 개요",
+   "- 위복병분장",
+   "분산 투명성 유형",
+   "- 위치·복제·병행",
+   "- 분할·장애",
+   "- 유형별 장단점",
+   "분산 DB 적용 기법",
+   "- 테이블 위치·분할·복제 분산"
+  ],
+  "sections": [
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "위치: 데이터의 물리적 위치를 몰라도 접근(분산 데이터 사전 필요)",
+       "복제: 복제본 존재·위치를 몰라도 됨(갱신 전파는 DBMS 담당)",
+       "병행: 동시 트랜잭션에도 결과 일관(Locking·Time Stamp)",
+       "분할: 릴레이션이 단편으로 나뉜 사실을 몰라도 됨",
+       "장애: 사이트·통신 장애에도 무결성 유지(2PC)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "장단점",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "장점: 응용 단순화, 자유로운 데이터 접근, 자원 활용·성능 향상",
+       "단점: 이중 처리·저장 공간 낭비, 복잡한 Locking, 장애 원인 규명 어려움"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "위치 투명성(Location Transparency)",
+   "복제 투명성(Replication Transparency)",
+   "병행 투명성(Concurrency Transparency)",
+   "분할 투명성(Fragmentation Transparency)",
+   "장애 투명성(Failure Transparency)",
+   "분산 데이터 사전(Distributed Data Dictionary)",
+   "2PC(Two-Phase Commit)",
+   "테이블 위치 분산",
+   "테이블 복제 분산"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_084",
+  "code": "DB_084",
+  "domain": "DB",
+  "category": "DB > 성능",
+  "title": "DB 성능 개선 방안(Database Performance Improvement)",
+  "subtitle": "",
+  "name": "DB 성능 개선 방안(Database Performance Improvement)",
+  "en": "Database Performance Improvement",
+  "definition": "처리 능력·처리 시간·응답 시간·적재 시간 목표를 정하고 DB 모델링, DBMS·외부 환경, SQL 측면에서 병목을 제거해 데이터베이스 성능을 높이는 방안.",
+  "keywords": [
+   "목표: 처리 능력(Throughput) · 처리 시간(Throughput Time) · 응답 시간(Response Time) · 적재 시간(Load Time)",
+   "모델링 측면: 정규화·반정규화 · 파티션 · 인덱스 설계 · 데이터 타입",
+   "DBMS·외부 환경: 메모리(SGA) · I/O · OS · 스토리지 · 네트워크",
+   "SQL 측면: 실행계획(QEP) · Hint · 조인 방식 · 부분범위 처리 · 병렬 처리"
+  ],
+  "keywords_must": [
+   "처리 능력(Throughput)",
+   "응답 시간(Response Time)",
+   "처리 시간(Throughput Time)",
+   "적재 시간(Load Time)",
+   "실행계획(QEP, Query Execution Plan)",
+   "옵티마이저(Optimizer)",
+   "조인 방식(NL·Sort Merge·Hash)",
+   "부분범위 처리",
+   "병렬 처리(Parallel Processing)",
+   "파티셔닝(Partitioning)"
+  ],
+  "keywords_ref": [
+   "BMT(Benchmark Test)",
+   "Sequence 객체로 Lock 억제",
+   "바인드 변수·하드 파싱 감소",
+   "SORT_AREA·HASH_AREA 메모리"
+  ],
+  "outline": [
+   "DB 성능 개선의 개요",
+   "- 목표별 측정 지표",
+   "- BMT 기반 목표 설정",
+   "DB 모델링 측면",
+   "- 정규화·반정규화·파티션·인덱스",
+   "DBMS·외부 환경 측면",
+   "- 메모리·I/O·OS·네트워크",
+   "SQL 구문 측면",
+   "- 실행계획·조인·Hint·병렬"
+  ],
+  "sections": [
+   {
+    "title": "목표별 방안",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "처리 시간(배치): 병렬 처리, Full Scan, Hash 조인, 정렬·해시 메모리 확보, 파티션",
+       "응답 시간(OLTP): 인덱스 액세스, NL 조인, 정렬 제거, Lock 억제, 하드 파싱 감소",
+       "적재 시간: Direct Path Load, 인덱스·제약 비활성 후 재생성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "측면별 방안",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "모델링: 정규화·반정규화, 파티션, 인덱스·키·데이터 타입 설계",
+       "DBMS·환경: 버퍼 캐시·Multiblock I/O·비동기 I/O·RAID·Jumbo Packet",
+       "SQL: 실행계획 분석, Hint, 조인 순서, 동적 쿼리 지양, 다중·병렬 처리"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "처리 능력(Throughput)",
+   "응답 시간(Response Time)",
+   "처리 시간(Throughput Time)",
+   "적재 시간(Load Time)",
+   "실행계획(QEP, Query Execution Plan)",
+   "옵티마이저(Optimizer)",
+   "조인 방식(NL·Sort Merge·Hash)",
+   "부분범위 처리",
+   "병렬 처리(Parallel Processing)",
+   "파티셔닝(Partitioning)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_089",
+  "code": "DB_089",
+  "domain": "DB",
+  "category": "DB > 성능",
+  "title": "옵티마이저(Optimizer)",
+  "subtitle": "",
+  "name": "옵티마이저(Optimizer)",
+  "en": "Query Optimizer",
+  "definition": "사용자가 질의한 SQL을 처리할 수 있는 실행계획들을 탐색하고 각 계획의 비용을 추정해 최적의 실행계획을 선택하는 DBMS 핵심 엔진.",
+  "keywords": [
+   "기능: 실행계획 탐색(Search Space Enumeration) · 비용 산정(Cost Estimation)",
+   "종류: 규칙 기반(RBO) · 비용 기반(CBO)",
+   "CBO 구성: 질의 변환기 · 비용 산정기 · 실행계획 생성기",
+   "입력: 통계정보(행 수·선택도·카디널리티·히스토그램)"
+  ],
+  "keywords_must": [
+   "RBO(Rule Based Optimizer)",
+   "CBO(Cost Based Optimizer)",
+   "질의 변환기(Query Transformer)",
+   "비용 산정기(Estimator)",
+   "실행계획 생성기(Plan Generator)",
+   "통계정보(Statistics)",
+   "선택도(Selectivity)",
+   "카디널리티(Cardinality)",
+   "히스토그램(Histogram)",
+   "힌트(Hint)"
+  ],
+  "keywords_ref": [
+   "RBO 우선순위(Path 1 ROWID ~ Path 15 Full Scan)",
+   "실행계획(Execution Plan)",
+   "바인드 변수 엿보기(Bind Peeking)",
+   "적응형 실행계획(Adaptive Plan)"
+  ],
+  "outline": [
+   "옵티마이저의 개요",
+   "- 최적 실행계획 수립 엔진",
+   "- 실행계획 탐색·비용 산정",
+   "옵티마이저 분류",
+   "- RBO: 규칙 우선순위",
+   "- CBO: 통계 기반 비용",
+   "CBO 구성요소",
+   "- 질의 변환기·비용 산정기·실행계획 생성기",
+   "- 통계정보 관리"
+  ],
+  "sections": [
+   {
+    "title": "RBO vs CBO",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "RBO: 인덱스 구조·연산자별 우선순위 규칙(Path 1 ROWID 단일 행 ~ Full Table Scan), 예측 쉬우나 데이터 분포 무시",
+       "CBO: 통계정보로 I/O·CPU 비용 계산, 데이터 분포 반영, 통계 품질에 의존"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "CBO 구성",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "질의 변환기: 뷰 병합·서브쿼리 Unnesting·조건 Pushdown",
+       "비용 산정기: 선택도·카디널리티·비용 계산",
+       "실행계획 생성기: 액세스 경로·조인 순서·조인 방식 조합 후 최소 비용 선택"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "운영",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "주기적 통계 수집, 실행계획 고정(SQL Plan Baseline), 필요 시 Hint"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "RBO(Rule Based Optimizer)",
+   "CBO(Cost Based Optimizer)",
+   "질의 변환기(Query Transformer)",
+   "비용 산정기(Estimator)",
+   "실행계획 생성기(Plan Generator)",
+   "통계정보(Statistics)",
+   "선택도(Selectivity)",
+   "카디널리티(Cardinality)",
+   "히스토그램(Histogram)",
+   "힌트(Hint)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_090",
+  "code": "DB_090",
+  "domain": "DB",
+  "category": "DB > 성능",
+  "title": "DB 튜닝 절차(Database Tuning Process)",
+  "subtitle": "",
+  "name": "DB 튜닝 절차(Database Tuning Process)",
+  "en": "Database Tuning Process",
+  "definition": "성능 목표를 정한 뒤 비즈니스 → 디자인 → SQL → 서버 → 시스템·네트워크 순으로 단계별 튜닝 포인트를 점검·개선하는 데이터베이스 성능 최적화 절차.",
+  "keywords": [
+   "목표: 처리 능력 · 처리 시간 · 응답 시간 · 적재 시간",
+   "절차: 비즈니스 → 디자인 → SQL → 서버 → 시스템·네트워크 튜닝",
+   "디자인 기법: 정규화·반정규화 · 파티셔닝 · 인덱스 · 키 · 데이터 타입",
+   "원칙: 초기 단계 튜닝일수록 비용 대비 효과 큼"
+  ],
+  "keywords_must": [
+   "비즈니스 튜닝(업무 프로세스)",
+   "디자인 튜닝(논리·물리 설계)",
+   "SQL 튜닝(실행계획)",
+   "서버 튜닝(DBMS 메모리·I/O)",
+   "시스템·네트워크 튜닝(OS·Storage)",
+   "Hint",
+   "부분범위 처리",
+   "조인 순서 조정",
+   "버퍼 캐시(Buffer Cache)",
+   "RAID 구성"
+  ],
+  "keywords_ref": [
+   "Multiblock I/O",
+   "Jumbo Packet",
+   "Tuning Early vs Late 비용 곡선",
+   "병렬 처리"
+  ],
+  "outline": [
+   "DB 튜닝 절차의 개요",
+   "- 튜닝 목표",
+   "단계별 튜닝 포인트",
+   "- 비즈니스·디자인·SQL",
+   "- 서버·시스템/네트워크",
+   "DB 튜닝 기법",
+   "- 디자인 단계 기법",
+   "- DB 환경 기법",
+   "- SQL 기법",
+   "튜닝 전략",
+   "- 초기 단계 튜닝 효과"
+  ],
+  "sections": [
+   {
+    "title": "단계별 포인트",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "비즈니스: 업무 흐름·중요 프로세스 최적화",
+       "디자인: 논리·물리 구조(테이블·인덱스) 튜닝, 정규화·반정규화",
+       "SQL: 실행계획·SQL 최적화, 응답 시간",
+       "서버: 메모리·CPU·I/O 자원 최적화",
+       "시스템·네트워크: OS·스토리지·네트워크 부하 분석"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "디자인: 분산 설계, 파티셔닝, B-Tree·해시·비트맵 인덱스, PK·FK 클러스터링, 조인 컬럼 데이터 타입 일치",
+       "환경: SGA 버퍼 캐시, Multiblock I/O, 비동기 I/O, RAID, Jumbo Packet",
+       "SQL: Hint, 부분범위 처리, 동적 쿼리 지양(Binding), 조인 순서, 다중·병렬 처리"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "비즈니스 튜닝(업무 프로세스)",
+   "디자인 튜닝(논리·물리 설계)",
+   "SQL 튜닝(실행계획)",
+   "서버 튜닝(DBMS 메모리·I/O)",
+   "시스템·네트워크 튜닝(OS·Storage)",
+   "Hint",
+   "부분범위 처리",
+   "조인 순서 조정",
+   "버퍼 캐시(Buffer Cache)",
+   "RAID 구성"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_092",
+  "code": "DB_092",
+  "domain": "DB",
+  "category": "DB > 인덱스",
+  "title": "인덱스 구조 분류(Index Structure Types)",
+  "subtitle": "",
+  "name": "인덱스 구조 분류(Index Structure Types)",
+  "en": "Index Structure Types",
+  "definition": "인덱스는 행을 빠르게 찾기 위해 테이블과 별도로 구조화한 객체로, 구조에 따라 범위 검색에 강한 트리 기반, 동등 검색에 강한 해시 기반, 저카디널리티 분석에 강한 비트맵 인덱스로 나뉜다.",
+  "keywords": [
+   "분류: 트리 · 해시 · 비트맵(트해비)",
+   "트리: B-Tree · B*-Tree · B+Tree · T-Tree / 다차원 R-Tree",
+   "해시: 정적 해싱 · 동적 해싱 · 확장 해싱 · 선형 해싱",
+   "비트맵: DW·Mart 저카디널리티 컬럼 · 비트 연산"
+  ],
+  "keywords_must": [
+   "B-Tree",
+   "B+Tree",
+   "T-Tree(메모리 DB)",
+   "R-Tree(다차원)",
+   "Root·Branch·Leaf 블록",
+   "해시 함수(Hash Function)",
+   "버킷(Bucket)",
+   "확장 해싱(Extendible Hashing)",
+   "비트맵 인덱스(Bitmap Index)",
+   "카디널리티(Cardinality)"
+  ],
+  "keywords_ref": [
+   "선형 해싱(Linear Hashing)",
+   "3DR-Tree",
+   "인덱스 특징: 성능·알고리즘·독립성·Trade-Off",
+   "DML 성능 저하"
+  ],
+  "outline": [
+   "인덱스의 개요",
+   "- 검색 최적화 객체",
+   "- 성능·알고리즘·독립성·Trade-Off",
+   "인덱스 구조별 비교",
+   "- 용도·Root/Leaf·버킷·비트열",
+   "인덱스 구조별 상세",
+   "- 트리 기반",
+   "- 해시 기반",
+   "- 비트맵"
+  ],
+  "sections": [
+   {
+    "title": "비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "트리: OLTP 범위 검색, Root·Branch·Leaf, 균형 트리로 O(log N)",
+       "해시: OLTP 동등(Key) 검색, 버킷·해시 함수·해시 테이블, 범위 검색 불가",
+       "비트맵: DW·Mart, 값별 비트열, AND/OR 비트 연산, DML 잦으면 Lock 경합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Trade-Off",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "조회 성능 향상 vs 입력·수정·삭제 시 인덱스 유지 비용 증가",
+       "선택도 낮은(값 종류 많은) 컬럼은 B-Tree, 적은 컬럼은 비트맵"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "B-Tree",
+   "B+Tree",
+   "T-Tree(메모리 DB)",
+   "R-Tree(다차원)",
+   "Root·Branch·Leaf 블록",
+   "해시 함수(Hash Function)",
+   "버킷(Bucket)",
+   "확장 해싱(Extendible Hashing)",
+   "비트맵 인덱스(Bitmap Index)",
+   "카디널리티(Cardinality)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_095_1",
+  "code": "DB_095_1",
+  "domain": "DB",
+  "category": "DB > 인덱스",
+  "title": "확장 해싱(Extendible Hashing)",
+  "subtitle": "",
+  "name": "확장 해싱(Extendible Hashing)",
+  "en": "Extendible Hashing",
+  "definition": "해시 값(모조키)의 앞 d비트로 디렉터리를 찾아 버킷에 접근하고, 버킷 오버플로 시 해당 버킷만 분할하거나 디렉터리를 두 배로 늘려 재구성 부하를 줄이는 동적 해싱 기법.",
+  "keywords": [
+   "구성: 키 · 모조키(Pseudo Key) · 디렉터리 · 버킷",
+   "깊이: 전역 깊이 d(디렉터리) · 지역 깊이 p(버킷)",
+   "오버플로: p < d → 버킷 분할 · p = d → 디렉터리 2배 확장",
+   "충돌 해결: 개방 주소(선형 조사·이중 해싱) · 체인"
+  ],
+  "keywords_must": [
+   "모조키(Pseudo Key)",
+   "전역 깊이(Global Depth, d)",
+   "지역 깊이(Local Depth, p)",
+   "디렉터리(Directory)",
+   "버킷 분할(Bucket Split)",
+   "디렉터리 확장(Doubling)",
+   "동적 해싱(Dynamic Hashing)",
+   "개방 주소법(Open Addressing)",
+   "체인(Chaining)"
+  ],
+  "keywords_ref": [
+   "선형 조사(Linear Probing)",
+   "이중 해싱(Double Hashing)",
+   "선형 해싱(Linear Hashing)",
+   "정적 해싱 한계"
+  ],
+  "outline": [
+   "확장 해싱의 개요",
+   "- 동적 해싱",
+   "- 한 버킷 단위 재구성",
+   "확장 해싱 구조",
+   "- 키·모조키·디렉터리·버킷",
+   "- 전역·지역 깊이",
+   "오버플로와 충돌 해결",
+   "- 버킷 분할·디렉터리 확장",
+   "- 개방 주소·체인"
+  ],
+  "sections": [
+   {
+    "title": "동작",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "해시 함수로 키를 비트열(모조키)로 변환, 앞 d비트로 디렉터리 엔트리 → 버킷 포인터",
+       "버킷 오버플로: 지역 깊이 p < d면 버킷만 분할(p+1), p = d면 디렉터리 2배(d+1) 후 분할",
+       "재구성이 한 버킷에 국한되어 부하 경감, 디렉터리 크기가 지수적으로 증가 가능"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "충돌 해결",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "개방 주소: 테이블 내 빈 공간 탐색(선형 조사·이중 해싱)",
+       "체인: 동일 버킷 데이터를 연결 리스트로 연결, 공간 오버헤드"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "모조키(Pseudo Key)",
+   "전역 깊이(Global Depth, d)",
+   "지역 깊이(Local Depth, p)",
+   "디렉터리(Directory)",
+   "버킷 분할(Bucket Split)",
+   "디렉터리 확장(Doubling)",
+   "동적 해싱(Dynamic Hashing)",
+   "개방 주소법(Open Addressing)",
+   "체인(Chaining)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_098_00",
+  "code": "DB_098_00",
+  "domain": "DB",
+  "category": "DB > 인덱스",
+  "title": "다차원 색인 구조(Multidimensional Index Structure)",
+  "subtitle": "",
+  "name": "다차원 색인 구조(Multidimensional Index Structure)",
+  "en": "Multidimensional Index Structure",
+  "definition": "이미지·공간·멀티미디어 같은 데이터를 효율적으로 검색하기 위해 여러 속성을 동시에 키로 사용하는 색인 구조로, 점 데이터용 PAM(Point Access Method)과 영역 데이터용 SAM(Spatial Access Method)으로 나뉜다.",
+  "keywords": [
+   "유형: PAM(Point Access Method) · SAM(Spatial Access Method)",
+   "점 데이터: k-d 트리 · k-d-b 트리 · Grid File · MLGF · Quad Tree",
+   "영역 데이터: R-Tree · R+-Tree · R*-Tree",
+   "활용: 공간 DB · 유사도 기반 내용 검색"
+  ],
+  "keywords_must": [
+   "PAM(Point Access Method)",
+   "SAM(Spatial Access Method)",
+   "k-d 트리",
+   "k-d-b 트리",
+   "Grid File",
+   "MLGF(Multi-Level Grid File)",
+   "Quad Tree",
+   "R-Tree",
+   "R*-Tree",
+   "MBR(Minimum Bounding Rectangle)"
+  ],
+  "keywords_ref": [
+   "R+-Tree",
+   "차원의 저주(Curse of Dimensionality)",
+   "최근접 이웃 질의(k-NN Query)",
+   "범위 질의(Range Query)"
+  ],
+  "outline": [
+   "다차원 색인 구조의 개념",
+   "- 다중 속성 동시 키",
+   "- PAM/SAM",
+   "다차원 색인 구조 3가지",
+   "- k-d 트리",
+   "- Quad Tree",
+   "- R-Tree",
+   "활용과 한계",
+   "- 공간·멀티미디어 검색",
+   "- 고차원 성능 저하"
+  ],
+  "sections": [
+   {
+    "title": "주요 구조",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "k-d 트리: 이진 탐색 트리를 다차원으로 확장, 레벨마다 비교 차원 교대, 비균형·소규모 점 데이터",
+       "Quad Tree: 공간을 4개 부속 공간으로 재귀 분할, 탐색 O(log₄N)",
+       "R-Tree: B-Tree와 유사한 균형 트리, MBR로 선·면 객체 저장·검색"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "차원이 매우 높으면 효율 급감 → 벡터 검색은 HNSW·LSH 등 ANN(Approximate Nearest Neighbor) 사용"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "PAM(Point Access Method)",
+   "SAM(Spatial Access Method)",
+   "k-d 트리",
+   "k-d-b 트리",
+   "Grid File",
+   "MLGF(Multi-Level Grid File)",
+   "Quad Tree",
+   "R-Tree",
+   "R*-Tree",
+   "MBR(Minimum Bounding Rectangle)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_098_01",
+  "code": "DB_098_01",
+  "domain": "DB",
+  "category": "DB > 인덱스",
+  "title": "해시 인덱스(Hash Index)",
+  "subtitle": "",
+  "name": "해시 인덱스(Hash Index)",
+  "en": "Hash Index",
+  "definition": "검색 키 값에 해시 함수를 적용해 데이터가 저장된 버킷 주소를 직접 계산하여 접근하는 인덱스로, 동등(=) 검색이 매우 빠르지만 범위 검색과 정렬에는 사용할 수 없다.",
+  "keywords": [
+   "구성: 해시 함수 · 버킷 · 해시 테이블(해시 값-레코드 주소)",
+   "동작: 해시 값 생성 → 버킷 구성 → 동일 값 검색",
+   "장점: 빠른 검색 O(1) · 인덱스 저장량 감소 · 병렬 DB 분산 검색",
+   "한계: 범위·LIKE·정렬 불가 · 충돌 · 재해싱 비용"
+  ],
+  "keywords_must": [
+   "해시 함수(Hash Function)",
+   "버킷(Bucket)",
+   "동등 검색(Equality Search)",
+   "O(1) 탐색",
+   "충돌(Collision)",
+   "오버플로(Overflow)",
+   "범위 검색 불가",
+   "메모리 기반 테이블(MEMORY Engine)",
+   "해시 파티셔닝(Hash Partitioning)"
+  ],
+  "keywords_ref": [
+   "Adaptive Hash Index(InnoDB)",
+   "해시 조인(Hash Join)",
+   "정적·동적 해싱",
+   "B-Tree 인덱스 비교"
+  ],
+  "outline": [
+   "해시 인덱스의 개념",
+   "- 키 연산으로 버킷 주소 계산",
+   "- 장점: 빠른 검색·저장량 감소",
+   "해시 인덱스의 구조와 동작",
+   "- 해시 함수·버킷",
+   "- 해시 값 생성 → 버킷 구성 → 검색",
+   "해시 인덱스 활용과 한계",
+   "- 동등 검색·메모리 테이블",
+   "- 범위 검색 불가"
+  ],
+  "sections": [
+   {
+    "title": "동작",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 값 → 해시 함수 → 해시 값, 해시 값과 레코드 주소 쌍을 버킷에 저장",
+       "검색 시 같은 해시 값으로 버킷을 찾아 레코드 접근",
+       "원래 키가 아닌 해시 값을 저장해 긴 컬럼도 인덱스 크기 작음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "B-Tree 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "해시: = 조건 최적, 범위·정렬·부분 일치 불가",
+       "B-Tree: 범위·정렬·접두 검색 지원, 범용"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "해시 함수(Hash Function)",
+   "버킷(Bucket)",
+   "동등 검색(Equality Search)",
+   "O(1) 탐색",
+   "충돌(Collision)",
+   "오버플로(Overflow)",
+   "범위 검색 불가",
+   "메모리 기반 테이블(MEMORY Engine)",
+   "해시 파티셔닝(Hash Partitioning)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ }
+]

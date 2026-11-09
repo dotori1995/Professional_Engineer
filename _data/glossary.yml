@@ -1,10 +1,19 @@
 # 약어 → 정식 명칭 (표준 문서·교과서 기준). 화면에서 약어 옆에 작게 표시됨.
 # 뜻이 여러 개라 헷갈리는 약어(CA, CD, CP, SP, IS, MC, AM, EU 등)는 넣지 않음.
+1NF: First Normal Form
+2NF: Second Normal Form
+2PC: Two-Phase Commit
+2PL: Two-Phase Locking
+3NF: Third Normal Form
+3PC: Three-Phase Commit
+4NF: Fourth Normal Form
 5GC: 5G Core
+5NF: Fifth Normal Form
 6rd: IPv6 Rapid Deployment
 ABP: Activation By Personalization
 ABR: Area Border Router
 ACF: Autocorrelation Function
+ACID: Atomicity, Consistency, Isolation, Durability
 ACK: Acknowledgment
 ACL: Access Control List
 ADAS: Advanced Driver Assistance System
@@ -64,6 +73,7 @@ BBR: Bottleneck Bandwidth and Round-trip propagation time
 BCH: Bose–Chaudhuri–Hocquenghem
 BCM: Business Continuity Management
 BCMS: Business Continuity Management System
+BCNF: Boyce-Codd Normal Form
 BCP: Business Continuity Plan
 BCR: Benefit-Cost Ratio
 BDP: Bandwidth-Delay Product
@@ -115,6 +125,7 @@ CIDR: Classless Inter-Domain Routing
 CIFS: Common Internet File System
 CIR: Committed Information Rate
 CLAT: Customer-side Translator
+CLR: Compensation Log Record
 CLT: Central Limit Theorem
 CMMI: Capability Maturity Model Integration
 CNAME: Canonical Name
@@ -170,6 +181,7 @@ DHCPv6: Dynamic Host Configuration Protocol for IPv6
 DHT: Distributed Hash Table
 DiffServ: Differentiated Services
 DIFS: DCF Inter-Frame Space
+DKNF: Domain-Key Normal Form
 DLCI: Data Link Connection Identifier
 DLL: Dynamic Link Library
 DLNA: Digital Living Network Alliance
@@ -234,6 +246,7 @@ EDFA: Erbium-Doped Fiber Amplifier
 EDNS0: Extension Mechanisms for DNS version 0
 EEBL: Emergency Electronic Brake Light
 EEF: Enterprise Environmental Factors
+EERD: Enhanced Entity Relationship Diagram
 EF: Expedited Forwarding
 EGP: Exterior Gateway Protocol
 EHT: Extremely High Throughput
@@ -246,6 +259,7 @@ EMV: Expected Monetary Value
 EN-DC: E-UTRA NR Dual Connectivity
 EPC: Evolved Packet Core
 EPMO: Enterprise Project Management Office
+ERD: Entity Relationship Diagram
 ERP: Enterprise Resource Planning
 ERPS: Ethernet Ring Protection Switching
 ESG: Environment Social Governance
@@ -317,12 +331,14 @@ HCI: Hyper-Converged Infrastructure
 HDLC: High-level Data Link Control
 HEMS: Home Energy Management System
 HMAC: Hash-based Message Authentication Code
+HNSW: Hierarchical Navigable Small World
 HOL: Head-of-Line
 HOLAP: Hybrid OLAP
 HPACK: HTTP/2 Header Compression
 HSD: Honestly Significant Difference
 HSRP: Hot Standby Router Protocol
 HSS: Home Subscriber Server
+HTAP: Hybrid Transactional/Analytical Processing
 HTTP: HyperText Transfer Protocol
 HTTPS: HTTP Secure
 IASB: International Accounting Standards Board
@@ -424,6 +440,8 @@ LPWA: Low Power Wide Area
 LPWAN: Low-Power Wide-Area Network
 LSA: Link State Advertisement
 LSDB: Link State Database
+LSH: Locality-Sensitive Hashing
+LSN: Log Sequence Number
 LSNAT: Load Sharing Network Address Translation
 LSP: Label Switched Path
 LSR: Label Switching Router
@@ -442,6 +460,7 @@ MANET: Mobile Ad hoc Network
 MANO: Management and Orchestration
 MANOVA: Multivariate Analysis of Variance
 MBAP: Modbus Application Protocol
+MBR: Minimum Bounding Rectangle
 MCL: Maximum Coupling Loss
 MCPTT: Mission Critical Push-To-Talk
 MCU: Multipoint Control Unit
@@ -489,8 +508,11 @@ MTU: Maximum Transmission Unit
 MU-MIMO: Multi-User MIMO
 MUX: Multiplexer
 MVC: Multiview Video Coding
+MVCC: Multi-Version Concurrency Control
+MVD: Multi-Valued Dependency
 MVNO: Mobile Virtual Network Operator
 MVP: Minimum Viable Product
+MVTO: Multi-Version Timestamp Ordering
 MVUE: Minimum Variance Unbiased Estimator
 MX: Mail Exchanger
 NAK: Negative Acknowledgment
@@ -537,6 +559,7 @@ NTP: Network Time Protocol
 NTRIP: Networked Transport of RTCM via Internet Protocol
 NTS: Network Time Security
 NVR: Network Video Recorder
+NVRAM: Non-Volatile Random Access Memory
 O-CU: O-RAN Central Unit
 O-DU: O-RAN Distributed Unit
 O-RU: O-RAN Radio Unit
@@ -599,6 +622,8 @@ PHY: Physical Layer
 PIE: Proportional Integral controller Enhanced
 PIFS: PCF Inter-Frame Space
 PIM: Protocol Independent Multicast
+PITR: Point-in-Time Recovery
+PJNF: Project-Join Normal Form
 PKI: Public Key Infrastructure
 PLAT: Provider-side Translator
 PLC: Programmable Logic Controller
@@ -644,6 +669,7 @@ RADIUS: Remote Authentication Dial-In User Service
 RAM: Responsibility Assignment Matrix
 RAN: Radio Access Network
 RARP: Reverse Address Resolution Protocol
+RCSI: Read Committed Snapshot Isolation
 RED: Random Early Detection
 RegTech: Regulatory Technology
 REJ: Reject
@@ -659,6 +685,7 @@ RIPng: RIP next generation
 RIR: Regional Internet Registry
 RIS: Reconfigurable Intelligent Surface
 RLE: Run-Length Encoding
+RMAN: Recovery Manager
 RMSE: Root Mean Squared Error
 RNN: Recurrent Neural Network
 RNR: Receive Not Ready
@@ -872,6 +899,7 @@ VRRP: Virtual Router Redundancy Protocol
 VRS: Virtual Reference Station
 VXLAN: Virtual Extensible LAN
 W3C: World Wide Web Consortium
+WAL: Write-Ahead Logging
 WAN: Wide Area Network
 WAVE: Wireless Access in Vehicular Environments
 WBAN: Wireless Body Area Network
