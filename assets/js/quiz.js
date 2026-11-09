@@ -98,6 +98,7 @@
     const primary = $('quizPrimary');
     const skip = $('quizSkip');
     updateProgress();
+    PE.glTopic = t || null;
     if (!t) {
       quiz.innerHTML = '<div class="empty">서술 연습할 토픽이 없어요.<br>필수 키워드가 있는 토픽부터 열어 주세요.</div>';
       primary.disabled = true; skip.hidden = true;

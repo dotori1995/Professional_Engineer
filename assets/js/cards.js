@@ -28,6 +28,7 @@
     ['prevBtn', 'nextBtn'].forEach(b => $(b).disabled = !n);
     if (!n) { front.innerHTML = '<div class="empty">카드가 없어요</div>'; return; }
     const t = deck[idx];
+    PE.glTopic = t;
     front.innerHTML = `<div class="code">${PE.esc(t.id)}${PE.isImportant(t) ? ' <span class="badge star-badge">중요</span>' : ''}${PE.reviewFixed(t) ? ' <span class="badge fix">검토 수정</span>' : ''}</div>
       <h2>${PE.nameHtml(t)}</h2>
       <div class="tap">탭해서 정의·키워드·목차 보기</div>`;

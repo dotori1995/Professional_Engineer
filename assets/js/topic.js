@@ -5,6 +5,7 @@
     const i = all.findIndex(t => t.id === id);
     if (i < 0) { el.innerHTML = '<p class="empty">토픽을 찾을 수 없어요. <a href="' + PE.url('/') + '">목록으로</a></p>'; return; }
     const t = all[i];
+    PE.glTopic = t;
     if (t.domain !== PE.cur) PE.setDomain(t.domain);
     const same = all.filter(x => x.domain === t.domain), j = same.indexOf(t), prev = same[j - 1], next = same[j + 1];
     document.title = PE.name(t) + ' · ' + document.title;

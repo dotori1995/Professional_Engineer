@@ -8,6 +8,7 @@
     GL = g || {}; const keys = Object.keys(GL).sort((a, b) => b.length - a.length).map(k => k.replace(/[.*+?^${}()|[\]\\\/-]/g, '\\$&'));
     GLRE = keys.length ? new RegExp('(?<![A-Za-z0-9])(' + keys.join('|') + ')(?![A-Za-z0-9])', 'g') : null;
   }).catch(() => {});
+  PE.glTopic = null; // 지금 그리는 토픽(문맥별 약어 풀이용)
   PE.important = {};
   PE.loadImportant = () => fetch(PE.base + '/important.json').then(r => r.ok ? r.json() : {}).then(o => { PE.important = o || {}; }).catch(() => { PE.important = {}; });
   PE.isImportant = t => !!(t && PE.important[t.id]);
@@ -42,13 +43,15 @@
     const seen = new Set(); let out = '', last = 0;
     raw.replace(GLRE, (m, k, off) => {
       const after = raw.slice(off + m.length).trimStart();
-      const full = GL[k];
+      // 토픽별 풀이(t.gloss)가 우선. 사전 값이 목록(뜻 여러 개)이거나 '-'면 토픽에 지정이 없을 때 표시 안 함
+      const tg = PE.glTopic && PE.glTopic.gloss; let full = tg && Object.prototype.hasOwnProperty.call(tg, k) ? tg[k] : GL[k];
+      if (Array.isArray(full) || !full || full === '-') full = null;
       out += PE.esc(raw.slice(last, off + m.length)); last = off + m.length;
       // 바로 뒤 괄호가 이미 풀네임(같은 첫 글자로 시작하는 단어 포함)이면 생략, ISO/SAE처럼 '/'로 붙은 복합 표기는 생략
       const paren = after.startsWith('(') ? (after.match(/^\(([^)]*)\)/) || [, ''])[1] : null;
       const expanded = paren != null && new RegExp('(^|[^A-Za-z])' + k[0] + '[a-z]', 'i').test(paren);
       const slash = !k.includes('/') && (raw[off - 1] === '/' || raw[off + m.length] === '/');
-      if (!seen.has(k) && !expanded && !slash && !raw.toLowerCase().includes(String(full).toLowerCase())) { out += `<small class="gl">(${PE.esc(full)})</small>`; seen.add(k); }
+      if (full && !seen.has(k) && !expanded && !slash && !raw.toLowerCase().includes(String(full).toLowerCase())) { out += `<small class="gl">(${PE.esc(full)})</small>`; seen.add(k); }
       return m;
     });
     return out + PE.esc(raw.slice(last));
