@@ -7855,7 +7855,7 @@
  },
  "SV_250": {
   "name": "의료정보 표준(PACS·PHR·EMR·DICOM·OCS)",
-  "en": "PACS PHR EMR DICOM OCS",
+  "en": "Healthcare Information Standards",
   "title": "의료정보 표준(PACS·PHR·EMR·DICOM·OCS)",
   "definition": "의료 환경에서 발생한 의학영상(CT,MRI)등을 데이터베이스에 저장하는 가용성, 접근성 향상시스템",
   "outline": [
@@ -15708,9 +15708,9 @@
   "quiz_avoid": []
  },
  "SV_424": {
-  "name": "디지털서비스 전문계약제도(SV 424)",
-  "en": "SV 424",
-  "title": "디지털서비스 전문계약제도(SV 424)",
+  "name": "디지털서비스 전문계약제도(Digital Service Special Contract)",
+  "en": "Digital Service Special Contract System",
+  "title": "디지털서비스 전문계약제도(Digital Service Special Contract)",
   "definition": "디지털서비스산업의 변화에 따라 공공기관의 클라우드 컴퓨팅 서비스 도입 활성화를 위해디지털서비스를 신속하게 도입할 수 있도록 디지털서비스에 특화된 전문계약제도",
   "outline": [
    "디지털서비스 전문계약제도의 개념",

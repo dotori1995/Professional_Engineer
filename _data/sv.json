@@ -18930,7 +18930,7 @@
    "활용·시사점"
   ],
   "name": "의료정보 표준(PACS·PHR·EMR·DICOM·OCS)",
-  "en": "PACS PHR EMR DICOM OCS",
+  "en": "Healthcare Information Standards",
   "keywords_must": [
    "의료정보 표준",
    "몰입·실감",
@@ -31830,7 +31830,7 @@
  {
   "id": "SV_424",
   "code": "SV_424",
-  "title": "디지털서비스 전문계약제도(SV 424)",
+  "title": "디지털서비스 전문계약제도(Digital Service Special Contract)",
   "subtitle": "디지털서비스 전문 계약 제도",
   "domain": "SV",
   "category": "SV",
@@ -31900,8 +31900,8 @@
    "구성·유형",
    "활용·시사점"
   ],
-  "name": "디지털서비스 전문계약제도(SV 424)",
-  "en": "SV 424",
+  "name": "디지털서비스 전문계약제도(Digital Service Special Contract)",
+  "en": "Digital Service Special Contract System",
   "keywords_must": [
    "디지털서비스 전문계약제도",
    "개념·정의",
