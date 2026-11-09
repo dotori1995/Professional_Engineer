@@ -121,7 +121,7 @@
       skip.hidden = false; skip.textContent = '다른 토픽';
       const dump = $('wDump');
       dump && dump.addEventListener('input', () => { notes = dump.value; });
-      PE.fit(quiz);
+      quiz.classList.remove('scroll'); PE.fit(quiz);
       return;
     }
 
@@ -150,7 +150,7 @@
       }));
       primary.textContent = '결과 저장'; primary.disabled = false;
       skip.hidden = false; skip.textContent = '다시';
-      PE.fit(quiz);
+      PE.scrollFit(quiz);
       return;
     }
 
@@ -169,7 +169,7 @@
       ${got.length ? `<div class="lbl">맞힌 필수</div><ul class="whit">${got.map(k => `<li>${PE.gl(k)}</li>`).join('')}</ul>` : ''}`;
     primary.textContent = '다음 토픽'; primary.disabled = false;
     skip.hidden = false; skip.textContent = '같은 토픽 다시';
-    PE.fit(quiz);
+    PE.scrollFit(quiz);
   }
 
   function kwChip(prefix, i, text) {

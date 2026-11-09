@@ -83,6 +83,8 @@
     if (over()) { box.classList.add('tight2'); while (over() && s > 0.5) { s -= 0.025; box.style.setProperty('--s', s.toFixed(3)); } }
     box.dataset.fit = over() ? 'overflow' : 'ok';
   };
+  // 스크롤 모드: 글자 축소 없이 원래 크기로, 넘치면 스크롤
+  PE.scrollFit = box => { if (!box) return; box.classList.remove('tight','tight2'); box.style.setProperty('--s', 1); box.classList.add('scroll'); box.scrollTop = 0; };
   // 목차: '- '로 시작하면 하위 항목. full=false면 상위 항목만
   const ROM = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
   PE.outlineHtml = (ol, full) => {
