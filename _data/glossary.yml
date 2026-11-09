@@ -1,12 +1,15 @@
 # 약어 → 정식 명칭 (표준 문서·교과서 기준). 화면에서 약어 옆에 작게 표시됨.
 # 뜻이 여러 개라 헷갈리는 약어(CA, CD, CP, SP, IS, MC, AM, EU 등)는 넣지 않음.
+6rd: IPv6 Rapid Deployment
 ABR: Area Border Router
 ACK: Acknowledgment
 ADAS: Advanced Driver Assistance System
 ADN: Application Delivery Network
 AES: Advanced Encryption Standard
 AI: Artificial Intelligence
+AIMD: Additive Increase Multiplicative Decrease
 AIoE: Ambient Internet of Everything
+ALG: Application Level Gateway
 AMC: Adaptive Modulation and Coding
 AMI: Advanced Metering Infrastructure
 AMPS: Advanced Mobile Phone System
@@ -15,12 +18,14 @@ AODV: Ad hoc On-demand Distance Vector
 AP: Access Point
 APIPA: Automatic Private IP Addressing
 APTEEN: Adaptive Periodic Threshold-sensitive Energy Efficient sensor Network
+AQM: Active Queue Management
 ARP: Address Resolution Protocol
 ARQ: Automatic Repeat reQuest
 AS: Autonomous System
 ASBR: Autonomous System Boundary Router
 ASK: Amplitude Shift Keying
 AXFR: Full Zone Transfer
+BBR: Bottleneck Bandwidth and Round-trip propagation time
 BDR: Backup Designated Router
 BEC: Backward Error Correction
 BGP: Border Gateway Protocol
@@ -30,13 +35,18 @@ BSS: Business Support System
 C-V2X: Cellular Vehicle-to-Everything
 CAM: Cooperative Awareness Message
 CAN: Controller Area Network
+CBS: Committed Burst Size
+CBWFQ: Class-Based Weighted Fair Queuing
 CCTV: Closed-Circuit Television
 CDM: Code Division Multiplexing
 CDMA: Code Division Multiple Access
 CDN: Content Delivery Network
 CIDR: Classless Inter-Domain Routing
+CIR: Committed Information Rate
+CLAT: Customer-side Translator
 CNAME: Canonical Name
 CoAP: Constrained Application Protocol
+CoDel: Controlled Delay
 CoRE: Constrained RESTful Environments
 CPU: Central Processing Unit
 CRC: Cyclic Redundancy Check
@@ -57,12 +67,14 @@ DHCP: Dynamic Host Configuration Protocol
 DiffServ: Differentiated Services
 DIFS: DCF Inter-Frame Space
 DNS: Domain Name System
+DNS64: DNS extensions for NAT64
 DNSSEC: DNS Security Extensions
 DoH: DNS over HTTPS
 DoQ: DNS over QUIC
 DoT: DNS over TLS
 DPP: Device Provisioning Protocol
 DR: Designated Router
+DS-Lite: Dual-Stack Lite
 DSCP: Differentiated Services Code Point
 DSDV: Destination-Sequenced Distance Vector
 DSR: Dynamic Source Routing
@@ -75,9 +87,12 @@ DVA: Distance Vector Algorithm
 DVB-T: Digital Video Broadcasting – Terrestrial
 DWDM: Dense Wavelength Division Multiplexing
 E2E: End-to-End
+EBS: Excess Burst Size
 eCall: Emergency Call
 ECC: Elliptic Curve Cryptography
+ECN: Explicit Congestion Notification
 ECU: Electronic Control Unit
+EF: Expedited Forwarding
 EGP: Exterior Gateway Protocol
 EIFS: Extended Inter-Frame Space
 EIGRP: Enhanced Interior Gateway Routing Protocol
@@ -103,6 +118,7 @@ GSLB: Global Server Load Balancing
 GSM: Global System for Mobile Communications
 GWCN: Gateway Core Network
 HARQ: Hybrid Automatic Repeat reQuest
+HCE: Host Card Emulation
 HDLC: High-level Data Link Control
 HOL: Head-of-Line
 HSRP: Hot Standby Router Protocol
@@ -130,6 +146,7 @@ IPv4: Internet Protocol version 4
 IPv6: Internet Protocol version 6
 IS-IS: Intermediate System to Intermediate System
 ISAC: Integrated Sensing and Communication
+ISATAP: Intra-Site Automatic Tunnel Addressing Protocol
 ISN: Initial Sequence Number
 ISO: International Organization for Standardization
 ISP: Internet Service Provider
@@ -144,9 +161,11 @@ LAN: Local Area Network
 LDP: Label Distribution Protocol
 LEACH: Low-Energy Adaptive Clustering Hierarchy
 LER: Label Edge Router
+LFIB: Label Forwarding Information Base
 LIB: Label Information Base
 LLC: Logical Link Control
 LLM: Large Language Model
+LLQ: Low Latency Queuing
 LOS: Line of Sight
 LPWA: Low Power Wide Area
 LSP: Label Switched Path
@@ -162,6 +181,7 @@ MANO: Management and Orchestration
 MCPTT: Mission Critical Push-To-Talk
 MCU: Multipoint Control Unit
 MEC: Multi-access Edge Computing
+MEF: Metro Ethernet Forum
 MF: More Fragments
 MIMO: Multiple-Input Multiple-Output
 MLD: Multicast Listener Discovery
@@ -169,6 +189,7 @@ MLO: Multi-Link Operation
 MOCN: Multi-Operator Core Network
 MORAN: Multi-Operator Radio Access Network
 MoS: Mean Opinion Score
+MOS: Mean Opinion Score
 MPLS: Multi-Protocol Label Switching
 MPLS-TP: MPLS Transport Profile
 MPR: Multipoint Relay
@@ -183,8 +204,11 @@ MUX: Multiplexer
 MX: Mail Exchanger
 NAK: Negative Acknowledgment
 NAT: Network Address Translation
+NAT64: Network Address Translation IPv6-to-IPv4
 NAV: Network Allocation Vector
 NB-IoT: Narrowband IoT
+NDEF: NFC Data Exchange Format
+NDP: Neighbor Discovery Protocol
 NFC: Near Field Communication
 NFV: Network Functions Virtualization
 NFVI: NFV Infrastructure
@@ -210,11 +234,17 @@ OWE: Opportunistic Wireless Encryption
 P2P: Peer-to-Peer
 PCF: Point Coordination Function
 PDR: Pedestrian Dead Reckoning
+PESQ: Perceptual Evaluation of Speech Quality
+PHB: Per-Hop Behavior
+PHP: Penultimate Hop Popping
+PIE: Proportional Integral controller Enhanced
 PIFS: PCF Inter-Frame Space
 PIM: Protocol Independent Multicast
+PLAT: Provider-side Translator
 PLC: Programmable Logic Controller
 PMF: Protected Management Frames
 PMTUD: Path MTU Discovery
+POLQA: Perceptual Objective Listening Quality Analysis
 POP: Point of Presence
 PPP: Point-to-Point Protocol
 PS-LTE: Public Safety LTE
@@ -249,6 +279,7 @@ RU: Radio Unit
 SA: Standalone
 SACK: Selective Acknowledgment
 SAE: Simultaneous Authentication of Equals
+SAM: Slot Availability Mask
 SASL: Simple Authentication and Security Layer
 SATIN: Satellite-Aerial-Terrestrial Integrated Network
 SCMA: Sparse Code Multiple Access
@@ -267,6 +298,7 @@ SecOC: Secure Onboard Communication
 SFU: Selective Forwarding Unit
 SIC: Successive Interference Cancellation
 SIFS: Short Inter-Frame Space
+SIIT: Stateless IP/ICMP Translation
 SLA: Service Level Agreement
 SLAAC: Stateless Address Autoconfiguration
 SLD: Second-Level Domain
@@ -294,6 +326,7 @@ TURN: Traversal Using Relays around NAT
 UAV: Unmanned Aerial Vehicle
 UDP: User Datagram Protocol
 UHR: Ultra High Reliability
+ULA: Unique Local Address
 UPF: User Plane Function
 URG: Urgent
 UWB: Ultra-Wideband
@@ -305,6 +338,7 @@ V2X: Vehicle-to-Everything
 VANET: Vehicular Ad-hoc Network
 VIP: Virtual IP
 VLSM: Variable Length Subnet Mask
+VMAF: Video Multimethod Assessment Fusion
 VNF: Virtualized Network Function
 VPN: Virtual Private Network
 VRRP: Virtual Router Redundancy Protocol
