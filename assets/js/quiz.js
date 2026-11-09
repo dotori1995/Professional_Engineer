@@ -20,9 +20,10 @@
   function baseList() {
     const curated = all.filter(x => x.domain === domain && (x.keywords_must || []).length);
     let list = curated.length ? curated : all.filter(x => x.domain === domain && (x.keywords || []).length);
-    if (topicOnly) {
+    // 토픽에서 들어와도 도메인 전체를 넘겨 볼 수 있게 하고, 그 토픽부터 시작
+    if (topicOnly && !list.some(x => x.id === topicOnly)) {
       const one = all.find(x => x.id === topicOnly);
-      if (one) list = [one];
+      if (one) list = [one].concat(list);
     }
     return list;
   }
