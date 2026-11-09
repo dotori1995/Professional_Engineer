@@ -14887,6 +14887,179 @@
   ]
  },
  {
+  "id": "SE_096_01",
+  "code": "SE_096_01",
+  "title": "위협 헌팅과 마이터 어택(Threat Hunting and MITRE ATT&CK)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > SM > 신토픽",
+  "definition": "위협 헌팅은 공격자가 이미 내부에 침투했다고 가정하고 가설을 세워 로그·엔드포인트·네트워크 데이터를 능동적으로 탐색해 기존 보안 장비가 놓친 위협을 찾아 제거하는 활동이며, 마이터 어택은 실제 공격에서 관찰된 공격자의 전술·기술·절차(TTPs)를 매트릭스로 정리한 지식 기반으로 가설 수립과 탐지 범위 점검에 쓰인다",
+  "keywords": [
+   "헌팅 절차: 수집 · 가설 수립 · 헌팅 · 탐지 규칙 개발 · 위협 탐지 · 조사·대응",
+   "어택 구성: 전술(Tactic) · 기술(Technique) · 절차(Procedure)"
+  ],
+  "sections": [
+   {
+    "title": "위협 헌팅 절차",
+    "subsections": [
+     {
+      "title": "1 수집",
+      "items": [
+       "엔드포인트·네트워크·로그 데이터 확보"
+      ]
+     },
+     {
+      "title": "2 가설 수립",
+      "items": [
+       "어택 기술과 위협 인텔리전스로 공격 시나리오 가정"
+      ]
+     },
+     {
+      "title": "3 헌팅",
+      "items": [
+       "질의·분석으로 가설 검증"
+      ]
+     },
+     {
+      "title": "4 탐지 규칙 개발",
+      "items": [
+       "발견 패턴을 자동 탐지 규칙으로 전환"
+      ]
+     },
+     {
+      "title": "5 조사·대응",
+      "items": [
+       "확인된 위협 제거, 결과를 관제에 반영"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "어택 구조",
+    "subsections": [
+     {
+      "title": "전술",
+      "items": [
+       "공격자가 달성하려는 목표(왜)"
+      ]
+     },
+     {
+      "title": "기술·하위 기술",
+      "items": [
+       "목표를 달성하는 방법(어떻게)"
+      ]
+     },
+     {
+      "title": "절차",
+      "items": [
+       "특정 그룹·악성코드의 실제 구현 사례"
+      ]
+     },
+     {
+      "title": "매핑",
+      "items": [
+       "그룹·소프트웨어·완화책·탐지 데이터 소스와 연결"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "도입 고려",
+    "subsections": [
+     {
+      "title": "가시성",
+      "items": [
+       "엔드포인트·네트워크 로그를 충분히 수집"
+      ]
+     },
+     {
+      "title": "커버리지",
+      "items": [
+       "어택 매트릭스로 탐지 공백 식별, 레드팀 에뮬레이션"
+      ]
+     },
+     {
+      "title": "조직",
+      "items": [
+       "숙련 헌터 확보, 관제 프로세스 선제 표준화"
+      ]
+     },
+     {
+      "title": "자동화",
+      "items": [
+       "SOAR로 반복 업무를 줄여 헌팅 시간 확보"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "위협 헌팅 절차",
+   "- 1 수집",
+   "- 2 가설 수립",
+   "- 3 헌팅",
+   "- 4 탐지 규칙 개발",
+   "- 5 조사·대응",
+   "어택 구조",
+   "- 전술",
+   "- 기술·하위 기술",
+   "- 절차",
+   "- 매핑",
+   "도입 고려",
+   "- 가시성",
+   "- 커버리지",
+   "- 조직",
+   "- 자동화"
+  ],
+  "name": "위협 헌팅과 마이터 어택(Threat Hunting and MITRE ATT&CK)",
+  "en": "Threat Hunting and MITRE ATT&CK",
+  "keywords_must": [
+   "수집",
+   "가설 수립",
+   "헌팅",
+   "탐지 규칙 개발",
+   "위협 탐지",
+   "조사·대응",
+   "전술(Tactic)",
+   "기술(Technique)",
+   "절차(Procedure)"
+  ],
+  "keywords_ref": [
+   "어택 매트릭스: Enterprise·Mobile·ICS",
+   "주요 전술: 초기 접근·권한 상승·방어 회피·측면 이동·유출",
+   "Enterprise 14개 전술: 정찰·자원 개발·초기 접근·실행·지속·권한 상승·방어 회피·자격 증명 접근·탐색·측면 이동·수집·명령 제어·유출·영향",
+   "사이버 킬체인과 비교",
+   "침해 가정(Assume Breach)",
+   "수동형 탐지에서 능동형 탐색으로",
+   "SOAR로 업무 자동화",
+   "방어 대응 지식 베이스 D3FEND",
+   "헌팅 도구: EDR·SIEM"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "수집",
+   "가설 수립",
+   "헌팅",
+   "탐지 규칙 개발",
+   "위협 탐지",
+   "조사·대응",
+   "전술(Tactic)",
+   "기술(Technique)",
+   "절차(Procedure)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "TTPs": "Tactics, Techniques and Procedures",
+   "ICS": "Industrial Control System",
+   "SOAR": "Security Orchestration, Automation and Response",
+   "EDR": "Endpoint Detection and Response",
+   "SIEM": "Security Information and Event Management"
+  }
+ },
+ {
   "id": "SE_097",
   "code": "SE_097",
   "title": "소프트웨어 개발 보안(Secure Coding)",
@@ -15462,6 +15635,175 @@
    "LDAP": "Lightweight Directory Access Protocol",
    "HSM": "Hardware Security Module",
    "CT": "Certificate Transparency"
+  }
+ },
+ {
+  "id": "SE_101",
+  "code": "SE_101",
+  "title": "인증서(Certificate)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 > PKI > 공인인증서",
+  "definition": "인증기관(CA)이 가입자의 신원과 공개키를 묶어 전자서명한 전자 증명서로, X.509 형식을 따르며 전자서명 검증·암호 통신·본인 확인에 쓰인다. 국내 공인인증서는 2020년 전자서명법 개정으로 독점적 지위가 폐지되고 공동인증서로 바뀌었다",
+  "keywords": [
+   "X.509 필드: 버전·일련번호 · 발급자·유효 기간 · 주체·공개키 · CA 서명",
+   "공인인증서 문제: ActiveX 의존 · NPKI 파일 복제 · 발급 기관 독과점",
+   "개선: 웹 표준(HTML5·Web Crypto) · 보안 토큰(HSM) 저장 · 인증 기술 선택권 보장"
+  ],
+  "sections": [
+   {
+    "title": "인증 원리",
+    "subsections": [
+     {
+      "title": "1 발급",
+      "items": [
+       "가입자가 키 쌍 생성 후 등록기관에서 신원 확인, CA가 공개키에 서명"
+      ]
+     },
+     {
+      "title": "2 서명",
+      "items": [
+       "가입자가 개인키로 전자서명 생성"
+      ]
+     },
+     {
+      "title": "3 검증",
+      "items": [
+       "상대가 인증서로 공개키를 얻고 CA 서명·유효 기간·폐지 여부 확인"
+      ]
+     },
+     {
+      "title": "4 부인 방지",
+      "items": [
+       "서명자만 개인키를 가져 서명 사실 부인 불가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "국내 공인 제도의 문제",
+    "subsections": [
+     {
+      "title": "호환성",
+      "items": [
+       "ActiveX로 비IE 브라우저·모바일 제약"
+      ]
+     },
+     {
+      "title": "안전성",
+      "items": [
+       "하드디스크·USB의 NPKI 폴더 저장으로 파일 복제·유출"
+      ]
+     },
+     {
+      "title": "독과점",
+      "items": [
+       "정부 지정 5개 기관이 발급 독점"
+      ]
+     },
+     {
+      "title": "기술 선택권",
+      "items": [
+       "정부 주도 단일 기술로 취약점 발견 시 전체 위험"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "개선과 대체",
+    "subsections": [
+     {
+      "title": "웹 표준",
+      "items": [
+       "플러그인 없는 HTML5·Web Crypto 기반 서명"
+      ]
+     },
+     {
+      "title": "키 보호",
+      "items": [
+       "보안 토큰·스마트폰 안전 영역에 개인키 저장, 복사 방지"
+      ]
+     },
+     {
+      "title": "제도",
+      "items": [
+       "의무 사용 폐지, 다양한 인증 수단 경쟁"
+      ]
+     },
+     {
+      "title": "대체 수단",
+      "items": [
+       "생체 인증, 스마트 OTP, 비대면 본인 확인"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "인증 원리",
+   "- 1 발급",
+   "- 2 서명",
+   "- 3 검증",
+   "- 4 부인 방지",
+   "국내 공인 제도의 문제",
+   "- 호환성",
+   "- 안전성",
+   "- 독과점",
+   "- 기술 선택권",
+   "개선과 대체",
+   "- 웹 표준",
+   "- 키 보호",
+   "- 제도",
+   "- 대체 수단"
+  ],
+  "name": "인증서(Certificate)",
+  "en": "Digital Certificate",
+  "keywords_must": [
+   "버전·일련번호",
+   "발급자·유효 기간",
+   "주체·공개키",
+   "CA 서명",
+   "ActiveX 의존",
+   "NPKI 파일 복제",
+   "발급 기관 독과점",
+   "웹 표준(HTML5·Web Crypto)",
+   "보안 토큰(HSM) 저장",
+   "인증 기술 선택권 보장"
+  ],
+  "keywords_ref": [
+   "검증: 인증 경로(체인) 확인·폐지 확인(CRL·OCSP)",
+   "구성 키: 개인키(서명 생성)·공개키(서명 검증)",
+   "2014 전자상거래 30만 원 이상 공인인증서 의무 폐지",
+   "2020.12.10 전자서명법 전부 개정: 공인인증서 제도 폐지, 전자서명인증사업자 평가·인정제",
+   "공동인증서·금융인증서",
+   "대체 수단: 간편 인증, 생체 인증(FIDO), 스마트 OTP, 유심 인증",
+   "정부의 공인 인증기관 5곳(금융결제원·코스콤·한국정보인증·한국전자인증·한국무역정보통신)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "버전·일련번호",
+   "발급자·유효 기간",
+   "주체·공개키",
+   "CA 서명",
+   "ActiveX 의존",
+   "NPKI 파일 복제",
+   "발급 기관 독과점",
+   "웹 표준(HTML5·Web Crypto)",
+   "보안 토큰(HSM) 저장",
+   "인증 기술 선택권 보장"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "CA": "Certificate Authority",
+   "CRL": "Certificate Revocation List",
+   "OCSP": "Online Certificate Status Protocol",
+   "NPKI": "National Public Key Infrastructure",
+   "HSM": "Hardware Security Module",
+   "FIDO": "Fast Identity Online",
+   "OTP": "One-Time Password"
   }
  },
  {
