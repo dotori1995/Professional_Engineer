@@ -4228,6 +4228,12 @@
             "items": [
               "우선순위에 따라 사용 승인 신호 발생"
             ]
+          },
+          {
+            "title": "공평성",
+            "items": [
+              "가장 낮은 우선순위 마스터도 언젠가는 사용권을 얻어야 함"
+            ]
           }
         ]
       },
@@ -4270,7 +4276,7 @@
     "warnings": [],
     "pages": [
       43,
-      46
+      427
     ],
     "outline": [
       "시스템 버스 유형",
@@ -4281,6 +4287,7 @@
       "- 버스 마스터",
       "- 버스 경합",
       "- 버스 중재기",
+      "- 공평성",
       "버스 중재 분류",
       "- 중앙 집중식",
       "- 분산식",
@@ -21329,6 +21336,7 @@
     "reviewed": true,
     "dueum": null,
     "gloss": {
+      "AMP": "Asymmetric Multicore Processor",
       "OpenMP": "Open Multi-Processing",
       "OpenCL": "Open Computing Language",
       "OpenGL": "Open Graphics Library",
@@ -21804,6 +21812,954 @@
       "FLOPS": "Floating-point Operations Per Second",
       "ORNL": "Oak Ridge National Laboratory",
       "HBM": "High Bandwidth Memory"
+    }
+  },
+  {
+    "id": "CA_204",
+    "code": "CA_204",
+    "title": "임베디드 멀티미디어 카드(eMMC, embedded Multi Media Card)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 내장형 저장장치",
+    "definition": "NAND 플래시 메모리와 이를 관리하는 MMC 컨트롤러를 하나의 BGA 패키지로 통합해 기기 기판에 직접 실장하는 JEDEC 표준 내장형 저장장치로, 호스트가 플래시 관리를 몰라도 블록 장치처럼 쓸 수 있음",
+    "keywords": [
+      "핵심: MMC 컨트롤러 + NAND 플래시 통합 · CLK(동기 클럭) · CMD(명령 신호선) · DAT[0:7](8비트 데이터 버스)",
+      "필수: ECC(오류 정정) · 웨어 레벨링(Wear Leveling) · 불량 블록 관리(BBM) · 반이중 병렬 인터페이스",
+      "참고: JEDEC 표준 eMMC 5.1 HS400 최대 400MB/s · 후속 UFS(직렬·전이중·명령 큐) · 스마트폰·태블릿·차량 인포테인먼트·IoT · 소형·저전력·저비용 패키지"
+    ],
+    "sections": [
+      {
+        "title": "제품 특성",
+        "subsections": [
+          {
+            "title": "고집적",
+            "items": [
+              "플래시와 제어 칩을 캡슐화해 회로 기판 면적 절약"
+            ]
+          },
+          {
+            "title": "고성능",
+            "items": [
+              "캐시와 메모리 배열 기술로 원시 NAND보다 읽기·쓰기 성능 향상"
+            ]
+          },
+          {
+            "title": "호스트 단순화",
+            "items": [
+              "플래시 관리가 내부에서 처리되어 기기 개발 부담 감소"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "신호 인터페이스",
+        "subsections": [
+          {
+            "title": "클럭선",
+            "items": [
+              "호스트가 데이터 전송 동기화를 위해 공급"
+            ]
+          },
+          {
+            "title": "명령선",
+            "items": [
+              "호스트가 명령을 보내고 장치가 응답"
+            ]
+          },
+          {
+            "title": "데이터선",
+            "items": [
+              "최대 8비트 폭으로 호스트와 데이터 송수신"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "컨트롤러 기술",
+        "subsections": [
+          {
+            "title": "오류 정정",
+            "items": [
+              "메모리 오류를 검출하고 위치를 계산해 수정"
+            ]
+          },
+          {
+            "title": "마모 평준화",
+            "items": [
+              "셀을 골고루 돌아가며 써서 수명 연장"
+            ]
+          },
+          {
+            "title": "불량 블록 관리",
+            "items": [
+              "결함 블록을 식별해 예비 블록으로 대체"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      420,
+      421
+    ],
+    "outline": [
+      "제품 특성",
+      "- 고집적",
+      "- 고성능",
+      "- 호스트 단순화",
+      "신호 인터페이스",
+      "- 클럭선",
+      "- 명령선",
+      "- 데이터선",
+      "컨트롤러 기술",
+      "- 오류 정정",
+      "- 마모 평준화",
+      "- 불량 블록 관리"
+    ],
+    "name": "임베디드 멀티미디어 카드(eMMC, embedded Multi Media Card)",
+    "en": "embedded Multi Media Card",
+    "keywords_must": [
+      "MMC 컨트롤러 + NAND 플래시 통합",
+      "CLK(동기 클럭)",
+      "CMD(명령 신호선)",
+      "DAT[0:7](8비트 데이터 버스)",
+      "ECC(오류 정정)",
+      "웨어 레벨링(Wear Leveling)",
+      "불량 블록 관리(BBM)",
+      "반이중 병렬 인터페이스"
+    ],
+    "keywords_ref": [
+      "JEDEC 표준 eMMC 5.1 HS400 최대 400MB/s",
+      "후속 UFS(직렬·전이중·명령 큐)",
+      "스마트폰·태블릿·차량 인포테인먼트·IoT",
+      "소형·저전력·저비용 패키지"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "MMC 컨트롤러 + NAND 플래시 통합",
+      "CLK(동기 클럭)",
+      "CMD(명령 신호선)",
+      "DAT[0:7](8비트 데이터 버스)",
+      "ECC(오류 정정)",
+      "웨어 레벨링(Wear Leveling)",
+      "불량 블록 관리(BBM)",
+      "반이중 병렬 인터페이스"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "MMC": "MultiMediaCard",
+      "BGA": "Ball Grid Array",
+      "JEDEC": "Joint Electron Device Engineering Council",
+      "UFS": "Universal Flash Storage",
+      "BBM": "Bad Block Management"
+    }
+  },
+  {
+    "id": "CA_205",
+    "code": "CA_205",
+    "title": "메모리 오버 스토리지(MoS, Memory over Storage)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 영구 메모리",
+    "definition": "비휘발성 메모리(NVDIMM)와 초저지연 SSD의 용량을 하나의 메모리 주소 공간으로 통합하고, 둘 사이의 데이터 이동을 메모리 컨트롤러 허브에서 하드웨어로 자동 처리하는 대용량 영구 메모리 기술",
+    "keywords": [
+      "핵심: NVDIMM 캐시 + 초저지연(ULL) SSD 결합 · 통합 메모리 공간(테라바이트급) · 메모리 컨트롤러 허브(MCH) 내장 구현 · 주소 관리자(캐시 적중·실패 분기)",
+      "필수: NVMe 명령어 생성기 · 운영체제 입출력 오버헤드 제거 · 영구 메모리(Persistent Memory) · 기존 DIMM·SSD 기술 재사용",
+      "참고: 메모리 슬롯당 기존 대비 4배 이상 용량 · D램과 유사한 사용자 체감 속도 · 인텔 옵테인은 2022년 단종 발표 · CXL 메모리 확장과 경쟁·보완 · 인메모리 DB·슈퍼컴퓨터 적용"
+    ],
+    "sections": [
+      {
+        "title": "기술 특성",
+        "subsections": [
+          {
+            "title": "대용량",
+            "items": [
+              "메모리 슬롯당 테라바이트 수준 저장 용량 제공"
+            ]
+          },
+          {
+            "title": "고속 처리",
+            "items": [
+              "사용자 입장에서 D램에 가까운 데이터 처리 속도"
+            ]
+          },
+          {
+            "title": "기술 재사용",
+            "items": [
+              "기존 D램 메모리 규격과 고속 플래시 저장장치 기술을 그대로 활용"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "동작 원리",
+        "subsections": [
+          {
+            "title": "요청 처리",
+            "items": [
+              "모든 메모리 요청을 메모리 컨트롤러 허브가 받아 주소 관리자로 판별"
+            ]
+          },
+          {
+            "title": "캐시 적중",
+            "items": [
+              "비휘발성 메모리에 있으면 DDR 인터페이스로 바로 응답"
+            ]
+          },
+          {
+            "title": "캐시 실패",
+            "items": [
+              "NVMe 명령을 하드웨어로 생성해 PCIe로 SSD에서 읽어옴"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "구성 기술",
+        "subsections": [
+          {
+            "title": "메모리 컨트롤러",
+            "items": [
+              "DDR 인터페이스로 비휘발성 메모리 제어"
+            ]
+          },
+          {
+            "title": "SSD 접근 경로",
+            "items": [
+              "명령어 생성기와 PCIe 물리 계층으로 SSD 직접 제어"
+            ]
+          },
+          {
+            "title": "소프트웨어 우회",
+            "items": [
+              "운영체제 입출력 스택을 거치지 않아 접근 지연 단축"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      422,
+      423
+    ],
+    "outline": [
+      "기술 특성",
+      "- 대용량",
+      "- 고속 처리",
+      "- 기술 재사용",
+      "동작 원리",
+      "- 요청 처리",
+      "- 캐시 적중",
+      "- 캐시 실패",
+      "구성 기술",
+      "- 메모리 컨트롤러",
+      "- SSD 접근 경로",
+      "- 소프트웨어 우회"
+    ],
+    "name": "메모리 오버 스토리지(MoS, Memory over Storage)",
+    "en": "Memory over Storage",
+    "keywords_must": [
+      "NVDIMM 캐시 + 초저지연(ULL) SSD 결합",
+      "통합 메모리 공간(테라바이트급)",
+      "메모리 컨트롤러 허브(MCH) 내장 구현",
+      "주소 관리자(캐시 적중·실패 분기)",
+      "NVMe 명령어 생성기",
+      "운영체제 입출력 오버헤드 제거",
+      "영구 메모리(Persistent Memory)",
+      "기존 DIMM·SSD 기술 재사용"
+    ],
+    "keywords_ref": [
+      "메모리 슬롯당 기존 대비 4배 이상 용량",
+      "D램과 유사한 사용자 체감 속도",
+      "인텔 옵테인은 2022년 단종 발표",
+      "CXL 메모리 확장과 경쟁·보완",
+      "인메모리 DB·슈퍼컴퓨터 적용"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "NVDIMM 캐시 + 초저지연(ULL) SSD 결합",
+      "통합 메모리 공간(테라바이트급)",
+      "메모리 컨트롤러 허브(MCH) 내장 구현",
+      "주소 관리자(캐시 적중·실패 분기)",
+      "NVMe 명령어 생성기",
+      "운영체제 입출력 오버헤드 제거",
+      "영구 메모리(Persistent Memory)",
+      "기존 DIMM·SSD 기술 재사용"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "MoS": "Memory over Storage",
+      "DB": "Database",
+      "NVDIMM": "Non-Volatile Dual In-line Memory Module",
+      "ULL": "Ultra Low Latency",
+      "MCH": "Memory Controller Hub",
+      "DIMM": "Dual In-line Memory Module"
+    }
+  },
+  {
+    "id": "CA_206",
+    "code": "CA_206",
+    "title": "오픈VX(OpenVX)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 응용 가속 > 컴퓨터 비전 표준",
+    "definition": "크로노스 그룹이 로열티 없이 제정한 개방형 컴퓨터 비전 가속 표준 API로, 비전 처리를 노드와 그래프로 정의하면 런타임이 CPU·GPU·DSP·ISP 등 이기종 하드웨어에 맞게 최적화해 실행함",
+    "keywords": [
+      "핵심: 크로노스 그룹(Khronos Group) · 컴퓨터 비전 가속 · 이기종 플랫폼(ISP·DSP·GPU·멀티코어 CPU) · 저전력 임베디드",
+      "필수: 그래프(Graph) 기반 실행 · 노드(Node) · 커널(Kernel) · 컨텍스트(Context)·파라미터(Parameter)",
+      "참고: 그래프 단위 최적화로 중간 데이터 메모리 이동 감소 · 적합성 테스트로 이식성 보장 · NVIDIA VisionWorks·인텔 OpenVINO·TI TIOVX 구현 · 신경망 확장(NN Extension) · OpenCV는 라이브러리, OpenVX는 하드웨어 추상 표준"
+    ],
+    "sections": [
+      {
+        "title": "표준 특성",
+        "subsections": [
+          {
+            "title": "저전력 도메인",
+            "items": [
+              "모바일·임베디드에서 소프트웨어 재사용과 이식 용이"
+            ]
+          },
+          {
+            "title": "이기종 지원",
+            "items": [
+              "엄격한 적합성 테스트로 다양한 하드웨어에서 안정적 실행"
+            ]
+          },
+          {
+            "title": "확장성",
+            "items": [
+              "머신러닝 등 다른 분야와 연계하도록 지속 확장"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "프레임워크 객체",
+        "subsections": [
+          {
+            "title": "컨텍스트",
+            "items": [
+              "하나의 응용을 관리"
+            ]
+          },
+          {
+            "title": "그래프",
+            "items": [
+              "응용 전체의 처리 흐름 표현"
+            ]
+          },
+          {
+            "title": "노드",
+            "items": [
+              "그래프를 이루는 최소 처리 단위"
+            ]
+          },
+          {
+            "title": "커널",
+            "items": [
+              "노드 안의 비전 기능, 프로세서별로 CPU·OpenCL·NEON 등으로 구현"
+            ]
+          },
+          {
+            "title": "런타임 엔진",
+            "items": [
+              "가용 자원을 감시해 경량·고성능·저전력 목적에 맞는 커널 선택"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "데이터 객체",
+        "subsections": [
+          {
+            "title": "기본 형식",
+            "items": [
+              "스칼라·배열·행렬"
+            ]
+          },
+          {
+            "title": "영상 형식",
+            "items": [
+              "이미지·이미지 피라미드"
+            ]
+          },
+          {
+            "title": "파라미터",
+            "items": [
+              "커널 입출력을 정의하고 물리 메모리를 추상화"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      424,
+      425
+    ],
+    "outline": [
+      "표준 특성",
+      "- 저전력 도메인",
+      "- 이기종 지원",
+      "- 확장성",
+      "프레임워크 객체",
+      "- 컨텍스트",
+      "- 그래프",
+      "- 노드",
+      "- 커널",
+      "- 런타임 엔진",
+      "데이터 객체",
+      "- 기본 형식",
+      "- 영상 형식",
+      "- 파라미터"
+    ],
+    "name": "오픈VX(OpenVX)",
+    "en": "OpenVX",
+    "keywords_must": [
+      "크로노스 그룹(Khronos Group)",
+      "컴퓨터 비전 가속",
+      "이기종 플랫폼(ISP·DSP·GPU·멀티코어 CPU)",
+      "저전력 임베디드",
+      "그래프(Graph) 기반 실행",
+      "노드(Node)",
+      "커널(Kernel)",
+      "컨텍스트(Context)·파라미터(Parameter)"
+    ],
+    "keywords_ref": [
+      "그래프 단위 최적화로 중간 데이터 메모리 이동 감소",
+      "적합성 테스트로 이식성 보장",
+      "NVIDIA VisionWorks·인텔 OpenVINO·TI TIOVX 구현",
+      "신경망 확장(NN Extension)",
+      "OpenCV는 라이브러리, OpenVX는 하드웨어 추상 표준"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "크로노스 그룹(Khronos Group)",
+      "컴퓨터 비전 가속",
+      "이기종 플랫폼(ISP·DSP·GPU·멀티코어 CPU)",
+      "저전력 임베디드",
+      "그래프(Graph) 기반 실행",
+      "노드(Node)",
+      "커널(Kernel)",
+      "컨텍스트(Context)·파라미터(Parameter)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "OpenCL": "Open Computing Language",
+      "ISP": "Image Signal Processor",
+      "DSP": "Digital Signal Processor",
+      "NN": "Neural Network",
+      "OpenCV": "Open Source Computer Vision Library",
+      "OpenVINO": "Open Visual Inference and Neural network Optimization",
+      "TI": "Texas Instruments"
+    }
+  },
+  {
+    "id": "CA_209",
+    "code": "CA_209",
+    "title": "컴퓨트 익스프레스 링크 메모리(CXL Memory)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 메모리 확장 인터커넥트",
+    "definition": "PCIe 물리 계층 위에서 CPU와 가속기·메모리 확장 장치를 캐시 일관성을 유지하며 저지연으로 연결하는 개방형 인터커넥트 표준과, 이를 이용해 서버 메모리 용량·대역폭을 확장하거나 여러 호스트가 메모리를 풀링·공유하는 기술",
+    "keywords": [
+      "핵심: PCIe 5.0 물리 계층 기반(3.0부터 PCIe 6.0) · CXL.io(초기화·장치 탐색, PCIe 호환) · CXL.cache(장치가 호스트 메모리 캐시) · CXL.mem(호스트가 장치 메모리 접근)",
+      "필수: 타입 1(캐시 장치, 스마트 NIC) · 타입 2(가속기, GPGPU·FPGA) · 타입 3(메모리 버퍼·확장) · 캐시 일관성(Coherency)",
+      "참고: 2.0: CXL 스위치·메모리 풀링(최대 16개 호스트)·IDE 링크 암호화 · 3.0: 패브릭·다중 호스트 메모리 공유·64GT/s · 메모리 계층화(Tiered Memory) · 메모리 월 완화 · CXL 컨소시엄(2019 인텔 주도)"
+    ],
+    "sections": [
+      {
+        "title": "등장 배경",
+        "subsections": [
+          {
+            "title": "연산량 증가",
+            "items": [
+              "AI 처리량이 급증하며 프로세서와 메모리 격차 확대"
+            ]
+          },
+          {
+            "title": "용량 한계",
+            "items": [
+              "CPU당 장착 가능한 D램 채널·슬롯 수 제한"
+            ]
+          },
+          {
+            "title": "이기종 공유",
+            "items": [
+              "가속기와 호스트가 데이터를 복사 없이 함께 쓸 필요"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "프로토콜 구성",
+        "subsections": [
+          {
+            "title": "입출력 계열",
+            "items": [
+              "모든 장치가 지원하는 기본 프로토콜, 장치 검색·설정·비일관 입출력"
+            ]
+          },
+          {
+            "title": "캐시 계열",
+            "items": [
+              "장치가 호스트 메모리를 일관성 있게 캐시"
+            ]
+          },
+          {
+            "title": "메모리 계열",
+            "items": [
+              "호스트 CPU가 장치에 붙은 메모리를 적재·저장 명령으로 접근"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "장치 유형별 활용",
+        "subsections": [
+          {
+            "title": "1형",
+            "items": [
+              "자체 메모리 없는 캐시 장치, 입출력 + 캐시 계열 사용"
+            ]
+          },
+          {
+            "title": "2형",
+            "items": [
+              "고속 메모리를 가진 가속기, 세 프로토콜 모두 사용해 양방향 메모리 공유"
+            ]
+          },
+          {
+            "title": "3형",
+            "items": [
+              "메모리 버퍼 장치, 입출력 + 메모리 계열로 대역폭·용량 확장"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "2.0 이후 기능",
+        "subsections": [
+          {
+            "title": "스위치",
+            "items": [
+              "여러 장치를 팬아웃하고 하나의 메모리 장치를 여러 호스트에 분할 할당"
+            ]
+          },
+          {
+            "title": "영구 메모리",
+            "items": [
+              "컨트롤러 기반이던 영구 메모리를 링크로 직접 연결"
+            ]
+          },
+          {
+            "title": "보안",
+            "items": [
+              "링크 송수신 데이터의 무결성 검사와 암호화"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      428,
+      430
+    ],
+    "outline": [
+      "등장 배경",
+      "- 연산량 증가",
+      "- 용량 한계",
+      "- 이기종 공유",
+      "프로토콜 구성",
+      "- 입출력 계열",
+      "- 캐시 계열",
+      "- 메모리 계열",
+      "장치 유형별 활용",
+      "- 1형",
+      "- 2형",
+      "- 3형",
+      "2.0 이후 기능",
+      "- 스위치",
+      "- 영구 메모리",
+      "- 보안"
+    ],
+    "name": "컴퓨트 익스프레스 링크 메모리(CXL Memory)",
+    "en": "Compute Express Link Memory",
+    "keywords_must": [
+      "PCIe 5.0 물리 계층 기반(3.0부터 PCIe 6.0)",
+      "CXL.io(초기화·장치 탐색, PCIe 호환)",
+      "CXL.cache(장치가 호스트 메모리 캐시)",
+      "CXL.mem(호스트가 장치 메모리 접근)",
+      "타입 1(캐시 장치, 스마트 NIC)",
+      "타입 2(가속기, GPGPU·FPGA)",
+      "타입 3(메모리 버퍼·확장)",
+      "캐시 일관성(Coherency)"
+    ],
+    "keywords_ref": [
+      "2.0: CXL 스위치·메모리 풀링(최대 16개 호스트)·IDE 링크 암호화",
+      "3.0: 패브릭·다중 호스트 메모리 공유·64GT/s",
+      "메모리 계층화(Tiered Memory)",
+      "메모리 월 완화",
+      "CXL 컨소시엄(2019 인텔 주도)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "PCIe 5.0 물리 계층 기반(3.0부터 PCIe 6.0)",
+      "CXL.io(초기화·장치 탐색, PCIe 호환)",
+      "CXL.cache(장치가 호스트 메모리 캐시)",
+      "CXL.mem(호스트가 장치 메모리 접근)",
+      "타입 1(캐시 장치, 스마트 NIC)",
+      "타입 2(가속기, GPGPU·FPGA)",
+      "타입 3(메모리 버퍼·확장)",
+      "캐시 일관성(Coherency)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "CXL": "Compute Express Link",
+      "IDE": "Integrity and Data Encryption",
+      "GPGPU": "General-Purpose computing on GPU",
+      "NIC": "Network Interface Card",
+      "GT/s": "Giga Transfers per second"
+    }
+  },
+  {
+    "id": "CA_210",
+    "code": "CA_210",
+    "title": "CMOS 이미지 센서(CIS, CMOS Image Sensor)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 시스템 > 센서 반도체",
+    "definition": "상보형 금속산화막 반도체(CMOS) 공정으로 만든 촬상 소자로, 픽셀마다 포토다이오드와 증폭 트랜지스터를 두어 빛을 전기 신호로 바꾸고 ADC·ISP까지 한 칩에 집적해 저전력으로 영상을 얻음",
+    "keywords": [
+      "핵심: 마이크로 렌즈(Micro Lens) · 컬러 필터(Bayer RGB 배열) · 포토다이오드(Photodiode) · 픽셀 트랜지스터(능동 픽셀, APS)",
+      "필수: ADC(아날로그-디지털 변환) · ISP(영상 신호 처리) · 저전력·저전압 · CCD(전하 결합 소자) 비교",
+      "참고: 후면 조사(BSI)·적층형(Stacked) 구조 · 롤링 셔터 왜곡 vs 글로벌 셔터 · 픽셀 비닝·테트라셀 · 모바일·차량 ADAS·보안 카메라 · 소니·삼성 주도 시장"
+    ],
+    "sections": [
+      {
+        "title": "픽셀 영역",
+        "subsections": [
+          {
+            "title": "렌즈",
+            "items": [
+              "픽셀이 빛을 잘 받도록 입사광을 모음"
+            ]
+          },
+          {
+            "title": "필터",
+            "items": [
+              "들어오는 빛에서 빨강·초록·파랑 중 한 색만 통과"
+            ]
+          },
+          {
+            "title": "광전 소자",
+            "items": [
+              "픽셀로 들어온 빛을 전하로 변환"
+            ]
+          },
+          {
+            "title": "트랜지스터",
+            "items": [
+              "생성된 신호를 증폭해 읽기 회로로 전달"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "보조 영역",
+        "subsections": [
+          {
+            "title": "변환기",
+            "items": [
+              "픽셀의 아날로그 신호를 디지털 값으로 변환"
+            ]
+          },
+          {
+            "title": "영상 처리기",
+            "items": [
+              "색 보간·노이즈 제거·보정·압축 수행"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "전하 결합 소자 대비 비교",
+        "subsections": [
+          {
+            "title": "신호 전송",
+            "items": [
+              "CMOS(픽셀별로 즉시 증폭·읽기)",
+              "CCD(전하를 모아 순차 이동 후 변환)"
+            ]
+          },
+          {
+            "title": "소비 전력",
+            "items": [
+              "CMOS(낮음)",
+              "CCD(높음)"
+            ]
+          },
+          {
+            "title": "구동 전압",
+            "items": [
+              "CMOS(단일 저전압)",
+              "CCD(여러 고전압과 클럭 필요)"
+            ]
+          },
+          {
+            "title": "집적도",
+            "items": [
+              "CMOS(주변 회로 온칩 통합)",
+              "CCD(별도 칩 필요)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      431,
+      432
+    ],
+    "outline": [
+      "픽셀 영역",
+      "- 렌즈",
+      "- 필터",
+      "- 광전 소자",
+      "- 트랜지스터",
+      "보조 영역",
+      "- 변환기",
+      "- 영상 처리기",
+      "전하 결합 소자 대비 비교",
+      "- 신호 전송",
+      "- 소비 전력",
+      "- 구동 전압",
+      "- 집적도"
+    ],
+    "name": "CMOS 이미지 센서(CIS, CMOS Image Sensor)",
+    "en": "CMOS Image Sensor",
+    "keywords_must": [
+      "마이크로 렌즈(Micro Lens)",
+      "컬러 필터(Bayer RGB 배열)",
+      "포토다이오드(Photodiode)",
+      "픽셀 트랜지스터(능동 픽셀, APS)",
+      "ADC(아날로그-디지털 변환)",
+      "ISP(영상 신호 처리)",
+      "저전력·저전압",
+      "CCD(전하 결합 소자) 비교"
+    ],
+    "keywords_ref": [
+      "후면 조사(BSI)·적층형(Stacked) 구조",
+      "롤링 셔터 왜곡 vs 글로벌 셔터",
+      "픽셀 비닝·테트라셀",
+      "모바일·차량 ADAS·보안 카메라",
+      "소니·삼성 주도 시장"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "마이크로 렌즈(Micro Lens)",
+      "컬러 필터(Bayer RGB 배열)",
+      "포토다이오드(Photodiode)",
+      "픽셀 트랜지스터(능동 픽셀, APS)",
+      "ADC(아날로그-디지털 변환)",
+      "ISP(영상 신호 처리)",
+      "저전력·저전압",
+      "CCD(전하 결합 소자) 비교"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "CIS": "CMOS Image Sensor",
+      "CCD": "Charge Coupled Device",
+      "ADC": "Analog-to-Digital Converter",
+      "APS": "Active Pixel Sensor",
+      "BSI": "Backside Illumination",
+      "ADAS": "Advanced Driver Assistance Systems",
+      "ISP": "Image Signal Processor"
+    }
+  },
+  {
+    "id": "CA_212",
+    "code": "CA_212",
+    "title": "칩렛(Chiplet)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 시스템 > 반도체 패키징",
+    "definition": "서로 다른 기능을 맡는 작은 반도체 다이 여러 개를 따로 만든 뒤 고밀도 패키징 기술로 하나의 패키지에 연결해 단일 칩처럼 동작시키는 방식으로, 대형 단일 다이의 수율·비용·미세 공정 한계를 극복함",
+    "keywords": [
+      "핵심: 기능별 다이 분할(연산·메모리·입출력) · 수율 향상·원가 절감 · 이종 공정 혼합(Heterogeneous Integration) · 2.5D 실리콘 인터포저",
+      "필수: 3D 적층(TSV·하이브리드 본딩) · 다이 간 인터커넥트(D2D) · UCIe 표준 · 재사용·맞춤형 조합",
+      "참고: AMD EPYC·Ryzen(CCD + IOD) · TSMC CoWoS·인텔 EMIB·Foveros · HBM + GPU 패키징 · 다이 간 지연·전력·열 관리 과제 · 노운 굿 다이(KGD) 테스트"
+    ],
+    "sections": [
+      {
+        "title": "등장 배경",
+        "subsections": [
+          {
+            "title": "미세 공정 한계",
+            "items": [
+              "공정이 미세해질수록 대형 다이의 개발비·제조비 급증"
+            ]
+          },
+          {
+            "title": "단일 칩 한계",
+            "items": [
+              "다이가 커질수록 결함 확률이 높아져 수율 하락"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "장점",
+        "subsections": [
+          {
+            "title": "수율·비용",
+            "items": [
+              "다이가 작아 웨이퍼당 양품 수가 늘고 제조 원가 절감"
+            ]
+          },
+          {
+            "title": "맞춤 제작",
+            "items": [
+              "연산·메모리·입출력 다이를 용도에 맞게 조합해 개발 기간 단축"
+            ]
+          },
+          {
+            "title": "개발 효율",
+            "items": [
+              "성능 개선이 필요한 다이만 교체·업그레이드"
+            ]
+          },
+          {
+            "title": "분업화",
+            "items": [
+              "기업은 주력 다이에 집중하고 나머지는 외부에서 조달"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "연결 기술",
+        "subsections": [
+          {
+            "title": "기판 연결",
+            "items": [
+              "유기 기판 위에 다이를 나란히 실장"
+            ]
+          },
+          {
+            "title": "인터포저",
+            "items": [
+              "실리콘 중간 기판이나 브리지로 다이 간 고밀도 배선"
+            ]
+          },
+          {
+            "title": "수직 적층",
+            "items": [
+              "관통 전극과 하이브리드 본딩으로 다이를 위로 쌓음"
+            ]
+          },
+          {
+            "title": "표준 링크",
+            "items": [
+              "다이 간 연결 규격 통일로 이종 업체 다이 조합"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      433,
+      435
+    ],
+    "outline": [
+      "등장 배경",
+      "- 미세 공정 한계",
+      "- 단일 칩 한계",
+      "장점",
+      "- 수율·비용",
+      "- 맞춤 제작",
+      "- 개발 효율",
+      "- 분업화",
+      "연결 기술",
+      "- 기판 연결",
+      "- 인터포저",
+      "- 수직 적층",
+      "- 표준 링크"
+    ],
+    "name": "칩렛(Chiplet)",
+    "en": "Chiplet",
+    "keywords_must": [
+      "기능별 다이 분할(연산·메모리·입출력)",
+      "수율 향상·원가 절감",
+      "이종 공정 혼합(Heterogeneous Integration)",
+      "2.5D 실리콘 인터포저",
+      "3D 적층(TSV·하이브리드 본딩)",
+      "다이 간 인터커넥트(D2D)",
+      "UCIe 표준",
+      "재사용·맞춤형 조합"
+    ],
+    "keywords_ref": [
+      "AMD EPYC·Ryzen(CCD + IOD)",
+      "TSMC CoWoS·인텔 EMIB·Foveros",
+      "HBM + GPU 패키징",
+      "다이 간 지연·전력·열 관리 과제",
+      "노운 굿 다이(KGD) 테스트"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "기능별 다이 분할(연산·메모리·입출력)",
+      "수율 향상·원가 절감",
+      "이종 공정 혼합(Heterogeneous Integration)",
+      "2.5D 실리콘 인터포저",
+      "3D 적층(TSV·하이브리드 본딩)",
+      "다이 간 인터커넥트(D2D)",
+      "UCIe 표준",
+      "재사용·맞춤형 조합"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "UCIe": "Universal Chiplet Interconnect Express",
+      "TSV": "Through Silicon Via",
+      "D2D": "Die-to-Die",
+      "CoWoS": "Chip on Wafer on Substrate",
+      "EMIB": "Embedded Multi-die Interconnect Bridge",
+      "KGD": "Known Good Die",
+      "CCD": "Core Complex Die",
+      "IOD": "I/O Die"
     }
   },
   {
