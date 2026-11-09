@@ -7,6 +7,7 @@ ADN: Application Delivery Network
 AES: Advanced Encryption Standard
 AI: Artificial Intelligence
 AIoE: Ambient Internet of Everything
+AMC: Adaptive Modulation and Coding
 AMI: Advanced Metering Infrastructure
 AMPS: Advanced Mobile Phone System
 AODV: Ad hoc On-demand Distance Vector
@@ -45,6 +46,7 @@ CU: Central Unit
 CWDM: Coarse Wavelength Division Multiplexing
 D2D: Device-to-Device
 DAI: Dynamic ARP Inspection
+DCF: Distributed Coordination Function
 DHCP: Dynamic Host Configuration Protocol
 DiffServ: Differentiated Services
 DIFS: DCF Inter-Frame Space
@@ -56,6 +58,7 @@ DoT: DNS over TLS
 DR: Designated Router
 DSCP: Differentiated Services Code Point
 DSDV: Destination-Sequenced Distance Vector
+DSR: Dynamic Source Routing
 DSRC: Dedicated Short-Range Communications
 DSSS: Direct Sequence Spread Spectrum
 DST: Digital Services Tax
@@ -65,15 +68,19 @@ DVA: Distance Vector Algorithm
 DVB-T: Digital Video Broadcasting – Terrestrial
 DWDM: Dense Wavelength Division Multiplexing
 E2E: End-to-End
+eCall: Emergency Call
 ECC: Elliptic Curve Cryptography
 EGP: Exterior Gateway Protocol
+EIFS: Extended Inter-Frame Space
 EIGRP: Enhanced Interior Gateway Routing Protocol
 EMS: Element Management System
 EPC: Evolved Packet Core
+FCS: Frame Check Sequence
 FDM: Frequency Division Multiplexing
 FDMA: Frequency Division Multiple Access
 FEC: Forward Error Correction
 FHSS: Frequency Hopping Spread Spectrum
+FIN: Finish
 FQDN: Fully Qualified Domain Name
 GAF: Geographic Adaptive Fidelity
 GCSE: Group Communication System Enablers
@@ -82,6 +89,8 @@ GNSS: Global Navigation Satellite System
 GPS: Global Positioning System
 GSM: Global System for Mobile Communications
 GWCN: Gateway Core Network
+HARQ: Hybrid Automatic Repeat reQuest
+HDLC: High-level Data Link Control
 HOL: Head-of-Line
 HSRP: Hot Standby Router Protocol
 HTTP: HyperText Transfer Protocol
@@ -115,6 +124,7 @@ IVN: In-Vehicle Network
 IX: Internet eXchange
 IXFR: Incremental Zone Transfer
 JSEP: JavaScript Session Establishment Protocol
+KL: Kullback-Leibler
 LAN: Local Area Network
 LDP: Label Distribution Protocol
 LEACH: Low-Energy Adaptive Clustering Hierarchy
@@ -132,6 +142,7 @@ LTE-V2X: LTE Vehicle-to-Everything
 LwM2M: Lightweight Machine-to-Machine
 M2M: Machine-to-Machine
 MAC: Medium Access Control
+MANET: Mobile Ad hoc Network
 MANO: Management and Orchestration
 MCPTT: Mission Critical Push-To-Talk
 MCU: Multipoint Control Unit
@@ -143,8 +154,10 @@ MORAN: Multi-Operator Radio Access Network
 MoS: Mean Opinion Score
 MPLS: Multi-Protocol Label Switching
 MPLS-TP: MPLS Transport Profile
+MPR: Multipoint Relay
 MPTCP: Multipath TCP
 MQTT: MQ Telemetry Transport (현재 OASIS 표준명은 약어 아님)
+MSL: Maximum Segment Lifetime
 MSS: Maximum Segment Size
 MTU: Maximum Transmission Unit
 MU-MIMO: Multi-User MIMO
@@ -166,14 +179,21 @@ NSA: Non-Standalone
 OECD: Organisation for Economic Co-operation and Development
 OFDM: Orthogonal Frequency Division Multiplexing
 OFDMA: Orthogonal Frequency Division Multiple Access
+OLSR: Optimized Link State Routing
+OMA: Orthogonal Multiple Access
 OPNFV: Open Platform for NFV
 OSPF: Open Shortest Path First
 OSS: Operations Support System
 OTA: Over-The-Air
 P2P: Peer-to-Peer
+PCF: Point Coordination Function
+PIFS: PCF Inter-Frame Space
+PIM: Protocol Independent Multicast
 PLC: Programmable Logic Controller
 POP: Point of Presence
+PPP: Point-to-Point Protocol
 PS-LTE: Public Safety LTE
+PSH: Push
 PSK: Phase Shift Keying
 PTR: Pointer
 QAM: Quadrature Amplitude Modulation
@@ -187,20 +207,24 @@ RF: Radio Frequency
 RFC: Request for Comments
 RIP: Routing Information Protocol
 RIPng: RIP next generation
+RPF: Reverse Path Forwarding
 RR: Resource Record
 RRL: Response Rate Limiting
 RSSI: Received Signal Strength Indicator
+RST: Reset
 RSU: Road Side Unit
 RSVP: Resource Reservation Protocol
 RTO: Retransmission TimeOut
 RTS: Request To Send
 RTT: Round Trip Time
+RTTVAR: Round-Trip Time Variation
 RU: Radio Unit
 SA: Standalone
 SACK: Selective Acknowledgment
 SAE: Simultaneous Authentication of Equals
 SASL: Simple Authentication and Security Layer
 SATIN: Satellite-Aerial-Terrestrial Integrated Network
+SCMA: Sparse Code Multiple Access
 SCTP: Stream Control Transmission Protocol
 SD-WAN: Software-Defined Wide Area Network
 SDDC: Software-Defined Data Center
@@ -220,10 +244,13 @@ SLAAC: Stateless Address Autoconfiguration
 SLD: Second-Level Domain
 SPIN: Sensor Protocols for Information via Negotiation
 SRTP: Secure Real-time Transport Protocol
+SRTT: Smoothed Round-Trip Time
 SSID: Service Set Identifier
+SSM: Source-Specific Multicast
 STP: Spanning Tree Protocol
 STUN: Session Traversal Utilities for NAT
 SUMS: Software Update Management System
+SYN: Synchronize
 TCP: Transmission Control Protocol
 TDM: Time Division Multiplexing
 TDMA: Time Division Multiple Access
@@ -238,6 +265,7 @@ UAV: Unmanned Aerial Vehicle
 UDP: User Datagram Protocol
 UHR: Ultra High Reliability
 UPF: User Plane Function
+URG: Urgent
 V2I: Vehicle-to-Infrastructure
 V2N: Vehicle-to-Network
 V2P: Vehicle-to-Pedestrian
@@ -263,5 +291,5 @@ WRED: Weighted Random Early Detection
 XML: eXtensible Markup Language
 XMPP: eXtensible Messaging and Presence Protocol
 XOR: Exclusive OR
+ZRP: Zone Routing Protocol
 ZSM: Zero-touch network and Service Management
-eCall: Emergency Call

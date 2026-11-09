@@ -1,57 +1,466 @@
 {
  "_comment": "수동 보정 파일. parse_topics.py 실행 시 같은 id 항목의 필드를 덮어씀. 원문(PDF)에 있는 내용만 정리하고 새 내용은 만들지 않음. null 값은 해당 필드 삭제.",
  "NW_004_00": {
-  "definition": "수신측 동기화가 쉽도록 비트 중간에 극성 변화(전압 전이)가 있게 한 선로부호 방식. 물리 계층에서 신호를 전송할 때 쓰는 디지털 인코딩의 한 형태.",
+  "definition": "모든 비트 구간의 중앙에서 신호 전이(Transition)가 일어나도록 해 클록을 함께 실어 보내는 자기 동기식 선로 부호화 방식 (10BASE-T 이더넷)",
   "keywords": [
-   "비트 중앙 전압 전이",
-   "동기화 용이",
-   "NRZ ⊕ 클록(XOR)",
-   "대역폭 2배",
-   "10Mbps Ethernet"
+   "비트 중앙 전이(Mid-bit Transition) → 자기 동기화(Self-Clocking)",
+   "IEEE 802.3: 0 = High→Low, 1 = Low→High",
+   "생성: NRZ ⊕ 클록(XOR)",
+   "장점: 직류 성분(DC Component) 없음 / 단점: 대역폭 2배(보오율 = 2 × 비트율)",
+   "적용: 10BASE-T 이더넷 · 비교: 차등 맨체스터, 4B/5B, 8B/10B"
   ],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "keywords_note": null,
   "name": "맨체스터 코딩(Manchester Coding)",
-  "en": "Manchester Coding"
+  "en": "Manchester Coding",
+  "outline": [
+   "맨체스터 코딩의 개념",
+   "- 정의",
+   "- 특징",
+   "신호 변환 방식",
+   "- 생성 원리(NRZ ⊕ 클록)",
+   "- 비트 표현 규칙",
+   "장단점 및 다른 선로 부호와 비교"
+  ],
+  "sections": [
+   {
+    "title": "맨체스터 코딩의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "각 비트 구간을 반으로 나눠 중앙에서 반드시 전압이 바뀌게 하는 선로 부호화(Line Coding), 바이페이즈(Biphase)라고도 함"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "수신측이 비트 중앙 전이로 클록을 복원 → 자기 동기화(Self-Clocking)",
+       "한 비트 안에 +/− 레벨이 반씩 → 직류 성분 없음",
+       "10Mbps 이더넷(10BASE-T, 10BASE5), 자기 기록 장치 등에 사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "신호 변환 방식",
+    "subsections": [
+     {
+      "title": "생성 원리(NRZ ⊕ 클록)",
+      "items": [
+       "NRZ(Non-Return-to-Zero) 데이터 신호와 클록 신호를 XOR해서 생성",
+       "NRZ: 비트 구간 동안 0V로 돌아오지 않는 방식 → 같은 비트가 길게 이어지면 동기 상실"
+      ]
+     },
+     {
+      "title": "비트 표현 규칙",
+      "items": [
+       "IEEE 802.3: 0 = 중앙에서 High→Low(하강), 1 = Low→High(상승)",
+       "G.E. Thomas 규약은 반대 → 규약을 명시해야 함"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "장단점 및 다른 선로 부호와 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "장점: 동기화 쉬움, 직류 성분 없음, 전이 누락으로 오류 검출 가능",
+       "단점: 신호 변화율(보오율)이 비트율의 2배 → 대역폭 2배, 효율 50%",
+       "차등 맨체스터: 비트 시작점 전이 유무로 데이터 표현(토큰 링)",
+       "고속 이더넷은 효율 높은 블록 부호 사용: 4B/5B(100BASE-TX), 8B/10B(1000BASE-X), 64B/66B(10GbE)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "자기 동기화(Self-Clocking)",
+   "비트 중앙 전이(Mid-bit Transition)",
+   "NRZ ⊕ 클록(XOR)",
+   "10BASE-T 이더넷(10Mbps Ethernet)",
+   "대역폭 2배(Baud Rate = 2 × Bit Rate)"
+  ],
+  "quiz_groups": [
+   "line"
+  ],
+  "quiz_avoid": [],
+  "note": null,
+  "review": null
  },
  "NW_004_01": {
-  "definition": "각 비트 구간 중앙에서 반드시 신호 전이를 발생시켜 클록을 동기화하고, 비트 시작점의 전이 유무로 0과 1을 구분하는 차등 방식의 자기동기식 디지털 부호화 기법.",
+  "definition": "모든 비트 중앙에서 전이를 일으켜 클록을 실어 보내고, 비트 시작점의 전이 유무로 0과 1을 구분하는 차등 방식의 자기 동기식 선로 부호화 (토큰 링, IEEE 802.5)",
   "name": "차등 맨체스터 코딩(Differential Manchester Coding)",
-  "en": "Differential Manchester Coding"
+  "en": "Differential Manchester Coding",
+  "keywords": [
+   "비트 중앙 전이: 항상 발생 → 클록 동기화(Self-Clocking)",
+   "데이터: 비트 시작점 전이 있음 = 0, 없음 = 1 (IEEE 802.5)",
+   "극성 무관(Polarity Insensitive) → 선로 극성이 뒤바뀌어도 해석 유지",
+   "적용: 토큰 링(Token Ring, IEEE 802.5)",
+   "비교: 맨체스터(Manchester)는 중앙 전이 방향이 데이터"
+  ],
+  "outline": [
+   "차등 맨체스터 코딩의 개념",
+   "- 정의",
+   "- 특징",
+   "부호화 규칙",
+   "맨체스터 코딩과 비교"
+  ],
+  "sections": [
+   {
+    "title": "차등 맨체스터 코딩의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "클록은 비트 중앙 전이로, 데이터는 비트 시작점의 전이 유무로 표현하는 차등(Differential) 선로 부호화"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "절대 전압 레벨이 아니라 전이 유무만 보므로 극성이 뒤바뀌어도 데이터가 그대로 해석됨",
+       "잡음에 강하고 직류 성분 없음",
+       "맨체스터와 마찬가지로 대역폭이 NRZ의 2배"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "부호화 규칙",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "모든 비트 구간 중앙: 반드시 전이 → 송·수신 클록 동기화",
+       "비트 시작점: 전이 있음 = 0, 전이 없음 = 1 (IEEE 802.5 기준)",
+       "직전 비트의 끝 레벨에 따라 다음 비트의 파형이 정해짐(차등)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "맨체스터 코딩과 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "공통점: 비트 중앙 전이로 자기 동기화, 직류 성분 없음, 대역폭 2배",
+       "맨체스터: 중앙 전이의 방향(상승/하강)이 데이터 → 극성이 바뀌면 데이터 반전",
+       "차등 맨체스터: 시작점 전이 유무가 데이터 → 극성 무관",
+       "사용: 맨체스터 = 10Mbps 이더넷, 차등 맨체스터 = 토큰 링"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "비트 시작점 전이(Transition at Bit Start)",
+   "극성 무관성(Polarity Insensitivity)",
+   "토큰 링(Token Ring, IEEE 802.5)"
+  ],
+  "quiz_groups": [
+   "line"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_010": {
   "keywords": [
-   "진폭+위상 동시 변조",
-   "PSK + ASK",
-   "성상도(Constellation)",
-   "16/64/256/1024 QAM",
-   "계층적 변조(DVB-T)"
+   "진폭(ASK) + 위상(PSK) 동시 변조 · I/Q 직교 반송파(90°)",
+   "성상도(Constellation Diagram): M-QAM → 심볼당 log2 M 비트",
+   "16·64·256·1024·4096-QAM (Wi-Fi 6: 1024, Wi-Fi 7: 4096)",
+   "고차 변조 ↔ 높은 SNR 필요 → AMC(적응 변조·부호화)",
+   "계층적 변조(Hierarchical Modulation, DVB-T)"
   ],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "keywords_note": null,
   "name": "QAM(Quadrature Amplitude Modulation, 직교 진폭 변조)",
-  "en": "Quadrature Amplitude Modulation"
+  "en": "Quadrature Amplitude Modulation",
+  "definition": "서로 직교(90°)하는 두 반송파(I·Q)의 진폭을 각각 바꿔, 진폭과 위상을 동시에 변화시키는 디지털 변조 방식으로 한 심볼에 여러 비트를 실어 주파수 효율이 높음",
+  "outline": [
+   "QAM의 개념",
+   "- 정의",
+   "- 장단점",
+   "QAM 구성",
+   "- I/Q 변조 원리",
+   "- 성상도와 변조 차수",
+   "QAM 활용 및 동향"
+  ],
+  "sections": [
+   {
+    "title": "QAM의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "동위상(I, In-phase) 반송파와 직교(Q, Quadrature) 반송파의 진폭을 데이터에 따라 바꿔 합성하는 방식 → 결과적으로 진폭과 위상이 함께 변함"
+      ]
+     },
+     {
+      "title": "장단점",
+      "items": [
+       "장점: 한 심볼에 여러 비트 → 높은 주파수 효율·전송률",
+       "단점: 차수가 높을수록 신호점 간격이 좁아 잡음·페이딩에 약함 → 높은 SNR 필요, 선형 증폭기 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "QAM 구성",
+    "subsections": [
+     {
+      "title": "I/Q 변조 원리",
+      "items": [
+       "s(t) = I·cos(ωt) − Q·sin(ωt): 두 반송파는 90° 위상차로 서로 간섭하지 않음"
+      ]
+     },
+     {
+      "title": "성상도와 변조 차수",
+      "items": [
+       "성상도(Constellation Diagram): 가로축 I, 세로축 Q 평면에 신호점 배치",
+       "M-QAM은 심볼당 log2 M 비트: 16-QAM 4비트, 64-QAM 6비트, 256-QAM 8비트, 1024-QAM 10비트, 4096-QAM 12비트",
+       "인접 신호점은 1비트만 다르게 그레이 부호(Gray Code) 배치 → 비트 오류 최소화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "QAM 활용 및 동향",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "AMC(Adaptive Modulation and Coding): 채널이 좋으면 고차 QAM, 나쁘면 QPSK 등으로 자동 전환",
+       "Wi-Fi 6(802.11ax) 1024-QAM, Wi-Fi 7(802.11be) 4096-QAM, 5G NR 하향 256/1024-QAM, 케이블 모뎀(DOCSIS)",
+       "계층적 변조(DVB-T): 강건한 고우선 스트림 + 고속 저우선 스트림을 한 신호에 실음"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "성상도(Constellation Diagram)",
+   "I/Q 직교 반송파(In-phase/Quadrature)",
+   "AMC(Adaptive Modulation and Coding)",
+   "계층적 변조(Hierarchical Modulation)",
+   "4096-QAM(Wi-Fi 7)"
+  ],
+  "quiz_groups": [
+   "mod"
+  ],
+  "quiz_avoid": [],
+  "note": null,
+  "review": null
  },
  "NW_011": {
   "keywords": [
-   "반송파 감지",
-   "충돌 탐지(Collision Detection)",
-   "지속성 전략 3가지",
-   "유선 Ethernet",
-   "CSMA/CA와 비교(탐지 vs 회피)"
+   "반송파 감지(Carrier Sense) → 충돌 감지(Collision Detection) → 잼 신호(Jam)",
+   "지속성: 1-지속 · 비지속 · p-지속 (1/Non/p-persistent)",
+   "이진 지수 백오프(Binary Exponential Backoff): 최대 16회 시도",
+   "최소 프레임 64바이트 = 슬롯 타임(512비트)",
+   "반이중 유선 이더넷(IEEE 802.3) ↔ CSMA/CA(무선, 충돌 회피)"
   ],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "keywords_note": null,
   "name": "CSMA/CD(Carrier Sense Multiple Access with Collision Detection)",
-  "en": "Carrier Sense Multiple Access with Collision Detection"
+  "en": "Carrier Sense Multiple Access with Collision Detection",
+  "definition": "전송 전에 매체가 비어 있는지 감지하고(Carrier Sense), 전송 중 충돌을 감지하면(Collision Detection) 잼 신호를 보낸 뒤 임의 시간 후 재전송하는 반이중 유선 이더넷의 매체 접근 방식 (IEEE 802.3)",
+  "outline": [
+   "CSMA/CD의 개념",
+   "- 정의",
+   "- 동작 절차",
+   "CSMA/CD 핵심 기법",
+   "- 지속성 전략",
+   "- 이진 지수 백오프",
+   "- 최소 프레임 크기",
+   "CSMA/CD와 CSMA/CA 비교"
+  ],
+  "sections": [
+   {
+    "title": "CSMA/CD의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "공유 매체에서 여러 노드가 경쟁하며 전송하는 랜덤 접근 방식, 충돌을 감지해 빠르게 복구"
+      ]
+     },
+     {
+      "title": "동작 절차",
+      "items": [
+       "① 반송파 감지로 매체가 비었는지 확인 → ② 전송하며 충돌 감시",
+       "③ 충돌 감지 시 즉시 중단하고 잼 신호(32비트) 전송 → ④ 백오프 후 재시도"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "CSMA/CD 핵심 기법",
+    "subsections": [
+     {
+      "title": "지속성 전략",
+      "items": [
+       "1-지속(1-persistent): 매체가 비면 즉시 전송 (이더넷)",
+       "비지속(Non-persistent): 바쁘면 임의 시간 후 다시 감지",
+       "p-지속(p-persistent): 슬롯마다 확률 p로 전송"
+      ]
+     },
+     {
+      "title": "이진 지수 백오프",
+      "items": [
+       "n번째 충돌 후 0 ~ 2^min(n,10) − 1 중 임의 슬롯 수만큼 대기",
+       "16번 시도까지 실패하면 전송 포기"
+      ]
+     },
+     {
+      "title": "최소 프레임 크기",
+      "items": [
+       "프레임 전송 시간 ≥ 왕복 전파 지연 → 전송이 끝나기 전에 충돌 감지 보장",
+       "10/100Mbps 이더넷 최소 프레임 64바이트(512비트 = 슬롯 타임)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "CSMA/CD와 CSMA/CA 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "CSMA/CD: 충돌 감지(Detection), 유선 반이중 이더넷 — 스위치 기반 전이중 이더넷에서는 사용 안 함",
+       "CSMA/CA: 충돌 회피(Avoidance), 무선랜(IEEE 802.11) — 무선은 송신 중 충돌 감지가 어려워 IFS·백오프·ACK 사용"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "잼 신호(Jam Signal)",
+   "이진 지수 백오프(Binary Exponential Backoff)",
+   "1-지속(1-persistent)",
+   "최소 프레임 64바이트(Minimum Frame Size)",
+   "반이중 이더넷(Half-duplex Ethernet)"
+  ],
+  "quiz_groups": [
+   "mac"
+  ],
+  "quiz_avoid": [],
+  "note": null,
+  "review": null
  },
  "NW_023_00": {
   "keywords": [
-   "Proactive(DSDV, 주기적 라우팅 정보 갱신)",
-   "Reactive(AODV, 필요 시 경로 탐색)",
-   "Hybrid",
-   "Self-organizing",
-   "인프라 없음"
+   "특징: 인프라 없음(Infrastructure-less) · 자율 구성(Self-organizing) · 다중 홉(Multi-hop) · 동적 토폴로지",
+   "사전형(Proactive, Table-driven): DSDV · OLSR",
+   "요구형(Reactive, On-demand): AODV · DSR",
+   "혼합형(Hybrid): ZRP",
+   "활용: 군 전술망 · 재난 통신 · VANET · 센서망",
+   "과제: 배터리·대역폭 제약 · 보안(블랙홀 공격, Black Hole Attack)"
   ],
   "name": "애드혹 네트워크(Ad hoc Network)",
-  "en": "Ad hoc Network"
+  "en": "Ad hoc Network",
+  "definition": "기지국·AP 같은 기반 시설 없이 이동 노드끼리 무선으로 자율 구성되고, 노드가 라우터 역할을 하며 다중 홉으로 통신하는 네트워크 (MANET)",
+  "outline": [
+   "애드혹 네트워크의 개념",
+   "- 정의",
+   "- 특징",
+   "애드혹 라우팅 프로토콜",
+   "- 사전형",
+   "- 요구형",
+   "- 혼합형",
+   "활용 분야 및 과제"
+  ],
+  "sections": [
+   {
+    "title": "애드혹 네트워크의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "고정 인프라 없이 노드들이 스스로 망을 구성하는 무선 네트워크, 이동성이 있으면 MANET(Mobile Ad hoc Network, IETF)"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "모든 노드가 단말이자 라우터 → 다중 홉 전달",
+       "노드 이동·전원 차단으로 토폴로지가 수시로 변함",
+       "무선 대역폭·배터리 제약, 중앙 관리 없음 → 보안 취약"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "애드혹 라우팅 프로토콜",
+    "subsections": [
+     {
+      "title": "사전형",
+      "items": [
+       "모든 경로를 주기적으로 갱신해 항상 유지 → 지연 적음, 제어 오버헤드 큼",
+       "DSDV(Destination-Sequenced Distance Vector): 목적지 순서 번호로 루프 방지",
+       "OLSR(Optimized Link State Routing, RFC 3626): MPR(Multipoint Relay)로 플러딩 감소"
+      ]
+     },
+     {
+      "title": "요구형",
+      "items": [
+       "트래픽이 생길 때만 경로 탐색 → 오버헤드 적음, 초기 지연 있음",
+       "AODV(RFC 3561): RREQ/RREP로 경로 탐색, 노드는 다음 홉만 저장",
+       "DSR(Dynamic Source Routing, RFC 4728): 패킷 헤더에 전체 경로를 담는 소스 라우팅"
+      ]
+     },
+     {
+      "title": "혼합형",
+      "items": [
+       "ZRP(Zone Routing Protocol): 자기 영역(Zone) 안은 사전형, 영역 밖은 요구형"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용 분야 및 과제",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "활용: 군 전술 통신, 재난 현장, 차량 애드혹망(VANET), 무선 센서망, 드론 군집",
+       "과제: 에너지 효율, 확장성, QoS 보장",
+       "보안 위협: 블랙홀(Black Hole) — 최단 경로가 있다고 거짓 응답해 패킷을 끌어들여 버림, 웜홀(Wormhole), 시빌(Sybil)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "MANET(Mobile Ad hoc Network)",
+   "사전형 라우팅(Proactive Routing)",
+   "요구형 라우팅(Reactive Routing)",
+   "AODV(Ad hoc On-demand Distance Vector)",
+   "DSDV(Destination-Sequenced Distance Vector)",
+   "OLSR(Optimized Link State Routing)",
+   "ZRP(Zone Routing Protocol)"
+  ],
+  "quiz_groups": [
+   "routing",
+   "adhoc",
+   "iot"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_026": {
   "title": "DNS",
@@ -293,44 +702,391 @@
  },
  "NW_032": {
   "keywords": [
-   "1:특정다수 통신(목적지 주소 = 수신자 집합)",
-   "IGMP",
-   "224.x(예약)",
-   "225~239: 라우팅"
+   "IPv4 D 클래스 224.0.0.0/4 · 224.0.0.0/24 링크 로컬 · 239.0.0.0/8 관리 범위",
+   "그룹 관리: IGMP(IPv4) · MLD(IPv6)",
+   "라우팅: PIM-DM(Dense) · PIM-SM(Sparse, RP) · PIM-SSM",
+   "RPF(역경로 전달) 검사로 루프 방지",
+   "L2: IGMP 스누핑 · MAC 01:00:5E",
+   "활용: IPTV · 라우팅 프로토콜(OSPF 224.0.0.5) · 금융 시세"
   ],
   "name": "멀티캐스트(Multicast)",
-  "en": "Multicast"
+  "en": "Multicast",
+  "definition": "하나의 송신자가 보낸 패킷을 네트워크가 복제해, 같은 그룹에 가입한 여러 수신자에게만 전달하는 일대다(그룹) 통신 방식",
+  "outline": [
+   "멀티캐스트의 개념",
+   "- 정의",
+   "- 전송 방식 비교",
+   "멀티캐스트 구성 기술",
+   "- 주소 체계",
+   "- 그룹 관리",
+   "- 멀티캐스트 라우팅",
+   "L2 멀티캐스트와 활용"
+  ],
+  "sections": [
+   {
+    "title": "멀티캐스트의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "송신자는 패킷을 한 번만 보내고, 분기점의 라우터가 복제해 그룹 가입자에게 전달 → 대역폭·서버 부하 절감"
+      ]
+     },
+     {
+      "title": "전송 방식 비교",
+      "items": [
+       "유니캐스트(Unicast): 1:1",
+       "브로드캐스트(Broadcast): 1:전체(같은 네트워크 모든 호스트)",
+       "멀티캐스트(Multicast): 1:그룹 가입자",
+       "애니캐스트(Anycast): 1:가장 가까운 하나"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "멀티캐스트 구성 기술",
+    "subsections": [
+     {
+      "title": "주소 체계",
+      "items": [
+       "IPv4 D 클래스 224.0.0.0 ~ 239.255.255.255(224.0.0.0/4)",
+       "224.0.0.0/24: 링크 로컬(라우터가 넘기지 않음, 예: OSPF 224.0.0.5, 모든 호스트 224.0.0.1)",
+       "232.0.0.0/8: SSM 대역, 239.0.0.0/8: 조직 내부용 관리 범위(Administratively Scoped)",
+       "IPv6: FF00::/8"
+      ]
+     },
+     {
+      "title": "그룹 관리",
+      "items": [
+       "IGMP(Internet Group Management Protocol): 호스트가 라우터에 그룹 가입·탈퇴를 알림 (v2: Leave, v3: 출발지 지정)",
+       "MLD(Multicast Listener Discovery): IPv6용 (ICMPv6 기반)"
+      ]
+     },
+     {
+      "title": "멀티캐스트 라우팅",
+      "items": [
+       "PIM-DM(Dense Mode): 일단 모두에게 흘린 뒤 필요 없는 곳은 잘라냄(Flood & Prune)",
+       "PIM-SM(Sparse Mode): 랑데부 지점(RP)을 중심으로 한 공유 트리, 가입한 곳으로만 전달",
+       "PIM-SSM(Source-Specific Multicast): 특정 출발지(S,G)만 수신, RP 불필요",
+       "RPF(Reverse Path Forwarding): 출발지로 가는 최단 경로 인터페이스로 들어온 패킷만 전달 → 루프 방지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "L2 멀티캐스트와 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "멀티캐스트 MAC: 01:00:5E + IP 주소 하위 23비트",
+       "IGMP 스누핑(Snooping): 스위치가 IGMP를 엿봐 가입 포트로만 전달 → 불필요한 플러딩 방지",
+       "활용: IPTV·실시간 방송, 화상회의, 라우팅 프로토콜 메시지, 금융 시세 배포, 소프트웨어 배포"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "IGMP(Internet Group Management Protocol)",
+   "PIM-SM(Protocol Independent Multicast–Sparse Mode)",
+   "RPF(Reverse Path Forwarding)",
+   "IGMP 스누핑(IGMP Snooping)",
+   "랑데부 지점(RP, Rendezvous Point)",
+   "MLD(Multicast Listener Discovery)"
+  ],
+  "quiz_groups": [
+   "ip",
+   "multicast"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_041": {
   "keywords": [
-   "데이터 송수신·QoS·4계층",
-   "전송단위: Segment",
-   "장비: L4 스위치",
-   "흐름제어: Sliding Window",
-   "혼잡제어: TCP 혼잡제어",
-   "오류제어: Sequence Number",
-   "주요 프로토콜: TCP, UDP"
+   "전송 단위: 세그먼트(TCP Segment) · 데이터그램(UDP Datagram)",
+   "포트 번호(Port Number): 프로세스 식별, 잘 알려진 포트 0~1023",
+   "TCP: 연결형·신뢰성 / UDP: 비연결형·경량",
+   "흐름 제어(Flow Control): 슬라이딩 윈도(Sliding Window)",
+   "혼잡 제어(Congestion Control): 느린 시작 · 혼잡 회피",
+   "오류 제어: 체크섬(Checksum) + 재전송(ACK·타임아웃)",
+   "장비: L4 스위치(부하 분산)"
   ],
   "name": "전송 계층(Transport Layer, L4)",
-  "en": "Transport Layer, L4"
+  "en": "Transport Layer, L4",
+  "definition": "OSI 4계층으로, 포트 번호로 양 끝단 프로세스(응용)를 구분하고 종단 간(End-to-End) 신뢰성·흐름 제어·혼잡 제어를 제공하는 계층",
+  "outline": [
+   "전송 계층의 개념",
+   "- 정의",
+   "- 주요 기능",
+   "전송 계층 프로토콜",
+   "- TCP와 UDP",
+   "- 기타(SCTP·QUIC)",
+   "주요 제어 기법 및 장비"
+  ],
+  "sections": [
+   {
+    "title": "전송 계층의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "네트워크 계층(IP)의 호스트 간 전달 위에서, 프로세스 간 종단 간 통신을 제공하는 OSI 4계층"
+      ]
+     },
+     {
+      "title": "주요 기능",
+      "items": [
+       "다중화·역다중화: 포트 번호로 여러 응용의 데이터를 구분",
+       "분할·재조립: 응용 데이터를 세그먼트로 나누고 순서대로 재조립",
+       "연결 관리, 흐름·오류·혼잡 제어"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "전송 계층 프로토콜",
+    "subsections": [
+     {
+      "title": "TCP와 UDP",
+      "items": [
+       "TCP(Transmission Control Protocol): 연결형, 순서 보장, 재전송 → 웹(HTTP/1.1·2), 메일, 파일 전송",
+       "UDP(User Datagram Protocol): 비연결형, 헤더 8바이트, 재전송 없음 → DNS, 스트리밍, VoIP, QUIC 하위"
+      ]
+     },
+     {
+      "title": "기타(SCTP·QUIC)",
+      "items": [
+       "SCTP(Stream Control Transmission Protocol): 멀티스트림·멀티호밍, 이동통신 시그널링",
+       "QUIC: UDP 위에서 TCP+TLS 기능 제공, HTTP/3의 전송 계층"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 제어 기법 및 장비",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "포트 번호 16비트: 잘 알려진 포트(0~1023), 등록 포트(1024~49151), 동적 포트(49152~65535)",
+       "흐름 제어: 수신 버퍼가 넘치지 않도록 수신 윈도 크기로 송신량 조절(슬라이딩 윈도)",
+       "혼잡 제어: 네트워크 혼잡에 맞춰 혼잡 윈도 조절(느린 시작·혼잡 회피·빠른 복구)",
+       "오류 제어: 체크섬으로 손상 검출 + ACK·타임아웃 재전송 (링크 계층의 CRC와 구분)",
+       "L4 스위치: IP+포트 정보로 서버 부하 분산(Load Balancing)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "포트 번호(Port Number)",
+   "세그먼트(Segment)",
+   "흐름 제어(Flow Control)",
+   "혼잡 제어(Congestion Control)",
+   "L4 스위치(Layer 4 Switch)",
+   "UDP(User Datagram Protocol)"
+  ],
+  "quiz_groups": [
+   "transport",
+   "layers"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_049": {
-  "definition": "신뢰성 있는 데이터 전송을 위해 세그먼트의 손상(checksum), 손실(sequence/ack number), 시간초과(Time-Over)를 처리하는 TCP의 오류제어 기능.",
+  "definition": "TCP가 세그먼트의 손상·손실·중복·순서 뒤바뀜을 체크섬, 확인 응답(ACK), 타임아웃과 재전송으로 검출하고 복구하는 메커니즘",
   "name": "TCP 오류 제어(TCP Error Control)",
-  "en": "TCP Error Control"
+  "en": "TCP Error Control",
+  "keywords": [
+   "오류 검출: 체크섬(Checksum, 16비트)",
+   "누적 ACK(Cumulative ACK) · NAK 없음",
+   "재전송: 타임아웃(RTO) · 빠른 재전송(중복 ACK 3개)",
+   "RTO = SRTT + 4·RTTVAR, 최소 1초 (RFC 6298)",
+   "카른 알고리즘(Karn's Algorithm): 재전송 세그먼트는 RTT 측정 제외",
+   "SACK(선택적 확인 응답)"
+  ],
+  "outline": [
+   "TCP 오류 제어의 개념",
+   "- 정의",
+   "- 오류 유형",
+   "오류 제어 메커니즘",
+   "- 오류 검출(체크섬)",
+   "- 확인 응답(ACK)",
+   "- 재전송",
+   "재전송 타이머(RTO) 계산"
+  ],
+  "sections": [
+   {
+    "title": "TCP 오류 제어의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "TCP가 신뢰성 있는 전송을 위해 오류를 검출하고 재전송으로 복구하는 기능"
+      ]
+     },
+     {
+      "title": "오류 유형",
+      "items": [
+       "손상(Corrupted), 손실(Lost), 중복(Duplicate), 순서 어긋남(Out-of-order)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "오류 제어 메커니즘",
+    "subsections": [
+     {
+      "title": "오류 검출(체크섬)",
+      "items": [
+       "헤더·데이터·의사 헤더(IP 주소 등)에 대한 16비트 1의 보수 합 체크섬, 손상된 세그먼트는 폐기"
+      ]
+     },
+     {
+      "title": "확인 응답(ACK)",
+      "items": [
+       "누적 ACK: 다음에 받기를 기대하는 바이트 번호를 알림",
+       "TCP에는 부정 응답(NAK)이 없음 → 손실은 ACK가 오지 않거나 중복 ACK로 판단",
+       "SACK(Selective Acknowledgment, RFC 2018): 받은 불연속 구간을 알려 빠진 부분만 재전송"
+      ]
+     },
+     {
+      "title": "재전송",
+      "items": [
+       "타임아웃 재전송: RTO 안에 ACK가 없으면 재전송, 이후 RTO를 2배로(지수 백오프)",
+       "빠른 재전송(Fast Retransmit): 중복 ACK 3개를 받으면 타이머 만료 전에 즉시 재전송"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "재전송 타이머(RTO) 계산",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "RFC 6298: SRTT(평활 RTT)와 RTTVAR(RTT 변동)을 측정값으로 갱신",
+       "RTO = SRTT + max(G, 4·RTTVAR), 최소 1초 권고, 초기값 1초",
+       "카른 알고리즘: 재전송한 세그먼트의 RTT는 어느 전송의 ACK인지 모호하므로 측정에서 제외"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "빠른 재전송(Fast Retransmit)",
+   "RTO(Retransmission Timeout)",
+   "카른 알고리즘(Karn's Algorithm)",
+   "누적 ACK(Cumulative ACK)",
+   "SACK(Selective Acknowledgment)"
+  ],
+  "quiz_groups": [
+   "transport"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_050_1": {
-  "definition": "송·수신측 응용 프로그램의 낮은 데이터 생성·소비 속도 때문에 전송 데이터보다 Header·Trailer가 더 커져 비효율성이 증가하는 흐름제어 현상.",
+  "definition": "송신측 응용이 데이터를 아주 조금씩 만들거나 수신측 응용이 조금씩 읽어, TCP가 헤더보다 훨씬 작은 세그먼트를 반복 전송해 대역폭 효율이 급격히 떨어지는 현상",
   "keywords": [
-   "1byte 전송 오버헤드(헤더 40byte)",
-   "송신측 해결: Nagle's Algorithm",
-   "수신측 해결: Clark's Solution",
-   "MSS",
-   "Window Size 0"
+   "원인: 느린 생산자(송신 응용) · 느린 소비자(수신 응용)",
+   "예: 1바이트 데이터에 41바이트 패킷(TCP 20 + IP 20)",
+   "송신측 대책: 나글 알고리즘(Nagle's Algorithm, RFC 896)",
+   "수신측 대책: 클라크 해법(Clark's Solution) · 지연 ACK(Delayed ACK)",
+   "예외: TCP_NODELAY(실시간·대화형 응용)"
   ],
-  "keywords_note": "원문 키워드 칸에 다른 토픽(Harbor) 키워드가 잘못 들어가 있어 본문에서 발췌",
+  "keywords_note": null,
   "name": "어리석은 윈도우 신드롬(Silly Window Syndrome)",
-  "en": "Silly Window Syndrome"
+  "en": "Silly Window Syndrome",
+  "outline": [
+   "어리석은 윈도우 신드롬의 개념",
+   "- 정의",
+   "- 발생 원인",
+   "해결 방안",
+   "- 송신측(나글 알고리즘)",
+   "- 수신측(클라크 해법·지연 ACK)",
+   "적용 시 고려사항"
+  ],
+  "sections": [
+   {
+    "title": "어리석은 윈도우 신드롬의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "작은 데이터 세그먼트나 작은 윈도 알림이 반복돼 헤더 오버헤드가 커지는 TCP 비효율 현상",
+       "예: 1바이트를 보내려고 TCP 헤더 20 + IP 헤더 20 = 41바이트 패킷 전송"
+      ]
+     },
+     {
+      "title": "발생 원인",
+      "items": [
+       "송신측: 응용이 데이터를 1바이트씩 천천히 생성 (예: 텔넷 타이핑)",
+       "수신측: 응용이 버퍼에서 1바이트씩 천천히 읽어 작은 윈도를 계속 알림"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "해결 방안",
+    "subsections": [
+     {
+      "title": "송신측(나글 알고리즘)",
+      "items": [
+       "첫 데이터는 바로 보내고, 이후에는 ACK를 받거나 MSS만큼 모일 때까지 모아서 전송",
+       "ACK되지 않은 작은 세그먼트는 하나만 허용"
+      ]
+     },
+     {
+      "title": "수신측(클라크 해법·지연 ACK)",
+      "items": [
+       "클라크 해법: 버퍼에 MSS 이상 또는 버퍼의 절반 이상 공간이 생길 때까지 윈도 0을 알림",
+       "지연 ACK: ACK를 잠시(최대 500ms, 보통 200ms 내) 미뤄 윈도가 충분히 커진 뒤 알림"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 시 고려사항",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "나글 알고리즘과 지연 ACK가 함께 작동하면 응답 지연이 커질 수 있음",
+       "실시간 게임·대화형 응용은 소켓 옵션 TCP_NODELAY로 나글 알고리즘을 끔",
+       "대용량 전송은 MSS 크기로 모아 보내 효율 유지"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "나글 알고리즘(Nagle's Algorithm)",
+   "클라크 해법(Clark's Solution)",
+   "지연 ACK(Delayed ACK)",
+   "TCP_NODELAY 옵션(Disable Nagle)"
+  ],
+  "quiz_groups": [
+   "transport"
+  ],
+  "quiz_avoid": [],
+  "note": null,
+  "review": null
  },
  "NW_055": {
   "keywords": [
@@ -1260,27 +2016,588 @@
  },
  "NW_001": {
   "name": "정보이론(Information Theory)",
-  "en": "Information Theory"
+  "en": "Information Theory",
+  "definition": "정보를 확률로 정량화(정보량·엔트로피)하고, 데이터 압축의 한계(정보원 부호화)와 잡음 채널에서의 최대 전송률(채널 용량)을 수학적으로 밝힌 이론 (Shannon, 1948)",
+  "keywords": [
+   "정보량(Self-information): I = −log2 p [bit], 드문 사건일수록 큼",
+   "엔트로피(Entropy): 평균 정보량, 균등 분포일 때 최대",
+   "샤논 제1정리: 정보원 부호화(Source Coding) → 허프만 부호(Huffman Coding)",
+   "샤논 제2정리: 채널 부호화(Channel Coding), 전송률 R < 채널 용량 C",
+   "채널 용량: 샤논-하틀리 C = B·log2(1+S/N) · 나이퀴스트 C = 2B·log2 M",
+   "기계학습: 교차 엔트로피(Cross-Entropy) · KL 발산(KL Divergence)"
+  ],
+  "outline": [
+   "정보이론의 개념",
+   "- 정의",
+   "- 정보량과 엔트로피",
+   "샤논의 정리",
+   "- 제1정리(정보원 부호화)",
+   "- 제2정리(채널 부호화)",
+   "- 채널 용량(샤논-하틀리·나이퀴스트)",
+   "기계학습에서의 활용"
+  ],
+  "sections": [
+   {
+    "title": "정보이론의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "정보를 확률로 정량화해 통신의 압축 한계와 전송 한계를 다루는 이론 (C. Shannon, 1948, A Mathematical Theory of Communication)"
+      ]
+     },
+     {
+      "title": "정보량과 엔트로피",
+      "items": [
+       "정보량 I(x) = −log2 p(x) [bit]: 발생 확률이 낮을수록 정보량이 큼, 확실한 사건(p=1)은 정보량 0",
+       "독립 사건의 정보량은 더해짐 (동전 앞면 2번 = 1번의 2배)",
+       "엔트로피 H(X) = −Σ p(x)·log2 p(x): 정보원의 평균 정보량(불확실성), N개 기호가 균등할 때 최대 log2 N"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "샤논의 정리",
+    "subsections": [
+     {
+      "title": "제1정리(정보원 부호화)",
+      "items": [
+       "평균 부호 길이 L ≥ 엔트로피 H → 무손실 압축의 하한",
+       "확률 높은 기호에 짧은 부호를 주는 허프만 부호(Huffman Coding)·산술 부호가 대표 예"
+      ]
+     },
+     {
+      "title": "제2정리(채널 부호화)",
+      "items": [
+       "전송률 R이 채널 용량 C보다 작으면 오류 확률을 임의로 작게 만드는 부호가 존재",
+       "오류 정정 부호(FEC: 터보·LDPC·폴라 부호)의 이론적 근거"
+      ]
+     },
+     {
+      "title": "채널 용량(샤논-하틀리·나이퀴스트)",
+      "items": [
+       "샤논-하틀리: C = B·log2(1 + S/N) — 잡음 채널의 최대 전송률(B: 대역폭, S/N: 신호 대 잡음비)",
+       "나이퀴스트: C = 2B·log2 M — 잡음 없는 채널에서 신호 레벨 M개일 때 최대 전송률",
+       "대역폭·SNR을 늘려야 용량 증가, SNR은 로그로만 효과"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기계학습에서의 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "교차 엔트로피 H(p,q) = −Σ p·log q: 실제 분포 p를 모델 분포 q로 부호화할 때 평균 비트 수 → 분류 모델 손실 함수",
+       "KL 발산 D(p‖q) = H(p,q) − H(p): 두 분포의 차이(비대칭)",
+       "상호 정보량(Mutual Information): 두 변수가 공유하는 정보량 → 특징 선택·결정 트리 정보 이득"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "엔트로피(Entropy)",
+   "정보원 부호화 정리(Source Coding Theorem)",
+   "채널 부호화 정리(Channel Coding Theorem)",
+   "샤논-하틀리 정리(Shannon–Hartley Theorem)",
+   "허프만 부호(Huffman Coding)",
+   "KL 발산(Kullback–Leibler Divergence)",
+   "교차 엔트로피(Cross-Entropy)"
+  ],
+  "quiz_groups": [
+   "info"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_012": {
   "name": "CSMA/CA(Carrier Sense Multiple Access with Collision Avoidance)",
-  "en": "Carrier Sense Multiple Access with Collision Avoidance"
+  "en": "Carrier Sense Multiple Access with Collision Avoidance",
+  "definition": "무선랜에서 송신 중 충돌 감지가 어려우므로, 매체가 빈 뒤에도 IFS와 임의 백오프만큼 기다려 충돌을 미리 피하고 ACK로 성공을 확인하는 매체 접근 방식 (IEEE 802.11 DCF)",
+  "keywords": [
+   "IFS: SIFS < PIFS < DIFS (짧을수록 우선)",
+   "경쟁 윈도(Contention Window) · 임의 백오프(Random Backoff), 실패 시 CW 2배",
+   "RTS/CTS → 숨은 노드(Hidden Node) 문제 해결",
+   "NAV: 가상 반송파 감지(Virtual Carrier Sense)",
+   "ACK로 전송 성공 확인 · IEEE 802.11 DCF"
+  ],
+  "outline": [
+   "CSMA/CA의 개념",
+   "- 정의",
+   "- CSMA/CD를 쓰지 않는 이유",
+   "충돌 회피 메커니즘",
+   "- IFS와 경쟁 윈도",
+   "- RTS/CTS와 NAV",
+   "동작 절차"
+  ],
+  "sections": [
+   {
+    "title": "CSMA/CA의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "IEEE 802.11 DCF(Distributed Coordination Function)의 기본 접근 방식: 감지 → 대기(IFS) → 백오프 → 전송 → ACK"
+      ]
+     },
+     {
+      "title": "CSMA/CD를 쓰지 않는 이유",
+      "items": [
+       "무선은 자기 송신 신호가 매우 강해 송신 중 다른 신호(충돌)를 감지하기 어려움",
+       "숨은 노드(Hidden Node): 서로 신호가 안 닿는 두 단말이 같은 AP로 동시에 보내 충돌"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "충돌 회피 메커니즘",
+    "subsections": [
+     {
+      "title": "IFS와 경쟁 윈도",
+      "items": [
+       "SIFS(Short IFS): ACK·CTS 등 응답 프레임, 가장 우선",
+       "PIFS(PCF IFS): PCF(폴링) 모드의 AP 제어 프레임",
+       "DIFS(DCF IFS): 일반 데이터 경쟁 전 대기",
+       "DIFS 후 경쟁 윈도(CW) 안의 임의 슬롯 수만큼 백오프, 실패하면 CW를 2배(최대 CWmax)"
+      ]
+     },
+     {
+      "title": "RTS/CTS와 NAV",
+      "items": [
+       "RTS(Request To Send) → CTS(Clear To Send)로 매체 예약 → 숨은 노드도 CTS를 듣고 대기",
+       "NAV(Network Allocation Vector): 프레임의 Duration 값만큼 매체를 사용 중으로 간주하는 가상 반송파 감지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작 절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① 매체 감지 → 비어 있으면 DIFS 대기",
+       "② 임의 백오프 카운트다운(매체가 바쁘면 일시 정지)",
+       "③ 데이터 전송 → SIFS 후 ACK 수신",
+       "④ ACK 없으면 CW 2배로 재시도, 재시도 한도(Retry Limit) 초과 시 폐기"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "SIFS(Short Inter-Frame Space)",
+   "DIFS(DCF Inter-Frame Space)",
+   "RTS/CTS(Request To Send/Clear To Send)",
+   "NAV(Network Allocation Vector)",
+   "숨은 노드(Hidden Node)",
+   "경쟁 윈도(Contention Window)"
+  ],
+  "quiz_groups": [
+   "mac",
+   "wlan"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_031_02": {
   "name": "비직교 다중접속(NOMA, Non-Orthogonal Multiple Access)",
-  "en": "NOMA, Non-Orthogonal Multiple Access"
+  "en": "NOMA, Non-Orthogonal Multiple Access",
+  "definition": "여러 사용자의 신호를 같은 시간·주파수 자원에 서로 다른 전력(또는 코드)으로 겹쳐 보내고, 수신기가 순차 간섭 제거(SIC)로 분리해 주파수 효율과 동시 접속 수를 높이는 다중 접속 기술",
+  "keywords": [
+   "비직교(Non-Orthogonal): 같은 시간·주파수 자원을 여러 사용자가 공유",
+   "전력 영역(Power-domain): 송신 중첩 부호화(Superposition Coding)",
+   "수신 SIC(순차 간섭 제거, Successive Interference Cancellation)",
+   "전력 할당: 채널 나쁜(원거리) 사용자 ↑ · 좋은(근거리) 사용자 ↓",
+   "코드 영역(Code-domain): SCMA",
+   "효과: 주파수 효율·동시 접속↑ / 과제: 수신 복잡도·오류 전파"
+  ],
+  "outline": [
+   "NOMA의 개념",
+   "- 정의",
+   "- OMA와 비교",
+   "NOMA 원리 및 핵심 기술",
+   "- 중첩 부호화와 전력 할당",
+   "- SIC 수신",
+   "장단점 및 동향"
+  ],
+  "sections": [
+   {
+    "title": "NOMA의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "직교성을 일부러 포기하고 여러 사용자 신호를 같은 자원에 겹쳐 전송하는 다중 접속"
+      ]
+     },
+     {
+      "title": "OMA와 비교",
+      "items": [
+       "OMA(Orthogonal Multiple Access): FDMA·TDMA·OFDMA처럼 사용자별로 자원을 나눔 → 사용자 수 = 자원 수로 제한",
+       "NOMA: 전력·코드 영역에서 구분 → 같은 자원에 더 많은 사용자 수용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "NOMA 원리 및 핵심 기술",
+    "subsections": [
+     {
+      "title": "중첩 부호화와 전력 할당",
+      "items": [
+       "기지국이 사용자 신호를 서로 다른 전력으로 더해 한 번에 전송(Superposition Coding)",
+       "채널이 나쁜 원거리(셀 경계) 사용자에게 더 큰 전력, 근거리 사용자에게 작은 전력 → 공정성 향상"
+      ]
+     },
+     {
+      "title": "SIC 수신",
+      "items": [
+       "근거리 사용자: 전력이 큰 원거리 사용자 신호를 먼저 복호·제거한 뒤 자기 신호 복호",
+       "원거리 사용자: 근거리 사용자 신호를 잡음으로 보고 바로 복호",
+       "코드 영역 NOMA: SCMA(Sparse Code Multiple Access) 등 희소 코드로 구분"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "장단점 및 동향",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "장점: 주파수 효율·동시 접속 수 증가(대규모 IoT), 셀 경계 성능·공정성 향상, 접속 지연 감소",
+       "단점: SIC 수신기 복잡도, 앞 단계 복호 오류가 뒤로 퍼지는 오류 전파, 정확한 채널 정보 필요",
+       "동향: 5G NR 표준에는 채택되지 않았고, MIMO·RIS 등과 결합한 6G 후보 기술로 연구 중"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "SIC(Successive Interference Cancellation)",
+   "중첩 부호화(Superposition Coding)",
+   "전력 영역 다중화(Power-domain Multiplexing)",
+   "SCMA(Sparse Code Multiple Access)"
+  ],
+  "quiz_groups": [
+   "mux",
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_042": {
   "name": "네트워크 계층(Network Layer, L3)",
-  "en": "Network Layer, L3"
+  "en": "Network Layer, L3",
+  "definition": "OSI 3계층으로, 논리 주소(IP 주소)를 이용해 서로 다른 네트워크를 거쳐 출발지 호스트에서 목적지 호스트까지 패킷의 경로를 정하고 전달하는 계층",
+  "keywords": [
+   "전송 단위: 패킷(Packet) · 논리 주소: IP 주소(IP Address)",
+   "라우팅(Routing): 경로 계산 · 포워딩(Forwarding): 패킷 전달",
+   "단편화(Fragmentation)와 재조립",
+   "프로토콜: IP · ICMP · IGMP · IPsec · (주소 해석) ARP",
+   "장비: 라우터(Router) · L3 스위치"
+  ],
+  "outline": [
+   "네트워크 계층의 개념",
+   "- 정의",
+   "- 주요 기능",
+   "주요 프로토콜",
+   "네트워크 계층 장비"
+  ],
+  "sections": [
+   {
+    "title": "네트워크 계층의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "데이터 링크 계층의 인접 노드 간 전달 위에서, 여러 네트워크를 거치는 호스트 간 전달을 담당"
+      ]
+     },
+     {
+      "title": "주요 기능",
+      "items": [
+       "논리 주소 지정: IP 주소(IPv4 32비트, IPv6 128비트)로 네트워크와 호스트 식별",
+       "라우팅: 라우팅 프로토콜(OSPF·BGP 등)로 경로를 계산해 라우팅 테이블 작성 (제어 평면)",
+       "포워딩: 들어온 패킷의 목적지 주소를 테이블과 비교해 출력 포트로 내보냄 (데이터 평면)",
+       "단편화: 다음 링크의 MTU보다 큰 패킷을 쪼개고 목적지에서 재조립 (IPv6는 출발지만 단편화)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 프로토콜",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "IP(Internet Protocol): 비연결형·최선형(Best-effort) 전달",
+       "ICMP(Internet Control Message Protocol): 오류 보고·진단(ping, traceroute)",
+       "IGMP: 멀티캐스트 그룹 관리",
+       "IPsec: IP 계층 보안(AH 인증, ESP 암호화)",
+       "ARP(Address Resolution Protocol): IP 주소 → MAC 주소 변환 (2·3계층 사이)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "네트워크 계층 장비",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "라우터(Router): 서로 다른 네트워크 연결, 경로 선택, 브로드캐스트 도메인 분리",
+       "L3 스위치: 하드웨어(ASIC) 기반 고속 라우팅, VLAN 간 통신"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "라우팅(Routing)",
+   "포워딩(Forwarding)",
+   "패킷(Packet)",
+   "IP 주소(IP Address)",
+   "ICMP(Internet Control Message Protocol)",
+   "라우터(Router)",
+   "단편화(Fragmentation)"
+  ],
+  "quiz_groups": [
+   "ip",
+   "layers"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_043": {
   "name": "데이터 링크 계층(Data Link Layer, L2)",
-  "en": "Data Link Layer, L2"
+  "en": "Data Link Layer, L2",
+  "definition": "OSI 2계층으로, 물리 계층 위에서 같은 링크로 직접 연결된 인접 노드 사이에 프레임을 오류 없이 전달하도록 프레이밍·물리 주소·오류 제어·흐름 제어·매체 접근 제어를 담당하는 계층",
+  "keywords": [
+   "전송 단위: 프레임(Frame) · 물리 주소: MAC 주소(48비트)",
+   "부계층: LLC(논리 링크 제어) + MAC(매체 접근 제어)",
+   "오류 검출: CRC(FCS 필드)",
+   "오류 제어: ARQ(Stop-and-Wait · Go-Back-N · Selective Repeat)",
+   "흐름 제어: 정지-대기 · 슬라이딩 윈도",
+   "프로토콜: 이더넷 · HDLC · PPP / 장비: L2 스위치 · 브리지"
+  ],
+  "outline": [
+   "데이터 링크 계층의 개념",
+   "- 정의",
+   "- 부계층 구성",
+   "주요 기능",
+   "- 프레이밍과 주소 지정",
+   "- 오류 제어",
+   "- 흐름 제어·매체 접근 제어",
+   "주요 프로토콜 및 장비"
+  ],
+  "sections": [
+   {
+    "title": "데이터 링크 계층의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "물리 계층의 비트 전송을 신뢰할 수 있는 링크로 만들어 주는 노드 간(Hop-by-Hop) 전달 계층"
+      ]
+     },
+     {
+      "title": "부계층 구성",
+      "items": [
+       "LLC(Logical Link Control, IEEE 802.2): 상위 프로토콜 구분, 흐름·오류 제어",
+       "MAC(Medium Access Control): 공유 매체 접근(CSMA/CD·CSMA/CA), MAC 주소 처리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 기능",
+    "subsections": [
+     {
+      "title": "프레이밍과 주소 지정",
+      "items": [
+       "프레이밍: 비트열을 헤더·트레일러가 있는 프레임으로 구분 (플래그·비트 스터핑)",
+       "MAC 주소: 48비트 물리 주소, 앞 24비트 OUI(제조사)"
+      ]
+     },
+     {
+      "title": "오류 제어",
+      "items": [
+       "오류 검출: CRC(Cyclic Redundancy Check) 값을 FCS(Frame Check Sequence) 필드에 담아 확인",
+       "ARQ(Automatic Repeat reQuest): 오류·손실 프레임을 재전송하는 오류 제어 기법",
+       "정지-대기(Stop-and-Wait) / Go-Back-N(오류 프레임부터 모두 재전송) / Selective Repeat(오류 프레임만 재전송)"
+      ]
+     },
+     {
+      "title": "흐름 제어·매체 접근 제어",
+      "items": [
+       "흐름 제어: 수신측 처리 속도에 맞춰 송신(정지-대기, 슬라이딩 윈도)",
+       "매체 접근 제어: 공유 매체에서 누가 전송할지 결정 (CSMA/CD, CSMA/CA, 토큰)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 프로토콜 및 장비",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "프로토콜: 이더넷(IEEE 802.3), 무선랜(IEEE 802.11), HDLC(High-level Data Link Control), PPP(Point-to-Point Protocol)",
+       "L2 스위치·브리지: MAC 주소 테이블로 프레임 전달, 충돌 도메인 분리",
+       "VLAN(IEEE 802.1Q)으로 브로드캐스트 도메인 논리 분할, STP로 루프 방지"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "프레임(Frame)",
+   "MAC 주소(MAC Address)",
+   "LLC(Logical Link Control)",
+   "CRC(Cyclic Redundancy Check)",
+   "ARQ(Automatic Repeat reQuest)",
+   "Go-Back-N ARQ",
+   "L2 스위치(Layer 2 Switch)"
+  ],
+  "quiz_groups": [
+   "mac",
+   "layers",
+   "err"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_046": {
   "name": "TCP(Transmission Control Protocol)",
-  "en": "Transmission Control Protocol"
+  "en": "Transmission Control Protocol",
+  "definition": "IP 위에서 연결 설정 후 바이트 스트림을 순서대로, 손실 없이 전달하는 연결형 전송 계층 프로토콜로 흐름·오류·혼잡 제어를 제공 (RFC 9293)",
+  "keywords": [
+   "연결형·신뢰성·바이트 스트림 · 전이중(Full-duplex)",
+   "3-way 핸드셰이크(SYN → SYN+ACK → ACK) · ISN 무작위화",
+   "연결 종료: 4-way(FIN/ACK) · TIME_WAIT(2MSL)",
+   "헤더 20바이트(옵션 포함 최대 60바이트) · 플래그 SYN/ACK/FIN/RST/PSH/URG",
+   "흐름·오류·혼잡 제어",
+   "보안: SYN 플러딩(SYN Flooding) → SYN 쿠키(SYN Cookies)"
+  ],
+  "outline": [
+   "TCP의 개념",
+   "- 정의",
+   "- 특징",
+   "TCP 헤더 구조",
+   "TCP 연결 관리",
+   "- 연결 설정(3-way)",
+   "- 연결 종료(4-way)",
+   "TCP 제어 기능 및 보안"
+  ],
+  "sections": [
+   {
+    "title": "TCP의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "신뢰성 있는 종단 간 바이트 스트림 전송 프로토콜, 현재 표준 RFC 9293(2022, RFC 793 대체)"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "연결형: 데이터 전 연결 설정",
+       "신뢰성: 순서 번호·ACK·재전송",
+       "전이중·점대점(1:1) 통신, 바이트 스트림(메시지 경계 없음)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "TCP 헤더 구조",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "기본 20바이트, 옵션 포함 최대 60바이트",
+       "출발지·목적지 포트(각 16비트), 순서 번호·확인 응답 번호(각 32비트)",
+       "플래그: SYN(연결 요청), ACK(확인), FIN(정상 종료), RST(강제 재설정), PSH(즉시 전달), URG(긴급)",
+       "윈도 크기(흐름 제어), 체크섬, 옵션(MSS·윈도 스케일·SACK·타임스탬프)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "TCP 연결 관리",
+    "subsections": [
+     {
+      "title": "연결 설정(3-way)",
+      "items": [
+       "클라이언트 SYN → 서버 SYN+ACK → 클라이언트 ACK",
+       "ISN(초기 순서 번호)을 무작위로 정해 순서 번호 예측 공격 방지"
+      ]
+     },
+     {
+      "title": "연결 종료(4-way)",
+      "items": [
+       "FIN → ACK → FIN → ACK (반쪽씩 종료 가능, Half-close)",
+       "먼저 종료한 쪽은 TIME_WAIT 상태로 2MSL 대기 → 늦게 온 세그먼트 처리·마지막 ACK 재전송"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "TCP 제어 기능 및 보안",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "흐름 제어: 수신 윈도(rwnd) 기반 슬라이딩 윈도",
+       "오류 제어: 체크섬, 누적 ACK, 타임아웃·빠른 재전송",
+       "혼잡 제어: 느린 시작·혼잡 회피·빠른 복구 (CUBIC, BBR)",
+       "SYN 플러딩: SYN만 대량 전송해 반개방(Half-open) 연결로 백로그 고갈 → SYN 쿠키로 상태 없이 응답"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "quiz_terms": [
+   "3-way 핸드셰이크(Three-way Handshake)",
+   "TIME_WAIT(2MSL 대기)",
+   "RST 플래그(Reset)",
+   "SYN 쿠키(SYN Cookies)",
+   "ISN(Initial Sequence Number)",
+   "바이트 스트림(Byte Stream)"
+  ],
+  "quiz_groups": [
+   "transport"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_053": {
   "name": "서브네팅(Subnetting)",
