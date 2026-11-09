@@ -113,14 +113,31 @@ def main(keys):
             for d in descs:
                 if d: dom_descs[d].append(tid); file_descs[d].add(tid)
             # (d) outline must not repeat the topic title / its expansion
+            # Flag only the full Korean topic name or the full English name.
+            # Abbreviations (MOLAP, gRPC, COCOMO II, RPO, QA) are allowed in sub-headings.
             tb = set()
-            for b in [title, t.get('en') or ''] + list(re.findall(r'\(([^()]*)\)', title)) + [re.sub(r'\(.*\)', '', title)]:
-                for x in re.split(r',\s*', b):
-                    x = re.sub(r'\s+', '', x).lower()
-                    if len(x) >= 2: tb.add(x)
+            def _abbr(x):
+                if re.search(r'[가-힣]', x): return False
+                toks = x.split()
+                return bool(toks) and all(sum(c.isupper() for c in w) >= 2 or re.fullmatch(r'[0-9IVXx.+/-]+', w) for w in toks)
+            kor = re.sub(r'\(.*\)', '', title).strip()
+            cands = [kor, (t.get('en') or '').strip()]
+            for inner in re.findall(r'\(([^()]*)\)', title):
+                cands += [x.strip() for x in re.split(r',\s*', inner)]
+            for x in cands:
+                if not x or _abbr(x): continue
+                x = re.sub(r'\s+', '', x).lower()
+                if len(x) >= 2: tb.add(x)
+            # whole-name match: not glued to a longer Hangul compound (표본오차, 이산확률분포 are distinct terms)
+            # A repeat = the whole name at the heading start, or followed by a particle/generic heading word.
+            # Names inside a longer term (표본오차, 로지스틱 회귀분석) are not repeats.
+            GEN = r'(?:의|와|과|\s*(?:정의|특징|개념|개요|필요성|목적|효과|구성|한계|유형|비교|종류|절차|활용|동작|원리|기술|장단점|등장))'
+            tbre = []
+            for b in tb:
+                core = r'\s*'.join(map(re.escape, b))
+                tbre.append((b, re.compile(r'^(?:[IVX]+\.\s*)?-?\s*' + core + r'(?![가-힣])|^(?:[IVX]+\.\s*)?-?\s*' + core + GEN + r'|(?<![가-힣])' + core + GEN + r'(?![가-힣])', re.I)))
             for o in (t.get('outline') or []):
-                oo = re.sub(r'\s+', '', o).lower()
-                hitb = [b for b in tb if b in oo]
+                hitb = [b for b, rx in tbre if rx.search(o)]
                 if hitb: errs.append(f'{tid}: outline에 토픽명 반복 "{o[:40]}" ({hitb[0]})')
             # (c) outline length / glued
             for o in (t.get('outline') or []):
