@@ -5811,54 +5811,84 @@
   "dueum": null,
   "name": "멀티클라우드(Multi-Cloud)",
   "title": "멀티클라우드(Multi-Cloud)",
-  "definition": "2 개 이상의 CSP(Cloud Service Provider)가 제공하는 Public or Private 구성된 클라우드 운영 방식",
+  "definition": "두 개 이상의 클라우드 서비스 제공자(CSP)의 퍼블릭·프라이빗 클라우드를 업무 특성에 맞게 함께 사용해 가용성과 협상력을 높이고 특정 벤더 종속을 피하는 클라우드 운영 방식",
   "keywords_must": [
-   "상이한 인증",
-   "상이한 정책",
-   "상이한 보안기술",
-   "CASB",
-   "IaaS",
-   "멀티클라우드 표준"
+   "벤더 종속 회피(Lock-in Avoidance)",
+   "고가용성·장애 전환(Failover)",
+   "멀티 클라우드 관리 플랫폼(CMP)",
+   "상이한 인증·정책·보안 체계",
+   "CASB(Cloud Access Security Broker)",
+   "SD-WAN 연결",
+   "컨테이너·쿠버네티스 이식성",
+   "ISO/IEC 27017·27018",
+   "비용 최적화(FinOps)"
   ],
   "keywords_ref": [
-   "IS0"
+   "하이브리드 클라우드와 차이",
+   "IaC(Terraform) 표준화",
+   "데이터 송신(Egress) 비용",
+   "통합 ID(SSO·Federation)",
+   "슈퍼클라우드(Supercloud)"
   ],
   "keywords": [
-   "핵심: 상이한 인증 · 상이한 정책 · 상이한 보안기술",
-   "기술: CASB · IaaS · 멀티클라우드 표준",
-   "참고: IS0"
+   "장점: 고가용성 · 유연성 · 비용 효율 · 장애 전환",
+   "문제: 상이한 인증·정책·보안 · 운영 복잡성 · 데이터 이동 비용",
+   "대응: CMP · CASB · IaC · 쿠버네티스 · ISO/IEC 27017·27018"
   ],
   "outline": [
-   "멀티클라우드의 개념",
-   "- 멀티클라우드 핵심 키워드",
-   "멀티클라우드의 구성·기술",
-   "- 구성요소·표준",
-   "멀티클라우드의 운영 가치·시사점",
-   "- 멀티클라우드 요점"
+   "도입 이유",
+   "- 장점: 가용성·유연성·비용",
+   "연결과 관리 구성",
+   "- 클라우드·연결: 퍼블릭·프라이빗·SD-WAN",
+   "- 관리 계층: CMP·쿠버네티스",
+   "보안 이슈와 대응",
+   "- 이슈: 상이한 인증·정책·보안기술",
+   "- 대응: CASB·국제 표준"
   ],
   "sections": [
    {
-    "title": "멀티클라우드 핵심",
+    "title": "도입 이유",
     "subsections": [
      {
-      "title": null,
+      "title": "장점: 가용성·유연성·비용",
       "items": [
-       "상이한 인증: 멀티클라우드에서 상이한 인증을 다루는 핵심 암기 포인트",
-       "상이한 정책: 멀티클라우드에서 상이한 정책을 다루는 핵심 암기 포인트",
-       "상이한 보안기술: 멀티클라우드에서 상이한 보안기술을 다루는 핵심 암기 포인트",
-       "CASB: CASB를 멀티클라우드 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "고가용성·장애 전환(Failover): 한 CSP 리전 장애 시 다른 CSP로 전환, 데이터 이중화 보관",
+       "벤더 종속 회피(Lock-in Avoidance): CSP 간 가격 경쟁으로 협상력 확보, 서비스별 최적 CSP 선택(AI는 GCP, ERP는 Azure 등)"
       ]
      }
     ]
    },
    {
-    "title": "멀티클라우드 구성·기술",
+    "title": "연결과 관리 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "클라우드·연결: 퍼블릭·프라이빗·SD-WAN",
       "items": [
-       "IaaS: 가상머신·스토리지·네트워크를 온디맨드로 제공하는 클라우드 모델 (멀티클라우드/0f54)",
-       "멀티클라우드 표준: 멀티클라우드 상호운용·품질을 맞추는 규격·기준"
+       "SD-WAN 연결: 지점·데이터센터·여러 CSP를 정책 기반 가상 WAN으로 연결, 엔드투엔드 접근 보안"
+      ]
+     },
+     {
+      "title": "관리 계층: CMP·쿠버네티스",
+      "items": [
+       "멀티 클라우드 관리 플랫폼(CMP): 통합 대시보드로 자원·비용·정책을 일괄 관리",
+       "컨테이너·쿠버네티스 이식성: 동일 배포 단위로 CSP 간 워크로드 이동, IaC(Terraform)로 구성 표준화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 이슈와 대응",
+    "subsections": [
+     {
+      "title": "이슈: 상이한 인증·정책·보안기술",
+      "items": [
+       "상이한 인증·정책·보안 체계: CSP마다 IAM·로그 형식이 달라 설정 오류와 가시성 저하로 복잡성 증대"
+      ]
+     },
+     {
+      "title": "대응: CASB·국제 표준",
+      "items": [
+       "CASB(Cloud Access Security Broker): 여러 SaaS 이용을 단일 정책으로 통제, ISO/IEC 27017(보안)·27018(개인정보) 기준 적용"
       ]
      }
     ]
@@ -5867,19 +5897,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "상이한 인증",
-   "상이한 정책",
-   "상이한 보안기술",
-   "CASB",
-   "IaaS",
-   "멀티클라우드 표준"
+   "벤더 종속 회피(Lock-in Avoidance)",
+   "고가용성·장애 전환(Failover)",
+   "멀티 클라우드 관리 플랫폼(CMP)",
+   "상이한 인증·정책·보안 체계",
+   "CASB(Cloud Access Security Broker)",
+   "SD-WAN 연결",
+   "컨테이너·쿠버네티스 이식성",
+   "ISO/IEC 27017·27018",
+   "비용 최적화(FinOps)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_055",
@@ -5890,66 +5924,94 @@
    69,
    75
   ],
-  "en": "Public Cloud Adoption",
+  "en": "Public Sector Cloud Adoption Guideline",
   "dueum": null,
-  "name": "민간 클라우드 이용(Public Cloud Adoption)",
-  "title": "민간 클라우드 이용(Public Cloud Adoption)",
-  "definition": "정보자원 1 등급은 이용 제외 o 정보자원 2 등급은 검토 요청하여 정책협의체에서 이용가능 여부 검토와 국가정보원에서보안성 검토를 통해 결과 통보함.",
+  "name": "공공기관 민간 클라우드 이용(Public Sector Cloud Adoption)",
+  "title": "공공기관 민간 클라우드 이용(Public Sector Cloud Adoption)",
+  "definition": "전자정부법상 공공기관이 정보자원 등급과 보안·경제성 검토를 거쳐 클라우드 보안인증(CSAP)을 받은 민간 클라우드 서비스를 이용하도록 기준과 절차를 정한 가이드라인",
   "keywords_must": [
    "전자정부법",
+   "클라우드컴퓨팅법(제12조 공공기관 이용 촉진)",
+   "정보자원 등급(상·중·하)",
+   "국가정보원 보안성 검토",
    "정책협의체",
-   "국정원 보안성 검토",
-   "정보자원등급 등",
-   "SLA(SERVICE LEVEL AGREEMENT) 평가 등급",
-   "UX 차별화(혁신, 경영)전략 수립",
-   "SLA"
+   "클라우드 보안인증(CSAP)",
+   "사전 검토(시스템·구현성·경제성)",
+   "디지털서비스 이용지원시스템",
+   "망분리"
   ],
   "keywords_ref": [
-   "SLA(SERVICE LEVEL AGREEMENT)"
+   "국가 정보보안 기본지침",
+   "행정안전부",
+   "비밀 정보 저장 시스템 제외",
+   "보안등급제(2023 개편)",
+   "국가정보자원관리원"
   ],
   "keywords": [
-   "핵심: 전자정부법 · 정책협의체 · 국정원 보안성 검토",
-   "기술: 정보자원등급 등 · SLA(SERVICE LEVEL AGREEMENT) 평가 등급 · UX 차별화(혁신, 경영)전략 수립",
-   "운영: SLA",
-   "참고: SLA(SERVICE LEVEL AGREEMENT)"
+   "근거: 전자정부법 · 클라우드컴퓨팅법 · 국가정보화기본법",
+   "절차: 자체 사전 검토 → 등급 확인 → 보안성 검토 → CSAP 인증 서비스 선택 → 계약",
+   "검토 항목: 시스템(비밀 여부) · 구현성(법령·성능) · 경제성(자체 구축 대비 비용)"
   ],
   "outline": [
-   "공공기관 민간 클라우드 이용 가이드라인의 개요",
-   "- 공공기관 민간 클라우드 이용 가이드라인 배경",
-   "- 클라우드 민간 클라우드 이용 법적 근거",
-   "민간 클라우드 이용 검토 단계",
-   "- 공공기관 민간 클라우드 이용 사전 검토",
-   "- 공공기관 민간 클라우드 이용 본 검토",
-   "SLA(Service Level Agreement) 주요 평가지표",
-   "- SLA(SERVICE LEVEL AGREEMENT) 평가 등급",
-   "- 서비스 수준 지표 (예시)",
-   "공공기관이 민간 클라우드 컴퓨팅 이용시 보안 위협",
-   "- 민간 클라우드 이용 요점"
+   "배경과 법적 근거",
+   "- 배경: 정보자원 등급별 이용 확대",
+   "- 근거: 전자정부법·클라우드컴퓨팅법",
+   "이용 기준과 검토 절차",
+   "- 사전 검토: 시스템·구현성·경제성",
+   "- 검토·승인: 정책협의체·보안성 검토",
+   "이용 지원과 과제",
+   "- 지원: 디지털서비스 이용지원시스템",
+   "- 과제: 망분리·해외 CSP 진입"
   ],
   "sections": [
    {
-    "title": "민간 클라우드 이용 핵심",
+    "title": "배경과 법적 근거",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 정보자원 등급별 이용 확대",
       "items": [
-       "전자정부법: 민간 클라우드 이용에서 전자정부법을 다루는 핵심 암기 포인트",
-       "정책협의체: 민간 클라우드 이용에서 정책협의체를 다루는 핵심 암기 포인트",
-       "국정원 보안성 검토: 민간 클라우드 이용에서 국정원 보안성 검토를 다루는 핵심 암기 포인트",
-       "정보자원등급 등: 민간 클라우드 이용에서 정보자원등급 등을 다루는 핵심 암기 포인트"
+       "정보자원 등급(상·중·하): 초기 1등급 제외·2등급 협의·3등급 허용에서 2023년 보안등급제로 상·중·하 분류, 하 등급 민간 SaaS 이용 확대"
+      ]
+     },
+     {
+      "title": "근거: 전자정부법·클라우드컴퓨팅법",
+      "items": [
+       "전자정부법 제54조(정보자원 통합 관리), 클라우드컴퓨팅법 제12조로 공공기관 민간 클라우드 이용 촉진"
       ]
      }
     ]
    },
    {
-    "title": "민간 클라우드 이용 구성·기술",
+    "title": "이용 기준과 검토 절차",
     "subsections": [
      {
-      "title": null,
+      "title": "사전 검토: 시스템·구현성·경제성",
       "items": [
-       "SLA(SERVICE LEVEL AGREEMENT) 평가 등급: 민간 클라우드 이용에서 SLA(SERVICE LEVEL AGREEMENT) 평가 등급을 다루는 핵심 암기 포인트",
-       "UX 차별화(혁신, 경영)전략 수립: 민간 클라우드 이용에서 UX 차별화(혁신, 경영)전략 수립을 다루는 핵심 암기 포인트",
-       "SLA: 서비스 수준을 수치로 합의한 계약 지표"
+       "사전 검토: 비밀 정보 처리 시스템 여부, 관계 법령·성능 충족 여부, 자체 구축 대비 비용 비교"
+      ]
+     },
+     {
+      "title": "검토·승인: 정책협의체·보안성 검토",
+      "items": [
+       "국가정보원 보안성 검토: 중요 정보자원은 정책협의체 검토 후 보안성 검토 결과 통보",
+       "클라우드 보안인증(CSAP): 인증받은 서비스만 이용, 공공 전용 구역·물리적 분리 요건"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "이용 지원과 과제",
+    "subsections": [
+     {
+      "title": "지원: 디지털서비스 이용지원시스템",
+      "items": [
+       "디지털서비스 이용지원시스템: 인증 클라우드 서비스 카탈로그 계약, 수의계약 특례로 조달 간소화"
+      ]
+     },
+     {
+      "title": "과제: 망분리·해외 CSP 진입",
+      "items": [
+       "망분리 규제와 CSAP 요건으로 SaaS 도입이 제한적, 다층 보안 체계(N2SF) 전환 논의"
       ]
      }
     ]
@@ -5959,19 +6021,22 @@
   "reviewed": true,
   "quiz_terms": [
    "전자정부법",
+   "클라우드컴퓨팅법(제12조 공공기관 이용 촉진)",
+   "정보자원 등급(상·중·하)",
+   "국가정보원 보안성 검토",
    "정책협의체",
-   "국정원 보안성 검토",
-   "정보자원등급 등",
-   "SLA(SERVICE LEVEL AGREEMENT) 평가 등급",
-   "UX 차별화(혁신, 경영)전략 수립",
-   "SLA"
+   "클라우드 보안인증(CSAP)",
+   "사전 검토(시스템·구현성·경제성)",
+   "디지털서비스 이용지원시스템",
+   "망분리"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_057",
@@ -5982,77 +6047,87 @@
    72,
    73
   ],
-  "en": "LXC Linux Contatiner",
+  "en": "Linux Containers",
   "dueum": null,
-  "name": "사용자경험(LXC(Linux Contatiner))",
-  "title": "사용자경험(LXC(Linux Contatiner))",
-  "definition": "하나의 리눅스 호스트상에서 namespace와 cgroups를 활용하여 여러 개의 독립된 리눅스 컨테이너를 제공하는 운영체제 수준의 경량 프로세스 가상화 기술",
+  "name": "리눅스 컨테이너(LXC, Linux Containers)",
+  "title": "리눅스 컨테이너(LXC, Linux Containers)",
+  "definition": "하나의 리눅스 커널 위에서 네임스페이스로 프로세스의 시야를 격리하고 cgroups로 자원 사용량을 제한해 여러 개의 독립된 리눅스 시스템을 실행하는 운영체제 수준의 경량 가상화 기술",
   "keywords_must": [
-   "Namespaces",
-   "cgroups",
-   "경량 프로세스 가상화 기술",
-   "컨테이너",
-   "짧은 가동시간",
-   "적은 자원 소요",
-   "LXC (Linux Container) 개념",
-   "LXC Architecture",
-   "LXC 구성요소 및 요소기술",
-   "LXC"
+   "네임스페이스(Namespaces: PID·NET·MNT·IPC·UTS·USER)",
+   "컨트롤 그룹(cgroups)",
+   "운영체제 수준 가상화(OS-level Virtualization)",
+   "커널 공유(Shared Kernel)",
+   "시스템 컨테이너(System Container)",
+   "liblxc·LXD",
+   "chroot·pivot_root",
+   "낮은 오버헤드·빠른 기동"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "도커(Docker) 초기 실행 드라이버",
+   "AppArmor·SELinux·seccomp",
+   "하이퍼바이저 VM 비교",
+   "비특권 컨테이너(Unprivileged)",
+   "Incus"
+  ],
   "keywords": [
-   "핵심: Namespaces · cgroups · 경량 프로세스 가상화 기술",
-   "기술: 컨테이너 · 짧은 가동시간 · 적은 자원 소요",
-   "운영: LXC (Linux Container) 개념 · LXC Architecture · LXC 구성요소 및 요소기술"
+   "커널 기능: Namespaces(격리) · cgroups(자원 제한) · seccomp·AppArmor(보안)",
+   "구성: 리눅스 커널 · liblxc · 컨테이너 · LXD 관리 도구",
+   "비교: LXC(시스템 컨테이너) ↔ 도커(앱 컨테이너) ↔ VM(게스트 OS)"
   ],
   "outline": [
-   "경량(Light-weight) 프로세스 가상화 기술, LXC 개요",
-   "- LXC (Linux Container) 개념",
-   "- LXC 특징",
-   "LXC 아키텍처 및 구성요소",
-   "- LXC Architecture",
-   "사용자영역: Library, Container",
-   "- LXC 구성요소 및 요소기술",
-   "컨테이너 기반 가상화 기술과 하이퍼바이저(Hypervisor) 기반 가상화 기술",
-   "- 사용자경험 요점"
+   "장점",
+   "- 경량성: 적은 Footprint·낮은 오버헤드",
+   "아키텍처와 요소기술",
+   "- 커널 영역: 네임스페이스·cgroups",
+   "- 사용자 영역: 라이브러리·관리 데몬",
+   "비교와 보안 고려사항",
+   "- 비교: 도커·VM",
+   "- 보안: 커널 공유 위험"
   ],
   "sections": [
    {
-    "title": "사용자경험 핵심",
+    "title": "장점",
     "subsections": [
      {
-      "title": null,
+      "title": "경량성: 적은 Footprint·낮은 오버헤드",
       "items": [
-       "Namespaces: Namespaces를 사용자경험 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "cgroups: cgroups를 사용자경험 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "경량 프로세스 가상화 기술: 사용자경험를 단계적으로 수행·이행하는 절차",
-       "컨테이너: OS 커널을 공유하며 앱과 의존성을 격리 실행하는 단위"
+       "커널 공유(Shared Kernel): 게스트 OS 없이 호스트 커널을 공유해 초 단위 기동, 메모리 사용량 적음",
+       "시스템 컨테이너(System Container): init을 포함한 전체 리눅스 배포판을 컨테이너로 실행"
       ]
      }
     ]
    },
    {
-    "title": "사용자경험 구성·기술",
+    "title": "아키텍처와 요소기술",
     "subsections": [
      {
-      "title": null,
+      "title": "커널 영역: 네임스페이스·cgroups",
       "items": [
-       "짧은 가동시간: 사용자경험에서 짧은 가동시간을 다루는 핵심 암기 포인트",
-       "적은 자원 소요: 사용자경험에서 적은 자원 소요를 다루는 핵심 암기 포인트",
-       "LXC (Linux Container) 개념: 사용자경험에서 LXC (Linux Container) 개념을 다루는 핵심 암기 포인트",
-       "LXC Architecture: 사용자경험에서 LXC Architecture를 다루는 핵심 암기 포인트"
+       "네임스페이스(Namespaces): PID·네트워크·마운트·IPC·UTS·사용자 ID 공간을 컨테이너별로 분리해 고립된 뷰 제공",
+       "컨트롤 그룹(cgroups): CPU·메모리·블록 I/O 사용량 제한·우선순위·계정 집계"
+      ]
+     },
+     {
+      "title": "사용자 영역: 라이브러리·관리 데몬",
+      "items": [
+       "liblxc·LXD: 컨테이너 생성·시작·중지 API와 CLI, LXD는 이미지·클러스터 관리 데몬"
       ]
      }
     ]
    },
    {
-    "title": "사용자경험 운영",
+    "title": "비교와 보안 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "비교: 도커·VM",
       "items": [
-       "LXC 구성요소 및 요소기술: 사용자경험에서 LXC 구성요소 및 요소기술을 다루는 핵심 암기 포인트",
-       "LXC: LXC를 사용자경험 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "도커는 LXC 위 앱 단위 이미지 계층화로 출발(초기 실행 드라이버), VM은 하이퍼바이저 위 게스트 OS로 격리 강도 높음"
+      ]
+     },
+     {
+      "title": "보안: 커널 공유 위험",
+      "items": [
+       "비특권 컨테이너(Unprivileged): 사용자 네임스페이스로 root 매핑, seccomp·AppArmor로 시스템 콜 제한"
       ]
      }
     ]
@@ -6061,23 +6136,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Namespaces",
-   "cgroups",
-   "경량 프로세스 가상화 기술",
-   "컨테이너",
-   "짧은 가동시간",
-   "적은 자원 소요",
-   "LXC (Linux Container) 개념",
-   "LXC Architecture",
-   "LXC 구성요소 및 요소기술",
-   "LXC"
+   "네임스페이스(Namespaces: PID·NET·MNT·IPC·UTS·USER)",
+   "컨트롤 그룹(cgroups)",
+   "운영체제 수준 가상화(OS-level Virtualization)",
+   "커널 공유(Shared Kernel)",
+   "시스템 컨테이너(System Container)",
+   "liblxc·LXD",
+   "chroot·pivot_root",
+   "낮은 오버헤드·빠른 기동"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_058",
@@ -6092,58 +6166,85 @@
   "dueum": null,
   "name": "서버리스 컴퓨팅(Serverless Computing)",
   "title": "서버리스 컴퓨팅(Serverless Computing)",
-  "definition": "실제 물리적인 서버가 없는 것이 아닌 서버가 없는 것과 같이 직접 해당 이벤트에 접근하여 처리하여각 서버를 접속하는 방식보다 연결 및 처리속도를 개선한 컴퓨팅 기술",
+  "definition": "서버 프로비저닝·확장·운영을 클라우드 제공자가 전담하고 개발자는 이벤트에 반응하는 코드나 관리형 백엔드만 사용해 실행된 만큼만 비용을 내는 클라우드 실행 모델로, FaaS와 BaaS로 구성됨",
   "keywords_must": [
-   "BaaS (Backend as a Service)",
    "FaaS(Function as a Service)",
-   "서버리스 컴퓨팅 동작방식(AWS Lamda 방식)",
-   "컴퓨팅 (Serverless Computing)",
-   "서버리스 컴퓨팅 표준",
-   "서버리스 컴퓨팅 아키텍처"
+   "BaaS(Backend as a Service)",
+   "이벤트 기반(Event-driven)",
+   "자동 확장·스케일 투 제로(Scale to Zero)",
+   "실행 시간 기반 과금",
+   "콜드 스타트(Cold Start)",
+   "무상태(Stateless) 함수",
+   "AWS Lambda",
+   "API 게이트웨이 트리거"
   ],
   "keywords_ref": [
-   "서버관리 불필요",
-   "유연한 규모 조정",
-   "자동화된 고가용성",
-   "AWS"
+   "Azure Functions·Google Cloud Functions",
+   "실행 시간 제한(Lambda 15분)",
+   "벤더 종속",
+   "Knative·OpenFaaS",
+   "3-Tier 대비"
   ],
   "keywords": [
-   "핵심: BaaS (Backend as a Service) · FaaS(Function as a Service) · 서버리스 컴퓨팅 동작방식(AWS Lamda 방식)",
-   "기술: 컴퓨팅 (Serverless Computing) · 서버리스 컴퓨팅 표준 · 서버리스 컴퓨팅 아키텍처",
-   "참고: 서버관리 불필요 · 유연한 규모 조정 · 자동화된 고가용성"
+   "구성: FaaS(함수 실행) · BaaS(인증·DB·스토리지)",
+   "동작: 이벤트(HTTP·큐·파일) → 함수 컨테이너 기동 → 실행 → 종료·과금",
+   "한계: 콜드 스타트 · 실행 시간 제한 · 디버깅·관측 어려움 · 종속"
   ],
   "outline": [
-   "클라우드 컴퓨팅의 진화, 서버리스 컴퓨팅의 개요",
-   "- 서버리스 컴퓨팅(Serverless Computing)의 정의",
-   "- 서버리스 컴퓨팅 특징",
-   "서버리스 컴퓨팅 동작방식 및 구성요소",
-   "- 서버리스 컴퓨팅 동작방식(AWS Lamda 방식)",
-   "클라우드 기업이 제공하는 기술 사례",
-   "- 서버리스 컴퓨팅 요점"
+   "출현 배경과 장점",
+   "- 배경: 서버 관리 부담·유휴 비용",
+   "동작 방식과 구성요소",
+   "- 구성: FaaS·BaaS",
+   "- 동작: 이벤트 트리거",
+   "한계와 3-Tier 비교",
+   "- 한계: 콜드 스타트·시간 제한",
+   "- 비교: 상시 서버 vs 이벤트 실행"
   ],
   "sections": [
    {
-    "title": "서버리스 컴퓨팅 핵심",
+    "title": "출현 배경과 장점",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 서버 관리 부담·유휴 비용",
       "items": [
-       "BaaS (Backend as a Service): 인증·DB 등 백엔드 기능을 API로 제공하는 서비스 (서버리스 컴퓨팅/063b)",
-       "FaaS(Function as a Service): 이벤트 단위 함수만 배포·과금하는 서버리스 실행 모델 (서버리스 컴퓨팅/4394)",
-       "서버리스 컴퓨팅 동작방식(AWS Lamda 방식): 서버리스 컴퓨팅에서 서버리스 컴퓨팅 동작방식(AWS Lamda 방식)을 다루는 핵심 암기 포인트",
-       "컴퓨팅 (Serverless Computing): 서버리스 컴퓨팅에서 컴퓨팅 (Serverless Computing)을 다루는 핵심 암기 포인트"
+       "스케일 투 제로(Scale to Zero): 요청이 없으면 인스턴스 0개로 비용 0, 트래픽 급증 시 자동 확장",
+       "실행 시간 기반 과금: 요청 수와 실행 시간(ms)·메모리로 과금, 프로비저닝·패치 불필요"
       ]
      }
     ]
    },
    {
-    "title": "서버리스 컴퓨팅 구성·기술",
+    "title": "동작 방식과 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "구성: FaaS·BaaS",
       "items": [
-       "서버리스 컴퓨팅 표준: 서버리스 컴퓨팅 상호운용·품질을 맞추는 규격·기준",
-       "서버리스 컴퓨팅 아키텍처: 서버리스 컴퓨팅의 계층·모듈 배치와 상호작용 구조"
+       "FaaS(Function as a Service): 비즈니스 로직을 함수 단위로 배포해 이벤트 시 실행",
+       "BaaS(Backend as a Service): 인증·DB·파일 저장 같은 공통 백엔드를 관리형 서비스로 사용"
+      ]
+     },
+     {
+      "title": "동작: 이벤트 트리거",
+      "items": [
+       "이벤트 기반(Event-driven): API 게이트웨이 HTTP 요청, S3 업로드, 메시지 큐 수신 등이 함수 실행을 트리거",
+       "무상태(Stateless) 함수: 실행 간 상태를 보존하지 않아 상태는 외부 DB·캐시에 저장"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한계와 3-Tier 비교",
+    "subsections": [
+     {
+      "title": "한계: 콜드 스타트·시간 제한",
+      "items": [
+       "콜드 스타트(Cold Start): 유휴 후 첫 호출 시 런타임 기동 지연, 프로비저닝된 동시성으로 완화"
+      ]
+     },
+     {
+      "title": "비교: 상시 서버 vs 이벤트 실행",
+      "items": [
+       "3-Tier는 서버가 상시 대기·용량 계획 필요, 서버리스는 요청 단위 실행·자동 확장이나 장시간 작업엔 부적합"
       ]
      }
     ]
@@ -6152,19 +6253,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "BaaS (Backend as a Service)",
    "FaaS(Function as a Service)",
-   "서버리스 컴퓨팅 동작방식(AWS Lamda 방식)",
-   "컴퓨팅 (Serverless Computing)",
-   "서버리스 컴퓨팅 표준",
-   "서버리스 컴퓨팅 아키텍처"
+   "BaaS(Backend as a Service)",
+   "이벤트 기반(Event-driven)",
+   "자동 확장·스케일 투 제로(Scale to Zero)",
+   "실행 시간 기반 과금",
+   "콜드 스타트(Cold Start)",
+   "무상태(Stateless) 함수",
+   "AWS Lambda",
+   "API 게이트웨이 트리거"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_059",
@@ -6177,52 +6282,84 @@
   ],
   "en": "Function as a Service",
   "dueum": null,
-  "name": "함수형 서비스(FaaS)",
-  "title": "함수형 서비스(FaaS)",
-  "definition": "애플리케이션을 구성하는 여러 함수(function)들을 클라우드에서 직접 실행하는 방식의 클라우드 서비스",
+  "name": "서비스형 함수(FaaS, Function as a Service)",
+  "title": "서비스형 함수(FaaS, Function as a Service)",
+  "definition": "애플리케이션을 작은 함수 단위로 나누어 클라우드에 올려두면 HTTP 요청·메시지·타이머 등 이벤트가 발생할 때만 제공자가 컨테이너를 띄워 실행하고 호출 횟수와 실행 시간만큼 과금하는 서버리스 서비스 모델",
   "keywords_must": [
-   "Function",
-   "FaaS 의 Architecture",
-   "FaaS 의 상세설명",
-   "함수형 서비스 아키텍처",
-   "함수형 서비스 표준",
-   "HTTP"
+   "이벤트 기반 실행(Event-driven)",
+   "함수 단위 배포",
+   "트리거(Trigger: HTTP·큐·스토리지·스케줄)",
+   "호출 횟수·실행 시간(ms) 과금",
+   "무상태(Stateless)",
+   "콜드 스타트(Cold Start)",
+   "AWS Lambda·Azure Functions·Google Cloud Functions",
+   "BaaS 연계"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "동시성 제한(Concurrency)",
+   "프로비저닝된 동시성",
+   "Knative·OpenFaaS",
+   "함수 체이닝(Step Functions)",
+   "실행 시간 제한"
+  ],
   "keywords": [
-   "핵심: Function · FaaS 의 Architecture · FaaS 의 상세설명",
-   "기술: 함수형 서비스 아키텍처 · 함수형 서비스 표준 · HTTP"
+   "실행: 트리거 → 함수 인스턴스 기동 → 처리 → 종료",
+   "과금: 호출 수 × 실행 시간(ms) × 메모리",
+   "제품: AWS Lambda · Azure Functions · Google Cloud Functions · OpenFaaS"
   ],
   "outline": [
-   "서버리스 아키텍처의 대표적 기법 FaaS 의 정의",
-   "- 함수형 서비스 요점",
-   "Faas 의 Architecture 및 상세설명",
-   "- FaaS 의 Architecture",
-   "- FaaS 의 상세설명"
+   "서버리스 내 위치",
+   "- 서버리스 대표 기법: BaaS와 결합",
+   "아키텍처와 동작",
+   "- 이벤트 기반: 트리거",
+   "- 과금: 밀리초 단위",
+   "장단점과 사례",
+   "- 단점: 콜드 스타트·상태 관리",
+   "- 사례: Lambda·Azure Functions"
   ],
   "sections": [
    {
-    "title": "함수형 서비스 핵심",
+    "title": "서버리스 내 위치",
     "subsections": [
      {
-      "title": null,
+      "title": "서버리스 대표 기법: BaaS와 결합",
       "items": [
-       "Function: Function를 함수형 서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "FaaS 의 Architecture: 이벤트 단위 함수만 배포·과금하는 서버리스 실행 모델 (함수형 서비스/f8ac)",
-       "FaaS 의 상세설명: 이벤트 단위 함수만 배포·과금하는 서버리스 실행 모델 (함수형 서비스/7b23)",
-       "함수형 서비스 아키텍처: 함수형 서비스의 계층·모듈 배치와 상호작용 구조"
+       "BaaS 연계: 인증·상품 DB 같은 공통 기능은 BaaS로, 세부 로직은 FaaS 함수로 구현하는 구조"
       ]
      }
     ]
    },
    {
-    "title": "함수형 서비스 구성·기술",
+    "title": "아키텍처와 동작",
     "subsections": [
      {
-      "title": null,
+      "title": "이벤트 기반: 트리거",
       "items": [
-       "함수형 서비스 표준: 함수형 서비스 상호운용·품질을 맞추는 규격·기준",
-       "HTTP: 요청/응답 기반의 웹 응용 계층 프로토콜 (함수형 서비스/fa9c)"
+       "이벤트 기반 실행(Event-driven): 서버가 상시 대기하지 않고 HTTP 요청·API 호출·파일 업로드 시마다 실행",
+       "함수 단위 배포: 기능을 작은 함수로 쪼개 독립 배포·확장, 함수 체이닝으로 워크플로 구성"
+      ]
+     },
+     {
+      "title": "과금: 밀리초 단위",
+      "items": [
+       "호출 횟수·실행 시간(ms) 과금: 실행된 횟수와 시간만 비용 발생, 유휴 시 비용 없음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "장단점과 사례",
+    "subsections": [
+     {
+      "title": "단점: 콜드 스타트·상태 관리",
+      "items": [
+       "콜드 스타트(Cold Start)와 무상태 제약, 실행 시간 제한(Lambda 최대 15분)으로 장시간 배치에 부적합"
+      ]
+     },
+     {
+      "title": "사례: Lambda·Azure Functions",
+      "items": [
+       "AWS Lambda(2014)·Azure Functions·Google Cloud Functions, 오픈소스는 Knative·OpenFaaS"
       ]
      }
     ]
@@ -6231,19 +6368,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Function",
-   "FaaS 의 Architecture",
-   "FaaS 의 상세설명",
-   "함수형 서비스 아키텍처",
-   "함수형 서비스 표준",
-   "HTTP"
+   "이벤트 기반 실행(Event-driven)",
+   "함수 단위 배포",
+   "트리거(Trigger: HTTP·큐·스토리지·스케줄)",
+   "호출 횟수·실행 시간(ms) 과금",
+   "무상태(Stateless)",
+   "콜드 스타트(Cold Start)",
+   "AWS Lambda·Azure Functions·Google Cloud Functions",
+   "BaaS 연계"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_060_00",
@@ -6258,77 +6398,85 @@
   "dueum": null,
   "name": "클라우드 네이티브(Cloud Native)",
   "title": "클라우드 네이티브(Cloud Native)",
-  "definition": "컨테이너·MSA·선언적 API·자동화로 클라우드에 최적화된 애플리케이션 접근",
+  "definition": "컨테이너·마이크로서비스·데브옵스·지속적 배포를 기반으로 애플리케이션을 처음부터 클라우드 환경에 맞게 설계해 확장성·탄력성·빠른 배포와 장애 자동 복구를 확보하는 접근 방식 (CNCF 정의)",
   "keywords_must": [
-   "OCI(Open Container Initiative)",
    "CNCF(Cloud Native Computing Foundation)",
-   "데브옵스 (DevOps)",
-   "지속적 배포(Continuous Delivery)",
-   "마이크로서비스아키텍쳐(Microservices)",
-   "컨 테이너(Containers)",
-   "Public Cloud 서비스의 구축단계",
-   "SLA",
-   "SaaS 활용 용이"
+   "마이크로서비스 아키텍처(MSA)",
+   "컨테이너(Container)",
+   "데브옵스(DevOps)",
+   "지속적 통합·배포(CI/CD)",
+   "서비스 메시(Service Mesh)",
+   "선언적 API(Declarative API)",
+   "불변 인프라(Immutable Infrastructure)",
+   "OCI(Open Container Initiative)"
   ],
   "keywords_ref": [
-   "VMW",
-   "EMC",
-   "S3",
-   "EC2",
-   "SQS",
-   "CRM(SaaS)"
+   "쿠버네티스",
+   "12-Factor App",
+   "서버리스 아키텍처",
+   "장애 격리·자동 복구(Auto-Recovery)",
+   "관측성(Observability)"
   ],
   "keywords": [
-   "핵심: OCI(Open Container Initiative) · CNCF(Cloud Native Computing Foundation) · 데브옵스 (DevOps)",
-   "기술: 지속적 배포(Continuous Delivery) · 마이크로서비스아키텍쳐(Microservices) · 컨 테이너(Containers)",
-   "운영: Public Cloud 서비스의 구축단계 · SLA · SaaS 활용 용이",
-   "참고: VMW · EMC · S3"
+   "4대 요소: 데브옵스 · 지속적 배포 · 마이크로서비스 · 컨테이너",
+   "확장 기술: 서비스 메시 · 서버리스 · 선언적 API · 불변 인프라",
+   "표준·생태계: CNCF · OCI · 쿠버네티스"
   ],
   "outline": [
-   "Public Cloud 의 개요",
-   "- Public Cloud 의 정의",
-   "Cloud Computing 의 분류 및 비교",
-   "- 서비스 대상에 따른 클라우드컴퓨팅의 비교",
-   "Public Cloud 서비스의 구축단계 및 사례",
-   "- Public Cloud 서비스의 구축단계",
-   "- 클라우드 컴퓨팅 서비스 사례"
+   "등장 배경",
+   "- 클라우드 리프트앤시프트의 한계",
+   "구성요소와 주요 기술",
+   "- 조직·프로세스: 데브옵스·CI/CD",
+   "- 아키텍처·런타임: MSA·컨테이너",
+   "기존 아키텍처와 비교",
+   "- 비교: 종속성·자원·배포 단위",
+   "- 복구: 장애 격리·자동 복구"
   ],
   "sections": [
    {
-    "title": "클라우드 네이티브 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "클라우드 리프트앤시프트의 한계",
       "items": [
-       "OCI(Open Container Initiative): OCI를 클라우드 네이티브 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CNCF(Cloud Native Computing Foundation): 하이퍼바이저가 하드웨어 위에서 직접 동작하는 유형",
-       "데브옵스 (DevOps): 개발·운영을 통합해 전달 속도를 높이는 문화·실천",
-       "지속적 배포(Continuous Delivery): 클라우드 네이티브에서 지속적 배포(Continuous Delivery)를 다루는 핵심 암기 포인트"
+       "단순 이전(Lift & Shift)만으로는 탄력성을 못 살려 설계 자체를 클라우드에 맞추는 접근 필요",
+       "CNCF(Cloud Native Computing Foundation): 2015년 리눅스 재단 산하 설립, 쿠버네티스를 첫 프로젝트로 생태계 주도"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 네이티브 구성·기술",
+    "title": "구성요소와 주요 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "조직·프로세스: 데브옵스·CI/CD",
       "items": [
-       "마이크로서비스아키텍쳐(Microservices): 클라우드 네이티브에서 마이크로서비스아키텍쳐(Microservices)를 다루는 핵심 암기 포인트",
-       "컨 테이너(Containers): 클라우드 네이티브에서 컨 테이너(Containers)를 다루는 핵심 암기 포인트",
-       "Public Cloud 서비스의 구축단계: 클라우드 네이티브에서 Public Cloud 서비스의 구축단계를 다루는 핵심 암기 포인트",
-       "SLA: 서비스 수준을 수치로 합의한 계약 지표 (클라우드 네이티브/c2b0)"
+       "데브옵스(DevOps): 개발·운영 협업 문화와 피드백 자동화, 애자일 통합",
+       "지속적 통합·배포(CI/CD): GitHub Actions 등 파이프라인으로 빌드·테스트·배포 자동화"
+      ]
+     },
+     {
+      "title": "아키텍처·런타임: MSA·컨테이너",
+      "items": [
+       "마이크로서비스 아키텍처(MSA): 독립 배포 가능한 소규모 서비스, API로 느슨하게 결합",
+       "컨테이너(Container): 앱과 의존성을 이미지로 패키징, CRI-O·containerd 런타임과 쿠버네티스로 오케스트레이션"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 네이티브 운영",
+    "title": "기존 아키텍처와 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "비교: 종속성·자원·배포 단위",
       "items": [
-       "SaaS 활용 용이: 클라우드 네이티브에서 SaaS 활용 용이를 다루는 핵심 암기 포인트"
+       "기존은 OS·인프라 종속적 모놀리식·수동 확장, 클라우드 네이티브는 OS 추상화·동적 프로비저닝·서비스별 독립 업데이트"
+      ]
+     },
+     {
+      "title": "복구: 장애 격리·자동 복구",
+      "items": [
+       "장애 격리(Fault Isolation)·내결함성(Fault Tolerance)·자동 복구(Auto-Recovery)와 관측성으로 신속 복구"
       ]
      }
     ]
@@ -6337,22 +6485,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "OCI(Open Container Initiative)",
    "CNCF(Cloud Native Computing Foundation)",
-   "데브옵스 (DevOps)",
-   "지속적 배포(Continuous Delivery)",
-   "마이크로서비스아키텍쳐(Microservices)",
-   "컨 테이너(Containers)",
-   "Public Cloud 서비스의 구축단계",
-   "SLA",
-   "SaaS 활용 용이"
+   "마이크로서비스 아키텍처(MSA)",
+   "컨테이너(Container)",
+   "데브옵스(DevOps)",
+   "지속적 통합·배포(CI/CD)",
+   "서비스 메시(Service Mesh)",
+   "선언적 API(Declarative API)",
+   "불변 인프라(Immutable Infrastructure)",
+   "OCI(Open Container Initiative)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_060_01",
@@ -6363,70 +6512,88 @@
    81,
    83
   ],
-  "en": "CNMM",
+  "en": "Cloud Native Maturity Model",
   "dueum": null,
-  "name": "클라우드 네이티브 성숙도 모델(CNMM)",
-  "title": "클라우드 네이티브 성숙도 모델(CNMM)",
-  "definition": "클라우드 애플리케이션 간 또는 클라우드 애플리케이션과 클라우드 자원의 배포, 설정, 오케스트레이션과 같은 기능을",
+  "name": "클라우드 네이티브 성숙도 모델(CNMM, Cloud Native Maturity Model)",
+  "title": "클라우드 네이티브 성숙도 모델(CNMM, Cloud Native Maturity Model)",
+  "definition": "애플리케이션이 클라우드 환경을 활용하는 수준을 온프레미스(0단계)부터 클라우드 지원·클라우드 최적화·클라우드 네이티브(3단계)까지 4단계로 구분해 전환 목표와 이식성·상호운용성 확보 수준을 진단하는 모델 (클라우드 네이티브 애플리케이션 개발 가이드라인)",
   "keywords_must": [
    "CNMM 0(On-Premise)",
    "CNMM 1(Cloud-Enabled)",
    "CNMM 2(Cloud-Optimized)",
-   "CNMM 3(Cloud- Native)",
-   "CSAP",
-   "OCI(Open Container Initiative)",
-   "CNCF(Cloud Native Computing Foundation)",
-   "데브옵스 (DevOps)",
-   "IaaS"
+   "CNMM 3(Cloud-Native)",
+   "애플리케이션 상호운용성",
+   "공통관리기능 상호운용성",
+   "데이터 이식성(Data Portability)",
+   "가상 어플라이언스 이식성(VM·컨테이너 이미지)",
+   "애플리케이션 이식성"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "리프트앤시프트(Lift & Shift)",
+   "관리형 서비스 활용",
+   "MSA·컨테이너·CI/CD",
+   "12-Factor App",
+   "ISO/IEC 19941(상호운용성·이식성)"
+  ],
   "keywords": [
-   "핵심: CNMM 0(On-Premise) · CNMM 1(Cloud-Enabled) · CNMM 2(Cloud-Optimized)",
-   "기술: CNMM 3(Cloud- Native) · CSAP · OCI(Open Container Initiative)",
-   "운영: CNCF(Cloud Native Computing Foundation) · 데브옵스 (DevOps) · IaaS"
+   "4단계: 0 온프레미스 · 1 클라우드 지원 · 2 클라우드 최적화 · 3 클라우드 네이티브",
+   "상호운용성: 애플리케이션 · 공통관리기능",
+   "이식성: 데이터 · 가상 어플라이언스(VM·컨테이너) · 애플리케이션"
   ],
   "outline": [
-   "클라우드 상호운용성 및 이식성의 대상 범위",
-   "- 클라우드 네이티브 성숙도 모델 요점",
-   "클라우드 네이티브 성숙도 모델(Cloud Native Maturity Model",
-   "- 클라우드 네이티브 성숙도 모델(Cloud Native Maturity…"
+   "상호운용성·이식성 대상 범위",
+   "- 상호운용성: 애플리케이션·관리기능",
+   "- 이식성: 데이터·이미지·애플리케이션",
+   "성숙도 4단계",
+   "- 0~1단계: 온프레미스·클라우드 지원",
+   "- 2~3단계: 최적화·네이티브",
+   "활용 방안",
+   "- 진단: 현재 수준·목표 설정"
   ],
   "sections": [
    {
-    "title": "클라우드 네이티브 성숙도 모델 핵심",
+    "title": "상호운용성·이식성 대상 범위",
     "subsections": [
      {
-      "title": null,
+      "title": "상호운용성: 애플리케이션·관리기능",
       "items": [
-       "CNMM 0(On-Premise): 클라우드 네이티브 성숙도 모델에서 CNMM 0(On-Premise)를 다루는 핵심 암기 포인트",
-       "CNMM 1(Cloud-Enabled): 클라우드 네이티브 성숙도 모델에서 CNMM 1(Cloud-Enabled)를 다루는 핵심 암기 포인트",
-       "CNMM 2(Cloud-Optimized): 클라우드 네이티브 성숙도 모델에서 CNMM 2(Cloud-Optimized)를 다루는 핵심 암기 포인트",
-       "CNMM 3(Cloud- Native): 하이퍼바이저가 하드웨어 위에서 직접 동작하는 유형 (클라우드 네이티브 성숙도 모델/2205)"
+       "공통관리기능 상호운용성: 자원 배포·설정·오케스트레이션 관리 시스템 간 연동 능력"
+      ]
+     },
+     {
+      "title": "이식성: 데이터·이미지·애플리케이션",
+      "items": [
+       "가상 어플라이언스 이식성: VM·컨테이너 이미지를 다른 인프라에서 재사용, 데이터 이식성은 재입력 없이 데이터 재사용",
+       "ISO/IEC 19941: 클라우드 상호운용성·이식성 국제 표준"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 네이티브 성숙도 모델 구성·기술",
+    "title": "성숙도 4단계",
     "subsections": [
      {
-      "title": null,
+      "title": "0~1단계: 온프레미스·클라우드 지원",
       "items": [
-       "CSAP: CSAP를 클라우드 네이티브 성숙도 모델 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OCI(Open Container Initiative): OCI를 클라우드 네이티브 성숙도 모델 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CNCF(Cloud Native Computing Foundation): 하이퍼바이저가 하드웨어 위에서 직접 동작하는 유형 (클라우드 네이티브 성숙도 모델/9436)",
-       "데브옵스 (DevOps): 개발·운영을 통합해 전달 속도를 높이는 문화·실천 (클라우드 네이티브 성숙도 모델/7814)"
+       "CNMM 1(Cloud-Enabled): 앱 수정 없이 VM으로 이전(Lift & Shift), 수동 확장"
+      ]
+     },
+     {
+      "title": "2~3단계: 최적화·네이티브",
+      "items": [
+       "CNMM 2(Cloud-Optimized): 관리형 DB·오토스케일 등 클라우드 서비스를 부분 활용하도록 일부 수정",
+       "CNMM 3(Cloud-Native): MSA·컨테이너·CI/CD로 재설계, 자동 복구·탄력적 확장"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 네이티브 성숙도 모델 운영",
+    "title": "활용 방안",
     "subsections": [
      {
-      "title": null,
+      "title": "진단: 현재 수준·목표 설정",
       "items": [
-       "IaaS: 가상머신·스토리지·네트워크를 온디맨드로 제공하는 클라우드 모델 (클라우드 네이티브 성숙도 모델/60f7)"
+       "시스템별 현재 단계를 진단해 업무 중요도·변경 빈도에 따라 목표 단계를 차등 설정하고 전환 로드맵 수립"
       ]
      }
     ]
@@ -6438,19 +6605,20 @@
    "CNMM 0(On-Premise)",
    "CNMM 1(Cloud-Enabled)",
    "CNMM 2(Cloud-Optimized)",
-   "CNMM 3(Cloud- Native)",
-   "CSAP",
-   "OCI(Open Container Initiative)",
-   "CNCF(Cloud Native Computing Foundation)",
-   "데브옵스 (DevOps)",
-   "IaaS"
+   "CNMM 3(Cloud-Native)",
+   "애플리케이션 상호운용성",
+   "공통관리기능 상호운용성",
+   "데이터 이식성(Data Portability)",
+   "가상 어플라이언스 이식성(VM·컨테이너 이미지)",
+   "애플리케이션 이식성"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_061",
@@ -6461,61 +6629,87 @@
    84,
    87
   ],
-  "en": "Auto Scale UpAuto Scale Out",
+  "en": "Auto Scaling (Scale-up/Scale-out)",
   "dueum": null,
-  "name": "디지털서비스(Auto Scale UpAuto Scale Out)",
-  "title": "디지털서비스(Auto Scale UpAuto Scale Out)",
-  "definition": "클라우드 환경에서 요청이 늘어나면 이를 수용하기 위해 추가 자원의 할당, 회수를 통해 자원을 효율적으로활용 하여 On-Demand 서비스를 지원 하는 기술",
+  "name": "오토스케일 업·아웃(Auto Scale-up/Scale-out)",
+  "title": "오토스케일 업·아웃(Auto Scale-up/Scale-out)",
+  "definition": "클라우드에서 부하나 일정에 따라 서버의 CPU·메모리 사양을 자동으로 키우거나(Scale-up) 인스턴스 수를 자동으로 늘리고(Scale-out) 부하가 줄면 회수해 온디맨드로 자원을 효율적으로 운용하는 기술",
   "keywords_must": [
-   "Scale Up",
-   "Scale Out",
-   "Scale In",
-   "Scale Down",
-   "On-Demand",
-   "Load Balancer",
-   "Scheduler",
-   "Sentiment"
+   "스케일 업·다운(Vertical Scaling)",
+   "스케일 아웃·인(Horizontal Scaling)",
+   "부하 기반 오토스케일(Dynamic Scaling)",
+   "스케줄 기반 오토스케일(Scheduled Scaling)",
+   "로드 밸런서(Load Balancer)",
+   "오토스케일링 그룹(ASG, 최소·최대·희망 용량)",
+   "쿨다운(Cooldown)",
+   "임계치·CloudWatch 경보",
+   "예측 스케일링(Predictive Scaling)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "쿠버네티스 HPA·VPA",
+   "무상태 설계(Stateless)",
+   "세션 외부화(Redis)",
+   "헬스 체크",
+   "스케일 아웃 한계(DB 병목)"
+  ],
   "keywords": [
-   "핵심: Scale Up · Scale Out · Scale In",
-   "기술: Scale Down · On-Demand · Load Balancer",
-   "운영: Scheduler · Sentiment"
+   "방향: 수직(업·다운) · 수평(아웃·인)",
+   "트리거: 부하 기반(CPU·요청 수) · 스케줄 기반 · 예측 기반",
+   "구성: 로드 밸런서 · 오토스케일링 그룹 · 모니터링 경보 · 쿨다운"
   ],
   "outline": [
-   "디지털서비스의 개요",
-   "- 디지털서비스의 정의",
-   "- 디지털서비스의 특징",
-   "디지털서비스의 구성과 기술",
-   "- 디지털서비스의 핵심 요소",
-   "디지털서비스의 적용",
-   "- 디지털서비스 요점"
+   "분류",
+   "- 수직 확장: 업·다운",
+   "- 수평 확장: 아웃·인",
+   "아키텍처 구성",
+   "- 구성: 로드 밸런서·ASG·경보",
+   "스케줄 기반과 부하 기반 비교",
+   "- 스케줄 기반: 예측 가능한 피크",
+   "- 부하 기반: 실시간 대응"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "분류",
     "subsections": [
      {
-      "title": null,
+      "title": "수직 확장: 업·다운",
       "items": [
-       "Scale Up: 디지털서비스에서 Scale Up를 다루는 핵심 암기 포인트",
-       "Scale Out: 디지털서비스에서 Scale Out를 다루는 핵심 암기 포인트",
-       "Scale In: 디지털서비스에서 Scale In를 다루는 핵심 암기 포인트",
-       "Scale Down: 디지털서비스에서 Scale Down를 다루는 핵심 암기 포인트"
+       "스케일 업·다운(Vertical Scaling): 인스턴스 유형을 상향·하향, 재기동 필요·단일 서버 한계 존재, DB 서버에 적합"
+      ]
+     },
+     {
+      "title": "수평 확장: 아웃·인",
+      "items": [
+       "스케일 아웃·인(Horizontal Scaling): 동일 인스턴스를 추가·제거하고 로드 밸런서로 분산, 무상태 웹·앱 서버에 적합"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "아키텍처 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "구성: 로드 밸런서·ASG·경보",
       "items": [
-       "On-Demand: On-Demand를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Load Balancer: 디지털서비스에서 Load Balancer를 다루는 핵심 암기 포인트",
-       "Scheduler: Pod를 조건에 맞는 Node에 배치하는 스케줄러",
-       "Sentiment: 텍스트의 긍정·부정 등 감성 극성을 분류"
+       "오토스케일링 그룹(ASG): 최소·최대·희망 용량과 시작 템플릿으로 인스턴스를 자동 관리, 헬스 체크 실패 시 교체",
+       "임계치·CloudWatch 경보: CPU 70% 초과 5분 지속 시 확장 같은 정책, 쿨다운(Cooldown)으로 반복 진동 방지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "스케줄 기반과 부하 기반 비교",
+    "subsections": [
+     {
+      "title": "스케줄 기반: 예측 가능한 피크",
+      "items": [
+       "스케줄 기반 오토스케일(Scheduled Scaling): 수강신청·월말 정산처럼 시간대가 정해진 부하에 미리 확장"
+      ]
+     },
+     {
+      "title": "부하 기반: 실시간 대응",
+      "items": [
+       "부하 기반 오토스케일(Dynamic Scaling): 실시간 지표로 확장·축소, 예측 스케일링은 과거 패턴을 학습해 선제 확장"
       ]
      }
     ]
@@ -6524,21 +6718,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Scale Up",
-   "Scale Out",
-   "Scale In",
-   "Scale Down",
-   "On-Demand",
-   "Load Balancer",
-   "Scheduler",
-   "Sentiment"
+   "스케일 업·다운(Vertical Scaling)",
+   "스케일 아웃·인(Horizontal Scaling)",
+   "부하 기반 오토스케일(Dynamic Scaling)",
+   "스케줄 기반 오토스케일(Scheduled Scaling)",
+   "로드 밸런서(Load Balancer)",
+   "오토스케일링 그룹(ASG, 최소·최대·희망 용량)",
+   "쿨다운(Cooldown)",
+   "임계치·CloudWatch 경보",
+   "예측 스케일링(Predictive Scaling)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_062",
@@ -6550,53 +6746,87 @@
    93
   ],
   "en": "Cloud Migration",
-  "dueum": "계클마확서안",
+  "dueum": null,
   "name": "클라우드 전환(Cloud Migration)",
   "title": "클라우드 전환(Cloud Migration)",
-  "definition": "비상시적중요도낮은시스템 -전환비용, 이행절차 업그레이드요구, 신규투자불가 -요구사항, 기존시스템이용방안",
+  "definition": "온프레미스 전산실 시스템을 선정기준과 평가항목으로 클라우드 적합성을 검증한 뒤 전환 대상을 분류하고 6R 전환 방식과 단계별 이행절차에 따라 클라우드 환경으로 이전하는 활동",
   "keywords_must": [
-   "클라우드 전환대상 분류",
-   "클라우드전환이행절차",
-   "클라우드 전환 아키텍처",
-   "클라우드 전환 표준",
-   "적합성(Adopting suitability)",
-   "IaaS"
+   "전환 선정기준(유지관리 부하·대용량·효율성·개발테스트·부정기 이벤트)",
+   "클라우드 적합성 평가",
+   "전환 대상 분류",
+   "6R(Rehost·Replatform·Refactor·Repurchase·Retire·Retain)",
+   "이행절차(계획→분석→전환→검증→운영)",
+   "마스터 플랜(Master Plan)",
+   "병행 운영·롤백",
+   "클라우드컴퓨팅법",
+   "클라우드 보안인증(CSAP)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "오토스케일 활용",
+   "데이터 이전(Data Migration) 도구",
+   "라이선스 이전성(BYOL)",
+   "AWS MAP·CAF",
+   "행정·공공기관 클라우드 전환 사업"
+  ],
   "keywords": [
-   "핵심: 클라우드 전환대상 분류 · 클라우드전환이행절차 · 클라우드 전환 아키텍처",
-   "기술: 클라우드 전환 표준 · 적합성(Adopting suitability) · IaaS"
+   "선정기준: 유지관리 부하 감소 · 대용량 처리 · 효율성 증대 · 개발·테스트 효율화 · 부정기 이벤트 대응",
+   "전환 방식: 6R",
+   "이행: 계획 → 분석·설계 → 전환 → 검증 → 운영·안정화"
   ],
   "outline": [
-   "클라우드 전환 시 선정기준 및 고려사항 , 평가항목",
-   "- 클라우드 전환 시 선정기준 및 고려사항",
-   "클라우드 전환대상 분류 및 이행절차",
-   "- 클라우드 전환대상 분류",
-   "- 클라우드전환이행절차"
+   "선정기준과 평가항목",
+   "- 선정기준: 적합 업무 유형",
+   "- 고려사항: 비용·성능·보안",
+   "전환대상 분류와 6R",
+   "- 분류: 시스템별 전환 방식 결정",
+   "이행절차와 고려사항",
+   "- 이행: 단계적 마스터 플랜",
+   "- 제도: 법·인증"
   ],
   "sections": [
    {
-    "title": "클라우드 전환 핵심",
+    "title": "선정기준과 평가항목",
     "subsections": [
      {
-      "title": null,
+      "title": "선정기준: 적합 업무 유형",
       "items": [
-       "클라우드 전환대상 분류: 클라우드 전환에서 클라우드 전환대상 분류를 다루는 핵심 암기 포인트",
-       "클라우드전환이행절차: 클라우드 전환를 단계적으로 수행·이행하는 절차",
-       "클라우드 전환 아키텍처: 클라우드 전환의 계층·모듈 배치와 상호작용 구조",
-       "클라우드 전환 표준: 클라우드 전환 상호운용·품질을 맞추는 규격·기준"
+       "전환 선정기준: 중요도 낮은 비상시 시스템, 신규 분석 등 대용량 처리, 재택·협력사 공유, 개발·테스트 환경, 월말·연말 피크 이벤트"
+      ]
+     },
+     {
+      "title": "고려사항: 비용·성능·보안",
+      "items": [
+       "전환비용·이행절차, 데이터 양과 이전 시간, 라이선스 호환성, 오토스케일 가능성과 보안 관리체계 검토"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 전환 구성·기술",
+    "title": "전환대상 분류와 6R",
     "subsections": [
      {
-      "title": null,
+      "title": "분류: 시스템별 전환 방식 결정",
       "items": [
-       "적합성(Adopting suitability): 워크로드가 클라우드에 적합한지 평가하는 기준",
-       "IaaS: 가상머신·스토리지·네트워크를 온디맨드로 제공하는 클라우드 모델 (클라우드 전환/2392)"
+       "6R(Rehost·Replatform·Refactor·Repurchase·Retire·Retain): 그대로 이전·부분 최적화·재설계·SaaS 교체·폐기·유지 중 선택",
+       "클라우드 적합성 평가: 업무 중요도·기술 의존성·규제 요건으로 전환 가능 여부 검증"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "이행절차와 고려사항",
+    "subsections": [
+     {
+      "title": "이행: 단계적 마스터 플랜",
+      "items": [
+       "이행절차(계획→분석→전환→검증→운영): 파일럿 후 단계적 이전, 성능·기능 검증 후 컷오버",
+       "병행 운영·롤백: 전환 초기 기존 시스템을 유지해 장애 시 복귀"
+      ]
+     },
+     {
+      "title": "제도: 법·인증",
+      "items": [
+       "클라우드컴퓨팅법과 공공 부문 클라우드 보안인증(CSAP) 요건, 데이터 국외 이전 제한 확인"
       ]
      }
     ]
@@ -6605,19 +6835,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "클라우드 전환대상 분류",
-   "클라우드전환이행절차",
-   "클라우드 전환 아키텍처",
-   "클라우드 전환 표준",
-   "적합성(Adopting suitability)",
-   "IaaS"
+   "전환 선정기준(유지관리 부하·대용량·효율성·개발테스트·부정기 이벤트)",
+   "클라우드 적합성 평가",
+   "전환 대상 분류",
+   "6R(Rehost·Replatform·Refactor·Repurchase·Retire·Retain)",
+   "이행절차(계획→분석→전환→검증→운영)",
+   "마스터 플랜(Master Plan)",
+   "병행 운영·롤백",
+   "클라우드컴퓨팅법",
+   "클라우드 보안인증(CSAP)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_063_00",
@@ -6630,57 +6864,85 @@
   ],
   "en": "Cloud Security Assurance Program",
   "dueum": null,
-  "name": "클라우드 보안인증제도(CSAP)",
-  "title": "클라우드 보안인증제도(CSAP)",
-  "definition": "'클라우드 컴퓨팅 발전 및 이용자 보호에 관한 법률'(2015.9.25 제정, 이하 클라우드컴퓨팅법) 제 23조 제2항에따라 정보보호 기준의 준수 여부 확인을 인증기관(한국인터넷진흥원(KISA))이 평가/인증하여 안심하고 클라우드서비스를 이용할 수 있도록 지원하는 제도",
+  "name": "클라우드 보안인증제도(CSAP, Cloud Security Assurance Program)",
+  "title": "클라우드 보안인증제도(CSAP, Cloud Security Assurance Program)",
+  "definition": "클라우드컴퓨팅법 제23조의2에 따라 한국인터넷진흥원(KISA)이 클라우드 서비스의 정보보호 기준 준수 여부를 평가·인증해 공공기관이 안전성이 검증된 민간 클라우드를 이용하도록 하는 제도 (2016년 시행)",
   "keywords_must": [
-   "KISA(한국인터넷진흥원)",
-   "추진근거",
-   "클라우드 보안 인증제도 평가/인증 종류",
-   "평가인증범위",
-   "AWS",
-   "국내에서 클라우드 보안인증 받은 회사"
+   "클라우드컴퓨팅법(클라우드컴퓨팅 발전 및 이용자 보호에 관한 법률)",
+   "한국인터넷진흥원(KISA)",
+   "과학기술정보통신부(정책기관)",
+   "국가보안기술연구소(기술자문)",
+   "IaaS·SaaS·DaaS 인증",
+   "최초·사후·갱신평가",
+   "유효기간 3년(사후평가 매년)",
+   "상·중·하 등급제(2023)",
+   "물리적 망분리(공공 전용 구역)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "SaaS 간편등급",
+   "인증위원회",
+   "공공기관 민간 클라우드 이용",
+   "ISMS-P 연계",
+   "국가정보원 보안성 검토"
+  ],
   "keywords": [
-   "핵심: KISA(한국인터넷진흥원) · 추진근거 · 클라우드 보안 인증제도 평가/인증 종류",
-   "기술: 평가인증범위 · AWS · 국내에서 클라우드 보안인증 받은 회사"
+   "체계: 정책기관(과기정통부) · 평가·인증기관(KISA) · 기술자문(국보연) · 인증위원회",
+   "평가 종류: 최초평가 · 사후평가(매년) · 갱신평가(3년)",
+   "대상·등급: IaaS · SaaS(표준·간편) · DaaS · 상·중·하 등급"
   ],
   "outline": [
-   "공공기관에 신뢰성이 검증된 클라우드 서비스를 제공토록 하기 위한 제도",
-   "- 클라우드 보안 인증 제도 (CSAP; Cloud Security As…",
-   "- 추진근거",
-   "클라우드 보안 인증 제도 평가 인증 체계 및 평가/인증 종류",
-   "- 클라우드 보안 인증 제도 평가 인증 체계",
-   "- 클라우드 보안 인증제도 평가/인증 종류",
-   "평가인증범위 기준 및 인증기준",
-   "- 평가인증범위",
-   "공공부문 추가 보안요구 사항 8 7",
-   "- 클라우드 보안인증제도 요점"
+   "도입 경과와 근거",
+   "- 근거: 클라우드컴퓨팅법",
+   "평가·인증 체계와 종류",
+   "- 체계: 역할별 기관",
+   "- 종류: 최초·사후·갱신",
+   "인증기준과 제도 개편",
+   "- 인증기준: 관리적·물리적·기술적 보호",
+   "- 개편: 등급제 도입"
   ],
   "sections": [
    {
-    "title": "클라우드 보안인증제도 핵심",
+    "title": "도입 경과와 근거",
     "subsections": [
      {
-      "title": null,
+      "title": "근거: 클라우드컴퓨팅법",
       "items": [
-       "KISA(한국인터넷진흥원): KISA를 클라우드 보안인증제도 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "추진근거: 클라우드 보안인증제도에서 추진근거를 다루는 핵심 암기 포인트",
-       "클라우드 보안 인증제도 평가/인증 종류: 클라우드 보안인증제도에서 클라우드 보안 인증제도 평가/인증 종류를 다루는 핵심 암기 포인트",
-       "평가인증범위: 클라우드 보안인증제도에서 평가인증범위를 다루는 핵심 암기 포인트"
+       "클라우드컴퓨팅법: 2015년 제정, 2016년 IaaS 인증 시작, 2018년 SaaS·2022년 DaaS로 확대"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 보안인증제도 구성·기술",
+    "title": "평가·인증 체계와 종류",
     "subsections": [
      {
-      "title": null,
+      "title": "체계: 역할별 기관",
       "items": [
-       "AWS: AWS를 클라우드 보안인증제도 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "국내에서 클라우드 보안인증 받은 회사: 클라우드 보안인증제도에서 국내에서 클라우드 보안인증 받은 회사를 다루는 핵심 암기 포인트"
+       "과학기술정보통신부(정책기관)·한국인터넷진흥원(KISA, 평가·인증)·국가보안기술연구소(기술자문)·인증위원회로 구성"
+      ]
+     },
+     {
+      "title": "종류: 최초·사후·갱신",
+      "items": [
+       "최초평가: 신규·중요 변경 시 실시, 인증 시 유효기간 3년",
+       "사후평가는 매년 1회 이상 기준 준수 확인, 갱신평가는 유효기간 만료 전 재인증"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "인증기준과 제도 개편",
+    "subsections": [
+     {
+      "title": "인증기준: 관리적·물리적·기술적 보호",
+      "items": [
+       "물리적 망분리(공공 전용 구역): 공공 이용 클라우드는 민간 고객 자원과 물리적으로 분리, 국내 데이터 저장"
+      ]
+     },
+     {
+      "title": "개편: 등급제 도입",
+      "items": [
+       "상·중·하 등급제(2023): 시스템 중요도에 따라 등급 차등, 하 등급은 논리적 분리 허용으로 해외 CSP 진입 가능"
       ]
      }
     ]
@@ -6689,19 +6951,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "KISA(한국인터넷진흥원)",
-   "추진근거",
-   "클라우드 보안 인증제도 평가/인증 종류",
-   "평가인증범위",
-   "AWS",
-   "국내에서 클라우드 보안인증 받은 회사"
+   "클라우드컴퓨팅법(클라우드컴퓨팅 발전 및 이용자 보호에 관한 법률)",
+   "한국인터넷진흥원(KISA)",
+   "과학기술정보통신부(정책기관)",
+   "국가보안기술연구소(기술자문)",
+   "IaaS·SaaS·DaaS 인증",
+   "최초·사후·갱신평가",
+   "유효기간 3년(사후평가 매년)",
+   "상·중·하 등급제(2023)",
+   "물리적 망분리(공공 전용 구역)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_063_01",
@@ -6712,77 +6978,94 @@
    94,
    95
   ],
-  "en": "CSPM Cloud Security Posture Management",
+  "en": "Cloud Security Posture Management",
   "dueum": null,
-  "name": "클라우드(CSPM(Cloud Security Posture Management))",
-  "title": "클라우드(CSPM(Cloud Security Posture Management))",
-  "definition": "컴플라이언스 또는 기업 보안 정책에 따라 클라우드 인프라의 위험 요소를 예방, 탐지, 대응 및 예측하여클라우드 위험을 지속적으로 관리하는 솔루션",
+  "name": "클라우드 보안 형상 관리(CSPM, Cloud Security Posture Management)",
+  "title": "클라우드 보안 형상 관리(CSPM, Cloud Security Posture Management)",
+  "definition": "퍼블릭·멀티 클라우드 계정의 설정 상태를 API로 지속 점검해 잘못된 구성(Misconfiguration)과 컴플라이언스 위반을 탐지하고 자동 교정하는 클라우드 보안 위험 관리 솔루션",
   "keywords_must": [
-   "Compliance",
-   "Risk",
-   "Threat Protection",
-   "CASB",
-   "CWPP",
-   "CSPM",
-   "CSPM의 핵심 기능",
-   "CSPM의 개념도",
-   "SMS"
+   "잘못된 구성 탐지(Misconfiguration Detection)",
+   "지속적 컴플라이언스 점검(CIS Benchmark·ISMS-P)",
+   "자산 가시성(Asset Visibility)",
+   "자동 교정(Auto-Remediation)",
+   "위험 평가(Risk Assessment)",
+   "멀티 클라우드 통합 대시보드",
+   "CWPP(Cloud Workload Protection Platform)",
+   "CASB(Cloud Access Security Broker)",
+   "CNAPP(Cloud-Native Application Protection Platform)"
   ],
   "keywords_ref": [
-   "APIM"
+   "책임 공유 모델",
+   "S3 버킷 공개 설정 사고",
+   "IaC 스캐닝",
+   "알림(SMS·메신저)",
+   "AWS Security Hub·Defender for Cloud"
   ],
   "keywords": [
-   "핵심: Compliance · Risk · Threat Protection",
-   "기술: CASB · CWPP · CSPM",
-   "운영: CSPM의 핵심 기능 · CSPM의 개념도 · SMS",
-   "참고: APIM"
+   "핵심 기능: 지속성 · 가시성 · 신속성(자동 대응)",
+   "구성: 대시보드 · 경보 · 컴플라이언스 평가 · 위험 평가 · 위협 대응",
+   "비교: CSPM(설정 점검) · CWPP(워크로드 보호) · CASB(SaaS 이용 통제) → CNAPP 통합"
   ],
   "outline": [
-   "클라우드 보안 위험 통합 관리",
-   "- CSPM(Cloud Security Posture Management…",
-   "- CSPM 의 핵심 기능",
-   "CSPM 의 개념도와 구성요소",
-   "- CSPM 의 개념도",
-   "- CSPM 의 구성요소",
-   "CSPM, CASB, CWPP 비교",
-   "- 클라우드 요점"
+   "필요성과 핵심 기능",
+   "- 필요성: 설정 오류가 사고의 주원인",
+   "- 기능: 지속성·가시성·신속성",
+   "대시보드와 분석 구성",
+   "- 사용자 영역: 대시보드·경보",
+   "- 분석 영역: 컴플라이언스·위험·위협",
+   "유사 솔루션 비교",
+   "- 비교: CWPP·CASB",
+   "- 통합: CNAPP"
   ],
   "sections": [
    {
-    "title": "클라우드 핵심",
+    "title": "필요성과 핵심 기능",
     "subsections": [
      {
-      "title": null,
+      "title": "필요성: 설정 오류가 사고의 주원인",
       "items": [
-       "Compliance: Compliance를 클라우드 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Risk: Risk를 클라우드 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Threat Protection: 클라우드에서 Threat Protection를 다루는 핵심 암기 포인트",
-       "CASB: CASB를 클라우드 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "잘못된 구성 탐지: 공개된 스토리지 버킷·과도한 IAM 권한·암호화 미적용 같은 고객 책임 영역 설정 오류 탐지"
+      ]
+     },
+     {
+      "title": "기능: 지속성·가시성·신속성",
+      "items": [
+       "지속적 컴플라이언스 점검: CIS Benchmark·ISMS-P 기준으로 변경될 때마다 자동 점검",
+       "자동 교정(Auto-Remediation): 위반 발생 시 설정 원복·차단 자동 실행"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 구성·기술",
+    "title": "대시보드와 분석 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "사용자 영역: 대시보드·경보",
       "items": [
-       "CWPP: CWPP를 클라우드 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CSPM: CSPM를 클라우드 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CSPM의 핵심 기능: 클라우드에서 CSPM의 핵심 기능을 다루는 핵심 암기 포인트",
-       "CSPM의 개념도: 클라우드의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램"
+       "멀티 클라우드 통합 대시보드: 여러 계정·CSP 자산과 위반 현황을 한 화면에 조회, 주요 이벤트는 SMS·메신저 경보"
+      ]
+     },
+     {
+      "title": "분석 영역: 컴플라이언스·위험·위협",
+      "items": [
+       "위험 평가(Risk Assessment): 자산 중요도와 노출도를 결합해 우선순위 산정, 위협 탐지는 이상 API 호출 분석"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 운영",
+    "title": "유사 솔루션 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "비교: CWPP·CASB",
       "items": [
-       "SMS: SMS를 클라우드 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "CWPP는 VM·컨테이너 워크로드 런타임 보호, CASB는 SaaS 이용 가시성·DLP 통제"
+      ]
+     },
+     {
+      "title": "통합: CNAPP",
+      "items": [
+       "CNAPP(Cloud-Native Application Protection Platform): CSPM·CWPP·IaC 스캐닝을 하나로 통합한 가트너 제시 플랫폼"
       ]
      }
     ]
@@ -6791,22 +7074,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Compliance",
-   "Risk",
-   "Threat Protection",
-   "CASB",
-   "CWPP",
-   "CSPM",
-   "CSPM의 핵심 기능",
-   "CSPM의 개념도",
-   "SMS"
+   "잘못된 구성 탐지(Misconfiguration Detection)",
+   "지속적 컴플라이언스 점검(CIS Benchmark·ISMS-P)",
+   "자산 가시성(Asset Visibility)",
+   "자동 교정(Auto-Remediation)",
+   "위험 평가(Risk Assessment)",
+   "멀티 클라우드 통합 대시보드",
+   "CWPP(Cloud Workload Protection Platform)",
+   "CASB(Cloud Access Security Broker)",
+   "CNAPP(Cloud-Native Application Protection Platform)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_063_02",
@@ -6821,76 +7105,83 @@
   "dueum": null,
   "name": "클라우드 보안기술 표준화(Cloud Security Standardization)",
   "title": "클라우드 보안기술 표준화(Cloud Security Standardization)",
-  "definition": "SECaaS(Security as a Service)모델과 더불어 글로벌 클라우드 보안 기술과 국제 표준을 통해 안전한 클라우드환경을 구현",
+  "definition": "클라우드 서비스의 보안 수준을 보장하기 위해 ISO/IEC 27001·27017·27018 등 국제 표준과 CSA 프레임워크를 기반으로 주요 CSP의 식별·탐지·대응 보안 서비스와 관리 체계를 정립하는 활동",
   "keywords_must": [
-   "SeCaaS",
-   "AWS",
-   "GCP",
-   "Azure",
-   "ISO 27001",
-   "ISO 27017:2015",
-   "ISO 27018:2019",
-   "아마존 AWS 클라우드 보안 기술",
-   "ISO/IEC 27000 계열 표준",
-   "ISO/IEC 27017"
+   "ISO/IEC 27001(ISMS)",
+   "ISO/IEC 27017(클라우드 보안 통제)",
+   "ISO/IEC 27018(클라우드 개인정보 보호)",
+   "CSA CCM(Cloud Controls Matrix)",
+   "SECaaS(Security as a Service)",
+   "AWS 보안 서비스(GuardDuty·Security Hub·CloudTrail)",
+   "Azure 보안(Defender for Cloud·Sentinel)",
+   "GCP 보안(Security Command Center)",
+   "식별·탐지·대응 단계"
   ],
   "keywords_ref": [
-   "EC2",
-   "ISO",
-   "IEC",
-   "ISO 27017",
-   "ISO 27018"
+   "CSA STAR 인증",
+   "ISO/IEC 27701",
+   "NIST SP 800-144·800-210",
+   "CSAP",
+   "AWS Config·Macie·Detective"
   ],
   "keywords": [
-   "핵심: SeCaaS · AWS · GCP",
-   "기술: Azure · ISO 27001 · ISO 27017:2015",
-   "운영: ISO 27018:2019 · 아마존 AWS 클라우드 보안 기술 · ISO/IEC 27000 계열 표준",
-   "참고: EC2 · ISO · IEC"
+   "국제 표준: ISO/IEC 27001 · 27017 · 27018 · CSA CCM·STAR",
+   "AWS: Config(식별) · GuardDuty·Inspector·Macie(탐지) · CloudWatch·Detective(대응)",
+   "Azure·GCP: Defender for Cloud · Sentinel · Security Command Center"
   ],
   "outline": [
-   "글로벌 클라우드 보안 기술 동향",
-   "- 아마존 AWS 클라우드 보안 기술",
-   "클라우드 보안 표준 동향",
-   "- ISO/IEC 27000 계열 표준",
-   "- ISO/IEC 27017:2015의 개요"
+   "표준화 필요성",
+   "- 배경: SECaaS·멀티 클라우드 확산",
+   "글로벌 CSP 보안 기술",
+   "- AWS: 식별→탐지→대응",
+   "- Azure·GCP: 통합 보안 센터",
+   "국제 표준 체계",
+   "- ISO/IEC 270xx: 관리·통제·개인정보",
+   "- CSA: CCM·STAR"
   ],
   "sections": [
    {
-    "title": "클라우드 보안기술 표준화 핵심",
+    "title": "표준화 필요성",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: SECaaS·멀티 클라우드 확산",
       "items": [
-       "SeCaaS: SeCaaS를 클라우드 보안기술 표준화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "AWS: AWS를 클라우드 보안기술 표준화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "GCP: GCP를 클라우드 보안기술 표준화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Azure: Azure를 클라우드 보안기술 표준화 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "SECaaS(Security as a Service): 보안 기능 서비스화와 함께 CSP별 상이한 통제를 국제 표준으로 정렬할 필요"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 보안기술 표준화 구성·기술",
+    "title": "글로벌 CSP 보안 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "AWS: 식별→탐지→대응",
       "items": [
-       "ISO 27001: 클라우드 보안기술 표준화에서 ISO 27001를 다루는 핵심 암기 포인트",
-       "ISO 27017:2015: 클라우드 보안기술 표준화에서 ISO 27017:2015를 다루는 핵심 암기 포인트",
-       "ISO 27018:2019: 클라우드 보안기술 표준화에서 ISO 27018:2019를 다루는 핵심 암기 포인트",
-       "아마존 AWS 클라우드 보안 기술: 클라우드 보안기술 표준화에서 아마존 AWS 클라우드 보안 기술을 다루는 핵심 암기 포인트"
+       "AWS Config는 리소스 변경을 규칙으로 식별, GuardDuty는 위협 탐지, Inspector는 EC2 취약점 점검, Macie는 ML로 민감정보 분류",
+       "CloudTrail은 API 호출 로깅, Detective는 사고 원인 분석, Security Hub는 규정 준수 현황 통합"
+      ]
+     },
+     {
+      "title": "Azure·GCP: 통합 보안 센터",
+      "items": [
+       "Azure 보안(Defender for Cloud·Sentinel): 보안 형상 관리와 클라우드 SIEM, GCP는 Security Command Center로 자산·위협 통합 관리"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 보안기술 표준화 운영",
+    "title": "국제 표준 체계",
     "subsections": [
      {
-      "title": null,
+      "title": "ISO/IEC 270xx: 관리·통제·개인정보",
       "items": [
-       "ISO/IEC 27000 계열 표준: 클라우드 보안기술 표준화 상호운용·품질을 맞추는 규격·기준",
-       "ISO/IEC 27017: 클라우드 보안기술 표준화에서 ISO/IEC 27017를 다루는 핵심 암기 포인트"
+       "ISO/IEC 27017:2015는 27002 기반 클라우드 통제, ISO/IEC 27018:2019는 퍼블릭 클라우드 PII 처리자 보호 지침"
+      ]
+     },
+     {
+      "title": "CSA: CCM·STAR",
+      "items": [
+       "CSA CCM(Cloud Controls Matrix): 17개 도메인 197개 통제(v4), STAR 인증으로 CSP 보안 수준 공개"
       ]
      }
     ]
@@ -6899,23 +7190,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "SeCaaS",
-   "AWS",
-   "GCP",
-   "Azure",
-   "ISO 27001",
-   "ISO 27017:2015",
-   "ISO 27018:2019",
-   "아마존 AWS 클라우드 보안 기술",
-   "ISO/IEC 27000 계열 표준",
-   "ISO/IEC 27017"
+   "ISO/IEC 27001(ISMS)",
+   "ISO/IEC 27017(클라우드 보안 통제)",
+   "ISO/IEC 27018(클라우드 개인정보 보호)",
+   "CSA CCM(Cloud Controls Matrix)",
+   "SECaaS(Security as a Service)",
+   "AWS 보안 서비스(GuardDuty·Security Hub·CloudTrail)",
+   "Azure 보안(Defender for Cloud·Sentinel)",
+   "GCP 보안(Security Command Center)",
+   "식별·탐지·대응 단계"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_064",
@@ -6926,58 +7217,89 @@
    99,
    101
   ],
-  "en": "Unix to Linux",
+  "en": "Unix to Linux Migration",
   "dueum": null,
-  "name": "U2L(Unix to Linux)",
-  "title": "U2L(Unix to Linux)",
-  "definition": "유닉스 기반 시스템을 리눅스로 이전하는 마이그레이션. 라이선스 비용 절감과 클라우드 친화 인프라 전환이 목적이다.",
+  "name": "유닉스 투 리눅스 전환(U2L, Unix to Linux)",
+  "title": "유닉스 투 리눅스 전환(U2L, Unix to Linux)",
+  "definition": "고가의 유닉스(RISC) 서버에서 운영하던 시스템을 x86 기반 리눅스 서버로 이전해 TCO를 절감하고 벤더 종속을 해소하며 클라우드 전환 기반을 마련하는 차세대 인프라 전환 활동",
   "keywords_must": [
-   "U2L의 핵심 요소",
-   "U2L의 구조",
-   "U2L의 적용",
-   "U2L의 과제",
-   "토픽이름(상)",
-   "Linux(U2L)"
+   "x86 서버",
+   "RISC 유닉스(AIX·HP-UX·Solaris)",
+   "RHEL·SUSE·Rocky Linux",
+   "리호스팅·리플랫폼(Rehosting·Replatform)",
+   "호환성 검증(컴파일러·라이브러리·엔디언)",
+   "전환 절차(현황 분석→PoC→전환→병행 운영→안정화)",
+   "TCO 절감",
+   "벤더 종속 해소",
+   "HA 클러스터(Pacemaker)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "빅 엔디언→리틀 엔디언 데이터 변환",
+   "쉘 스크립트·배치 이행",
+   "DB 이관(Oracle·Tibero)",
+   "성능 테스트",
+   "클라우드 전환 사전 단계"
+  ],
   "keywords": [
-   "핵심: U2L의 핵심 요소 · U2L의 구조 · U2L의 적용",
-   "기술: U2L의 과제 · 토픽이름(상) · Linux(U2L)"
+   "동인: TCO 절감 · 벤더 종속 해소 · x86 성능 향상 · 클라우드 전환 기반",
+   "절차: 현황 분석 → PoC → 전환 설계 → 이관 → 병행 운영 → 안정화",
+   "이슈: 엔디언·컴파일러 호환 · 고가용성 재구성 · 성능 검증 · 운영 인력 역량"
   ],
   "outline": [
-   "U2L 의 개요",
-   "- U2L 의 정의",
-   "- U2L 의 등장 배경",
-   "U2L 의 구성과 핵심 요소",
-   "- U2L 의 핵심 요소",
-   "- U2L 의 구조",
-   "U2L 의 적용과 사례",
-   "- U2L 의 적용",
-   "- U2L 의 과제"
+   "추진 배경",
+   "- 동인: 비용·종속·성능",
+   "전환 절차",
+   "- 준비: 현황 분석·PoC",
+   "- 이관: 리호스팅·리플랫폼",
+   "이슈와 대응",
+   "- 기술 이슈: 호환성·고가용성",
+   "- 관리 이슈: 인력·성능"
   ],
   "sections": [
    {
-    "title": "U2L 핵심",
+    "title": "추진 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "동인: 비용·종속·성능",
       "items": [
-       "U2L의 핵심 요소: U2L에서 U2L의 핵심 요소를 다루는 핵심 암기 포인트",
-       "U2L의 구조: U2L에서 U2L의 구조를 다루는 핵심 암기 포인트",
-       "U2L의 적용: U2L에서 U2L의 적용을 다루는 핵심 암기 포인트",
-       "U2L의 과제: U2L에서 U2L의 과제를 다루는 핵심 암기 포인트"
+       "TCO 절감: 고가 RISC 장비·유지보수 비용 대비 x86 서버 도입·운영비가 낮음",
+       "벤더 종속 해소: AIX·HP-UX·Solaris 장비 단종과 독점 유지보수에서 탈피, 오픈소스 생태계 활용"
       ]
      }
     ]
    },
    {
-    "title": "U2L 구성·기술",
+    "title": "전환 절차",
     "subsections": [
      {
-      "title": null,
+      "title": "준비: 현황 분석·PoC",
       "items": [
-       "토픽이름(상): U2L에서 토픽이름(상)을 다루는 핵심 암기 포인트",
-       "Linux(U2L): Linux를 U2L 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "현황 분석: 애플리케이션·미들웨어·DB 의존성 목록화, PoC로 핵심 업무 성능·호환성 사전 검증"
+      ]
+     },
+     {
+      "title": "이관: 리호스팅·리플랫폼",
+      "items": [
+       "리호스팅·리플랫폼(Rehosting·Replatform): 소스 재컴파일·라이브러리 교체로 이전, 필요 시 미들웨어를 오픈소스로 대체",
+       "병행 운영 후 컷오버, 안정화 기간 모니터링으로 장애 대응"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "이슈와 대응",
+    "subsections": [
+     {
+      "title": "기술 이슈: 호환성·고가용성",
+      "items": [
+       "호환성 검증(컴파일러·라이브러리·엔디언): 빅 엔디언 유닉스와 리틀 엔디언 x86 간 바이너리 데이터 변환 필요",
+       "HA 클러스터(Pacemaker): 유닉스 클러스터(HACMP 등)를 리눅스 HA로 재구성"
+      ]
+     },
+     {
+      "title": "관리 이슈: 인력·성능",
+      "items": [
+       "리눅스 운영 역량 교육, 성능 테스트로 처리량·응답시간이 기존 이상인지 확인"
       ]
      }
     ]
@@ -6986,19 +7308,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "U2L의 핵심 요소",
-   "U2L의 구조",
-   "U2L의 적용",
-   "U2L의 과제",
-   "토픽이름(상)",
-   "Linux(U2L)"
+   "x86 서버",
+   "RISC 유닉스(AIX·HP-UX·Solaris)",
+   "RHEL·SUSE·Rocky Linux",
+   "리호스팅·리플랫폼(Rehosting·Replatform)",
+   "호환성 검증(컴파일러·라이브러리·엔디언)",
+   "전환 절차(현황 분석→PoC→전환→병행 운영→안정화)",
+   "TCO 절감",
+   "벤더 종속 해소",
+   "HA 클러스터(Pacemaker)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_065",
@@ -7011,57 +7337,94 @@
   ],
   "en": "Infrastructure as Code",
   "dueum": null,
-  "name": "코드형 인프라(IaC)",
-  "title": "코드형 인프라(IaC)",
-  "definition": "유연성이 떨어지는 스크립팅이나 수동 프로세스 대신 코드를 이용해 시스템을 자동으로 구축, 관리, 프로비저닝 하는 IT 인프라 프로비저닝 프로세스의 일종 또는 방법론.",
+  "name": "코드형 인프라(IaC, Infrastructure as Code)",
+  "title": "코드형 인프라(IaC, Infrastructure as Code)",
+  "definition": "서버·네트워크·스토리지 등 인프라 구성을 수동 작업 대신 기계가 읽을 수 있는 코드로 정의하고 버전 관리·자동 실행해 반복 가능하고 일관된 프로비저닝을 구현하는 데브옵스 핵심 방법론",
   "keywords_must": [
-   "선언전",
-   "명령적",
-   "지능적",
-   "push",
-   "pull",
-   "DevOps",
-   "Agile",
-   "CTO"
+   "선언적 방식(Declarative)",
+   "명령적 방식(Imperative)",
+   "푸시·풀 방식(Push·Pull)",
+   "멱등성(Idempotency)",
+   "테라폼(Terraform)",
+   "앤서블(Ansible)",
+   "퍼핏·셰프(Puppet·Chef)",
+   "형상 관리·버전 관리(Git)",
+   "구성 드리프트(Configuration Drift) 방지"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "AWS CloudFormation",
+   "GitOps",
+   "불변 인프라(Immutable Infrastructure)",
+   "Policy as Code(OPA)",
+   "상태 파일(State)"
+  ],
   "keywords": [
-   "핵심: 선언전 · 명령적 · 지능적",
-   "기술: push · pull · DevOps",
-   "운영: Agile · CTO"
+   "방식: 선언적(원하는 상태) · 명령적(실행 절차) · 푸시 · 풀",
+   "도구: Terraform · CloudFormation · Ansible · Puppet · Chef",
+   "원칙: 멱등성 · 버전 관리 · 드리프트 방지 · CI/CD 연계"
   ],
   "outline": [
-   "프로그래밍이 가능한 인프라",
-   "- IaC 의 정의",
-   "- IaC 의 특징",
-   "IaC 접근 유형, 방식, 구성요소",
-   "- 코드형 인프라 요점"
+   "등장과 장점",
+   "- 기원: 2008년 형상관리 도구",
+   "- 장점: 신속성·일관성·확장성",
+   "방식 분류",
+   "- 정의 방식: 선언적·명령적",
+   "- 배포 방식: 푸시·풀",
+   "도구와 고려사항",
+   "- 도구: Terraform·Ansible",
+   "- 고려사항: 드리프트·비밀 관리"
   ],
   "sections": [
    {
-    "title": "코드형 인프라 핵심",
+    "title": "등장과 장점",
     "subsections": [
      {
-      "title": null,
+      "title": "기원: 2008년 형상관리 도구",
       "items": [
-       "선언전: 코드형 인프라에서 선언전을 다루는 핵심 암기 포인트",
-       "명령적: 코드형 인프라에서 명령적을 다루는 핵심 암기 포인트",
-       "지능적: 코드형 인프라에서 지능적을 다루는 핵심 암기 포인트",
-       "push: push를 코드형 인프라 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "퍼핏·셰프(Puppet·Chef): 2005년 전후 형상관리 도구에서 출발, Chef CTO 애덤 제이콥이 2008년 개념 확산"
+      ]
+     },
+     {
+      "title": "장점: 신속성·일관성·확장성",
+      "items": [
+       "멱등성(Idempotency): 여러 번 실행해도 같은 결과, 수작업 오류 제거와 환경 간 일관성 확보",
+       "형상 관리·버전 관리(Git): 인프라 변경 이력 추적·코드 리뷰·롤백"
       ]
      }
     ]
    },
    {
-    "title": "코드형 인프라 구성·기술",
+    "title": "방식 분류",
     "subsections": [
      {
-      "title": null,
+      "title": "정의 방식: 선언적·명령적",
       "items": [
-       "pull: pull를 코드형 인프라 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "DevOps: 개발·운영을 통합해 전달 속도를 높이는 문화·실천 (코드형 인프라/dde7)",
-       "Agile: Agile를 코드형 인프라 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CTO: CTO를 코드형 인프라 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "선언적 방식(Declarative): 최종 상태를 기술하면 도구가 차이를 계산(Terraform·CloudFormation)",
+       "명령적 방식(Imperative): 실행 명령 순서를 기술(스크립트·Ansible 플레이북 일부)"
+      ]
+     },
+     {
+      "title": "배포 방식: 푸시·풀",
+      "items": [
+       "푸시·풀 방식(Push·Pull): 서버에서 대상 노드로 설정을 밀어넣기(Ansible) vs 에이전트가 주기적으로 당겨오기(Puppet·Chef)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "도구와 고려사항",
+    "subsections": [
+     {
+      "title": "도구: Terraform·Ansible",
+      "items": [
+       "테라폼(Terraform): HCL로 멀티 클라우드 프로비저닝, 상태 파일로 실제 자원과 비교",
+       "앤서블(Ansible): 에이전트 없는 SSH 기반 구성 관리, YAML 플레이북"
+      ]
+     },
+     {
+      "title": "고려사항: 드리프트·비밀 관리",
+      "items": [
+       "구성 드리프트(Configuration Drift) 방지: 콘솔 수동 변경 금지, 비밀정보는 Vault로 분리, Policy as Code로 규정 검사"
       ]
      }
     ]
@@ -7070,21 +7433,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "선언전",
-   "명령적",
-   "지능적",
-   "push",
-   "pull",
-   "DevOps",
-   "Agile",
-   "CTO"
+   "선언적 방식(Declarative)",
+   "명령적 방식(Imperative)",
+   "푸시·풀 방식(Push·Pull)",
+   "멱등성(Idempotency)",
+   "테라폼(Terraform)",
+   "앤서블(Ansible)",
+   "퍼핏·셰프(Puppet·Chef)",
+   "형상 관리·버전 관리(Git)",
+   "구성 드리프트(Configuration Drift) 방지"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_066",
@@ -7095,78 +7460,95 @@
    105,
    108
   ],
-  "en": "Hyper Converged Infrastructure",
+  "en": "Hyper-Converged Infrastructure",
   "dueum": null,
-  "name": "하이퍼컨버지드 인프라(HCI)",
-  "title": "하이퍼컨버지드 인프라(HCI)",
-  "definition": "HCI 구성요소는 컴퓨팅 자원(CPU, MEM, Hypervisor), SDS(Software Defined Storage), x86 서버로 통합 구성됨",
+  "name": "하이퍼컨버지드 인프라(HCI, Hyper-Converged Infrastructure)",
+  "title": "하이퍼컨버지드 인프라(HCI, Hyper-Converged Infrastructure)",
+  "definition": "x86 서버 노드에 컴퓨팅·스토리지·네트워크를 하이퍼바이저와 소프트웨어 정의 기술로 통합해 노드 추가만으로 확장(Scale-out)하고 단일 콘솔로 관리하는 소프트웨어 정의 인프라",
   "keywords_must": [
-   "하이퍼바이저",
-   "가상화",
-   "X86",
-   "SDDC",
-   "SDC",
-   "SDSa",
-   "SDN",
-   "HCI 개념",
-   "HCI 특징 및 설명"
+   "x86 노드 기반",
+   "하이퍼바이저(Hypervisor)",
+   "SDS(Software-Defined Storage, 분산 스토리지)",
+   "SDN(Software-Defined Networking)",
+   "SDDC·SDI(Software-Defined Data Center·Infrastructure)",
+   "노드 단위 스케일 아웃(Scale-out)",
+   "단일 관리 콘솔",
+   "벤더 종속 탈피",
+   "CI(Converged Infrastructure) 비교"
   ],
   "keywords_ref": [
-   "CPU",
-   "MEM",
-   "SDS(Software Defined Storage)",
-   "SDS"
+   "Nutanix·VMware vSAN",
+   "데이터 지역성(Data Locality)",
+   "복제 계수(RF2·RF3)",
+   "VDI·엣지 활용",
+   "dHCI(분리형 HCI)"
   ],
   "keywords": [
-   "핵심: 하이퍼바이저 · 가상화 · X86",
-   "기술: SDDC · SDC · SDSa",
-   "운영: SDN · HCI 개념 · HCI 특징 및 설명",
-   "참고: CPU · MEM · SDS(Software Defined Storage)"
+   "구성: x86 노드 · 하이퍼바이저 · SDS · SDN · 관리 소프트웨어",
+   "장점: 스케일 아웃 · 단순 관리 · 빠른 배포 · 비용 절감",
+   "비교: 레거시 3계층(서버·SAN·스위치) → CI(사전 통합 HW) → HCI(SW 정의 통합)"
   ],
   "outline": [
-   "하이퍼컨버지드 인프라의 개념",
-   "- 하이퍼컨버지드 인프라 핵심 키워드",
-   "하이퍼컨버지드 인프라의 구성·기술",
-   "- 구성요소·표준",
-   "하이퍼컨버지드 인프라의 운영 가치·시사점",
-   "- 하이퍼컨버지드 인프라 요점"
+   "개념과 장점",
+   "- 구성 측면: 서버·스토리지 가상화",
+   "- 기능 측면: 빠른 배포·확장성",
+   "아키텍처와 기술요소",
+   "- 계층: 하이퍼바이저·SDS·SDN",
+   "- 목표: SDDC·SDI",
+   "CI 비교와 활용",
+   "- 비교: 하드웨어 통합 vs 소프트웨어 통합",
+   "- 활용: VDI·엣지·프라이빗 클라우드"
   ],
   "sections": [
    {
-    "title": "하이퍼컨버지드 인프라 핵심",
+    "title": "개념과 장점",
     "subsections": [
      {
-      "title": null,
+      "title": "구성 측면: 서버·스토리지 가상화",
       "items": [
-       "하이퍼바이저: 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층",
-       "가상화: 하이퍼컨버지드 인프라에서 가상화를 다루는 핵심 암기 포인트",
-       "X86: X86를 하이퍼컨버지드 인프라 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "SDDC: SDDC를 하이퍼컨버지드 인프라 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "SDS(Software-Defined Storage, 분산 스토리지): 별도 SAN 없이 노드 로컬 디스크를 묶어 공유 스토리지 구현"
+      ]
+     },
+     {
+      "title": "기능 측면: 빠른 배포·확장성",
+      "items": [
+       "노드 단위 스케일 아웃(Scale-out): 노드를 추가하면 컴퓨팅·용량이 함께 증가, 클러스터 전체 부하 분산",
+       "단일 관리 콘솔: VM·스토리지·네트워크를 하나의 화면에서 관리해 레거시 인프라 단순화"
       ]
      }
     ]
    },
    {
-    "title": "하이퍼컨버지드 인프라 구성·기술",
+    "title": "아키텍처와 기술요소",
     "subsections": [
      {
-      "title": null,
+      "title": "계층: 하이퍼바이저·SDS·SDN",
       "items": [
-       "SDC: SDC를 하이퍼컨버지드 인프라 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "SDSa: SDSa를 하이퍼컨버지드 인프라 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "SDN: SDN를 하이퍼컨버지드 인프라 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HCI 개념: 하이퍼컨버지드 인프라에서 HCI 개념을 다루는 핵심 암기 포인트"
+       "하이퍼바이저(Hypervisor): ESXi·AHV·KVM 위에 VM 실행, 컨트롤러 VM이 스토리지 I/O 처리",
+       "데이터 지역성(Data Locality): VM 데이터를 실행 노드에 우선 저장해 지연 감소, 복제 계수로 노드 장애 대비"
+      ]
+     },
+     {
+      "title": "목표: SDDC·SDI",
+      "items": [
+       "SDDC·SDI: 데이터센터 전 요소를 소프트웨어로 정의·자동화하는 차세대 데이터센터의 기반"
       ]
      }
     ]
    },
    {
-    "title": "하이퍼컨버지드 인프라 운영",
+    "title": "CI 비교와 활용",
     "subsections": [
      {
-      "title": null,
+      "title": "비교: 하드웨어 통합 vs 소프트웨어 통합",
       "items": [
-       "HCI 특징 및 설명: 하이퍼컨버지드 인프라에서 HCI 특징 및 설명을 다루는 핵심 암기 포인트"
+       "CI(Converged Infrastructure): 서버·스토리지·네트워크 장비를 사전 검증 랙으로 묶음, HCI는 소프트웨어로 단일 노드에 통합"
+      ]
+     },
+     {
+      "title": "활용: VDI·엣지·프라이빗 클라우드",
+      "items": [
+       "VDI·지점 엣지·프라이빗 클라우드에 적합, 컴퓨팅과 스토리지를 따로 늘리기 어려운 점은 dHCI로 보완"
       ]
      }
     ]
@@ -7175,15 +7557,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "하이퍼바이저",
-   "가상화",
-   "X86",
-   "SDDC",
-   "SDC",
-   "SDSa",
-   "SDN",
-   "HCI 개념",
-   "HCI 특징 및 설명"
+   "x86 노드 기반",
+   "하이퍼바이저(Hypervisor)",
+   "SDS(Software-Defined Storage, 분산 스토리지)",
+   "SDN(Software-Defined Networking)",
+   "SDDC·SDI(Software-Defined Data Center·Infrastructure)",
+   "노드 단위 스케일 아웃(Scale-out)",
+   "단일 관리 콘솔",
+   "벤더 종속 탈피",
+   "CI(Converged Infrastructure) 비교"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -7193,7 +7575,8 @@
   "warnings": [],
   "gloss": {
    "HCI": "Hyper-Converged Infrastructure"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_067",
@@ -7206,53 +7589,85 @@
   ],
   "en": "Managed Service Provider",
   "dueum": null,
-  "name": "매니지드 서비스 제공자(MSP)",
-  "title": "매니지드 서비스 제공자(MSP)",
-  "definition": "클라우드 사업자의 제품 컨설팅과 운영 및 관리 서비스를 제공하는 기업 기존에 기업에서 구축하고 있는 IT인프라와 클라우드 환경은 구조와 운영 방법이다르고 기업 내부에 이를 해결할 수 있는 전문가가 거의 없음",
+  "name": "매니지드 서비스 제공자(MSP, Managed Service Provider)",
+  "title": "매니지드 서비스 제공자(MSP, Managed Service Provider)",
+  "definition": "기업의 클라우드 도입을 위해 컨설팅·설계·마이그레이션부터 운영·모니터링·보안·비용 최적화까지 대행하는 클라우드 관리 전문 사업자로, AWS·Azure·GCP 등 하이퍼스케일러와 고객 사이에서 운영 역량을 제공함",
   "keywords_must": [
-   "클라우드 매니지먼트 플랫폼 보유 여부",
-   "자동화된 운영 능력",
-   "애플리케이션의 클라우드 최적화 역량",
-   "MSP(Managed Service Provider)의 개념도",
-   "MSP(Managed Service Provider)의 서비스 영역",
-   "AWS"
+   "클라우드 컨설팅·설계",
+   "클라우드 마이그레이션(Migration)",
+   "운영·모니터링(24×7)",
+   "CMP(Cloud Management Platform) 보유",
+   "자동화된 운영(Automation)",
+   "애플리케이션 클라우드 최적화",
+   "멀티·하이브리드 클라우드 역량",
+   "비용 최적화(FinOps)",
+   "보안 관제·컴플라이언스"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "AWS MSP 파트너 프로그램",
+   "하이퍼스케일러",
+   "리셀링·통합 빌링",
+   "차세대 MSP(Next-Gen MSP)",
+   "국내 메가존·베스핀글로벌"
+  ],
   "keywords": [
-   "핵심: 클라우드 매니지먼트 플랫폼 보유 여부 · 자동화된 운영 능력 · 애플리케이션의 클라우드 최적화 역량",
-   "기술: MSP(Managed Service Provider)의 개념도 · MSP(Managed Service Provider)의 서비스 영역 · AWS"
+   "서비스: 컨설팅 → 마이그레이션 → 운영 → 최적화",
+   "평가 역량: 하이퍼스케일러 전문성 · CMP 보유 · 자동화 운영 · 앱 최적화 · 마이그레이션 경험",
+   "확장: 멀티·하이브리드 · 빅데이터·AI · 보안 관제 · FinOps"
   ],
   "outline": [
-   "클라우드 시대, 떠오르는 MSP(Managed Service Provider)의",
-   "- MSP(Managed Service Provider)의 정의",
-   "- MSP(Managed Service Provider)의 등장 배경",
-   "MSP(Managed Service Provider) 개념도와 서비스 영역",
-   "- MSP(Managed Service Provider)의 개념도",
-   "- MSP(Managed Service Provider)의 서비스 영역"
+   "등장 배경",
+   "- 배경: 내부 전문가 부족",
+   "서비스 영역",
+   "- 전환: 컨설팅·마이그레이션",
+   "- 운영: 모니터링·자동화·최적화",
+   "역량 평가와 진화",
+   "- 평가: CMP·자동화·경험",
+   "- 진화: 데이터·AI·보안 서비스 확장"
   ],
   "sections": [
    {
-    "title": "매니지드 서비스 제공자 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 내부 전문가 부족",
       "items": [
-       "클라우드 매니지먼트 플랫폼 보유 여부: 매니지드 서비스 제공자에서 클라우드 매니지먼트 플랫폼 보유 여부를 다루는 핵심 암기 포인트",
-       "자동화된 운영 능력: 매니지드 서비스 제공자에서 자동화된 운영 능력을 다루는 핵심 암기 포인트",
-       "애플리케이션의 클라우드 최적화 역량: 매니지드 서비스 제공자에서 애플리케이션의 클라우드 최적화 역량을 다루는 핵심 암기 포인트",
-       "MSP(Managed Service Provider)의 개념도: 매니지드 서비스 제공자의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램"
+       "기존 IT와 클라우드는 구조·운영 방식이 달라 내부 인력만으로 구축·운영이 어려워 전문 파트너 수요 증가"
       ]
      }
     ]
    },
    {
-    "title": "매니지드 서비스 제공자 구성·기술",
+    "title": "서비스 영역",
     "subsections": [
      {
-      "title": null,
+      "title": "전환: 컨설팅·마이그레이션",
       "items": [
-       "MSP(Managed Service Provider)의 서비스 영역: 매니지드 서비스 제공자에서 MSP(Managed Service Provider)의 서비스 영역을 다루는 핵심 암기 포인트",
-       "AWS: AWS를 매니지드 서비스 제공자 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "클라우드 컨설팅·설계: 아키텍처·전환 전략 수립, 클라우드 마이그레이션은 무중단 이전과 검증 수행"
+      ]
+     },
+     {
+      "title": "운영: 모니터링·자동화·최적화",
+      "items": [
+       "운영·모니터링(24×7): 장애 대응·백업·패치, 자동화된 운영으로 반복 작업 코드화",
+       "비용 최적화(FinOps): 통합 빌링과 예약 인스턴스·유휴 자원 정리로 비용 절감"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "역량 평가와 진화",
+    "subsections": [
+     {
+      "title": "평가: CMP·자동화·경험",
+      "items": [
+       "CMP(Cloud Management Platform) 보유 여부, 자동화 운영 능력, 앱 최적화 역량, 마이그레이션 레퍼런스로 평가(AWS MSP 파트너 감사)"
+      ]
+     },
+     {
+      "title": "진화: 데이터·AI·보안 서비스 확장",
+      "items": [
+       "차세대 MSP(Next-Gen MSP): 인프라 관리 대행을 넘어 데이터·AI·보안·DevOps 서비스까지 제공"
       ]
      }
     ]
@@ -7261,19 +7676,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "클라우드 매니지먼트 플랫폼 보유 여부",
-   "자동화된 운영 능력",
-   "애플리케이션의 클라우드 최적화 역량",
-   "MSP(Managed Service Provider)의 개념도",
-   "MSP(Managed Service Provider)의 서비스 영역",
-   "AWS"
+   "클라우드 컨설팅·설계",
+   "클라우드 마이그레이션(Migration)",
+   "운영·모니터링(24×7)",
+   "CMP(Cloud Management Platform) 보유",
+   "자동화된 운영(Automation)",
+   "애플리케이션 클라우드 최적화",
+   "멀티·하이브리드 클라우드 역량",
+   "비용 최적화(FinOps)",
+   "보안 관제·컴플라이언스"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_068_00",
@@ -7284,79 +7703,95 @@
    111,
    119
   ],
-  "en": "Cloud Interoperability",
+  "en": "Cloud Interoperability and Portability",
   "dueum": null,
   "name": "클라우드 상호운용성(Cloud Interoperability)",
   "title": "클라우드 상호운용성(Cloud Interoperability)",
-  "definition": "클라우드 환경에서의 애플리케이션 간 또는 클라우드 환경의 애플리케이션과 사용자 애플리케이션 간에 상호작용하는 능력",
+  "definition": "서로 다른 클라우드 서비스·이용자 시스템 간에 애플리케이션·관리 기능이 상호작용하고(상호운용성) 데이터·VM 이미지·애플리케이션을 재작성 없이 이관할 수 있도록(이식성) 보장하는 능력으로, 클라우드 네이티브 성숙도 모델(CNMM)과 CNCF 참조 아키텍처로 구현 수준을 단계화함",
   "keywords_must": [
-   "성숙도 모델 : CNMM 0(On-Premise)",
-   "CNMM 1(Cloud-Enabled)",
-   "CNMM 2(Cloud- Optimized)",
-   "CNMM 3(Cloud-Native) 기술 : DevOps",
-   "MSA",
-   "컨테이너",
-   "CD 아키텍처 : Application Definition",
-   "Development",
-   "Orchestration & Management"
+   "애플리케이션 상호운용성",
+   "공통관리기능 상호운용성(Management Interoperability)",
+   "데이터 이식성(Data Portability)",
+   "가상 어플라이언스 이식성(VM·컨테이너 이미지)",
+   "애플리케이션 이식성",
+   "성숙도 모델(CNMM 0~3)",
+   "CNCF 참조 아키텍처",
+   "12-Factor App",
+   "컨테이너·쿠버네티스(Kubernetes)"
   ],
   "keywords_ref": [
-   "REST",
-   "성숙도 모델",
-   "CNMM",
-   "CNMM 3(Cloud-Native) 기술",
-   "CD 아키텍처"
+   "15-Factor(API First·Telemetry·인증권한)",
+   "OCI 표준",
+   "Cloud Native Landscape·TrailMap",
+   "벤더 종속(Lock-in)",
+   "ISO/IEC 19941"
   ],
   "keywords": [
-   "핵심: 성숙도 모델 : CNMM 0(On-Premise) · CNMM 1(Cloud-Enabled) · CNMM 2(Cloud- Optimized)",
-   "기술: CNMM 3(Cloud-Native) 기술 : DevOps · MSA · 컨테이너",
-   "운영: CD 아키텍처 : Application Definition · Development · Orchestration & Management",
-   "참고: REST · 성숙도 모델 · CNMM"
+   "대상: 애플리케이션·관리 상호운용성 · 데이터·이미지·애플리케이션 이식성",
+   "성숙도: CNMM 0 On-Premise → 1 Cloud-Enabled → 2 Cloud-Optimized → 3 Cloud-Native",
+   "CNCF 계층: 정의·개발 · 오케스트레이션·관리 · 런타임 · 프로비저닝 · 인프라"
   ],
   "outline": [
-   "클라우드 상호운용성 및 이식성의 개념, 대상 범위",
-   "- 클라우드 상호운용성 및 이식성의 개념",
-   "클라우드 네이티브 성숙도 모델(Cloud Native Maturity Model",
-   "- 클라우드 네이티브 성숙도 모델(Cloud Native Maturity…",
-   "클라우드 네이티브 애플리케이션 주요 기술 및 참조 아키텍처",
-   "- 클라우드 네이티브 애플리케이션 주요 기술"
+   "개념과 대상범위",
+   "- 상호운용성: 애플리케이션·관리 기능",
+   "- 이식성: 데이터·이미지·애플리케이션",
+   "성숙도 모델(CNMM)",
+   "- 단계: 0~3",
+   "- 체크리스트: 단계 이동 조건",
+   "구현 기술과 참조 아키텍처",
+   "- 기술: MSA·컨테이너·12-Factor",
+   "- 아키텍처: CNCF 5계층"
   ],
   "sections": [
    {
-    "title": "클라우드 상호운용성 핵심",
+    "title": "개념과 대상범위",
     "subsections": [
      {
-      "title": null,
+      "title": "상호운용성: 애플리케이션·관리 기능",
       "items": [
-       "성숙도 모델 : CNMM 0(On-Premise): 클라우드 상호운용성에서 성숙도 모델 : CNMM 0(On-Premise)를 다루는 핵심 암기 포인트",
-       "CNMM 1(Cloud-Enabled): 클라우드 상호운용성에서 CNMM 1(Cloud-Enabled)를 다루는 핵심 암기 포인트",
-       "CNMM 2(Cloud- Optimized): 클라우드 상호운용성에서 CNMM 2(Cloud- Optimized)를 다루는 핵심 암기 포인트",
-       "CNMM 3(Cloud-Native) 기술 : DevOps: 하이퍼바이저가 하드웨어 위에서 직접 동작하는 유형 (클라우드 상호운용성/ebe5)"
+       "공통관리기능 상호운용성(Management Interoperability): 배포·설정·프로비저닝·모니터링 관리 시스템 간 상호작용"
+      ]
+     },
+     {
+      "title": "이식성: 데이터·이미지·애플리케이션",
+      "items": [
+       "데이터 이식성(Data Portability): 재입력 없이 다른 애플리케이션에서 데이터 재사용",
+       "가상 어플라이언스 이식성(VM·컨테이너 이미지): OS·앱 번들 이미지를 다른 인프라에서 재사용"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 상호운용성 구성·기술",
+    "title": "성숙도 모델(CNMM)",
     "subsections": [
      {
-      "title": null,
+      "title": "단계: 0~3",
       "items": [
-       "MSA: 서비스를 독립 배포 단위로 쪼개는 아키텍처",
-       "컨테이너: OS 커널을 공유하며 앱과 의존성을 격리 실행하는 단위 (클라우드 상호운용성/530c)",
-       "CD 아키텍처 : Application Definition: 클라우드 상호운용성의 계층·모듈 배치와 상호작용 구조",
-       "Development: Development를 클라우드 상호운용성 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "CNMM 1(Cloud-Enabled)은 단순 이전, CNMM 2(Cloud-Optimized)는 재개발 없이 관리형 서비스 활용, CNMM 3(Cloud-Native)은 처음부터 MSA로 신규 구축"
+      ]
+     },
+     {
+      "title": "체크리스트: 단계 이동 조건",
+      "items": [
+       "무상태 마이크로서비스, CI/CD 자동 배포, 장애 시 새 인스턴스 자동 재배포 여부로 다음 단계 판단"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 상호운용성 운영",
+    "title": "구현 기술과 참조 아키텍처",
     "subsections": [
      {
-      "title": null,
+      "title": "기술: MSA·컨테이너·12-Factor",
       "items": [
-       "Orchestration & Management: 클라우드 상호운용성에서 Orchestration & Management를 다루는 핵심 암기 포인트"
+       "12-Factor App: 헤로쿠(Heroku)가 정리한 코드베이스·종속성·설정·무상태 프로세스 등 이식성 극대화 원칙, 피보탈 케빈 호프만이 15-Factor로 확장",
+       "컨테이너·쿠버네티스(Kubernetes): OCI 이미지 표준으로 환경 간 동일 실행 보장"
+      ]
+     },
+     {
+      "title": "아키텍처: CNCF 5계층",
+      "items": [
+       "CNCF 참조 아키텍처: Helm 등 정의·개발, Kubernetes 오케스트레이션, containerd·CNI 런타임, Terraform 프로비저닝, 베어메탈·퍼블릭 인프라"
       ]
      }
     ]
@@ -7365,22 +7800,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "성숙도 모델 : CNMM 0(On-Premise)",
-   "CNMM 1(Cloud-Enabled)",
-   "CNMM 2(Cloud- Optimized)",
-   "CNMM 3(Cloud-Native) 기술 : DevOps",
-   "MSA",
-   "컨테이너",
-   "CD 아키텍처 : Application Definition",
-   "Development",
-   "Orchestration & Management"
+   "애플리케이션 상호운용성",
+   "공통관리기능 상호운용성(Management Interoperability)",
+   "데이터 이식성(Data Portability)",
+   "가상 어플라이언스 이식성(VM·컨테이너 이미지)",
+   "애플리케이션 이식성",
+   "성숙도 모델(CNMM 0~3)",
+   "CNCF 참조 아키텍처",
+   "12-Factor App",
+   "컨테이너·쿠버네티스(Kubernetes)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_068_01",
@@ -7391,76 +7827,96 @@
    120,
    122
   ],
-  "en": "Cloud Service Quality",
+  "en": "Cloud Service Quality and Performance",
   "dueum": null,
-  "name": "클라우드 서비스 품질성능(Cloud QoS)",
-  "title": "클라우드 서비스 품질성능(Cloud QoS)",
-  "definition": "클라우드 서비스 이용자의 요구사항 충족여부, 목적 달성율, 효율성 등을 평가하기 위한 클라우드 서비스의정성적, 정량적 기준",
+  "name": "클라우드 서비스 품질·성능(Cloud QoS)",
+  "title": "클라우드 서비스 품질·성능(Cloud QoS)",
+  "definition": "클라우드컴퓨팅법 제23조(신뢰성 향상)에 근거해 클라우드 서비스가 이용자 요구를 충족하는지 가용성·응답성·확장성·신뢰성·서비스 지속성·서비스 지원·고객대응 7개 기준과 MTTR·MTTSR 등 정량 지표로 평가하는 품질·성능 기준",
   "keywords_must": [
-   "가용성",
-   "응답성",
-   "확장성",
-   "신뢰성",
+   "가용성(가용률)",
+   "응답성(응답시간)",
+   "확장성(자동 리소스 확장)",
+   "신뢰성(복구·백업)",
    "서비스 지속성",
    "서비스 지원",
    "고객대응",
-   "MTTR",
-   "MTTSR",
-   "평균복구시간(MTTR, Mean Time To Repair)"
+   "MTTR(Mean Time To Repair)",
+   "MTTSR(Maximum Time To Service Recovery)",
+   "클라우드컴퓨팅법 제23조"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "MTBF·MTTF",
+   "SLA(Service Level Agreement)",
+   "품질·성능 검증서비스(NIPA)",
+   "백업 준수율",
+   "사용자 만족도 등급"
+  ],
   "keywords": [
-   "핵심: 가용성 · 응답성 · 확장성",
-   "기술: 신뢰성 · 서비스 지속성 · 서비스 지원",
-   "운영: 고객대응 · MTTR · MTTSR"
+   "기술 기준: 가용성 · 응답성 · 확장성 · 신뢰성",
+   "운영 기준: 서비스 지속성 · 서비스 지원 · 고객대응",
+   "정량 지표: MTTR = 총 장애시간/총 고장횟수 · MTTSR = 최대 복구시간"
   ],
   "outline": [
-   "클라우드 서비스의 품질 성능에 관한 기준 제정의 추진배경",
-   "- 클라우드 서비스의 품질 성능의 개념",
-   "- 클라우드 서비스의 품질 성능에 관한 기준 제정의 추진배경",
-   "클라우드 서비스의 품질 성능 평가기준",
-   "- 클라우드 서비스 품질성능 요점",
-   "클라우드 서비스 회복시간의 정량적 측정을 위한 지표",
-   "- 평균복구시간(MTTR, Mean Time To Repair)",
-   "- 최대 서비스 복구시간(MTTSR, Maximum Time To Ser…"
+   "추진배경과 법적 근거",
+   "- 배경: 성능 불확실성·도입 부담",
+   "- 근거: 신뢰성 향상 의무",
+   "7대 평가기준",
+   "- 기술 측면: 가용성~신뢰성",
+   "- 운영 측면: 지속성·지원·대응",
+   "회복시간 정량 지표",
+   "- MTTR: 평균복구시간",
+   "- MTTSR: 최대 서비스 복구시간"
   ],
   "sections": [
    {
-    "title": "클라우드 서비스 품질성능 핵심",
+    "title": "추진배경과 법적 근거",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 성능 불확실성·도입 부담",
       "items": [
-       "가용성: 합의 시간 동안 서비스가 정상 제공되는 비율",
-       "응답성: 클라우드 서비스 품질성능에서 응답성을 다루는 핵심 암기 포인트",
-       "확장성: 부하 증가에 맞춰 자원을 늘려 성능을 유지하는 능력",
-       "신뢰성: 클라우드 서비스 품질성능에서 신뢰성을 다루는 핵심 암기 포인트"
+       "도입 레퍼런스·서비스 수준 정보 부족, 마이그레이션 비용, 사내정보 유출 우려로 객관적 기준 필요"
+      ]
+     },
+     {
+      "title": "근거: 신뢰성 향상 의무",
+      "items": [
+       "클라우드컴퓨팅법 제23조: 제공자는 품질·성능·정보보호 수준 향상에 노력해야 함"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 서비스 품질성능 구성·기술",
+    "title": "7대 평가기준",
     "subsections": [
      {
-      "title": null,
+      "title": "기술 측면: 가용성~신뢰성",
       "items": [
-       "서비스 지속성: 클라우드 서비스 품질성능에서 서비스 지속성을 다루는 핵심 암기 포인트",
-       "서비스 지원: 클라우드 서비스 품질성능에서 서비스 지원을 다루는 핵심 암기 포인트",
-       "고객대응: 클라우드 서비스 품질성능에서 고객대응을 다루는 핵심 암기 포인트",
-       "MTTR: MTTR를 클라우드 서비스 품질성능 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "가용성(가용률): 모니터링·장애 알림과 측정 구간·산정방식 명시, 응답성은 응답시간 수준·분석",
+       "확장성(자동 리소스 확장): 임계치 알람, 관리 콘솔·API로 수동·자동 확장",
+       "신뢰성(복구·백업): 서비스 회복시간, 증분·전체 백업 주기, 복구 테스트, 데이터 반환 후 폐기"
+      ]
+     },
+     {
+      "title": "운영 측면: 지속성·지원·대응",
+      "items": [
+       "서비스 지속성: 재무상태·중장기 목표·지원 인력, 고객대응은 불만 처리 절차와 만족도 등급"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 서비스 품질성능 운영",
+    "title": "회복시간 정량 지표",
     "subsections": [
      {
-      "title": null,
+      "title": "MTTR: 평균복구시간",
       "items": [
-       "MTTSR: MTTSR를 클라우드 서비스 품질성능 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "평균복구시간(MTTR, Mean Time To Repair): 클라우드 서비스 품질성능에서 평균복구시간(MTTR, Mean Time To Repair)을 다루는 핵심 암기 포인트"
+       "MTTR(Mean Time To Repair): 지정 기간 총 장애시간을 총 고장횟수로 나눔, 연속 측정 실패는 1회 고장으로 계산"
+      ]
+     },
+     {
+      "title": "MTTSR: 최대 서비스 복구시간",
+      "items": [
+       "MTTSR(Maximum Time To Service Recovery): 장애 식별부터 정상 가동까지 최장 시간, 연속 실패는 이어진 복구시간으로 산정"
       ]
      }
     ]
@@ -7469,23 +7925,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "가용성",
-   "응답성",
-   "확장성",
-   "신뢰성",
+   "가용성(가용률)",
+   "응답성(응답시간)",
+   "확장성(자동 리소스 확장)",
+   "신뢰성(복구·백업)",
    "서비스 지속성",
    "서비스 지원",
    "고객대응",
-   "MTTR",
-   "MTTSR",
-   "평균복구시간(MTTR, Mean Time To Repair)"
+   "MTTR(Mean Time To Repair)",
+   "MTTSR(Maximum Time To Service Recovery)",
+   "클라우드컴퓨팅법 제23조"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_068_02",
@@ -7500,58 +7957,89 @@
   "dueum": null,
   "name": "책임공유모델(Shared Responsibility Model)",
   "title": "책임공유모델(Shared Responsibility Model)",
-  "definition": "클라우드 서비스 제공자(Cloud Service Provider)와 사용자(Customer)가 클라우드 영역 별 보안에 대한 책임을분담하는 모델",
+  "definition": "클라우드 서비스 제공자(CSP)와 이용자가 IaaS·PaaS·SaaS 서비스 유형에 따라 물리 시설부터 데이터까지 계층별 보안 책임을 나누어 부담하도록 정의한 클라우드 보안 모델",
   "keywords_must": [
-   "IaaS",
-   "PaaS",
-   "SaaS",
-   "책임공유모델(SRM)의 개념도",
-   "호스트 OS에 대한 보안 패치",
-   "SEC",
-   "CASB",
-   "CSAP(Cloud Security Assurance Program)"
+   "클라우드 서비스 제공자(CSP)",
+   "이용자(Customer) 책임",
+   "IaaS 책임 경계(게스트 OS부터 이용자)",
+   "PaaS 책임 경계(애플리케이션·데이터)",
+   "SaaS 책임 경계(데이터·권한)",
+   "물리 시설·하이퍼바이저 보안",
+   "데이터 보안·권한 관리(IAM)",
+   "보안 그룹·방화벽 설정",
+   "CSAP"
   ],
   "keywords_ref": [
-   "SRM"
+   "Security of the Cloud vs Security in the Cloud",
+   "CASB",
+   "SECaaS",
+   "CSPM",
+   "설정 오류 사고"
   ],
   "keywords": [
-   "핵심: IaaS · PaaS · SaaS",
-   "기술: 책임공유모델(SRM)의 개념도 · 호스트 OS에 대한 보안 패치 · SEC",
-   "운영: CASB · CSAP(Cloud Security Assurance Program)",
-   "참고: SRM"
+   "제공자: 물리 시설 · 호스트 OS · 하이퍼바이저 · 네트워크",
+   "이용자: 데이터 · 계정·권한 · 애플리케이션 · (IaaS는) 게스트 OS·방화벽",
+   "경계 이동: IaaS → PaaS → SaaS로 갈수록 제공자 책임 확대"
   ],
   "outline": [
-   "책임공유모델(SRM)의 개념도 및 책임영역 설명",
-   "- 책임공유모델(SRM)의 개념도",
-   "- 클라우드의 서비스별 제공자와 사용자의 책임 영역 설명",
-   "책임공유모델의 장단점 및 전망",
-   "- 책임공유모델 요점"
+   "책임 분담 원칙",
+   "- 원칙: 클라우드의 보안 vs 클라우드 안의 보안",
+   "서비스 유형별 책임",
+   "- IaaS: 게스트 OS부터 이용자",
+   "- PaaS: 앱·데이터만 이용자",
+   "- SaaS: 데이터·권한만 이용자",
+   "한계와 대응",
+   "- 한계: 경계 오해로 인한 사고",
+   "- 대응: 보안 서비스·인증"
   ],
   "sections": [
    {
-    "title": "책임공유모델 핵심",
+    "title": "책임 분담 원칙",
     "subsections": [
      {
-      "title": null,
+      "title": "원칙: 클라우드의 보안 vs 클라우드 안의 보안",
       "items": [
-       "IaaS: 가상머신·스토리지·네트워크를 온디맨드로 제공하는 클라우드 모델 (책임공유모델/2d08)",
-       "PaaS: 런타임·미들웨어를 제공해 앱 배포에 집중하게 하는 모델 (책임공유모델/795e)",
-       "SaaS: 완성 애플리케이션을 구독형으로 제공하는 클라우드 모델 (책임공유모델/4eee)",
-       "책임공유모델(SRM)의 개념도: 책임공유모델의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램"
+       "AWS 표현으로 제공자는 Security of the Cloud, 이용자는 Security in the Cloud 담당"
       ]
      }
     ]
    },
    {
-    "title": "책임공유모델 구성·기술",
+    "title": "서비스 유형별 책임",
     "subsections": [
      {
-      "title": null,
+      "title": "IaaS: 게스트 OS부터 이용자",
       "items": [
-       "호스트 OS에 대한 보안 패치: 책임공유모델에서 호스트 OS에 대한 보안 패치를 다루는 핵심 암기 포인트",
-       "SEC: SEC를 책임공유모델 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CASB: CASB를 책임공유모델 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CSAP(Cloud Security Assurance Program): CSAP를 책임공유모델 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "IaaS 책임 경계(게스트 OS부터 이용자): 제공자는 물리 시설·호스트 OS 패치·하이퍼바이저, 이용자는 게스트 OS 패치·보안 그룹·데이터"
+      ]
+     },
+     {
+      "title": "PaaS: 앱·데이터만 이용자",
+      "items": [
+       "PaaS 책임 경계: 제공자가 게스트 OS·미들웨어 패치까지, 이용자는 애플리케이션 보안 설정·데이터·권한"
+      ]
+     },
+     {
+      "title": "SaaS: 데이터·권한만 이용자",
+      "items": [
+       "SaaS 책임 경계: 애플리케이션 패치도 제공자, 이용자는 데이터 접근통제·암호화와 관리자·사용자 권한"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한계와 대응",
+    "subsections": [
+     {
+      "title": "한계: 경계 오해로 인한 사고",
+      "items": [
+       "데이터 보안·권한 관리(IAM)는 모든 유형에서 이용자 책임이라 설정 오류가 사고로 직결"
+      ]
+     },
+     {
+      "title": "대응: 보안 서비스·인증",
+      "items": [
+       "CASB·SECaaS·CSPM으로 이용자 영역 보완, 제공자 측은 CSAP 인증으로 보안 수준 확인"
       ]
      }
     ]
@@ -7560,21 +8048,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "IaaS",
-   "PaaS",
-   "SaaS",
-   "책임공유모델(SRM)의 개념도",
-   "호스트 OS에 대한 보안 패치",
-   "SEC",
-   "CASB",
-   "CSAP(Cloud Security Assurance Program)"
+   "클라우드 서비스 제공자(CSP)",
+   "이용자(Customer) 책임",
+   "IaaS 책임 경계(게스트 OS부터 이용자)",
+   "PaaS 책임 경계(애플리케이션·데이터)",
+   "SaaS 책임 경계(데이터·권한)",
+   "물리 시설·하이퍼바이저 보안",
+   "데이터 보안·권한 관리(IAM)",
+   "보안 그룹·방화벽 설정",
+   "CSAP"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_068_03",
@@ -7589,73 +8079,83 @@
   "dueum": null,
   "name": "소버린 클라우드(Sovereign Cloud)",
   "title": "소버린 클라우드(Sovereign Cloud)",
-  "definition": "현지 국가의 데이터 주권을 보장하기 위해 현지 법률과 규정을 준수하여 현지에 데이터 센터를 두고, 데이터접근이 이루어지도록 설계하고 구축된 클라우드 컴퓨팅 아키텍처",
+  "definition": "현지 국가의 데이터 주권을 보장하기 위해 데이터센터를 자국 내에 두고 현지 법률·규정을 준수하며 데이터 저장·접근·운영 통제권을 해당 국가나 조직이 갖도록 설계한 클라우드 컴퓨팅 아키텍처",
   "keywords_must": [
-   "Data Residency",
-   "Sovereign Control",
-   "Governance & Transparency",
-   "Expertise",
+   "데이터 주권(Data Sovereignty)",
+   "데이터 레지던시(Data Residency)",
+   "주권 통제(Sovereign Control)",
+   "거버넌스·투명성(Governance & Transparency)",
+   "현지 전문성(Expertise)",
+   "이중키 암호화(BYOK·HYOK)",
+   "기밀 컴퓨팅(Confidential Computing)",
    "EU GDPR",
-   "멀티클 라우드",
-   "소버린 클라우드(Sovereign Cloud)의 개념도",
-   "Cloud 기본 제공 서비스 유형",
-   "IaaS"
+   "미국 CLOUD Act"
   ],
   "keywords_ref": [
-   "GDPR"
+   "Gaia-X",
+   "코드형 정책(PaC)",
+   "지역 거점 데이터센터",
+   "멀티 클라우드",
+   "국내 공공 클라우드"
   ],
   "keywords": [
-   "핵심: Data Residency · Sovereign Control · Governance & Transparency",
-   "기술: Expertise · EU GDPR · 멀티클 라우드",
-   "운영: 소버린 클라우드(Sovereign Cloud)의 개념도 · Cloud 기본 제공 서비스 유형 · IaaS",
-   "참고: GDPR"
+   "4요소: Data Residency · Sovereign Control · Governance & Transparency · Expertise",
+   "기술: 현지 데이터센터 · 이중키 암호화 · 기밀 VM·컨테이너 · IaC·PaC",
+   "배경: GDPR · 데이터 주권 · 해외 법 집행 우려(CLOUD Act)"
   ],
   "outline": [
-   "데이터 주권 유지, 소버린 클라우드(Sovereign Cloud)의 개요",
-   "- 소버린 클라우드(Sovereign Cloud)의 정의",
-   "- 소버린 클라우드(Sovereign Cloud)의 등장 배경",
-   "소버린 클라우드(Sovereign Cloud) 개념도, 상세설명",
-   "- 소버린 클라우드(Sovereign Cloud)의 개념도",
-   "- 소버린 클라우드(Sovereign Cloud) 구성요소",
-   "소버린 클라우드(Sovereign Cloud)의 장단점",
-   "- 소버린 클라우드 요점"
+   "등장 배경",
+   "- 규제: GDPR·데이터 주권",
+   "4대 구성",
+   "- 데이터 위치·통제: Residency·Control",
+   "- 운영: 거버넌스·현지 지원",
+   "장단점",
+   "- 장점: 통제권·보안·독립성",
+   "- 단점: 호환성·혁신 속도"
   ],
   "sections": [
    {
-    "title": "소버린 클라우드 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "규제: GDPR·데이터 주권",
       "items": [
-       "Data Residency: 소버린 클라우드에서 Data Residency를 다루는 핵심 암기 포인트",
-       "Sovereign Control: 소버린 클라우드에서 Sovereign Control를 다루는 핵심 암기 포인트",
-       "Governance & Transparency: 소버린 클라우드에서 Governance & Transparency를 다루는 핵심 암기 포인트",
-       "Expertise: Expertise를 소버린 클라우드 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "EU GDPR: 국가별 개인정보 규율 적용, 미국 CLOUD Act로 해외 CSP 데이터가 외국 정부 요청 대상이 될 우려"
       ]
      }
     ]
    },
    {
-    "title": "소버린 클라우드 구성·기술",
+    "title": "4대 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "데이터 위치·통제: Residency·Control",
       "items": [
-       "EU GDPR: 소버린 클라우드에서 EU GDPR를 다루는 핵심 암기 포인트",
-       "멀티클 라우드: 소버린 클라우드에서 멀티클 라우드를 다루는 핵심 암기 포인트",
-       "소버린 클라우드(Sovereign Cloud)의 개념도: 소버린 클라우드의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "Cloud 기본 제공 서비스 유형: 소버린 클라우드에서 Cloud 기본 제공 서비스 유형을 다루는 핵심 암기 포인트"
+       "데이터 레지던시(Data Residency): 지역 거점 데이터센터에 저장, 이중키 암호화로 고객이 키 보유",
+       "기밀 컴퓨팅(Confidential Computing): 기밀 VM·컨테이너로 사용 중 데이터까지 보호"
+      ]
+     },
+     {
+      "title": "운영: 거버넌스·현지 지원",
+      "items": [
+       "거버넌스·투명성: 운영 정보 공개와 IaC·코드형 정책(PaC)으로 규정 준수 자동화, 현지 인력 지원·교육"
       ]
      }
     ]
    },
    {
-    "title": "소버린 클라우드 운영",
+    "title": "장단점",
     "subsections": [
      {
-      "title": null,
+      "title": "장점: 통제권·보안·독립성",
       "items": [
-       "IaaS: 가상머신·스토리지·네트워크를 온디맨드로 제공하는 클라우드 모델 (소버린 클라우드/fc7a)"
+       "데이터 통제권 강화, 지역 근접성으로 가용성 향상, 외국 기술 의존도 감소"
+      ]
+     },
+     {
+      "title": "단점: 호환성·혁신 속도",
+      "items": [
+       "상호운용성 저하, 정부 감시에 악용될 프라이버시 우려, 글로벌 CSP 대비 신기술 도입 지연"
       ]
      }
     ]
@@ -7664,22 +8164,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Data Residency",
-   "Sovereign Control",
-   "Governance & Transparency",
-   "Expertise",
+   "데이터 주권(Data Sovereignty)",
+   "데이터 레지던시(Data Residency)",
+   "주권 통제(Sovereign Control)",
+   "거버넌스·투명성(Governance & Transparency)",
+   "현지 전문성(Expertise)",
+   "이중키 암호화(BYOK·HYOK)",
+   "기밀 컴퓨팅(Confidential Computing)",
    "EU GDPR",
-   "멀티클 라우드",
-   "소버린 클라우드(Sovereign Cloud)의 개념도",
-   "Cloud 기본 제공 서비스 유형",
-   "IaaS"
+   "미국 CLOUD Act"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_068_04",
@@ -7694,56 +8195,90 @@
   "dueum": null,
   "name": "데이터스페이스(Data Space)",
   "title": "데이터스페이스(Data Space)",
-  "definition": "데이터 공유·활용 생태계로 기업, 기관, 개인이 만든 데이터를 공유 및 교환하면서 보안·주권을 유지할 수있도록 만든 체계",
+  "definition": "기업·기관·개인이 데이터를 중앙 저장소에 모으지 않고 연합형 분산 구조와 합의된 공통 규칙·정책에 따라 데이터 주권을 유지한 채 신뢰 기반으로 공유·교환하는 데이터 생태계",
   "keywords_must": [
-   "데이터 주권",
-   "신뢰",
-   "상호 운용성",
-   "분산형 구조",
-   "데이터 스페이스의 개념",
-   "연합(Federation) 기반의 분산 구조",
-   "AI 혁신 서비스 실증, 확산"
+   "데이터 주권(Data Sovereignty)",
+   "연합형·분산형 구조(Federation)",
+   "데이터 커넥터(Connector)",
+   "연합 카탈로그·메타데이터 브로커",
+   "클리어링하우스(Clearing House)",
+   "사용 정책 자동 이행(Policy-as-Code)",
+   "DID·VC 신원 관리",
+   "Gaia-X·IDSA",
+   "한국형 데이터스페이스 참조모델"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "eIDAS",
+   "데이터 거래 정산(스테이블코인·토큰)",
+   "도메인별 Use Case",
+   "운영모델(제휴형·출자형·조합형)",
+   "Catena-X"
+  ],
   "keywords": [
-   "핵심: 데이터 주권 · 신뢰 · 상호 운용성",
-   "기술: 분산형 구조 · 데이터 스페이스의 개념 · 연합(Federation) 기반의 분산 구조",
-   "운영: AI 혁신 서비스 실증, 확산"
+   "특징: 분산 구조 · 데이터 주권 · 신뢰 · 상호운용성 · 정책 기반",
+   "참조모델: 거버넌스 · 비즈니스 계층 · 기술 계층",
+   "기술 계층: 커넥터·표준 API · DID·VC · 정책 모듈 · 카탈로그·브로커 · 클리어링하우스"
   ],
   "outline": [
-   "신뢰 기반 데이터 교환 생태계, 데이터 스페이스(Data Space)의 정의",
-   "- 데이터 스페이스의 개념",
-   "- 데이터 스페이스의 특징",
-   "데이터 스페이스(Data Space)의 개념도와 구성요소",
-   "- 데이터 스페이스의 개념도",
-   "- 데이터 스페이스(Data Space)의 구성요소",
-   "한국형 데이터 스페이스(Data Space) 추진 전략",
-   "- 데이터스페이스 요점"
+   "운영 원리",
+   "- 구조: 연합·분산",
+   "- 정책: 사용 조건 자동 이행",
+   "참조모델 구성",
+   "- 거버넌스·비즈니스 계층",
+   "- 기술 계층: 커넥터·신원·카탈로그",
+   "한국형 추진 전략",
+   "- 단계: 거버넌스→구축→가치 창출",
+   "- 해외 사례: Gaia-X·IDSA"
   ],
   "sections": [
    {
-    "title": "데이터스페이스 핵심",
+    "title": "운영 원리",
     "subsections": [
      {
-      "title": null,
+      "title": "구조: 연합·분산",
       "items": [
-       "데이터 주권: 데이터스페이스에서 데이터 주권을 다루는 핵심 암기 포인트",
-       "신뢰: 데이터스페이스에서 신뢰를 다루는 핵심 암기 포인트",
-       "상호 운용성: 데이터스페이스에서 상호 운용성을 다루는 핵심 암기 포인트",
-       "분산형 구조: 데이터스페이스에서 분산형 구조를 다루는 핵심 암기 포인트"
+       "연합형·분산형 구조(Federation): 데이터는 소유자에 남고 커넥터 간 직접 교환"
+      ]
+     },
+     {
+      "title": "정책: 사용 조건 자동 이행",
+      "items": [
+       "사용 정책 자동 이행(Policy-as-Code): 기간·목적 등 이용 조건을 기계가 집행"
       ]
      }
     ]
    },
    {
-    "title": "데이터스페이스 구성·기술",
+    "title": "참조모델 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "거버넌스·비즈니스 계층",
       "items": [
-       "데이터 스페이스의 개념: 데이터스페이스에서 데이터 스페이스의 개념을 다루는 핵심 암기 포인트",
-       "연합(Federation) 기반의 분산 구조: 데이터스페이스에서 연합(Federation) 기반의 분산 구조를 다루는 핵심 암기 포인트",
-       "AI 혁신 서비스 실증, 확산: 데이터스페이스에서 AI 혁신 서비스 실증, 확산을 다루는 핵심 암기 포인트"
+       "공통 규칙·신뢰·참여자 자율성 확보, 비즈니스 계층은 참여자 등록·계약·접근 정책·데이터 제품 제공"
+      ]
+     },
+     {
+      "title": "기술 계층: 커넥터·신원·카탈로그",
+      "items": [
+       "데이터 커넥터(Connector): 표준 API로 교환, DID·VC 신원 관리로 참여자 자격 검증",
+       "연합 카탈로그·메타데이터 브로커: 데이터 상품 등록·탐색, 클리어링하우스는 거래 이력 추적·정산"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한국형 추진 전략",
+    "subsections": [
+     {
+      "title": "단계: 거버넌스→구축→가치 창출",
+      "items": [
+       "참여 구조·운영 규칙·데이터 표준 정립 후 국가 데이터 인프라 연계, AI 학습용 데이터 유통으로 가치 창출"
+      ]
+     },
+     {
+      "title": "해외 사례: Gaia-X·IDSA",
+      "items": [
+       "Gaia-X·IDSA: EU 데이터 주권 인프라와 커넥터 표준, 자동차 분야 Catena-X가 대표 적용 사례"
       ]
      }
     ]
@@ -7752,20 +8287,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "데이터 주권",
-   "신뢰",
-   "상호 운용성",
-   "분산형 구조",
-   "데이터 스페이스의 개념",
-   "연합(Federation) 기반의 분산 구조",
-   "AI 혁신 서비스 실증, 확산"
+   "데이터 주권(Data Sovereignty)",
+   "연합형·분산형 구조(Federation)",
+   "데이터 커넥터(Connector)",
+   "연합 카탈로그·메타데이터 브로커",
+   "클리어링하우스(Clearing House)",
+   "사용 정책 자동 이행(Policy-as-Code)",
+   "DID·VC 신원 관리",
+   "Gaia-X·IDSA",
+   "한국형 데이터스페이스 참조모델"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_070",
