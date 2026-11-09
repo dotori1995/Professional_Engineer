@@ -18456,58 +18456,100 @@
    259,
    260
   ],
-  "en": "Reshoring",
+  "en": "Reshoring Policy",
   "dueum": null,
   "name": "리쇼어링(Reshoring) 정책",
   "title": "리쇼어링(Reshoring) 정책",
-  "definition": "해외에 나가 있는 자국 기업을 각종 세제 혜택과 규제 완화 등을 통해 자국으로 불러 들이는 정책",
+  "definition": "인건비 등을 이유로 해외로 이전했던 자국 기업의 생산 거점을 세제 혜택·보조금·규제 완화 등으로 본국에 되돌아오게 하여 제조업 일자리와 공급망 안정성을 확보하려는 산업 정책",
   "keywords_must": [
-   "제조 거점을 본국으로 이전",
    "오프쇼어링(Offshoring)",
-   "리쇼어링 아키텍처",
-   "리쇼어링 표준",
-   "CPS",
-   "CPS* 기반의 Virtual Factory",
-   "리쇼어링 (Reshoring)"
+   "니어쇼어링(Nearshoring)",
+   "프렌드쇼어링(Friend-shoring)",
+   "공급망 회복력(Resilience)",
+   "적기 출시(Time to Market)",
+   "인건비 격차 축소",
+   "해외진출기업복귀법(유턴법)",
+   "스마트 팩토리 자동화",
+   "세제·보조금 인센티브"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "미국 인플레이션감축법(IRA)·반도체법(CHIPS Act)",
+   "셰일가스 에너지 비용",
+   "글로벌 가치사슬(GVC) 재편",
+   "제조업의 서비스화",
+   "탈세계화"
+  ],
   "keywords": [
-   "핵심: 제조 거점을 본국으로 이전 · 오프쇼어링(Offshoring) · 리쇼어링 아키텍처",
-   "기술: 리쇼어링 표준 · CPS · CPS* 기반의 Virtual Factory",
-   "운영: 리쇼어링 (Reshoring)"
+   "유형: 리쇼어링(본국) · 니어쇼어링(인접국) · 프렌드쇼어링(우방국) ↔ 오프쇼어링(저임금 해외)",
+   "확산 배경: 인건비 상승 · 물류·Time to Market · 에너지 비용 · 가치사슬 협력 · 공급망 리스크",
+   "정책 수단: 세제 감면 · 입지·설비 보조금 · 규제 완화 · 자동화 지원(유턴법)"
   ],
   "outline": [
-   "기업 내/외부 경쟁력 강화를 위한 활용, 리쇼어링(Reshoring) 개요",
-   "- 리쇼어링 요점",
-   "리쇼어링 정책의 확산 배경 및 오프쇼어링과 비교",
-   "- 리쇼어링(Reshoring) 확산 배경",
-   "추가자료",
-   "- 리쇼어링 요점"
+   "개념과 유형",
+   "- 반대 개념: 오프쇼어링",
+   "- 변형: 니어·프렌드쇼어링",
+   "확산 배경",
+   "- 비용: 인건비·에너지",
+   "- 속도·혁신: 근접 생산",
+   "- 리스크: 공급망 충격",
+   "국내 정책과 과제",
+   "- 정책: 유턴법",
+   "- 과제: 실효성"
   ],
   "sections": [
    {
-    "title": "리쇼어링 핵심",
+    "title": "개념과 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "반대 개념: 오프쇼어링",
       "items": [
-       "제조 거점을 본국으로 이전: 리쇼어링에서 제조 거점을 본국으로 이전을 다루는 핵심 암기 포인트",
-       "오프쇼어링(Offshoring): 리쇼어링에서 오프쇼어링(Offshoring)을 다루는 핵심 암기 포인트",
-       "리쇼어링 아키텍처: 리쇼어링의 계층·모듈 배치와 상호작용 구조",
-       "리쇼어링 표준: 리쇼어링 상호운용·품질을 맞추는 규격·기준"
+       "오프쇼어링(Offshoring)은 저원가 해외 생산, 리쇼어링은 물류비 절감과 단순한 공급망을 위해 본국으로 회귀"
+      ]
+     },
+     {
+      "title": "변형: 니어·프렌드쇼어링",
+      "items": [
+       "니어쇼어링(Nearshoring)은 수요지 인접국, 프렌드쇼어링(Friend-shoring)은 동맹·우방국으로 거점 이전"
       ]
      }
     ]
    },
    {
-    "title": "리쇼어링 구성·기술",
+    "title": "확산 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "비용: 인건비·에너지",
       "items": [
-       "CPS: CPS를 리쇼어링 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CPS* 기반의 Virtual Factory: 리쇼어링에서 CPS* 기반의 Virtual Factory를 다루는 핵심 암기 포인트",
-       "리쇼어링 (Reshoring): 리쇼어링에서 리쇼어링 (Reshoring)을 다루는 핵심 암기 포인트"
+       "인건비 격차 축소: 신흥국 임금 상승과 자동화로 저임금 이점 감소, 미국은 셰일가스로 에너지 원가 하락"
+      ]
+     },
+     {
+      "title": "속도·혁신: 근접 생산",
+      "items": [
+       "적기 출시(Time to Market): 수요지 근접 생산으로 물류·재고 비용 절감, 설계-생산 근접으로 혁신 역량 강화"
+      ]
+     },
+     {
+      "title": "리스크: 공급망 충격",
+      "items": [
+       "팬데믹·미중 갈등으로 공급망 회복력(Resilience)이 비용보다 중시, 미국 IRA·CHIPS Act가 자국 생산 유도"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "국내 정책과 과제",
+    "subsections": [
+     {
+      "title": "정책: 유턴법",
+      "items": [
+       "해외진출기업복귀법(유턴법): 국내 복귀 기업에 법인세 감면·입지·설비 투자 보조금 지원"
+      ]
+     },
+     {
+      "title": "과제: 실효성",
+      "items": [
+       "높은 인건비·규제로 복귀 실적이 제한적, 스마트 팩토리 자동화와 첨단산업 중심 유치로 경쟁력 보완 필요"
       ]
      }
     ]
@@ -18516,20 +18558,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "제조 거점을 본국으로 이전",
    "오프쇼어링(Offshoring)",
-   "리쇼어링 아키텍처",
-   "리쇼어링 표준",
-   "CPS",
-   "CPS* 기반의 Virtual Factory",
-   "리쇼어링 (Reshoring)"
+   "니어쇼어링(Nearshoring)",
+   "프렌드쇼어링(Friend-shoring)",
+   "공급망 회복력(Resilience)",
+   "적기 출시(Time to Market)",
+   "인건비 격차 축소",
+   "해외진출기업복귀법(유턴법)",
+   "스마트 팩토리 자동화",
+   "세제·보조금 인센티브"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_213",
@@ -18544,54 +18589,89 @@
   "dueum": null,
   "name": "포지티브 규제(Positive Regulation)",
   "title": "포지티브 규제(Positive Regulation)",
-  "definition": "법률·정책상으로 허용하는 것을 구체적으로 나열한 뒤 나머지는 모두 금지하는 방식의 규제",
+  "definition": "법령이나 정책에서 허용되는 행위를 구체적으로 열거하고 열거되지 않은 나머지는 모두 금지하는 규제 방식으로, 신기술·신산업의 시장 진입을 늦추는 원인이 되어 네거티브 규제와 규제 샌드박스로의 전환이 추진됨",
   "keywords_must": [
-   "포지티브 규제의 핵심 요소",
-   "포지티브 규제의 구조",
-   "포지티브 규제 아키텍처",
-   "토픽이름(하)",
-   "기타(2016)",
-   "MES(Manufacturing Execution System)",
-   "ISA(International Society of Automation)"
+   "원칙 허용·예외 금지(네거티브 규제)",
+   "원칙 금지·예외 허용(포지티브 규제)",
+   "포괄적 네거티브 규제",
+   "규제 샌드박스(Regulatory Sandbox)",
+   "규제 신속확인",
+   "실증특례",
+   "임시허가",
+   "규제특례심의위원회",
+   "이용자 보호장치"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "정보통신융합법",
+   "산업융합촉진법",
+   "지역특구법",
+   "금융혁신지원특별법",
+   "영국 FCA 금융 샌드박스"
+  ],
   "keywords": [
-   "핵심: 포지티브 규제의 핵심 요소 · 포지티브 규제의 구조 · 포지티브 규제 아키텍처",
-   "기술: 토픽이름(하) · 기타(2016) · MES(Manufacturing Execution System)",
-   "운영: ISA(International Society of Automation)"
+   "비교: 포지티브(열거된 것만 허용) ↔ 네거티브(금지된 것 외 허용)",
+   "샌드박스 3종: 신속확인(30일 내 회신) · 실증특례(시험·검증) · 임시허가(시장 출시)",
+   "절차: 신청 → 관계부처 검토 → 규제특례심의위원회 심의 → 이용자 보호 조건 → 실증 → 법령 정비"
   ],
   "outline": [
-   "규제 샌드박스 제도의 주요 내용",
-   "- 포지티브 규제의 정의",
-   "- 포지티브 규제의 등장 배경",
-   "규제 샌드박스 기반 포괄적 네거티브 규제 전환 방안",
-   "- 포지티브 규제의 핵심 요소",
-   "- 포지티브 규제의 구조"
+   "규제 방식 비교",
+   "- 포지티브: 열거 허용",
+   "- 네거티브: 열거 금지",
+   "규제 샌드박스 3종",
+   "- 확인: 신속확인",
+   "- 특례: 실증·임시허가",
+   "운영 절차와 전환 방향",
+   "- 절차: 심의·보호장치",
+   "- 전환: 법령 정비"
   ],
   "sections": [
    {
-    "title": "포지티브 규제 핵심",
+    "title": "규제 방식 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "포지티브: 열거 허용",
       "items": [
-       "포지티브 규제의 핵심 요소: 포지티브 규제에서 포지티브 규제의 핵심 요소를 다루는 핵심 암기 포인트",
-       "포지티브 규제의 구조: 포지티브 규제에서 포지티브 규제의 구조를 다루는 핵심 암기 포인트",
-       "포지티브 규제 아키텍처: 포지티브 규제의 계층·모듈 배치와 상호작용 구조",
-       "토픽이름(하): 포지티브 규제에서 토픽이름(하)을 다루는 핵심 암기 포인트"
+       "원칙 금지·예외 허용(포지티브 규제): 법적 안정성은 높으나 법에 없는 신산업은 시도 자체가 불가"
+      ]
+     },
+     {
+      "title": "네거티브: 열거 금지",
+      "items": [
+       "원칙 허용·예외 금지(네거티브 규제): 혁신 친화적, 포괄적 네거티브 규제는 입법 방식 유연화와 사후 규제까지 포함"
       ]
      }
     ]
    },
    {
-    "title": "포지티브 규제 구성·기술",
+    "title": "규제 샌드박스 3종",
     "subsections": [
      {
-      "title": null,
+      "title": "확인: 신속확인",
       "items": [
-       "기타(2016): 포지티브 규제에서 기타(2016)를 다루는 핵심 암기 포인트",
-       "MES(Manufacturing Execution System): MES를 포지티브 규제 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ISA(International Society of Automation): ISA를 포지티브 규제 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "규제 신속확인: 규제 존재 여부를 30일 내 회신, 기한 내 무응답 시 규제 없음으로 간주"
+      ]
+     },
+     {
+      "title": "특례: 실증·임시허가",
+      "items": [
+       "실증특례는 규제를 일정 기간 면제해 시험·검증, 임시허가는 안전성이 입증된 제품의 시장 출시 허용(각 2년, 1회 연장)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "운영 절차와 전환 방향",
+    "subsections": [
+     {
+      "title": "절차: 심의·보호장치",
+      "items": [
+       "규제특례심의위원회가 혁신성·이용자 편익·생명·안전 영향을 심의, 보증보험 등 이용자 보호장치 부과"
+      ]
+     },
+     {
+      "title": "전환: 법령 정비",
+      "items": [
+       "실증 결과를 근거로 관련 법령을 정비해 정식 허용, 정보통신융합법·산업융합촉진법·지역특구법·금융혁신지원특별법으로 분야 확대"
       ]
      }
     ]
@@ -18600,20 +18680,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "포지티브 규제의 핵심 요소",
-   "포지티브 규제의 구조",
-   "포지티브 규제 아키텍처",
-   "토픽이름(하)",
-   "기타(2016)",
-   "MES(Manufacturing Execution System)",
-   "ISA(International Society of Automation)"
+   "원칙 허용·예외 금지(네거티브 규제)",
+   "원칙 금지·예외 허용(포지티브 규제)",
+   "포괄적 네거티브 규제",
+   "규제 샌드박스(Regulatory Sandbox)",
+   "규제 신속확인",
+   "실증특례",
+   "임시허가",
+   "규제특례심의위원회",
+   "이용자 보호장치"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_214",
@@ -18624,76 +18707,94 @@
    239,
    243
   ],
-  "en": "IDX",
+  "en": "Intelligent Digital X-formation",
   "dueum": null,
-  "name": "디지털서비스(IDX)",
-  "title": "디지털서비스(IDX)",
-  "definition": "DX(Digital Transformation)에서 발전하여 국가 경제 · 사회 시스템에 디지털 지능이 내재화되는 현상이자, 전면적으로 디지털 지능화 추진하는 전략",
+  "name": "지능형 디지털 전환(IDX, Intelligent Digital X-formation)",
+  "title": "지능형 디지털 전환(IDX, Intelligent Digital X-formation)",
+  "definition": "디지털 전환(DX)을 넘어 국가 경제·사회 시스템 전반에 데이터와 인공지능 기반의 디지털 지능이 내재화되도록 공공·민간을 아우르는 디지털 지능 플랫폼을 구축하고 국방·의료·행정·제조 등 분야별 지능화를 동시 추진하는 전략",
   "keywords_must": [
-   "디지털 지능",
+   "디지털 지능(Digital Intelligence)",
    "초연결",
    "초지능",
    "초실감",
-   "IDX(Intelligent Digital X-formation) 정의",
-   "IDX 구성도",
-   "HDR",
-   "WCG",
-   "UWV(Ultra Wide Vision)"
+   "디지털 지능 플랫폼",
+   "국방 IDX",
+   "의료 IDX",
+   "행정 IDX",
+   "제조 IDX",
+   "데이터 공유 정책"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "디지털 전환(DX)",
+   "ETRI 기술경제 전략",
+   "디지털 트윈 도시",
+   "산업IoT·CPS",
+   "초실감 미디어(HDR·WCG·3D 오디오)"
+  ],
   "keywords": [
-   "핵심: 디지털 지능 · 초연결 · 초지능",
-   "기술: 초실감 · IDX(Intelligent Digital X-formation) 정의 · IDX 구성도",
-   "운영: HDR · WCG · UWV(Ultra Wide Vision)"
+   "3대 속성: 초연결(5G·IoT) · 초지능(AI·데이터) · 초실감(HDR·WCG·3D 오디오·초광시야)",
+   "분야: 국방 · 의료 · 행정 · 제조 IDX",
+   "성공 요건: 디지털 지능 플랫폼 · 국가 데이터 공유 · ICT 역량과 도메인 지식 협업"
   ],
   "outline": [
-   "IDX(Intelligent Digital X-formation)의 개요",
-   "- IDX(Intelligent Digital X-formation) 정의",
-   "- IDX(Intelligent Digital X-formation)의 …",
-   "IDX 구성도 및 구성요소",
-   "- IDX 구성도",
-   "- IDX 구성요소",
-   "IDX 의 추진방향",
-   "- 디지털서비스 요점",
-   "IDX 기반 국가경제를 성공하기 위한 발판, IDX 플랫폼 전략",
-   "- 디지털서비스 요점"
+   "개념과 등장 배경",
+   "- DX 대비: 지능 내재화",
+   "- 배경: 지능 유기체",
+   "3대 속성과 플랫폼",
+   "- 속성: 초연결·초지능·초실감",
+   "- 플랫폼: 공공·민간 통합",
+   "분야별 추진 방향",
+   "- 국방·의료: 정밀·예측",
+   "- 행정·제조: 시뮬레이션·예측"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "개념과 등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "DX 대비: 지능 내재화",
       "items": [
-       "디지털 지능: 디지털서비스에서 디지털 지능을 다루는 핵심 암기 포인트",
-       "초연결: 디지털서비스에서 초연결을 다루는 핵심 암기 포인트",
-       "초지능: 디지털서비스에서 초지능을 다루는 핵심 암기 포인트",
-       "초실감: 디지털서비스에서 초실감을 다루는 핵심 암기 포인트"
+       "DX가 업무의 디지털화라면 IDX는 디지털 지능(Digital Intelligence)이 사회 시스템에 내재돼 스스로 판단·최적화"
+      ]
+     },
+     {
+      "title": "배경: 지능 유기체",
+      "items": [
+       "AI·데이터 기술 성숙으로 산업 단위 혁신을 넘어 국가 차원의 동시다발 지능화 필요"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "3대 속성과 플랫폼",
     "subsections": [
      {
-      "title": null,
+      "title": "속성: 초연결·초지능·초실감",
       "items": [
-       "IDX(Intelligent Digital X-formation) 정의: 디지털서비스에서 IDX(Intelligent Digital X-formation) 정의를 다루는 핵심 암기 포인트",
-       "IDX 구성도: 디지털서비스의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램 (디지털서비스/6f8d)",
-       "HDR: HDR를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "WCG: WCG를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "초연결은 사람·사물·공간 연결, 초지능은 AI 기반 예측·판단, 초실감은 HDR·WCG·3D 오디오 등 몰입형 표현"
+      ]
+     },
+     {
+      "title": "플랫폼: 공공·민간 통합",
+      "items": [
+       "디지털 지능 플랫폼: 공공·민간 데이터와 AI를 공유 기반으로 묶어 인프라·산업 지능화를 동시 추진"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "분야별 추진 방향",
     "subsections": [
      {
-      "title": null,
+      "title": "국방·의료: 정밀·예측",
       "items": [
-       "UWV(Ultra Wide Vision): UWV를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "국방 IDX는 사이버·우주까지 확장된 5차원 전장과 정밀 무인 전력, 의료 IDX는 질병 예측과 비침습 현장 자동 진단"
+      ]
+     },
+     {
+      "title": "행정·제조: 시뮬레이션·예측",
+      "items": [
+       "행정 IDX는 도시 모델링·시뮬레이션과 3D 시각화, 제조 IDX는 고신뢰 산업 네트워크·CPS 기반 예측적 제조"
       ]
      }
     ]
@@ -18702,15 +18803,16 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "디지털 지능",
+   "디지털 지능(Digital Intelligence)",
    "초연결",
    "초지능",
    "초실감",
-   "IDX(Intelligent Digital X-formation) 정의",
-   "IDX 구성도",
-   "HDR",
-   "WCG",
-   "UWV(Ultra Wide Vision)"
+   "디지털 지능 플랫폼",
+   "국방 IDX",
+   "의료 IDX",
+   "행정 IDX",
+   "제조 IDX",
+   "데이터 공유 정책"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -18720,7 +18822,8 @@
   "warnings": [],
   "gloss": {
    "DX": "Digital Transformation"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_215",
@@ -18731,76 +18834,94 @@
    244,
    245
   ],
-  "en": "ICS",
+  "en": "Industrial Control System",
   "dueum": null,
-  "name": "산업제어시스템(ICS)",
-  "title": "산업제어시스템(ICS)",
-  "definition": "SCADA, DCS, PLC 등 산업부분 및 주요 하부구조에서 자주 사용되는 여러 가지 형태의 제어 시스템",
+  "name": "산업제어시스템(ICS, Industrial Control System)",
+  "title": "산업제어시스템(ICS, Industrial Control System)",
+  "definition": "전력·가스·수도·석유화학·제조 등 산업 현장과 국가기반시설의 물리 공정을 감시·제어하는 SCADA·DCS·PLC 등 운영기술(OT) 시스템의 총칭으로, 가용성과 실시간성을 최우선으로 함",
   "keywords_must": [
-   "System Interface",
-   "Process Interface",
-   "Operator Interface",
-   "KNICS",
-   "한국형 DCS - 원전계측제어시스템(KNICS)",
-   "산업제어시스템의 종류",
-   "IEEE",
-   "RTU",
-   "EMS",
-   "DCS"
+   "감시제어데이터수집(SCADA)",
+   "분산제어시스템(DCS)",
+   "프로그래머블 로직 컨트롤러(PLC)",
+   "원격단말장치(RTU)",
+   "인간-기계 인터페이스(HMI)",
+   "히스토리안(Historian)",
+   "운영기술(OT) vs 정보기술(IT)",
+   "퍼듀 모델(Purdue Model)",
+   "IEC 62443",
+   "망 분리(폐쇄망)"
   ],
   "keywords_ref": [
-   "PLC(안전등급 제어기기)",
-   "RPS(원자로 보호 계통)"
+   "산업용 프로토콜(Modbus·DNP3)",
+   "스턱스넷",
+   "원전계측제어시스템(KNICS)",
+   "단방향 게이트웨이",
+   "국가기반시설 보호"
   ],
   "keywords": [
-   "핵심: System Interface · Process Interface · Operator Interface",
-   "기술: KNICS · 한국형 DCS - 원전계측제어시스템(KNICS) · 산업제어시스템의 종류",
-   "운영: IEEE · RTU · EMS",
-   "참고: PLC(안전등급 제어기기) · RPS(원자로 보호 계통)"
+   "종류: SCADA(광역 원격 감시) · DCS(공장 내 분산 제어) · PLC(단일 설비 제어)",
+   "기술: 센서·RTU · 히스토리안 DB · HMI · 미들웨어 · 이중화 네트워크",
+   "보안: OT 우선순위 가용성 > 무결성 > 기밀성 · 퍼듀 모델 계층 분리 · IEC 62443"
   ],
   "outline": [
-   "산업제어시스템의 종류 및 주요기술",
-   "- 산업제어시스템의 종류",
-   "산업제어시스템의 활용사례",
-   "- 한국형 DCS - 원전계측제어시스템(KNICS)"
+   "개념과 IT 비교",
+   "- 대상: 물리 공정 제어",
+   "- 차이: 우선순위·환경",
+   "종류와 구성 기술",
+   "- 3대 종류: 범위별",
+   "- 구성 기술: 수집·저장·표시",
+   "보안 위협과 대응",
+   "- 위협: 폐쇄망 신화",
+   "- 대응: 계층 분리·표준"
   ],
   "sections": [
    {
-    "title": "산업제어시스템 핵심",
+    "title": "개념과 IT 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "대상: 물리 공정 제어",
       "items": [
-       "System Interface: 산업제어시스템에서 System Interface를 다루는 핵심 암기 포인트",
-       "Process Interface: 산업제어시스템에서 Process Interface를 다루는 핵심 암기 포인트",
-       "Operator Interface: 산업제어시스템에서 Operator Interface를 다루는 핵심 암기 포인트",
-       "KNICS: KNICS를 산업제어시스템 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "운영기술(OT) 영역으로 센서 측정 → 제어기 판단 → 액추에이터 구동 루프를 실시간 수행"
+      ]
+     },
+     {
+      "title": "차이: 우선순위·환경",
+      "items": [
+       "운영기술(OT) vs 정보기술(IT): IT는 기밀성 우선·범용 OS·잦은 패치, OT는 가용성 우선·실시간 OS·수십 년 운영과 패치 제약"
       ]
      }
     ]
    },
    {
-    "title": "산업제어시스템 구성·기술",
+    "title": "종류와 구성 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "3대 종류: 범위별",
       "items": [
-       "한국형 DCS - 원전계측제어시스템(KNICS): 산업제어시스템에서 한국형 DCS - 원전계측제어시스템(KNICS)을 다루는 핵심 암기 포인트",
-       "산업제어시스템의 종류: 산업제어시스템에서 산업제어시스템의 종류를 다루는 핵심 암기 포인트",
-       "IEEE: IEEE를 산업제어시스템 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "RTU: RTU를 산업제어시스템 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "SCADA는 넓은 지역 RTU 원격 감시·데이터 수집, DCS는 공장 내 기능별 분산 제어·이중화, PLC는 단일 설비의 순차·불연속 공정 제어"
+      ]
+     },
+     {
+      "title": "구성 기술: 수집·저장·표시",
+      "items": [
+       "원격단말장치(RTU)·센서로 수집, 히스토리안(Historian)이 태그 단위 이력 압축 저장, HMI가 감시 화면·경보 제공"
       ]
      }
     ]
    },
    {
-    "title": "산업제어시스템 운영",
+    "title": "보안 위협과 대응",
     "subsections": [
      {
-      "title": null,
+      "title": "위협: 폐쇄망 신화",
       "items": [
-       "EMS: EMS를 산업제어시스템 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "DCS: DCS를 산업제어시스템 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "망 분리(폐쇄망)에도 USB·유지보수 경로로 침투(스턱스넷), 인증 없는 Modbus·DNP3 프로토콜 취약"
+      ]
+     },
+     {
+      "title": "대응: 계층 분리·표준",
+      "items": [
+       "퍼듀 모델(Purdue Model) 계층 간 DMZ·단방향 게이트웨이, IEC 62443 보안 수준 기반 구역·관로(Zone·Conduit) 설계"
       ]
      }
     ]
@@ -18809,16 +18930,16 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "System Interface",
-   "Process Interface",
-   "Operator Interface",
-   "KNICS",
-   "한국형 DCS - 원전계측제어시스템(KNICS)",
-   "산업제어시스템의 종류",
-   "IEEE",
-   "RTU",
-   "EMS",
-   "DCS"
+   "감시제어데이터수집(SCADA)",
+   "분산제어시스템(DCS)",
+   "프로그래머블 로직 컨트롤러(PLC)",
+   "원격단말장치(RTU)",
+   "인간-기계 인터페이스(HMI)",
+   "히스토리안(Historian)",
+   "운영기술(OT) vs 정보기술(IT)",
+   "퍼듀 모델(Purdue Model)",
+   "IEC 62443",
+   "망 분리(폐쇄망)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -18829,7 +18950,8 @@
   "gloss": {
    "EMS": "Energy Management System",
    "PLC": "Programmable Logic Controller"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_216",
