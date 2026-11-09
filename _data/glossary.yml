@@ -100,6 +100,7 @@ BIC: Bayesian Information Criterion
 BID: Bridge ID
 BLAST: Bell Laboratories Layered Space-Time
 BLE: Bluetooth Low Energy
+BLOB: Binary Large Object
 BLSR: Bidirectional Line-Switched Ring
 BML: Build-Measure-Learn
 BOOTP: Bootstrap Protocol
@@ -112,6 +113,7 @@ BPR: Business Process Reengineering
 BPSK: Binary Phase Shift Keying
 BSC: Balanced Scorecard
 BSM: Basic Safety Message
+BSON: Binary JSON
 BSS: [Basic Service Set, Business Support System]
 BWS: Broadcast Website
 C-V2X: Cellular Vehicle-to-Everything
@@ -121,6 +123,7 @@ CAN: Controller Area Network
 CAPEX: Capital Expenditure
 CATV: Community Antenna Television
 CBD: Component-Based Development
+CBIR: Content-Based Image Retrieval
 CBRS: Citizens Broadband Radio Service
 CBS: Committed Burst Size
 CBWFQ: Class-Based Weighted Fair Queuing
@@ -141,8 +144,10 @@ CFD: Cumulative Flow Diagram
 CIDR: Classless Inter-Domain Routing
 CIFS: Common Internet File System
 CIR: Committed Information Rate
+CKPT: Checkpoint Process
 CLAT: Customer-side Translator
 CLI: Command-Line Interface
+CLOB: Character Large Object
 CLR: Compensation Log Record
 CLT: Central Limit Theorem
 CMMI: Capability Maturity Model Integration
@@ -172,6 +177,7 @@ CQI: Channel Quality Indicator
 CRC: Cyclic Redundancy Check
 CRISP-DM: Cross-Industry Standard Process for Data Mining
 CRM: Customer Relationship Management
+CRUD: Create, Read, Update, Delete
 CSA: Connectivity Standards Alliance
 CSCF: Call Session Control Function
 CSE: Common Services Entity
@@ -184,6 +190,7 @@ CSMS: Cyber Security Management System
 CSRC: Contributing Source
 CSS: [Cascading Style Sheets, Chirp Spread Spectrum]
 CSSI: Console Subsystem Interface
+CTE: Common Table Expression
 CTS: Clear To Send
 CU: Central Unit
 CUBIC: CUBIC TCP Congestion Control
@@ -192,10 +199,14 @@ D2D: Device-to-Device
 DAC: Device Attestation Certificate
 DAI: Dynamic ARP Inspection
 DASH: Dynamic Adaptive Streaming over HTTP
+DBA: Database Administrator
 DBD: Database Description
+DBWR: Database Writer
 DCE: [Data Circuit-terminating Equipment, Distributed Computing Environment]
 DCF: [Distributed Coordination Function, Discounted Cash Flow]
+DCL: Data Control Language
 DCT: Discrete Cosine Transform
+DDL: Data Definition Language
 DEEP: Detailed appropriately, Estimated, Emergent, Prioritized
 DEMUX: Demultiplexer
 DENM: Decentralized Environmental Notification Message
@@ -216,6 +227,7 @@ DKNF: Domain-Key Normal Form
 DLCI: Data Link Connection Identifier
 DLL: Dynamic Link Library
 DLNA: Digital Living Network Alliance
+DML: Data Manipulation Language
 DMO: Direct Mode Operation
 DMT: Discrete Multi-Tone
 DNS: Domain Name System
@@ -226,6 +238,7 @@ DOCSIS: Data Over Cable Service Interface Specification
 DoD: Definition of Done
 DOE: Design of Experiments
 DoH: DNS over HTTPS
+DOM: Document Object Model
 DoQ: DNS over QUIC
 DoR: Definition of Ready
 DoT: DNS over TLS
@@ -237,6 +250,7 @@ DPSK: Differential Phase Shift Keying
 DPWS: Devices Profile for Web Services
 DQDB: Distributed Queue Dual Bus
 DRaaS: Disaster Recovery as a Service
+DRC: Domain Relational Calculus
 DRP: Disaster Recovery Plan
 DRR: Deficit Round Robin
 DRS: Disaster Recovery System
@@ -251,6 +265,7 @@ DSR: [Dynamic Source Routing, Direct Server Return]
 DSRC: Dedicated Short-Range Communications
 DSSS: Direct Sequence Spread Spectrum
 DST: Digital Services Tax
+DTD: Document Type Definition
 DTE: Data Terminal Equipment
 DTLS: Datagram Transport Layer Security
 DTN: [Delay/Disruption-Tolerant Networking, Digital Twin Network]
@@ -312,6 +327,7 @@ ETRI: Electronics and Telecommunications Research Institute
 EVC: Ethernet Virtual Connection
 EVM: [Earned Value Management, Error Vector Magnitude]
 FANET: Flying Ad-hoc Network
+FAR: False Acceptance Rate
 FCC: Federal Communications Commission
 FCS: Frame Check Sequence
 FCW: Forward Collision Warning
@@ -328,7 +344,9 @@ FHSS: Frequency Hopping Spread Spectrum
 FIB: Forwarding Information Base
 FIFO: First In, First Out
 FIN: Finish
+FK: Foreign Key
 FKP: Flächenkorrekturparameter
+FLWOR: For, Let, Where, Order by, Return
 FMC: Fixed Mobile Convergence
 FMEA: Failure Mode and Effects Analysis
 FMS: Flexible Manufacturing System
@@ -342,6 +360,7 @@ FPIF: Fixed Price Incentive Fee
 FPR: False Positive Rate
 FQDN: Fully Qualified Domain Name
 FRAND: Fair Reasonable And Non-Discriminatory
+FRR: False Rejection Rate
 FSK: Frequency Shift Keying
 FSO: Free Space Optics
 FTA: Fault Tree Analysis
@@ -363,8 +382,10 @@ GEAR: Geographical and Energy Aware Routing
 GENA: General Event Notification Architecture
 GEO: Geostationary Earth Orbit
 GFP: Generic Framing Procedure
+GFS: Google File System
 GFSK: Gaussian Frequency Shift Keying
 GIF: Graphics Interchange Format
+GIS: Geographic Information System
 GloBE: Global Anti-Base Erosion
 GLONASS: Global Navigation Satellite System (Russia)
 GNSS: Global Navigation Satellite System
@@ -383,6 +404,7 @@ HAZOP: Hazard and Operability Study
 HBC: Human Body Communication
 HCE: Host Card Emulation
 HCI: [Hyper-Converged Infrastructure, Human-Computer Interaction]
+HDFS: Hadoop Distributed File System
 HDLC: High-level Data Link Control
 HEMS: Home Energy Management System
 HLR: Home Location Register
@@ -399,6 +421,7 @@ HSS: Home Subscriber Server
 HTAP: Hybrid Transactional/Analytical Processing
 HTTP: HyperText Transfer Protocol
 HTTPS: HTTP Secure
+HWM: High Water Mark
 IASB: International Accounting Standards Board
 IBN: Intent-Based Networking
 IBSS: Independent Basic Service Set
@@ -449,6 +472,7 @@ IPv6: Internet Protocol version 6
 IRR: Internal Rate of Return
 IS-IS: Intermediate System to Intermediate System
 ISAC: Integrated Sensing and Communication
+ISAM: Indexed Sequential Access Method
 ISATAP: Intra-Site Automatic Tunnel Addressing Protocol
 ISDN: Integrated Services Digital Network
 ISI: Inter-Symbol Interference
@@ -471,19 +495,24 @@ IXFR: Incremental Zone Transfer
 IXP: Internet Exchange Point
 JAD: Joint Application Development
 JAR: Java Archive
+JDBC: Java Database Connectivity
 JID: Jabber ID
 JIT: Just In Time
+JPA: Java Persistence API
 JPEG: Joint Photographic Experts Group
 JSEP: JavaScript Session Establishment Protocol
+JSON: JavaScript Object Notation
 JTRS: Joint Tactical Radio System
 JVM: Java Virtual Machine
 KL: Kullback-Leibler
+KNN: K-Nearest Neighbors
 KRACK: Key Reinstallation Attack
 KSK: Key Signing Key
 KVM: Kernel-based Virtual Machine
 L2TP: Layer 2 Tunneling Protocol
 L3VPN: Layer 3 Virtual Private Network
 LACP: Link Aggregation Control Protocol
+LALR: Look-Ahead LR
 LAN: Local Area Network
 LAPF: Link Access Procedure for Frame Mode Bearer Services
 LBS: Location-Based Service
@@ -509,9 +538,11 @@ LIN: Local Interconnect Network
 LLC: Logical Link Control
 LLM: Large Language Model
 LLQ: Low Latency Queuing
+LOB: Large Object
 LOC: Lines of Code
 LOE: Level of Effort
 LOF: Local Outlier Factor
+LOOCV: Leave-One-Out Cross-Validation
 LoRa: Long Range
 LOS: Line of Sight
 LPF: Low-Pass Filter
@@ -565,7 +596,10 @@ MITM: Man-in-the-Middle
 ML: Machine Learning
 MLD: Multicast Listener Discovery
 MLE: Maximum Likelihood Estimation
+MLGF: Multi-Level Grid File
 MLO: Multi-Link Operation
+MMDB: Main Memory Database
+MMDBMS: Main Memory Database Management System
 MME: Mobility Management Entity
 MMF: Multi-Mode Fiber
 MNO: Mobile Network Operator
@@ -598,6 +632,7 @@ MTC: Machine-Type Communication
 MTU: Maximum Transmission Unit
 MU-MIMO: Multi-User MIMO
 MUX: Multiplexer
+MV2PL: Multi-Version Two-Phase Locking
 MVC: Model-View-Controller
 MVCC: Multi-Version Concurrency Control
 MVD: Multi-Valued Dependency
@@ -630,6 +665,7 @@ NGV: Next Generation V2X
 NIC: Network Interface Card
 NLB: Network Load Balancer
 NLOS: Non-Line-of-Sight
+NMF: Non-negative Matrix Factorization
 NMRG: Network Management Research Group
 NMS: Network Management System
 NOMA: Non-Orthogonal Multiple Access
@@ -659,6 +695,7 @@ O-DU: O-RAN Distributed Unit
 O-RU: O-RAN Radio Unit
 O2O: Online to Offline
 O4O: Online for Offline
+OAIS: Open Archival Information System
 OAM: Operations, Administration and Maintenance
 OASIS: Organization for the Advancement of Structured Information Standards
 OBE: On-Board Equipment
@@ -668,9 +705,13 @@ OBU: On-Board Unit
 OCB: Outside the Context of a BSS
 OCF: Open Connectivity Foundation
 OCL: Object Constraint Language
+ODBC: Open Database Connectivity
+ODL: Object Definition Language
+ODMG: Object Data Management Group
 OECD: Organisation for Economic Co-operation and Development
 OFDM: Orthogonal Frequency Division Multiplexing
 OFDMA: Orthogonal Frequency Division Multiple Access
+OGC: Open Geospatial Consortium
 OID: Object Identifier
 OISL: Optical Inter-Satellite Link
 OKR: Objectives and Key Results
@@ -683,11 +724,14 @@ OMG: Object Management Group
 ONF: Open Networking Foundation
 ONOS: Open Network Operating System
 ONVIF: Open Network Video Interface Forum
+OODBMS: Object-Oriented Database Management System
 OOK: On-Off Keying
 OPA: Organizational Process Assets
 OPEX: Operating Expenditure
 OPNFV: Open Platform for NFV
+OQL: Object Query Language
 OQPSK: Offset Quadrature Phase Shift Keying
+ORDBMS: Object-Relational Database Management System
 OSGi: Open Services Gateway initiative
 OSI: Open Systems Interconnection
 OSPF: Open Shortest Path First
@@ -726,6 +770,7 @@ PIFS: PCF Inter-Frame Space
 PIM: [Protocol Independent Multicast, Platform Independent Model, Process Improvement]
 PITR: Point-in-Time Recovery
 PJNF: Project-Join Normal Form
+PK: Primary Key
 PKI: Public Key Infrastructure
 PLAT: Provider-side Translator
 PLC: [Programmable Logic Controller, Power Line Communication]
@@ -737,6 +782,7 @@ PMC: Project Management Consulting
 PMF: [Protected Management Frames, Product-Market Fit, Probability Mass Function]
 PMI: Project Management Institute
 PMO: Project Management Office
+PMON: Process Monitor
 PMP: Project Management Professional
 PMTUD: Path MTU Discovery
 PN: Pseudo-Noise
@@ -750,6 +796,7 @@ POTN: Packet Optical Transport Network
 PPP: [Point-to-Point Protocol, Public Private Partnership]
 PQ: Priority Queuing
 PRB: Physical Resource Block
+PREMIS: "PREservation Metadata: Implementation Strategies"
 PRINCE2: PRojects IN Controlled Environments 2
 PRM: [Performance Reference Model, Partner Relationship Management]
 ProSe: Proximity Services
@@ -768,16 +815,20 @@ PVST: Per-VLAN Spanning Tree
 PWM: Pulse Width Modulation
 QA: Quality Assurance
 QAM: Quadrature Amplitude Modulation
+QBE: Query By Example
 QC: Quality Control
 QCI: QoS Class Identifier
 QDMTT: Qualified Domestic Minimum Top-up Tax
+QEP: Query Execution Plan
 QFD: Quality Function Deployment
 QoE: Quality of Experience
 QoS: Quality of Service
 QPACK: QUIC Header Compression
 QPSK: Quadrature Phase Shift Keying
 QR: Quick Response
+QUEL: Query Language (Ingres)
 QUIC: Quick UDP Internet Connections
+RAC: Real Application Clusters
 RACI: Responsible Accountable Consulted Informed
 RAD: Rapid Application Development
 RADIUS: Remote Authentication Dial-In User Service
@@ -786,6 +837,7 @@ RAN: Radio Access Network
 RARP: Reverse Address Resolution Protocol
 RCA: Root Cause Analysis
 RCSI: Read Committed Snapshot Isolation
+RDBMS: Relational Database Management System
 RED: Random Early Detection
 RegTech: Regulatory Technology
 REJ: Reject
@@ -864,6 +916,7 @@ SBMA: Service-Based Management Architecture
 SBOM: Software Bill of Materials
 SBSP: Space-Based Solar Power
 SCADA: Supervisory Control And Data Acquisition
+SCD: Slowly Changing Dimension
 SCell: Secondary Cell
 SCH: Service Channel
 SCM: [Supply Chain Management, Software Configuration Management]
@@ -890,6 +943,8 @@ SEP: Standard-Essential Patent
 SFC: Service Function Chaining
 SFTP: SSH File Transfer Protocol
 SFU: Selective Forwarding Unit
+SGA: System Global Area
+SHAP: SHapley Additive exPlanations
 SI: System Integration
 SIC: Successive Interference Cancellation
 SIFS: Short Inter-Frame Space
@@ -897,6 +952,7 @@ SIGTRAN: Signaling Transport
 SIIT: Stateless IP/ICMP Translation
 SIM: Subscriber Identity Module
 SINR: Signal-to-Interference-plus-Noise Ratio
+SIX: Shared Intention Exclusive
 SLA: Service Level Agreement
 SLAAC: Stateless Address Autoconfiguration
 SLB: Server Load Balancing
@@ -905,6 +961,7 @@ SLM: Service Level Management
 SMDS: Switched Multimegabit Data Service
 SMF: [Session Management Function, Single-Mode Fiber]
 SMO: Service Management and Orchestration
+SMON: System Monitor
 SNAT: Source Network Address Translation
 SNMP: Simple Network Management Protocol
 SNPN: Standalone Non-Public Network
@@ -958,6 +1015,7 @@ T&M: Time and Materials
 TAM: [Total Addressable Market, Technology Acceptance Model]
 TBID: Tree-Based Itinerary Design
 TCA: Traffic Conditioning Agreement
+TCL: Transaction Control Language
 TCO: Total Cost of Ownership
 TCP: Transmission Control Protocol
 TCPI: To-Complete Performance Index
@@ -980,6 +1038,7 @@ TOS: Type of Service
 TPID: Tag Protocol Identifier
 TPR: True Positive Rate
 TPS: [Toyota Production System, Transactions Per Second]
+TRC: Tuple Relational Calculus
 TRS: Trunked Radio System
 TSDSI: Telecommunications Standards Development Society, India
 TSN: Time-Sensitive Networking
@@ -996,11 +1055,13 @@ UAV: Unmanned Aerial Vehicle
 UCL: Upper Control Limit
 UDM: Unified Data Management
 UDP: User Datagram Protocol
+UDT: User-Defined Type
 UE: User Equipment
 UHR: Ultra High Reliability
 ULA: Unique Local Address
 ULCL: Uplink Classifier
 UMA: Unlicensed Mobile Access
+UML: Unified Modeling Language
 UMTS: Universal Mobile Telecommunications System
 UNB: Ultra Narrow Band
 UNECE: United Nations Economic Commission for Europe
@@ -1031,6 +1092,8 @@ VAF: Value Adjustment Factor
 VANET: Vehicular Ad-hoc Network
 VCAT: Virtual Concatenation
 VCF: VMware Cloud Foundation
+VDBE: Virtual Database Engine
+VFS: Virtual File System
 VHF: Very High Frequency
 VIF: Variance Inflation Factor
 VIM: Virtualized Infrastructure Manager
@@ -1046,6 +1109,7 @@ VMS: Video Management System
 VNF: Virtualized Network Function
 VNFM: VNF Manager
 VNI: VXLAN Network Identifier
+VOD: Video on Demand
 VoWiFi: Voice over Wi-Fi
 VPLS: Virtual Private LAN Service
 VPN: Virtual Private Network
@@ -1057,6 +1121,7 @@ VRID: Virtual Router Identifier
 VRM: Vendor Relationship Management
 VRRP: Virtual Router Redundancy Protocol
 VRS: Virtual Reference Station
+VSAM: Virtual Storage Access Method
 VSM: Value Stream Mapping
 VXLAN: Virtual Extensible LAN
 W3C: World Wide Web Consortium
@@ -1090,6 +1155,7 @@ XMPP: eXtensible Messaging and Presence Protocol
 XOR: Exclusive OR
 XP: Extreme Programming
 YAGNI: You Aren't Gonna Need It
+YARN: Yet Another Resource Negotiator
 ZRP: Zone Routing Protocol
 ZSK: Zone Signing Key
 ZSM: Zero-touch network and Service Management

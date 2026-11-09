@@ -8,7 +8,9 @@
     GL = g || {}; const keys = Object.keys(GL).sort((a, b) => b.length - a.length).map(k => k.replace(/[.*+?^${}()|[\]\\\/-]/g, '\\$&'));
     GLRE = keys.length ? new RegExp('(?<![A-Za-z0-9-])(' + keys.join('|') + ')(?![A-Za-z0-9-])', 'g') : null;
   }).catch(() => {});
-  PE.glTopic = null; // 지금 그리는 토픽(문맥별 약어 풀이용)
+  // 지금 그리는 토픽(문맥별 약어 풀이용). 토픽을 새로 그릴 때마다 약어 풀이 기록을 초기화해 한 화면에서 첫 등장만 풀이
+  let glTopic = null; PE.glSeen = null;
+  Object.defineProperty(PE, 'glTopic', { get: () => glTopic, set: v => { glTopic = v; PE.glSeen = v ? new Set() : null; }, configurable: true });
   PE.important = {};
   PE.loadImportant = () => fetch(PE.base + '/important.json').then(r => r.ok ? r.json() : {}).then(o => { PE.important = o || {}; }).catch(() => { PE.important = {}; });
   PE.isImportant = t => !!(t && PE.important[t.id]);
@@ -40,7 +42,7 @@
   PE.gl = text => {
     const raw = String(text == null ? '' : text);
     if (!GLRE) return PE.esc(raw);
-    const seen = new Set(); let out = '', last = 0;
+    const seen = PE.glSeen || new Set(); let out = '', last = 0;
     raw.replace(GLRE, (m, k, off) => {
       const after = raw.slice(off + m.length).trimStart();
       // 토픽별 풀이(t.gloss)가 우선. 사전 값이 목록(뜻 여러 개)이거나 '-'면 토픽에 지정이 없을 때 표시 안 함
@@ -53,7 +55,9 @@
       const slash = !k.includes('/') && (raw[off - 1] === '/' || raw[off + m.length] === '/');
       // GS리테일·LG전자처럼 약어 바로 뒤에 회사명 꼬리가 붙으면 회사명이라 풀이 생략
       const corp = /^(리테일|그룹|전자|텔레콤|유플러스|칼텍스|화학|에너지|디스플레이|이노텍|건설|홈쇼핑|증권|은행|생명|헬로비전|홀딩스)/.test(raw.slice(off + m.length));
-      if (full && !seen.has(k) && !expanded && !slash && !corp && !raw.toLowerCase().includes(String(full).toLowerCase())) { out += `<small class="gl">(${PE.esc(full)})</small>`; seen.add(k); }
+      const shown = full && (expanded || raw.toLowerCase().includes(String(full).toLowerCase()));
+      if (full && !seen.has(k) && !shown && !slash && !corp) { out += `<small class="gl">(${PE.esc(full)})</small>`; seen.add(k); }
+      else if (shown) seen.add(k);
       return m;
     });
     return out + PE.esc(raw.slice(last));
