@@ -6,71 +6,95 @@
     "subtitle": "",
     "domain": "MG",
     "category": "MG > ITSM",
-    "definition": "고객과 합의된 SLA 수준의 IT 서비스를 안정적으로 제공·개선하기 위해 프로세스·자원·기술·조직을 통합 관리하는 서비스 중심 IT 운영 체계. ITIL이 사실상 표준 모범사례",
+    "definition": "고객과 합의된 서비스 수준(SLA)의 IT 서비스를 안정적으로 제공·개선하기 위해 인력·조직·프로세스·기술을 통합 관리하는, ITIL 기반 비즈니스 중심 IT 서비스 관리 체계",
     "keywords": [
-      "핵심: 서비스 수준 협약(SLA) · 서비스 수준 관리(SLM) · ITIL · ISO/IEC 20000",
-      "필수: 인시던트 관리(Incident Management) · 문제 관리(Problem Management) · 변경 관리(Change Management) · 구성 관리 DB(CMDB) · 서비스 데스크(Service Desk)",
-      "참고: 서비스 카탈로그(Service Catalog) · eSCM · COBIT · 가용성 관리(Availability Management) · 지속적 서비스 개선(CSI)"
+      "핵심: ITIL(IT Infrastructure Library) · e-소싱 역량 모델(eSCM) · 서비스 수준 관리(SLM·SLA·SoW) · CMMI",
+      "필수: 인력(People) · 조직(Organization) · 프로세스(Process) · 기술(Technology)",
+      "참고: ISO/IEC 20000(인증) · 서비스 데스크·인시던트·문제·변경 관리 · 구성 관리 DB(CMDB) · 서비스 수준 기반 과금 · IT 자산관리·IT 거버넌스로 확대"
     ],
     "sections": [
       {
-        "title": "ITSM의 개념",
+        "title": "ITSM의 개요",
         "subsections": [
           {
-            "title": "ITSM의 정의",
+            "title": "ITSM 목적",
             "items": [
-              "기술·장비 중심 IT 관리에서 고객·서비스 중심 관리로 전환",
-              "SLA로 합의한 품질을 측정·보고·개선"
+              "ITIL 기반 서비스 관리 체계 도입, IT 역량·성숙도 향상으로 비즈니스 가치 창출"
             ]
           },
           {
-            "title": "등장 배경",
+            "title": "프레임워크 상호 연동",
             "items": [
-              "IT 아웃소싱 확대, 비즈니스-IT 정렬 요구, 운영 비용·품질 가시화 필요"
+              "ITIL·SLM/SLA/SoW·eSCM·CMMI 연동으로 IT 품질 향상"
             ]
           }
         ]
       },
       {
-        "title": "구성요소와 프로세스",
+        "title": "ITSM 주요 구성요소",
         "subsections": [
+          {
+            "title": "ITIL",
+            "items": [
+              "서비스 관리 모범 사례, 서비스 수명주기(전략·설계·전환·운영·지속적 개선)"
+            ]
+          },
+          {
+            "title": "eSCM",
+            "items": [
+              "아웃소싱 제공자 역량 평가 모델(조직 관리·인력·사업·기술·지식 영역)"
+            ]
+          },
+          {
+            "title": "SLM",
+            "items": [
+              "서비스 수준 관리(SLA·SoW), 가용성 측정"
+            ]
+          },
+          {
+            "title": "CMMI",
+            "items": [
+              "프로세스 능력·성숙도 평가와 지속적 품질 개선"
+            ]
+          },
           {
             "title": "4요소",
             "items": [
-              "프로세스(ITIL 프로세스)",
-              "자원(인력·예산)",
-              "기술(ITSM 도구·CMDB)",
-              "조직(서비스 데스크·운영 조직)"
-            ]
-          },
-          {
-            "title": "핵심 프로세스",
-            "items": [
-              "서비스 지원(인시던트·문제·변경·릴리스·구성)",
-              "서비스 제공(SLM·가용성·용량·연속성·재무)"
+              "인력(프로세스 중심 조직)",
+              "조직(내외부 비즈니스 요소·문화)",
+              "프로세스(계획·개발·적용 절차)",
+              "기술(ITSM 도구·CMDB)"
             ]
           }
         ]
       },
       {
-        "title": "구축 전략과 표준",
+        "title": "전통적 IT 운영과 비교·전망",
         "subsections": [
           {
-            "title": "도입 절차",
+            "title": "관리 관점",
             "items": [
-              "현황 진단 → 서비스 카탈로그·SLA 정의 → 프로세스·도구(CMDB) 구축 → 측정·CSI"
+              "IT 내부 운영 중심 → 비즈니스 현업 중심"
             ]
           },
           {
-            "title": "성공 요건",
+            "title": "문제 해결·절차",
             "items": [
-              "경영진 후원, 단계적 도입(서비스 데스크·인시던트부터), KPI 기반 SLA 관리"
+              "인위적 처리 → 예방·자동 처리",
+              "비정형 → 모범 사례 절차 준수"
             ]
           },
           {
-            "title": "표준·프레임워크",
+            "title": "도구·과금",
             "items": [
-              "ITIL 4(모범사례), ISO/IEC 20000(인증), COBIT(거버넌스)"
+              "SMS·NMS → 프로세스 기반 도구",
+              "IT 요소별 사용료 → 서비스 수준 기반 과금"
+            ]
+          },
+          {
+            "title": "전망",
+            "items": [
+              "IT 자산관리·IT 거버넌스로 확대"
             ]
           }
         ]
@@ -82,48 +106,50 @@
       3
     ],
     "outline": [
-      "ITSM의 개념",
-      "- ITSM의 정의",
-      "- 등장 배경",
-      "구성요소와 프로세스",
+      "ITSM의 개요",
+      "- ITSM 목적",
+      "- 프레임워크 상호 연동",
+      "ITSM 주요 구성요소",
+      "- ITIL",
+      "- eSCM",
+      "- SLM",
+      "- CMMI",
       "- 4요소",
-      "- 핵심 프로세스",
-      "구축 전략과 표준",
-      "- 도입 절차",
-      "- 성공 요건",
-      "- 표준·프레임워크"
+      "전통적 IT 운영과 비교·전망",
+      "- 관리 관점",
+      "- 문제 해결·절차",
+      "- 도구·과금",
+      "- 전망"
     ],
     "name": "IT 서비스 관리(ITSM, IT Service Management)",
     "en": "IT Service Management",
     "keywords_must": [
-      "서비스 수준 협약(SLA)",
-      "서비스 수준 관리(SLM)",
-      "ITIL",
-      "ISO/IEC 20000",
-      "인시던트 관리(Incident Management)",
-      "문제 관리(Problem Management)",
-      "변경 관리(Change Management)",
-      "구성 관리 DB(CMDB)",
-      "서비스 데스크(Service Desk)"
+      "ITIL(IT Infrastructure Library)",
+      "e-소싱 역량 모델(eSCM)",
+      "서비스 수준 관리(SLM·SLA·SoW)",
+      "CMMI",
+      "인력(People)",
+      "조직(Organization)",
+      "프로세스(Process)",
+      "기술(Technology)"
     ],
     "keywords_ref": [
-      "서비스 카탈로그(Service Catalog)",
-      "eSCM",
-      "COBIT",
-      "가용성 관리(Availability Management)",
-      "지속적 서비스 개선(CSI)"
+      "ISO/IEC 20000(인증)",
+      "서비스 데스크·인시던트·문제·변경 관리",
+      "구성 관리 DB(CMDB)",
+      "서비스 수준 기반 과금",
+      "IT 자산관리·IT 거버넌스로 확대"
     ],
     "curated": true,
     "quiz_terms": [
-      "서비스 수준 협약(SLA)",
-      "서비스 수준 관리(SLM)",
-      "ITIL",
-      "ISO/IEC 20000",
-      "인시던트 관리(Incident Management)",
-      "문제 관리(Problem Management)",
-      "변경 관리(Change Management)",
-      "구성 관리 DB(CMDB)",
-      "서비스 데스크(Service Desk)"
+      "ITIL(IT Infrastructure Library)",
+      "e-소싱 역량 모델(eSCM)",
+      "서비스 수준 관리(SLM·SLA·SoW)",
+      "CMMI",
+      "인력(People)",
+      "조직(Organization)",
+      "프로세스(Process)",
+      "기술(Technology)"
     ],
     "quiz_groups": [
       "mg"
@@ -139,72 +165,79 @@
     "subtitle": "",
     "domain": "MG",
     "category": "MG > ITSM > IT Outsourcing",
-    "definition": "가치사슬 중 경쟁우위가 있는 활동만 내부에서 수행하고 비전략적 IT 기능(개발·운영·인프라)을 외부 전문 사업자에게 계약으로 위탁하는 정보기술 조달 방식",
+    "definition": "기업 가치사슬 중 경쟁우위가 있는 활동만 내부에서 수행하고 비전략적 IT 기능을 외부 전문 업체에 계약으로 위탁·조달(Procurement)하는 정보기술 위탁 서비스",
     "keywords": [
-      "주요: 핵심역량 집중(Core Competency) · 가치사슬(Value Chain) · 서비스 수준 협약(SLA) · 작업기술서(SoW)",
-      "필수: 전면 아웃소싱(Total Outsourcing) · 선택적 아웃소싱(Selective Outsourcing) · 벤더 종속(Lock-in) · 제안요청서(RFP)",
-      "참고: BPO(Business Process Outsourcing) · KPO(Knowledge Process Outsourcing) · MSP(Managed Service Provider) · eSCM · 니어쇼어·오프쇼어"
+      "핵심: 전면 아웃소싱(Total Outsourcing) · 선택적 아웃소싱(Selective Outsourcing) · IT 자회사 아웃소싱 · 공동 소싱(Co-sourcing)",
+      "필수: 선택과 집중(핵심역량) · 서비스 수준 협약(SLA)·서비스 수준 관리(SLM) · 작업기술서(SoW) · 제안요청서(RFP)",
+      "참고: TCO 절감 · ITIL 수준 서비스 제공 능력 · KPI 성과 관리 · 벤더 종속(Lock-in)·출구 전략 · BPO·ITO · eSCM"
     ],
     "sections": [
       {
-        "title": "IT 아웃소싱의 개념",
+        "title": "IT 아웃소싱의 개요",
         "subsections": [
           {
-            "title": "IT 아웃소싱의 정의",
+            "title": "IT 아웃소싱의 필요성",
             "items": [
-              "비핵심 IT 기능을 외부 전문 기업에 장기 계약으로 맡기고 SLA로 품질 관리"
-            ]
-          },
-          {
-            "title": "도입 목적",
-            "items": [
-              "비용 절감·변동비화, 전문 기술 확보, 핵심역량 집중, 위험 분산"
+              "선택과 집중",
+              "전문성(신기술·품질)",
+              "TCO 절감",
+              "운영 생산성 제고"
             ]
           }
         ]
       },
       {
-        "title": "아웃소싱 유형",
+        "title": "구축 프레임워크와 유형",
         "subsections": [
           {
-            "title": "범위별",
+            "title": "구축 프레임워크",
             "items": [
-              "전면(Total) 아웃소싱",
-              "선택적(Selective) 아웃소싱",
-              "전략적 제휴·합작(Joint Venture)"
+              "사전 준비(정보화전략계획·BPR) → 조직 구성(TFT·R&R) → 업체 선정(RFI/RFP·SLO/SLA) → 협상·계약 → 이행(ITSM) → 계약 관리(SLA/SLM·보상·벌칙)"
             ]
           },
           {
-            "title": "대상별",
+            "title": "전면",
             "items": [
-              "ITO(인프라·운영)",
-              "BPO(업무 프로세스)",
-              "KPO(지식·분석 업무)"
+              "단일 벤더 전체 위탁",
+              "효율·책임 명확, 독점·경쟁 부재"
             ]
           },
           {
-            "title": "지역별",
+            "title": "선택적",
             "items": [
-              "온쇼어",
-              "니어쇼어",
-              "오프쇼어"
+              "특정 기능 위탁",
+              "경쟁으로 품질·가격 개선, 책임 소재 불명확"
+            ]
+          },
+          {
+            "title": "IT 자회사",
+            "items": [
+              "전문 법인 설립 위탁",
+              "의사소통 용이, 비용 증가·나태"
+            ]
+          },
+          {
+            "title": "공동 소싱",
+            "items": [
+              "기획 총괄과 수행 분리",
+              "통제권 보유로 위험 감소, 전략–수행 갈등"
             ]
           }
         ]
       },
       {
-        "title": "추진 절차와 위험 관리",
+        "title": "추진 절차와 개선 방안",
         "subsections": [
           {
             "title": "절차",
             "items": [
-              "전략·대상 선정 → RFI/RFP → 업체 평가·계약(SoW·SLA) → 이관 → 운영·평가 → 재계약/회수"
+              "목표 설정(SWOT·AS-IS) → 서비스 제공자 선정(RFP·제안 평가) → 협상·계약(SLA 확정) → 전환·이행(자산·인력 이전, KPI 운영)"
             ]
           },
           {
-            "title": "위험·대응",
+            "title": "취약점·개선",
             "items": [
-              "벤더 종속·내부 역량 상실·보안 유출 → SLA 벌칙, 출구 전략(Exit Plan), 거버넌스 조직 유지"
+              "벤더 종속·내부 역량 상실·보안 유출 → SLA 벌칙, 출구 전략, 거버넌스 조직 유지"
             ]
           }
         ]
@@ -216,45 +249,47 @@
       4
     ],
     "outline": [
-      "IT 아웃소싱의 개념",
-      "- IT 아웃소싱의 정의",
-      "- 도입 목적",
-      "아웃소싱 유형",
-      "- 범위별",
-      "- 대상별",
-      "- 지역별",
-      "추진 절차와 위험 관리",
+      "IT 아웃소싱의 개요",
+      "- IT 아웃소싱의 필요성",
+      "구축 프레임워크와 유형",
+      "- 구축 프레임워크",
+      "- 전면",
+      "- 선택적",
+      "- IT 자회사",
+      "- 공동 소싱",
+      "추진 절차와 개선 방안",
       "- 절차",
-      "- 위험·대응"
+      "- 취약점·개선"
     ],
     "name": "IT 아웃소싱(IT Outsourcing)",
     "en": "IT Outsourcing",
     "keywords_must": [
-      "핵심역량 집중(Core Competency)",
-      "가치사슬(Value Chain)",
-      "서비스 수준 협약(SLA)",
-      "작업기술서(SoW)",
       "전면 아웃소싱(Total Outsourcing)",
       "선택적 아웃소싱(Selective Outsourcing)",
-      "벤더 종속(Lock-in)",
+      "IT 자회사 아웃소싱",
+      "공동 소싱(Co-sourcing)",
+      "선택과 집중(핵심역량)",
+      "서비스 수준 협약(SLA)·서비스 수준 관리(SLM)",
+      "작업기술서(SoW)",
       "제안요청서(RFP)"
     ],
     "keywords_ref": [
-      "BPO(Business Process Outsourcing)",
-      "KPO(Knowledge Process Outsourcing)",
-      "MSP(Managed Service Provider)",
-      "eSCM",
-      "니어쇼어·오프쇼어"
+      "TCO 절감",
+      "ITIL 수준 서비스 제공 능력",
+      "KPI 성과 관리",
+      "벤더 종속(Lock-in)·출구 전략",
+      "BPO·ITO",
+      "eSCM"
     ],
     "curated": true,
     "quiz_terms": [
-      "핵심역량 집중(Core Competency)",
-      "가치사슬(Value Chain)",
-      "서비스 수준 협약(SLA)",
-      "작업기술서(SoW)",
       "전면 아웃소싱(Total Outsourcing)",
       "선택적 아웃소싱(Selective Outsourcing)",
-      "벤더 종속(Lock-in)",
+      "IT 자회사 아웃소싱",
+      "공동 소싱(Co-sourcing)",
+      "선택과 집중(핵심역량)",
+      "서비스 수준 협약(SLA)·서비스 수준 관리(SLM)",
+      "작업기술서(SoW)",
       "제안요청서(RFP)"
     ],
     "quiz_groups": [
@@ -262,7 +297,7 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": "토셀자코(Total·Selective·자회사·Co-sourcing)"
   },
   {
     "id": "MG_003",
@@ -271,49 +306,76 @@
     "subtitle": "",
     "domain": "MG",
     "category": "MG > ITSM > SLM > SoW",
-    "definition": "아웃소싱·조달 계약에서 공급자가 수행할 작업 범위·인도물·일정·수행 조건·품질 기준을 서술한 문서. SLA와 함께 계약의 업무 기준이 됨",
+    "definition": "서비스 수준 관리를 위해 서비스 제공자와 사용자 간 합의된 SLA의 세부 작업 내용으로, 프로젝트·서비스로 이행할 제품·서비스·결과와 작업 범위·책임을 상세히 기술한 작업 명세서",
     "keywords": [
-      "핵심: 작업 범위(Scope of Work) · 인도물(Deliverables) · 일정·마일스톤(Milestone) · 수용 기준(Acceptance Criteria)",
-      "필수: 서비스 수준 협약(SLA) · 기본 계약서(Master Agreement) · 역할과 책임(R&R)",
-      "참고: PMBOK 조달 작업기술서 · 서비스 카탈로그(Service Catalog) · 제안요청서(RFP) · 범위 기술서(Scope Statement) · 변경 통제"
+      "핵심: 프로세스(서비스 제공 절차) · 업무 범위 · 책임 범위 · 비즈니스 필요성(비즈니스 케이스)",
+      "필수: 제품 범위 기술(RFP) · 전략적 계획(BM) · 서비스 수준 협약(SLA) · 작업 분할 구조(WBS) 참조",
+      "참고: 예측 고장 시간·지원 시간·보안 항목 · 서비스 사용자 측면(평가·보상·패널티) · 서비스 제공자 측면(위험 회피·원가 절감) · RFI·제안서 일관성 · PMBOK 조달 작업기술서"
     ],
     "sections": [
       {
-        "title": "SoW의 개념",
+        "title": "SoW의 개요",
         "subsections": [
           {
-            "title": "작업기술서의 정의",
+            "title": "SoW 특징",
             "items": [
-              "\"무엇을, 어디서, 언제까지, 어떤 기준으로\" 수행할지 정의한 업무 정의서"
+              "운영·유지보수 SoW가 다수",
+              "RFP 필수 납품 항목에서 시작해 요구사항 확정 후 완성"
             ]
           },
           {
-            "title": "계약 체계 내 위치",
+            "title": "SoW 필요성",
             "items": [
-              "기본 계약서(법적 조건) + SoW(작업 내용) + SLA(서비스 수준·측정)"
+              "공급·수요자 기대 차이 해소",
+              "서비스 계량화·정량화",
+              "WBS 주요 참고 문서"
+            ]
+          },
+          {
+            "title": "SoW·SLA·SLM 관계",
+            "items": [
+              "SoW(작업 내용) → SLA(수준 합의) → SLM(측정·관리)"
+            ]
+          },
+          {
+            "title": "참조 사항",
+            "items": [
+              "비즈니스 필요성(비즈니스 케이스)",
+              "제품 범위 기술(RFP)",
+              "전략적 계획(BM·목표)"
             ]
           }
         ]
       },
       {
-        "title": "SoW 구성 항목",
+        "title": "SoW 구성과 관점별 역할",
         "subsections": [
           {
-            "title": "범위·인도물",
+            "title": "작업기술서의 구성요소",
             "items": [
-              "수행 업무 목록, 제외 범위, 산출물·형식"
+              "프로세스",
+              "업무 범위",
+              "책임 범위"
             ]
           },
           {
-            "title": "일정·장소·조건",
+            "title": "구성 항목 사례",
             "items": [
-              "마일스톤, 수행 장소, 투입 인력·자원, 보안 요구"
+              "예측 고장 시간(HW·SW·NW)",
+              "지원 시간(헬프데스크·기술 지원)",
+              "보안(접근 제어·백업·재해 복구)"
             ]
           },
           {
-            "title": "검수·지불",
+            "title": "사용자 측면",
             "items": [
-              "수용 기준, 검수 절차, 대가 지급 조건"
+              "작업 내용 이해, 작업량 기반 평가·보상·패널티"
+            ]
+          },
+          {
+            "title": "제공자 측면",
+            "items": [
+              "작업량 객관 측정, 미예측 요구 위험 회피, 원가 절감 동인"
             ]
           }
         ]
@@ -322,23 +384,15 @@
         "title": "작성 시 고려사항",
         "subsections": [
           {
-            "title": "명확성",
+            "title": "포함 범위",
             "items": [
-              "모호한 표현 배제, 측정 가능한 기준으로 분쟁 예방"
+              "실행에 필요한 모든 작업 포함"
             ]
           },
           {
-            "title": "연계",
+            "title": "일관성·소통",
             "items": [
-              "SLA 지표·벌칙과 정합, 변경 통제 절차 명시"
-            ]
-          },
-          {
-            "title": "유형",
-            "items": [
-              "설계형(Design)",
-              "수준형(Level of Effort)",
-              "성과형(Performance-based) SoW"
+              "RFI·제안서와 일관성 유지, 충분한 의사소통으로 의견 상충 방지"
             ]
           }
         ]
@@ -350,45 +404,49 @@
       6
     ],
     "outline": [
-      "SoW의 개념",
-      "- 작업기술서의 정의",
-      "- 계약 체계 내 위치",
-      "SoW 구성 항목",
-      "- 범위·인도물",
-      "- 일정·장소·조건",
-      "- 검수·지불",
+      "SoW의 개요",
+      "- SoW 특징",
+      "- SoW 필요성",
+      "- SoW·SLA·SLM 관계",
+      "- 참조 사항",
+      "SoW 구성과 관점별 역할",
+      "- 작업기술서의 구성요소",
+      "- 구성 항목 사례",
+      "- 사용자 측면",
+      "- 제공자 측면",
       "작성 시 고려사항",
-      "- 명확성",
-      "- 연계",
-      "- 유형"
+      "- 포함 범위",
+      "- 일관성·소통"
     ],
     "name": "작업기술서(SoW, Statement of Work)",
     "en": "Statement of Work",
     "keywords_must": [
-      "작업 범위(Scope of Work)",
-      "인도물(Deliverables)",
-      "일정·마일스톤(Milestone)",
-      "수용 기준(Acceptance Criteria)",
+      "프로세스(서비스 제공 절차)",
+      "업무 범위",
+      "책임 범위",
+      "비즈니스 필요성(비즈니스 케이스)",
+      "제품 범위 기술(RFP)",
+      "전략적 계획(BM)",
       "서비스 수준 협약(SLA)",
-      "기본 계약서(Master Agreement)",
-      "역할과 책임(R&R)"
+      "작업 분할 구조(WBS) 참조"
     ],
     "keywords_ref": [
-      "PMBOK 조달 작업기술서",
-      "서비스 카탈로그(Service Catalog)",
-      "제안요청서(RFP)",
-      "범위 기술서(Scope Statement)",
-      "변경 통제"
+      "예측 고장 시간·지원 시간·보안 항목",
+      "서비스 사용자 측면(평가·보상·패널티)",
+      "서비스 제공자 측면(위험 회피·원가 절감)",
+      "RFI·제안서 일관성",
+      "PMBOK 조달 작업기술서"
     ],
     "curated": true,
     "quiz_terms": [
-      "작업 범위(Scope of Work)",
-      "인도물(Deliverables)",
-      "일정·마일스톤(Milestone)",
-      "수용 기준(Acceptance Criteria)",
+      "프로세스(서비스 제공 절차)",
+      "업무 범위",
+      "책임 범위",
+      "비즈니스 필요성(비즈니스 케이스)",
+      "제품 범위 기술(RFP)",
+      "전략적 계획(BM)",
       "서비스 수준 협약(SLA)",
-      "기본 계약서(Master Agreement)",
-      "역할과 책임(R&R)"
+      "작업 분할 구조(WBS) 참조"
     ],
     "quiz_groups": [
       "mg"
@@ -404,26 +462,37 @@
     "subtitle": "",
     "domain": "MG",
     "category": "MG > ITSM > SLA",
-    "definition": "IT 서비스 제공자와 이용자가 제공할 서비스의 범위·수준·측정 지표(KPI)·책임·보상/벌칙을 사전에 합의해 문서화한 협약서",
+    "definition": "IT 서비스 제공자와 이용자가 제공할 서비스의 범위·수준·측정 방법·보고 체계·보상과 벌칙을 사전에 정량적으로 합의해 문서화한 IT 서비스 수준 협약서",
     "keywords": [
-      "핵심: 서비스 수준 지표(SLI) · 서비스 수준 목표(SLO) · 핵심성과지표(KPI) · 가용성(Availability)",
-      "필수: 평균 복구 시간(MTTR) · 보상·벌칙(Penalty·Incentive) · 서비스 수준 관리(SLM) · 작업기술서(SoW)",
-      "참고: OLA(Operational Level Agreement) · UC(Underpinning Contract) · 서비스 카탈로그 · 정보통신산업진흥원 SLA 가이드 · 서비스 크레딧(Service Credit)"
+      "핵심: 기본 계약서 · 서비스 카탈로그 · 작업기술서(SoW) · 서비스 수준 관리지표(SLM, Service Level Metrics)",
+      "필수: 서비스 목표 수준(SLO) · 서비스 성과 측정 기준(Measurement) · 서비스 수준 보고(Reports) · 보상 체계(Penalty·Incentive)",
+      "참고: 가용성(총 가동 시간/예정 시간) · 평균 복구 시간(MTTR) · 운영 수준 협약(OLA) · 정보통신산업진흥원 SW사업 SLA 가이드 · 서비스 크레딧"
     ],
     "sections": [
       {
-        "title": "SLA의 개념",
+        "title": "SLA의 개요",
         "subsections": [
           {
-            "title": "SLA의 정의",
+            "title": "SLA와 SLM 관계",
             "items": [
-              "서비스 품질을 정량 지표로 합의해 기대 수준 차이와 분쟁을 방지"
+              "SLA(합의 문서) ↔ SLM(측정·평가·개선 관리 체계)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "도입 절차와 지표",
+        "subsections": [
+          {
+            "title": "도입 절차",
+            "items": [
+              "현황 분석 → 서비스 정의(카탈로그) → 지표·목표 설정 → 측정 체계 → 협약 체결 → 운영·개선"
             ]
           },
           {
-            "title": "계약 체계",
+            "title": "HW·SW·NW 지표",
             "items": [
-              "기본 계약서 + SoW(작업 범위) + SLA(수준·측정·보상)"
+              "시스템 가동률, 장애 복구 시간, 응답 시간, 네트워크 처리량"
             ]
           }
         ]
@@ -432,38 +501,26 @@
         "title": "SLA 구성요소",
         "subsections": [
           {
-            "title": "서비스 정의",
+            "title": "계약·범위",
             "items": [
-              "대상 서비스, 범위, 운영 시간, 역할과 책임"
+              "기본 계약서(목적·기간·비용)",
+              "SoW(작업 범위)",
+              "서비스 카탈로그"
             ]
           },
           {
-            "title": "측정 지표",
+            "title": "수준·측정",
             "items": [
-              "가용성, 응답·처리 시간, MTTR, 장애 건수, 고객 만족도"
+              "관리지표(가동률 최대 99.9%·최소 98%)",
+              "목표 수준(SLO, 목표치·최소치)",
+              "측정 기준(주기·방법)"
             ]
           },
           {
-            "title": "관리 조건",
+            "title": "보고·보상",
             "items": [
-              "측정·보고 주기, 보상·벌칙, 예외 사항, 개정 절차"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "운영과 고려사항",
-        "subsections": [
-          {
-            "title": "운영",
-            "items": [
-              "SLM 프로세스로 측정 → 보고 → 평가 → 개선, OLA·UC로 내부·외부 지원 보장"
-            ]
-          },
-          {
-            "title": "고려사항",
-            "items": [
-              "측정 가능·달성 가능한 지표, 비즈니스 영향 기반 수준 설정, 과도한 벌칙 지양"
+              "서비스 수준 보고(의사소통·모니터링)",
+              "보상 체계(패널티·인센티브)"
             ]
           }
         ]
@@ -475,53 +532,52 @@
       7
     ],
     "outline": [
-      "SLA의 개념",
-      "- SLA의 정의",
-      "- 계약 체계",
+      "SLA의 개요",
+      "- SLA와 SLM 관계",
+      "도입 절차와 지표",
+      "- 도입 절차",
+      "- HW·SW·NW 지표",
       "SLA 구성요소",
-      "- 서비스 정의",
-      "- 측정 지표",
-      "- 관리 조건",
-      "운영과 고려사항",
-      "- 운영",
-      "- 고려사항"
+      "- 계약·범위",
+      "- 수준·측정",
+      "- 보고·보상"
     ],
     "name": "서비스 수준 협약(SLA, Service Level Agreement)",
     "en": "Service Level Agreement",
     "keywords_must": [
-      "서비스 수준 지표(SLI)",
-      "서비스 수준 목표(SLO)",
-      "핵심성과지표(KPI)",
-      "가용성(Availability)",
-      "평균 복구 시간(MTTR)",
-      "보상·벌칙(Penalty·Incentive)",
-      "서비스 수준 관리(SLM)",
-      "작업기술서(SoW)"
+      "기본 계약서",
+      "서비스 카탈로그",
+      "작업기술서(SoW)",
+      "서비스 수준 관리지표(SLM, Service Level Metrics)",
+      "서비스 목표 수준(SLO)",
+      "서비스 성과 측정 기준(Measurement)",
+      "서비스 수준 보고(Reports)",
+      "보상 체계(Penalty·Incentive)"
     ],
     "keywords_ref": [
-      "OLA(Operational Level Agreement)",
-      "UC(Underpinning Contract)",
-      "서비스 카탈로그",
-      "정보통신산업진흥원 SLA 가이드",
-      "서비스 크레딧(Service Credit)"
+      "가용성(총 가동 시간/예정 시간)",
+      "평균 복구 시간(MTTR)",
+      "운영 수준 협약(OLA)",
+      "정보통신산업진흥원 SW사업 SLA 가이드",
+      "서비스 크레딧"
     ],
     "curated": true,
     "quiz_terms": [
-      "서비스 수준 지표(SLI)",
-      "서비스 수준 목표(SLO)",
-      "핵심성과지표(KPI)",
-      "가용성(Availability)",
-      "평균 복구 시간(MTTR)",
-      "보상·벌칙(Penalty·Incentive)",
-      "서비스 수준 관리(SLM)",
-      "작업기술서(SoW)"
+      "기본 계약서",
+      "서비스 카탈로그",
+      "작업기술서(SoW)",
+      "서비스 수준 관리지표(SLM, Service Level Metrics)",
+      "서비스 목표 수준(SLO)",
+      "서비스 성과 측정 기준(Measurement)",
+      "서비스 수준 보고(Reports)",
+      "보상 체계(Penalty·Incentive)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": "기소카 메오메보(기본 계약서·SoW·서비스 카탈로그·관리지표·목표 수준·측정 기준·보고·보상)"
   },
   {
     "id": "MG_005_0",
@@ -530,66 +586,70 @@
     "subtitle": "",
     "domain": "MG",
     "category": "MG > ITSM > SLM",
-    "definition": "SLA에서 합의한 서비스 수준을 측정·평가·보고하고 그 결과를 바탕으로 개선 방안을 마련하는 ITSM의 통합 관리 프로세스",
+    "definition": "사용자 요구사항 파악과 우선순위 판단을 지원하고, SLA에서 정의한 서비스의 성과를 측정·평가해 그 결과를 바탕으로 서비스·프로세스·조직 역량·기술을 통합 관리하고 개선하는 체계",
     "keywords": [
-      "핵심: 서비스 수준 협약(SLA) · 운영 수준 협약(OLA) · 지원 계약(UC, Underpinning Contract) · 서비스 카탈로그(Service Catalog)",
-      "필수: 측정·보고(Monitoring·Reporting) · 서비스 개선 계획(SIP) · 핵심성과지표(KPI) · PDCA",
-      "참고: ITIL 서비스 설계 · 서비스 수준 요구사항(SLR) · 서비스 검토 회의 · 고객 만족도 조사 · ITSM 도구"
+      "핵심: 서비스 카탈로그(Service Catalog) · 서비스 수준 협약(SLA) · 운영 수준 협약(OLA) · 서비스 품질 계획(Service Quality Plan)",
+      "필수: 서비스 보고서(Service Report) · SLM 엔진 · 계획–설계–운영–지속적 평가 · 작업기술서(SoW)",
+      "참고: SLA 기준정보 관리 · 서비스 수준 데이터 분석(Tracking) · 서비스 수준 모니터링 · ITIL 서비스 설계 · 서비스 개선 계획(SIP)"
     ],
     "sections": [
       {
-        "title": "SLM의 개념",
+        "title": "SLM의 개요",
         "subsections": [
           {
-            "title": "SLM의 정의",
+            "title": "SLM의 필요성",
             "items": [
-              "고객 요구를 SLR로 수집해 SLA를 협상·문서화하고 지속 관리"
-            ]
-          },
-          {
-            "title": "SLA와 관계",
-            "items": [
-              "SLA는 합의 문서, SLM은 SLA를 운영·개선하는 관리 활동"
+              "비즈니스 측면(IT 서비스 수준이 CSF)",
+              "IT 기술 측면(대규모·복잡화 위험)",
+              "비용 측면(품질 대비 합리적 대가)"
             ]
           }
         ]
       },
       {
-        "title": "SLM 프로세스",
+        "title": "개념도와 구성요소",
         "subsections": [
           {
-            "title": "계획",
+            "title": "개념도",
             "items": [
-              "서비스 카탈로그·SLR 정의, SLA·OLA·UC 체결"
+              "고객–IT 서비스 업체 간 SLA 기반 서비스 수준 결정·관리"
             ]
           },
           {
-            "title": "운영",
+            "title": "문서",
             "items": [
-              "지표 측정, 실적 보고, 위반 시 원인 분석·보상 처리"
+              "서비스 카탈로그(전체 목록)",
+              "SLA(제공–사용 업체 계약)",
+              "OLA(내부 부서 간 협약)",
+              "서비스 품질 계획",
+              "서비스 보고서(위반 검토)"
             ]
           },
           {
-            "title": "개선",
+            "title": "SLM 엔진",
             "items": [
-              "정기 서비스 검토, SIP 수립, SLA 개정"
+              "지표별 측정치 산출, 보고 자동화, 실시간 모니터링"
             ]
           }
         ]
       },
       {
-        "title": "성공 요소",
+        "title": "기대효과와 시스템 기능",
         "subsections": [
           {
-            "title": "지표 체계",
+            "title": "기대효과",
             "items": [
-              "비즈니스 관점 KPI, 자동 수집 도구(ITSM·모니터링)"
+              "서비스 보장(요구 파악·우선순위)",
+              "명확성(통합 관리 체계)",
+              "성과 측정(NW·시스템·애플리케이션)"
             ]
           },
           {
-            "title": "조직",
+            "title": "시스템 기능",
             "items": [
-              "서비스 수준 관리자 지정, 고객·공급자 정기 협의체"
+              "SLA 기준정보 관리(항목·지표·목표)",
+              "데이터 분석(미달 원인 추적·용량 분석)",
+              "모니터링(목표 대비 실시간·워크로드)"
             ]
           }
         ]
@@ -601,46 +661,45 @@
       9
     ],
     "outline": [
-      "SLM의 개념",
-      "- SLM의 정의",
-      "- SLA와 관계",
-      "SLM 프로세스",
-      "- 계획",
-      "- 운영",
-      "- 개선",
-      "성공 요소",
-      "- 지표 체계",
-      "- 조직"
+      "SLM의 개요",
+      "- SLM의 필요성",
+      "개념도와 구성요소",
+      "- 개념도",
+      "- 문서",
+      "- SLM 엔진",
+      "기대효과와 시스템 기능",
+      "- 기대효과",
+      "- 시스템 기능"
     ],
     "name": "서비스 수준 관리(SLM, Service Level Management)",
     "en": "Service Level Management",
     "keywords_must": [
+      "서비스 카탈로그(Service Catalog)",
       "서비스 수준 협약(SLA)",
       "운영 수준 협약(OLA)",
-      "지원 계약(UC, Underpinning Contract)",
-      "서비스 카탈로그(Service Catalog)",
-      "측정·보고(Monitoring·Reporting)",
-      "서비스 개선 계획(SIP)",
-      "핵심성과지표(KPI)",
-      "PDCA"
+      "서비스 품질 계획(Service Quality Plan)",
+      "서비스 보고서(Service Report)",
+      "SLM 엔진",
+      "계획–설계–운영–지속적 평가",
+      "작업기술서(SoW)"
     ],
     "keywords_ref": [
+      "SLA 기준정보 관리",
+      "서비스 수준 데이터 분석(Tracking)",
+      "서비스 수준 모니터링",
       "ITIL 서비스 설계",
-      "서비스 수준 요구사항(SLR)",
-      "서비스 검토 회의",
-      "고객 만족도 조사",
-      "ITSM 도구"
+      "서비스 개선 계획(SIP)"
     ],
     "curated": true,
     "quiz_terms": [
+      "서비스 카탈로그(Service Catalog)",
       "서비스 수준 협약(SLA)",
       "운영 수준 협약(OLA)",
-      "지원 계약(UC, Underpinning Contract)",
-      "서비스 카탈로그(Service Catalog)",
-      "측정·보고(Monitoring·Reporting)",
-      "서비스 개선 계획(SIP)",
-      "핵심성과지표(KPI)",
-      "PDCA"
+      "서비스 품질 계획(Service Quality Plan)",
+      "서비스 보고서(Service Report)",
+      "SLM 엔진",
+      "계획–설계–운영–지속적 평가",
+      "작업기술서(SoW)"
     ],
     "quiz_groups": [
       "mg"
@@ -658,8 +717,8 @@
     "category": "MG > Mining 총론 > Data Mining",
     "definition": "대량의 데이터에 통계·기계학습 기법을 적용해 숨은 패턴·관계·규칙을 발견하고 의사결정에 활용하는 지식 발견(KDD, Knowledge Discovery in Databases) 과정",
     "keywords": [
-      "핵심: 지식 발견(KDD) · 분류(Classification) · 군집(Clustering) · 연관 규칙(Association Rule)",
-      "필수: 예측(Prediction) · 의사결정나무(Decision Tree) · 인공신경망(ANN) · CRISP-DM",
+      "핵심: 분류(Classification) · 군집(Clustering) · 연관 규칙(Association Rule) · 의사결정나무(Decision Tree)",
+      "필수: 인공신경망(ANN) · CRISP-DM · 연관성(Association, 지지도·신뢰도·향상도) · 연속성(Sequence) · 특성화(Characterization)",
       "참고: SEMMA · 지지도·신뢰도·향상도(Support·Confidence·Lift) · 이상치 탐지(Anomaly Detection) · 과적합(Overfitting) · 데이터 전처리"
     ],
     "sections": [
@@ -723,6 +782,18 @@
             "items": [
               "데이터 품질, 과적합, 개인정보 보호"
             ]
+          },
+          {
+            "title": "수행 단계",
+            "items": [
+              "샘플 데이터 추출(층화 추출) → 정제·전처리(이상치·결측치) → 모델링(회귀·군집) → 평가·시각화"
+            ]
+          },
+          {
+            "title": "비교",
+            "items": [
+              "데이터 마이닝(통계적 패턴 식별) vs 기계학습(지도·비지도·강화) vs 인공지능(지식 표현·추론)"
+            ]
           }
         ]
       }
@@ -743,19 +814,22 @@
       "방법론과 활용",
       "- 표준 방법론",
       "- 활용",
-      "- 이슈"
+      "- 이슈",
+      "- 수행 단계",
+      "- 비교"
     ],
     "name": "데이터 마이닝(Data Mining)",
     "en": "Data Mining",
     "keywords_must": [
-      "지식 발견(KDD)",
       "분류(Classification)",
       "군집(Clustering)",
       "연관 규칙(Association Rule)",
-      "예측(Prediction)",
       "의사결정나무(Decision Tree)",
       "인공신경망(ANN)",
-      "CRISP-DM"
+      "CRISP-DM",
+      "연관성(Association, 지지도·신뢰도·향상도)",
+      "연속성(Sequence)",
+      "특성화(Characterization)"
     ],
     "keywords_ref": [
       "SEMMA",
@@ -766,21 +840,22 @@
     ],
     "curated": true,
     "quiz_terms": [
-      "지식 발견(KDD)",
       "분류(Classification)",
       "군집(Clustering)",
       "연관 규칙(Association Rule)",
-      "예측(Prediction)",
       "의사결정나무(Decision Tree)",
       "인공신경망(ANN)",
-      "CRISP-DM"
+      "CRISP-DM",
+      "연관성(Association, 지지도·신뢰도·향상도)",
+      "연속성(Sequence)",
+      "특성화(Characterization)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": "AS 분데특신의(연관성·연속성·분류·데이터 군집화·특성화·신경망·의사결정나무)"
   },
   {
     "id": "MG_007",
@@ -793,7 +868,7 @@
     "keywords": [
       "핵심: 업무 이해(Business Understanding) · 데이터 이해(Data Understanding) · 데이터 준비(Data Preparation) · 모델링(Modeling)",
       "필수: 평가(Evaluation) · 전개(Deployment) · 단계(Phase)–일반 태스크–세분화 태스크–프로세스 실행 4레벨 · 반복 순환",
-      "참고: SEMMA · KDD · 분석 마스터플랜 · 모델 모니터링 · 피드백 루프"
+      "참고: SEMMA · KDD · 분석 마스터플랜 · 모델 모니터링 · 피드백 루프 · 일반 과업: 상황 평가·프로젝트 계획 · 초기 데이터 수집·데이터 품질 검증 · 데이터 선택·정제·통합·포맷 · 테스트 설계·모델 구축·모델 평가 · 결과 평가·프로세스 검토 · 전개 계획·모니터링"
     ],
     "sections": [
       {
@@ -844,6 +919,17 @@
             "items": [
               "SEMMA는 SAS 도구 중심 5단계(Sample·Explore·Modify·Model·Assess), CRISP-DM은 업무 이해·전개까지 포함"
             ]
+          },
+          {
+            "title": "산출물",
+            "items": [
+              "업무 이해(비용·편익, 프로젝트 계획)",
+              "데이터 이해(데이터 품질 보고서)",
+              "준비(정제 보고서·통합 데이터)",
+              "모델링(파라미터·모델 평가)",
+              "평가(승인 모델)",
+              "전개(전개 계획)"
+            ]
           }
         ]
       }
@@ -862,7 +948,8 @@
       "- 6단계",
       "단계별 주요 과업과 비교",
       "- 주요 과업",
-      "- SEMMA 비교"
+      "- SEMMA 비교",
+      "- 산출물"
     ],
     "name": "데이터 마이닝 표준 프로세스(CRISP-DM)",
     "en": "Cross-Industry Standard Process for Data Mining",
@@ -881,7 +968,13 @@
       "KDD",
       "분석 마스터플랜",
       "모델 모니터링",
-      "피드백 루프"
+      "피드백 루프",
+      "일반 과업: 상황 평가·프로젝트 계획",
+      "초기 데이터 수집·데이터 품질 검증",
+      "데이터 선택·정제·통합·포맷",
+      "테스트 설계·모델 구축·모델 평가",
+      "결과 평가·프로세스 검토",
+      "전개 계획·모니터링"
     ],
     "curated": true,
     "quiz_terms": [
@@ -911,7 +1004,7 @@
     "definition": "ERP·BPM·SCM 등 정보시스템의 이벤트 로그를 분석해 실제 업무 프로세스를 발견하고, 설계 모델과 비교·진단해 개선하는 분석 기법",
     "keywords": [
       "핵심: 이벤트 로그(Event Log) · 케이스 ID·활동·타임스탬프(Case·Activity·Timestamp) · 프로세스 발견(Discovery) · 적합성 검사(Conformance Checking)",
-      "필수: 프로세스 개선(Enhancement) · 페트리넷(Petri Net) · 알파 알고리즘(Alpha Algorithm)",
+      "필수: 프로세스 개선(Enhancement) · 페트리넷(Petri Net) · 알파 알고리즘(Alpha Algorithm) · 프로세스 식별·가시화·개선 · 프로세스 모델링·조직 성과 도출·정보시스템 로그",
       "참고: 휴리스틱 마이너(Heuristic Miner) · BPMN · 병목 분석 · 디지털 트윈 조직(DTO) · 로보틱 처리 자동화(RPA) 대상 발굴"
     ],
     "sections": [
@@ -969,6 +1062,12 @@
             "items": [
               "로그 품질·통합, 개인정보, 복잡 프로세스의 스파게티 모델"
             ]
+          },
+          {
+            "title": "비교",
+            "items": [
+              "프로세스 마이닝(실행 로그로 모델 도출) vs BPM(모델링·최적화·자동화) vs RPA(UI 기반 반복 업무 자동화)"
+            ]
           }
         ]
       }
@@ -988,7 +1087,8 @@
       "- 개선(Enhancement)",
       "활용과 고려사항",
       "- 활용",
-      "- 고려사항"
+      "- 고려사항",
+      "- 비교"
     ],
     "name": "프로세스 마이닝(Process Mining)",
     "en": "Process Mining",
@@ -999,7 +1099,9 @@
       "적합성 검사(Conformance Checking)",
       "프로세스 개선(Enhancement)",
       "페트리넷(Petri Net)",
-      "알파 알고리즘(Alpha Algorithm)"
+      "알파 알고리즘(Alpha Algorithm)",
+      "프로세스 식별·가시화·개선",
+      "프로세스 모델링·조직 성과 도출·정보시스템 로그"
     ],
     "keywords_ref": [
       "휴리스틱 마이너(Heuristic Miner)",
@@ -1016,7 +1118,9 @@
       "적합성 검사(Conformance Checking)",
       "프로세스 개선(Enhancement)",
       "페트리넷(Petri Net)",
-      "알파 알고리즘(Alpha Algorithm)"
+      "알파 알고리즘(Alpha Algorithm)",
+      "프로세스 식별·가시화·개선",
+      "프로세스 모델링·조직 성과 도출·정보시스템 로그"
     ],
     "quiz_groups": [
       "mg"
@@ -1035,8 +1139,8 @@
     "definition": "웹 콘텐츠·하이퍼링크 구조·사용 로그에서 데이터 마이닝 기법으로 유용한 패턴을 추출해 마케팅·개인화·사이트 개선에 활용하는 기술",
     "keywords": [
       "핵심: 웹 콘텐츠 마이닝(Web Content Mining) · 웹 구조 마이닝(Web Structure Mining) · 웹 사용 마이닝(Web Usage Mining) · 웹 로그(Web Log)",
-      "필수: 클릭스트림(Clickstream) · 페이지랭크(PageRank) · 개인화 추천",
-      "참고: HITS 알고리즘 · 세션화(Sessionization) · 쿠키 · 검색엔진 최적화(SEO) · 협업 필터링"
+      "필수: 클릭스트림(Clickstream) · 페이지랭크(PageRank) · 개인화 추천 · 시맨틱 웹(Semantic Web)·온톨로지(Ontology) · 자원 기술 프레임워크(RDF)",
+      "참고: HITS 알고리즘 · 세션화(Sessionization) · 쿠키 · 검색엔진 최적화(SEO) · 협업 필터링 · 웹 로그 → 데이터 웨어하우스·데이터 마트 · 연관성·연속성·분류·군집 탐사 · REST · ONTEX"
     ],
     "sections": [
       {
@@ -1076,6 +1180,20 @@
             "items": [
               "로그 전처리 → 세션화 → 패턴 발견(순차·연관) → 분석"
             ]
+          },
+          {
+            "title": "웹 마이닝의 구성요소",
+            "items": [
+              "추출(웹 로그·HTML 구조 분석)",
+              "저장(DW·데이터 마트)",
+              "분석(연관성·연속성·분류·군집 탐사)"
+            ]
+          },
+          {
+            "title": "구축 절차",
+            "items": [
+              "전처리(정제·클렌징) → 패턴 도출(통계·마이닝) → 마케팅 적용·전략 수립(개인화)"
+            ]
           }
         ]
       },
@@ -1110,6 +1228,8 @@
       "- 콘텐츠 마이닝",
       "- 구조 마이닝",
       "- 사용 마이닝",
+      "- 웹 마이닝의 구성요소",
+      "- 구축 절차",
       "활용과 고려사항",
       "- 활용",
       "- 고려사항"
@@ -1123,14 +1243,20 @@
       "웹 로그(Web Log)",
       "클릭스트림(Clickstream)",
       "페이지랭크(PageRank)",
-      "개인화 추천"
+      "개인화 추천",
+      "시맨틱 웹(Semantic Web)·온톨로지(Ontology)",
+      "자원 기술 프레임워크(RDF)"
     ],
     "keywords_ref": [
       "HITS 알고리즘",
       "세션화(Sessionization)",
       "쿠키",
       "검색엔진 최적화(SEO)",
-      "협업 필터링"
+      "협업 필터링",
+      "웹 로그 → 데이터 웨어하우스·데이터 마트",
+      "연관성·연속성·분류·군집 탐사",
+      "REST",
+      "ONTEX"
     ],
     "curated": true,
     "quiz_terms": [
@@ -1140,7 +1266,9 @@
       "웹 로그(Web Log)",
       "클릭스트림(Clickstream)",
       "페이지랭크(PageRank)",
-      "개인화 추천"
+      "개인화 추천",
+      "시맨틱 웹(Semantic Web)·온톨로지(Ontology)",
+      "자원 기술 프레임워크(RDF)"
     ],
     "quiz_groups": [
       "mg"
@@ -1159,8 +1287,8 @@
     "definition": "상품 후기·SNS·게시판 등 텍스트에서 대상·속성별 긍정·부정·중립 의견과 감성 강도를 자동 추출해 평판·여론을 분석하는 텍스트 마이닝 기술(감성 분석)",
     "keywords": [
       "핵심: 감성 분석(Sentiment Analysis) · 감성 사전(Sentiment Lexicon) · 극성 분류(Polarity Classification) · 속성 기반 감성 분석(ABSA)",
-      "필수: 자연어 처리(NLP) · 형태소 분석 · 평판 분석",
-      "참고: 머신러닝 분류(SVM·나이브 베이즈) · BERT · 소셜 리스닝 · 고객의 소리(VOC) · 반어·풍자 처리"
+      "필수: 자연어 처리(NLP) · 형태소 분석 · 평판 분석 · 도메인 지식 추출 · 양태 분석(Modality)",
+      "참고: 머신러닝 분류(SVM·나이브 베이즈) · BERT · 소셜 리스닝 · 고객의 소리(VOC) · 반어·풍자 처리 · 단서 단어·의존 단어 · 공기(Co-occurrence) 정보 · 시스템 평점"
     ],
     "sections": [
       {
@@ -1196,6 +1324,12 @@
               "기계학습 기반",
               "딥러닝(BERT 등) 기반"
             ]
+          },
+          {
+            "title": "분석 단계",
+            "items": [
+              "전처리(비정형 데이터) → 도메인 지식(속성·감성어) 추출 → 극성 분류·양태 분석 → 요약·시스템 평점"
+            ]
           }
         ]
       },
@@ -1229,6 +1363,7 @@
       "처리 절차와 기법",
       "- 절차",
       "- 기법",
+      "- 분석 단계",
       "활용과 한계",
       "- 활용",
       "- 오피니언 마이닝의 한계"
@@ -1242,14 +1377,19 @@
       "속성 기반 감성 분석(ABSA)",
       "자연어 처리(NLP)",
       "형태소 분석",
-      "평판 분석"
+      "평판 분석",
+      "도메인 지식 추출",
+      "양태 분석(Modality)"
     ],
     "keywords_ref": [
       "머신러닝 분류(SVM·나이브 베이즈)",
       "BERT",
       "소셜 리스닝",
       "고객의 소리(VOC)",
-      "반어·풍자 처리"
+      "반어·풍자 처리",
+      "단서 단어·의존 단어",
+      "공기(Co-occurrence) 정보",
+      "시스템 평점"
     ],
     "curated": true,
     "quiz_terms": [
@@ -1259,7 +1399,9 @@
       "속성 기반 감성 분석(ABSA)",
       "자연어 처리(NLP)",
       "형태소 분석",
-      "평판 분석"
+      "평판 분석",
+      "도메인 지식 추출",
+      "양태 분석(Modality)"
     ],
     "quiz_groups": [
       "mg"
@@ -1279,7 +1421,7 @@
     "keywords": [
       "핵심: 자연어 처리(NLP) · 형태소 분석(Morphological Analysis) · 불용어 제거(Stopword) · 문서-단어 행렬(DTM)",
       "필수: TF-IDF · 토픽 모델링(LDA) · 문서 분류·군집 · 개체명 인식(NER)",
-      "참고: 워드 임베딩(Word2Vec) · 워드 클라우드 · 정보 추출(IE) · 요약(Summarization) · 오피니언 마이닝"
+      "참고: 워드 임베딩(Word2Vec) · 워드 클라우드 · 정보 추출(IE) · 요약(Summarization) · 오피니언 마이닝 · 역문서 빈도(IDF)·잠재 의미 인덱싱(LSI) · 정적·동적 군집화"
     ],
     "sections": [
       {
@@ -1336,6 +1478,12 @@
             "items": [
               "한국어 형태소 처리, 동의어·신조어, 개인정보 비식별"
             ]
+          },
+          {
+            "title": "데이터 마이닝 비교",
+            "items": [
+              "텍스트(비정형 문서, 특성 벡터) vs 데이터(관계형 DB, 결정트리·신경망·연관규칙)"
+            ]
           }
         ]
       }
@@ -1355,7 +1503,8 @@
       "- 마이닝",
       "활용과 고려사항",
       "- 활용",
-      "- 고려사항"
+      "- 고려사항",
+      "- 데이터 마이닝 비교"
     ],
     "name": "텍스트 마이닝(Text Mining)",
     "en": "Text Mining",
@@ -1374,7 +1523,9 @@
       "워드 클라우드",
       "정보 추출(IE)",
       "요약(Summarization)",
-      "오피니언 마이닝"
+      "오피니언 마이닝",
+      "역문서 빈도(IDF)·잠재 의미 인덱싱(LSI)",
+      "정적·동적 군집화"
     ],
     "curated": true,
     "quiz_terms": [
@@ -1405,7 +1556,7 @@
     "keywords": [
       "핵심: 퍼셉트론(Perceptron) · 다층 퍼셉트론(MLP) · 입력층·은닉층·출력층 · 가중치(Weight)·편향(Bias)",
       "필수: 활성화 함수(Activation Function) · 역전파(Backpropagation) · 경사하강법(Gradient Descent) · 과적합(Overfitting)",
-      "참고: 딥러닝(Deep Learning) · 시그모이드·ReLU · 기울기 소실(Vanishing Gradient) · 드롭아웃(Dropout) · 블랙박스 해석(XAI)"
+      "참고: 딥러닝(Deep Learning) · 시그모이드·ReLU · 기울기 소실(Vanishing Gradient) · 드롭아웃(Dropout) · 블랙박스 해석(XAI) · 예를 통한 학습·일반화·연상 기억·결함 허용성 · 자기 조직화 지도(SOM) · 홉필드·ART(Carpenter) 네트워크"
     ],
     "sections": [
       {
@@ -1438,6 +1589,21 @@
             "title": "학습",
             "items": [
               "순전파로 오차 계산 → 역전파로 기울기 산출 → 경사하강법으로 가중치 갱신"
+            ]
+          },
+          {
+            "title": "학습 유형",
+            "items": [
+              "지도(퍼셉트론·MLP)",
+              "자율(경쟁 학습·SOM)",
+              "준지도(레이블·비레이블 결합)",
+              "강화 학습"
+            ]
+          },
+          {
+            "title": "지도학습 절차",
+            "items": [
+              "구조 설계 → 연결 강도 초기화 → 학습 패턴 입력·출력 → 목표치 비교 오차 → 가중치 조정 반복"
             ]
           }
         ]
@@ -1472,6 +1638,8 @@
       "구조와 학습",
       "- 구조",
       "- 학습",
+      "- 학습 유형",
+      "- 지도학습 절차",
       "활용과 한계",
       "- 활용",
       "- 한계·대응"
@@ -1493,7 +1661,10 @@
       "시그모이드·ReLU",
       "기울기 소실(Vanishing Gradient)",
       "드롭아웃(Dropout)",
-      "블랙박스 해석(XAI)"
+      "블랙박스 해석(XAI)",
+      "예를 통한 학습·일반화·연상 기억·결함 허용성",
+      "자기 조직화 지도(SOM)",
+      "홉필드·ART(Carpenter) 네트워크"
     ],
     "curated": true,
     "quiz_terms": [
@@ -1524,7 +1695,7 @@
     "keywords": [
       "핵심: 인과지도(CLD, Causal Loop Diagram) · 강화 루프(Reinforcing Loop) · 균형 루프(Balancing Loop) · 저량·유량(Stock·Flow)",
       "필수: 시간 지연(Delay) · 피드백(Feedback) · 시뮬레이션 · 시스템 사고(Systems Thinking)",
-      "참고: 제이 포레스터(Jay Forrester) · Vensim·Stella · 채찍 효과(Bullwhip Effect) · 성장의 한계 · 정책 실험"
+      "참고: 제이 포레스터(Jay Forrester) · Vensim·Stella · 채찍 효과(Bullwhip Effect) · 성장의 한계 · 정책 실험 · 레벨(Level)·레이트(Rate) · 양(+)·음(−) 인과 관계"
     ],
     "sections": [
       {
@@ -1557,6 +1728,12 @@
             "title": "절차",
             "items": [
               "문제 정의 → 인과지도 → 저량·유량 모델 → 시뮬레이션·검증 → 정책 실험"
+            ]
+          },
+          {
+            "title": "인과루프 예",
+            "items": [
+              "신제품 매출 → 입소문 → 매출 증가(양의 피드백), 제품 만족도·재구매율 연계"
             ]
           }
         ]
@@ -1591,6 +1768,7 @@
       "모델링 요소와 절차",
       "- 요소",
       "- 절차",
+      "- 인과루프 예",
       "활용과 한계",
       "- 활용",
       "- 시스템 다이내믹스의 한계"
@@ -1612,7 +1790,9 @@
       "Vensim·Stella",
       "채찍 효과(Bullwhip Effect)",
       "성장의 한계",
-      "정책 실험"
+      "정책 실험",
+      "레벨(Level)·레이트(Rate)",
+      "양(+)·음(−) 인과 관계"
     ],
     "curated": true,
     "quiz_terms": [
@@ -1643,7 +1823,7 @@
     "keywords": [
       "핵심: 업무 연속성 계획(BCP) · 업무영향분석(BIA) · 위험 평가(Risk Assessment) · 재해복구 계획(DRP)",
       "필수: 목표 복구 시간(RTO) · 목표 복구 시점(RPO) · ISO 22301 · 모의 훈련(Exercise)",
-      "참고: BCMS · 위기관리 계획(CMP) · 복원력(Resilience) · 팬데믹 BCP · 전자금융감독규정"
+      "참고: BCMS · 위기관리 계획(CMP) · 복원력(Resilience) · 팬데믹 BCP · 전자금융감독규정 · 데이터 복제 정책(디스크·OS·DBMS) · 내부 감사·경영 검토 · 예방·시정 조치"
     ],
     "sections": [
       {
@@ -1683,6 +1863,21 @@
             "items": [
               "교육·모의 훈련, 유지보수·검토, 지속적 개선(PDCA)"
             ]
+          },
+          {
+            "title": "BCMS 구축 절차",
+            "items": [
+              "정책·계획(범위·R&R) → 구현·운영(BIA·BCP·모의 훈련) → 성과 평가(내부 감사·경영 검토) → 개선(예방·시정 조치)"
+            ]
+          },
+          {
+            "title": "BCMS 구성",
+            "items": [
+              "BIA(RTO·RPO·RSO·RCO)",
+              "연속성 계획(업무 복구·위기 관리)",
+              "데이터 복제 정책",
+              "미러링 방식(미러·핫·웜·콜드)"
+            ]
           }
         ]
       },
@@ -1717,6 +1912,8 @@
       "- 이해",
       "- 전략·계획",
       "- 운영",
+      "- BCMS 구축 절차",
+      "- BCMS 구성",
       "표준과 고려사항",
       "- 표준",
       "- 고려사항"
@@ -1738,7 +1935,10 @@
       "위기관리 계획(CMP)",
       "복원력(Resilience)",
       "팬데믹 BCP",
-      "전자금융감독규정"
+      "전자금융감독규정",
+      "데이터 복제 정책(디스크·OS·DBMS)",
+      "내부 감사·경영 검토",
+      "예방·시정 조치"
     ],
     "curated": true,
     "quiz_terms": [
@@ -1895,7 +2095,7 @@
     "keywords": [
       "핵심: 미러 사이트(Mirror Site) · 핫 사이트(Hot Site) · 웜 사이트(Warm Site) · 콜드 사이트(Cold Site)",
       "필수: 목표 복구 시간(RTO) · 목표 복구 시점(RPO) · 데이터 복제(Replication) · 동기·비동기 복제",
-      "참고: 상호계약(Reciprocal Agreement) · 공동 이용 센터 · DRaaS · 재해복구 모의훈련 · 전자금융감독규정"
+      "참고: 상호계약(Reciprocal Agreement) · 공동 이용 센터 · DRaaS · 재해복구 모의훈련 · 전자금융감독규정 · 복제 방식(디스크·OS·DBMS 기반) · 고장 감내(FT, Fault Tolerant) · 광 전송(DWDM·CWDM)"
     ],
     "sections": [
       {
@@ -1953,6 +2153,20 @@
             "items": [
               "정기 전환 훈련, 원격지 거리·재해권역 분리, DRaaS 활용"
             ]
+          },
+          {
+            "title": "구성 기술",
+            "items": [
+              "서버(Web·WAS·DBMS)·스토리지 복제, 광 전송(DWDM·CWDM), L2~L4 스위치·백본 라우터"
+            ]
+          },
+          {
+            "title": "복제 방식",
+            "items": [
+              "디스크 기반(스토리지 복제)",
+              "OS 기반(볼륨 복제)",
+              "DBMS 기반(로그 복제), 동기·비동기 전송"
+            ]
           }
         ]
       }
@@ -1972,7 +2186,9 @@
       "- 웜·콜드",
       "구축 고려사항",
       "- 유형 선정",
-      "- 운영"
+      "- 운영",
+      "- 구성 기술",
+      "- 복제 방식"
     ],
     "name": "재해복구시스템(DRS, Disaster Recovery System)",
     "en": "Disaster Recovery System",
@@ -1991,7 +2207,10 @@
       "공동 이용 센터",
       "DRaaS",
       "재해복구 모의훈련",
-      "전자금융감독규정"
+      "전자금융감독규정",
+      "복제 방식(디스크·OS·DBMS 기반)",
+      "고장 감내(FT, Fault Tolerant)",
+      "광 전송(DWDM·CWDM)"
     ],
     "curated": true,
     "quiz_terms": [
@@ -2156,7 +2375,7 @@
     "keywords": [
       "핵심: 재해 선언(Disaster Declaration) · 비상 조직·역할(R&R) · 복구 절차서(Runbook) · 복구 우선순위",
       "필수: 비상 연락망 · 정기·비정기 훈련 · 목표 복구 시간(RTO) · 재해복구시스템(DRS)",
-      "참고: 업무 연속성 계획(BCP) · 업무영향분석(BIA) · 탁상 훈련(Tabletop Exercise) · 전환 훈련 · 계획 유지보수"
+      "참고: 업무 연속성 계획(BCP) · 업무영향분석(BIA) · 탁상 훈련(Tabletop Exercise) · 전환 훈련 · 계획 유지보수 · DRP 문서(DRS 구성도·운영 절차서·시스템·업무 복구 계획서·비상 연락 체계·복구 이동 절차)"
     ],
     "sections": [
       {
@@ -2251,7 +2470,8 @@
       "업무영향분석(BIA)",
       "탁상 훈련(Tabletop Exercise)",
       "전환 훈련",
-      "계획 유지보수"
+      "계획 유지보수",
+      "DRP 문서(DRS 구성도·운영 절차서·시스템·업무 복구 계획서·비상 연락 체계·복구 이동 절차)"
     ],
     "curated": true,
     "quiz_terms": [
@@ -2407,7 +2627,7 @@
     "definition": "클라우드 사업자가 데이터 복제·백업·페일오버·복구 인프라를 서비스로 제공해, 자체 DR 센터 없이 사용량 기반으로 재해복구 체계를 갖추게 하는 클라우드 서비스",
     "keywords": [
       "핵심: 클라우드 재해복구 · 복제(Replication) · 페일오버·페일백(Failover·Failback) · 목표 복구 시간(RTO)",
-      "필수: 목표 복구 시점(RPO) · 종량제 과금(Pay-as-you-go) · 서비스 수준 협약(SLA)",
+      "필수: 목표 복구 시점(RPO) · 종량제 과금(Pay-as-you-go) · 서비스 수준 협약(SLA) · 관리형·지원형·DIY형 DRaaS",
       "참고: BaaS(Backup as a Service) · 하이브리드 클라우드 · 셀프 서비스형·관리형 DRaaS · 데이터 주권 · 복구 테스트 자동화"
     ],
     "sections": [
@@ -2490,7 +2710,8 @@
       "목표 복구 시간(RTO)",
       "목표 복구 시점(RPO)",
       "종량제 과금(Pay-as-you-go)",
-      "서비스 수준 협약(SLA)"
+      "서비스 수준 협약(SLA)",
+      "관리형·지원형·DIY형 DRaaS"
     ],
     "keywords_ref": [
       "BaaS(Backup as a Service)",
@@ -2507,7 +2728,8 @@
       "목표 복구 시간(RTO)",
       "목표 복구 시점(RPO)",
       "종량제 과금(Pay-as-you-go)",
-      "서비스 수준 협약(SLA)"
+      "서비스 수준 협약(SLA)",
+      "관리형·지원형·DIY형 DRaaS"
     ],
     "quiz_groups": [
       "mg"
@@ -2527,7 +2749,7 @@
     "keywords": [
       "핵심: 파장분할다중화(DWDM) · 스토리지 영역 네트워크(SAN) · 스토리지 복제(Storage Replication) · 동기·비동기 복제",
       "필수: 서버 가상화(Server Virtualization) · 스토리지 가상화 · 라이브 마이그레이션(Live Migration)",
-      "참고: FC(Fibre Channel) · FCIP·iSCSI · 클러스터링(HA) · CDP(Continuous Data Protection) · 스냅샷"
+      "참고: FC(Fibre Channel) · FCIP·iSCSI · 클러스터링(HA) · CDP(Continuous Data Protection) · 스냅샷 · 고가용성(HA, High Availability)·고장 감내(FT, Fault Tolerant)"
     ],
     "sections": [
       {
@@ -2623,7 +2845,8 @@
       "FCIP·iSCSI",
       "클러스터링(HA)",
       "CDP(Continuous Data Protection)",
-      "스냅샷"
+      "스냅샷",
+      "고가용성(HA, High Availability)·고장 감내(FT, Fault Tolerant)"
     ],
     "curated": true,
     "quiz_terms": [
@@ -2653,7 +2876,7 @@
     "keywords": [
       "핵심: 정류기(Rectifier) · 인버터(Inverter) · 축전지(Battery) · 바이패스(Bypass)",
       "필수: 상시 인버터 방식(On-line) · 오프라인 방식(Off-line) · 라인 인터랙티브(Line-interactive) · 이중화(N+1)",
-      "참고: 비상 발전기 · 자동 절체 스위치(ATS) · 전력 품질(서지·순간 정전) · 데이터센터 Tier · 리튬이온 배터리"
+      "참고: 비상 발전기 · 자동 절체 스위치(ATS) · 전력 품질(서지·순간 정전) · 데이터센터 Tier · 리튬이온 배터리 · 유지보수 바이패스 스위치(MBS) · 자동 전압 조정기(AVR) · 정적 절체 스위치(STS, 동기 절체)"
     ],
     "sections": [
       {
@@ -2743,7 +2966,10 @@
       "자동 절체 스위치(ATS)",
       "전력 품질(서지·순간 정전)",
       "데이터센터 Tier",
-      "리튬이온 배터리"
+      "리튬이온 배터리",
+      "유지보수 바이패스 스위치(MBS)",
+      "자동 전압 조정기(AVR)",
+      "정적 절체 스위치(STS, 동기 절체)"
     ],
     "curated": true,
     "quiz_terms": [
@@ -2773,7 +2999,7 @@
     "definition": "산업의 수익성과 경쟁 강도를 기존 경쟁자·잠재적 진입자·대체재·공급자 교섭력·구매자 교섭력의 다섯 가지 힘으로 분석하는 외부 환경 분석 기법(Porter)",
     "keywords": [
       "핵심: 기존 경쟁자 간 경쟁(Rivalry) · 잠재적 진입자 위협(Threat of New Entrants) · 대체재 위협(Threat of Substitutes) · 공급자 교섭력(Supplier Power)",
-      "필수: 구매자 교섭력(Buyer Power) · 진입 장벽(Entry Barrier) · 산업 수익성",
+      "필수: 구매자 교섭력(Buyer Power) · 진입 장벽(Entry Barrier) · 산업 수익성 · 공구기대잠",
       "참고: 마이클 포터(Michael Porter) · 전환 비용(Switching Cost) · 규모의 경제 · 본원적 경쟁 전략 · 보완재(6번째 힘)"
     ],
     "sections": [
@@ -2808,6 +3034,21 @@
             "items": [
               "공급자 교섭력, 구매자 교섭력(집중도·전환 비용)"
             ]
+          },
+          {
+            "title": "두음 공구기대잠",
+            "items": [
+              "공급자·구매자·기존 경쟁자·대체재·잠재적 진입자"
+            ]
+          },
+          {
+            "title": "분석 요소",
+            "items": [
+              "경쟁(산업 성장률·철수 장벽)",
+              "공급자(차별화·비중)",
+              "구매자(가격 민감도)",
+              "대체재(가격·효능·교체 비용)"
+            ]
           }
         ]
       },
@@ -2841,6 +3082,8 @@
       "다섯 가지 힘",
       "- 수평적 경쟁",
       "- 수직적 교섭력",
+      "- 두음 공구기대잠",
+      "- 분석 요소",
       "활용과 한계",
       "- 활용",
       "- 5 Forces 분석의 한계"
@@ -2854,7 +3097,8 @@
       "공급자 교섭력(Supplier Power)",
       "구매자 교섭력(Buyer Power)",
       "진입 장벽(Entry Barrier)",
-      "산업 수익성"
+      "산업 수익성",
+      "공구기대잠"
     ],
     "keywords_ref": [
       "마이클 포터(Michael Porter)",
@@ -2871,7 +3115,8 @@
       "공급자 교섭력(Supplier Power)",
       "구매자 교섭력(Buyer Power)",
       "진입 장벽(Entry Barrier)",
-      "산업 수익성"
+      "산업 수익성",
+      "공구기대잠"
     ],
     "quiz_groups": [
       "mg"
@@ -3128,7 +3373,7 @@
     "subtitle": "",
     "domain": "MG",
     "category": "MG > 전략수립도구 > 4C",
-    "definition": "고객·경쟁사·자사(3C)에 유통 채널(Channel)을 더한 관점에서 시장 요구와 경쟁 상황을 비교해 자사의 차별화 포인트와 경쟁 우위 전략을 도출하는 분석 기법",
+    "definition": "3C(고객·경쟁사·자사)에 환경(Circumstance)을 더해 시장·규제 환경·경쟁·자사 역량을 종합 분석하고 핵심 성공 요인과 차별화 전략을 도출하는 시장 분석 기법",
     "keywords": [
       "핵심: 고객(Customer) · 경쟁사(Competitor) · 자사(Company) · 유통 채널(Channel)",
       "필수: 핵심 성공 요인(KSF) · 차별화 포인트 · 고객 니즈 분석",
@@ -3156,23 +3401,27 @@
         "title": "분석 요소",
         "subsections": [
           {
-            "title": "3C",
+            "title": "고객",
             "items": [
-              "고객(시장 규모·니즈)",
-              "경쟁사(전략·강약점)",
-              "자사(자원·역량)"
+              "시장 규모·성장률, 니즈, 구매 동기·충성도"
             ]
           },
           {
-            "title": "4C 확장",
+            "title": "환경",
             "items": [
-              "유통 채널(Channel) — 판매·전달 경로 분석"
+              "법·제도 규제, 정치·사회 환경, 진입 장벽"
             ]
           },
           {
-            "title": "마케팅 4C",
+            "title": "경쟁",
             "items": [
-              "4P의 고객 관점 재해석(고객 가치·비용·편의성·소통)"
+              "현재·잠재 경쟁사의 전략·강약점·반응 패턴"
+            ]
+          },
+          {
+            "title": "자사",
+            "items": [
+              "내부 역량(7S)·기술력, 비전·목표 부합성"
             ]
           }
         ]
@@ -3183,7 +3432,7 @@
           {
             "title": "절차",
             "items": [
-              "고객 분석 → 경쟁사 분석 → 자사 분석 → KSF·차별화 도출"
+              "고객 → 환경 → 경쟁 → 자사 분석 → KSF·차별화 도출"
             ]
           },
           {
@@ -3205,9 +3454,10 @@
       "- 3C·4C 분석의 정의",
       "- 3C·4C 분석의 목적",
       "분석 요소",
-      "- 3C",
-      "- 4C 확장",
-      "- 마케팅 4C",
+      "- 고객",
+      "- 환경",
+      "- 경쟁",
+      "- 자사",
       "활용",
       "- 절차",
       "- 연계"
@@ -3736,7 +3986,7 @@
     "keywords": [
       "핵심: 뿌리·중간·끝마디(Root·Internal·Leaf Node) · 분할 기준(Split Criterion) · 지니 지수(Gini Index) · 엔트로피·정보 이득(Information Gain)",
       "필수: 가지치기(Pruning) · CART·C4.5·CHAID · 기대 화폐 가치(EMV)",
-      "참고: 과적합(Overfitting) · 랜덤 포레스트(Random Forest) · 해석 용이성 · 결정 노드·확률 노드 · 민감도 분석"
+      "참고: 과적합(Overfitting) · 랜덤 포레스트(Random Forest) · 해석 용이성 · 결정 노드·확률 노드 · 민감도 분석 · 부모·자식 마디(Parent·Child Node) · 가지(Branch)·깊이(Depth)"
     ],
     "sections": [
       {
@@ -3830,7 +4080,9 @@
       "랜덤 포레스트(Random Forest)",
       "해석 용이성",
       "결정 노드·확률 노드",
-      "민감도 분석"
+      "민감도 분석",
+      "부모·자식 마디(Parent·Child Node)",
+      "가지(Branch)·깊이(Depth)"
     ],
     "curated": true,
     "quiz_terms": [
@@ -3979,7 +4231,7 @@
     "keywords": [
       "핵심: 시장 세분화(Segmentation) · 표적 시장 선정(Targeting) · 포지셔닝(Positioning) · 세분화 변수(인구통계·지리·심리·행동)",
       "필수: 비차별·차별·집중 마케팅 · 포지셔닝 맵(Perceptual Map) · 마케팅 믹스(4P)",
-      "참고: 필립 코틀러(Philip Kotler) · 니치 마케팅 · 고객 페르소나 · 리포지셔닝 · 세그먼트 매력도"
+      "참고: 필립 코틀러(Philip Kotler) · 니치 마케팅 · 고객 페르소나 · 리포지셔닝 · 세그먼트 매력도 · 세분화 요건(측정·접근·실질·실행 가능성)"
     ],
     "sections": [
       {
@@ -4073,7 +4325,8 @@
       "니치 마케팅",
       "고객 페르소나",
       "리포지셔닝",
-      "세그먼트 매력도"
+      "세그먼트 매력도",
+      "세분화 요건(측정·접근·실질·실행 가능성)"
     ],
     "curated": true,
     "quiz_terms": [
@@ -4470,7 +4723,7 @@
     "keywords": [
       "핵심: 계층 구조(Hierarchy) · 쌍대비교(Pairwise Comparison) · 9점 척도 · 고유벡터(Eigenvector)",
       "필수: 가중치(Weight) · 일관성 비율(CR, Consistency Ratio) · 대안 우선순위",
-      "참고: 토머스 사티(Thomas Saaty) · 일관성 지수(CI) · 퍼지 AHP · ANP · 사업자 선정 평가"
+      "참고: 토머스 사티(Thomas Saaty) · 일관성 지수(CI) · 퍼지 AHP · ANP · 사업자 선정 평가 · 무작위 지수(RI, Random Index)·CR=CI/RI<0.1"
     ],
     "sections": [
       {
@@ -4564,7 +4817,8 @@
       "일관성 지수(CI)",
       "퍼지 AHP",
       "ANP",
-      "사업자 선정 평가"
+      "사업자 선정 평가",
+      "무작위 지수(RI, Random Index)·CR=CI/RI<0.1"
     ],
     "curated": true,
     "quiz_terms": [
@@ -4594,7 +4848,7 @@
     "keywords": [
       "핵심: 서비스 전략(Service Strategy) · 서비스 설계(Service Design) · 서비스 전환(Service Transition) · 서비스 운영(Service Operation)",
       "필수: 지속적 서비스 개선(CSI) · 서비스 수명주기 · 26개 프로세스 · CMDB",
-      "참고: ITIL v2(서비스 지원·제공) · 인시던트·문제 관리 · 변경·릴리스 관리 · 서비스 데스크 · ITIL 4"
+      "참고: ITIL v2(서비스 지원·제공) · 인시던트·문제 관리 · 변경·릴리스 관리 · 서비스 데스크 · ITIL 4 · 두음 전설전운지(전략·설계·전환·운영·지속적 개선) · 서비스 지식 관리 시스템(SKMS)"
     ],
     "sections": [
       {
@@ -4691,7 +4945,9 @@
       "인시던트·문제 관리",
       "변경·릴리스 관리",
       "서비스 데스크",
-      "ITIL 4"
+      "ITIL 4",
+      "두음 전설전운지(전략·설계·전환·운영·지속적 개선)",
+      "서비스 지식 관리 시스템(SKMS)"
     ],
     "curated": true,
     "quiz_terms": [
@@ -4972,7 +5228,7 @@
     "keywords": [
       "핵심: 고객 주도(Customer-driven) · 개인 데이터 저장소(PDS, Personal Data Store) · 의도 경제(Intention Economy) · 개인 요청(Personal RFP)",
       "필수: CRM 대비 관점 · 데이터 주권 · 프로젝트 VRM",
-      "참고: 닥 설즈(Doc Searls) · 마이데이터(MyData) · 자기 주권 신원(SSI) · 개인정보 이동권 · 4th Party 대리인"
+      "참고: 닥 설즈(Doc Searls) · 마이데이터(MyData) · 자기 주권 신원(SSI) · 개인정보 이동권 · 4th Party 대리인 · 개인 데이터 분석(PDA) · 권한 관리·역메시징"
     ],
     "sections": [
       {
@@ -5066,7 +5322,9 @@
       "마이데이터(MyData)",
       "자기 주권 신원(SSI)",
       "개인정보 이동권",
-      "4th Party 대리인"
+      "4th Party 대리인",
+      "개인 데이터 분석(PDA)",
+      "권한 관리·역메시징"
     ],
     "curated": true,
     "quiz_terms": [
@@ -5096,7 +5354,7 @@
     "keywords": [
       "핵심: 통합 데이터베이스 · 베스트 프랙티스(Best Practice) · 모듈(재무·회계·생산·물류·인사) · 파라미터 설정(Configuration)",
       "필수: 커스터마이징(Customization) · 실시간 통합 처리 · BPR 연계",
-      "참고: MRP → MRP II → ERP → ERP II 진화 · 클라우드 ERP · SAP·Oracle · 2-Tier ERP · 갭 분석(Fit-Gap)"
+      "참고: MRP → MRP II → ERP → ERP II 진화 · 클라우드 ERP · SAP·Oracle · 2-Tier ERP · 갭 분석(Fit-Gap) · 빅뱅·단계별·기능별 구축 방식"
     ],
     "sections": [
       {
@@ -5183,7 +5441,8 @@
       "클라우드 ERP",
       "SAP·Oracle",
       "2-Tier ERP",
-      "갭 분석(Fit-Gap)"
+      "갭 분석(Fit-Gap)",
+      "빅뱅·단계별·기능별 구축 방식"
     ],
     "curated": true,
     "quiz_terms": [
@@ -5212,8 +5471,8 @@
     "definition": "과거 성과부터 현재 데이터까지 필요한 정보를 수집·분석·시각화해 의사결정을 지원하는 BI의 진화 단계. BI 2.0은 실시간·이벤트 기반, BI 3.0은 예측·협업·모바일·셀프서비스 분석이 특징",
     "keywords": [
       "핵심: 데이터 웨어하우스(DW) · OLAP · 대시보드(Dashboard) · 실시간 BI(BI 2.0)",
-      "필수: 이벤트 기반 분석 · 예측 분석(BI 3.0) · 셀프서비스 BI(Self-service BI) · 모바일·소셜 BI",
-      "참고: ETL · 데이터 시각화 · 증강 분석(Augmented Analytics) · 데이터 레이크 · Power BI·Tableau"
+      "필수: 이벤트 기반 분석 · 예측 분석(BI 3.0) · 셀프서비스 BI(Self-service BI) · 운영·전략·분석 BI(운전분정)",
+      "참고: ETL · 데이터 시각화 · 증강 분석(Augmented Analytics) · 데이터 레이크 · Power BI·Tableau · 데이터 변경 캡처(CDC)·EII · 기업 포털(EP)·위젯"
     ],
     "sections": [
       {
@@ -5264,6 +5523,21 @@
             "items": [
               "증강 분석(AI), 자연어 질의, 클라우드 BI, 데이터 거버넌스"
             ]
+          },
+          {
+            "title": "계층(운전분정)",
+            "items": [
+              "운영 BI(일상 업무)",
+              "전략 BI(BSC·VBM·ABM)",
+              "분석 BI(마이닝)",
+              "정보 전달(EP·모바일)"
+            ]
+          },
+          {
+            "title": "기술 요소",
+            "items": [
+              "수집(CDC·EII·ETL) → 분석(DW·OLAP·마이닝) → 표현(대시보드·EP·위젯)"
+            ]
           }
         ]
       }
@@ -5282,7 +5556,9 @@
       "- BI 3.0",
       "구성과 동향",
       "- 구성",
-      "- 동향"
+      "- 동향",
+      "- 계층(운전분정)",
+      "- 기술 요소"
     ],
     "name": "비즈니스 인텔리전스(BI) 2.0·3.0",
     "en": "Business Intelligence 2.0 and 3.0",
@@ -5294,14 +5570,16 @@
       "이벤트 기반 분석",
       "예측 분석(BI 3.0)",
       "셀프서비스 BI(Self-service BI)",
-      "모바일·소셜 BI"
+      "운영·전략·분석 BI(운전분정)"
     ],
     "keywords_ref": [
       "ETL",
       "데이터 시각화",
       "증강 분석(Augmented Analytics)",
       "데이터 레이크",
-      "Power BI·Tableau"
+      "Power BI·Tableau",
+      "데이터 변경 캡처(CDC)·EII",
+      "기업 포털(EP)·위젯"
     ],
     "curated": true,
     "quiz_terms": [
@@ -5312,7 +5590,7 @@
       "이벤트 기반 분석",
       "예측 분석(BI 3.0)",
       "셀프서비스 BI(Self-service BI)",
-      "모바일·소셜 BI"
+      "운영·전략·분석 BI(운전분정)"
     ],
     "quiz_groups": [
       "mg"
@@ -5332,7 +5610,7 @@
     "keywords": [
       "핵심: 다차원 큐브(Cube) · 차원(Dimension)·측정값(Measure) · 드릴다운·롤업(Drill-down·Roll-up) · 슬라이스·다이스(Slice·Dice)",
       "필수: 피벗(Pivot) · MOLAP·ROLAP·HOLAP · 스타 스키마(Star Schema)",
-      "참고: OLTP 비교 · 스노우플레이크 스키마 · 팩트 테이블(Fact Table) · 데이터 마트 · FASMI(코드 규칙)"
+      "참고: OLTP 비교 · 스노우플레이크 스키마 · 팩트 테이블(Fact Table) · 데이터 마트 · FASMI(Fast Analysis of Shared Multidimensional Information) · 코드의 12규칙 · DOLAP·WOLAP"
     ],
     "sections": [
       {
@@ -5420,7 +5698,9 @@
       "스노우플레이크 스키마",
       "팩트 테이블(Fact Table)",
       "데이터 마트",
-      "FASMI(코드 규칙)"
+      "FASMI(Fast Analysis of Shared Multidimensional Information)",
+      "코드의 12규칙",
+      "DOLAP·WOLAP"
     ],
     "curated": true,
     "quiz_terms": [
