@@ -11958,15 +11958,17 @@
   },
   "MG": {
    "sheet_topics": 177,
-   "matched": 127,
-   "unmatched": 50,
-   "site_domain_present": true
+   "matched": 152,
+   "unmatched": 25,
+   "site_domain_present": true,
+   "rematch_note": "2026-11-09 second-pass conservative rematch"
   },
   "NW": {
    "sheet_topics": 255,
-   "matched": 205,
-   "unmatched": 50,
-   "site_domain_present": true
+   "matched": 238,
+   "unmatched": 17,
+   "site_domain_present": true,
+   "rematch_note": "2026-11-09 second-pass conservative rematch"
   },
   "OS": {
    "sheet_topics": 71,
@@ -11976,9 +11978,10 @@
   },
   "PM": {
    "sheet_topics": 96,
-   "matched": 84,
-   "unmatched": 12,
-   "site_domain_present": true
+   "matched": 92,
+   "unmatched": 4,
+   "site_domain_present": true,
+   "rematch_note": "2026-11-09 second-pass conservative rematch"
   },
   "ST": {
    "sheet_topics": 329,
