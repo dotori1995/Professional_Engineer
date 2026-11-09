@@ -1469,5 +1469,22 @@
  "OS_028": true,
  "OS_079": true,
  "OS_010": true,
- "OS_024": true
+ "OS_024": true,
+ "DB_126": true,
+ "DB_127": true,
+ "DB_130": true,
+ "DB_131": true,
+ "DB_133": true,
+ "DB_137": true,
+ "DB_138": true,
+ "DB_139": true,
+ "DB_151": true,
+ "DB_154": true,
+ "DB_157": true,
+ "DB_162": true,
+ "DB_163": true,
+ "DB_169": true,
+ "DB_172": true,
+ "DB_174": true,
+ "DB_182": true
 }

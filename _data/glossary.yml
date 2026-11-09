@@ -21,6 +21,7 @@ ADAS: Advanced Driver Assistance System
 ADC: Application Delivery Controller
 ADF: Augmented Dickey-Fuller
 ADN: Application Delivery Network
+ADO: ActiveX Data Objects
 ADPCM: Adaptive Differential Pulse Code Modulation
 ADR: [Adaptive Data Rate, Architecture Decision Record, Active Design Review]
 ADT: Abstract Data Type
@@ -71,6 +72,7 @@ ASIC: Application-Specific Integrated Circuit
 ASID: Address Space Identifier
 ASK: Amplitude Shift Keying
 ASN.1: Abstract Syntax Notation One
+ASP: Active Server Pages
 AST: Abstract Syntax Tree
 ATAM: Architecture Tradeoff Analysis Method
 ATIS: Alliance for Telecommunications Industry Solutions
@@ -147,6 +149,7 @@ CCM: Critical Chain Method
 CCMP: Counter Mode CBC-MAC Protocol
 CCSA: China Communications Standards Association
 CCTV: Closed-Circuit Television
+CDA: Confirmatory Data Analysis
 CDF: Cumulative Distribution Function
 CDM: Code Division Multiplexing
 CDMA: Code Division Multiple Access
@@ -154,6 +157,7 @@ CDN: Content Delivery Network
 CF: Cash Flow
 CFD: Cumulative Flow Diagram
 CFS: Completely Fair Scheduler
+CGI: Common Gateway Interface
 CIDR: Classless Inter-Domain Routing
 CIFS: Common Internet File System
 CIR: Committed Information Rate
@@ -229,6 +233,7 @@ DBWR: Database Writer
 DCE: [Data Circuit-terminating Equipment, Distributed Computing Environment]
 DCF: [Distributed Coordination Function, Discounted Cash Flow]
 DCL: Data Control Language
+DCMI: Dublin Core Metadata Initiative
 DCT: Discrete Cosine Transform
 DDL: Data Definition Language
 DEEP: Detailed appropriately, Estimated, Emergent, Prioritized
@@ -285,6 +290,7 @@ DS-Lite: Dual-Stack Lite
 DSA: Dynamic Spectrum Access
 DSCP: Differentiated Services Code Point
 DSDV: Destination-Sequenced Distance Vector
+DSMS: Data Stream Management System
 DSN: Data Sequence Number
 DSO: Dynamic Subchannel Operation
 DSP: Digital Signal Processing
@@ -294,6 +300,7 @@ DSSS: Direct Sequence Spread Spectrum
 DST: Digital Services Tax
 DTD: Document Type Definition
 DTE: Data Terminal Equipment
+DTF: Date and Time Formats
 DTLS: Datagram Transport Layer Security
 DTN: [Delay/Disruption-Tolerant Networking, Digital Twin Network]
 DU: Distributed Unit
@@ -335,7 +342,9 @@ EI: External Input
 EIF: External Interface File
 EIFS: Extended Inter-Frame Space
 EIGRP: Enhanced Interior Gateway Routing Protocol
+EJB: Enterprise JavaBeans
 EMI: Electromagnetic Interference
+EMR: Electronic Medical Record
 EMS: [Element Management System, Energy Management System]
 EMV: Expected Monetary Value
 EN-DC: E-UTRA NR Dual Connectivity
@@ -452,6 +461,7 @@ HOL: Head-of-Line
 HOLAP: Hybrid OLAP
 HPACK: HTTP/2 Header Compression
 HQL: Hive Query Language
+HR: Human Resources
 HRN: Highest Response-ratio Next
 HSD: Honestly Significant Difference
 HSRP: Hot Standby Router Protocol
@@ -459,7 +469,9 @@ HSS: Home Subscriber Server
 HTAP: Hybrid Transactional/Analytical Processing
 HTTP: HyperText Transfer Protocol
 HTTPS: HTTP Secure
+HW: Hardware
 HWM: High Water Mark
+HWP: Hangul Word Processor (한글 문서 형식)
 IASB: International Accounting Standards Board
 IBN: Intent-Based Networking
 IBSS: Independent Basic Service Set
@@ -536,7 +548,10 @@ IXFR: Incremental Zone Transfer
 IXP: Internet Exchange Point
 JAD: Joint Application Development
 JAR: Java Archive
+JCA: Java EE Connector Architecture
 JDBC: Java Database Connectivity
+JDK: Java Development Kit
+JDO: Java Data Objects
 JID: Jabber ID
 JIT: Just In Time
 JMS: Java Message Service
@@ -546,7 +561,9 @@ JPA: Java Persistence API
 JPEG: Joint Photographic Experts Group
 JSEP: JavaScript Session Establishment Protocol
 JSON: JavaScript Object Notation
+JSP: Jakarta Server Pages (JavaServer Pages)
 JTRS: Joint Tactical Radio System
+JTS: Java Transaction Service
 JVM: Java Virtual Machine
 KL: Kullback-Leibler
 KNN: K-Nearest Neighbors
@@ -639,6 +656,7 @@ MIB: Management Information Base
 MICS: Medical Implant Communication Service
 MIME: Multipurpose Internet Mail Extensions
 MIMO: Multiple-Input Multiple-Output
+MIPS: Million Instructions Per Second
 MIRR: Modified Internal Rate of Return
 MITM: Man-in-the-Middle
 ML: Machine Learning
@@ -717,6 +735,7 @@ NGAP: NG Application Protocol
 NGT: Nominal Group Technique
 NGV: Next Generation V2X
 NIC: Network Interface Card
+NISO: National Information Standards Organization
 NLB: Network Load Balancer
 NLOS: Non-Line-of-Sight
 NMF: Non-negative Matrix Factorization
@@ -758,6 +777,7 @@ OBSS: Overlapping Basic Service Set
 OBU: On-Board Unit
 OCB: Outside the Context of a BSS
 OCF: Open Connectivity Foundation
+OCI: Oracle Call Interface
 OCL: Object Constraint Language
 ODBC: Open Database Connectivity
 ODL: Object Definition Language
@@ -778,6 +798,8 @@ OMG: Object Management Group
 ONF: Open Networking Foundation
 ONOS: Open Network Operating System
 ONVIF: Open Network Video Interface Forum
+OO: Object-Oriented
+OODB: Object-Oriented Database
 OODBMS: Object-Oriented Database Management System
 OOK: On-Off Keying
 OPA: Organizational Process Assets
@@ -799,6 +821,7 @@ OWE: Opportunistic Wireless Encryption
 OWL: Web Ontology Language
 P2P: Peer-to-Peer
 PACF: Partial Autocorrelation Function
+PACS: Picture Archiving and Communication System
 PAM: [Pulse Amplitude Modulation, Process Assessment Model, Point Access Method]
 PAPR: Peak-to-Average Power Ratio
 PAT: Port Address Translation
@@ -812,6 +835,7 @@ PCF: Point Coordination Function
 PCM: Pulse Code Modulation
 PCRF: Policy and Charging Rules Function
 PDCP: Packet Data Convergence Protocol
+PDF: Portable Document Format
 PDM: Precedence Diagramming Method
 PDN: Packet Data Network
 PDR: Pedestrian Dead Reckoning
@@ -821,6 +845,7 @@ PESQ: Perceptual Evaluation of Speech Quality
 PFF: Page Fault Frequency
 PHB: Per-Hop Behavior
 PHP: Penultimate Hop Popping
+PHR: Personal Health Record
 PHY: Physical Layer
 PIE: Proportional Integral controller Enhanced
 PIFS: PCF Inter-Frame Space
@@ -912,6 +937,7 @@ RF: Radio Frequency
 RFC: Request for Comments
 RFID: Radio Frequency Identification
 RFP: Request for Proposal
+RIA: Rich Internet Application
 RIB: Routing Information Base
 RIC: RAN Intelligent Controller
 RID: Record Identifier
@@ -1046,11 +1072,14 @@ SONiC: Software for Open Networking in the Cloud
 SoW: Statement of Work
 SOW: Statement of Work
 SPARQL: SPARQL Protocol and RDF Query Language
+SPC: Storage Performance Council
 SPEC: Standard Performance Evaluation Corporation
 SPF: [Shortest Path First, Sender Policy Framework]
 SPIN: Sensor Protocols for Information via Negotiation
 SPOF: Single Point of Failure
+SPSS: Statistical Package for the Social Sciences
 SPT: Shortest Path Tree
+SQLJ: SQL for Java (Embedded SQL in Java)
 SQMS: Single Queue Multiple Server
 SQNR: Signal-to-Quantization-Noise Ratio
 SRE: Site Reliability Engineering
@@ -1231,6 +1260,7 @@ WSMP: WAVE Short Message Protocol
 WSN: Wireless Sensor Network
 XDR: [External Data Representation, Extended Detection and Response]
 XEP: XMPP Extension Protocol
+XLS: Microsoft Excel Spreadsheet format
 XML: eXtensible Markup Language
 XMPP: eXtensible Messaging and Presence Protocol
 XOR: Exclusive OR
