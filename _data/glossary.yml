@@ -1,5 +1,6 @@
 # 약어 → 정식 명칭 (표준 문서·교과서 기준). 화면에서 약어 옆에 작게 표시됨.
 # 뜻이 여러 개라 헷갈리는 약어(CA, CD, CP, SP, IS, MC, AM, EU 등)는 넣지 않음.
+5GC: 5G Core
 6rd: IPv6 Rapid Deployment
 ABR: Area Border Router
 ACK: Acknowledgment
@@ -11,6 +12,7 @@ AIMD: Additive Increase Multiplicative Decrease
 AIoE: Ambient Internet of Everything
 ALG: Application Level Gateway
 AMC: Adaptive Modulation and Coding
+AMF: Access and Mobility Management Function
 AMI: Advanced Metering Infrastructure
 AMPS: Advanced Mobile Phone System
 AoA: Angle of Arrival
@@ -35,6 +37,7 @@ BSS: Business Support System
 C-V2X: Cellular Vehicle-to-Everything
 CAM: Cooperative Awareness Message
 CAN: Controller Area Network
+CBRS: Citizens Broadband Radio Service
 CBS: Committed Burst Size
 CBWFQ: Class-Based Weighted Fair Queuing
 CCTV: Closed-Circuit Television
@@ -75,6 +78,7 @@ DoT: DNS over TLS
 DPP: Device Provisioning Protocol
 DR: Designated Router
 DS-Lite: Dual-Stack Lite
+DSA: Dynamic Spectrum Access
 DSCP: Differentiated Services Code Point
 DSDV: Destination-Sequenced Distance Vector
 DSR: Dynamic Source Routing
@@ -82,6 +86,7 @@ DSRC: Dedicated Short-Range Communications
 DSSS: Direct Sequence Spread Spectrum
 DST: Digital Services Tax
 DTLS: Datagram Transport Layer Security
+DTN: Digital Twin Network
 DU: Distributed Unit
 DVA: Distance Vector Algorithm
 DVB-T: Digital Video Broadcasting – Terrestrial
@@ -97,6 +102,7 @@ EGP: Exterior Gateway Protocol
 EIFS: Extended Inter-Frame Space
 EIGRP: Enhanced Interior Gateway Routing Protocol
 EMS: Element Management System
+EN-DC: E-UTRA NR Dual Connectivity
 EPC: Evolved Packet Core
 ESS: Extended Service Set
 FCS: Frame Check Sequence
@@ -122,6 +128,7 @@ HCE: Host Card Emulation
 HDLC: High-level Data Link Control
 HOL: Head-of-Line
 HSRP: Hot Standby Router Protocol
+HSS: Home Subscriber Server
 HTTP: HyperText Transfer Protocol
 IBN: Intent-Based Networking
 ICE: Interactive Connectivity Establishment
@@ -182,6 +189,7 @@ MCPTT: Mission Critical Push-To-Talk
 MCU: Multipoint Control Unit
 MEC: Multi-access Edge Computing
 MEF: Metro Ethernet Forum
+MEO: MEC Orchestrator
 MF: More Fragments
 MIMO: Multiple-Input Multiple-Output
 MLD: Multicast Listener Discovery
@@ -212,12 +220,16 @@ NDP: Neighbor Discovery Protocol
 NFC: Near Field Communication
 NFV: Network Functions Virtualization
 NFVI: NFV Infrastructure
+NMRG: Network Management Research Group
 NOMA: Non-Orthogonal Multiple Access
+NPN: Non-Public Network
 NR: New Radio
 NR-V2X: New Radio Vehicle-to-Everything
 NRTK: Network Real-Time Kinematic
 NRZ: Non-Return-to-Zero
 NSA: Non-Standalone
+NSSAI: Network Slice Selection Assistance Information
+NSSF: Network Slice Selection Function
 NTN: Non-Terrestrial Network
 NTRIP: Networked Transport of RTCM via Internet Protocol
 OBU: On-Board Unit
@@ -232,6 +244,7 @@ OSS: Operations Support System
 OTA: Over-The-Air
 OWE: Opportunistic Wireless Encryption
 P2P: Peer-to-Peer
+PCell: Primary Cell
 PCF: Point Coordination Function
 PDR: Pedestrian Dead Reckoning
 PESQ: Perceptual Evaluation of Speech Quality
@@ -242,16 +255,19 @@ PIFS: PCF Inter-Frame Space
 PIM: Protocol Independent Multicast
 PLAT: Provider-side Translator
 PLC: Programmable Logic Controller
+PLMN: Public Land Mobile Network
 PMF: Protected Management Frames
 PMTUD: Path MTU Discovery
 POLQA: Perceptual Objective Listening Quality Analysis
 POP: Point of Presence
 PPP: Point-to-Point Protocol
+ProSe: Proximity Services
 PS-LTE: Public Safety LTE
 PSAP: Public Safety Answering Point
 PSH: Push
 PSK: Phase Shift Keying
 PTR: Pointer
+PU: Primary User
 QAM: Quadrature Amplitude Modulation
 QoE: Quality of Experience
 QoS: Quality of Service
@@ -263,6 +279,7 @@ RF: Radio Frequency
 RFC: Request for Comments
 RIP: Routing Information Protocol
 RIPng: RIP next generation
+RIS: Reconfigurable Intelligent Surface
 RPF: Reverse Path Forwarding
 RR: Resource Record
 RRL: Response Rate Limiting
@@ -282,6 +299,8 @@ SAE: Simultaneous Authentication of Equals
 SAM: Slot Availability Mask
 SASL: Simple Authentication and Security Layer
 SATIN: Satellite-Aerial-Terrestrial Integrated Network
+SBA: Service-Based Architecture
+SCell: Secondary Cell
 SCMA: Sparse Code Multiple Access
 SCTP: Stream Control Transmission Protocol
 SD-WAN: Software-Defined Wide Area Network
@@ -302,13 +321,18 @@ SIIT: Stateless IP/ICMP Translation
 SLA: Service Level Agreement
 SLAAC: Stateless Address Autoconfiguration
 SLD: Second-Level Domain
+SMF: Session Management Function
+SNPN: Standalone Non-Public Network
 SPIN: Sensor Protocols for Information via Negotiation
 SRTP: Secure Real-time Transport Protocol
 SRTT: Smoothed Round-Trip Time
+SSB: Synchronization Signal Block
 SSID: Service Set Identifier
 SSM: Source-Specific Multicast
+SST: Slice/Service Type
 STP: Spanning Tree Protocol
 STUN: Session Traversal Utilities for NAT
+SU: Secondary User
 SUMS: Software Update Management System
 SYN: Synchronize
 TCP: Transmission Control Protocol
@@ -323,10 +347,12 @@ ToA: Time of Arrival
 TOS: Type of Service
 TTL: Time To Live
 TURN: Traversal Using Relays around NAT
+TVWS: TV White Space
 UAV: Unmanned Aerial Vehicle
 UDP: User Datagram Protocol
 UHR: Ultra High Reliability
 ULA: Unique Local Address
+ULCL: Uplink Classifier
 UPF: User Plane Function
 URG: Urgent
 UWB: Ultra-Wideband

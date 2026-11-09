@@ -4302,41 +4302,434 @@
  "NW_166": {
   "dueum": null,
   "keywords": [
-   "MC: 여러 주파수 중 하나 선택",
-   "로드밸런싱",
-   "트래픽 혼잡 분산"
+   "여러 주파수 대역 중 하나 선택(Single Carrier Selection)",
+   "트래픽 혼잡 분산 · 주파수 간 부하 분산(Load Balancing)",
+   "단말 속도 자체는 그대로 · 셀 용량 증대",
+   "예: 800MHz + 1.8GHz 듀얼 밴드",
+   "진화: 주파수 집성(CA) — 여러 대역 동시 사용"
   ],
   "name": "멀티캐리어(Multi-Carrier)",
-  "en": "Multi-Carrier"
+  "en": "Multi-Carrier",
+  "definition": "이동통신사가 보유한 여러 주파수 대역 중 지역별 트래픽 혼잡도를 고려해 단말이 그중 덜 붐비는 하나를 골라 쓰게 함으로써 LTE 품질을 높이는 기술 (LTE MC)",
+  "outline": [
+   "멀티캐리어의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "멀티캐리어 동작 원리",
+   "주파수 집성(CA)과 비교"
+  ],
+  "sections": [
+   {
+    "title": "멀티캐리어의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "서로 다른 주파수 대역을 한 지역에 함께 운용하고, 단말을 혼잡이 덜한 대역에 분산 접속시키는 LTE 운용 기술"
+      ]
+     },
+     {
+      "title": "등장 배경",
+      "items": [
+       "스마트폰 확산으로 특정 대역 트래픽 집중 → 속도 저하",
+       "국내 사업자가 2011~2012년 LTE 듀얼 밴드(예: 800MHz + 1.8GHz)에 적용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "멀티캐리어 동작 원리",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① 기지국이 두 개 이상 주파수(캐리어)로 셀 운용",
+       "② 각 캐리어의 부하(접속 단말 수·자원 사용률) 감시",
+       "③ 혼잡한 캐리어의 단말을 한가한 캐리어로 재선택·핸드오버 유도",
+       "④ 단말은 어느 순간에도 하나의 캐리어만 사용 → 단말 최대 속도는 그대로, 전체 셀 용량과 평균 체감 품질 향상"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주파수 집성(CA)과 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "멀티캐리어: 여러 대역 중 하나 선택, 부하 분산 목적",
+       "주파수 집성(CA, Carrier Aggregation): 여러 대역을 동시에 묶어 사용, 단말 최대 속도 증가(LTE-Advanced)",
+       "멀티캐리어는 CA 도입 전 단계의 용량 대책, 이후 CA·5G NR CA로 진화"
+      ]
+     }
+    ]
+   }
+  ],
+  "keywords_must": [
+   "멀티캐리어(Multi-Carrier)",
+   "여러 주파수 대역 보유(Multiple Bands)",
+   "하나의 대역 선택(Single Band Selection)",
+   "트래픽 혼잡 분산(Congestion Distribution)",
+   "부하 분산(Load Balancing)",
+   "주파수 간 핸드오버(Inter-frequency Handover)",
+   "셀 용량 증대(Capacity Increase)",
+   "주파수 집성 비교(Carrier Aggregation)"
+  ],
+  "keywords_ref": [
+   "듀얼 밴드(800MHz·1.8GHz)",
+   "유휴 모드 재선택(Idle Mode Reselection)",
+   "LTE-A 이전 기술(Pre-LTE-Advanced)",
+   "단말 최대 속도 불변(Peak Rate Unchanged)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "부하 분산(Load Balancing)",
+   "주파수 간 핸드오버(Inter-frequency Handover)",
+   "듀얼 밴드(Dual Band)"
+  ],
+  "quiz_groups": [
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_167": {
   "dueum": null,
   "keywords": [
-   "CA: 여러 주파수 대역 결합",
-   "대역폭 확장(최대 5개 묶음)",
-   "속도 향상",
-   "분류: 대역내 연속 / 대역내 불연속 / 대역간 비연속 통합"
+   "요소 반송파(CC, Component Carrier) 최대 20MHz",
+   "Rel-10: 최대 5개(100MHz) → Rel-13: 최대 32개",
+   "유형: 대역 내 연속 · 대역 내 비연속 · 대역 간 비연속",
+   "PCell(주 셀) · SCell(보조 셀) · 교차 반송파 스케줄링",
+   "속도 향상 · 파편화된 주파수 활용",
+   "5G NR CA · 이중 연결(DC)과 비교"
   ],
   "name": "주파수 집성(Carrier Aggregation)",
-  "en": "Carrier Aggregation"
+  "en": "Carrier Aggregation",
+  "definition": "LTE-Advanced의 핵심 기술로, 여러 개의 주파수 대역(요소 반송파)을 묶어 하나의 넓은 대역처럼 동시에 사용해 단말 전송 속도를 높이는 주파수 확장 기술",
+  "outline": [
+   "주파수 집성의 개념",
+   "- 정의",
+   "- 필요성",
+   "주파수 집성 유형 및 구조",
+   "- 집성 유형",
+   "- 셀 구조와 스케줄링",
+   "발전 동향 및 비교"
+  ],
+  "sections": [
+   {
+    "title": "주파수 집성의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "3GPP Rel-10(LTE-Advanced)에 도입, 여러 요소 반송파를 집성해 최대 100MHz(5×20MHz) 대역폭 제공"
+      ]
+     },
+     {
+      "title": "필요성",
+      "items": [
+       "IMT-Advanced 요구(하향 최대 1Gbps) 충족",
+       "사업자 주파수가 여러 대역에 조각나 있어 넓은 연속 대역 확보가 어려움",
+       "LTE 단말과 하위 호환(각 CC는 LTE 셀과 동일)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주파수 집성 유형 및 구조",
+    "subsections": [
+     {
+      "title": "집성 유형",
+      "items": [
+       "대역 내 연속(Intra-band Contiguous): 같은 대역의 인접 CC 결합 → 구현 쉬움",
+       "대역 내 비연속(Intra-band Non-contiguous): 같은 대역의 떨어진 CC",
+       "대역 간 비연속(Inter-band Non-contiguous): 서로 다른 대역 결합(예: 800MHz + 1.8GHz) → RF 복잡, 국내 상용 주류"
+      ]
+     },
+     {
+      "title": "셀 구조와 스케줄링",
+      "items": [
+       "PCell(Primary Cell): 접속·이동성·제어 담당, 항상 활성",
+       "SCell(Secondary Cell): 추가 용량, 필요 시 활성·비활성",
+       "교차 반송파 스케줄링: 한 CC의 제어 채널로 다른 CC 자원 할당 → 간섭 회피"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "발전 동향 및 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Rel-12: TDD-FDD CA / Rel-13: 최대 32CC(비면허 대역 LAA 포함)",
+       "5G NR: 최대 16CC, FR1+FR2 결합, LTE-NR 이중 연결(EN-DC)",
+       "이중 연결(DC): 서로 다른 기지국의 캐리어를 함께 사용 / CA: 같은 기지국(또는 이상적 백홀) 내 결합",
+       "국내: 2013년 LTE-A CA 세계 최초 상용화, 이후 3·4·5밴드 CA로 확대"
+      ]
+     }
+    ]
+   }
+  ],
+  "keywords_must": [
+   "주파수 집성(Carrier Aggregation)",
+   "LTE-Advanced(3GPP Rel-10)",
+   "요소 반송파(CC, Component Carrier)",
+   "대역폭 확장(Bandwidth Extension)",
+   "대역 내 연속(Intra-band Contiguous)",
+   "대역 내 비연속(Intra-band Non-contiguous)",
+   "대역 간 비연속(Inter-band Non-contiguous)",
+   "PCell(Primary Cell)",
+   "SCell(Secondary Cell)",
+   "전송 속도 향상(Peak Rate Increase)"
+  ],
+  "keywords_ref": [
+   "CC 최대 20MHz",
+   "최대 5CC(Rel-10) · 32CC(Rel-13)",
+   "교차 반송파 스케줄링(Cross-carrier Scheduling)",
+   "5G NR CA(최대 16CC)",
+   "이중 연결(DC, Dual Connectivity)",
+   "국내 2013년 상용화"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "요소 반송파(CC, Component Carrier)",
+   "PCell(Primary Cell)",
+   "교차 반송파 스케줄링(Cross-carrier Scheduling)",
+   "대역 간 집성(Inter-band CA)",
+   "이중 연결(DC, Dual Connectivity)"
+  ],
+  "quiz_groups": [
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_178": {
   "keywords": [
-   "700MHz",
-   "LTE-Maritime",
-   "100km 해상 커버리지",
-   "EPC, EMS, e-Navigation",
-   "DU/RU",
-   "PS-LTE·LTE-R 간섭"
+   "700MHz LTE 기반 · 해상 커버리지 최대 약 100km",
+   "한국형 e-Navigation(SMART-Navigation) 서비스 기반망",
+   "구성: 육상 기지국(DU/RU) · EPC · EMS · 선박 단말",
+   "서비스: 충돌·좌초 경고 · 최적 항로 · 실시간 전자해도 · 원격 의료",
+   "700MHz 공유: PS-LTE · LTE-R · LTE-M 간섭 관리",
+   "IMO e-Navigation 국제 표준화"
   ],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "keywords_note": null,
   "name": "해상 재난망(LTE-M, LTE-Maritime)",
-  "en": "LTE-M, LTE-Maritime"
+  "en": "LTE-M, LTE-Maritime",
+  "definition": "700MHz 대역 LTE 기술로 연안 최대 약 100km 해상까지 초고속 무선통신망(LTE-Maritime)을 구축해 선박에 항행 안전·e-Navigation 서비스를 제공하는 해상 재난안전통신망",
+  "outline": [
+   "해상 재난망(LTE-M)의 개념",
+   "- 정의",
+   "- 필요성",
+   "LTE-M 구성 및 기술",
+   "- 망 구성",
+   "- 장거리 해상 통신 기술",
+   "서비스 및 과제"
+  ],
+  "sections": [
+   {
+    "title": "해상 재난망(LTE-M)의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "해양수산부가 한국형 e-Navigation 사업으로 구축한 해상 전용 LTE 망, 2021년 서비스 개시"
+      ]
+     },
+     {
+      "title": "필요성",
+      "items": [
+       "해양 사고의 상당수가 인적 과실(경계 소홀·항법 실수)",
+       "기존 해상 통신(VHF·위성)은 속도가 느리거나 비쌈 → 연안 선박에 저렴한 초고속 데이터 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "LTE-M 구성 및 기술",
+    "subsections": [
+     {
+      "title": "망 구성",
+      "items": [
+       "육상·도서 기지국(DU/RU, 고출력·고지대 설치)",
+       "EPC(코어망)와 EMS(망 관리 시스템)",
+       "운영센터: e-Navigation 서비스 플랫폼",
+       "선박 단말: LTE-M 라우터 + 전자해도 표시 장치"
+      ]
+     },
+     {
+      "title": "장거리 해상 통신 기술",
+      "items": [
+       "700MHz 저주파 대역 + 고출력·고이득 안테나로 연안 약 100km까지 커버",
+       "해수면 반사·덕팅 등 해상 전파 특성을 고려한 셀 설계, 셀 반경 확대(Extended Cyclic Prefix 등)",
+       "700MHz는 PS-LTE·LTE-R과 같은 공공 대역 → 지역·시간별 간섭 조정, RAN 공유로 통합 운용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "서비스 및 과제",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "서비스: 충돌·좌초 위험 경고, 최적 항로 안내, 실시간 전자해도·기상 정보, 입출항 정보, 원격 의료 지원, 해양 사고 긴급 통신",
+       "과제: 원거리 해상 음영 해소(위성·NTN 연계), 3개 공공망 간섭 관리, 단말 보급·이용 활성화, IMO 국제 표준과 호환"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "해상 LTE(LTE-Maritime)",
+   "700MHz 대역",
+   "원거리 해상 커버리지(약 100km)",
+   "e-Navigation(차세대 해양 안전 종합 관리)",
+   "선박 충돌·좌초 예방(Collision/Grounding Avoidance)",
+   "육상 기지국(Shore Base Station)",
+   "EPC(Evolved Packet Core)",
+   "선박 단말(Ship Terminal)",
+   "PS-LTE·LTE-R 간섭(700MHz Interference)"
+  ],
+  "keywords_ref": [
+   "DU/RU(Digital Unit/Radio Unit)",
+   "EMS(Element Management System)",
+   "전자해도(ENC, Electronic Navigational Chart)",
+   "원격 의료 지원(Tele-medical)",
+   "IMO 국제 표준화(International Maritime Organization)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "LTE-Maritime(해상 LTE)",
+   "e-Navigation(차세대 해양 안전 관리 체계)",
+   "전자해도(ENC, Electronic Navigational Chart)"
+  ],
+  "quiz_groups": [
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "note": null,
+  "review": null
  },
  "NW_181": {
-  "definition": "화재·홍수·지진 등 재난 발생 시 국가 차원의 신속하고 효율적인 재난 관리를 위해, 4세대 이동통신 표준 LTE에 재난대응 무선 교신기술을 적용한 재난 관련 기관용 무선 통신망.",
+  "definition": "재난 발생 시 경찰·소방·해경 등 재난 관련 기관이 하나의 망으로 신속하게 교신하도록, 4G LTE에 그룹 통신·단말 간 직접 통신 등 재난 대응 기능을 더한 국가 재난안전통신망",
   "name": "국가재난안전통신망(PS-LTE, Public Safety LTE)",
-  "en": "PS-LTE, Public Safety LTE"
+  "en": "PS-LTE, Public Safety LTE",
+  "keywords": [
+   "3GPP Rel-12~14 공공안전 기능",
+   "ProSe(D2D): 기지국 없이 단말 간 직접 통신",
+   "GCSE(그룹 통신) · eMBMS 방송형 전달",
+   "MCPTT(무전 기능) · MCData · MCVideo",
+   "IOPS: 코어 단절 시 기지국 단독 운용",
+   "700MHz 전용 대역 · 국내 2021년 전국망 개통"
+  ],
+  "outline": [
+   "PS-LTE의 개념",
+   "- 정의",
+   "- 필요성",
+   "PS-LTE 핵심 기술",
+   "- 3GPP 공공안전 기능",
+   "- 망 구성",
+   "국내 구축 현황 및 과제"
+  ],
+  "sections": [
+   {
+    "title": "PS-LTE의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "상용 LTE 표준에 공공안전(Mission Critical) 기능을 더한 재난 대응 전용 통신망"
+      ]
+     },
+     {
+      "title": "필요성",
+      "items": [
+       "기관마다 다른 무전망(TRS·VHF·UHF)으로 재난 시 기관 간 교신 불가(2003 대구 지하철 화재, 2014 세월호 사고)",
+       "음성뿐 아니라 영상·데이터 공유 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "PS-LTE 핵심 기술",
+    "subsections": [
+     {
+      "title": "3GPP 공공안전 기능",
+      "items": [
+       "ProSe(Rel-12): 기지국이 없는 곳에서 단말끼리 직접 통신(D2D), 단말 중계",
+       "GCSE(Rel-12): 그룹 통신, 다수 단말에 eMBMS로 효율 전달",
+       "MCPTT(Rel-13): 누르고 말하는 무전, 긴급 호출·우선 순위 선점",
+       "IOPS(Rel-13): 백홀·코어 단절 시 기지국이 로컬 코어로 단독 운용",
+       "MCData·MCVideo(Rel-14): 데이터·영상 임무 통신"
+      ]
+     },
+     {
+      "title": "망 구성",
+      "items": [
+       "기지국(eNB) + EPC(MME, S/P-GW, HSS, PCRF)",
+       "MCPTT 서버·GCS AS(그룹 통신 응용 서버)",
+       "상용망 연동(RAN 공유·로밍)으로 커버리지 보완, 이동형 기지국"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "국내 구축 현황 및 과제",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "행정안전부 주관, 700MHz 대역(상향 718~728MHz, 하향 773~783MHz), 2021년 5월 전국망 개통",
+       "경찰·소방·해경·지자체·군 등 300여 기관 사용",
+       "700MHz를 쓰는 LTE-R(철도)·LTE-M(해상)과 간섭 조정 및 연계",
+       "과제: 음영 지역 해소, 단말 보급·활용 훈련, 5G 기반 공공안전망(MCX over 5G)으로 진화"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "공공안전 LTE(Public Safety LTE)",
+   "재난안전통신망(국가 재난망)",
+   "3GPP 표준 기반(3GPP Rel-12~14)",
+   "ProSe(Proximity Services)",
+   "D2D 직접 통신(Device-to-Device)",
+   "GCSE(Group Communication System Enablers)",
+   "MCPTT(Mission Critical Push To Talk)",
+   "IOPS(Isolated E-UTRAN Operation for Public Safety)",
+   "700MHz 전용 대역",
+   "우선순위·선점(Priority & Pre-emption)"
+  ],
+  "keywords_ref": [
+   "MCData·MCVideo(Rel-14)",
+   "eMBMS(evolved Multimedia Broadcast Multicast Service)",
+   "HSS(Home Subscriber Server)",
+   "TRS(Trunked Radio System) 대체",
+   "Rel-12 동결(2015년 3월)",
+   "2021년 5월 전국망 개통"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "ProSe(Proximity Services)",
+   "MCPTT(Mission Critical Push To Talk)",
+   "GCSE(Group Communication System Enablers)",
+   "IOPS(Isolated E-UTRAN Operation for Public Safety)"
+  ],
+  "quiz_groups": [
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_185": {
   "definition": "ITU-R IMT-2020 요구사항을 만족하는 5세대 이동통신. 4G 대비 약 10배 이상 향상된 초고속·초고용량·초저지연·초연결을 목표로, eMBB·URLLC·mMTC 세 가지 서비스 시나리오를 지원한다.",
@@ -4404,42 +4797,452 @@
   ]
  },
  "NW_186": {
-  "definition": "물리적으로 하나의 네트워크에서 Device·Access·Transport·Core를 포함해 End-to-End로 논리적으로 분리된 네트워크를 만들어, 서로 다른 특성의 서비스마다 특화된 전용 네트워크를 제공하는 5G 핵심기술.",
+  "definition": "하나의 물리 네트워크를 단말·무선 접속·전달·코어까지 종단 간(E2E) 논리적으로 분리된 여러 가상 네트워크(슬라이스)로 나누어, 서비스별 요구에 맞춘 전용망처럼 제공하는 5G 핵심 기술",
   "name": "네트워크 슬라이싱(Network Slicing)",
-  "en": "Network Slicing"
+  "en": "Network Slicing",
+  "keywords": [
+   "종단 간(E2E) 논리 분리: RAN · 전달망 · 코어",
+   "슬라이스 식별: S-NSSAI(SST + SD) · NSSF 선택",
+   "SST: eMBB(1) · URLLC(2) · mMTC(3) · V2X(4)",
+   "기반: NFV · SDN · MANO(NFVI · VNF)",
+   "격리(Isolation) · 슬라이스 수명 주기 관리",
+   "GSMA GST · 3GPP NSMF/NSSMF"
+  ],
+  "outline": [
+   "네트워크 슬라이싱의 개념",
+   "- 정의",
+   "- 필요성",
+   "네트워크 슬라이싱 구조 및 기술",
+   "- 슬라이스 유형과 식별",
+   "- 구성 기술",
+   "관리 체계 및 활용"
+  ],
+  "sections": [
+   {
+    "title": "네트워크 슬라이싱의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "3GPP Rel-15부터 5G 시스템에 정의, 공통 인프라 위에 서비스별 독립 논리망을 만드는 기술"
+      ]
+     },
+     {
+      "title": "필요성",
+      "items": [
+       "5G 서비스마다 요구가 상충: 초고속(eMBB), 초저지연·고신뢰(URLLC), 대량 연결(mMTC)",
+       "하나의 망으로 모두 최적화 불가 → 서비스별 전용망을 가상으로 제공해 비용 절감"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "네트워크 슬라이싱 구조 및 기술",
+    "subsections": [
+     {
+      "title": "슬라이스 유형과 식별",
+      "items": [
+       "S-NSSAI = SST(슬라이스 유형: 1 eMBB, 2 URLLC, 3 mMTC, 4 V2X) + SD(세부 구분)",
+       "단말이 요청한 NSSAI로 NSSF가 슬라이스와 AMF 선택"
+      ]
+     },
+     {
+      "title": "구성 기술",
+      "items": [
+       "NFV: 망 기능을 가상화(VNF)해 슬라이스별로 배치",
+       "SDN: 전달망 경로·대역을 슬라이스별로 분리",
+       "MANO(NFV 관리·오케스트레이션): 자원 할당·배치 자동화",
+       "RAN 슬라이싱: 무선 자원(PRB) 분할·우선 스케줄링, 코어: 슬라이스별 SMF·UPF"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "관리 체계 및 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "3GPP 관리: CSMF(통신 서비스) → NSMF(슬라이스) → NSSMF(서브넷: RAN·코어·전달망)",
+       "수명 주기: 준비 → 생성·활성화 → 운용·감시 → 종료",
+       "GSMA GST로 슬라이스 요구 사항(지연·처리량·가용성) 템플릿화",
+       "활용: 스마트 팩토리 URLLC, 방송·이벤트 eMBB, 공공안전 전용 슬라이스, 커넥티드 카 V2X",
+       "과제: 슬라이스 간 완전 격리·보안, 종단 간 SLA 보장, 과금 모델"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "네트워크 슬라이싱(Network Slicing)",
+   "종단 간 논리 분리(End-to-End)",
+   "가상 네트워크(Virtual Network)",
+   "S-NSSAI(Single Network Slice Selection Assistance Information)",
+   "NSSF(Network Slice Selection Function)",
+   "eMBB 슬라이스(enhanced Mobile Broadband)",
+   "URLLC 슬라이스(Ultra-Reliable Low-Latency)",
+   "mMTC 슬라이스(massive Machine-Type)",
+   "NFV(Network Functions Virtualization)",
+   "SDN(Software Defined Networking)",
+   "슬라이스 격리(Slice Isolation)"
+  ],
+  "keywords_ref": [
+   "SST·SD(Slice/Service Type·Slice Differentiator)",
+   "MANO(Management and Orchestration)",
+   "NFVI(NFV Infrastructure)",
+   "슬라이스 수명 주기(Lifecycle Management)",
+   "GSMA GST(Generic Network Slice Template)",
+   "RAN 슬라이싱(RAN Slicing)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "S-NSSAI(Single Network Slice Selection Assistance Information)",
+   "NSSF(Network Slice Selection Function)",
+   "MANO(Management and Orchestration)",
+   "슬라이스 격리(Slice Isolation)",
+   "SST(Slice/Service Type)"
+  ],
+  "quiz_groups": [
+   "mobile",
+   "sdn"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_189": {
   "keywords": [
-   "근접성(Proximity)",
-   "다양한 지리적 분포",
-   "저지연(Low Latency)",
-   "위치인식(Location Awareness)",
-   "MEC Server(기지국 위치)"
+   "특징: 근접성(Proximity) · 저지연 · 위치 인식 · 망 상태 정보 활용",
+   "ETSI ISG MEC: Mobile → Multi-access(2017 명칭 변경)",
+   "구조: MEC 호스트(MEC 플랫폼 · MEC 앱 · 가상화 인프라) · MEC 오케스트레이터",
+   "API: 무선 망 정보(RNIS) · 위치 · 대역폭 관리",
+   "5G 연동: UPF 로컬 브레이크아웃(ULCL)",
+   "서비스: AR/VR · 자율주행 · 영상 분석 · 클라우드 게임"
   ],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "keywords_note": null,
   "name": "멀티액세스 엣지 컴퓨팅(MEC, Multi-access Edge Computing)",
-  "en": "MEC, Multi-access Edge Computing"
+  "en": "MEC, Multi-access Edge Computing",
+  "definition": "이동통신 기지국·집선국 등 사용자와 가까운 망 가장자리에 클라우드 컴퓨팅 자원을 두어 콘텐츠·응용을 근접 처리함으로써 지연을 줄이고 코어망 혼잡을 완화하는 기술 (ETSI MEC)",
+  "outline": [
+   "MEC의 개념",
+   "- 정의",
+   "- 특징",
+   "MEC 구조",
+   "- ETSI MEC 참조 구조",
+   "- 5G 연동",
+   "MEC 서비스 및 과제"
+  ],
+  "sections": [
+   {
+    "title": "MEC의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "ETSI ISG MEC가 2014년 Mobile Edge Computing으로 시작, 2017년 Wi-Fi·유선까지 포함하는 Multi-access Edge Computing으로 확대"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "근접성: 기지국·집선국에 서버 배치",
+       "저지연: 코어·인터넷 왕복 제거로 수 ms 응답",
+       "위치 인식: 단말이 접속한 셀 정보로 위치 기반 서비스",
+       "망 상태 정보: 무선 품질·혼잡 정보를 응용에 제공(RNIS)",
+       "지리적 분산, 백홀·코어 트래픽 절감"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "MEC 구조",
+    "subsections": [
+     {
+      "title": "ETSI MEC 참조 구조",
+      "items": [
+       "MEC 호스트: MEC 플랫폼(서비스 등록·트래픽 규칙·DNS), MEC 앱, 가상화 인프라(NFVI)",
+       "MEC 시스템 관리: MEC 오케스트레이터(MEO)가 앱 배치·이동, 플랫폼 관리자",
+       "참조점: Mp1(앱-플랫폼 API), Mp2(데이터 평면), Mm(관리)"
+      ]
+     },
+     {
+      "title": "5G 연동",
+      "items": [
+       "5GC의 UPF를 엣지에 두고 ULCL·로컬 브레이크아웃으로 트래픽을 MEC로 분기",
+       "AF(응용 기능)가 NEF를 통해 트래픽 라우팅·QoS 요청",
+       "단말 이동 시 앱 재배치(Application Mobility)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "MEC 서비스 및 과제",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "서비스: AR/VR·메타버스 렌더링, 자율주행·V2X 정보 처리, CCTV 영상 분석, 클라우드 게임, 스마트 팩토리, 콘텐츠 캐싱",
+       "사례: 통신사 5G MEC, AWS Wavelength·Azure Edge Zones",
+       "과제: 엣지 자원 제약과 배치 최적화, 이동 시 서비스 연속성, 다중 사업자 상호 운용, 물리 보안·멀티 테넌시"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "멀티액세스 엣지 컴퓨팅(Multi-access Edge Computing)",
+   "ETSI ISG MEC",
+   "근접성(Proximity)",
+   "저지연(Low Latency)",
+   "위치 인식(Location Awareness)",
+   "망 상태 정보(RNIS, Radio Network Information Service)",
+   "MEC 호스트(MEC Host)",
+   "MEC 플랫폼(MEC Platform)",
+   "MEC 오케스트레이터(MEO)",
+   "UPF 로컬 브레이크아웃(Local Breakout)"
+  ],
+  "keywords_ref": [
+   "Mobile → Multi-access 명칭 변경(2017)",
+   "ULCL(Uplink Classifier)",
+   "코어망 혼잡 완화(Backhaul Offload)",
+   "AWS Wavelength",
+   "5G 특화망 연계(Private 5G)",
+   "AR/VR·자율주행·클라우드 게임"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "MEC 플랫폼(MEC Platform)",
+   "RNIS(Radio Network Information Service)",
+   "로컬 브레이크아웃(Local Breakout)",
+   "MEC 오케스트레이터(MEO, MEC Orchestrator)"
+  ],
+  "quiz_groups": [
+   "edge",
+   "sdn",
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "note": null,
+  "review": null
  },
  "NW_191": {
   "keywords": [
-   "최대 1Tbps",
+   "ITU-R M.2160(IMT-2030 프레임워크, 2023)",
+   "6대 사용 시나리오: 몰입형 · HRLLC · 대규모 통신 · 유비쿼터스 연결 · AI-통신 · 통합 센싱-통신",
+   "목표: 최대 1Tbps(연구 목표) · 지연 0.1ms · 초정밀 측위",
+   "핵심 기술: 테라헤르츠(THz) · RIS · AI 네이티브 · NTN · ISAC · 셀프리 MIMO",
    "AIoE(Ambient Internet of Everything)",
-   "6대 성능 비전: 초성능, 초대역, 초경험, 초지능, 초정밀, 초공간",
-   "테라헤르츠(THz) 대역"
+   "일정: 3GPP Rel-20 연구 → Rel-21 표준 → 2030년경 상용화"
   ],
   "name": "6G(6세대 이동통신, IMT-2030)",
-  "en": "IMT-2030"
+  "en": "IMT-2030",
+  "definition": "5G 이후의 차세대 이동통신(IMT-2030)으로, 테라헤르츠 대역·AI 네이티브·위성 통합 등을 바탕으로 초고속(최대 1Tbps급 연구 목표)·초저지연·초연결·초지능의 만물 지능 인터넷(AIoE)을 지향",
+  "outline": [
+   "6G의 개념",
+   "- 정의",
+   "- 비전과 성능 목표",
+   "6G 사용 시나리오 및 핵심 기술",
+   "- 사용 시나리오",
+   "- 핵심 기술",
+   "표준화 및 국내외 동향"
+  ],
+  "sections": [
+   {
+    "title": "6G의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "ITU-R이 IMT-2030으로 명명한 6세대 이동통신, 2030년경 상용화 목표"
+      ]
+     },
+     {
+      "title": "비전과 성능 목표",
+      "items": [
+       "최대 전송률 1Tbps(삼성 등 연구 목표, ITU 후보치는 50~200Gbps), 지연 0.1ms, 연결 밀도 10^7~10^8/km², cm급 측위",
+       "국내 비전: 초성능·초대역·초경험·초지능·초정밀·초공간",
+       "지속 가능성(에너지 효율)·신뢰·보안을 기본 가치로 포함"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "6G 사용 시나리오 및 핵심 기술",
+    "subsections": [
+     {
+      "title": "사용 시나리오",
+      "items": [
+       "ITU-R M.2160(2023년 11월): 5G의 3대 시나리오를 확장한 6대 시나리오",
+       "몰입형 통신(eMBB 확장), HRLLC(URLLC 확장), 대규모 통신(mMTC 확장)",
+       "새 시나리오: 유비쿼터스 연결, AI와 통신 융합, 통합 센싱·통신"
+      ]
+     },
+     {
+      "title": "핵심 기술",
+      "items": [
+       "테라헤르츠(0.1~10THz) 대역: 초광대역, 짧은 도달 거리 극복 필요",
+       "RIS(재구성 가능 지능형 표면): 전파 반사 방향 제어로 음영 해소",
+       "AI 네이티브 무선·코어: 채널 추정·자원 관리를 AI로",
+       "NTN: 저궤도 위성·HAPS와 지상망 통합",
+       "ISAC: 통신 신호로 센싱",
+       "셀프리 Massive MIMO, 전이중 통신, 양자 보안"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "표준화 및 국내외 동향",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "ITU-R: 2023년 프레임워크(M.2160) → 2026년경 기술 성능 요구 → 2030년 표준 승인",
+       "3GPP: Rel-20(5G-Advanced 마무리 + 6G 연구) → Rel-21에서 6G 규격",
+       "국내: 6G 핵심 기술 개발 사업, 주파수(테라헤르츠·어퍼미드밴드 7~24GHz) 확보 추진",
+       "미국 Next G Alliance, 유럽 Hexa-X, 중국·일본도 2030 상용화 경쟁"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "6G(IMT-2030)",
+   "ITU-R M.2160",
+   "테라헤르츠 대역(THz)",
+   "AI 네이티브(AI-Native)",
+   "비지상 네트워크(NTN, Non-Terrestrial Network)",
+   "ISAC(Integrated Sensing and Communication)",
+   "RIS(Reconfigurable Intelligent Surface)",
+   "최대 1Tbps(Peak Rate Target)",
+   "초저지연 0.1ms(Ultra-Low Latency)",
+   "AIoE(Ambient Internet of Everything)"
+  ],
+  "keywords_ref": [
+   "몰입형 통신(Immersive Communication)",
+   "HRLLC(Hyper-Reliable Low-Latency Communication)",
+   "셀프리 Massive MIMO(Cell-free)",
+   "전이중 통신(Full Duplex)",
+   "3GPP Rel-20·21",
+   "2030년 상용화 목표"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "ITU-R M.2160(IMT-2030 Framework)",
+   "RIS(Reconfigurable Intelligent Surface)",
+   "테라헤르츠 통신(THz Communication)",
+   "AI 네이티브(AI-Native)",
+   "HRLLC(Hyper-Reliable Low-Latency Communication)"
+  ],
+  "quiz_groups": [
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_194": {
   "keywords": [
-   "RAN Sharing",
-   "코어망은 통신사별 소유",
-   "기지국(eNB/gNB)·주파수 공유",
-   "MORAN·GWCN과 비교"
+   "기지국 + 주파수 공유 · 코어망은 사업자별 소유",
+   "다중 PLMN ID 방송 → 단말이 자기 사업자 선택",
+   "MME/AMF 선택 · NAS 재라우팅",
+   "비교: MORAN(주파수 분리) · GWCN(코어 일부 공유)",
+   "효과: 구축비 절감 · 주파수 효율 · 커버리지 확대",
+   "적용: 농어촌 5G 공동 이용 · 재난망 상용망 연계"
   ],
-  "keywords_note": "원문 키워드 칸에 다른 토픽(데이터거버넌스) 키워드가 들어가 있어 본문에서 발췌",
+  "keywords_note": null,
   "name": "MOCN(Multi-Operator Core Network)",
-  "en": "Multi-Operator Core Network"
+  "en": "Multi-Operator Core Network",
+  "definition": "여러 통신사가 기지국(eNB/gNB)과 주파수를 공유하고 코어 네트워크만 각자 소유하는 RAN 공유 방식으로, 공유 기지국이 여러 사업자 식별자(PLMN ID)를 함께 방송함 (3GPP TS 23.251)",
+  "outline": [
+   "MOCN의 개념",
+   "- 정의",
+   "- 필요성",
+   "MOCN 구조 및 동작",
+   "RAN 공유 방식 비교 및 적용"
+  ],
+  "sections": [
+   {
+    "title": "MOCN의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "다중 사업자 코어 네트워크: 하나의 무선 접속망(장비+주파수)을 여러 사업자 코어에 연결하는 능동적 RAN 공유"
+      ]
+     },
+     {
+      "title": "필요성",
+      "items": [
+       "농어촌·실내·공공망 등 수익성 낮은 지역의 중복 투자 방지",
+       "주파수를 묶어 넓은 대역으로 운용해 효율 향상"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "MOCN 구조 및 동작",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "공유 기지국이 시스템 정보로 여러 PLMN ID 방송(LTE 최대 6개, NR 최대 12개)",
+       "단말은 자기 가입 사업자 PLMN을 선택해 접속",
+       "기지국이 선택된 PLMN에 맞는 사업자 코어(MME/AMF)로 연결, 미지원 단말은 NAS 재라우팅",
+       "사업자별 과금·가입자 관리·서비스는 각자 코어에서 독립 처리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "RAN 공유 방식 비교 및 적용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "MORAN: 장비만 공유, 주파수·코어 분리 → 사업자별 품질 독립성 높음",
+       "MOCN: 장비+주파수 공유, 코어 분리 → 주파수 효율 높음, 사업자 간 자원 분배 정책 필요",
+       "GWCN: MOCN + 코어 일부(MME 등) 공유 → 비용 최소, 독립성 낮음",
+       "적용: 국내 농어촌 5G 공동 이용(통신 3사, 2021년~), 재난망·해외 지방 커버리지 공유"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "MOCN(Multi-Operator Core Network)",
+   "RAN 공유(RAN Sharing)",
+   "기지국 공유(eNB/gNB Sharing)",
+   "주파수 공유(Spectrum Sharing)",
+   "코어망 사업자별 소유(Separate Core)",
+   "다중 PLMN ID 방송(Multiple PLMN IDs)",
+   "MORAN 비교(Multi-Operator RAN)",
+   "GWCN 비교(Gateway Core Network)"
+  ],
+  "keywords_ref": [
+   "3GPP TS 23.251",
+   "NAS 재라우팅(NAS Rerouting)",
+   "PLMN 선택(PLMN Selection)",
+   "농어촌 5G 공동 이용(Rural 5G Sharing)",
+   "구축비 절감(CAPEX Reduction)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "다중 PLMN ID(Multiple PLMN IDs)",
+   "NAS 재라우팅(NAS Rerouting)",
+   "능동적 RAN 공유(Active RAN Sharing)"
+  ],
+  "quiz_groups": [
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "note": null,
+  "review": null
  },
  "NW_197": {
   "keywords": [
@@ -8674,39 +9477,998 @@
  },
  "NW_160": {
   "name": "인지 무선(Cognitive Radio)",
-  "en": "Cognitive Radio"
+  "en": "Cognitive Radio",
+  "definition": "주변 전파 환경을 스스로 감지·학습하고 지능적으로 판단해, 비어 있는 주파수를 찾아 송신 파라미터를 바꾸며 동작하는 무선 기술로 주파수 자원 부족의 해결책",
+  "keywords": [
+   "인지 주기: 감지 → 분석 → 결정 → 적응(Cognitive Cycle)",
+   "스펙트럼 센싱: 에너지 검출 · 정합 필터 · 순환 정상성",
+   "기능: 스펙트럼 결정 · 공유 · 이동성(Spectrum Mobility)",
+   "1차 사용자(PU) 보호 · 2차 사용자(SU) 기회적 접근",
+   "TV 화이트 스페이스(TVWS) · SDR 기반",
+   "표준: IEEE 802.22 WRAN · IEEE 802.11af"
+  ],
+  "outline": [
+   "인지 무선의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "인지 무선 핵심 기술",
+   "- 인지 주기",
+   "- 스펙트럼 센싱",
+   "- 스펙트럼 관리",
+   "표준 및 활용"
+  ],
+  "sections": [
+   {
+    "title": "인지 무선의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "J. Mitola(1999)가 제안, SDR(소프트웨어 정의 무선)에 인지·학습 능력을 더해 주파수·출력·변조를 스스로 바꾸는 무선 시스템"
+      ]
+     },
+     {
+      "title": "등장 배경",
+      "items": [
+       "주파수 수요 폭증 vs 고정 할당 방식의 낮은 실제 이용률(시간·장소별 빈 대역 존재)",
+       "면허 대역의 빈 시간·공간을 2차 사용자가 간섭 없이 쓰게 하는 동적 접근 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "인지 무선 핵심 기술",
+    "subsections": [
+     {
+      "title": "인지 주기",
+      "items": [
+       "감지(Observe): 주변 주파수 사용 상태 측정",
+       "분석·결정(Orient/Decide): 빈 대역과 송신 파라미터 선택",
+       "적응(Act): 해당 대역으로 전송, 1차 사용자가 나타나면 이동"
+      ]
+     },
+     {
+      "title": "스펙트럼 센싱",
+      "items": [
+       "에너지 검출: 단순하나 잡음 불확실성에 약함",
+       "정합 필터: 1차 신호를 알 때 최적, 사전 정보 필요",
+       "순환 정상성 특징 검출: 낮은 SNR에서도 신호 구분, 복잡도 높음",
+       "협력 센싱: 여러 단말 결과를 결합해 숨은 1차 사용자 문제 완화"
+      ]
+     },
+     {
+      "title": "스펙트럼 관리",
+      "items": [
+       "스펙트럼 결정: 품질이 가장 좋은 빈 대역 선택",
+       "스펙트럼 공유: 언더레이(낮은 출력 공존)·오버레이·인터위브(빈 대역 사용)",
+       "스펙트럼 이동성: 1차 사용자 출현 시 끊김 없이 다른 대역으로 전환"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "표준 및 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "IEEE 802.22 WRAN(2011): TV 대역 활용 최초 인지 무선 표준, 농어촌 광대역",
+       "IEEE 802.11af(Super Wi-Fi): TVWS 무선랜",
+       "지리 위치 데이터베이스로 빈 채널 조회하는 방식이 실제 TVWS 운용의 주류",
+       "진화: 미국 CBRS(3.5GHz, SAS 기반 3계층 공유), AI 기반 스펙트럼 관리"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "인지 무선(Cognitive Radio)",
+   "스펙트럼 센싱(Spectrum Sensing)",
+   "스펙트럼 결정(Spectrum Decision)",
+   "스펙트럼 공유(Spectrum Sharing)",
+   "스펙트럼 이동성(Spectrum Mobility)",
+   "1차 사용자(PU, Primary User)",
+   "2차 사용자(SU, Secondary User)",
+   "동적 주파수 접근(DSA, Dynamic Spectrum Access)",
+   "TV 화이트 스페이스(TVWS)",
+   "SDR(Software Defined Radio)"
+  ],
+  "keywords_ref": [
+   "에너지 검출(Energy Detection)",
+   "협력 센싱(Cooperative Sensing)",
+   "지리 위치 DB(Geolocation Database)",
+   "IEEE 802.22 WRAN",
+   "IEEE 802.11af",
+   "CBRS·SAS(미국 3.5GHz)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "스펙트럼 센싱(Spectrum Sensing)",
+   "TV 화이트 스페이스(TVWS, TV White Space)",
+   "SDR(Software Defined Radio)",
+   "1차 사용자(PU, Primary User)",
+   "IEEE 802.22 WRAN(Wireless Regional Area Network)"
+  ],
+  "quiz_groups": [
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_184": {
   "name": "RAN 공유(RAN Sharing)",
-  "en": "RAN Sharing"
+  "en": "RAN Sharing",
+  "definition": "여러 사업자(또는 망)가 기지국 장비·사이트·주파수 등 무선 접속망(RAN) 자원을 함께 사용하는 기법으로, 700MHz 공공 대역(PS-LTE·LTE-R·LTE-M) 간 간섭 해결과 구축비 절감에 활용",
+  "keywords": [
+   "700MHz 대역 공유 → 망 간 주파수 간섭 문제",
+   "MORAN: 장비 공유 · 주파수 분리",
+   "MOCN: 기지국 + 주파수 공유 · 코어 분리",
+   "GWCN: 기지국 + 주파수 + 코어 일부(MME) 공유",
+   "효과: 구축·운영비 절감 · 커버리지 확대 · 간섭 해소",
+   "3GPP TS 23.251 · 다중 PLMN ID 방송"
+  ],
+  "outline": [
+   "RAN 공유의 개념",
+   "- 정의",
+   "- 필요성(700MHz 간섭 문제)",
+   "RAN 공유 유형",
+   "- 수동적·능동적 공유",
+   "- MORAN·MOCN·GWCN",
+   "적용 효과 및 고려사항"
+  ],
+  "sections": [
+   {
+    "title": "RAN 공유의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "복수 사업자·망이 RAN 인프라를 공동 이용하는 망 공유 기술 (3GPP TS 23.251)"
+      ]
+     },
+     {
+      "title": "필요성(700MHz 간섭 문제)",
+      "items": [
+       "국내 700MHz 공공 대역에 재난망(PS-LTE)·철도망(LTE-R)·해상망(LTE-M)이 인접·공유 운용 → 같은 지역에서 상호 간섭",
+       "망마다 기지국을 따로 세우면 중복 투자 → RAN 공유로 통합 운용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "RAN 공유 유형",
+    "subsections": [
+     {
+      "title": "수동적·능동적 공유",
+      "items": [
+       "수동적 공유: 철탑·전원·국사 등 사이트만 공유",
+       "능동적 공유: 기지국 장비·주파수까지 공유"
+      ]
+     },
+     {
+      "title": "MORAN·MOCN·GWCN",
+      "items": [
+       "MORAN(Multi-Operator RAN): 기지국 장비 공유, 사업자별 주파수·코어 분리",
+       "MOCN(Multi-Operator Core Network): 기지국과 주파수까지 공유, 코어는 사업자별 → 기지국이 여러 PLMN ID 방송",
+       "GWCN(Gateway Core Network): MOCN + 코어 일부(MME 등)까지 공유"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 효과 및 고려사항",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "효과: 구축·운영비 절감, 중복 기지국 감소로 간섭 해소, 신속한 커버리지 확대, 에너지 절감",
+       "고려: 사업자 간 품질·자원 배분 정책(SLA), 장애 책임 경계, 보안·우선순위(공공망 선점) 보장",
+       "국내: 재난망 개통(2021년 5월 14일) 시 상용망 RAN 공유 활용, 농어촌 5G 공동 이용(MOCN)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "RAN 공유(RAN Sharing)",
+   "무선 접속망(RAN, Radio Access Network)",
+   "700MHz 공공 대역",
+   "주파수 간섭(Frequency Interference)",
+   "MORAN(Multi-Operator RAN)",
+   "MOCN(Multi-Operator Core Network)",
+   "GWCN(Gateway Core Network)",
+   "구축비 절감(CAPEX Reduction)",
+   "커버리지 확대(Coverage Extension)"
+  ],
+  "keywords_ref": [
+   "PS-LTE·LTE-R·LTE-M",
+   "3GPP TS 23.251",
+   "다중 PLMN ID(Multiple PLMN IDs)",
+   "사이트 공유(Passive Sharing)",
+   "농어촌 5G 공동 이용(Rural 5G Sharing)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "MORAN(Multi-Operator RAN)",
+   "GWCN(Gateway Core Network)",
+   "수동적 공유(Passive Sharing)",
+   "능동적 공유(Active Sharing)"
+  ],
+  "quiz_groups": [
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_187": {
   "name": "NR과 NR-MIMO(New Radio & NR MIMO)",
-  "en": "New Radio & NR MIMO"
+  "en": "New Radio & NR MIMO",
+  "definition": "NR은 3GPP가 정의한 5G 무선 접속 규격이며, NR-MIMO는 밀리미터파 대역에 맞춘 대규모 안테나·빔 관리 기술로 LTE 대비 약 3배 주파수 효율을 목표로 함",
+  "keywords": [
+   "NR(3GPP Rel-15, 2018) · FR1(410MHz~7.125GHz) · FR2(24.25~71GHz)",
+   "유연한 뉴머롤로지(Numerology): 부반송파 간격 15·30·60·120kHz",
+   "미니 슬롯 · 자기 완결형 슬롯 · 채널 코딩 LDPC(데이터)/Polar(제어)",
+   "Massive MIMO(64T64R) · 하이브리드 빔포밍",
+   "빔 관리: SSB 빔 스위핑 · 측정·보고 · 빔 복구",
+   "CSI Type I/II · MU-MIMO"
+  ],
+  "outline": [
+   "NR과 NR-MIMO의 개념",
+   "- 정의",
+   "- LTE 대비 특징",
+   "NR 무선 접속 기술",
+   "NR-MIMO 기술",
+   "- Massive MIMO와 빔포밍",
+   "- 빔 관리"
+  ],
+  "sections": [
+   {
+    "title": "NR과 NR-MIMO의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "NR: 3GPP 5G 무선 규격(Rel-15 2018 첫 표준), NR-MIMO: 다수 안테나로 빔을 만들어 용량·커버리지를 높이는 NR 다중 안테나 기술"
+      ]
+     },
+     {
+      "title": "LTE 대비 특징",
+      "items": [
+       "6GHz 이하와 밀리미터파까지 넓은 대역 지원",
+       "서비스별 뉴머롤로지 선택으로 저지연·고속 동시 지원",
+       "상시 신호(CRS) 제거한 린 캐리어(Lean Carrier)로 간섭·전력 감소"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "NR 무선 접속 기술",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "주파수 범위: FR1(410MHz~7.125GHz), FR2(24.25~52.6GHz, Rel-17에서 71GHz까지)",
+       "뉴머롤로지: 부반송파 간격 15×2^μ kHz → 간격이 넓을수록 슬롯이 짧아 지연 감소",
+       "미니 슬롯(2·4·7 심볼) 전송, 자기 완결형 슬롯(한 슬롯에 데이터+ACK)",
+       "채널 코딩: 데이터 LDPC, 제어 Polar",
+       "대역폭: FR1 최대 100MHz, FR2 최대 400MHz(반송파당)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "NR-MIMO 기술",
+    "subsections": [
+     {
+      "title": "Massive MIMO와 빔포밍",
+      "items": [
+       "수십~수백 개 안테나(64T64R 등)로 좁은 빔 형성 → 밀리미터파 경로 손실 보상",
+       "하이브리드 빔포밍: 아날로그(위상 변환기) + 디지털 프리코딩 결합으로 RF 체인 수 절감",
+       "SU-MIMO 하향 최대 8레이어, MU-MIMO로 여러 단말 공간 다중화",
+       "CSI Type I(일반)/Type II(고해상도) 채널 정보 보고"
+      ]
+     },
+     {
+      "title": "빔 관리",
+      "items": [
+       "빔 스위핑: 기지국이 SSB를 여러 방향으로 순차 송신",
+       "빔 측정·보고: 단말이 최적 빔(RSRP) 보고",
+       "빔 결정·추적: 이동에 따라 빔 전환",
+       "빔 실패 복구(BFR): 차단 시 대체 빔으로 빠르게 복구"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "NR(New Radio)",
+   "3GPP Rel-15",
+   "FR1(Frequency Range 1)",
+   "FR2(Frequency Range 2, mmWave)",
+   "유연한 뉴머롤로지(Flexible Numerology)",
+   "미니 슬롯(Mini-slot)",
+   "LDPC 부호(Low-Density Parity-Check)",
+   "Polar 부호(Polar Code)",
+   "Massive MIMO",
+   "빔포밍(Beamforming)",
+   "빔 관리(Beam Management)"
+  ],
+  "keywords_ref": [
+   "SSB 빔 스위핑(SS Block Beam Sweeping)",
+   "하이브리드 빔포밍(Hybrid Beamforming)",
+   "CSI Type I/II(Channel State Information)",
+   "MU-MIMO(Multi-User MIMO)",
+   "빔 실패 복구(Beam Failure Recovery)",
+   "주파수 효율 3배(3× Spectral Efficiency)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "유연한 뉴머롤로지(Flexible Numerology)",
+   "FR2(Frequency Range 2, mmWave)",
+   "빔 관리(Beam Management)",
+   "하이브리드 빔포밍(Hybrid Beamforming)",
+   "LDPC 부호(Low-Density Parity-Check)"
+  ],
+  "quiz_groups": [
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_188": {
   "name": "5G NSA/SA(Non-Standalone/Standalone)",
-  "en": "Non-Standalone/Standalone"
+  "en": "Non-Standalone/Standalone",
+  "definition": "NSA(비단독)는 LTE 기지국·EPC를 제어 기반으로 두고 5G NR을 데이터 가속용으로 함께 쓰는 구조이고, SA(단독)는 5G NR과 5G 코어(5GC)만으로 동작하는 구조",
+  "keywords": [
+   "NSA: Option 3/3a/3x · EN-DC(LTE 마스터 + NR 보조) · EPC",
+   "SA: Option 2 · NR gNB + 5GC(SBA)",
+   "제어 평면: NSA는 LTE 경유 / SA는 NR 직접",
+   "사용자 평면: NSA는 LTE+NR 동시(분할 베어러)",
+   "SA 장점: 네트워크 슬라이싱 · URLLC · 저지연 · 단말 전력 절감",
+   "국내: 2019년 4월 NSA 상용화 → 2021년 SA 도입"
+  ],
+  "outline": [
+   "5G NSA/SA의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "NSA와 SA 구조",
+   "- NSA 구조",
+   "- SA 구조",
+   "NSA와 SA 비교 및 진화"
+  ],
+  "sections": [
+   {
+    "title": "5G NSA/SA의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "3GPP Rel-15의 5G 망 구축 옵션, LTE 의존 여부에 따라 NSA와 SA로 구분"
+      ]
+     },
+     {
+      "title": "등장 배경",
+      "items": [
+       "5G 조기 상용화를 위해 기존 LTE·EPC를 재활용하는 NSA 먼저 표준화(2017년 12월), SA는 2018년 6월 완료",
+       "두 구조 모두 단말은 4G·5G 무선 접속을 동시 지원하는 방향으로 진화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "NSA와 SA 구조",
+    "subsections": [
+     {
+      "title": "NSA 구조",
+      "items": [
+       "Option 3 계열: LTE eNB가 마스터(제어 평면), NR gNB가 보조 노드(데이터 가속), 코어는 EPC",
+       "EN-DC(이중 연결): 단말이 LTE와 NR에 동시 접속",
+       "Option 3x: 데이터를 gNB에서 분할해 LTE·NR로 함께 전송(국내 주류)"
+      ]
+     },
+     {
+      "title": "SA 구조",
+      "items": [
+       "Option 2: gNB + 5GC, LTE 없이 NR만으로 제어·데이터 처리",
+       "5GC: 서비스 기반 구조(SBA) — AMF(접속·이동성), SMF(세션), UPF(사용자 데이터), NSSF 등",
+       "제어·사용자 평면 분리(CUPS)로 UPF를 엣지에 배치"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "NSA와 SA 비교 및 진화",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "NSA: 빠른 구축·낮은 비용, LTE 의존으로 지연·단말 전력 불리, 슬라이싱 등 5G 고유 기능 제한",
+       "SA: 5G 고유 기능(네트워크 슬라이싱, URLLC, MEC 연동) 완전 지원, 저지연·배터리 효율, 초기 커버리지 확보가 과제",
+       "기타 옵션: Option 4(NR 마스터 + 5GC + LTE 보조), Option 7(LTE 마스터 + 5GC)",
+       "국내: 2019년 4월 세계 최초 NSA 상용화, 2021년 7월 SA 상용 서비스 시작 → 5G-Advanced로 진화"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "NSA(Non-Standalone)",
+   "SA(Standalone)",
+   "EPC(Evolved Packet Core)",
+   "5GC(5G Core)",
+   "EN-DC(E-UTRA NR Dual Connectivity)",
+   "LTE 앵커(LTE Anchor)",
+   "제어 평면(Control Plane)",
+   "사용자 평면(User Plane, Data Plane)",
+   "Option 3x",
+   "Option 2"
+  ],
+  "keywords_ref": [
+   "SBA(Service-Based Architecture)",
+   "AMF·SMF·UPF",
+   "분할 베어러(Split Bearer)",
+   "네트워크 슬라이싱(Network Slicing)",
+   "Option 4·7",
+   "국내 2019년 NSA 상용화 · 2021년 SA"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "EN-DC(E-UTRA NR Dual Connectivity)",
+   "Option 3x(NSA Split Bearer)",
+   "5GC(5G Core)",
+   "SBA(Service-Based Architecture)",
+   "LTE 앵커(LTE Anchor)"
+  ],
+  "quiz_groups": [
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_190_00": {
   "name": "엣지 컴퓨팅 스케줄링(Edge Computing Scheduling)",
-  "en": "Edge Computing Scheduling"
+  "en": "Edge Computing Scheduling",
+  "definition": "클라우드-엣지 클러스터-엣지 디바이스로 이어지는 분산 환경에서, 응용 요구(지연·연산량)와 자원 상태를 고려해 작업을 어느 노드에 언제 배치할지 결정하는 엣지 컴퓨팅 자원 스케줄링 기술",
+  "keywords": [
+   "3계층: 클라우드 · 엣지 클러스터 · 엣지 디바이스",
+   "스케줄러 구조: 모놀리식 · 2단계 · 공유 상태",
+   "글로벌 엣지 스케줄러 제어기 · 계층형(Leveled) · 공유형(Shared) 스케줄러",
+   "응용 유형별 배치: 지연 민감 · 연산 집약 · 데이터 집약",
+   "목표: 지연 · 에너지 · 자원 이용률 · 비용 최적화",
+   "작업 오프로딩(Task Offloading)"
+  ],
+  "outline": [
+   "엣지 컴퓨팅 스케줄링의 개념",
+   "- 정의",
+   "- 필요성",
+   "스케줄링 구조",
+   "- 3계층 환경",
+   "- 스케줄러 아키텍처 유형",
+   "엣지 스케줄러 구성 및 고려사항"
+  ],
+  "sections": [
+   {
+    "title": "엣지 컴퓨팅 스케줄링의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "대규모 현장 데이터를 클라우드로 보내기 전에 엣지에서 처리하도록, 분산 자원에 작업을 효율적으로 할당하는 기술"
+      ]
+     },
+     {
+      "title": "필요성",
+      "items": [
+       "엣지 노드는 자원이 작고 이질적·지리적으로 분산",
+       "응용마다 지연·연산 요구가 달라 단일 클라우드 스케줄러로는 최적 배치 어려움"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "스케줄링 구조",
+    "subsections": [
+     {
+      "title": "3계층 환경",
+      "items": [
+       "클라우드: 대용량 연산·장기 저장·모델 학습",
+       "엣지 클러스터: 지역 서버 묶음, 실시간 분석",
+       "엣지 디바이스: 센서·게이트웨이, 1차 처리·필터링"
+      ]
+     },
+     {
+      "title": "스케줄러 아키텍처 유형",
+      "items": [
+       "모놀리식(Monolithic): 단일 중앙 스케줄러가 모든 자원 결정 → 일관성 높음, 확장성·지연 한계",
+       "2단계(Two-level): 자원 관리자가 자원을 제안(Offer)하고 응용별 스케줄러가 선택 (Mesos)",
+       "공유 상태(Shared-state): 여러 스케줄러가 전체 상태를 공유하며 낙관적 동시성으로 병렬 결정 (Omega)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "엣지 스케줄러 구성 및 고려사항",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "글로벌 엣지 스케줄러 제어기: 클러스터 전체 자원·응용 정보를 보고 배치 정책 결정",
+       "계층형(Leveled) 스케줄러: 클라우드→엣지→디바이스 단계별로 위임해 결정",
+       "공유형(Shared) 스케줄러: 여러 엣지 클러스터가 자원 상태를 공유해 협력 배치",
+       "응용 유형별 정책: 지연 민감형은 디바이스·근접 엣지, 연산 집약형은 엣지 클러스터·클라우드",
+       "고려사항: 지연·에너지·비용 다목적 최적화, 노드 이동·장애 대응, AI 기반 예측 스케줄링"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "엣지 컴퓨팅 스케줄링(Edge Scheduling)",
+   "클라우드-엣지-디바이스 3계층(3-tier)",
+   "엣지 클러스터(Edge Cluster)",
+   "모놀리식 스케줄링(Monolithic Scheduling)",
+   "2단계 스케줄링(Two-level Scheduling)",
+   "공유 상태 스케줄링(Shared-state Scheduling)",
+   "글로벌 엣지 스케줄러 제어기(Global Edge Scheduler)",
+   "응용 유형(Application Type)",
+   "작업 오프로딩(Task Offloading)"
+  ],
+  "keywords_ref": [
+   "계층형 스케줄러(Leveled Scheduler)",
+   "공유형 스케줄러(Shared Scheduler)",
+   "Kubernetes 스케줄러",
+   "Mesos(2단계)·Omega(공유 상태)",
+   "지연·에너지 최적화(Latency/Energy)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "모놀리식 스케줄링(Monolithic Scheduling)",
+   "2단계 스케줄링(Two-level Scheduling)",
+   "공유 상태 스케줄링(Shared-state Scheduling)",
+   "작업 오프로딩(Task Offloading)"
+  ],
+  "quiz_groups": [
+   "edge"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_190_01": {
   "name": "컴퓨팅 컨티뉴엄(Computing Continuum)",
-  "en": "Computing Continuum"
+  "en": "Computing Continuum",
+  "definition": "임베디드 디바이스·엣지·포그·클라우드 등 여러 단계의 컴퓨팅 자원을 하나의 연속체로 보고, 작업을 그 위에서 끊김 없이 배치·이동시켜 최적의 컴퓨팅 서비스를 제공하는 개념",
+  "keywords": [
+   "연속체(Continuum): 디바이스 · 엣지 · 포그 · 클라우드",
+   "통합 오케스트레이션 · 작업 배치·이동(Workload Placement)",
+   "이질성·상호 운용성 · 자원 추상화",
+   "지연·에너지·비용 최적화 · AI 기반 자원 관리",
+   "국내 연구 사례(ETRI): GigaMEC · CompactEdge · EdgeCPS",
+   "적용: 스마트 팩토리 · 자율주행 · 스마트 시티"
+  ],
+  "outline": [
+   "컴퓨팅 컨티뉴엄의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "컴퓨팅 컨티뉴엄 구성 및 핵심 기술",
+   "국내 연구 사례 및 적용 분야"
+  ],
+  "sections": [
+   {
+    "title": "컴퓨팅 컨티뉴엄의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "단말부터 클라우드까지 이어지는 컴퓨팅 계층을 분리된 시스템이 아닌 하나의 연속된 자원 풀로 운용하는 개념"
+      ]
+     },
+     {
+      "title": "등장 배경",
+      "items": [
+       "IoT·AI 응용이 지연·연산·데이터 요구에 따라 디바이스·엣지·클라우드를 오가며 실행",
+       "계층별로 따로 관리하면 배치 최적화·이동이 어려움"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "컴퓨팅 컨티뉴엄 구성 및 핵심 기술",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "계층: 임베디드·IoT 디바이스 → 엣지(MEC) → 포그(지역 서버) → 클라우드(중앙 데이터센터)",
+       "통합 오케스트레이션: 전 계층 자원을 추상화해 하나의 제어 평면으로 관리",
+       "작업 배치·이동: 지연·연산량·전력에 따라 실행 위치 결정, 상황 변화 시 마이그레이션",
+       "이질성 극복: 컨테이너·WebAssembly 등 경량 가상화, 표준 API로 상호 운용",
+       "AI 기반 예측: 부하·이동 예측으로 사전 배치, 지속 가능성(에너지) 고려"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "국내 연구 사례 및 적용 분야",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "국내 연구 사례(ETRI 등): GigaMEC(초저지연 MEC 플랫폼), CompactEdge(경량 엣지 플랫폼), EdgeCPS(엣지 기반 사이버 물리 시스템)",
+       "적용: 스마트 팩토리 실시간 제어, 자율주행·V2X, 스마트 시티 영상 분석, 원격 의료",
+       "과제: 계층 간 보안·신뢰, 표준화, 운영 복잡도"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "컴퓨팅 컨티뉴엄(Computing Continuum)",
+   "연속체(Continuum)",
+   "임베디드-엣지-클라우드(Device–Edge–Cloud)",
+   "포그 컴퓨팅(Fog Computing)",
+   "통합 오케스트레이션(Unified Orchestration)",
+   "작업 배치·이동(Workload Placement/Migration)",
+   "이질성(Heterogeneity)",
+   "상호 운용성(Interoperability)"
+  ],
+  "keywords_ref": [
+   "GigaMEC",
+   "CompactEdge",
+   "EdgeCPS(Edge Cyber-Physical System)",
+   "AI 기반 자원 관리(AI-driven Resource Management)",
+   "EU Cloud-Edge-IoT Continuum"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "컴퓨팅 컨티뉴엄(Computing Continuum)",
+   "포그 컴퓨팅(Fog Computing)",
+   "통합 오케스트레이션(Unified Orchestration)",
+   "작업 마이그레이션(Workload Migration)"
+  ],
+  "quiz_groups": [
+   "edge"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_192_0": {
   "name": "5G 특화망(Private 5G)",
-  "en": "Private 5G"
+  "en": "Private 5G",
+  "definition": "건물·공장·캠퍼스 등 특정 지역에 한해 그 지역 수요 기관이 도입하려는 서비스에 특화된 맞춤형 5G 네트워크 (3GPP 비공중망, NPN)",
+  "keywords": [
+   "3GPP NPN(Rel-16): SNPN(독립형) · PNI-NPN(공중망 연계형)",
+   "구축 모델: 독립형(Standalone Private) · 공유형",
+   "공유형: RAN 공유 · RAN+제어 평면 공유 · 공중망 위 호스팅(슬라이스)",
+   "온프레미스 UPF·MEC로 데이터 현장 처리",
+   "장점: 보안·데이터 주권 · 맞춤 품질(URLLC) · 독립 운영",
+   "국내: 이음 5G(4.7GHz · 28GHz)"
+  ],
+  "outline": [
+   "5G 특화망의 개념",
+   "- 정의",
+   "- 필요성",
+   "5G 특화망 구축 유형",
+   "- 독립형",
+   "- 공유형",
+   "장점 및 적용 분야"
+  ],
+  "sections": [
+   {
+    "title": "5G 특화망의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "통신사 전국망과 별도로, 특정 구역에서 기업·기관 전용으로 운영하는 5G 망 (3GPP Rel-16 NPN)"
+      ]
+     },
+     {
+      "title": "필요성",
+      "items": [
+       "스마트 팩토리·물류·병원 등에서 유선 수준 신뢰성·저지연 무선 필요",
+       "공장 데이터를 외부망으로 내보내지 않는 보안·데이터 주권 요구",
+       "Wi-Fi 대비 이동성·QoS·보안 우수"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "5G 특화망 구축 유형",
+    "subsections": [
+     {
+      "title": "독립형",
+      "items": [
+       "SNPN(Standalone NPN): RAN·코어(5GC)·주파수를 모두 자체 구축, 공중망과 분리 → 최고 보안·독자 운영, 구축·운영비 큼"
+      ]
+     },
+     {
+      "title": "공유형",
+      "items": [
+       "RAN 공유형: 기지국은 공중망과 공유, 코어·데이터는 자체 → 비용 절감",
+       "RAN·제어 평면 공유형: 제어 평면은 사업자 코어, 사용자 평면(UPF)만 현장 → 데이터는 현장 처리",
+       "공중망 위 호스팅(PNI-NPN): 사업자망 네트워크 슬라이스·DNN으로 가상 특화망 → 가장 저렴, 독립성 낮음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "장점 및 적용 분야",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "장점: 맞춤형 품질(URLLC·대용량 상향), 데이터 현장 처리(온프레미스 UPF·MEC), 망 독립 운영·통제, 보안 강화",
+       "적용: 스마트 팩토리(AGV·로봇 제어), 항만·물류, 병원, 스마트 캠퍼스, 공공·국방",
+       "국내: '이음 5G' 브랜드로 4.7GHz·28GHz 주파수를 통신사 외 기업에 지정"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "5G 특화망(Private 5G)",
+   "비공중망(NPN, Non-Public Network)",
+   "SNPN(Standalone Non-Public Network)",
+   "PNI-NPN(Public Network Integrated NPN)",
+   "독립형 특화망(Standalone Private)",
+   "RAN 공유형(Shared RAN)",
+   "RAN·제어 평면 공유형(Shared RAN and Control Plane)",
+   "온프레미스 UPF(On-premise UPF)",
+   "MEC 연계(Multi-access Edge Computing)"
+  ],
+  "keywords_ref": [
+   "5G-ACIA 구축 모델",
+   "네트워크 슬라이싱 호스팅(Slice-based NPN)",
+   "데이터 주권(Data Sovereignty)",
+   "스마트 팩토리(Smart Factory)",
+   "이음 5G(4.7GHz·28GHz)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "NPN(Non-Public Network)",
+   "SNPN(Standalone Non-Public Network)",
+   "PNI-NPN(Public Network Integrated NPN)",
+   "온프레미스 UPF(On-premise UPF)"
+  ],
+  "quiz_groups": [
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_192_1": {
   "name": "이음 5G(e-Um 5G, Korea Private 5G)",
-  "en": "e-Um 5G, Korea Private 5G"
+  "en": "e-Um 5G, Korea Private 5G",
+  "definition": "토지·건물 등 특정 구역 단위로 통신사가 아닌 기업·기관도 주파수를 받아 구축할 수 있는 국내 5G 특화망 브랜드로, 5G의 초고속·초저지연·초연결을 현장 맞춤형으로 활용",
+  "keywords": [
+   "국내 5G 특화망 브랜드 '이음 5G'(2021~)",
+   "주파수: 4.7GHz(4.72~4.82GHz, 100MHz) · 28GHz(28.9~29.5GHz, 600MHz)",
+   "통신사 외 수요 기업 직접 주파수 지정 · 기간통신사업 등록",
+   "구성: 5G 코어 제어 평면 · 사용자 평면(UPF) · RAN · MEC",
+   "SA 방식 · 현장 데이터 처리",
+   "적용: 스마트 공장 · 물류 · 병원 · 스마트 오피스"
+  ],
+  "outline": [
+   "이음 5G의 개념",
+   "- 정의",
+   "- 도입 배경",
+   "이음 5G 구성 요소",
+   "주파수·제도 및 활용 사례"
+  ],
+  "sections": [
+   {
+    "title": "이음 5G의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "과학기술정보통신부가 2021년 도입한 국내 5G 특화망 제도의 명칭, '이음'은 연결을 뜻함"
+      ]
+     },
+     {
+      "title": "도입 배경",
+      "items": [
+       "통신사 전국망만으로는 기업 현장의 맞춤형 요구(대용량 상향, 초저지연, 현장 데이터 보안) 충족 한계",
+       "해외(독일·일본·미국 CBRS) 특화망 제도 확산에 대응"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "이음 5G 구성 요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "RAN: 4.7GHz·28GHz gNB(기지국), 소형셀 위주",
+       "5G 코어 제어 평면: AMF·SMF 등 가입자·세션 관리 (자체 구축 또는 임대)",
+       "5G 코어 사용자 평면(UPF): 현장에 배치해 데이터를 외부로 내보내지 않음",
+       "MEC: 현장 AI·영상 분석·로봇 제어",
+       "단말: 이음 5G 지원 모듈·CPE, SA 기반 구성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주파수·제도 및 활용 사례",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "주파수: 4.72~4.82GHz(100MHz, 커버리지 유리), 28.9~29.5GHz(600MHz, 대용량)",
+       "제도: 수요 기업이 직접 주파수 지정 신청, 또는 구축 사업자에게 위탁",
+       "사례: 네이버(2021년 첫 지정, 사옥 로봇), 스마트 공장·물류센터·병원·대학, 공공기관",
+       "과제: 단말·장비 생태계 확대, 구축비 부담 완화, 4.7GHz 대역 글로벌 장비 호환"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "이음 5G(e-Um 5G)",
+   "5G 특화망(Private 5G)",
+   "4.7GHz 대역(100MHz)",
+   "28GHz 대역(mmWave, 600MHz)",
+   "주파수 지정(Spectrum Assignment)",
+   "5G 코어 제어 평면(5GC Control Plane)",
+   "5G 코어 사용자 평면(UPF)",
+   "RAN(Radio Access Network)",
+   "MEC(Multi-access Edge Computing)"
+  ],
+  "keywords_ref": [
+   "2021년 제도 도입",
+   "네이버 첫 지정(2021)",
+   "SA(Standalone) 구성",
+   "스마트 팩토리·물류 로봇",
+   "이음 5G 실증 사업"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "이음 5G(e-Um 5G)",
+   "4.7GHz 특화망 대역(4.72~4.82GHz)",
+   "주파수 지정(Spectrum Assignment)"
+  ],
+  "quiz_groups": [
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_193_02": {
   "name": "디지털 트윈 네트워크(DTN, Digital Twin Network)",
-  "en": "DTN, Digital Twin Network"
+  "en": "DTN, Digital Twin Network",
+  "definition": "물리 네트워크를 데이터·모델로 가상 공간에 실시간 복제해, 실제 망에 영향을 주지 않고 설계·진단·분석·AI/ML 기반 최적화와 제어를 수행하는 기술 (6G 망 운영 핵심 기술)",
+  "keywords": [
+   "4대 요소: 데이터(Data) · 모델(Model) · 인터페이스(Interface) · 매핑(Mapping)",
+   "3계층: 물리 네트워크 · 트윈 네트워크 · 네트워크 응용",
+   "What-if 분석 · 사전 검증 · 폐루프 최적화",
+   "요구 사항: 신뢰성·지연 · 확장성 · 민첩성 · 일반화 · 보안 · 해석 가능성",
+   "표준: IETF NMRG DTN 참조 구조 · ITU-T Y.3090",
+   "AI/ML 학습 환경 · 의도 기반 네트워킹(IBN) 연계"
+  ],
+  "outline": [
+   "디지털 트윈 네트워크의 개념",
+   "- 정의",
+   "- 필요성",
+   "DTN 구조 및 구성 요소",
+   "- 4대 핵심 요소",
+   "- 3계층 참조 구조",
+   "요구 사항 및 활용"
+  ],
+  "sections": [
+   {
+    "title": "디지털 트윈 네트워크의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "물리 망의 토폴로지·설정·트래픽·상태를 가상 복제한 '트윈'과 실제 망이 실시간으로 동기화되는 시스템"
+      ]
+     },
+     {
+      "title": "필요성",
+      "items": [
+       "6G 망은 규모·복잡도가 커서 실제 망 시험은 위험·고비용",
+       "AI/ML 모델을 안전하게 학습·검증할 환경 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "DTN 구조 및 구성 요소",
+    "subsections": [
+     {
+      "title": "4대 핵심 요소",
+      "items": [
+       "데이터: 망 구성·상태·트래픽 데이터 수집 저장소",
+       "모델: 기본 모델(망 요소·토폴로지)과 기능 모델(성능 예측·고장 진단 등)",
+       "인터페이스: 물리 망과의 남향, 응용과의 북향 표준 인터페이스",
+       "매핑: 물리 망과 트윈의 실시간 1:1 대응·동기화"
+      ]
+     },
+     {
+      "title": "3계층 참조 구조",
+      "items": [
+       "물리 네트워크 계층: 실제 망 장비, 데이터 제공·제어 명령 수행",
+       "트윈 네트워크 계층: 데이터 저장소, 서비스 매핑 모델, 트윈 관리",
+       "네트워크 응용 계층: 최적화·계획·장애 분석 응용, 의도(Intent) 입력"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "요구 사항 및 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "요구 사항: 신뢰성·지연(실시간 동기화), 확장성(대규모 망), 민첩성(빠른 반영), 일반화 가능성(다른 망 적용), 보안(트윈 데이터 보호), 해석 가능성(AI 결정 설명)",
+       "활용: 설정 변경 사전 검증(What-if), 장애 예측·근본 원인 분석, 용량 계획, 에너지 절감, AI 모델 학습장",
+       "표준: IETF NMRG DTN 개념·참조 구조 초안, ITU-T Y.3090(2022)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "디지털 트윈 네트워크(Digital Twin Network)",
+   "물리 네트워크(Physical Network)",
+   "트윈 네트워크(Twin Network)",
+   "네트워크 응용(Network Application)",
+   "데이터(Data)",
+   "모델(Model)",
+   "인터페이스(Interface)",
+   "매핑(Mapping)",
+   "What-if 분석(What-if Analysis)",
+   "AI/ML 기반 최적화(AI/ML Optimization)"
+  ],
+  "keywords_ref": [
+   "IETF NMRG(Network Management Research Group)",
+   "ITU-T Y.3090",
+   "신뢰성·지연(Reliability/Latency)",
+   "확장성·민첩성(Scalability/Agility)",
+   "해석 가능성(Interpretability)",
+   "IBN(Intent-Based Networking)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "What-if 분석(What-if Analysis)",
+   "트윈 네트워크(Twin Network)",
+   "ITU-T Y.3090(DTN Requirements and Architecture)",
+   "서비스 매핑 모델(Service Mapping Model)"
+  ],
+  "quiz_groups": [
+   "sdn",
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_198": {
   "name": "넷플릭스법(Netflix Act)",
