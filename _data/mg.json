@@ -5569,56 +5569,77 @@
     "title": "실시간 기업(RTE, Real-Time Enterprise)",
     "subtitle": "",
     "domain": "MG",
-    "category": "IT 경영전략 > 실시간 기업 > RTE",
-    "definition": "이벤트·정보를 실시간으로 감지·판단·실행해 자원 배분과 성과를 즉시 최적화하는 기업 운영 형태",
+    "category": "MG > 실시간 기업 > RTE",
+    "definition": "최신 실시간 정보를 기반으로 경영에 영향을 주는 이벤트를 즉시 인지·결정·조치하고 프로세스의 지체를 지속 제거해 경영 자원을 효과적으로 배분·집행하는 실시간 기업 모델",
     "keywords": [
-      "핵심: 실시간 기업(RTE) · 실시간 감지 · 실시간 의사결정",
-      "구성: 이벤트 기반 · 지연 최소화 · 통합 정보",
-      "활용: 자동화 · 성과 모니터링"
+      "핵심: 이벤트(Event) · 인지(Awareness) · 의사결정(Decision) · 조치(Action)",
+      "필수: 대응(Response) · 사이클 타임 단축(Latency 제거) · 조기 경보(Early Warning) · BPM·BAM·BRE",
+      "참고: DW·데이터 품질 관리(DQM) · BI · SOA·EA/ITA · RFID · 사이클론 모델(Cyclone Model)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "RTE의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "이벤트·정보를 실시간으로 감지·판단·실행해 자원 배분과 성과를 즉시 최적화하는 기업 운영 형태"
+              "이벤트 감지부터 대응까지 지연을 최소화해 경쟁력을 극대화하는 경영 방식"
             ]
           },
           {
-            "title": "목적",
+            "title": "핵심 사이클",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "Awareness → Decision → Action, 인지-조치 간 Cycle Time 최소화"
+            ]
+          },
+          {
+            "title": "구성요소",
+            "items": [
+              "이벤트(내·외부 변화)",
+              "인식(지표 모니터링·감지)",
+              "결정(분석·대응안)",
+              "활동(실행)",
+              "대응(Response)"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "RTE 기반 기술",
         "subsections": [
           {
-            "title": null,
+            "title": "데이터 통합",
             "items": [
-              "실시간 기업(RTE)",
-              "실시간 감지",
-              "실시간 의사결정",
-              "이벤트 기반",
-              "지연 최소화",
-              "통합 정보"
+              "데이터 품질·메타데이터 관리 기반 DW·데이터 마트"
+            ]
+          },
+          {
+            "title": "프로세스 통합·의사결정",
+            "items": [
+              "BPM·BRE로 프로세스 통합, BI로 의사결정, BAM으로 실시간 가시화·경보"
+            ]
+          },
+          {
+            "title": "시스템 연동",
+            "items": [
+              "SOA·EA/ITA·웹 서비스, CRM·ERP, RFID, DRS, 유틸리티 컴퓨팅"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "적용 전략과 고려사항",
         "subsections": [
           {
-            "title": null,
+            "title": "기대효과",
             "items": [
-              "자동화",
-              "성과 모니터링",
-              "관련 지표·표준·한계를 함께 제시"
+              "경영 신속성(위기 신속 대응), 핵심 업무 개선(재고 절감·리스크 감소), 프로세스 최적화"
+            ]
+          },
+          {
+            "title": "고려사항",
+            "items": [
+              "이벤트 기반 업무에 적합, 패키지의 블랙박스 프로세스, 대량 데이터 성능, 도입 후 BCP 시나리오 재점검"
             ]
           }
         ]
@@ -5630,47 +5651,54 @@
       97
     ],
     "outline": [
-      "실시간 기업의 개념",
+      "RTE의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 핵심 사이클",
+      "- 구성요소",
+      "RTE 기반 기술",
+      "- 데이터 통합",
+      "- 프로세스 통합·의사결정",
+      "- 시스템 연동",
+      "적용 전략과 고려사항",
+      "- 기대효과",
+      "- 고려사항"
     ],
     "name": "실시간 기업(RTE, Real-Time Enterprise)",
     "en": "Real-Time Enterprise",
     "keywords_must": [
-      "실시간 기업(RTE)",
-      "실시간 감지",
-      "실시간 의사결정",
-      "이벤트 기반",
-      "지연 최소화",
-      "통합 정보",
-      "자동화",
-      "성과 모니터링"
+      "이벤트(Event)",
+      "인지(Awareness)",
+      "의사결정(Decision)",
+      "조치(Action)",
+      "대응(Response)",
+      "사이클 타임 단축(Latency 제거)",
+      "조기 경보(Early Warning)",
+      "BPM·BAM·BRE"
     ],
     "keywords_ref": [
-      "EDA",
-      "BAM",
-      "CEP",
-      "디지털 트윈",
-      "관련 표준·사례"
+      "DW·데이터 품질 관리(DQM)",
+      "BI",
+      "SOA·EA/ITA",
+      "RFID",
+      "사이클론 모델(Cyclone Model)"
     ],
     "curated": true,
     "quiz_terms": [
-      "실시간 기업(RTE)",
-      "실시간 감지",
-      "실시간 의사결정",
-      "이벤트 기반",
-      "지연 최소화",
-      "통합 정보",
-      "자동화",
-      "성과 모니터링"
+      "이벤트(Event)",
+      "인지(Awareness)",
+      "의사결정(Decision)",
+      "조치(Action)",
+      "대응(Response)",
+      "사이클 타임 단축(Latency 제거)",
+      "조기 경보(Early Warning)",
+      "BPM·BAM·BRE"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_053",
@@ -5678,56 +5706,73 @@
     "title": "사이클론 모델(Cyclone Model)",
     "subtitle": "",
     "domain": "MG",
-    "category": "MG > 실시간 기업 > Cyclone Mode",
-    "definition": "사업부 간 수평적 연계·순환으로 가치를 보는 모델. 수직 Activity 중심 관점을 보완",
+    "category": "MG > 실시간 기업 > Cyclone Model",
+    "definition": "실시간 기업 구축을 위해 전사에서 발생하는 이벤트에 대한 End-to-End 대응을 지휘·관리·운영 프로세스로 나누어 사업부 간 수평적(Horizontal) 관점에서 파악하는 공통 프레임워크",
     "keywords": [
-      "핵심: 사이클론 모델 · 수평적 관점 · 사업부 연계",
-      "구성: 가치 순환 · 협업 · 사일로 제거",
-      "활용: 프로세스 횡단 · 시너지"
+      "핵심: 지휘(Lead) · 관리(Manage) · 운영(Operate) · End-to-End 대응(Response)",
+      "필수: 수평적 관점(Horizontal View) · 프로세스 결합·제거 · 테일러링(Tailoring)",
+      "참고: 실시간 기업(RTE) · 수직적 Activity 중심 관점 · 이벤트 기반 프로세스 · 점진적 프로세스 개선 · 가트너 RTE"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "사이클론 모델의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "사업부 간 수평적 연계·순환으로 가치를 보는 모델. 수직 Activity 중심 관점을 보완"
+              "RTE 구현을 위한 이벤트 대응 프로세스 프레임워크"
             ]
           },
           {
-            "title": "목적",
+            "title": "관점 전환",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "전형적 Activity 중심 수직(Vertical) 관점 → 사업부 간 수평(Horizontal) 관점"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "3개 사이클론 레벨",
         "subsections": [
           {
-            "title": null,
+            "title": "지휘(Lead)",
             "items": [
-              "사이클론 모델",
-              "수평적 관점",
-              "사업부 연계",
-              "가치 순환",
-              "협업",
-              "사일로 제거"
+              "경영 투명화·합의(Consensus), 전략적 결정 실행 시 혼란·충돌 제거 → 전략의 신속한 구현"
+            ]
+          },
+          {
+            "title": "관리(Manage)",
+            "items": [
+              "자원 배분·성과 관리로 지휘 결과를 운영 계획에 반영"
+            ]
+          },
+          {
+            "title": "운영(Operate)",
+            "items": [
+              "일상 업무 실행·이벤트 처리, 결과를 다시 상위 레벨에 피드백"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "적용 원리",
         "subsections": [
           {
-            "title": null,
+            "title": "흐름",
             "items": [
-              "프로세스 횡단",
-              "시너지",
-              "관련 지표·표준·한계를 함께 제시"
+              "Lead → Manage → Operate 순으로 상위 프로세스 결과가 하위에 지속 반영"
+            ]
+          },
+          {
+            "title": "개선",
+            "items": [
+              "End-to-End 대응의 부적절한 활동을 결합·제거해 점진적 변화"
+            ]
+          },
+          {
+            "title": "적용",
+            "items": [
+              "기업 조직 구조와 특성에 맞춰 테일러링"
             ]
           }
         ]
@@ -5741,45 +5786,50 @@
     "outline": [
       "사이클론 모델의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 관점 전환",
+      "3개 사이클론 레벨",
+      "- 지휘(Lead)",
+      "- 관리(Manage)",
+      "- 운영(Operate)",
+      "적용 원리",
+      "- 흐름",
+      "- 개선",
+      "- 적용"
     ],
     "name": "사이클론 모델(Cyclone Model)",
-    "en": "Cyclone Model",
+    "en": "RTE Cyclone Model",
     "keywords_must": [
-      "사이클론 모델",
-      "수평적 관점",
-      "사업부 연계",
-      "가치 순환",
-      "협업",
-      "사일로 제거",
-      "프로세스 횡단",
-      "시너지"
+      "지휘(Lead)",
+      "관리(Manage)",
+      "운영(Operate)",
+      "End-to-End 대응(Response)",
+      "수평적 관점(Horizontal View)",
+      "프로세스 결합·제거",
+      "테일러링(Tailoring)"
     ],
     "keywords_ref": [
-      "가치사슬",
-      "BPM",
-      "매트릭스 조직",
-      "E2E 프로세스",
-      "관련 표준·사례"
+      "실시간 기업(RTE)",
+      "수직적 Activity 중심 관점",
+      "이벤트 기반 프로세스",
+      "점진적 프로세스 개선",
+      "가트너 RTE"
     ],
     "curated": true,
     "quiz_terms": [
-      "사이클론 모델",
-      "수평적 관점",
-      "사업부 연계",
-      "가치 순환",
-      "협업",
-      "사일로 제거",
-      "프로세스 횡단",
-      "시너지"
+      "지휘(Lead)",
+      "관리(Manage)",
+      "운영(Operate)",
+      "End-to-End 대응(Response)",
+      "수평적 관점(Horizontal View)",
+      "프로세스 결합·제거",
+      "테일러링(Tailoring)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_054",
@@ -5787,56 +5837,77 @@
     "title": "이벤트 기반 아키텍처(EDA, Event-Driven Architecture)",
     "subtitle": "",
     "domain": "MG",
-    "category": "IT 경영전략 > 실시간 기업 > EDA",
-    "definition": "비즈니스·외부 이벤트를 발행·구독으로 감지·대응해 느슨한 결합과 실시간성을 얻는 아키텍처",
+    "category": "MG > 실시간 기업 > EDA",
+    "definition": "분산된 시스템 간에 이벤트를 생성·발행하고, 발행된 이벤트를 필요로 하는 수신자에게 비동기로 전달·처리하여 애플리케이션 간 결합과 종속성을 배제하는 시스템 아키텍처",
     "keywords": [
-      "핵심: EDA · 이벤트 생성·소비 · 발행/구독(Pub/Sub)",
-      "구성: 느슨한 결합 · CEP(복합이벤트처리) · 비동기",
-      "활용: 확장성 · 실시간 대응"
+      "핵심: 이벤트 생성기(Event Generator·Publisher) · 이벤트 채널(Event Channel·Bus) · 이벤트 처리 엔진(Event Processing Engine) · 비동기(Asynchronous)",
+      "필수: N:N 통신 · 디커플링(Decoupling) · 중재자 토폴로지(Mediator Topology) · 브로커 토폴로지(Broker Topology)",
+      "참고: SOA 비교 · 이벤트 메타데이터 · Apache Kafka·RabbitMQ·ActiveMQ · Apache Camel·Spring Integration · MSA 보완"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "EDA의 개념과 동작 원리",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "비즈니스·외부 이벤트를 발행·구독으로 감지·대응해 느슨한 결합과 실시간성을 얻는 아키텍처"
+              "비즈니스·외부 이벤트를 매개로 상호작용하는 분산 아키텍처"
             ]
           },
           {
-            "title": "목적",
+            "title": "동작 원리",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "디커플 인터랙션(발행자는 구독자를 모름)",
+              "N:N 통신",
+              "이벤트 기반 트리거",
+              "비동기 메시징"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "구성요소와 토폴로지",
         "subsections": [
           {
-            "title": null,
+            "title": "구성요소",
             "items": [
-              "EDA",
-              "이벤트 생성·소비",
-              "발행/구독(Pub/Sub)",
-              "느슨한 결합",
-              "CEP(복합이벤트처리)",
-              "비동기"
+              "이벤트 생성기(표준 형식 이벤트 생성) → 이벤트 채널(전파) → 이벤트 처리 엔진(식별·처리·신규 이벤트 생성)"
+            ]
+          },
+          {
+            "title": "플랫폼 요소",
+            "items": [
+              "이벤트 메타데이터, 이벤트 프로세싱, 구축 도구, 관리 도구, 엔터프라이즈 통합"
+            ]
+          },
+          {
+            "title": "토폴로지",
+            "items": [
+              "중재자(이벤트 큐·중재자로 다단계 오케스트레이션, 예: 주식 거래)",
+              "브로커(채널만으로 체인 처리, 예: 로그 모니터링)"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "SOA와 비교·고려사항",
         "subsections": [
           {
-            "title": null,
+            "title": "EDA",
             "items": [
-              "확장성",
-              "실시간 대응",
-              "관련 지표·표준·한계를 함께 제시"
+              "이벤트 단위, N:N, 수신자 흐름 제어, 동적·병렬·비동기, 진행 중에도 새 입력에 반응"
+            ]
+          },
+          {
+            "title": "SOA",
+            "items": [
+              "서비스 단위, 1:1, 클라이언트 흐름 제어, 순차 경로, 진행 중 새 입력 차단"
+            ]
+          },
+          {
+            "title": "고려사항",
+            "items": [
+              "전체 흐름 파악·디버깅 어려움, 장애 시 재시도·롤백 설계"
             ]
           }
         ]
@@ -5848,104 +5919,134 @@
       106
     ],
     "outline": [
-      "이벤트 기반 아키텍처의 개념",
+      "EDA의 개념과 동작 원리",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 동작 원리",
+      "구성요소와 토폴로지",
+      "- 구성요소",
+      "- 플랫폼 요소",
+      "- 토폴로지",
+      "SOA와 비교·고려사항",
+      "- EDA",
+      "- SOA",
+      "- 고려사항"
     ],
     "name": "이벤트 기반 아키텍처(EDA, Event-Driven Architecture)",
     "en": "Event-Driven Architecture",
     "keywords_must": [
-      "EDA",
-      "이벤트 생성·소비",
-      "발행/구독(Pub/Sub)",
-      "느슨한 결합",
-      "CEP(복합이벤트처리)",
-      "비동기",
-      "확장성",
-      "실시간 대응"
+      "이벤트 생성기(Event Generator·Publisher)",
+      "이벤트 채널(Event Channel·Bus)",
+      "이벤트 처리 엔진(Event Processing Engine)",
+      "비동기(Asynchronous)",
+      "N:N 통신",
+      "디커플링(Decoupling)",
+      "중재자 토폴로지(Mediator Topology)",
+      "브로커 토폴로지(Broker Topology)"
     ],
     "keywords_ref": [
-      "메시지 브로커",
-      "SOA/MSA",
-      "BAM",
-      "최종 일관성",
-      "관련 표준·사례"
+      "SOA 비교",
+      "이벤트 메타데이터",
+      "Apache Kafka·RabbitMQ·ActiveMQ",
+      "Apache Camel·Spring Integration",
+      "MSA 보완"
     ],
     "curated": true,
     "quiz_terms": [
-      "EDA",
-      "이벤트 생성·소비",
-      "발행/구독(Pub/Sub)",
-      "느슨한 결합",
-      "CEP(복합이벤트처리)",
-      "비동기",
-      "확장성",
-      "실시간 대응"
+      "이벤트 생성기(Event Generator·Publisher)",
+      "이벤트 채널(Event Channel·Bus)",
+      "이벤트 처리 엔진(Event Processing Engine)",
+      "비동기(Asynchronous)",
+      "N:N 통신",
+      "디커플링(Decoupling)",
+      "중재자 토폴로지(Mediator Topology)",
+      "브로커 토폴로지(Broker Topology)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_055",
     "code": "MG_055",
     "title": "정보화전략계획(ISP, Information Strategy Planning)",
-    "subtitle": "ISP(Information Strategy Plan)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "경영전략(MG) > 전략계획 > ISP(Information Strategy Plan)",
-    "definition": "조직 중장기 목표에 맞춰 정보시스템·정보화 방향을 수립하는 전략 기획 활동",
+    "category": "MG > 전략 계획 > ISP",
+    "definition": "조직의 경영 목표와 중장기 전략을 지원하기 위해 환경·현황을 분석하고 정보화 비전·목표모델·통합 이행계획을 수립하는 정보화 전략 기획 활동",
     "keywords": [
-      "핵심: ISP · 현황 분석(As-Is) · 목표 모형(To-Be)",
-      "구성: 이행 계획 · IT·비즈니스 정렬 · 정보화 과제",
-      "활용: 로드맵 · 투자 우선순위"
+      "핵심: 환경 분석(경영·법제도·IT 환경) · 현황 분석(As-Is) · 벤치마킹·차이 분석(Gap Analysis) · 개선과제 도출",
+      "필수: 정보화 비전·전략 · 목표모델 설계(To-Be) · 통합 이행계획 · 총 사업비 산출(FP 기반)",
+      "참고: 핵심 성공 요인(CSF) · ISP 수립 공통가이드 · 제안요청서(RFP) 작성 · 효과 분석 · ISMP·EA 비교"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "정보화전략계획의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "조직 중장기 목표에 맞춰 정보시스템·정보화 방향을 수립하는 전략 기획 활동"
+              "정보화 사업 기획 단계에서 경영 전략과 IT 전략을 연계하는 마스터플랜"
             ]
           },
           {
-            "title": "목적",
+            "title": "필요성",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "정보화 사업 기획의 내실화, 재정 투자 관리 효율화"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "수행 절차와 내용",
         "subsections": [
           {
-            "title": null,
+            "title": "환경 분석",
             "items": [
-              "ISP",
-              "현황 분석(As-Is)",
-              "목표 모형(To-Be)",
-              "이행 계획",
-              "IT·비즈니스 정렬",
-              "정보화 과제"
+              "경영 현황(기회·위협, CSF), 법령·제도 분석, IT 환경 분석"
+            ]
+          },
+          {
+            "title": "현황 분석(As-Is)",
+            "items": [
+              "업무 분석, 정보시스템 분석, 벤치마킹, 차이 분석"
+            ]
+          },
+          {
+            "title": "정보화 비전·전략",
+            "items": [
+              "이슈 통합·개선과제 도출, 비전·목표·단계별 실행 전략"
+            ]
+          },
+          {
+            "title": "목표모델(To-Be)",
+            "items": [
+              "업무 프로세스 재설계, 응용·데이터·기술·보안 구조 설계"
+            ]
+          },
+          {
+            "title": "통합 이행계획",
+            "items": [
+              "과제 선후관계·추진 일정, SW 개발비(FP)·장비비·운영유지비 산정, 효과 분석"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "검토 항목과 활용",
         "subsections": [
           {
-            "title": null,
+            "title": "산출물 검토",
             "items": [
-              "로드맵",
-              "투자 우선순위",
-              "관련 지표·표준·한계를 함께 제시"
+              "3개 분야 6개 항목 중심 점검"
+            ]
+          },
+          {
+            "title": "후속 활동",
+            "items": [
+              "사업계획서·제안요청서 작성, 특정 사업은 ISMP로 상세화"
             ]
           }
         ]
@@ -5959,45 +6060,53 @@
     "outline": [
       "정보화전략계획의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 필요성",
+      "수행 절차와 내용",
+      "- 환경 분석",
+      "- 현황 분석(As-Is)",
+      "- 정보화 비전·전략",
+      "- 목표모델(To-Be)",
+      "- 통합 이행계획",
+      "검토 항목과 활용",
+      "- 산출물 검토",
+      "- 후속 활동"
     ],
     "name": "정보화전략계획(ISP, Information Strategy Planning)",
     "en": "Information Strategy Planning",
     "keywords_must": [
-      "ISP",
+      "환경 분석(경영·법제도·IT 환경)",
       "현황 분석(As-Is)",
-      "목표 모형(To-Be)",
-      "이행 계획",
-      "IT·비즈니스 정렬",
-      "정보화 과제",
-      "로드맵",
-      "투자 우선순위"
+      "벤치마킹·차이 분석(Gap Analysis)",
+      "개선과제 도출",
+      "정보화 비전·전략",
+      "목표모델 설계(To-Be)",
+      "통합 이행계획",
+      "총 사업비 산출(FP 기반)"
     ],
     "keywords_ref": [
-      "EA",
-      "ISMP",
-      "BPR",
-      "ROI",
-      "관련 표준·사례"
+      "핵심 성공 요인(CSF)",
+      "ISP 수립 공통가이드",
+      "제안요청서(RFP) 작성",
+      "효과 분석",
+      "ISMP·EA 비교"
     ],
     "curated": true,
     "quiz_terms": [
-      "ISP",
+      "환경 분석(경영·법제도·IT 환경)",
       "현황 분석(As-Is)",
-      "목표 모형(To-Be)",
-      "이행 계획",
-      "IT·비즈니스 정렬",
-      "정보화 과제",
-      "로드맵",
-      "투자 우선순위"
+      "벤치마킹·차이 분석(Gap Analysis)",
+      "개선과제 도출",
+      "정보화 비전·전략",
+      "목표모델 설계(To-Be)",
+      "통합 이행계획",
+      "총 사업비 산출(FP 기반)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": "수행 절차: 환현정목통(환경 분석·현황 분석·정보화 비전·목표모델·통합 이행계획)"
   },
   {
     "id": "MG_056",
@@ -6158,59 +6267,76 @@
   {
     "id": "MG_057",
     "code": "MG_057",
-    "title": "BCG 매트릭스(BCG Matrix)",
-    "subtitle": "BCG Matrix",
+    "title": "BCG 매트릭스(BCG Matrix, 성장-점유율 매트릭스)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "경영전략(MG) > 전략 계획 > BCG Matrix",
-    "definition": "상대 시장점유율×시장성장률로 SBU를 Stars·Cash Cows·Question Marks·Dogs로 분류하는 포트폴리오 기법",
+    "category": "MG > 전략 계획 > BCG Matrix",
+    "definition": "기업이 보유한 제품·사업을 전략적 사업단위(SBU)로 구분하고, 시장 성장률과 상대적 시장 점유율에 따라 네 영역에 배치해 자원 배분과 최적 사업 조합을 제시하는 포트폴리오 전략 기법(Boston Consulting Group)",
     "keywords": [
-      "핵심: BCG 매트릭스 · Star · Cash Cow",
-      "구성: Question Mark · Dog · 상대 점유율",
-      "활용: 시장 성장률 · SBU"
+      "핵심: 전략적 사업단위(SBU) · 시장 성장률(Market Growth Rate) · 상대적 시장 점유율(Relative Market Share) · 스타(Star)",
+      "필수: 캐시카우(Cash Cow) · 물음표(Question Mark·Problem Child) · 개(Dog) · 경험곡선(Experience Curve)",
+      "참고: 포트폴리오 분석 · GE-맥킨지 매트릭스 · 제품 수명주기 · 육성·유지·수확·철수 전략 · 현금 흐름 균형"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "BCG 매트릭스의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "상대 시장점유율×시장성장률로 SBU를 Stars·Cash Cows·Question Marks·Dogs로 분류하는 포트폴리오 기법"
+              "성장-점유율 2차원으로 사업 포트폴리오를 분석하는 전략 기법"
             ]
           },
           {
-            "title": "목적",
+            "title": "등장 배경",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "다각화 기업의 SBU별 자원 배분 기준 필요"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "4개 영역과 대응 전략",
         "subsections": [
           {
-            "title": null,
+            "title": "스타",
             "items": [
-              "BCG 매트릭스",
-              "Star",
-              "Cash Cow",
-              "Question Mark",
-              "Dog",
-              "상대 점유율"
+              "고성장·고점유, 투자 지속으로 리더십 유지"
+            ]
+          },
+          {
+            "title": "캐시카우",
+            "items": [
+              "저성장·고점유, 경험곡선 효과로 현금 창출 → 스타·물음표에 자금 공급, 비용 최소화"
+            ]
+          },
+          {
+            "title": "물음표",
+            "items": [
+              "고성장·저점유, 비용 소요 큼 → 선별 투자로 경쟁 위치 향상 또는 철수"
+            ]
+          },
+          {
+            "title": "개",
+            "items": [
+              "저성장·저점유, 수익·현금 감소 → 시장 세분화·차별화 또는 철수"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "활용과 한계",
         "subsections": [
           {
-            "title": null,
+            "title": "활용",
             "items": [
-              "시장 성장률",
-              "SBU",
-              "관련 지표·표준·한계를 함께 제시"
+              "수익 안정성(캐시카우), 성장 전략(스타), 투자 우선순위(물음표), 폐기·존속 결정(개)"
+            ]
+          },
+          {
+            "title": "한계",
+            "items": [
+              "두 변수만 고려, 시장 정의에 따라 결과 변동, 사업 간 시너지 미반영"
             ]
           }
         ]
@@ -6224,45 +6350,52 @@
     "outline": [
       "BCG 매트릭스의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 등장 배경",
+      "4개 영역과 대응 전략",
+      "- 스타",
+      "- 캐시카우",
+      "- 물음표",
+      "- 개",
+      "활용과 한계",
+      "- 활용",
+      "- 한계"
     ],
-    "name": "BCG 매트릭스(BCG Matrix)",
-    "en": "BCG Matrix",
+    "name": "BCG 매트릭스(BCG Matrix, 성장-점유율 매트릭스)",
+    "en": "BCG Growth-Share Matrix",
     "keywords_must": [
-      "BCG 매트릭스",
-      "Star",
-      "Cash Cow",
-      "Question Mark",
-      "Dog",
-      "상대 점유율",
-      "시장 성장률",
-      "SBU"
+      "전략적 사업단위(SBU)",
+      "시장 성장률(Market Growth Rate)",
+      "상대적 시장 점유율(Relative Market Share)",
+      "스타(Star)",
+      "캐시카우(Cash Cow)",
+      "물음표(Question Mark·Problem Child)",
+      "개(Dog)",
+      "경험곡선(Experience Curve)"
     ],
     "keywords_ref": [
-      "자원 배분",
+      "포트폴리오 분석",
+      "GE-맥킨지 매트릭스",
       "제품 수명주기",
-      "GE/McKinsey",
-      "철수·투자 전략",
-      "관련 표준·사례"
+      "육성·유지·수확·철수 전략",
+      "현금 흐름 균형"
     ],
     "curated": true,
     "quiz_terms": [
-      "BCG 매트릭스",
-      "Star",
-      "Cash Cow",
-      "Question Mark",
-      "Dog",
-      "상대 점유율",
-      "시장 성장률",
-      "SBU"
+      "전략적 사업단위(SBU)",
+      "시장 성장률(Market Growth Rate)",
+      "상대적 시장 점유율(Relative Market Share)",
+      "스타(Star)",
+      "캐시카우(Cash Cow)",
+      "물음표(Question Mark·Problem Child)",
+      "개(Dog)",
+      "경험곡선(Experience Curve)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_058",
@@ -6270,56 +6403,61 @@
     "title": "가치사슬(Value Chain)",
     "subtitle": "",
     "domain": "MG",
-    "category": "경영전략(MG) > 전략 계획 > Value Chain",
-    "definition": "본원적·지원 활동을 통해 고객 가치를 창출하는 활동 연쇄. 경쟁우위 원천을 찾는 분석 틀 (Porter)",
+    "category": "MG > 전략 계획 > Value Chain",
+    "definition": "기업이 투입 자원보다 더 큰 가치의 재화·서비스를 만들기 위해 수행하는 본원적·지원 활동의 연쇄. 각 활동의 부가가치와 비용을 분석해 경쟁우위 원천을 찾는 전략 분석 기법(Porter)",
     "keywords": [
-      "핵심: 가치사슬(Value Chain) · 본원적 활동 · 지원 활동",
-      "구성: 마진 · 원가 우위 · 차별화",
-      "활용: 연계(Linkages) · 경쟁 우위"
+      "핵심: 본원적 활동(Primary Activities) · 지원 활동(Support Activities) · 부가가치(Value Added) · 이윤(Margin)",
+      "필수: 경쟁우위(Competitive Advantage) · 활동 지도화(Mapping) · 원가우위·차별화",
+      "참고: 마이클 포터(Michael Porter) · 아웃소싱(비핵심 기능) · 가치 시스템(Value System) · 디지털 가치사슬 · 비즈니스 생태계"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "가치사슬의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "본원적·지원 활동을 통해 고객 가치를 창출하는 활동 연쇄. 경쟁우위 원천을 찾는 분석 틀 (Porter)"
+              "기업 활동을 가치 창출 단위로 분해하는 전략 분석 모형"
             ]
           },
           {
-            "title": "목적",
+            "title": "특징",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "활동 지도화로 수익·비용 분석, 강점·약점 활동 식별"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "구성",
         "subsections": [
           {
-            "title": null,
+            "title": "본원적 활동",
             "items": [
-              "가치사슬(Value Chain)",
-              "본원적 활동",
-              "지원 활동",
-              "마진",
-              "원가 우위",
-              "차별화"
+              "내부 물류, 운영·생산, 외부 물류, 마케팅·영업, 서비스"
+            ]
+          },
+          {
+            "title": "지원 활동",
+            "items": [
+              "기업 하부구조, 인적자원관리, 기술 개발, 조달"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "활용",
         "subsections": [
           {
-            "title": null,
+            "title": "경쟁 전략",
             "items": [
-              "연계(Linkages)",
-              "경쟁 우위",
-              "관련 지표·표준·한계를 함께 제시"
+              "원가우위·차별화가 발생하는 활동 식별"
+            ]
+          },
+          {
+            "title": "의사결정",
+            "items": [
+              "핵심 역량은 내재화, 비핵심 기능은 아웃소싱, IT로 활동 연계 혁신"
             ]
           }
         ]
@@ -6333,45 +6471,48 @@
     "outline": [
       "가치사슬의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 특징",
+      "구성",
+      "- 본원적 활동",
+      "- 지원 활동",
+      "활용",
+      "- 경쟁 전략",
+      "- 의사결정"
     ],
     "name": "가치사슬(Value Chain)",
     "en": "Value Chain",
     "keywords_must": [
-      "가치사슬(Value Chain)",
-      "본원적 활동",
-      "지원 활동",
-      "마진",
-      "원가 우위",
-      "차별화",
-      "연계(Linkages)",
-      "경쟁 우위"
+      "본원적 활동(Primary Activities)",
+      "지원 활동(Support Activities)",
+      "부가가치(Value Added)",
+      "이윤(Margin)",
+      "경쟁우위(Competitive Advantage)",
+      "활동 지도화(Mapping)",
+      "원가우위·차별화"
     ],
     "keywords_ref": [
-      "가치시스템",
-      "아웃소싱 판단",
-      "활동 원가",
+      "마이클 포터(Michael Porter)",
+      "아웃소싱(비핵심 기능)",
+      "가치 시스템(Value System)",
       "디지털 가치사슬",
-      "관련 표준·사례"
+      "비즈니스 생태계"
     ],
     "curated": true,
     "quiz_terms": [
-      "가치사슬(Value Chain)",
-      "본원적 활동",
-      "지원 활동",
-      "마진",
-      "원가 우위",
-      "차별화",
-      "연계(Linkages)",
-      "경쟁 우위"
+      "본원적 활동(Primary Activities)",
+      "지원 활동(Support Activities)",
+      "부가가치(Value Added)",
+      "이윤(Margin)",
+      "경쟁우위(Competitive Advantage)",
+      "활동 지도화(Mapping)",
+      "원가우위·차별화"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_059",
@@ -6379,56 +6520,67 @@
     "title": "가치사슬 모델(Value Chain Model)",
     "subtitle": "",
     "domain": "MG",
-    "category": "경영전략(MG) > 전략 계획 > Value Chain Model",
-    "definition": "주활동·지원활동·기능이 부가가치를 만드는 구조를 모델화해 개선·디지털화 지점을 식별",
+    "category": "MG > 전략 계획 > Value Chain Model",
+    "definition": "기업이 고객에게 가치를 제공하는 과정에서 부가가치 창출에 직·간접적으로 관련된 본원적 활동과 지원 활동을 구성도로 모델화하고 연계 분석해 비용 우위와 차별화 지점을 찾는 기법",
     "keywords": [
-      "핵심: 가치사슬 모델 · 주활동 · 지원활동",
-      "구성: 부가가치 · 프로세스 개선 · 정보 흐름",
-      "활용: 병목 · 아웃소싱/내재화"
+      "핵심: 본원적 활동 · 지원 활동 · 내부 물류(Inbound Logistics) · 운영·생산(Operations)",
+      "필수: 외부 물류(Outbound Logistics) · 마케팅·영업 · 서비스 · 인적자원관리·기술 개발·조달 · 이윤(Margin)",
+      "참고: 비용 우위 · 차별화 속성 · 활동 간 연계(Linkage) · 가치 평가 방법 · 정보시스템 적용 지점"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "가치사슬 모델의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "주활동·지원활동·기능이 부가가치를 만드는 구조를 모델화해 개선·디지털화 지점을 식별"
+              "전체 생산 활동을 본원적·지원 활동으로 분리해 부문별 가치를 분석"
             ]
           },
           {
             "title": "목적",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "비용 우위 확보, 차별화 속성 창출, 경쟁 우위 구축"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "구성도와 가치 창출 활동",
         "subsections": [
           {
-            "title": null,
+            "title": "본원적 활동",
             "items": [
-              "가치사슬 모델",
-              "주활동",
-              "지원활동",
-              "부가가치",
-              "프로세스 개선",
-              "정보 흐름"
+              "내부 물류 → 운영·생산 → 외부 물류 → 마케팅·영업 → 서비스"
+            ]
+          },
+          {
+            "title": "지원 활동",
+            "items": [
+              "기업 하부구조, 인적자원관리, 기술 개발, 조달"
+            ]
+          },
+          {
+            "title": "이윤",
+            "items": [
+              "고객 가치 총합에서 활동 비용을 뺀 마진"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "평가와 적용",
         "subsections": [
           {
-            "title": null,
+            "title": "평가",
             "items": [
-              "병목",
-              "아웃소싱/내재화",
-              "관련 지표·표준·한계를 함께 제시"
+              "활동별 비용·가치 기여도 측정, 활동 간 연계 효과 분석"
+            ]
+          },
+          {
+            "title": "IT 적용",
+            "items": [
+              "SCM(물류), ERP(운영), CRM(마케팅·서비스), HRM(지원)"
             ]
           }
         ]
@@ -6443,44 +6595,52 @@
       "가치사슬 모델의 개념",
       "- 정의",
       "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "구성도와 가치 창출 활동",
+      "- 본원적 활동",
+      "- 지원 활동",
+      "- 이윤",
+      "평가와 적용",
+      "- 평가",
+      "- IT 적용"
     ],
     "name": "가치사슬 모델(Value Chain Model)",
     "en": "Value Chain Model",
     "keywords_must": [
-      "가치사슬 모델",
-      "주활동",
-      "지원활동",
-      "부가가치",
-      "프로세스 개선",
-      "정보 흐름",
-      "병목",
-      "아웃소싱/내재화"
+      "본원적 활동",
+      "지원 활동",
+      "내부 물류(Inbound Logistics)",
+      "운영·생산(Operations)",
+      "외부 물류(Outbound Logistics)",
+      "마케팅·영업",
+      "서비스",
+      "인적자원관리·기술 개발·조달",
+      "이윤(Margin)"
     ],
     "keywords_ref": [
-      "Porter VC",
-      "SCM",
-      "BPM",
-      "고객 가치",
-      "관련 표준·사례"
+      "비용 우위",
+      "차별화 속성",
+      "활동 간 연계(Linkage)",
+      "가치 평가 방법",
+      "정보시스템 적용 지점"
     ],
     "curated": true,
     "quiz_terms": [
-      "가치사슬 모델",
-      "주활동",
-      "지원활동",
-      "부가가치",
-      "프로세스 개선",
-      "정보 흐름",
-      "병목",
-      "아웃소싱/내재화"
+      "본원적 활동",
+      "지원 활동",
+      "내부 물류(Inbound Logistics)",
+      "운영·생산(Operations)",
+      "외부 물류(Outbound Logistics)",
+      "마케팅·영업",
+      "서비스",
+      "인적자원관리·기술 개발·조달",
+      "이윤(Margin)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_060",
@@ -6488,56 +6648,61 @@
     "title": "캐즘 이론(Chasm Theory)",
     "subtitle": "",
     "domain": "MG",
-    "category": "IT경영전략 > 전략 계획 > 캐즘이론",
-    "definition": "하이테크 제품이 초기 시장에서 주류 시장으로 넘어갈 때 나타나는 깊은 간극(캐즘)을 설명 (Moore)",
+    "category": "MG > 전략 계획 > 캐즘",
+    "definition": "첨단 기술 제품이 소수 혁신 수용자 중심의 초기 시장에서 실용주의자 중심의 주류 시장으로 넘어갈 때 수요가 정체·단절되는 깊은 간극(캐즘)이 존재하며, 이를 극복하는 전략이 필요하다는 이론(Geoffrey Moore)",
     "keywords": [
-      "핵심: 캐즘(Chasm) · 혁신 수용자 분포 · 전기수용자",
-      "구성: 전기다수 · 주류 시장 · 캐즘 넘기",
-      "활용: 비치헤드 전략 · 전체 제품(Whole Product)"
+      "핵심: 기술 수용 주기(Technology Adoption Life Cycle) · 혁신 수용자(Innovators) · 선각 수용자(Early Adopters) · 전기 다수 수용자(Early Majority)",
+      "필수: 후기 다수 수용자(Late Majority) · 지각 수용자(Laggards) · 완전 완비 제품(Whole Product) · 거점 시장 공략(Beachhead)",
+      "참고: 제프리 무어(Geoffrey Moore) · 에버렛 로저스 혁신 확산 · 볼링 앨리 · 토네이도 · 구전 효과"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "캐즘의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "하이테크 제품이 초기 시장에서 주류 시장으로 넘어갈 때 나타나는 깊은 간극(캐즘)을 설명 (Moore)"
+              "초기 시장과 주류 시장 사이의 수요 단절 구간"
             ]
           },
           {
-            "title": "목적",
+            "title": "원인",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "선각 수용자(변화 추구)와 전기 다수(실용·안정 추구)의 구매 기준 차이"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "기술 수용 주기와 소비자 유형",
         "subsections": [
           {
-            "title": null,
+            "title": "시장 구분",
             "items": [
-              "캐즘(Chasm)",
-              "혁신 수용자 분포",
-              "전기수용자",
-              "전기다수",
-              "주류 시장",
-              "캐즘 넘기"
+              "초기 시장 → (캐즘) → 주류 시장 → 말기 시장"
+            ]
+          },
+          {
+            "title": "소비자 유형",
+            "items": [
+              "혁신(2.5%) → 선각(13.5%) → 전기 다수(34%) → 후기 다수(34%) → 지각(16%)"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "캐즘 극복 전략",
         "subsections": [
           {
-            "title": null,
+            "title": "완전 완비 제품",
             "items": [
-              "비치헤드 전략",
-              "전체 제품(Whole Product)",
-              "관련 지표·표준·한계를 함께 제시"
+              "핵심 제품에 서비스·보완재를 더해 실용주의자 요구 충족"
+            ]
+          },
+          {
+            "title": "거점 확보",
+            "items": [
+              "특정 세분 시장 집중 공략 → 구전 효과로 인접 시장 확장(볼링 앨리)"
             ]
           }
         ]
@@ -6549,47 +6714,52 @@
       115
     ],
     "outline": [
-      "캐즘 이론의 개념",
+      "캐즘의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 원인",
+      "기술 수용 주기와 소비자 유형",
+      "- 시장 구분",
+      "- 소비자 유형",
+      "캐즘 극복 전략",
+      "- 완전 완비 제품",
+      "- 거점 확보"
     ],
     "name": "캐즘 이론(Chasm Theory)",
-    "en": "Crossing the Chasm",
+    "en": "Chasm Theory",
     "keywords_must": [
-      "캐즘(Chasm)",
-      "혁신 수용자 분포",
-      "전기수용자",
-      "전기다수",
-      "주류 시장",
-      "캐즘 넘기",
-      "비치헤드 전략",
-      "전체 제품(Whole Product)"
+      "기술 수용 주기(Technology Adoption Life Cycle)",
+      "혁신 수용자(Innovators)",
+      "선각 수용자(Early Adopters)",
+      "전기 다수 수용자(Early Majority)",
+      "후기 다수 수용자(Late Majority)",
+      "지각 수용자(Laggards)",
+      "완전 완비 제품(Whole Product)",
+      "거점 시장 공략(Beachhead)"
     ],
     "keywords_ref": [
-      "기술수용주기",
-      "얼리어답터",
-      "포지셔닝",
-      "레퍼런스 고객",
-      "관련 표준·사례"
+      "제프리 무어(Geoffrey Moore)",
+      "에버렛 로저스 혁신 확산",
+      "볼링 앨리",
+      "토네이도",
+      "구전 효과"
     ],
     "curated": true,
     "quiz_terms": [
-      "캐즘(Chasm)",
-      "혁신 수용자 분포",
-      "전기수용자",
-      "전기다수",
-      "주류 시장",
-      "캐즘 넘기",
-      "비치헤드 전략",
-      "전체 제품(Whole Product)"
+      "기술 수용 주기(Technology Adoption Life Cycle)",
+      "혁신 수용자(Innovators)",
+      "선각 수용자(Early Adopters)",
+      "전기 다수 수용자(Early Majority)",
+      "후기 다수 수용자(Late Majority)",
+      "지각 수용자(Laggards)",
+      "완전 완비 제품(Whole Product)",
+      "거점 시장 공략(Beachhead)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_061",
@@ -6597,56 +6767,61 @@
     "title": "죽음의 계곡(Death Valley)",
     "subtitle": "",
     "domain": "MG",
-    "category": "IT경영전략 > 전략 계획 > 데스밸리",
-    "definition": "R&D 성공 후 사업화 전 단계에서 자금·시장 검증 부족으로 실패하는 구간",
+    "category": "MG > 전략 계획 > 데스밸리",
+    "definition": "초기 창업 기업이 연구개발(R&D)에 성공한 뒤에도 자금 조달·시장 진입의 어려움으로 사업화 단계에서 도산 위기를 겪는 구간. 통상 창업 후 3~7년차에 해당",
     "keywords": [
-      "핵심: 죽음의 계곡 · R&D→사업화 갭 · 자금 조달",
-      "구성: 시제품·양산 · 시장 검증 · 스타트업",
-      "활용: 정부 지원 · 기술사업화"
+      "핵심: 기술사업화(Technology Commercialization) · 사업 자금 위기 · 시제품 개발 · 시장 진입 장벽",
+      "필수: 악마의 강(Devil's River) · 다윈의 바다(Darwinian Sea) · 창업 3~7년차",
+      "참고: 엔젤 투자·벤처 캐피털 · 정책 자금·보증 · 액셀러레이터 · 기술 금융 · 데스밸리 극복 지원 사업"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "죽음의 계곡의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "R&D 성공 후 사업화 전 단계에서 자금·시장 검증 부족으로 실패하는 구간"
+              "R&D 성공 후 매출 발생 전까지 현금 흐름이 마이너스인 위기 구간"
             ]
           },
           {
-            "title": "목적",
+            "title": "기술사업화 단계",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "악마의 강(연구→개발) → 죽음의 계곡(개발→사업화) → 다윈의 바다(사업화→시장 생존)"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "발생 원인",
         "subsections": [
           {
-            "title": null,
+            "title": "자금",
             "items": [
-              "죽음의 계곡",
-              "R&D→사업화 갭",
-              "자금 조달",
-              "시제품·양산",
-              "시장 검증",
-              "스타트업"
+              "정부 지원은 R&D 단계, 민간 투자는 성장 단계에 집중"
+            ]
+          },
+          {
+            "title": "시장·역량",
+            "items": [
+              "시제품 양산·판로 확보 역량 부족, 시장 검증 미흡"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "극복 방안",
         "subsections": [
           {
-            "title": null,
+            "title": "금융",
             "items": [
-              "정부 지원",
-              "기술사업화",
-              "관련 지표·표준·한계를 함께 제시"
+              "초기 단계 투자·보증 확대, 기술 금융 활성화"
+            ]
+          },
+          {
+            "title": "사업화 지원",
+            "items": [
+              "액셀러레이팅, 실증·판로 지원, 기술 거래 인프라 확충"
             ]
           }
         ]
@@ -6660,102 +6835,118 @@
     "outline": [
       "죽음의 계곡의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 기술사업화 단계",
+      "발생 원인",
+      "- 자금",
+      "- 시장·역량",
+      "극복 방안",
+      "- 금융",
+      "- 사업화 지원"
     ],
     "name": "죽음의 계곡(Death Valley)",
-    "en": "Valley of Death",
+    "en": "Death Valley",
     "keywords_must": [
-      "죽음의 계곡",
-      "R&D→사업화 갭",
-      "자금 조달",
-      "시제품·양산",
-      "시장 검증",
-      "스타트업",
-      "정부 지원",
-      "기술사업화"
+      "기술사업화(Technology Commercialization)",
+      "사업 자금 위기",
+      "시제품 개발",
+      "시장 진입 장벽",
+      "악마의 강(Devil's River)",
+      "다윈의 바다(Darwinian Sea)",
+      "창업 3~7년차"
     ],
     "keywords_ref": [
-      "악마의 강",
-      "캐즘",
-      "MVP",
-      "IR",
-      "관련 표준·사례"
+      "엔젤 투자·벤처 캐피털",
+      "정책 자금·보증",
+      "액셀러레이터",
+      "기술 금융",
+      "데스밸리 극복 지원 사업"
     ],
     "curated": true,
     "quiz_terms": [
-      "죽음의 계곡",
-      "R&D→사업화 갭",
-      "자금 조달",
-      "시제품·양산",
-      "시장 검증",
-      "스타트업",
-      "정부 지원",
-      "기술사업화"
+      "기술사업화(Technology Commercialization)",
+      "사업 자금 위기",
+      "시제품 개발",
+      "시장 진입 장벽",
+      "악마의 강(Devil's River)",
+      "다윈의 바다(Darwinian Sea)",
+      "창업 3~7년차"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_062",
     "code": "MG_062",
     "title": "악마의 강(Devil's River)",
-    "subtitle": "악마의 강",
+    "subtitle": "",
     "domain": "MG",
-    "category": "IT경영전략 > 전략 계획 > 악마의 강",
-    "definition": "우수 원천기술이 자금·사업화 지원을 받지 못해 응용·시장 기술로 발전하지 못하는 단절",
+    "category": "MG > 전략 계획 > 악마의 강",
+    "definition": "우수한 원천 기술이 자금 지원을 받지 못해 시장에 맞는 가치 있는 응용 기술로 발전하지 못하는 기술사업화 초기의 단절 현상. 죽음의 계곡·다윈의 바다와 함께 기술사업화 3대 장벽",
     "keywords": [
-      "핵심: 악마의 강 · 원천기술 · 응용기술",
-      "구성: 기술사업화 · 자금 단절 · 기술 이전",
-      "활용: 산학연 · TRL"
+      "핵심: 원천 기술(Basic Technology) · 응용 기술 개발 · 죽음의 계곡(Death Valley) · 다윈의 바다(Darwinian Sea)",
+      "필수: 기술사업화 과정 · 기술 금융 · 정부 R&D 성과물 미활용",
+      "참고: 기술 이전(Technology Transfer) · 기술 거래 인프라 · 기술 성숙도(TRL) · 산학협력 · 공공기술 사업화"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "악마의 강의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "우수 원천기술이 자금·사업화 지원을 받지 못해 응용·시장 기술로 발전하지 못하는 단절"
+              "연구 성과가 응용·개발 단계로 넘어가지 못하는 단절"
             ]
           },
           {
-            "title": "목적",
+            "title": "3대 장벽",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "악마의 강(기초→응용)",
+              "죽음의 계곡(시제품 개발 실패)",
+              "다윈의 바다(시장 경쟁·마케팅 역량 부족으로 도태)"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "기술사업화 과정과 문제점",
         "subsections": [
           {
-            "title": null,
+            "title": "과정",
             "items": [
-              "악마의 강",
-              "원천기술",
-              "응용기술",
-              "기술사업화",
-              "자금 단절",
-              "기술 이전"
+              "악마의 강 → 죽음의 계곡 → 다윈의 바다"
+            ]
+          },
+          {
+            "title": "기술 금융",
+            "items": [
+              "정부 지원은 R&D 준비 단계, 민간 자금은 성장·성숙 단계 집중 → 초기 자금 공백"
+            ]
+          },
+          {
+            "title": "인프라",
+            "items": [
+              "정부 R&D 성과물 미활용, 기술 거래 인프라 미흡"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "극복 방안",
         "subsections": [
           {
-            "title": null,
+            "title": "연계 지원",
             "items": [
-              "산학연",
-              "TRL",
-              "관련 지표·표준·한계를 함께 제시"
+              "연구-사업화 연계 R&D, 기술 이전·사업화 전문 조직"
+            ]
+          },
+          {
+            "title": "시장 기반",
+            "items": [
+              "기술 거래 시장 활성화, 초기 단계 기술 금융 확대"
             ]
           }
         ]
@@ -6769,102 +6960,125 @@
     "outline": [
       "악마의 강의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 3대 장벽",
+      "기술사업화 과정과 문제점",
+      "- 과정",
+      "- 기술 금융",
+      "- 인프라",
+      "극복 방안",
+      "- 연계 지원",
+      "- 시장 기반"
     ],
     "name": "악마의 강(Devil's River)",
     "en": "Devil's River",
     "keywords_must": [
-      "악마의 강",
-      "원천기술",
-      "응용기술",
-      "기술사업화",
-      "자금 단절",
-      "기술 이전",
-      "산학연",
-      "TRL"
+      "원천 기술(Basic Technology)",
+      "응용 기술 개발",
+      "죽음의 계곡(Death Valley)",
+      "다윈의 바다(Darwinian Sea)",
+      "기술사업화 과정",
+      "기술 금융",
+      "정부 R&D 성과물 미활용"
     ],
     "keywords_ref": [
-      "죽음의 계곡",
-      "캐즘",
-      "TLO",
-      "투자",
-      "관련 표준·사례"
+      "기술 이전(Technology Transfer)",
+      "기술 거래 인프라",
+      "기술 성숙도(TRL)",
+      "산학협력",
+      "공공기술 사업화"
     ],
     "curated": true,
     "quiz_terms": [
-      "악마의 강",
-      "원천기술",
-      "응용기술",
-      "기술사업화",
-      "자금 단절",
-      "기술 이전",
-      "산학연",
-      "TRL"
+      "원천 기술(Basic Technology)",
+      "응용 기술 개발",
+      "죽음의 계곡(Death Valley)",
+      "다윈의 바다(Darwinian Sea)",
+      "기술사업화 과정",
+      "기술 금융",
+      "정부 R&D 성과물 미활용"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_063",
     "code": "MG_063",
-    "title": "추격자·선도자 전략(Fast Follower vs First Mover)",
-    "subtitle": "추격자 전략, 선도자 전략",
+    "title": "추격자·선도자 전략(Fast Follower·First Mover)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "경영전략(MG) > 전략 계획 > 추격자 전략, 선도자 전략",
-    "definition": "선도자(First Mover)는 시장 개척·표준 선점, 추격자(Fast Follower)는 학습·원가·빠른 추격으로 경쟁하는 전략 유형",
+    "category": "MG > 전략 계획 > 추격자·선도자 전략",
+    "definition": "추격자 전략은 선도 기업을 벤치마킹해 검증된 시장에 빠르게 따라 들어가는 전략이고, 선도자 전략은 최초 참여자 우위에 따라 시장에 먼저 진출해 시장·표준을 선점하는 전략",
     "keywords": [
-      "핵심: 선도자 전략(First Mover) · 추격자 전략(Fast Follower) · 표준 선점",
-      "구성: 학습 효과 · 모방·개량 · 위험·투자",
-      "활용: 시장 진입 시기 · 전환 전략"
+      "핵심: 추격자(Fast Follower) · 선도자(First Mover) · 최초 참여자 우위(First-Mover Advantage) · 벤치마킹(Benchmarking)",
+      "필수: 표준 선점 · 최초 상기도(TOM, Top of Mind) · 병행자 전략(Parallel Mover) · 스마트 무버(Smart Mover)",
+      "참고: FRAND 라이선스 · 경험곡선 · 시행착오 회피 · 산업 간 융합 · 방어적 인수합병"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "추격자·선도자 전략의 개념",
         "subsections": [
           {
-            "title": "정의",
+            "title": "추격자",
             "items": [
-              "선도자(First Mover)는 시장 개척·표준 선점, 추격자(Fast Follower)는 학습·원가·빠른 추격으로 경쟁하는 전략 유형"
+              "기업 전략·제품 모방, 선도 기업 시행착오 회피, 검증 시장으로 위험 관리 용이, 빠른 추격 필요"
             ]
           },
           {
-            "title": "목적",
+            "title": "선도자",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "진입 장벽을 넘어 시장 개척, 패러다임 선점, 미검증 시장으로 위험 큼, TOM 효과"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "장단점과 산업 적용 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "선도자 장단점",
             "items": [
-              "선도자 전략(First Mover)",
-              "추격자 전략(Fast Follower)",
-              "표준 선점",
-              "학습 효과",
-              "모방·개량",
-              "위험·투자"
+              "브랜드·충성도·시장·표준 선점",
+              "실패 확률·소비자 외면·자금 회수 위험"
+            ]
+          },
+          {
+            "title": "추격자 장단점",
+            "items": [
+              "R&D·진입 위험·소비자 교육 비용 감소",
+              "표준 특허 비용, 경쟁 심화로 수익률 감소"
+            ]
+          },
+          {
+            "title": "산업 적용",
+            "items": [
+              "선도자는 아이디어 기반 분야, 추격자는 메모리 반도체·디스플레이 등 기술 추적 용이 분야"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "보완 전략: 병행자 전략",
         "subsections": [
           {
-            "title": null,
+            "title": "개념",
             "items": [
-              "시장 진입 시기",
-              "전환 전략",
-              "관련 지표·표준·한계를 함께 제시"
+              "모든 가능성을 두고 기술 개발을 병행하다 방향이 정해지면 빠르게 집중"
+            ]
+          },
+          {
+            "title": "배경",
+            "items": [
+              "선도 서비스(MP3·싸이월드)가 다른 패러다임 후발 주자에 시장을 잃은 경험"
+            ]
+          },
+          {
+            "title": "적용",
+            "items": [
+              "산업 간 융합, 계열사 간 시너지, 시장 변화 대응과 방어적 인수합병"
             ]
           }
         ]
@@ -6877,46 +7091,53 @@
     ],
     "outline": [
       "추격자·선도자 전략의 개념",
-      "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 추격자",
+      "- 선도자",
+      "장단점과 산업 적용 비교",
+      "- 선도자 장단점",
+      "- 추격자 장단점",
+      "- 산업 적용",
+      "보완 전략: 병행자 전략",
+      "- 개념",
+      "- 배경",
+      "- 적용"
     ],
-    "name": "추격자·선도자 전략(Fast Follower vs First Mover)",
-    "en": "Fast Follower and First Mover Strategy",
+    "name": "추격자·선도자 전략(Fast Follower·First Mover)",
+    "en": "Fast Follower vs. First Mover Strategy",
     "keywords_must": [
-      "선도자 전략(First Mover)",
-      "추격자 전략(Fast Follower)",
+      "추격자(Fast Follower)",
+      "선도자(First Mover)",
+      "최초 참여자 우위(First-Mover Advantage)",
+      "벤치마킹(Benchmarking)",
       "표준 선점",
-      "학습 효과",
-      "모방·개량",
-      "위험·투자",
-      "시장 진입 시기",
-      "전환 전략"
+      "최초 상기도(TOM, Top of Mind)",
+      "병행자 전략(Parallel Mover)",
+      "스마트 무버(Smart Mover)"
     ],
     "keywords_ref": [
-      "후발 우위",
-      "특허",
-      "브랜드",
-      "중국 추격 사례",
-      "관련 표준·사례"
+      "FRAND 라이선스",
+      "경험곡선",
+      "시행착오 회피",
+      "산업 간 융합",
+      "방어적 인수합병"
     ],
     "curated": true,
     "quiz_terms": [
-      "선도자 전략(First Mover)",
-      "추격자 전략(Fast Follower)",
+      "추격자(Fast Follower)",
+      "선도자(First Mover)",
+      "최초 참여자 우위(First-Mover Advantage)",
+      "벤치마킹(Benchmarking)",
       "표준 선점",
-      "학습 효과",
-      "모방·개량",
-      "위험·투자",
-      "시장 진입 시기",
-      "전환 전략"
+      "최초 상기도(TOM, Top of Mind)",
+      "병행자 전략(Parallel Mover)",
+      "스마트 무버(Smart Mover)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_063_1",
@@ -6924,56 +7145,67 @@
     "title": "플라이휠 프레임워크(Flywheel Framework)",
     "subtitle": "",
     "domain": "MG",
-    "category": "BS",
-    "definition": "성장 동력이 서로 맞물려 가속도가 붙는 선순환 구조를 설계하는 전략 틀 (예: 아마존 플라이휠)",
+    "category": "MG > 전략 계획 > Flywheel",
+    "definition": "성장을 중심으로 고객 경험·트래픽·판매자·가격 등 비즈니스 요소가 유기적으로 맞물려 순환하면서 회전할수록 성장 모멘텀이 커지도록 설계하는 지속 가능 성장 전략 틀",
     "keywords": [
-      "핵심: 플라이휠 · 선순환 · 성장 루프",
-      "구성: 고객 경험 · 비용 절감→가격→트래픽 · 시너지",
-      "활용: 모멘텀 · 지표 설계"
+      "핵심: 유기적 순환(Virtuous Cycle) · 성장 모멘텀(Momentum) · 고객 경험(Customer Experience) · 트래픽·방문자 증가",
+      "필수: 판매자·제품 다양성 · 낮은 비용 구조 · 낮은 판매 가격 · 목표 고객 정의",
+      "참고: 아마존 플라이휠(제프 베이조스) · AWS 플라이휠(데이터·AI 고도화) · 당근마켓 플라이휠 · 짐 콜린스(Good to Great) · 네트워크 효과"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "플라이휠 프레임워크의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "성장 동력이 서로 맞물려 가속도가 붙는 선순환 구조를 설계하는 전략 틀 (예: 아마존 플라이휠)"
+              "요소 간 상호작용으로 힘이 전달·누적되는 선순환 성장 구조"
             ]
           },
           {
-            "title": "목적",
+            "title": "특징",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "유기적 연결(시너지), 지속 가능성(수립·구축·검증), 고객 유지, 회전할수록 확대"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "사례",
         "subsections": [
           {
-            "title": null,
+            "title": "아마존",
             "items": [
-              "플라이휠",
-              "선순환",
-              "성장 루프",
-              "고객 경험",
-              "비용 절감→가격→트래픽",
-              "시너지"
+              "낮은 가격 → 고객 경험 개선 → 트래픽 증가 → 판매자·상품 증가 → 규모의 경제로 비용 절감 → 더 낮은 가격"
+            ]
+          },
+          {
+            "title": "AWS",
+            "items": [
+              "고객 데이터 확보 → 데이터 분석·AI 고도화 → 서비스 개선 → 이용 기업 증가"
+            ]
+          },
+          {
+            "title": "국내",
+            "items": [
+              "당근마켓(판매자·콘텐츠·트래픽·고객 만족 4요소), 콘텐츠 커머스 플라이휠"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "성공 원칙",
         "subsections": [
           {
-            "title": null,
+            "title": "방향성 수립",
             "items": [
-              "모멘텀",
-              "지표 설계",
-              "관련 지표·표준·한계를 함께 제시"
+              "달성 목표(방향) 명확화"
+            ]
+          },
+          {
+            "title": "목표 고객 정의",
+            "items": [
+              "이상적 고객을 먼저 이해, 다른 전략 도구와 병행"
             ]
           }
         ]
@@ -6987,102 +7219,128 @@
     "outline": [
       "플라이휠 프레임워크의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 특징",
+      "사례",
+      "- 아마존",
+      "- AWS",
+      "- 국내",
+      "성공 원칙",
+      "- 방향성 수립",
+      "- 목표 고객 정의"
     ],
     "name": "플라이휠 프레임워크(Flywheel Framework)",
     "en": "Flywheel Framework",
     "keywords_must": [
-      "플라이휠",
-      "선순환",
-      "성장 루프",
-      "고객 경험",
-      "비용 절감→가격→트래픽",
-      "시너지",
-      "모멘텀",
-      "지표 설계"
+      "유기적 순환(Virtuous Cycle)",
+      "성장 모멘텀(Momentum)",
+      "고객 경험(Customer Experience)",
+      "트래픽·방문자 증가",
+      "판매자·제품 다양성",
+      "낮은 비용 구조",
+      "낮은 판매 가격",
+      "목표 고객 정의"
     ],
     "keywords_ref": [
-      "네트워크 효과",
-      "북스타 메트릭",
-      "인과루프",
-      "전략 정렬",
-      "관련 표준·사례"
+      "아마존 플라이휠(제프 베이조스)",
+      "AWS 플라이휠(데이터·AI 고도화)",
+      "당근마켓 플라이휠",
+      "짐 콜린스(Good to Great)",
+      "네트워크 효과"
     ],
     "curated": true,
     "quiz_terms": [
-      "플라이휠",
-      "선순환",
-      "성장 루프",
-      "고객 경험",
-      "비용 절감→가격→트래픽",
-      "시너지",
-      "모멘텀",
-      "지표 설계"
+      "유기적 순환(Virtuous Cycle)",
+      "성장 모멘텀(Momentum)",
+      "고객 경험(Customer Experience)",
+      "트래픽·방문자 증가",
+      "판매자·제품 다양성",
+      "낮은 비용 구조",
+      "낮은 판매 가격",
+      "목표 고객 정의"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_066",
     "code": "MG_066",
     "title": "EA 프레임워크(Enterprise Architecture Framework)",
-    "subtitle": "36 상 EA Framework",
+    "subtitle": "",
     "domain": "MG",
-    "category": "경영 > EA/ITA > EA Framework",
-    "definition": "비즈니스·IT 관계를 총괄 설명·통제하기 위한 EA 구성·절차·산출 표준 (Zachman, TOGAF 등)",
+    "category": "MG > EA/ITA > EA Framework",
+    "definition": "조직의 전략 목표와 정보자원 관리 목표를 달성하기 위해 업무와 IT의 관계를 체계적으로 정의한 EA를 기술하는 데 필요한 관점·산출물 유형과 그 논리적 구조·관계를 정의한 틀",
     "keywords": [
-      "핵심: 엔터프라이즈 아키텍처(EA) · 비즈니스·데이터·애플리케이션·기술 아키텍처 · As-Is/To-Be",
-      "구성: 이행 계획 · 거버넌스 · 프레임워크",
-      "활용: 산출물 · 정렬(Alignment)"
+      "핵심: 비즈니스 아키텍처(BA) · 데이터 아키텍처(DA) · 애플리케이션 아키텍처(AA) · 기술 아키텍처(TA)",
+      "필수: 참조모델(BRM·SRM·DRM·TRM·PRM) · 자크만 프레임워크(Zachman) · TOGAF · FEAF · EAMS",
+      "참고: DoDAF·TEAF · 표준 프로파일(Standard Profile) · As-Is·To-Be 갭 분석 · EA 거버넌스 · 정부 EA(GEA)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "EA의 개념과 필요성",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "비즈니스·IT 관계를 총괄 설명·통제하기 위한 EA 구성·절차·산출 표준 (Zachman, TOGAF 등)"
+              "업무와 정보화를 체계적으로 추진하기 위한 전사 종합설계도(청사진)"
             ]
           },
           {
-            "title": "목적",
+            "title": "필요성",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "정부(부처 간 IT 통합, 중복 투자 방지)",
+              "금융(차세대 프레임워크, IT 컴플라이언스)",
+              "기업(IT-비즈니스 결합, 자원 효율 관리)"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "구성요소와 핵심 산출물",
         "subsections": [
           {
-            "title": null,
+            "title": "아키텍처 영역",
             "items": [
-              "엔터프라이즈 아키텍처(EA)",
-              "비즈니스·데이터·애플리케이션·기술 아키텍처",
-              "As-Is/To-Be",
-              "이행 계획",
-              "거버넌스",
-              "프레임워크"
+              "IT 거버넌스, BA(업무·PRM·BRM), AA(SRM), DA(DRM), TA(TRM), 보안 아키텍처"
+            ]
+          },
+          {
+            "title": "참조모델·표준",
+            "items": [
+              "RM(내·외부 사례·표준 참조), Standard Profile(RM별 지침)"
+            ]
+          },
+          {
+            "title": "핵심 산출물",
+            "items": [
+              "아키텍처 모델(이해관계자·뷰별), 이행 프로그램·로드맵, 원칙·표준 가이드"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "구축 절차와 프레임워크 유형",
         "subsections": [
           {
-            "title": null,
+            "title": "구축 절차",
             "items": [
-              "산출물",
-              "정렬(Alignment)",
-              "관련 지표·표준·한계를 함께 제시"
+              "EA 기반(프레임워크·매트릭스 정의) → EAMS 개발(레포지터리·포털) → EA 관리체계 → EA 활용·거버넌스"
+            ]
+          },
+          {
+            "title": "자크만",
+            "items": [
+              "6개 관점(Planner·Owner·Designer·Builder·Subcontractor·사용자) × 6하 원칙(What·How·Where·Who·When·Why), 산출물 과다 우려"
+            ]
+          },
+          {
+            "title": "TOGAF·FEAF",
+            "items": [
+              "Open Group의 ADM 개발 프로세스·빌딩 블록",
+              "미 연방정부, 5개 참조모델·세그먼트 접근"
             ]
           }
         ]
@@ -7094,104 +7352,126 @@
       127
     ],
     "outline": [
-      "EA 프레임워크의 개념",
+      "EA의 개념과 필요성",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 필요성",
+      "구성요소와 핵심 산출물",
+      "- 아키텍처 영역",
+      "- 참조모델·표준",
+      "- 핵심 산출물",
+      "구축 절차와 프레임워크 유형",
+      "- 구축 절차",
+      "- 자크만",
+      "- TOGAF·FEAF"
     ],
     "name": "EA 프레임워크(Enterprise Architecture Framework)",
     "en": "Enterprise Architecture Framework",
     "keywords_must": [
-      "엔터프라이즈 아키텍처(EA)",
-      "비즈니스·데이터·애플리케이션·기술 아키텍처",
-      "As-Is/To-Be",
-      "이행 계획",
-      "거버넌스",
-      "프레임워크",
-      "산출물",
-      "정렬(Alignment)"
+      "비즈니스 아키텍처(BA)",
+      "데이터 아키텍처(DA)",
+      "애플리케이션 아키텍처(AA)",
+      "기술 아키텍처(TA)",
+      "참조모델(BRM·SRM·DRM·TRM·PRM)",
+      "자크만 프레임워크(Zachman)",
+      "TOGAF",
+      "FEAF",
+      "EAMS"
     ],
     "keywords_ref": [
-      "TOGAF ADM",
-      "Zachman",
-      "참조모델",
-      "EAMS",
-      "관련 표준·사례"
+      "DoDAF·TEAF",
+      "표준 프로파일(Standard Profile)",
+      "As-Is·To-Be 갭 분석",
+      "EA 거버넌스",
+      "정부 EA(GEA)"
     ],
     "curated": true,
     "quiz_terms": [
-      "엔터프라이즈 아키텍처(EA)",
-      "비즈니스·데이터·애플리케이션·기술 아키텍처",
-      "As-Is/To-Be",
-      "이행 계획",
-      "거버넌스",
-      "프레임워크",
-      "산출물",
-      "정렬(Alignment)"
+      "비즈니스 아키텍처(BA)",
+      "데이터 아키텍처(DA)",
+      "애플리케이션 아키텍처(AA)",
+      "기술 아키텍처(TA)",
+      "참조모델(BRM·SRM·DRM·TRM·PRM)",
+      "자크만 프레임워크(Zachman)",
+      "TOGAF",
+      "FEAF",
+      "EAMS"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_067",
     "code": "MG_067",
-    "title": "EA 관리시스템(EAMS)",
+    "title": "EA 관리시스템(EAMS, Enterprise Architecture Management System)",
     "subtitle": "",
     "domain": "MG",
-    "category": "경영전략 > EA/ITA > EAMS",
-    "definition": "EA 산출물의 작성·저장·조회·영향분석을 지원하는 관리 도구·시스템",
+    "category": "MG > EA/ITA > EAMS",
+    "definition": "EA 산출물의 작성·저장·관리·활용을 지원하고 주변 시스템과 연계해 정보시스템 구성 체계를 실시간으로 조회·변경할 수 있게 하는 포괄적인 EA 관리 시스템",
     "keywords": [
-      "핵심: EAMS · 메타데이터 · 산출물 저장소",
-      "구성: 영향 분석 · 시각화 · 버전 관리",
-      "활용: 권한 · EA 거버넌스"
+      "핵심: EA 레포지터리(Repository) · EA 메타모델(Meta Model) · 산출물 관리 · 참조모델 관리",
+      "필수: 버전·승인 관리 · 웹 기반 EA 포털 · XML 연계 · 영향 분석",
+      "참고: 범정부 EA 포털(GEAP) · IT 자산관리(ITAM) 연계 · EA Tool(모델링) · 메타데이터 기반 설계 · 중복 투자 최소화"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "EAMS의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "EA 산출물의 작성·저장·조회·영향분석을 지원하는 관리 도구·시스템"
+              "EA 정보를 효율적으로 생산·유지·활용하기 위한 관리 도구"
             ]
           },
           {
-            "title": "목적",
+            "title": "필요성",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "EA 관련 정보의 효율적 관리, EAMS 구축·운영을 통한 중복 투자 최소화"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "특징과 주요 기능",
         "subsections": [
           {
-            "title": null,
+            "title": "특징",
             "items": [
-              "EAMS",
-              "메타데이터",
-              "산출물 저장소",
-              "영향 분석",
-              "시각화",
-              "버전 관리"
+              "웹·레포지터리 기반",
+              "메타데이터 기반(산출물 변화에 유연)",
+              "컴포넌트 기반(이식·확장성)"
+            ]
+          },
+          {
+            "title": "기본·관리 기능",
+            "items": [
+              "사용자 접근 관리, 프레임워크·산출물·참조모델 관리, 버전·승인 관리"
+            ]
+          },
+          {
+            "title": "활용·연계 기능",
+            "items": [
+              "산출물 검색·분석, XML 연계로 IT 자산·투자 관리 시스템과 통합"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "구성요소와 활용",
         "subsections": [
           {
-            "title": null,
+            "title": "구성요소",
             "items": [
-              "권한",
-              "EA 거버넌스",
-              "관련 지표·표준·한계를 함께 제시"
+              "EA Tool(모델링), 레포지터리, 웹 퍼블리싱·포털, 관리 모듈"
+            ]
+          },
+          {
+            "title": "활용",
+            "items": [
+              "IT 투자 의사결정, 시스템 변경 영향 분석, 정보화 사업 중복 검토"
             ]
           }
         ]
@@ -7203,47 +7483,53 @@
       129
     ],
     "outline": [
-      "EA 관리시스템의 개념",
+      "EAMS의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 필요성",
+      "특징과 주요 기능",
+      "- 특징",
+      "- 기본·관리 기능",
+      "- 활용·연계 기능",
+      "구성요소와 활용",
+      "- 구성요소",
+      "- 활용"
     ],
-    "name": "EA 관리시스템(EAMS)",
-    "en": "EA Management System",
+    "name": "EA 관리시스템(EAMS, Enterprise Architecture Management System)",
+    "en": "Enterprise Architecture Management System",
     "keywords_must": [
-      "EAMS",
-      "메타데이터",
-      "산출물 저장소",
-      "영향 분석",
-      "시각화",
-      "버전 관리",
-      "권한",
-      "EA 거버넌스"
+      "EA 레포지터리(Repository)",
+      "EA 메타모델(Meta Model)",
+      "산출물 관리",
+      "참조모델 관리",
+      "버전·승인 관리",
+      "웹 기반 EA 포털",
+      "XML 연계",
+      "영향 분석"
     ],
     "keywords_ref": [
-      "CMDB 연계",
-      "포트폴리오",
-      "표준 준수",
-      "검색",
-      "관련 표준·사례"
+      "범정부 EA 포털(GEAP)",
+      "IT 자산관리(ITAM) 연계",
+      "EA Tool(모델링)",
+      "메타데이터 기반 설계",
+      "중복 투자 최소화"
     ],
     "curated": true,
     "quiz_terms": [
-      "EAMS",
-      "메타데이터",
-      "산출물 저장소",
-      "영향 분석",
-      "시각화",
-      "버전 관리",
-      "권한",
-      "EA 거버넌스"
+      "EA 레포지터리(Repository)",
+      "EA 메타모델(Meta Model)",
+      "산출물 관리",
+      "참조모델 관리",
+      "버전·승인 관리",
+      "웹 기반 EA 포털",
+      "XML 연계",
+      "영향 분석"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_068",
@@ -7251,56 +7537,64 @@
     "title": "참조모델(RM, Reference Model)",
     "subtitle": "",
     "domain": "MG",
-    "category": "경영전략(MG) > EA/ITA> RM(참조모델)",
-    "definition": "아키텍처 구성요소를 표준화한 추상 모델. EA 수립 시 공통 언어·재사용 기준으로 참조",
+    "category": "MG > EA/ITA > 참조모델",
+    "definition": "아키텍처 구성요소를 식별해 표준화한 추상 모델로, 재사용 가능한 방식으로 만들어 여러 기관·기업이 EA를 수립할 때 공통 분류 체계와 기준으로 참조하도록 한 것",
     "keywords": [
-      "핵심: 참조모델(RM) · BRM/DRM/ARM/TRM 등 · 표준화",
-      "구성: 공통 언어 · 재사용 · 상호운용",
-      "활용: 분류 체계 · EA 입력"
+      "핵심: 성과참조모델(PRM) · 업무참조모델(BRM) · 서비스 컴포넌트 참조모델(SRM) · 데이터 참조모델(DRM)",
+      "필수: 기술참조모델(TRM) · 표준 프로파일(Standard Profile) · 재사용(Reuse) · 공통 분류 체계",
+      "참고: FEAF 5대 참조모델 · 범정부 참조모델(정부 EA) · 보안 참조모델(SRM) · 중복 투자 식별 · 상호운용성"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "참조모델의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "아키텍처 구성요소를 표준화한 추상 모델. EA 수립 시 공통 언어·재사용 기준으로 참조"
+              "기업 내·외부 사례와 표준을 추상화한 아키텍처 참조 틀"
             ]
           },
           {
-            "title": "목적",
+            "title": "특징",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "공통 언어 제공, 재사용, 기관 간 비교·중복 식별"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "참조모델 유형",
         "subsections": [
           {
-            "title": null,
+            "title": "성과·업무",
             "items": [
-              "참조모델(RM)",
-              "BRM/DRM/ARM/TRM 등",
-              "표준화",
-              "공통 언어",
-              "재사용",
-              "상호운용"
+              "PRM(성과 측정 지표 체계)",
+              "BRM(업무 기능 분류)"
+            ]
+          },
+          {
+            "title": "서비스·데이터·기술",
+            "items": [
+              "SRM(서비스 컴포넌트 분류)",
+              "DRM(데이터 분류·표준)",
+              "TRM(기술 요소·표준 분류)"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "활용",
         "subsections": [
           {
-            "title": null,
+            "title": "EA 수립",
             "items": [
-              "분류 체계",
-              "EA 입력",
-              "관련 지표·표준·한계를 함께 제시"
+              "아키텍처 산출물 작성 기준, 표준 프로파일로 세부 지침 제공"
+            ]
+          },
+          {
+            "title": "투자 관리",
+            "items": [
+              "참조모델 기준 사업 분류로 중복 투자 방지·공동 활용 촉진"
             ]
           }
         ]
@@ -7314,102 +7608,116 @@
     "outline": [
       "참조모델의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 특징",
+      "참조모델 유형",
+      "- 성과·업무",
+      "- 서비스·데이터·기술",
+      "활용",
+      "- EA 수립",
+      "- 투자 관리"
     ],
     "name": "참조모델(RM, Reference Model)",
     "en": "Reference Model",
     "keywords_must": [
-      "참조모델(RM)",
-      "BRM/DRM/ARM/TRM 등",
-      "표준화",
-      "공통 언어",
-      "재사용",
-      "상호운용",
-      "분류 체계",
-      "EA 입력"
+      "성과참조모델(PRM)",
+      "업무참조모델(BRM)",
+      "서비스 컴포넌트 참조모델(SRM)",
+      "데이터 참조모델(DRM)",
+      "기술참조모델(TRM)",
+      "표준 프로파일(Standard Profile)",
+      "재사용(Reuse)",
+      "공통 분류 체계"
     ],
     "keywords_ref": [
-      "국가 EA 참조모델",
-      "TOGAF",
-      "온톨로지",
-      "택소노미",
-      "관련 표준·사례"
+      "FEAF 5대 참조모델",
+      "범정부 참조모델(정부 EA)",
+      "보안 참조모델(SRM)",
+      "중복 투자 식별",
+      "상호운용성"
     ],
     "curated": true,
     "quiz_terms": [
-      "참조모델(RM)",
-      "BRM/DRM/ARM/TRM 등",
-      "표준화",
-      "공통 언어",
-      "재사용",
-      "상호운용",
-      "분류 체계",
-      "EA 입력"
+      "성과참조모델(PRM)",
+      "업무참조모델(BRM)",
+      "서비스 컴포넌트 참조모델(SRM)",
+      "데이터 참조모델(DRM)",
+      "기술참조모델(TRM)",
+      "표준 프로파일(Standard Profile)",
+      "재사용(Reuse)",
+      "공통 분류 체계"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_069",
     "code": "MG_069",
     "title": "정보자원관리(IRM, Information Resource Management)",
-    "subtitle": "IRM(Information Resource Management) 정보자원관리",
+    "subtitle": "",
     "domain": "MG",
     "category": "MG > EA/ITA > IRM",
-    "definition": "HW·SW·데이터·인력·통신·조직을 포함한 정보자원을 전략적으로 계획·관리하는 활동",
+    "definition": "조직의 정보시스템과 관련된 하드웨어·소프트웨어·인력·데이터베이스·통신 시스템·조직 구조와 절차 등 정보자원을 전략적 관점에서 계획·구축·운영·평가하며 통합 관리하는 기법",
     "keywords": [
-      "핵심: 정보자원관리(IRM) · 정보자원 · 계획·조직·통제",
-      "구성: 데이터 관리 · IT 자산 · 비용 효율",
-      "활용: 정책 · 수명주기"
+      "핵심: 정보자원(HW·SW·데이터·인력·통신) · 정보 관리 · 기술 관리 · 분산 관리",
+      "필수: 기능 관리 · 전략 관리 · 정보자원 생명주기 · 최고정보책임자(CIO)",
+      "참고: EA/ITA 연관 · 성과 모니터링·평가 · 상호운용성 표준화 · 정보시스템 감리 · 전자정부법 정보자원 관리"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "IRM의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "HW·SW·데이터·인력·통신·조직을 포함한 정보자원을 전략적으로 계획·관리하는 활동"
+              "정보를 경영 자원으로 보고 정보자원 전반을 통합 관리"
             ]
           },
           {
-            "title": "목적",
+            "title": "필요성",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "정보자원 증가, 환경 변화에 따른 새로운 시스템 수요, 투자 효율화"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "관리 대상과 주요 활동",
         "subsections": [
           {
-            "title": null,
+            "title": "관리 대상",
             "items": [
-              "정보자원관리(IRM)",
-              "정보자원",
-              "계획·조직·통제",
-              "데이터 관리",
-              "IT 자산",
-              "비용 효율"
+              "정보 관리(오류 없는 자료)",
+              "기술 관리(HW·SW 구성)",
+              "분산 관리(논리·물리 위치)",
+              "기능 관리(사용자 요구 반영)",
+              "전략 관리(경쟁 우위)"
+            ]
+          },
+          {
+            "title": "관리 활동",
+            "items": [
+              "정보자원 관리 계획·조직 → 정보기술 도입·구축 → 운영·지원 → 성과 모니터링·평가"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "EA와 연관 및 고려사항",
         "subsections": [
           {
-            "title": null,
+            "title": "EA/ITA 연관",
             "items": [
-              "정책",
-              "수명주기",
-              "관련 지표·표준·한계를 함께 제시"
+              "표준화로 상호운용성 확보, 정보화 목표를 업무 성과와 연계한 생명주기 관리"
+            ]
+          },
+          {
+            "title": "고려사항",
+            "items": [
+              "CEO의 하향식 추진, 조직 문화 적응, CIO 확보, 현실성 있는 목표 설정"
             ]
           }
         ]
@@ -7421,47 +7729,52 @@
       133
     ],
     "outline": [
-      "정보자원관리의 개념",
+      "IRM의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 필요성",
+      "관리 대상과 주요 활동",
+      "- 관리 대상",
+      "- 관리 활동",
+      "EA와 연관 및 고려사항",
+      "- EA/ITA 연관",
+      "- 고려사항"
     ],
     "name": "정보자원관리(IRM, Information Resource Management)",
-    "en": "Information Resource Planning/Management",
+    "en": "Information Resource Management",
     "keywords_must": [
-      "정보자원관리(IRM)",
-      "정보자원",
-      "계획·조직·통제",
-      "데이터 관리",
-      "IT 자산",
-      "비용 효율",
-      "정책",
-      "수명주기"
+      "정보자원(HW·SW·데이터·인력·통신)",
+      "정보 관리",
+      "기술 관리",
+      "분산 관리",
+      "기능 관리",
+      "전략 관리",
+      "정보자원 생명주기",
+      "최고정보책임자(CIO)"
     ],
     "keywords_ref": [
-      "ITAM",
-      "거버넌스",
-      "보안",
-      "아웃소싱",
-      "관련 표준·사례"
+      "EA/ITA 연관",
+      "성과 모니터링·평가",
+      "상호운용성 표준화",
+      "정보시스템 감리",
+      "전자정부법 정보자원 관리"
     ],
     "curated": true,
     "quiz_terms": [
-      "정보자원관리(IRM)",
-      "정보자원",
-      "계획·조직·통제",
-      "데이터 관리",
-      "IT 자산",
-      "비용 효율",
-      "정책",
-      "수명주기"
+      "정보자원(HW·SW·데이터·인력·통신)",
+      "정보 관리",
+      "기술 관리",
+      "분산 관리",
+      "기능 관리",
+      "전략 관리",
+      "정보자원 생명주기",
+      "최고정보책임자(CIO)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_070",
@@ -7469,56 +7782,67 @@
     "title": "전략적 기업경영(SEM, Strategic Enterprise Management)",
     "subtitle": "",
     "domain": "MG",
-    "category": "IT경영전략 > SEM > SEM",
-    "definition": "가치 중심 경영을 위해 계획·시뮬레이션·성과·통합 분석을 제공하는 경영진용 관리 체계·솔루션",
+    "category": "MG > SEM > SEM",
+    "definition": "경영진이 전사 정보를 명확히 파악해 가치 중심 경영을 전사적으로 구현하도록 비전·목표·전략을 정렬하고 성과를 관리하는 통합 분석 애플리케이션과 프로세스 기반의 전략경영 지원 시스템",
     "keywords": [
-      "핵심: SEM · 가치 중심 경영 · 경영 계획",
-      "구성: 시뮬레이션 · 성과관리 · 통합 분석",
-      "활용: 대시보드 · 의사결정"
+      "핵심: 가치기반경영(VBM) · 활동기준경영(ABM) · 활동기준원가(ABC) · 균형성과표(BSC)",
+      "필수: 핵심성과지표(KPI) · 핵심 가치 동인(Key Value Driver) · 시뮬레이션(Simulation) · DW 기반 통합",
+      "참고: ROIC·WACC · 전략적 의사결정 · ERP 비교 · 기업 가치 극대화 · 성과관리(CPM)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "SEM의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "가치 중심 경영을 위해 계획·시뮬레이션·성과·통합 분석을 제공하는 경영진용 관리 체계·솔루션"
+              "전략 수립-실행-성과관리를 지원하는 경영진용 통합 솔루션"
             ]
           },
           {
-            "title": "목적",
+            "title": "핵심 기능",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "핵심 가치 동인의 효율적 관리, 기간·운영·외부 시스템을 DW로 통합해 신속한 의사결정"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "가치·활동·성과 관리 체계",
         "subsections": [
           {
-            "title": null,
+            "title": "가치 중심(VBM)",
             "items": [
-              "SEM",
-              "가치 중심 경영",
-              "경영 계획",
-              "시뮬레이션",
-              "성과관리",
-              "통합 분석"
+              "손익 위주에서 기업 가치 중심으로 전환, ROIC·WACC로 평가"
+            ]
+          },
+          {
+            "title": "활동 중심(ABM·ABC)",
+            "items": [
+              "활동별 정확한 원가로 가격·제품 믹스·프로세스 개선"
+            ]
+          },
+          {
+            "title": "성과 관리(BSC)",
+            "items": [
+              "재무·비재무 지표를 종합·균형 있게 측정"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "구축 절차와 ERP 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "구축 절차",
             "items": [
-              "대시보드",
-              "의사결정",
-              "관련 지표·표준·한계를 함께 제시"
+              "KPI 결정 → BSC 생성(가치사슬 연계) → 시뮬레이션(의사결정이 KPI에 미칠 영향 예측) → 전략적 의사결정"
+            ]
+          },
+          {
+            "title": "ERP 비교",
+            "items": [
+              "ERP는 비용 절감·실무자·재무 관리, SEM은 기업 가치 향상·최고 경영자·비재무 가치 중심"
             ]
           }
         ]
@@ -7530,104 +7854,124 @@
       77
     ],
     "outline": [
-      "전략적 기업경영의 개념",
+      "SEM의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 핵심 기능",
+      "가치·활동·성과 관리 체계",
+      "- 가치 중심(VBM)",
+      "- 활동 중심(ABM·ABC)",
+      "- 성과 관리(BSC)",
+      "구축 절차와 ERP 비교",
+      "- 구축 절차",
+      "- ERP 비교"
     ],
     "name": "전략적 기업경영(SEM, Strategic Enterprise Management)",
     "en": "Strategic Enterprise Management",
     "keywords_must": [
-      "SEM",
-      "가치 중심 경영",
-      "경영 계획",
-      "시뮬레이션",
-      "성과관리",
-      "통합 분석",
-      "대시보드",
-      "의사결정"
+      "가치기반경영(VBM)",
+      "활동기준경영(ABM)",
+      "활동기준원가(ABC)",
+      "균형성과표(BSC)",
+      "핵심성과지표(KPI)",
+      "핵심 가치 동인(Key Value Driver)",
+      "시뮬레이션(Simulation)",
+      "DW 기반 통합"
     ],
     "keywords_ref": [
-      "BSC",
-      "VBM",
-      "BI",
-      "예산",
-      "관련 표준·사례"
+      "ROIC·WACC",
+      "전략적 의사결정",
+      "ERP 비교",
+      "기업 가치 극대화",
+      "성과관리(CPM)"
     ],
     "curated": true,
     "quiz_terms": [
-      "SEM",
-      "가치 중심 경영",
-      "경영 계획",
-      "시뮬레이션",
-      "성과관리",
-      "통합 분석",
-      "대시보드",
-      "의사결정"
+      "가치기반경영(VBM)",
+      "활동기준경영(ABM)",
+      "활동기준원가(ABC)",
+      "균형성과표(BSC)",
+      "핵심성과지표(KPI)",
+      "핵심 가치 동인(Key Value Driver)",
+      "시뮬레이션(Simulation)",
+      "DW 기반 통합"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_071",
     "code": "MG_071",
-    "title": "가치기반경영(VBM, Value-Based Management)",
-    "subtitle": "VBM(Value Based Management)",
+    "title": "가치기반경영(VBM, Value Based Management)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "IT 경영전략> SEM(전략적 경영 관리) >VBM",
-    "definition": "기업 가치 극대화를 목표로 의사결정·성과를 가치 지표로 측정·관리하는 경영 방식",
+    "category": "MG > SEM > VBM",
+    "definition": "기업의 궁극적 목표를 기업 가치 극대화에 두고, 의사결정·경영계획·성과평가를 가치 지표로 측정·관리해 기업 전체의 가치를 높이는 경영 방식",
     "keywords": [
-      "핵심: VBM · 기업가치 극대화 · EVA/경제적 이윤",
-      "구성: 가치 드라이버 · 자본비용 · 성과 연계",
-      "활용: 인센티브 · 투자 결정"
+      "핵심: 기업 가치 극대화 · 경제적 부가가치(EVA) · 시장부가가치(MVA) · 투하자본수익률(ROIC)",
+      "필수: 가중평균자본비용(WACC) · 현금흐름(Cash Flow) · 균형성과표(BSC) · 책임회계·성과평가",
+      "참고: 주주가치 · 목표 비용 · 기회 비용 · 무형 자산 중시 · 사업별 투자자산 정의"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "VBM의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "기업 가치 극대화를 목표로 의사결정·성과를 가치 지표로 측정·관리하는 경영 방식"
+              "이익 경영에서 가치 경영으로 관리 방향 전환"
             ]
           },
           {
-            "title": "목적",
+            "title": "등장 배경",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "IMF 이후 재무구조 개선, 현금흐름 극대화를 통한 사업·주주가치 최대화 요구"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "특징과 가치평가 지표",
         "subsections": [
           {
-            "title": null,
+            "title": "특징",
             "items": [
-              "VBM",
-              "기업가치 극대화",
-              "EVA/경제적 이윤",
-              "가치 드라이버",
-              "자본비용",
-              "성과 연계"
+              "현금흐름 최적화로 자원 효율 이용",
+              "최악 시나리오 분석으로 위험 최소화",
+              "사업부 리더까지 현장 적용"
+            ]
+          },
+          {
+            "title": "EVA",
+            "items": [
+              "세후 영업이익 − 자본비용, 자본 운용 효율 측정"
+            ]
+          },
+          {
+            "title": "MVA·ROIC",
+            "items": [
+              "시장가치 − 투하자본(누적 성과)",
+              "세후 영업이익 ÷ 평균 투하자본"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "도입 효과",
         "subsections": [
           {
-            "title": null,
+            "title": "투자 측면",
             "items": [
-              "인센티브",
-              "투자 결정",
-              "관련 지표·표준·한계를 함께 제시"
+              "원가 보상능력 기준 투자, 성공 사업 중심 투자 유도, 무형 자산 중시"
+            ]
+          },
+          {
+            "title": "성과 측면",
+            "items": [
+              "매출 중시 → 기회 비용·가치 창출 중시, BSC로 실행 연계"
             ]
           }
         ]
@@ -7639,47 +7983,53 @@
       136
     ],
     "outline": [
-      "가치기반경영의 개념",
+      "VBM의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 등장 배경",
+      "특징과 가치평가 지표",
+      "- 특징",
+      "- EVA",
+      "- MVA·ROIC",
+      "도입 효과",
+      "- 투자 측면",
+      "- 성과 측면"
     ],
-    "name": "가치기반경영(VBM, Value-Based Management)",
-    "en": "Value-Based Management",
+    "name": "가치기반경영(VBM, Value Based Management)",
+    "en": "Value Based Management",
     "keywords_must": [
-      "VBM",
-      "기업가치 극대화",
-      "EVA/경제적 이윤",
-      "가치 드라이버",
-      "자본비용",
-      "성과 연계",
-      "인센티브",
-      "투자 결정"
+      "기업 가치 극대화",
+      "경제적 부가가치(EVA)",
+      "시장부가가치(MVA)",
+      "투하자본수익률(ROIC)",
+      "가중평균자본비용(WACC)",
+      "현금흐름(Cash Flow)",
+      "균형성과표(BSC)",
+      "책임회계·성과평가"
     ],
     "keywords_ref": [
-      "NPV",
-      "BSC",
       "주주가치",
-      "KPI",
-      "관련 표준·사례"
+      "목표 비용",
+      "기회 비용",
+      "무형 자산 중시",
+      "사업별 투자자산 정의"
     ],
     "curated": true,
     "quiz_terms": [
-      "VBM",
-      "기업가치 극대화",
-      "EVA/경제적 이윤",
-      "가치 드라이버",
-      "자본비용",
-      "성과 연계",
-      "인센티브",
-      "투자 결정"
+      "기업 가치 극대화",
+      "경제적 부가가치(EVA)",
+      "시장부가가치(MVA)",
+      "투하자본수익률(ROIC)",
+      "가중평균자본비용(WACC)",
+      "현금흐름(Cash Flow)",
+      "균형성과표(BSC)",
+      "책임회계·성과평가"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_072",
@@ -7687,56 +8037,70 @@
     "title": "균형성과표(BSC, Balanced Scorecard)",
     "subtitle": "",
     "domain": "MG",
-    "category": "IT경영전략 > SEM > BSC",
-    "definition": "재무·고객·내부프로세스·학습성장 네 관점의 KPI로 전략을 실행·측정하는 성과관리 체계 (Kaplan & Norton)",
+    "category": "MG > SEM > BSC",
+    "definition": "재무적 관점과 비재무적 관점(고객·내부 프로세스·학습과 성장)을 측정 가능한 핵심성과지표(KPI)로 전환해 관리함으로써 균형 있는 경영 성과관리를 실행하도록 하는 전략 성과관리 체계(Kaplan & Norton)",
     "keywords": [
-      "핵심: BSC · 재무 관점 · 고객 관점",
-      "구성: 내부 프로세스 · 학습과 성장 · KPI/CSF",
-      "활용: 전략지도(Strategy Map) · 인과관계"
+      "핵심: 재무 관점(Financial) · 고객 관점(Customer) · 내부 프로세스 관점(Internal Process) · 학습과 성장 관점(Learning & Growth)",
+      "필수: 핵심성과지표(KPI) · 전략 맵(Strategy Map) · 인과관계 · IT BSC",
+      "참고: 캐플런·노턴(Kaplan & Norton) · 선행·후행 지표 · 무형 자산 · 기업 공헌도·사용자·운영 프로세스·미래 지향 관점 · MBO 비교"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "BSC의 개념과 특징",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "재무·고객·내부프로세스·학습성장 네 관점의 KPI로 전략을 실행·측정하는 성과관리 체계 (Kaplan & Norton)"
+              "비재무 관점을 추가한 전략 연계형 성과평가 도구"
             ]
           },
           {
-            "title": "목적",
+            "title": "특징",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "지표 간 균형(재무-비재무, 결과-과정, 내부-외부, 과거-미래)",
+              "전략과 연계",
+              "전략 의사소통 원활"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "4가지 관점과 KPI",
         "subsections": [
           {
-            "title": null,
+            "title": "재무",
             "items": [
-              "BSC",
-              "재무 관점",
-              "고객 관점",
-              "내부 프로세스",
-              "학습과 성장",
-              "KPI/CSF"
+              "매출액·현금흐름·영업이익률"
+            ]
+          },
+          {
+            "title": "고객",
+            "items": [
+              "고객 만족도·충성도·적시 공급률"
+            ]
+          },
+          {
+            "title": "내부 프로세스·학습과 성장",
+            "items": [
+              "생산 사이클 타임·단위 원가·신제품 건수",
+              "종업원 만족도·역량·자격증"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "IT BSC",
         "subsections": [
           {
-            "title": null,
+            "title": "관점 매핑",
             "items": [
-              "전략지도(Strategy Map)",
-              "인과관계",
-              "관련 지표·표준·한계를 함께 제시"
+              "기업 공헌도(재무), 사용자(고객), 운영 프로세스(내부), 미래 지향(학습과 성장)"
+            ]
+          },
+          {
+            "title": "지표 예",
+            "items": [
+              "IT 비용 관리·사업 가치, 사용자 만족도, 요구 대응·문제 해결 시간, IT 인력 전문성·연구 예산 비율"
             ]
           }
         ]
@@ -7748,104 +8112,118 @@
       140
     ],
     "outline": [
-      "균형성과표의 개념",
+      "BSC의 개념과 특징",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 특징",
+      "4가지 관점과 KPI",
+      "- 재무",
+      "- 고객",
+      "- 내부 프로세스·학습과 성장",
+      "IT BSC",
+      "- 관점 매핑",
+      "- 지표 예"
     ],
     "name": "균형성과표(BSC, Balanced Scorecard)",
     "en": "Balanced Scorecard",
     "keywords_must": [
-      "BSC",
-      "재무 관점",
-      "고객 관점",
-      "내부 프로세스",
-      "학습과 성장",
-      "KPI/CSF",
-      "전략지도(Strategy Map)",
-      "인과관계"
+      "재무 관점(Financial)",
+      "고객 관점(Customer)",
+      "내부 프로세스 관점(Internal Process)",
+      "학습과 성장 관점(Learning & Growth)",
+      "핵심성과지표(KPI)",
+      "전략 맵(Strategy Map)",
+      "인과관계",
+      "IT BSC"
     ],
     "keywords_ref": [
-      "OKR과 비교",
-      "캐스케이딩",
-      "이니셔티브",
-      "성과회의",
-      "관련 표준·사례"
+      "캐플런·노턴(Kaplan & Norton)",
+      "선행·후행 지표",
+      "무형 자산",
+      "기업 공헌도·사용자·운영 프로세스·미래 지향 관점",
+      "MBO 비교"
     ],
     "curated": true,
     "quiz_terms": [
-      "BSC",
-      "재무 관점",
-      "고객 관점",
-      "내부 프로세스",
-      "학습과 성장",
-      "KPI/CSF",
-      "전략지도(Strategy Map)",
-      "인과관계"
+      "재무 관점(Financial)",
+      "고객 관점(Customer)",
+      "내부 프로세스 관점(Internal Process)",
+      "학습과 성장 관점(Learning & Growth)",
+      "핵심성과지표(KPI)",
+      "전략 맵(Strategy Map)",
+      "인과관계",
+      "IT BSC"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": "4관점: 재고내학(재무·고객·내부 프로세스·학습과 성장), IT BSC: 기사운미"
   },
   {
     "id": "MG_074",
     "code": "MG_074",
-    "title": "비즈니스 프로세스 관리(BPM)",
-    "subtitle": "BPM(Business Process Management)",
+    "title": "비즈니스 프로세스 관리(BPM, Business Process Management)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "경영전략 > 프로세스 관리",
-    "definition": "업무 프로세스를 모델링·자동화·모니터링·최적화해 성과를 높이는 관리 체계",
+    "category": "MG > 프로세스 관리 > BPM",
+    "definition": "업무 프로세스의 자동화·통합·최적화를 통해 업무 프로세스를 합리화·효율화하고 이를 통해 기업 가치를 높이는 프로세스 수명주기 관리 기반 시스템",
     "keywords": [
-      "핵심: BPM · 프로세스 모델링 · 자동화(Workflow)",
-      "구성: 모니터링 · 최적화 · 표준화",
-      "활용: 지속 개선 · E2E 프로세스"
+      "핵심: 시스템 통합(E2E) · 업무 자동화(BPEL) · 프로세스 최적화 · 가시성·통제력",
+      "필수: 프로세스 모델링(BPA) · 비즈니스 규칙 엔진(BRE) · 비즈니스 활동 모니터링(BAM) · 워크플로(Workflow)",
+      "참고: BPMN · EAI 연계 · 프로세스 혁신(PI) 비교 · 지속적 개선 · SOA 기반 BPM"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "BPM의 개념과 목적",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "업무 프로세스를 모델링·자동화·모니터링·최적화해 성과를 높이는 관리 체계"
+              "프로세스 설계-실행-모니터링-개선의 수명주기를 관리하는 체계"
             ]
           },
           {
             "title": "목적",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "시스템 통합(레거시와 프로세스 E2E 통합)",
+              "업무 자동화(BPEL 실행)",
+              "최적화(모니터링·분석)",
+              "가시성·통제력"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "기술 영역",
         "subsections": [
           {
-            "title": null,
+            "title": "프로세스 관점",
             "items": [
-              "BPM",
-              "프로세스 모델링",
-              "자동화(Workflow)",
-              "모니터링",
-              "최적화",
-              "표준화"
+              "BPA(모델링·분석·병목 파악), BRE(흐름 통제 규칙), BAM(이벤트 이력·품질 추적)"
+            ]
+          },
+          {
+            "title": "통합 관점",
+            "items": [
+              "EAI(이벤트 중심 애플리케이션 통합), 워크플로(인간 중심 흐름 처리)"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "BPM과 PI 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "BPM",
             "items": [
-              "지속 개선",
-              "E2E 프로세스",
-              "관련 지표·표준·한계를 함께 제시"
+              "중요 프로세스 대상, 프로세스 기반 지속적 혁신, 점진적 변화, 현행 프로세스에서 시작"
+            ]
+          },
+          {
+            "title": "PI",
+            "items": [
+              "전사 프로세스 대상, 근본적 관리 혁신, 단계적 변화, 전략적 이슈에서 시작"
             ]
           }
         ]
@@ -7857,104 +8235,120 @@
       143
     ],
     "outline": [
-      "비즈니스 프로세스 관리의 개념",
+      "BPM의 개념과 목적",
       "- 정의",
       "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "기술 영역",
+      "- 프로세스 관점",
+      "- 통합 관점",
+      "BPM과 PI 비교",
+      "- BPM",
+      "- PI"
     ],
-    "name": "비즈니스 프로세스 관리(BPM)",
+    "name": "비즈니스 프로세스 관리(BPM, Business Process Management)",
     "en": "Business Process Management",
     "keywords_must": [
-      "BPM",
-      "프로세스 모델링",
-      "자동화(Workflow)",
-      "모니터링",
-      "최적화",
-      "표준화",
-      "지속 개선",
-      "E2E 프로세스"
+      "시스템 통합(E2E)",
+      "업무 자동화(BPEL)",
+      "프로세스 최적화",
+      "가시성·통제력",
+      "프로세스 모델링(BPA)",
+      "비즈니스 규칙 엔진(BRE)",
+      "비즈니스 활동 모니터링(BAM)",
+      "워크플로(Workflow)"
     ],
     "keywords_ref": [
-      "BPMS",
-      "BPR과 차이",
-      "BAM",
-      "RPA",
-      "관련 표준·사례"
+      "BPMN",
+      "EAI 연계",
+      "프로세스 혁신(PI) 비교",
+      "지속적 개선",
+      "SOA 기반 BPM"
     ],
     "curated": true,
     "quiz_terms": [
-      "BPM",
-      "프로세스 모델링",
-      "자동화(Workflow)",
-      "모니터링",
-      "최적화",
-      "표준화",
-      "지속 개선",
-      "E2E 프로세스"
+      "시스템 통합(E2E)",
+      "업무 자동화(BPEL)",
+      "프로세스 최적화",
+      "가시성·통제력",
+      "프로세스 모델링(BPA)",
+      "비즈니스 규칙 엔진(BRE)",
+      "비즈니스 활동 모니터링(BAM)",
+      "워크플로(Workflow)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": "목적: 가자최통(가시화·자동화·최적화·통합)"
   },
   {
     "id": "MG_075",
     "code": "MG_075",
-    "title": "업무재설계(BPR, Business Process Reengineering)",
-    "subtitle": "BPR(Business Process Reengineering)",
+    "title": "업무 재설계(BPR, Business Process Reengineering)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "경영관리 > 통합/연계",
-    "definition": "비용·품질·서비스·속도 등 핵심 성과의 비약적 향상을 위해 프로세스를 근본적으로 재설계 (Hammer)",
+    "category": "MG > 프로세스 관리 > BPR",
+    "definition": "비용·품질·서비스·속도 등 핵심 경영성과 지표의 비약적 향상을 위해 기존 업무 방식을 근본적으로 재고하고 핵심 프로세스를 급진적으로 재설계하는 경영 혁신 기법(Hammer & Champy)",
     "keywords": [
-      "핵심: BPR · 근본적 재설계 · 프로세스 중심",
-      "구성: 비약적 개선 · IT 활용 · 조직 변화",
-      "활용: 고객 관점 · 리스크"
+      "핵심: 근본적 발상(Fundamental) · 급진적 재설계(Radical) · 극적 개선(Dramatic) · 프로세스 중심(Process)",
+      "필수: 제로베이스(Zero-base) · 고객 지향 · 핵심 성과 지표(비용·품질·서비스·속도)",
+      "참고: 마이클 해머(Michael Hammer) · 프로세스 혁신(PI) · BPM 비교 · ERP 연계 · 변화 관리 저항"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "BPR의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "비용·품질·서비스·속도 등 핵심 성과의 비약적 향상을 위해 프로세스를 근본적으로 재설계 (Hammer)"
+              "기존 프로세스를 무시하고 영점에서 업무를 다시 설계하는 혁신"
             ]
           },
           {
-            "title": "목적",
+            "title": "등장 배경",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "1990년대 경쟁 심화, 기능별 분업의 비효율"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "특징",
         "subsections": [
           {
-            "title": null,
+            "title": "근본적 발상·제로베이스",
             "items": [
-              "BPR",
-              "근본적 재설계",
-              "프로세스 중심",
-              "비약적 개선",
-              "IT 활용",
-              "조직 변화"
+              "\"왜 이 일을 하는가\"부터 재고, 기존 방식을 백지에서 재창조"
+            ]
+          },
+          {
+            "title": "극적 개선",
+            "items": [
+              "점진 개선이 아니라 대폭적 성과 변화 지향"
+            ]
+          },
+          {
+            "title": "프로세스 품질",
+            "items": [
+              "입력을 고객 가치 출력으로 바꾸는 프로세스 중심 문제 해결"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "추진과 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "추진 절차",
             "items": [
-              "고객 관점",
-              "리스크",
-              "관련 지표·표준·한계를 함께 제시"
+              "비전 수립 → 핵심 프로세스 선정 → 현행 분석 → To-Be 재설계 → IT 적용·실행"
+            ]
+          },
+          {
+            "title": "BPM 비교",
+            "items": [
+              "BPR은 일회성·급진적 재설계, BPM은 지속적·점진적 관리, ERP 도입과 병행이 일반적"
             ]
           }
         ]
@@ -7966,104 +8360,119 @@
       145
     ],
     "outline": [
-      "업무재설계의 개념",
+      "BPR의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 등장 배경",
+      "특징",
+      "- 근본적 발상·제로베이스",
+      "- 극적 개선",
+      "- 프로세스 품질",
+      "추진과 비교",
+      "- 추진 절차",
+      "- BPM 비교"
     ],
-    "name": "업무재설계(BPR, Business Process Reengineering)",
+    "name": "업무 재설계(BPR, Business Process Reengineering)",
     "en": "Business Process Reengineering",
     "keywords_must": [
-      "BPR",
-      "근본적 재설계",
-      "프로세스 중심",
-      "비약적 개선",
-      "IT 활용",
-      "조직 변화",
-      "고객 관점",
-      "리스크"
+      "근본적 발상(Fundamental)",
+      "급진적 재설계(Radical)",
+      "극적 개선(Dramatic)",
+      "프로세스 중심(Process)",
+      "제로베이스(Zero-base)",
+      "고객 지향",
+      "핵심 성과 지표(비용·품질·서비스·속도)"
     ],
     "keywords_ref": [
-      "점진개선(KPI)과 대비",
-      "BPM",
-      "변화관리",
-      "실패요인",
-      "관련 표준·사례"
+      "마이클 해머(Michael Hammer)",
+      "프로세스 혁신(PI)",
+      "BPM 비교",
+      "ERP 연계",
+      "변화 관리 저항"
     ],
     "curated": true,
     "quiz_terms": [
-      "BPR",
-      "근본적 재설계",
-      "프로세스 중심",
-      "비약적 개선",
-      "IT 활용",
-      "조직 변화",
-      "고객 관점",
-      "리스크"
+      "근본적 발상(Fundamental)",
+      "급진적 재설계(Radical)",
+      "극적 개선(Dramatic)",
+      "프로세스 중심(Process)",
+      "제로베이스(Zero-base)",
+      "고객 지향",
+      "핵심 성과 지표(비용·품질·서비스·속도)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_076",
     "code": "MG_076",
-    "title": "비즈니스 활동 모니터링(BAM)",
-    "subtitle": "BAM(Business Activity Monitoring)",
+    "title": "비즈니스 활동 모니터링(BAM, Business Activity Monitoring)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "경영전략(MG)> 프로세스 관리 >BAM",
-    "definition": "핵심 비즈니스 이벤트·KPI를 실시간으로 감시·경보해 즉시 대응하게 하는 모니터링",
+    "category": "MG > 프로세스 관리 > BAM",
+    "definition": "다양한 애플리케이션과 핵심성과지표·데이터 수집을 통해 획득한 주요 비즈니스 이벤트에 대해 실시간 보고·분석·경보를 제공하는 기법(Gartner). 광의로는 BI를 실시간으로 확장한 개념",
     "keywords": [
-      "핵심: BAM · 실시간 모니터링 · 비즈니스 이벤트",
-      "구성: KPI/대시보드 · 경보(Alert) · 운영 가시성",
-      "활용: CEP 연계 · 의사결정 단축"
+      "핵심: 실시간 모니터링(Real-time) · 비즈니스 이벤트(Business Event) · 조합 이벤트(Composite Event) · 핵심성과지표(KPI)",
+      "필수: 경보(Alert) · 가시성(Visibility) · 대시보드(Dashboard) · BAM 모델링(Metadata)",
+      "참고: BAM = BI + Real-time · BPM·EAI 연계 · DW·OLAP · 복합 이벤트 처리(CEP) · 규칙 엔진 실시간 Action"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "BAM의 개념과 특징",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "핵심 비즈니스 이벤트·KPI를 실시간으로 감시·경보해 즉시 대응하게 하는 모니터링"
+              "업무 성과의 실시간 모니터링·경보 솔루션"
             ]
           },
           {
-            "title": "목적",
+            "title": "특징",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "프로세스 가시성",
+              "KPI 연계 메트릭",
+              "경보 기반 위험 관리",
+              "EAI·BPM·BI의 실시간 분석 보완"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "기능과 기반 기술",
         "subsections": [
           {
-            "title": null,
+            "title": "기능",
             "items": [
-              "BAM",
-              "실시간 모니터링",
-              "비즈니스 이벤트",
-              "KPI/대시보드",
-              "경보(Alert)",
-              "운영 가시성"
+              "비즈니스 이벤트 정의·캡처 → 조합 이벤트·그룹 생성 → BAM 모델링(메타데이터) → KPI 미달 시 경고·원인 분석"
+            ]
+          },
+          {
+            "title": "기반 기술",
+            "items": [
+              "애플리케이션 통합(EAI), BI·DW(지표 분석), BPM(프로세스 영향 분석), 네트워크·시스템 관리"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "솔루션 비교와 고려사항",
         "subsections": [
           {
-            "title": null,
+            "title": "비교",
             "items": [
-              "CEP 연계",
-              "의사결정 단축",
-              "관련 지표·표준·한계를 함께 제시"
+              "BAM(실시간 성과 모니터링)",
+              "BI(데이터 분석 의사결정)",
+              "BPM(프로세스 자동화·최적화)",
+              "EAI(애플리케이션 통합)"
+            ]
+          },
+          {
+            "title": "고려사항",
+            "items": [
+              "수집·분석·조치 자동화, 실시간 정보 제공, SOA 기반 표준 준수"
             ]
           }
         ]
@@ -8075,104 +8484,114 @@
       149
     ],
     "outline": [
-      "비즈니스 활동 모니터링의 개념",
+      "BAM의 개념과 특징",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 특징",
+      "기능과 기반 기술",
+      "- 기능",
+      "- 기반 기술",
+      "솔루션 비교와 고려사항",
+      "- 비교",
+      "- 고려사항"
     ],
-    "name": "비즈니스 활동 모니터링(BAM)",
+    "name": "비즈니스 활동 모니터링(BAM, Business Activity Monitoring)",
     "en": "Business Activity Monitoring",
     "keywords_must": [
-      "BAM",
-      "실시간 모니터링",
-      "비즈니스 이벤트",
-      "KPI/대시보드",
+      "실시간 모니터링(Real-time)",
+      "비즈니스 이벤트(Business Event)",
+      "조합 이벤트(Composite Event)",
+      "핵심성과지표(KPI)",
       "경보(Alert)",
-      "운영 가시성",
-      "CEP 연계",
-      "의사결정 단축"
+      "가시성(Visibility)",
+      "대시보드(Dashboard)",
+      "BAM 모델링(Metadata)"
     ],
     "keywords_ref": [
-      "BI와 차이",
-      "RTE",
-      "프로세스 마이닝",
-      "SLA",
-      "관련 표준·사례"
+      "BAM = BI + Real-time",
+      "BPM·EAI 연계",
+      "DW·OLAP",
+      "복합 이벤트 처리(CEP)",
+      "규칙 엔진 실시간 Action"
     ],
     "curated": true,
     "quiz_terms": [
-      "BAM",
-      "실시간 모니터링",
-      "비즈니스 이벤트",
-      "KPI/대시보드",
+      "실시간 모니터링(Real-time)",
+      "비즈니스 이벤트(Business Event)",
+      "조합 이벤트(Composite Event)",
+      "핵심성과지표(KPI)",
       "경보(Alert)",
-      "운영 가시성",
-      "CEP 연계",
-      "의사결정 단축"
+      "가시성(Visibility)",
+      "대시보드(Dashboard)",
+      "BAM 모델링(Metadata)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_077_0",
     "code": "MG_077_0",
-    "title": "비즈니스 규칙 엔진(BRE, Business Rules Engine)",
+    "title": "비즈니스 규칙 엔진(BRE, Business Rule Engine)",
     "subtitle": "",
     "domain": "MG",
     "category": "MG > 프로세스 관리 > BRE",
-    "definition": "업무 규칙을 프로세스 코드에서 분리·관리해 빠른 변경과 일관된 의사결정을 지원하는 엔진",
+    "definition": "업무 규칙을 애플리케이션 제어 프로세스에서 분리해 별도로 저장·관리하고 추론 기능을 제공함으로써 비즈니스 요구 변화를 신속·정확하게 반영하도록 지원하는 시스템",
     "keywords": [
-      "핵심: BRE · 비즈니스 규칙 · 규칙·프로세스 분리",
-      "구성: 의사결정 테이블 · 즉시 변경 · 일관성",
-      "활용: 감사추적 · BRMS"
+      "핵심: 비즈니스 규칙(Business Rule) · 규칙 분리(Rule Separation) · 규칙 저장소(Rule Repository) · 추론 엔진(Inference Engine)",
+      "필수: 규칙 관리 도구 · 실시간 기업(RTE) · BPM·BI 결합",
+      "참고: 의사결정 테이블(Decision Table) · Rete 알고리즘 · Drools · BRMS(Business Rule Management System) · 현업 규칙 변경"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "BRE의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "업무 규칙을 프로세스 코드에서 분리·관리해 빠른 변경과 일관된 의사결정을 지원하는 엔진"
+              "코드에 하드코딩된 규칙을 외부화해 엔진이 해석·실행"
             ]
           },
           {
-            "title": "목적",
+            "title": "필요성",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "데이터 양 증가·프로세스 복잡화로 처리 방식 단순화 필요, RTE에서 신속한 의사결정이 경쟁력"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "구성과 동작",
         "subsections": [
           {
-            "title": null,
+            "title": "구성",
             "items": [
-              "BRE",
-              "비즈니스 규칙",
-              "규칙·프로세스 분리",
-              "의사결정 테이블",
-              "즉시 변경",
-              "일관성"
+              "규칙 작성·관리 도구, 규칙 저장소(DB), 추론 엔진, 애플리케이션 연계 인터페이스"
+            ]
+          },
+          {
+            "title": "동작",
+            "items": [
+              "애플리케이션이 사실(Fact) 전달 → 엔진이 규칙 매칭·추론 → 결과 반환"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "활용과 효과",
         "subsections": [
           {
-            "title": null,
+            "title": "결합",
             "items": [
-              "감사추적",
-              "BRMS",
-              "관련 지표·표준·한계를 함께 제시"
+              "BPM·BI와 결합해 경영 전략·정책 적용의 토대"
+            ]
+          },
+          {
+            "title": "효과",
+            "items": [
+              "규칙 변경 시 개발·배포 없이 신속 반영, 현업 주도 관리, 일관된 의사결정"
             ]
           }
         ]
@@ -8184,104 +8603,118 @@
       151
     ],
     "outline": [
-      "비즈니스 규칙 엔진의 개념",
+      "BRE의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 필요성",
+      "구성과 동작",
+      "- 구성",
+      "- 동작",
+      "활용과 효과",
+      "- 결합",
+      "- 효과"
     ],
-    "name": "비즈니스 규칙 엔진(BRE, Business Rules Engine)",
-    "en": "Business Rules Engine",
+    "name": "비즈니스 규칙 엔진(BRE, Business Rule Engine)",
+    "en": "Business Rule Engine",
     "keywords_must": [
-      "BRE",
-      "비즈니스 규칙",
-      "규칙·프로세스 분리",
-      "의사결정 테이블",
-      "즉시 변경",
-      "일관성",
-      "감사추적",
-      "BRMS"
+      "비즈니스 규칙(Business Rule)",
+      "규칙 분리(Rule Separation)",
+      "규칙 저장소(Rule Repository)",
+      "추론 엔진(Inference Engine)",
+      "규칙 관리 도구",
+      "실시간 기업(RTE)",
+      "BPM·BI 결합"
     ],
     "keywords_ref": [
-      "드룰스 등",
-      "의사결정관리",
-      "컴플라이언스",
-      "로코드",
-      "관련 표준·사례"
+      "의사결정 테이블(Decision Table)",
+      "Rete 알고리즘",
+      "Drools",
+      "BRMS(Business Rule Management System)",
+      "현업 규칙 변경"
     ],
     "curated": true,
     "quiz_terms": [
-      "BRE",
-      "비즈니스 규칙",
-      "규칙·프로세스 분리",
-      "의사결정 테이블",
-      "즉시 변경",
-      "일관성",
-      "감사추적",
-      "BRMS"
+      "비즈니스 규칙(Business Rule)",
+      "규칙 분리(Rule Separation)",
+      "규칙 저장소(Rule Repository)",
+      "추론 엔진(Inference Engine)",
+      "규칙 관리 도구",
+      "실시간 기업(RTE)",
+      "BPM·BI 결합"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_077_1",
     "code": "MG_077_1",
-    "title": "비즈니스 디지털 전환(BDR, Business Digital Revolution)",
+    "title": "비즈니스 디지털 혁명(BDR, Business Digital Revolution)",
     "subtitle": "",
     "domain": "MG",
-    "category": "경영전략",
-    "definition": "디지털 기술로 비즈니스 모델·프로세스·제품·전략을 근본 재정의하는 전환",
+    "category": "MG > 프로세스 관리 > 디지털 혁명",
+    "definition": "BPR과 디지털 전환(DT)을 기반으로 생성형 AI·빅데이터·클라우드 등 첨단 기술을 사업 자체에 내장해 비즈니스 모델·프로세스·제품·전략을 근본적으로 재정의하는 전략적 이니셔티브",
     "keywords": [
-      "핵심: 디지털 전환(DX) · 비즈니스 모델 혁신 · 프로세스 재설계",
-      "구성: 데이터·플랫폼 · 고객 경험 · 조직·문화",
-      "활용: 신기술 활용 · 성과 지표"
+      "핵심: 업무 재설계(BPR) · 디지털 전환(DT) · 생성형 AI(Generative AI) · 빅데이터",
+      "필수: 사물인터넷(IoT) · 클라우드(IaaS·PaaS·SaaS) · 디지털 트윈(Digital Twin) · 비즈니스 모델 변신",
+      "참고: ERP·SCM·MES · 블록체인 · 혼합현실(MR) · 파괴적 혁신(Disruptive Innovation) · 사업성 중심 효과"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "비즈니스 디지털 혁명의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "디지털 기술로 비즈니스 모델·프로세스·제품·전략을 근본 재정의하는 전환"
+              "BPR과 DT의 진화형으로 신기술을 장착한 비즈니스 전면 혁신"
             ]
           },
           {
-            "title": "목적",
+            "title": "목표",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "전체 비즈니스 모델과 운영 구조의 변신"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "추진 구성요소",
         "subsections": [
           {
-            "title": null,
+            "title": "BPR 기반",
             "items": [
-              "디지털 전환(DX)",
-              "비즈니스 모델 혁신",
-              "프로세스 재설계",
-              "데이터·플랫폼",
-              "고객 경험",
-              "조직·문화"
+              "ERP(생산·자재 정보), SCM(조달-배송 데이터 흐름), MES(AI 기반 생산 자동화)"
+            ]
+          },
+          {
+            "title": "DT 기술",
+            "items": [
+              "생성형 AI, 빅데이터, IoT·엣지, 클라우드, 블록체인, MR, 디지털 트윈"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "BPR·DT·디지털 혁명 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "BPR",
             "items": [
-              "신기술 활용",
-              "성과 지표",
-              "관련 지표·표준·한계를 함께 제시"
+              "1990년대, 프로세스 재설계, 효율성(GE·포드)"
+            ]
+          },
+          {
+            "title": "DT",
+            "items": [
+              "2010년대, 디지털 기술 적용·파괴적 혁신, 효과성(아마존·넷플릭스·우버)"
+            ]
+          },
+          {
+            "title": "디지털 혁명",
+            "items": [
+              "2020년대, 신기술 내장 비즈니스 혁명, 사업성(생성형 AI·자율주행)"
             ]
           }
         ]
@@ -8293,104 +8726,121 @@
       79
     ],
     "outline": [
-      "비즈니스 디지털 전환의 개념",
+      "비즈니스 디지털 혁명의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 목표",
+      "추진 구성요소",
+      "- BPR 기반",
+      "- DT 기술",
+      "BPR·DT·디지털 혁명 비교",
+      "- BPR",
+      "- DT",
+      "- 디지털 혁명"
     ],
-    "name": "비즈니스 디지털 전환(BDR, Business Digital Revolution)",
+    "name": "비즈니스 디지털 혁명(BDR, Business Digital Revolution)",
     "en": "Business Digital Revolution",
     "keywords_must": [
-      "디지털 전환(DX)",
-      "비즈니스 모델 혁신",
-      "프로세스 재설계",
-      "데이터·플랫폼",
-      "고객 경험",
-      "조직·문화",
-      "신기술 활용",
-      "성과 지표"
+      "업무 재설계(BPR)",
+      "디지털 전환(DT)",
+      "생성형 AI(Generative AI)",
+      "빅데이터",
+      "사물인터넷(IoT)",
+      "클라우드(IaaS·PaaS·SaaS)",
+      "디지털 트윈(Digital Twin)",
+      "비즈니스 모델 변신"
     ],
     "keywords_ref": [
-      "Digitization/Digitalization",
-      "애자일",
-      "플랫폼",
-      "리더십",
-      "관련 표준·사례"
+      "ERP·SCM·MES",
+      "블록체인",
+      "혼합현실(MR)",
+      "파괴적 혁신(Disruptive Innovation)",
+      "사업성 중심 효과"
     ],
     "curated": true,
     "quiz_terms": [
-      "디지털 전환(DX)",
-      "비즈니스 모델 혁신",
-      "프로세스 재설계",
-      "데이터·플랫폼",
-      "고객 경험",
-      "조직·문화",
-      "신기술 활용",
-      "성과 지표"
+      "업무 재설계(BPR)",
+      "디지털 전환(DT)",
+      "생성형 AI(Generative AI)",
+      "빅데이터",
+      "사물인터넷(IoT)",
+      "클라우드(IaaS·PaaS·SaaS)",
+      "디지털 트윈(Digital Twin)",
+      "비즈니스 모델 변신"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_078",
     "code": "MG_078",
-    "title": "오픈 이노베이션(Open Innovation)",
+    "title": "개방형 혁신(Open Innovation)",
     "subtitle": "",
     "domain": "MG",
     "category": "MG > 프로세스 혁신 > Open Innovation",
-    "definition": "내부 R&D만이 아니라 외부 지식·기술을 적극 유입·방출해 혁신을 가속하는 패러다임 (Chesbrough)",
+    "definition": "기술 혁신을 기업 내부 R&D에만 의존하지 않고 외부의 다양한 기술·지식 원천을 활용하거나 내부 기술을 외부로 내보내 기간 단축·위험 감소·비용 절감을 실현하는 경영 기법(Chesbrough)",
     "keywords": [
-      "핵심: 오픈 이노베이션 · 외부 기술 유입 · 내부 IP 외부화",
-      "구성: 협력·제휴 · 생태계 · R&D 효율",
-      "활용: 기술 중개 · 지식 흐름"
+      "핵심: 외부→내부(Outside-in) · 내부→외부(Inside-out) · 인소싱(In-Sourcing) · 공동연구(Joint R&D)",
+      "필수: 벤처 투자(CVC) · 기술자산 판매(라이선싱) · 분사화(Spin-off) · 프로젝트 공개",
+      "참고: 헨리 체스브로(Henry Chesbrough) · 폐쇄형 혁신 비교 · NIH·NIT·NSH 증후군 · P&G C&D · 집단지성"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "개방형 혁신의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "내부 R&D만이 아니라 외부 지식·기술을 적극 유입·방출해 혁신을 가속하는 패러다임 (Chesbrough)"
+              "내부와 외부의 아이디어·기술을 결합하는 혁신 패러다임"
             ]
           },
           {
-            "title": "목적",
+            "title": "등장 배경",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "글로벌화, 제품 수명주기 단축(가속화), 지능화, 지식 인력 유동성(집단지성), 융복합화"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "유형과 폐쇄형 혁신 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "외부 자원 활용(외부→내부)",
             "items": [
-              "오픈 이노베이션",
-              "외부 기술 유입",
-              "내부 IP 외부화",
-              "협력·제휴",
-              "생태계",
-              "R&D 효율"
+              "인소싱(P&G C&D), 공동연구(인텔 Lablet), 벤처 투자"
+            ]
+          },
+          {
+            "title": "내부 자원 개방(내부→외부)",
+            "items": [
+              "기술자산 판매(라이선스), 분사화(루슨트 New Venture), 프로젝트 공개(리눅스)"
+            ]
+          },
+          {
+            "title": "폐쇄형 대비",
+            "items": [
+              "내부 R&D 중심 → 외부 R&D 연계, 최초 제품화보다 더 나은 비즈니스 모델이 중요"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "저해 요인과 활성화 조건",
         "subsections": [
           {
-            "title": null,
+            "title": "저해 요인",
             "items": [
-              "기술 중개",
-              "지식 흐름",
-              "관련 지표·표준·한계를 함께 제시"
+              "NIH(외부 기술 경시), NIT(선진 기업 미검증 기술 불신), NSH(외부 자원 활용 사업 무시)"
+            ]
+          },
+          {
+            "title": "활성화 조건",
+            "items": [
+              "혁신 주체 다양화(혁신형 중견기업), 사업모델 혁신, 외부 자원 통합 역량, 공정한 성과 공유"
             ]
           }
         ]
@@ -8402,47 +8852,53 @@
       81
     ],
     "outline": [
-      "오픈 이노베이션의 개념",
+      "개방형 혁신의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 등장 배경",
+      "유형과 폐쇄형 혁신 비교",
+      "- 외부 자원 활용(외부→내부)",
+      "- 내부 자원 개방(내부→외부)",
+      "- 폐쇄형 대비",
+      "저해 요인과 활성화 조건",
+      "- 저해 요인",
+      "- 활성화 조건"
     ],
-    "name": "오픈 이노베이션(Open Innovation)",
+    "name": "개방형 혁신(Open Innovation)",
     "en": "Open Innovation",
     "keywords_must": [
-      "오픈 이노베이션",
-      "외부 기술 유입",
-      "내부 IP 외부화",
-      "협력·제휴",
-      "생태계",
-      "R&D 효율",
-      "기술 중개",
-      "지식 흐름"
+      "외부→내부(Outside-in)",
+      "내부→외부(Inside-out)",
+      "인소싱(In-Sourcing)",
+      "공동연구(Joint R&D)",
+      "벤처 투자(CVC)",
+      "기술자산 판매(라이선싱)",
+      "분사화(Spin-off)",
+      "프로젝트 공개"
     ],
     "keywords_ref": [
-      "크라우드소싱",
-      "산학연",
-      "라이선스",
-      "스타트업 협업",
-      "관련 표준·사례"
+      "헨리 체스브로(Henry Chesbrough)",
+      "폐쇄형 혁신 비교",
+      "NIH·NIT·NSH 증후군",
+      "P&G C&D",
+      "집단지성"
     ],
     "curated": true,
     "quiz_terms": [
-      "오픈 이노베이션",
-      "외부 기술 유입",
-      "내부 IP 외부화",
-      "협력·제휴",
-      "생태계",
-      "R&D 효율",
-      "기술 중개",
-      "지식 흐름"
+      "외부→내부(Outside-in)",
+      "내부→외부(Inside-out)",
+      "인소싱(In-Sourcing)",
+      "공동연구(Joint R&D)",
+      "벤처 투자(CVC)",
+      "기술자산 판매(라이선싱)",
+      "분사화(Spin-off)",
+      "프로젝트 공개"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": "유형: 인공벤(인소싱·공동연구·벤처투자), 기분프(기술자산 판매·분사화·프로젝트 공개)"
   },
   {
     "id": "MG_079",
@@ -8450,56 +8906,70 @@
     "title": "크라우드소싱(Crowdsourcing)",
     "subtitle": "",
     "domain": "MG",
-    "category": "경영전략(MG) > 아웃소싱 표준/정책 > Crowd Sourcing",
-    "definition": "대중·사용자에게 과업·아이디어·자원을 열어 참여를 통해 생산·혁신을 수행하는 방식",
+    "category": "MG > 프로세스 혁신 > Crowdsourcing",
+    "definition": "생산과 서비스 과정에 소비자나 대중을 참여하도록 개방해 생산 효율을 높이고 그 수익을 참여자와 공유하는 방법. 대중(Crowd)과 아웃소싱(Outsourcing)의 합성어(Jeff Howe, 2006)",
     "keywords": [
-      "핵심: 크라우드소싱 · 대중 참여 · 개방형 문제 해결",
-      "구성: 보상·동기 · 품질 관리 · 집단지성",
-      "활용: 플랫폼 · 지식 재산"
+      "핵심: 대중 참여(Crowd) · 집단지성(Collective Intelligence) · 참여 개방 · 외부 인적 자원 활용",
+      "필수: 이익 공유 · 통합형(협업형·선택형) · 선택형 크라우드소싱 · 웹 2.0·3.0 플랫폼",
+      "참고: 제프 하우(Jeff Howe) · 크라우드펀딩 · 위키피디아·이노센티브 · 오픈 이노베이션 · 품질·지식재산 관리"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "크라우드소싱의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "대중·사용자에게 과업·아이디어·자원을 열어 참여를 통해 생산·혁신을 수행하는 방식"
+              "기업 활동 일부를 대중에게 개방해 참여로 문제를 해결"
             ]
           },
           {
-            "title": "목적",
+            "title": "특징",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "웹 기반 새로운 가능성",
+              "참여 개방(비전문가·외부 전문가)",
+              "외부 인적 자원 활용",
+              "참여자 이익 공유"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "유형",
         "subsections": [
           {
-            "title": null,
+            "title": "통합형-협업형",
             "items": [
-              "크라우드소싱",
-              "대중 참여",
-              "개방형 문제 해결",
-              "보상·동기",
-              "품질 관리",
-              "집단지성"
+              "소수 전문가의 장기 작업을 대중의 집단지성으로 해결(위키피디아)"
+            ]
+          },
+          {
+            "title": "통합형-선택형",
+            "items": [
+              "대중이 여러 옵션 중 필요에 따라 선택, 반복 선택 가능"
+            ]
+          },
+          {
+            "title": "경쟁·자금형",
+            "items": [
+              "아이디어 공모·현상 과제(이노센티브), 크라우드펀딩"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "활용과 고려사항",
         "subsections": [
           {
-            "title": null,
+            "title": "활용",
             "items": [
-              "플랫폼",
-              "지식 재산",
-              "관련 지표·표준·한계를 함께 제시"
+              "신제품 아이디어, 디자인, 데이터 라벨링, 문제 해결 공모"
+            ]
+          },
+          {
+            "title": "고려사항",
+            "items": [
+              "결과 품질 관리, 지식재산권 귀속, 공정한 보상과 참여 동기 유지"
             ]
           }
         ]
@@ -8513,45 +8983,51 @@
     "outline": [
       "크라우드소싱의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 특징",
+      "유형",
+      "- 통합형-협업형",
+      "- 통합형-선택형",
+      "- 경쟁·자금형",
+      "활용과 고려사항",
+      "- 활용",
+      "- 고려사항"
     ],
     "name": "크라우드소싱(Crowdsourcing)",
     "en": "Crowdsourcing",
     "keywords_must": [
-      "크라우드소싱",
-      "대중 참여",
-      "개방형 문제 해결",
-      "보상·동기",
-      "품질 관리",
-      "집단지성",
-      "플랫폼",
-      "지식 재산"
+      "대중 참여(Crowd)",
+      "집단지성(Collective Intelligence)",
+      "참여 개방",
+      "외부 인적 자원 활용",
+      "이익 공유",
+      "통합형(협업형·선택형)",
+      "선택형 크라우드소싱",
+      "웹 2.0·3.0 플랫폼"
     ],
     "keywords_ref": [
+      "제프 하우(Jeff Howe)",
       "크라우드펀딩",
-      "오픈이노베이션",
-      "공모전",
-      "신뢰",
-      "관련 표준·사례"
+      "위키피디아·이노센티브",
+      "오픈 이노베이션",
+      "품질·지식재산 관리"
     ],
     "curated": true,
     "quiz_terms": [
-      "크라우드소싱",
-      "대중 참여",
-      "개방형 문제 해결",
-      "보상·동기",
-      "품질 관리",
-      "집단지성",
-      "플랫폼",
-      "지식 재산"
+      "대중 참여(Crowd)",
+      "집단지성(Collective Intelligence)",
+      "참여 개방",
+      "외부 인적 자원 활용",
+      "이익 공유",
+      "통합형(협업형·선택형)",
+      "선택형 크라우드소싱",
+      "웹 2.0·3.0 플랫폼"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_080",
@@ -8559,56 +9035,68 @@
     "title": "PDCA 사이클(Plan-Do-Check-Act)",
     "subtitle": "",
     "domain": "MG",
-    "category": "MG> 프로세스 혁신 > PDCA",
-    "definition": "계획·실행·평가·개선을 순환하는 품질·경영 개선 방법 (Deming/Shewhart)",
+    "category": "MG > 프로세스 혁신 > PDCA",
+    "definition": "생산·품질 등 사업 활동을 Plan(계획)-Do(실행)-Check(점검)-Act(조치)의 4단계로 반복해 업무와 프로세스를 지속적으로 개선하는 관리 기법(Shewhart·Deming)",
     "keywords": [
-      "핵심: PDCA · Plan · Do",
-      "구성: Check · Act · 지속적 개선",
-      "활용: 표준화 · 피드백"
+      "핵심: 계획(Plan) · 실행(Do) · 점검(Check) · 조치(Act)",
+      "필수: 지속적 개선(Continuous Improvement) · 품질 계획·보증·통제·개선 · 선순환 구조 · 데밍 사이클(Deming Cycle)",
+      "참고: 슈하트(Shewhart) · 히스토그램·관리도 · ISO 9001·27001·22301 적용 · PDSA · 6시그마 DMAIC"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "PDCA의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "계획·실행·평가·개선을 순환하는 품질·경영 개선 방법 (Deming/Shewhart)"
+              "계획과 실행의 질을 높이는 선순환 개선 시스템"
             ]
           },
           {
-            "title": "목적",
+            "title": "핵심",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "4단계 반복을 통한 나선형 지속 개선"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "단계별 내용",
         "subsections": [
           {
-            "title": null,
+            "title": "Plan",
             "items": [
-              "PDCA",
-              "Plan",
-              "Do",
-              "Check",
-              "Act",
-              "지속적 개선"
+              "품질 계획(비용편익 분석·표본 추출·품질 비용), 고객 요구·방침에 따른 목표와 프로세스 수립"
+            ]
+          },
+          {
+            "title": "Do·Check",
+            "items": [
+              "품질 보증(리뷰·감사·워크스루)으로 프로세스 실행",
+              "품질 통제(통계적 표본 추출)로 모니터링·측정"
+            ]
+          },
+          {
+            "title": "Act",
+            "items": [
+              "품질 개선(품질·개선 보고서), 프로세스 성과의 지속적 개선"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "품질 관리 적용 사례",
         "subsections": [
           {
-            "title": null,
+            "title": "Plan",
             "items": [
-              "표준화",
-              "피드백",
-              "관련 지표·표준·한계를 함께 제시"
+              "오류 수집·체크리스트 재정립, 히스토그램으로 부적합 기준 수립"
+            ]
+          },
+          {
+            "title": "Do·Check·Act",
+            "items": [
+              "개정 체크리스트 적용·부적합률 관리도 작성 → 이상 원인 분석 → 기준·프로세스 표준화"
             ]
           }
         ]
@@ -8620,104 +9108,123 @@
       156
     ],
     "outline": [
-      "PDCA 사이클의 개념",
+      "PDCA의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 핵심",
+      "단계별 내용",
+      "- Plan",
+      "- Do·Check",
+      "- Act",
+      "품질 관리 적용 사례",
+      "- Plan",
+      "- Do·Check·Act"
     ],
     "name": "PDCA 사이클(Plan-Do-Check-Act)",
     "en": "PDCA Cycle",
     "keywords_must": [
-      "PDCA",
-      "Plan",
-      "Do",
-      "Check",
-      "Act",
-      "지속적 개선",
-      "표준화",
-      "피드백"
+      "계획(Plan)",
+      "실행(Do)",
+      "점검(Check)",
+      "조치(Act)",
+      "지속적 개선(Continuous Improvement)",
+      "품질 계획·보증·통제·개선",
+      "선순환 구조",
+      "데밍 사이클(Deming Cycle)"
     ],
     "keywords_ref": [
-      "DMAIC",
-      "OODA",
-      "ISO 품질",
-      "가설검증",
-      "관련 표준·사례"
+      "슈하트(Shewhart)",
+      "히스토그램·관리도",
+      "ISO 9001·27001·22301 적용",
+      "PDSA",
+      "6시그마 DMAIC"
     ],
     "curated": true,
     "quiz_terms": [
-      "PDCA",
-      "Plan",
-      "Do",
-      "Check",
-      "Act",
-      "지속적 개선",
-      "표준화",
-      "피드백"
+      "계획(Plan)",
+      "실행(Do)",
+      "점검(Check)",
+      "조치(Act)",
+      "지속적 개선(Continuous Improvement)",
+      "품질 계획·보증·통제·개선",
+      "선순환 구조",
+      "데밍 사이클(Deming Cycle)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_081",
     "code": "MG_081",
     "title": "공급망관리(SCM, Supply Chain Management)",
-    "subtitle": "SCM(Supply Chain Management)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "ABC, ERP, PLM, BRM, SRM(Supplier Relationship Management)",
-    "definition": "공급자부터 최종 고객까지 물류·정보·자금을 통합 최적화해 비용·서비스·속도를 높이는 관리",
+    "category": "MG > 기업 간 관계 관리 > SCM",
+    "definition": "공급자에서 최종 소비자까지 제품 공급과 관련된 물자·정보·자금의 흐름을 기업 간 인터페이스를 통합해 효율적으로 관리함으로써 비용 절감과 고객 서비스 개선을 이루는 경영 혁신 기법",
     "keywords": [
-      "핵심: SCM · 공급망 · 수요예측",
-      "구성: 재고 최적화 · 물류 · 협업 계획(CPFR)",
-      "활용: 가시성 · 리스크"
+      "핵심: 공급망 계획(SCP, Supply Chain Planning) · 공급망 실행(SCE, Supply Chain Execution) · 공급망 프로세스 관리(SCI, Supply Chain Integration) · 채찍 효과(Bullwhip Effect)",
+      "필수: 가치사슬 통합 · 수요 예측 · 재고 최적화 · SCM 2.0",
+      "참고: CRM·ERP 연계 · VMI·CPFR · SCOR 모델 · RFID·POS · 역물류(Reverse Logistics)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "SCM의 개념과 목적",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "공급자부터 최종 고객까지 물류·정보·자금을 통합 최적화해 비용·서비스·속도를 높이는 관리"
+              "공급 체인 전체를 하나의 시스템으로 보는 통합 관리"
             ]
           },
           {
             "title": "목적",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "가치사슬 통합 관리(구매-조달-제조-보관-운송-판매)",
+              "수익 증대(비용 절감·고객 만족)",
+              "효율성 증대(정보기술로 시간·공간 극복)"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "SCP·SCE·SCI 체계",
         "subsections": [
           {
-            "title": null,
+            "title": "SCP",
             "items": [
-              "SCM",
-              "공급망",
-              "수요예측",
-              "재고 최적화",
-              "물류",
-              "협업 계획(CPFR)"
+              "제조·수요·재고·유통·운송 계획 의사결정 지원"
+            ]
+          },
+          {
+            "title": "SCE",
+            "items": [
+              "주문·생산·유통·물류·역물류 등 실제 공급망 실행 지원"
+            ]
+          },
+          {
+            "title": "SCI",
+            "items": [
+              "계획과 실행 간 갭 통합, 모니터링·성과 측정·프로세스 개선"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "주요 기술과 이슈",
         "subsections": [
           {
-            "title": null,
+            "title": "연계",
             "items": [
-              "가시성",
-              "리스크",
-              "관련 지표·표준·한계를 함께 제시"
+              "CRM으로 고객 수요 정보 수집 → SCP 수요 계획 → ERP·MES 실행"
+            ]
+          },
+          {
+            "title": "채찍 효과",
+            "items": [
+              "하류 수요 변동이 상류로 갈수록 증폭 → 정보 공유·VMI·CPFR로 완화"
             ]
           }
         ]
@@ -8729,104 +9236,123 @@
       159
     ],
     "outline": [
-      "공급망관리의 개념",
+      "SCM의 개념과 목적",
       "- 정의",
       "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "SCP·SCE·SCI 체계",
+      "- SCP",
+      "- SCE",
+      "- SCI",
+      "주요 기술과 이슈",
+      "- 연계",
+      "- 채찍 효과"
     ],
     "name": "공급망관리(SCM, Supply Chain Management)",
     "en": "Supply Chain Management",
     "keywords_must": [
-      "SCM",
-      "공급망",
-      "수요예측",
+      "공급망 계획(SCP, Supply Chain Planning)",
+      "공급망 실행(SCE, Supply Chain Execution)",
+      "공급망 프로세스 관리(SCI, Supply Chain Integration)",
+      "채찍 효과(Bullwhip Effect)",
+      "가치사슬 통합",
+      "수요 예측",
       "재고 최적화",
-      "물류",
-      "협업 계획(CPFR)",
-      "가시성",
-      "리스크"
+      "SCM 2.0"
     ],
     "keywords_ref": [
-      "ERP 연계",
-      "JIT",
-      "bullwhip",
-      "지속가능 SCM",
-      "관련 표준·사례"
+      "CRM·ERP 연계",
+      "VMI·CPFR",
+      "SCOR 모델",
+      "RFID·POS",
+      "역물류(Reverse Logistics)"
     ],
     "curated": true,
     "quiz_terms": [
-      "SCM",
-      "공급망",
-      "수요예측",
+      "공급망 계획(SCP, Supply Chain Planning)",
+      "공급망 실행(SCE, Supply Chain Execution)",
+      "공급망 프로세스 관리(SCI, Supply Chain Integration)",
+      "채찍 효과(Bullwhip Effect)",
+      "가치사슬 통합",
+      "수요 예측",
       "재고 최적화",
-      "물류",
-      "협업 계획(CPFR)",
-      "가시성",
-      "리스크"
+      "SCM 2.0"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_082",
     "code": "MG_082",
     "title": "파트너관계관리(PRM, Partner Relationship Management)",
-    "subtitle": "PRM (Partner Relationship Management)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "경영전략 > 기업간 관계 관리 > PRM",
-    "definition": "채널·협력 파트너와의 영업·마케팅·서비스를 체계화해 공동 수익을 극대화하는 관리",
+    "category": "MG > 기업 간 관계 관리 > PRM",
+    "definition": "공급업체·협력업체 등 파트너와 영업·마케팅·서비스 분야 관계를 관리해 수익 극대화와 동반 성장을 목표로 하는 협업 솔루션. CRM의 고객 개념을 가치사슬 관점에서 파트너까지 확대한 개념",
     "keywords": [
-      "핵심: PRM · 파트너 포털 · 채널 인센티브",
-      "구성: 공동 마케팅 · 성과 가시성 · 교육·인증",
-      "활용: 리드 공유 · 파트너 등급"
+      "핵심: 파트너 등록·접근 수준 정의 · 요청·입찰(RFQ·Bidding) · 송장·지불(Invoice·Payment) · 평가·보고",
+      "필수: 간접 판매 채널 · 동반 성장 · 거래 투명성 · 파트너 수명주기 관리",
+      "참고: CRM 비교 · SCM 연계 · SRM(Supplier Relationship Management) · 채널 관리 · 입찰 성과율"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "PRM의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "채널·협력 파트너와의 영업·마케팅·서비스를 체계화해 공동 수익을 극대화하는 관리"
+              "파트너와의 협업 프로세스를 시스템화한 관계 관리"
             ]
           },
           {
-            "title": "목적",
+            "title": "필요성",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "파트너와 효율적 커뮤니케이션, SCM·CRM과 연계한 업무 효율화·거래 투명성"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "관리 요소",
         "subsections": [
           {
-            "title": null,
+            "title": "등록·입찰",
             "items": [
-              "PRM",
-              "파트너 포털",
-              "채널 인센티브",
-              "공동 마케팅",
-              "성과 가시성",
-              "교육·인증"
+              "업체 기준정보 등록·접근 권한 정의, 발주 요청·입찰 진행"
+            ]
+          },
+          {
+            "title": "지불·평가",
+            "items": [
+              "납품 승인·대금 지불, 납기 지연·입찰 성과율(계약 성사율) 평가"
+            ]
+          },
+          {
+            "title": "위치",
+            "items": [
+              "SCM 공급망 계획에 대응해 CRM은 고객, PRM은 납품 파트너 관리"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "CRM과 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "대상·범위",
             "items": [
-              "리드 공유",
-              "파트너 등급",
-              "관련 지표·표준·한계를 함께 제시"
+              "PRM은 유통 채널 간접 판매·회사 내외부 업무",
+              "CRM은 최종 고객 직접 판매·회사 내 고객 업무"
+            ]
+          },
+          {
+            "title": "추진 주체",
+            "items": [
+              "PRM은 PI 조직 주도·파트너 관리",
+              "CRM은 마케팅 부서 주도·효과적 고객 관리"
             ]
           }
         ]
@@ -8838,104 +9364,121 @@
       161
     ],
     "outline": [
-      "파트너관계관리의 개념",
+      "PRM의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 필요성",
+      "관리 요소",
+      "- 등록·입찰",
+      "- 지불·평가",
+      "- 위치",
+      "CRM과 비교",
+      "- 대상·범위",
+      "- 추진 주체"
     ],
     "name": "파트너관계관리(PRM, Partner Relationship Management)",
     "en": "Partner Relationship Management",
     "keywords_must": [
-      "PRM",
-      "파트너 포털",
-      "채널 인센티브",
-      "공동 마케팅",
-      "성과 가시성",
-      "교육·인증",
-      "리드 공유",
-      "파트너 등급"
+      "파트너 등록·접근 수준 정의",
+      "요청·입찰(RFQ·Bidding)",
+      "송장·지불(Invoice·Payment)",
+      "평가·보고",
+      "간접 판매 채널",
+      "동반 성장",
+      "거래 투명성",
+      "파트너 수명주기 관리"
     ],
     "keywords_ref": [
-      "CRM과 구분",
-      "간접판매",
-      "생태계",
-      "SLA",
-      "관련 표준·사례"
+      "CRM 비교",
+      "SCM 연계",
+      "SRM(Supplier Relationship Management)",
+      "채널 관리",
+      "입찰 성과율"
     ],
     "curated": true,
     "quiz_terms": [
-      "PRM",
-      "파트너 포털",
-      "채널 인센티브",
-      "공동 마케팅",
-      "성과 가시성",
-      "교육·인증",
-      "리드 공유",
-      "파트너 등급"
+      "파트너 등록·접근 수준 정의",
+      "요청·입찰(RFQ·Bidding)",
+      "송장·지불(Invoice·Payment)",
+      "평가·보고",
+      "간접 판매 채널",
+      "동반 성장",
+      "거래 투명성",
+      "파트너 수명주기 관리"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_083",
     "code": "MG_083",
     "title": "제품수명주기관리(PLM, Product Lifecycle Management)",
-    "subtitle": "PLM (Product Lifecycle Management)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "IT경영전략 > 생명주기관리",
-    "definition": "기획부터 폐기까지 제품 정보·프로세스를 통합 관리하는 체계",
+    "category": "MG > 생명주기관리 > PLM",
+    "definition": "제품 기획에서 설계·제조·출시·유지보수·폐기에 이르기까지 제품의 전체 수명주기 동안 생성되는 제품 정보와 프로세스를 통합 관리하는 체계",
     "keywords": [
-      "핵심: PLM · 제품 수명주기 · 설계·BOM",
-      "구성: 변경 관리 · 협업 설계 · 품질·규정",
-      "활용: 디지털 트윈 · 폐기·재활용"
+      "핵심: 자재명세서(BOM) · 부품 정보 관리 · 설계·도면·문서 관리 · 설계 변경 관리(ECM)",
+      "필수: 엔지니어링 워크플로 · CAD/CAM 연계 · 가상 생산(Virtual Manufacturing) · 제품 개발 협업",
+      "참고: PDM(Product Data Management) · Time to Market · 디지털 트윈 · ERP·MES 연계 · 요구사항 관리"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "PLM의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "기획부터 폐기까지 제품 정보·프로세스를 통합 관리하는 체계"
+              "제품 정보의 단일 원천(Single Source of Truth)을 제공하는 전 주기 관리"
             ]
           },
           {
-            "title": "목적",
+            "title": "필요성",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "시장 출시 기간 단축, 제품 개발 비용 감소, 협업 강화"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "제품·프로세스·협업 기능",
         "subsections": [
           {
-            "title": null,
+            "title": "제품 관리",
             "items": [
-              "PLM",
-              "제품 수명주기",
-              "설계·BOM",
-              "변경 관리",
-              "협업 설계",
-              "품질·규정"
+              "부품 마스터·BOM(요약·들여쓰기·레벨 전개), 제품 사양·설계 정보, 도면·문서"
+            ]
+          },
+          {
+            "title": "프로세스 관리",
+            "items": [
+              "프로젝트·요구사항 관리, 워크플로 기반 엔지니어링 변경"
+            ]
+          },
+          {
+            "title": "시스템 통합·협업",
+            "items": [
+              "CAD 시각화, 가상 생산 시뮬레이션, 웹 기반 내·외부 협업"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "기대효과와 연계",
         "subsections": [
           {
-            "title": null,
+            "title": "기대효과",
             "items": [
-              "디지털 트윈",
-              "폐기·재활용",
-              "관련 지표·표준·한계를 함께 제시"
+              "개발 기간·원가 절감, 설계 오류 감소, 품질 향상"
+            ]
+          },
+          {
+            "title": "연계",
+            "items": [
+              "ERP(생산·구매), MES(제조 실행), SCM과 BOM·변경 정보 연동"
             ]
           }
         ]
@@ -8947,104 +9490,121 @@
       163
     ],
     "outline": [
-      "제품수명주기관리의 개념",
+      "PLM의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 필요성",
+      "제품·프로세스·협업 기능",
+      "- 제품 관리",
+      "- 프로세스 관리",
+      "- 시스템 통합·협업",
+      "기대효과와 연계",
+      "- 기대효과",
+      "- 연계"
     ],
     "name": "제품수명주기관리(PLM, Product Lifecycle Management)",
     "en": "Product Lifecycle Management",
     "keywords_must": [
-      "PLM",
-      "제품 수명주기",
-      "설계·BOM",
-      "변경 관리",
-      "협업 설계",
-      "품질·규정",
-      "디지털 트윈",
-      "폐기·재활용"
+      "자재명세서(BOM)",
+      "부품 정보 관리",
+      "설계·도면·문서 관리",
+      "설계 변경 관리(ECM)",
+      "엔지니어링 워크플로",
+      "CAD/CAM 연계",
+      "가상 생산(Virtual Manufacturing)",
+      "제품 개발 협업"
     ],
     "keywords_ref": [
-      "PDM",
-      "ALM과 비교",
-      "CAD 통합",
-      "시제품",
-      "관련 표준·사례"
+      "PDM(Product Data Management)",
+      "Time to Market",
+      "디지털 트윈",
+      "ERP·MES 연계",
+      "요구사항 관리"
     ],
     "curated": true,
     "quiz_terms": [
-      "PLM",
-      "제품 수명주기",
-      "설계·BOM",
-      "변경 관리",
-      "협업 설계",
-      "품질·규정",
-      "디지털 트윈",
-      "폐기·재활용"
+      "자재명세서(BOM)",
+      "부품 정보 관리",
+      "설계·도면·문서 관리",
+      "설계 변경 관리(ECM)",
+      "엔지니어링 워크플로",
+      "CAD/CAM 연계",
+      "가상 생산(Virtual Manufacturing)",
+      "제품 개발 협업"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_084",
     "code": "MG_084",
-    "title": "애플리케이션 수명주기관리(ALM)",
-    "subtitle": "ALM (Application Lifecycle Management)",
+    "title": "애플리케이션 수명주기관리(ALM, Application Lifecycle Management)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "경영전략 > 생명주기관리 > ALM",
-    "definition": "요구부터 개발·테스트·배포·운영까지 SW 수명주기를 도구·프로세스로 통합 관리",
+    "category": "MG > 생명주기관리 > ALM",
+    "definition": "소프트웨어 개발 수명주기(SDLC)의 요구사항부터 개발·형상·빌드·테스트·배포·운영까지 전 과정을 전문화된 자동화 도구로 연계해 추적·관리하는 소프트웨어 관리 체계",
     "keywords": [
-      "핵심: ALM · 요구관리 · 개발·빌드",
-      "구성: 테스트 · 배포 · 추적성",
-      "활용: 자동화 · DevOps 연계"
+      "핵심: 요구사항 관리 · 이슈 추적(Issue Tracking) · 형상 관리(소스 버전 관리) · 빌드 자동화",
+      "필수: 테스트 관리 · 배포(Release) · 추적성(Traceability) · 통합 대시보드",
+      "참고: Jira·Git·Jenkins · CI/CD · 데브옵스(DevOps) · PLM 비교 · 감사 추적"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "ALM의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "요구부터 개발·테스트·배포·운영까지 SW 수명주기를 도구·프로세스로 통합 관리"
+              "SW 수명주기의 사람·프로세스·도구를 통합하는 관리 체계"
             ]
           },
           {
-            "title": "목적",
+            "title": "필요성",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "분산 개발 협업, 요구-코드-테스트 추적성, 품질·규제 대응"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "구성 영역과 흐름",
         "subsections": [
           {
-            "title": null,
+            "title": "흐름",
             "items": [
-              "ALM",
-              "요구관리",
-              "개발·빌드",
-              "테스트",
-              "배포",
-              "추적성"
+              "이슈 → 개발 → 소스(형상) → 빌드 → 테스트 → 배포"
+            ]
+          },
+          {
+            "title": "거버넌스",
+            "items": [
+              "요구사항·변경·포트폴리오 관리"
+            ]
+          },
+          {
+            "title": "개발·운영",
+            "items": [
+              "형상·빌드·테스트 자동화, 릴리스·운영 모니터링"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "기대효과와 동향",
         "subsections": [
           {
-            "title": null,
+            "title": "기대효과",
             "items": [
-              "자동화",
-              "DevOps 연계",
-              "관련 지표·표준·한계를 함께 제시"
+              "가시성·추적성 확보, 생산성·품질 향상, 개발 비용 절감"
+            ]
+          },
+          {
+            "title": "동향",
+            "items": [
+              "CI/CD·데브옵스 툴체인 통합, 클라우드 기반 ALM"
             ]
           }
         ]
@@ -9056,104 +9616,115 @@
       166
     ],
     "outline": [
-      "애플리케이션 수명주기관리의 개념",
+      "ALM의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 필요성",
+      "구성 영역과 흐름",
+      "- 흐름",
+      "- 거버넌스",
+      "- 개발·운영",
+      "기대효과와 동향",
+      "- 기대효과",
+      "- 동향"
     ],
-    "name": "애플리케이션 수명주기관리(ALM)",
+    "name": "애플리케이션 수명주기관리(ALM, Application Lifecycle Management)",
     "en": "Application Lifecycle Management",
     "keywords_must": [
-      "ALM",
-      "요구관리",
-      "개발·빌드",
-      "테스트",
-      "배포",
-      "추적성",
-      "자동화",
-      "DevOps 연계"
+      "요구사항 관리",
+      "이슈 추적(Issue Tracking)",
+      "형상 관리(소스 버전 관리)",
+      "빌드 자동화",
+      "테스트 관리",
+      "배포(Release)",
+      "추적성(Traceability)",
+      "통합 대시보드"
     ],
     "keywords_ref": [
-      "PLM 대비",
+      "Jira·Git·Jenkins",
       "CI/CD",
-      "이슈트래킹",
-      "거버넌스",
-      "관련 표준·사례"
+      "데브옵스(DevOps)",
+      "PLM 비교",
+      "감사 추적"
     ],
     "curated": true,
     "quiz_terms": [
-      "ALM",
-      "요구관리",
-      "개발·빌드",
-      "테스트",
-      "배포",
-      "추적성",
-      "자동화",
-      "DevOps 연계"
+      "요구사항 관리",
+      "이슈 추적(Issue Tracking)",
+      "형상 관리(소스 버전 관리)",
+      "빌드 자동화",
+      "테스트 관리",
+      "배포(Release)",
+      "추적성(Traceability)",
+      "통합 대시보드"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_085",
     "code": "MG_085",
     "title": "정보수명주기관리(ILM, Information Lifecycle Management)",
-    "subtitle": "ILM(Information Lifecycle Management)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "MG > ILM",
-    "definition": "정보 가치 변화에 맞춰 생성부터 폐기까지 저장 계층·정책을 최적화하는 데이터 관리",
+    "category": "MG > 생명주기관리 > ILM",
+    "definition": "정보의 생성·저장·보존·폐기 전 과정을 비즈니스 가치 관점에서 관리하며, 가치 변화에 따라 가장 적절하고 효율적인 IT 인프라(스토리지 계층)를 적용하는 데이터 관리 체계(SNIA)",
     "keywords": [
-      "핵심: ILM · 정보 가치 · 티어링 스토리지",
-      "구성: 보존·폐기 · 정책 기반 · 비용 최적화",
-      "활용: 컴플라이언스 · 백업·아카이브"
+      "핵심: 정보 가치 분류 · 데이터 분류 정책 · 계층형 스토리지 관리(HSM) · 스토리지 자원 관리(SRM)",
+      "필수: 아카이빙(Archiving) · 보존·폐기 정책 · 스토리지 가상화 · 데이터 보호(백업·복제)",
+      "참고: SNIA(Storage Networking Industry Association) · 컴플라이언스(SOX·HIPAA) · 티어링(Tiering) · 콜드 스토리지 · 데이터 거버넌스"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "ILM의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "정보 가치 변화에 맞춰 생성부터 폐기까지 저장 계층·정책을 최적화하는 데이터 관리"
+              "정보 가치와 비용을 정렬하는 정책 기반 데이터 관리"
             ]
           },
           {
-            "title": "목적",
+            "title": "필요성",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "데이터 폭증·관리 비용 증가, 컴플라이언스 보존 요건 강화(SOX·HIPAA), 저가 스토리지 기술 발전"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "구성과 구축 프로세스",
         "subsections": [
           {
-            "title": null,
+            "title": "구성",
             "items": [
-              "ILM",
-              "정보 가치",
-              "티어링 스토리지",
-              "보존·폐기",
-              "정책 기반",
-              "비용 최적화"
+              "정책 관리(분류·보존 규칙) → 데이터 이동(HSM·아카이브 매니저) → 스토리지 계층(고성능·저가·테이프·클라우드)"
+            ]
+          },
+          {
+            "title": "구축 프로세스",
+            "items": [
+              "데이터 분류·가치 평가 → 정책 정의 → 스토리지 계층 설계 → 자동화·모니터링"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "기반 기술과 효과",
         "subsections": [
           {
-            "title": null,
+            "title": "기반 기술",
             "items": [
-              "컴플라이언스",
-              "백업·아카이브",
-              "관련 지표·표준·한계를 함께 제시"
+              "HSM, SRM, 스토리지 가상화, 백업·복제 등 데이터 보호"
+            ]
+          },
+          {
+            "title": "효과",
+            "items": [
+              "스토리지 TCO 절감, 규제 준수, 데이터 접근성·성능 최적화"
             ]
           }
         ]
@@ -9165,47 +9736,52 @@
       168
     ],
     "outline": [
-      "정보수명주기관리의 개념",
+      "ILM의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 필요성",
+      "구성과 구축 프로세스",
+      "- 구성",
+      "- 구축 프로세스",
+      "기반 기술과 효과",
+      "- 기반 기술",
+      "- 효과"
     ],
     "name": "정보수명주기관리(ILM, Information Lifecycle Management)",
     "en": "Information Lifecycle Management",
     "keywords_must": [
-      "ILM",
-      "정보 가치",
-      "티어링 스토리지",
-      "보존·폐기",
-      "정책 기반",
-      "비용 최적화",
-      "컴플라이언스",
-      "백업·아카이브"
+      "정보 가치 분류",
+      "데이터 분류 정책",
+      "계층형 스토리지 관리(HSM)",
+      "스토리지 자원 관리(SRM)",
+      "아카이빙(Archiving)",
+      "보존·폐기 정책",
+      "스토리지 가상화",
+      "데이터 보호(백업·복제)"
     ],
     "keywords_ref": [
-      "데이터 거버넌스",
-      "GDPR",
-      "스토리지 계층",
-      "메타데이터",
-      "관련 표준·사례"
+      "SNIA(Storage Networking Industry Association)",
+      "컴플라이언스(SOX·HIPAA)",
+      "티어링(Tiering)",
+      "콜드 스토리지",
+      "데이터 거버넌스"
     ],
     "curated": true,
     "quiz_terms": [
-      "ILM",
-      "정보 가치",
-      "티어링 스토리지",
-      "보존·폐기",
-      "정책 기반",
-      "비용 최적화",
-      "컴플라이언스",
-      "백업·아카이브"
+      "정보 가치 분류",
+      "데이터 분류 정책",
+      "계층형 스토리지 관리(HSM)",
+      "스토리지 자원 관리(SRM)",
+      "아카이빙(Archiving)",
+      "보존·폐기 정책",
+      "스토리지 가상화",
+      "데이터 보호(백업·복제)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_086",
@@ -9213,56 +9789,69 @@
     "title": "기업정보포털(EIP, Enterprise Information Portal)",
     "subtitle": "",
     "domain": "MG",
-    "category": "MG > EIP",
-    "definition": "웹 단일 창구로 사내외 정보를 통합·개인화해 의사결정을 지원하는 포털",
+    "category": "MG > 통합시스템 > EIP",
+    "definition": "웹이라는 단일 정보 게이트웨이를 통해 기업 내·외부 정보와 업무 시스템을 통합하고 개인화해 제공함으로써 의사결정을 지원하는 기업 포털 시스템",
     "keywords": [
-      "핵심: EIP · 단일 게이트웨이 · 개인화",
-      "구성: SSO · 콘텐츠 통합 · 검색",
-      "활용: 협업 · 권한"
+      "핵심: 단일 창구(Single Point of Access) · 개인화(Personalization) · 통합 인증(SSO, Single Sign-On) · 포털 컴포넌트 서버",
+      "필수: 포털 저장소 · 디렉터리·보안 · 통합 검색 · 기업 지식 포털(EKP)",
+      "참고: 엔터프라이즈 포털(EP) · 그룹웨어 · KMS·ERP·SCM 연계 · 포틀릿(Portlet) · 동일 Look & Feel"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "EIP의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "웹 단일 창구로 사내외 정보를 통합·개인화해 의사결정을 지원하는 포털"
+              "사내외 정보를 하나의 웹 창구로 통합·개인화하는 포털"
             ]
           },
           {
-            "title": "목적",
+            "title": "특징",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "구성·유형",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "EIP",
-              "단일 게이트웨이",
+              "단일 창구(모든 업무·정보의 동일 Look & Feel)",
               "개인화",
-              "SSO",
-              "콘텐츠 통합",
-              "검색"
+              "통합 인증·검색"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "포털 아키텍처 구성",
         "subsections": [
           {
-            "title": null,
+            "title": "정보 원천",
             "items": [
-              "협업",
-              "권한",
-              "관련 지표·표준·한계를 함께 제시"
+              "내·외부 정보시스템(ERP·SCM·KMS 등)"
+            ]
+          },
+          {
+            "title": "포털 모듈",
+            "items": [
+              "포털 컴포넌트 서버(미들웨어), 포털 서버, 디렉터리·보안, 포털 저장소"
+            ]
+          },
+          {
+            "title": "접점",
+            "items": [
+              "인트라넷(단일 정보 인터페이스), 인터넷 모듈(방화벽 접근 통제)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "구축 단계",
+        "subsections": [
+          {
+            "title": "1~2단계",
+            "items": [
+              "인트라넷 링크로 단일 접점 → 고급 검색·개인화 통합 접근"
+            ]
+          },
+          {
+            "title": "3~4단계",
+            "items": [
+              "정형·비정형 데이터 가상 작업 공간 → 공급망·기업 간 협업 지원"
             ]
           }
         ]
@@ -9274,104 +9863,124 @@
       171
     ],
     "outline": [
-      "기업정보포털의 개념",
+      "EIP의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 특징",
+      "포털 아키텍처 구성",
+      "- 정보 원천",
+      "- 포털 모듈",
+      "- 접점",
+      "구축 단계",
+      "- 1~2단계",
+      "- 3~4단계"
     ],
     "name": "기업정보포털(EIP, Enterprise Information Portal)",
     "en": "Enterprise Information Portal",
     "keywords_must": [
-      "EIP",
-      "단일 게이트웨이",
-      "개인화",
-      "SSO",
-      "콘텐츠 통합",
-      "검색",
-      "협업",
-      "권한"
+      "단일 창구(Single Point of Access)",
+      "개인화(Personalization)",
+      "통합 인증(SSO, Single Sign-On)",
+      "포털 컴포넌트 서버",
+      "포털 저장소",
+      "디렉터리·보안",
+      "통합 검색",
+      "기업 지식 포털(EKP)"
     ],
     "keywords_ref": [
-      "인트라넷",
-      "지식관리",
-      "대시보드",
-      "모바일",
-      "관련 표준·사례"
+      "엔터프라이즈 포털(EP)",
+      "그룹웨어",
+      "KMS·ERP·SCM 연계",
+      "포틀릿(Portlet)",
+      "동일 Look & Feel"
     ],
     "curated": true,
     "quiz_terms": [
-      "EIP",
-      "단일 게이트웨이",
-      "개인화",
-      "SSO",
-      "콘텐츠 통합",
-      "검색",
-      "협업",
-      "권한"
+      "단일 창구(Single Point of Access)",
+      "개인화(Personalization)",
+      "통합 인증(SSO, Single Sign-On)",
+      "포털 컴포넌트 서버",
+      "포털 저장소",
+      "디렉터리·보안",
+      "통합 검색",
+      "기업 지식 포털(EKP)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_087",
     "code": "MG_087",
     "title": "기업통합패턴(EIP, Enterprise Integration Patterns)",
-    "subtitle": "EIP(Enterprise Integration Patterns)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "MG > EIP",
-    "definition": "느슨한 결합의 메시지 기반 통합을 위한 검증된 패턴 모음 (Hohpe & Woolf)",
+    "category": "MG > 통합시스템 > Enterprise Integration Patterns",
+    "definition": "느슨한 결합(Loosely Coupled) 방식으로 메시지 지향 아키텍처(MOA) 기반의 기업 애플리케이션 통합을 정의한 검증된 설계 패턴 모음이자 아키텍처 방법론(Hohpe & Woolf)",
     "keywords": [
-      "핵심: Enterprise Integration Patterns · 메시지 채널 · 라우팅",
-      "구성: 변환(Transformation) · 엔드포인트 · 느슨한 결합",
-      "활용: 비동기 · MOM"
+      "핵심: 메시지 지향 아키텍처(MOA) · 메시지 채널(Message Channel) · 메시지 라우터(Message Router) · 메시지 변환기(Message Translator)",
+      "필수: 메시지 엔드포인트(Message Endpoint) · 파이프와 필터(Pipes and Filters) · 시스템 관리(System Management)",
+      "참고: 그레고르 호프·바비 울프 · 파일 전송·공유 DB·원격 호출·메시징 4대 통합 방식 · Apache Camel·Spring Integration · ESB · 발행-구독 채널"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "EIP 패턴의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "느슨한 결합의 메시지 기반 통합을 위한 검증된 패턴 모음 (Hohpe & Woolf)"
+              "메시징 기반 애플리케이션 통합 문제의 재사용 해법"
             ]
           },
           {
-            "title": "목적",
+            "title": "통합 접근법",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "파일 전송",
+              "공유 데이터베이스",
+              "원격 프로시저 호출",
+              "메시징(느슨한 결합에 가장 적합)"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "메시징 시스템 구성과 대표 패턴",
         "subsections": [
           {
-            "title": null,
+            "title": "메시지 구성",
             "items": [
-              "Enterprise Integration Patterns",
-              "메시지 채널",
-              "라우팅",
-              "변환(Transformation)",
-              "엔드포인트",
-              "느슨한 결합"
+              "메시지(헤더·본문), 채널(Point-to-Point·Publish-Subscribe)"
+            ]
+          },
+          {
+            "title": "라우팅·변환",
+            "items": [
+              "콘텐츠 기반 라우터, 분할기·수집기, 메시지 변환기"
+            ]
+          },
+          {
+            "title": "엔드포인트·관리",
+            "items": [
+              "폴링·이벤트 기반 소비자, 와이어 탭·제어 버스"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "활용",
         "subsections": [
           {
-            "title": null,
+            "title": "구현",
             "items": [
-              "비동기",
-              "MOM",
-              "관련 지표·표준·한계를 함께 제시"
+              "Apache Camel·Spring Integration·ESB 제품이 패턴을 컴포넌트로 제공"
+            ]
+          },
+          {
+            "title": "효과",
+            "items": [
+              "통합 설계 공통 언어, 결합도 감소, 유지보수성 향상"
             ]
           }
         ]
@@ -9383,104 +9992,120 @@
       175
     ],
     "outline": [
-      "기업통합패턴의 개념",
+      "EIP 패턴의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 통합 접근법",
+      "메시징 시스템 구성과 대표 패턴",
+      "- 메시지 구성",
+      "- 라우팅·변환",
+      "- 엔드포인트·관리",
+      "활용",
+      "- 구현",
+      "- 효과"
     ],
     "name": "기업통합패턴(EIP, Enterprise Integration Patterns)",
     "en": "Enterprise Integration Patterns",
     "keywords_must": [
-      "Enterprise Integration Patterns",
-      "메시지 채널",
-      "라우팅",
-      "변환(Transformation)",
-      "엔드포인트",
-      "느슨한 결합",
-      "비동기",
-      "MOM"
+      "메시지 지향 아키텍처(MOA)",
+      "메시지 채널(Message Channel)",
+      "메시지 라우터(Message Router)",
+      "메시지 변환기(Message Translator)",
+      "메시지 엔드포인트(Message Endpoint)",
+      "파이프와 필터(Pipes and Filters)",
+      "시스템 관리(System Management)"
     ],
     "keywords_ref": [
+      "그레고르 호프·바비 울프",
+      "파일 전송·공유 DB·원격 호출·메시징 4대 통합 방식",
+      "Apache Camel·Spring Integration",
       "ESB",
-      "Apache Camel",
-      "MSA",
-      "이벤트",
-      "관련 표준·사례"
+      "발행-구독 채널"
     ],
     "curated": true,
     "quiz_terms": [
-      "Enterprise Integration Patterns",
-      "메시지 채널",
-      "라우팅",
-      "변환(Transformation)",
-      "엔드포인트",
-      "느슨한 결합",
-      "비동기",
-      "MOM"
+      "메시지 지향 아키텍처(MOA)",
+      "메시지 채널(Message Channel)",
+      "메시지 라우터(Message Router)",
+      "메시지 변환기(Message Translator)",
+      "메시지 엔드포인트(Message Endpoint)",
+      "파이프와 필터(Pipes and Filters)",
+      "시스템 관리(System Management)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_088",
     "code": "MG_088",
-    "title": "기업애플리케이션통합(EAI)",
+    "title": "기업 애플리케이션 통합(EAI, Enterprise Application Integration)",
     "subtitle": "",
     "domain": "MG",
-    "category": "ESB",
-    "definition": "이질 애플리케이션을 미들웨어로 통합해 데이터·프로세스를 일관 운영하는 기술·아키텍처",
+    "category": "MG > 통합시스템 > EAI",
+    "definition": "엔터프라이즈 미들웨어를 인프라로 하여 프로토콜·DB·OS·개발 언어가 다른 이질적인 기업 애플리케이션을 비즈니스 프로세스 차원에서 통합해 하나의 시스템처럼 관리·운영하는 솔루션",
     "keywords": [
-      "핵심: EAI · 미들웨어 · 어댑터",
-      "구성: 허브앤스포크/버스 · 메시지 변환 · 프로세스 통합",
-      "활용: 실시간 연동 · 표준화"
+      "핵심: 어댑터(Adapter) · 브로커(Broker) · 허브 앤 스포크(Hub & Spoke) · 메시지 버스(Messaging Bus)",
+      "필수: 포인트 투 포인트(Point-to-Point) · 하이브리드(Hybrid) · 오케스트레이션(Orchestration) · ESB(Enterprise Service Bus) 진화",
+      "참고: BPM·SOA 연계 · 데이터 변환 · 트랜잭션 보장 · 벤더 독자 포맷 · 웹 서비스 표준"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "EAI의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "이질 애플리케이션을 미들웨어로 통합해 데이터·프로세스를 일관 운영하는 기술·아키텍처"
+              "미들웨어 기반 이기종 애플리케이션 통합 솔루션"
             ]
           },
           {
-            "title": "목적",
+            "title": "구성요소",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "어댑터(시스템 연결), 브로커(변환·라우팅), 비즈니스 워크플로, 모니터링"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "통합 방식",
         "subsections": [
           {
-            "title": null,
+            "title": "Point-to-Point·Peer-to-Peer",
             "items": [
-              "EAI",
-              "미들웨어",
-              "어댑터",
-              "허브앤스포크/버스",
-              "메시지 변환",
-              "프로세스 통합"
+              "1:1 직접 연결, 저비용이나 연결 수 증가 시 관리 복잡"
+            ]
+          },
+          {
+            "title": "Hub & Spoke",
+            "items": [
+              "중앙 허브 경유, 데이터 전송 보장, 허브 병목·단일 장애점"
+            ]
+          },
+          {
+            "title": "Messaging Bus·Hybrid",
+            "items": [
+              "버스 미들웨어로 확장성·대용량",
+              "그룹 내 허브, 그룹 간 버스 혼합"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "ESB로의 진화와 고려사항",
         "subsections": [
           {
-            "title": null,
+            "title": "ESB 비교",
             "items": [
-              "실시간 연동",
-              "표준화",
-              "관련 지표·표준·한계를 함께 제시"
+              "EAI는 벤더 독자 포맷·중앙 집중, ESB는 표준(웹 서비스·SOA)·분산 버스·저비용"
+            ]
+          },
+          {
+            "title": "고려사항",
+            "items": [
+              "미들웨어 만능 착각 지양, 내부 시스템 구조 파악, 범용 솔루션 한계, 어댑터 정의가 핵심"
             ]
           }
         ]
@@ -9492,104 +10117,130 @@
       84
     ],
     "outline": [
-      "기업애플리케이션통합의 개념",
+      "EAI의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 구성요소",
+      "통합 방식",
+      "- Point-to-Point·Peer-to-Peer",
+      "- Hub & Spoke",
+      "- Messaging Bus·Hybrid",
+      "ESB로의 진화와 고려사항",
+      "- ESB 비교",
+      "- 고려사항"
     ],
-    "name": "기업애플리케이션통합(EAI)",
+    "name": "기업 애플리케이션 통합(EAI, Enterprise Application Integration)",
     "en": "Enterprise Application Integration",
     "keywords_must": [
-      "EAI",
-      "미들웨어",
-      "어댑터",
-      "허브앤스포크/버스",
-      "메시지 변환",
-      "프로세스 통합",
-      "실시간 연동",
-      "표준화"
+      "어댑터(Adapter)",
+      "브로커(Broker)",
+      "허브 앤 스포크(Hub & Spoke)",
+      "메시지 버스(Messaging Bus)",
+      "포인트 투 포인트(Point-to-Point)",
+      "하이브리드(Hybrid)",
+      "오케스트레이션(Orchestration)",
+      "ESB(Enterprise Service Bus) 진화"
     ],
     "keywords_ref": [
-      "ESB",
-      "API 기반 통합",
-      "포인트투포인트 한계",
-      "데이터 정합",
-      "관련 표준·사례"
+      "BPM·SOA 연계",
+      "데이터 변환",
+      "트랜잭션 보장",
+      "벤더 독자 포맷",
+      "웹 서비스 표준"
     ],
     "curated": true,
     "quiz_terms": [
-      "EAI",
-      "미들웨어",
-      "어댑터",
-      "허브앤스포크/버스",
-      "메시지 변환",
-      "프로세스 통합",
-      "실시간 연동",
-      "표준화"
+      "어댑터(Adapter)",
+      "브로커(Broker)",
+      "허브 앤 스포크(Hub & Spoke)",
+      "메시지 버스(Messaging Bus)",
+      "포인트 투 포인트(Point-to-Point)",
+      "하이브리드(Hybrid)",
+      "오케스트레이션(Orchestration)",
+      "ESB(Enterprise Service Bus) 진화"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_089",
     "code": "MG_089",
     "title": "데이터 웨어하우스(DW, Data Warehouse)",
-    "subtitle": "Data Warehouse",
+    "subtitle": "",
     "domain": "MG",
-    "category": "MG > Data Warehouse",
-    "definition": "의사결정용으로 통합·주제지향·시계열·비휘발 특성을 갖는 분석 데이터베이스 (Inmon)",
+    "category": "MG > 의사판단시스템 > DW",
+    "definition": "의사결정을 지원하기 위해 운영 시스템 데이터를 추출·변환해 적재한, 주제 지향적·통합적·시계열적·비휘발적 특성을 갖는 분석용 데이터 저장소(Inmon)",
     "keywords": [
-      "핵심: 데이터 웨어하우스(DW) · 통합(Integrated) · 주제 지향",
-      "구성: 시계열 · 비휘발(Nonvolatile) · ETL",
-      "활용: 차원 모델링 · 데이터마트"
+      "핵심: 주제 지향(Subject-oriented) · 통합(Integrated) · 시계열(Time-variant) · 비휘발(Non-volatile)",
+      "필수: ETL(Extract·Transform·Load) · 데이터 마트(Data Mart) · ODS(Operational Data Store) · 메타데이터(Metadata)",
+      "참고: 빌 인먼(Bill Inmon) · OLAP · 스타 스키마 · Top-down·Bottom-up 구축 · 데이터 레이크·레이크하우스"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "DW의 개념과 특징",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "의사결정용으로 통합·주제지향·시계열·비휘발 특성을 갖는 분석 데이터베이스 (Inmon)"
+              "의사결정용 통합 분석 데이터베이스"
             ]
           },
           {
-            "title": "목적",
+            "title": "특징",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "주제 중심(전사 관심 주제 통합)",
+              "통합(정합성·변환)",
+              "시계열(장기 스냅샷 보관)",
+              "비휘발(적재·조회만, 갱신 없음, 반정규화 허용)"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "구성도와 구성요소",
         "subsections": [
           {
-            "title": null,
+            "title": "획득",
             "items": [
-              "데이터 웨어하우스(DW)",
-              "통합(Integrated)",
-              "주제 지향",
-              "시계열",
-              "비휘발(Nonvolatile)",
-              "ETL"
+              "운영계 소스 → ETL(추출·정제·변환·적재) → ODS(통합 운영 데이터)"
+            ]
+          },
+          {
+            "title": "저장",
+            "items": [
+              "전사 DW, 부서별 데이터 마트, 메타데이터 저장소"
+            ]
+          },
+          {
+            "title": "활용",
+            "items": [
+              "OLAP·데이터 마이닝·리포팅·대시보드"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "구축 방법과 동향",
         "subsections": [
           {
-            "title": null,
+            "title": "Top-down(Inmon)",
             "items": [
-              "차원 모델링",
-              "데이터마트",
-              "관련 지표·표준·한계를 함께 제시"
+              "전사 DW 먼저 구축 후 마트 파생, 정합성 우수"
+            ]
+          },
+          {
+            "title": "Bottom-up(Kimball)",
+            "items": [
+              "데이터 마트부터 구축·통합, 신속 구축"
+            ]
+          },
+          {
+            "title": "동향",
+            "items": [
+              "클라우드 DW, 데이터 레이크하우스, 실시간 DW"
             ]
           }
         ]
@@ -9601,104 +10252,126 @@
       177
     ],
     "outline": [
-      "데이터 웨어하우스의 개념",
+      "DW의 개념과 특징",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 특징",
+      "구성도와 구성요소",
+      "- 획득",
+      "- 저장",
+      "- 활용",
+      "구축 방법과 동향",
+      "- Top-down(Inmon)",
+      "- Bottom-up(Kimball)",
+      "- 동향"
     ],
     "name": "데이터 웨어하우스(DW, Data Warehouse)",
     "en": "Data Warehouse",
     "keywords_must": [
-      "데이터 웨어하우스(DW)",
+      "주제 지향(Subject-oriented)",
       "통합(Integrated)",
-      "주제 지향",
-      "시계열",
-      "비휘발(Nonvolatile)",
-      "ETL",
-      "차원 모델링",
-      "데이터마트"
+      "시계열(Time-variant)",
+      "비휘발(Non-volatile)",
+      "ETL(Extract·Transform·Load)",
+      "데이터 마트(Data Mart)",
+      "ODS(Operational Data Store)",
+      "메타데이터(Metadata)"
     ],
     "keywords_ref": [
-      "ODS",
-      "데이터레이크",
-      "Inmon vs Kimball",
-      "품질",
-      "관련 표준·사례"
+      "빌 인먼(Bill Inmon)",
+      "OLAP",
+      "스타 스키마",
+      "Top-down·Bottom-up 구축",
+      "데이터 레이크·레이크하우스"
     ],
     "curated": true,
     "quiz_terms": [
-      "데이터 웨어하우스(DW)",
+      "주제 지향(Subject-oriented)",
       "통합(Integrated)",
-      "주제 지향",
-      "시계열",
-      "비휘발(Nonvolatile)",
-      "ETL",
-      "차원 모델링",
-      "데이터마트"
+      "시계열(Time-variant)",
+      "비휘발(Non-volatile)",
+      "ETL(Extract·Transform·Load)",
+      "데이터 마트(Data Mart)",
+      "ODS(Operational Data Store)",
+      "메타데이터(Metadata)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": "특징: 주통시비(주제 지향·통합·시계열·비휘발)"
   },
   {
     "id": "MG_092",
     "code": "MG_092",
-    "title": "이소스싱 역량모델(eSCM)",
+    "title": "e-소싱 역량 모델(eSCM, eSourcing Capability Model)",
     "subtitle": "",
     "domain": "MG",
-    "category": "MG > Outsourcing > eSCM",
-    "definition": "IT 아웃소싱 전 과정의 Best Practice를 체계화한 역량 모델. 제공자·고객 관점 모델이 있음 (Carnegie Mellon)",
+    "category": "MG > 아웃소싱 > eSCM",
+    "definition": "IT 아웃소싱 전 과정의 모범사례(Best Practice)를 체계화해 소싱 서비스 공급자(eSCM-SP)와 고객(eSCM-CL)의 역량 수준을 객관적으로 평가하고 개선하도록 한 역량 성숙도 모델(카네기멜론대)",
     "keywords": [
-      "핵심: eSCM · 아웃소싱 Best Practice · 역량 영역",
-      "구성: 인증·평가 · 제공자/고객 모델 · 관계 관리",
-      "활용: 가치 창출 · 지속 개선"
+      "핵심: 소싱 수명주기(Sourcing Life-cycle) · 역량 영역(Capability Area) · 역량 수준 5단계(Capability Level) · 조직 관리",
+      "필수: 인원 · 사업 관리 · 기술 · 지식 경영",
+      "참고: 카네기멜론대 ITSqc · eSCM-SP(공급자)·eSCM-CL(고객) · 개시·이행·완료 단계 · ISO/IEC 20000 비교 · CMMI 비교"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "eSCM의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "IT 아웃소싱 전 과정의 Best Practice를 체계화한 역량 모델. 제공자·고객 관점 모델이 있음 (Carnegie Mellon)"
+              "아웃소싱 관계 형성·관리·확대 능력을 평가하는 모델"
+            ]
+          },
+          {
+            "title": "등장 배경",
+            "items": [
+              "IT 아웃소싱 증가에 따른 관리 체계·품질-역량 통합 모델 부재"
             ]
           },
           {
             "title": "목적",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "고객이 공급자 능력을 객관적으로 평가, 소싱 전 단계에서 고객 만족 최우선"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "프레임워크와 구성요소",
         "subsections": [
           {
-            "title": null,
+            "title": "3차원 구조",
             "items": [
-              "eSCM",
-              "아웃소싱 Best Practice",
-              "역량 영역",
-              "인증·평가",
-              "제공자/고객 모델",
-              "관계 관리"
+              "소싱 수명주기(개시·이행·완료·지속) × 역량 영역 × 역량 수준(1~5)"
+            ]
+          },
+          {
+            "title": "5관점",
+            "items": [
+              "조직 관리(지도층 관리)",
+              "인원(역량 개발·동기부여)",
+              "사업(요구 이해·서비스 수준 개선)",
+              "기술(서비스 설계·공급 수단)",
+              "지식 경영"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "ISO/IEC 20000과 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "eSCM",
             "items": [
-              "가치 창출",
-              "지속 개선",
-              "관련 지표·표준·한계를 함께 제시"
+              "사실 표준, 단계별(5단계) 인증, IT 아웃소싱 서비스 수준 대상"
+            ]
+          },
+          {
+            "title": "ISO/IEC 20000",
+            "items": [
+              "공식 표준, 인증 여부 결정형, ITSM(ITIL) 기반 서비스 관리 대상"
             ]
           }
         ]
@@ -9712,102 +10385,128 @@
     "outline": [
       "eSCM의 개념",
       "- 정의",
+      "- 등장 배경",
       "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "프레임워크와 구성요소",
+      "- 3차원 구조",
+      "- 5관점",
+      "ISO/IEC 20000과 비교",
+      "- eSCM",
+      "- ISO/IEC 20000"
     ],
-    "name": "이소스싱 역량모델(eSCM)",
-    "en": "eSCM",
+    "name": "e-소싱 역량 모델(eSCM, eSourcing Capability Model)",
+    "en": "eSourcing Capability Model",
     "keywords_must": [
-      "eSCM",
-      "아웃소싱 Best Practice",
-      "역량 영역",
-      "인증·평가",
-      "제공자/고객 모델",
-      "관계 관리",
-      "가치 창출",
-      "지속 개선"
+      "소싱 수명주기(Sourcing Life-cycle)",
+      "역량 영역(Capability Area)",
+      "역량 수준 5단계(Capability Level)",
+      "조직 관리",
+      "인원",
+      "사업 관리",
+      "기술",
+      "지식 경영"
     ],
     "keywords_ref": [
-      "ITIL",
-      "ISO 20000",
-      "SLA",
-      "거버넌스",
-      "관련 표준·사례"
+      "카네기멜론대 ITSqc",
+      "eSCM-SP(공급자)·eSCM-CL(고객)",
+      "개시·이행·완료 단계",
+      "ISO/IEC 20000 비교",
+      "CMMI 비교"
     ],
     "curated": true,
     "quiz_terms": [
-      "eSCM",
-      "아웃소싱 Best Practice",
-      "역량 영역",
-      "인증·평가",
-      "제공자/고객 모델",
-      "관계 관리",
-      "가치 창출",
-      "지속 개선"
+      "소싱 수명주기(Sourcing Life-cycle)",
+      "역량 영역(Capability Area)",
+      "역량 수준 5단계(Capability Level)",
+      "조직 관리",
+      "인원",
+      "사업 관리",
+      "기술",
+      "지식 경영"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": "프레임워크 5관점: 조인기사지(조직관리·인원·사업·기술·지식경영)"
   },
   {
     "id": "MG_093",
     "code": "MG_093",
-    "title": "ISO/IEC 20000(IT 서비스 관리 표준)",
-    "subtitle": "ISO 20000",
+    "title": "IT 서비스 관리 국제 표준(ISO/IEC 20000)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "경영전략 > 아웃소싱/표준/정책 > ISO 20000",
-    "definition": "ITIL 기반 IT 서비스 관리 체계를 심사·인증하는 국제표준",
+    "category": "MG > 아웃소싱 표준 > ISO/IEC 20000",
+    "definition": "ITIL을 기반으로 IT 서비스 관리(ITSM)의 운영·관리 체계를 측정·평가·개선하기 위해 제정된 국제 심사·인증 표준. IT 아웃소싱 서비스 수준을 객관적으로 인증",
     "keywords": [
-      "핵심: ISO/IEC 20000 · ITSM 인증 · 서비스 관리 시스템",
-      "구성: 프로세스 요구사항 · PDCA · SLA",
-      "활용: 감사 · 지속 개선"
+      "핵심: 서비스 관리 시스템(SMS) · Part 1 요구사항(인증 규격) · Part 2 실행 지침(Code of Practice) · PDCA",
+      "필수: 서비스 제공 프로세스 · 관계 프로세스 · 해결 프로세스 · 통제 프로세스",
+      "참고: BS 15000(전신) · ISO/IEC 20000-1:2018 · ITIL 관계 · eSCM 비교 · 제3자 인증 심사"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "ISO/IEC 20000의 개념과 목적",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "ITIL 기반 IT 서비스 관리 체계를 심사·인증하는 국제표준"
+              "ITSM 분야 국제 인증 표준(BS 15000 기반)"
             ]
           },
           {
             "title": "목적",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "서비스 수준의 객관적 평가, 고객 요구에 신속 대응하는 서비스 중심 프로세스, 통합 프로세스 프레임워크"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "구성",
         "subsections": [
           {
-            "title": null,
+            "title": "Part 1(요구사항)",
             "items": [
-              "ISO/IEC 20000",
-              "ITSM 인증",
-              "서비스 관리 시스템",
-              "프로세스 요구사항",
-              "PDCA",
-              "SLA"
+              "제3자 심사·인증에 사용하는 규격"
+            ]
+          },
+          {
+            "title": "Part 2(실행 지침)",
+            "items": [
+              "Part 1 범위 내 가이드·권고"
+            ]
+          },
+          {
+            "title": "프로세스 그룹",
+            "items": [
+              "서비스 제공",
+              "관계(사업·공급자)",
+              "해결(인시던트·문제)",
+              "통제(구성·변경·릴리스), PDCA 적용"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "인증과 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "인증 절차",
             "items": [
-              "감사",
-              "지속 개선",
-              "관련 지표·표준·한계를 함께 제시"
+              "사전 진단 → 프로세스 구축·운영 → 1·2단계 심사 → 인증·사후 심사"
+            ]
+          },
+          {
+            "title": "eSCM 비교",
+            "items": [
+              "공식 표준·인증 여부형 vs 사실 표준·5단계 인증"
+            ]
+          },
+          {
+            "title": "ITIL 관계",
+            "items": [
+              "ITIL은 모범사례(How), ISO/IEC 20000은 인증 요구사항(What)"
             ]
           }
         ]
@@ -9819,47 +10518,54 @@
       187
     ],
     "outline": [
-      "ISO/IEC 20000의 개념",
+      "ISO/IEC 20000의 개념과 목적",
       "- 정의",
       "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "구성",
+      "- Part 1(요구사항)",
+      "- Part 2(실행 지침)",
+      "- 프로세스 그룹",
+      "인증과 비교",
+      "- 인증 절차",
+      "- eSCM 비교",
+      "- ITIL 관계"
     ],
-    "name": "ISO/IEC 20000(IT 서비스 관리 표준)",
-    "en": "ISO/IEC 20000",
+    "name": "IT 서비스 관리 국제 표준(ISO/IEC 20000)",
+    "en": "ISO/IEC 20000 IT Service Management",
     "keywords_must": [
-      "ISO/IEC 20000",
-      "ITSM 인증",
-      "서비스 관리 시스템",
-      "프로세스 요구사항",
+      "서비스 관리 시스템(SMS)",
+      "Part 1 요구사항(인증 규격)",
+      "Part 2 실행 지침(Code of Practice)",
       "PDCA",
-      "SLA",
-      "감사",
-      "지속 개선"
+      "서비스 제공 프로세스",
+      "관계 프로세스",
+      "해결 프로세스",
+      "통제 프로세스"
     ],
     "keywords_ref": [
-      "ITIL",
-      "ISO 9001",
-      "아웃소싱 평가",
-      "증거 문서",
-      "관련 표준·사례"
+      "BS 15000(전신)",
+      "ISO/IEC 20000-1:2018",
+      "ITIL 관계",
+      "eSCM 비교",
+      "제3자 인증 심사"
     ],
     "curated": true,
     "quiz_terms": [
-      "ISO/IEC 20000",
-      "ITSM 인증",
-      "서비스 관리 시스템",
-      "프로세스 요구사항",
+      "서비스 관리 시스템(SMS)",
+      "Part 1 요구사항(인증 규격)",
+      "Part 2 실행 지침(Code of Practice)",
       "PDCA",
-      "SLA",
-      "감사",
-      "지속 개선"
+      "서비스 제공 프로세스",
+      "관계 프로세스",
+      "해결 프로세스",
+      "통제 프로세스"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_097",
@@ -9868,55 +10574,71 @@
     "subtitle": "",
     "domain": "MG",
     "category": "MG > IT Governance",
-    "definition": "기업 전략·목표에 맞게 IT 자원과 프로세스를 지휘·통제하는 체계. 가치·위험·자원에 초점",
+    "definition": "기업 지배구조의 일부로서 기업의 전략과 목표 달성을 위해 비즈니스와 IT를 연계(Alignment)하고 IT 자원과 프로세스를 지휘·통제하는 리더십·조직 구조·프로세스·의사결정 체계",
     "keywords": [
-      "핵심: IT 거버넌스 · 전략 정렬 · 가치 전달",
-      "구성: 위험 관리 · 자원 관리 · 성과 측정",
-      "활용: 이사회·경영진 책임 · COBIT"
+      "핵심: 전략적 연계(Strategic Alignment) · 가치 제공(Value Delivery) · 위험 관리(Risk Management) · 자원 관리(Resource Management)",
+      "필수: 성과 측정(Performance Measurement) · 리더십·조직 구조·프로세스 · 평가·지휘·모니터링(EDM) · COBIT·ISO/IEC 38500",
+      "참고: ITGI(IT Governance Institute) · 이사회(BOD) 리더십 · IT BSC·IT ROI · ISP·EA 적용 기술 · EA와 비교"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "IT 거버넌스의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "기업 전략·목표에 맞게 IT 자원과 프로세스를 지휘·통제하는 체계. 가치·위험·자원에 초점"
+              "IT 전략 → 가치 제공 → 성과 측정이 다시 전략에 피드백되는 체계"
             ]
           },
           {
-            "title": "목적",
+            "title": "등장 배경",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "주주·대리인 이론 기반 기업 지배구조, IT 결정권의 이사회 상향, 비즈니스 언어로 IT 가시화"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "구성요소와 5대 도메인",
         "subsections": [
           {
-            "title": null,
+            "title": "구성요소",
             "items": [
-              "IT 거버넌스",
-              "전략 정렬",
-              "가치 전달",
-              "위험 관리",
-              "자원 관리",
-              "성과 측정"
+              "리더십(이사회부터 시작)",
+              "조직 구조(거버넌스 조직 재구성)",
+              "프로세스(실질적 수행)"
+            ]
+          },
+          {
+            "title": "도메인-적용 기술",
+            "items": [
+              "전략적 연계(ISP·EA)",
+              "가치 제공(ERP·CRM·SCM·BPM)",
+              "위험 관리(DRS·BCP·ERM)"
+            ]
+          },
+          {
+            "title": "도메인-적용 기술",
+            "items": [
+              "자원 관리(ITAM·ITSM)",
+              "성과 측정(IT BSC·IT ROI·PPM)"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "프레임워크와 구축",
         "subsections": [
           {
-            "title": null,
+            "title": "프레임워크",
             "items": [
-              "이사회·경영진 책임",
-              "COBIT",
-              "관련 지표·표준·한계를 함께 제시"
+              "COBIT(통제·관리), ISO/IEC 38500(원칙·EDM), Val IT(가치), Risk IT(위험)"
+            ]
+          },
+          {
+            "title": "구축 활동",
+            "items": [
+              "PMO·EA 구축, 보안 조직, 성과 측정 체계, 순환 개선"
             ]
           }
         ]
@@ -9930,102 +10652,120 @@
     "outline": [
       "IT 거버넌스의 개념",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 등장 배경",
+      "구성요소와 5대 도메인",
+      "- 구성요소",
+      "- 도메인-적용 기술",
+      "- 도메인-적용 기술",
+      "프레임워크와 구축",
+      "- 프레임워크",
+      "- 구축 활동"
     ],
     "name": "IT 거버넌스(IT Governance)",
     "en": "IT Governance",
     "keywords_must": [
-      "IT 거버넌스",
-      "전략 정렬",
-      "가치 전달",
-      "위험 관리",
-      "자원 관리",
-      "성과 측정",
-      "이사회·경영진 책임",
-      "COBIT"
+      "전략적 연계(Strategic Alignment)",
+      "가치 제공(Value Delivery)",
+      "위험 관리(Risk Management)",
+      "자원 관리(Resource Management)",
+      "성과 측정(Performance Measurement)",
+      "리더십·조직 구조·프로세스",
+      "평가·지휘·모니터링(EDM)",
+      "COBIT·ISO/IEC 38500"
     ],
     "keywords_ref": [
-      "ISO/IEC 38500",
-      "IT 관리와 구분",
-      "컴플라이언스",
-      "포트폴리오",
-      "관련 표준·사례"
+      "ITGI(IT Governance Institute)",
+      "이사회(BOD) 리더십",
+      "IT BSC·IT ROI",
+      "ISP·EA 적용 기술",
+      "EA와 비교"
     ],
     "curated": true,
     "quiz_terms": [
-      "IT 거버넌스",
-      "전략 정렬",
-      "가치 전달",
-      "위험 관리",
-      "자원 관리",
-      "성과 측정",
-      "이사회·경영진 책임",
-      "COBIT"
+      "전략적 연계(Strategic Alignment)",
+      "가치 제공(Value Delivery)",
+      "위험 관리(Risk Management)",
+      "자원 관리(Resource Management)",
+      "성과 측정(Performance Measurement)",
+      "리더십·조직 구조·프로세스",
+      "평가·지휘·모니터링(EDM)",
+      "COBIT·ISO/IEC 38500"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_098",
     "code": "MG_098",
-    "title": "코빗(COBIT)",
+    "title": "코빗(COBIT, Control Objectives for Information and related Technology)",
     "subtitle": "",
     "domain": "MG",
-    "category": "경영전략 > IT-Governance > COBIT5",
-    "definition": "IT 거버넌스·관리 목표 달성을 지원하는 ISACA 프레임워크. 원칙·목표·프로세스·성과지표 제공",
+    "category": "MG > IT Governance > COBIT",
+    "definition": "조직이 IT 거버넌스와 관리 목표를 달성하도록 지원하는 ISACA의 종합 프레임워크. COBIT 5는 COBIT 4.1을 계승해 Val IT와 Risk IT를 통합했으며 2019년 COBIT 2019로 개정",
     "keywords": [
-      "핵심: COBIT · 거버넌스와 관리 구분 · 5원칙(COBIT 5)",
-      "구성: 엔터프라이즈 목표 정렬 · 프로세스·실천 · 목표 연계(Cascade)",
-      "활용: 성과 측정 · 위험·준수"
+      "핵심: 이해관계자 요구 충족 · 전사 범위 적용(End-to-End) · 단일 통합 프레임워크 · 총체적 접근(7 Enabler)",
+      "필수: 거버넌스와 관리의 분리 · EDM(평가·지휘·모니터링) · APO·BAI·DSS·MEA · 목표 계층(Goals Cascade)",
+      "참고: ISACA · Val IT·Risk IT 통합 · COBIT 2019(설계 요소·포커스 영역) · ISO/IEC 38500·20000·27001 연계 · 프로세스 역량 평가(ISO/IEC 15504)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "COBIT 5의 개념과 5원칙",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "IT 거버넌스·관리 목표 달성을 지원하는 ISACA 프레임워크. 원칙·목표·프로세스·성과지표 제공"
+              "IT 통제 수준 진단과 거버넌스 실현을 위한 사실상 표준 모범사례"
             ]
           },
           {
-            "title": "목적",
+            "title": "5원칙",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "통합 프레임워크(타 표준 연계)",
+              "이해관계자 가치 제고",
+              "비즈니스 초점(전사 범위)",
+              "7 Enabler 기반 총체적 접근",
+              "거버넌스와 관리 분리"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "프로세스 참조 모델",
         "subsections": [
           {
-            "title": null,
+            "title": "거버넌스",
             "items": [
-              "COBIT",
-              "거버넌스와 관리 구분",
-              "5원칙(COBIT 5)",
-              "엔터프라이즈 목표 정렬",
-              "프로세스·실천",
-              "목표 연계(Cascade)"
+              "EDM(평가·지휘·모니터링) — 가치 제공·위험·자원 최적화"
+            ]
+          },
+          {
+            "title": "관리",
+            "items": [
+              "APO(연계·계획·조직)",
+              "BAI(구축·도입·구현)",
+              "DSS(제공·서비스·지원)",
+              "MEA(모니터링·평가·진단)"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "7 Enabler와 평가",
         "subsections": [
           {
-            "title": null,
+            "title": "7 Enabler",
             "items": [
-              "성과 측정",
-              "위험·준수",
-              "관련 지표·표준·한계를 함께 제시"
+              "원칙·정책·프레임워크, 프로세스, 조직 구조, 문화·윤리·행동, 정보, 서비스·인프라·애플리케이션, 인력·스킬·역량"
+            ]
+          },
+          {
+            "title": "평가",
+            "items": [
+              "프로세스 역량 수준 0~5 단계 진단, 목표 계층(이해관계자 → 기업 목표 → IT 목표 → Enabler 목표)"
             ]
           }
         ]
@@ -10037,47 +10777,52 @@
       197
     ],
     "outline": [
-      "COBIT 5/2019의 개념",
+      "COBIT 5의 개념과 5원칙",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 5원칙",
+      "프로세스 참조 모델",
+      "- 거버넌스",
+      "- 관리",
+      "7 Enabler와 평가",
+      "- 7 Enabler",
+      "- 평가"
     ],
-    "name": "코빗(COBIT)",
-    "en": "COBIT",
+    "name": "코빗(COBIT, Control Objectives for Information and related Technology)",
+    "en": "COBIT 5",
     "keywords_must": [
-      "COBIT",
-      "거버넌스와 관리 구분",
-      "5원칙(COBIT 5)",
-      "엔터프라이즈 목표 정렬",
-      "프로세스·실천",
-      "목표 연계(Cascade)",
-      "성과 측정",
-      "위험·준수"
+      "이해관계자 요구 충족",
+      "전사 범위 적용(End-to-End)",
+      "단일 통합 프레임워크",
+      "총체적 접근(7 Enabler)",
+      "거버넌스와 관리의 분리",
+      "EDM(평가·지휘·모니터링)",
+      "APO·BAI·DSS·MEA",
+      "목표 계층(Goals Cascade)"
     ],
     "keywords_ref": [
-      "COBIT 2019",
-      "ITIL 연계",
-      "감사",
-      "성숙도",
-      "관련 표준·사례"
+      "ISACA",
+      "Val IT·Risk IT 통합",
+      "COBIT 2019(설계 요소·포커스 영역)",
+      "ISO/IEC 38500·20000·27001 연계",
+      "프로세스 역량 평가(ISO/IEC 15504)"
     ],
     "curated": true,
     "quiz_terms": [
-      "COBIT",
-      "거버넌스와 관리 구분",
-      "5원칙(COBIT 5)",
-      "엔터프라이즈 목표 정렬",
-      "프로세스·실천",
-      "목표 연계(Cascade)",
-      "성과 측정",
-      "위험·준수"
+      "이해관계자 요구 충족",
+      "전사 범위 적용(End-to-End)",
+      "단일 통합 프레임워크",
+      "총체적 접근(7 Enabler)",
+      "거버넌스와 관리의 분리",
+      "EDM(평가·지휘·모니터링)",
+      "APO·BAI·DSS·MEA",
+      "목표 계층(Goals Cascade)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": "5원칙: 통이비인거, 7 Enabler: 원프조문 정서인, 프로세스: EDM·APO·BAI·DSS·MEA"
   },
   {
     "id": "MG_099_0",
@@ -10085,56 +10830,67 @@
     "title": "IT 투자 가치 거버넌스(Val IT)",
     "subtitle": "",
     "domain": "MG",
-    "category": "",
-    "definition": "IT 투자 가치 실현을 위한 ISACA 거버넌스 프레임워크. 포트폴리오·투자·가치 관리에 초점",
+    "category": "MG > IT Governance > Val IT",
+    "definition": "적절한 비용과 수용 가능한 위험 수준에서 IT 관련 투자로부터 비즈니스 가치를 창출·측정·최적화할 수 있도록 지원하는 ISACA의 포괄적·실용적 IT 가치 거버넌스 프레임워크",
     "keywords": [
-      "핵심: Val IT · IT 투자 가치 · 포트폴리오 관리",
-      "구성: 투자 관리 · 가치 관리 · 비즈니스 케이스",
-      "활용: 편익 실현 · COBIT 연계"
+      "핵심: 가치 거버넌스(Value Governance) · 포트폴리오 관리(Portfolio Management) · 투자 관리(Investment Management) · 비즈니스 케이스(Business Case)",
+      "필수: 경제적 수명주기 · 가치 관리 프로세스 · COBIT 보완",
+      "참고: ISACA·ITGI · COBIT 5에 통합 · Risk IT · IT 투자 평가(ROI·NPV) · 프로그램 관리"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "Val IT의 개념",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "IT 투자 가치 실현을 위한 ISACA 거버넌스 프레임워크. 포트폴리오·투자·가치 관리에 초점"
+              "\"올바른 일을 하고 있는가, 가치를 얻고 있는가\"에 답하는 IT 투자 가치 프레임워크"
             ]
           },
           {
             "title": "목적",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "IT 투자에서 비즈니스 가치 실현을 측정·감시·최적화"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "3대 도메인",
         "subsections": [
           {
-            "title": null,
+            "title": "가치 거버넌스",
             "items": [
-              "Val IT",
-              "IT 투자 가치",
-              "포트폴리오 관리",
-              "투자 관리",
-              "가치 관리",
-              "비즈니스 케이스"
+              "가치 관리 관행이 기업에 내재되어 IT 투자 전 수명주기에서 최적 가치 확보 보증"
+            ]
+          },
+          {
+            "title": "포트폴리오 관리",
+            "items": [
+              "IT 활용 투자 포트폴리오 전체의 최적 가치 확보 보증"
+            ]
+          },
+          {
+            "title": "투자 관리",
+            "items": [
+              "개별 IT 투자(비즈니스 케이스)가 최적 가치에 기여하도록 보증"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "COBIT과의 관계",
         "subsections": [
           {
-            "title": null,
+            "title": "시너지",
             "items": [
-              "편익 실현",
-              "COBIT 연계",
-              "관련 지표·표준·한계를 함께 제시"
+              "COBIT은 IT 수행 수단(올바르게 하는가), Val IT는 투자 가치(올바른 일을 하는가)"
+            ]
+          },
+          {
+            "title": "통합",
+            "items": [
+              "COBIT 5에서 Val IT·Risk IT가 단일 프레임워크로 통합"
             ]
           }
         ]
@@ -10149,101 +10905,128 @@
       "Val IT의 개념",
       "- 정의",
       "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "3대 도메인",
+      "- 가치 거버넌스",
+      "- 포트폴리오 관리",
+      "- 투자 관리",
+      "COBIT과의 관계",
+      "- 시너지",
+      "- 통합"
     ],
     "name": "IT 투자 가치 거버넌스(Val IT)",
-    "en": "Val IT",
+    "en": "Val IT Framework",
     "keywords_must": [
-      "Val IT",
-      "IT 투자 가치",
-      "포트폴리오 관리",
-      "투자 관리",
-      "가치 관리",
-      "비즈니스 케이스",
-      "편익 실현",
-      "COBIT 연계"
+      "가치 거버넌스(Value Governance)",
+      "포트폴리오 관리(Portfolio Management)",
+      "투자 관리(Investment Management)",
+      "비즈니스 케이스(Business Case)",
+      "경제적 수명주기",
+      "가치 관리 프로세스",
+      "COBIT 보완"
     ],
     "keywords_ref": [
-      "ROI",
-      "우선순위",
-      "거버넌스 보드",
+      "ISACA·ITGI",
+      "COBIT 5에 통합",
       "Risk IT",
-      "관련 표준·사례"
+      "IT 투자 평가(ROI·NPV)",
+      "프로그램 관리"
     ],
     "curated": true,
     "quiz_terms": [
-      "Val IT",
-      "IT 투자 가치",
-      "포트폴리오 관리",
-      "투자 관리",
-      "가치 관리",
-      "비즈니스 케이스",
-      "편익 실현",
-      "COBIT 연계"
+      "가치 거버넌스(Value Governance)",
+      "포트폴리오 관리(Portfolio Management)",
+      "투자 관리(Investment Management)",
+      "비즈니스 케이스(Business Case)",
+      "경제적 수명주기",
+      "가치 관리 프로세스",
+      "COBIT 보완"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_099_1",
     "code": "MG_099_1",
-    "title": "위험관리 지침(ISO 31000)",
+    "title": "위험관리 국제 표준(ISO 31000)",
     "subtitle": "",
     "domain": "MG",
-    "category": "경영전략",
-    "definition": "모든 조직·활동의 위험을 관리하기 위한 원칙·프레임워크·프로세스를 제시하는 국제 지침",
+    "category": "MG > IT Governance > ISO 31000",
+    "definition": "모든 조직과 비즈니스 활동에서 발생하는 모든 종류의 위험을 관리하기 위한 원칙·프레임워크·프로세스를 제시한 위험관리 국제 가이드라인 표준(최신 2018년판)",
     "keywords": [
-      "핵심: ISO 31000 · 위험관리 원칙 · 프레임워크",
-      "구성: 위험 프로세스 · 위험 평가 · 위험 대응",
-      "활용: 모니터링 · 리더십·통합"
+      "핵심: 8대 원칙 · 의사소통 및 협의(Communication & Consultation) · 맥락 수립(Establishing the Context) · 위험 식별(Risk Identification)",
+      "필수: 위험 분석(Risk Analysis) · 위험 평가(Risk Evaluation) · 위험 대응(Risk Treatment) · 모니터링 및 검토(Monitoring & Review)",
+      "참고: 위험 대응 4T(Terminate·Treat·Transfer·Tolerate) · 위험 등록부(Risk Register) · IEC 31010(위험 평가 기법) · ISO/TR 31004 · COSO ERM"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "ISO 31000의 개념과 원칙",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "모든 조직·활동의 위험을 관리하기 위한 원칙·프레임워크·프로세스를 제시하는 국제 지침"
+              "인증용이 아닌 범용 위험관리 지침 표준"
             ]
           },
           {
-            "title": "목적",
+            "title": "8대 원칙",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "통합, 체계적·포괄적, 맞춤형, 포용적(이해관계자 참여), 동적, 최선의 가용 정보, 인적·문화적 요소, 지속적 개선"
+            ]
+          },
+          {
+            "title": "개정",
+            "items": [
+              "2018년 개정으로 11개 원칙이 8개로 간소화"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "위험관리 프로세스",
         "subsections": [
           {
-            "title": null,
+            "title": "준비",
             "items": [
-              "ISO 31000",
-              "위험관리 원칙",
-              "프레임워크",
-              "위험 프로세스",
-              "위험 평가",
-              "위험 대응"
+              "의사소통 및 협의, 범위·맥락·기준 수립"
+            ]
+          },
+          {
+            "title": "위험 평가(Assessment)",
+            "items": [
+              "위험 식별 → 위험 분석(발생 가능성·영향) → 위험 평가(허용 여부 판단)"
+            ]
+          },
+          {
+            "title": "대응·감독",
+            "items": [
+              "회피(Terminate)·감소(Treat)·전가(Transfer)·수용(Tolerate), 모니터링·검토·기록·보고"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "연계 표준(ISO·IEC)",
         "subsections": [
           {
-            "title": null,
+            "title": "ISO/TR 31004",
             "items": [
-              "모니터링",
-              "리더십·통합",
-              "관련 지표·표준·한계를 함께 제시"
+              "ISO 31000 구현 지침"
+            ]
+          },
+          {
+            "title": "IEC 31010",
+            "items": [
+              "위험 평가 기법(FMEA·HAZOP·몬테카를로 등)"
+            ]
+          },
+          {
+            "title": "연계",
+            "items": [
+              "ISO 27005(정보보호 위험), ISO 22301(BCMS)"
             ]
           }
         ]
@@ -10255,104 +11038,134 @@
       89
     ],
     "outline": [
-      "ISO 31000의 개념",
+      "ISO 31000의 개념과 원칙",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 8대 원칙",
+      "- 개정",
+      "위험관리 프로세스",
+      "- 준비",
+      "- 위험 평가(Assessment)",
+      "- 대응·감독",
+      "연계 표준(ISO·IEC)",
+      "- ISO/TR 31004",
+      "- IEC 31010",
+      "- 연계"
     ],
-    "name": "위험관리 지침(ISO 31000)",
-    "en": "ISO 31000",
+    "name": "위험관리 국제 표준(ISO 31000)",
+    "en": "ISO 31000 Risk Management",
     "keywords_must": [
-      "ISO 31000",
-      "위험관리 원칙",
-      "프레임워크",
-      "위험 프로세스",
-      "위험 평가",
-      "위험 대응",
-      "모니터링",
-      "리더십·통합"
+      "8대 원칙",
+      "의사소통 및 협의(Communication & Consultation)",
+      "맥락 수립(Establishing the Context)",
+      "위험 식별(Risk Identification)",
+      "위험 분석(Risk Analysis)",
+      "위험 평가(Risk Evaluation)",
+      "위험 대응(Risk Treatment)",
+      "모니터링 및 검토(Monitoring & Review)"
     ],
     "keywords_ref": [
-      "ISO 27005",
-      "COSO",
-      "Residual Risk",
-      "기회",
-      "관련 표준·사례"
+      "위험 대응 4T(Terminate·Treat·Transfer·Tolerate)",
+      "위험 등록부(Risk Register)",
+      "IEC 31010(위험 평가 기법)",
+      "ISO/TR 31004",
+      "COSO ERM"
     ],
     "curated": true,
     "quiz_terms": [
-      "ISO 31000",
-      "위험관리 원칙",
-      "프레임워크",
-      "위험 프로세스",
-      "위험 평가",
-      "위험 대응",
-      "모니터링",
-      "리더십·통합"
+      "8대 원칙",
+      "의사소통 및 협의(Communication & Consultation)",
+      "맥락 수립(Establishing the Context)",
+      "위험 식별(Risk Identification)",
+      "위험 분석(Risk Analysis)",
+      "위험 평가(Risk Evaluation)",
+      "위험 대응(Risk Treatment)",
+      "모니터링 및 검토(Monitoring & Review)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_100",
     "code": "MG_100",
-    "title": "ISO/IEC 38500(IT 거버넌스 표준)",
+    "title": "IT 거버넌스 국제 표준(ISO/IEC 38500)",
     "subtitle": "",
     "domain": "MG",
-    "category": "",
-    "definition": "조직 IT 활용을 평가(Evaluate)·지휘(Direct)·감시(Monitor)하도록 하는 IT 거버넌스 국제표준",
+    "category": "MG > IT Governance > ISO/IEC 38500",
+    "definition": "조직의 IT가 효율적·효과적이고 책임성 있게 활용되도록 경영진(이사회)이 IT 활용을 평가(Evaluate)·지휘(Direct)·감독(Monitor)하기 위한 6대 원칙과 모델을 제시한 IT 거버넌스 국제 표준",
     "keywords": [
-      "핵심: ISO/IEC 38500 · Evaluate · Direct",
-      "구성: Monitor · 책임성 · 전략",
-      "활용: 획득 · 성과·준수·인간행동 원칙"
+      "핵심: 평가(Evaluate) · 지휘(Direct) · 모니터링(Monitor) · 책임(Responsibility)",
+      "필수: 준거(Conformance) · 전략(Strategy) · 획득(Acquisition) · 성과(Performance) · 인간 행동(Human Behavior)",
+      "참고: EDM 순환 모델 · 이사회·경영진 역할 · COBIT 연계 · ISO/IEC 38500:2015 · 프로젝트 포트폴리오·ITSM 참조"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "ISO/IEC 38500의 개념과 목적",
         "subsections": [
           {
             "title": "정의",
             "items": [
-              "조직 IT 활용을 평가(Evaluate)·지휘(Direct)·감시(Monitor)하도록 하는 IT 거버넌스 국제표준"
+              "경영진 관점의 IT 거버넌스 원칙 표준"
             ]
           },
           {
-            "title": "목적",
+            "title": "평가",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "현재·미래 IT 활용 제안·대안을 비즈니스 환경·기술 변화 등 다각적 기준으로 평가"
+            ]
+          },
+          {
+            "title": "지휘·감독",
+            "items": [
+              "계획·정책 수립과 이행 지휘",
+              "계획 대비 성과·법규·내부 지침 준수 모니터링"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "EDM 모델과 6대 원칙",
         "subsections": [
           {
-            "title": null,
+            "title": "EDM 모델",
             "items": [
-              "ISO/IEC 38500",
-              "Evaluate",
-              "Direct",
-              "Monitor",
-              "책임성",
-              "전략"
+              "비즈니스 압력·요구 → 평가 → 지휘(계획·정책) → 모니터링(성과·준수) 순환"
+            ]
+          },
+          {
+            "title": "원칙",
+            "items": [
+              "책임(역할과 책임 수락)",
+              "준거(법·규제 준수)",
+              "전략(IT·비즈니스 전략 연계)"
+            ]
+          },
+          {
+            "title": "원칙",
+            "items": [
+              "획득(투명한 구매 의사결정)",
+              "성과(서비스 수준·품질 유지)",
+              "인간 행동(인간 요구 존중)"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "지침과 활용",
         "subsections": [
           {
-            "title": null,
+            "title": "원칙×EDM",
             "items": [
-              "획득",
-              "성과·준수·인간행동 원칙",
-              "관련 지표·표준·한계를 함께 제시"
+              "원칙별로 평가·지휘·모니터링 활동을 정의(예: 획득 — 투자 위험·가치 평가, 구매 목적 공유, 구매 기능 제공 확인)"
+            ]
+          },
+          {
+            "title": "활용",
+            "items": [
+              "COBIT으로 관리 프로세스 구현, 이사회 보고 체계 수립"
             ]
           }
         ]
@@ -10364,104 +11177,132 @@
       202
     ],
     "outline": [
-      "ISO/IEC 38500의 개념",
+      "ISO/IEC 38500의 개념과 목적",
       "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "- 평가",
+      "- 지휘·감독",
+      "EDM 모델과 6대 원칙",
+      "- EDM 모델",
+      "- 원칙",
+      "- 원칙",
+      "지침과 활용",
+      "- 원칙×EDM",
+      "- 활용"
     ],
-    "name": "ISO/IEC 38500(IT 거버넌스 표준)",
-    "en": "ISO/IEC 38500",
+    "name": "IT 거버넌스 국제 표준(ISO/IEC 38500)",
+    "en": "ISO/IEC 38500 Corporate Governance of IT",
     "keywords_must": [
-      "ISO/IEC 38500",
-      "Evaluate",
-      "Direct",
-      "Monitor",
-      "책임성",
-      "전략",
-      "획득",
-      "성과·준수·인간행동 원칙"
+      "평가(Evaluate)",
+      "지휘(Direct)",
+      "모니터링(Monitor)",
+      "책임(Responsibility)",
+      "준거(Conformance)",
+      "전략(Strategy)",
+      "획득(Acquisition)",
+      "성과(Performance)",
+      "인간 행동(Human Behavior)"
     ],
     "keywords_ref": [
-      "IT Governance",
-      "이사회",
-      "COBIT",
-      "정책",
-      "관련 표준·사례"
+      "EDM 순환 모델",
+      "이사회·경영진 역할",
+      "COBIT 연계",
+      "ISO/IEC 38500:2015",
+      "프로젝트 포트폴리오·ITSM 참조"
     ],
     "curated": true,
     "quiz_terms": [
-      "ISO/IEC 38500",
-      "Evaluate",
-      "Direct",
-      "Monitor",
-      "책임성",
-      "전략",
-      "획득",
-      "성과·준수·인간행동 원칙"
+      "평가(Evaluate)",
+      "지휘(Direct)",
+      "모니터링(Monitor)",
+      "책임(Responsibility)",
+      "준거(Conformance)",
+      "전략(Strategy)",
+      "획득(Acquisition)",
+      "성과(Performance)",
+      "인간 행동(Human Behavior)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": "6원칙: 책준전구성인(책임·준거·전략·획득·성과·인간 행동)"
   },
   {
     "id": "MG_101",
     "code": "MG_101",
     "title": "오픈소스 거버넌스(OSS Governance)",
-    "subtitle": "ICO(가상화폐공개)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "MG > IPO/ICO > ICO",
-    "definition": "오픈소스 사용·기여·라이선스·보안을 정책·프로세스로 통제해 법적·보안 위험을 관리하는 체계",
+    "category": "MG > IT Governance > OSS 거버넌스",
+    "definition": "조직의 공개 SW(OSS, Open Source Software) 적용 기준에 따라 도입 계획부터 운영·폐기까지 라이선스·보안·품질 위험을 정책·조직·프로세스로 지속 관리하는 프레임워크",
     "keywords": [
-      "핵심: OSS 거버넌스 · 라이선스 준수 · 보안 취약점",
-      "구성: 사용 정책 · 기여 정책 · SBOM",
-      "활용: 법무·보안 검토 · 내부 저장소"
+      "핵심: 활동 전반 진단 · 도입 전략 수립 · 정책 결정 · 지원 전략 수립",
+      "필수: 유지보수 · 라이선스 컴플라이언스(License Compliance) · 리뷰 보드(Review Board) · 오픈소스 관리 네트워크",
+      "참고: GPL·LGPL·Apache·MIT 라이선스 · SBOM(Software Bill of Materials) · OSPO(Open Source Program Office) · 공개SW 검증 도구 · 커뮤니티 기여 정책"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "오픈소스 거버넌스의 구성",
         "subsections": [
           {
-            "title": "정의",
+            "title": "오픈소스 영역",
             "items": [
-              "오픈소스 사용·기여·라이선스·보안을 정책·프로세스로 통제해 법적·보안 위험을 관리하는 체계"
+              "지식재산권·라이선스, 커뮤니티, 방법론과 공통 준수 사항"
             ]
           },
           {
-            "title": "목적",
+            "title": "정책·가이드 영역",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "현황 진단, 기본 정책 수립, 안전한 도입 지침"
+            ]
+          },
+          {
+            "title": "운영 영역",
+            "items": [
+              "프로세스, 컴플라이언스 팀, 리뷰 보드, 도입 절차"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "구축 전략(5단계)",
         "subsections": [
           {
-            "title": null,
+            "title": "활동 전반 진단",
             "items": [
-              "OSS 거버넌스",
-              "라이선스 준수",
-              "보안 취약점",
-              "사용 정책",
-              "기여 정책",
-              "SBOM"
+              "내부 인프라·고객 배포·제품 내장 등 사용 현황 수집, 제3자 제품 포함 여부 점검"
+            ]
+          },
+          {
+            "title": "도입 전략·정책 결정",
+            "items": [
+              "개발 절차 도입 가이드, 라이선스 분류",
+              "조직 목표와 조화된 배포·관리 정책, 교육·점검 목록"
+            ]
+          },
+          {
+            "title": "지원 전략·유지보수",
+            "items": [
+              "커뮤니티 추적·품질·보안 분석",
+              "기술 지원·업그레이드, 비용 가치 검토"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "조직 협력 체계",
         "subsections": [
           {
-            "title": null,
+            "title": "정책 공유",
             "items": [
-              "법무·보안 검토",
-              "내부 저장소",
-              "관련 지표·표준·한계를 함께 제시"
+              "오픈소스 정책·가이드라인·FAQ 작성·배포"
+            ]
+          },
+          {
+            "title": "관리 네트워크",
+            "items": [
+              "조직별 오픈소스 관리 담당자·라이선스 담당자 지정, 점검 담당자 의무 교육"
             ]
           }
         ]
@@ -10473,47 +11314,54 @@
       205
     ],
     "outline": [
-      "오픈소스 거버넌스의 개념",
-      "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "오픈소스 거버넌스의 구성",
+      "- 오픈소스 영역",
+      "- 정책·가이드 영역",
+      "- 운영 영역",
+      "구축 전략(5단계)",
+      "- 활동 전반 진단",
+      "- 도입 전략·정책 결정",
+      "- 지원 전략·유지보수",
+      "조직 협력 체계",
+      "- 정책 공유",
+      "- 관리 네트워크"
     ],
     "name": "오픈소스 거버넌스(OSS Governance)",
     "en": "Open Source Software Governance",
     "keywords_must": [
-      "OSS 거버넌스",
-      "라이선스 준수",
-      "보안 취약점",
-      "사용 정책",
-      "기여 정책",
-      "SBOM",
-      "법무·보안 검토",
-      "내부 저장소"
+      "활동 전반 진단",
+      "도입 전략 수립",
+      "정책 결정",
+      "지원 전략 수립",
+      "유지보수",
+      "라이선스 컴플라이언스(License Compliance)",
+      "리뷰 보드(Review Board)",
+      "오픈소스 관리 네트워크"
     ],
     "keywords_ref": [
-      "GPL/MIT 등",
-      "공급망 보안",
-      "감사",
-      "교육",
-      "관련 표준·사례"
+      "GPL·LGPL·Apache·MIT 라이선스",
+      "SBOM(Software Bill of Materials)",
+      "OSPO(Open Source Program Office)",
+      "공개SW 검증 도구",
+      "커뮤니티 기여 정책"
     ],
     "curated": true,
     "quiz_terms": [
-      "OSS 거버넌스",
-      "라이선스 준수",
-      "보안 취약점",
-      "사용 정책",
-      "기여 정책",
-      "SBOM",
-      "법무·보안 검토",
-      "내부 저장소"
+      "활동 전반 진단",
+      "도입 전략 수립",
+      "정책 결정",
+      "지원 전략 수립",
+      "유지보수",
+      "라이선스 컴플라이언스(License Compliance)",
+      "리뷰 보드(Review Board)",
+      "오픈소스 관리 네트워크"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_102",
