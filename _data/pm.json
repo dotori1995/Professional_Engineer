@@ -326,7 +326,10 @@
   "quiz_groups": [
    "pm"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "PP": "Payback Period"
+  }
  },
  {
   "id": "PM_004",
@@ -528,7 +531,8 @@
   ],
   "reviewed": true,
   "gloss": {
-   "DCF": "Discounted Cash Flow"
+   "DCF": "Discounted Cash Flow",
+   "PV": "Present Value"
   }
  },
  {
@@ -2525,51 +2529,70 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 프로젝트 범위(Scope) 관리 > WBS",
-  "definition": "프로젝트 인도물을 산출물 중심으로 계층 분해한 구조. 100% 규칙으로 범위를 빠짐없이 담고, 최하위는 워크 패키지",
+  "definition": "프로젝트 목표 달성과 인도물 생성을 위해 수행할 전체 작업 범위를 인도물 중심으로 계층적으로 분해한 구조로, 범위 기준선의 핵심 구성 요소",
   "keywords": [
-   "산출물 중심 계층 분해",
-   "100% 규칙: 상위=하위 합",
-   "WP: 산정·일정·책임 가능 수준",
-   "WBS Dictionary로 상세 기술"
+   "구성 요소: 작업 패키지(WP, Work Package) · 계획 패키지(PP, Planning Package) · 통제 계정(Control Account) · WBS 사전(WBS Dictionary) · 계정 코드(Code of Accounts)",
+   "작성 원칙: 100% 규칙(100% Rule) · 분해(Decomposition) · 8/80 규칙(8~80시간)",
+   "범위 기준선: 범위 기술서 + WBS + WBS 사전"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "계층 분해 구조 특징",
     "subsections": [
      {
-      "title": "정의",
+      "title": "주요 특징",
       "items": [
-       "목표 달성에 필요한 작업을 산출물 계층으로 분해한 체계"
+       "인도물 중심 계층도",
+       "최하위 작업 패키지에서 일정·원가 산정",
+       "진척 관리 단위",
+       "활동 선후관계 정의 기반"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "작성 절차와 구성 요소",
+    "subsections": [
+     {
+      "title": "작성 절차",
+      "items": [
+       "인도물·작업 식별",
+       "상위 구조 결정",
+       "하위 수준으로 분해",
+       "식별 코드 부여",
+       "분해 수준 적정성 검증"
       ]
      },
      {
+      "title": "구성 요소별 역할",
+      "items": [
+       "작업 패키지: 최하위 관리 단위",
+       "계획 패키지: 세부 활동 미정 작업",
+       "통제 계정: 범위·일정·원가 통합 관리점",
+       "WBS 사전: 작업 상세 설명",
+       "계정 코드: 고유 식별 번호"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "100% 규칙과 활용",
+    "subsections": [
+     {
       "title": "100% 규칙",
       "items": [
-       "하위 합이 상위 범위를 빠짐·중복 없이 구성"
+       "하위 요소 합 = 상위 요소 100%",
+       "범위 밖 작업 제외",
+       "누락·중복 방지"
       ]
-     }
-    ]
-   },
-   {
-    "title": "요소",
-    "subsections": [
+     },
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "Control Account, Planning Package, Work Package",
-       "Code of Accounts, WBS Dictionary"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "작성",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "보통 3~5수준, 관리 가능한 크기까지 분해",
-       "활동(Activity)은 WBS 이후 정의"
+       "일정: 활동 정의 기준",
+       "원가: 상향식 산정",
+       "의사소통: 책임 할당",
+       "리스크: 작업별 식별"
       ]
      }
     ]
@@ -2581,46 +2604,57 @@
    32
   ],
   "outline": [
-   "WBS의 개념",
-   "- 정의",
+   "계층 분해 구조 특징",
+   "- 주요 특징",
+   "작성 절차와 구성 요소",
+   "- 작성 절차",
+   "- 구성 요소별 역할",
+   "100% 규칙과 활용",
    "- 100% 규칙",
-   "구성 요소",
-   "작성 원칙"
+   "- 활용"
   ],
   "name": "작업분류체계(WBS, Work Breakdown Structure)",
   "en": "Work Breakdown Structure",
   "keywords_must": [
-   "작업분류체계(WBS)",
-   "워크 패키지(Work Package)",
-   "계획 패키지(Planning Package)",
+   "작업 패키지(WP, Work Package)",
+   "계획 패키지(PP, Planning Package)",
    "통제 계정(Control Account)",
+   "WBS 사전(WBS Dictionary)",
+   "계정 코드(Code of Accounts)",
    "100% 규칙(100% Rule)",
    "분해(Decomposition)",
-   "WBS 사전(WBS Dictionary)",
-   "계정 코드(Code of Accounts)"
+   "8/80 규칙(8~80시간)",
+   "범위 기술서 + WBS + WBS 사전"
   ],
   "keywords_ref": [
-   "범위 기준선(Scope Baseline)",
-   "연동 기획(Rolling Wave Planning)",
-   "조직 분해도(OBS)",
-   "일정 네트워크(Activity List)"
+   "인도물 중심 vs 단계 중심",
+   "상향식·하향식 작성",
+   "템플릿 활용",
+   "연동기획과 연계",
+   "일정(활동 정의)·원가(산정)·의사소통(RAM) 활용",
+   "과도한 분해 주의"
   ],
   "curated": true,
   "quiz_terms": [
-   "작업분류체계(WBS)",
-   "워크 패키지(Work Package)",
-   "계획 패키지(Planning Package)",
+   "작업 패키지(WP, Work Package)",
+   "계획 패키지(PP, Planning Package)",
    "통제 계정(Control Account)",
+   "WBS 사전(WBS Dictionary)",
+   "계정 코드(Code of Accounts)",
    "100% 규칙(100% Rule)",
    "분해(Decomposition)",
-   "WBS 사전(WBS Dictionary)",
-   "계정 코드(Code of Accounts)"
+   "8/80 규칙(8~80시간)",
+   "범위 기술서 + WBS + WBS 사전"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "PP": "Planning Package",
+   "RAM": "Responsibility Assignment Matrix",
+   "WP": "Work Package"
+  }
  },
  {
   "id": "PM_027",
@@ -2629,43 +2663,59 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 프로젝트 범위(Scope) 관리 > 변경요청(서)",
-  "definition": "범위·일정·원가·절차 등의 수정을 공식적으로 제안하는 문서. 영향 분석 후 CCB·통합 변경 통제를 거쳐 승인·기각",
+  "definition": "문서·인도물·기준선을 수정하자는 공식 제안으로, 통합 변경 통제 프로세스에서 영향 분석 후 변경 통제 위원회(CCB)의 승인을 받아야 반영됨",
   "keywords": [
-   "유형: 시정·예방·결함수리·업데이트",
-   "절차: 제기→영향분석→CCB→승인→반영",
-   "승인 전 기준선 변경 금지",
-   "로그에 상태 추적"
+   "유형: 시정 조치(Corrective Action) · 예방 조치(Preventive Action) · 결함 수정(Defect Repair) · 갱신(Update)",
+   "처리 절차: 변경 요청 접수 · 영향 분석(Impact Analysis) · CCB 승인·기각 · 기준선 갱신(Baseline Update) · 변경 로그(Change Log)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "개념과 발생 원인",
     "subsections": [
      {
-      "title": null,
+      "title": "발생 원인",
       "items": [
-       "공식 경로로 변경을 제안·평가·결정하는 수단"
+       "고객 요구 변화",
+       "외부 환경·법규 변화",
+       "결함·성과 차이",
+       "리스크 대응"
       ]
      }
     ]
    },
    {
-    "title": "유형",
+    "title": "변경 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "유형",
       "items": [
-       "시정 조치, 예방 조치, 결함 수리, 계획/문서 업데이트"
+       "시정 조치: 성과를 계획에 재정렬",
+       "예방 조치: 향후 성과 저하 방지",
+       "결함 수정: 부적합 인도물 수정",
+       "갱신: 문서·계획 반영"
       ]
      }
     ]
    },
    {
-    "title": "절차",
+    "title": "처리 절차와 관련 산출물",
     "subsections": [
      {
-      "title": null,
+      "title": "절차",
       "items": [
-       "작성 → 영향(범위·일정·원가·위험) 분석 → CCB 검토 → 승인/기각 → 기준선·계획 반영"
+       "접수: 변경 요청서 작성",
+       "분석: 범위·일정·원가·품질 영향",
+       "결정: CCB 승인·연기·기각",
+       "반영: 계획서·기준선 갱신",
+       "통보: 이해관계자 공유"
+      ]
+     },
+     {
+      "title": "관련 산출물",
+      "items": [
+       "변경 로그",
+       "승인된 변경 요청",
+       "프로젝트 관리 계획서 갱신"
       ]
      }
     ]
@@ -2677,45 +2727,54 @@
    37
   ],
   "outline": [
-   "변경요청의 개념",
-   "유형",
-   "처리 절차",
-   "관련 산출물"
+   "개념과 발생 원인",
+   "- 발생 원인",
+   "변경 유형",
+   "- 유형",
+   "처리 절차와 관련 산출물",
+   "- 절차",
+   "- 관련 산출물"
   ],
   "name": "변경요청(CR, Change Request)",
   "en": "Change Request",
   "keywords_must": [
-   "변경요청(Change Request)",
-   "통합 변경 통제(Integrated Change Control)",
-   "변경 통제 위원회(CCB)",
-   "영향 분석(Impact Analysis)",
    "시정 조치(Corrective Action)",
    "예방 조치(Preventive Action)",
-   "결함 조치(Defect Repair)",
-   "기준선 갱신(Baseline Update)"
+   "결함 수정(Defect Repair)",
+   "갱신(Update)",
+   "변경 요청 접수",
+   "영향 분석(Impact Analysis)",
+   "CCB 승인·기각",
+   "기준선 갱신(Baseline Update)",
+   "변경 로그(Change Log)"
   ],
   "keywords_ref": [
-   "변경 로그(Change Log)",
-   "형상 관리(Configuration Management)",
-   "Scope Creep",
-   "프로젝트 관리 계획서"
+   "통합 변경 통제(Perform Integrated Change Control)",
+   "형상 관리",
+   "승인된 변경 요청 → 작업 지시·관리",
+   "범위 크리프 방지",
+   "애자일: 백로그 재우선순위화",
+   "변경 관리 계획서"
   ],
   "curated": true,
   "quiz_terms": [
-   "변경요청(Change Request)",
-   "통합 변경 통제(Integrated Change Control)",
-   "변경 통제 위원회(CCB)",
-   "영향 분석(Impact Analysis)",
    "시정 조치(Corrective Action)",
    "예방 조치(Preventive Action)",
-   "결함 조치(Defect Repair)",
-   "기준선 갱신(Baseline Update)"
+   "결함 수정(Defect Repair)",
+   "갱신(Update)",
+   "변경 요청 접수",
+   "영향 분석(Impact Analysis)",
+   "CCB 승인·기각",
+   "기준선 갱신(Baseline Update)",
+   "변경 로그(Change Log)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "CR": "Change Request"
+  }
  },
  {
   "id": "PM_028",
@@ -2724,50 +2783,50 @@
   "subtitle": "연동기획 (Rolling Wave Planning)",
   "domain": "PM",
   "category": "PM > 프로젝트 범위(Scope) 관리 > Rolling Wave Planning",
-  "definition": "가까운 작업은 상세히, 먼 작업은 개략적으로 계획하고 시점이 다가오면 상세화하는 점진적 상세화 기법",
+  "definition": "가까운 시기의 작업은 상세하게, 먼 미래의 작업은 상위 수준으로 계획한 뒤 정보가 확보되는 대로 반복적으로 상세화하는 점진적 상세화 방식의 계획 기법",
   "keywords": [
-   "가까운 일=상세, 먼 일=개략",
-   "Progressive Elaboration의 실천",
-   "PP → 시점 도래 시 WP로 분해",
-   "불확실성 큰 프로젝트에 적합"
+   "핵심 원리: 점진적 상세화(Progressive Elaboration) · 근거리 상세 계획(Near-term Detail) · 원거리 개략 계획",
+   "WBS 연계: 작업 패키지(Work Package) · 계획 패키지(Planning Package) · 활동 정의(Define Activities)",
+   "적용 조건: 불확실성(Uncertainty) · 장기 프로젝트 · 요구 변화"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "점진적 상세화 계획 개념",
     "subsections": [
      {
-      "title": "정의",
+      "title": "도입 필요성",
       "items": [
-       "시간에 따라 계획을 파도처럼 상세화하는 기법"
-      ]
-     },
-     {
-      "title": "점진적 상세화",
-      "items": [
-       "정보가 늘어남에 따라 계획을 구체화"
+       "초기 정보 부족",
+       "요구·기술 불확실",
+       "과도한 초기 계획 낭비 방지"
       ]
      }
     ]
    },
    {
-    "title": "WBS",
+    "title": "수행 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "방식",
       "items": [
-       "원거리: Planning Package 유지",
-       "근거리: Work Package·Activity로 분해"
+       "근거리: 작업 패키지·활동 수준 상세 계획",
+       "원거리: 계획 패키지·마일스톤 수준",
+       "진행에 따라 계획 패키지 → 작업 패키지로 전환"
       ]
      }
     ]
    },
    {
-    "title": "적용",
+    "title": "장단점과 적용",
     "subsections": [
      {
-      "title": null,
+      "title": "장점",
       "items": [
-       "장기·불확실 과제, 예측형에서도 애자일식 상세화 필요 시"
+       "변화 대응",
+       "계획 정확도 향상",
+       "단점: 전체 원가·일정 확정 지연",
+       "기준선 변경 잦음",
+       "적용: R&D·장기 SI·애자일 하이브리드"
       ]
      }
     ]
@@ -2779,45 +2838,48 @@
    39
   ],
   "outline": [
-   "연동기획의 개념",
-   "- 정의",
-   "- 점진적 상세화",
-   "WBS와의 관계",
-   "적용 상황"
+   "점진적 상세화 계획 개념",
+   "- 도입 필요성",
+   "수행 방식",
+   "- 방식",
+   "장단점과 적용",
+   "- 장점"
   ],
   "name": "연동기획(Rolling Wave Planning)",
   "en": "Rolling Wave Planning",
   "keywords_must": [
-   "연동기획(Rolling Wave Planning)",
    "점진적 상세화(Progressive Elaboration)",
-   "워크 패키지(Work Package)",
-   "계획 패키지(Planning Package)",
    "근거리 상세 계획(Near-term Detail)",
+   "원거리 개략 계획",
+   "작업 패키지(Work Package)",
+   "계획 패키지(Planning Package)",
+   "활동 정의(Define Activities)",
    "불확실성(Uncertainty)",
-   "애자일 유사성",
-   "WBS"
+   "장기 프로젝트",
+   "요구 변화"
   ],
   "keywords_ref": [
-   "예측형 수명주기(Predictive Life Cycle)",
-   "스프린트 계획(Sprint Planning)",
-   "가정(Assumption)",
-   "재계획(Replanning)"
+   "애자일 반복 계획 유사",
+   "이터레이션·릴리스 계획",
+   "단계별 관문(Phase Gate)",
+   "과도 계획 방지",
+   "기준선 관리 어려움"
   ],
   "curated": true,
   "quiz_terms": [
-   "연동기획(Rolling Wave Planning)",
    "점진적 상세화(Progressive Elaboration)",
-   "워크 패키지(Work Package)",
-   "계획 패키지(Planning Package)",
    "근거리 상세 계획(Near-term Detail)",
+   "원거리 개략 계획",
+   "작업 패키지(Work Package)",
+   "계획 패키지(Planning Package)",
+   "활동 정의(Define Activities)",
    "불확실성(Uncertainty)",
-   "애자일 유사성",
-   "WBS"
+   "장기 프로젝트",
+   "요구 변화"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -2827,51 +2889,53 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 프로젝트 범위(Scope) 관리 > Scope Creep",
-  "definition": "공식 변경 통제 없이 범위가 조금씩 늘어나는 현상. 불명확한 목표·약한 통제가 원인이며 일정·원가·품질에 손실을 줌",
+  "definition": "공식 변경 통제 절차 없이 일정·원가·자원 조정 없이 프로젝트 범위가 점진적으로 확장되는 현상으로, 일정 지연과 원가 초과의 주요 원인",
   "keywords": [
-   "비승인 범위 증가",
-   "원인: 모호한 목표·약한 통제",
-   "Gold Plating과 구분",
-   "예방: 기준선·CR·RTM"
+   "발생 원인: 불명확한 요구사항(Unclear Requirements) · 이해관계자 기대(Stakeholder Expectations) · 비공식 요청 수용 · 골드 플레이팅(Gold Plating)",
+   "대응: 범위 기준선(Scope Baseline) · 통합 변경 통제(CCB) · 영향 분석(Impact Analysis) · 요구사항 추적 매트릭스(RTM) · 범위 통제(Control Scope)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "범위 확장 현상",
     "subsections": [
      {
-      "title": "정의",
+      "title": "영향",
       "items": [
-       "통제되지 않은 범위 확대"
+       "일정 지연",
+       "원가 초과",
+       "품질 저하",
+       "팀 사기 저하",
+       "분쟁"
       ]
-     },
+     }
+    ]
+   },
+   {
+    "title": "발생 원인",
+    "subsections": [
      {
       "title": "원인",
       "items": [
-       "모호한 목표, 비공식 요청 수용, 약한 변경통제"
+       "요구사항 미확정",
+       "고객의 비공식 추가 요청",
+       "팀의 자발적 추가(골드 플레이팅)",
+       "변경 통제 부재",
+       "범위 경계 모호"
       ]
      }
     ]
    },
    {
-    "title": "영향",
+    "title": "방지 대책",
     "subsections": [
      {
-      "title": null,
+      "title": "대책",
       "items": [
-       "일정 지연, 원가 초과, 품질·사기 저하, 편익 훼손"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "예방",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "명확한 범위 기준선, 모든 변경은 CR",
-       "RTM·이해관계자 합의 유지",
-       "Gold Plating(팀 자발적 초과)도 금지"
+       "요구사항 상세화·SRS 확정",
+       "RTM으로 추적",
+       "모든 변경은 CCB 경유",
+       "영향 분석 후 일정·원가 조정",
+       "인수 기준 사전 합의"
       ]
      }
     ]
@@ -2883,45 +2947,48 @@
    34
   ],
   "outline": [
-   "Scope Creep의 개념",
-   "- 정의",
+   "범위 확장 현상",
+   "- 영향",
+   "발생 원인",
    "- 원인",
-   "영향",
-   "예방·대응"
+   "방지 대책",
+   "- 대책"
   ],
   "name": "범위 크리프(Scope Creep)",
   "en": "Scope Creep",
   "keywords_must": [
-   "범위 크리프(Scope Creep)",
-   "변경 통제(Change Control)",
-   "범위 기준선(Scope Baseline)",
    "불명확한 요구사항(Unclear Requirements)",
-   "골드 플레이팅(Gold Plating)",
    "이해관계자 기대(Stakeholder Expectations)",
+   "비공식 요청 수용",
+   "골드 플레이팅(Gold Plating)",
+   "범위 기준선(Scope Baseline)",
+   "통합 변경 통제(CCB)",
    "영향 분석(Impact Analysis)",
+   "요구사항 추적 매트릭스(RTM)",
    "범위 통제(Control Scope)"
   ],
   "keywords_ref": [
-   "요구사항 추적 매트릭스(RTM)",
-   "프로젝트 헌장(Project Charter)",
-   "CCB(Change Control Board)",
-   "연동기획(Rolling Wave Planning)"
+   "범위 확인(인수 기준)",
+   "과업심의위원회(공공 SW)",
+   "요구사항 상세화",
+   "애자일: 백로그 우선순위·타임박스",
+   "원가·일정 초과"
   ],
   "curated": true,
   "quiz_terms": [
-   "범위 크리프(Scope Creep)",
-   "변경 통제(Change Control)",
-   "범위 기준선(Scope Baseline)",
    "불명확한 요구사항(Unclear Requirements)",
-   "골드 플레이팅(Gold Plating)",
    "이해관계자 기대(Stakeholder Expectations)",
+   "비공식 요청 수용",
+   "골드 플레이팅(Gold Plating)",
+   "범위 기준선(Scope Baseline)",
+   "통합 변경 통제(CCB)",
    "영향 분석(Impact Analysis)",
+   "요구사항 추적 매트릭스(RTM)",
    "범위 통제(Control Scope)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -2931,51 +2998,52 @@
   "subtitle": "골드플레팅(Gold-plating)",
   "domain": "PM",
   "category": "PM > 프로젝트 범위(Scope) 관리 > 골드플레팅(Gold-plating)",
-  "definition": "고객이 요구하지 않은 기능·품질을 팀이 임의로 추가하는 행위. 선의라도 원가·일정을 초과시키고 Scope Creep과 함께 경계 대상",
+  "definition": "고객이 요구하지 않은 기능이나 품질을 프로젝트 팀이 임의로 추가해 범위 기준선을 초과하는 행위로, 가치 없이 원가·일정·위험을 증가시킴",
   "keywords": [
-   "요구 없는 기능 임의 추가",
-   "Creep=외부 요청 비공식 수용 / Plating=팀 자발적 추가",
-   "예방: 기준선 준수·CR",
-   "가치 없는 품질 과잉도 해당"
+   "원인: 팀의 과시·완벽주의 · 고객 만족 오해 · 요구사항 불명확",
+   "영향: 초과 기능(Extra Features) · 일정 초과(Schedule Overrun) · 원가 초과(Cost Overrun) · 결함·테스트 부담",
+   "방지: 범위 기준선(Scope Baseline) · 요구사항 추적 매트릭스(RTM) · PMO·QA 검토"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "요구 외 기능 추가 개념",
     "subsections": [
      {
-      "title": "정의",
+      "title": "범위 크리프와 비교",
       "items": [
-       "요청되지 않은 기능·특성을 추가하는 것"
-      ]
-     },
-     {
-      "title": "차이",
-      "items": [
-       "Scope Creep: 이해관계자 비공식 요구 수용",
-       "Gold Plating: 팀이 알아서 추가"
+       "주체: 팀 vs 고객",
+       "의도: 선의의 추가 vs 요구 확장",
+       "공통: 공식 변경 통제 미경유"
       ]
      }
     ]
    },
    {
-    "title": "영향",
+    "title": "원인과 영향",
     "subsections": [
      {
-      "title": null,
+      "title": "원인",
       "items": [
-       "원가·일정 초과, 유지보수 복잡도↑, 정작 필요 기능 지연"
+       "기술 과시",
+       "품질 과잉",
+       "고객 기대 추정",
+       "영향: 원가·일정 증가",
+       "신규 결함",
+       "유지보수 부담"
       ]
      }
     ]
    },
    {
-    "title": "예방",
+    "title": "방지 대책",
     "subsections": [
      {
-      "title": null,
+      "title": "대책",
       "items": [
-       "범위 기준선 엄수, 추가는 CR로만",
-       "완료 정의(DoD)·인수기준으로 범위 고정"
+       "RTM으로 구현 기능 역추적",
+       "PMO·QA 정기 검토",
+       "변경 요청 절차 준수",
+       "요구 적합 품질 교육"
       ]
      }
     ]
@@ -2987,45 +3055,50 @@
    36
   ],
   "outline": [
-   "Gold Plating의 개념",
-   "- 정의",
-   "- Scope Creep과의 차이",
+   "요구 외 기능 추가 개념",
+   "- 범위 크리프와 비교",
    "원인과 영향",
-   "예방"
+   "- 원인",
+   "방지 대책",
+   "- 대책"
   ],
   "name": "골드 플레이팅(Gold Plating)",
   "en": "Gold Plating",
   "keywords_must": [
-   "골드 플레이팅(Gold Plating)",
+   "팀의 과시·완벽주의",
+   "고객 만족 오해",
+   "요구사항 불명확",
    "초과 기능(Extra Features)",
-   "범위 기준선(Scope Baseline)",
-   "가치 대비 낭비(Waste)",
-   "고객 요구(Customer Requirements)",
    "일정 초과(Schedule Overrun)",
    "원가 초과(Cost Overrun)",
-   "변경요청(Change Request)"
+   "결함·테스트 부담",
+   "범위 기준선(Scope Baseline)",
+   "요구사항 추적 매트릭스(RTM)",
+   "PMO·QA 검토"
   ],
   "keywords_ref": [
-   "Scope Creep",
-   "MVP(Minimum Viable Product)",
-   "Yagni(You Aren't Gonna Need It)",
-   "품질 관리(Quality Management)"
+   "범위 크리프와 차이(팀 주도 vs 고객 주도)",
+   "변경 요청 경유",
+   "린 낭비(추가 기능)",
+   "품질 = 요구 적합성",
+   "인수 기준"
   ],
   "curated": true,
   "quiz_terms": [
-   "골드 플레이팅(Gold Plating)",
+   "팀의 과시·완벽주의",
+   "고객 만족 오해",
+   "요구사항 불명확",
    "초과 기능(Extra Features)",
-   "범위 기준선(Scope Baseline)",
-   "가치 대비 낭비(Waste)",
-   "고객 요구(Customer Requirements)",
    "일정 초과(Schedule Overrun)",
    "원가 초과(Cost Overrun)",
-   "변경요청(Change Request)"
+   "결함·테스트 부담",
+   "범위 기준선(Scope Baseline)",
+   "요구사항 추적 매트릭스(RTM)",
+   "PMO·QA 검토"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -3035,44 +3108,52 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 프로젝트 일정관리(시간)",
-  "definition": "활동 정의·순서·기간 산정·일정 개발·통제로 납기를 지키는 지식영역. 네트워크 분석·자원 최적화·단축 기법을 활용",
+  "definition": "프로젝트를 정해진 기한 내에 완료하기 위해 활동을 정의·순서화·기간 산정하고 일정을 개발·통제하는 지식 영역",
   "keywords": [
-   "6 프로세스: 계획·정의·순서·기간·개발·통제",
-   "CPM·여유·자원최적화",
-   "단축: Crashing·Fast Tracking",
-   "기준선 대비 성과(SPI 등)"
+   "6개 프로세스: 일정 관리 계획 · 활동 정의(Define Activities) · 활동 순서 배열(Sequence Activities) · 활동 기간 산정(Estimate Durations) · 일정 개발(Develop Schedule) · 일정 통제(Control Schedule)",
+   "일정 개발 기법: 임계 경로법(CPM) · 주공정 연쇄법(CCM) · 자원 최적화 · 일정 단축(Crashing·Fast Tracking)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "일정 관리 목표",
     "subsections": [
      {
-      "title": null,
+      "title": "산출물",
       "items": [
-       "납기 준수를 위해 일정을 계획·개발·통제하는 영역"
+       "활동 목록·속성",
+       "마일스톤 목록",
+       "네트워크 다이어그램",
+       "일정 기준선",
+       "프로젝트 일정"
       ]
      }
     ]
    },
    {
-    "title": "프로세스",
+    "title": "주요 프로세스",
     "subsections": [
      {
-      "title": null,
+      "title": "프로세스",
       "items": [
-       "일정관리 계획, 활동 정의, 서열화, 기간 산정, 일정 개발, 일정 통제"
+       "활동 정의: WBS 작업 패키지 분해",
+       "순서 배열: PDM·의존 관계",
+       "기간 산정: 유사·모수·3점",
+       "일정 개발: CPM·자원 최적화",
+       "일정 통제: 차이 분석"
       ]
      }
     ]
    },
    {
-    "title": "기법",
+    "title": "일정 단축과 최적화",
     "subsections": [
      {
-      "title": null,
+      "title": "단축",
       "items": [
-       "네트워크 분석(CPM), 3점 산정, 자원 평준화/평활화",
-       "Crashing(자원 추가), Fast Tracking(병행)"
+       "크래싱: 자원 추가",
+       "패스트트래킹: 병행 수행",
+       "최적화: 자원 평준화·평활화",
+       "위험 반영: CCM 버퍼·몬테카를로"
       ]
      }
     ]
@@ -3084,47 +3165,59 @@
    39
   ],
   "outline": [
-   "일정관리의 개념",
+   "일정 관리 목표",
+   "- 산출물",
    "주요 프로세스",
-   "일정 개발 기법",
-   "단축·최적화"
+   "- 프로세스",
+   "일정 단축과 최적화",
+   "- 단축"
   ],
   "name": "프로젝트 일정관리(Project Schedule Management)",
   "en": "Project Schedule Management",
   "keywords_must": [
-   "일정 관리(Schedule Management)",
+   "일정 관리 계획",
    "활동 정의(Define Activities)",
-   "서열화(Sequence Activities)",
-   "기간 산정(Estimate Duration)",
+   "활동 순서 배열(Sequence Activities)",
+   "활동 기간 산정(Estimate Durations)",
    "일정 개발(Develop Schedule)",
    "일정 통제(Control Schedule)",
-   "임계 경로(Critical Path)",
-   "일정 기준선(Schedule Baseline)"
+   "임계 경로법(CPM)",
+   "주공정 연쇄법(CCM)",
+   "자원 최적화",
+   "일정 단축(Crashing·Fast Tracking)"
   ],
   "keywords_ref": [
-   "CPM(Critical Path Method)",
-   "PERT",
-   "자원 평준화(Resource Leveling)",
-   "크래싱·패스트트래킹(Crashing/Fast Tracking)"
+   "일정 기준선",
+   "선후행 도형법(PDM: FS·SS·FF·SF)",
+   "선도·지연(Lead·Lag)",
+   "마일스톤 목록",
+   "간트 차트",
+   "몬테카를로",
+   "애자일: 반복 일정·칸반"
   ],
   "curated": true,
   "quiz_terms": [
-   "일정 관리(Schedule Management)",
+   "일정 관리 계획",
    "활동 정의(Define Activities)",
-   "서열화(Sequence Activities)",
-   "기간 산정(Estimate Duration)",
+   "활동 순서 배열(Sequence Activities)",
+   "활동 기간 산정(Estimate Durations)",
    "일정 개발(Develop Schedule)",
    "일정 통제(Control Schedule)",
-   "임계 경로(Critical Path)",
-   "일정 기준선(Schedule Baseline)"
+   "임계 경로법(CPM)",
+   "주공정 연쇄법(CCM)",
+   "자원 최적화",
+   "일정 단축(Crashing·Fast Tracking)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
-   "CPM": "Critical Path Method"
+   "CPM": "Critical Path Method",
+   "FS": "Finish-to-Start",
+   "SS": "Start-to-Start",
+   "FF": "Finish-to-Finish",
+   "SF": "Start-to-Finish"
   }
  },
  {
@@ -3134,46 +3227,57 @@
   "subtitle": "성과 측정 규칙",
   "domain": "PM",
   "category": "PM > 일정관리 > 성과 측정 규칙",
-  "definition": "EVM 등에서 활동·워크패키지의 진척을 어떻게 인정할지 정한 규칙. 0/100, 50/50, 마일스톤 가중 등이 대표적",
+  "definition": "작업 패키지의 진척률과 획득가치(EV)를 객관적으로 산정하기 위해 작업 성격에 따라 적용하는 측정 규칙으로, EVM 신뢰성의 기반",
   "keywords": [
-   "0/100: 완료 전 0, 완료 시 100",
-   "50/50: 착수 50·완료 50",
-   "마일스톤 가중·%완료",
-   "짧은 WP일수록 0/100 적합"
+   "측정 규칙: 0/100 규칙(0/100 Rule) · 50/50 규칙(50/50 Rule) · 20/80 규칙 · 가중 마일스톤(Weighted Milestone) · 진척률법(Percent Complete) · 물리적 측정(Physical Measurement)",
+   "적용 기준: 작업 기간 · 측정 가능성 · 객관성",
+   "EVM 연계: 획득가치(EV, Earned Value)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "진척 측정 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "도입 필요성",
       "items": [
-       "EV 측정의 일관성을 위한 진척 인정 규칙"
+       "주관적 진척 보고 방지",
+       "EV 산정 근거",
+       "일정·원가 성과 비교 가능"
       ]
      }
     ]
    },
    {
-    "title": "규칙",
+    "title": "주요 규칙",
     "subsections": [
      {
-      "title": null,
+      "title": "고정 공식",
       "items": [
-       "0/100, 50/50, 20/80",
-       "% Complete, Weighted Milestone, Fixed Formula"
+       "0/100: 완료 시 100%",
+       "50/50: 착수 50%·완료 50%",
+       "20/80: 착수 20%·완료 80%"
+      ]
+     },
+     {
+      "title": "기타",
+      "items": [
+       "가중 마일스톤: 마일스톤별 가중치",
+       "진척률법: 담당자 추정 %",
+       "물리적 측정: 수량·길이 등 실측"
       ]
      }
     ]
    },
    {
-    "title": "선택",
+    "title": "선택 기준과 EVM",
     "subsections": [
      {
-      "title": null,
+      "title": "선택 기준",
       "items": [
-       "단기·명확 완료 → 0/100",
-       "장기 WP → 마일스톤·%완료",
-       "주관 개입 최소화"
+       "짧은 작업: 0/100·50/50",
+       "긴 작업: 가중 마일스톤",
+       "정량 산출물: 물리적 측정",
+       "EVM 관계: 규칙에 따라 EV 산정 → SPI·CPI 계산"
       ]
      }
     ]
@@ -3185,47 +3289,56 @@
    40
   ],
   "outline": [
-   "성과측정의 개념",
+   "진척 측정 개념",
+   "- 도입 필요성",
    "주요 규칙",
-   "선택 기준",
-   "EVM과의 관계"
+   "- 고정 공식",
+   "- 기타",
+   "선택 기준과 EVM",
+   "- 선택 기준"
   ],
   "name": "성과측정기준(Performance Measurement Rules)",
   "en": "Performance Measurement Rules",
   "keywords_must": [
-   "성과측정규칙(Performance Measurement Rules)",
    "0/100 규칙(0/100 Rule)",
    "50/50 규칙(50/50 Rule)",
    "20/80 규칙",
-   "진척율법(Percent Complete)",
-   "마일스톤 가중(Weighted Milestone)",
-   "획득가치(EV, Earned Value)",
-   "워크 패키지(Work Package)"
+   "가중 마일스톤(Weighted Milestone)",
+   "진척률법(Percent Complete)",
+   "물리적 측정(Physical Measurement)",
+   "작업 기간",
+   "측정 가능성",
+   "객관성",
+   "획득가치(EV, Earned Value)"
   ],
   "keywords_ref": [
-   "PV(Planned Value)",
-   "BAC(Budget at Completion)",
-   "일정 관리 계획",
-   "객관성(Objectivity)"
+   "수준 노력(LOE, Level of Effort)",
+   "배분 노력(Apportioned Effort)",
+   "통제 계정·작업 패키지 단위",
+   "1~2개월 이내 짧은 작업에 고정 공식",
+   "성과 측정 기준선(PMB)"
   ],
   "curated": true,
   "quiz_terms": [
-   "성과측정규칙(Performance Measurement Rules)",
    "0/100 규칙(0/100 Rule)",
    "50/50 규칙(50/50 Rule)",
    "20/80 규칙",
-   "진척율법(Percent Complete)",
-   "마일스톤 가중(Weighted Milestone)",
-   "획득가치(EV, Earned Value)",
-   "워크 패키지(Work Package)"
+   "가중 마일스톤(Weighted Milestone)",
+   "진척률법(Percent Complete)",
+   "물리적 측정(Physical Measurement)",
+   "작업 기간",
+   "측정 가능성",
+   "객관성",
+   "획득가치(EV, Earned Value)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
-   "EVM": "Earned Value Management"
+   "EVM": "Earned Value Management",
+   "EV": "Earned Value",
+   "LOE": "Level of Effort"
   }
  },
  {
@@ -3235,46 +3348,59 @@
   "subtitle": "활동기간 산정 기법들",
   "domain": "PM",
   "category": "PM > 일정관리 > 활동기간 산정 기법들",
-  "definition": "배정된 자원으로 활동을 끝내는 데 필요한 기간을 추정하는 프로세스. 전문가 판단·유사·모수·3점 산정 등을 사용",
+  "definition": "산정된 자원으로 개별 활동을 완료하는 데 필요한 작업 기간 수를 추정하는 일정 관리 프로세스의 도구와 기법으로, 일정 개발의 입력이 됨",
   "keywords": [
-   "기법: 전문가·유사·모수·3점·상향식",
-   "Duration ≠ Effort",
-   "예비(버퍼) 별도 명시",
-   "자원 달력·생산성 반영"
+   "산정 기법: 전문가 판단(Expert Judgment) · 유사 산정(Analogous) · 모수 산정(Parametric) · 3점 산정(Three-Point) · 상향식 산정(Bottom-up)",
+   "3점 산정 공식: 베타 분포(O+4M+P)/6 · 삼각 분포(O+M+P)/3",
+   "분석: 예비 분석(Reserve Analysis) · 기간(Duration) vs 공수(Effort)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "기간 산정 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "고려 요소",
       "items": [
-       "활동별 소요 기간을 추정 (공수·자원·달력 고려)"
+       "자원 가용성",
+       "인력 역량",
+       "수확체감",
+       "기술 발전",
+       "동기 부여(파킨슨·학생 증후군)"
       ]
      }
     ]
    },
    {
-    "title": "기법",
+    "title": "주요 기법",
     "subsections": [
      {
-      "title": null,
+      "title": "기법",
       "items": [
-       "유사(빠르고 거침), 모수(단위당×수량), 3점(불확실성)",
-       "상향식(WP 합산), 전문가 판단"
+       "유사: 과거 유사 활동 기준, 빠르나 부정확",
+       "모수: 단위 생산성 × 수량",
+       "3점: 낙관·최빈·비관 가중",
+       "상향식: 하위 활동 합산",
+       "예비 분석: 우발 예비 반영"
       ]
      }
     ]
    },
    {
-    "title": "주의",
+    "title": "입력·출력과 유의점",
     "subsections": [
      {
-      "title": null,
+      "title": "입력·출력",
+      "items": [
+       "입력: 활동 목록·속성·자원 요구사항·위험 등록부",
+       "출력: 기간 산정치·산정 근거"
+      ]
+     },
+     {
+      "title": "유의점",
       "items": [
        "기간과 공수 구분",
-       "위험 예비는 별도",
-       "다중 작업·비생산 시간 반영"
+       "버퍼 숨김 방지",
+       "산정 근거 문서화"
       ]
      }
     ]
@@ -3286,44 +3412,50 @@
    41
   ],
   "outline": [
-   "기간 산정의 개념",
+   "기간 산정 개념",
+   "- 고려 요소",
    "주요 기법",
-   "입력·출력",
-   "주의점"
+   "- 기법",
+   "입력·출력과 유의점",
+   "- 입력·출력",
+   "- 유의점"
   ],
   "name": "활동기간 산정 기법(Activity Duration Estimating)",
-  "en": "Activity Duration Estimating",
+  "en": "Estimate Activity Durations",
   "keywords_must": [
    "전문가 판단(Expert Judgment)",
-   "유사 산정(Analogous Estimating)",
-   "모수 산정(Parametric Estimating)",
-   "3점 산정(Three-Point Estimating)",
-   "상향식 산정(Bottom-up Estimating)",
-   "예비분석(Reserve Analysis)",
-   "기간(Duration) vs 공수(Effort)",
-   "자원 가용성(Resource Availability)"
+   "유사 산정(Analogous)",
+   "모수 산정(Parametric)",
+   "3점 산정(Three-Point)",
+   "상향식 산정(Bottom-up)",
+   "베타 분포(O+4M+P)/6",
+   "삼각 분포(O+M+P)/3",
+   "예비 분석(Reserve Analysis)",
+   "기간(Duration) vs 공수(Effort)"
   ],
   "keywords_ref": [
-   "PERT",
-   "학습 곡선(Learning Curve)",
-   "대안 분석(Alternative Analysis)",
-   "프로젝트 일정(Project Schedule)"
+   "의사결정(투표·Fist of Five)",
+   "수확체감의 법칙",
+   "자원 수·기술 수준",
+   "파킨슨 법칙·학생 증후군",
+   "산출물: 기간 산정치·산정 근거",
+   "활동 목록·자원 요구사항(투입물)"
   ],
   "curated": true,
   "quiz_terms": [
    "전문가 판단(Expert Judgment)",
-   "유사 산정(Analogous Estimating)",
-   "모수 산정(Parametric Estimating)",
-   "3점 산정(Three-Point Estimating)",
-   "상향식 산정(Bottom-up Estimating)",
-   "예비분석(Reserve Analysis)",
-   "기간(Duration) vs 공수(Effort)",
-   "자원 가용성(Resource Availability)"
+   "유사 산정(Analogous)",
+   "모수 산정(Parametric)",
+   "3점 산정(Three-Point)",
+   "상향식 산정(Bottom-up)",
+   "베타 분포(O+4M+P)/6",
+   "삼각 분포(O+M+P)/3",
+   "예비 분석(Reserve Analysis)",
+   "기간(Duration) vs 공수(Effort)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -3333,45 +3465,58 @@
   "subtitle": "3점 산정(Three-Point Estimating)",
   "domain": "PM",
   "category": "PM > 일정관리 > 3점 산정(Three-Point Estimating)",
-  "definition": "낙관치(O)·최빈치(M)·비관치(P)로 불확실성을 반영해 기댓값을 구하는 기법. PERT(베타)는 (O+4M+P)/6",
+  "definition": "활동 기간이나 원가의 불확실성을 반영하기 위해 낙관치·최빈치·비관치 세 값을 이용해 기대값을 추정하는 기법으로, PERT의 기반이 됨",
   "keywords": [
-   "PERT: te=(O+4M+P)/6",
-   "삼각: te=(O+M+P)/3",
-   "σ≈(P−O)/6",
-   "불확실성 큰 활동에 유용"
+   "3점: 낙관치(tO, Optimistic) · 최빈치(tM, Most Likely) · 비관치(tP, Pessimistic)",
+   "분포·산식: 베타 분포(PERT): tE=(tO+4tM+tP)/6 · 삼각 분포: tE=(tO+tM+tP)/3 · 표준편차 σ=(tP−tO)/6",
+   "활용: PERT(Program Evaluation and Review Technique) · 완료 확률(정규 분포)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "불확실성 반영 산정",
     "subsections": [
      {
-      "title": null,
+      "title": "도입 필요성",
       "items": [
-       "단일점 추정의 편향을 줄이려 세 추정치를 사용"
+       "단일 추정의 낙관 편향 보완",
+       "위험 반영",
+       "완료 확률 제시"
       ]
      }
     ]
    },
    {
-    "title": "산식",
+    "title": "베타·삼각 분포",
     "subsections": [
      {
-      "title": null,
+      "title": "베타 분포",
       "items": [
-       "베타(PERT): (tO+4tM+tP)/6",
-       "삼각: (tO+tM+tP)/3",
-       "σ ≈ (tP−tO)/6"
+       "최빈치 가중 4",
+       "PERT 표준",
+       "삼각 분포: 세 값 단순 평균",
+       "데이터 부족 시"
       ]
      }
     ]
    },
    {
-    "title": "활용",
+    "title": "산식과 활용",
     "subsections": [
      {
-      "title": null,
+      "title": "예시",
       "items": [
-       "일정·원가 산정, 경로 확률, 예비 산정 입력"
+       "tO=4, tM=6, tP=14",
+       "베타 tE=(4+24+14)/6=7",
+       "삼각 tE=8",
+       "σ=10/6≈1.67"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "경로 기대 기간 = Σ tE",
+       "경로 σ = √Σσ²",
+       "목표일 완료 확률 Z 산정"
       ]
      }
     ]
@@ -3383,44 +3528,48 @@
    42
   ],
   "outline": [
-   "3점 산정의 개념",
+   "불확실성 반영 산정",
+   "- 도입 필요성",
    "베타·삼각 분포",
-   "산식",
-   "활용"
+   "- 베타 분포",
+   "산식과 활용",
+   "- 예시",
+   "- 활용"
   ],
   "name": "3점 산정(Three-Point Estimating)",
   "en": "Three-Point Estimating",
   "keywords_must": [
-   "3점 산정(Three-Point Estimating)",
-   "낙관치(Optimistic, tO)",
-   "최빈치(Most Likely, tM)",
-   "비관치(Pessimistic, tP)",
-   "PERT",
-   "베타 분포(Beta Distribution)",
-   "삼각 분포(Triangular Distribution)",
-   "표준편차(Standard Deviation)"
+   "낙관치(tO, Optimistic)",
+   "최빈치(tM, Most Likely)",
+   "비관치(tP, Pessimistic)",
+   "베타 분포(PERT): tE=(tO+4tM+tP)/6",
+   "삼각 분포: tE=(tO+tM+tP)/3",
+   "표준편차 σ=(tP−tO)/6",
+   "PERT(Program Evaluation and Review Technique)",
+   "완료 확률(정규 분포)"
   ],
   "keywords_ref": [
-   "유사 산정(Analogous)",
-   "모수 산정(Parametric)",
-   "위험 예비(Contingency Reserve)",
-   "일정 네트워크"
+   "분산 σ²",
+   "경로 분산 합산",
+   "±1σ 68.3%·±2σ 95.5%·±3σ 99.7%",
+   "몬테카를로 입력",
+   "원가 산정에도 적용",
+   "미 해군 폴라리스(1958)"
   ],
   "curated": true,
   "quiz_terms": [
-   "3점 산정(Three-Point Estimating)",
-   "낙관치(Optimistic, tO)",
-   "최빈치(Most Likely, tM)",
-   "비관치(Pessimistic, tP)",
-   "PERT",
-   "베타 분포(Beta Distribution)",
-   "삼각 분포(Triangular Distribution)",
-   "표준편차(Standard Deviation)"
+   "낙관치(tO, Optimistic)",
+   "최빈치(tM, Most Likely)",
+   "비관치(tP, Pessimistic)",
+   "베타 분포(PERT): tE=(tO+4tM+tP)/6",
+   "삼각 분포: tE=(tO+tM+tP)/3",
+   "표준편차 σ=(tP−tO)/6",
+   "PERT(Program Evaluation and Review Technique)",
+   "완료 확률(정규 분포)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -3430,46 +3579,57 @@
   "subtitle": "CPM(Critical Path Method)",
   "domain": "PM",
   "category": "PM > 일정관리 > CPM",
-  "definition": "활동 네트워크에서 여유(Float)가 0인 최장 경로를 찾아 프로젝트 최소 완료 기간을 결정하는 일정 분석 기법",
+  "definition": "네트워크 다이어그램에서 전진·후진 계산으로 각 활동의 여유를 구하고, 여유가 0인 가장 긴 경로(임계 경로)를 찾아 프로젝트 최단 완료 기간을 결정하는 일정 개발 기법",
   "keywords": [
-   "최장 경로 = 프로젝트 기간",
-   "Float=0 → Critical",
-   "ES/EF 전진, LS/LF 후진",
-   "임계 지연 = 전체 지연"
+   "계산 요소: 조기 시작·종료(ES·EF) · 늦은 시작·종료(LS·LF) · 전진 계산(Forward Pass) · 후진 계산(Backward Pass)",
+   "여유: 총 여유(TF = LS−ES) · 자유 여유(FF)",
+   "임계 경로: 여유 0 최장 경로 · 네트워크 다이어그램(PDM)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "최장 경로 기반 일정 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "주요 특징",
       "items": [
-       "의존관계를 반영해 최장 경로·여유를 산출"
+       "확정 기간 사용",
+       "최단 완료 기간 산출",
+       "집중 관리 대상 식별",
+       "자원 제약 미고려"
       ]
      }
     ]
    },
    {
-    "title": "계산",
+    "title": "전진·후진 계산",
     "subsections": [
      {
-      "title": null,
+      "title": "계산",
       "items": [
-       "전진: ES→EF=ES+Duration",
-       "후진: LF→LS=LF−Duration",
-       "Total Float = LS−ES = LF−EF"
+       "전진: ES=선행 EF 최댓값, EF=ES+기간",
+       "후진: LF=후행 LS 최솟값, LS=LF−기간",
+       "결과: 프로젝트 완료일 = 최종 EF"
       ]
      }
     ]
    },
    {
-    "title": "활용",
+    "title": "여유와 활용",
     "subsections": [
      {
-      "title": null,
+      "title": "여유",
       "items": [
-       "집중 관리·단축 대상 식별",
-       "자원·위험 우선순위"
+       "TF=LS−ES=LF−EF",
+       "FF=후행 ES 최솟값−EF",
+       "임계 활동 TF=0"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "임계 경로 집중 감시",
+       "일정 단축 대상 선정",
+       "여유 활용한 자원 조정"
       ]
      }
     ]
@@ -3481,48 +3641,57 @@
    46
   ],
   "outline": [
-   "CPM의 개념",
+   "최장 경로 기반 일정 개념",
+   "- 주요 특징",
    "전진·후진 계산",
-   "Float",
-   "활용"
+   "- 계산",
+   "여유와 활용",
+   "- 여유",
+   "- 활용"
   ],
   "name": "임계경로법(CPM, Critical Path Method)",
   "en": "Critical Path Method",
   "keywords_must": [
-   "임계경로법(CPM)",
-   "임계 경로(Critical Path)",
-   "조기 시작·종료(ES/EF)",
-   "늦은 시작·종료(LS/LF)",
-   "총 여유(Total Float)",
-   "자유 여유(Free Float)",
-   "네트워크 다이어그램(Network Diagram)",
-   "일정 단축(Schedule Compression)"
+   "조기 시작·종료(ES·EF)",
+   "늦은 시작·종료(LS·LF)",
+   "전진 계산(Forward Pass)",
+   "후진 계산(Backward Pass)",
+   "총 여유(TF = LS−ES)",
+   "자유 여유(FF)",
+   "여유 0 최장 경로",
+   "네트워크 다이어그램(PDM)"
   ],
   "keywords_ref": [
-   "PERT",
-   "CCM(Critical Chain Method)",
-   "크래싱(Crashing)",
-   "패스트트래킹(Fast Tracking)"
+   "확정적 기간(단일 추정)",
+   "PERT(확률적)와 비교",
+   "일정 단축(크래싱·패스트트래킹)",
+   "근접 임계 경로",
+   "자원 제약 미반영 → CCM",
+   "부정적 여유"
   ],
   "curated": true,
   "quiz_terms": [
-   "임계경로법(CPM)",
-   "임계 경로(Critical Path)",
-   "조기 시작·종료(ES/EF)",
-   "늦은 시작·종료(LS/LF)",
-   "총 여유(Total Float)",
-   "자유 여유(Free Float)",
-   "네트워크 다이어그램(Network Diagram)",
-   "일정 단축(Schedule Compression)"
+   "조기 시작·종료(ES·EF)",
+   "늦은 시작·종료(LS·LF)",
+   "전진 계산(Forward Pass)",
+   "후진 계산(Backward Pass)",
+   "총 여유(TF = LS−ES)",
+   "자유 여유(FF)",
+   "여유 0 최장 경로",
+   "네트워크 다이어그램(PDM)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
    "CPM": "Critical Path Method",
-   "EF": "Early Finish"
+   "EF": "Early Finish",
+   "FF": "Free Float",
+   "ES": "Early Start",
+   "LS": "Late Start",
+   "LF": "Late Finish",
+   "TF": "Total Float"
   }
  },
  {
@@ -3532,45 +3701,57 @@
   "subtitle": "전진계산/후진계산",
   "domain": "PM",
   "category": "프로젝트 관리 >프로젝트 일정관리(시간관리) >전진계산/후진계산",
-  "definition": "네트워크에서 전진으로 ES·EF, 후진으로 LS·LF를 구해 여유와 임계경로를 산출하는 CPM의 핵심 계산",
+  "definition": "CPM 네트워크에서 시작 노드부터 각 활동의 조기 일정(ES·EF)을, 종료 노드부터 늦은 일정(LS·LF)을 계산하여 여유와 임계 경로를 도출하는 일정 계산 방법",
   "keywords": [
-   "전진: 프로젝트 시작→ES/EF",
-   "후진: 완료일←LS/LF",
-   "TF=LS−ES",
-   "TF=0이 임계"
+   "전진 계산: ES(Early Start) · EF(Early Finish) = ES + 기간 · 합류 시 최댓값",
+   "후진 계산: LF(Late Finish) · LS(Late Start) = LF − 기간 · 분기 시 최솟값",
+   "여유 산출: 총 여유(TF) = LS − ES · 자유 여유(FF) · 임계 경로(TF=0)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "계산 원리",
     "subsections": [
      {
-      "title": null,
+      "title": "원리",
       "items": [
-       "일정 네트워크의 조기·늦은 일자를 양방향으로 계산"
+       "전진은 가장 빠른 일정",
+       "후진은 납기를 지키는 가장 늦은 일정",
+       "두 결과 차이가 여유"
       ]
      }
     ]
    },
    {
-    "title": "전진",
+    "title": "전진 계산",
     "subsections": [
      {
-      "title": null,
+      "title": "규칙",
       "items": [
-       "시작점에서 ES 할당, EF=ES+Dur−1(또는 +Dur 규칙)",
-       "후속 ES = 선행 EF 반영(+Lag)"
+       "시작 활동 ES=0",
+       "EF=ES+기간",
+       "후속 ES=선행 EF 중 최댓값",
+       "최종 EF=프로젝트 기간"
       ]
      }
     ]
    },
    {
-    "title": "후진·여유",
+    "title": "후진 계산과 여유",
     "subsections": [
      {
-      "title": null,
+      "title": "규칙",
       "items": [
-       "완료점에서 LF 할당, LS=LF−Dur",
-       "Total Float=LS−ES, Free Float=후속ES−EF"
+       "최종 LF=프로젝트 기간",
+       "LS=LF−기간",
+       "선행 LF=후속 LS 중 최솟값"
+      ]
+     },
+     {
+      "title": "여유",
+      "items": [
+       "TF=LS−ES",
+       "FF=후속 ES 최솟값−EF",
+       "TF=0 경로가 임계 경로"
       ]
      }
     ]
@@ -3582,48 +3763,58 @@
    51
   ],
   "outline": [
-   "전진·후진 계산의 개념",
+   "계산 원리",
+   "- 원리",
    "전진 계산",
-   "후진 계산",
-   "Float 산출"
+   "- 규칙",
+   "후진 계산과 여유",
+   "- 규칙",
+   "- 여유"
   ],
   "name": "전진·후진 계산(Forward & Backward Pass)",
   "en": "Forward and Backward Pass",
   "keywords_must": [
-   "전진 계산(Forward Pass)",
-   "후진 계산(Backward Pass)",
    "ES(Early Start)",
-   "EF(Early Finish)",
-   "LS(Late Start)",
+   "EF(Early Finish) = ES + 기간",
+   "합류 시 최댓값",
    "LF(Late Finish)",
-   "총 여유(Total Float)",
-   "임계 경로(Critical Path)"
+   "LS(Late Start) = LF − 기간",
+   "분기 시 최솟값",
+   "총 여유(TF) = LS − ES",
+   "자유 여유(FF)",
+   "임계 경로(TF=0)"
   ],
   "keywords_ref": [
-   "의존관계(FS/SS/FF/SF)",
-   "선도·지연(Lead/Lag)",
-   "자유 여유(Free Float)",
-   "프로젝트 완료일"
+   "시작일 0 기준 vs 1 기준",
+   "선도·지연(Lead·Lag) 반영",
+   "목표 완료일 지정 시 음의 여유",
+   "AON·PDM",
+   "근접 임계 경로"
   ],
   "curated": true,
   "quiz_terms": [
-   "전진 계산(Forward Pass)",
-   "후진 계산(Backward Pass)",
    "ES(Early Start)",
-   "EF(Early Finish)",
-   "LS(Late Start)",
+   "EF(Early Finish) = ES + 기간",
+   "합류 시 최댓값",
    "LF(Late Finish)",
-   "총 여유(Total Float)",
-   "임계 경로(Critical Path)"
+   "LS(Late Start) = LF − 기간",
+   "분기 시 최솟값",
+   "총 여유(TF) = LS − ES",
+   "자유 여유(FF)",
+   "임계 경로(TF=0)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
    "CPM": "Critical Path Method",
-   "EF": "Early Finish"
+   "EF": "Early Finish",
+   "FF": "Free Float",
+   "ES": "Early Start",
+   "LS": "Late Start",
+   "LF": "Late Finish",
+   "TF": "Total Float"
   }
  },
  {
@@ -3633,51 +3824,49 @@
   "subtitle": "CCM(Critical Chain Method)",
   "domain": "PM",
   "category": "PM > 일정관리 > CCM",
-  "definition": "자원 제약을 반영한 임계 사슬을 기준으로, 개별 여유를 줄여 프로젝트·피딩·자원 버퍼로 통합 관리하는 일정 기법",
+  "definition": "골드랫의 제약이론(TOC)을 일정에 적용해, 자원 제약을 고려한 최장 경로(주공정 연쇄)를 구하고 개별 활동의 안전 여유를 제거·통합한 버퍼로 일정 위험을 관리하는 기법",
   "keywords": [
-   "자원 의존 반영 → Critical Chain",
-   "개별 안전여유 → 버퍼로 통합",
-   "PB/FB/RB",
-   "버퍼 소진으로 경보"
+   "버퍼: 프로젝트 버퍼(Project Buffer) · 합류 버퍼(Feeding Buffer) · 자원 버퍼(Resource Buffer)",
+   "핵심 개념: 주공정 연쇄(Critical Chain) · 자원 제약(Resource Constraint) · 안전 여유 제거(50% 추정) · 버퍼 관리(Buffer Management)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "자원 제약 일정 개념",
     "subsections": [
      {
-      "title": "정의",
+      "title": "등장 배경",
       "items": [
-       "자원 제약을 포함한 최장 사슬로 일정을 관리"
-      ]
-     },
-     {
-      "title": "CPM 대비",
-      "items": [
-       "CPM은 논리 의존, CCM은 자원 충돌까지 반영"
+       "활동별 과도한 안전 여유",
+       "파킨슨 법칙(시간 채우기)",
+       "학생 증후군(늑장 착수)",
+       "자원 경합 미반영(CPM 한계)"
       ]
      }
     ]
    },
    {
-    "title": "버퍼",
+    "title": "버퍼 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "버퍼",
       "items": [
-       "Project Buffer: 임계사슬 끝",
-       "Feeding Buffer: 비임계→임계 합류",
-       "Resource Buffer: 자원 대기 경보(시간 버퍼 아님)"
+       "프로젝트 버퍼: 주공정 연쇄 끝, 납기 보호",
+       "합류 버퍼: 비주공정이 합류하는 지점",
+       "자원 버퍼: 주공정 자원 준비 신호"
       ]
      }
     ]
    },
    {
-    "title": "관리",
+    "title": "CPM 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "비교 항목",
       "items": [
-       "버퍼 소진율·잔여 사슬 비율로 우선 조치"
+       "기준: 활동 의존 vs 의존+자원",
+       "여유: 개별 활동 vs 통합 버퍼",
+       "관리: 여유 감시 vs 버퍼 소진율",
+       "일정 추정: 안전 포함 vs 50% 확률 추정"
       ]
      }
     ]
@@ -3689,44 +3878,44 @@
    54
   ],
   "outline": [
-   "CCM의 개념",
-   "- CPM과의 차이",
+   "자원 제약 일정 개념",
+   "- 등장 배경",
    "버퍼 유형",
-   "버퍼 관리"
+   "- 버퍼",
+   "CPM 비교",
+   "- 비교 항목"
   ],
   "name": "주공정연쇄법(CCM, Critical Chain Method)",
   "en": "Critical Chain Method",
   "keywords_must": [
-   "주공정연쇄법(CCM)",
-   "임계 사슬(Critical Chain)",
    "프로젝트 버퍼(Project Buffer)",
-   "피딩 버퍼(Feeding Buffer)",
+   "합류 버퍼(Feeding Buffer)",
    "자원 버퍼(Resource Buffer)",
+   "주공정 연쇄(Critical Chain)",
    "자원 제약(Resource Constraint)",
-   "버퍼 소진율(Buffer Consumption)",
-   "안전 여유 제거"
+   "안전 여유 제거(50% 추정)",
+   "버퍼 관리(Buffer Management)"
   ],
   "keywords_ref": [
-   "CPM(Critical Path Method)",
-   "이론적 제약(TOC)",
-   "자원 평준화(Resource Leveling)",
-   "멀티태스킹 감소"
+   "제약이론(TOC, Theory of Constraints)",
+   "파킨슨 법칙·학생 증후군 대응",
+   "버퍼 소진율 피버 차트(Fever Chart)",
+   "멀티태스킹 금지",
+   "CPM과 비교"
   ],
   "curated": true,
   "quiz_terms": [
-   "주공정연쇄법(CCM)",
-   "임계 사슬(Critical Chain)",
    "프로젝트 버퍼(Project Buffer)",
-   "피딩 버퍼(Feeding Buffer)",
+   "합류 버퍼(Feeding Buffer)",
    "자원 버퍼(Resource Buffer)",
+   "주공정 연쇄(Critical Chain)",
    "자원 제약(Resource Constraint)",
-   "버퍼 소진율(Buffer Consumption)",
-   "안전 여유 제거"
+   "안전 여유 제거(50% 추정)",
+   "버퍼 관리(Buffer Management)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
    "CPM": "Critical Path Method"
@@ -3739,50 +3928,57 @@
   "subtitle": "Free Float, Total Float",
   "domain": "PM",
   "category": "PM > 일정관리 > 여유시간",
-  "definition": "네트워크 상에서 활동이 늦어져도 되는 여유. Total Float는 프로젝트 완료에, Free Float는 후속 조기시작에 영향을 주지 않는 여유",
+  "definition": "네트워크 일정에서 활동이 지연되어도 후속 활동이나 프로젝트 완료일에 영향을 주지 않는 시간으로, 총 여유와 자유 여유로 구분하며 임계 경로 판별과 자원 조정에 활용함",
   "keywords": [
-   "TF=LS−ES=LF−EF",
-   "FF=후속 ES − EF (−Lag 반영)",
-   "TF=0 → 임계",
-   "TF 남용 시 새 임계 경로"
+   "총 여유(TF, Total Float): TF = LS − ES = LF − EF · 프로젝트 완료일 영향 없는 지연 한도 · TF=0 임계 활동",
+   "자유 여유(FF, Free Float): FF = 후속 ES 최솟값 − EF · 후속 활동 영향 없는 지연 한도",
+   "관계: FF ≤ TF · 경로 공유 여유"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "일정 여유 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "계산 기반",
       "items": [
-       "활동을 지연해도 되는 시간적 여유"
+       "전진 계산 ES·EF",
+       "후진 계산 LS·LF",
+       "여유는 일정 유연성 지표"
       ]
      }
     ]
    },
    {
-    "title": "종류",
+    "title": "총 여유",
     "subsections": [
      {
-      "title": "Total Float",
+      "title": "총 여유",
       "items": [
-       "프로젝트 완료일을 밀지 않는 최대 지연"
+       "정의: 완료일을 지키는 최대 지연",
+       "산식: LS−ES",
+       "특징: 같은 경로의 활동들이 공유",
+       "0이면 임계"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "자유 여유와 관리",
+    "subsections": [
+     {
+      "title": "자유 여유",
+      "items": [
+       "정의: 후속 활동 ES 지연 없는 지연",
+       "산식: 후속 ES−EF",
+       "경로 마지막 비임계 활동에 주로 존재"
       ]
      },
      {
-      "title": "Free Float",
+      "title": "관리",
       "items": [
-       "후속 활동의 ES를 밀지 않는 최대 지연"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "관리",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "임계(TF=0) 집중 모니터링",
-       "여유 소비는 팀·경로 전체에 영향"
+       "여유 큰 활동 자원 임계 경로로 이동",
+       "음의 여유 시 단축 필요",
+       "여유 소진 감시"
       ]
      }
     ]
@@ -3794,48 +3990,53 @@
    56
   ],
   "outline": [
-   "여유의 개념",
-   "Total Float",
-   "Free Float",
-   "관리 의미"
+   "일정 여유 개념",
+   "- 계산 기반",
+   "총 여유",
+   "- 총 여유",
+   "자유 여유와 관리",
+   "- 자유 여유",
+   "- 관리"
   ],
   "name": "여유시간(Free Float·Total Float)",
-  "en": "Free Float and Total Float",
+  "en": "Float",
   "keywords_must": [
-   "총 여유(Total Float)",
-   "자유 여유(Free Float)",
-   "ES/EF/LS/LF",
-   "임계 활동(Critical Activity)",
-   "일정 여유(Slack)",
-   "후속 활동(Successor)",
-   "프로젝트 완료일",
-   "경로 수렴(Path Convergence)"
+   "TF = LS − ES = LF − EF",
+   "프로젝트 완료일 영향 없는 지연 한도",
+   "TF=0 임계 활동",
+   "FF = 후속 ES 최솟값 − EF",
+   "후속 활동 영향 없는 지연 한도",
+   "FF ≤ TF",
+   "경로 공유 여유"
   ],
   "keywords_ref": [
-   "CPM",
-   "버퍼(CCM)",
-   "네거티브 플로트(Negative Float)",
-   "일정 단축"
+   "여유(Slack) 동의어",
+   "음의 여유(Negative Float)",
+   "독립 여유(Independent Float)",
+   "자원 평활화는 여유 내 조정",
+   "근접 임계 경로 감시"
   ],
   "curated": true,
   "quiz_terms": [
-   "총 여유(Total Float)",
-   "자유 여유(Free Float)",
-   "ES/EF/LS/LF",
-   "임계 활동(Critical Activity)",
-   "일정 여유(Slack)",
-   "후속 활동(Successor)",
-   "프로젝트 완료일",
-   "경로 수렴(Path Convergence)"
+   "TF = LS − ES = LF − EF",
+   "프로젝트 완료일 영향 없는 지연 한도",
+   "TF=0 임계 활동",
+   "FF = 후속 ES 최솟값 − EF",
+   "후속 활동 영향 없는 지연 한도",
+   "FF ≤ TF",
+   "경로 공유 여유"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
-   "CPM": "Critical Path Method",
-   "EF": "Early Finish"
+   "EF": "Early Finish",
+   "FF": "Free Float",
+   "ES": "Early Start",
+   "LS": "Late Start",
+   "LF": "Late Finish",
+   "TF": "Total Float"
   }
  },
  {
@@ -3845,44 +4046,56 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 일정관리 > 자원최적화",
-  "definition": "일정과 자원 제약을 맞춰 배정을 조정하는 기법. 자원 평준화(기간 늘어날 수 있음)와 자원 평활화(기간 유지)가 대표적",
+  "definition": "자원의 수요와 공급이 균형을 이루도록 활동의 시작·종료일을 조정하는 일정 개발 기법으로, 자원 평준화와 자원 평활화로 구분함",
   "keywords": [
-   "Leveling: 제약 해소, 일정 연장 가능",
-   "Smoothing: Float 안에서만, 기간 유지",
-   "히스토그램으로 피크 확인",
-   "임계 자원 우선"
+   "자원 평준화(Resource Leveling): 자원 제약 기준 · 임계 경로 변경 가능 · 완료일 연장 가능",
+   "자원 평활화(Resource Smoothing): 여유 내 조정 · 임계 경로·완료일 불변 · 자원 변동 완화",
+   "도구: 자원 히스토그램(Resource Histogram) · 초과 배정(Over-allocation)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "자원 수급 조정 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "도입 필요성",
       "items": [
-       "수요와 공급(가용 자원)을 맞추는 일정 조정"
+       "특정 기간 자원 초과 배정",
+       "자원 공유 경합",
+       "인력 변동 비용",
+       "일정 실현 가능성 확보"
       ]
      }
     ]
    },
    {
-    "title": "평준화",
+    "title": "자원 평준화",
     "subsections": [
      {
-      "title": null,
+      "title": "평준화",
       "items": [
-       "초과 배정 해소가 목적, Critical Path·기간 변경 가능"
+       "목적: 자원 한도 준수",
+       "방법: 활동 지연·분할",
+       "결과: 임계 경로 변경·완료일 연장 가능"
       ]
      }
     ]
    },
    {
-    "title": "평활화",
+    "title": "자원 평활화와 선택 기준",
     "subsections": [
      {
-      "title": null,
+      "title": "평활화",
       "items": [
-       "기간 유지, Free/Total Float 범위에서 피크만 완화",
-       "제약 미해소 시 잔여 과배정 가능"
+       "목적: 자원 수요 고르게",
+       "방법: 자유·총 여유 내 이동",
+       "결과: 완료일 불변, 완전 최적화 불가할 수 있음"
+      ]
+     },
+     {
+      "title": "선택 기준",
+      "items": [
+       "자원 한도 절대: 평준화",
+       "납기 고정: 평활화"
       ]
      }
     ]
@@ -3894,44 +4107,47 @@
    58
   ],
   "outline": [
-   "자원 최적화의 개념",
+   "자원 수급 조정 개념",
+   "- 도입 필요성",
    "자원 평준화",
-   "자원 평활화",
-   "선택 기준"
+   "- 평준화",
+   "자원 평활화와 선택 기준",
+   "- 평활화",
+   "- 선택 기준"
   ],
   "name": "자원 최적화(Resource Optimization)",
   "en": "Resource Optimization",
   "keywords_must": [
-   "자원 최적화(Resource Optimization)",
-   "자원 평준화(Resource Leveling)",
-   "자원 평활화(Resource Smoothing)",
+   "자원 제약 기준",
+   "임계 경로 변경 가능",
+   "완료일 연장 가능",
+   "여유 내 조정",
+   "임계 경로·완료일 불변",
+   "자원 변동 완화",
    "자원 히스토그램(Resource Histogram)",
-   "초과 배정(Over-allocation)",
-   "가용 여유(Available Float)",
-   "일정 기준선",
-   "자원 제약"
+   "초과 배정(Over-allocation)"
   ],
   "keywords_ref": [
-   "CCM(Critical Chain)",
-   "크래싱(Crashing)",
-   "자원 캘린더(Resource Calendar)",
-   "멀티태스킹"
+   "자원 달력",
+   "자원 부하 그래프",
+   "자원 제약 일정 → CCM",
+   "자원 공유·과다 배정 해소",
+   "What-if 분석"
   ],
   "curated": true,
   "quiz_terms": [
-   "자원 최적화(Resource Optimization)",
-   "자원 평준화(Resource Leveling)",
-   "자원 평활화(Resource Smoothing)",
+   "자원 제약 기준",
+   "임계 경로 변경 가능",
+   "완료일 연장 가능",
+   "여유 내 조정",
+   "임계 경로·완료일 불변",
+   "자원 변동 완화",
    "자원 히스토그램(Resource Histogram)",
-   "초과 배정(Over-allocation)",
-   "가용 여유(Available Float)",
-   "일정 기준선",
-   "자원 제약"
+   "초과 배정(Over-allocation)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -3941,45 +4157,55 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 일정관리 > 일정단축기법",
-  "definition": "범위를 줄이지 않고 일정을 앞당기는 기법. 자원·비용을 늘리는 Crashing과 순차 작업을 겹치는 Fast Tracking이 핵심",
+  "definition": "프로젝트 범위를 줄이지 않고 일정 제약이나 목표를 맞추기 위해 임계 경로 활동의 기간을 단축하는 기법으로, 크래싱과 패스트트래킹이 대표적",
   "keywords": [
-   "Crashing: 자원 추가로 기간↓·원가↑",
-   "Fast Tracking: 병행으로 기간↓·위험↑",
-   "임계 경로만 단축 의미",
-   "범위 축소는 단축 아님(별도)"
+   "크래싱(Crashing): 자원 추가 · 원가 증가 · 비용 기울기(Cost Slope) 최소 활동 우선",
+   "패스트트래킹(Fast Tracking): 순차 활동 병행 · 재작업 위험(Rework Risk) · 원가 증가 없음",
+   "공통: 임계 경로(Critical Path) 대상 · 범위 유지"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "범위 유지 단축 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "적용 원칙",
       "items": [
-       "범위는 유지한 채 완료일을 당김"
+       "임계 경로 활동만 단축",
+       "단축 후 임계 경로 재확인",
+       "비용·위험 비교"
       ]
      }
     ]
    },
    {
-    "title": "Crashing",
+    "title": "크래싱",
     "subsections": [
      {
-      "title": null,
+      "title": "크래싱",
       "items": [
-       "임계 활동에 자원·연장 근무 투입",
-       "비용 대비 단축 효과 큰 활동부터"
+       "방법: 인력·장비 추가, 초과 근무",
+       "대상: 비용 기울기 최소 활동",
+       "한계: 수확체감·브룩스 법칙"
       ]
      }
     ]
    },
    {
-    "title": "Fast Tracking",
+    "title": "패스트트래킹과 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "패스트트래킹",
       "items": [
-       "원래 순차인 작업을 겹침",
-       "재작업·소통 위험 증가"
+       "방법: FS 관계를 SS·리드로 변경",
+       "한계: 재작업·위험 증가"
+      ]
+     },
+     {
+      "title": "비교 항목",
+      "items": [
+       "원가: 증가 vs 거의 없음",
+       "위험: 낮음 vs 높음",
+       "조건: 자원 추가 가능 vs 병행 가능한 활동"
       ]
      }
     ]
@@ -3991,44 +4217,47 @@
    60
   ],
   "outline": [
-   "일정 단축의 개념",
-   "Crashing",
-   "Fast Tracking",
-   "비교·위험"
+   "범위 유지 단축 개념",
+   "- 적용 원칙",
+   "크래싱",
+   "- 크래싱",
+   "패스트트래킹과 비교",
+   "- 패스트트래킹",
+   "- 비교 항목"
   ],
   "name": "일정 단축 기법(Schedule Compression)",
   "en": "Schedule Compression",
   "keywords_must": [
-   "일정 단축(Schedule Compression)",
-   "크래싱(Crashing)",
-   "패스트트래킹(Fast Tracking)",
-   "임계 경로(Critical Path)",
-   "비용-시간 트레이드오프",
+   "자원 추가",
+   "원가 증가",
+   "비용 기울기(Cost Slope) 최소 활동 우선",
+   "순차 활동 병행",
    "재작업 위험(Rework Risk)",
-   "범위 유지",
-   "한계 효용 체감"
+   "원가 증가 없음",
+   "임계 경로(Critical Path) 대상",
+   "범위 유지"
   ],
   "keywords_ref": [
-   "수확체감(Law of Diminishing Returns)",
-   "브룩스 법칙(Brooks' Law)",
-   "자원 최적화",
-   "일정 기준선"
+   "비용 기울기 = (단축 비용 − 정상 비용)/(정상 기간 − 단축 기간)",
+   "수확체감·브룩스 법칙",
+   "근접 임계 경로 전환",
+   "범위 축소·연장 협상",
+   "잔업·외주"
   ],
   "curated": true,
   "quiz_terms": [
-   "일정 단축(Schedule Compression)",
-   "크래싱(Crashing)",
-   "패스트트래킹(Fast Tracking)",
-   "임계 경로(Critical Path)",
-   "비용-시간 트레이드오프",
+   "자원 추가",
+   "원가 증가",
+   "비용 기울기(Cost Slope) 최소 활동 우선",
+   "순차 활동 병행",
    "재작업 위험(Rework Risk)",
-   "범위 유지",
-   "한계 효용 체감"
+   "원가 증가 없음",
+   "임계 경로(Critical Path) 대상",
+   "범위 유지"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -4038,43 +4267,55 @@
   "subtitle": "수확 체감의 법칙",
   "domain": "PM",
   "category": "PM > 일정관리> 브룩스 법칙",
-  "definition": "투입(인력·자원)을 늘려도 추가 산출의 증가분이 점차 줄어드는 현상. 일정 크래싱 시 한계 효용을 설명",
+  "definition": "다른 투입 요소를 고정한 채 한 요소만 계속 늘리면 추가 투입 단위당 산출 증가분(한계 생산)이 점차 감소하는 경제 법칙으로, 크래싱·인력 투입 효과의 한계를 설명함",
   "keywords": [
-   "추가 투입 → 추가 성과 감소",
-   "크래싱 효과 한계",
-   "Brooks: 지연 프로젝트에 인력 추가 → 더 지연",
-   "소통·학습 비용이 원인"
+   "핵심 개념: 한계 생산(Marginal Product) 감소 · 투입 대비 산출 · 한계 비용(Marginal Cost) 증가 · 최적 투입점",
+   "프로젝트 적용: 크래싱(Crashing) 한계 · 기간 산정 고려 요소 · 과다 인력 투입",
+   "비교: 브룩스의 법칙(Brooks' Law)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "한계 생산 감소 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "개념과 주요 특징",
       "items": [
-       "다른 조건이 고정일 때 가변 투입의 한계 생산이 감소"
+       "생산 요소 일부 고정",
+       "추가 투입 효과 체감",
+       "일정 수준 이후 총 산출 감소 가능"
       ]
      }
     ]
    },
    {
-    "title": "일정",
+    "title": "프로젝트에서의 의미",
     "subsections": [
      {
-      "title": null,
+      "title": "의미",
       "items": [
-       "인력·자원 추가 초기엔 단축, 이후 효과 급감·원가 급증"
+       "인력 2배가 기간 1/2이 아님",
+       "기간 산정 시 고려",
+       "장시간 초과 근무 생산성 저하"
       ]
      }
     ]
    },
    {
-    "title": "관련",
+    "title": "크래싱·브룩스 법칙과 관계",
     "subsections": [
      {
-      "title": null,
+      "title": "크래싱",
       "items": [
-       "Brooks' Law는 지연 상황의 소통·교육 오버헤드를 강조"
+       "비용 기울기 증가",
+       "단축 한계점 존재"
+      ]
+     },
+     {
+      "title": "브룩스 법칙과 차이",
+      "items": [
+       "수확체감: 산출 증가폭 감소",
+       "브룩스: 지연 프로젝트 인력 추가 시 오히려 더 지연",
+       "원인: 교육·의사소통 비용"
       ]
      }
     ]
@@ -4086,44 +4327,47 @@
    65
   ],
   "outline": [
-   "수확체감의 개념",
+   "한계 생산 감소 개념",
+   "- 개념과 주요 특징",
    "프로젝트에서의 의미",
-   "크래싱과의 관계",
-   "브룩스 법칙과의 차이"
+   "- 의미",
+   "크래싱·브룩스 법칙과 관계",
+   "- 크래싱",
+   "- 브룩스 법칙과 차이"
   ],
   "name": "수확체감의 법칙(Law of Diminishing Returns)",
   "en": "Law of Diminishing Returns",
   "keywords_must": [
-   "수확체감의 법칙(Law of Diminishing Returns)",
-   "한계 생산(Marginal Output)",
+   "한계 생산(Marginal Product) 감소",
    "투입 대비 산출",
-   "크래싱(Crashing)",
-   "한계 비용(Marginal Cost)",
-   "최적 투입",
-   "과다 인력",
-   "생산성 저하"
+   "한계 비용(Marginal Cost) 증가",
+   "최적 투입점",
+   "크래싱(Crashing) 한계",
+   "기간 산정 고려 요소",
+   "과다 인력 투입",
+   "브룩스의 법칙(Brooks' Law)"
   ],
   "keywords_ref": [
-   "브룩스 법칙(Brooks' Law)",
-   "일정 단축",
-   "학습 곡선",
-   "커뮤니케이션 경로 증가"
+   "한계 생산 음수 구간(역효과)",
+   "고정 요소: 관리·장비·공간",
+   "초과 근무 피로",
+   "의사소통 오버헤드",
+   "PMBOK 활동 기간 산정 고려"
   ],
   "curated": true,
   "quiz_terms": [
-   "수확체감의 법칙(Law of Diminishing Returns)",
-   "한계 생산(Marginal Output)",
+   "한계 생산(Marginal Product) 감소",
    "투입 대비 산출",
-   "크래싱(Crashing)",
-   "한계 비용(Marginal Cost)",
-   "최적 투입",
-   "과다 인력",
-   "생산성 저하"
+   "한계 비용(Marginal Cost) 증가",
+   "최적 투입점",
+   "크래싱(Crashing) 한계",
+   "기간 산정 고려 요소",
+   "과다 인력 투입",
+   "브룩스의 법칙(Brooks' Law)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -4133,50 +4377,50 @@
   "subtitle": "브룩스 법칙(Brook's Law)",
   "domain": "PM",
   "category": "PM > 일정관리> 브룩스 법칙",
-  "definition": "『맨먼스 미신』의 경험칙: 지연된 소프트웨어 프로젝트에 인력을 추가하면 오히려 더 늦어진다. 소통·교육 비용 때문",
+  "definition": "프레드 브룩스가 「맨먼스 미신」에서 제시한 법칙으로, 이미 지연된 소프트웨어 프로젝트에 인력을 추가 투입하면 오히려 프로젝트가 더 지연된다는 원리",
   "keywords": [
-   "지연+인력추가 → 더 지연",
-   "원인: 교육·소통·분할난해",
-   "채널 수 급증",
-   "초기 계획·모듈화가 대안"
+   "원인: 교육·온보딩 비용(Ramp-up) · 의사소통 경로(N(N−1)/2) 증가 · 분할 불가능 과업(Indivisible Tasks)",
+   "배경: 맨먼스 미신(The Mythical Man-Month, 1975) · 공수(M/M)와 기간 비례 착각",
+   "대응: 조기 인력 계획 · 범위 조정 · 소규모 팀 분할"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "인력 추가 역효과 개념",
     "subsections": [
      {
-      "title": "정의",
+      "title": "의미",
       "items": [
-       "늦은 프로젝트에 사람을 더 넣으면 더 늦다 (F. Brooks)"
+       "인력과 기간은 교환 불가",
+       "SW 개발은 소통 비중 높음",
+       "일정 지연 시 인력 추가 신중"
       ]
-     },
+     }
+    ]
+   },
+   {
+    "title": "발생 원인",
+    "subsections": [
      {
       "title": "원인",
       "items": [
-       "신규 인력 교육, 소통 경로 증가, 과업 분할 한계"
+       "학습 곡선: 신규 인력 교육에 기존 인력 투입",
+       "의사소통: 경로 N(N−1)/2로 증가",
+       "분할 한계: 순차 작업은 병렬화 불가"
       ]
      }
     ]
    },
    {
-    "title": "시사점",
+    "title": "대응 방안",
     "subsections": [
      {
-      "title": null,
+      "title": "대응",
       "items": [
-       "일정은 완충으로 관리",
-       "위기 시 범위·우선순위 조정 검토"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "보완",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "독립 모듈·자동화 시험이 있으면 영향 완화 가능하나 법칙은 유효"
+       "범위 축소·우선순위 조정",
+       "초기 단계 인력 확보",
+       "독립 모듈 단위 팀 분리",
+       "문서화·온보딩 체계",
+       "일정 재협상"
       ]
      }
     ]
@@ -4188,45 +4432,47 @@
    69
   ],
   "outline": [
-   "브룩스 법칙의 개념",
-   "- 정의",
+   "인력 추가 역효과 개념",
+   "- 의미",
+   "발생 원인",
    "- 원인",
-   "시사점",
-   "예외·보완"
+   "대응 방안",
+   "- 대응"
   ],
   "name": "브룩스의 법칙(Brooks' Law)",
   "en": "Brooks' Law",
   "keywords_must": [
-   "브룩스의 법칙(Brooks' Law)",
-   "맨먼스 미신(Mythical Man-Month)",
-   "의사소통 경로(Communication Paths)",
-   "교육·온보딩 비용",
+   "교육·온보딩 비용(Ramp-up)",
+   "의사소통 경로(N(N−1)/2) 증가",
    "분할 불가능 과업(Indivisible Tasks)",
-   "일정 지연",
-   "인력 추가",
-   "생산성"
+   "맨먼스 미신(The Mythical Man-Month, 1975)",
+   "공수(M/M)와 기간 비례 착각",
+   "조기 인력 계획",
+   "범위 조정",
+   "소규모 팀 분할"
   ],
   "keywords_ref": [
-   "수확체감의 법칙",
-   "의사소통 채널 수 N(N−1)/2",
-   "페어 프로그래밍",
-   "모듈화"
+   "수확체감의 법칙과 비교",
+   "콘웨이 법칙",
+   "외과 수술 팀(Surgical Team)",
+   "개념적 무결성",
+   "은탄환은 없다(No Silver Bullet)",
+   "애자일 2피자 팀"
   ],
   "curated": true,
   "quiz_terms": [
-   "브룩스의 법칙(Brooks' Law)",
-   "맨먼스 미신(Mythical Man-Month)",
-   "의사소통 경로(Communication Paths)",
-   "교육·온보딩 비용",
+   "교육·온보딩 비용(Ramp-up)",
+   "의사소통 경로(N(N−1)/2) 증가",
    "분할 불가능 과업(Indivisible Tasks)",
-   "일정 지연",
-   "인력 추가",
-   "생산성"
+   "맨먼스 미신(The Mythical Man-Month, 1975)",
+   "공수(M/M)와 기간 비례 착각",
+   "조기 인력 계획",
+   "범위 조정",
+   "소규모 팀 분할"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -4236,44 +4482,56 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 프로젝트관리 > 원가관리",
-  "definition": "원가 산정·예산 결정·원가 통제로 승인된 예산 안에서 완료하도록 관리하는 지식영역. EVM이 핵심 통제 도구",
+  "definition": "승인된 예산 범위 내에서 프로젝트를 완료하기 위해 원가를 계획·산정·예산 책정·조달·관리·통제하는 지식 영역",
   "keywords": [
-   "프로세스: 계획·산정·예산·통제",
-   "Cost Baseline ⊂ Project Budget",
-   "우발=위험, 관리=미지",
-   "EVM으로 SV/CV·예측"
+   "4개 프로세스: 원가 관리 계획 · 원가 산정(Estimate Costs) · 예산 결정(Determine Budget) · 원가 통제(Control Costs)",
+   "예산 구조: 원가 기준선(Cost Baseline) · 우발 예비(Contingency Reserve) · 관리 예비(Management Reserve) · 완료 시 예산(BAC)",
+   "통제: 획득가치관리(EVM)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "원가 관리 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "원가 범위",
       "items": [
-       "예산 내 완료를 위한 원가 계획·산정·통제"
+       "직접비·간접비",
+       "고정비·변동비",
+       "생애주기 원가 고려"
       ]
      }
     ]
    },
    {
-    "title": "프로세스",
+    "title": "주요 프로세스",
     "subsections": [
      {
-      "title": null,
+      "title": "프로세스",
       "items": [
-       "원가관리 계획, 원가 산정, 예산 결정, 원가 통제"
+       "계획: 원가 관리 계획서",
+       "산정: 유사·모수·상향식·3점",
+       "예산 결정: 원가 합산·기준선 수립",
+       "통제: EVM·예측"
       ]
      }
     ]
    },
    {
-    "title": "예산",
+    "title": "예산과 기준선 통제",
     "subsections": [
      {
-      "title": null,
+      "title": "예산 구조",
       "items": [
-       "Cost Baseline = 승인된 시간위상 예산(우발예비 포함)",
-       "Management Reserve는 기준선 밖, 전체 예산에 포함"
+       "활동 원가 + 우발 예비 = 작업 패키지 → 통제 계정 → 원가 기준선",
+       "+ 관리 예비 = 프로젝트 예산"
+      ]
+     },
+     {
+      "title": "통제",
+      "items": [
+       "CV·CPI 감시",
+       "EAC 예측",
+       "관리 예비 사용은 변경 통제 필요"
       ]
      }
     ]
@@ -4285,47 +4543,55 @@
    45
   ],
   "outline": [
-   "원가관리의 개념",
-   "프로세스",
-   "예산과 기준선",
-   "통제"
+   "원가 관리 개념",
+   "- 원가 범위",
+   "주요 프로세스",
+   "- 프로세스",
+   "예산과 기준선 통제",
+   "- 예산 구조",
+   "- 통제"
   ],
   "name": "프로젝트 원가관리(Project Cost Management)",
   "en": "Project Cost Management",
   "keywords_must": [
-   "원가 관리(Cost Management)",
+   "원가 관리 계획",
    "원가 산정(Estimate Costs)",
    "예산 결정(Determine Budget)",
    "원가 통제(Control Costs)",
    "원가 기준선(Cost Baseline)",
-   "관리 예비(Management Reserve)",
    "우발 예비(Contingency Reserve)",
-   "EVM(Earned Value Management)"
+   "관리 예비(Management Reserve)",
+   "완료 시 예산(BAC)",
+   "획득가치관리(EVM)"
   ],
   "keywords_ref": [
-   "수명주기 원가(Life Cycle Costing)",
-   "가치공학(Value Engineering)",
-   "자금 한도(Funding Limit)",
-   "S-커브"
+   "예산 = 원가 기준선 + 관리 예비",
+   "S-커브",
+   "자금 한도 조정(Funding Limit Reconciliation)",
+   "생애주기 원가(LCC)",
+   "TCPI",
+   "활동 원가 → 작업 패키지 → 통제 계정"
   ],
   "curated": true,
   "quiz_terms": [
-   "원가 관리(Cost Management)",
+   "원가 관리 계획",
    "원가 산정(Estimate Costs)",
    "예산 결정(Determine Budget)",
    "원가 통제(Control Costs)",
    "원가 기준선(Cost Baseline)",
-   "관리 예비(Management Reserve)",
    "우발 예비(Contingency Reserve)",
-   "EVM(Earned Value Management)"
+   "관리 예비(Management Reserve)",
+   "완료 시 예산(BAC)",
+   "획득가치관리(EVM)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
-   "EVM": "Earned Value Management"
+   "EVM": "Earned Value Management",
+   "CV": "Cost Variance",
+   "CPI": "Cost Performance Index"
   }
  },
  {
@@ -4335,44 +4601,52 @@
   "subtitle": "원가 산정 기법",
   "domain": "PM",
   "category": "PM > 원가관리 > 원가 산정 기법",
-  "definition": "프로젝트 완료에 필요한 원가를 추정하는 기법. 유사·모수·상향식·3점·전문가 판단 등으로 공수·자원을 금액화",
+  "definition": "프로젝트 활동을 완료하는 데 필요한 자원의 금전적 비용을 추정하는 원가 관리 프로세스의 기법으로, 단계가 진행될수록 정확도를 높여 원가 기준선의 근거를 마련함",
   "keywords": [
-   "유사: 빠르고 거침",
-   "모수: 단위비용×규모",
-   "상향식: WP합, 정확↑노력↑",
-   "예비(우발·관리) 구분"
+   "PMBOK 기법: 유사 산정(Analogous) · 모수 산정(Parametric) · 상향식 산정(Bottom-up) · 3점 산정(Three-Point) · 예비 분석(Reserve Analysis)",
+   "SW 규모 기반: 기능점수(FP) · COCOMO(Constructive Cost Model)",
+   "정확도: ROM(개략) −25%~+75% · 확정(Definitive) −5%~+10%"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "원가 추정 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "원칙",
       "items": [
-       "활동·패키지 원가를 추정해 예산의 기초를 만듦"
+       "자원 단가 × 수량",
+       "위험 반영 예비",
+       "산정 근거 문서화",
+       "단계적 정확도 향상"
       ]
      }
     ]
    },
    {
-    "title": "기법",
+    "title": "주요 기법",
     "subsections": [
      {
-      "title": null,
+      "title": "기법",
       "items": [
-       "유사, 모수, 상향식, 3점, 전문가 판단, 벤더 입찰 분석"
+       "유사: 과거 유사 사업 기준",
+       "모수: 통계 관계(단가 × 규모)",
+       "상향식: 작업 패키지 합산",
+       "3점: 낙관·최빈·비관",
+       "SW: FP·COCOMO"
       ]
      }
     ]
    },
    {
-    "title": "단계",
+    "title": "정확도 단계",
     "subsections": [
      {
-      "title": null,
+      "title": "정확도",
       "items": [
-       "Rough Order of Magnitude → Budgetary → Definitive",
-       "진행될수록 정확도 향상"
+       "착수 ROM: −25%~+75%",
+       "예산(Budget): −10%~+25%",
+       "확정: −5%~+10%",
+       "진행할수록 범위 축소"
       ]
      }
     ]
@@ -4384,47 +4658,53 @@
    53
   ],
   "outline": [
-   "원가 산정의 개념",
+   "원가 추정 개념",
+   "- 원칙",
    "주요 기법",
+   "- 기법",
    "정확도 단계",
-   "관련 산출"
+   "- 정확도"
   ],
   "name": "원가 산정 기법(Cost Estimating Techniques)",
   "en": "Cost Estimating Techniques",
   "keywords_must": [
-   "유사 산정(Analogous Estimating)",
-   "모수 산정(Parametric Estimating)",
-   "상향식 산정(Bottom-up Estimating)",
+   "유사 산정(Analogous)",
+   "모수 산정(Parametric)",
+   "상향식 산정(Bottom-up)",
    "3점 산정(Three-Point)",
-   "전문가 판단(Expert Judgment)",
    "예비 분석(Reserve Analysis)",
-   "정확도(Accuracy)",
-   "원가 기준선(Cost Baseline)"
+   "기능점수(FP)",
+   "COCOMO(Constructive Cost Model)",
+   "ROM(개략) −25%~+75%",
+   "확정(Definitive) −5%~+10%"
   ],
   "keywords_ref": [
-   "기능점수(FP, Function Point)",
-   "COCOMO",
-   "견적(Order of Magnitude)",
-   "예산(Budget)"
+   "품질 비용(COQ)",
+   "대안 분석",
+   "LOC 기반 산정",
+   "SW사업 대가산정 가이드",
+   "투입 공수(M/M) 방식",
+   "원가 기준선·산정 근거(산출물)"
   ],
   "curated": true,
   "quiz_terms": [
-   "유사 산정(Analogous Estimating)",
-   "모수 산정(Parametric Estimating)",
-   "상향식 산정(Bottom-up Estimating)",
+   "유사 산정(Analogous)",
+   "모수 산정(Parametric)",
+   "상향식 산정(Bottom-up)",
    "3점 산정(Three-Point)",
-   "전문가 판단(Expert Judgment)",
    "예비 분석(Reserve Analysis)",
-   "정확도(Accuracy)",
-   "원가 기준선(Cost Baseline)"
+   "기능점수(FP)",
+   "COCOMO(Constructive Cost Model)",
+   "ROM(개략) −25%~+75%",
+   "확정(Definitive) −5%~+10%"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
-   "FP": "Function Point"
+   "FP": "Function Point",
+   "ROM": "Rough Order of Magnitude"
   }
  },
  {
@@ -4434,46 +4714,67 @@
   "subtitle": "원가 산정 기법2(FP)",
   "domain": "PM",
   "category": "PM > 원가관리 > 원가 산정 기법",
-  "definition": "사용자 관점의 기능 규모를 산정하는 SW 규모 지표. ILF·EIF·EI·EO·EQ와 가중·VAF로 FP를 산출해 공수·원가 추정에 사용",
+  "definition": "소프트웨어가 사용자에게 제공하는 기능의 양을 사용자 관점에서 측정하는 규모 산정 방식(ISO/IEC 14143-1)으로, LOC의 언어·개발자 의존 문제를 보완해 SW 사업 대가 산정에 활용됨",
   "keywords": [
-   "5유형: ILF·EIF·EI·EO·EQ",
-   "미조정 FP→VAF→AFP",
-   "언어·기술 독립적 규모",
-   "원가·생산성 벤치마크"
+   "데이터 기능: 내부 논리 파일(ILF, Internal Logical File) · 외부 연계 파일(EIF, External Interface File)",
+   "트랜잭션 기능: 외부 입력(EI, External Input) · 외부 출력(EO, External Output) · 외부 조회(EQ, External inQuiry)",
+   "산정 방법: 정규 기능점수(상세법) · 간이법(평균 복잡도) · 보정 계수(VAF, Value Adjustment Factor)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "사용자 관점 규모 산정",
     "subsections": [
      {
-      "title": null,
+      "title": "등장 배경",
       "items": [
-       "사용자 기능 관점의 SW 규모 측정 (Allan Albrecht / IFPUG)"
+       "LOC는 언어 의존",
+       "초기 추정 어려움",
+       "개발자 역량 영향",
+       "사용자 관점 측정 필요"
       ]
      }
     ]
    },
    {
-    "title": "유형",
+    "title": "기능 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "데이터 기능",
       "items": [
-       "데이터: ILF, EIF",
-       "트랜잭션: EI, EO, EQ"
+       "ILF: 내부 유지 데이터",
+       "EIF: 외부 참조 데이터"
+      ]
+     },
+     {
+      "title": "트랜잭션 기능",
+      "items": [
+       "EI: 입력 처리",
+       "EO: 가공 수반 출력",
+       "EQ: 가공 없는 조회"
       ]
      }
     ]
    },
    {
-    "title": "절차",
+    "title": "산정 절차와 활용",
     "subsections": [
      {
-      "title": null,
+      "title": "절차",
       "items": [
-       "기능 식별 → 복잡도(단순/보통/복잡) → UFP",
-       "14특성 VAF 적용 → AFP",
-       "생산성(FP/MM)으로 공수 환산"
+       "측정 유형 결정",
+       "측정 범위·경계 식별",
+       "데이터·트랜잭션 기능 식별",
+       "복잡도 평가",
+       "기능점수 산출",
+       "보정"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "공공 SW 사업 대가 산정",
+       "생산성(FP/M·M) 관리",
+       "견적 비교"
       ]
      }
     ]
@@ -4485,45 +4786,49 @@
    62
   ],
   "outline": [
-   "기능점수의 개념",
-   "5가지 기능 유형",
-   "산정 절차",
-   "활용"
+   "사용자 관점 규모 산정",
+   "- 등장 배경",
+   "기능 유형",
+   "- 데이터 기능",
+   "- 트랜잭션 기능",
+   "산정 절차와 활용",
+   "- 절차",
+   "- 활용"
   ],
   "name": "기능점수(FP, Function Point)",
   "en": "Function Point",
   "keywords_must": [
-   "기능점수(Function Point)",
-   "ILF(Internal Logical File)",
-   "EIF(External Interface File)",
-   "EI(External Input)",
-   "EO(External Output)",
-   "EQ(External Inquiry)",
-   "복잡도 가중(Complexity Weight)",
-   "VAF(Value Adjustment Factor)"
+   "내부 논리 파일(ILF, Internal Logical File)",
+   "외부 연계 파일(EIF, External Interface File)",
+   "외부 입력(EI, External Input)",
+   "외부 출력(EO, External Output)",
+   "외부 조회(EQ, External inQuiry)",
+   "정규 기능점수(상세법)",
+   "간이법(평균 복잡도)",
+   "보정 계수(VAF, Value Adjustment Factor)"
   ],
   "keywords_ref": [
-   "COCOMO",
-   "LOC(Lines of Code)",
-   "스토리 포인트(Story Point)",
-   "IFPUG",
-   "NESMA"
+   "IFPUG 방식",
+   "측정 유형: 개발·개선·애플리케이션",
+   "경계(Boundary) 식별",
+   "복잡도: DET·RET·FTR",
+   "SW사업 대가산정 가이드",
+   "NESMA·COSMIC"
   ],
   "curated": true,
   "quiz_terms": [
-   "기능점수(Function Point)",
-   "ILF(Internal Logical File)",
-   "EIF(External Interface File)",
-   "EI(External Input)",
-   "EO(External Output)",
-   "EQ(External Inquiry)",
-   "복잡도 가중(Complexity Weight)",
-   "VAF(Value Adjustment Factor)"
+   "내부 논리 파일(ILF, Internal Logical File)",
+   "외부 연계 파일(EIF, External Interface File)",
+   "외부 입력(EI, External Input)",
+   "외부 출력(EO, External Output)",
+   "외부 조회(EQ, External inQuiry)",
+   "정규 기능점수(상세법)",
+   "간이법(평균 복잡도)",
+   "보정 계수(VAF, Value Adjustment Factor)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
    "FP": "Function Point"
@@ -4536,48 +4841,65 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 획득가치관리(EVM)",
-  "definition": "계획 가치·획득 가치·실제 원가로 일정·원가 성과를 통합 측정·예측하는 기법. PV·EV·AC와 SPI·CPI·EAC 등이 핵심",
+  "definition": "범위·일정·원가를 통합한 성과 측정 기준선(PMB) 대비 계획가치·획득가치·실제원가를 비교해 프로젝트 성과를 분석하고 완료 시점 원가·일정을 예측하는 기법",
   "keywords": [
-   "측정: PV·EV·AC·BAC",
-   "분석: SV·CV·SPI·CPI",
-   "예측: ETC·EAC·VAC·TCPI",
-   "CPI<1 원가초과, SPI<1 일정지연"
+   "측정 요소: 계획가치(PV, Planned Value) · 획득가치(EV, Earned Value) · 실제원가(AC, Actual Cost) · 완료 시 예산(BAC)",
+   "분석 지표: 일정 차이 SV = EV − PV · 원가 차이 CV = EV − AC · SPI = EV/PV · CPI = EV/AC",
+   "예측 지표: EAC·ETC·VAC · TCPI = (BAC−EV)/(BAC−AC)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "통합 성과 측정 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "주요 특징",
       "items": [
-       "범위·일정·원가를 가치(금액)로 통합해 성과를 측정·예측"
+       "범위·일정·원가 통합",
+       "객관적 진척 측정",
+       "조기 경보",
+       "성과 측정 기준선(PMB) 기반"
       ]
      }
     ]
    },
    {
-    "title": "측정",
+    "title": "측정 요소와 분석 지표",
     "subsections": [
      {
-      "title": null,
+      "title": "측정 요소",
       "items": [
-       "PV: 계획 작업의 예산",
-       "EV: 완료 작업의 예산가치",
-       "AC: 실제 지출",
+       "PV: 계획된 작업의 승인 예산",
+       "EV: 완료된 작업의 예산 가치",
+       "AC: 실제 투입 원가",
        "BAC: 총 예산"
       ]
+     },
+     {
+      "title": "분석",
+      "items": [
+       "SV·SPI: 일정 성과(SPI<1 지연)",
+       "CV·CPI: 원가 성과(CPI<1 초과)"
+      ]
      }
     ]
    },
    {
-    "title": "분석·예측",
+    "title": "예측 지표와 전형·비전형",
     "subsections": [
      {
-      "title": null,
+      "title": "예측",
       "items": [
-       "SV=EV−PV, CV=EV−AC, SPI=EV/PV, CPI=EV/AC",
-       "EAC=BAC/CPI(Typical) 또는 AC+(BAC−EV)(Atypical)",
-       "TCPI=(BAC−EV)/(BAC−AC)"
+       "EAC: 완료 시 추정 원가",
+       "ETC: 잔여 원가",
+       "VAC: 예산 차이",
+       "TCPI: 잔여 작업 목표 효율"
+      ]
+     },
+     {
+      "title": "전형·비전형",
+      "items": [
+       "전형적(Typical): 현재 CPI 지속 → BAC/CPI",
+       "비전형적(Atypical): 일시적 차이 → AC+(BAC−EV)"
       ]
      }
     ]
@@ -4589,10 +4911,14 @@
    73
   ],
   "outline": [
-   "EVM의 개념",
-   "측정 요소",
-   "분석·예측 지표",
-   "Typical/Atypical"
+   "통합 성과 측정 개념",
+   "- 주요 특징",
+   "측정 요소와 분석 지표",
+   "- 측정 요소",
+   "- 분석",
+   "예측 지표와 전형·비전형",
+   "- 예측",
+   "- 전형·비전형"
   ],
   "name": "획득가치관리(EVM, Earned Value Management)",
   "en": "Earned Value Management",
@@ -4601,16 +4927,20 @@
    "획득가치(EV, Earned Value)",
    "실제원가(AC, Actual Cost)",
    "완료 시 예산(BAC)",
-   "일정차이(SV)=EV−PV",
-   "원가차이(CV)=EV−AC",
-   "SPI=EV/PV",
-   "CPI=EV/AC",
-   "EAC·ETC·VAC·TCPI"
+   "일정 차이 SV = EV − PV",
+   "원가 차이 CV = EV − AC",
+   "SPI = EV/PV",
+   "CPI = EV/AC",
+   "EAC·ETC·VAC",
+   "TCPI = (BAC−EV)/(BAC−AC)"
   ],
   "keywords_ref": [
-   "BCWS/BCWP/ACWP 구용어",
-   "성과측정기준선(PMB)",
-   "번다운 차트(Burndown Chart)",
+   "EAC = BAC/CPI(전형적)",
+   "EAC = AC + (BAC−EV)(비전형적)",
+   "EAC = AC + (BAC−EV)/(CPI×SPI)",
+   "ETC = EAC − AC",
+   "VAC = BAC − EAC",
+   "획득 일정(ES, Earned Schedule)",
    "S-커브"
   ],
   "curated": true,
@@ -4619,19 +4949,27 @@
    "획득가치(EV, Earned Value)",
    "실제원가(AC, Actual Cost)",
    "완료 시 예산(BAC)",
-   "일정차이(SV)=EV−PV",
-   "원가차이(CV)=EV−AC",
-   "SPI=EV/PV",
-   "CPI=EV/AC",
-   "EAC·ETC·VAC·TCPI"
+   "일정 차이 SV = EV − PV",
+   "원가 차이 CV = EV − AC",
+   "SPI = EV/PV",
+   "CPI = EV/AC",
+   "EAC·ETC·VAC",
+   "TCPI = (BAC−EV)/(BAC−AC)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
-   "EVM": "Earned Value Management"
+   "EVM": "Earned Value Management",
+   "PV": "Planned Value",
+   "EV": "Earned Value",
+   "AC": "Actual Cost",
+   "SV": "Schedule Variance",
+   "CV": "Cost Variance",
+   "SPI": "Schedule Performance Index",
+   "CPI": "Cost Performance Index",
+   "ES": "Earned Schedule"
   }
  },
  {
@@ -4641,44 +4979,49 @@
   "subtitle": "프로젝트 품질관리 절차",
   "domain": "PM",
   "category": "PM > 프로젝트 품질관리 절차",
-  "definition": "요구사항을 충족하도록 품질 정책·목표·책임을 정하고 품질 계획·보증·통제를 수행하는 지식영역",
+  "definition": "이해관계자 목표 충족을 위해 프로젝트와 제품의 품질 요구사항을 계획·관리·통제하는 지식 영역으로, 조직 품질 정책을 프로젝트에 적용함",
   "keywords": [
-   "Plan → QA(프로세스) → QC(산출물)",
-   "예방 > 검사",
-   "등급(Grade)≠품질(Quality)",
-   "COQ: 예방·평가·실패 비용"
+   "3개 프로세스: 품질 관리 계획(Plan Quality Management) · 품질 관리(Manage Quality, QA) · 품질 통제(Control Quality, QC)",
+   "핵심 원칙: 검사보다 예방(Prevention over Inspection) · 고객 만족 · 지속적 개선(PDCA) · 경영진 책임",
+   "품질 비용: 적합 비용(예방·평가) · 부적합 비용(내부·외부 실패)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "품질 관리 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "품질 정의",
       "items": [
-       "요구 충족을 위한 품질 정책·활동 전반"
+       "요구사항 충족 정도",
+       "사용 적합성(주란)",
+       "요구 적합성(크로스비)"
       ]
      }
     ]
    },
    {
-    "title": "구성",
+    "title": "계획·보증·통제",
     "subsections": [
      {
-      "title": null,
+      "title": "프로세스",
       "items": [
-       "품질관리 계획, 품질 보증(프로세스 감사·개선)",
-       "품질 통제(산출물 측정·합격판정)"
+       "계획: 품질 표준·지표 결정",
+       "관리(QA): 프로세스 준수·개선",
+       "통제(QC): 인도물 검사·측정"
       ]
      }
     ]
    },
    {
-    "title": "원칙",
+    "title": "예방과 검사 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "비교 항목",
       "items": [
-       "예방 중심, 고객 만족, 경영 책임, 지속적 개선"
+       "시점: 사전 vs 사후",
+       "대상: 프로세스 vs 산출물",
+       "비용: 적합 비용 vs 실패 비용",
+       "원칙: 예방 비용이 실패 비용보다 저렴"
       ]
      }
     ]
@@ -4690,44 +5033,50 @@
    76
   ],
   "outline": [
-   "품질관리의 개념",
+   "품질 관리 개념",
+   "- 품질 정의",
    "계획·보증·통제",
-   "예방 vs 검사",
-   "관련 개념"
+   "- 프로세스",
+   "예방과 검사 비교",
+   "- 비교 항목"
   ],
   "name": "프로젝트 품질관리(Project Quality Management)",
   "en": "Project Quality Management",
   "keywords_must": [
-   "품질 관리(Quality Management)",
-   "품질 계획(Plan Quality Management)",
-   "품질 보증(QA, Quality Assurance)",
-   "품질 통제(QC, Quality Control)",
-   "적합 품질(Conformance)",
-   "예방(Prevention)",
-   "검사(Inspection)",
-   "고객 만족(Customer Satisfaction)"
+   "품질 관리 계획(Plan Quality Management)",
+   "품질 관리(Manage Quality, QA)",
+   "품질 통제(Control Quality, QC)",
+   "검사보다 예방(Prevention over Inspection)",
+   "고객 만족",
+   "지속적 개선(PDCA)",
+   "경영진 책임",
+   "적합 비용(예방·평가)",
+   "부적합 비용(내부·외부 실패)"
   ],
   "keywords_ref": [
-   "비용 of 품질(COQ)",
-   "지속적 개선(Continuous Improvement)",
-   "시그마·TQM",
-   "완료 정의(DoD)"
+   "등급(Grade)과 품질 구분",
+   "정확도(Accuracy)·정밀도(Precision)",
+   "데밍·주란·크로스비",
+   "6시그마",
+   "ISO 9001",
+   "7가지 품질 도구",
+   "검증된 인도물"
   ],
   "curated": true,
   "quiz_terms": [
-   "품질 관리(Quality Management)",
-   "품질 계획(Plan Quality Management)",
-   "품질 보증(QA, Quality Assurance)",
-   "품질 통제(QC, Quality Control)",
-   "적합 품질(Conformance)",
-   "예방(Prevention)",
-   "검사(Inspection)",
-   "고객 만족(Customer Satisfaction)"
+   "품질 관리 계획(Plan Quality Management)",
+   "품질 관리(Manage Quality, QA)",
+   "품질 통제(Control Quality, QC)",
+   "검사보다 예방(Prevention over Inspection)",
+   "고객 만족",
+   "지속적 개선(PDCA)",
+   "경영진 책임",
+   "적합 비용(예방·평가)",
+   "부적합 비용(내부·외부 실패)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -4737,43 +5086,62 @@
   "subtitle": "품질관리계획수립",
   "domain": "PM",
   "category": "PM > 프로젝트 품질 > 품질관리계획수립",
-  "definition": "적용할 품질 표준과 달성 방법·측정 지표·체크리스트를 정하는 기획 프로세스. 이후 QA·QC의 기준이 됨",
+  "definition": "프로젝트와 인도물의 품질 요구사항·표준을 식별하고, 이를 충족하는 방법과 준수 입증 방법을 문서화하는 품질 관리의 기획 프로세스",
   "keywords": [
-   "표준·지표·체크리스트 정의",
-   "도구: 벤치·DOE·COQ·흐름도",
-   "산출: 품질관리계획·지표",
-   "QA/QC 입력"
+   "주요 산출물: 품질 관리 계획서(Quality Management Plan) · 품질 지표(Quality Metrics)",
+   "기법: 비용-편익 분석 · 품질 비용(COQ, Cost of Quality) · 벤치마킹(Benchmarking) · 실험 계획법(DOE, Design of Experiments) · 흐름도·논리 데이터 모델 · 테스트·검사 계획"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "품질 계획 목적",
     "subsections": [
      {
-      "title": null,
+      "title": "도입 목적",
       "items": [
-       "어떤 품질 기준으로 어떻게 측정·보증할지 계획"
+       "품질 요구·표준 정의",
+       "측정 방법 결정",
+       "품질 활동·책임 배정",
+       "비용 대비 품질 수준 결정"
       ]
      }
     ]
    },
    {
-    "title": "도구",
+    "title": "주요 기법",
     "subsections": [
      {
-      "title": null,
+      "title": "기법",
       "items": [
-       "전문가 판단, 벤치마킹, 브레인스토밍, DOE, COQ, 흐름도"
+       "비용-편익: 품질 활동 효익 비교",
+       "COQ: 예방·평가·실패 비용",
+       "벤치마킹: 우수 사례 비교",
+       "DOE: 영향 요인 통계 실험",
+       "흐름도: 프로세스 분석"
       ]
      }
     ]
    },
    {
-    "title": "산출",
+    "title": "품질 지표와 계획서",
     "subsections": [
      {
-      "title": null,
+      "title": "품질 지표",
       "items": [
-       "품질관리 계획, 품질 지표, 체크리스트, 프로세스 개선 계획 갱신"
+       "결함 밀도",
+       "정시 성과",
+       "고장률",
+       "가용성",
+       "고객 만족도"
+      ]
+     },
+     {
+      "title": "계획서 구성",
+      "items": [
+       "품질 표준",
+       "품질 목표",
+       "역할·책임",
+       "품질 통제·관리 활동",
+       "도구"
       ]
      }
     ]
@@ -4785,44 +5153,49 @@
    64
   ],
   "outline": [
-   "품질계획의 개념",
-   "입력·도구",
-   "산출물",
-   "품질 지표"
+   "품질 계획 목적",
+   "- 도입 목적",
+   "주요 기법",
+   "- 기법",
+   "품질 지표와 계획서",
+   "- 품질 지표",
+   "- 계획서 구성"
   ],
   "name": "품질관리 계획수립(Plan Quality Management)",
   "en": "Plan Quality Management",
   "keywords_must": [
-   "품질관리 계획(Quality Management Plan)",
+   "품질 관리 계획서(Quality Management Plan)",
    "품질 지표(Quality Metrics)",
-   "품질 체크리스트(Quality Checklist)",
-   "프로세스 개선 계획",
+   "비용-편익 분석",
+   "품질 비용(COQ, Cost of Quality)",
    "벤치마킹(Benchmarking)",
-   "실험계획법(DOE)",
-   "COQ(Cost of Quality)",
-   "표준(Standard)"
+   "실험 계획법(DOE, Design of Experiments)",
+   "흐름도·논리 데이터 모델",
+   "테스트·검사 계획"
   ],
   "keywords_ref": [
-   "ISO 9000",
-   "인수 기준(Acceptance Criteria)",
-   "SIPOC",
-   "흐름도(Flowchart)"
+   "품질 체크리스트",
+   "매트릭스 다이어그램",
+   "마인드 매핑",
+   "프로세스 개선 계획",
+   "요구사항 문서·RTM·위험 등록부(투입물)",
+   "조직 품질 정책",
+   "ISO 9001·CMMI"
   ],
   "curated": true,
   "quiz_terms": [
-   "품질관리 계획(Quality Management Plan)",
+   "품질 관리 계획서(Quality Management Plan)",
    "품질 지표(Quality Metrics)",
-   "품질 체크리스트(Quality Checklist)",
-   "프로세스 개선 계획",
+   "비용-편익 분석",
+   "품질 비용(COQ, Cost of Quality)",
    "벤치마킹(Benchmarking)",
-   "실험계획법(DOE)",
-   "COQ(Cost of Quality)",
-   "표준(Standard)"
+   "실험 계획법(DOE, Design of Experiments)",
+   "흐름도·논리 데이터 모델",
+   "테스트·검사 계획"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -4832,44 +5205,51 @@
   "subtitle": "품질보증(QA)",
   "domain": "PM",
   "category": "프로젝트관리 > 품질관리 > 품질보증(품질관리)",
-  "definition": "품질 요구와 표준이 프로세스에 올바르게 적용되는지 감사·개선하는 활동. 산출물이 아닌 프로세스를 다룸",
+  "definition": "품질 요구사항과 표준이 충족되도록 프로세스를 계획대로 수행하는지 확인하고 개선하는 활동으로, PMBOK 6판의 품질 관리(Manage Quality) 프로세스에 해당하며 예방 중심",
   "keywords": [
-   "초점: 프로세스·시스템",
-   "감사로 갭·모범사례 도출",
-   "DfX·문제해결·개선",
-   "QC는 산출물 검사"
+   "주요 활동: 품질 감사(Quality Audit) · 프로세스 분석(Process Analysis) · 근본 원인 분석(RCA) · 문제 해결(Problem Solving)",
+   "설계 기법: DfX(Design for X) · 품질 개선 방법(PDCA·6시그마)",
+   "산출물: 품질 보고서 · 테스트·평가 문서 · 변경 요청"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "프로세스 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "주요 특징",
       "items": [
-       "프로세스가 품질 표준을 지키도록 보증·개선"
+       "프로세스 중심",
+       "예방 활동",
+       "품질 관리 계획 준수 확인",
+       "지속적 개선"
       ]
      }
     ]
    },
    {
-    "title": "활동",
+    "title": "주요 활동",
     "subsections": [
      {
-      "title": null,
+      "title": "활동",
       "items": [
-       "품질 감사, DfX, 문제 해결, 품질 개선 방법 적용"
+       "품질 감사: 프로세스·정책 준수 독립 검토",
+       "프로세스 분석: 비부가가치 활동 개선",
+       "RCA: 문제 근본 원인",
+       "DfX: 신뢰성·제조성 등 특정 측면 최적 설계"
       ]
      }
     ]
    },
    {
-    "title": "QA vs QC",
+    "title": "QC 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "비교 항목",
       "items": [
-       "QA: 프로세스·예방·감사",
-       "QC: 산출물·검사·측정"
+       "대상: 프로세스 vs 산출물",
+       "시점: 수행 중 예방 vs 완료 후 검출",
+       "활동: 감사·분석 vs 검사·측정",
+       "수행: 전체 팀·QA 조직 vs 검사 담당"
       ]
      }
     ]
@@ -4881,44 +5261,49 @@
    66
   ],
   "outline": [
-   "QA의 개념",
+   "프로세스 개념",
+   "- 주요 특징",
    "주요 활동",
-   "QC와의 차이",
-   "기법"
+   "- 활동",
+   "QC 비교",
+   "- 비교 항목"
   ],
   "name": "품질보증(QA, Quality Assurance)",
   "en": "Quality Assurance",
   "keywords_must": [
-   "품질보증(QA)",
    "품질 감사(Quality Audit)",
-   "프로세스 개선(Process Improvement)",
-   "DfX(Design for X)",
+   "프로세스 분석(Process Analysis)",
+   "근본 원인 분석(RCA)",
    "문제 해결(Problem Solving)",
-   "품질 관리 계획 준수",
-   "예방(Prevention)",
-   "적합 프로세스"
+   "DfX(Design for X)",
+   "품질 개선 방법(PDCA·6시그마)",
+   "품질 보고서",
+   "테스트·평가 문서",
+   "변경 요청"
   ],
   "keywords_ref": [
-   "QC(Quality Control)",
-   "PDCA",
-   "심사(Audit)",
-   "교훈(Lessons Learned)"
+   "체크리스트",
+   "친화도·인과도·흐름도",
+   "독립성(제3자 QA)",
+   "감리와 비교",
+   "ISO 9001·CMMI",
+   "QC와 비교"
   ],
   "curated": true,
   "quiz_terms": [
-   "품질보증(QA)",
    "품질 감사(Quality Audit)",
-   "프로세스 개선(Process Improvement)",
-   "DfX(Design for X)",
+   "프로세스 분석(Process Analysis)",
+   "근본 원인 분석(RCA)",
    "문제 해결(Problem Solving)",
-   "품질 관리 계획 준수",
-   "예방(Prevention)",
-   "적합 프로세스"
+   "DfX(Design for X)",
+   "품질 개선 방법(PDCA·6시그마)",
+   "품질 보고서",
+   "테스트·평가 문서",
+   "변경 요청"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -4928,43 +5313,53 @@
   "subtitle": "품질통제",
   "domain": "PM",
   "category": "프로젝트관리 > 품질관리 > 품질통제(QC)",
-  "definition": "산출물이 품질 기준을 충족하는지 측정·기록하고 합격/시정을 결정하는 활동. 7가지 기본 도구가 대표적",
+  "definition": "인도물이 품질 요구사항을 충족하는지 검사·측정하여 성과를 평가하고 필요한 변경을 권고하는 프로세스로, 검증된 인도물을 산출함",
   "keywords": [
-   "7도구: 인과·체크·관리도·히스토·파레토·산점·층별/흐름",
-   "측정→판정→조치",
-   "관리도: 공정 안정",
-   "파레토: Vital few"
+   "7가지 품질 도구: 관리도(Control Chart) · 인과도(Ishikawa) · 파레토도(Pareto) · 히스토그램(Histogram) · 산점도(Scatter Diagram) · 체크시트(Check Sheet) · 층별(Stratification)",
+   "활동: 검사(Inspection) · 통계적 샘플링(Statistical Sampling)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "산출물 품질 검증 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "도입 목적",
       "items": [
-       "산출물의 기준 충족 여부를 검증·기록"
+       "결함 검출",
+       "요구 적합성 확인",
+       "원인 분석",
+       "프로세스 개선 피드백"
       ]
      }
     ]
    },
    {
-    "title": "7도구",
+    "title": "7가지 품질 도구",
     "subsections": [
      {
-      "title": null,
+      "title": "도구",
       "items": [
-       "인과도, 체크시트, 관리도, 히스토그램, 파레토, 산점도, 층별(또는 흐름도)"
+       "관리도: 공정 안정성(관리 한계)",
+       "인과도: 원인 계층 분석",
+       "파레토: 주요 원인 우선(80/20)",
+       "히스토그램: 분포",
+       "산점도: 변수 상관",
+       "체크시트: 데이터 수집",
+       "층별: 집단 구분 분석"
       ]
      }
     ]
    },
    {
-    "title": "산출",
+    "title": "관리도 해석",
     "subsections": [
      {
-      "title": null,
+      "title": "관리 이탈 판단",
       "items": [
-       "측정 결과, 변경요청, 검증된 인도물, 작업성과정보"
+       "관리 한계(±3σ) 밖 점",
+       "평균 한쪽에 7점 연속(7점 규칙)",
+       "연속 상승·하강 추세",
+       "규격 한계와 구분"
       ]
      }
     ]
@@ -4976,44 +5371,50 @@
    69
   ],
   "outline": [
-   "QC의 개념",
-   "7가지 도구",
-   "산출",
-   "QA와의 관계"
+   "산출물 품질 검증 개념",
+   "- 도입 목적",
+   "7가지 품질 도구",
+   "- 도구",
+   "관리도 해석",
+   "- 관리 이탈 판단"
   ],
   "name": "품질통제(QC, Quality Control)",
   "en": "Quality Control",
   "keywords_must": [
-   "품질통제(QC)",
-   "검사(Inspection)",
    "관리도(Control Chart)",
-   "인과도(Fishbone/Ishikawa)",
-   "파레토(Pareto Chart)",
+   "인과도(Ishikawa)",
+   "파레토도(Pareto)",
    "히스토그램(Histogram)",
    "산점도(Scatter Diagram)",
-   "체크시트·층별(Check Sheet/Stratification)"
+   "체크시트(Check Sheet)",
+   "층별(Stratification)",
+   "검사(Inspection)",
+   "통계적 샘플링(Statistical Sampling)"
   ],
   "keywords_ref": [
-   "관리한계(UCL/LCL)",
-   "특별원인 vs 일반원인",
-   "합격·불합격",
-   "시정 조치"
+   "관리 상·하한(UCL·LCL ±3σ)",
+   "7점 연속 규칙",
+   "80/20 법칙",
+   "흐름도(층별 대신)",
+   "검증된 인도물 → 범위 확인",
+   "품질 통제 측정치",
+   "테스트·검토"
   ],
   "curated": true,
   "quiz_terms": [
-   "품질통제(QC)",
-   "검사(Inspection)",
    "관리도(Control Chart)",
-   "인과도(Fishbone/Ishikawa)",
-   "파레토(Pareto Chart)",
+   "인과도(Ishikawa)",
+   "파레토도(Pareto)",
    "히스토그램(Histogram)",
    "산점도(Scatter Diagram)",
-   "체크시트·층별(Check Sheet/Stratification)"
+   "체크시트(Check Sheet)",
+   "층별(Stratification)",
+   "검사(Inspection)",
+   "통계적 샘플링(Statistical Sampling)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -5023,46 +5424,57 @@
   "subtitle": "",
   "domain": "PM",
   "category": "프로젝트관리 > 품질관리 > 프로젝트 형상관리",
-  "definition": "생명주기 산출물(형상항목)을 식별·통제·감사·기록하여 일관성과 추적성을 유지하는 관리. 기준선이 핵심",
+  "definition": "소프트웨어·인도물의 형상 항목을 식별하고 변경을 체계적으로 통제·기록·감사하여 무결성과 추적성을 유지하는 관리 활동",
   "keywords": [
-   "식·통·감·기 (식별·통제·감사·기록)",
-   "CI와 Baseline",
-   "변경은 통제 절차로만",
-   "감사로 무결성 확인"
+   "4대 활동: 형상 식별(Identification) · 형상 통제(Control) · 형상 감사(Audit) · 형상 상태 기록(Status Accounting)",
+   "구성 요소: 형상 항목(CI, Configuration Item) · 기준선(Baseline) · 변경 통제 위원회(CCB)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "무결성 유지 관리",
     "subsections": [
      {
-      "title": null,
+      "title": "도입 필요성",
       "items": [
-       "산출물의 버전·일관성·추적성을 체계적으로 유지"
+       "변경 추적",
+       "산출물 일관성",
+       "다수 개발자 동시 작업 통제",
+       "유지보수 용이"
       ]
      }
     ]
    },
    {
-    "title": "4활동",
+    "title": "4대 활동",
     "subsections": [
      {
-      "title": null,
+      "title": "활동",
       "items": [
-       "식별: CI·기준선 정의",
-       "통제: 변경 평가·승인",
-       "감사: 완전·일치 검증",
-       "기록: 상태·이력 보고"
+       "식별: CI 선정·명명·버전 부여",
+       "통제: 변경 요청 → CCB 승인 → 반영",
+       "감사: 기준선 무결성·요구 충족 검증",
+       "상태 기록: 변경 이력·현황 보고"
       ]
      }
     ]
    },
    {
-    "title": "기준선",
+    "title": "기준선과 도구",
     "subsections": [
      {
-      "title": null,
+      "title": "기준선",
       "items": [
-       "기능→할당→설계→시험→제품→운영 등으로 단계별 동결"
+       "기능 기준선: 요구 정의 후",
+       "할당 기준선: 설계 후",
+       "제품 기준선: 시험·인도 후"
+      ]
+     },
+     {
+      "title": "도구",
+      "items": [
+       "Git·SVN(Subversion)",
+       "이슈 트래커",
+       "지속적 통합·배포 연계"
       ]
      }
     ]
@@ -5075,45 +5487,52 @@
    79
   ],
   "outline": [
-   "형상관리의 개념",
+   "무결성 유지 관리",
+   "- 도입 필요성",
    "4대 활동",
-   "기준선",
-   "구성 요소"
+   "- 활동",
+   "기준선과 도구",
+   "- 기준선",
+   "- 도구"
   ],
   "name": "프로젝트 형상관리(Configuration Management)",
   "en": "Configuration Management",
   "keywords_must": [
-   "형상관리(Configuration Management)",
    "형상 식별(Identification)",
    "형상 통제(Control)",
    "형상 감사(Audit)",
    "형상 상태 기록(Status Accounting)",
+   "형상 항목(CI, Configuration Item)",
    "기준선(Baseline)",
-   "형상항목(CI, Configuration Item)",
-   "형상통제위원회(CCB)"
+   "변경 통제 위원회(CCB)"
   ],
   "keywords_ref": [
-   "기능·할당·설계·시험·제품·운영 기준선",
-   "버전 관리(Version Control)",
-   "변경요청(CR)",
-   "릴리스 관리"
+   "기준선: 기능·할당·제품",
+   "버전 관리(Git)",
+   "형상 관리 도구(SCM)",
+   "기능 형상 감사(FCA)·물리 형상 감사(PCA)",
+   "변경 요청 처리",
+   "빌드·릴리스 관리",
+   "DevOps"
   ],
   "curated": true,
   "quiz_terms": [
-   "형상관리(Configuration Management)",
    "형상 식별(Identification)",
    "형상 통제(Control)",
    "형상 감사(Audit)",
    "형상 상태 기록(Status Accounting)",
+   "형상 항목(CI, Configuration Item)",
    "기준선(Baseline)",
-   "형상항목(CI, Configuration Item)",
-   "형상통제위원회(CCB)"
+   "변경 통제 위원회(CCB)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SCM": "Software Configuration Management",
+   "CI": "Configuration Item"
+  }
  },
  {
   "id": "PM_052",
@@ -5122,43 +5541,65 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 프로젝트 자원관리",
-  "definition": "인적·물적 자원을 확보·개발·관리·통제하는 지식영역. 팀 구성, 동기부여, 갈등 관리를 포함",
+  "definition": "프로젝트 완료에 필요한 인적·물적 자원을 식별·확보·관리하는 지식 영역으로, PMBOK 6판에서 인적 자원 관리가 물적 자원까지 확장됨",
   "keywords": [
-   "계획→산정→확보→개발→관리→통제",
-   "RAM/RACI로 역할 명확화",
-   "갈등: 협력·강요·타협 등",
-   "물적·인적 모두 포함"
+   "6개 프로세스: 자원 관리 계획 · 활동 자원 산정 · 자원 확보(Acquire Resources) · 팀 개발(Develop Team) · 팀 관리(Manage Team) · 자원 통제(Control Resources)",
+   "핵심 도구: 책임 배정 매트릭스(RAM·RACI) · 자원 분류 체계(RBS) · 팀 헌장(Team Charter)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "자원 관리 범위",
     "subsections": [
      {
-      "title": null,
+      "title": "자원",
       "items": [
-       "필요 자원을 적시에 확보·활용·해제"
+       "인적 자원: 팀원",
+       "물적 자원: 장비·자재·시설",
+       "6판 변화: 물적 자원 통제 추가"
       ]
      }
     ]
    },
    {
-    "title": "프로세스",
+    "title": "주요 프로세스",
     "subsections": [
      {
-      "title": null,
+      "title": "기획",
       "items": [
-       "자원관리 계획, 활동자원 산정, 확보, 팀 개발, 팀 관리, 자원 통제"
+       "계획: 자원 관리 계획서·팀 헌장",
+       "산정: 자원 요구사항·RBS"
+      ]
+     },
+     {
+      "title": "실행·통제",
+      "items": [
+       "확보: 사전 배정·협상·가상 팀",
+       "팀 개발: 교육·팀 빌딩·인정 보상",
+       "팀 관리: 갈등 관리·성과 평가",
+       "자원 통제: 물적 자원 사용 감시"
       ]
      }
     ]
    },
    {
-    "title": "팀",
+    "title": "팀 개발과 갈등 관리",
     "subsections": [
      {
-      "title": null,
+      "title": "팀 개발",
       "items": [
-       "역할 명확화(RACI), 동기·갈등·성과 피드백"
+       "터크만 5단계",
+       "동기 부여",
+       "동일 장소 배치(Co-location)"
+      ]
+     },
+     {
+      "title": "갈등 해결",
+      "items": [
+       "철회·회피",
+       "완화·수용",
+       "타협·화해",
+       "강요·지시",
+       "협력·문제 해결(최선)"
       ]
      }
     ]
@@ -5170,47 +5611,57 @@
    86
   ],
   "outline": [
-   "자원관리의 개념",
-   "프로세스",
-   "팀 관리",
-   "갈등·동기"
+   "자원 관리 범위",
+   "- 자원",
+   "주요 프로세스",
+   "- 기획",
+   "- 실행·통제",
+   "팀 개발과 갈등 관리",
+   "- 팀 개발",
+   "- 갈등 해결"
   ],
   "name": "프로젝트 자원관리(Project Resource Management)",
   "en": "Project Resource Management",
   "keywords_must": [
-   "자원 관리(Resource Management)",
    "자원 관리 계획",
    "활동 자원 산정",
-   "팀 확보(Acquire Resources)",
+   "자원 확보(Acquire Resources)",
    "팀 개발(Develop Team)",
    "팀 관리(Manage Team)",
    "자원 통제(Control Resources)",
-   "책임배정매트릭스(RAM/RACI)"
+   "책임 배정 매트릭스(RAM·RACI)",
+   "자원 분류 체계(RBS)",
+   "팀 헌장(Team Charter)"
   ],
   "keywords_ref": [
-   "동기부여 이론",
+   "조직도·직위 기술서",
+   "자원 달력",
+   "사전 배정·협상·가상 팀",
+   "팀 성과 평가",
    "터크만 모델",
-   "가상 팀(Virtual Team)",
-   "갈등 해결 기법"
+   "동기 부여 이론",
+   "갈등 관리 기법",
+   "감성 지능"
   ],
   "curated": true,
   "quiz_terms": [
-   "자원 관리(Resource Management)",
    "자원 관리 계획",
    "활동 자원 산정",
-   "팀 확보(Acquire Resources)",
+   "자원 확보(Acquire Resources)",
    "팀 개발(Develop Team)",
    "팀 관리(Manage Team)",
    "자원 통제(Control Resources)",
-   "책임배정매트릭스(RAM/RACI)"
+   "책임 배정 매트릭스(RAM·RACI)",
+   "자원 분류 체계(RBS)",
+   "팀 헌장(Team Charter)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
-   "RAM": "Responsibility Assignment Matrix"
+   "RAM": "Responsibility Assignment Matrix",
+   "RBS": "Resource Breakdown Structure"
   }
  },
  {
@@ -5220,48 +5671,61 @@
   "subtitle": "",
   "domain": "PM",
   "category": "프로젝트관리 > 인적자원관리 > RACI",
-  "definition": "책임배정매트릭스(RAM)의 대표 형식. 활동별로 Responsible·Accountable·Consulted·Informed를 지정해 역할·권한을 명확히 함",
+  "definition": "작업 또는 인도물별로 팀원의 역할과 책임을 실무 수행·최종 책임·자문·통보의 네 가지로 표시하는 책임 배정 매트릭스(RAM)의 대표 형태",
   "keywords": [
-   "R: 수행, A: 승인(하나)",
-   "C: 양방향 협의, I: 일방향 통보",
-   "활동×역할 표",
-   "공백·다중 A 지양"
+   "구성 요소: R 실무 수행(Responsible) · A 최종 책임·승인(Accountable) · C 자문(Consulted) · I 통보(Informed)",
+   "작성 유의점: 작업당 A는 1명 · 최소 1명의 R · C·I는 선택 · 역할 동시 배정 지양",
+   "작성 단계: 작업 목록 · 역할·담당자 열거 · RACI 배정"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "역할·책임 명확화 도구",
     "subsections": [
      {
-      "title": null,
+      "title": "기대 효과",
       "items": [
-       "누가 무엇을 하는지 한눈에 보는 역할 매트릭스"
+       "역할 모호성 제거",
+       "책임 공백·중복 방지",
+       "의사소통 경로 명확",
+       "갈등 예방"
       ]
      }
     ]
    },
    {
-    "title": "역할",
+    "title": "작성 방법과 구성 요소",
     "subsections": [
      {
-      "title": null,
+      "title": "작성 절차",
       "items": [
-       "R: 실제 수행자(복수 가능)",
-       "A: 결과 책임·승인(활동당 1명 권장)",
-       "C: 사전 협의",
-       "I: 결과 공유"
+       "1단계: 작업·인도물 행 나열",
+       "2단계: 역할·이해관계자 열 나열",
+       "3단계: R·A·C·I 배정",
+       "4단계: 검토·합의"
+      ]
+     },
+     {
+      "title": "구성",
+      "items": [
+       "R: 작업 수행자",
+       "A: 최종 의사결정·승인 1명",
+       "C: 수행 전 의견 제공",
+       "I: 결과 통보 대상"
       ]
      }
     ]
    },
    {
-    "title": "원칙",
+    "title": "팀 진단 방법",
     "subsections": [
      {
-      "title": null,
+      "title": "진단",
       "items": [
-       "모든 활동에 A 존재",
-       "R과 A 공백·중복 점검",
-       "C/I 과다 시 병목"
+       "A 많고 R 없음: 실행자 부재",
+       "A 없음: 책임 공백",
+       "R 과다: 중복·혼선",
+       "C·I 과다: 의사결정 지연·정보 과부하",
+       "C 없음: 소통 단절"
       ]
      }
     ]
@@ -5273,44 +5737,55 @@
    71
   ],
   "outline": [
-   "RACI의 개념",
-   "네 역할",
-   "작성 원칙",
-   "활용"
+   "역할·책임 명확화 도구",
+   "- 기대 효과",
+   "작성 방법과 구성 요소",
+   "- 작성 절차",
+   "- 구성",
+   "팀 진단 방법",
+   "- 진단"
   ],
   "name": "RACI 매트릭스(RACI Matrix)",
-  "en": "RACI Matrix",
+  "en": "RACI Chart",
   "keywords_must": [
-   "RACI",
-   "Responsible(실무 수행)",
-   "Accountable(최종 책임·승인)",
-   "Consulted(협의)",
-   "Informed(통보)",
-   "책임배정매트릭스(RAM)",
-   "역할 모호성 제거",
-   "단일 Accountable"
+   "R 실무 수행(Responsible)",
+   "A 최종 책임·승인(Accountable)",
+   "C 자문(Consulted)",
+   "I 통보(Informed)",
+   "작업당 A는 1명",
+   "최소 1명의 R",
+   "C·I는 선택",
+   "역할 동시 배정 지양",
+   "작업 목록",
+   "역할·담당자 열거",
+   "RACI 배정"
   ],
   "keywords_ref": [
-   "RASCI(S=Support)",
-   "OBS",
-   "WBS",
-   "직무기술서"
+   "책임 배정 매트릭스(RAM)",
+   "진단: A 과다·R 부재",
+   "A 없는 작업",
+   "R 과다",
+   "C 과다(의사결정 지연)",
+   "RASCI(S: Support)",
+   "자원 관리 계획서"
   ],
   "curated": true,
   "quiz_terms": [
-   "RACI",
-   "Responsible(실무 수행)",
-   "Accountable(최종 책임·승인)",
-   "Consulted(협의)",
-   "Informed(통보)",
-   "책임배정매트릭스(RAM)",
-   "역할 모호성 제거",
-   "단일 Accountable"
+   "R 실무 수행(Responsible)",
+   "A 최종 책임·승인(Accountable)",
+   "C 자문(Consulted)",
+   "I 통보(Informed)",
+   "작업당 A는 1명",
+   "최소 1명의 R",
+   "C·I는 선택",
+   "역할 동시 배정 지양",
+   "작업 목록",
+   "역할·담당자 열거",
+   "RACI 배정"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
    "RAM": "Responsibility Assignment Matrix"
@@ -5323,21 +5798,23 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 프로젝트 자원관리 > 가상팀",
-  "definition": "지리적·시간적으로 떨어져 대면이 적거나 없이 공동 목표를 수행하는 팀. 소통 계획·협업 도구·신뢰가 핵심",
+  "definition": "공동 목표를 가진 구성원이 서로 다른 장소·시간대에서 대면 접촉 없이 정보통신 기술을 이용해 협업하는 팀 형태로, PMBOK 자원 확보 기법의 하나",
   "keywords": [
-   "대면 최소·공통 목표",
-   "장점: 인재풀·비용 / 단점: 소통·신뢰",
-   "명확한 역할·응답 SLA",
-   "문서화·비동기 우선"
+   "장점: 원거리 전문가 확보 · 비용 절감(이동·사무실) · 재택·유연 근무 · 지리적 분산 팀 구성",
+   "단점: 시차(Time Zone)로 의사결정 지연 · PM 통제 어려움 · 의사소통 오해·고립감 · 문화적 차이",
+   "성공 요소: 협업 도구(Collaboration Tools) · 갈등 해결 규약(Ground Rules)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "원격 협업 팀 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "주요 특징",
       "items": [
-       "물리적 동일 공간 없이 공동 성과를 내는 팀"
+       "지리적 분산",
+       "기술 기반 소통",
+       "다문화 구성",
+       "비동기 협업"
       ]
      }
     ]
@@ -5346,21 +5823,34 @@
     "title": "장단점",
     "subsections": [
      {
-      "title": null,
+      "title": "장점",
       "items": [
-       "장: 광역 인재, 비용·이동 절감",
-       "단: 오해, 고립, 시차, 비공식 소통 감소"
+       "전문가 풀 확대",
+       "이동·시설 비용 절감",
+       "근무 유연성",
+       "24시간 연속 작업(Follow-the-Sun)"
+      ]
+     },
+     {
+      "title": "단점",
+      "items": [
+       "시차: 회의·의사결정 지연",
+       "통제: 진척 파악 어려움",
+       "소통: 비언어 단서 부족"
       ]
      }
     ]
    },
    {
-    "title": "성공 요인",
+    "title": "성공적 운영 방안",
     "subsections": [
      {
-      "title": null,
+      "title": "방안",
       "items": [
-       "목표·역할 명확, 소통 규범, 도구 표준, 정기 동기화, 신뢰 구축"
+       "의사소통 계획: 채널·주기 명확화",
+       "Ground Rules: 응답 시간·회의 규칙",
+       "협업 도구: 화상·메신저·저장소",
+       "신뢰: 정기 대면·성과 공유"
       ]
      }
     ]
@@ -5372,44 +5862,53 @@
    73
   ],
   "outline": [
-   "가상팀의 개념",
+   "원격 협업 팀 개념",
+   "- 주요 특징",
    "장단점",
-   "성공 요인",
-   "관리 포인트"
+   "- 장점",
+   "- 단점",
+   "성공적 운영 방안",
+   "- 방안"
   ],
   "name": "가상팀(Virtual Team)",
   "en": "Virtual Team",
   "keywords_must": [
-   "가상팀(Virtual Team)",
-   "원격 협업(Remote Collaboration)",
-   "비동기 소통(Asynchronous Communication)",
+   "원거리 전문가 확보",
+   "비용 절감(이동·사무실)",
+   "재택·유연 근무",
+   "지리적 분산 팀 구성",
+   "시차(Time Zone)로 의사결정 지연",
+   "PM 통제 어려움",
+   "의사소통 오해·고립감",
+   "문화적 차이",
    "협업 도구(Collaboration Tools)",
-   "신뢰(Trust)",
-   "문화적 다양성(Cultural Diversity)",
-   "의사소통 계획",
-   "성과 가시성"
+   "갈등 해결 규약(Ground Rules)"
   ],
   "keywords_ref": [
-   "화상회의",
+   "의사소통 계획 강화",
+   "비동기 소통",
+   "신뢰 구축",
+   "정기 화상 회의",
    "공유 저장소",
-   "스크럼 원격 운영",
-   "시차(Time Zone)"
+   "성과 가시화(대시보드)",
+   "원격 애자일"
   ],
   "curated": true,
   "quiz_terms": [
-   "가상팀(Virtual Team)",
-   "원격 협업(Remote Collaboration)",
-   "비동기 소통(Asynchronous Communication)",
+   "원거리 전문가 확보",
+   "비용 절감(이동·사무실)",
+   "재택·유연 근무",
+   "지리적 분산 팀 구성",
+   "시차(Time Zone)로 의사결정 지연",
+   "PM 통제 어려움",
+   "의사소통 오해·고립감",
+   "문화적 차이",
    "협업 도구(Collaboration Tools)",
-   "신뢰(Trust)",
-   "문화적 다양성(Cultural Diversity)",
-   "의사소통 계획",
-   "성과 가시성"
+   "갈등 해결 규약(Ground Rules)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -5419,21 +5918,20 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 동기부여이론",
-  "definition": "개인이 조직 목표를 위해 자발적으로 노력하게 만드는 욕구·과정·강화 메커니즘을 설명하는 이론군",
+  "definition": "구성원이 목표를 향해 행동을 일으키고 지속하게 하는 요인과 과정을 설명하는 이론으로, 욕구 중심의 내용 이론과 인지 과정 중심의 과정 이론으로 구분함",
   "keywords": [
-   "내용: 무엇을 욕구하나",
-   "과정: 어떻게 동기화되나",
-   "허즈버그: 위생≠동기",
-   "PM: 목표·공정·인정"
+   "내용 이론: 매슬로 욕구 5단계 · 앨더퍼 ERG(존재·관계·성장) · 허즈버그 2요인(위생·동기) · 맥그리거 X·Y이론 · 맥클리랜드 성취동기(성취·권력·친교)",
+   "과정 이론: 브룸 기대 이론(기대·수단성·유의성) · 아담스 공정성 이론 · 로크 목표 설정 이론"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "동기 부여 분류",
     "subsections": [
      {
-      "title": null,
+      "title": "분류",
       "items": [
-       "욕구 충족 조건에서 목표 지향 노력을 이끌어냄"
+       "내용 이론: 무엇이 동기를 유발하는가",
+       "과정 이론: 어떻게 동기가 형성되는가"
       ]
      }
     ]
@@ -5442,20 +5940,34 @@
     "title": "내용 이론",
     "subsections": [
      {
-      "title": null,
+      "title": "이론",
       "items": [
-       "Maslow, Alderfer ERG, Herzberg, McGregor X/Y, McClelland"
+       "매슬로: 하위 욕구 충족 후 상위 욕구",
+       "ERG: 좌절-퇴행 인정",
+       "허즈버그: 위생 요인(급여·환경)은 불만 해소, 동기 요인(성취·인정)이 만족",
+       "X·Y: 통제형 vs 자율형 관리"
       ]
      }
     ]
    },
    {
-    "title": "과정 이론",
+    "title": "과정 이론과 PM 적용",
     "subsections": [
      {
-      "title": null,
+      "title": "과정 이론",
       "items": [
-       "기대(Vroom), 공정성(Adams), 목표설정(Locke), 강화(Skinner)"
+       "기대 이론: 동기 = 기대 × 수단성 × 유의성",
+       "공정성: 투입 대비 보상 비교",
+       "목표 설정: 구체적·도전적 목표"
+      ]
+     },
+     {
+      "title": "PM 적용",
+      "items": [
+       "인정·보상 체계",
+       "역량 개발 기회",
+       "공정한 평가",
+       "명확한 목표"
       ]
      }
     ]
@@ -5467,44 +5979,48 @@
    74
   ],
   "outline": [
-   "동기부여의 개념",
+   "동기 부여 분류",
+   "- 분류",
    "내용 이론",
-   "과정 이론",
-   "프로젝트 적용"
+   "- 이론",
+   "과정 이론과 PM 적용",
+   "- 과정 이론",
+   "- PM 적용"
   ],
   "name": "동기부여 이론(Motivation Theories)",
   "en": "Motivation Theories",
   "keywords_must": [
-   "매슬로우 욕구 5단계",
-   "앨더퍼 ERG",
+   "매슬로 욕구 5단계",
+   "앨더퍼 ERG(존재·관계·성장)",
    "허즈버그 2요인(위생·동기)",
    "맥그리거 X·Y이론",
-   "브룸 기대이론",
+   "맥클리랜드 성취동기(성취·권력·친교)",
+   "브룸 기대 이론(기대·수단성·유의성)",
    "아담스 공정성 이론",
-   "목표설정 이론",
-   "강화 이론"
+   "로크 목표 설정 이론"
   ],
   "keywords_ref": [
-   "내재·외재 동기",
-   "잡 크래프팅",
-   "피드백",
-   "인정·보상"
+   "매슬로 5단계: 생리·안전·사회·존경·자아실현",
+   "오우치 Z이론",
+   "강화 이론(스키너)",
+   "다니엘 핑크 Drive(자율·숙련·목적)",
+   "인정·보상",
+   "서번트 리더십"
   ],
   "curated": true,
   "quiz_terms": [
-   "매슬로우 욕구 5단계",
-   "앨더퍼 ERG",
+   "매슬로 욕구 5단계",
+   "앨더퍼 ERG(존재·관계·성장)",
    "허즈버그 2요인(위생·동기)",
    "맥그리거 X·Y이론",
-   "브룸 기대이론",
+   "맥클리랜드 성취동기(성취·권력·친교)",
+   "브룸 기대 이론(기대·수단성·유의성)",
    "아담스 공정성 이론",
-   "목표설정 이론",
-   "강화 이론"
+   "로크 목표 설정 이론"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -5514,48 +6030,51 @@
   "subtitle": "터크만 5가지 팀 개발 단계",
   "domain": "PM",
   "category": "PM > 터크만 5가지 팀 개발 단계",
-  "definition": "팀이 Forming→Storming→Norming→Performing→Adjourning 순으로 성숙한다는 모델. 단계별 리더십이 달라짐",
+  "definition": "브루스 터크만이 제시한 팀 발달 모델로, 팀이 형성·격동·규범·수행·해산의 단계를 거쳐 성숙한다고 보며 단계별 리더십 개입 방식을 제시함",
   "keywords": [
-   "F→S→N→P→A",
-   "Storming 갈등이 성장 과정",
-   "Norming에서 신뢰·규칙",
-   "수행기 자율·위임"
+   "5단계: 형성기(Forming) · 격동기(Storming) · 규범기(Norming) · 수행기(Performing) · 해산기(Adjourning)",
+   "단계별 리더십: 지시형(Directing) · 코칭형(Coaching) · 지원형(Supporting) · 위임형(Delegating)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "팀 발달 모델 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "주요 특징",
       "items": [
-       "Bruce Tuckman의 팀 발달 단계 모델"
+       "순차 단계",
+       "단계 건너뛰기·정체·역행 가능",
+       "팀 기간·규모에 따라 단계 길이 상이"
       ]
      }
     ]
    },
    {
-    "title": "5단계",
+    "title": "단계별 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "단계",
       "items": [
-       "Forming: 탐색·의존",
-       "Storming: 역할·갈등",
-       "Norming: 규범·응집",
-       "Performing: 성과",
-       "Adjourning: 해체·이별"
+       "형성기: 소개·탐색, 역할 불명확",
+       "격동기: 의견 충돌·주도권 갈등",
+       "규범기: 규칙·신뢰 형성",
+       "수행기: 자율·고성과 협업",
+       "해산기: 작업 종료·인력 재배치"
       ]
      }
     ]
    },
    {
-    "title": "리더십",
+    "title": "단계별 PM 역할",
     "subsections": [
      {
-      "title": null,
+      "title": "PM 역할",
       "items": [
-       "초기 지시 → 촉진·중재 → 위임",
-       "갈등 회피가 아닌 건설적 해결"
+       "형성기: 목표·역할 지시",
+       "격동기: 갈등 중재·코칭",
+       "규범기: 참여 지원",
+       "수행기: 권한 위임",
+       "해산기: 성과 인정·교훈 정리"
       ]
      }
     ]
@@ -5567,44 +6086,49 @@
    88
   ],
   "outline": [
-   "모델의 개념",
-   "5단계",
-   "리더십 시사점",
-   "프로젝트 적용"
+   "팀 발달 모델 개념",
+   "- 주요 특징",
+   "단계별 특징",
+   "- 단계",
+   "단계별 PM 역할",
+   "- PM 역할"
   ],
   "name": "터크만 팀 개발 5단계(Tuckman Model)",
-  "en": "Tuckman's Stages of Group Development",
+  "en": "Tuckman's Stages of Team Development",
   "keywords_must": [
-   "형성(Forming)",
-   "격동(Storming)",
-   "규범(Norming)",
-   "수행(Performing)",
-   "해산(Adjourning)",
-   "팀 성숙도",
-   "갈등",
-   "규범(Norms)"
+   "형성기(Forming)",
+   "격동기(Storming)",
+   "규범기(Norming)",
+   "수행기(Performing)",
+   "해산기(Adjourning)",
+   "지시형(Directing)",
+   "코칭형(Coaching)",
+   "지원형(Supporting)",
+   "위임형(Delegating)"
   ],
   "keywords_ref": [
-   "벨빈 팀 역할",
-   "갈등 해결",
-   "서번트 리더십",
-   "스프린트 회고"
+   "1965년 4단계 → 1977년 해산 추가",
+   "단계 역행 가능(신규 인원)",
+   "상황적 리더십(허시·블랜차드)",
+   "팀 빌딩",
+   "갈등 관리",
+   "팀 헌장"
   ],
   "curated": true,
   "quiz_terms": [
-   "형성(Forming)",
-   "격동(Storming)",
-   "규범(Norming)",
-   "수행(Performing)",
-   "해산(Adjourning)",
-   "팀 성숙도",
-   "갈등",
-   "규범(Norms)"
+   "형성기(Forming)",
+   "격동기(Storming)",
+   "규범기(Norming)",
+   "수행기(Performing)",
+   "해산기(Adjourning)",
+   "지시형(Directing)",
+   "코칭형(Coaching)",
+   "지원형(Supporting)",
+   "위임형(Delegating)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -5614,44 +6138,55 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 프로젝트 의사소통관리",
-  "definition": "정보가 적시에 생성·수집·배포·보관·폐기가 되도록 계획·관리·감시하는 지식영역",
+  "definition": "프로젝트 정보가 적시에 적절히 계획·수집·생성·배포·저장·감시되도록 하는 지식 영역으로, 이해관계자와 효과적 정보 교환을 보장함",
   "keywords": [
-   "계획→관리→감시",
-   "Push/Pull/Interactive",
-   "언어·문화·노이즈 장벽",
-   "계획: 수신자·내용·주기·매체"
+   "3개 프로세스: 의사소통 관리 계획(Plan) · 의사소통 관리(Manage) · 의사소통 감시(Monitor)",
+   "의사소통 방법: 대화형(Interactive) · 푸시(Push) · 풀(Pull)",
+   "핵심 요소: 채널 수 N(N−1)/2 · 의사소통 모델(송신자·부호화·매체·해독·수신자·피드백) · 5W1H"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "의사소통 관리 중요성",
     "subsections": [
      {
-      "title": null,
+      "title": "중요성",
       "items": [
-       "올바른 정보를 올바른 사람에게 적시에"
+       "PM 업무의 약 90%가 의사소통",
+       "오해·누락 방지",
+       "이해관계자 기대 관리"
       ]
      }
     ]
    },
    {
-    "title": "프로세스",
+    "title": "프로세스와 방법",
     "subsections": [
      {
-      "title": null,
+      "title": "프로세스",
       "items": [
-       "의사소통관리 계획, 의사소통 관리, 의사소통 감시"
+       "계획: 대상·정보·주기·방법 결정",
+       "관리: 정보 생성·배포",
+       "감시: 정보 요구 충족 확인"
+      ]
+     },
+     {
+      "title": "방법",
+      "items": [
+       "대화형: 회의·통화",
+       "푸시: 이메일·보고서",
+       "풀: 인트라넷·지식 저장소"
       ]
      }
     ]
    },
    {
-    "title": "유형",
+    "title": "의사소통 모델과 채널",
     "subsections": [
      {
-      "title": null,
+      "title": "모델",
       "items": [
-       "Interactive/Push/Pull",
-       "공식·비공식, 서면·구두, 내부·외부"
+       "송신자가 부호화 → 매체 전송(잡음) → 수신자 해독 → 피드백",
+       "채널 수: 10명이면 45개"
       ]
      }
     ]
@@ -5663,44 +6198,52 @@
    77
   ],
   "outline": [
-   "의사소통관리의 개념",
-   "프로세스",
-   "소통 유형",
-   "계획 요소"
+   "의사소통 관리 중요성",
+   "- 중요성",
+   "프로세스와 방법",
+   "- 프로세스",
+   "- 방법",
+   "의사소통 모델과 채널",
+   "- 모델"
   ],
   "name": "프로젝트 의사소통관리(Project Communications Management)",
   "en": "Project Communications Management",
   "keywords_must": [
-   "의사소통 관리",
-   "의사소통 관리 계획",
+   "의사소통 관리 계획(Plan)",
    "의사소통 관리(Manage)",
    "의사소통 감시(Monitor)",
-   "푸시·풀·대화형(Push/Pull/Interactive)",
-   "공식·비공식",
-   "수직·수평",
+   "대화형(Interactive)",
+   "푸시(Push)",
+   "풀(Pull)",
+   "채널 수 N(N−1)/2",
+   "의사소통 모델(송신자·부호화·매체·해독·수신자·피드백)",
    "5W1H"
   ],
   "keywords_ref": [
-   "의사소통 모델",
-   "채널 수",
-   "이해관계자 참여",
-   "보고서·회의"
+   "공식·비공식",
+   "수직·수평",
+   "서면·구두",
+   "의사소통 관리 계획서",
+   "성과 보고",
+   "잡음(Noise)",
+   "의사소통 기술(회의·이메일·대시보드)",
+   "문화 인식"
   ],
   "curated": true,
   "quiz_terms": [
-   "의사소통 관리",
-   "의사소통 관리 계획",
+   "의사소통 관리 계획(Plan)",
    "의사소통 관리(Manage)",
    "의사소통 감시(Monitor)",
-   "푸시·풀·대화형(Push/Pull/Interactive)",
-   "공식·비공식",
-   "수직·수평",
+   "대화형(Interactive)",
+   "푸시(Push)",
+   "풀(Pull)",
+   "채널 수 N(N−1)/2",
+   "의사소통 모델(송신자·부호화·매체·해독·수신자·피드백)",
    "5W1H"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -5710,44 +6253,50 @@
   "subtitle": "프로젝트 의사소통관리",
   "domain": "PM",
   "category": "PM > 프로젝트 의사소통관리",
-  "definition": "N명이 있을 때 잠재 소통 경로 수는 N(N−1)/2. 인원 증가 시 복잡도가 급증함을 보여주는 지표",
+  "definition": "프로젝트 이해관계자 간 잠재적 의사소통 경로의 수로, 인원 증가에 따라 제곱에 비례해 늘어 의사소통 복잡도와 관리 부담을 나타냄",
   "keywords": [
-   "경로 수 = N(N−1)/2",
-   "10명→45, 15명→105",
-   "인원↑ 복잡도↑↑",
-   "역할·보고선·도구로 통제"
+   "산식: 채널 수 = N(N−1)/2 · N = 이해관계자 수",
+   "특성: 제곱 비례 증가 · 의사소통 복잡도(Complexity) · 정보 왜곡·과부하",
+   "대응: 의사소통 관리 계획 · 허브 앤 스포크(Hub-and-Spoke) 구조 · 브룩스의 법칙"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "잠재 경로 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "의미",
       "items": [
-       "사람들 사이 양방향 잠재 경로의 개수"
+       "인원 1명 추가 시 N개 채널 증가",
+       "조정 비용 급증",
+       "인력 추가 시 고려 요소"
       ]
      }
     ]
    },
    {
-    "title": "산식",
+    "title": "산식과 계산 예",
     "subsections": [
      {
-      "title": null,
+      "title": "계산",
       "items": [
-       "Channels = N×(N−1)/2"
+       "5명: 5×4/2 = 10",
+       "10명: 10×9/2 = 45",
+       "5명 → 10명: 35개 증가"
       ]
      }
     ]
    },
    {
-    "title": "시사점",
+    "title": "관리 방안",
     "subsections": [
      {
-      "title": null,
+      "title": "방안",
       "items": [
-       "대규모 팀은 하위 그룹·창구 단일화",
-       "가상팀은 문서·비동기로 채널 부담 완화"
+       "의사소통 계획: 대상·주기·채널 정의",
+       "허브 앤 스포크: PM·리더 경유",
+       "팀 분할",
+       "협업 도구·정보 저장소",
+       "정기 회의 체계"
       ]
      }
     ]
@@ -5759,44 +6308,46 @@
    78
   ],
   "outline": [
-   "채널 수의 개념",
-   "산식",
-   "의미",
-   "관리 시사점"
+   "잠재 경로 개념",
+   "- 의미",
+   "산식과 계산 예",
+   "- 계산",
+   "관리 방안",
+   "- 방안"
   ],
   "name": "의사소통 채널 수(Communication Channels)",
   "en": "Communication Channels",
   "keywords_must": [
-   "의사소통 채널(Communication Channels)",
-   "산식 N(N−1)/2",
-   "이해관계자 수(N)",
-   "복잡도(Complexity)",
-   "소통 과부하",
-   "허브·스포크",
-   "의사소통 계획",
-   "브룩스 법칙"
+   "채널 수 = N(N−1)/2",
+   "N = 이해관계자 수",
+   "제곱 비례 증가",
+   "의사소통 복잡도(Complexity)",
+   "정보 왜곡·과부하",
+   "의사소통 관리 계획",
+   "허브 앤 스포크(Hub-and-Spoke) 구조",
+   "브룩스의 법칙"
   ],
   "keywords_ref": [
-   "송신자·수신자 모델",
-   "노이즈",
-   "피드백",
-   "매트릭스 조직"
+   "예: 5명 10개 → 10명 45개",
+   "증가분 = 새 채널 − 기존 채널",
+   "소규모 팀 분할",
+   "스크럼 팀 10명 이하",
+   "정보 배포 체계"
   ],
   "curated": true,
   "quiz_terms": [
-   "의사소통 채널(Communication Channels)",
-   "산식 N(N−1)/2",
-   "이해관계자 수(N)",
-   "복잡도(Complexity)",
-   "소통 과부하",
-   "허브·스포크",
-   "의사소통 계획",
-   "브룩스 법칙"
+   "채널 수 = N(N−1)/2",
+   "N = 이해관계자 수",
+   "제곱 비례 증가",
+   "의사소통 복잡도(Complexity)",
+   "정보 왜곡·과부하",
+   "의사소통 관리 계획",
+   "허브 앤 스포크(Hub-and-Spoke) 구조",
+   "브룩스의 법칙"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -5806,43 +6357,59 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 프로젝트 위험관리",
-  "definition": "위협을 줄이고 기회를 키워 성공 가능성을 높이는 지식영역. 식별·분석·대응·감시 프로세스로 구성",
+  "definition": "프로젝트에서 발생할 수 있는 불확실한 사건이나 조건을 식별·분석·대응·감시하여 긍정적 위험(기회)은 극대화하고 부정적 위험(위협)은 최소화하는 지식 영역",
   "keywords": [
-   "계획→식별→정성→정량→대응→실행→감시",
-   "위협·기회 모두 관리",
-   "Risk Register가 중심",
-   "우발예비와 연결"
+   "7개 프로세스: 위험 관리 계획 · 위험 식별 · 정성적 위험 분석 · 정량적 위험 분석 · 위험 대응 계획 · 위험 대응 실행(6판 신규) · 위험 감시",
+   "핵심 산출물: 위험 등록부(Risk Register) · 위험 보고서(Risk Report)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "위험 관리 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "위험 구성",
       "items": [
-       "불확실성이 목표에 미치는 영향을 체계적으로 다룸"
+       "사건",
+       "발생 확률",
+       "영향",
+       "위협(부정)과 기회(긍정)"
       ]
      }
     ]
    },
    {
-    "title": "프로세스",
+    "title": "주요 프로세스",
     "subsections": [
      {
-      "title": null,
+      "title": "기획",
       "items": [
-       "위험관리 계획, 식별, 정성·정량 분석, 대응 계획, 대응 실행, 감시"
+       "계획: 방법론·역할·RBS",
+       "식별: 브레인스토밍·체크리스트·SWOT",
+       "분석: 정성(확률·영향) → 정량(EMV·몬테카를로)"
+      ]
+     },
+     {
+      "title": "대응·감시",
+      "items": [
+       "대응 계획: 위협·기회 전략",
+       "대응 실행",
+       "감시: 위험 재평가·감사"
       ]
      }
     ]
    },
    {
-    "title": "산출",
+    "title": "위험 등록부",
     "subsections": [
      {
-      "title": null,
+      "title": "구성",
       "items": [
-       "Risk Register, Risk Report, 우발예비, 대응 책임자(Owner)"
+       "위험 ID·설명",
+       "원인·영향",
+       "확률·영향 등급",
+       "대응 전략",
+       "위험 책임자",
+       "상태"
       ]
      }
     ]
@@ -5854,45 +6421,55 @@
    91
   ],
   "outline": [
-   "위험관리의 개념",
-   "프로세스",
-   "개별·포괄 위험",
-   "산출물"
+   "위험 관리 개념",
+   "- 위험 구성",
+   "주요 프로세스",
+   "- 기획",
+   "- 대응·감시",
+   "위험 등록부",
+   "- 구성"
   ],
   "name": "프로젝트 위험관리(Project Risk Management)",
   "en": "Project Risk Management",
   "keywords_must": [
-   "위험 관리(Risk Management)",
-   "위험 식별(Identify Risks)",
-   "정성 분석(Qualitative)",
-   "정량 분석(Quantitative)",
-   "대응 계획(Plan Responses)",
-   "위험 감시(Monitor Risks)",
+   "위험 관리 계획",
+   "위험 식별",
+   "정성적 위험 분석",
+   "정량적 위험 분석",
+   "위험 대응 계획",
+   "위험 대응 실행(6판 신규)",
+   "위험 감시",
    "위험 등록부(Risk Register)",
-   "위험 보고서"
+   "위험 보고서(Risk Report)"
   ],
   "keywords_ref": [
-   "SWOT",
-   "Boehm Top 10",
+   "위험 분류 체계(RBS)",
+   "위험 성향·한계선(Risk Appetite·Threshold)",
+   "위험 책임자(Risk Owner)",
    "잔여·이차 위험",
-   "위험 태도(Risk Appetite)"
+   "우발 예비·관리 예비",
+   "개별 위험 vs 전체 위험",
+   "이슈와 구분"
   ],
   "curated": true,
   "quiz_terms": [
-   "위험 관리(Risk Management)",
-   "위험 식별(Identify Risks)",
-   "정성 분석(Qualitative)",
-   "정량 분석(Quantitative)",
-   "대응 계획(Plan Responses)",
-   "위험 감시(Monitor Risks)",
+   "위험 관리 계획",
+   "위험 식별",
+   "정성적 위험 분석",
+   "정량적 위험 분석",
+   "위험 대응 계획",
+   "위험 대응 실행(6판 신규)",
+   "위험 감시",
    "위험 등록부(Risk Register)",
-   "위험 보고서"
+   "위험 보고서(Risk Report)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "RBS": "Risk Breakdown Structure"
+  }
  },
  {
   "id": "PM_060",
@@ -5901,43 +6478,51 @@
   "subtitle": "정성적 위험 분석",
   "domain": "PM",
   "category": "PM > 위험관리 > 정성적 위험 분석",
-  "definition": "발생 확률과 영향 등으로 개별 위험의 우선순위를 정하는 빠른 분석. 확률-영향 매트릭스가 대표 도구",
+  "definition": "식별된 개별 위험의 발생 확률과 영향을 주관적으로 평가하여 우선순위를 정하는 신속하고 비용 효율적인 위험 분석 프로세스로, 정량 분석과 대응 계획의 기초가 됨",
   "keywords": [
-   "P×I로 순위",
-   "매트릭스 색상으로 등급",
-   "긴급성·근접성 고려",
-   "정량·대응 입력"
+   "평가 요소: 확률(Probability) · 영향(Impact) · 확률-영향 매트릭스(P-I Matrix) · 위험 점수 = 확률 × 영향",
+   "추가 속성: 긴급성(Urgency) · 근접성(Proximity) · 관리 용이성 · 위험 데이터 품질 평가",
+   "결과: 우선순위(Prioritization) · 위험 범주화(Risk Categorization)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "확률·영향 기반 분석",
     "subsections": [
      {
-      "title": null,
+      "title": "주요 특징",
       "items": [
-       "상대 평가로 대응 우선순위를 신속히 결정"
+       "주관적·신속",
+       "저비용",
+       "모든 식별 위험 대상",
+       "우선순위 결정"
       ]
      }
     ]
    },
    {
-    "title": "도구",
+    "title": "평가 방법",
     "subsections": [
      {
-      "title": null,
+      "title": "방법",
       "items": [
-       "P-I Matrix, 위험 데이터 품질 평가, 범주화, 긴급성 평가"
+       "확률·영향 척도 정의(매우 낮음~매우 높음)",
+       "P-I 매트릭스 배치",
+       "빨강·노랑·초록 구역 분류",
+       "데이터 품질 확인"
       ]
      }
     ]
    },
    {
-    "title": "산출",
+    "title": "결과 활용",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "우선순위화된 Risk Register, Watch List, 정량분석 대상"
+       "상위 위험: 정량 분석·즉시 대응",
+       "중위: 대응 계획",
+       "하위: 감시 목록",
+       "위험 등록부 갱신"
       ]
      }
     ]
@@ -5949,44 +6534,50 @@
    93
   ],
   "outline": [
-   "정성분석의 개념",
-   "PI 매트릭스",
-   "기타 평가",
-   "산출"
+   "확률·영향 기반 분석",
+   "- 주요 특징",
+   "평가 방법",
+   "- 방법",
+   "결과 활용",
+   "- 활용"
   ],
   "name": "정성적 위험분석(Qualitative Risk Analysis)",
-  "en": "Qualitative Risk Analysis",
+  "en": "Perform Qualitative Risk Analysis",
   "keywords_must": [
-   "정성적 위험분석",
    "확률(Probability)",
    "영향(Impact)",
    "확률-영향 매트릭스(P-I Matrix)",
-   "위험 점수(Risk Score)",
+   "위험 점수 = 확률 × 영향",
    "긴급성(Urgency)",
-   "위험 범주(Risk Category)",
-   "우선순위(Prioritization)"
+   "근접성(Proximity)",
+   "관리 용이성",
+   "위험 데이터 품질 평가",
+   "우선순위(Prioritization)",
+   "위험 범주화(Risk Categorization)"
   ],
   "keywords_ref": [
-   "버블 차트",
-   "가정 분석",
-   "위험 데이터 품질 평가",
-   "정량분석 후보 선별"
+   "계층 차트(버블)",
+   "감시 목록(Watch List)",
+   "휴면성·연결성·전략적 영향",
+   "위험 등록부 갱신",
+   "정량 분석 대상 선별"
   ],
   "curated": true,
   "quiz_terms": [
-   "정성적 위험분석",
    "확률(Probability)",
    "영향(Impact)",
    "확률-영향 매트릭스(P-I Matrix)",
-   "위험 점수(Risk Score)",
+   "위험 점수 = 확률 × 영향",
    "긴급성(Urgency)",
-   "위험 범주(Risk Category)",
-   "우선순위(Prioritization)"
+   "근접성(Proximity)",
+   "관리 용이성",
+   "위험 데이터 품질 평가",
+   "우선순위(Prioritization)",
+   "위험 범주화(Risk Categorization)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -5996,43 +6587,49 @@
   "subtitle": "정량적 위험 분석",
   "domain": "PM",
   "category": "PM > 위험관리 > 정량적 위험 분석",
-  "definition": "수치로 위험의 영향을 평가해 프로젝트 전체 노출도를 추정하는 분석. EMV·의사결정나무·시뮬레이션 등을 사용",
+  "definition": "개별 위험과 전체 불확실성이 프로젝트 목표에 미치는 영향을 수치로 분석하는 프로세스로, 일정·원가 목표 달성 확률과 필요한 예비비를 산출함",
   "keywords": [
-   "EMV=P×I",
-   "Tornado로 민감 요인",
-   "Monte Carlo로 분포",
-   "예비·대안 선택 근거"
+   "분석 기법: 몬테카를로 시뮬레이션(Monte Carlo) · 민감도 분석(토네이도 다이어그램) · 의사결정나무(Decision Tree) · 기대 금전 가치(EMV = 확률 × 영향)",
+   "결과: 목표 달성 확률 · 신뢰 수준(Confidence Level) · 우발 예비 산정"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "수치 기반 위험 분석",
     "subsections": [
      {
-      "title": null,
+      "title": "주요 특징",
       "items": [
-       "개별·포괄 위험을 수치로 모델링"
+       "객관적 수치",
+       "시간·비용 소요",
+       "상위 우선 위험 대상",
+       "전체 위험 평가 가능"
       ]
      }
     ]
    },
    {
-    "title": "기법",
+    "title": "주요 기법",
     "subsections": [
      {
-      "title": null,
+      "title": "기법",
       "items": [
-       "EMV, 의사결정나무, 민감도(토네이도), 시뮬레이션"
+       "몬테카를로: 확률 분포 반복 시행",
+       "민감도: 영향 큰 변수 순위(토네이도)",
+       "의사결정나무: 대안별 EMV 비교",
+       "EMV: 위협(−)·기회(+) 합산"
       ]
      }
     ]
    },
    {
-    "title": "산출",
+    "title": "의사결정나무 예시",
     "subsections": [
      {
-      "title": null,
+      "title": "예시",
       "items": [
-       "확률적 일정/원가 예측, 우발예비 규모, 우선 위험 수치"
+       "자체 개발: 성공 0.7 × 100 + 실패 0.3 × (−50) = 55",
+       "외주: 0.9 × 60 + 0.1 × (−20) = 52",
+       "EMV 큰 자체 개발 선택"
       ]
      }
     ]
@@ -6044,44 +6641,45 @@
    98
   ],
   "outline": [
-   "정량분석의 개념",
+   "수치 기반 위험 분석",
+   "- 주요 특징",
    "주요 기법",
-   "산출",
-   "정성과의 차이"
+   "- 기법",
+   "의사결정나무 예시",
+   "- 예시"
   ],
   "name": "정량적 위험분석(Quantitative Risk Analysis)",
-  "en": "Quantitative Risk Analysis",
+  "en": "Perform Quantitative Risk Analysis",
   "keywords_must": [
-   "정량적 위험분석",
-   "기댓값(EMV, Expected Monetary Value)",
+   "몬테카를로 시뮬레이션(Monte Carlo)",
+   "민감도 분석(토네이도 다이어그램)",
    "의사결정나무(Decision Tree)",
-   "민감도 분석(Sensitivity/Tornado)",
-   "시뮬레이션(Monte Carlo)",
-   "확률적 일정·원가",
-   "신뢰수준(Confidence Level)",
-   "위험 노출도"
+   "기대 금전 가치(EMV = 확률 × 영향)",
+   "목표 달성 확률",
+   "신뢰 수준(Confidence Level)",
+   "우발 예비 산정"
   ],
   "keywords_ref": [
+   "영향도(Influence Diagram)",
    "S-커브",
-   "영향도 다이어그램",
-   "우발예비 산정",
-   "정성분석"
+   "3점 산정 입력",
+   "정성 분석 후 선택 수행",
+   "위험 보고서 갱신",
+   "전체 프로젝트 위험 노출"
   ],
   "curated": true,
   "quiz_terms": [
-   "정량적 위험분석",
-   "기댓값(EMV, Expected Monetary Value)",
+   "몬테카를로 시뮬레이션(Monte Carlo)",
+   "민감도 분석(토네이도 다이어그램)",
    "의사결정나무(Decision Tree)",
-   "민감도 분석(Sensitivity/Tornado)",
-   "시뮬레이션(Monte Carlo)",
-   "확률적 일정·원가",
-   "신뢰수준(Confidence Level)",
-   "위험 노출도"
+   "기대 금전 가치(EMV = 확률 × 영향)",
+   "목표 달성 확률",
+   "신뢰 수준(Confidence Level)",
+   "우발 예비 산정"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -6091,44 +6689,51 @@
   "subtitle": "시뮬레이션 기법 (정량적)",
   "domain": "PM",
   "category": "PM > 위험관리 > 시뮬레이션 기법",
-  "definition": "활동 기간·원가의 확률분포를 반복 표본추출해 전체 일정·원가 분포를 얻는 기법. 완료 확률·버퍼 산정에 사용",
+  "definition": "활동 기간·원가 등 불확실 변수에 확률 분포를 부여하고 난수로 수천 번 반복 계산하여 프로젝트 완료 일정·원가의 확률 분포를 얻는 정량적 위험 분석 기법",
   "keywords": [
-   "입력: 3점·분포",
-   "수천 회 반복",
-   "출력: 완료일/원가 분포·%,",
-   "버퍼·약속일 근거"
+   "입력: 확률 분포(Probability Distribution) · 3점 산정(삼각·베타) · 변수 간 상관관계",
+   "수행: 반복 시행(Iterations) · 난수 생성",
+   "결과: S-커브(누적 확률) · 완료 확률·신뢰 수준(P50·P80) · 민감도·주공정 지수(Criticality Index)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "확률적 반복 계산 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "도입 필요성",
       "items": [
-       "불확실 입력을 확률적으로 결합해 결과 분포를 추정"
+       "단일 추정의 한계",
+       "경로 수렴 효과 반영",
+       "목표 달성 확률 제시"
       ]
      }
     ]
    },
    {
-    "title": "절차",
+    "title": "수행 절차",
     "subsections": [
      {
-      "title": null,
+      "title": "절차",
       "items": [
-       "모델 구축 → 분포 할당 → N회 샘플 → 통계 집계"
+       "모델 구성(일정 네트워크·원가)",
+       "변수별 분포 설정",
+       "난수 반복 시행(수천 회)",
+       "결과 분포 집계",
+       "분석·보고"
       ]
      }
     ]
    },
    {
-    "title": "활용",
+    "title": "결과 해석",
     "subsections": [
      {
-      "title": null,
+      "title": "해석",
       "items": [
-       "‘D일 내 완료 확률 80%’ 제시",
-       "우발예비·약정일 결정"
+       "S-커브: 날짜·원가별 누적 확률",
+       "P80: 80% 확률로 달성 가능한 값",
+       "주공정 지수: 활동이 임계 경로에 포함된 비율",
+       "예비비 = 목표 신뢰 수준 값 − 기준선"
       ]
      }
     ]
@@ -6140,44 +6745,47 @@
    101
   ],
   "outline": [
-   "시뮬레이션의 개념",
-   "Monte Carlo",
-   "입력·출력",
-   "활용"
+   "확률적 반복 계산 개념",
+   "- 도입 필요성",
+   "수행 절차",
+   "- 절차",
+   "결과 해석",
+   "- 해석"
   ],
   "name": "시뮬레이션 기법(Simulation, Monte Carlo)",
-  "en": "Simulation (Monte Carlo)",
+  "en": "Monte Carlo Simulation",
   "keywords_must": [
-   "몬테카를로 시뮬레이션(Monte Carlo Simulation)",
-   "확률분포(Probability Distribution)",
+   "확률 분포(Probability Distribution)",
+   "3점 산정(삼각·베타)",
+   "변수 간 상관관계",
    "반복 시행(Iterations)",
-   "완료 확률(Confidence Level)",
-   "S-커브",
-   "일정 위험",
-   "원가 위험",
-   "민감도"
+   "난수 생성",
+   "S-커브(누적 확률)",
+   "완료 확률·신뢰 수준(P50·P80)",
+   "민감도·주공정 지수(Criticality Index)"
   ],
   "keywords_ref": [
-   "PERT 3점",
-   "토네이도 차트",
-   "우발예비",
-   "What-if 시나리오"
+   "일정·원가 위험",
+   "경로 수렴(Path Convergence)",
+   "우발 예비 결정",
+   "토네이도 다이어그램",
+   "@RISK·Primavera Risk",
+   "입력 품질 의존"
   ],
   "curated": true,
   "quiz_terms": [
-   "몬테카를로 시뮬레이션(Monte Carlo Simulation)",
-   "확률분포(Probability Distribution)",
+   "확률 분포(Probability Distribution)",
+   "3점 산정(삼각·베타)",
+   "변수 간 상관관계",
    "반복 시행(Iterations)",
-   "완료 확률(Confidence Level)",
-   "S-커브",
-   "일정 위험",
-   "원가 위험",
-   "민감도"
+   "난수 생성",
+   "S-커브(누적 확률)",
+   "완료 확률·신뢰 수준(P50·P80)",
+   "민감도·주공정 지수(Criticality Index)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -6187,44 +6795,59 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 위험관리 > 위험 대응 계획 수립",
-  "definition": "개별·포괄 위험에 대한 전략을 선택하고 조치·책임자를 합의하는 프로세스. 위협·기회 전략이 다름",
+  "definition": "개별 위험과 전체 프로젝트 위험에 대해 위협은 줄이고 기회는 키우는 대응 전략과 조치를 선택하고 위험 책임자를 지정하는 프로세스",
   "keywords": [
-   "위협: 회피·전가·완화·수용",
-   "기회: 활용·공유·향상·수용",
-   "Escalate: 권한 밖",
-   "잔여/이차 위험 재분석"
+   "위협 전략: 상부 보고(Escalate) · 회피(Avoid) · 전가(Transfer) · 완화(Mitigate) · 수용(Accept)",
+   "기회 전략: 상부 보고(Escalate) · 활용(Exploit) · 공유(Share) · 증대(Enhance) · 수용(Accept)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "대응 전략 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "원칙",
       "items": [
-       "전략 선택·조치·오너·트리거를 합의"
+       "위험 중요도에 비례",
+       "비용 효율적",
+       "현실적·적시",
+       "책임자 지정",
+       "이해관계자 합의"
       ]
      }
     ]
    },
    {
-    "title": "위협",
+    "title": "위협·기회 전략",
     "subsections": [
      {
-      "title": null,
+      "title": "위협",
       "items": [
-       "Avoid, Transfer, Mitigate, Accept(능동/수동)"
+       "회피: 원인 제거·계획 변경",
+       "전가: 보험·계약으로 제3자 이전",
+       "완화: 확률·영향 감소",
+       "수용: 예비비 준비 또는 대응 없음"
+      ]
+     },
+     {
+      "title": "기회",
+      "items": [
+       "활용: 확실히 실현",
+       "공유: 역량 있는 제3자와 협력",
+       "증대: 확률·영향 증가",
+       "상부 보고: PM 권한 밖 위험 이관"
       ]
      }
     ]
    },
    {
-    "title": "기회",
+    "title": "잔여·이차 위험",
     "subsections": [
      {
-      "title": null,
+      "title": "구분",
       "items": [
-       "Exploit, Share, Enhance, Accept",
-       "Escalate는 위협·기회 공통"
+       "잔여 위험: 대응 후 남은 위험 → 우발 예비",
+       "이차 위험: 대응으로 새로 생긴 위험",
+       "대체 계획: 1차 대응 실패 시 실행"
       ]
      }
     ]
@@ -6236,46 +6859,53 @@
    103
   ],
   "outline": [
-   "대응 계획의 개념",
-   "위협 전략",
-   "기회 전략",
-   "공통·확대"
+   "대응 전략 개념",
+   "- 원칙",
+   "위협·기회 전략",
+   "- 위협",
+   "- 기회",
+   "잔여·이차 위험",
+   "- 구분"
   ],
   "name": "위험 대응 계획(Plan Risk Responses)",
   "en": "Plan Risk Responses",
   "keywords_must": [
+   "상부 보고(Escalate)",
    "회피(Avoid)",
    "전가(Transfer)",
    "완화(Mitigate)",
    "수용(Accept)",
+   "상부 보고(Escalate)",
    "활용(Exploit)",
    "공유(Share)",
-   "향상(Enhance)",
-   "상승(Escalate)",
-   "잔여·이차 위험"
+   "증대(Enhance)",
+   "수용(Accept)"
   ],
   "keywords_ref": [
-   "우발 대응(Contingent Response)",
-   "위험 소유자(Risk Owner)",
-   "폴백 계획(Fallback)",
-   "보험·계약"
+   "우발 대응 전략(Contingent Response)·트리거",
+   "대체 계획(Fallback Plan)",
+   "잔여 위험(Residual)",
+   "이차 위험(Secondary)",
+   "위험 책임자",
+   "적극적 수용(우발 예비) vs 소극적 수용",
+   "보험·보증(전가)"
   ],
   "curated": true,
   "quiz_terms": [
+   "상부 보고(Escalate)",
    "회피(Avoid)",
    "전가(Transfer)",
    "완화(Mitigate)",
    "수용(Accept)",
+   "상부 보고(Escalate)",
    "활용(Exploit)",
    "공유(Share)",
-   "향상(Enhance)",
-   "상승(Escalate)",
-   "잔여·이차 위험"
+   "증대(Enhance)",
+   "수용(Accept)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -6285,43 +6915,58 @@
   "subtitle": "",
   "domain": "PM",
   "category": "PM > 프로젝트 조달관리",
-  "definition": "외부에서 제품·서비스를 획득하기 위한 계획·수행·통제 지식영역. 계약 유형과 판매자 관리가 핵심",
+  "definition": "프로젝트 팀 외부에서 제품·서비스·결과물을 구매하거나 획득하는 데 필요한 계약 관리와 변경 통제 프로세스를 포함하는 지식 영역",
   "keywords": [
-   "계획→수행→통제(종료 포함)",
-   "Make-or-Buy 결정",
-   "계약으로 위험 배분",
-   "성과·인수·지급 통제"
+   "3개 프로세스: 조달 관리 계획(Plan) · 조달 수행(Conduct Procurements) · 조달 통제(Control Procurements)",
+   "핵심 문서: 조달 작업 기술서(SOW) · 입찰 문서(RFI·RFP·RFQ) · 공급자 선정 기준(Source Selection Criteria) · 계약(Contract)",
+   "분석: 제작-구매 분석(Make-or-Buy)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "조달 관리 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "대상",
       "items": [
-       "조직 외부 자원·서비스를 계약으로 확보·관리"
+       "구매자–판매자 관계",
+       "계약은 법적 구속력",
+       "PM은 구매자 관점"
       ]
      }
     ]
    },
    {
-    "title": "프로세스",
+    "title": "주요 프로세스",
     "subsections": [
      {
-      "title": null,
+      "title": "프로세스",
       "items": [
-       "조달관리 계획, 조달 수행, 조달 통제(PMBOK 6)"
+       "계획: 제작-구매 결정·계약 유형·SOW",
+       "수행: 입찰자 회의·제안 평가·계약 체결",
+       "통제: 성과 검토·변경·클레임·종료"
       ]
      }
     ]
    },
    {
-    "title": "핵심",
+    "title": "입찰 문서와 선정",
     "subsections": [
      {
-      "title": null,
+      "title": "입찰 문서",
       "items": [
-       "계약 유형 선택, 선정기준, 성과감시, 변경·클레임·종료"
+       "RFI: 정보 요청",
+       "RFP: 제안 요청",
+       "RFQ: 견적 요청"
+      ]
+     },
+     {
+      "title": "선정 기준",
+      "items": [
+       "기술 역량",
+       "가격",
+       "재무 안정성",
+       "관리 방법",
+       "과거 실적"
       ]
      }
     ]
@@ -6333,44 +6978,49 @@
    80
   ],
   "outline": [
-   "조달관리의 개념",
-   "프로세스",
-   "계약 유형 개요",
-   "통제"
+   "조달 관리 개념",
+   "- 대상",
+   "주요 프로세스",
+   "- 프로세스",
+   "입찰 문서와 선정",
+   "- 입찰 문서",
+   "- 선정 기준"
   ],
   "name": "프로젝트 조달관리(Project Procurement Management)",
   "en": "Project Procurement Management",
   "keywords_must": [
-   "조달 관리(Procurement Management)",
-   "조달 관리 계획",
+   "조달 관리 계획(Plan)",
    "조달 수행(Conduct Procurements)",
    "조달 통제(Control Procurements)",
+   "조달 작업 기술서(SOW)",
+   "입찰 문서(RFI·RFP·RFQ)",
+   "공급자 선정 기준(Source Selection Criteria)",
    "계약(Contract)",
-   "판매자(Seller/Vendor)",
-   "입찰 문서(Bid Documents)",
-   "소스 선정(Source Selection)"
+   "제작-구매 분석(Make-or-Buy)"
   ],
   "keywords_ref": [
-   "FP·CR·T&M 계약",
-   "Make-or-Buy",
-   "SoW",
-   "클레임"
+   "입찰자 회의",
+   "독자 산정(Independent Estimates)",
+   "계약 유형(고정가·실비정산·T&M)",
+   "클레임 관리",
+   "조달 감사",
+   "공급자 성과 평가",
+   "조달 종료"
   ],
   "curated": true,
   "quiz_terms": [
-   "조달 관리(Procurement Management)",
-   "조달 관리 계획",
+   "조달 관리 계획(Plan)",
    "조달 수행(Conduct Procurements)",
    "조달 통제(Control Procurements)",
+   "조달 작업 기술서(SOW)",
+   "입찰 문서(RFI·RFP·RFQ)",
+   "공급자 선정 기준(Source Selection Criteria)",
    "계약(Contract)",
-   "판매자(Seller/Vendor)",
-   "입찰 문서(Bid Documents)",
-   "소스 선정(Source Selection)"
+   "제작-구매 분석(Make-or-Buy)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
    "FP": "Function Point"
@@ -6383,57 +7033,58 @@
   "subtitle": "계약유형 3모델",
   "domain": "PM",
   "category": "프로젝트관리 > 조달관리 > 계약유형",
-  "definition": "고정가(FP)·실비정산(CR)·시간자료(T&M)로 대별. 위험 부담이 구매자·판매자 사이에 다르게 배분됨",
+  "definition": "구매자와 판매자 간 위험 분담 방식에 따라 고정가, 실비정산, 시간·자재 계약으로 구분하는 조달 계약 유형으로, 범위 명확성에 따라 선택함",
   "keywords": [
-   "FP: 판매자 위험↑·범위 명확 시",
-   "CR: 구매자 위험↑·연구성",
-   "T&M: 혼합·단기·범위 모호",
-   "인센티브로 목표 정렬"
+   "고정가(FP, Fixed Price): FFP(확정 고정가) · FPIF(성과급 고정가) · FP-EPA(경제 가격 조정)",
+   "실비정산(CR, Cost-Reimbursable): CPFF(고정 수수료) · CPIF(성과 수수료) · CPAF(보상 수수료)",
+   "시간·자재(T&M, Time & Materials): 단가 고정·수량 미정 · 혼합형"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "위험 분담 기준 분류",
     "subsections": [
      {
-      "title": null,
+      "title": "선택 요소",
       "items": [
-       "대금 산정·위험 배분 방식에 따른 계약 분류"
+       "범위 명확성",
+       "위험 분담",
+       "변경 빈도",
+       "계약 기간",
+       "업계 관행"
       ]
      }
     ]
    },
    {
-    "title": "유형",
+    "title": "유형별 특징",
     "subsections": [
      {
-      "title": "FP",
+      "title": "고정가",
       "items": [
-       "FFP, FPIF, FPEPA 등 — 가격 대체로 고정"
+       "FFP: 총액 확정, 판매자 위험",
+       "FPIF: 성과에 따라 인센티브",
+       "FP-EPA: 장기 계약 물가 조정"
       ]
      },
      {
-      "title": "CR",
+      "title": "실비정산",
       "items": [
-       "CPFF, CPIF, CPAF — 실비+수수료"
-      ]
-     },
-     {
-      "title": "T&M",
-      "items": [
-       "단가×투입, 한도 설정 권장"
+       "CPFF: 원가 + 고정 수수료",
+       "CPIF: 목표 원가 대비 분담",
+       "CPAF: 구매자 주관 평가 보상"
       ]
      }
     ]
    },
    {
-    "title": "선택",
+    "title": "위험 분담 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "비교",
       "items": [
-       "범위 명확·안정 → FP",
-       "불확실·R&D → CR",
-       "긴급·부분 모호 → T&M"
+       "구매자 위험: CPFF > CPIF > T&M > FPIF > FFP",
+       "판매자 위험은 반대",
+       "애자일: T&M·타임박스 계약 활용"
       ]
      }
     ]
@@ -6445,47 +7096,50 @@
    105
   ],
   "outline": [
-   "계약 유형의 개념",
-   "고정가(FP)",
-   "실비정산(CR)",
-   "T&M과 선택"
+   "위험 분담 기준 분류",
+   "- 선택 요소",
+   "유형별 특징",
+   "- 고정가",
+   "- 실비정산",
+   "위험 분담 비교",
+   "- 비교"
   ],
   "name": "계약 유형(Contract Types)",
   "en": "Contract Types",
   "keywords_must": [
-   "고정가(FP, Fixed Price)",
-   "실비정산(CR, Cost-Reimbursable)",
-   "시간자료(T&M, Time & Materials)",
-   "FFP·FPI·FPIF",
-   "CPFF·CPIF·CPAF",
-   "위험 배분(Risk Allocation)",
-   "인센티브(Incentive)",
-   "범위 명확성"
+   "FFP(확정 고정가)",
+   "FPIF(성과급 고정가)",
+   "FP-EPA(경제 가격 조정)",
+   "CPFF(고정 수수료)",
+   "CPIF(성과 수수료)",
+   "CPAF(보상 수수료)",
+   "단가 고정·수량 미정",
+   "혼합형"
   ],
   "keywords_ref": [
-   "구매자·판매자 위험",
-   "SoW 상세도",
-   "천장가격(Ceiling Price)",
-   "공유비율(Share Ratio)"
+   "위험: FFP 판매자 최대 ↔ CPFF 구매자 최대",
+   "목표 원가·분담 비율(예 80/20)·최고가(PTA)",
+   "범위 명확 → 고정가, 불명확 → 실비정산",
+   "소규모·인력 보강 → T&M"
   ],
   "curated": true,
   "quiz_terms": [
-   "고정가(FP, Fixed Price)",
-   "실비정산(CR, Cost-Reimbursable)",
-   "시간자료(T&M, Time & Materials)",
-   "FFP·FPI·FPIF",
-   "CPFF·CPIF·CPAF",
-   "위험 배분(Risk Allocation)",
-   "인센티브(Incentive)",
-   "범위 명확성"
+   "FFP(확정 고정가)",
+   "FPIF(성과급 고정가)",
+   "FP-EPA(경제 가격 조정)",
+   "CPFF(고정 수수료)",
+   "CPIF(성과 수수료)",
+   "CPAF(보상 수수료)",
+   "단가 고정·수량 미정",
+   "혼합형"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true,
   "gloss": {
-   "FP": "Function Point"
+   "FP": "Fixed Price",
+   "CR": "Cost-Reimbursable"
   }
  },
  {
@@ -6495,43 +7149,57 @@
   "subtitle": "프로젝트 이해관계자관리",
   "domain": "PM",
   "category": "PM > 프로젝트 이해관계자관리",
-  "definition": "프로젝트에 영향받거나 영향을 주는 개인·집단을 식별하고 기대·참여를 관리하는 지식영역",
+  "definition": "프로젝트에 영향을 주거나 받는 개인·집단·조직을 식별하고 기대와 영향력을 분석해 적절한 참여 전략으로 의사결정과 실행에 효과적으로 참여시키는 지식 영역",
   "keywords": [
-   "식별→참여계획→관리→감시",
-   "Power/Interest·Salience 분류",
-   "기대 정렬·갈등 조율",
-   "등록부로 추적"
+   "4개 프로세스: 이해관계자 식별 · 참여 계획(Plan Engagement) · 참여 관리(Manage Engagement) · 참여 감시(Monitor Engagement)",
+   "분석 도구: 권력-관심 격자(Power/Interest Grid) · 현저성 모델(Salience Model) · 참여 수준 평가 매트릭스",
+   "산출물: 이해관계자 등록부(Stakeholder Register)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "이해관계자 관리 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "중요성",
       "items": [
-       "성공에 영향을 주는 모든 이해관계자의 기대를 관리"
+       "프로젝트 성공 기준 결정",
+       "저항 최소화",
+       "기대 관리",
+       "지속적 참여"
       ]
      }
     ]
    },
    {
-    "title": "프로세스",
+    "title": "주요 프로세스",
     "subsections": [
      {
-      "title": null,
+      "title": "프로세스",
       "items": [
-       "식별, 참여계획, 참여관리, 참여감시"
+       "식별: 등록부 작성·분석",
+       "참여 계획: 현재·목표 참여 수준 차이 해소 전략",
+       "참여 관리: 소통·협상·갈등 해결",
+       "감시: 관계·참여 수준 평가"
       ]
      }
     ]
    },
    {
-    "title": "분류",
+    "title": "분석 도구",
     "subsections": [
      {
-      "title": null,
+      "title": "권력-관심 격자",
       "items": [
-       "권력/관심, 권력/영향, 영향/충격, 현저성(권력·합법·긴급)"
+       "고권력·고관심: 밀접 관리",
+       "고권력·저관심: 만족 유지",
+       "저권력·고관심: 정보 제공",
+       "저권력·저관심: 감시"
+      ]
+     },
+     {
+      "title": "참여 평가 매트릭스",
+      "items": [
+       "C(현재)·D(목표)로 참여 수준 표시"
       ]
      }
     ]
@@ -6543,44 +7211,48 @@
    85
   ],
   "outline": [
-   "이해관계자관리의 개념",
-   "프로세스",
-   "분류 기법",
-   "참여 관리"
+   "이해관계자 관리 개념",
+   "- 중요성",
+   "주요 프로세스",
+   "- 프로세스",
+   "분석 도구",
+   "- 권력-관심 격자",
+   "- 참여 평가 매트릭스"
   ],
   "name": "프로젝트 이해관계자관리(Project Stakeholder Management)",
   "en": "Project Stakeholder Management",
   "keywords_must": [
-   "이해관계자(Stakeholder)",
    "이해관계자 식별",
    "참여 계획(Plan Engagement)",
    "참여 관리(Manage Engagement)",
    "참여 감시(Monitor Engagement)",
-   "권력/관심 격자(Power/Interest Grid)",
+   "권력-관심 격자(Power/Interest Grid)",
    "현저성 모델(Salience Model)",
-   "이해관계자 등록부"
+   "참여 수준 평가 매트릭스",
+   "이해관계자 등록부(Stakeholder Register)"
   ],
   "keywords_ref": [
-   "참여 수준 매트릭스",
-   "스폰서",
-   "저항 관리",
-   "의사소통 계획"
+   "참여 수준: 인지 못함·저항·중립·지원·주도",
+   "권력/영향·영향/효과 격자",
+   "영향 방향(상향·하향·외부·측면)",
+   "이슈 기록부",
+   "의사소통 관리와 연계",
+   "7판 이해관계자 성과 영역"
   ],
   "curated": true,
   "quiz_terms": [
-   "이해관계자(Stakeholder)",
    "이해관계자 식별",
    "참여 계획(Plan Engagement)",
    "참여 관리(Manage Engagement)",
    "참여 감시(Monitor Engagement)",
-   "권력/관심 격자(Power/Interest Grid)",
+   "권력-관심 격자(Power/Interest Grid)",
    "현저성 모델(Salience Model)",
-   "이해관계자 등록부"
+   "참여 수준 평가 매트릭스",
+   "이해관계자 등록부(Stakeholder Register)"
   ],
   "quiz_groups": [
    "pm"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {

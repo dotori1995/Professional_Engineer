@@ -46,6 +46,7 @@ ANR: Automatic Neighbor Relation
 ANSI: American National Standards Institute
 AoA: Angle of Arrival
 AODV: Ad hoc On-demand Distance Vector
+AON: Activity On Node
 AOP: Aspect-Oriented Programming
 AP: [Access Point, Application Processor, Action Priority, Average Precision]
 APCO: Association of Public-Safety Communications Officials
@@ -157,7 +158,11 @@ CoMP: Coordinated Multi-Point
 COQ: Cost of Quality
 CoRE: Constrained RESTful Environments
 CORS: Continuously Operating Reference Station
+COSMIC: Common Software Measurement International Consortium
+CPAF: Cost Plus Award Fee
 CPE: Customer Premises Equipment
+CPFF: Cost Plus Fixed Fee
+CPIF: Cost Plus Incentive Fee
 CPM: [Critical Path Method, Counting Practices Manual, Corporate Performance Management]
 CPS: Cyber-Physical System
 CPU: Central Processing Unit
@@ -193,10 +198,12 @@ DCT: Discrete Cosine Transform
 DEMUX: Demultiplexer
 DENM: Decentralized Environmental Notification Message
 DER: [Distinguished Encoding Rules, Distributed Energy Resources]
+DET: Data Element Type
 DevRel: Developer Relations
 DF: ["Don't Fragment", Degrees of Freedom]
 DFS: Dynamic Frequency Selection
 DFT: Discrete Fourier Transform
+DfX: Design for X
 DGPS: Differential GPS
 DHCP: Dynamic Host Configuration Protocol
 DHCPv6: Dynamic Host Configuration Protocol for IPv6
@@ -276,6 +283,7 @@ EERD: Enhanced Entity Relationship Diagram
 EF: [Expedited Forwarding, Early Finish]
 EGP: Exterior Gateway Protocol
 EHT: Extremely High Throughput
+EI: External Input
 EIF: External Interface File
 EIFS: Extended Inter-Frame Space
 EIGRP: Enhanced Interior Gateway Routing Protocol
@@ -283,9 +291,12 @@ EMI: Electromagnetic Interference
 EMS: [Element Management System, Energy Management System]
 EMV: Expected Monetary Value
 EN-DC: E-UTRA NR Dual Connectivity
+EO: External Output
 EPC: Evolved Packet Core
 EPMO: Enterprise Project Management Office
+EQ: External inQuiry
 ERD: Entity Relationship Diagram
+ERG: Existence, Relatedness, Growth
 ERP: Enterprise Resource Planning
 ERPS: Ethernet Ring Protection Switching
 ESG: Environment Social Governance
@@ -321,8 +332,10 @@ FMS: Flexible Manufacturing System
 FOD: Foreign Object Detection
 FOTA: Firmware Over-The-Air
 FP: [Function Point, False Positive, Frequent Pattern]
+FP-EPA: Fixed Price with Economic Price Adjustment
 FPC: Finite Population Correction
 FPGA: Field-Programmable Gate Array
+FPIF: Fixed Price Incentive Fee
 FPR: False Positive Rate
 FQDN: Fully Qualified Domain Name
 FRAND: Fair Reasonable And Non-Discriminatory
@@ -332,6 +345,7 @@ FTA: Fault Tree Analysis
 FTM: Fine Timing Measurement
 FTP: File Transfer Protocol
 FTPS: FTP Secure
+FTR: File Type Referenced
 FV: Future Value
 FWA: Fixed Wireless Access
 FWLB: Firewall Load Balancing
@@ -472,7 +486,9 @@ LBS: Location-Based Service
 LBT: Listen Before Talk
 LC3: Low Complexity Communication Codec
 LCAS: Link Capacity Adjustment Scheme
+LCC: Life Cycle Cost
 LCF: Local Closest First
+LCL: Lower Control Limit
 LCP: Link Control Protocol
 LDAP: Lightweight Directory Access Protocol
 LDP: Label Distribution Protocol
@@ -490,6 +506,7 @@ LLC: Logical Link Control
 LLM: Large Language Model
 LLQ: Low Latency Queuing
 LOC: Lines of Code
+LOE: Level of Effort
 LOF: Local Outlier Factor
 LoRa: Long Range
 LOS: Line of Sight
@@ -596,6 +613,7 @@ NCP: Network Control Protocol
 NDEF: NFC Data Exchange Format
 NDN: Named Data Networking
 NDP: Neighbor Discovery Protocol
+NESMA: Netherlands Software Metrics Association
 NETCONF: Network Configuration Protocol
 NFC: Near Field Communication
 NFV: Network Functions Virtualization
@@ -688,6 +706,7 @@ PCF: Point Coordination Function
 PCM: Pulse Code Modulation
 PCRF: Policy and Charging Rules Function
 PDCP: Packet Data Convergence Protocol
+PDM: Precedence Diagramming Method
 PDN: Packet Data Network
 PDR: Pedestrian Dead Reckoning
 PDU: Protocol Data Unit
@@ -721,7 +740,6 @@ POLQA: Perceptual Objective Listening Quality Analysis
 POP: [Point of Presence, Point of Purchase, Point of Production]
 POP3: Post Office Protocol version 3
 POTN: Packet Optical Transport Network
-PP: Payback Period
 PPP: [Point-to-Point Protocol, Public Private Partnership]
 PQ: Priority Queuing
 PRB: Physical Resource Block
@@ -734,13 +752,16 @@ PSH: Push
 PSK: [Phase Shift Keying, Pre-Shared Key]
 PSM: [Power Saving Mode, Platform Specific Model]
 PSTN: Public Switched Telephone Network
+PTA: Point of Total Assumption
 PTR: Pointer
 PTT: Push To Talk
 PV: Present Value
 PVC: Permanent Virtual Circuit
 PVST: Per-VLAN Spanning Tree
 PWM: Pulse Width Modulation
+QA: Quality Assurance
 QAM: Quadrature Amplitude Modulation
+QC: Quality Control
 QCI: QoS Class Identifier
 QDMTT: Qualified Domestic Minimum Top-up Tax
 QFD: Quality Function Deployment
@@ -756,11 +777,13 @@ RADIUS: Remote Authentication Dial-In User Service
 RAM: [Random Access Memory, Responsibility Assignment Matrix, Regional Air Mobility]
 RAN: Radio Access Network
 RARP: Reverse Address Resolution Protocol
+RCA: Root Cause Analysis
 RCSI: Read Committed Snapshot Isolation
 RED: Random Early Detection
 RegTech: Regulatory Technology
 REJ: Reject
 REST: Representational State Transfer
+RET: Record Element Type
 RF: Radio Frequency
 RFC: Request for Comments
 RFID: Radio Frequency Identification
@@ -919,6 +942,8 @@ SupTech: Supervisory Technology
 SVC: [Switched Virtual Circuit, Service Value Chain, CMMI for Services]
 SVI: Switch Virtual Interface
 SVM: Support Vector Machine
+SVN: Subversion
+SW: Software
 SWEBOK: Software Engineering Body of Knowledge
 SYN: Synchronize
 T&M: Time and Materials
@@ -959,6 +984,7 @@ TVWS: TV White Space
 TWR: Two-Way Ranging
 TWT: Target Wake Time
 UAV: Unmanned Aerial Vehicle
+UCL: Upper Control Limit
 UDM: Unified Data Management
 UDP: User Datagram Protocol
 UE: User Equipment
@@ -991,6 +1017,7 @@ V2P: Vehicle-to-Pedestrian
 V2V: Vehicle-to-Vehicle
 V2X: Vehicle-to-Everything
 VAC: Variance at Completion
+VAF: Value Adjustment Factor
 VANET: Vehicular Ad-hoc Network
 VCAT: Virtual Concatenation
 VCF: VMware Cloud Foundation
@@ -1035,6 +1062,7 @@ WIP: Work In Progress
 WLAN: Wireless Local Area Network
 WLC: Wireless LAN Controller
 WoT: Web of Things
+WP: Work Package
 WPA2: Wi-Fi Protected Access 2
 WPA3: Wi-Fi Protected Access 3
 WPAN: Wireless Personal Area Network
