@@ -6972,5 +6972,2133 @@
    "PC": "Personal Computer",
    "XDR": "Extended Detection and Response"
   }
+ },
+ {
+  "id": "SE_095",
+  "code": "SE_095",
+  "title": "사이버 레질리언스(Cyber Resilience)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 > 보안 표준(정책) 및 관리적 보안 > 사이버 레질리언스(Cyber Resilience)",
+  "definition": "사이버 공격·장애 같은 부정적 사이버 사건을 완전히 막을 수 없다는 전제에서 이를 예측하고 견디며 신속히 복구하고 적응해 핵심 업무 성과를 계속 유지하는 조직의 능력",
+  "keywords": [
+   "목표(NIST SP 800-160 Vol.2): 예측(Anticipate) · 저항(Withstand) · 복구(Recover) · 적응(Adapt)",
+   "구성 요소: 비즈니스 영향 분석(BIA) · 보안 정책 통제 · 종합적 테스팅 · 사이버 복구 계획",
+   "비교: 사이버 보안 = 침해 방지 · 레질리언스 = 업무 지속"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "방어 한계",
+      "items": [
+       "APT·랜섬웨어로 완전 차단 불가능"
+      ]
+     },
+     {
+      "title": "관점 전환",
+      "items": [
+       "침해를 가정하고 핵심 업무 성과 유지에 초점"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "핵심 목표와 구성 요소",
+    "subsections": [
+     {
+      "title": "4대 목표",
+      "items": [
+       "예측(위협 대비 태세) → 저항(공격 중 핵심 기능 유지) → 복구(기능 회복) → 적응(교훈 반영해 구조 변경)"
+      ]
+     },
+     {
+      "title": "다보스 포럼 요소",
+      "items": [
+       "비즈니스 영향 분석으로 우선순위 도출",
+       "정책 통제 문서화",
+       "지속 테스트로 정책 검증",
+       "보안 도구·관리형 서비스 투자",
+       "사이버 복구 계획"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "사이버 보안과 비교",
+    "subsections": [
+     {
+      "title": "대상",
+      "items": [
+       "보안: IT 시스템·자산",
+       "레질리언스: 비즈니스 결과물 전달"
+      ]
+     },
+     {
+      "title": "지향점",
+      "items": [
+       "보안: 실패 불허 설계",
+       "레질리언스: 실패를 통제하고 극복"
+      ]
+     },
+     {
+      "title": "범위",
+      "items": [
+       "보안: 조직 내부 중심",
+       "레질리언스: 공급망·조직 간 네트워크까지"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 방어 한계",
+   "- 관점 전환",
+   "핵심 목표와 구성 요소",
+   "- 4대 목표",
+   "- 다보스 포럼 요소",
+   "사이버 보안과 비교",
+   "- 대상",
+   "- 지향점",
+   "- 범위"
+  ],
+  "name": "사이버 레질리언스(Cyber Resilience)",
+  "en": "Cyber Resilience",
+  "keywords_must": [
+   "예측(Anticipate)",
+   "저항(Withstand)",
+   "복구(Recover)",
+   "적응(Adapt)",
+   "비즈니스 영향 분석(BIA)",
+   "보안 정책 통제",
+   "종합적 테스팅",
+   "사이버 복구 계획",
+   "사이버 보안 = 침해 방지",
+   "레질리언스 = 업무 지속"
+  ],
+  "keywords_ref": [
+   "다보스 포럼 핵심 요소",
+   "업무 연속성 계획(BCP)",
+   "재해 복구(DR)",
+   "침해 가정(Assume Breach)",
+   "이뮤터블 백업",
+   "모의 훈련·레드팀",
+   "사이버 복원력법(EU CRA)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "예측(Anticipate)",
+   "저항(Withstand)",
+   "복구(Recover)",
+   "적응(Adapt)",
+   "비즈니스 영향 분석(BIA)",
+   "보안 정책 통제",
+   "종합적 테스팅",
+   "사이버 복구 계획",
+   "사이버 보안 = 침해 방지",
+   "레질리언스 = 업무 지속"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "BIA": "Business Impact Analysis",
+   "BCP": "Business Continuity Planning",
+   "DR": "Disaster Recovery",
+   "CRA": "Cyber Resilience Act"
+  }
+ },
+ {
+  "id": "SE_096_00",
+  "code": "SE_096_00",
+  "title": "CARTA 접근법(Continuous Adaptive Risk and Trust Assessment)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 > 보안 표준(정책) 및 관리적 보안 > CARTA 접근법",
+  "definition": "가트너가 2017년 제시한 보안 전략으로, 접근 허용·차단을 한 번 결정하고 끝내지 않고 사용자·기기·행위의 위험과 신뢰를 실시간으로 계속 평가해 접근 수준을 적응적으로 조정하는 접근법",
+  "keywords": [
+   "핵심 원칙: 지속적(Continuous) 평가 · 적응형(Adaptive) 대응 · 위험·신뢰 평가 · 상황 인지(Context-aware)",
+   "적용 단계: 실행(Run) 탐지·대응 · 구축(Build) DevSecOps · 계획(Plan) 위험 기반 의사결정",
+   "모태: 적응형 보안 아키텍처(예측·예방·탐지·대응)"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "일회성 인증 한계",
+      "items": [
+       "로그인 후 탈취된 세션·내부자 위협 탐지 불가"
+      ]
+     },
+     {
+      "title": "디지털 비즈니스",
+      "items": [
+       "클라우드·모바일로 경계가 사라져 매 순간 신뢰 판단 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "평가·대응 방식",
+    "subsections": [
+     {
+      "title": "지속 평가",
+      "items": [
+       "접속 이후에도 행위·기기 상태·위치를 계속 분석"
+      ]
+     },
+     {
+      "title": "적응 대응",
+      "items": [
+       "위험 증가 시 추가 인증, 권한 축소, 세션 차단"
+      ]
+     },
+     {
+      "title": "적응형 보안 아키텍처 계승",
+      "items": [
+       "예측 → 예방 → 탐지 → 대응의 순환"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 전략",
+    "subsections": [
+     {
+      "title": "실행 단계",
+      "items": [
+       "UEBA·EDR로 실시간 이상 탐지와 자동 대응"
+      ]
+     },
+     {
+      "title": "구축 단계",
+      "items": [
+       "DevSecOps로 개발 파이프라인에 보안 점검 내재화"
+      ]
+     },
+     {
+      "title": "계획 단계",
+      "items": [
+       "위험 수용 수준을 정의하고 위험 기반으로 투자·정책 결정"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 일회성 인증 한계",
+   "- 디지털 비즈니스",
+   "평가·대응 방식",
+   "- 지속 평가",
+   "- 적응 대응",
+   "- 적응형 보안 아키텍처 계승",
+   "적용 전략",
+   "- 실행 단계",
+   "- 구축 단계",
+   "- 계획 단계"
+  ],
+  "name": "CARTA 접근법(Continuous Adaptive Risk and Trust Assessment)",
+  "en": "Continuous Adaptive Risk and Trust Assessment",
+  "keywords_must": [
+   "지속적(Continuous) 평가",
+   "적응형(Adaptive) 대응",
+   "위험·신뢰 평가",
+   "상황 인지(Context-aware)",
+   "실행(Run) 탐지·대응",
+   "구축(Build) DevSecOps",
+   "계획(Plan) 위험 기반 의사결정",
+   "적응형 보안 아키텍처(예측·예방·탐지·대응)"
+  ],
+  "keywords_ref": [
+   "제로 트러스트 연계",
+   "UEBA(User and Entity Behavior Analytics)",
+   "CASB",
+   "위험 기반 인증",
+   "마이크로 세그멘테이션",
+   "2018 가트너 10대 기술"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "지속적(Continuous) 평가",
+   "적응형(Adaptive) 대응",
+   "위험·신뢰 평가",
+   "상황 인지(Context-aware)",
+   "실행(Run) 탐지·대응",
+   "구축(Build) DevSecOps",
+   "계획(Plan) 위험 기반 의사결정",
+   "적응형 보안 아키텍처(예측·예방·탐지·대응)"
+  ],
+  "quiz_groups": [
+   "se"
+  ]
+ },
+ {
+  "id": "SE_097",
+  "code": "SE_097",
+  "title": "소프트웨어 개발 보안(Secure Coding)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안",
+  "definition": "소프트웨어 개발 생명주기(SDLC) 전 단계, 특히 구현 단계에서 보안 약점을 만들지 않도록 안전한 코딩 규칙을 적용해 해킹의 원인이 되는 취약점을 사전에 제거하는 개발 활동",
+  "keywords": [
+   "보안 약점 7유형: 입력데이터 검증 및 표현 · 보안 기능 · 시간 및 상태 · 에러 처리 · 코드 오류 · 캡슐화 · API 오용",
+   "개념 구분: 보안 약점(Weakness) · 보안 취약점(Vulnerability)",
+   "도구: 정적 분석(SAST) · 동적 분석(DAST)"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "공격 집중",
+      "items": [
+       "보안 장비를 우회해 애플리케이션 취약점을 노리는 공격 증가"
+      ]
+     },
+     {
+      "title": "비용",
+      "items": [
+       "개발 완료 후 결함 수정 비용이 설계·구현 단계보다 크게 증가"
+      ]
+     },
+     {
+      "title": "제도",
+      "items": [
+       "전자정부 정보시스템 개발 시 SW 개발보안 적용·진단 의무"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구현 단계 보안 약점 7유형",
+    "subsections": [
+     {
+      "title": "입력데이터 검증 및 표현",
+      "items": [
+       "SQL 삽입, XSS, 경로 조작, 운영체제 명령어 삽입"
+      ]
+     },
+     {
+      "title": "보안 기능",
+      "items": [
+       "부적절한 인가, 취약한 암호 알고리즘, 하드코딩된 비밀번호"
+      ]
+     },
+     {
+      "title": "시간 및 상태",
+      "items": [
+       "경쟁 조건(TOCTOU), 종료되지 않는 반복문"
+      ]
+     },
+     {
+      "title": "에러 처리",
+      "items": [
+       "오류 메시지 정보 노출, 예외 처리 누락"
+      ]
+     },
+     {
+      "title": "코드 오류",
+      "items": [
+       "널 포인터 역참조, 자원 미해제"
+      ]
+     },
+     {
+      "title": "캡슐화",
+      "items": [
+       "세션 데이터 노출, 디버그 코드 잔존"
+      ]
+     },
+     {
+      "title": "API 오용",
+      "items": [
+       "DNS 조회 결과 의존 보안 결정, 취약한 API 사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 절차",
+    "subsections": [
+     {
+      "title": "설계",
+      "items": [
+       "보안 요구항목 정의, 위협 모델링"
+      ]
+     },
+     {
+      "title": "구현",
+      "items": [
+       "시큐어 코딩 규칙 적용, SAST 점검"
+      ]
+     },
+     {
+      "title": "테스트·운영",
+      "items": [
+       "DAST·모의해킹, 취약점 조치 확인"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 공격 집중",
+   "- 비용",
+   "- 제도",
+   "구현 단계 보안 약점 7유형",
+   "- 입력데이터 검증 및 표현",
+   "- 보안 기능",
+   "- 시간 및 상태",
+   "- 에러 처리",
+   "- 코드 오류",
+   "- 캡슐화",
+   "- API 오용",
+   "적용 절차",
+   "- 설계",
+   "- 구현",
+   "- 테스트·운영"
+  ],
+  "name": "소프트웨어 개발 보안(Secure Coding)",
+  "en": "Secure Coding",
+  "keywords_must": [
+   "입력데이터 검증 및 표현",
+   "보안 기능",
+   "시간 및 상태",
+   "에러 처리",
+   "코드 오류",
+   "캡슐화",
+   "API 오용",
+   "보안 약점(Weakness)",
+   "보안 취약점(Vulnerability)",
+   "정적 분석(SAST)",
+   "동적 분석(DAST)"
+  ],
+  "keywords_ref": [
+   "행정안전부 SW 개발보안 가이드(구현 49개 항목)",
+   "설계 단계 보안 요구항목 20개",
+   "전자정부 감리 의무화",
+   "CWE·OWASP Top 10",
+   "결함 사후 수정 비용 증가",
+   "SQL 삽입·XSS 대표 약점",
+   "DevSecOps"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "입력데이터 검증 및 표현",
+   "보안 기능",
+   "시간 및 상태",
+   "에러 처리",
+   "코드 오류",
+   "캡슐화",
+   "API 오용",
+   "보안 약점(Weakness)",
+   "보안 취약점(Vulnerability)",
+   "정적 분석(SAST)",
+   "동적 분석(DAST)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "SDLC": "Software Development Life Cycle",
+   "SAST": "Static Application Security Testing",
+   "DAST": "Dynamic Application Security Testing"
+  }
+ },
+ {
+  "id": "SE_098",
+  "code": "SE_098",
+  "title": "검사 시점과 사용 시점 경쟁 조건(TOCTOU, Time-Of-Check to Time-Of-Use)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > SW개발보안(시큐어코딩)",
+  "definition": "자원의 상태나 권한을 검사한 시점과 그 자원을 실제 사용하는 시점 사이의 시간 차를 이용해 다른 프로세스가 자원을 바꿔치기함으로써 검사 결과가 무효화되는 경쟁 조건 취약점",
+  "keywords": [
+   "원인: 경쟁 조건(Race Condition) · 비원자적 검사·사용 · 공유 자원",
+   "공격 예: 심볼릭 링크 교체 · set-uid 프로그램 · /tmp 임시 파일",
+   "대응: 원자적 연산 · 파일 디스크립터 기반 검사(fstat) · 동기화(Lock·Mutex) · 최소 권한"
+  ],
+  "sections": [
+   {
+    "title": "발생 원리",
+    "subsections": [
+     {
+      "title": "시간 창",
+      "items": [
+       "검사(Check)와 사용(Use)이 분리된 비원자적 처리"
+      ]
+     },
+     {
+      "title": "예",
+      "items": [
+       "set-uid root 프로그램이 access()로 /tmp/X 권한 확인 → 공격자가 /tmp/X를 /etc/passwd 심볼릭 링크로 교체 → open() 시 권한 없는 파일 수정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "발생 상황",
+    "subsections": [
+     {
+      "title": "프로세스 A",
+      "items": [
+       "파일 존재 검사(TOC) 성공 후 CPU 제어권 반납"
+      ]
+     },
+     {
+      "title": "프로세스 B",
+      "items": [
+       "그 사이 파일 삭제·교체"
+      ]
+     },
+     {
+      "title": "프로세스 A",
+      "items": [
+       "사용(TOU) 시 오류 또는 의도치 않은 파일 접근"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "원자화",
+      "items": [
+       "검사와 사용을 한 연산으로(O_CREAT·O_EXCL로 생성, open 후 fstat 검사)"
+      ]
+     },
+     {
+      "title": "동기화",
+      "items": [
+       "공유 자원 접근 시 잠금·뮤텍스"
+      ]
+     },
+     {
+      "title": "환경",
+      "items": [
+       "mkstemp 등 안전한 임시 파일, 권한 확인 대신 실제 사용자 권한으로 실행(최소 권한)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "발생 원리",
+   "- 시간 창",
+   "- 예",
+   "발생 상황",
+   "- 프로세스 A",
+   "- 프로세스 B",
+   "- 프로세스 A",
+   "대응",
+   "- 원자화",
+   "- 동기화",
+   "- 환경"
+  ],
+  "name": "검사 시점과 사용 시점 경쟁 조건(TOCTOU, Time-Of-Check to Time-Of-Use)",
+  "en": "Time-Of-Check to Time-Of-Use",
+  "keywords_must": [
+   "경쟁 조건(Race Condition)",
+   "비원자적 검사·사용",
+   "공유 자원",
+   "심볼릭 링크 교체",
+   "set-uid 프로그램",
+   "/tmp 임시 파일",
+   "원자적 연산",
+   "파일 디스크립터 기반 검사(fstat)",
+   "동기화(Lock·Mutex)",
+   "최소 권한"
+  ],
+  "keywords_ref": [
+   "access()·open() 사이 창",
+   "O_CREAT·O_EXCL",
+   "안전한 임시 파일(mkstemp)",
+   "CWE-367",
+   "SW 보안 약점 시간 및 상태 유형",
+   "더티 카우(Dirty COW)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "경쟁 조건(Race Condition)",
+   "비원자적 검사·사용",
+   "공유 자원",
+   "심볼릭 링크 교체",
+   "set-uid 프로그램",
+   "/tmp 임시 파일",
+   "원자적 연산",
+   "파일 디스크립터 기반 검사(fstat)",
+   "동기화(Lock·Mutex)",
+   "최소 권한"
+  ],
+  "quiz_groups": [
+   "se"
+  ]
+ },
+ {
+  "id": "SE_099",
+  "code": "SE_099",
+  "title": "프라이버시 중심 설계 7대 원칙(Privacy by Design 7 Foundational Principles)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 개인정보 > Privacy by Design 7대 기본원칙",
+  "definition": "앤 카보키안이 제시한 원칙으로, 프라이버시 침해 후 조치가 아니라 서비스 기획·설계 단계부터 개인정보 보호를 기본값으로 내재화해 전 생애주기에 걸쳐 보호하도록 하는 7가지 기본 원칙",
+  "keywords": [
+   "7대 원칙: 사후 조치가 아닌 사전 예방 · 기본 설정으로 프라이버시 보호 · 설계에 내재된 보호 · 포지티브섬(완전한 기능) · 전 생애주기 보호 · 가시성·투명성 · 이용자 프라이버시 존중"
+  ],
+  "sections": [
+   {
+    "title": "설계 철학",
+    "subsections": [
+     {
+      "title": "사전 예방",
+      "items": [
+       "침해를 예측해 기획·설계 단계에서 보호 조치 반영"
+      ]
+     },
+     {
+      "title": "균형",
+      "items": [
+       "이용자 통제권 보장과 기업 경쟁력 유지를 함께 달성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "7대 원칙",
+    "subsections": [
+     {
+      "title": "①~③ 예방·기본·내재",
+      "items": [
+       "① 사후 조치가 아닌 사전 예방(Proactive not Reactive)",
+       "② 기본 설정으로 보호(Privacy as the Default), 이용자 조치 없이도 최대 보호",
+       "③ 설계에 내재된 보호(Embedded into Design)"
+      ]
+     },
+     {
+      "title": "④~⑤ 기능·주기",
+      "items": [
+       "④ 포지티브섬, 보호와 사업 기능을 맞바꾸지 않고 모두 충족",
+       "⑤ 전 생애주기 보호(End-to-End Security), 수집부터 파기까지"
+      ]
+     },
+     {
+      "title": "⑥~⑦ 투명·존중",
+      "items": [
+       "⑥ 가시성·투명성, 처리 과정 공개와 검증 가능",
+       "⑦ 이용자 프라이버시 존중(User-Centric)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용",
+    "subsections": [
+     {
+      "title": "법제",
+      "items": [
+       "GDPR 제25조 설계·기본값에 의한 보호 의무"
+      ]
+     },
+     {
+      "title": "실무",
+      "items": [
+       "개인정보 영향평가, 최소 수집, 가명·익명처리, 기본 비공개 설정"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "설계 철학",
+   "- 사전 예방",
+   "- 균형",
+   "7대 원칙",
+   "- ①~③ 예방·기본·내재",
+   "- ④~⑤ 기능·주기",
+   "- ⑥~⑦ 투명·존중",
+   "적용",
+   "- 법제",
+   "- 실무"
+  ],
+  "name": "프라이버시 중심 설계 7대 원칙(Privacy by Design 7 Foundational Principles)",
+  "en": "Privacy by Design 7 Foundational Principles",
+  "keywords_must": [
+   "사후 조치가 아닌 사전 예방",
+   "기본 설정으로 프라이버시 보호",
+   "설계에 내재된 보호",
+   "포지티브섬(완전한 기능)",
+   "전 생애주기 보호",
+   "가시성·투명성",
+   "이용자 프라이버시 존중"
+  ],
+  "keywords_ref": [
+   "GDPR 제25조(Data Protection by Design and by Default)",
+   "개인정보 영향평가(PIA)",
+   "가명처리·최소 수집",
+   "제로섬 대비 포지티브섬",
+   "앤 카보키안(Ann Cavoukian)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "사후 조치가 아닌 사전 예방",
+   "기본 설정으로 프라이버시 보호",
+   "설계에 내재된 보호",
+   "포지티브섬(완전한 기능)",
+   "전 생애주기 보호",
+   "가시성·투명성",
+   "이용자 프라이버시 존중"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "PIA": "Privacy Impact Assessment",
+   "GDPR": "General Data Protection Regulation"
+  }
+ },
+ {
+  "id": "SE_100",
+  "code": "SE_100",
+  "title": "공개키 기반 구조(PKI, Public Key Infrastructure)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > PKI > PKI(Public Key Infrastructure)",
+  "definition": "신뢰할 수 있는 인증기관이 공개키와 소유자 신원을 결합한 인증서를 발급·관리하여 비대면 환경에서 인증, 기밀성, 무결성, 부인방지를 제공하는 공개키 암호 기반 보안 인프라",
+  "keywords": [
+   "구성 요소: 인증기관(CA) · 등록기관(RA) · 검증기관(VA) · 디렉터리(LDAP) · 사용자",
+   "인증서: X.509 v3 · 인증서 폐지 목록(CRL) · 온라인 상태 확인(OCSP)",
+   "보안 서비스: 인증 · 기밀성 · 무결성 · 부인방지"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "대칭키 한계",
+      "items": [
+       "키 분배·관리 곤란"
+      ]
+     },
+     {
+      "title": "신원 보증",
+      "items": [
+       "공개키가 실제 소유자 것인지 제3자 보증 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성과 동작",
+    "subsections": [
+     {
+      "title": "CA",
+      "items": [
+       "인증서 발급·서명, CRL 공표",
+       "RA: 신원 확인 후 발급 요청 대행"
+      ]
+     },
+     {
+      "title": "VA·디렉터리",
+      "items": [
+       "OCSP로 실시간 유효성 확인",
+       "LDAP으로 인증서·CRL 배포"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "사용자 키 쌍 생성 → RA 신원 확인 → CA 인증서 발급 → 상대방은 인증 경로·폐지 여부 검증 후 공개키 사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "인증서와 신뢰 모델",
+    "subsections": [
+     {
+      "title": "X.509 v3",
+      "items": [
+       "버전, 일련번호, 서명 알고리즘, 발급자, 유효기간, 주체, 주체 공개키, 확장 필드, CA 서명"
+      ]
+     },
+     {
+      "title": "신뢰 모델",
+      "items": [
+       "계층형(루트 CA 자체 서명)",
+       "상호 인증",
+       "브라우저 신뢰 목록"
+      ]
+     },
+     {
+      "title": "국내",
+      "items": [
+       "최상위 KISA 루트 → 인증기관 → 사용자",
+       "2020년 공인인증서 독점 폐지, 공동인증서로 전환"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 대칭키 한계",
+   "- 신원 보증",
+   "구성과 동작",
+   "- CA",
+   "- VA·디렉터리",
+   "- 동작",
+   "인증서와 신뢰 모델",
+   "- X.509 v3",
+   "- 신뢰 모델",
+   "- 국내"
+  ],
+  "name": "공개키 기반 구조(PKI, Public Key Infrastructure)",
+  "en": "Public Key Infrastructure",
+  "keywords_must": [
+   "인증기관(CA)",
+   "등록기관(RA)",
+   "검증기관(VA)",
+   "디렉터리(LDAP)",
+   "사용자",
+   "X.509 v3",
+   "인증서 폐지 목록(CRL)",
+   "온라인 상태 확인(OCSP)",
+   "인증",
+   "기밀성",
+   "무결성",
+   "부인방지"
+  ],
+  "keywords_ref": [
+   "계층형 신뢰 모델(루트 CA→하위 CA)",
+   "상호 인증(Cross Certification)",
+   "공동인증서(2020 전자서명법 개정)",
+   "인증 경로 검증",
+   "HSM 키 보관",
+   "인증서 투명성(CT)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "인증기관(CA)",
+   "등록기관(RA)",
+   "검증기관(VA)",
+   "디렉터리(LDAP)",
+   "사용자",
+   "X.509 v3",
+   "인증서 폐지 목록(CRL)",
+   "온라인 상태 확인(OCSP)",
+   "인증",
+   "기밀성",
+   "무결성",
+   "부인방지"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "CA": "Certification Authority",
+   "RA": "Registration Authority",
+   "VA": "Validation Authority",
+   "CRL": "Certificate Revocation List",
+   "OCSP": "Online Certificate Status Protocol",
+   "LDAP": "Lightweight Directory Access Protocol",
+   "HSM": "Hardware Security Module",
+   "CT": "Certificate Transparency"
+  }
+ },
+ {
+  "id": "SE_103",
+  "code": "SE_103",
+  "title": "전자봉투(Digital Envelope)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > PKI > 전자봉투(Digital Envelope)",
+  "definition": "메시지는 빠른 대칭키(세션키)로 암호화하고 그 세션키는 수신자 공개키로 암호화해 함께 보내는 혼합 암호 방식으로, 전자서명과 결합하면 기밀성·무결성·인증·부인방지를 모두 제공한다",
+  "keywords": [
+   "구성: 세션키(대칭키) 메시지 암호화 · 수신자 공개키로 세션키 암호화 · 전자서명(송신자 개인키)",
+   "보안 서비스: 기밀성 · 무결성 · 인증 · 부인방지",
+   "장점: 대칭키 속도 · 공개키 키 분배"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "대칭키",
+      "items": [
+       "빠르지만 키 전달 곤란"
+      ]
+     },
+     {
+      "title": "공개키",
+      "items": [
+       "키 분배는 쉽지만 대용량 암호화가 느림 → 두 방식 결합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "생성 과정(송신자)",
+    "subsections": [
+     {
+      "title": "1 서명",
+      "items": [
+       "메시지 해시를 송신자 개인키로 서명"
+      ]
+     },
+     {
+      "title": "2 암호화",
+      "items": [
+       "메시지+서명+인증서를 임의 세션키로 대칭 암호화"
+      ]
+     },
+     {
+      "title": "3 봉투",
+      "items": [
+       "세션키를 수신자 공개키로 암호화해 암호문과 함께 전송"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "개봉 과정(수신자)과 비교",
+    "subsections": [
+     {
+      "title": "1 세션키 복원",
+      "items": [
+       "수신자 개인키로 봉투 복호화"
+      ]
+     },
+     {
+      "title": "2 메시지 복호화",
+      "items": [
+       "세션키로 암호문 복호화"
+      ]
+     },
+     {
+      "title": "3 서명 검증",
+      "items": [
+       "송신자 공개키로 서명을 검증하고 해시 비교"
+      ]
+     },
+     {
+      "title": "전자서명 비교",
+      "items": [
+       "서명은 송신자 개인키로 인증·부인방지",
+       "봉투는 수신자 공개키로 기밀성 추가"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 대칭키",
+   "- 공개키",
+   "생성 과정(송신자)",
+   "- 1 서명",
+   "- 2 암호화",
+   "- 3 봉투",
+   "개봉 과정(수신자)과 비교",
+   "- 1 세션키 복원",
+   "- 2 메시지 복호화",
+   "- 3 서명 검증",
+   "- 전자서명 비교"
+  ],
+  "name": "전자봉투(Digital Envelope)",
+  "en": "Digital Envelope",
+  "keywords_must": [
+   "세션키(대칭키) 메시지 암호화",
+   "수신자 공개키로 세션키 암호화",
+   "전자서명(송신자 개인키)",
+   "기밀성",
+   "무결성",
+   "인증",
+   "부인방지",
+   "대칭키 속도",
+   "공개키 키 분배"
+  ],
+  "keywords_ref": [
+   "하이브리드 암호",
+   "PKCS #7·CMS EnvelopedData",
+   "S/MIME",
+   "PGP",
+   "해시 함수",
+   "전자서명 비교"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "세션키(대칭키) 메시지 암호화",
+   "수신자 공개키로 세션키 암호화",
+   "전자서명(송신자 개인키)",
+   "기밀성",
+   "무결성",
+   "인증",
+   "부인방지",
+   "대칭키 속도",
+   "공개키 키 분배"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "CMS": "Cryptographic Message Syntax",
+   "PKCS": "Public-Key Cryptography Standards"
+  }
+ },
+ {
+  "id": "SE_106",
+  "code": "SE_106",
+  "title": "보안 소켓 계층(SSL, Secure Sockets Layer)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 네트워크 보안 > SSL",
+  "definition": "넷스케이프가 개발한 전송 계층 보안 프로토콜로, 응용 계층과 TCP 사이에서 서버·클라이언트 인증, 암호화, 메시지 무결성을 제공하며 현재는 취약점으로 폐기되고 TLS로 대체되었다",
+  "keywords": [
+   "상위 프로토콜: 핸드셰이크(Handshake) · 암호 명세 변경(Change Cipher Spec) · 경보(Alert)",
+   "하위 프로토콜: 레코드(Record)",
+   "레코드 처리: 단편화 · 압축 · MAC 추가 · 암호화",
+   "보안 서비스: 서버 인증 · 기밀성 · 무결성"
+  ],
+  "sections": [
+   {
+    "title": "프로토콜 구조",
+    "subsections": [
+     {
+      "title": "상위",
+      "items": [
+       "핸드셰이크는 알고리즘 협상·인증·키 교환",
+       "암호 명세 변경은 협상 결과 적용 시점 통지(1바이트 값 1)",
+       "경보는 오류 통지"
+      ]
+     },
+     {
+      "title": "하위",
+      "items": [
+       "레코드 프로토콜이 상위 계층이 정한 방식으로 데이터 보호"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "핸드셰이크 과정",
+    "subsections": [
+     {
+      "title": "1 협상",
+      "items": [
+       "ClientHello(버전·암호 스위트·난수) → ServerHello"
+      ]
+     },
+     {
+      "title": "2 인증·키 교환",
+      "items": [
+       "서버 Certificate·ServerKeyExchange → 클라이언트가 프리마스터 시크릿을 서버 공개키로 암호화해 ClientKeyExchange"
+      ]
+     },
+     {
+      "title": "3 완료",
+      "items": [
+       "양측 ChangeCipherSpec → Finished로 핸드셰이크 무결성 확인"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "레코드 처리와 현황",
+    "subsections": [
+     {
+      "title": "레코드",
+      "items": [
+       "단편화(최대 2^14바이트) → 압축 → MAC 추가 → 암호화 → 레코드 헤더 부착"
+      ]
+     },
+     {
+      "title": "경보",
+      "items": [
+       "warning(1)은 연결 유지 가능, fatal(2)은 즉시 종료"
+      ]
+     },
+     {
+      "title": "현황",
+      "items": [
+       "SSL 2.0·3.0 폐기, POODLE·DROWN 공격",
+       "TLS 1.2·1.3 사용 권고"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "프로토콜 구조",
+   "- 상위",
+   "- 하위",
+   "핸드셰이크 과정",
+   "- 1 협상",
+   "- 2 인증·키 교환",
+   "- 3 완료",
+   "레코드 처리와 현황",
+   "- 레코드",
+   "- 경보",
+   "- 현황"
+  ],
+  "name": "보안 소켓 계층(SSL, Secure Sockets Layer)",
+  "en": "Secure Sockets Layer",
+  "keywords_must": [
+   "핸드셰이크(Handshake)",
+   "암호 명세 변경(Change Cipher Spec)",
+   "경보(Alert)",
+   "레코드(Record)",
+   "단편화",
+   "압축",
+   "MAC 추가",
+   "암호화",
+   "서버 인증",
+   "기밀성",
+   "무결성"
+  ],
+  "keywords_ref": [
+   "ClientHello·ServerHello",
+   "프리마스터 시크릿",
+   "Alert 수준 warning(1)·fatal(2)",
+   "SSL 2.0·3.0 폐기(RFC 6176·7568)",
+   "POODLE·DROWN",
+   "HTTPS 443",
+   "SSL VPN"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "핸드셰이크(Handshake)",
+   "암호 명세 변경(Change Cipher Spec)",
+   "경보(Alert)",
+   "레코드(Record)",
+   "단편화",
+   "압축",
+   "MAC 추가",
+   "암호화",
+   "서버 인증",
+   "기밀성",
+   "무결성"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "MAC": "Message Authentication Code"
+  }
+ },
+ {
+  "id": "SE_110",
+  "code": "SE_110",
+  "title": "오픈VPN(OpenVPN)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > NW > 이동통신기술 > OpenVPN",
+  "definition": "SSL/TLS를 키 교환과 인증에 사용하는 오픈소스(GPL) VPN 소프트웨어로, 라우팅(TUN)·브리지(TAP) 방식으로 원격 접속과 사이트 간 암호화 터널을 구성한다",
+  "keywords": [
+   "구성 방식: TUN(라우팅·L3) · TAP(브리지·L2) · 원격 접속 · 사이트 간(Site-to-Site)",
+   "보안: SSL/TLS 키 교환 · 인증서·사전 공유키 인증 · OpenSSL 암호 라이브러리",
+   "특징: 오픈소스(GNU GPL) · NAT 통과 용이",
+   "포트: UDP 1194"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "IPSec 한계",
+      "items": [
+       "설정 복잡, NAT 환경 통과 어려움"
+      ]
+     },
+     {
+      "title": "대안",
+      "items": [
+       "사용자 공간에서 동작하는 TLS 기반 VPN, 단일 UDP·TCP 포트 사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성과 네트워크",
+    "subsections": [
+     {
+      "title": "TUN",
+      "items": [
+       "IP 패킷 라우팅, 서브넷 간 연결",
+       "TAP: 이더넷 프레임 브리지, 같은 LAN처럼 연결"
+      ]
+     },
+     {
+      "title": "네트워크 구간",
+      "items": [
+       "공인 IP의 공용망",
+       "고객 내부망",
+       "OpenVPN 터널 대역(기본 10.8.0.0/24)"
+      ]
+     },
+     {
+      "title": "포트",
+      "items": [
+       "데이터 채널 UDP 1194(TCP 443 가능)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 기능과 비교",
+    "subsections": [
+     {
+      "title": "인증",
+      "items": [
+       "X.509 인증서 상호 인증, 사전 공유키, 사용자 ID·비밀번호 추가"
+      ]
+     },
+     {
+      "title": "암호",
+      "items": [
+       "OpenSSL 기반 AES 등 대칭 암호, tls-auth로 무단 핸드셰이크 차단"
+      ]
+     },
+     {
+      "title": "IPSec 비교",
+      "items": [
+       "IPSec은 커널·L3 표준",
+       "OpenVPN은 사용자 공간·TLS 기반, 방화벽 통과 쉬움"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- IPSec 한계",
+   "- 대안",
+   "구성과 네트워크",
+   "- TUN",
+   "- 네트워크 구간",
+   "- 포트",
+   "보안 기능과 비교",
+   "- 인증",
+   "- 암호",
+   "- IPSec 비교"
+  ],
+  "name": "오픈VPN(OpenVPN)",
+  "en": "OpenVPN",
+  "keywords_must": [
+   "TUN(라우팅·L3)",
+   "TAP(브리지·L2)",
+   "원격 접속",
+   "사이트 간(Site-to-Site)",
+   "SSL/TLS 키 교환",
+   "인증서·사전 공유키 인증",
+   "OpenSSL 암호 라이브러리",
+   "오픈소스(GNU GPL)",
+   "NAT 통과 용이",
+   "UDP 1194"
+  ],
+  "keywords_ref": [
+   "지원 암호: AES·Camellia·Blowfish·3DES·CAST-128",
+   "tls-auth HMAC 방어",
+   "IPSec VPN 비교",
+   "WireGuard",
+   "동시 연결 장치 기반 라이선스(Access Server)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "TUN(라우팅·L3)",
+   "TAP(브리지·L2)",
+   "원격 접속",
+   "사이트 간(Site-to-Site)",
+   "SSL/TLS 키 교환",
+   "인증서·사전 공유키 인증",
+   "OpenSSL 암호 라이브러리",
+   "오픈소스(GNU GPL)",
+   "NAT 통과 용이",
+   "UDP 1194"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "TUN": "Network Tunnel",
+   "TAP": "Network Tap"
+  }
+ },
+ {
+  "id": "SE_111",
+  "code": "SE_111",
+  "title": "디지털 포렌식(Digital Forensics)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 디지털 포렌식 > 컴퓨터 포렌식",
+  "definition": "컴퓨터·네트워크 등 디지털 기기에 남은 데이터를 법적 증거로 인정받을 수 있도록 적법한 절차에 따라 수집·보존·분석하고 보고하는 과학적 조사 기법",
+  "keywords": [
+   "5대 원칙: 정당성 · 재현성 · 신속성 · 연계 보관성(Chain of Custody) · 무결성",
+   "조사 절차: 준비 · 획득 · 보관 · 분석 · 보고"
+  ],
+  "sections": [
+   {
+    "title": "디지털 증거 특성",
+    "subsections": [
+     {
+      "title": "매체 독립성",
+      "items": [
+       "저장 매체와 무관하게 같은 값 유지"
+      ]
+     },
+     {
+      "title": "비가시성",
+      "items": [
+       "사람이 직접 인지 불가, 도구로 해석"
+      ]
+     },
+     {
+      "title": "휘발성·변조 용이",
+      "items": [
+       "전원 차단 시 소멸, 원본·사본 구별 곤란"
+      ]
+     },
+     {
+      "title": "대용량·네트워크성",
+      "items": [
+       "방대한 데이터에서 식별, 국경을 넘는 관할 문제"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "5대 원칙",
+    "subsections": [
+     {
+      "title": "정당성",
+      "items": [
+       "적법 절차로 수집, 위법 증거와 파생 증거 배제"
+      ]
+     },
+     {
+      "title": "재현성",
+      "items": [
+       "같은 조건에서 항상 같은 결과"
+      ]
+     },
+     {
+      "title": "신속성",
+      "items": [
+       "휘발성 증거를 지체 없이 확보"
+      ]
+     },
+     {
+      "title": "연계 보관성",
+      "items": [
+       "획득부터 법정 제출까지 담당자·이동 기록 유지"
+      ]
+     },
+     {
+      "title": "무결성",
+      "items": [
+       "수집 시점과 해시값 일치 증명"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "조사 절차",
+    "subsections": [
+     {
+      "title": "1 준비",
+      "items": [
+       "영장·도구·인력 확보"
+      ]
+     },
+     {
+      "title": "2 획득",
+      "items": [
+       "휘발성 순서대로 수집, 쓰기 방지 장치로 이미징"
+      ]
+     },
+     {
+      "title": "3 보관",
+      "items": [
+       "해시 기록, 봉인·연계 보관 기록"
+      ]
+     },
+     {
+      "title": "4 분석",
+      "items": [
+       "사본으로 타임라인·아티팩트 분석"
+      ]
+     },
+     {
+      "title": "5 보고",
+      "items": [
+       "재현 가능한 분석 과정과 결과를 보고서로 제출"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "디지털 증거 특성",
+   "- 매체 독립성",
+   "- 비가시성",
+   "- 휘발성·변조 용이",
+   "- 대용량·네트워크성",
+   "5대 원칙",
+   "- 정당성",
+   "- 재현성",
+   "- 신속성",
+   "- 연계 보관성",
+   "- 무결성",
+   "조사 절차",
+   "- 1 준비",
+   "- 2 획득",
+   "- 3 보관",
+   "- 4 분석",
+   "- 5 보고"
+  ],
+  "name": "디지털 포렌식(Digital Forensics)",
+  "en": "Digital Forensics",
+  "keywords_must": [
+   "정당성",
+   "재현성",
+   "신속성",
+   "연계 보관성(Chain of Custody)",
+   "무결성",
+   "준비",
+   "획득",
+   "보관",
+   "분석",
+   "보고"
+  ],
+  "keywords_ref": [
+   "증거 특성(매체 독립성·비가시성·휘발성·대용량)",
+   "위법수집증거 배제·독수독과",
+   "해시값 무결성 검증",
+   "쓰기 방지 장치",
+   "휘발성 순서(RFC 3227)",
+   "디스크·네트워크·모바일·DB 포렌식",
+   "활성 시스템 분석"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "정당성",
+   "재현성",
+   "신속성",
+   "연계 보관성(Chain of Custody)",
+   "무결성",
+   "준비",
+   "획득",
+   "보관",
+   "분석",
+   "보고"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "dueum": "정재신연무 ; 준획보분보"
+ },
+ {
+  "id": "SE_114",
+  "code": "SE_114",
+  "title": "안티 포렌식(Anti-Forensics)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 디지털 포렌식 > 안티포렌식",
+  "definition": "디지털 포렌식 조사에서 범죄 증거가 발견·복구·분석되지 않도록 데이터를 완전 삭제하거나 암호화·은닉·조작하는 기술",
+  "keywords": [
+   "데이터 삭제: 와이핑(Wiping) · 디가우징(Degaussing) · 로그 삭제",
+   "데이터 암호화: 파일·문서 암호화 · 디스크 전체 암호화",
+   "데이터 은닉: 스테가노그래피(Steganography) · 슬랙 공간 은닉 · ADS(Alternate Data Stream)",
+   "흔적 조작: 타임스탬프 변조(Timestomping)"
+  ],
+  "sections": [
+   {
+    "title": "방해 범주",
+    "subsections": [
+     {
+      "title": "노림수",
+      "items": [
+       "포렌식 수사로 증거가 발견되지 않도록 방해"
+      ]
+     },
+     {
+      "title": "범주",
+      "items": [
+       "삭제 → 암호화 → 은닉 → 조작"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 기술",
+    "subsections": [
+     {
+      "title": "삭제",
+      "items": [
+       "와이핑은 파일 엔트리·클러스터를 난수나 0으로 반복 덮어쓰기",
+       "디가우징은 강한 자기장으로 자기 매체 데이터 소거",
+       "OS 로그 삭제"
+      ]
+     },
+     {
+      "title": "암호화",
+      "items": [
+       "압축 파일·문서 암호",
+       "가상 디스크·USB·OS 영역 암호화"
+      ]
+     },
+     {
+      "title": "은닉",
+      "items": [
+       "이미지·오디오에 스테가노그래피",
+       "파일 시스템 슬랙 공간·ADS·숨김 파티션"
+      ]
+     },
+     {
+      "title": "조작",
+      "items": [
+       "파일 시간 정보 변경으로 타임라인 교란"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "수집",
+      "items": [
+       "전원 차단 전 메모리 덤프로 암호키·상주 코드 확보"
+      ]
+     },
+     {
+      "title": "분석",
+      "items": [
+       "데이터 카빙으로 삭제 파일 복구",
+       "$MFT·$LogFile로 시간 조작 탐지",
+       "스테가 분석"
+      ]
+     },
+     {
+      "title": "예방",
+      "items": [
+       "로그 중앙 수집·위변조 방지 저장"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "방해 범주",
+   "- 노림수",
+   "- 범주",
+   "주요 기술",
+   "- 삭제",
+   "- 암호화",
+   "- 은닉",
+   "- 조작",
+   "대응",
+   "- 수집",
+   "- 분석",
+   "- 예방"
+  ],
+  "name": "안티 포렌식(Anti-Forensics)",
+  "en": "Anti-Forensics",
+  "keywords_must": [
+   "와이핑(Wiping)",
+   "디가우징(Degaussing)",
+   "로그 삭제",
+   "파일·문서 암호화",
+   "디스크 전체 암호화",
+   "스테가노그래피(Steganography)",
+   "슬랙 공간 은닉",
+   "ADS(Alternate Data Stream)",
+   "타임스탬프 변조(Timestomping)"
+  ],
+  "keywords_ref": [
+   "난수·0 다중 덮어쓰기",
+   "물리적 파괴",
+   "숨김 파티션·HPA",
+   "메모리 상주(파일리스)",
+   "대응: 메모리 포렌식·카빙·로그 중앙 수집"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "와이핑(Wiping)",
+   "디가우징(Degaussing)",
+   "로그 삭제",
+   "파일·문서 암호화",
+   "디스크 전체 암호화",
+   "스테가노그래피(Steganography)",
+   "슬랙 공간 은닉",
+   "ADS(Alternate Data Stream)",
+   "타임스탬프 변조(Timestomping)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "dueum": "와이프가 다가오면 스테가노그래피를 암호화해야지",
+  "gloss": {
+   "ADS": "Alternate Data Stream",
+   "HPA": "Host Protected Area"
+  }
+ },
+ {
+  "id": "SE_115_00",
+  "code": "SE_115_00",
+  "title": "클라우드 포렌식(Cloud Forensics)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 디지털 포렌식 > 클라우드 포렌식(Cloud Forensic)",
+  "definition": "클라우드 서비스에 저장·처리된 전자적 증거를 사법기관에 제출하기 위해 클라우드 서비스 이용 흔적과 제공자 보관 데이터를 수집·분석·보고하는 포렌식 기법",
+  "keywords": [
+   "특징: 클라우드 시그니처(이용 흔적) · 사법관할권 · 서비스 유형별(SaaS·PaaS·IaaS) 접근",
+   "문제점: 가상화·멀티테넌시 · 데이터 휘발성·분산 저장 · CSP 의존",
+   "해결: 국제 공조(국제형사사법공조법) · CSP 정보 제공 의무 · 로그 표준화"
+  ],
+  "sections": [
+   {
+    "title": "조사상 고려사항",
+    "subsections": [
+     {
+      "title": "시그니처",
+      "items": [
+       "단말의 동기화 폴더·설정 파일로 서비스 이용 여부 판단"
+      ]
+     },
+     {
+      "title": "관할권",
+      "items": [
+       "물리적 저장 위치가 해외면 압수 권한 제한"
+      ]
+     },
+     {
+      "title": "유형 고려",
+      "items": [
+       "SaaS는 계정·로그 중심, IaaS는 가상 머신 스냅숏 중심"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "조사 절차",
+    "subsections": [
+     {
+      "title": "1 대상 확인",
+      "items": [
+       "단말에서 이용 서비스 식별(SaaS·IaaS)"
+      ]
+     },
+     {
+      "title": "2 증거 확보",
+      "items": [
+       "브라우저·레지스트리 분석으로 로그인 정보·서비스 로그 확보"
+      ]
+     },
+     {
+      "title": "3 협조 요구",
+      "items": [
+       "제공자 관할권 확인 → 국내는 압수수색, 해외는 국제 공조",
+       "사용자 임의 제출"
+      ]
+     },
+     {
+      "title": "4 분석·보고",
+      "items": [
+       "수집 데이터 해시 검증 후 분석"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "문제점과 해결",
+    "subsections": [
+     {
+      "title": "문제",
+      "items": [
+       "멀티테넌시로 타 고객 데이터 혼재",
+       "자원 회수 시 증거 소멸",
+       "제공자 협조 없이는 로그 접근 불가"
+      ]
+     },
+     {
+      "title": "해결",
+      "items": [
+       "제공자 정보 제공 의무·로그 보존 규정",
+       "국제 공조 체계",
+       "포렌식 지원 API·스냅숏 기능"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "조사상 고려사항",
+   "- 시그니처",
+   "- 관할권",
+   "- 유형 고려",
+   "조사 절차",
+   "- 1 대상 확인",
+   "- 2 증거 확보",
+   "- 3 협조 요구",
+   "- 4 분석·보고",
+   "문제점과 해결",
+   "- 문제",
+   "- 해결"
+  ],
+  "name": "클라우드 포렌식(Cloud Forensics)",
+  "en": "Cloud Forensics",
+  "keywords_must": [
+   "클라우드 시그니처(이용 흔적)",
+   "사법관할권",
+   "서비스 유형별(SaaS·PaaS·IaaS) 접근",
+   "가상화·멀티테넌시",
+   "데이터 휘발성·분산 저장",
+   "CSP 의존",
+   "국제 공조(국제형사사법공조법)",
+   "CSP 정보 제공 의무",
+   "로그 표준화"
+  ],
+  "keywords_ref": [
+   "웹 브라우저·레지스트리 포렌식",
+   "임의 제출 요청(ID·패스워드)",
+   "스냅숏 이미징",
+   "책임 공유 모델",
+   "클라우드 계정 접속 로그",
+   "증거 연계 보관성"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "클라우드 시그니처(이용 흔적)",
+   "사법관할권",
+   "서비스 유형별(SaaS·PaaS·IaaS) 접근",
+   "가상화·멀티테넌시",
+   "데이터 휘발성·분산 저장",
+   "CSP 의존",
+   "국제 공조(국제형사사법공조법)",
+   "CSP 정보 제공 의무",
+   "로그 표준화"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "CSP": "Cloud Service Provider"
+  }
+ },
+ {
+  "id": "SE_115_01",
+  "code": "SE_115_01",
+  "title": "데이터 카빙(Data Carving)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 기타",
+  "definition": "파일 시스템 메타데이터가 손상·삭제되어 파일 정보를 얻을 수 없을 때, 각 파일 포맷 고유의 헤더·푸터 시그니처와 내부 구조를 이용해 원시 데이터 영역에서 파일을 복구하는 포렌식 기법",
+  "keywords": [
+   "유형: 연속 카빙(Continuous) · 비연속 카빙(Fragment Recovery)",
+   "연속 기법: 헤더·푸터 카빙 · 램 슬랙 카빙 · 파일 크기 카빙 · 파일 검증 카빙",
+   "비연속 기법: 시그니처 탐색 · 엔트로피 · 바이트 분포 · 바이트 편차"
+  ],
+  "sections": [
+   {
+    "title": "원리",
+    "subsections": [
+     {
+      "title": "전제",
+      "items": [
+       "메타데이터가 없어도 파일 내용 자체는 비할당 영역에 남아 있음"
+      ]
+     },
+     {
+      "title": "단서",
+      "items": [
+       "포맷별 바이너리 시그니처(예: JPEG FFD8 시작, FFD9 끝)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": "연속",
+      "items": [
+       "파일이 연속된 클러스터에 저장된 경우 시작~끝을 잘라 복구"
+      ]
+     },
+     {
+      "title": "비연속",
+      "items": [
+       "단편화로 여러 위치에 흩어진 조각을 판별해 재조합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "세부 복구 방식",
+    "subsections": [
+     {
+      "title": "연속 기법",
+      "items": [
+       "헤더·푸터 시그니처",
+       "윈도 램 슬랙이 0x00으로 채워지는 성질",
+       "헤더 구조에서 파일 크기 획득",
+       "내부 구조를 검증해 응용 프로그램 수준 복구"
+      ]
+     },
+     {
+      "title": "비연속 기법",
+      "items": [
+       "시그니처 탐색(오탐 많음)",
+       "블록 엔트로피로 조각 분류",
+       "바이트 분포 기준점과의 거리 비교",
+       "인접 바이트 간 편차 이용"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "원리",
+   "- 전제",
+   "- 단서",
+   "유형",
+   "- 연속",
+   "- 비연속",
+   "세부 복구 방식",
+   "- 연속 기법",
+   "- 비연속 기법"
+  ],
+  "name": "데이터 카빙(Data Carving)",
+  "en": "Data Carving",
+  "keywords_must": [
+   "연속 카빙(Continuous)",
+   "비연속 카빙(Fragment Recovery)",
+   "헤더·푸터 카빙",
+   "램 슬랙 카빙",
+   "파일 크기 카빙",
+   "파일 검증 카빙",
+   "시그니처 탐색",
+   "엔트로피",
+   "바이트 분포",
+   "바이트 편차"
+  ],
+  "keywords_ref": [
+   "JPEG FFD8·FFD9",
+   "비할당 영역",
+   "Scalpel·Foremost·PhotoRec",
+   "단편화",
+   "안티 포렌식 대응"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "연속 카빙(Continuous)",
+   "비연속 카빙(Fragment Recovery)",
+   "헤더·푸터 카빙",
+   "램 슬랙 카빙",
+   "파일 크기 카빙",
+   "파일 검증 카빙",
+   "시그니처 탐색",
+   "엔트로피",
+   "바이트 분포",
+   "바이트 편차"
+  ],
+  "quiz_groups": [
+   "se"
+  ]
+ },
+ {
+  "id": "SE_115_02",
+  "code": "SE_115_02",
+  "title": "디스크 이미징(Disk Imaging)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > SM > 포렌식",
+  "definition": "디지털 포렌식 조사에서 원본 저장 매체를 훼손하지 않도록 쓰기 방지 상태로 비트 단위 사본(이미지)을 만들고, 해시값으로 원본과 동일성을 증명해 반복 분석을 가능하게 하는 기술",
+  "keywords": [
+   "방식: 디스크 투 디스크(Disk to Disk) · 디스크 투 파일(Disk to File)",
+   "도구: 하드웨어 복제 장비 · 소프트웨어 이미징 도구 · 쓰기 방지 장치(Write Blocker)",
+   "무결성: 해시값 검증(MD5·SHA-256) · 비트 단위 복제",
+   "이미지 형식: Raw(dd) · E01(EnCase)"
+  ],
+  "sections": [
+   {
+    "title": "용도",
+    "subsections": [
+     {
+      "title": "포렌식",
+      "items": [
+       "원본 변조 없이 수집·이동·보관·분석"
+      ]
+     },
+     {
+      "title": "사고 대응",
+      "items": [
+       "공격·삭제·재해 전후 상태 보존"
+      ]
+     },
+     {
+      "title": "기업",
+      "items": [
+       "중요 정보 별도 복제, 시스템 배포"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "이미징 방식",
+    "subsections": [
+     {
+      "title": "디스크 투 디스크",
+      "items": [
+       "하드웨어 복제 장비로 원본을 다른 디스크에 직접 복제, PC 연결 불필요"
+      ]
+     },
+     {
+      "title": "디스크 투 파일",
+      "items": [
+       "원본을 이미지 파일(Raw·E01)로 생성, 분할·압축·메타데이터 저장"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "무결성 확보",
+    "subsections": [
+     {
+      "title": "쓰기 방지",
+      "items": [
+       "원본 연결 시 하드웨어·소프트웨어 쓰기 방지 장치 사용"
+      ]
+     },
+     {
+      "title": "해시 검증",
+      "items": [
+       "원본과 사본 해시를 획득 직후 계산·기록"
+      ]
+     },
+     {
+      "title": "범위",
+      "items": [
+       "비할당·슬랙·HPA·DCO 영역까지 비트 단위 복제"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "용도",
+   "- 포렌식",
+   "- 사고 대응",
+   "- 기업",
+   "이미징 방식",
+   "- 디스크 투 디스크",
+   "- 디스크 투 파일",
+   "무결성 확보",
+   "- 쓰기 방지",
+   "- 해시 검증",
+   "- 범위"
+  ],
+  "name": "디스크 이미징(Disk Imaging)",
+  "en": "Disk Imaging",
+  "keywords_must": [
+   "디스크 투 디스크(Disk to Disk)",
+   "디스크 투 파일(Disk to File)",
+   "하드웨어 복제 장비",
+   "소프트웨어 이미징 도구",
+   "쓰기 방지 장치(Write Blocker)",
+   "해시값 검증(MD5·SHA-256)",
+   "비트 단위 복제",
+   "Raw(dd)",
+   "E01(EnCase)"
+  ],
+  "keywords_ref": [
+   "FTK Imager",
+   "비할당·슬랙 영역 포함",
+   "HPA·DCO 영역",
+   "라이브 이미징",
+   "연계 보관성",
+   "이미징 분석"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "디스크 투 디스크(Disk to Disk)",
+   "디스크 투 파일(Disk to File)",
+   "하드웨어 복제 장비",
+   "소프트웨어 이미징 도구",
+   "쓰기 방지 장치(Write Blocker)",
+   "해시값 검증(MD5·SHA-256)",
+   "비트 단위 복제",
+   "Raw(dd)",
+   "E01(EnCase)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "DCO": "Device Configuration Overlay",
+   "HPA": "Host Protected Area",
+   "PC": "Personal Computer"
+  }
+ },
+ {
+  "id": "SE_115_03",
+  "code": "SE_115_03",
+  "title": "아티팩트(Artifact)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 디지털포렌식",
+  "definition": "컴퓨터·디지털 기기에서 사용자 행위나 시스템 동작 후 남는 흔적 데이터로, 무엇을 언제 했는지 추적하게 해 주는 디지털 포렌식의 핵심 분석 대상",
+  "keywords": [
+   "유형: 시스템 아티팩트 · 응용 프로그램 아티팩트 · 파일 아티팩트",
+   "윈도 주요 아티팩트: 레지스트리 · 이벤트 로그 · 프리패치(Prefetch) · $MFT·LNK 파일",
+   "분석 기술: 타임라인 분석 · 레지스트리 분석 · 브라우저 분석"
+  ],
+  "sections": [
+   {
+    "title": "증거 가치",
+    "subsections": [
+     {
+      "title": "행위 증거",
+      "items": [
+       "실행 프로그램, 접속 사이트, 열람 파일 흔적"
+      ]
+     },
+     {
+      "title": "시점 확인",
+      "items": [
+       "타임스탬프로 행위 발생 시각 확인"
+      ]
+     },
+     {
+      "title": "잔존성",
+      "items": [
+       "사용자가 삭제해도 로그·캐시·레지스트리에 남음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": "시스템",
+      "items": [
+       "윈도 레지스트리·이벤트 로그, 리눅스 syslog·bash history, 로그온 기록"
+      ]
+     },
+     {
+      "title": "응용 프로그램",
+      "items": [
+       "브라우저 히스토리·캐시·쿠키, 메신저·메일 기록"
+      ]
+     },
+     {
+      "title": "파일",
+      "items": [
+       "LNK 바로가기, Thumbs.db, 최근 문서 목록, $MFT 레코드"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분석 기술",
+    "subsections": [
+     {
+      "title": "타임라인",
+      "items": [
+       "여러 아티팩트 시간 정보를 통합해 사건 재구성"
+      ]
+     },
+     {
+      "title": "레지스트리",
+      "items": [
+       "실행 이력, USB 연결 이력, 사용자 계정"
+      ]
+     },
+     {
+      "title": "실행 흔적",
+      "items": [
+       "프리패치·점프 목록으로 프로그램 실행 횟수·시각 확인"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "증거 가치",
+   "- 행위 증거",
+   "- 시점 확인",
+   "- 잔존성",
+   "유형",
+   "- 시스템",
+   "- 응용 프로그램",
+   "- 파일",
+   "분석 기술",
+   "- 타임라인",
+   "- 레지스트리",
+   "- 실행 흔적"
+  ],
+  "name": "아티팩트(Artifact)",
+  "en": "Digital Forensic Artifact",
+  "keywords_must": [
+   "시스템 아티팩트",
+   "응용 프로그램 아티팩트",
+   "파일 아티팩트",
+   "레지스트리",
+   "이벤트 로그",
+   "프리패치(Prefetch)",
+   "$MFT·LNK 파일",
+   "타임라인 분석",
+   "레지스트리 분석",
+   "브라우저 분석"
+  ],
+  "keywords_ref": [
+   "점프 목록",
+   "셸백(Shellbags)",
+   "Thumbs.db",
+   "bash_history·syslog",
+   "메신저·SNS 기록",
+   "메모리 아티팩트",
+   "타임스탬프 MAC 시간"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "시스템 아티팩트",
+   "응용 프로그램 아티팩트",
+   "파일 아티팩트",
+   "레지스트리",
+   "이벤트 로그",
+   "프리패치(Prefetch)",
+   "$MFT·LNK 파일",
+   "타임라인 분석",
+   "레지스트리 분석",
+   "브라우저 분석"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "MAC": "Modified, Accessed, Changed"
+  }
  }
 ]
