@@ -22262,6 +22262,7 @@
     "reviewed": true,
     "dueum": null,
     "gloss": {
+      "OpenVX": null,
       "OpenCL": "Open Computing Language",
       "ISP": "Image Signal Processor",
       "DSP": "Digital Signal Processor",
