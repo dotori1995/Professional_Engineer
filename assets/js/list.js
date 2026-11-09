@@ -1,7 +1,7 @@
 (function () {
   const PE = window.PE;
   const $q = document.getElementById('q'), $list = document.getElementById('list'), $count = document.getElementById('count');
-  let all = [], domain = sessionStorage.getItem('pe-domain') || 'ALL';
+  let all = [];
   const norm = s => String(s || '').toLowerCase().replace(/\s+/g, '');
   const hl = (text, q) => {
     const t = PE.esc(text); if (!q) return t;
@@ -16,7 +16,7 @@
   function render() {
     const q = norm($q.value);
     const rows = all.filter(t => {
-      if (domain !== 'ALL' && t.domain !== domain) return false;
+      if (!PE.inCur(t)) return false;
       if (!q) return true;
       return norm([t.id, t.title, t.name, t.en, t.subtitle, (t.keywords || []).join(' '), t.definition, t.dueum].join(' ')).includes(q);
     });
@@ -32,8 +32,6 @@
   }
   PE.load().then(data => {
     all = data;
-    if (domain !== 'ALL' && !PE.domains(all).includes(domain)) domain = 'ALL';
-    PE.domainChips(document.getElementById('domainChips'), all, domain, d => { domain = d; sessionStorage.setItem('pe-domain', d); render(); });
     const q0 = PE.params().get('q'); if (q0) $q.value = q0;
     render();
   }).catch(() => { $count.textContent = '데이터를 불러오지 못했어요.'; });

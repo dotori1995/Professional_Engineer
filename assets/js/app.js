@@ -8,7 +8,28 @@
     GL = g || {}; const keys = Object.keys(GL).sort((a, b) => b.length - a.length).map(k => k.replace(/[.*+?^${}()|[\]\\\/-]/g, '\\$&'));
     GLRE = keys.length ? new RegExp('(?<![A-Za-z0-9])(' + keys.join('|') + ')(?![A-Za-z0-9])', 'g') : null;
   }).catch(() => {});
-  PE.load = () => Promise.all([fetch(PE.data).then(r => r.json()), PE.loadGlossary()]).then(([d]) => d);
+  PE.load = () => Promise.all([fetch(PE.data).then(r => r.json()), PE.loadGlossary()]).then(([d]) => { PE.all = d; PE.resolveDomain(d); PE.buildDrawer(d); return d; });
+  // 현재 도메인: URL ?d= → localStorage → 첫 도메인. 바꾸는 곳은 햄버거 메뉴(☰)뿐
+  PE.setDomain = d => { PE.cur = d; try { localStorage.setItem('pe-dom', d); } catch (e) {} const el = document.getElementById('curDom'); if (el) el.textContent = ' · ' + d;
+    document.querySelectorAll('[data-nav]').forEach(a => { const u = new URL(a.href, location.href); u.searchParams.set('d', d); a.href = u.pathname + u.search; }); };
+  PE.resolveDomain = list => { const ds = PE.domains(list); let d = PE.params().get('d') || localStorage.getItem('pe-dom'); if (!ds.includes(d)) d = ds[0]; PE.setDomain(d); return d; };
+  PE.inCur = t => t.domain === PE.cur;
+  const metaOf = code => (PE.domainsMeta || []).find(m => m.code === code) || { code, name: code };
+  PE.buildDrawer = list => {
+    const body = document.getElementById('drawerBody'); if (!body) return;
+    body.innerHTML = '<div class="dr-label">도메인</div>' + PE.domains(list).map(code => {
+      const m = metaOf(code), ts = list.filter(t => t.domain === code), q = '?d=' + encodeURIComponent(code);
+      return `<details class="dr-dom"${code === PE.cur ? ' open' : ''}><summary><b>${PE.esc(code)}</b> ${PE.esc(m.name)} <span class="dr-n">${ts.length}</span></summary>
+        <div class="dr-links"><a href="${PE.url('/')}${q}">📚 목록</a><a href="${PE.url('/cards/')}${q}">🃏 카드</a><a href="${PE.url('/quiz/')}${q}">📝 문제</a></div>
+        <ul class="dr-topics">${ts.map(t => `<li><a href="${PE.topicUrl(t.id)}&d=${encodeURIComponent(code)}"><span class="dr-id">${PE.esc(t.id)}</span> ${PE.esc(PE.name(t))}</a></li>`).join('')}</ul></details>`;
+    }).join('');
+  };
+  const drawer = document.getElementById('drawer'), menuBtn = document.getElementById('menuBtn');
+  const openDrawer = o => { if (!drawer) return; drawer.hidden = !o; menuBtn && menuBtn.setAttribute('aria-expanded', String(o)); document.documentElement.classList.toggle('dr-open', o);
+    if (o) { const cur = drawer.querySelector('details[open] .dr-topics a[href*="id=' + (PE.params().get('id') || '#') + '&"]'); cur && (cur.classList.add('on'), cur.scrollIntoView({ block: 'center' })); } };
+  menuBtn && menuBtn.addEventListener('click', () => openDrawer(drawer.hidden));
+  drawer && drawer.addEventListener('click', e => { if (e.target.closest('[data-close]')) openDrawer(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') openDrawer(false); });
   // 텍스트를 escape하고, 약어 뒤에 정식 명칭을 작게 붙임(이미 괄호로 풀어 쓴 경우·같은 약어 반복은 생략)
   PE.gl = text => {
     const raw = String(text == null ? '' : text);

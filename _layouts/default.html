@@ -16,23 +16,31 @@
   <link rel="apple-touch-icon" href="{{ '/assets/icons/apple-touch-icon.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <script>
-    window.PE = { base: "{{ site.baseurl }}", data: "{{ '/data.json' | relative_url }}", sw: "{{ '/sw.js' | relative_url }}" };
+    window.PE = { domainsMeta: {{ site.domains | jsonify }}, base: "{{ site.baseurl }}", data: "{{ '/data.json' | relative_url }}", sw: "{{ '/sw.js' | relative_url }}" };
     (function(){ var t = localStorage.getItem('pe-theme'); if (t) document.documentElement.setAttribute('data-theme', t); })();
   </script>
 </head>
 <body class="page-{{ page.page_id | default: 'x' }}">
   <header class="topbar">
-    <a class="brand" href="{{ '/' | relative_url }}">📘 {{ site.short_name }}</a>
-    <button class="icon-btn" id="themeBtn" type="button" aria-label="다크 모드 전환">🌓</button>
+    <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="메뉴 열기" aria-controls="drawer" aria-expanded="false">☰</button>
+    <a class="brand" href="{{ '/' | relative_url }}">📘 {{ site.short_name }}<span class="cur-dom" id="curDom"></span></a>
+    <nav class="topnav" aria-label="바로가기">
+      <a href="{{ '/' | relative_url }}" data-nav="home" class="{% if page.page_id == 'home' %}on{% endif %}" aria-label="목록" title="목록">📚</a>
+      <a href="{{ '/cards/' | relative_url }}" data-nav="cards" class="{% if page.page_id == 'cards' %}on{% endif %}" aria-label="카드" title="카드">🃏</a>
+      <a href="{{ '/quiz/' | relative_url }}" data-nav="quiz" class="{% if page.page_id == 'quiz' %}on{% endif %}" aria-label="문제" title="문제">📝</a>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="다크 모드 전환">🌓</button>
+    </nav>
   </header>
+  <aside class="drawer" id="drawer" hidden>
+    <div class="drawer-bg" data-close></div>
+    <div class="drawer-panel" role="dialog" aria-label="메뉴">
+      <div class="dr-head"><b>메뉴</b><button class="icon-btn" type="button" data-close aria-label="메뉴 닫기">✕</button></div>
+      <div id="drawerBody"><p class="meta">불러오는 중…</p></div>
+    </div>
+  </aside>
   <main class="wrap">
     {{ content }}
   </main>
-  <nav class="tabbar" aria-label="주요 메뉴">
-    <a href="{{ '/' | relative_url }}" class="{% if page.page_id == 'home' %}on{% endif %}"><span>📚</span>목록</a>
-    <a href="{{ '/cards/' | relative_url }}" class="{% if page.page_id == 'cards' %}on{% endif %}"><span>🃏</span>카드</a>
-    <a href="{{ '/cards/?shuffle=1' | relative_url }}"><span>🔀</span>랜덤</a>
-  </nav>
   <script src="{{ '/assets/js/app.js' | relative_url }}"></script>
   {% if page.script %}<script src="{{ page.script | relative_url }}"></script>{% endif %}
 </body>

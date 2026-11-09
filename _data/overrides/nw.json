@@ -173,7 +173,11 @@
   "review": null,
   "dueum": null,
   "name": "DNS(Domain Name System)",
-  "en": "Domain Name System"
+  "en": "Domain Name System",
+  "quiz_groups": [
+   "ip",
+   "app"
+  ]
  },
  "NW_031_01": {
   "title": "다중화(Multiplexing)와 다원접속(Multiple Access)",
@@ -281,7 +285,11 @@
   "review": null,
   "dueum": null,
   "name": "다중화와 다원접속(Multiplexing & Multiple Access)",
-  "en": "Multiplexing & Multiple Access"
+  "en": "Multiplexing & Multiple Access",
+  "quiz_groups": [
+   "mux",
+   "mac"
+  ]
  },
  "NW_032": {
   "keywords": [
@@ -455,7 +463,10 @@
   "note": null,
   "review": null,
   "name": "DHCP(Dynamic Host Configuration Protocol)",
-  "en": "Dynamic Host Configuration Protocol"
+  "en": "Dynamic Host Configuration Protocol",
+  "quiz_groups": [
+   "ip"
+  ]
  },
  "NW_075": {
   "keywords": [
@@ -1118,7 +1129,11 @@
   "review": null,
   "dueum": null,
   "name": "QUIC(Quick UDP Internet Connections)",
-  "en": "Quick UDP Internet Connections"
+  "en": "Quick UDP Internet Connections",
+  "quiz_groups": [
+   "transport",
+   "app"
+  ]
  },
  "NW_080": {
   "title": "커넥티드 카(Connected Car)",
@@ -1238,7 +1253,10 @@
   "review": null,
   "dueum": null,
   "name": "커넥티드 카(Connected Car)",
-  "en": "Connected Car"
+  "en": "Connected Car",
+  "quiz_groups": [
+   "vehicle"
+  ]
  },
  "NW_001": {
   "name": "정보이론(Information Theory)",

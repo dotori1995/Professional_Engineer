@@ -4,7 +4,9 @@
   PE.load().then(all => {
     const i = all.findIndex(t => t.id === id);
     if (i < 0) { el.innerHTML = '<p class="empty">토픽을 찾을 수 없어요. <a href="' + PE.url('/') + '">목록으로</a></p>'; return; }
-    const t = all[i], prev = all[i - 1], next = all[i + 1];
+    const t = all[i];
+    if (t.domain !== PE.cur) PE.setDomain(t.domain);
+    const same = all.filter(x => x.domain === t.domain), j = same.indexOf(t), prev = same[j - 1], next = same[j + 1];
     document.title = PE.name(t) + ' · ' + document.title;
     const secs = (t.sections || []).filter(s => (s.subsections || []).some(x => x.items.length));
     const ROM = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
@@ -21,9 +23,9 @@
         </div>
         <div class="tfoot">
           ${prev ? `<a class="btn ghost nav" href="${PE.topicUrl(prev.id)}" aria-label="이전 토픽">◀</a>` : '<span class="btn ghost nav" aria-hidden="true"></span>'}
-          <a class="btn ghost" href="${PE.url('/cards/')}?id=${encodeURIComponent(t.id)}&view=flash">🃏 카드</a>
-          ${t.curated ? `<a class="btn ghost" href="${PE.url('/cards/')}?view=quiz&topic=${encodeURIComponent(t.id)}">📝 문제</a>` : ''}
-          <span class="pos">${i + 1}/${all.length}</span>
+          <a class="btn ghost" href="${PE.url('/cards/')}?topic=${encodeURIComponent(t.id)}">🃏 카드</a>
+          ${t.curated ? `<a class="btn ghost" href="${PE.url('/quiz/')}?topic=${encodeURIComponent(t.id)}">📝 문제</a>` : ''}
+          <span class="pos">${j + 1}/${same.length}</span>
           ${next ? `<a class="btn ghost nav" href="${PE.topicUrl(next.id)}" aria-label="다음 토픽">▶</a>` : '<span class="btn ghost nav" aria-hidden="true"></span>'}
         </div>`;
       const fb = document.getElementById('fb');
