@@ -7,15 +7,15 @@ lang: ko
 
 # 도메인(과목) 목록: _data/<key>.json 파일과 연결됨. 새 PDF를 파싱해 추가하면 여기에 한 줄 추가.
 domains:
-  - key: nw
-    code: NW
-    name: 네트워크
-  - key: pm
-    code: PM
-    name: 프로젝트관리
   - key: mg
     code: MG
     name: 경영전략
+  - key: pm
+    code: PM
+    name: 프로젝트관리
+  - key: nw
+    code: NW
+    name: 네트워크
 
 markdown: kramdown
 exclude:

@@ -52,7 +52,12 @@
   PE.url = (path) => PE.base + path;
   PE.topicUrl = id => PE.base + '/topic/?id=' + encodeURIComponent(id);
   PE.params = () => new URLSearchParams(location.search);
-  PE.domains = list => Array.from(new Set(list.map(t => t.domain)));
+  // 커리큘럼(주차) 순서: 경영전략 → 프로젝트관리 → 소공 → 디지털서비스 → 네트워크 → 보안 → DB → CA → OS → DS → 알고리즘 → AI → 통계
+  PE.ORDER = ['MG', 'PM', 'SW', 'SV', 'NW', 'SE', 'DB', 'CA', 'OS', 'DS', 'AL', 'AI', 'ST'];
+  PE.domains = list => Array.from(new Set(list.map(t => t.domain))).sort((a, b) => {
+    const ia = PE.ORDER.indexOf(a), ib = PE.ORDER.indexOf(b);
+    return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+  });
   PE.domainChips = (el, list, current, onChange) => {
     const ds = PE.domains(list);
     el.innerHTML = ['ALL'].concat(ds).map(d => `<button type="button" class="chip${d === current ? ' on' : ''}" data-domain="${d}">${d === 'ALL' ? '전체 도메인' : d}</button>`).join('');
