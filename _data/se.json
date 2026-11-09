@@ -13329,6 +13329,685 @@
   }
  },
  {
+  "id": "SE_085",
+  "code": "SE_085",
+  "title": "공통평가기준(CC, Common Criteria)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 표준(정책) 및 관리적 보안 > CC",
+  "definition": "국가마다 달랐던 정보보호 제품 평가 기준을 통합한 국제 표준(ISO/IEC 15408)으로, 보안 기능 요구사항과 보증 요구사항을 계층적으로 정의해 평가하고 가입국 간 인증서를 상호 인정한다",
+  "keywords": [
+   "구성: Part 1 개요·모델 · Part 2 보안 기능 요구사항 · Part 3 보증 요구사항",
+   "작성 문서: 보호 프로파일(PP) · 보안 목표 명세서(ST) · 평가 대상(TOE)",
+   "평가 등급: EAL1 기능 시험 · EAL4 체계적 설계·시험·검토 · EAL7 정형적 검증 설계·시험",
+   "평가 체계: 공통 평가 방법론(CEM) · 상호 인정 협정(CCRA)"
+  ],
+  "sections": [
+   {
+    "title": "요구사항 구조",
+    "subsections": [
+     {
+      "title": "패키지",
+      "items": [
+       "기능·보증 요구사항 묶음, PP·ST의 재사용 기초"
+      ]
+     },
+     {
+      "title": "PP",
+      "items": [
+       "제품군 공통 요구사항, 구현 독립적"
+      ]
+     },
+     {
+      "title": "ST",
+      "items": [
+       "특정 제품의 요구사항과 구현 보안 기능, 구현 종속적"
+      ]
+     },
+     {
+      "title": "TOE",
+      "items": [
+       "평가 대상 제품·시스템과 관련 문서"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "평가 보증 등급",
+    "subsections": [
+     {
+      "title": "EAL1~2",
+      "items": [
+       "기능 시험, 구조 시험"
+      ]
+     },
+     {
+      "title": "EAL3~4",
+      "items": [
+       "방법론적 시험·점검, 체계적 설계·시험·검토"
+      ]
+     },
+     {
+      "title": "EAL5~6",
+      "items": [
+       "준정형 설계·시험, 준정형 검증 설계"
+      ]
+     },
+     {
+      "title": "EAL7",
+      "items": [
+       "정형적으로 검증된 설계와 시험"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "PP와 ST 비교",
+    "subsections": [
+     {
+      "title": "적용 범위",
+      "items": [
+       "PP는 제품군 여러 제품에 동일 적용",
+       "ST는 특정 제품 하나"
+      ]
+     },
+     {
+      "title": "관계",
+      "items": [
+       "ST는 PP 준수를 선언할 수 있으나 PP는 ST를 수용 못 함"
+      ]
+     },
+     {
+      "title": "완전성",
+      "items": [
+       "PP는 미완성 오퍼레이션 허용",
+       "ST는 모든 오퍼레이션 완성"
+      ]
+     },
+     {
+      "title": "상호 인정",
+      "items": [
+       "CCRA 가입국 인증서는 수용국에서 효력"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "요구사항 구조",
+   "- 패키지",
+   "- PP",
+   "- ST",
+   "- TOE",
+   "평가 보증 등급",
+   "- EAL1~2",
+   "- EAL3~4",
+   "- EAL5~6",
+   "- EAL7",
+   "PP와 ST 비교",
+   "- 적용 범위",
+   "- 관계",
+   "- 완전성",
+   "- 상호 인정"
+  ],
+  "name": "공통평가기준(CC, Common Criteria)",
+  "en": "Common Criteria",
+  "keywords_must": [
+   "Part 1 개요·모델",
+   "Part 2 보안 기능 요구사항",
+   "Part 3 보증 요구사항",
+   "보호 프로파일(PP)",
+   "보안 목표 명세서(ST)",
+   "평가 대상(TOE)",
+   "EAL1 기능 시험",
+   "EAL4 체계적 설계·시험·검토",
+   "EAL7 정형적 검증 설계·시험",
+   "공통 평가 방법론(CEM)",
+   "상호 인정 협정(CCRA)"
+  ],
+  "keywords_ref": [
+   "CCRA 회원: 인증서 발행국(CAP)·수용국(CCP)",
+   "2014 CCRA 개정으로 상호 인정 범위 EAL2·cPP 중심",
+   "CC:2022는 5개 파트(Part 4 평가 방법 틀, Part 5 사전 정의 패키지)",
+   "국내 IT 보안 인증 사무국",
+   "패키지: 재사용 가능한 요구사항 묶음",
+   "목적: 평가 신뢰성, 상호 인정, 인증 비용 절감"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "Part 1 개요·모델",
+   "Part 2 보안 기능 요구사항",
+   "Part 3 보증 요구사항",
+   "보호 프로파일(PP)",
+   "보안 목표 명세서(ST)",
+   "평가 대상(TOE)",
+   "EAL1 기능 시험",
+   "EAL4 체계적 설계·시험·검토",
+   "EAL7 정형적 검증 설계·시험",
+   "공통 평가 방법론(CEM)",
+   "상호 인정 협정(CCRA)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "PP": "Protection Profile",
+   "ST": "Security Target",
+   "TOE": "Target of Evaluation",
+   "EAL": "Evaluation Assurance Level",
+   "CEM": "Common Evaluation Methodology",
+   "CCRA": "Common Criteria Recognition Arrangement",
+   "CAP": "Certificate Authorizing Participant",
+   "CCP": "Certificate Consuming Participant",
+   "cPP": "collaborative Protection Profile"
+  }
+ },
+ {
+  "id": "SE_089",
+  "code": "SE_089",
+  "title": "심층 방어(Defense-in-Depth)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 표준(정책) 및 관리적 보안 > 계층적 방어 체계(Defense-in-Depth)",
+  "definition": "단일 보안 솔루션으로는 정보자산을 완벽히 보호할 수 없다는 전제로 네트워크·시스템·애플리케이션·데이터 계층과 관리 계층에 서로 다른 통제를 겹겹이 배치해, 한 계층이 뚫려도 다음 계층이 공격을 지연·탐지·차단하게 하는 보안 체계",
+  "keywords": [
+   "보호 계층: 네트워크 계층 · 시스템 계층 · 애플리케이션·데이터베이스 계층 · 보안 관리 계층",
+   "관리 활동: 예방 · 탐지 · 대응",
+   "네트워크 구역: 외부망 · 비무장지대(DMZ) · 내부망"
+  ],
+  "sections": [
+   {
+    "title": "계층 구조",
+    "subsections": [
+     {
+      "title": "네트워크",
+      "items": [
+       "침입 탐지·차단, 방화벽으로 외부망·DMZ·내부망 분리"
+      ]
+     },
+     {
+      "title": "시스템",
+      "items": [
+       "서버 백신, 취약점 관리, 접근 통제"
+      ]
+     },
+     {
+      "title": "애플리케이션·DB",
+      "items": [
+       "인증 서버, DB 접근 통제, 데이터 유출 검사"
+      ]
+     },
+     {
+      "title": "보안 관리",
+      "items": [
+       "보안 정책·보안 SDLC·안전 진단(예방), 취약점 스캐너·보안 관제(탐지), 대응 조직·절차(대응)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 형태별 대응",
+    "subsections": [
+     {
+      "title": "능동·수동 공격",
+      "items": [
+       "중간자·SQL 삽입·랜섬웨어 → 방화벽·IPS·UTM"
+      ]
+     },
+     {
+      "title": "근거리 공격",
+      "items": [
+       "장비 파괴·설정 변경·악성 장비 부착 → 인증, 서버 분리"
+      ]
+     },
+     {
+      "title": "내부 공격",
+      "items": [
+       "내부자 부정행위 → 인증·인가·감사 추적"
+      ]
+     },
+     {
+      "title": "분산 공격",
+      "items": [
+       "DDoS·DRDoS → 망 분리, 이중 회선"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구축·운영",
+    "subsections": [
+     {
+      "title": "구축 전",
+      "items": [
+       "서비스·자산 위험 평가로 보호 대상과 계층별 방안 도출"
+      ]
+     },
+     {
+      "title": "운영",
+      "items": [
+       "자산 변화 반영, 계층 간 로그 연계 관제"
+      ]
+     },
+     {
+      "title": "원칙",
+      "items": [
+       "계층마다 다른 기술 사용으로 공통 취약점 회피"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "계층 구조",
+   "- 네트워크",
+   "- 시스템",
+   "- 애플리케이션·DB",
+   "- 보안 관리",
+   "공격 형태별 대응",
+   "- 능동·수동 공격",
+   "- 근거리 공격",
+   "- 내부 공격",
+   "- 분산 공격",
+   "구축·운영",
+   "- 구축 전",
+   "- 운영",
+   "- 원칙"
+  ],
+  "name": "심층 방어(Defense-in-Depth)",
+  "en": "Defense-in-Depth",
+  "keywords_must": [
+   "네트워크 계층",
+   "시스템 계층",
+   "애플리케이션·데이터베이스 계층",
+   "보안 관리 계층",
+   "예방",
+   "탐지",
+   "대응",
+   "외부망",
+   "비무장지대(DMZ)",
+   "내부망"
+  ],
+  "keywords_ref": [
+   "통제 유형: 관리적·기술적·물리적",
+   "공격 유형별 대응: 능동·수동 공격은 방화벽·IPS·UTM, 근거리 공격은 인증·서버 분리, 내부 공격은 AAA, 분산 공격은 망 분리·이중 ISP",
+   "등장 배경: 제로데이 증가, 단일 보안 기술 한계",
+   "위험 평가 기반 단계별 방어",
+   "제로 트러스트와 결합"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "네트워크 계층",
+   "시스템 계층",
+   "애플리케이션·데이터베이스 계층",
+   "보안 관리 계층",
+   "예방",
+   "탐지",
+   "대응",
+   "외부망",
+   "비무장지대(DMZ)",
+   "내부망"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "DMZ": "Demilitarized Zone",
+   "UTM": "Unified Threat Management",
+   "AAA": "Authentication, Authorization, Accounting",
+   "ISP": "Internet Service Provider",
+   "IPS": "Intrusion Prevention System",
+   "SDLC": "Software Development Life Cycle",
+   "DRDoS": "Distributed Reflection Denial of Service"
+  }
+ },
+ {
+  "id": "SE_090",
+  "code": "SE_090",
+  "title": "보안 관제 서비스(Security Operation Service)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 표준(정책) 및 관리적 보안 > 보안관제서비스(Security Operation Service)",
+  "definition": "관제센터(SOC)에서 기업 보안 장비와 IT 자원의 이벤트를 24시간 감시·분석하고 웜·해킹 등 침해 시도를 탐지·대응해 서비스 안정성을 확보하는 보안 서비스로, 자체 운영이나 전문 업체 위탁(원격·파견)으로 제공된다",
+  "keywords": [
+   "기본 업무: 실시간 모니터링 · 침해 분석·대응 · 보안 기획(SLA) · 대외 기관 연계",
+   "취약점 진단: 모의 해킹 · 시스템 진단",
+   "고도화 업무: APT 대응 · 웹셸 탐지 · 침해 흔적 조사·역추적",
+   "기반 기술: SIEM · SOAR · 위협 인텔리전스"
+  ],
+  "sections": [
+   {
+    "title": "관제 절차",
+    "subsections": [
+     {
+      "title": "1 수집",
+      "items": [
+       "방화벽·IPS·서버 로그와 이벤트 수집"
+      ]
+     },
+     {
+      "title": "2 탐지·분석",
+      "items": [
+       "상관 분석으로 위협 식별, 오탐 제거"
+      ]
+     },
+     {
+      "title": "3 대응",
+      "items": [
+       "차단·격리, 고객 통보, 조치 지원"
+      ]
+     },
+     {
+      "title": "4 보고·개선",
+      "items": [
+       "사고 보고서, 탐지 정책 튜닝"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "업무 구분",
+    "subsections": [
+     {
+      "title": "모니터링",
+      "items": [
+       "보안 이벤트 실시간 분석, 관제 시스템 가용성 점검"
+      ]
+     },
+     {
+      "title": "침해 대응",
+      "items": [
+       "유형별 사고 조치, 긴급 위협·최신 공격 패턴 공유"
+      ]
+     },
+     {
+      "title": "기획",
+      "items": [
+       "관제 정책·프로세스, 서비스 수준 협약 수립"
+      ]
+     },
+     {
+      "title": "진단",
+      "items": [
+       "웹·소스 코드 모의 해킹, 서버·DBMS·네트워크 장비 취약점 점검"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "고도화",
+    "subsections": [
+     {
+      "title": "지능형 위협",
+      "items": [
+       "APT 악성코드 분석, 웹셸 탐지와 조치"
+      ]
+     },
+     {
+      "title": "사고 조사",
+      "items": [
+       "운영 웹사이트 침해 흔적 조사, 공격 IP 역추적"
+      ]
+     },
+     {
+      "title": "분석 플랫폼",
+      "items": [
+       "분석 회피형 악성코드 대응, 모바일 악성코드 유사도 분석"
+      ]
+     },
+     {
+      "title": "예측·공유",
+      "items": [
+       "사고 프로파일링 시계열 분석으로 공격 예측, 표준 포맷 정보 공유"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "관제 절차",
+   "- 1 수집",
+   "- 2 탐지·분석",
+   "- 3 대응",
+   "- 4 보고·개선",
+   "업무 구분",
+   "- 모니터링",
+   "- 침해 대응",
+   "- 기획",
+   "- 진단",
+   "고도화",
+   "- 지능형 위협",
+   "- 사고 조사",
+   "- 분석 플랫폼",
+   "- 예측·공유"
+  ],
+  "name": "보안 관제 서비스(Security Operation Service)",
+  "en": "Security Operation Service",
+  "keywords_must": [
+   "실시간 모니터링",
+   "침해 분석·대응",
+   "보안 기획(SLA)",
+   "대외 기관 연계",
+   "모의 해킹",
+   "시스템 진단",
+   "APT 대응",
+   "웹셸 탐지",
+   "침해 흔적 조사·역추적",
+   "SIEM",
+   "SOAR",
+   "위협 인텔리전스"
+  ],
+  "keywords_ref": [
+   "통합 보안 상황 분석 시스템: 클라우드 대규모 악성코드 분석, 모바일 침해 사고 분석, 침해 사고 프로파일링, 공격 예측, 정보 공유",
+   "KISA·KrCERT·국정원 연계",
+   "보안 관제 전문 기업 지정 제도",
+   "관제 유형: 자체·원격·파견",
+   "오탐 튜닝",
+   "관리형 탐지 대응(MDR)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "실시간 모니터링",
+   "침해 분석·대응",
+   "보안 기획(SLA)",
+   "대외 기관 연계",
+   "모의 해킹",
+   "시스템 진단",
+   "APT 대응",
+   "웹셸 탐지",
+   "침해 흔적 조사·역추적",
+   "SIEM",
+   "SOAR",
+   "위협 인텔리전스"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "SOC": "Security Operations Center",
+   "SLA": "Service Level Agreement",
+   "APT": "Advanced Persistent Threat",
+   "SIEM": "Security Information and Event Management",
+   "SOAR": "Security Orchestration, Automation and Response",
+   "MDR": "Managed Detection and Response",
+   "KrCERT": "Korea Computer Emergency Response Team",
+   "DBMS": "Database Management System",
+   "IPS": "Intrusion Prevention System"
+  }
+ },
+ {
+  "id": "SE_091",
+  "code": "SE_091",
+  "title": "ISO/IEC 27014 정보보호 거버넌스(Governance of Information Security)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 표준(정책) 및 관리적 보안 > ISO/IEC 27014",
+  "definition": "최고 경영층(이사회)이 정보보호에 대한 의사결정 권한과 책임을 갖고 정보보호를 비즈니스 목표와 전략적으로 연계하도록 지켜야 할 원칙·목표·프로세스를 정의한 국제 표준",
+  "keywords": [
+   "목표: 책임성 · 비즈니스 연계성 · 준거성",
+   "거버넌스 프로세스: 평가(Evaluate) · 지시(Direct) · 모니터(Monitor) · 소통(Communicate) · 보증(Assure)",
+   "구성 주체: 최고 경영층(이사회) · 실행 관리자(ISMS 운영)"
+  ],
+  "sections": [
+   {
+    "title": "목표와 도메인",
+    "subsections": [
+     {
+      "title": "목표",
+      "items": [
+       "성과 책임 소재, 비즈니스 목표 기여, 법·규정 준수"
+      ]
+     },
+     {
+      "title": "전략적 연계",
+      "items": [
+       "조직 목표와 정보보호 전략 정렬"
+      ]
+     },
+     {
+      "title": "가치 전달",
+      "items": [
+       "조직 목표를 지원하도록 정보보호 투자 최적화"
+      ]
+     },
+     {
+      "title": "위험·자원·성과",
+      "items": [
+       "전사 위험관리 차원의 KSI, 적정 인력 산정, SPI로 준수·성과 측정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "프로세스",
+    "subsections": [
+     {
+      "title": "평가",
+      "items": [
+       "현재·예상 보안 수준과 활동 성과 평가"
+      ]
+     },
+     {
+      "title": "지시",
+      "items": [
+       "전략·정책 방향 제시와 자원 배정"
+      ]
+     },
+     {
+      "title": "모니터",
+      "items": [
+       "정책 준수와 계획 대비 성과 감시"
+      ]
+     },
+     {
+      "title": "소통·보증",
+      "items": [
+       "이해관계자 보고, 독립적 감사·평가로 보증"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "관리체계와 비교",
+    "subsections": [
+     {
+      "title": "역할",
+      "items": [
+       "거버넌스는 감독",
+       "관리체계는 구현"
+      ]
+     },
+     {
+      "title": "권한",
+      "items": [
+       "거버넌스는 결정 권한 부여",
+       "관리체계는 권한 위임받아 실행"
+      ]
+     },
+     {
+      "title": "정책",
+      "items": [
+       "거버넌스는 수립",
+       "관리체계는 집행"
+      ]
+     },
+     {
+      "title": "책임",
+      "items": [
+       "거버넌스는 최종 책임",
+       "관리체계는 실행 책임"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "목표와 도메인",
+   "- 목표",
+   "- 전략적 연계",
+   "- 가치 전달",
+   "- 위험·자원·성과",
+   "프로세스",
+   "- 평가",
+   "- 지시",
+   "- 모니터",
+   "- 소통·보증",
+   "관리체계와 비교",
+   "- 역할",
+   "- 권한",
+   "- 정책",
+   "- 책임"
+  ],
+  "name": "ISO/IEC 27014 정보보호 거버넌스(Governance of Information Security)",
+  "en": "Governance of Information Security",
+  "keywords_must": [
+   "책임성",
+   "비즈니스 연계성",
+   "준거성",
+   "평가(Evaluate)",
+   "지시(Direct)",
+   "모니터(Monitor)",
+   "소통(Communicate)",
+   "보증(Assure)",
+   "최고 경영층(이사회)",
+   "실행 관리자(ISMS 운영)"
+  ],
+  "keywords_ref": [
+   "도메인: 전략적 연계·가치 전달·위험관리·자원관리·성과 측정",
+   "핵심 보안 지표(KSI)",
+   "보안 성과 지표(SPI)",
+   "IT 거버넌스 표준 ISO/IEC 38500: 평가·지시·모니터, 6원칙(책임·전략·획득·성과·준거·인간 행동)",
+   "기업 거버넌스 ⊃ IT 거버넌스·정보보호 거버넌스",
+   "2020 개정판"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "책임성",
+   "비즈니스 연계성",
+   "준거성",
+   "평가(Evaluate)",
+   "지시(Direct)",
+   "모니터(Monitor)",
+   "소통(Communicate)",
+   "보증(Assure)",
+   "최고 경영층(이사회)",
+   "실행 관리자(ISMS 운영)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "KSI": "Key Security Indicator",
+   "SPI": "Security Performance Indicator",
+   "ISMS": "Information Security Management System",
+   "ERM": "Enterprise Risk Management"
+  }
+ },
+ {
   "id": "SE_094",
   "code": "SE_094",
   "title": "엔드포인트 탐지 및 대응(EDR, Endpoint Detection and Response)",
