@@ -27,12 +27,15 @@ AS: Autonomous System
 ASBR: Autonomous System Boundary Router
 ASK: Amplitude Shift Keying
 AXFR: Full Zone Transfer
+BAC: Budget at Completion
 BBR: Bottleneck Bandwidth and Round-trip propagation time
 BCH: Bose–Chaudhuri–Hocquenghem
+BCR: Benefit-Cost Ratio
 BDR: Backup Designated Router
 BEC: Backward Error Correction
 BEPS: Base Erosion and Profit Shifting
 BGP: Border Gateway Protocol
+BML: Build-Measure-Learn
 BOOTP: Bootstrap Protocol
 BPDU: Bridge Protocol Data Unit
 BSM: Basic Safety Message
@@ -43,10 +46,13 @@ CAN: Controller Area Network
 CBRS: Citizens Broadband Radio Service
 CBS: Committed Burst Size
 CBWFQ: Class-Based Weighted Fair Queuing
+CCB: Change Control Board
+CCM: Critical Chain Method
 CCTV: Closed-Circuit Television
 CDM: Code Division Multiplexing
 CDMA: Code Division Multiple Access
 CDN: Content Delivery Network
+CFD: Cumulative Flow Diagram
 CIDR: Classless Inter-Domain Routing
 CIR: Committed Information Rate
 CLAT: Customer-side Translator
@@ -54,7 +60,9 @@ CNAME: Canonical Name
 CNF: Cloud-native Network Function
 CoAP: Constrained Application Protocol
 CoDel: Controlled Delay
+COQ: Cost of Quality
 CoRE: Constrained RESTful Environments
+CPM: Critical Path Method
 CPU: Central Processing Unit
 CRC: Cyclic Redundancy Check
 CSA: Connectivity Standards Alliance
@@ -70,6 +78,7 @@ D2D: Device-to-Device
 DAI: Dynamic ARP Inspection
 DCF: Distributed Coordination Function
 DENM: Decentralized Environmental Notification Message
+DevRel: Developer Relations
 DF: Don't Fragment
 DHCP: Dynamic Host Configuration Protocol
 DHT: Distributed Hash Table
@@ -79,6 +88,8 @@ DLNA: Digital Living Network Alliance
 DNS: Domain Name System
 DNS64: DNS extensions for NAT64
 DNSSEC: DNS Security Extensions
+DoD: Definition of Done
+DOE: Design of Experiments
 DoH: DNS over HTTPS
 DoQ: DNS over QUIC
 DoT: DNS over TLS
@@ -97,7 +108,9 @@ DU: Distributed Unit
 DVA: Distance Vector Algorithm
 DVB-T: Digital Video Broadcasting – Terrestrial
 DWDM: Dense Wavelength Division Multiplexing
+DX: Developer Experience
 E2E: End-to-End
+EAC: Estimate at Completion
 EBS: Excess Burst Size
 eCall: Emergency Call
 ECC: Elliptic Curve Cryptography
@@ -105,16 +118,22 @@ ECN: Explicit Congestion Notification
 ECU: Electronic Control Unit
 EF: Expedited Forwarding
 EGP: Exterior Gateway Protocol
+EIF: External Interface File
 EIFS: Extended Inter-Frame Space
 EIGRP: Enhanced Interior Gateway Routing Protocol
 EMS: Element Management System
+EMV: Expected Monetary Value
 EN-DC: E-UTRA NR Dual Connectivity
 EPC: Evolved Packet Core
+EPMO: Enterprise Project Management Office
 ESS: Extended Service Set
+ETC: Estimate to Complete
+EVM: Earned Value Management
 FCS: Frame Check Sequence
 FDM: Frequency Division Multiplexing
 FDMA: Frequency Division Multiple Access
 FEC: Forward Error Correction
+FFP: Firm Fixed Price
 FHSS: Frequency Hopping Spread Spectrum
 FIN: Finish
 FKP: Flächenkorrekturparameter
@@ -145,11 +164,13 @@ ICMP: Internet Control Message Protocol
 ICMPv6: Internet Control Message Protocol for IPv6
 IEEE: Institute of Electrical and Electronics Engineers
 IETF: Internet Engineering Task Force
+IFPUG: International Function Point Users Group
 IFS: Inter-Frame Space
 IGMP: Internet Group Management Protocol
 IGP: Interior Gateway Protocol
 IGRP: Interior Gateway Routing Protocol
 IIR: Income Inclusion Rule
+ILF: Internal Logical File
 IMT-2020: International Mobile Telecommunications-2020
 IMT-Advanced: International Mobile Telecommunications-Advanced
 IntServ: Integrated Services
@@ -161,6 +182,7 @@ IP: Internet Protocol
 IPsec: IP Security
 IPv4: Internet Protocol version 4
 IPv6: Internet Protocol version 6
+IRR: Internal Rate of Return
 IS-IS: Intermediate System to Intermediate System
 ISAC: Integrated Sensing and Communication
 ISATAP: Intra-Site Automatic Tunnel Addressing Protocol
@@ -172,6 +194,7 @@ IVN: In-Vehicle Network
 IX: Internet eXchange
 IXFR: Incremental Zone Transfer
 JID: Jabber ID
+JIT: Just In Time
 JSEP: JavaScript Session Establishment Protocol
 KL: Kullback-Leibler
 LAN: Local Area Network
@@ -223,6 +246,7 @@ MSTP: Multiple Spanning Tree Protocol
 MTU: Maximum Transmission Unit
 MU-MIMO: Multi-User MIMO
 MUX: Multiplexer
+MVP: Minimum Viable Product
 MX: Mail Exchanger
 NAK: Negative Acknowledgment
 NAT: Network Address Translation
@@ -236,9 +260,11 @@ NFC: Near Field Communication
 NFV: Network Functions Virtualization
 NFVI: NFV Infrastructure
 NFVO: NFV Orchestrator
+NGT: Nominal Group Technique
 NMRG: Network Management Research Group
 NOMA: Non-Orthogonal Multiple Access
 NPN: Non-Public Network
+NPV: Net Present Value
 NR: New Radio
 NR-V2X: New Radio Vehicle-to-Everything
 NRTK: Network Real-Time Kinematic
@@ -252,6 +278,7 @@ NTRIP: Networked Transport of RTCM via Internet Protocol
 O-CU: O-RAN Central Unit
 O-DU: O-RAN Distributed Unit
 O-RU: O-RAN Radio Unit
+OBS: Organizational Breakdown Structure
 OBU: On-Board Unit
 OCF: Open Connectivity Foundation
 OECD: Organisation for Economic Co-operation and Development
@@ -261,6 +288,7 @@ OLSR: Optimized Link State Routing
 OMA: Orthogonal Multiple Access
 ONF: Open Networking Foundation
 ONOS: Open Network Operating System
+OPA: Organizational Process Assets
 OPNFV: Open Platform for NFV
 OSPF: Open Shortest Path First
 OSS: Operations Support System
@@ -270,6 +298,7 @@ P2P: Peer-to-Peer
 PCell: Primary Cell
 PCF: Point Coordination Function
 PDR: Pedestrian Dead Reckoning
+PERT: Program Evaluation and Review Technique
 PESQ: Perceptual Evaluation of Speech Quality
 PHB: Per-Hop Behavior
 PHP: Penultimate Hop Popping
@@ -279,7 +308,12 @@ PIM: Protocol Independent Multicast
 PLAT: Provider-side Translator
 PLC: Programmable Logic Controller
 PLMN: Public Land Mobile Network
+PMB: Performance Measurement Baseline
+PMBOK: Project Management Body of Knowledge
+PMC: Project Management Consulting
 PMF: Protected Management Frames
+PMI: Project Management Institute
+PMO: Project Management Office
 PMTUD: Path MTU Discovery
 POLQA: Perceptual Objective Listening Quality Analysis
 POP: Point of Presence
@@ -294,6 +328,8 @@ QAM: Quadrature Amplitude Modulation
 QDMTT: Qualified Domestic Minimum Top-up Tax
 QoE: Quality of Experience
 QoS: Quality of Service
+RACI: Responsible Accountable Consulted Informed
+RAM: Responsibility Assignment Matrix
 RAN: Radio Access Network
 RARP: Reverse Address Resolution Protocol
 RED: Random Early Detection
@@ -313,6 +349,7 @@ RSTP: Rapid Spanning Tree Protocol
 RSU: Road Side Unit
 RSVP: Resource Reservation Protocol
 RTK: Real-Time Kinematic
+RTM: Requirements Traceability Matrix
 RTO: Retransmission TimeOut
 RTS: Request To Send
 RTT: Round Trip Time
@@ -352,8 +389,10 @@ SLD: Second-Level Domain
 SMF: Session Management Function
 SMO: Service Management and Orchestration
 SNPN: Standalone Non-Public Network
+SoW: Statement of Work
 SPF: Shortest Path First
 SPIN: Sensor Protocols for Information via Negotiation
+SRS: Software Requirements Specification
 SRTP: Secure Real-time Transport Protocol
 SRTT: Smoothed Round-Trip Time
 SSB: Synchronization Signal Block
@@ -364,7 +403,9 @@ STP: Spanning Tree Protocol
 STUN: Session Traversal Utilities for NAT
 SUMS: Software Update Management System
 SYN: Synchronize
+T&M: Time and Materials
 TCP: Transmission Control Protocol
+TCPI: To-Complete Performance Index
 TDM: Time Division Multiplexing
 TDMA: Time Division Multiple Access
 TDoA: Time Difference of Arrival
@@ -373,7 +414,9 @@ THz: Terahertz
 TLD: Top-Level Domain
 TLS: Transport Layer Security
 ToA: Time of Arrival
+TOC: Theory of Constraints
 TOS: Type of Service
+TPS: Toyota Production System
 TTL: Time To Live
 TURN: Traversal Using Relays around NAT
 TVWS: TV White Space
@@ -392,6 +435,7 @@ V2N: Vehicle-to-Network
 V2P: Vehicle-to-Pedestrian
 V2V: Vehicle-to-Vehicle
 V2X: Vehicle-to-Everything
+VAC: Variance at Completion
 VANET: Vehicular Ad-hoc Network
 VIM: Virtualized Infrastructure Manager
 VIP: Virtual IP
@@ -403,10 +447,12 @@ VPN: Virtual Private Network
 VRRP: Virtual Router Redundancy Protocol
 VRS: Virtual Reference Station
 WAVE: Wireless Access in Vehicular Environments
+WBS: Work Breakdown Structure
 WCDMA: Wideband Code Division Multiple Access
 WDM: Wavelength Division Multiplexing
 WEP: Wired Equivalent Privacy
 WFQ: Weighted Fair Queuing
+WIP: Work In Progress
 WLAN: Wireless Local Area Network
 WoT: Web of Things
 WPA3: Wi-Fi Protected Access 3

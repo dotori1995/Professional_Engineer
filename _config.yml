@@ -10,6 +10,9 @@ domains:
   - key: nw
     code: NW
     name: 네트워크
+  - key: pm
+    code: PM
+    name: 프로젝트관리
 
 markdown: kramdown
 exclude:

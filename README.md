@@ -5,7 +5,7 @@
 👉 사이트 주소: **https://dotori1995.github.io/Professional_Engineer/**
 
 ## 기능
-- **메뉴(☰)**: 도메인(NW, 이후 DB·SE·AI…) → 토픽 목록 계층. 도메인마다 목록·카드·문제 바로가기. 현재 도메인은 상단 제목 옆에 표시(`?d=NW` + 브라우저에 저장), 도메인 변경은 메뉴에서만
+- **메뉴(☰)**: 도메인(NW·PM, 이후 DB·SE·AI…) → 토픽 목록 계층. 도메인마다 목록·카드·문제 바로가기. 현재 도메인은 상단 제목 옆에 표시(`?d=NW` + 브라우저에 저장), 도메인 변경은 메뉴에서만
 - 페이지: 목록(`/`), 토픽(`/topic/?id=`), 카드(`/cards/`, `?topic=`), 문제(`/quiz/`, `?topic=`는 그 토픽만 출제)
 - **목록**: 제목·키워드·정의 통합 검색(공백 무시), 현재 도메인 토픽만 표시
 - **토픽 상세**: 정의, 키워드, 두음(통용되는 것만), 목차(I/II/III), 자세히(접힘), 한 화면 자동 맞춤
@@ -35,6 +35,7 @@ bundle exec jekyll serve      # http://localhost:4000/Professional_Engineer/
 ## 데이터 구조
 ```
 _data/nw.json             # 네트워크(NW) 토픽 127개 (파서 출력물)
+_data/pm.json             # 프로젝트관리(PM) 토픽 89개 (파서+큐레이션)
 _data/overrides/nw.json   # 수동 보정(name/en 표시 제목, 검수한 정의·키워드·목차·자세히)
 _data/glossary.yml        # 약어 → 풀네임
 _config.yml → domains     # 사이트에 노출할 도메인 목록
