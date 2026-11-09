@@ -2467,344 +2467,339 @@
   "en": "LXC Linux Contatiner",
   "title": "사용자경험(LXC(Linux Contatiner))",
   "definition": "하나의 리눅스 호스트상에서 namespace와 cgroups를 활용하여 여러 개의 독립된 리눅스 컨테이너를 제공하는 운영체제 수준의 경량 프로세스 가상화 기술",
-  "outline": [
-   "사용자경험의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: Namespaces · cgroups · 경량 프로세스 가상화 기술",
+   "기술: 컨테이너(Container) · 짧은 가동시간 · 적은 자원 소요",
+   "운영: LXC",
+   "참고: LXC"
   ],
   "keywords_must": [
-   "사용자경험",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Namespaces",
+   "cgroups",
+   "경량 프로세스 가상화 기술",
+   "컨테이너(Container)",
+   "짧은 가동시간",
+   "적은 자원 소요",
+   "LXC"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "LXC"
   ],
-  "keywords": [
-   "핵심: 사용자경험 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "하나의 리눅스 호스트상에서 namespace와 cgroups를 활용하여 "
+  "outline": [
+   "경량(Light-weight) 프로세스 가상화 기술, LXC 개요",
+   "- LXC 특징",
+   "LXC 아키텍처 및 구성요소",
+   "- LXC Architecture",
+   "사용자영역: Library, Container",
+   "- LXC 구성요소 및 요소기술",
+   "컨테이너 기반 가상화 기술과 하이퍼바이저(Hypervisor) 기반 가상화 기술 비교"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "경량(Light-weight) 프로세스 가상화 기술, LXC 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "LXC 특징",
       "items": [
-       "하나의 리눅스 호스트상에서 namespace와 cgroups를 활용하여 여러 개의 독립된 리눅스 컨테이너를 제공하는 운영체제 수준의 경량 프로세스 가상화 기술"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "컨테이너가 사용하는 자원을 보다 세밀하게 할당하고, 컨테이너별로 고립(isolated)된 뷰를 제공"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "LXC 아키텍처 및 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "LXC Architecture",
       "items": [
-       "사용자경험",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "LXC 동작을 위한 주요 구성요소"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "사용자영역: Library, Container",
+    "subsections": [
+     {
+      "title": "LXC 구성요소 및 요소기술",
+      "items": [
+       "컨테이너 별로 세부적 자원 제어, 고립된 View 제공 이후부터 컨테이너 가상화 기술 활성화 됨"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "컨테이너 기반 가상화 기술과 하이퍼바이저(Hypervisor) 기반 가상화 기술 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "가상화의 목적 및 대상의 차이가 가장 큰 차이는 LXC는 실행환경/자원을 대상, 하이퍼바이저는 H/W를 가상화"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "사용자경험",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Namespaces",
+   "cgroups",
+   "경량 프로세스 가상화 기술",
+   "컨테이너(Container)",
+   "짧은 가동시간",
+   "적은 자원 소요",
+   "LXC"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_058": {
   "name": "서버리스 컴퓨팅(Serverless Computing)",
   "en": "Serverless Computing",
   "title": "서버리스 컴퓨팅(Serverless Computing)",
-  "definition": "서버 관리 없이 이벤트 기반 함수·서비스를 실행하는 클라우드 모델",
-  "outline": [
-   "서버리스 컴퓨팅의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "실제 물리적인 서버가 없는 것이 아닌 서버가 없는 것과 같이 직접 해당 이벤트에 접근하여 처리하여각 서버를 접속하는 방식보다 연결 및 처리속도를 개선한 컴퓨팅 기술",
+  "keywords": [
+   "핵심: BaaS (Backend as a Service) · FaaS(Function as a Service) · 람다 - 클라우드 제공 업체가 서버의 역할을 제공하므로",
+   "기술: 개발자는 개발만 하는 형태 · 혹은 서버 비용이 안드는 형태 · AWS",
+   "운영: API",
+   "참고: API"
   ],
   "keywords_must": [
-   "서버리스",
-   "이벤트 구동",
-   "자동 스케일",
-   "콜드스타트",
-   "FaaS",
-   "비용 모델",
-   "상태 관리",
-   "관측성"
+   "BaaS (Backend as a Service)",
+   "FaaS(Function as a Service)",
+   "람다 - 클라우드 제공 업체가 서버의 역할을 제공하므로",
+   "개발자는 개발만 하는 형태",
+   "혹은 서버 비용이 안드는 형태",
+   "AWS",
+   "API"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "API"
   ],
-  "keywords": [
-   "핵심: 서버리스 · 이벤트 구동 · 자동 스케일",
-   "구성: 콜드스타트 · FaaS · 비용 모델",
-   "서버 관리 없이 이벤트 기반 함수·서비스를 실행하는 클라우드 모델"
+  "outline": [
+   "클라우드 컴퓨팅의 진화, 서버리스 컴퓨팅의 개요",
+   "- 서버리스 컴퓨팅(Serverless Computing)의 정의",
+   "- 서버리스 컴퓨팅 특징",
+   "서버리스 컴퓨팅 동작방식 및 구성요소",
+   "- 서버리스 컴퓨팅 동작방식(AWS Lamda 방식)",
+   "클라우드 기업이 제공하는 기술 사례"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "클라우드 컴퓨팅의 진화, 서버리스 컴퓨팅의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "서버리스 컴퓨팅(Serverless Computing)의 정의",
       "items": [
-       "서버 관리 없이 이벤트 기반 함수·서비스를 실행하는 클라우드 모델"
+       "클라우드 컴퓨팅 실행 모델의 하나로, 클라우드 제공자가 동적으로 머신 자원의 할당을 관리하여배치(Deployed)된 서버리스 코드를 실행 시키는 기술"
       ]
      },
      {
-      "title": "목적",
+      "title": "서버리스 컴퓨팅 특징",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "서버관리 불필요 : 프로비저닝 필요 없음, 유지 관리 요소 없음",
+       "유연한 규모 조정: 자동 스케일 업/다운",
+       "자동화된 고가용성: 가용성과 내결함성 내장"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "서버리스 컴퓨팅 동작방식 및 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "서버리스 컴퓨팅 동작방식(AWS Lamda 방식)",
       "items": [
-       "서버리스",
-       "이벤트 구동",
-       "자동 스케일",
-       "콜드스타트",
-       "FaaS",
-       "비용 모델"
+       "프로그래밍 언어의 단일 함수로 구현된 코드",
+       "트리거가 발생했을 때 실행되어 결과를 반환",
+       "트리거에서 발생한 이벤트에 대해 어떤 액션이 실행될지 정의액션을 연결하는 조합을 만들어 실행하는 것",
+       "트리거와 액션을 모아 하나의 패키지로 공개 가능",
+       "패키지로 정의된 외부 서비스를 사용할 수도 있고, 직접 만든 패키지를 외부에 공개할 수도 있음"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "클라우드 기업이 제공하는 기술 사례",
     "subsections": [
      {
       "title": null,
       "items": [
-       "상태 관리",
-       "관측성",
-       "표준·비교·한계를 함께 기술"
+       "애플리케이션이나 백엔드 서비스에 대한 코드를 별도의 관리 없이 실행하는플랫폼",
+       "서버를 프로비저닝 하거나 관리할 필요 없이 코드를 실행",
+       "사용한 만큼 비용 지불, 코드가 실행되지 않을 때 요금 부가 되지 않음",
+       "애플리케이션이 백엔드 서비스의 데이터, 비즈니스 로직 또는 기능에 액세스할수 있는 API 제공",
+       "트래픽 관리, 권한 부여 및 액세스 제어, 모니터링 및 API 버전 관리",
+       "수신한 API 호출과 전송한 데이터 양에 대해서만 비용을 지불"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "서버리스",
-   "이벤트 구동",
-   "자동 스케일",
-   "콜드스타트",
-   "FaaS",
-   "비용 모델",
-   "상태 관리",
-   "관측성"
+   "BaaS (Backend as a Service)",
+   "FaaS(Function as a Service)",
+   "람다 - 클라우드 제공 업체가 서버의 역할을 제공하므로",
+   "개발자는 개발만 하는 형태",
+   "혹은 서버 비용이 안드는 형태",
+   "AWS",
+   "API"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_059": {
   "name": "함수 서비스(FaaS)",
   "en": "Function as a Service",
   "title": "함수 서비스(FaaS)",
-  "definition": "단일 함수 단위로 코드를 배포·실행하는 서버리스 형태",
+  "definition": "애플리케이션을 구성하는 여러 함수(function)들을 클라우드에서 직접 실행하는 방식의 클라우드 서비스",
+  "keywords": [
+   "핵심: Function · API · 함수 서비스(FaaS)",
+   "기술: 함수 서비스 아키텍처 · 함수 서비스 프로토콜 · 함수 서비스 보안"
+  ],
+  "keywords_must": [
+   "Function",
+   "API",
+   "함수 서비스(FaaS)",
+   "함수 서비스 아키텍처",
+   "함수 서비스 프로토콜",
+   "함수 서비스 보안"
+  ],
+  "keywords_ref": [],
   "outline": [
    "함수 서비스의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "FaaS",
-   "함수",
-   "트리거",
-   "짧은 실행",
-   "스케일 투 제로",
-   "한도",
-   "상태 없음",
-   "이벤트"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: FaaS · 함수 · 트리거",
-   "구성: 짧은 실행 · 스케일 투 제로 · 한도",
-   "단일 함수 단위로 코드를 배포·실행하는 서버리스 형태"
+   "- 필요성",
+   "함수 서비스의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "함수 서비스의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "함수 서비스의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "단일 함수 단위로 코드를 배포·실행하는 서버리스 형태"
+       "애플리케이션을 구성하는 여러 함수(function)들을 클라우드에서 직접 실행하는 방식의 클라우드 서비스"
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "함수 서비스는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "함수 서비스의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "FaaS",
-       "함수",
-       "트리거",
-       "짧은 실행",
-       "스케일 투 제로",
-       "한도"
+       "Function",
+       "API",
+       "함수 서비스(FaaS)",
+       "함수 서비스 아키텍처"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "함수 서비스 프로토콜",
+       "함수 서비스 보안"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "함수 서비스의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "상태 없음",
-       "이벤트",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 함수 서비스를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "FaaS",
-   "함수",
-   "트리거",
-   "짧은 실행",
-   "스케일 투 제로",
-   "한도",
-   "상태 없음",
-   "이벤트"
+   "Function",
+   "API",
+   "함수 서비스(FaaS)",
+   "함수 서비스 아키텍처",
+   "함수 서비스 프로토콜",
+   "함수 서비스 보안"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_060_00": {
   "name": "클라우드 네이티브(Cloud Native)",
   "en": "Cloud Native",
   "title": "클라우드 네이티브(Cloud Native)",
   "definition": "컨테이너·MSA·선언적 API·자동화로 클라우드에 최적화된 애플리케이션 접근",
+  "keywords": [
+   "핵심: OCI(Open Container Initiative) · CNCF(Cloud Native Computing Foundation) · 데브옵스 (DevOps)",
+   "기술: 지속적 배포(Continuous Delivery) · 마이크로서비스아키텍쳐(Microservices) · 컨 테이너(Containers)",
+   "운영: MSA · API",
+   "참고: MSA · API"
+  ],
+  "keywords_must": [
+   "OCI(Open Container Initiative)",
+   "CNCF(Cloud Native Computing Foundation)",
+   "데브옵스 (DevOps)",
+   "지속적 배포(Continuous Delivery)",
+   "마이크로서비스아키텍쳐(Microservices)",
+   "컨 테이너(Containers)",
+   "MSA",
+   "API"
+  ],
+  "keywords_ref": [
+   "MSA",
+   "API"
+  ],
   "outline": [
    "클라우드 네이티브의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "클라우드 네이티브",
-   "컨테이너",
-   "MSA",
-   "CI/CD",
-   "불변 인프라",
-   "관측성",
-   "CNCF",
-   "탄력성"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 클라우드 네이티브 · 컨테이너 · MSA",
-   "구성: CI/CD · 불변 인프라 · 관측성",
-   "컨테이너·MSA·선언적 API·자동화로 클라우드에 최적화된 애플리케이션 "
+   "- 필요성",
+   "클라우드 네이티브의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "클라우드 네이티브의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "클라우드 네이티브의 개념",
     "subsections": [
      {
       "title": "정의",
@@ -2813,202 +2808,175 @@
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "클라우드 네이티브는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "클라우드 네이티브의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "클라우드 네이티브",
-       "컨테이너",
-       "MSA",
-       "CI/CD",
-       "불변 인프라",
-       "관측성"
+       "OCI(Open Container Initiative)",
+       "CNCF(Cloud Native Computing Foundation)",
+       "데브옵스 (DevOps)",
+       "지속적 배포(Continuous Delivery)"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "마이크로서비스아키텍쳐(Microservices)",
+       "컨 테이너(Containers)"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "클라우드 네이티브의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "CNCF",
-       "탄력성",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 클라우드 네이티브를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드 네이티브",
-   "컨테이너",
+   "OCI(Open Container Initiative)",
+   "CNCF(Cloud Native Computing Foundation)",
+   "데브옵스 (DevOps)",
+   "지속적 배포(Continuous Delivery)",
+   "마이크로서비스아키텍쳐(Microservices)",
+   "컨 테이너(Containers)",
    "MSA",
-   "CI/CD",
-   "불변 인프라",
-   "관측성",
-   "CNCF",
-   "탄력성"
+   "API"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_060_01": {
   "name": "클라우드 네이티브 성숙도 모델(CNMM)",
   "en": "CNMM",
   "title": "클라우드 네이티브 성숙도 모델(CNMM)",
   "definition": "클라우드 애플리케이션 간 또는 클라우드 애플리케이션과 클라우드 자원의 배포, 설정, 오케스트레이션과 같은 기능을",
-  "outline": [
-   "클라우드 네이티브 성숙도 모델의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: CNMM 0(On-Premise) · CNMM 1(Cloud-Enabled) · CNMM 2(Cloud-Optimized)",
+   "기술: CNMM 3(Cloud- Native) · CNMM"
   ],
   "keywords_must": [
-   "클라우드 네이티브 성숙도 모델",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "CNMM 0(On-Premise)",
+   "CNMM 1(Cloud-Enabled)",
+   "CNMM 2(Cloud-Optimized)",
+   "CNMM 3(Cloud- Native)",
+   "CNMM"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 클라우드 네이티브 성숙도 모델 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "클라우드 애플리케이션 간 또는 클라우드 애플리케이션과 클라우드 자원의 배"
+  "keywords_ref": [],
+  "outline": [
+   "클라우드 상호운용성 및 이식성의 대상 범위",
+   "클라우드 네이티브 성숙도 모델(Cloud Native Maturity Model, …"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "클라우드 상호운용성 및 이식성의 대상 범위",
     "subsections": [
      {
-      "title": "정의",
+      "title": null,
       "items": [
-       "클라우드 애플리케이션 간 또는 클라우드 애플리케이션과 클라우드 자원의 배포, 설정, 오케스트레이션과 같은 기능을"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "서로 다른 애플리케이션 사이에서(데이터의 재기입 없이)",
+       "가상머신 단위의 운영체제와 애플리케이션 Bundle 또는",
+       "서로 다른 클라우드 환경 간 또는 클라우드 환경과 비클라우드환경 사이에서 애플리케이션을 이관하여 재사용"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "클라우드 네이티브 성숙도 모델(Cloud Native Maturity Model, CNMM)",
     "subsections": [
      {
-      "title": null,
+      "title": "클라우드 네이티브 성숙도 모델(Cloud Native Maturity Model, CNMM)",
       "items": [
-       "클라우드 네이티브 성숙도 모델",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "기존의 애플리케이션들은 조직 내부와 별도의 데이터센터 등의 장소에 보관되어사용되는 모델",
+       "조직의 애플리케이션을 단순하게 클라우드 서비스를 지원하는 수준에서 사용되는 단순한 형태의 애플리케이션",
+       "조직의 애플리케이션을 클라우드 네이티브 애플리케이션의 형태로 다시 개발하지 않고, 더 많은 클라우드의 기능과 서비스를 사용할 수 있도록 전환시킨 애플리케이션",
+       "조직의 애플리케이션에 대해 효율성 제공, 가용성 확보, 모범 사례 마련을 위하여 처음부터 새롭게 구축되는 단계",
+       "클라우드 네이티브의 모든 기능을 충분히 이용하는 환경에서 애플리케이션들이 장치와 플랫폼, 서비스 제공자들 간에 일관되게 동작"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드 네이티브 성숙도 모델",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "CNMM 0(On-Premise)",
+   "CNMM 1(Cloud-Enabled)",
+   "CNMM 2(Cloud-Optimized)",
+   "CNMM 3(Cloud- Native)",
+   "CNMM"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_061": {
   "name": "디지털서비스(Auto Scale UpAuto Scale Out)",
   "en": "Auto Scale UpAuto Scale Out",
   "title": "디지털서비스(Auto Scale UpAuto Scale Out)",
   "definition": "클라우드 환경에서 요청이 늘어나면 이를 수용하기 위해 추가 자원의 할당, 회수를 통해 자원을 효율적으로활용 하여 On-Demand 서비스를 지원 하는 기술",
+  "keywords": [
+   "핵심: Scale Up · Scale Out · Scale In",
+   "기술: Scale Down · On-Demand · Load Balancer",
+   "운영: Scheduler",
+   "참고: Scheduler"
+  ],
+  "keywords_must": [
+   "Scale Up",
+   "Scale Out",
+   "Scale In",
+   "Scale Down",
+   "On-Demand",
+   "Load Balancer",
+   "Scheduler"
+  ],
+  "keywords_ref": [
+   "Scheduler"
+  ],
   "outline": [
    "디지털서비스의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 디지털서비스 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "클라우드 환경에서 요청이 늘어나면 이를 수용하기 위해 추가 자원의 할당,"
+   "- 필요성",
+   "디지털서비스의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "디지털서비스의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "디지털서비스의 개념",
     "subsections": [
      {
       "title": "정의",
@@ -3017,406 +2985,371 @@
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "디지털서비스는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "디지털서비스의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "디지털서비스",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
-      ]
-     }
-    ]
-   }
-  ],
-  "dueum": null,
-  "curated": true,
-  "keywords_note": null,
-  "note": null,
-  "review": null,
-  "quiz_terms": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
-  ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
- },
- "SV_062": {
-  "name": "클라우드전환(SV 062)",
-  "en": "SV 062",
-  "title": "클라우드전환(SV 062)",
-  "definition": "비상시적중요도낮은시스템 -전환비용, 이행절차 업그레이드요구, 신규투자불가 -요구사항, 기존시스템이용방안",
-  "outline": [
-   "클라우드전환의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "클라우드전환",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 클라우드전환 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "비상시적중요도낮은시스템 -전환비용, 이행절차 업그레이드요구, 신규투자불가"
-  ],
-  "sections": [
-   {
-    "title": "개념",
-    "subsections": [
-     {
-      "title": "정의",
-      "items": [
-       "비상시적중요도낮은시스템 -전환비용, 이행절차 업그레이드요구, 신규투자불가 -요구사항, 기존시스템이용방안"
+       "Scale Up",
+       "Scale Out",
+       "Scale In",
+       "Scale Down"
       ]
      },
      {
-      "title": "목적",
+      "title": "유형·동작",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "On-Demand",
+       "Load Balancer",
+       "Scheduler"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "디지털서비스의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "클라우드전환",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
+       "공공·민간 서비스에 디지털서비스를 적용한다."
       ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
+     },
      {
-      "title": null,
+      "title": "과제",
       "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드전환",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "Scale Up",
+   "Scale Out",
+   "Scale In",
+   "Scale Down",
+   "On-Demand",
+   "Load Balancer",
+   "Scheduler"
   ],
-  "quiz_groups": [
-   "sv"
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
+ },
+ "SV_062": {
+  "name": "클라우드 전환(Cloud Migration)",
+  "en": "Cloud Migration",
+  "title": "클라우드 전환(Cloud Migration)",
+  "definition": "비상시적중요도낮은시스템 -전환비용, 이행절차 업그레이드요구, 신규투자불가 -요구사항, 기존시스템이용방안",
+  "keywords": [
+   "핵심: 클라우드 전환(Cloud Migration) · 클라우드 전환 아키텍처 · 클라우드 전환 프로토콜",
+   "기술: 클라우드 전환 보안 · 클라우드 전환 표준 · 클라우드 전환 유형"
   ],
-  "quiz_avoid": []
+  "keywords_must": [
+   "클라우드 전환(Cloud Migration)",
+   "클라우드 전환 아키텍처",
+   "클라우드 전환 프로토콜",
+   "클라우드 전환 보안",
+   "클라우드 전환 표준",
+   "클라우드 전환 유형"
+  ],
+  "keywords_ref": [],
+  "outline": [
+   "클라우드 전환 시 선정기준 및 고려사항 , 평가항목",
+   "- 클라우드 전환 시 선정기준 및 고려사항",
+   "클라우드 전환대상 분류 및 이행절차",
+   "- 클라우드 전환대상 분류",
+   "- 클라우드전환이행절차"
+  ],
+  "sections": [
+   {
+    "title": "클라우드 전환 시 선정기준 및 고려사항 , 평가항목",
+    "subsections": [
+     {
+      "title": "클라우드 전환 시 선정기준 및 고려사항",
+      "items": [
+       "신규비지니스, 데이터분석 -데이터의양, 성능",
+       "기존시스템대비많은투자필요 -이전시간, 확장성",
+       "모바일, 재택, 협력사자료공유 -보안, 관리체계",
+       "사외접속, 모바일등투자필요 -비지니스요구절차",
+       "다양한개발및업데이트 -개발/테스트라이센스"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "클라우드 전환대상 분류 및 이행절차",
+    "subsections": [
+     {
+      "title": "클라우드 전환대상 분류",
+      "items": [
+       "전환되는 대상의 분류 확정 이후에 상세 이행절차 에 따라 전산실의 클라우드 전환을 수행"
+      ]
+     },
+     {
+      "title": "클라우드전환이행절차",
+      "items": [
+       "절차 기반의 클라우드 전환시 비즈니스의 목적과 안전성에 기반하여 클라우드의 단계적 전환 Master Plan 을 통해 기업의 전산실 이전이 필요"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "dueum": "계클마확서안",
+  "keywords_note": null,
+  "note": null,
+  "review": null,
+  "quiz_terms": [
+   "클라우드 전환(Cloud Migration)",
+   "클라우드 전환 아키텍처",
+   "클라우드 전환 프로토콜",
+   "클라우드 전환 보안",
+   "클라우드 전환 표준",
+   "클라우드 전환 유형"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_063_01": {
   "name": "클라우드(CSPM(Cloud Security Posture Management))",
   "en": "CSPM Cloud Security Posture Management",
   "title": "클라우드(CSPM(Cloud Security Posture Management))",
   "definition": "컴플라이언스 또는 기업 보안 정책에 따라 클라우드 인프라의 위험 요소를 예방, 탐지, 대응 및 예측하여클라우드 위험을 지속적으로 관리하는 솔루션",
-  "outline": [
-   "클라우드의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: Compliance · Risk · Threat Protection",
+   "기술: CASB · CWPP · CSPM(Cloud Security Posture Management)",
+   "운영: CSPM · SMS",
+   "참고: CSPM · SMS"
   ],
   "keywords_must": [
-   "클라우드",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "Compliance",
+   "Risk",
+   "Threat Protection",
+   "CASB",
+   "CWPP",
+   "CSPM(Cloud Security Posture Management)",
+   "CSPM",
+   "SMS"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "CSPM",
+   "SMS"
   ],
-  "keywords": [
-   "핵심: 클라우드 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "컴플라이언스 또는 기업 보안 정책에 따라 클라우드 인프라의 위험 요소를 "
+  "outline": [
+   "클라우드 보안 위험 통합 관리, CSPM(Cloud Security Posture …",
+   "- CSPM의 핵심 기능",
+   "CSPM의 개념도와 구성요소",
+   "- CSPM의 개념도",
+   "- CSPM의 구성요소",
+   "CSPM, CASB, CWPP 비교"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "클라우드 보안 위험 통합 관리, CSPM(Cloud Security Posture Management)의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "CSPM의 핵심 기능",
       "items": [
-       "컴플라이언스 또는 기업 보안 정책에 따라 클라우드 인프라의 위험 요소를 예방, 탐지, 대응 및 예측하여클라우드 위험을 지속적으로 관리하는 솔루션"
+       "끊임없이 변경되는 클라우드 환경에서 컴플라이언스의 지속적인 체크",
+       "하나 이상의 Account 혹은 멀티 클라우드를 통합하여 한눈에 볼 수 있도록 자산 가시성 제공",
+       "컴플라이언스 준수 위반이 발생했을 때 신속한 자동 대응",
+       "CSPM을 통하여 기업에서 사용하는 퍼블릭 클라우드 보안 향상이 가능함."
+      ]
+     }
+    ]
+   },
+   {
+    "title": "CSPM의 개념도와 구성요소",
+    "subsections": [
+     {
+      "title": "CSPM의 개념도",
+      "items": [
+       "CSPM에서 관리되는 모든 정보는 대시보드를 통하여 클라우드를 사용하는 사용자에게 전달됨."
       ]
      },
      {
-      "title": "목적",
+      "title": "CSPM의 구성요소",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "CSPM에서 제공하는 모든 정보를 조회하고 검색하는 기능제공",
+       "주요 이벤트 발생 시 사용자 SMS, Talk을 통해 전송",
+       "클라우드 사용 기업에 요구되는 컴플라이언스 이슈에 대한 관리 및 평가 수행"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "CSPM, CASB, CWPP 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "클라우드",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "멀티 클라우드 사용 목적이 있을 경우 CSPM과 CASB, CWPP의 통합을 통하여 클라우드 전반 적인 보안 아키텍처 전략 수립"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "Compliance",
+   "Risk",
+   "Threat Protection",
+   "CASB",
+   "CWPP",
+   "CSPM(Cloud Security Posture Management)",
+   "CSPM",
+   "SMS"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_063_02": {
-  "name": "클라우드 보안기술 표준화(SV 063 02)",
-  "en": "SV 063 02",
-  "title": "클라우드 보안기술 표준화(SV 063 02)",
+  "name": "클라우드 보안기술 표준화(Cloud Security Standardization)",
+  "en": "Cloud Security Standardization",
+  "title": "클라우드 보안기술 표준화(Cloud Security Standardization)",
   "definition": "SECaaS(Security as a Service)모델과 더불어 글로벌 클라우드 보안 기술과 국제 표준을 통해 안전한 클라우드환경을 구현",
-  "outline": [
-   "클라우드 보안기술 표준화의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: SeCaaS · AWS · GCP",
+   "기술: Azure · ISO 27001 · ISO 27017:2015",
+   "운영: ISO 27018:2019 · EC2 · ISO",
+   "참고: ISO 27018:2019 · EC2 · ISO"
   ],
   "keywords_must": [
-   "클라우드 보안기술 표준화",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "SeCaaS",
+   "AWS",
+   "GCP",
+   "Azure",
+   "ISO 27001",
+   "ISO 27017:2015",
+   "ISO 27018:2019",
+   "EC2",
+   "ISO",
+   "IEC"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "ISO 27018:2019",
+   "EC2",
+   "ISO"
   ],
-  "keywords": [
-   "핵심: 클라우드 보안기술 표준화 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "SECaaS(Security as a Service)모델과 더불어 글로벌"
+  "outline": [
+   "글로벌 클라우드 보안 기술 동향",
+   "- 아마존 AWS 클라우드 보안 기술",
+   "클라우드 보안 표준 동향",
+   "- ISO/IEC 27000 계열 표준",
+   "- ISO/IEC 27017:2015의 개요"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "글로벌 클라우드 보안 기술 동향",
     "subsections": [
      {
-      "title": "정의",
+      "title": "아마존 AWS 클라우드 보안 기술",
       "items": [
-       "SECaaS(Security as a Service)모델과 더불어 글로벌 클라우드 보안 기술과 국제 표준을 통해 안전한 클라우드환경을 구현"
+       "변경 리소스를 Config Rules로 대응 규칙 실행",
+       "관리형 위협 탐지 및 통지 서비스",
+       "Amazon EC2 instances의 자동화된 보안 수준 점검",
+       "기계학습 기반 민감한 중요 데이터의 발견 및 분류",
+       "AWS 환경에 대한 보안과 규정 준수 현황 확인 서비스"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "클라우드 보안 표준 동향",
+    "subsections": [
+     {
+      "title": "ISO/IEC 27000 계열 표준",
+      "items": [
+       "ISO/IEC 27002를 기반으로 Best Practice 제공, ISO/IEC 27017, ISO/IEC 27018로 클라우드 보안 가이드 제공"
       ]
      },
      {
-      "title": "목적",
+      "title": "ISO/IEC 27017:2015의 개요",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "구성·유형",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "클라우드 보안기술 표준화",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "ISO/IEC 27017 표준 구성 범위",
+       "표준 구성을 위한 참조 정보",
+       "클라우드 부문별 개념 상세 설명"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드 보안기술 표준화",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "SeCaaS",
+   "AWS",
+   "GCP",
+   "Azure",
+   "ISO 27001",
+   "ISO 27017:2015",
+   "ISO 27018:2019",
+   "EC2",
+   "ISO",
+   "IEC"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_064": {
   "name": "사용자경험(Unix To Linux(U2L))",
   "en": "Unix To Linux U2L",
   "title": "사용자경험(Unix To Linux(U2L))",
   "definition": "사용자경험(Unix To Linux(U2L)) — 디지털서비스 영역에서 사용자경험의 개념·구성·적용을 다루는 토픽",
+  "keywords": [
+   "핵심: U2L · 사용자경험(Unix To Linux(U2L)) · 사용자경험 아키텍처",
+   "기술: 사용자경험 프로토콜 · 사용자경험 보안 · 사용자경험 표준"
+  ],
+  "keywords_must": [
+   "U2L",
+   "사용자경험(Unix To Linux(U2L))",
+   "사용자경험 아키텍처",
+   "사용자경험 프로토콜",
+   "사용자경험 보안",
+   "사용자경험 표준"
+  ],
+  "keywords_ref": [],
   "outline": [
    "사용자경험의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "사용자경험",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 사용자경험 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "사용자경험(Unix To Linux(U2L)) — 디지털서비스 영역에서 "
+   "- 필요성",
+   "사용자경험의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "사용자경험의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "사용자경험의 개념",
     "subsections": [
      {
       "title": "정의",
@@ -3425,202 +3358,226 @@
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "사용자경험는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "사용자경험의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "사용자경험",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "사용자경험(Unix To Linux(U2L))",
+       "사용자경험 아키텍처",
+       "사용자경험 프로토콜",
+       "사용자경험 보안"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "사용자경험 표준",
+       "사용자경험 유형"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "사용자경험의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 사용자경험를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "사용자경험",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "U2L",
+   "사용자경험(Unix To Linux(U2L))",
+   "사용자경험 아키텍처",
+   "사용자경험 프로토콜",
+   "사용자경험 보안",
+   "사용자경험 표준"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_065": {
   "name": "코드형 인프라(IaC)",
   "en": "Infrastructure as Code",
   "title": "코드형 인프라(IaC)",
-  "definition": "인프라를 코드로 정의·버전관리·자동 프로비저닝하는 실천",
+  "definition": "유연성이 떨어지는 스크립팅이나 수동 프로세스 대신 코드를 이용해 시스템을 자동으로 구축, 관리, 프로비저닝 하는 IT 인프라 프로비저닝 프로세스의 일종 또는 방법론.",
+  "keywords": [
+   "핵심: 선언전 · 명령적 · 지능적",
+   "기술: push · pull · DevOps",
+   "운영: Agile · IT · API",
+   "참고: Agile · IT · API"
+  ],
+  "keywords_must": [
+   "선언전",
+   "명령적",
+   "지능적",
+   "push",
+   "pull",
+   "DevOps",
+   "Agile",
+   "IT",
+   "API"
+  ],
+  "keywords_ref": [
+   "Agile",
+   "IT",
+   "API"
+  ],
   "outline": [
    "코드형 인프라의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "IaC",
-   "선언적/명령적",
-   "Terraform/Ansible",
-   "버전관리",
-   "재현성",
-   "드리프트",
-   "파이프라인",
-   "정책 코드"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: IaC · 선언적/명령적 · Terraform/Ansible",
-   "구성: 버전관리 · 재현성 · 드리프트",
-   "인프라를 코드로 정의·버전관리·자동 프로비저닝하는 실천"
+   "- 필요성",
+   "코드형 인프라의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "코드형 인프라의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "코드형 인프라의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "인프라를 코드로 정의·버전관리·자동 프로비저닝하는 실천"
+       "유연성이 떨어지는 스크립팅이나 수동 프로세스 대신 코드를 이용해 시스템을 자동으로 구축, 관리, 프로비저닝 하는 IT 인프라 프로비저닝 프로세스의 일종 또는 방법론."
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "코드형 인프라는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "코드형 인프라의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "IaC",
-       "선언적/명령적",
-       "Terraform/Ansible",
-       "버전관리",
-       "재현성",
-       "드리프트"
+       "선언전",
+       "명령적",
+       "지능적",
+       "push"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "pull",
+       "DevOps",
+       "Agile",
+       "API"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "코드형 인프라의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "파이프라인",
-       "정책 코드",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 코드형 인프라를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "IaC",
-   "선언적/명령적",
-   "Terraform/Ansible",
-   "버전관리",
-   "재현성",
-   "드리프트",
-   "파이프라인",
-   "정책 코드"
+   "선언전",
+   "명령적",
+   "지능적",
+   "push",
+   "pull",
+   "DevOps",
+   "Agile",
+   "IT",
+   "API"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_066": {
   "name": "하이퍼컨버지드 인프라(HCI)",
   "en": "Hyper Converged Infrastructure",
   "title": "하이퍼컨버지드 인프라(HCI)",
   "definition": "X86 머신에 가상 컴퓨팅기능을 적용하고 스토리지와 네트워킹을 단일 시스템으로 결합하여데이터 센터의 모든 요소를 Software-Defined IT Infrastructure (SDI)로 구축, Scale-Out, 벤더 lock-in 탈피한 통합 IT 프레임워크",
-  "outline": [
-   "HCI의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 하이퍼바이저(Hypervisor) · VM · 가상화(Virtualization)",
+   "기술: X86 · SDDC · SDC",
+   "운영: SDSa · SDN · IT",
+   "참고: SDSa · SDN · IT"
   ],
   "keywords_must": [
-   "HCI",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "하이퍼바이저(Hypervisor)",
+   "VM",
+   "가상화(Virtualization)",
+   "X86",
+   "SDDC",
+   "SDC",
+   "SDSa",
+   "SDN",
+   "IT",
+   "SDI"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "SDSa",
+   "SDN",
+   "IT"
   ],
-  "keywords": [
-   "핵심: HCI · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "X86 머신에 가상 컴퓨팅기능을 적용하고 스토리지와 네트워킹을 단일 시스"
+  "outline": [
+   "하이퍼컨버지드 인프라의 개념",
+   "- 정의",
+   "- 필요성",
+   "하이퍼컨버지드 인프라의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "하이퍼컨버지드 인프라의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "하이퍼컨버지드 인프라의 개념",
     "subsections": [
      {
       "title": "정의",
@@ -3629,1898 +3586,1867 @@
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "하이퍼컨버지드 인프라는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "하이퍼컨버지드 인프라의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "HCI",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "하이퍼바이저(Hypervisor)",
+       "VM",
+       "가상화(Virtualization)",
+       "X86"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "SDDC",
+       "SDC",
+       "SDSa",
+       "SDN"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "하이퍼컨버지드 인프라의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 하이퍼컨버지드 인프라를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "HCI",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "하이퍼바이저(Hypervisor)",
+   "VM",
+   "가상화(Virtualization)",
+   "X86",
+   "SDDC",
+   "SDC",
+   "SDSa",
+   "SDN",
+   "IT",
+   "SDI"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_067": {
   "name": "매니지드 서비스 제공자(MSP)",
   "en": "Managed Service Provider",
   "title": "매니지드 서비스 제공자(MSP)",
   "definition": "클라우드 사업자의 제품 컨설팅과 운영 및 관리 서비스를 제공하는 기업 기존에 기업에서 구축하고 있는 IT인프라와 클라우드 환경은 구조와 운영 방법이다르고 기업 내부에 이를 해결할 수 있는 전문가가 거의 없음",
-  "outline": [
-   "MSP의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 클라우드 매니지먼트 플랫폼 보유 여부 · 자동화된 운영 능력 · 애플리케이션의 클라우드 최적화 역량",
+   "기술: 안정적 클라우드 마이그레이션 역량 및 경험 보유 · MSP(Managed Service Provider) · MSP",
+   "운영: AWS · IT",
+   "참고: AWS · IT"
   ],
   "keywords_must": [
+   "클라우드 매니지먼트 플랫폼 보유 여부",
+   "자동화된 운영 능력",
+   "애플리케이션의 클라우드 최적화 역량",
+   "안정적 클라우드 마이그레이션 역량 및 경험 보유",
+   "MSP(Managed Service Provider)",
    "MSP",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "AWS",
+   "IT"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "AWS",
+   "IT"
   ],
-  "keywords": [
-   "핵심: MSP · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "클라우드 사업자의 제품 컨설팅과 운영 및 관리 서비스를 제공하는 기업 기"
+  "outline": [
+   "클라우드 시대, 떠오르는 MSP(Managed Service Provider)의 개요",
+   "- MSP(Managed Service Provider)의 등장 배경",
+   "MSP(Managed Service Provider) 개념도와 서비스 영역",
+   "- MSP(Managed Service Provider)의 개념도",
+   "- MSP(Managed Service Provider)의 서비스 영역"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "클라우드 시대, 떠오르는 MSP(Managed Service Provider)의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "MSP(Managed Service Provider)의 등장 배경",
       "items": [
-       "클라우드 사업자의 제품 컨설팅과 운영 및 관리 서비스를 제공하는 기업 기존에 기업에서 구축하고 있는 IT인프라와 클라우드 환경은 구조와 운영 방법이다르고 기업 내부에 이를 해결할 수 있는 전문가가 거의 없음"
+       "기업 환경에 맞게 구축하고 운영할 수 있는 클라우드 경험과 전문성을 갖춘 파트너 필요",
+       "MSP 역량은 AWS, 애저, 구글 등 하이퍼스케일 클라우드에 대한 전문성, 클라우드 매니지먼트 플랫폼(Cloud Management Platform) 보유 여부, 자동화된 운영 능력, 애플리케이션의 클라우드 최적화 역량, 안정적 클라우드 마이그레이션 역량 및 경험을 갖추었는지 여부에 따라 평가됨"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "MSP(Managed Service Provider) 개념도와 서비스 영역",
+    "subsections": [
+     {
+      "title": "MSP(Managed Service Provider)의 개념도",
+      "items": [
+       "클라우드 매니지드 서비스는 다양한 클라우드 영역 전문성을 갖추는 멀티 클라우드 역량, 하이브리드 IT 구축역량, 하이브리드 환경에서의 애플리케이션 관리 역량, 빅데이터와 디지털 트랜스포메이션 역량, 등 다양한 요건을 갖추어야 함"
       ]
      },
      {
-      "title": "목적",
+      "title": "MSP(Managed Service Provider)의 서비스 영역",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "구성·유형",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "MSP",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "아키텍처 디자인 - 서버리스 아키텍처, 빅데이터 클라우드 영역, 데브옵스",
+       "워크로드 마이그레 (DevOps) 구축 및 자동화 등 더 넓은 범위 서비스를 제공이션",
+       "기술 지원 - 운영체계와 미들웨어, 데이터베이스, 애플리케이션, 인프라"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
+   "클라우드 매니지먼트 플랫폼 보유 여부",
+   "자동화된 운영 능력",
+   "애플리케이션의 클라우드 최적화 역량",
+   "안정적 클라우드 마이그레이션 역량 및 경험 보유",
+   "MSP(Managed Service Provider)",
    "MSP",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "AWS",
+   "IT"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_068_00": {
-  "name": "클라우드 상호운용성(SV 068 00)",
-  "en": "SV 068 00",
-  "title": "클라우드 상호운용성(SV 068 00)",
+  "name": "클라우드 상호운용성(Cloud Interoperability)",
+  "en": "Cloud Interoperability",
+  "title": "클라우드 상호운용성(Cloud Interoperability)",
   "definition": "클라우드 환경에서의 애플리케이션 간 또는 클라우드 환경의 애플리케이션과 사용자 애플리케이션 간에 상호작용하는 능력",
-  "outline": [
-   "클라우드 상호운용성의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 성숙도 모델 : CNMM 0(On-Premise) · CNMM 1(Cloud-Enabled) · CNMM 2(Cloud- Optimized)",
+   "기술: CNMM 3(Cloud-Native) 기술 : DevOps · MSA · 컨테이너(Container)",
+   "운영: CI/CD 아키텍처 : Application Definition/Development · Orchestration & Management · Runtime",
+   "참고: CI/CD 아키텍처 : Application Definition/Development · Orchestration & Management · Runtime"
   ],
   "keywords_must": [
-   "클라우드 상호운용성",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "성숙도 모델 : CNMM 0(On-Premise)",
+   "CNMM 1(Cloud-Enabled)",
+   "CNMM 2(Cloud- Optimized)",
+   "CNMM 3(Cloud-Native) 기술 : DevOps",
+   "MSA",
+   "컨테이너(Container)",
+   "CI/CD 아키텍처 : Application Definition/Development",
+   "Orchestration & Management",
+   "Runtime",
+   "Provisioning",
+   "Infrastructure",
+   "CNMM"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "CI/CD 아키텍처 : Application Definition/Development",
+   "Orchestration & Management",
+   "Runtime"
   ],
-  "keywords": [
-   "핵심: 클라우드 상호운용성 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "클라우드 환경에서의 애플리케이션 간 또는 클라우드 환경의 애플리케이션과 "
+  "outline": [
+   "클라우드 상호운용성 및 이식성의 개념, 대상 범위",
+   "- 클라우드 상호운용성 및 이식성의 개념",
+   "클라우드 네이티브 성숙도 모델(Cloud Native Maturity Model, …",
+   "클라우드 네이티브 애플리케이션 주요 기술 및 참조 아키텍처",
+   "- 클라우드 네이티브 애플리케이션 주요 기술"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "클라우드 상호운용성 및 이식성의 개념, 대상 범위",
     "subsections": [
      {
-      "title": "정의",
+      "title": "클라우드 상호운용성 및 이식성의 개념",
       "items": [
-       "클라우드 환경에서의 애플리케이션 간 또는 클라우드 환경의 애플리케이션과 사용자 애플리케이션 간에 상호작용하는 능력"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "이용자와 클라우드 서비스 간 또는 클라우드 서비스와 다른 클라우드 서비스 간에 애플리케이션을 이관하는 능력"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "클라우드 네이티브 성숙도 모델(Cloud Native Maturity Model, CNMM)",
     "subsections": [
      {
-      "title": null,
+      "title": "클라우드 네이티브 성숙도 모델(Cloud Native Maturity Model, CNMM)",
       "items": [
-       "클라우드 상호운용성",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
+       "기존의 애플리케이션들은 조직 내부와 별도의 데이터센터 등의 장소에 보관되어사용되는 모델",
+       "조직의 애플리케이션을 단순하게 클라우드 서비스를 지원하는 수준에서 사용되는 단순한 형태의 애플리케이션",
+       "조직의 애플리케이션을 클라우드 네이티브 애플리케이션의 형태로 다시 개발하지 않고, 더 많은 클라우드의 기능과 서비스를 사용할 수 있도록 전환시킨 애플리케이션",
+       "조직의 애플리케이션에 대해 효율성 제공, 가용성 확보, 모범 사례 마련을 위하여 처음부터 새롭게 구축되는 단계",
+       "클라우드 네이티브의 모든 기능을 충분히 이용하는 환경에서 애플리케이션들이 장치와 플랫폼, 서비스 제공자들 간에 일관되게 동작"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "클라우드 네이티브 애플리케이션 주요 기술 및 참조 아키텍처",
     "subsections": [
      {
-      "title": null,
+      "title": "클라우드 네이티브 애플리케이션 주요 기술",
       "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "Tool Chain을 활용해 개발과 운영조직이 협업 Build와 구현 및 관리를 진행하는 협업 문화",
+       "UserStory기반의 끈임없는 개발, 요구의 적극적인 수용을 통해 소프트웨어를 개발하는 Adaptive 개발방법론 Micro Service를 이용해 복잡한 애플리케이션을 구축하는 방법 API를 활용 타 서비스와 통신하고 독립적으로 확장 가능",
+       "API 기반 서비스 연동 인터페이스 구현",
+       "REST API, API Gateway 표준 API 를 통해 네트워크 상의 서비스 인터페이스 호출을 통한 서비스 / 어플리케이션 통신",
+       "실행 환경 사이의 이식성을 극대화"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드 상호운용성",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "성숙도 모델 : CNMM 0(On-Premise)",
+   "CNMM 1(Cloud-Enabled)",
+   "CNMM 2(Cloud- Optimized)",
+   "CNMM 3(Cloud-Native) 기술 : DevOps",
+   "MSA",
+   "컨테이너(Container)",
+   "CI/CD 아키텍처 : Application Definition/Development",
+   "Orchestration & Management",
+   "Runtime",
+   "Provisioning",
+   "Infrastructure",
+   "CNMM"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_068_01": {
-  "name": "클라우드 서비스 품질성능(SV 068 01)",
-  "en": "SV 068 01",
-  "title": "클라우드 서비스 품질성능(SV 068 01)",
+  "name": "클라우드 서비스 품질성능(Cloud QoS)",
+  "en": "Cloud Service Quality",
+  "title": "클라우드 서비스 품질성능(Cloud QoS)",
   "definition": "클라우드 서비스 이용자의 요구사항 충족여부, 목적 달성율, 효율성 등을 평가하기 위한 클라우드 서비스의정성적, 정량적 기준",
-  "outline": [
-   "클라우드 서비스 품질성능의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 가용성 · 응답성 · 확장성",
+   "기술: 신뢰성 · 서비스 지속성 · 서비스 지원",
+   "운영: 고객대응 · MTTR · MTTSR",
+   "참고: 고객대응 · MTTR · MTTSR"
   ],
   "keywords_must": [
-   "클라우드 서비스 품질성능",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "가용성",
+   "응답성",
+   "확장성",
+   "신뢰성",
+   "서비스 지속성",
+   "서비스 지원",
+   "고객대응",
+   "MTTR",
+   "MTTSR"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "고객대응",
+   "MTTR",
+   "MTTSR"
   ],
-  "keywords": [
-   "핵심: 클라우드 서비스 품질성능 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "클라우드 서비스 이용자의 요구사항 충족여부, 목적 달성율, 효율성 등을 "
+  "outline": [
+   "클라우드 서비스의 품질 성능에 관한 기준 제정의 추진배경",
+   "- 클라우드 서비스의 품질 성능에 관한 기준 제정의 추진배경",
+   "클라우드 서비스의 품질 성능 평가기준",
+   "클라우드 서비스 회복시간의 정량적 측정을 위한 지표",
+   "- 평균복구시간(MTTR, Mean Time To Repair)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "클라우드 서비스의 품질 성능에 관한 기준 제정의 추진배경",
     "subsections": [
      {
-      "title": "정의",
+      "title": "클라우드 서비스의 품질 성능에 관한 기준 제정의 추진배경",
       "items": [
-       "클라우드 서비스 이용자의 요구사항 충족여부, 목적 달성율, 효율성 등을 평가하기 위한 클라우드 서비스의정성적, 정량적 기준"
+       "부족한 클라우드 도입 레퍼런스, 개별기업의 서비스 수준에 대한 정보 부족, 품질, 성능 측정의 원천적 어려움으로 인해 불확실성이 상존",
+       "기존 On-Premise 환경의 서비스를 클라우드 서비스로 전환함에 있어 컨설팅, 마이그레이션, 운영 비용 등의 부담",
+       "사내 인트라넷 보안 규정에 따라 관리되는 기업의 핵심 정보 및 고객 민감 정보등의 클라우드로 유출 우려 심화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "클라우드 서비스의 품질 성능 평가기준",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "가용률 보장을 위한 관리체계 및 운영정책",
+       "가용성 모니터링, 운영상태 로그 기능, 장애 알림 기능",
+       "가용률 측정 절차, 대상 및 구간, 방법 및 도구, 산정방식",
+       "응답시간 수준제시, 조직 및 책임 설정, 응답시간 분석",
+       "응답시간 측정 절차, 대상 및 구간, 방법 및 도구, 산정방식",
+       "확장성 정책수립, 수준제시, 시스템 도입 및 관리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "클라우드 서비스 회복시간의 정량적 측정을 위한 지표",
+    "subsections": [
+     {
+      "title": "평균복구시간(MTTR, Mean Time To Repair)",
+      "items": [
+       "지정된 기간의 서비스 지속상태를 측정한 후 측정된 총 고장횟수와 총 장애시간을 통해산출된 클라우드 서비스 평균복구시간",
+       "측정 실패가 지속적으로 발생될 경우 총 1회의 고장 횟수 계산",
+       "복합적인 장애 요인으로 발생될 경우 원인에 따라 고장 횟수 산정 필요"
       ]
      },
      {
-      "title": "목적",
+      "title": "최대 서비스 복구시간(MTTSR, Maximum Time To Service Recovery)",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "구성·유형",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "클라우드 서비스 품질성능",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "지정된 기간의 서비스 지속상태를 측정한 후 장애 식별 및 조치 후 서비스를 정상적으로가동하기까지 소요되는 최대 서비스 복구 시간"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드 서비스 품질성능",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "가용성",
+   "응답성",
+   "확장성",
+   "신뢰성",
+   "서비스 지속성",
+   "서비스 지원",
+   "고객대응",
+   "MTTR",
+   "MTTSR"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_068_02": {
   "name": "책임공유모델(Shared Responsibility Model)",
   "en": "Shared Responsibility Model",
   "title": "책임공유모델(Shared Responsibility Model)",
   "definition": "클라우드 서비스 제공자(Cloud Service Provider)와 사용자(Customer)가 클라우드 영역 별 보안에 대한 책임을분담하는 모델",
-  "outline": [
-   "책임공유모델의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: IaaS · PaaS · SaaS",
+   "기술: SRM · OS · SEC",
+   "운영: CASB · CSAP(Cloud Security Assurance Program)",
+   "참고: CASB · CSAP(Cloud Security Assurance Program)"
   ],
   "keywords_must": [
-   "책임공유모델",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "IaaS",
+   "PaaS",
+   "SaaS",
+   "SRM",
+   "OS",
+   "SEC",
+   "CASB",
+   "CSAP(Cloud Security Assurance Program)"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "CASB",
+   "CSAP(Cloud Security Assurance Program)"
   ],
-  "keywords": [
-   "핵심: 책임공유모델 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "클라우드 서비스 제공자(Cloud Service Provider)와 사용"
+  "outline": [
+   "책임공유모델(SRM)의 개념도 및 책임영역 설명",
+   "- 책임공유모델(SRM)의 개념도",
+   "- 클라우드의 서비스별 제공자와 사용자의 책임 영역 설명",
+   "책임공유모델의 장단점 및 전망"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "책임공유모델(SRM)의 개념도 및 책임영역 설명",
     "subsections": [
      {
-      "title": "정의",
+      "title": "책임공유모델(SRM)의 개념도",
       "items": [
-       "클라우드 서비스 제공자(Cloud Service Provider)와 사용자(Customer)가 클라우드 영역 별 보안에 대한 책임을분담하는 모델"
+       "각 서비스 별로 제공자와 사용자의 책임 범위를 정의"
       ]
      },
      {
-      "title": "목적",
+      "title": "클라우드의 서비스별 제공자와 사용자의 책임 영역 설명",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "고객이 필요한 모든 보안 구성 및 관리",
+       "물리적 영역 시설 보안 및 접근 통제작업 수행",
+       "호스트 OS에 대한 보안 패치"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "책임공유모델의 장단점 및 전망",
     "subsections": [
      {
       "title": null,
       "items": [
-       "책임공유모델",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "SECaaS, CASB 등 복잡한 클라우드 환경에서 보안에 초점을 맞춘 보안 서비스 활용하여 보안 이슈대비 필요",
+       "'클라우드 컴퓨팅 발전 및 이용자 보호에 관한 법률'에 따라 클라우드 서비스 제공자가 제공하는 서비스 CSAP(Cloud Security Assurance Program) 인증 제도 존재"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "책임공유모델",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "IaaS",
+   "PaaS",
+   "SaaS",
+   "SRM",
+   "OS",
+   "SEC",
+   "CASB",
+   "CSAP(Cloud Security Assurance Program)"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_068_03": {
   "name": "소버린 클라우드(Sovereign Cloud)",
   "en": "Sovereign Cloud",
   "title": "소버린 클라우드(Sovereign Cloud)",
   "definition": "현지 국가의 데이터 주권을 보장하기 위해 현지 법률과 규정을 준수하여 현지에 데이터 센터를 두고, 데이터접근이 이루어지도록 설계하고 구축된 클라우드 컴퓨팅 아키텍처",
-  "outline": [
-   "소버린 클라우드의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: Data Residency · Sovereign Control · Governance & Transparency",
+   "기술: Expertise · EU GDPR · 멀티클 라우드"
   ],
   "keywords_must": [
-   "소버린 클라우드",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "Data Residency",
+   "Sovereign Control",
+   "Governance & Transparency",
+   "Expertise",
+   "EU GDPR",
+   "멀티클 라우드"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 소버린 클라우드 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "현지 국가의 데이터 주권을 보장하기 위해 현지 법률과 규정을 준수하여 현"
+  "keywords_ref": [],
+  "outline": [
+   "데이터 주권 유지, 소버린 클라우드(Sovereign Cloud)의 개요",
+   "- 소버린 클라우드(Sovereign Cloud)의 등장 배경",
+   "소버린 클라우드(Sovereign Cloud) 개념도, 상세설명",
+   "- 소버린 클라우드(Sovereign Cloud) 구성요소",
+   "소버린 클라우드(Sovereign Cloud)의 장단점"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "데이터 주권 유지, 소버린 클라우드(Sovereign Cloud)의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "소버린 클라우드(Sovereign Cloud)의 등장 배경",
       "items": [
-       "현지 국가의 데이터 주권을 보장하기 위해 현지 법률과 규정을 준수하여 현지에 데이터 센터를 두고, 데이터접근이 이루어지도록 설계하고 구축된 클라우드 컴퓨팅 아키텍처"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "자국의 데이터 보호 및 나라별 개인정보 규율 적용",
+       "소비자 자신에 관한 데이터의 생성, 저장, 유통 및 활용에 대한 정보 주체인 소비자의 배타적 권리의 중요성 증대",
+       "다양한 환경에 활용 가능한 멀티 클라우드 활용에 대한 사용자 이해 확대",
+       "소버린 클라우드를 통해 '클라우드 신기술은 이용하되 데이터 주권을 확보해야 하는' 숙제를 해결."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "소버린 클라우드(Sovereign Cloud) 개념도, 상세설명",
     "subsections": [
      {
-      "title": null,
+      "title": "소버린 클라우드(Sovereign Cloud) 구성요소",
       "items": [
-       "소버린 클라우드",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
+       "각 지역의 데이터를 저장할 수 있는 지역 거점 데이터센터",
+       "Cloud 기본 제공 서비스 유형",
+       "이중키 암호화 등 다양한 암호화 솔루션으로 데이터 보호",
+       "클라우드 아키텍처, 배포 워크플로우를 단순화, 간소화 방식"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "소버린 클라우드(Sovereign Cloud)의 장단점",
     "subsections": [
      {
       "title": null,
       "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "데이터 통제권 및 소유권 강화",
+       "현지 규정과 법률을 준수해 데이터를 저장하고 관리",
+       "암호화, 액세스 제어, 네트워크 세분화 등 강화된 보안 조치를 제공하고 특정 국가나 지역에 맞게 조정 가능",
+       "국가 또는 조직의 특정 요구사항(데이터 저장 및 처리 등)을충족할 수 있음",
+       "투명하고 책임감 있는 데이터 관리 프레임워크를 제공",
+       "외국 기술 및 인프라에 대한 의존도를 낮출 수 있음"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "소버린 클라우드",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "Data Residency",
+   "Sovereign Control",
+   "Governance & Transparency",
+   "Expertise",
+   "EU GDPR",
+   "멀티클 라우드"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_068_04": {
   "name": "데이터스페이스(Data Space)",
   "en": "Data Space",
   "title": "데이터스페이스(Data Space)",
   "definition": "데이터 공유·활용 생태계로 기업, 기관, 개인이 만든 데이터를 공유 및 교환하면서 보안·주권을 유지할 수있도록 만든 체계",
-  "outline": [
-   "데이터스페이스의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 데이터 주권 · 신뢰 · 상호 운용성",
+   "기술: 분산형 구조 · AI"
   ],
   "keywords_must": [
-   "데이터스페이스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "데이터 주권",
+   "신뢰",
+   "상호 운용성",
+   "분산형 구조",
+   "AI"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 데이터스페이스 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "데이터 공유·활용 생태계로 기업, 기관, 개인이 만든 데이터를 공유 및 "
+  "keywords_ref": [],
+  "outline": [
+   "신뢰 기반 데이터 교환 생태계, 데이터 스페이스(Data Space)의 정의",
+   "- 데이터 스페이스의 특징",
+   "데이터 스페이스(Data Space)의 개념도와 구성요소",
+   "- 데이터 스페이스의 개념도",
+   "- 데이터 스페이스(Data Space)의 구성요소",
+   "한국형 데이터 스페이스(Data Space) 추진 전략"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "신뢰 기반 데이터 교환 생태계, 데이터 스페이스(Data Space)의 정의",
     "subsections": [
      {
-      "title": "정의",
+      "title": "데이터 스페이스의 특징",
       "items": [
-       "데이터 공유·활용 생태계로 기업, 기관, 개인이 만든 데이터를 공유 및 교환하면서 보안·주권을 유지할 수있도록 만든 체계"
+       "연합(Federation) 기반의 분산 구조",
+       "사용 조건 등 정책 기반 설정 및 자동 이행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "데이터 스페이스(Data Space)의 개념도와 구성요소",
+    "subsections": [
+     {
+      "title": "데이터 스페이스의 개념도",
+      "items": [
+       "한국형 데이터 스페이스 참조모델에서는 거버넌스, 비즈니스 계층, 기술 계층으로 구성"
       ]
      },
      {
-      "title": "목적",
+      "title": "데이터 스페이스(Data Space)의 구성요소",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "연합형 및 분산형 구조 - 데이터 주권 보장, 합의된 공통 규칙 기반 구성",
+       "신뢰성, 보안 및 투명성 - 신뢰 기반 데이터 교환 및 서비스 모델 운영 체계 구성",
+       "거버넌스 유연성 및 - 거버넌스 유연성 및 참여자 자율성 확보 체계 구성자율성"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "한국형 데이터 스페이스(Data Space) 추진 전략",
     "subsections": [
      {
       "title": null,
       "items": [
-       "데이터스페이스",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "국가 데이터 인프라 컴플라이언스 연계",
+       "법, 제도 보안 기준 적용",
+       "AI 혁신 서비스 실증, 확산",
+       "고품질 AI 학습용 데이터셋 생산 및 유통",
+       "한국형 데이터스페이스 운영모델(제휴형·출자형·조합형 등)을 정립하고 초기에는 정부가 공공·민간 수요를반영한 데이터 스페이스 시범사업을 직접 주도하고, 이후 민간 중심 자율적 확산이 가능하도록 운영가이드라인과 기술 지원 체계 마련 필요"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "데이터스페이스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "데이터 주권",
+   "신뢰",
+   "상호 운용성",
+   "분산형 구조",
+   "AI"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_077_1": {
   "name": "엣지컴퓨팅(Edge Computing)",
   "en": "Edge Computing",
   "title": "엣지컴퓨팅(Edge Computing)",
   "definition": "응답 시간을 개선하고 대역폭을 절약하기 위해 필요한 곳에 연산과 데이터 스토리지를 도입하는 분산 컴퓨팅패러다임",
-  "outline": [
-   "엣지컴퓨팅의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 3중 구조 · 인텔리전스 레이어 · 클라우드렛",
+   "기술: 엣지컴퓨팅(Edge Computing) · 엣지컴퓨팅 아키텍처 · 엣지컴퓨팅 프로토콜"
   ],
   "keywords_must": [
-   "엣지컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "3중 구조",
+   "인텔리전스 레이어",
+   "클라우드렛",
+   "엣지컴퓨팅(Edge Computing)",
+   "엣지컴퓨팅 아키텍처",
+   "엣지컴퓨팅 프로토콜"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 엣지컴퓨팅 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "응답 시간을 개선하고 대역폭을 절약하기 위해 필요한 곳에 연산과 데이터 "
+  "keywords_ref": [],
+  "outline": [
+   "물리적 근접위치에서의 컴퓨팅, 엣지 컴퓨팅의 개념",
+   "- 엣지 컴퓨팅의 필요성",
+   "엣지 컴퓨팅의 구성도 및 기술요소",
+   "- 엣지 컴퓨팅의 구성도",
+   "- 엣지 컴퓨팅의 기술요소"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "물리적 근접위치에서의 컴퓨팅, 엣지 컴퓨팅의 개념",
     "subsections": [
      {
-      "title": "정의",
+      "title": "엣지 컴퓨팅의 필요성",
       "items": [
-       "응답 시간을 개선하고 대역폭을 절약하기 위해 필요한 곳에 연산과 데이터 스토리지를 도입하는 분산 컴퓨팅패러다임"
+       "자동화 및 상시 접속을 통한 운영의 효율화 지원",
+       "유연하고 확장가능하여 비즈니스 에코시스템 촉진 및 비용절감"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "엣지 컴퓨팅의 구성도 및 기술요소",
+    "subsections": [
+     {
+      "title": "엣지 컴퓨팅의 구성도",
+      "items": [
+       "3중 구조 패러다임을 통한 실시간 대응 및 정보 처리의 분업 수행"
       ]
      },
      {
-      "title": "목적",
+      "title": "엣지 컴퓨팅의 기술요소",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "구성·유형",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "엣지컴퓨팅",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "5G 확산으로 엣지 컴퓨팅 기술 발전 및 확산"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "엣지컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "3중 구조",
+   "인텔리전스 레이어",
+   "클라우드렛",
+   "엣지컴퓨팅(Edge Computing)",
+   "엣지컴퓨팅 아키텍처",
+   "엣지컴퓨팅 프로토콜"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_078": {
-  "name": "앰비언트 컴퓨팅(SV 078)",
-  "en": "SV 078",
-  "title": "앰비언트 컴퓨팅(SV 078)",
+  "name": "앰비언트 컴퓨팅(Ambient Computing)",
+  "en": "Ambient Computing",
+  "title": "앰비언트 컴퓨팅(Ambient Computing)",
   "definition": "IT 기기가 사용자의 일상에서 너무 자연스럽게 자리잡아, 인지되지 못한 상태로 활용되는 개념",
-  "outline": [
-   "앰비언트 컴퓨팅의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: IT · 앰비언트 컴퓨팅(Ambient Computing) · 앰비언트 컴퓨팅 아키텍처",
+   "기술: 앰비언트 컴퓨팅 프로토콜 · 앰비언트 컴퓨팅 보안 · 앰비언트 컴퓨팅 표준"
   ],
   "keywords_must": [
-   "앰비언트 컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "IT",
+   "앰비언트 컴퓨팅(Ambient Computing)",
+   "앰비언트 컴퓨팅 아키텍처",
+   "앰비언트 컴퓨팅 프로토콜",
+   "앰비언트 컴퓨팅 보안",
+   "앰비언트 컴퓨팅 표준"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 앰비언트 컴퓨팅 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "IT 기기가 사용자의 일상에서 너무 자연스럽게 자리잡아, 인지되지 못한 "
+  "keywords_ref": [],
+  "outline": [
+   "보이지 않는 IT 기술, 앰비언트 컴퓨팅의 개요",
+   "- 앰비언트 컴퓨팅의 등장배경",
+   "앰비언트 컴퓨팅의 구성 및 주요기술",
+   "- 앰비언트 컴퓨팅의 구성",
+   "- 앰비언트 컴퓨팅의 주요기술",
+   "앰비언트 컴퓨팅의 사례"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "보이지 않는 IT 기술, 앰비언트 컴퓨팅의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "앰비언트 컴퓨팅의 등장배경",
       "items": [
-       "IT 기기가 사용자의 일상에서 너무 자연스럽게 자리잡아, 인지되지 못한 상태로 활용되는 개념"
+       "IT 기기의 발달 : 다양한 Device 를 통해 제공되는 서비스의 생활화",
+       "빠른 서비스 : 서비스 제공까지의 소요시간 감소"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "앰비언트 컴퓨팅의 구성 및 주요기술",
+    "subsections": [
+     {
+      "title": "앰비언트 컴퓨팅의 구성",
+      "items": [
+       "사용자가 IT 기술이라고 인지하지 못할 정도의 자연스러운 Device 활용"
       ]
      },
      {
-      "title": "목적",
+      "title": "앰비언트 컴퓨팅의 주요기술",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "서비스를 위한 입출력, 데이터 전송, 데이터 분석등의 기술들로 앰비언트 컴퓨팅 구현"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "앰비언트 컴퓨팅의 사례",
     "subsections": [
      {
       "title": null,
       "items": [
-       "앰비언트 컴퓨팅",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "사용자의 삶의 질을 개선하는데 도움을 주기 위해 다수의 기술이 개발 및 발전중"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "앰비언트 컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "IT",
+   "앰비언트 컴퓨팅(Ambient Computing)",
+   "앰비언트 컴퓨팅 아키텍처",
+   "앰비언트 컴퓨팅 프로토콜",
+   "앰비언트 컴퓨팅 보안",
+   "앰비언트 컴퓨팅 표준"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_079_0": {
-  "name": "인터미턴트컴퓨팅(SV 079 0)",
-  "en": "SV 079 0",
-  "title": "인터미턴트컴퓨팅(SV 079 0)",
+  "name": "인터미턴트 컴퓨팅(Intermittent Computing)",
+  "en": "Intermittent Computing",
+  "title": "인터미턴트 컴퓨팅(Intermittent Computing)",
   "definition": "초 연결 사회에서 신뢰성 있는 컴퓨팅 환경 구현을 위한 인터미턴트 컴퓨팅 기술의 연구가 중요해짐",
-  "outline": [
-   "인터미턴트컴퓨팅의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 에너지 하베스팅 · 에너지 저장장치 · 비휘발성 메모리",
+   "기술: 다중 버전 모델 · NoC · NVP",
+   "운영: Chain · Alpaca",
+   "참고: Chain · Alpaca"
   ],
   "keywords_must": [
-   "인터미턴트컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "에너지 하베스팅",
+   "에너지 저장장치",
+   "비휘발성 메모리",
+   "다중 버전 모델",
+   "NoC",
+   "NVP",
+   "Chain",
+   "Alpaca"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "Chain",
+   "Alpaca"
   ],
-  "keywords": [
-   "핵심: 인터미턴트컴퓨팅 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "초 연결 사회에서 신뢰성 있는 컴퓨팅 환경 구현을 위한 인터미턴트 컴퓨팅"
+  "outline": [
+   "인터미턴트 컴퓨팅 개념 및 해결 과제",
+   "- 인터미턴트 컴퓨팅 개념",
+   "- 인터미턴트 컴퓨팅의 해결 과제",
+   "에너지 하베스팅 기반 인터미턴트 컴퓨팅 기술 동향",
+   "- 신뢰성 있는 데이터 저장 및 전송을 위한, 인터미턴트 컴퓨팅 기술 동향",
+   "에너지 하베스팅 기반 인터미턴트 컴퓨팅 기술의 시사점"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "인터미턴트 컴퓨팅 개념 및 해결 과제",
     "subsections": [
      {
-      "title": "정의",
+      "title": "인터미턴트 컴퓨팅 개념",
       "items": [
-       "초 연결 사회에서 신뢰성 있는 컴퓨팅 환경 구현을 위한 인터미턴트 컴퓨팅 기술의 연구가 중요해짐"
+       "에너지 하베스팅, 에너지 저장 장치, 실행 모델 및 프로그래밍 등이 필요한 컴퓨팅 기술"
       ]
      },
      {
-      "title": "목적",
+      "title": "인터미턴트 컴퓨팅의 해결 과제",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "인터미턴트 컴퓨팅 기술 적용을 위해서 기기 스스로가 자급 자족할 수 있는 에너지 하베스팅 기술 적용 중요"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "에너지 하베스팅 기반 인터미턴트 컴퓨팅 기술 동향",
     "subsections": [
      {
-      "title": null,
+      "title": "신뢰성 있는 데이터 저장 및 전송을 위한, 인터미턴트 컴퓨팅 기술 동향",
       "items": [
-       "인터미턴트컴퓨팅",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "캐시 계층과 비 휘발성 특성이 혼합된 복합적인 메모리 계층의 연구",
+       "신뢰성 있는 동작을 보장 위한 Noc(Normally-Off Computing) 시스템 연구",
+       "비휘발성 메모리를 장착한 비휘발성 프로세서 (Nonvolatile Processor: NVP)의 출현",
+       "비휘발성 메모리의 일부를 사용하여 보존하고 복 원하는 다중 버전 모델(multi-versioning models) 연구"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "에너지 하베스팅 기반 인터미턴트 컴퓨팅 기술의 시사점",
     "subsections": [
      {
       "title": null,
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "인터미턴트 컴퓨팅 분야는 국내외적으로 시작 초기 단계",
+       "초 연결 사회로 진입하고 변화할 미래 산업에서 신 성장 동력 산업으로의 진출을 모색하기 위해 이를 극복할원천 기술이 필요한 시점임"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "인터미턴트컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "에너지 하베스팅",
+   "에너지 저장장치",
+   "비휘발성 메모리",
+   "다중 버전 모델",
+   "NoC",
+   "NVP",
+   "Chain",
+   "Alpaca"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_079_1": {
   "name": "디지털서비스(HPC(High-Performance Computing))",
   "en": "HPC High-Performance Computing",
   "title": "디지털서비스(HPC(High-Performance Computing))",
   "definition": "일반 컴퓨터보다 압도적으로 빠른 속도로 대용량 연산을 수행하는 대형 컴퓨터 시스템과 이를 활용하기 위한 응용기술을 통칭",
-  "outline": [
-   "디지털서비스의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: Top500 · 초고성능 · 고성능",
+   "기술: CPU · GPU · 고대역폭 저지연 인터커넥트",
+   "운영: 병렬파일시스템 · Frontier · 뉴론",
+   "참고: 병렬파일시스템 · Frontier · 뉴론"
   ],
   "keywords_must": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Top500",
+   "초고성능",
+   "고성능",
+   "CPU",
+   "GPU",
+   "고대역폭 저지연 인터커넥트",
+   "병렬파일시스템",
+   "Frontier",
+   "뉴론",
+   "HPC(고성능PC, high-performance computing)"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "병렬파일시스템",
+   "Frontier",
+   "뉴론"
   ],
-  "keywords": [
-   "핵심: 디지털서비스 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "일반 컴퓨터보다 압도적으로 빠른 속도로 대용량 연산을 수행하는 대형 컴퓨"
+  "outline": [
+   "세계의 주요 문제 해결!, HPC(고성능PC, high-performance com…",
+   "- HPC의 개념",
+   "- HPC의 유형",
+   "HPC 개념도 및 구성요소",
+   "- HPC 개념도",
+   "- HPC의 구성요소",
+   "HPC 기술 동향 및 활용분야",
+   "- HPC 기술 동향"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "세계의 주요 문제 해결!, HPC(고성능PC, high-performance computing) 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "HPC의 개념",
       "items": [
-       "일반 컴퓨터보다 압도적으로 빠른 속도로 대용량 연산을 수행하는 대형 컴퓨터 시스템과 이를 활용하기 위한 응용기술을 통칭"
+       "수백 대 이상의 고성능컴퓨터를 고속 상호연결망으로 연결시킨 물리적 집합체(HW)와 운영체제 (시스템SW)로 구성"
       ]
      },
      {
-      "title": "목적",
+      "title": "HPC의 유형",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "매년 두 차례(6월, 11월)에걸쳐 발표하는 전세계에서성능이 가능 뛰어난 500 대의 초고성능컴퓨터",
+       "150만달러를 초과하는고성능컴퓨터",
+       "일반컴퓨터보다 뛰어난계산·메모리·데이터를기반으로 과학·공학·데이터분석 등에 사용되는서버급 이상 컴퓨터"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "HPC 개념도 및 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "HPC 개념도",
       "items": [
-       "디지털서비스",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "HPC 시스템은 고성능이 필요하기 때문에 노드는 고속 이더넷 또는 대기시간이 짧은 INfiniBand로 연결"
+      ]
+     },
+     {
+      "title": "HPC의 구성요소",
+      "items": [
+       "CPU와 GPU를 동시 탑재한 이기종 프로세스 환경을 제공하며차세대 고성능 CPU 및 가속기 로드맵을 고려하여 최신의 아",
+       "CPU, GPU 동시 탑재키텍처를 탑재이기종 프로세스",
+       "여러 개의 프로세서나 코어를 가진 병렬 컴퓨터"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "HPC 기술 동향 및 활용분야",
     "subsections": [
      {
-      "title": null,
+      "title": "HPC 기술 동향",
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "최초 슈퍼컴퓨터로 '22년 상반기 Top500에서 1.1엑사플롭스 성능 기록",
+       "Argonne National Laboratory의 시스템으로 2EP급으로 예상되며 현재",
+       "LUMI - 핀란드 EuroHPC 프리엑사스케일 슈퍼컴퓨터",
+       "이탈리아의 Leonardo 슈퍼컴퓨터가 Linpack(HPL) 174.7 PF 성능으로",
+       "Leonardo Top500 순위 4위로 새롭게 등재"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Top500",
+   "초고성능",
+   "고성능",
+   "CPU",
+   "GPU",
+   "고대역폭 저지연 인터커넥트",
+   "병렬파일시스템",
+   "Frontier",
+   "뉴론",
+   "HPC(고성능PC, high-performance computing)"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_085": {
   "name": "무선식별(RFID)",
   "en": "Radio Frequency Identification",
   "title": "무선식별(RFID)",
   "definition": "마이크로 칩을 내장한 태그, 라벨, 카드 등에 저장된 데이터를 무선 주파수를 이용하여 리더기에서 자동 인식하는 기술을 모든 사물에 전자 태그를 부착, 무선통신 기술을 이용하여 사물의 정보 및 주변 상황정보를감지하는 인식기술",
-  "outline": [
-   "RFID의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: RFID Tag · Reader · RF",
+   "기술: RFID(Radio Frequency Identification) · RFID · RF(주파수 변조)",
+   "운영: ONS(Object Name Service) · RP(Reader Protocol) · RM(Reader Management)",
+   "참고: ONS(Object Name Service) · RP(Reader Protocol) · RM(Reader Management)"
   ],
   "keywords_must": [
+   "RFID Tag",
+   "Reader",
+   "RF",
+   "RFID(Radio Frequency Identification)",
    "RFID",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "RF(주파수 변조)",
+   "ONS(Object Name Service)",
+   "RP(Reader Protocol)",
+   "RM(Reader Management)",
+   "ALE(Application Level Event)"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "ONS(Object Name Service)",
+   "RP(Reader Protocol)",
+   "RM(Reader Management)"
   ],
-  "keywords": [
-   "핵심: RFID · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "마이크로 칩을 내장한 태그, 라벨, 카드 등에 저장된 데이터를 무선 주파"
+  "outline": [
+   "무선 주파수(RF)를 이용하여 대상을 식별하는 기술, RFID(Radio Frequ…",
+   "- RFID 시스템의 개념",
+   "RFID 시스템 구조, 개념도 및 구성요소",
+   "- RFID 시스템 구조",
+   "- RFID 개념도(USN 포함)",
+   "- RFID 구성요소",
+   "RFID Tag",
+   "RFID Reader",
+   "RFID 미들웨어"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "무선 주파수(RF)를 이용하여 대상을 식별하는 기술, RFID(Radio Frequency Identification)의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "RFID(Radio Frequency Identification)의 정의",
       "items": [
-       "마이크로 칩을 내장한 태그, 라벨, 카드 등에 저장된 데이터를 무선 주파수를 이용하여 리더기에서 자동 인식하는 기술을 모든 사물에 전자 태그를 부착, 무선통신 기술을 이용하여 사물의 정보 및 주변 상황정보를감지하는 인식기술"
+       "바코드 시스템과 달리 무선 주파수를 이용한 비 접촉 통신과 많은 데이터를 저장"
       ]
      },
      {
-      "title": "목적",
+      "title": "RFID 시스템의 개념",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "Microchip을 내장하여 RF(주파수 변조)방식으로 안테나와 교신을 통하여 근거리/원거리에서 읽고 쓰기가가능한 무선 인식 기술을 적용한 자동식별 시스템",
+       "안테나가 포함된 Reader기, 무선자원을 송수신할 수 있는 안테나, 정보를 저장하고 프로토콜로 데이터를교환하는 Tag, 서버 등으로 구성"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "RFID 시스템 구조, 개념도 및 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "RFID 시스템 구조",
       "items": [
-       "RFID",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "RFID시스템은 태그(Tag), 리더(Reader), ONS(Object Name Service), RP(Reader Protocol), RM(Reader Management), ALE(Application Level Event), TDT(Tag Data Translator) 등이 포함된 미들웨어(Middleware), EPC의 실 개체 정보를 저장, Providing하는 EPCIS (Ele"
+      ]
+     },
+     {
+      "title": "RFID 개념도(USN 포함)",
+      "items": [
+       "사물에 전자 태그를 부탁하고, 무선통신 기술을 이용하여 사물의 정보를 감지"
+      ]
+     },
+     {
+      "title": "RFID 구성요소",
+      "items": [
+       "RFID 정보를 가지고 있음."
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "RFID Tag",
     "subsections": [
      {
       "title": null,
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "RFID Tag는 데이터를 저장하기 위한 하나의 마이크로 칩과 RF통신으로데이터를 전달하기 위한 요소로 구성됨.",
+       "가격이 저렴하고, WRITE 과정이 필요 없는 경우에 사용",
+       "WORM(Write Only Read Many)",
+       "사용자가 1회 Write가능",
+       "End User 누구나 Write 가능",
+       "가장 다양한 응용분야에서 사용 가능"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "RFID Reader",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "RFID Tag를 인식하는 기기로써 호스트 컴퓨터에 연결된 리더가 신호를 보내어 Tag인식",
+       "리더는 휴대 가능한 터미널일수도 있으며 톨게이트와 같은 입구에 설치되어 있는 고정된 디바이스 일 수있음."
+      ]
+     }
+    ]
+   },
+   {
+    "title": "RFID 미들웨어",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "RFID 미들웨어는 리더에서 지속적으로 발생하는 코드 데이터를 수집, 제어, 관리하는 기능을 하며, 분산된구조의 미들웨어 네트워크를 구성하여 서로 통신함내용",
+       "인터넷을 통해 ONS 서버의 DB로 제품코드(EPC)를 조회(Query)",
+       "조회된 결과(IP)로 PML 서버에 연결하여 해당 EPC의 상세정보 획득",
+       "Middleware의 old version 요즘에는 사용하지 않음",
+       "2006년 이후의 Middleware 표준",
+       "Application Level Event"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
+   "RFID Tag",
+   "Reader",
+   "RF",
+   "RFID(Radio Frequency Identification)",
    "RFID",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "RF(주파수 변조)",
+   "ONS(Object Name Service)",
+   "RP(Reader Protocol)",
+   "RM(Reader Management)",
+   "ALE(Application Level Event)"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_094": {
   "name": "증강현실(AR, Augmented Reality)",
   "en": "Augmented Reality",
   "title": "증강현실(AR, Augmented Reality)",
-  "definition": "현실 영상에 가상 정보를 겹쳐 보여주는 기술",
-  "outline": [
-   "증강현실의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "실세계와 가상정보를 seamless하게 실시간으로 합성하여 사용자에게 보다 향상된 몰입감과 현실감을 제공하는 기술내 용실 세계와 가상 세계를 Seamless, Real Time으로 혼합하여 제공공간 모델링, 대화형 지능 부여를 통한 사용자 상호 작용 제공",
+  "keywords": [
+   "핵심: HMD · HUD(Head Up Display) · 센싱기술",
+   "기술: 그래픽(CAD기술, 3차원 CG기술) · 데이터 통신기 술(4/5G, 와이파이) · 마커인식기술",
+   "운영: 모션트래킹 · 프로젝터 · VRML",
+   "참고: 모션트래킹 · 프로젝터 · VRML"
   ],
   "keywords_must": [
-   "증강현실(AR)",
-   "마커/마커리스",
-   "정합",
-   "디스플레이",
-   "모바일 AR",
-   "산업 활용",
-   "XR",
-   "사용자 경험"
+   "HMD",
+   "HUD(Head Up Display)",
+   "센싱기술",
+   "그래픽(CAD기술, 3차원 CG기술)",
+   "데이터 통신기 술(4/5G, 와이파이)",
+   "마커인식기술",
+   "모션트래킹",
+   "프로젝터",
+   "VRML",
+   "MRI"
   ],
   "keywords_ref": [
-   "VR",
-   "MR",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "모션트래킹",
+   "프로젝터",
+   "VRML"
   ],
-  "keywords": [
-   "핵심: 증강현실(AR) · 마커/마커리스 · 정합",
-   "구성: 디스플레이 · 모바일 AR · 산업 활용",
-   "현실 영상에 가상 정보를 겹쳐 보여주는 기술"
+  "outline": [
+   "증강현실의 구성도 및 구성요소",
+   "- 증강현실의 구성도",
+   "- 증강현실의 구성요소(정보마추삼아이디)",
+   "증강현실 응용사례",
+   "모바일 증강 현실의 문제점 및 해결 방안",
+   "모바일 증강 현실의 기대 효과"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "증강현실의 구성도 및 구성요소",
     "subsections": [
      {
-      "title": "정의",
+      "title": "증강현실의 구성도",
       "items": [
-       "현실 영상에 가상 정보를 겹쳐 보여주는 기술"
+       "현실세계와 가상의 이미지를 합성해서 사용자에게 제공"
       ]
      },
      {
-      "title": "목적",
+      "title": "증강현실의 구성요소(정보마추삼아이디)",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "마커 : 표시를 위한 기계",
+       "카메라 영상에서 현실 세계의 어떤 지점이나카메라 화면에 가상공간상 물체표현물체에 대한 카메라의 3차원 조표를 확보하기위한 기술사용자에게 증강현실을 display 및 액션처리 2차원/3차원 시각 I/F, HMD 3 차원 객체 모델링, 3차원 가상 현실 구현 및 처리 VRML, 3D 물리 엔진"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "증강현실 응용사례",
     "subsections": [
      {
       "title": null,
       "items": [
-       "증강현실(AR)",
-       "마커/마커리스",
-       "정합",
-       "디스플레이",
-       "모바일 AR",
-       "산업 활용"
+       "2010년 캐나다 동계올림픽 스피드 스케이팅 방송에서 선수에 대한 정보가 화면에서 실시간으로 제공되어 시청자의 편의 증진",
+       "축구 중계 중 3D 그래프를 실 영상에 합성하여 시청자의 이해증진",
+       "일기예보에서 가상의 기상환경에서 홍수, 대설 등의 기상을 예보하는 서비스",
+       "특수 장치 또는 특수 효과 생성에 이용",
+       "MRI, CT, 초음파 등의 센서를 통해 수집된 환자에 대한 3차원 이미지를 수술시 환자의 환부에 중첩하여 표시함으로서 데이터를 확인하면서 정교하게 수술하며 곡 필요한 부위만을 절개 가능",
+       "현실의 화분에 물과 영양분을 주면 가상공간의 식물이 조건에 따라 다르게 자"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "모바일 증강 현실의 문제점 및 해결 방안",
     "subsections": [
      {
       "title": null,
       "items": [
-       "XR",
-       "사용자 경험",
-       "표준·비교·한계를 함께 기술"
+       "증강 현실 데이터 포맷 및 컨텐츠간 상호 운용성을 담보할 수 있는 표준 정립과 표준화 노력 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "모바일 증강 현실의 기대 효과",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "항상 휴대한다는 최대의 장점을 가진 휴대폰과 무선 통신 기술의 발달은 증강 현실을 우리 실생활과 가장빠르게 접목시키는 기본 인프라로 성장될 것으로 전망",
+       "모바일 증강 현실을 이용한 기업의 새로운 비즈니스 전략의 활성화",
+       "향후 교육, 여가, 의료, 환경 등의 생활 전반에 걸친 다양한 분야에서의 생활 밀착형 서비스로 확대/보급"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": "정보마추삼아이디",
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "증강현실(AR)",
-   "마커/마커리스",
-   "정합",
-   "디스플레이",
-   "모바일 AR",
-   "산업 활용",
-   "XR",
-   "사용자 경험"
+   "HMD",
+   "HUD(Head Up Display)",
+   "센싱기술",
+   "그래픽(CAD기술, 3차원 CG기술)",
+   "데이터 통신기 술(4/5G, 와이파이)",
+   "마커인식기술",
+   "모션트래킹",
+   "프로젝터",
+   "VRML",
+   "MRI"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_096": {
   "name": "가상현실(VR, Virtual Reality)",
   "en": "Virtual Reality",
   "title": "가상현실(VR, Virtual Reality)",
-  "definition": "컴퓨터로 만든 가상 환경에 사용자를 몰입시키는 기술",
-  "outline": [
-   "가상현실의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "컴퓨터를 이용하여 가상세계를 만들어내 가상의 상황을 사람의 감각기관을 통해 몰입감을 느끼고 실제와같은 경험 제공 기술",
+  "keywords": [
+   "핵심: 가상현실(Virtual Reality) · 분류 유형 정리 디바이스 · 플랫폼",
+   "기술: 네트워크 · 디스플레이기술 · 인터렉션",
+   "운영: 오큘러스 · 깊이 카메라 · NVI(natural User interface)",
+   "참고: 오큘러스 · 깊이 카메라 · NVI(natural User interface)"
   ],
   "keywords_must": [
-   "가상현실(VR)",
+   "가상현실(Virtual Reality)",
+   "분류 유형 정리 디바이스",
+   "플랫폼",
+   "네트워크",
+   "디스플레이기술",
+   "인터렉션",
+   "오큘러스",
+   "깊이 카메라",
+   "NVI(natural User interface)",
    "HMD",
-   "몰입",
-   "트래킹",
-   "상호작용",
-   "멀미",
-   "콘텐츠",
-   "XR"
+   "렌더링"
   ],
   "keywords_ref": [
-   "AR",
-   "MR",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "오큘러스",
+   "깊이 카메라",
+   "NVI(natural User interface)"
   ],
-  "keywords": [
-   "핵심: 가상현실(VR) · HMD · 몰입",
-   "구성: 트래킹 · 상호작용 · 멀미",
-   "컴퓨터로 만든 가상 환경에 사용자를 몰입시키는 기술"
+  "outline": [
+   "가상현실 구현 방식 및 핵심 기술",
+   "- 가상현실 구현 방식",
+   "가상현실 활용 현황"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "가상현실 구현 방식 및 핵심 기술",
     "subsections": [
      {
-      "title": "정의",
+      "title": "가상현실 구현 방식",
       "items": [
-       "컴퓨터로 만든 가상 환경에 사용자를 몰입시키는 기술"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "3D 영상, 3D 음향, 오감 활용 및 모션인식을 통한 현실에 최대한 가까운 경험 제공"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "가상현실 활용 현황",
     "subsections": [
      {
       "title": null,
       "items": [
-       "가상현실(VR)",
-       "HMD",
-       "몰입",
-       "트래킹",
-       "상호작용",
-       "멀미"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "콘텐츠",
-       "XR",
-       "표준·비교·한계를 함께 기술"
+       "1인칭 시점 게임 주목 - HMD단말과 동작인식 기술로 몰입감 향상",
+       "공간효과 확대 - 다양한 장르의 게임에서 가상공간 창출",
+       "영화 속 장면을 직접 체험해보는 경험 제공",
+       "HMD를 이용한 가상극장 - 사용자 참여에 따라 스토리가 변경되는 인터렉티브시네마 구현",
+       "각지에 흩어진 학생들의 가상교실 집합수업",
+       "역사문화 탐방 및 물리법칙 체험 가상현실공간"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": "오출입음모",
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "가상현실(VR)",
+   "가상현실(Virtual Reality)",
+   "분류 유형 정리 디바이스",
+   "플랫폼",
+   "네트워크",
+   "디스플레이기술",
+   "인터렉션",
+   "오큘러스",
+   "깊이 카메라",
+   "NVI(natural User interface)",
    "HMD",
-   "몰입",
-   "트래킹",
-   "상호작용",
-   "멀미",
-   "콘텐츠",
-   "XR"
+   "렌더링"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_108": {
   "name": "확장현실(XR, Extended Reality)",
   "en": "Extended Reality",
   "title": "확장현실(XR, Extended Reality)",
-  "definition": "AR·VR·MR을 포괄하는 실감·몰입 기술의 총칭",
+  "definition": "가상현실(VR)과 증강현실(AR) 혼합현실(MR)의 기술 망라하는 초실감형 기술 현실과 가상현실간의 상호작용이 더욱 강화되어 물체를 직접 만질 수 있는 가상현실",
+  "keywords": [
+   "핵심: VR · AR · MR",
+   "기술: XR · OLED · PPI",
+   "운영: PPD",
+   "참고: PPD"
+  ],
+  "keywords_must": [
+   "VR",
+   "AR",
+   "MR",
+   "XR",
+   "OLED",
+   "PPI",
+   "PPD"
+  ],
+  "keywords_ref": [
+   "PPD"
+  ],
   "outline": [
    "확장현실의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "XR",
-   "AR",
-   "VR",
-   "MR",
-   "몰입",
-   "실감미디어",
-   "디바이스",
-   "표준·상호운용"
-  ],
-  "keywords_ref": [
-   "메타버스",
-   "공간컴퓨팅",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
-  ],
-  "keywords": [
-   "핵심: XR · AR · VR",
-   "구성: MR · 몰입 · 실감미디어",
-   "AR·VR·MR을 포괄하는 실감·몰입 기술의 총칭"
+   "- 필요성",
+   "확장현실의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "확장현실의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "확장현실의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "AR·VR·MR을 포괄하는 실감·몰입 기술의 총칭"
+       "가상현실(VR)과 증강현실(AR) 혼합현실(MR)의 기술 망라하는 초실감형 기술 현실과 가상현실간의 상호작용이 더욱 강화되어 물체를 직접 만질 수 있는 가상현실"
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "확장현실는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "확장현실의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
        "XR",
-       "AR",
-       "VR",
-       "MR",
-       "몰입",
-       "실감미디어"
+       "OLED",
+       "PPI",
+       "PPD"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "확장현실(XR, Extended Reality)",
+       "확장현실 아키텍처"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "확장현실의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "디바이스",
-       "표준·상호운용",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 확장현실를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "XR",
-   "AR",
    "VR",
+   "AR",
    "MR",
-   "몰입",
-   "실감미디어",
-   "디바이스",
-   "표준·상호운용"
+   "XR",
+   "OLED",
+   "PPI",
+   "PPD"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_109": {
-  "name": "실감경제(SV 109)",
-  "en": "SV 109",
-  "title": "실감경제(SV 109)",
+  "name": "실감경제(Immersive Economy)",
+  "en": "Immersive Economy",
+  "title": "실감경제(Immersive Economy)",
   "definition": "실감 기술을 적용하여 산업, 사회, 문화적 가치를 창출하는 경제 2018년 영국 혁신기관(Inovate UK)에서 발행된 'The Immersive economy in UK'에서 처음 등장한 개념",
-  "outline": [
-   "실감경제의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: AR/VR/MR · 실감경제(Immersive Economy) · 실감경제 아키텍처",
+   "기술: 실감경제 프로토콜 · 실감경제 보안 · 실감경제 표준"
   ],
   "keywords_must": [
-   "실감경제",
-   "몰입·실감",
-   "트래킹",
-   "디스플레이",
-   "콘텐츠",
-   "상호작용",
-   "XR",
-   "활용분야"
+   "AR/VR/MR",
+   "실감경제(Immersive Economy)",
+   "실감경제 아키텍처",
+   "실감경제 프로토콜",
+   "실감경제 보안",
+   "실감경제 표준"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 실감경제 · 몰입·실감 · 트래킹",
-   "구성: 디스플레이 · 콘텐츠 · 상호작용",
-   "실감 기술을 적용하여 산업, 사회, 문화적 가치를 창출하는 경제 2018"
+  "keywords_ref": [],
+  "outline": [
+   "실감 기술로 이루어진 경제 활동 생태계, 실감경제 개요",
+   "- 실감경제 부각 배경",
+   "실감경제 특징 및 구성기술",
+   "- 실감경제 특징",
+   "- 실감 경제 구성기술",
+   "실감경제 적용 사례"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "실감 기술로 이루어진 경제 활동 생태계, 실감경제 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "실감경제 부각 배경",
       "items": [
-       "실감 기술을 적용하여 산업, 사회, 문화적 가치를 창출하는 경제 2018년 영국 혁신기관(Inovate UK)에서 발행된 'The Immersive economy in UK'에서 처음 등장한 개념"
+       "2-3년 사이에 관련 기술과 5세대(5G) 이동통신 등 인프라가 학보",
+       "4차 산업혁명 정의 중 하나가 '가상과 현실의 경계가 허물어지는 시대'",
+       "2019년 가트너 10대 전략기술에 '실감기술'을 선정하고 혼합현실 기술시대를 예견"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "실감경제 특징 및 구성기술",
+    "subsections": [
+     {
+      "title": "실감경제 특징",
+      "items": [
+       "기존 경험 경제에서는 현실에 가상의 객체를 삽입하였으나 실감 경제에서는 현실보다",
+       "가상 세계와 현실 세계의 융합으로 가상 세계에서의 부의 창출이 현실에 반영"
       ]
      },
      {
-      "title": "목적",
+      "title": "실감 경제 구성기술",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "Head Up Display",
+       "사람의 시야를 따라 영상 투영"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "실감경제 적용 사례",
     "subsections": [
      {
       "title": null,
       "items": [
-       "실감경제",
-       "몰입·실감",
-       "트래킹",
-       "디스플레이",
-       "콘텐츠",
-       "상호작용"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "XR",
-       "활용분야",
-       "표준·비교·한계를 함께 기술"
+       "한국도 '디지털 뉴딜'과 '가상융합경제 발전 전략'으로 2025년 가상융합경제 선도국가 목표."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "실감경제",
-   "몰입·실감",
-   "트래킹",
-   "디스플레이",
-   "콘텐츠",
-   "상호작용",
-   "XR",
-   "활용분야"
+   "AR/VR/MR",
+   "실감경제(Immersive Economy)",
+   "실감경제 아키텍처",
+   "실감경제 프로토콜",
+   "실감경제 보안",
+   "실감경제 표준"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_110_0": {
   "name": "실감협업(Immersive Collaboration)",
   "en": "Immersive Collaboration",
   "title": "실감협업(Immersive Collaboration)",
   "definition": "풍부한 정보공유, 몰입감 높은 현장감, 대면하듯 자연스러운 상호작용을 경험하게 함으로써 매체 풍부성을보장하는 실감기술에 기반한 협업",
-  "outline": [
-   "실감협업의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: VR · AR · MR",
+   "기술: XR · 트래킹 · 렌더링",
+   "운영: 플렌옵틱 · 홀로그램 · 5G",
+   "참고: 플렌옵틱 · 홀로그램 · 5G"
   ],
   "keywords_must": [
-   "실감협업",
-   "몰입·실감",
-   "트래킹",
-   "디스플레이",
-   "콘텐츠",
-   "상호작용",
+   "VR",
+   "AR",
+   "MR",
    "XR",
-   "활용분야"
+   "트래킹",
+   "렌더링",
+   "플렌옵틱",
+   "홀로그램",
+   "5G",
+   "디지털트윈"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "플렌옵틱",
+   "홀로그램",
+   "5G"
   ],
-  "keywords": [
-   "핵심: 실감협업 · 몰입·실감 · 트래킹",
-   "구성: 디스플레이 · 콘텐츠 · 상호작용",
-   "풍부한 정보공유, 몰입감 높은 현장감, 대면하듯 자연스러운 상호작용을 경"
+  "outline": [
+   "비대면 시대의 협업, 실감협업의 개요",
+   "- 실감협업(Immersive Collaboration)의 개념",
+   "- 실감협업의 특징",
+   "실감협업의 개념도 및 주요 기능/기술",
+   "- 실감협업의 주요 기능/기술",
+   "실감협업 주요 플랫폼"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "비대면 시대의 협업, 실감협업의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "실감협업(Immersive Collaboration)의 개념",
       "items": [
-       "풍부한 정보공유, 몰입감 높은 현장감, 대면하듯 자연스러운 상호작용을 경험하게 함으로써 매체 풍부성을보장하는 실감기술에 기반한 협업"
+       "실감기술의 풍부한 표현력과 현장감을 통해 '공통된 목표'를 명확하게 공유함으로써 협업 효과를 향상시킴"
       ]
      },
      {
-      "title": "목적",
+      "title": "실감협업의 특징",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "풍부한 정보공유, 몰입감 높은 현장감등을 제공하여 의미를 공유하는 매체 능력 향상",
+       "동일한 활동,정보,시간에 공통된 관점에서 협업할 수 있는 의사소통 환경의 수준 향상"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "실감협업의 개념도 및 주요 기능/기술",
     "subsections": [
      {
       "title": null,
       "items": [
-       "실감협업",
-       "몰입·실감",
-       "트래킹",
-       "디스플레이",
-       "콘텐츠",
-       "상호작용"
+       "실감협업 플랫폼을 활용하여 현장감있는 정보공유와 대화가 가능."
+      ]
+     },
+     {
+      "title": "실감협업의 주요 기능/기술",
+      "items": [
+       "3D 모델과 같이 더 다양한 데이터의 공유와 시각화, 공간드로잉, 가상객체와의 상호작용 등을 통해 효과적이고정확한 협업 환경 조성",
+       "같은 공간에서의 협업 환경을 제공함으로써 팀원 간의",
+       "손동작, 시선, 움직임 등으로 의사소통 채널이 풍부해지고비언어적 의사소통이 가능하게 되면서 정확하게 의사를전달",
+       "실시간으로 원격미팅을 통해 협업을 수행하는 방식"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "실감협업 주요 플랫폼",
     "subsections": [
      {
       "title": null,
       "items": [
-       "XR",
-       "활용분야",
-       "표준·비교·한계를 함께 기술"
+       "AR 기반으로 원격의 동료와 협업할 수 있는 환경 제공",
+       "실제 오피스 공간에 아이디어를 시각화하고 원격 사용자를아바타로 생성해 공간을 초월한 AR 기반 원격작업 환경 제공",
+       "VR 기반으로 브레인스토밍과 원격협업을 지원",
+       "효과적인 브레인스토밍과 원격협업을 위한 VR 환경 제공",
+       "관계자, 고객 등이 설계 모델 안에 들어가 평가할 수 있는협업 환경 조성",
+       "건축물 설계 및 평가를 위한 VR 원격협업 서비스 제공"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "실감협업",
-   "몰입·실감",
-   "트래킹",
-   "디스플레이",
-   "콘텐츠",
-   "상호작용",
+   "VR",
+   "AR",
+   "MR",
    "XR",
-   "활용분야"
+   "트래킹",
+   "렌더링",
+   "플렌옵틱",
+   "홀로그램",
+   "5G",
+   "디지털트윈"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_110_1": {
   "name": "공간 컴퓨팅(Spatial Computing)",
   "en": "Spatial Computing",
   "title": "공간 컴퓨팅(Spatial Computing)",
   "definition": "물리적 공간과 디지털 공간의 구분을 없애 생성된 공간에서 사람들이 새롭게 상호작용하며 활동하도록 하는컴퓨팅 환경",
-  "outline": [
-   "공간 컴퓨팅의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: Defense-GAN · 프롬프트 엔지니어링 · 재현 데이터",
+   "기술: 설명가능AI(XAI) · AI 거버넌스"
   ],
   "keywords_must": [
-   "공간 컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Defense-GAN",
+   "프롬프트 엔지니어링",
+   "재현 데이터",
+   "설명가능AI(XAI)",
+   "AI 거버넌스"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 공간 컴퓨팅 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "물리적 공간과 디지털 공간의 구분을 없애 생성된 공간에서 사람들이 새롭게"
+  "keywords_ref": [],
+  "outline": [
+   "공간 혁신을 가능하게 하는 컴퓨팅, 공간 컴퓨팅의 개요",
+   "- 공간 컴퓨팅의 특징",
+   "공간 컴퓨팅의 구성요소 및 구현 기술",
+   "- 공간 컴퓨팅의 구성요소"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "공간 혁신을 가능하게 하는 컴퓨팅, 공간 컴퓨팅의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "공간 컴퓨팅의 특징",
       "items": [
-       "물리적 공간과 디지털 공간의 구분을 없애 생성된 공간에서 사람들이 새롭게 상호작용하며 활동하도록 하는컴퓨팅 환경"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "물리적 현실과 디지털공간의 경계가 사라짐",
+       "기존 공간은 직접 찾아가야 하는 대상이자 목적지에서 내가 공간이 이동하는 대상이자목적지로 전환",
+       "언제 어디서나 그 환경속으로 접속이 가능"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "공간 컴퓨팅의 구성요소 및 구현 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "공간 컴퓨팅의 구성요소",
       "items": [
-       "공간 컴퓨팅",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "사용자가 다른 사람과 사물을 포함한 공간과 만나는 접점",
+       "컴퓨팅 성능, 인터페이스로 구분, 3차원 360도 콘텐츠, 오감 콘텐츠",
+       "공간을 구성하는 주체이자 대상",
+       "실존하는 인간 외에도 사물의 의인화 및 창조된 신원 등장 가능",
+       "경계는 사라지고 새롭게 생성되는 공간"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "공간 컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Defense-GAN",
+   "프롬프트 엔지니어링",
+   "재현 데이터",
+   "설명가능AI(XAI)",
+   "AI 거버넌스"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_125": {
-  "name": "검색엔진(SV 125)",
-  "en": "SV 125",
-  "title": "검색엔진(SV 125)",
+  "name": "검색엔진(Search Engine)",
+  "en": "Search Engine",
+  "title": "검색엔진(Search Engine)",
   "definition": "데이터베이스에 저장된 방대한 양의 컨텐츠를 인터넷상에서 쉽게 찾을 수 있도록 도와주는 소프트웨어",
-  "outline": [
-   "검색엔진의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: Crawler · Indexer · Database",
+   "기술: Searcher · Query Manager · Filter",
+   "운영: 자연어 처리 · BI · DW",
+   "참고: 자연어 처리 · BI · DW"
   ],
   "keywords_must": [
-   "검색엔진",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Crawler",
+   "Indexer",
+   "Database",
+   "Searcher",
+   "Query Manager",
+   "Filter",
+   "자연어 처리",
+   "BI",
+   "DW",
+   "KMS"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "자연어 처리",
+   "BI",
+   "DW"
   ],
-  "keywords": [
-   "핵심: 검색엔진 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "데이터베이스에 저장된 방대한 양의 컨텐츠를 인터넷상에서 쉽게 찾을 수 있"
+  "outline": [
+   "자료검색의 효율적인 도구, 검색엔진의 개요",
+   "- 검색엔진(Search Engine)의 정의",
+   "- 이용주체에 따른 검색엔진의 의미",
+   "검색엔진의 핵심, 색인어 구성절차",
+   "- N-gram 방식을 통한 색인어 추출",
+   "검색포탈",
+   "- 검색엔진과 검색포탈의 개념 비교",
+   "검색포탈 구성도",
+   "검색포탈 구성요소"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "자료검색의 효율적인 도구, 검색엔진의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "검색엔진(Search Engine)의 정의",
       "items": [
-       "데이터베이스에 저장된 방대한 양의 컨텐츠를 인터넷상에서 쉽게 찾을 수 있도록 도와주는 소프트웨어"
+       "인터넷 상에서 필요한 정보를 정확하고 빠르고 쉽게 찾아 주기 위한 기술"
       ]
      },
      {
-      "title": "목적",
+      "title": "이용주체에 따른 검색엔진의 의미",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "검색엔진: 사용자에게 원하는 정보를 제공, 기업에게는 마케팅 도구로 활용",
+       "키워드: 사용자에게 정보검색의 방법으로 이용, 기업은 고객의 욕구를 파악하는데 이용",
+       "검색결과: 사용자에게 정보로서의 가치를 가짐, 기업에게는 마케팅채널로서의 가치"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "검색엔진의 핵심, 색인어 구성절차",
     "subsections": [
      {
-      "title": null,
+      "title": "N-gram 방식을 통한 색인어 추출",
       "items": [
-       "검색엔진",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "글자를 겹쳐서 색인어 추출하는 방법",
+       "사례) 정보검색시스템을 : “정보”, “보검”, “검색”, “색시”, “시스”, “스템”, “템을”",
+       "재현율 100%로 빠지는 것 없이 모두 찾아냄, 사전에 없는 신조어 색인 가능",
+       "색인어 크기가 일정하여 색인어 리스트 구성이 용이"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "검색포탈",
+    "subsections": [
+     {
+      "title": "검색엔진과 검색포탈의 개념 비교",
+      "items": [
+       "검색 엔진 및 검색 포탈은 공통적으로 사용자가 검색하는 정보의 결과를 최적으로 반환해주며, 검색 포탈은검색 엔진에 추가적으로 다양한 부가기능을 제공함."
+      ]
+     }
+    ]
+   },
+   {
+    "title": "검색포탈 구성도",
     "subsections": [
      {
       "title": null,
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "검색엔진 자체의 기능에 News/Media/Email등 다양한 부가 기능 등을 추가하여 다양한 서비스 제공이 가능, 기업용 포탈의 경우 BI/DW, KMS, SCM/CRM 등 과의 연계가 가능 함."
+      ]
+     }
+    ]
+   },
+   {
+    "title": "검색포탈 구성요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "검색 포탈은 개인화, 외부 서비스 연계 등을 통해 부가 서비스 제공을 목적으로하기 때문에 검색엔진과 차이가존재함."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "검색엔진",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Crawler",
+   "Indexer",
+   "Database",
+   "Searcher",
+   "Query Manager",
+   "Filter",
+   "자연어 처리",
+   "BI",
+   "DW",
+   "KMS"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_129": {
   "name": "지능형 에이전트(SV 129)",
@@ -18160,1062 +18086,995 @@
   "warnings": []
  },
  "SV_055": {
-  "name": "민간 클라우드 이용(SV 055)",
-  "en": "SV 055",
-  "title": "민간 클라우드 이용(SV 055)",
+  "name": "민간 클라우드 이용(Public Cloud Adoption)",
+  "en": "Public Cloud Adoption",
+  "title": "민간 클라우드 이용(Public Cloud Adoption)",
   "definition": "정보자원 1 등급은 이용 제외 o 정보자원 2 등급은 검토 요청하여 정책협의체에서 이용가능 여부 검토와 국가정보원에서보안성 검토를 통해 결과 통보함.",
-  "outline": [
-   "민간 클라우드 이용의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 전자정부법 · 정책협의체 · 국정원 보안성 검토",
+   "기술: 정보자원등급 등 · UX · SLA(Service Level Agreement)",
+   "운영: SLA",
+   "참고: SLA"
   ],
   "keywords_must": [
-   "민간 클라우드 이용",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "전자정부법",
+   "정책협의체",
+   "국정원 보안성 검토",
+   "정보자원등급 등",
+   "UX",
+   "SLA(Service Level Agreement)",
+   "SLA"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "SLA"
   ],
-  "keywords": [
-   "핵심: 민간 클라우드 이용 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "정보자원 1 등급은 이용 제외 o 정보자원 2 등급은 검토 요청하여 정책"
+  "outline": [
+   "공공기관 민간 클라우드 이용 가이드라인의 개요",
+   "- 공공기관 민간 클라우드 이용 가이드라인 배경",
+   "- 클라우드 민간 클라우드 이용 법적 근거",
+   "민간 클라우드 이용 검토 단계",
+   "- 공공기관 민간 클라우드 이용 사전 검토",
+   "- 공공기관 민간 클라우드 이용 본 검토",
+   "SLA(Service Level Agreement) 주요 평가지표",
+   "- SLA(SERVICE LEVEL AGREEMENT) 평가 등급",
+   "- 서비스 수준 지표 (예시)",
+   "공공기관이 민간 클라우드 컴퓨팅 이용시 보안 위협"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "공공기관 민간 클라우드 이용 가이드라인의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "공공기관 민간 클라우드 이용 가이드라인 배경",
       "items": [
-       "정보자원 1 등급은 이용 제외 o 정보자원 2 등급은 검토 요청하여 정책협의체에서 이용가능 여부 검토와 국가정보원에서보안성 검토를 통해 결과 통보함."
+       "정보자원 3 등급은 민간 클라우드 컴퓨팅서비스 이용 가능 o 전자정부법상의 공공기관"
       ]
      },
      {
-      "title": "목적",
+      "title": "클라우드 민간 클라우드 이용 법적 근거",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "행자부장관은 행정기관 등의 정보자원에 대한",
+       "제 54 조공동이용 및 효율적인 관리를 위하여 정보화 수요를 (정보자원 통합 관리) 조사하고, 정보자원의 통합기준 및 원칙 등을 수립",
+       "UX 차별화(혁신, 경영)전략 수립"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "민간 클라우드 이용 검토 단계",
     "subsections": [
      {
-      "title": null,
+      "title": "공공기관 민간 클라우드 이용 사전 검토",
       "items": [
-       "민간 클라우드 이용",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
+       "자체 구축과 민간 클라우드 비용 비교"
+      ]
+     },
+     {
+      "title": "공공기관 민간 클라우드 이용 본 검토",
+      "items": [
+       "(업무 대체 비용)사고 발생시 타수단으로 대체하는 비용 o 사고 발생시 피해정도 및 복구의 상 중 하시급성 (3 점) (2 점) (1 점)"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "SLA(Service Level Agreement) 주요 평가지표",
+    "subsections": [
+     {
+      "title": "SLA(SERVICE LEVEL AGREEMENT) 평가 등급",
+      "items": [
+       "서비스 수준의 평가는 서비스 수준 지표에 대한 최대목표수준과 최소목표수준을 5 개 등급으로 평가관리함.",
+       "UX 프로세스는 사용자 이해 -> UX 전략 -> UX 검증 단계로 진행함."
+      ]
+     },
+     {
+      "title": "서비스 수준 지표 (예시)",
+      "items": [
+       "명시된 지표항목 및 목표는 기본값이므로 기관시스템 성격을 고려하여 수정함."
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공공기관이 민간 클라우드 컴퓨팅 이용시 보안 위협",
     "subsections": [
      {
       "title": null,
       "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "인프라 솔루션 설치와 구성에 대한 보안",
+       "가상화 기술에 기반한 클라우드 서비스는최고 방법, 비인가된 수정 및 활동 대한시스템 자원을 통합 재분배하여 제공하는감시, 인증을 통한 접근제어인프라 계층의 특징으로 인해 악성코드",
+       "취약점 분석과 감사 구성을 통한 수행",
+       "네트워크, 서버 및 어플리케이션수준에서 단계별 보안기술 적용 권장",
+       "퍼블릭 클라우드의 경우 서비스 계약서, SLA 등을 통해 정보보호에 대한 기본요건을 확인함.",
+       "클라우드 서비스는 이용자의 정보를 o 개인정보가 포함된 경우, 클라우드서비스 공급자 서버에 저장하고 그 관리도 서비스 제공자 개인정보보호 수직에 따라공급자가 실시하게 되므로 내부자 또는 관리되는지 확인 필요."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "민간 클라우드 이용",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "전자정부법",
+   "정책협의체",
+   "국정원 보안성 검토",
+   "정보자원등급 등",
+   "UX",
+   "SLA(Service Level Agreement)",
+   "SLA"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_063_00": {
-  "name": "클라우드 보안인증제도(SV 063 00)",
-  "en": "SV 063 00",
-  "title": "클라우드 보안인증제도(SV 063 00)",
+  "name": "클라우드 보안인증제도(CSAP)",
+  "en": "Cloud Security Assurance Program",
+  "title": "클라우드 보안인증제도(CSAP)",
   "definition": "'클라우드 컴퓨팅 발전 및 이용자 보호에 관한 법률'(2015.9.25 제정, 이하 클라우드컴퓨팅법) 제 23조 제2항에따라 정보보호 기준의 준수 여부 확인을 인증기관(한국인터넷진흥원(KISA))이 평가/인증하여 안심하고 클라우드서비스를 이용할 수 있도록 지원하는 제도",
-  "outline": [
-   "클라우드 보안인증제도의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: KISA(한국인터넷진흥원) · AWS · KT",
+   "기술: 클라우드 보안인증제도(CSAP) · 클라우드 보안인증제도 아키텍처 · 클라우드 보안인증제도 프로토콜"
   ],
   "keywords_must": [
-   "클라우드 보안인증제도",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "KISA(한국인터넷진흥원)",
+   "AWS",
+   "KT",
+   "클라우드 보안인증제도(CSAP)",
+   "클라우드 보안인증제도 아키텍처",
+   "클라우드 보안인증제도 프로토콜"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 클라우드 보안인증제도 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "'클라우드 컴퓨팅 발전 및 이용자 보호에 관한 법률'(2015.9.25 "
+  "keywords_ref": [],
+  "outline": [
+   "공공기관에 신뢰성이 검증된 클라우드 서비스를 제공토록 하기 위한 제도, 클라우드보안…",
+   "- 추진근거",
+   "클라우드 보안 인증 제도 평가 인증 체계 및 평가/인증 종류",
+   "- 클라우드 보안 인증 제도 평가 인증 체계",
+   "- 클라우드 보안 인증제도 평가/인증 종류",
+   "평가인증범위 기준 및 인증기준",
+   "- 평가인증범위",
+   "공공부문 추가 보안요구 사항 8 7",
+   "SaaS 평가/인증 대상"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "공공기관에 신뢰성이 검증된 클라우드 서비스를 제공토록 하기 위한 제도, 클라우드보안인증제도 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "추진근거",
       "items": [
-       "'클라우드 컴퓨팅 발전 및 이용자 보호에 관한 법률'(2015.9.25 제정, 이하 클라우드컴퓨팅법) 제 23조 제2항에따라 정보보호 기준의 준수 여부 확인을 인증기관(한국인터넷진흥원(KISA))이 평가/인증하여 안심하고 클라우드서비스를 이용할 수 있도록 지원하는 제도"
+       "최초 IaaS 에 대한 인증으로 시작, 2018 년 6 월부터 SaaS 에 대한 인증 확대"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "클라우드 보안 인증 제도 평가 인증 체계 및 평가/인증 종류",
+    "subsections": [
+     {
+      "title": "클라우드 보안 인증 제도 평가 인증 체계",
+      "items": [
+       "클라우드서비스 보안 평가·인증체계는 역할과 책임에 따라 정책기관, 평가/인증기관, 인증위원회, 기술자문기관, 신청기관, 이용자로 구분하고, 정책기관은 과학기술정보통신부, 평가/인증기관은 한국인터넷진흥원, 기술자문기관은 국가보안기술연구소에서 각각 역할 수행"
       ]
      },
      {
-      "title": "목적",
+      "title": "클라우드 보안 인증제도 평가/인증 종류",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "클라우드 서비스를 위한 관련 자산 및 조직에 대해 관리적 · 물리적 · 기술적 보호조치, 공공기관용 추가 보호조치 등 총 14개 부문(117개 통제항목)을 준수했는지를 중점적으로 확인"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "평가인증범위 기준 및 인증기준",
     "subsections": [
      {
-      "title": null,
+      "title": "평가인증범위",
       "items": [
-       "클라우드 보안인증제도",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
+       "서비스 운영·관리를 위한 온·오프라인 자산 및 지원서비스)",
+       "안전성 및 신뢰성 확보를 위한 자산(정보보호시스템, 로그관리시스템 등)"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "공공부문 추가 보안요구 사항 8 7",
     "subsections": [
      {
       "title": null,
       "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "(정부/공공기관은 클라우드 보안인증을 받은 서비스만 이용할 수 있기 때문에) AWS가 클라우드 보안인증을받지 않아서 공공기관에 서비스가 불가능",
+       "국내에서 클라우드 보안인증 받은 회사: KT, 네이버 등 국내기업 뿐임 “끝” [참고] SaaS 인증"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "SaaS 평가/인증 대상",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "평가/인증 신청 시 준비, 평가, 인증의 3 단계 절차 수행(3~6 개월 소요)"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드 보안인증제도",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "KISA(한국인터넷진흥원)",
+   "AWS",
+   "KT",
+   "클라우드 보안인증제도(CSAP)",
+   "클라우드 보안인증제도 아키텍처",
+   "클라우드 보안인증제도 프로토콜"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_070": {
   "name": "디지털서비스(Fabric Computing)",
   "en": "Fabric Computing",
   "title": "디지털서비스(Fabric Computing)",
   "definition": "느슨히 결합된 저장장치/NW/프로세싱 기능이 높은 대역폭의 연결망으로 연결되어 있는 고성능 컴퓨팅시스템 (  컴퓨터의 요소들을 모듈화하여 동적으로 조직하는 기술 )",
-  "outline": [
-   "디지털서비스의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: FBC · FEC · FBI",
+   "기술: 가상화(Virtualization) · 병렬처리 · 분산 스토리지",
+   "운영: 연결망 · QPI · HyperTransport",
+   "참고: 연결망 · QPI · HyperTransport"
   ],
   "keywords_must": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "FBC",
+   "FEC",
+   "FBI",
+   "가상화(Virtualization)",
+   "병렬처리",
+   "분산 스토리지",
+   "연결망",
+   "QPI",
+   "HyperTransport",
+   "PCI express",
+   "InfiniBand"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "연결망",
+   "QPI",
+   "HyperTransport"
   ],
-  "keywords": [
-   "핵심: 디지털서비스 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "느슨히 결합된 저장장치/NW/프로세싱 기능이 높은 대역폭의 연결망으로 연"
+  "outline": [
+   "Fabric Computing",
+   "- Fabric Computing의 정의 (Wikipedia)",
+   "- Fabric Computing의 종류 (개념적 모델의 종류)",
+   "Fabric Computing의 개념도 및 요소기술",
+   "- Fabric Computing의 개념도",
+   "- Fabric Computing의 요소기술(인프라 가상화 및 관리기술)",
+   "패브릭 컴퓨팅의 개발 사례"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "Fabric Computing",
     "subsections": [
      {
-      "title": "정의",
+      "title": "Fabric Computing의 정의 (Wikipedia)",
       "items": [
-       "느슨히 결합된 저장장치/NW/프로세싱 기능이 높은 대역폭의 연결망으로 연결되어 있는 고성능 컴퓨팅시스템 (  컴퓨터의 요소들을 모듈화하여 동적으로 조직하는 기술 )"
+       "컴퓨터 시스템을 구성하는 자원(프로세서, 메모리, I/O)을 필요한 만큼, 독립적으로, 즉시 구성하여 사용하고자 하는 요구에서 도출된 컴퓨팅 시스템"
       ]
      },
      {
-      "title": "목적",
+      "title": "Fabric Computing의 종류 (개념적 모델의 종류)",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "패브릭 인터커넥트 혹은 백플레인 스위치에 연결되어 있는 빌딩 블록 모듈을",
+       "패브릭 기반 컴퓨터로 넘어가는 중간 단계 컴퓨팅 형태",
+       "프로세싱 블록, 저장 장치, 네트워킹, 관리 소프트웨어의 부분적인 통합을 제"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "Fabric Computing의 개념도 및 요소기술",
     "subsections": [
      {
-      "title": null,
+      "title": "Fabric Computing의 개념도",
       "items": [
-       "디지털서비스",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "데이터센터의 인프라 관리 방법이 각 장치마다 달라지는 현재의 방식에서 자원 풀을 중심으로 워크로드에따라 필요한 자원이 구성/재구성될 수 있는 관리 방식"
+      ]
+     },
+     {
+      "title": "Fabric Computing의 요소기술(인프라 가상화 및 관리기술)",
+      "items": [
+       "하나의 물리적 서버를 논리적으로 분리하여 운영하는 기술",
+       "다수의 물리적 H/W가 연결되어 있는 형태로 구성 - 베럴(barrel) 구조",
+       "가상 서버 제공 기술 - Provisioning"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "패브릭 컴퓨팅의 개발 사례",
     "subsections": [
      {
       "title": null,
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "블레이드 서버를 일관성 있게 모니터링 하고 빠르게 교체할 수 있는 환경지원",
+       "다양한 데이터센터 자원을 연결하여 중앙집중 관리할 수 있는 단위로 만들",
+       "하나의 블레이드 섀시에 서버와 네트워크 장비가 모두 설치되는 형태의 시스템으로 서버 설치 및 관리 비용 절약"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "FBC",
+   "FEC",
+   "FBI",
+   "가상화(Virtualization)",
+   "병렬처리",
+   "분산 스토리지",
+   "연결망",
+   "QPI",
+   "HyperTransport",
+   "PCI express",
+   "InfiniBand"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_071": {
   "name": "회(Utility Computing)",
   "en": "Utility Computing",
   "title": "회(Utility Computing)",
   "definition": "서버, 스토리지, 네트워크, H/W, S/W 등의 IT 자원을 하나의 서비스 개념으로 보고 구입 또는 자체 개발을하지 않고, 서비스 공급자와의 계약을 통하여 실제로 사용한 양만큼(pay-as-you-use, Payper-Use)요금을지불하는 컴퓨팅 패러다임",
-  "outline": [
-   "회의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: Pay Per Use의 개념 이해 -> 아웃소싱까지 확대 · 자율컴퓨팅 · SON(자가 조직 N/W)",
+   "기술: IT · ROI(투자수익률: Return of Investment) · TCO(소유총비용: Total Cost of Ownership)",
+   "운영: OS",
+   "참고: OS"
   ],
   "keywords_must": [
-   "회",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Pay Per Use의 개념 이해 -> 아웃소싱까지 확대",
+   "자율컴퓨팅",
+   "SON(자가 조직 N/W)",
+   "IT",
+   "ROI(투자수익률: Return of Investment)",
+   "TCO(소유총비용: Total Cost of Ownership)",
+   "OS"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "OS"
   ],
-  "keywords": [
-   "핵심: 회 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "서버, 스토리지, 네트워크, H/W, S/W 등의 IT 자원을 하나의 서"
+  "outline": [
+   "IT 자원, 서비스를 사용한 만큼 비용을 지불하는 개념의 컴퓨팅 패러다임, 유틸리티…",
+   "- 유틸리티 컴퓨팅의 등장배경",
+   "유틸리티 컴퓨팅의 구성요소 및 기반기술",
+   "- 유틸리티 컴퓨팅의 구성요소",
+   "컴퓨팅 패러다임간 비교"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "IT 자원, 서비스를 사용한 만큼 비용을 지불하는 개념의 컴퓨팅 패러다임, 유틸리티 컴퓨팅의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "유틸리티 컴퓨팅의 등장배경",
       "items": [
-       "서버, 스토리지, 네트워크, H/W, S/W 등의 IT 자원을 하나의 서비스 개념으로 보고 구입 또는 자체 개발을하지 않고, 서비스 공급자와의 계약을 통하여 실제로 사용한 양만큼(pay-as-you-use, Payper-Use)요금을지불하는 컴퓨팅 패러다임"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "IT 투자에 대한 ROI(투자수익률: Return of Investment) 측정이 불확실 - TCO(소유총비용: Total Cost of Ownership)등 IT 투자의 효율적 관리가 주요 관심사로 등장"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "유틸리티 컴퓨팅의 구성요소 및 기반기술",
     "subsections": [
      {
-      "title": null,
+      "title": "유틸리티 컴퓨팅의 구성요소",
       "items": [
-       "회",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "제공된 서비스를 관리하기 위한 기술 - Billing, 모니터링, 보안 기술 등",
+       "서비스 자원을 최적화 하고 관리하기 위한 기술, Utility Computing 의핵심요소 - Grid, 가상화 기술, 자동화, 최적화, 분할 기술 등",
+       "서비스를 제공하기 위한 물리적 컴퓨팅 자원 - 서버, 네트워크, 스토리지, OS, 미들웨어, 각종 Application 등"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "컴퓨팅 패러다임간 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "공통점: 전체 IT 자원의 활용도를 높여 총투자비용 절감함으로 자원의 효율적 관리 “끝”"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "회",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Pay Per Use의 개념 이해 -> 아웃소싱까지 확대",
+   "자율컴퓨팅",
+   "SON(자가 조직 N/W)",
+   "IT",
+   "ROI(투자수익률: Return of Investment)",
+   "TCO(소유총비용: Total Cost of Ownership)",
+   "OS"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_072": {
-  "name": "상황인식컴퓨팅(SV 072)",
-  "en": "SV 072",
-  "title": "상황인식컴퓨팅(SV 072)",
+  "name": "상황인식 컴퓨팅(Context-Aware Computing)",
+  "en": "Context-Aware Computing",
+  "title": "상황인식 컴퓨팅(Context-Aware Computing)",
   "definition": "사용자 주변의 정적/동적 상황 인식하고 정보화하여 사용자 중심의 지능화된 서비스를 제공하는 컴퓨팅기술",
-  "outline": [
-   "상황인식컴퓨팅의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 상황인식 컴퓨팅(Context-Aware Computing) · 상황인식 컴퓨팅 아키텍처 · 상황인식 컴퓨팅 프로토콜",
+   "기술: 상황인식 컴퓨팅 보안 · 상황인식 컴퓨팅 표준 · 상황인식 컴퓨팅 유형"
   ],
   "keywords_must": [
-   "상황인식컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "상황인식 컴퓨팅(Context-Aware Computing)",
+   "상황인식 컴퓨팅 아키텍처",
+   "상황인식 컴퓨팅 프로토콜",
+   "상황인식 컴퓨팅 보안",
+   "상황인식 컴퓨팅 표준",
+   "상황인식 컴퓨팅 유형"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 상황인식컴퓨팅 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "사용자 주변의 정적/동적 상황 인식하고 정보화하여 사용자 중심의 지능화된"
+  "keywords_ref": [],
+  "outline": [
+   "라이프 스타일을 바꾸는, 상황인식 컴퓨팅의 개요",
+   "- 상황인식 컴퓨팅의 정의",
+   "- 상황인식과 유비쿼터스 컴퓨팅의 연결 관계",
+   "상황정보의 컴퓨팅의 구성과 상황정보 유형",
+   "- 상황(Context)의 정의",
+   "- 상황(Context)정보의 카테고리",
+   "상황 정보전달 미들웨어 아키텍처 및 구성요소",
+   "- 상황정보 전달 미들웨어 아키텍처",
+   "- 미들웨어 아키텍처 구성요소"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "라이프 스타일을 바꾸는, 상황인식 컴퓨팅의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "상황인식 컴퓨팅의 정의",
       "items": [
-       "사용자 주변의 정적/동적 상황 인식하고 정보화하여 사용자 중심의 지능화된 서비스를 제공하는 컴퓨팅기술"
+       "실시간 상황정보 및 변화 정보에 대한 적응형 기술이며, 추론 기술 등을 활용한 인간 중심의 자율적인서비스 구현 가능한 유비쿼터스 환경의 핵심 기술"
       ]
      },
      {
-      "title": "목적",
+      "title": "상황인식과 유비쿼터스 컴퓨팅의 연결 관계",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "유비쿼터스 컴퓨팅: 주변의 모든 사물 안에 컴퓨터가 내장되어 사물간 사물과 인간간 효과적인 정보교환과활용을 지원하는 기술",
+       "유비쿼터스 환경에서 인간과 컴퓨터간 의사소통에 대한 장벽 해소를 위해 상황인식 컴퓨팅 필요",
+       "상황인식 컴퓨팅은 유비쿼터스 환경을 구축하기 위한 기반 기술이나 기능 범위와 접근방법에서 차이가 있음"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "상황정보의 컴퓨팅의 구성과 상황정보 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "상황(Context)의 정의",
       "items": [
-       "상황인식컴퓨팅",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "사용자와 응용간 상호작용에 연관되는 개체(Entity)의 상태(Situation)를 특징 짓는데 사용될 수 있는 모든정보"
+      ]
+     },
+     {
+      "title": "상황(Context)정보의 카테고리",
+      "items": [
+       "실세계에 존재하는 객체의 상태를 표현하고 특징 지울 수 있는 정보의 일체설명객체에 식별자 부여 (이름, 번호) 위치 정보 및 방향 고도, 객체간 위치 정보 (장소, 목적지, 주변인, 접근장비) 객체 고유의 특성 중 센싱이 가능한 정보 (온도, 냄새, 위급상황, 디스플레이 Status (or Activity) 종류, 대역폭, 조도) 역사적 가치를 높임 (시간, 계절)"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "상황 정보전달 미들웨어 아키텍처 및 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "상황정보 전달 미들웨어 아키텍처",
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "상황정보 전달을 위한 미들웨어는 환경정보를 센싱하는 센서로부터 센싱 정보를 받아 이를 저장한 후필요한 응용에게 전달.",
+       "상황 정보 전달 미들웨어를 통해 하나의 센서가 수집한 정보를 여러 응용이 공유"
+      ]
+     },
+     {
+      "title": "미들웨어 아키텍처 구성요소",
+      "items": [
+       "센서 의존적인 인터페이스를 사용하여 주기적으로 센서의 상황 정보를 획득",
+       "상위계층에게 상황정보를 제공하며, 상황관리 객체와 에이전트로 구성됨"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "상황인식컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "상황인식 컴퓨팅(Context-Aware Computing)",
+   "상황인식 컴퓨팅 아키텍처",
+   "상황인식 컴퓨팅 프로토콜",
+   "상황인식 컴퓨팅 보안",
+   "상황인식 컴퓨팅 표준",
+   "상황인식 컴퓨팅 유형"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_074": {
-  "name": "자율공장(SV 074)",
-  "en": "SV 074",
-  "title": "자율공장(SV 074)",
+  "name": "자율공장(Autonomous Factory)",
+  "en": "Autonomous Factory",
+  "title": "자율공장(Autonomous Factory)",
   "definition": "AI 발전이 가속화되면서 변화된 제조 패러다임을 맞출 수 있는 미래 공장의 모습이 자율 공장임.",
-  "outline": [
-   "자율공장의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: CPS · Digital Twin · AI",
+   "기술: Big Data · IIoT · 제조작업 인지기술",
+   "운영: 협업작업 자율 계획 기술 · 유연생 산 분산협업 실행제어 기술 · SW",
+   "참고: 협업작업 자율 계획 기술 · 유연생 산 분산협업 실행제어 기술 · SW"
   ],
   "keywords_must": [
-   "자율공장",
-   "인지·판단·제어",
-   "센서",
-   "안전(ASIL)",
-   "연결성",
-   "SW정의차량",
-   "규제",
-   "HMI"
+   "CPS",
+   "Digital Twin",
+   "AI",
+   "Big Data",
+   "IIoT",
+   "제조작업 인지기술",
+   "협업작업 자율 계획 기술",
+   "유연생 산 분산협업 실행제어 기술",
+   "SW",
+   "KAMP"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "협업작업 자율 계획 기술",
+   "유연생 산 분산협업 실행제어 기술",
+   "SW"
   ],
-  "keywords": [
-   "핵심: 자율공장 · 인지·판단·제어 · 센서",
-   "구성: 안전(ASIL) · 연결성 · SW정의차량",
-   "AI 발전이 가속화되면서 변화된 제조 패러다임을 맞출 수 있는 미래 공장"
+  "outline": [
+   "자율공장의 개념 및 개념도",
+   "- 자율공장의 개념",
+   "- 자율공장의 개념도",
+   "자율공장을 구현하기 위한 핵심 기술",
+   "- 자율공장 구성을 위한 기반 기술",
+   "자율공장 활성화를 위한 고려 사항"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "자율공장의 개념 및 개념도",
     "subsections": [
      {
-      "title": "정의",
+      "title": "자율공장의 개념",
       "items": [
-       "AI 발전이 가속화되면서 변화된 제조 패러다임을 맞출 수 있는 미래 공장의 모습이 자율 공장임."
+       "유연 생산 기술의 궁극적인 형태로 인공지능을 갖춘 제조설비 및 로봇들이 협력하여 조립, 운반, 포장, 검사 등 제품생산과 관련된 작업을 자율적으로 수행하고, 필요할 때 인간과함께 일을 할 수 있는 인공지능 기반의 미래 생산 환경",
+       "자율공장은 스마트공장 기반 스스로 전과정에 대한 계획 수립 및 실행할 수 있는 생산 환경"
       ]
      },
      {
-      "title": "목적",
+      "title": "자율공장의 개념도",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "자율공장을 구현하기 위한 핵심 기술 파악 및 개발이 중요함"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "자율공장을 구현하기 위한 핵심 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "자율공장 구성을 위한 기반 기술",
       "items": [
-       "자율공장",
-       "인지·판단·제어",
-       "센서",
-       "안전(ASIL)",
-       "연결성",
-       "SW정의차량"
+       "대규모 물리적인 요소와 통신기술, 응용 SW 그리고 시스템 SW기술 이",
+       "CPS 용하여 실시간으로 물리적 요소를 제어하는 시스템",
+       "고신뢰성, 실시간성, 안전성, 자율성",
+       "현실 정보를 기반으로 이를 컴퓨터로 재현, 시뮬레이션 데이터를 기반으",
+       "Digital Twin 로 분석하는 동적 시스템 모델링 기술"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "자율공장 활성화를 위한 고려 사항",
     "subsections": [
      {
       "title": null,
       "items": [
-       "규제",
-       "HMI",
-       "표준·비교·한계를 함께 기술"
+       "기업 측면 대기업/중소기업 파트너십 및 KAMP에 여러 중요한 제조 AI 기술이 포함된 플랫폼 활용하며 AI 기술선도 및 국제 표준에 맞는 기술을 연구하고 개발하여 자율공장 활성화가 가능"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "자율공장",
-   "인지·판단·제어",
-   "센서",
-   "안전(ASIL)",
-   "연결성",
-   "SW정의차량",
-   "규제",
-   "HMI"
+   "CPS",
+   "Digital Twin",
+   "AI",
+   "Big Data",
+   "IIoT",
+   "제조작업 인지기술",
+   "협업작업 자율 계획 기술",
+   "유연생 산 분산협업 실행제어 기술",
+   "SW",
+   "KAMP"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_075": {
-  "name": "인메모리컴퓨팅(SV 075)",
-  "en": "SV 075",
-  "title": "인메모리컴퓨팅(SV 075)",
+  "name": "인메모리 컴퓨팅(In-Memory Computing)",
+  "en": "In-Memory Computing",
+  "title": "인메모리 컴퓨팅(In-Memory Computing)",
   "definition": "어플리케이션을 구동하는 컴퓨터의 메인 메모리에 DB 데이터와 같은 주요 데이터를 저장하고 처리하는 컴퓨팅 기술",
-  "outline": [
-   "인메모리컴퓨팅의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 인메모리 분산디비 · OLAP지원 인메모리 · SSD",
+   "기술: DRAM · CPU"
   ],
   "keywords_must": [
-   "인메모리컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "인메모리 분산디비",
+   "OLAP지원 인메모리",
+   "SSD",
+   "DRAM",
+   "CPU"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 인메모리컴퓨팅 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "어플리케이션을 구동하는 컴퓨터의 메인 메모리에 DB 데이터와 같은 주요 "
+  "keywords_ref": [],
+  "outline": [
+   "대용량의 데이터를 실시간 저장/처리 인메모리 컴퓨팅 개요.",
+   "- 인메모리 컴퓨팅(In-Memory Computing) 정의",
+   "- 인메모리 컴퓨팅 특징",
+   "인메모리 컴퓨팅의 기술요소"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "대용량의 데이터를 실시간 저장/처리 인메모리 컴퓨팅 개요.",
     "subsections": [
      {
-      "title": "정의",
+      "title": "인메모리 컴퓨팅(In-Memory Computing) 정의",
       "items": [
-       "어플리케이션을 구동하는 컴퓨터의 메인 메모리에 DB 데이터와 같은 주요 데이터를 저장하고 처리하는 컴퓨팅 기술"
+       "분석과 트랜잭션 결과를 즉시 제공하기 위해 서버의 메인 메모리에서 초대용량 실시간 데이터를 처리하는 기술"
       ]
      },
      {
-      "title": "목적",
+      "title": "인메모리 컴퓨팅 특징",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "메모리에 데이터베이스를 구축하고 백업 데이터를 디스크에서 관리하는 구조",
+       "테이블과 인덱스를 비롯한 데이터베이스의 데이터 객체는 메모리메모리에 직접 저장 관리",
+       "데이터를 메인메모리에서 관리함으로써 디스크 접근을 최소화하여 효율적인 질의 처리를 통해 트랜잭션 처리율이 향상됨"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "인메모리 컴퓨팅의 기술요소",
     "subsections": [
      {
       "title": null,
       "items": [
-       "인메모리컴퓨팅",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "메모리 중심의 컴퓨팅을 제공하기 위한 기반이 되는 하드웨어 및 병렬/분산 컴퓨팅 기술기술요소 설명메모리 중심의 컴퓨팅을 제공하기 위한 기반이 되는 하드웨어 및 병렬/분산 컴퓨팅 기술 SSD Solid-state Drive : DRAM이나 flash에 정보를 저장하는 장치 Multicore 64비트 멀티코어프로세스. 대용량 병렬처리 환경 지원 InfiniBand CPU와 주변기기 간 고속통신을"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "인메모리컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "인메모리 분산디비",
+   "OLAP지원 인메모리",
+   "SSD",
+   "DRAM",
+   "CPU"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_076": {
   "name": "자율컴퓨팅(Autonomic Computing)",
   "en": "Autonomic Computing",
   "title": "자율컴퓨팅(Autonomic Computing)",
   "definition": "컴퓨터의 시스템들이 스스로의 상태를 인식해 인간의 개입을 최소화한 자가 관리(Self-Management) 능력을제공하는 기술.",
-  "outline": [
-   "자율컴퓨팅의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 엘리먼트 · 자율 매니저 · 관리 엘리먼트",
+   "기술: IBM · MAPE"
   ],
   "keywords_must": [
-   "자율컴퓨팅",
-   "인지·판단·제어",
-   "센서",
-   "안전(ASIL)",
-   "연결성",
-   "SW정의차량",
-   "규제",
-   "HMI"
+   "엘리먼트",
+   "자율 매니저",
+   "관리 엘리먼트",
+   "IBM",
+   "MAPE"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 자율컴퓨팅 · 인지·판단·제어 · 센서",
-   "구성: 안전(ASIL) · 연결성 · SW정의차량",
-   "컴퓨터의 시스템들이 스스로의 상태를 인식해 인간의 개입을 최소화한 자가 "
+  "keywords_ref": [],
+  "outline": [
+   "자율컴퓨팅의 참조모델 및 구성요소",
+   "- 자율컴퓨팅의 구성요소",
+   "자율 매니저의 동작 과정"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "자율컴퓨팅의 참조모델 및 구성요소",
     "subsections": [
      {
-      "title": "정의",
+      "title": "자율컴퓨팅의 참조모델(IBM MAPE-K(Monitor, Analyze, Plan, Execute, Knowledge))",
       "items": [
-       "컴퓨터의 시스템들이 스스로의 상태를 인식해 인간의 개입을 최소화한 자가 관리(Self-Management) 능력을제공하는 기술."
+       "여러 자율 엘리먼트 사이의 상호작용으로 동작"
       ]
      },
      {
-      "title": "목적",
+      "title": "자율컴퓨팅의 구성요소",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "다른 엘리먼트들과 상호작용하며 자율 매니저(autonomic manager)를 통해 사용자와소통함",
+       "하나 이상의 관리 엘리먼트(managed element)들로 구성됨",
+       "비자율 시스템의 매니저 대비 스스로 모니터하고 제어할 수 있는 기능이 추가됨"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "자율 매니저의 동작 과정",
     "subsections": [
      {
       "title": null,
       "items": [
-       "자율컴퓨팅",
-       "인지·판단·제어",
-       "센서",
-       "안전(ASIL)",
-       "연결성",
-       "SW정의차량"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "규제",
-       "HMI",
-       "표준·비교·한계를 함께 기술"
+       "센서를 통해 수집된 데이터 조직화, 융합화",
+       "모니터 단계의 상황 정보, 실행 기록 분석",
+       "관리 자원의 변경에 대한 시점, 자원 등에 대한 실행 계획 수립",
+       "계획단계에서 결졍된 조치를 실행기를 통해 관리자원에 적용 2/2"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "자율컴퓨팅",
-   "인지·판단·제어",
-   "센서",
-   "안전(ASIL)",
-   "연결성",
-   "SW정의차량",
-   "규제",
-   "HMI"
+   "엘리먼트",
+   "자율 매니저",
+   "관리 엘리먼트",
+   "IBM",
+   "MAPE"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_077_0": {
   "name": "포그컴퓨팅(Fog Computing)",
   "en": "Fog Computing",
   "title": "포그컴퓨팅(Fog Computing)",
   "definition": "포그 컴퓨팅(Fog Computing)은 방대한 양의 데이터가 발생되는 IoT 시대에 대비해 모든 데이터를 원거리의클라우드로 보내는 대신 데이터 발생 지점 주변에서 선별적으로 분석, 활용 가능하도록 시스코가 새롭게 제안한아키텍처",
-  "outline": [
-   "포그컴퓨팅의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: FOG 노드 · IDC · SDN",
+   "기술: 포그컴퓨팅(Fog Computing) · 포그컴퓨팅 아키텍처 · 포그컴퓨팅 프로토콜"
   ],
   "keywords_must": [
-   "포그컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "FOG 노드",
+   "IDC",
+   "SDN",
+   "포그컴퓨팅(Fog Computing)",
+   "포그컴퓨팅 아키텍처",
+   "포그컴퓨팅 프로토콜"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 포그컴퓨팅 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "포그 컴퓨팅(Fog Computing)은 방대한 양의 데이터가 발생되는 "
+  "keywords_ref": [],
+  "outline": [
+   "포그 컴퓨팅의 구성도 및 구성요소",
+   "- 포그 컴퓨팅의 주요 구성요소",
+   ". 포그컴퓨팅과 클라우드 컴퓨팅 비교"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "포그 컴퓨팅의 구성도 및 구성요소",
     "subsections": [
      {
-      "title": "정의",
+      "title": "포그 컴퓨팅의 주요 구성요소",
       "items": [
-       "포그 컴퓨팅(Fog Computing)은 방대한 양의 데이터가 발생되는 IoT 시대에 대비해 모든 데이터를 원거리의클라우드로 보내는 대신 데이터 발생 지점 주변에서 선별적으로 분석, 활용 가능하도록 시스코가 새롭게 제안한아키텍처"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "디바이스에서 생성된 데이터를 근거리 통신망을 이용해 포그 노드에전달",
+       "적은양의 데이터 즉각적인 분석 가능",
+       "분석결과 처리 불가일 경우, IDC 센터로 전달.",
+       "SDN 이 Software 를 활용한 Networking 기능이라면 Fog Computing 도 마찬가지의 기능을 포함하지만 Application Service 까지 제공하는 것도 포함. 따라서 위와 같은 Layer 로 표현 가능. Fog Server 가 SDN 또한 Layer 내에 포함."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": ". 포그컴퓨팅과 클라우드 컴퓨팅 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "포그컴퓨팅",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "데이터 수집 및 전처리 • 대용량 데이터 분석 및 대시 보드",
+       "상태 모니터링 • 데이터 / 패턴 분석 및 기계 학습",
+       "규칙 기반 의사 결정 • 시뮬레이션 및 최적화",
+       "단기 데이터 저장 • 예측 유지 보수",
+       "장기간 데이터 저장 3/3"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "포그컴퓨팅",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "FOG 노드",
+   "IDC",
+   "SDN",
+   "포그컴퓨팅(Fog Computing)",
+   "포그컴퓨팅 아키텍처",
+   "포그컴퓨팅 프로토콜"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_081": {
   "name": "스마트(Smart City)",
   "en": "Smart City",
   "title": "스마트(Smart City)",
   "definition": "스스로 인지하고 발전하는 IT 인프라인 하드 인프라와 교육, 안전, 복지 등 시민의 삶을 윤택하게 하는 IT∙ 비 IT 를 망라한 각종 서비스인 소프트 인프라가 조화를 이루어 모든 시민이 지능형 서비스를 이용할 수 있도록설계된 신개념 도시",
-  "outline": [
-   "스마트의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 스마트 시티 플랫폼 · 스마트 공공 · 공유경제",
+   "기술: 공공서비스 · 지능형관리 스마트 빌딩 · 스마트 유틸리티",
+   "운영: 스마트 정부 · 스마트 · 센서네트워크",
+   "참고: 스마트 정부 · 스마트 · 센서네트워크"
   ],
   "keywords_must": [
+   "스마트 시티 플랫폼",
+   "스마트 공공",
+   "공유경제",
+   "공공서비스",
+   "지능형관리 스마트 빌딩",
+   "스마트 유틸리티",
+   "스마트 정부",
    "스마트",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "센서네트워크",
+   "스마트 단말",
+   "통신 플랫폼"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "스마트 정부",
+   "스마트",
+   "센서네트워크"
   ],
-  "keywords": [
-   "핵심: 스마트 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "스스로 인지하고 발전하는 IT 인프라인 하드 인프라와 교육, 안전, 복지"
+  "outline": [
+   "첨단 산업 융합의 미래 도시, 스마트시티(Smart City)의 개요",
+   "- 스마트시티(Smart City)의 정의",
+   "- 스마트시티(Smart City)의 확산 배경",
+   "스마트시티(Smart City) 향후 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "첨단 산업 융합의 미래 도시, 스마트시티(Smart City)의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "스마트시티(Smart City)의 정의",
       "items": [
-       "스스로 인지하고 발전하는 IT 인프라인 하드 인프라와 교육, 안전, 복지 등 시민의 삶을 윤택하게 하는 IT∙ 비 IT 를 망라한 각종 서비스인 소프트 인프라가 조화를 이루어 모든 시민이 지능형 서비스를 이용할 수 있도록설계된 신개념 도시"
+       "기존 도시에 스마트 플랫폼을 활용하여 신기술로 도시의 효율성을 제고하고 데이터를 활용하여 새로운가치를 창출"
       ]
      },
      {
-      "title": "목적",
+      "title": "스마트시티(Smart City)의 확산 배경",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "많은 핀테크 기업들이 금융회사와의 협력을 통한 비즈니스 발굴의 어려움을 극복하여 핀테크 산업 활성화를목표 1/3"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "스마트시티(Smart City) 향후 과제",
     "subsections": [
      {
       "title": null,
       "items": [
-       "스마트",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "스마트시티 건설과 관련된 각종 법 제도 및 지원책 수립 필요",
+       "인프라 중심의 U-City 와는 달리 스마트시트 건설을 위해서는 시민 생활 전반과 관련된 서비스 개발에 초점",
+       "스마트시티 확산과 준비를 위한 공공과 민간의 적극적인 참여와 협조 필요",
+       "기업들의 장기적 투자를 통해 시장을 확장시키고 기술 투자를 통해 경쟁력 확보하고 스마트시티 관련 전문기술역량 확보 노력 필요"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
+   "스마트 시티 플랫폼",
+   "스마트 공공",
+   "공유경제",
+   "공공서비스",
+   "지능형관리 스마트 빌딩",
+   "스마트 유틸리티",
+   "스마트 정부",
    "스마트",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "센서네트워크",
+   "스마트 단말",
+   "통신 플랫폼"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_082": {
-  "name": "스마트시티 통합플랫폼(SV 082)",
-  "en": "SV 082",
-  "title": "스마트시티 통합플랫폼(SV 082)",
+  "name": "스마트시티 통합플랫폼(Smart City Integrated Platform)",
+  "en": "Smart City Integrated Platform",
+  "title": "스마트시티 통합플랫폼(Smart City Integrated Platform)",
   "definition": "스마트시티 통합플랫폼(SV 082) — 스마트제조·산업제어·디지털전환 관련 개념",
+  "keywords": [
+   "핵심: 통합운영 · 통합연계 · 통합 DB * 필요성 : 각종 도시 문제 해결을 위한 지자체 정보시스템이 연계",
+   "기술: 통합되지 않고 · 개별 운영됨에 따른 비효율 및 예상 중복 투자 등이 발생하고 있음 · SV",
+   "운영: DB",
+   "참고: DB"
+  ],
+  "keywords_must": [
+   "통합운영",
+   "통합연계",
+   "통합 DB * 필요성 : 각종 도시 문제 해결을 위한 지자체 정보시스템이 연계",
+   "통합되지 않고",
+   "개별 운영됨에 따른 비효율 및 예상 중복 투자 등이 발생하고 있음",
+   "SV",
+   "DB"
+  ],
+  "keywords_ref": [
+   "DB"
+  ],
   "outline": [
    "스마트시티 통합플랫폼의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "스마트시티 통합플랫폼",
-   "사이버물리",
-   "제어시스템",
-   "데이터 수집",
-   "자동화",
-   "보안",
-   "표준",
-   "가시성"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 스마트시티 통합플랫폼 · 사이버물리 · 제어시스템",
-   "구성: 데이터 수집 · 자동화 · 보안",
-   "스마트시티 통합플랫폼(SV 082) — 스마트제조·산업제어·디지털전환 관"
+   "- 필요성",
+   "스마트시티 통합플랫폼의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "스마트시티 통합플랫폼의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "스마트시티 통합플랫폼의 개념",
     "subsections": [
      {
       "title": "정의",
@@ -19224,304 +19083,294 @@
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "스마트시티 통합플랫폼는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "스마트시티 통합플랫폼의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "스마트시티 통합플랫폼",
-       "사이버물리",
-       "제어시스템",
-       "데이터 수집",
-       "자동화",
-       "보안"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "표준",
-       "가시성",
-       "표준·비교·한계를 함께 기술"
-      ]
-     }
-    ]
-   }
-  ],
-  "dueum": null,
-  "curated": true,
-  "keywords_note": null,
-  "note": null,
-  "review": null,
-  "quiz_terms": [
-   "스마트시티 통합플랫폼",
-   "사이버물리",
-   "제어시스템",
-   "데이터 수집",
-   "자동화",
-   "보안",
-   "표준",
-   "가시성"
-  ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
- },
- "SV_083": {
-  "name": "스마트시티 서비스 모델(SV 083)",
-  "en": "SV 083",
-  "title": "스마트시티 서비스 모델(SV 083)",
-  "definition": "ICT 핵심기술이 혁신적으로 스마트시티 물리시스템 도메인과 CPS 융합 시 세계 GDP 는 2030 년까지 10 조 6 천억 불 규모에 달하며, 법 제정 등 제도정비가 뒷받침되면 추가적으로 30% 증가하여 14 조 2 천억 불이 될것으로 전망",
-  "outline": [
-   "스마트시티 서비스 모델의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "스마트시티 서비스 모델",
-   "사이버물리",
-   "제어시스템",
-   "데이터 수집",
-   "자동화",
-   "보안",
-   "표준",
-   "가시성"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 스마트시티 서비스 모델 · 사이버물리 · 제어시스템",
-   "구성: 데이터 수집 · 자동화 · 보안",
-   "ICT 핵심기술이 혁신적으로 스마트시티 물리시스템 도메인과 CPS 융합 "
-  ],
-  "sections": [
-   {
-    "title": "개념",
-    "subsections": [
-     {
-      "title": "정의",
-      "items": [
-       "ICT 핵심기술이 혁신적으로 스마트시티 물리시스템 도메인과 CPS 융합 시 세계 GDP 는 2030 년까지 10 조 6 천억 불 규모에 달하며, 법 제정 등 제도정비가 뒷받침되면 추가적으로 30% 증가하여 14 조 2 천억 불이 될것으로 전망"
+       "통합운영",
+       "통합연계",
+       "통합 DB * 필요성 : 각종 도시 문제 해결을 위한 지자체 정보시스템이 연계",
+       "통합되지 않고"
       ]
      },
      {
-      "title": "목적",
+      "title": "유형·동작",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "개별 운영됨에 따른 비효율 및 예상 중복 투자 등이 발생하고 있음"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "스마트시티 통합플랫폼의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "스마트시티 서비스 모델",
-       "사이버물리",
-       "제어시스템",
-       "데이터 수집",
-       "자동화",
-       "보안"
+       "공공·민간 서비스에 스마트시티 통합플랫폼를 적용한다."
       ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
+     },
      {
-      "title": null,
+      "title": "과제",
       "items": [
-       "표준",
-       "가시성",
-       "표준·비교·한계를 함께 기술"
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "스마트시티 서비스 모델",
-   "사이버물리",
-   "제어시스템",
-   "데이터 수집",
-   "자동화",
-   "보안",
-   "표준",
-   "가시성"
+   "통합운영",
+   "통합연계",
+   "통합 DB * 필요성 : 각종 도시 문제 해결을 위한 지자체 정보시스템이 연계",
+   "통합되지 않고",
+   "개별 운영됨에 따른 비효율 및 예상 중복 투자 등이 발생하고 있음",
+   "SV",
+   "DB"
   ],
-  "quiz_groups": [
-   "sv"
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
+ },
+ "SV_083": {
+  "name": "스마트시티 서비스 모델(Smart City Service Model)",
+  "en": "Smart City Service Model",
+  "title": "스마트시티 서비스 모델(Smart City Service Model)",
+  "definition": "ICT 핵심기술이 혁신적으로 스마트시티 물리시스템 도메인과 CPS 융합 시 세계 GDP 는 2030 년까지 10 조 6 천억 불 규모에 달하며, 법 제정 등 제도정비가 뒷받침되면 추가적으로 30% 증가하여 14 조 2 천억 불이 될것으로 전망",
+  "keywords": [
+   "핵심: OBM · BOM · BOT",
+   "기술: BOO · CPS · ICT",
+   "운영: OBM(Open Business Model) · BOM(Build, Operate, Manage) · BOT(Build, Operate, Transfer)",
+   "참고: OBM(Open Business Model) · BOM(Build, Operate, Manage) · BOT(Build, Operate, Transfer)"
   ],
-  "quiz_avoid": []
+  "keywords_must": [
+   "OBM",
+   "BOM",
+   "BOT",
+   "BOO",
+   "CPS",
+   "ICT",
+   "OBM(Open Business Model)",
+   "BOM(Build, Operate, Manage)",
+   "BOT(Build, Operate, Transfer)",
+   "BOO(Build, Own, Operate)"
+  ],
+  "keywords_ref": [
+   "OBM(Open Business Model)",
+   "BOM(Build, Operate, Manage)",
+   "BOT(Build, Operate, Transfer)"
+  ],
+  "outline": [
+   "4 차 산업혁명과 CPS 시스템, 통신설비 구성요소",
+   "- 4 차 산업혁명과 CPS 시스템",
+   "- 4 차 산업혁명 시스템과 통신설비 구성요소",
+   "스마트시티 모델의 4 가지 유형",
+   "- 스마트시티 모델의 4 가지 유형",
+   "- 스마트시트 모델의 4 가지 유형 상세설명"
+  ],
+  "sections": [
+   {
+    "title": "4 차 산업혁명과 CPS 시스템, 통신설비 구성요소",
+    "subsections": [
+     {
+      "title": "4 차 산업혁명과 CPS 시스템",
+      "items": [
+       "4 차 산업혁명은 물리시스템과 사이버시스템 플랫폼을 통신설비 인프라에 연동하는 CPS 가 기반이며, CPS 는 Physical domain, Communications, Information technology, Data, 그리고 ICT Core technology 의 통합으로구성"
+      ]
+     },
+     {
+      "title": "4 차 산업혁명 시스템과 통신설비 구성요소",
+      "items": [
+       "Manufacturing, - 산업경쟁력 향상을 위한 스마트시티 분야 제조, 교통, 에너지, Transportation, Energy, 헬스케어 등 물리시스템의 도메인 Healthcare etc.",
+       "5G, gNB(Small cells), - 5G 와 Small cell 기반 스마트시티 서비스를 제공하고자 하는 Wifi, Duct, Pole, Manhole, 통신사업자와 자자체의 필수설비 Sites, Fibre, Industrial IoT, Blockchain",
+       "Bigdata, Cloud - 스마트시티 서비스를 제공하고자 하는 시설관리기관이 직접구축한 인공지능, 빅데이터, 사물인터넷, 블록체인 기술기반클라우드 플랫폼"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "스마트시티 모델의 4 가지 유형",
+    "subsections": [
+     {
+      "title": "스마트시티 모델의 4 가지 유형",
+      "items": [
+       "통신설비 · 플랫폼 인프라 구축·운영의 주체에 따라 스마트시티 모델은 OBM(Open Business Model), BOM(Build, Operate, Manage), BOT(Build, Operate, Transfer), BOO(Build, Own, Operate) 4 가지 유형으로 구분"
+      ]
+     },
+     {
+      "title": "스마트시트 모델의 4 가지 유형 상세설명",
+      "items": [
+       "스마트시티 구축을 모든 사업자와 함께 구축하는 모델",
+       "정부는 통신망 사업자가 이용자에게 서비스를 제공할 때, 규제의무를 부여 구도시",
+       "플랫폼 기반 인큐베이터 모델"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "dueum": null,
+  "keywords_note": null,
+  "note": null,
+  "review": null,
+  "quiz_terms": [
+   "OBM",
+   "BOM",
+   "BOT",
+   "BOO",
+   "CPS",
+   "ICT",
+   "OBM(Open Business Model)",
+   "BOM(Build, Operate, Manage)",
+   "BOT(Build, Operate, Transfer)",
+   "BOO(Build, Own, Operate)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_084": {
   "name": "디지털서비스(BIM BIM BIM)",
   "en": "BIM BIM BIM",
   "title": "디지털서비스(BIM BIM BIM)",
   "definition": "컴퓨터로 인공적 가상세계를 구현해 사용자가 느끼기에 실제와 같은 경험 제공 기술 컴퓨터를 이용하여 만들어내 가상의 상황을 사람의 감각 기관을 통해 몰입감을 느끼고 상호작용 하도록 하는기술",
-  "outline": [
-   "BIM의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: MR · AR · AV(Argumented Virtuality)",
+   "기술: VR · PA · HMD"
   ],
   "keywords_must": [
-   "BIM",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "MR",
+   "AR",
+   "AV(Argumented Virtuality)",
+   "VR",
+   "PA",
+   "HMD"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: BIM · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "컴퓨터로 인공적 가상세계를 구현해 사용자가 느끼기에 실제와 같은 경험 제"
+  "keywords_ref": [],
+  "outline": [
+   "VR, AR, MR 정의",
+   "- 증강현실(增強現實, Augmented Reality, AR)",
+   "혼합현실, 가상현실, 증강현실 비교",
+   "추가자료",
+   "- Projection Augmented Model (PA Model)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "VR, AR, MR 정의",
     "subsections": [
      {
-      "title": "정의",
+      "title": "증강현실(增強現實, Augmented Reality, AR)",
       "items": [
-       "컴퓨터로 인공적 가상세계를 구현해 사용자가 느끼기에 실제와 같은 경험 제공 기술 컴퓨터를 이용하여 만들어내 가상의 상황을 사람의 감각 기관을 통해 몰입감을 느끼고 상호작용 하도록 하는기술"
+       "가상 현실(Virtual Reality)의 한 분야로 실제 환경에 가상 사물이나 정보를 합성하여 원래의 환경에 존재하는사물처럼 보이도록 하는 컴퓨터 그래픽 기법",
+       "현실 세계와 가상 세계를 융합하여 사용자의 오감을 증강하여 인지하도록 만드는 가상 현실 기법"
       ]
      },
      {
-      "title": "목적",
+      "title": "혼합 현실 (Mixed reality, MR), 혼성 현실 (Hybrid reality)",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "현실 배경위에 현실과 가상의 정보를 혼합하여 기존보다 진화된 가상세계를 구현하는 기술"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "혼합현실, 가상현실, 증강현실 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "BIM",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "현실과 상호작용 가능 컴퓨터 그래픽으로 입체감, 형태로 현실에 도움 되는",
+       "사실감, 몰입감 극대화 가능 몰입감 있는 영상 구현정보",
+       "처리할 데이터 용량이 큼 현실감 떨어짐",
+       "장비, 기술 제약 - 컴퓨터 그래픽 세계를현실감 떨어짐구현해야 함"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "추가자료",
     "subsections": [
      {
-      "title": null,
+      "title": "Projection Augmented Model (PA Model)",
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "가상 현실 시스템에서 사용되는 요소",
+       "컴퓨터 이미지가 현실감 있게 보이는 물체를 만들기 위한 물리적인 입체 모델"
+      ]
+     },
+     {
+      "title": "HMD (Head Mounted Display, 헤드 마운티드 디스플레이)",
+      "items": [
+       "머리 부분에 장착해, 이용자의 눈 앞에 직접 영상을 제시할 수 있는 디스플레이 장치",
+       "1968년, 유타 대학의 이반 서덜랜드가 만든 것이 최초의 HMD"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "BIM",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "MR",
+   "AR",
+   "AV(Argumented Virtuality)",
+   "VR",
+   "PA",
+   "HMD"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_095": {
-  "name": "증강현실 유형(SV 095)",
-  "en": "SV 095",
-  "title": "증강현실 유형(SV 095)",
+  "name": "증강현실 유형(AR Types)",
+  "en": "Augmented Reality Types",
+  "title": "증강현실 유형(AR Types)",
   "definition": "증강현실 유형(SV 095) — 실감·몰입 미디어 및 메타버스 관련 개념",
+  "keywords": [
+   "핵심: SV · AR · 증강현실 유형(AR Types)",
+   "기술: 증강현실 유형 아키텍처 · 증강현실 유형 프로토콜 · 증강현실 유형 보안"
+  ],
+  "keywords_must": [
+   "SV",
+   "AR",
+   "증강현실 유형(AR Types)",
+   "증강현실 유형 아키텍처",
+   "증강현실 유형 프로토콜",
+   "증강현실 유형 보안"
+  ],
+  "keywords_ref": [],
   "outline": [
    "증강현실 유형의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "증강현실 유형",
-   "몰입·실감",
-   "트래킹",
-   "디스플레이",
-   "콘텐츠",
-   "상호작용",
-   "XR",
-   "활용분야"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 증강현실 유형 · 몰입·실감 · 트래킹",
-   "구성: 디스플레이 · 콘텐츠 · 상호작용",
-   "증강현실 유형(SV 095) — 실감·몰입 미디어 및 메타버스 관련 개념"
+   "- 필요성",
+   "증강현실 유형의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "증강현실 유형의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "증강현실 유형의 개념",
     "subsections": [
      {
       "title": "정의",
@@ -19530,100 +19379,100 @@
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "증강현실 유형는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "증강현실 유형의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "증강현실 유형",
-       "몰입·실감",
-       "트래킹",
-       "디스플레이",
-       "콘텐츠",
-       "상호작용"
+       "증강현실 유형(AR Types)",
+       "증강현실 유형 아키텍처",
+       "증강현실 유형 프로토콜",
+       "증강현실 유형 보안"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "증강현실 유형 표준",
+       "증강현실 유형 유형"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "증강현실 유형의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "XR",
-       "활용분야",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 증강현실 유형를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "증강현실 유형",
-   "몰입·실감",
-   "트래킹",
-   "디스플레이",
-   "콘텐츠",
-   "상호작용",
-   "XR",
-   "활용분야"
+   "SV",
+   "AR",
+   "증강현실 유형(AR Types)",
+   "증강현실 유형 아키텍처",
+   "증강현실 유형 프로토콜",
+   "증강현실 유형 보안"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_097": {
   "name": "VR(Virtual Reality) 미디어 획득",
   "en": "VR Virtual Reality",
   "title": "VR(Virtual Reality) 미디어 획득",
   "definition": "VR(Virtual Reality) 미디어 획득 — 실감·몰입 미디어 및 메타버스 관련 개념",
-  "outline": [
-   "VR의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: VR · VR(Virtual Reality) · VR(Virtual Reality) 미디어 획득",
+   "기술: VR 아키텍처 · VR 프로토콜 · VR 보안"
   ],
   "keywords_must": [
    "VR",
-   "몰입·실감",
-   "트래킹",
-   "디스플레이",
-   "콘텐츠",
-   "상호작용",
-   "XR",
-   "활용분야"
+   "VR(Virtual Reality)",
+   "VR(Virtual Reality) 미디어 획득",
+   "VR 아키텍처",
+   "VR 프로토콜",
+   "VR 보안"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: VR · 몰입·실감 · 트래킹",
-   "구성: 디스플레이 · 콘텐츠 · 상호작용",
-   "VR(Virtual Reality) 미디어 획득 — 실감·몰입 미디어 및"
+  "keywords_ref": [],
+  "outline": [
+   "VR의 개념",
+   "- 정의",
+   "- 필요성",
+   "VR의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "VR의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "VR의 개념",
     "subsections": [
      {
       "title": "정의",
@@ -19632,406 +19481,375 @@
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "VR는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "VR의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "VR",
-       "몰입·실감",
-       "트래킹",
-       "디스플레이",
-       "콘텐츠",
-       "상호작용"
+       "VR(Virtual Reality) 미디어 획득",
+       "VR 아키텍처",
+       "VR 프로토콜",
+       "VR 보안"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "VR 표준",
+       "VR 유형"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "VR의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "XR",
-       "활용분야",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 VR를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
    "VR",
-   "몰입·실감",
-   "트래킹",
-   "디스플레이",
-   "콘텐츠",
-   "상호작용",
-   "XR",
-   "활용분야"
+   "VR(Virtual Reality)",
+   "VR(Virtual Reality) 미디어 획득",
+   "VR 아키텍처",
+   "VR 프로토콜",
+   "VR 보안"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_099": {
   "name": "디지털서비스(AR ARC ARC)",
   "en": "AR ARC ARC",
   "title": "디지털서비스(AR ARC ARC)",
   "definition": "현실세계와 가상세계 사이에 두 가지, 증강현실(AR, Augmented Reality)과 증강가상(AV, Augmented Virtuality)인 혼합현실(MR, Mixed Reality)을 총칭",
-  "outline": [
-   "AR의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: ARC · QR · X3D",
+   "기술: VRML · 디지털서비스(AR ARC ARC) · 디지털서비스 아키텍처"
   ],
   "keywords_must": [
-   "AR",
-   "몰입·실감",
-   "트래킹",
-   "디스플레이",
-   "콘텐츠",
-   "상호작용",
-   "XR",
-   "활용분야"
+   "ARC",
+   "QR",
+   "X3D",
+   "VRML",
+   "디지털서비스(AR ARC ARC)",
+   "디지털서비스 아키텍처"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: AR · 몰입·실감 · 트래킹",
-   "구성: 디스플레이 · 콘텐츠 · 상호작용",
-   "현실세계와 가상세계 사이에 두 가지, 증강현실(AR, Augmented "
+  "keywords_ref": [],
+  "outline": [
+   "실 세계와 가상세계와의 경계 구분, 증강현실 연속체(ARC, Augmented Re…",
+   "- ARC의 요소 개념",
+   "ARC의 개념도 및 기술요소",
+   "- ARC의 개념도",
+   "ARC의 추진 동향"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "실 세계와 가상세계와의 경계 구분, 증강현실 연속체(ARC, Augmented Reality Continuum) 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "증강현실 연속체(ARC, Augmented Reality Continuum)의 정의",
       "items": [
-       "현실세계와 가상세계 사이에 두 가지, 증강현실(AR, Augmented Reality)과 증강가상(AV, Augmented Virtuality)인 혼합현실(MR, Mixed Reality)을 총칭"
+       "1994년에 발표된 Paul Milgram과 Fumio Kishino의 'A Taxonomy Of Mixed Reality Visual Displays'에서현실세계와 가상세계 사이의 세계를 정의"
       ]
      },
      {
-      "title": "목적",
+      "title": "ARC의 요소 개념",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "시공간을 초월하여 상상의 세계가 현실과 같이 펼쳐지는 세계로 몰입",
+       "가상 현실 내, 현실과 같은 자연스러운 상호 작용을 가능케 하는 인간이 컴퓨터와더불어 만든 감각의 세계",
+       "현실과 컴퓨터로 생성된 데이터와의 합성으로 현실에서 존재하는 객체처럼 보이도록하는 컴퓨터 그래픽스의 기법으로 만든 현실"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "ARC의 개념도 및 기술요소",
     "subsections": [
      {
-      "title": null,
+      "title": "ARC의 개념도",
       "items": [
-       "AR",
-       "몰입·실감",
-       "트래킹",
-       "디스플레이",
-       "콘텐츠",
-       "상호작용"
+       "ARC는 증강현실, 가상현실,혼합현실 전체를 아우르는 기술"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "ARC의 추진 동향",
     "subsections": [
      {
       "title": null,
       "items": [
-       "XR",
-       "활용분야",
-       "표준·비교·한계를 함께 기술"
+       "정부 주도로 무공해 산업 경제 육성을 위한 녹색 27대 중점 육성 기술 중 하나로 추진 중",
+       "국내외에서 ARC 의 표준화를 위한 활동이 진행되고 있음표 준 내 용모바일 증강 현실을 위한 QR 코드 데이터 표현국 내혼합 현실 컨텐츠의 데이터 Markup 표현 X3D 시리즈 VRML 바탕 기반의 De Jure 표준 [참고] ARC 활용분야 : 모델링(Modeling), 시뮬레이션, 온라인게임, 가상스튜디오, 영화제작"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "AR",
-   "몰입·실감",
-   "트래킹",
-   "디스플레이",
-   "콘텐츠",
-   "상호작용",
-   "XR",
-   "활용분야"
+   "ARC",
+   "QR",
+   "X3D",
+   "VRML",
+   "디지털서비스(AR ARC ARC)",
+   "디지털서비스 아키텍처"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_102": {
   "name": "혼합현실(MR, Mixed Reality)",
   "en": "Mixed Reality",
   "title": "혼합현실(MR, Mixed Reality)",
-  "definition": "현실과 가상이 상호작용하며 공존하는 혼합 환경",
-  "outline": [
-   "혼합현실의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "현실 배경 위에 현실과 가상의 정보를 혼합하여 기존보다 진화된 가상세계를 구현하는 기술",
+  "keywords": [
+   "핵심: 현실배경+현실과 가상 정보 혼합  진화된 가상세계 카메라보정 · 포즈평가 · 최적화이론",
+   "기술: 포토닉스 라이트 필드 공간상황이해 · 스마트객체생성 및 제어 · 인체기반 인터페이스",
+   "운영: 서비스네트워킹 Holographic · Immersive · 분류 유형(VR, MR, AR) 정리",
+   "참고: 서비스네트워킹 Holographic · Immersive · 분류 유형(VR, MR, AR) 정리"
   ],
   "keywords_must": [
-   "혼합현실(MR)",
-   "공간 인식",
-   "홀로그램",
-   "상호작용",
-   "XR",
-   "디바이스",
-   "정합",
-   "협업"
+   "현실배경+현실과 가상 정보 혼합  진화된 가상세계 카메라보정",
+   "포즈평가",
+   "최적화이론",
+   "포토닉스 라이트 필드 공간상황이해",
+   "스마트객체생성 및 제어",
+   "인체기반 인터페이스",
+   "서비스네트워킹 Holographic",
+   "Immersive",
+   "분류 유형(VR, MR, AR) 정리",
+   "MR"
   ],
   "keywords_ref": [
-   "AR",
-   "VR",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "서비스네트워킹 Holographic",
+   "Immersive",
+   "분류 유형(VR, MR, AR) 정리"
   ],
-  "keywords": [
-   "핵심: 혼합현실(MR) · 공간 인식 · 홀로그램",
-   "구성: 상호작용 · XR · 디바이스",
-   "현실과 가상이 상호작용하며 공존하는 혼합 환경"
+  "outline": [
+   "현실환경과 가상환경의 융합, 혼합현실(Mixed Reality)의 개요",
+   "- 혼합현실(Mixed Reality)의 정의",
+   "- MR-AR-VR 관계도",
+   "혼합현실의 개념도 및 요소기술",
+   "- 혼합현실의 개념도",
+   "- 혼합현실의 요소기술"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "현실환경과 가상환경의 융합, 혼합현실(Mixed Reality)의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "혼합현실(Mixed Reality)의 정의",
       "items": [
-       "현실과 가상이 상호작용하며 공존하는 혼합 환경"
+       "현실과 가상간의 실시간 상호작용, 즉각 반응을 통한 인터렉티브한 가상세계",
+       "실세계에 3D 가상 객체를 겹쳐서 보여주는 기술로, 현실환경과 가상환경을 융합하는 복합형 가상현실 시스템"
       ]
      },
      {
-      "title": "목적",
+      "title": "MR-AR-VR 관계도",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "MR은 증강현실과 증강가상을 포괄하는 복합형 가상현실 시스템 -"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "혼합현실의 개념도 및 요소기술",
     "subsections": [
      {
-      "title": null,
+      "title": "혼합현실의 개념도",
       "items": [
-       "혼합현실(MR)",
-       "공간 인식",
-       "홀로그램",
-       "상호작용",
-       "XR",
-       "디바이스"
+       "혼합현실과 콘텐츠간의 속도차이를 획기적으로 개선하여 실시간 처리가 가능"
       ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
+     },
      {
-      "title": null,
+      "title": "혼합현실의 요소기술",
       "items": [
-       "정합",
-       "협업",
-       "표준·비교·한계를 함께 기술"
+       "머리 착용, 눈각도에 맞게 영상 투영 3D기술 위치정보 기술",
+       "개방형은 배경과 콘텐츠 조합 가능함",
+       "사물 위치, 사용자 행위학습 등에 의한 의미기반"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "혼합현실(MR)",
-   "공간 인식",
-   "홀로그램",
-   "상호작용",
-   "XR",
-   "디바이스",
-   "정합",
-   "협업"
+   "현실배경+현실과 가상 정보 혼합  진화된 가상세계 카메라보정",
+   "포즈평가",
+   "최적화이론",
+   "포토닉스 라이트 필드 공간상황이해",
+   "스마트객체생성 및 제어",
+   "인체기반 인터페이스",
+   "서비스네트워킹 Holographic",
+   "Immersive",
+   "분류 유형(VR, MR, AR) 정리",
+   "MR"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_126": {
   "name": "디지털서비스(Folksonomy)",
   "en": "Folksonomy",
   "title": "디지털서비스(Folksonomy)",
   "definition": "사람에 의한 분류법(Folks: 민중 + taxonomy: 분류학) 이란 의미로, 전통적 분류기준인 디렉토리 대신 태그를이용하여 나누는 새로운 분류체계",
-  "outline": [
-   "디지털서비스의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 참여 · 직관적 · 개인화",
+   "기술: 소셜태깅 · 사용자 · 태그",
+   "운영: Resource",
+   "참고: Resource"
   ],
   "keywords_must": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "참여",
+   "직관적",
+   "개인화",
+   "소셜태깅",
+   "사용자",
+   "태그",
+   "Resource"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "Resource"
   ],
-  "keywords": [
-   "핵심: 디지털서비스 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "사람에 의한 분류법(Folks: 민중 + taxonomy: 분류학) 이란"
+  "outline": [
+   "Tag를 이용한 Web2.0 의 참여형 분류체계, Folksonomy의 개요",
+   "- Folksonomy(대중분류법)의 정의",
+   "Folksonomy의 개념도 및 구성요소",
+   "- Folksonomy의 개념도",
+   "Folksonomy와 Taxonomy 분류법의 비교 및 장단점",
+   "- Folksonomy의 장단점"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "Tag를 이용한 Web2.0 의 참여형 분류체계, Folksonomy의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "Folksonomy(대중분류법)의 정의",
       "items": [
-       "사람에 의한 분류법(Folks: 민중 + taxonomy: 분류학) 이란 의미로, 전통적 분류기준인 디렉토리 대신 태그를이용하여 나누는 새로운 분류체계"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "자유롭게 선택된 키워드를 이용하여 이루어지는 협업적 분류를 뜻하는 신조어이며, 정보를 분류하기 위해 사람들이 자발적으로 협력하는 것을 의미."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "Folksonomy의 개념도 및 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "Folksonomy의 개념도",
       "items": [
-       "디지털서비스",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "기존의 정보와 분류라는 1:1 관계에서 1:N관계로묶어 예상하지 못 했던 콘텐츠가 태그를 통해 사용자와 리소스와의 관계를 서로 연결",
+       "우연히 만난 태그는 새로운 리소스를 접하게 되며 그 리소스를 작성한 새로운 사용자를 만나게됨",
+       "자연스럽게 사용자와 사용자 간에는 네트워크가형성되고 태그는 그 사이를 엮어주는 매개체 역할",
+       "Flickr(사진공유사이트), Delicious(소셜 북마크), Library Thing(서평공유사이트)등을 통해 널리 확산됨"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "Folksonomy와 Taxonomy 분류법의 비교 및 장단점",
     "subsections": [
      {
-      "title": null,
+      "title": "Folksonomy의 장단점",
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "분류할 필요성이 없이 사용 가능(훈련이나 전문지식 - 정보의 정확성 부족 (개인적, 모호함)",
+       "태그는 계층적 구조가 아님",
+       "사용자가 원하는 키워드를 부여 (No signal loss) - 원하는 정보를 찾을 수 있는 비율이 낮음",
+       "분류하기 위한 비용이 없음 (No Tree Structure) - 동의어, 동음이의어, 맞춤법 오류를 처리하기 위한"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "참여",
+   "직관적",
+   "개인화",
+   "소셜태깅",
+   "사용자",
+   "태그",
+   "Resource"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_127": {
   "name": "디지털서비스(FTR)",
   "en": "FTR",
   "title": "디지털서비스(FTR)",
   "definition": "전문(Full Text)를 색인(인덱싱) 형태로 제공함으로써 각종 데이터를 신속 정확하게 검색할 수 있도록 지원하는검색 엔진",
+  "keywords": [
+   "핵심: FTR · RDB · 디지털서비스(FTR)",
+   "기술: 디지털서비스 아키텍처 · 디지털서비스 프로토콜 · 디지털서비스 보안"
+  ],
+  "keywords_must": [
+   "FTR",
+   "RDB",
+   "디지털서비스(FTR)",
+   "디지털서비스 아키텍처",
+   "디지털서비스 프로토콜",
+   "디지털서비스 보안"
+  ],
+  "keywords_ref": [],
   "outline": [
    "디지털서비스의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 디지털서비스 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "전문(Full Text)를 색인(인덱싱) 형태로 제공함으로써 각종 데이터"
+   "- 필요성",
+   "디지털서비스의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "디지털서비스의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "디지털서비스의 개념",
     "subsections": [
      {
       "title": "정의",
@@ -20040,164 +19858,162 @@
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "디지털서비스는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "디지털서비스의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "디지털서비스",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
-      ]
-     }
-    ]
-   }
-  ],
-  "dueum": null,
-  "curated": true,
-  "keywords_note": null,
-  "note": null,
-  "review": null,
-  "quiz_terms": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
-  ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
- },
- "SV_128": {
-  "name": "에이전트(SV 128)",
-  "en": "SV 128",
-  "title": "에이전트(SV 128)",
-  "definition": "컴퓨팅 환경에서 사용자 혹은 다른 프로그램을 대신해 특정한 일을 수행하는 자율적인 프로세스(Autonomous Process)",
-  "outline": [
-   "에이전트의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "에이전트",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 에이전트 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "컴퓨팅 환경에서 사용자 혹은 다른 프로그램을 대신해 특정한 일을 수행하는"
-  ],
-  "sections": [
-   {
-    "title": "개념",
-    "subsections": [
-     {
-      "title": "정의",
-      "items": [
-       "컴퓨팅 환경에서 사용자 혹은 다른 프로그램을 대신해 특정한 일을 수행하는 자율적인 프로세스(Autonomous Process)"
+       "FTR",
+       "RDB",
+       "디지털서비스(FTR)",
+       "디지털서비스 아키텍처"
       ]
      },
      {
-      "title": "목적",
+      "title": "유형·동작",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "디지털서비스 프로토콜",
+       "디지털서비스 보안"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "디지털서비스의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "에이전트",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "공공·민간 서비스에 디지털서비스를 적용한다."
       ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
+     },
      {
-      "title": null,
+      "title": "과제",
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "에이전트",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "FTR",
+   "RDB",
+   "디지털서비스(FTR)",
+   "디지털서비스 아키텍처",
+   "디지털서비스 프로토콜",
+   "디지털서비스 보안"
   ],
-  "quiz_groups": [
-   "sv"
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
+ },
+ "SV_128": {
+  "name": "에이전트(Agent)",
+  "en": "Agent",
+  "title": "에이전트(Agent)",
+  "definition": "컴퓨팅 환경에서 사용자나 다른 프로그램을 대신해 특정 작업을 수행하는 자율 프로세스(Autonomous Process).",
+  "keywords": [
+   "핵심: 에이전트 · 자율성 · 처리 모듈",
+   "구조: 지식 모듈 · 통신 모듈 · 협력 에이전트",
+   "참고: 지능형 에이전트 · MAS · FIPA"
   ],
-  "quiz_avoid": []
+  "keywords_must": [
+   "에이전트(Agent)",
+   "자율성(Autonomy)",
+   "처리 모듈",
+   "지식 모듈",
+   "통신 모듈",
+   "협력 에이전트",
+   "이동 에이전트",
+   "인터페이스 에이전트"
+  ],
+  "keywords_ref": [
+   "지능형 에이전트",
+   "다중 에이전트(MAS)",
+   "FIPA"
+  ],
+  "outline": [
+   "자율 프로세스, 에이전트의 개요",
+   "- 에이전트의 정의",
+   "에이전트(Agent) 구조 및 구성요소",
+   "- 에이전트의 구성요소",
+   "에이전트의 유형별 기술 비교",
+   "- 특성별 분류에 따른 에이전트 유형"
+  ],
+  "sections": [
+   {
+    "title": "자율 프로세스, 에이전트의 개요",
+    "subsections": [
+     {
+      "title": "에이전트의 정의",
+      "items": [
+       "특정한 환경을 인지하고, 독자적으로 어떠한 목적을 수행하기 위해 사용자를 대신하여 지속적으로 환경과 연동하며 작업을 수행하는 자율적인 시스템"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "에이전트(Agent) 구조 및 구성요소",
+    "subsections": [
+     {
+      "title": "에이전트의 구성요소",
+      "items": [
+       "문제를 해결하기 위해 구체적인 작업을 정의한 기구",
+       "단위 작업 문제 해결, 협력을 위한 제어, 동작제어 담당",
+       "특정 응용 분야 해결에 필요한 지식 저장",
+       "지식 관리 기구 포함, 추론이나 학습 등과 연결 Knowledge map 체계화된 지식영역지식 사전지식 추론 위한 로직 저장소"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "에이전트의 유형별 기술 비교",
+    "subsections": [
+     {
+      "title": "특성별 분류에 따른 에이전트 유형",
+      "items": [
+       "에이전트 특성들 중에서 사회성이 강조된 에이전트로서, 특정 작업을 수행하기 위하여 스스로 해결할 수 없는 부분은 다른 에이전트나 응용 프로그램의 도움을 받아 작업을 처리",
+       "순회 에이전트로 불리며, 에이전트의 특성 중 이동성이 강조",
+       "자신의 판단에 의하여 컴퓨터 시스템을 이동하며 작업을 수행",
+       "자율성과 학습능력이 강조된 에이전트로서, 컴퓨터에 대한 보다 편리한 사용환경을 제공해주는 것을 목표로 하는 에이전트",
+       "인터넷이나 웹 상에 분산되어 있는 엄청난 양의 정보를 사용자가 보다 사용하기 편리하도록 지원하는 역할"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "dueum": null,
+  "keywords_note": null,
+  "note": null,
+  "review": null,
+  "quiz_terms": [
+   "처리 모듈",
+   "지식 모듈",
+   "통신 모듈",
+   "협력∙이동∙인터페이스∙인터넷∙지능형 에이전트",
+   "에이전트(Agent)",
+   "에이전트 아키텍처"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_130": {
   "name": "온톨로지(SV 130)",
