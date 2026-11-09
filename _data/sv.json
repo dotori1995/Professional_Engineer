@@ -18962,78 +18962,94 @@
    263,
    264
   ],
-  "en": "ISA88 ISA95",
+  "en": "ISA-88 Batch Control, ISA-95 Enterprise-Control System Integration",
   "dueum": null,
-  "name": "디지털서비스(ISA88 ISA95)",
-  "title": "디지털서비스(ISA88 ISA95)",
-  "definition": "기업과 제어 시스템 간의 자동화된 인터페이스를 개발하기위한 국제 자동화 협회(International Society of Automation )의 국제 표준",
+  "name": "제조 통합 표준(ISA-88·ISA-95)",
+  "title": "제조 통합 표준(ISA-88·ISA-95)",
+  "definition": "국제자동화협회(ISA)가 제정한 제조 참조모델로, ISA-88은 배치 공정의 설비·절차·레시피 구조를 표준화하고 ISA-95는 ERP와 MES·제어 시스템 사이의 계층과 정보 교환 모델을 정의해 스마트 팩토리 시스템 통합의 기준이 됨",
   "keywords_must": [
-   "Business Logistics Systems",
-   "Manufacturing Operations Support",
-   "디지털서비스 아키텍처",
-   "디지털서비스 표준",
-   "디지털서비스 보안",
-   "MES",
-   "ISA",
-   "Part 1",
-   "Part 2",
-   "Part 3"
+   "국제자동화협회(ISA)",
+   "배치 제어(Batch Control)",
+   "물리 모델(셀·유닛·장비 모듈)",
+   "절차 모델(Procedure·Operation·Phase)",
+   "레시피 4유형",
+   "기업-제어 시스템 통합",
+   "퍼듀 계층(Level 0~4)",
+   "제조운영관리(MOM)",
+   "B2MML",
+   "IEC 62264·IEC 61512"
   ],
   "keywords_ref": [
-   "IACS",
-   "IEC"
+   "MES",
+   "ERP",
+   "ISA-99(IEC 62443 보안)",
+   "연속·반복 공정",
+   "OPC UA"
   ],
   "keywords": [
-   "핵심: Business Logistics Systems · Manufacturing Operations Support · 디지털서비스 아키텍처",
-   "기술: 디지털서비스 표준 · 디지털서비스 보안 · MES",
-   "운영: ISA · Part 1 · Part 2",
-   "참고: IACS · IEC"
+   "ISA-88(IEC 61512): 배치 공정 · 물리 모델 · 절차 모델 · 레시피(일반·사이트·마스터·제어)",
+   "ISA-95(IEC 62264): Level 4 ERP ↔ Level 3 MOM(MES) ↔ Level 2·1·0 제어·감지·공정",
+   "데이터 교환: B2MML(XML) · 생산·품질·재고·설비 4대 운영 영역"
   ],
   "outline": [
-   "스마트팩토리에서의 참조모델의 ISA(International Society of",
-   "- 디지털서비스 요점",
-   "MES 참조모델인 ISA-88과 ISA-95 비교",
-   "- 디지털서비스 요점",
-   "스마트팩토리 보안을 위한 표준 IEC-62443",
-   "- 디지털서비스 요점"
+   "ISA 표준과 MES",
+   "- 배경: 통합 인터페이스",
+   "- 역할: MES 참조모델",
+   "ISA-88 배치 제어",
+   "- 설비: 물리 모델",
+   "- 절차·레시피: 분리 설계",
+   "ISA-95 기업-제어 통합",
+   "- 계층: Level 0~4",
+   "- 교환: B2MML"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "ISA 표준과 MES",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 통합 인터페이스",
       "items": [
-       "Business Logistics Systems: 디지털서비스에서 Business Logistics Systems를 다루는 핵심 암기 포인트",
-       "Manufacturing Operations Support: 디지털서비스에서 Manufacturing Operations Support를 다루는 핵심 암기 포인트",
-       "디지털서비스 아키텍처: 디지털서비스의 계층·모듈 배치와 상호작용 구조 (디지털서비스/1d3e)",
-       "디지털서비스 표준: 디지털서비스 상호운용·품질을 맞추는 규격·기준 (디지털서비스/bb1e)"
+       "국제자동화협회(ISA)가 기업 시스템과 제어 시스템 간 자동화 인터페이스를 위해 제정, 배치·연속·반복 공정 모두 적용"
+      ]
+     },
+     {
+      "title": "역할: MES 참조모델",
+      "items": [
+       "MES는 4M 생산 정보를 실시간 수집·집계해 현장과 경영층이 공유, ISA-95가 MES 기능 범위의 기준"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "ISA-88 배치 제어",
     "subsections": [
      {
-      "title": null,
+      "title": "설비: 물리 모델",
       "items": [
-       "디지털서비스 보안: 디지털서비스에서 디지털서비스 보안을 다루는 핵심 암기 포인트 (디지털서비스/5627)",
-       "MES: MES를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ISA: ISA를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Part 1: 디지털서비스에서 Part 1를 다루는 핵심 암기 포인트"
+       "물리 모델(셀·유닛·장비 모듈): 기업 → 사이트 → 영역 → 공정 셀 → 유닛 → 장비·제어 모듈 계층"
+      ]
+     },
+     {
+      "title": "절차·레시피: 분리 설계",
+      "items": [
+       "절차 모델(Procedure·Operation·Phase)과 레시피 4유형(일반·사이트·마스터·제어)을 설비와 분리해 제품 변경 시 재사용"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "ISA-95 기업-제어 통합",
     "subsections": [
      {
-      "title": null,
+      "title": "계층: Level 0~4",
       "items": [
-       "Part 2: 디지털서비스에서 Part 2를 다루는 핵심 암기 포인트",
-       "Part 3: 디지털서비스에서 Part 3를 다루는 핵심 암기 포인트"
+       "퍼듀 계층(Level 0~4): 0 물리 공정, 1 감지·조작, 2 감시·제어(PLC·SCADA), 3 제조운영관리(MOM), 4 경영 계획·물류(ERP)"
+      ]
+     },
+     {
+      "title": "교환: B2MML",
+      "items": [
+       "B2MML: Level 3-4 간 생산 일정·실적·자재·설비 정보를 XML 스키마로 교환, IEC 62264로 국제 표준화"
       ]
      }
     ]
@@ -19042,23 +19058,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Business Logistics Systems",
-   "Manufacturing Operations Support",
-   "디지털서비스 아키텍처",
-   "디지털서비스 표준",
-   "디지털서비스 보안",
-   "MES",
-   "ISA",
-   "Part 1",
-   "Part 2",
-   "Part 3"
+   "국제자동화협회(ISA)",
+   "배치 제어(Batch Control)",
+   "물리 모델(셀·유닛·장비 모듈)",
+   "절차 모델(Procedure·Operation·Phase)",
+   "레시피 4유형",
+   "기업-제어 시스템 통합",
+   "퍼듀 계층(Level 0~4)",
+   "제조운영관리(MOM)",
+   "B2MML",
+   "IEC 62264·IEC 61512"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_217",
@@ -19069,60 +19086,94 @@
    265,
    266
   ],
-  "en": "HMI",
+  "en": "Human-Machine Interface",
   "dueum": null,
-  "name": "디지털서비스(HMI)",
-  "title": "디지털서비스(HMI)",
-  "definition": "Machine을 효율적으로 제어하기 위해 Machine의 상태를 인간이 이해하기 쉬운 인터페이스를 통해보여주는 도구, SCADA시스템 소프트웨어 및 데이터베이스 연동",
+  "name": "인간-기계 인터페이스(HMI, Human-Machine Interface)",
+  "title": "인간-기계 인터페이스(HMI, Human-Machine Interface)",
+  "definition": "PLC·SCADA 등 제어 시스템이 수집한 설비·공정 상태를 운전원이 이해하기 쉬운 그래픽 화면·경보·추세로 보여주고 운전원의 제어 명령을 설비에 전달하는 산업 현장의 감시·조작 인터페이스",
   "keywords_must": [
-   "정보 모니터링 기술",
-   "감시 목록 관리",
-   "GUI",
-   "현장 상태 감시",
-   "제어 기능 담당",
-   "생산장비의 이미지 화면",
-   "SCADA",
-   "Sentiment"
+   "공정 그래픽 화면(Mimic Diagram)",
+   "경보 관리(Alarm Management)",
+   "추세(Trend) 화면",
+   "태그(Tag) 데이터베이스",
+   "PLC 연동",
+   "통신 드라이버",
+   "히스토리안(Historian)",
+   "ISA-101(HMI 설계)",
+   "ISA-18.2(경보 관리)",
+   "고성능 HMI(High-Performance HMI)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "SCADA",
+   "MMI 패키지(WinCC·InTouch·FactoryTalk View)",
+   "패널 PC",
+   "웹 HMI",
+   "통계적 공정 관리(SPC)"
+  ],
   "keywords": [
-   "핵심: 정보 모니터링 기술 · 감시 목록 관리 · GUI",
-   "기술: 현장 상태 감시 · 제어 기능 담당 · 생산장비의 이미지 화면",
-   "운영: SCADA · Sentiment"
+   "기능: 모니터링 · 경보 · 추세 · 제어 명령 · 이력 조회",
+   "HW: PLC · HMI 서버·단말(패널 PC) · 통신망(Ethernet·필드버스·시리얼) · 현장 계기",
+   "SW: HMI 패키지 · 태그 DB · 히스토리안 · 통신 드라이버 · 분석 도구(SPC)"
   ],
   "outline": [
-   "Machine 상태 모니터링 인터페이스",
-   "- 디지털서비스의 정의",
-   "- 디지털서비스의 등장 배경",
-   "HMI 의 구성도 및 구성요소",
-   "- 디지털서비스의 핵심 요소",
-   "- 디지털서비스의 구조"
+   "역할과 특징",
+   "- 역할: 감시와 조작",
+   "- 특징: PLC 연동",
+   "하드웨어·소프트웨어 구성",
+   "- HW: 제어기·단말·통신",
+   "- SW: 패키지·DB",
+   "설계 표준과 보안",
+   "- 설계: ISA-101·18.2",
+   "- 보안: 원격 접속"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "역할과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "역할: 감시와 조작",
       "items": [
-       "정보 모니터링 기술: 디지털서비스에서 정보 모니터링 기술을 다루는 핵심 암기 포인트",
-       "감시 목록 관리: 디지털서비스에서 감시 목록 관리를 다루는 핵심 암기 포인트",
-       "GUI: 그래픽 인터페이스로 데스크톱·앱을 조작하는 표현 계층 (디지털서비스/2c11)",
-       "현장 상태 감시: 디지털서비스에서 현장 상태 감시를 다루는 핵심 암기 포인트"
+       "공정 그래픽 화면(Mimic Diagram)으로 설비 상태를 표시하고 밸브 개폐·설정값 변경 같은 운전원 명령 전달"
+      ]
+     },
+     {
+      "title": "특징: PLC 연동",
+      "items": [
+       "PLC 연동: 입출력 태그를 주기적으로 읽어 화면 갱신, 작화 전용 소프트웨어로 화면을 구성"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "하드웨어·소프트웨어 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "HW: 제어기·단말·통신",
       "items": [
-       "제어 기능 담당: 디지털서비스에서 제어 기능 담당을 다루는 핵심 암기 포인트",
-       "생산장비의 이미지 화면: 디지털서비스에서 생산장비의 이미지 화면을 다루는 핵심 암기 포인트",
-       "SCADA: SCADA를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Sentiment: 텍스트의 긍정·부정 등 감성 극성을 분류 (디지털서비스/6e93)"
+       "PLC가 시퀀스·연산 수행, HMI 서버·패널 PC가 화면 제공, Ethernet·필드버스·시리얼로 연결"
+      ]
+     },
+     {
+      "title": "SW: 패키지·DB",
+      "items": [
+       "태그(Tag) 데이터베이스로 신호 정의, 히스토리안(Historian)이 이력 저장, 통신 드라이버가 설비별 프로토콜 처리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "설계 표준과 보안",
+    "subsections": [
+     {
+      "title": "설계: ISA-101·18.2",
+      "items": [
+       "고성능 HMI(High-Performance HMI): 회색 배경에 이상 상태만 색 강조, ISA-18.2(경보 관리)로 경보 홍수 억제"
+      ]
+     },
+     {
+      "title": "보안: 원격 접속",
+      "items": [
+       "웹 HMI·원격 접속 확대로 공격면 증가, 기본 계정 제거·접근 통제와 OT 망 분리 필요"
       ]
      }
     ]
@@ -19131,21 +19182,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "정보 모니터링 기술",
-   "감시 목록 관리",
-   "GUI",
-   "현장 상태 감시",
-   "제어 기능 담당",
-   "생산장비의 이미지 화면",
-   "SCADA",
-   "Sentiment"
+   "공정 그래픽 화면(Mimic Diagram)",
+   "경보 관리(Alarm Management)",
+   "추세(Trend) 화면",
+   "태그(Tag) 데이터베이스",
+   "PLC 연동",
+   "통신 드라이버",
+   "히스토리안(Historian)",
+   "ISA-101(HMI 설계)",
+   "ISA-18.2(경보 관리)",
+   "고성능 HMI(High-Performance HMI)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_218",
@@ -19156,80 +19210,94 @@
    246,
    249
   ],
-  "en": "SCADA",
+  "en": "Supervisory Control and Data Acquisition",
   "dueum": null,
-  "name": "감시제어데이터수집(SCADA)",
-  "title": "감시제어데이터수집(SCADA)",
-  "definition": "산업제어시스템(산업공정/기반시설/설비)의 작업공정을 RTU를 통해 수집하여 감시하고 제어하는 종합관제시스템",
+  "name": "감시 제어 및 데이터 수집(SCADA, Supervisory Control and Data Acquisition)",
+  "title": "감시 제어 및 데이터 수집(SCADA, Supervisory Control and Data Acquisition)",
+  "definition": "전력·수도·가스·철도처럼 넓은 지역에 분산된 설비의 상태를 RTU·PLC로 수집해 중앙 관제센터에서 실시간 감시·경보·원격 제어하는 산업 제어 시스템",
   "keywords_must": [
-   "HMI",
-   "감시시스템",
-   "데이터베이스",
-   "통신시설",
+   "원격단말장치(RTU)",
    "PLC",
-   "RTU",
-   "Security",
-   "감시(Monitoring), 제어(Control)의 개념도",
-   "감시(Monitoring), 제어(Control)의 상세 비교 설명",
-   "SCADA vs DCS"
+   "마스터 터미널 유닛(MTU)",
+   "HMI",
+   "히스토리안 DB",
+   "경보(Alarm) 처리",
+   "원격 감시·제어",
+   "누산(Accumulator) 기능",
+   "DNP3·IEC 60870-5-104",
+   "망 분리·접근 통제"
   ],
   "keywords_ref": [
-   "DCS"
+   "Modbus",
+   "DCS 비교",
+   "지능형 SCADA",
+   "스턱스넷",
+   "에너지관리시스템(EMS)"
   ],
   "keywords": [
-   "핵심: HMI · 감시시스템 · 데이터베이스",
-   "기술: 통신시설 · PLC · RTU",
-   "운영: Security · 감시(Monitoring), 제어(Control)의 개념도 · 감시(Monitoring), 제어(Control)의 상세 비교 설명",
-   "참고: DCS"
+   "기능: 경보 · 감시·제어 · 지시·표시(HMI) · 누산",
+   "구성: 관제센터(MTU·HMI·DB·응용) · 현장(RTU·PLC) · 통신(DNP3·IEC 104·Modbus)",
+   "세대: 모놀리식(폐쇄망) → 분산(LAN) → 네트워크(인터넷 프로토콜) → IoT·클라우드"
   ],
   "outline": [
-   "SCADA 의 구성도 및 구성요소",
-   "- SCADA 의 구성도",
-   "- SCADA 의 구성요소",
-   "감시(Monitoring), 제어(Control)의 비교 설명",
-   "- 감시(Monitoring), 제어(Control)의 개념도",
-   "- 감시(Monitoring), 제어(Control)의 상세 비교 설명",
-   "SCADA 와 DCS 비교 및 적용분야",
-   "- SCADA vs DCS",
-   "- SCADA 적용분야"
+   "기능",
+   "- 감시·경보: 상태 변화",
+   "- 제어·집계: 원격 명령",
+   "관제센터·현장 구성",
+   "- 관제센터: MTU·DB",
+   "- 현장·통신: RTU·프로토콜",
+   "세대 발전과 보안",
+   "- 세대: 폐쇄망에서 IoT로",
+   "- 보안: 개방화 위험"
   ],
   "sections": [
    {
-    "title": "감시제어데이터수집 핵심",
+    "title": "기능",
     "subsections": [
      {
-      "title": null,
+      "title": "감시·경보: 상태 변화",
       "items": [
-       "HMI: HMI를 감시제어데이터수집 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "감시시스템: 감시제어데이터수집에서 감시시스템을 다루는 핵심 암기 포인트",
-       "데이터베이스: 감시제어데이터수집에서 데이터베이스를 다루는 핵심 암기 포인트",
-       "통신시설: 감시제어데이터수집에서 통신시설을 다루는 핵심 암기 포인트"
+       "경보(Alarm) 처리: 상태 변화 시 사전 규정된 경보를 그래픽·음성·SMS로 통보"
+      ]
+     },
+     {
+      "title": "제어·집계: 원격 명령",
+      "items": [
+       "원격 감시·제어로 차단기·펌프를 원거리 조작, 누산(Accumulator) 기능은 펄스 신호를 전력량·유량으로 환산"
       ]
      }
     ]
    },
    {
-    "title": "감시제어데이터수집 구성·기술",
+    "title": "관제센터·현장 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "관제센터: MTU·DB",
       "items": [
-       "PLC: PLC를 감시제어데이터수집 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "RTU: RTU를 감시제어데이터수집 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Security: Security를 감시제어데이터수집 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "감시(Monitoring), 제어(Control)의 개념도: 감시제어데이터수집의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램"
+       "마스터 터미널 유닛(MTU)이 RTU 폴링, 히스토리안 DB가 추세·고장 예측용 원시 데이터 관리, HMI가 화면 제공"
+      ]
+     },
+     {
+      "title": "현장·통신: RTU·프로토콜",
+      "items": [
+       "원격단말장치(RTU): 현장 신호를 디지털 변환·전송, 통신은 DNP3·IEC 60870-5-104·Modbus"
       ]
      }
     ]
    },
    {
-    "title": "감시제어데이터수집 운영",
+    "title": "세대 발전과 보안",
     "subsections": [
      {
-      "title": null,
+      "title": "세대: 폐쇄망에서 IoT로",
       "items": [
-       "감시(Monitoring), 제어(Control)의 상세 비교 설명: 감시제어데이터수집와 유사 기술을 기준별로 대조하는 표",
-       "SCADA vs DCS: 감시제어데이터수집에서 SCADA vs DCS를 다루는 핵심 암기 포인트"
+       "1세대 메인프레임·폐쇄망 → 2세대 LAN 분산 → 3세대 인터넷 프로토콜 네트워크 → 4세대 IoT·클라우드 연계"
+      ]
+     },
+     {
+      "title": "보안: 개방화 위험",
+      "items": [
+       "개방형 프로토콜 전환으로 공격면 확대, 망 분리·접근 통제·VPN·방화벽과 프로토콜 인증(DNP3 Secure Authentication)"
       ]
      }
     ]
@@ -19238,16 +19306,16 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "HMI",
-   "감시시스템",
-   "데이터베이스",
-   "통신시설",
+   "원격단말장치(RTU)",
    "PLC",
-   "RTU",
-   "Security",
-   "감시(Monitoring), 제어(Control)의 개념도",
-   "감시(Monitoring), 제어(Control)의 상세 비교 설명",
-   "SCADA vs DCS"
+   "마스터 터미널 유닛(MTU)",
+   "HMI",
+   "히스토리안 DB",
+   "경보(Alarm) 처리",
+   "원격 감시·제어",
+   "누산(Accumulator) 기능",
+   "DNP3·IEC 60870-5-104",
+   "망 분리·접근 통제"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -19257,7 +19325,8 @@
   "warnings": [],
   "gloss": {
    "PLC": "Programmable Logic Controller"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_219",
@@ -19268,65 +19337,100 @@
    250,
    252
   ],
-  "en": "SCADA",
+  "en": "Intelligent SCADA",
   "dueum": null,
-  "name": "지능형 SCADA(SCADA)",
-  "title": "지능형 SCADA(SCADA)",
-  "definition": "산업제어시스템(산업공정/기반시설/설비)의 작업공정을 감시하고 제어하는 종합관제시스템",
+  "name": "지능형 감시 제어 시스템(Intelligent SCADA)",
+  "title": "지능형 감시 제어 시스템(Intelligent SCADA)",
+  "definition": "기존 SCADA를 계층형 소프트웨어 구조·범용 OS·전 디지털 통신망 위에 재구성하고 데이터 분석·자율 제어 기능을 더해 무중단 가용성과 보안을 강화한 차세대 원격 감시 제어 시스템",
   "keywords_must": [
-   "원격 감시 제어 시스템(supervisory)",
-   "원격 단말기(RTU)",
-   "PLC",
-   "APT공격",
-   "스턱스넷",
-   "HMI",
-   "미들웨어계층",
-   "기술적 관점에서의 지능형 SCADA 시스템"
+   "3계층 SW 구조(응용·미들웨어·코어)",
+   "컴포넌트 기반 개발(CBD, Component-Based Development)",
+   "범용 OS 전환",
+   "무중단 이중화(주·예비·후비)",
+   "전 디지털 통신망",
+   "가용성 99.9999%",
+   "패턴 분석 기반 자율 제어",
+   "보안 프로토콜 전면 적용",
+   "지능형 전력망 연계"
   ],
   "keywords_ref": [
-   "CBD(Componet Based Development)",
-   "RTU",
-   "APT"
+   "한전 차세대 SCADA",
+   "APT 공격·스턱스넷",
+   "tpmC 성능 지표",
+   "디지털 트윈",
+   "에너지관리시스템(EMS)"
   ],
   "keywords": [
-   "핵심: 원격 감시 제어 시스템(supervisory) · 원격 단말기(RTU) · PLC",
-   "기술: APT공격 · 스턱스넷 · HMI",
-   "운영: 미들웨어계층 · 기술적 관점에서의 지능형 SCADA 시스템",
-   "참고: CBD(Componet Based Development) · RTU · APT"
+   "구조: 응용 계층 · 미들웨어 계층 · SCADA 코어 계층 (계층 독립성·무결성)",
+   "기술 전환: 전용 → 범용 OS · CBD 모듈 개발 · 전 디지털 통신 · 무중단 이중화",
+   "관리 지표: 가용성 99.9999% · 연간 장애 0.01시간 · 보안 프로토콜 100% · 실시간 전환"
   ],
   "outline": [
-   "지능형 SCADA 의 개념",
-   "- 지능형 SCADA 핵심 키워드",
-   "지능형 SCADA 의 구성·기술",
-   "- 구성요소·표준",
-   "지능형 SCADA 의 운영 가치·시사점",
-   "- 지능형 SCADA 요점"
+   "기존 SCADA의 한계",
+   "- 구조: 일체형·전용",
+   "- 위협: 연결 증가",
+   "기술 구조",
+   "- 계층: 3계층 분리",
+   "- 개발·운영: CBD·범용 OS",
+   "- 가용성: 주·예비·후비",
+   "지능화와 관리 지표",
+   "- 지능화: 자율 제어",
+   "- 지표: 6-나인 가용성"
   ],
   "sections": [
    {
-    "title": "지능형 SCADA 핵심",
+    "title": "기존 SCADA의 한계",
     "subsections": [
      {
-      "title": null,
+      "title": "구조: 일체형·전용",
       "items": [
-       "원격 감시 제어 시스템(supervisory): 지능형 SCADA에서 원격 감시 제어 시스템(supervisory)을 다루는 핵심 암기 포인트",
-       "원격 단말기(RTU): 지능형 SCADA에서 원격 단말기(RTU)를 다루는 핵심 암기 포인트",
-       "PLC: PLC를 지능형 SCADA 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "APT공격: 지능형 SCADA에서 APT공격을 다루는 핵심 암기 포인트"
+       "전용 OS·일체형 구조로 기능 추가와 유지보수가 어렵고 감시 중심 기능에 머묾"
+      ]
+     },
+     {
+      "title": "위협: 연결 증가",
+      "items": [
+       "연결성 증가와 함께 APT 공격·스턱스넷 같은 제어 시스템 표적 공격 증가"
       ]
      }
     ]
    },
    {
-    "title": "지능형 SCADA 구성·기술",
+    "title": "기술 구조",
     "subsections": [
      {
-      "title": null,
+      "title": "계층: 3계층 분리",
       "items": [
-       "스턱스넷: 지능형 SCADA에서 스턱스넷을 다루는 핵심 암기 포인트",
-       "HMI: HMI를 지능형 SCADA 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "미들웨어계층: 지능형 SCADA에서 미들웨어계층을 다루는 핵심 암기 포인트",
-       "기술적 관점에서의 지능형 SCADA 시스템: 지능형 SCADA에서 기술적 관점에서의 지능형 SCADA 시스템을 다루는 핵심 암기 포인트"
+       "3계층 SW 구조(응용·미들웨어·코어): 계층 간 독립성 확보로 응용 교체 시 코어 영향 최소화"
+      ]
+     },
+     {
+      "title": "개발·운영: CBD·범용 OS",
+      "items": [
+       "컴포넌트 기반 개발(CBD, Component-Based Development)로 모듈 재사용, 범용 OS 전환으로 개방성 확보"
+      ]
+     },
+     {
+      "title": "가용성: 주·예비·후비",
+      "items": [
+       "무중단 이중화(주·예비·후비): 주 서버 장애 시 예비 서버, 센터 장애 시 후비 시스템으로 실시간 전환"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "지능화와 관리 지표",
+    "subsections": [
+     {
+      "title": "지능화: 자율 제어",
+      "items": [
+       "패턴 분석 기반 자율 제어: 수집 데이터로 이상 징후 예측, 지능형 전력망·분산전원 연계 제어"
+      ]
+     },
+     {
+      "title": "지표: 6-나인 가용성",
+      "items": [
+       "가용성 99.9999%(연간 장애 약 30초), 보안 프로토콜 전면 적용, 실시간 정보 지연·전환 목표"
       ]
      }
     ]
@@ -19335,14 +19439,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "원격 감시 제어 시스템(supervisory)",
-   "원격 단말기(RTU)",
-   "PLC",
-   "APT공격",
-   "스턱스넷",
-   "HMI",
-   "미들웨어계층",
-   "기술적 관점에서의 지능형 SCADA 시스템"
+   "3계층 SW 구조(응용·미들웨어·코어)",
+   "컴포넌트 기반 개발(CBD, Component-Based Development)",
+   "범용 OS 전환",
+   "무중단 이중화(주·예비·후비)",
+   "전 디지털 통신망",
+   "가용성 99.9999%",
+   "패턴 분석 기반 자율 제어",
+   "보안 프로토콜 전면 적용",
+   "지능형 전력망 연계"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -19352,7 +19457,8 @@
   "warnings": [],
   "gloss": {
    "PLC": "Programmable Logic Controller"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_220",
