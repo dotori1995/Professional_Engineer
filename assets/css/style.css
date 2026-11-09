@@ -131,6 +131,8 @@ body.page-topic,body.page-cards,body.page-quiz{height:100vh;height:100dvh;overfl
 .outline>li{margin:.18em 0;font-weight:600;line-height:1.35}
 .outline .rn{color:var(--muted)}
 .outline .subs{display:block;font-weight:400;color:var(--muted);font-size:.88em;padding-left:1.6em;line-height:1.35}
+.outline .ol-subs{margin:.15em 0 0 1.2em;padding:0;list-style:none;font-weight:400;color:var(--muted);font-size:.88em;line-height:1.35}
+.outline .ol-subs li{margin:0;font-weight:400}
 .fitbox.tight .outline .subs{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
 .fitbox.tight2 .outline .subs{display:none}
 .fitbox.tight2 .sub{display:none}

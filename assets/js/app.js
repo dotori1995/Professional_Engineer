@@ -89,7 +89,7 @@
     const top = [];
     (ol || []).forEach(x => { if (x.startsWith('- ')) { if (top.length) top[top.length - 1].subs.push(x.slice(2)); } else top.push({ t: x, subs: [] }); });
     if (!top.length) return '';
-    return '<ol class="outline">' + top.map((o, i) => `<li><span class="rn">${ROM[i] || i + 1}.</span> ${PE.gl(o.t)}${full && o.subs.length ? `<span class="subs">${o.subs.map(PE.gl).join(' · ')}</span>` : ''}</li>`).join('') + '</ol>';
+    return '<ol class="outline">' + top.map((o, i) => `<li><span class="rn">${ROM[i] || i + 1}.</span> ${PE.gl(o.t)}${full && o.subs.length ? `<ul class="ol-subs">${o.subs.map(s => `<li>- ${PE.gl(s)}</li>`).join('')}</ul>` : ''}</li>`).join('') + '</ol>';
   };
   PE.reviewFixed = () => false; // 수정·출처 표기는 화면에 노출하지 않음(CONTENT_RULES.md)
   // 표시용 토픽명: 항상 '한글(English)' 형태(name 필드), 없으면 title
