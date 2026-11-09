@@ -265,9 +265,7 @@ html.dr-open,html.dr-open body{overflow:hidden}
 .page-quiz .quiz.write{gap:.35em;overflow:hidden}
 .wbar{display:flex;justify-content:space-between;align-items:center;font-size:.75em}
 .wtype{font-weight:700;color:var(--accent)}
-.wtimer{font-variant-numeric:tabular-nums;font-weight:700;font-size:1.15em;background:var(--surface2);padding:.15em .55em;border-radius:8px}
-.wtimer.warn{color:var(--dont);background:var(--dont-soft)}
-.wtimer.over{color:#fff;background:var(--dont)}
+.wtimer{font-variant-numeric:tabular-nums;font-weight:600;font-size:.9em;color:var(--muted);background:transparent;padding:.1em .35em;border-radius:8px}
 .wscore{font-weight:700;color:var(--know)}
 .wprompt{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.35em;min-height:0}
 .wlabel{font-size:.72em;font-weight:700;color:var(--accent);letter-spacing:.04em}
@@ -276,8 +274,6 @@ html.dr-open,html.dr-open body{overflow:hidden}
 .whint{margin:0;color:var(--muted);font-size:.82em}
 .wdump{width:100%;resize:none;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);padding:.55em .7em;font:inherit;font-size:.9em;line-height:1.4;min-height:5.5em}
 .wdump:focus{outline:2px solid var(--accent);border-color:transparent}
-.wtimes{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
-.wtimes .chip{min-height:32px;font-size:12px;padding:0 10px}
 .wmeta{text-align:center;font-size:.72em;color:var(--muted)}
 .wdef{font-size:.92em;line-height:1.4;padding:.35em .55em;background:var(--surface2);border-radius:10px}
 .wkws{display:flex;flex-wrap:wrap;gap:.3em}

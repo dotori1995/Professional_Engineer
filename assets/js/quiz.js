@@ -3,14 +3,12 @@
   const $ = id => document.getElementById(id);
   const params = PE.params();
   const STORE = 'pe-write-v1';
-  const TIMES = { '10': 10 * 60, '25': 25 * 60, '3': 3 * 60 };
-  const TIME_LABEL = { '10': '1교시 10분', '25': '2~4교시 25분', '3': '키워드 3분' };
 
   let all = [], domain = '', topicOnly = params.get('topic') || '';
   let mode = params.get('mode') === 'mc' ? 'mc' : 'write';
   let pool = [], idx = 0, t = null;
   let phase = 'prompt'; // prompt | reveal | result
-  let secs = 0, timerId = 0, timeKey = localStorage.getItem('pe-write-time') || '3';
+  let secs = 0, timerId = 0;
   let checked = new Set(), notes = '';
 
   const loadStore = () => { try { return JSON.parse(localStorage.getItem(STORE) || '{}'); } catch (e) { return {}; } };
@@ -44,22 +42,16 @@
   function stopTimer() { if (timerId) { clearInterval(timerId); timerId = 0; } }
   function startTimer() {
     stopTimer();
-    secs = TIMES[timeKey] || TIMES['3'];
+    secs = 0;
     timerId = setInterval(() => {
-      secs -= 1;
+      secs += 1;
       const el = document.getElementById('wTimer');
-      if (el) {
-        el.textContent = fmt(secs);
-        el.classList.toggle('warn', secs <= 30);
-        el.classList.toggle('over', secs < 0);
-      }
-      if (secs === 0) { /* keep counting negative as overtime */ }
+      if (el) el.textContent = fmt(secs);
     }, 1000);
   }
   function fmt(s) {
-    const neg = s < 0; s = Math.abs(s);
     const m = Math.floor(s / 60), r = s % 60;
-    return (neg ? '+' : '') + String(m).padStart(2, '0') + ':' + String(r).padStart(2, '0');
+    return String(m).padStart(2, '0') + ':' + String(r).padStart(2, '0');
   }
 
   function mustList(topic) {
@@ -92,22 +84,12 @@
         <div class="wprompt">
           <div class="wlabel">토픽</div>
           <h2 class="wtitle">${name}</h2>
-          <p class="whint">정의 · 목차 · 키워드를 떠올려 쏟아내 보세요</p>
+          <p class="whint">키워드를 떠올려 쏟아내 보세요</p>
         </div>
-        <textarea class="wdump" id="wDump" rows="6" placeholder="떠오르는 키워드를 여기에 적어도 됩니다 (선택)">${PE.esc(notes)}</textarea>
-        <div class="wtimes" id="wTimes">
-          ${Object.keys(TIMES).map(k => `<button type="button" class="chip${k === timeKey ? ' on' : ''}" data-t="${k}">${TIME_LABEL[k]}</button>`).join('')}
-        </div>
+        <textarea class="wdump" id="wDump" rows="8" placeholder="떠오르는 키워드를 여기에 적어도 됩니다 (선택)">${PE.esc(notes)}</textarea>
         ${prevHtml}`;
       primary.textContent = '답안 보기'; primary.disabled = false;
       skip.hidden = false; skip.textContent = '다른 토픽';
-      // timer chips only change for next round if already running; allow change before reveal
-      $('wTimes').addEventListener('click', e => {
-        const b = e.target.closest('[data-t]'); if (!b) return;
-        timeKey = b.dataset.t; localStorage.setItem('pe-write-time', timeKey);
-        secs = TIMES[timeKey]; startTimer();
-        render();
-      });
       const dump = $('wDump');
       dump && dump.addEventListener('input', () => { notes = dump.value; });
       PE.fit(quiz);
@@ -182,7 +164,6 @@
     phase = 'prompt';
     checked = new Set();
     notes = '';
-    secs = TIMES[timeKey] || TIMES['3'];
     startTimer();
     render();
   }
