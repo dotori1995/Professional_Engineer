@@ -18,6 +18,7 @@ AMI: Advanced Metering Infrastructure
 AMPS: Advanced Mobile Phone System
 AoA: Angle of Arrival
 AODV: Ad hoc On-demand Distance Vector
+AOP: Aspect-Oriented Programming
 AP: Access Point
 APIPA: Automatic Private IP Addressing
 APTEEN: Adaptive Periodic Threshold-sensitive Energy Efficient sensor Network
@@ -28,6 +29,7 @@ AS: Autonomous System
 ASBR: Autonomous System Boundary Router
 ASK: Amplitude Shift Keying
 ASN.1: Abstract Syntax Notation One
+ATAM: Architecture Tradeoff Analysis Method
 AXFR: Full Zone Transfer
 BAC: Budget at Completion
 BAM: Business Activity Monitoring
@@ -53,6 +55,7 @@ BSS: Business Support System
 C-V2X: Cellular Vehicle-to-Everything
 CAM: Cooperative Awareness Message
 CAN: Controller Area Network
+CBD: Component-Based Development
 CBRS: Citizens Broadband Radio Service
 CBS: Committed Burst Size
 CBWFQ: Class-Based Weighted Fair Queuing
@@ -66,10 +69,12 @@ CFD: Cumulative Flow Diagram
 CIDR: Classless Inter-Domain Routing
 CIR: Committed Information Rate
 CLAT: Customer-side Translator
+CMMI: Capability Maturity Model Integration
 CNAME: Canonical Name
 CNF: Cloud-native Network Function
 CoAP: Constrained Application Protocol
 COBIT: Control Objectives for Information and Related Technology
+COCOMO: Constructive Cost Model
 CoDel: Controlled Delay
 CoE: Center of Excellence
 CoMP: Coordinated Multi-Point
@@ -99,6 +104,7 @@ DHCP: Dynamic Host Configuration Protocol
 DHT: Distributed Hash Table
 DiffServ: Differentiated Services
 DIFS: DCF Inter-Frame Space
+DLL: Dynamic Link Library
 DLNA: Digital Living Network Alliance
 DNS: Domain Name System
 DNS64: DNS extensions for NAT64
@@ -162,10 +168,13 @@ FFP: Firm Fixed Price
 FHSS: Frequency Hopping Spread Spectrum
 FIN: Finish
 FKP: Flächenkorrekturparameter
+FMEA: Failure Mode and Effects Analysis
+FP: Function Point
 FQDN: Fully Qualified Domain Name
 FRAND: Fair Reasonable And Non-Discriminatory
 FSK: Frequency Shift Keying
 FSO: Free Space Optics
+FTA: Fault Tree Analysis
 FTM: Fine Timing Measurement
 GAF: Geographic Adaptive Fidelity
 GARP: Gratuitous ARP
@@ -174,11 +183,13 @@ GEAR: Geographical and Energy Aware Routing
 GloBE: Global Anti-Base Erosion
 GNSS: Global Navigation Satellite System
 GPS: Global Positioning System
+GS: Good Software
 GSLB: Global Server Load Balancing
 GSM: Global System for Mobile Communications
 GWCN: Gateway Core Network
 HAPS: High Altitude Platform Station
 HARQ: Hybrid Automatic Repeat reQuest
+HAZOP: Hazard and Operability Study
 HCE: Host Card Emulation
 HCI: Hyper-Converged Infrastructure
 HDLC: High-level Data Link Control
@@ -205,6 +216,7 @@ IMT-2020: International Mobile Telecommunications-2020
 IMT-Advanced: International Mobile Telecommunications-Advanced
 IntServ: Integrated Services
 IoB: Internet of Behavior
+IoC: Inversion of Control
 IoE: Internet of Everything
 IOPS: Isolated E-UTRAN Operation for Public Safety
 IoT: Internet of Things
@@ -239,6 +251,7 @@ LIB: Label Information Base
 LLC: Logical Link Control
 LLM: Large Language Model
 LLQ: Low Latency Queuing
+LOC: Lines of Code
 LoRa: Long Range
 LOS: Line of Sight
 LPWA: Low Power Wide Area
@@ -258,6 +271,8 @@ MANO: Management and Orchestration
 MBAP: Modbus Application Protocol
 MCPTT: Mission Critical Push-To-Talk
 MCU: Multipoint Control Unit
+MDA: Model-Driven Architecture
+MDD: Model-Driven Development
 MEC: Multi-access Edge Computing
 MEF: Metro Ethernet Forum
 MEO: MEC Orchestrator
@@ -268,6 +283,7 @@ MLD: Multicast Listener Discovery
 MLO: Multi-Link Operation
 MNO: Mobile Network Operator
 MOCN: Multi-Operator Core Network
+MOF: Meta-Object Facility
 MORAN: Multi-Operator Radio Access Network
 MoS: Mean Opinion Score
 MOS: Mean Opinion Score
@@ -277,6 +293,7 @@ MPLS-TP: MPLS Transport Profile
 MPR: Multipoint Relay
 MPTCP: Multipath TCP
 MQTT: MQ Telemetry Transport (현재 OASIS 표준명은 약어 아님)
+MSA: Microservice Architecture
 MSD: Minimum Set of Data
 MSL: Maximum Segment Lifetime
 MSS: Maximum Segment Size
@@ -323,6 +340,7 @@ O-RU: O-RAN Radio Unit
 OBS: Organizational Breakdown Structure
 OBU: On-Board Unit
 OCF: Open Connectivity Foundation
+OCL: Object Constraint Language
 OECD: Organisation for Economic Co-operation and Development
 OFDM: Orthogonal Frequency Division Multiplexing
 OFDMA: Orthogonal Frequency Division Multiple Access
@@ -381,6 +399,7 @@ QoE: Quality of Experience
 QoS: Quality of Service
 QUIC: Quick UDP Internet Connections
 RACI: Responsible Accountable Consulted Informed
+RAD: Rapid Application Development
 RAM: Responsibility Assignment Matrix
 RAN: Radio Access Network
 RARP: Reverse Address Resolution Protocol
@@ -389,6 +408,7 @@ RegTech: Regulatory Technology
 REST: Representational State Transfer
 RF: Radio Frequency
 RFC: Request for Comments
+RFP: Request for Proposal
 RIC: RAN Intelligent Controller
 RIP: Routing Information Protocol
 RIPng: RIP next generation
@@ -421,6 +441,7 @@ SASE: Secure Access Service Edge
 SASL: Simple Authentication and Security Layer
 SATIN: Satellite-Aerial-Terrestrial Integrated Network
 SBA: Service-Based Architecture
+SBOM: Software Bill of Materials
 SCADA: Supervisory Control And Data Acquisition
 SCell: Secondary Cell
 SCM: Supply Chain Management
@@ -452,11 +473,13 @@ SMF: Session Management Function
 SMO: Service Management and Orchestration
 SNMP: Simple Network Management Protocol
 SNPN: Standalone Non-Public Network
+SOA: Service-Oriented Architecture
 SOM: Serviceable Obtainable Market
 SONET: Synchronous Optical Network
 SoW: Statement of Work
 SPF: Shortest Path First
 SPIN: Sensor Protocols for Information via Negotiation
+SRE: Site Reliability Engineering
 SRS: Software Requirements Specification
 SRTP: Secure Real-time Transport Protocol
 SRTT: Smoothed Round-Trip Time
@@ -468,12 +491,14 @@ STP: Spanning Tree Protocol
 STUN: Session Traversal Utilities for NAT
 SUMS: Software Update Management System
 SupTech: Supervisory Technology
+SWEBOK: Software Engineering Body of Knowledge
 SYN: Synchronize
 T&M: Time and Materials
 TAM: Total Addressable Market
 TCO: Total Cost of Ownership
 TCP: Transmission Control Protocol
 TCPI: To-Complete Performance Index
+TDD: Test-Driven Development
 TDM: Time Division Multiplexing
 TDMA: Time Division Multiple Access
 TDoA: Time Difference of Arrival
@@ -481,6 +506,7 @@ TEEN: Threshold-sensitive Energy Efficient sensor Network
 THz: Terahertz
 TLD: Top-Level Domain
 TLS: Transport Layer Security
+TMMi: Test Maturity Model integration
 ToA: Time of Arrival
 TOC: Theory of Constraints
 TOS: Type of Service
