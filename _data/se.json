@@ -10095,6 +10095,455 @@
   }
  },
  {
+  "id": "SE_063",
+  "code": "SE_063",
+  "title": "스팸(Spam)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 > 악성프로그램 > 스팸(Spam) 메일",
+  "definition": "수신자가 원하지 않는데도 정보통신망을 통해 일방적·대량으로 보내는 영리 목적 광고성 정보로, 이메일·문자·메신저·VoIP·블로그 댓글 등으로 전송된다",
+  "keywords": [
+   "특징: 상업성 · 일방성 · 대량성",
+   "전송 기법: 오픈 릴레이 · 오픈 프록시 · 악성코드 감염 PC(봇넷) · 자체 SMTP 서버",
+   "방어 기술: 발신자 인증(SPF·DKIM·DMARC) · 평판 차단 목록(RBL) · 콘텐츠 필터링(베이지안)"
+  ],
+  "sections": [
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": "내용",
+      "items": [
+       "광고·음란 홍보, 업무 방해용 메일 폭탄, 피싱 유도, 비방"
+      ]
+     },
+     {
+      "title": "매체",
+      "items": [
+       "이메일(SMTP), VoIP 스팸(SPIT), 블로그 댓글 광고 링크, 문자·MMS"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "전송 기법",
+    "subsections": [
+     {
+      "title": "오픈 릴레이",
+      "items": [
+       "중계 제한 없는 메일 서버로 대량 발송, 발신 IP 변조로 추적 회피"
+      ]
+     },
+     {
+      "title": "오픈 프록시",
+      "items": [
+       "인가 없이 쓸 수 있는 프록시 경유"
+      ]
+     },
+     {
+      "title": "악성코드",
+      "items": [
+       "감염 PC가 메일 목록을 내려받아 발송"
+      ]
+     },
+     {
+      "title": "자체 서버",
+      "items": [
+       "스패머가 설치한 SMTP 서버로 발송"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "방어",
+    "subsections": [
+     {
+      "title": "제도",
+      "items": [
+       "옵트인(사전 동의)·광고 표시 의무, 위반 과태료"
+      ]
+     },
+     {
+      "title": "서버",
+      "items": [
+       "릴레이 제한, 발신자 인증, 평판 차단 목록, 그레이리스팅"
+      ]
+     },
+     {
+      "title": "콘텐츠",
+      "items": [
+       "키워드·베이지안·기계학습 필터, 사용자 신고 반영"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "유형",
+   "- 내용",
+   "- 매체",
+   "전송 기법",
+   "- 오픈 릴레이",
+   "- 오픈 프록시",
+   "- 악성코드",
+   "- 자체 서버",
+   "방어",
+   "- 제도",
+   "- 서버",
+   "- 콘텐츠"
+  ],
+  "name": "스팸(Spam)",
+  "en": "Spam Mail and Messages",
+  "keywords_must": [
+   "상업성",
+   "일방성",
+   "대량성",
+   "오픈 릴레이",
+   "오픈 프록시",
+   "악성코드 감염 PC(봇넷)",
+   "자체 SMTP 서버",
+   "발신자 인증(SPF·DKIM·DMARC)",
+   "평판 차단 목록(RBL)",
+   "콘텐츠 필터링(베이지안)"
+  ],
+  "keywords_ref": [
+   "유형(내용): 광고·음란·메일 폭탄·피싱·플레이밍(비방)",
+   "정보통신망법 제50조: 사전 수신 동의(옵트인), 광고 표시·수신 거부 방법 의무",
+   "옵트아웃과 비교",
+   "그레이리스팅",
+   "인터넷 전화 스팸(SPIT)",
+   "불법 스팸 신고 118",
+   "기계학습 스팸 분류"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "상업성",
+   "일방성",
+   "대량성",
+   "오픈 릴레이",
+   "오픈 프록시",
+   "악성코드 감염 PC(봇넷)",
+   "자체 SMTP 서버",
+   "발신자 인증(SPF·DKIM·DMARC)",
+   "평판 차단 목록(RBL)",
+   "콘텐츠 필터링(베이지안)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "SMTP": "Simple Mail Transfer Protocol",
+   "RBL": "Real-time Blackhole List",
+   "SPIT": "Spam over Internet Telephony",
+   "PC": "Personal Computer",
+   "SPF": "Sender Policy Framework",
+   "DKIM": "DomainKeys Identified Mail",
+   "DMARC": "Domain-based Message Authentication, Reporting and Conformance"
+  }
+ },
+ {
+  "id": "SE_064",
+  "code": "SE_064",
+  "title": "크라임웨어(Crimeware)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안(SE) > 악성프로그램 > 크라임웨어",
+  "definition": "금융 정보·인증 정보를 탈취해 금전적 이익을 얻는 등 온라인 범죄를 목적으로 만든 악성코드로, 악성코드 생성기와 C&C 서버를 묶은 패키지로 거래·판매된다",
+  "keywords": [
+   "대표 사례: 제우스(Zeus) · 스파이아이(SpyEye)",
+   "핵심 기술: 봇넷 컨트롤러 · 업데이트형 트로이 목마 · 금융·인증 정보 수집",
+   "발전 단계: 폼 그래빙(Form Grabbing) · 안티 디텍션(Anti-detection) · 웹 인젝션(Web Injection)",
+   "대응: 사이버 킬체인 선제 대응 · 방화벽·IPS·URL 필터링 · 위협 정보 공유(C-TAS)"
+  ],
+  "sections": [
+   {
+    "title": "대표 사례",
+    "subsections": [
+     {
+      "title": "제우스",
+      "items": [
+       "빌더로 악성코드 생성, 웹 기반 C&C로 온라인 뱅킹 정보 탈취, 메일 첨부·악성 사이트로 유포"
+      ]
+     },
+     {
+      "title": "스파이아이",
+      "items": [
+       "빌더와 C&C 패키지, 경쟁 악성코드 제거, 실시간 강제 업데이트, 전체 암호화로 분석 지연"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "발전 단계",
+    "subsections": [
+     {
+      "title": "1 폼 그래빙",
+      "items": [
+       "브라우저 입력 양식 데이터 가로채기, 훅 기반 키로깅"
+      ]
+     },
+     {
+      "title": "2 안티 디텍션",
+      "items": [
+       "레지스트리·파일명·서명을 계속 바꿔 백신 회피"
+      ]
+     },
+     {
+      "title": "3 웹 인젝션",
+      "items": [
+       "브라우저 내 정상 은행 페이지에 입력란을 삽입해 인증 정보 탈취(MITB)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "선제",
+      "items": [
+       "공격자 프로파일링, 패킷 포렌식, 사이버 게놈, 킬체인 분석"
+      ]
+     },
+     {
+      "title": "차단",
+      "items": [
+       "방화벽·IDS·IPS·URL 필터링, 게이트웨이 백신"
+      ]
+     },
+     {
+      "title": "정책",
+      "items": [
+       "취약점 제거, 보안 가이드, C-TAS 위협 정보 공유와 범정부 공조"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "대표 사례",
+   "- 제우스",
+   "- 스파이아이",
+   "발전 단계",
+   "- 1 폼 그래빙",
+   "- 2 안티 디텍션",
+   "- 3 웹 인젝션",
+   "대응",
+   "- 선제",
+   "- 차단",
+   "- 정책"
+  ],
+  "name": "크라임웨어(Crimeware)",
+  "en": "Crimeware",
+  "keywords_must": [
+   "제우스(Zeus)",
+   "스파이아이(SpyEye)",
+   "봇넷 컨트롤러",
+   "업데이트형 트로이 목마",
+   "금융·인증 정보 수집",
+   "폼 그래빙(Form Grabbing)",
+   "안티 디텍션(Anti-detection)",
+   "웹 인젝션(Web Injection)",
+   "사이버 킬체인 선제 대응",
+   "방화벽·IPS·URL 필터링",
+   "위협 정보 공유(C-TAS)"
+  ],
+  "keywords_ref": [
+   "제우스 빌더 패키지·블랙마켓 판매",
+   "스파이아이는 감염 PC의 제우스 제거·실시간 업데이트",
+   "맨 인 더 브라우저(MITB)",
+   "서비스형 범죄(CaaS)",
+   "랜섬웨어·키로거·스크린 스크레이퍼",
+   "프로파일링·패킷 포렌식·사이버 게놈"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "제우스(Zeus)",
+   "스파이아이(SpyEye)",
+   "봇넷 컨트롤러",
+   "업데이트형 트로이 목마",
+   "금융·인증 정보 수집",
+   "폼 그래빙(Form Grabbing)",
+   "안티 디텍션(Anti-detection)",
+   "웹 인젝션(Web Injection)",
+   "사이버 킬체인 선제 대응",
+   "방화벽·IPS·URL 필터링",
+   "위협 정보 공유(C-TAS)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "PC": "Personal Computer",
+   "MITB": "Man-in-the-Browser",
+   "CaaS": "Crime as a Service",
+   "C-TAS": "Cyber Threats Analysis System",
+   "IPS": "Intrusion Prevention System",
+   "C&C": "Command and Control",
+   "IDS": "Intrusion Detection System"
+  }
+ },
+ {
+  "id": "SE_065",
+  "code": "SE_065",
+  "title": "웹셸(Web Shell)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 악성프로그램",
+  "definition": "파일 업로드 취약점 등으로 웹 서버에 올린 ASP·JSP·PHP·CGI 스크립트 파일로, 공격자가 브라우저에서 원격으로 서버 명령을 실행해 소스 열람·DB 유출·홈페이지 변조·추가 악성코드 설치를 수행하게 하는 해킹 도구",
+  "keywords": [
+   "침투 경로: 파일 업로드 취약점 · SQL 삽입 · 원격 파일 포함(RFI)",
+   "예방: 업로드 확장자 화이트리스트(서버 측 검사) · 업로드 폴더 실행 권한 제거 · SQL 삽입 방지",
+   "탐지: 시그니처 파일 검색 · 업로드 폴더 로그 분석 · 웹 접속 통계 분석 · KISA 휘슬(WHISTL)"
+  ],
+  "sections": [
+   {
+    "title": "공격 방법",
+    "subsections": [
+     {
+      "title": "1 업로드",
+      "items": [
+       "첨부 가능 게시판에 스크립트 파일 업로드(확장자 우회)"
+      ]
+     },
+     {
+      "title": "2 실행",
+      "items": [
+       "업로드 경로 URL을 호출해 서버에서 스크립트 실행"
+      ]
+     },
+     {
+      "title": "3 잠복",
+      "items": [
+       "활동 없이 숨어 방화벽·IPS 탐지 회피"
+      ]
+     },
+     {
+      "title": "4 악용",
+      "items": [
+       "디렉터리 탐색, SQL 직접 실행, 파일 수정, 추가 악성코드 설치"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 위협",
+    "subsections": [
+     {
+      "title": "파일 업로드",
+      "items": [
+       "셸 명령으로 서버 디렉터리 조작"
+      ]
+     },
+     {
+      "title": "비밀번호 설정",
+      "items": [
+       "제작자만 사용하게 해 탐지 어렵게 함"
+      ]
+     },
+     {
+      "title": "SQL 직접 입력",
+      "items": [
+       "DB 열람·수정·삭제"
+      ]
+     },
+     {
+      "title": "파일 직접 편집",
+      "items": [
+       "홈페이지 변조, 악성 스크립트 삽입"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "예방과 탐지",
+    "subsections": [
+     {
+      "title": "예방",
+      "items": [
+       "불필요한 업로드 기능 제거, 서버 측 허용 확장자 검사, 업로드 폴더 스크립트 실행 금지"
+      ]
+     },
+     {
+      "title": "탐지",
+      "items": [
+       "알려진 웹셸 문자열 검색, 업로드 경로 URL 로그 분석, 극소수 IP만 접속하는 URL 분석"
+      ]
+     },
+     {
+      "title": "도구",
+      "items": [
+       "KISA 웹셸 탐지 도구, 웹 방화벽, 파일 무결성 감시"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 방법",
+   "- 1 업로드",
+   "- 2 실행",
+   "- 3 잠복",
+   "- 4 악용",
+   "보안 위협",
+   "- 파일 업로드",
+   "- 비밀번호 설정",
+   "- SQL 직접 입력",
+   "- 파일 직접 편집",
+   "예방과 탐지",
+   "- 예방",
+   "- 탐지",
+   "- 도구"
+  ],
+  "name": "웹셸(Web Shell)",
+  "en": "Web Shell",
+  "keywords_must": [
+   "파일 업로드 취약점",
+   "SQL 삽입",
+   "원격 파일 포함(RFI)",
+   "업로드 확장자 화이트리스트(서버 측 검사)",
+   "업로드 폴더 실행 권한 제거",
+   "SQL 삽입 방지",
+   "시그니처 파일 검색",
+   "업로드 폴더 로그 분석",
+   "웹 접속 통계 분석",
+   "KISA 휘슬(WHISTL)"
+  ],
+  "keywords_ref": [
+   "특징: 관리자 권한 획득·다양한 2차 공격·정상 웹 트래픽 위장(80·443)",
+   "셸쇼크(Shellshock, CVE-2014-6271 배시 환경 변수 취약점)와 구분",
+   "비밀번호 설정형 웹셸",
+   "한 줄 웹셸(China Chopper)",
+   "파일 무결성 모니터링",
+   "웹 방화벽",
+   "랜섬웹 침투 수단"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "파일 업로드 취약점",
+   "SQL 삽입",
+   "원격 파일 포함(RFI)",
+   "업로드 확장자 화이트리스트(서버 측 검사)",
+   "업로드 폴더 실행 권한 제거",
+   "SQL 삽입 방지",
+   "시그니처 파일 검색",
+   "업로드 폴더 로그 분석",
+   "웹 접속 통계 분석",
+   "KISA 휘슬(WHISTL)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "IPS": "Intrusion Prevention System",
+   "RFI": "Remote File Inclusion",
+   "WHISTL": "Web Hacking Incident & Sign Tracking Logger"
+  }
+ },
+ {
   "id": "SE_066",
   "code": "SE_066",
   "title": "셸코드(Shellcode)",
@@ -10361,6 +10810,176 @@
   "quiz_groups": [
    "se"
   ]
+ },
+ {
+  "id": "SE_068",
+  "code": "SE_068",
+  "title": "정적 분석(Static Analysis)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 악성코드 분석방법 > 정적분석",
+  "definition": "프로그램을 실행하지 않고 소스 코드나 바이너리의 구조·데이터 흐름을 분석해 보안 약점·결함이나 악성 기능을 찾아내는 기법으로, 개발 초기 시큐어 코딩 점검과 악성코드 역공학에 쓰인다",
+  "keywords": [
+   "주요 기법: 소스 코드 검증 · 코드 리뷰 · 역공학(디스어셈블)",
+   "분석 기술: 오염(Taint) 분석 · 패턴 매칭 · 데이터·제어 흐름 분석",
+   "분석 도구: Coverity · Fortify · Sparrow · IDA Pro"
+  ],
+  "sections": [
+   {
+    "title": "주요 기법",
+    "subsections": [
+     {
+      "title": "소스 코드 검증",
+      "items": [
+       "보안 가이드 기준으로 조치 여부 확인"
+      ]
+     },
+     {
+      "title": "코드 리뷰",
+      "items": [
+       "작성자 외 개발자·제3자가 정해진 절차로 검토"
+      ]
+     },
+     {
+      "title": "역공학",
+      "items": [
+       "IDA Pro 등 디스어셈블러로 바이너리 구조·기능 분석"
+      ]
+     },
+     {
+      "title": "자동 도구",
+      "items": [
+       "컴파일 단계에서 널 검사·입력 검증 누락 등 보안 약점 탐지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동적 분석 비교",
+    "subsections": [
+     {
+      "title": "대상",
+      "items": [
+       "정적은 소스 코드",
+       "동적은 실행 중인 애플리케이션"
+      ]
+     },
+     {
+      "title": "기술",
+      "items": [
+       "정적은 오염 분석·패턴 비교",
+       "동적은 HTTP 메시지 변조·퍼징"
+      ]
+     },
+     {
+      "title": "시점",
+      "items": [
+       "정적은 개발 단계",
+       "동적은 실행 환경 준비 후"
+      ]
+     },
+     {
+      "title": "결과",
+      "items": [
+       "정적은 코드 라인 지적",
+       "동적은 요청·응답으로 증명"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한계 보완",
+    "subsections": [
+     {
+      "title": "컴포넌트 간 취약점",
+      "items": [
+       "런타임 동적 분석과 연계"
+      ]
+     },
+     {
+      "title": "오탐·미탐",
+      "items": [
+       "정적·동적 결과를 상호 매칭해 신뢰성 향상"
+      ]
+     },
+     {
+      "title": "우선순위",
+      "items": [
+       "동적 결과로 실제 악용 가능한 취약점 선별"
+      ]
+     },
+     {
+      "title": "범위",
+      "items": [
+       "네트워크 데이터 흐름 분석으로 애플리케이션 밖까지 확장"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "주요 기법",
+   "- 소스 코드 검증",
+   "- 코드 리뷰",
+   "- 역공학",
+   "- 자동 도구",
+   "동적 분석 비교",
+   "- 대상",
+   "- 기술",
+   "- 시점",
+   "- 결과",
+   "한계 보완",
+   "- 컴포넌트 간 취약점",
+   "- 오탐·미탐",
+   "- 우선순위",
+   "- 범위"
+  ],
+  "name": "정적 분석(Static Analysis)",
+  "en": "Static Analysis",
+  "keywords_must": [
+   "소스 코드 검증",
+   "코드 리뷰",
+   "역공학(디스어셈블)",
+   "오염(Taint) 분석",
+   "패턴 매칭",
+   "데이터·제어 흐름 분석",
+   "Coverity",
+   "Fortify",
+   "Sparrow",
+   "IDA Pro"
+  ],
+  "keywords_ref": [
+   "한계: 높은 오탐·런타임·컴포넌트 간 취약점 미탐·설계 결함 탐지 곤란",
+   "장점: 실행 불필요·개발 초기 결함 발견·수정 비용 절감",
+   "웹 취약점 공격 중 SQL 삽입 비중 큼",
+   "동적 분석(DAST)과 비교: 실제 웹 애플리케이션에 HTTP 메시지 변조",
+   "하이브리드 분석",
+   "국내 SSEn",
+   "정적 애플리케이션 보안 테스트(SAST)",
+   "악성코드 정적 분석: 해시·문자열·PE 헤더·임포트 함수"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "소스 코드 검증",
+   "코드 리뷰",
+   "역공학(디스어셈블)",
+   "오염(Taint) 분석",
+   "패턴 매칭",
+   "데이터·제어 흐름 분석",
+   "Coverity",
+   "Fortify",
+   "Sparrow",
+   "IDA Pro"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "SAST": "Static Application Security Testing",
+   "DAST": "Dynamic Application Security Testing",
+   "PE": "Portable Executable"
+  }
  },
  {
   "id": "SE_070_01",
