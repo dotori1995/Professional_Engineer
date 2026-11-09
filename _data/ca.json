@@ -19523,7 +19523,7 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": "다데포",
+    "dueum": "다데포(다중 인터럽트선·데이지 체인·폴링)",
     "gloss": {
       "PIO": "Programmed I/O",
       "DMA": "Direct Memory Access",
@@ -19806,7 +19806,7 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": "다데포",
+    "dueum": "다데포(다중 인터럽트선·데이지 체인·폴링)",
     "gloss": {
       "IRQ": "Interrupt Request",
       "ISR": "Interrupt Service Routine",
