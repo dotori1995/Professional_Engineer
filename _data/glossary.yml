@@ -16,6 +16,7 @@ AMC: Adaptive Modulation and Coding
 AMF: Access and Mobility Management Function
 AMI: Advanced Metering Infrastructure
 AMPS: Advanced Mobile Phone System
+ANR: Automatic Neighbor Relation
 AoA: Angle of Arrival
 AODV: Ad hoc On-demand Distance Vector
 AOP: Aspect-Oriented Programming
@@ -52,9 +53,11 @@ BPR: Business Process Reengineering
 BSC: Balanced Scorecard
 BSM: Basic Safety Message
 BSS: Business Support System
+BWS: Broadcast Website
 C-V2X: Cellular Vehicle-to-Everything
 CAM: Cooperative Awareness Message
 CAN: Controller Area Network
+CAPEX: Capital Expenditure
 CBD: Component-Based Development
 CBRS: Citizens Broadband Radio Service
 CBS: Committed Burst Size
@@ -80,12 +83,15 @@ CoE: Center of Excellence
 CoMP: Coordinated Multi-Point
 COQ: Cost of Quality
 CoRE: Constrained RESTful Environments
+CPE: Customer Premises Equipment
 CPM: Critical Path Method
 CPU: Central Processing Unit
 CRC: Cyclic Redundancy Check
 CRISP-DM: Cross-Industry Standard Process for Data Mining
 CRM: Customer Relationship Management
 CSA: Connectivity Standards Alliance
+CSCF: Call Session Control Function
+CSI: Channel State Information
 CSMA: Carrier Sense Multiple Access
 CSMA/CA: Carrier Sense Multiple Access with Collision Avoidance
 CSMA/CD: Carrier Sense Multiple Access with Collision Detection
@@ -122,6 +128,7 @@ DS-Lite: Dual-Stack Lite
 DSA: Dynamic Spectrum Access
 DSCP: Differentiated Services Code Point
 DSDV: Destination-Sequenced Distance Vector
+DSP: Demand-Side Platform
 DSR: Dynamic Source Routing
 DSRC: Dedicated Short-Range Communications
 DSSS: Direct Sequence Spread Spectrum
@@ -143,6 +150,7 @@ ECC: Elliptic Curve Cryptography
 ECN: Explicit Congestion Notification
 ECU: Electronic Control Unit
 EDA: Event-Driven Architecture
+EEF: Enterprise Environmental Factors
 EF: Expedited Forwarding
 EGP: Exterior Gateway Protocol
 EIF: External Interface File
@@ -168,7 +176,9 @@ FFP: Firm Fixed Price
 FHSS: Frequency Hopping Spread Spectrum
 FIN: Finish
 FKP: Flächenkorrekturparameter
+FMC: Fixed Mobile Convergence
 FMEA: Failure Mode and Effects Analysis
+FMS: Fixed Mobile Substitution
 FP: Function Point
 FQDN: Fully Qualified Domain Name
 FRAND: Fair Reasonable And Non-Discriminatory
@@ -176,6 +186,7 @@ FSK: Frequency Shift Keying
 FSO: Free Space Optics
 FTA: Fault Tree Analysis
 FTM: Fine Timing Measurement
+FWA: Fixed Wireless Access
 GAF: Geographic Adaptive Fidelity
 GARP: Gratuitous ARP
 GCSE: Group Communication System Enablers
@@ -198,6 +209,7 @@ HOLAP: Hybrid OLAP
 HSRP: Hot Standby Router Protocol
 HSS: Home Subscriber Server
 HTTP: HyperText Transfer Protocol
+IASB: International Accounting Standards Board
 IBN: Intent-Based Networking
 ICE: Interactive Connectivity Establishment
 ICMP: Internet Control Message Protocol
@@ -205,6 +217,7 @@ ICMPv6: Internet Control Message Protocol for IPv6
 IEEE: Institute of Electrical and Electronics Engineers
 IETF: Internet Engineering Task Force
 IFPUG: International Function Point Users Group
+IFRS: International Financial Reporting Standards
 IFS: Inter-Frame Space
 IGMP: Internet Group Management Protocol
 IGP: Interior Gateway Protocol
@@ -212,6 +225,7 @@ IGRP: Interior Gateway Routing Protocol
 IIR: Income Inclusion Rule
 ILF: Internal Logical File
 ILM: Information Lifecycle Management
+IMS: IP Multimedia Subsystem
 IMT-2020: International Mobile Telecommunications-2020
 IMT-Advanced: International Mobile Telecommunications-Advanced
 IntServ: Integrated Services
@@ -238,6 +252,7 @@ ITSM: IT Service Management
 IVN: In-Vehicle Network
 IX: Internet eXchange
 IXFR: Incremental Zone Transfer
+IXP: Internet Exchange Point
 JID: Jabber ID
 JIT: Just In Time
 JSEP: JavaScript Session Establishment Protocol
@@ -247,6 +262,7 @@ LDP: Label Distribution Protocol
 LEACH: Low-Energy Adaptive Clustering Hierarchy
 LER: Label Edge Router
 LFIB: Label Forwarding Information Base
+Li-Fi: Light Fidelity
 LIB: Label Information Base
 LLC: Logical Link Control
 LLM: Large Language Model
@@ -293,14 +309,17 @@ MPLS-TP: MPLS Transport Profile
 MPR: Multipoint Relay
 MPTCP: Multipath TCP
 MQTT: MQ Telemetry Transport (현재 OASIS 표준명은 약어 아님)
+MRO: Maintenance, Repair and Operations
 MSA: Microservice Architecture
 MSD: Minimum Set of Data
 MSL: Maximum Segment Lifetime
+MSP: Managed Service Provider
 MSS: Maximum Segment Size
 MSTP: Multiple Spanning Tree Protocol
 MTU: Maximum Transmission Unit
 MU-MIMO: Multi-User MIMO
 MUX: Multiplexer
+MVC: Multiview Video Coding
 MVNO: Mobile Virtual Network Operator
 MVP: Minimum Viable Product
 MX: Mail Exchanger
@@ -334,9 +353,12 @@ NSSF: Network Slice Selection Function
 NTN: Non-Terrestrial Network
 NTP: Network Time Protocol
 NTRIP: Networked Transport of RTCM via Internet Protocol
+NVR: Network Video Recorder
 O-CU: O-RAN Central Unit
 O-DU: O-RAN Distributed Unit
 O-RU: O-RAN Radio Unit
+O2O: Online to Offline
+O4O: Online for Offline
 OBS: Organizational Breakdown Structure
 OBU: On-Board Unit
 OCF: Open Connectivity Foundation
@@ -350,8 +372,10 @@ OLSR: Optimized Link State Routing
 OMA: Orthogonal Multiple Access
 ONF: Open Networking Foundation
 ONOS: Open Network Operating System
+ONVIF: Open Network Video Interface Forum
 OOK: On-Off Keying
 OPA: Organizational Process Assets
+OPEX: Operating Expenditure
 OPNFV: Open Platform for NFV
 OSGi: Open Services Gateway initiative
 OSPF: Open Shortest Path First
@@ -413,6 +437,7 @@ RIC: RAN Intelligent Controller
 RIP: Routing Information Protocol
 RIPng: RIP next generation
 RIS: Reconfigurable Intelligent Surface
+ROAS: Return on Ad Spend
 RPF: Reverse Path Forwarding
 RPO: Recovery Point Objective
 RR: Resource Record
@@ -422,6 +447,7 @@ RST: Reset
 RSTP: Rapid Spanning Tree Protocol
 RSU: Road Side Unit
 RSVP: Resource Reservation Protocol
+RTB: Real-Time Bidding
 RTCP: RTP Control Protocol
 RTE: Real-Time Enterprise
 RTK: Real-Time Kinematic
@@ -475,6 +501,7 @@ SNMP: Simple Network Management Protocol
 SNPN: Standalone Non-Public Network
 SOA: Service-Oriented Architecture
 SOM: Serviceable Obtainable Market
+SON: Self-Organizing Network
 SONET: Synchronous Optical Network
 SoW: Statement of Work
 SPF: Shortest Path First
@@ -484,8 +511,10 @@ SRS: Software Requirements Specification
 SRTP: Secure Real-time Transport Protocol
 SRTT: Smoothed Round-Trip Time
 SSB: Synchronization Signal Block
+SSC: Shared Service Center
 SSID: Service Set Identifier
 SSM: Source-Specific Multicast
+SSP: Supply-Side Platform
 SST: Slice/Service Type
 STP: Spanning Tree Protocol
 STUN: Session Traversal Utilities for NAT
@@ -519,6 +548,7 @@ UDP: User Datagram Protocol
 UHR: Ultra High Reliability
 ULA: Unique Local Address
 ULCL: Uplink Classifier
+UMA: Unlicensed Mobile Access
 UPF: User Plane Function
 UPnP: Universal Plug and Play
 UPS: Uninterruptible Power Supply
@@ -535,10 +565,13 @@ VANET: Vehicular Ad-hoc Network
 VIM: Virtualized Infrastructure Manager
 VIP: Virtual IP
 VLAN: Virtual LAN
+VLC: Visible Light Communication
 VLSM: Variable Length Subnet Mask
 VMAF: Video Multimethod Assessment Fusion
+VMS: Video Management System
 VNF: Virtualized Network Function
 VNFM: VNF Manager
+VoWiFi: Voice over Wi-Fi
 VPN: Virtual Private Network
 VRM: Vendor Relationship Management
 VRRP: Virtual Router Redundancy Protocol

@@ -12008,5 +12008,198 @@
    "site_domain_present": false
   }
  },
- "match_notes": "Conservative semantic match to site topics present at build time. Domains not yet on site remain unmatched for later."
+ "match_notes": "Conservative semantic match to site topics present at build time. Domains not yet on site remain unmatched for later.",
+ "added_absent_topics": {
+  "NW": [
+   {
+    "id": "NW_279",
+    "name": "와이파이 콜링(Wi-Fi Calling, UMA)"
+   },
+   {
+    "id": "NW_280",
+    "name": "IEEE 802.11bf(WLAN Sensing)"
+   },
+   {
+    "id": "NW_281",
+    "name": "Wi-SUN(Wireless Smart Utility Network)"
+   },
+   {
+    "id": "NW_282",
+    "name": "CAPEX(설비투자비용, Capital Expenditure)"
+   },
+   {
+    "id": "NW_283",
+    "name": "FMC(Fixed Mobile Convergence, 유무선 융합)"
+   },
+   {
+    "id": "NW_284",
+    "name": "FMS(Fixed Mobile Substitution, 유선대 무선 대체)"
+   },
+   {
+    "id": "NW_285",
+    "name": "IMS(IP Multimedia Subsystem)"
+   },
+   {
+    "id": "NW_286",
+    "name": "SON(Self-Organizing Network, 자가구성 네트워크)"
+   },
+   {
+    "id": "NW_287",
+    "name": "ONVIF(Open Network Video Interface Forum)"
+   },
+   {
+    "id": "NW_288",
+    "name": "3차원 비디오 부호화(3D Video Coding)"
+   },
+   {
+    "id": "NW_289",
+    "name": "BWS MOT 캐러셀(BWS MOT Carousel)"
+   },
+   {
+    "id": "NW_290",
+    "name": "CCTV(Closed-Circuit Television, 폐쇄회로 TV)"
+   },
+   {
+    "id": "NW_291",
+    "name": "IX(Internet Exchange, 인터넷 교환 노드)"
+   },
+   {
+    "id": "NW_292",
+    "name": "Li-Fi(Light Fidelity, 가시광 통신)"
+   },
+   {
+    "id": "NW_293",
+    "name": "인터커넥션 네트워크(Interconnection Network)"
+   },
+   {
+    "id": "NW_294",
+    "name": "OpenVPN"
+   },
+   {
+    "id": "NW_295",
+    "name": "FWA(Fixed Wireless Access, 고정형 무선 액세스)"
+   }
+  ],
+  "PM": [
+   {
+    "id": "PM_094",
+    "name": "기업환경요인(EEF, Enterprise Environmental Factors)"
+   },
+   {
+    "id": "PM_095",
+    "name": "조직 프로세스 자산(OPA, Organizational Process Assets)"
+   },
+   {
+    "id": "PM_096",
+    "name": "프로젝트 분류(Project Classification)"
+   },
+   {
+    "id": "PM_097",
+    "name": "완료의 정의(DoD, Definition of Done)"
+   }
+  ],
+  "MG": [
+   {
+    "id": "MG_181",
+    "name": "IT 컨설팅(IT Consulting)"
+   },
+   {
+    "id": "MG_182",
+    "name": "Inside-out 전략"
+   },
+   {
+    "id": "MG_183",
+    "name": "Outside-in 전략"
+   },
+   {
+    "id": "MG_184",
+    "name": "MSP(Managed Service Provider)"
+   },
+   {
+    "id": "MG_185",
+    "name": "MRO(Maintenance, Repair and Operations)"
+   },
+   {
+    "id": "MG_186",
+    "name": "SSC(Shared Service Center, 공유서비스센터)"
+   },
+   {
+    "id": "MG_187",
+    "name": "IFRS(International Financial Reporting Standards, 국제회계기준)"
+   },
+   {
+    "id": "MG_188",
+    "name": "빅블러(Big Blur)"
+   },
+   {
+    "id": "MG_189",
+    "name": "소프트웨어 임치(Software Escrow)"
+   },
+   {
+    "id": "MG_190",
+    "name": "온라인 광고비(Online Advertising Cost)"
+   },
+   {
+    "id": "MG_191",
+    "name": "프로그래매틱 바잉(Programmatic Buying)"
+   },
+   {
+    "id": "MG_192",
+    "name": "O2O(Online to Offline)"
+   },
+   {
+    "id": "MG_193",
+    "name": "O4O(Online for Offline)"
+   },
+   {
+    "id": "MG_194",
+    "name": "인터넷전문은행(Internet-only Bank)"
+   },
+   {
+    "id": "MG_195",
+    "name": "백캐스팅(Backcasting)"
+   },
+   {
+    "id": "MG_196",
+    "name": "SMART 목표(SMART Goals)"
+   },
+   {
+    "id": "MG_197",
+    "name": "이슈탐색(Horizon Scanning)"
+   },
+   {
+    "id": "MG_198",
+    "name": "제로 레이팅(Zero Rating)"
+   },
+   {
+    "id": "MG_199",
+    "name": "리빙랩(Living Lab)"
+   },
+   {
+    "id": "MG_200",
+    "name": "SOS 랩(Solution in Our Society Lab)"
+   },
+   {
+    "id": "MG_201",
+    "name": "규제자유특구(Regulatory Free Zone)"
+   },
+   {
+    "id": "MG_202",
+    "name": "퍼널 분석(Funnel Analysis)"
+   },
+   {
+    "id": "MG_203",
+    "name": "A/B 테스트(A/B Test)"
+   },
+   {
+    "id": "MG_204",
+    "name": "코호트 분석(Cohort Analysis)"
+   },
+   {
+    "id": "MG_205",
+    "name": "디지털 리테일(Digital Retail)"
+   }
+  ],
+  "note": "Previously unmatched sheet topics curated from knowledge and starred."
+ }
 }
