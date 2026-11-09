@@ -1401,6 +1401,177 @@
    "EFF": "Electronic Frontier Foundation"
   }
  },
+ "SE_011": {
+  "title": "RSA 암호(Rivest-Shamir-Adleman)",
+  "category": "SE > 암호화 > RSA",
+  "definition": "두 큰 소수의 곱 n = p·q를 소인수분해하기 어렵다는 점에 안전성을 둔 공개키 암호로, 1977년 리베스트·샤미르·애들먼이 고안해 암호화와 전자서명에 모두 쓰인다",
+  "keywords": [
+   "키 생성: 큰 소수 p·q 선택 · n = p·q · φ(n) = (p-1)(q-1) · e·d ≡ 1 (mod φ(n))",
+   "연산: 암호화 C = M^e mod n · 복호화 M = C^d mod n · 서명은 개인키 d로 생성",
+   "안전성 근거: 소인수분해 문제 · 충분한 키 길이(2048비트 이상)",
+   "패딩: OAEP(암호화) · PSS(서명)"
+  ],
+  "sections": [
+   {
+    "title": "키 생성과 연산",
+    "subsections": [
+     {
+      "title": "1 소수 선택",
+      "items": [
+       "비슷한 크기의 큰 소수 p, q"
+      ]
+     },
+     {
+      "title": "2 모듈러",
+      "items": [
+       "n = p·q, φ(n) = (p-1)(q-1)"
+      ]
+     },
+     {
+      "title": "3 공개 지수",
+      "items": [
+       "φ(n)과 서로소인 e(주로 65537)"
+      ]
+     },
+     {
+      "title": "4 개인 지수",
+      "items": [
+       "e·d ≡ 1 (mod φ(n))인 d"
+      ]
+     },
+     {
+      "title": "5 키 쌍",
+      "items": [
+       "공개키 (n, e), 개인키 d"
+      ]
+     },
+     {
+      "title": "암·복호화",
+      "items": [
+       "C = M^e mod n, M = C^d mod n"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "안전성 확보",
+    "subsections": [
+     {
+      "title": "소수",
+      "items": [
+       "p, q는 비슷한 크기, p-1·q-1은 큰 소인수 포함, 강한 난수로 생성"
+      ]
+     },
+     {
+      "title": "키 길이",
+      "items": [
+       "현재 2048비트 이상, 장기 보호는 3072비트"
+      ]
+     },
+     {
+      "title": "패딩",
+      "items": [
+       "교과서적 RSA의 결정성·변조 취약 보완(OAEP·PSS)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "ECC 비교와 활용",
+    "subsections": [
+     {
+      "title": "성능",
+      "items": [
+       "RSA는 키가 크고 연산이 느림",
+       "ECC는 짧은 키로 같은 안전도"
+      ]
+     },
+     {
+      "title": "환경",
+      "items": [
+       "RSA는 기존 PKI",
+       "ECC는 모바일·무선 환경 유리"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "인증서 서명, TLS 키 전송(과거), 전자봉투, 코드 서명"
+      ]
+     },
+     {
+      "title": "양자 위협",
+      "items": [
+       "쇼어 알고리즘으로 해독 가능해 PQC 전환 필요"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "키 생성과 연산",
+   "- 1 소수 선택",
+   "- 2 모듈러",
+   "- 3 공개 지수",
+   "- 4 개인 지수",
+   "- 5 키 쌍",
+   "- 암·복호화",
+   "안전성 확보",
+   "- 소수",
+   "- 키 길이",
+   "- 패딩",
+   "ECC 비교와 활용",
+   "- 성능",
+   "- 환경",
+   "- 활용",
+   "- 양자 위협"
+  ],
+  "name": "RSA 암호(Rivest-Shamir-Adleman)",
+  "en": "Rivest-Shamir-Adleman",
+  "keywords_must": [
+   "큰 소수 p·q 선택",
+   "n = p·q",
+   "φ(n) = (p-1)(q-1)",
+   "e·d ≡ 1 (mod φ(n))",
+   "암호화 C = M^e mod n",
+   "복호화 M = C^d mod n",
+   "서명은 개인키 d로 생성",
+   "소인수분해 문제",
+   "충분한 키 길이(2048비트 이상)",
+   "OAEP(암호화)",
+   "PSS(서명)"
+  ],
+  "keywords_ref": [
+   "소수 조건: p·q 비슷한 크기, p-1·q-1이 큰 소인수 보유",
+   "공개 지수 e=65537",
+   "키 길이 권고 512(1980)→1024(1996)→2048(2005)→3072(2030 이후)",
+   "160비트 ECC ≈ 1024비트 RSA",
+   "랜섬웨어 키 보호에 악용",
+   "쇼어 알고리즘에 취약",
+   "중국인의 나머지 정리(CRT) 가속"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "큰 소수 p·q 선택",
+   "n = p·q",
+   "φ(n) = (p-1)(q-1)",
+   "e·d ≡ 1 (mod φ(n))",
+   "암호화 C = M^e mod n",
+   "복호화 M = C^d mod n",
+   "서명은 개인키 d로 생성",
+   "소인수분해 문제",
+   "충분한 키 길이(2048비트 이상)",
+   "OAEP(암호화)",
+   "PSS(서명)"
+  ],
+  "gloss": {
+   "ECC": "Elliptic Curve Cryptography",
+   "OAEP": "Optimal Asymmetric Encryption Padding",
+   "PSS": "Probabilistic Signature Scheme",
+   "CRT": "Chinese Remainder Theorem"
+  }
+ },
  "SE_012": {
   "title": "디피-헬만 키 교환(Diffie-Hellman Key Exchange)",
   "category": "SE > 암호화 > Diffie-Hellman 키 교환",
@@ -1517,6 +1688,302 @@
    "중간자 공격(MITM) 취약",
    "인증 부재"
   ]
+ },
+ "SE_013": {
+  "title": "SEED 블록 암호",
+  "category": "SE > 암호화 > SEED",
+  "definition": "한국인터넷진흥원(KISA)과 국내 암호 전문가가 1999년 개발한 128비트 블록·128비트 키·16라운드 파이스텔 구조의 국산 대칭키 블록 암호로, 전자상거래·금융·공공 분야 중요 정보 보호에 쓰인다",
+  "keywords": [
+   "규격: 128비트 블록 · 128비트 키 · 16라운드",
+   "구조: 파이스텔 구조 · 64비트 F 함수 · G 함수(S-Box 2종)",
+   "라운드 키: 128비트 키를 64비트씩 나눠 8비트 회전 · 산술 연산으로 생성",
+   "표준: TTA 국내 표준 · ISO/IEC 18033-3 국제 표준"
+  ],
+  "sections": [
+   {
+    "title": "구조",
+    "subsections": [
+     {
+      "title": "블록 분할",
+      "items": [
+       "128비트 평문을 64비트 L0, R0로 분할"
+      ]
+     },
+     {
+      "title": "F 함수",
+      "items": [
+       "64비트 입력과 64비트 라운드 키, 내부에 G 함수 3회 사용"
+      ]
+     },
+     {
+      "title": "G 함수",
+      "items": [
+       "두 S-Box 조회, 마스킹, XOR로 32비트 비선형 변환"
+      ]
+     },
+     {
+      "title": "출력",
+      "items": [
+       "16라운드 후 좌우 결합해 128비트 암호문"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "라운드 키 생성",
+    "subsections": [
+     {
+      "title": "분할",
+      "items": [
+       "128비트 키를 64비트 둘로 나눔"
+      ]
+     },
+     {
+      "title": "회전",
+      "items": [
+       "라운드마다 8비트 좌우 회전 이동"
+      ]
+     },
+     {
+      "title": "연산",
+      "items": [
+       "4워드 덧셈·뺄셈과 G 함수로 라운드 키 생성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "다른 블록 암호 비교",
+    "subsections": [
+     {
+      "title": "3DES",
+      "items": [
+       "DES 호환·범용이나 느림, 168비트 키"
+      ]
+     },
+     {
+      "title": "AES",
+      "items": [
+       "국제 표준, SPN 구조, 128·192·256비트 키"
+      ]
+     },
+     {
+      "title": "SEED",
+      "items": [
+       "국산으로 기술 종속 해소, 국제 범용성은 낮음"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "구조",
+   "- 블록 분할",
+   "- F 함수",
+   "- G 함수",
+   "- 출력",
+   "라운드 키 생성",
+   "- 분할",
+   "- 회전",
+   "- 연산",
+   "다른 블록 암호 비교",
+   "- 3DES",
+   "- AES",
+   "- SEED"
+  ],
+  "name": "SEED 블록 암호",
+  "en": "SEED Block Cipher",
+  "keywords_must": [
+   "128비트 블록",
+   "128비트 키",
+   "16라운드",
+   "파이스텔 구조",
+   "64비트 F 함수",
+   "G 함수(S-Box 2종)",
+   "128비트 키를 64비트씩 나눠 8비트 회전",
+   "산술 연산으로 생성",
+   "TTA 국내 표준",
+   "ISO/IEC 18033-3 국제 표준"
+  ],
+  "keywords_ref": [
+   "SEED 256(256비트 키·24라운드)",
+   "국내 공인인증 기반 기술 종속 해소",
+   "ActiveX 시대 브라우저 비호환",
+   "3DES·AES와 비교",
+   "ARIA·LEA와 함께 국가 표준 블록 암호",
+   "검증 대상 암호 모듈(KCMVP)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "128비트 블록",
+   "128비트 키",
+   "16라운드",
+   "파이스텔 구조",
+   "64비트 F 함수",
+   "G 함수(S-Box 2종)",
+   "128비트 키를 64비트씩 나눠 8비트 회전",
+   "산술 연산으로 생성",
+   "TTA 국내 표준",
+   "ISO/IEC 18033-3 국제 표준"
+  ],
+  "gloss": {
+   "TTA": "Telecommunications Technology Association",
+   "KCMVP": "Korea Cryptographic Module Validation Program"
+  }
+ },
+ "SE_014": {
+  "title": "고급 암호화 표준(AES, Advanced Encryption Standard)",
+  "category": "SE > 보안 > 암호화 > AES",
+  "definition": "DES를 대체하기 위해 미국 NIST가 공모해 2001년 FIPS 197로 채택한 리인달(Rijndael) 기반 대칭키 블록 암호로, 128비트 고정 블록과 128·192·256비트 키를 SPN 구조로 10·12·14라운드 처리한다",
+  "keywords": [
+   "규격: 128비트 블록 · 128·192·256비트 키 · 10·12·14라운드",
+   "구조: SPN(Substitution-Permutation Network) · 4×4 바이트 상태 행렬",
+   "라운드 연산: 바이트 치환(SubBytes) · 행 이동(ShiftRows) · 열 혼합(MixColumns) · 라운드 키 추가(AddRoundKey)",
+   "등장 배경: DES 키 길이 부족 · 3DES 낮은 속도"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "DES",
+      "items": [
+       "56비트 키로 전수 조사에 취약"
+      ]
+     },
+     {
+      "title": "3DES",
+      "items": [
+       "안전하지만 세 번 암호화로 느림"
+      ]
+     },
+     {
+      "title": "요구",
+      "items": [
+       "3DES 이상 안전성, 다양한 플랫폼에서 빠르고 간결한 구현"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "라운드 연산",
+    "subsections": [
+     {
+      "title": "바이트 치환",
+      "items": [
+       "S-Box로 바이트 단위 비선형 치환(혼돈)"
+      ]
+     },
+     {
+      "title": "행 이동",
+      "items": [
+       "상태 행렬의 행을 바이트 단위 순환 이동(확산)"
+      ]
+     },
+     {
+      "title": "열 혼합",
+      "items": [
+       "GF(2^8) 행렬 곱으로 열 혼합(확산), 마지막 라운드 생략"
+      ]
+     },
+     {
+      "title": "라운드 키 추가",
+      "items": [
+       "확장 키와 XOR"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "키 길이별 규격",
+    "subsections": [
+     {
+      "title": "128비트 키",
+      "items": [
+       "키 4워드, 10라운드, 확장 키 44워드"
+      ]
+     },
+     {
+      "title": "192비트 키",
+      "items": [
+       "키 6워드, 12라운드, 확장 키 52워드"
+      ]
+     },
+     {
+      "title": "256비트 키",
+      "items": [
+       "키 8워드, 14라운드, 확장 키 60워드"
+      ]
+     },
+     {
+      "title": "블록",
+      "items": [
+       "모두 128비트(리인달 원안의 가변 블록은 표준에서 제외)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- DES",
+   "- 3DES",
+   "- 요구",
+   "라운드 연산",
+   "- 바이트 치환",
+   "- 행 이동",
+   "- 열 혼합",
+   "- 라운드 키 추가",
+   "키 길이별 규격",
+   "- 128비트 키",
+   "- 192비트 키",
+   "- 256비트 키",
+   "- 블록"
+  ],
+  "name": "고급 암호화 표준(AES, Advanced Encryption Standard)",
+  "en": "Advanced Encryption Standard",
+  "keywords_must": [
+   "128비트 블록",
+   "128·192·256비트 키",
+   "10·12·14라운드",
+   "SPN(Substitution-Permutation Network)",
+   "4×4 바이트 상태 행렬",
+   "바이트 치환(SubBytes)",
+   "행 이동(ShiftRows)",
+   "열 혼합(MixColumns)",
+   "라운드 키 추가(AddRoundKey)",
+   "DES 키 길이 부족",
+   "3DES 낮은 속도"
+  ],
+  "keywords_ref": [
+   "리인달 설계자 대먼·레이먼",
+   "마지막 라운드 열 혼합 생략",
+   "GF(2^8) 산술",
+   "키 확장 44·52·60워드",
+   "AES-NI 하드웨어 가속",
+   "운영 모드 GCM 인증 암호",
+   "그로버 알고리즘 대비 AES-256 권장"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "128비트 블록",
+   "128·192·256비트 키",
+   "10·12·14라운드",
+   "SPN(Substitution-Permutation Network)",
+   "4×4 바이트 상태 행렬",
+   "바이트 치환(SubBytes)",
+   "행 이동(ShiftRows)",
+   "열 혼합(MixColumns)",
+   "라운드 키 추가(AddRoundKey)",
+   "DES 키 길이 부족",
+   "3DES 낮은 속도"
+  ],
+  "gloss": {
+   "GCM": "Galois/Counter Mode",
+   "AES-NI": "AES New Instructions"
+  }
  },
  "SE_015": {
   "title": "양자 암호 통신(Quantum Cryptography Communication)",
@@ -2153,6 +2620,151 @@
   "gloss": {
    "NV": "Nitrogen-Vacancy",
    "GPS": "Global Positioning System"
+  }
+ },
+ "SE_017": {
+  "title": "경량 암호(LEA, Lightweight Encryption Algorithm)",
+  "category": "SE > 암호화 > LEA",
+  "definition": "빅데이터·클라우드 같은 고속 환경과 모바일·IoT 같은 경량 환경에서 기밀성을 제공하도록 국가보안기술연구소가 2013년 개발한 128비트 블록 암호로, ARX 연산만 써서 소프트웨어에서 AES보다 1.5~2배 빠르다",
+  "keywords": [
+   "규격: 128비트 블록 · 128·192·256비트 키 · 24·28·32라운드",
+   "구조: ARX(덧셈·회전·XOR) · 일반화 파이스텔(GFN) · S-Box 미사용",
+   "특징: 고속 소프트웨어 구현 · 32비트 워드 연산 · 부채널 대응 용이",
+   "표준: KS X 3246 · ISO/IEC 29192-2"
+  ],
+  "sections": [
+   {
+    "title": "규격",
+    "subsections": [
+     {
+      "title": "128비트 키",
+      "items": [
+       "24라운드"
+      ]
+     },
+     {
+      "title": "192비트 키",
+      "items": [
+       "28라운드"
+      ]
+     },
+     {
+      "title": "256비트 키",
+      "items": [
+       "32라운드"
+      ]
+     },
+     {
+      "title": "공통",
+      "items": [
+       "128비트(16바이트) 블록을 32비트 워드 4개로 처리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작",
+    "subsections": [
+     {
+      "title": "키 스케줄",
+      "items": [
+       "비밀키에서 라운드마다 192비트 라운드 키 생성"
+      ]
+     },
+     {
+      "title": "라운드 함수",
+      "items": [
+       "32비트 워드 간 모듈러 덧셈, 비트 회전, XOR"
+      ]
+     },
+     {
+      "title": "복호화",
+      "items": [
+       "라운드 키를 역순 적용해 역연산"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "비교와 활용",
+    "subsections": [
+     {
+      "title": "AES 대비",
+      "items": [
+       "S-Box 테이블 없이 연산만 사용해 메모리 적고 캐시 부채널에 강함"
+      ]
+     },
+     {
+      "title": "HIGHT 대비",
+      "items": [
+       "64비트 블록의 HIGHT보다 큰 블록으로 대용량 처리에 적합"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "모바일 앱, IoT 센서, 클라우드 대용량 데이터 암호화"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "규격",
+   "- 128비트 키",
+   "- 192비트 키",
+   "- 256비트 키",
+   "- 공통",
+   "동작",
+   "- 키 스케줄",
+   "- 라운드 함수",
+   "- 복호화",
+   "비교와 활용",
+   "- AES 대비",
+   "- HIGHT 대비",
+   "- 활용"
+  ],
+  "name": "경량 암호(LEA, Lightweight Encryption Algorithm)",
+  "en": "Lightweight Encryption Algorithm",
+  "keywords_must": [
+   "128비트 블록",
+   "128·192·256비트 키",
+   "24·28·32라운드",
+   "ARX(덧셈·회전·XOR)",
+   "일반화 파이스텔(GFN)",
+   "S-Box 미사용",
+   "고속 소프트웨어 구현",
+   "32비트 워드 연산",
+   "부채널 대응 용이",
+   "KS X 3246",
+   "ISO/IEC 29192-2"
+  ],
+  "keywords_ref": [
+   "인텔·AMD·ARM 환경 AES 대비 1.5~2.7배",
+   "키 스케줄도 ARX 기반",
+   "KCMVP 검증 대상",
+   "경량 암호 HIGHT(64비트 블록)·CHAM",
+   "NIST 경량 암호 Ascon과 구분"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "128비트 블록",
+   "128·192·256비트 키",
+   "24·28·32라운드",
+   "ARX(덧셈·회전·XOR)",
+   "일반화 파이스텔(GFN)",
+   "S-Box 미사용",
+   "고속 소프트웨어 구현",
+   "32비트 워드 연산",
+   "부채널 대응 용이",
+   "KS X 3246",
+   "ISO/IEC 29192-2"
+  ],
+  "gloss": {
+   "ARX": "Addition, Rotation, XOR",
+   "GFN": "Generalized Feistel Network",
+   "KCMVP": "Korea Cryptographic Module Validation Program"
   }
  },
  "SE_018": {
