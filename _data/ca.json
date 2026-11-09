@@ -5175,7 +5175,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "CMP": "Chemical Mechanical Polishing"
+    }
   },
   {
     "id": "CA_031",
@@ -5460,7 +5463,8 @@
     "reviewed": true,
     "dueum": null,
     "gloss": {
-      "NCQ": "Native Command Queuing"
+      "NCQ": "Native Command Queuing",
+      "PC": "Personal Computer"
     }
   },
   {
@@ -6206,7 +6210,8 @@
     "reviewed": true,
     "dueum": null,
     "gloss": {
-      "DS": "Data-Strobe"
+      "DS": "Data-Strobe",
+      "PC": "Personal Computer"
     }
   },
   {
@@ -6347,7 +6352,8 @@
       "TMDS": "Transition-Minimized Differential Signaling",
       "HDCP": "High-bandwidth Digital Content Protection",
       "CEC": "Consumer Electronics Control",
-      "FRL": "Fixed Rate Link"
+      "FRL": "Fixed Rate Link",
+      "PC": "Personal Computer"
     }
   },
   {
@@ -7236,7 +7242,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "RAM": "Random Access Memory"
+    }
   },
   {
     "id": "CA_053",
@@ -7829,7 +7838,9 @@
       "PMIC": "Power Management Integrated Circuit",
       "DFE": "Decision Feedback Equalization",
       "DLL": "Delay-Locked Loop",
-      "DCC": "Duty Cycle Correction"
+      "DCC": "Duty Cycle Correction",
+      "PC": "Personal Computer",
+      "ECC": "Error-Correcting Code"
     }
   },
   {
@@ -7968,7 +7979,8 @@
       "PZT": "Lead Zirconate Titanate",
       "SBT": "Strontium Bismuth Tantalate",
       "BLT": "Bismuth Lanthanum Titanate",
-      "FeFET": "Ferroelectric Field-Effect Transistor"
+      "FeFET": "Ferroelectric Field-Effect Transistor",
+      "RAM": "Random Access Memory"
     }
   },
   {
@@ -8105,7 +8117,8 @@
     "dueum": null,
     "gloss": {
       "TMR": "Tunneling Magnetoresistance",
-      "SOT": "Spin-Orbit Torque"
+      "SOT": "Spin-Orbit Torque",
+      "MCU": "Microcontroller Unit"
     }
   },
   {
@@ -8253,7 +8266,9 @@
     "reviewed": true,
     "dueum": null,
     "gloss": {
-      "EAROM": "Electrically Alterable Read-Only Memory"
+      "EAROM": "Electrically Alterable Read-Only Memory",
+      "RAM": "Random Access Memory",
+      "SCM": "Storage Class Memory"
     }
   },
   {
@@ -8382,7 +8397,8 @@
     "reviewed": true,
     "dueum": null,
     "gloss": {
-      "GST": "Germanium-Antimony-Tellurium"
+      "GST": "Germanium-Antimony-Tellurium",
+      "RAM": "Random Access Memory"
     }
   },
   {
@@ -8526,7 +8542,8 @@
     "dueum": null,
     "gloss": {
       "MIM": "Metal-Insulator-Metal",
-      "CBRAM": "Conductive-Bridging RAM"
+      "CBRAM": "Conductive-Bridging RAM",
+      "RAM": "Random Access Memory"
     }
   },
   {
@@ -8811,7 +8828,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "CAM": "Content-Addressable Memory"
+    }
   },
   {
     "id": "CA_078",
@@ -9529,7 +9549,10 @@
     "reviewed": true,
     "dueum": null,
     "gloss": {
-      "BCAM": "Binary Content-Addressable Memory"
+      "BCAM": "Binary Content-Addressable Memory",
+      "CAM": "Content-Addressable Memory",
+      "MAC": "Medium Access Control",
+      "RAM": "Random Access Memory"
     }
   },
   {
@@ -9673,7 +9696,8 @@
     "dueum": null,
     "gloss": {
       "LPM": "Longest Prefix Match",
-      "ACL": "Access Control List"
+      "ACL": "Access Control List",
+      "CAM": "Content-Addressable Memory"
     }
   },
   {
@@ -10549,7 +10573,8 @@
     "reviewed": true,
     "dueum": null,
     "gloss": {
-      "ASID": "Address Space Identifier"
+      "ASID": "Address Space Identifier",
+      "CAM": "Content-Addressable Memory"
     }
   },
   {
@@ -11840,7 +11865,8 @@
     "gloss": {
       "TLP": "Thread-Level Parallelism",
       "SMT": "Simultaneous Multi-Threading",
-      "MDS": "Microarchitectural Data Sampling"
+      "MDS": "Microarchitectural Data Sampling",
+      "PC": "Program Counter"
     }
   },
   {

@@ -368,7 +368,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "PC": "Personal Computer"
+  }
  },
  {
   "id": "SV_005",
@@ -489,7 +492,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "PC": "Personal Computer"
+  }
  },
  {
   "id": "SV_006",
@@ -846,7 +852,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "PC": "Personal Computer"
+  }
  },
  {
   "id": "SV_009",
@@ -2174,7 +2183,8 @@
   "warnings": [],
   "hand": true,
   "gloss": {
-   "CSS": "Cascading Style Sheets"
+   "CSS": "Cascading Style Sheets",
+   "PC": "Personal Computer"
   }
  },
  {
@@ -2875,7 +2885,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "SOA": "Service-Oriented Architecture"
+  }
  },
  {
   "id": "SV_027_01",
@@ -2995,7 +3008,8 @@
   "warnings": [],
   "hand": true,
   "gloss": {
-   "CSS": "Cascading Style Sheets"
+   "CSS": "Cascading Style Sheets",
+   "ISP": "Internet Service Provider"
   }
  },
  {
@@ -3222,7 +3236,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "HLS": "HTTP Live Streaming"
+  }
  },
  {
   "id": "SV_030",
@@ -3791,7 +3808,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "HCI": "Hyper-Converged Infrastructure"
+  }
  },
  {
   "id": "SV_035",
@@ -3906,7 +3926,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "CMP": "Cloud Management Platform"
+  }
  },
  {
   "id": "SV_036_0",
@@ -4020,7 +4043,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "CMP": "Cloud Management Platform"
+  }
  },
  {
   "id": "SV_036_1",
@@ -4378,7 +4404,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "PC": "Personal Computer"
+  }
  },
  {
   "id": "SV_038",
