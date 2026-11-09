@@ -1,0 +1,227 @@
+{
+ "_comment": "수동 보정 파일. parse_topics.py 실행 시 같은 id 항목의 필드를 덮어씀. 원문(PDF)에 있는 내용만 정리하고 새 내용은 만들지 않음. null 값은 해당 필드 삭제.",
+ "NW_004_00": {
+  "definition": "수신측 동기화가 쉽도록 비트 중간에 극성 변화(전압 전이)가 있게 한 선로부호 방식. 물리 계층에서 신호를 전송할 때 쓰는 디지털 인코딩의 한 형태.",
+  "keywords": ["비트 중앙 전압 전이", "동기화 용이", "NRZ ⊕ 클록(XOR)", "대역폭 2배", "10Mbps Ethernet"],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+ },
+ "NW_004_01": {
+  "definition": "각 비트 구간 중앙에서 반드시 신호 전이를 발생시켜 클록을 동기화하고, 비트 시작점의 전이 유무로 0과 1을 구분하는 차등 방식의 자기동기식 디지털 부호화 기법."
+ },
+ "NW_010": {
+  "keywords": ["진폭+위상 동시 변조", "PSK + ASK", "성상도(Constellation)", "16/64/256/1024 QAM", "계층적 변조(DVB-T)"],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+ },
+ "NW_011": {
+  "keywords": ["반송파 감지", "충돌 탐지(Collision Detection)", "지속성 전략 3가지", "유선 Ethernet", "CSMA/CA와 비교(탐지 vs 회피)"],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+ },
+ "NW_023_00": {
+  "keywords": ["Proactive(DSDV, 주기적 라우팅 정보 갱신)", "Reactive(AODV, 필요 시 경로 탐색)", "Hybrid", "Self-organizing", "인프라 없음"]
+ },
+ "NW_026": {
+  "keywords": ["구성요소: Domain Name Space", "Name Server", "Resolver", "RR 구성: Name, Type, Class, TTL, RD Length, RD(Resource Data)"]
+ },
+ "NW_031_01": {
+  "definition": "다중화(Multiplexing)는 하나의 전송로를 분할해 여러 신호를 동시에 송수신하도록 다수 채널로 결합하는 기술이고, 다원접속(Multiple Access)은 한정된 전송 자원(시간·공간·코드·주파수)을 다수 노드가 효율적·공평하게 공유하는 기술.",
+  "keywords": ["다중화: FDM, TDM, SDM, CDM, WDM", "다원접속: FDMA, TDMA, SDMA, CDMA", "동적할당: ALOHA, CSMA/CD, 토큰, 폴링", "송신 지점 1곳 vs 여러 곳"],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+ },
+ "NW_032": {
+  "keywords": ["1:특정다수 통신(목적지 주소 = 수신자 집합)", "IGMP", "224.x(예약)", "225~239: 라우팅"]
+ },
+ "NW_041": {
+  "keywords": ["데이터 송수신·QoS·4계층", "전송단위: Segment", "장비: L4 스위치", "흐름제어: Sliding Window", "혼잡제어: TCP 혼잡제어", "오류제어: Sequence Number", "주요 프로토콜: TCP, UDP"]
+ },
+ "NW_049": {
+  "definition": "신뢰성 있는 데이터 전송을 위해 세그먼트의 손상(checksum), 손실(sequence/ack number), 시간초과(Time-Over)를 처리하는 TCP의 오류제어 기능."
+ },
+ "NW_050_1": {
+  "definition": "송·수신측 응용 프로그램의 낮은 데이터 생성·소비 속도 때문에 전송 데이터보다 Header·Trailer가 더 커져 비효율성이 증가하는 흐름제어 현상.",
+  "keywords": ["1byte 전송 오버헤드(헤더 40byte)", "송신측 해결: Nagle's Algorithm", "수신측 해결: Clark's Solution", "MSS", "Window Size 0"],
+  "keywords_note": "원문 키워드 칸에 다른 토픽(Harbor) 키워드가 잘못 들어가 있어 본문에서 발췌"
+ },
+ "NW_055": {
+  "keywords": ["슈퍼네팅(병합) 적용", "IP 주소 할당 방법", "8비트 단위로 네트워크부/호스트부를 구획하지 않음", "Prefix 표기(/24)"]
+ },
+ "NW_056": {
+  "keywords": ["서브넷의 서브넷", "다른 크기 서브넷(/25, /26 분배)", "RFC 1878", "RIPv2, OSPF, BGP 지원"]
+ },
+ "NW_062": {
+  "definition": "다수 호스트를 논리적 단위 하나로 관리하기 위해 호스트와 라우터 사이에 그룹 멤버 정보를 교환하여, 그룹 생성·제거와 호스트의 가입·탈퇴 등 멀티캐스트 그룹 소속원을 관리하는 프로토콜.",
+  "keywords": ["그룹 가입", "멤버십 감시", "멤버십 응답", "멤버십 탈퇴", "IPv6에서는 MLD(ICMPv6의 일부)"]
+ },
+ "NW_069": {
+  "keywords": ["초기화: DORA", "갱신: RA", "종료: R"]
+ },
+ "NW_075": {
+  "keywords": ["TCP/UDP 포트 기반 스위칭", "VIP", "부하분산 알고리즘: Round Robin, Least Connection, Response time, Hash", "서버 감시: ICMP, TCP Connection, HTTP Request", "Fail Over"]
+ },
+ "NW_082": {
+  "keywords": ["V2V", "V2I", "V2N", "V2P(Pedestrian, 보행자)", "IVN", "VANET", "WAVE", "C-ITS"]
+ },
+ "NW_084": {
+  "keywords": ["IEEE 802.11p / IEEE 1609.1~4", "5.9GHz 대역, 75MHz 대역폭", "최대 1km 커버리지", "최대 200km/h 이동", "100ms 이내 지연", "V2V·V2I"]
+ },
+ "NW_088": {
+  "keywords": ["IEEE 802.11", "SSID", "WEP", "AP 간 로밍(Roaming)"]
+ },
+ "NW_102_0": {
+  "definition": "실내외 위치 측위는 한 가지 기술이 아니라 GPS+센서+WiFi 등 여러 기술을 복합적으로 활용해 정확한 위치 정보를 파악하는 기술.",
+  "keywords": ["CCTV", "WiFi(RF fingerprinting, RSSI)", "Bluetooth/비콘(iBeacon)", "센서 기반", "GPS"],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+ },
+ "NW_104": {
+  "keywords": ["M2M", "IoT 표준: CoAP, MQTT, XMPP, LwM2M", "WoT", "IoE", "LPWA: LoRa, SigFox, LTE-M, NB-IoT", "IoV", "D2D", "소물인터넷", "IoST"]
+ },
+ "NW_106": {
+  "keywords": ["IETF CoRE WG", "UDP 기반 REST", "DTLS", "6LoWPAN / IEEE 802.15.4", "Sensor, Client, Server, Proxy", "CoAP Transactions"]
+ },
+ "NW_119": {
+  "definition": "차량이 유무선망을 통해 다른 차량 및 도로 등 인프라가 구축된 사물과 정보를 교환하는 기술로, C-ITS의 'Connected/Networked Vehicle'을 구현하는 핵심기술. LTE 진화 기술과 NR을 활용한 두 종류의 eV2X 기술로 구성."
+ },
+ "NW_121": {
+  "keywords": ["전력 인프라 + IoT", "LwM2M/CoAP 기반 표준(한전)", "디바이스-게이트웨이-플랫폼", "AMI", "DLMS/COSEM 변환"],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+ },
+ "NW_123": {
+  "definition": "센서 노드가 임의로 배치되는 무선 센서네트워크에서 자가 구성(Self-Organizing)과 노드 간 협력으로 동작하며, 에너지 소비를 네트워크 전체에 분산시켜 시스템 수명을 늘리도록 설계된 라우팅.",
+  "keywords": ["평면(Flat): DD, SPIN, SAR", "계층(Hierarchical): LEACH, TEEN, APTEEN", "위치기반: GAF, GEAR", "다중경로", "질의기반"],
+  "note": "원문 키워드에는 'REACH'로 적혀 있으나 본문 표기는 LEACH"
+ },
+ "NW_124_01": {
+  "definition": "매터(Matter)는 스마트홈의 상호 연동성·신뢰성·안전성을 위해 IP, 와이파이, 쓰레드 등을 기반으로 한 개방형 스마트홈 기기 연동 표준이고, 쓰레드(Thread)는 TCP·UDP/IP, IEEE 802.15.4, 메쉬 네트워크 기반의 저전력 무선 통신 기술."
+ },
+ "NW_125": {
+  "keywords": ["128bit 주소체계", "전환 유형", "보안 이슈", "예) 2001:0DB8:0000:0000:0000:0000:1428:57ab"]
+ },
+ "NW_126": {
+  "definition": "IPv4와 IPv6를 같은 장치와 네트워크상에서 상호 공존시키는 방법(IPv4/IPv6 라우터에 장착)."
+ },
+ "NW_128": {
+  "definition": "IPv4에서 IPv6로 전환하기 위한 방안 관점의 토픽. IPv6 보안취약성, 서비스 모델 부재, 전환 성공사례 미흡으로 민간·공공 부문 전환이 지연되고 있어 전환 기술과 정책이 필요.",
+  "keywords": ["IPv6 특징: 128bit 주소체계, Plug&Play, 이동성, ad-hoc, 보안", "전환 기술: 듀얼스택, 터널링, 주소변환", "전환 정책: 인프라 확충, 서비스 개발, 중소기업 지원, IPv6 의무화"],
+  "note": "원문 키워드에는 'IPv4 특징 : 128 bit'로 적혀 있으나 128bit는 IPv6 특징"
+ },
+ "NW_132": {
+  "definition": "QoS: 다양한 통신 서비스에 대한 서비스 품질과 성능을 일정 수준으로 보장하여 사용자 요구를 충족시키는 네트워크 기술."
+ },
+ "NW_134": {
+  "keywords": ["초과 트래픽 폐기(Drop)", "미터(meter)·마커(marker)", "SLA 대역폭 제어", "Token Bucket", "Traffic Shaping과 비교"],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+ },
+ "NW_135": {
+  "keywords": ["DiffServ Conditioner", "패킷 지연(버퍼링)", "Leaky Bucket", "Token Bucket"]
+ },
+ "NW_137": {
+  "keywords": ["송신자 전송률 제한", "혼잡 감지", "Slow Start", "Congestion Avoidance", "라우터 중심: Tail Drop, RED, WRED", "호스트 중심: TCP 혼잡제어"]
+ },
+ "NW_139": {
+  "keywords": ["IntServ 보완", "클래스별 가중치", "DSCP(6비트, IP 헤더)", "ISP에서 할당"]
+ },
+ "NW_141": {
+  "definition": "캐리어 이더넷: 이더넷에 표준 서비스·확장성·신뢰도·QoS·서비스 관리를 정의한 캐리어급 서비스로, 기존 LAN 영역의 이더넷 기술을 전달망(캐리어) 수준으로 향상시킨 기술/망.",
+  "keywords": ["IP/MPLS", "MPLS-TP", "Control Plane", "캐리어 이더넷 5대 속성: 표준화된 서비스, 확장성, 신뢰성/생존성, 서비스품질, 서비스관리"],
+  "note": "원문 본문 대부분이 이미지라 텍스트로 확인된 내용만 정리"
+ },
+ "NW_142": {
+  "definition": "고객이 서비스에 대해 총체적으로 경험하고 인지하는 품질로, 사용자가 요금을 지불한 서비스에 기대하는 기대값을 근거로 규정하는 품질 척도."
+ },
+ "NW_143": {
+  "definition": "통신망이 서비스품질(QoS)에 이바지하는 능력으로, 망 설계 특성에 의존하는 망의 개별 요소 성능. 통신망 사업자에게 유용한 품질 척도."
+ },
+ "NW_150": {
+  "definition": "13.56MHz 주파수로 양방향 통신(최대 424Kbps)이 가능하고 RFID와 스마트 기능을 통합한 근거리 무선통신 기술. 기존 스마트카드의 Tag 역할에 더해 양방향 통신과 Read/Write 기능을 수행."
+ },
+ "NW_166": {"dueum": null, "keywords": ["MC: 여러 주파수 중 하나 선택", "로드밸런싱", "트래픽 혼잡 분산"]},
+ "NW_167": {"dueum": null, "keywords": ["CA: 여러 주파수 대역 결합", "대역폭 확장(최대 5개 묶음)", "속도 향상", "분류: 대역내 연속 / 대역내 불연속 / 대역간 비연속 통합"]},
+ "NW_178": {
+  "keywords": ["700MHz", "LTE-Maritime", "100km 해상 커버리지", "EPC, EMS, e-Navigation", "DU/RU", "PS-LTE·LTE-R 간섭"],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+ },
+ "NW_181": {
+  "definition": "화재·홍수·지진 등 재난 발생 시 국가 차원의 신속하고 효율적인 재난 관리를 위해, 4세대 이동통신 표준 LTE에 재난대응 무선 교신기술을 적용한 재난 관련 기관용 무선 통신망."
+ },
+ "NW_185": {
+  "definition": "4G 대비 10배 이상 향상된 초고속·초고용량·초저지연·초연결 네트워크 기술로, 다양한 디지털 디바이스를 수용하는 차세대 네트워크의 핵심 인프라이자 기술.",
+  "keywords": ["최고 전송속도 20Gbps", "체감 100~1,000Mbps", "주파수 효율 3배", "이동성 500km/h", "지연 1ms", "연결 10^6개/km²", "에너지 효율 100배", "면적당 10Mbps/m²"],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문 성능 비교표(두음 '전체주고지연에면')에서 발췌"
+ },
+ "NW_186": {
+  "definition": "물리적으로 하나의 네트워크에서 Device·Access·Transport·Core를 포함해 End-to-End로 논리적으로 분리된 네트워크를 만들어, 서로 다른 특성의 서비스마다 특화된 전용 네트워크를 제공하는 5G 핵심기술."
+ },
+ "NW_189": {
+  "keywords": ["근접성(Proximity)", "다양한 지리적 분포", "저지연(Low Latency)", "위치인식(Location Awareness)", "MEC Server(기지국 위치)"],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+ },
+ "NW_191": {
+  "keywords": ["최대 1Tbps", "AIoE(Ambient Internet of Everything)", "6대 성능 비전: 초성능, 초대역, 초경험, 초지능, 초정밀, 초공간", "테라헤르츠(THz) 대역"]
+ },
+ "NW_194": {
+  "keywords": ["RAN Sharing", "코어망은 통신사별 소유", "기지국(eNB/gNB)·주파수 공유", "MORAN·GWCN과 비교"],
+  "keywords_note": "원문 키워드 칸에 다른 토픽(데이터거버넌스) 키워드가 들어가 있어 본문에서 발췌"
+ },
+ "NW_197": {"keywords": ["no discrimination(차별금지)", "모든 콘텐츠 동등 취급", "미국 망 중립성 폐지"]},
+ "NW_199": {
+  "definition": "사업장의 물리적 위치와 관계없이 매출이 발생하는 국가에서 세금을 부과하여 조세 회피를 방지하는 새로운 세금 제도."
+ },
+ "NW_205": {
+  "definition": "라우팅 테이블을 생성·유지·업데이트·전달하는 프로토콜이 라우팅 프로토콜이며, 경로 고정 여부에 따라 관리자가 경로를 직접 입력하는 Static과 라우터가 스스로 최적 경로를 찾는 Dynamic으로 분류.",
+  "keywords": ["Static Routing: 수동 입력, 라우터 부하 경감", "Dynamic Routing: RIP, IGRP, OSPF, EIGRP"]
+ },
+ "NW_206": {
+  "definition": "AS(자율 시스템) 내부·외부 연결에 따라 AS 내부 라우팅을 담당하는 IGP와 서로 다른 AS 사이에서 사용하는 EGP로 구분하는 라우팅 분류.",
+  "keywords": ["IGP: RIP, IGRP, OSPF, EIGRP, IS-IS (Multicast)", "EGP: BGP, EGP (Unicast)", "AS(Autonomous System)"]
+ },
+ "NW_208": {
+  "definition": "각 노드가 직접 연결된 이웃이 보내는 정보로 목적지까지의 거리(Hop)와 방향을 계산하고 그 결과를 다시 이웃에게 알리는(분산적·반복적·비동기적) 라우팅 방식.",
+  "keywords": ["RIP", "IGRP", "분산적·반복적·비동기적", "Hop Count", "이웃 라우터와 테이블 교환"],
+  "note": "원문 '정의' 칸은 SPF로 적혀 있으나 이는 Link State 설명이라, 원문 특징·개념도 설명으로 정의를 정리함"
+ },
+ "NW_209": {
+  "definition": "라우터가 네트워크 전반의 링크 상태 정보를 유지하고, 자신을 루트로 최단 경로 알고리즘(다익스트라)을 계산해 모든 목적지까지의 경로를 라우팅 테이블에 기록하는 방식(대표: OSPF)."
+ },
+ "NW_210": {"keywords": ["Hop 수(최대 15)", "거리벡터(DVA)", "라우팅 테이블", "UDP 520"]},
+ "NW_212_00": {"definition": "라우터가 목적지까지의 여러 경로 중 최적 경로를 선택하기 위한 기준 변수."},
+ "NW_213": {"note": "NW_222 스마트 홈과 거의 같은 내용"},
+ "NW_222": {
+  "definition": "가전제품, 에너지 소비장치(수도·전기·냉난방), 보안기기(도어록·감시카메라) 등 다양한 분야의 모든 것을 통신망으로 제어할 수 있는 기술. 주거환경에 IT를 융합한 인간 중심의 스마트 라이프 환경.",
+  "keywords": ["Smart Tag", "PLC", "Smart Meter"],
+  "note": "NW_213 Home Networking과 거의 같은 내용"
+ },
+ "NW_233": {"keywords": ["Control Plane / Data Plane 분리", "OpenFlow", "SDN 제어기", "Network OS", "NFV", "SDx, SDS"]},
+ "NW_238": {"keywords": ["NFV용 오픈소스 플랫폼", "Vl-Ha 인터페이스", "Vn-Nf 인터페이스", "Nf-Vi 인터페이스", "Or-Vi, Vi-Vnfm 인터페이스"]},
+ "NW_239": {"keywords": ["Compute(CPU, Memory)", "Storage", "Network", "Facility", "가상화: SDN, SDS", "프로비저닝", "오케스트레이션", "오토스케일링"]},
+ "NW_244": {
+  "definition": "송신측이 전송할 문자나 프레임에 부가적 정보(Redundancy)를 첨가해 전송하고, 수신측이 에러를 발견하면 이 부가 정보로 에러 검출과 에러 정정을 하는 방식. 재전송 요구 없이 오류 수정이 가능해 실시간 처리에 유리.",
+  "keywords": ["Forward Error Correction(전진오류수정)", "무선에서 많이 사용", "Block: Hamming, RS", "Non-Block: Convolutional(길쌈), Turbo", "오류검출+오류정정"],
+  "sections": [{"title": "FEC의 주요 용도", "bullets": ["송신측이 한 곳이고 수신측이 여러 곳", "재전송·피드백이 어려운 곳", "채널 환경이 열악한 곳", "높은 신뢰성이 요구되는 곳"]}],
+  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리"
+ },
+ "NW_246": {"keywords": ["이진 나눗셈(Modulo-2)", "데이터워드", "divisor(생성다항식)", "XOR 기반 연산", "집단오류(burst error) 검출"]},
+ "NW_247": {
+  "definition": "데이터링크 계층에서 데이터 교환 중 오류가 검출되면 부정응답(NAK)이 되돌아오고 오류난 프레임의 재전송을 반복하는 오류제어 방식(오류제어 = 오류검출 + 재전송)."
+ },
+ "NW_248": {
+  "definition": "데이터 통신에서 송신측이 전송할 모든 데이터를 16비트 워드 단위로 구분해 순차적으로 합한 결과의 1의 보수를 데이터에 추가해 전송하고, 수신측이 동일한 연산을 수행해 오류 여부를 판단하는 기법(도구).",
+  "keywords": ["16비트 워드 단위", "1의 보수", "덧셈 결과가 0이면 오류 없음", "워드 순서 변경 오류 검출 불가", "IPv4 헤더, TCP/UDP 헤더 체크섬", "데이터링크 계층은 CRC로 대체 추세"],
+  "sections": [{"title": "검사합 처리 절차(16비트 기준)", "bullets": ["① 전송 데이터를 워드 단위로 구분", "② 블록 단위 + 연산 결과 E 도출", "③ E의 1의 보수 E' 도출", "④ 전송 데이터 끝에 E'를 추가하여 전송", "⑤ 수신측이 A+B+C+D+E' = F 연산", "⑥ F의 1의 보수 F'가 0이면 오류 없음"]}],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리"
+ },
+ "NW_249": {
+  "definition": "코드 전송 시 발생하는 오류를 Parity bit로 검출(Detection)할 뿐 아니라 오류 정정(Correction)까지 가능한 코드.",
+  "keywords": ["2^p ≥ d+p+1 (d: 데이터 비트 수, p: 패리티 비트 수)", "패리티 위치: 1, 2, 4, 8번째 비트", "짝수 패리티", "검사 결과 0이면 정상, 아니면 그 2진값 위치 오류 정정", "데이터 4비트→패리티 3개, 7비트→4개"]
+ },
+ "NW_271": {
+  "definition": "무선채널에서 여러 신호가 경쟁하면서 공유할 때 외부의 전파잡음에 강하도록 넓은 주파수대역으로 분산시키는 일종의 변조방식.",
+  "keywords": ["Jamming 방지", "도청 방지", "페이딩(Fading)에 강함", "DSSS(Direct Sequence Spread Spectrum)", "FHSS(Frequency Hopping Spread Spectrum)", "확산(Spreading)/역확산(Despreading)"],
+  "sections": [{"title": "DSSS 동작", "bullets": ["송신부 확산: 미리 동일한 확산코드를 공유하고 송신데이터에 확산코드를 곱하여 송신", "수신부 역확산: 동일한 확산코드와 수신된 확산신호로 송신데이터를 복원", "간섭신호가 함께 수신되면 역확산 과정에서 원래 신호는 복원되고 간섭신호는 확산되어 줄어듦"]}],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리"
+ },
+ "NW_273": {"keywords": ["수퍼노드", "오버레이 구조", "하이브리드 P2P vs 퓨어 P2P"]},
+ "NW_278": {
+  "definition": "SCADA 시스템에서 RTU·PLC 간 제어 및 상태 정보 통신을 위해 시리얼과 TCP에서 구현 가능한 산업용 통신 응용 계층 메시징 프로토콜(1979년 Modicon 개발)."
+ }
+}

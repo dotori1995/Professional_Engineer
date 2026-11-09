@@ -1,0 +1,22 @@
+title: "정보관리기술사 단어장"
+short_name: "기술사 단어장"
+description: "정보관리기술사 토픽 정의·키워드·두음 암기용 모바일 단어장/플래시카드"
+url: "https://dotori1995.github.io"
+baseurl: "/Professional_Engineer"
+lang: ko
+
+# 도메인(과목) 목록: _data/<key>.json 파일과 연결됨. 새 PDF를 파싱해 추가하면 여기에 한 줄 추가.
+domains:
+  - key: nw
+    code: NW
+    name: 네트워크
+
+markdown: kramdown
+exclude:
+  - README.md
+  - scripts/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .github/
+  - "*.zip"

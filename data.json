@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /data.json
+---
+[{% assign first = true %}{% for d in site.domains %}{% assign arr = site.data[d.key] %}{% for t in arr %}{% unless first %},
+{% endunless %}{{ t | jsonify }}{% assign first = false %}{% endfor %}{% endfor %}]

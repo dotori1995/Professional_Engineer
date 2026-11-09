@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="theme-color" content="#1f6feb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="{{ site.short_name }}">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/icons/icon-192.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/icons/apple-touch-icon.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script>
+    window.PE = { base: "{{ site.baseurl }}", data: "{{ '/data.json' | relative_url }}", sw: "{{ '/sw.js' | relative_url }}" };
+    (function(){ var t = localStorage.getItem('pe-theme'); if (t) document.documentElement.setAttribute('data-theme', t); })();
+  </script>
+</head>
+<body class="page-{{ page.page_id | default: 'x' }}">
+  <header class="topbar">
+    <a class="brand" href="{{ '/' | relative_url }}">📘 {{ site.short_name }}</a>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="다크 모드 전환">🌓</button>
+  </header>
+  <main class="wrap">
+    {{ content }}
+  </main>
+  <nav class="tabbar" aria-label="주요 메뉴">
+    <a href="{{ '/' | relative_url }}" class="{% if page.page_id == 'home' %}on{% endif %}"><span>📚</span>목록</a>
+    <a href="{{ '/cards/' | relative_url }}" class="{% if page.page_id == 'cards' %}on{% endif %}"><span>🃏</span>카드</a>
+    <a href="{{ '/cards/?mode=dont' | relative_url }}"><span>🔁</span>복습</a>
+  </nav>
+  <script src="{{ '/assets/js/app.js' | relative_url }}"></script>
+  {% if page.script %}<script src="{{ page.script | relative_url }}"></script>{% endif %}
+</body>
+</html>

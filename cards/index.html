@@ -1,0 +1,36 @@
+---
+layout: default
+page_id: cards
+title: 플래시카드
+permalink: /cards/
+script: /assets/js/cards.js
+---
+<section class="card-tools">
+  <div class="chips" id="domainChips" role="group" aria-label="도메인 필터"></div>
+  <div class="chips" role="group" aria-label="카드 범위">
+    <button type="button" class="chip" data-mode="all">전체</button>
+    <button type="button" class="chip" data-mode="dont">몰라요만 복습</button>
+    <button type="button" class="chip" data-mode="new">미학습</button>
+    <button type="button" class="chip toggle" id="shuffleBtn" aria-pressed="false">🔀 섞기</button>
+  </div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+  <p class="meta" id="progress">불러오는 중…</p>
+</section>
+
+<div class="stage">
+  <article class="flash" id="card" tabindex="0" aria-live="polite">
+    <div class="face front" id="front"></div>
+    <div class="face back" id="back" hidden></div>
+  </article>
+  <p class="hint" id="hint">카드를 탭하면 뒤집혀요 · 좌우로 스와이프해서 이동</p>
+</div>
+
+<div class="card-actions">
+  <button type="button" class="btn ghost" id="prevBtn" aria-label="이전 카드">◀ 이전</button>
+  <button type="button" class="btn ghost" id="nextBtn" aria-label="다음 카드">다음 ▶</button>
+</div>
+<div class="card-actions">
+  <button type="button" class="btn dont" id="dontBtn">🤔 몰라요</button>
+  <button type="button" class="btn know" id="knowBtn">✅ 알아요</button>
+</div>
+<p class="meta center"><button type="button" class="link-btn" id="resetBtn">이 범위 학습 기록 초기화</button></p>

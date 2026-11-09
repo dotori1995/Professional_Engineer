@@ -1,0 +1,6222 @@
+[
+ {
+  "id": "NW_001",
+  "code": "NW_001",
+  "title": "정보이론(Information Theory)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 네트워크 기본",
+  "definition": "정보에 수학적인 정의를 부여하고 통신의 정보전송용량, 정보의 부호화, 예측 등을 수학적인 입장에서 연구한 이론",
+  "keywords": [
+   "불확실성",
+   "엔트로피",
+   "채널",
+   "부호화",
+   "최대 정보량"
+  ],
+  "sections": [
+   {
+    "title": "의미 있는 정보 전달을 위한 정보이론(Information Theory)의 개념",
+    "bullets": [
+     "잘 일어나지 않는 사건은 자주 발생하는 사건보다 많은 정보량을 제공",
+     "발생이 보장된 사건은 그 내용에 상관없이 전혀 정보가 없다는 걸 뜻함",
+     "덜 자주 발생하는 사건은 더 높은 정보량을 가짐",
+     "독립사건(independent event)은 추가적인 정보량(additive information)을 제공",
+     "동전을 던져 앞면이 두 번 나오는 사건에 대한 정보량은 앞면이 한번 나오는 정보량의 두배",
+     "각 메시지에서 포함되는 불확실성을 뜻하며 메시지에 포함된 정보의 기댓값(평균)"
+    ]
+   },
+   {
+    "title": "샤논의 제1정리 및 제2정리 설명",
+    "bullets": [
+     "▸ 샤논의 제1정리(Source Coding Theorem, 정보원 부호화 정리) 설명",
+     "어떤 정보원의 메시지를 순간 복호가 가능한 가변부호로 나타낼 때 평균 부호어 길이의 최소값은 그 정보원의 엔트로피와 같다는 정리",
+     "가변길이의 부호는 최소 엔트로피보다 크거나같다는 정리",
+     "데이터 부호화를 위한 데이터의 하한을 제시",
+     "코드 길이가 가변인 어떤 코드에서 모든 코드어",
+     "정보를 표현하는 최소 구성되어야 하는 정보의자원 량"
+    ]
+   },
+   {
+    "title": "최대 데이터 전송 한계, 채널용량(샤논 제3정리, Information Capacity Theorem)",
+    "bullets": [
+     "▸ 채널용량(샤논 제3정리, Information Capacity Theorem)의 정의",
+     "정보이론에서 채널모델 및 전송 제약조건이 주어진 상태에서 신뢰성 있게 전달할 수 있는 최대 전송률을 의미하는 이론"
+    ]
+   },
+   {
+    "title": "채널용량(샤논 제3정리, Information Capacity Theorem)의 정리",
+    "bullets": [
+     "▸ 채널용량(샤논 제3정리, Information Capacity Theorem)의 수식 정리",
+     "이 공식은 잡음(Noise)이 있는 환경에서도 오류 없이 데이터를 전송할 수 있는 최대 속도를 계산",
+     "▸ 채널용량(샤논 제3정리, Information Capacity Theorem)의 정리 상세 설명",
+     "채널을 통해 오류 없이 전송 가능한 최대 데이터 속도. 단위는 비",
+     "B: 대역폭 - 채널의 주파수 범위로, 처리 가능한 데이터 양에 비례. 대역폭이 클수록 전송 속도 증가",
+     "S: 신호 전력 (Signal - 데이터 전송 신호의 강도. 신호가 강할수록 잡음의 영향을 덜 받으며, 데이터 전송에 유리"
+    ]
+   },
+   {
+    "title": "기계학습 분야에서 활용되는 정보이론 설명",
+    "bullets": [
+     "정보 이론에서 Cross-entropy란, 두 확률 분포 p 와 q를 구분하기 위해 필요한 평균 비트 수를 의미",
+     "KL-divergence(Kullback-Leibler Divergence)는 두 분포의 차이를 측정하는데 사용"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   1,
+   4
+  ]
+ },
+ {
+  "id": "NW_004_00",
+  "code": "NW_004_00",
+  "title": "맨체스터 코딩",
+  "subtitle": "맨체스터 코딩 (Manchester Coding)",
+  "domain": "NW",
+  "category": "NW > 네트워크 기본",
+  "definition": "수신측 동기화가 쉽도록 비트 중간에 극성 변화(전압 전이)가 있게 한 선로부호 방식. 물리 계층에서 신호를 전송할 때 쓰는 디지털 인코딩의 한 형태.",
+  "keywords": [
+   "비트 중앙 전압 전이",
+   "동기화 용이",
+   "NRZ ⊕ 클록(XOR)",
+   "대역폭 2배",
+   "10Mbps Ethernet"
+  ],
+  "sections": [
+   {
+    "title": "맨체스터 코딩 (Manchester Coding)의 개요",
+    "bullets": [
+     "▸ 맨체스터 코딩 (Manchester Coding)의 정의",
+     "수신측 동기화의 용이성을 강조하도록 비트 중간에 극성 변화가 있게 한 선로부호 방식.",
+     "`Split-phase Code`,`Biphase Code`,`Diphase Code` 라고도 함.",
+     "각 비트타임의 중앙에서 전압의 전이(transition)가 발생하는게 특징이다. 그렇기 때문에 수신자는 이렇게 전달된 신호만을 보고 전송속도를 알아낼 수 있다. 이는 송신자와 수신자의 동기화를 쉽게 하며, 오류를 줄일 수 있다는 장점이 있다",
+     "▸ 맨체스터 코딩 (Manchester Coding)의 특징",
+     "활용분야는 자기 기록 장치, LAN 이더넷(10Mbps Ethernet)에서 주로 사용"
+    ]
+   },
+   {
+    "title": "맨체스터 코딩 (Manchester Coding)의 신호변환 방식 개념도 및 상세설명",
+    "bullets": [
+     "▸ 맨체스터 코딩 (Manchester Coding)의 신호변환 방식 개념도",
+     "▸ 맨체스터 코딩 (Manchester Coding)의 신호변환 방식 상세설명",
+     "'1'과 '0'의 2진값 각각을 양(+)의 전압값과 부(-)의 전압값으로 변환하는 NRZ방식으로 만들어진 신호를, 클록신호와 XOR연산하여 만들어진다.",
+     "'0'는 High->Low로 표현되고, '1'은 Low->High로 표현되는 (또는 그 반대의) 신호가 만들어진다",
+     "동기화를 돕고 오류를 줄이는 장점이 있는 반면, NRZ로 만들어진 신호와 똑같은 정보를 보내기 위해 두배의 대역폭을 사용해야 한다는 단점이 있다.",
+     "NRZ (None Return to Zero)는 비트 0, 1의 값을 전압으로 표시한 후에 영(zero)의 전압인 0V로 되돌아오지 않는 방식"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   5,
+   6
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "reviewed": true
+ },
+ {
+  "id": "NW_004_01",
+  "code": "NW_004_01",
+  "title": "차등적 맨체스터(Differential Manchester)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW",
+  "definition": "각 비트 구간 중앙에서 반드시 신호 전이를 발생시켜 클록을 동기화하고, 비트 시작점의 전이 유무로 0과 1을 구분하는 차등 방식의 자기동기식 디지털 부호화 기법.",
+  "keywords": [
+   "자기 동기화",
+   "전이 기반 부호화",
+   "극성 독립성"
+  ],
+  "sections": [
+   {
+    "title": "차등적 맨체스터 부호화(Differential Manchester Encoding) 의 개념",
+    "bullets": [
+     "비트 중앙의 필수 전이를 이용한 자기 동기화(Self-Clocking)",
+     "전이(Transition) 정보를 이용하여 데이터 0/1 표현",
+     "절대 전압 레벨이 아닌 전이 유무만으로 데이터 판별  잡음에 강함"
+    ]
+   },
+   {
+    "title": "차등적 맨체스터 부호화 개념도 및 단계별 특징",
+    "bullets": [
+     "▸ 차등적 맨체스터 부호화 개념도",
+     "0: 전이 있음, 비트 값 0 - 1: 전이 없음, 비트 값 1",
+     "▸ 차등적 맨체스터 코딩 상세 설명",
+     "모든 비트 구간의 중앙에서 High↔Low 전이 발생을",
+     "비트 중앙에서 항상 신호 전이통한 송·수신 클록 동기화",
+     "비트 시작점에서 신호 전이 발 - 직전 비트의 종료 레벨과 반대 레벨로 시작하여 0 표현 (일반적 IEEE 방식)"
+    ]
+   },
+   {
+    "title": "맨체스터 코딩방식과 차등(Differential) 맨체스터 코딩방식의 비교",
+    "bullets": [
+     "\"1\" 비트는 상승 에지로 시작하여 하강 - \"1\" 비트는 상승 에지에서 시작하여 상승 에지로 종료",
+     "\"0\" 비트는 하강 에지로 시작하여 상승 - \"0\" 비트는 하강 에지에서 시작하여 하강 에지로 종료",
+     "각 비트마다 반드시 에지가 발생하므로 - 각 비트 사이에 반드시 에지가 존재하지 않으므로 클록 동기화가 어려움",
+     "전압이 변하는 지점이 비트의 중간이므 - DC 컴포넌트가 없어짐으로써 전압의 변화가더 미세함.",
+     "에지 간의 간격이 일정하지 않아 클록 추출",
+     "클록 신호를 추출하기 쉬움이 어려울 수 있음"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   7,
+   8
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_010",
+  "code": "NW_010",
+  "title": "QAM",
+  "subtitle": "QAM(Quadrature Amplitude Modulation)",
+  "domain": "NW",
+  "category": "NW > Network 기본 > QAM",
+  "definition": "정보 신호에 따라 반송파의 진폭과 위상을 동시에 변화시켜, PSK의 변조 원리에 진폭 변조까지 포함하는 변조방식. (고속전송방식에 많이 쓰임.)",
+  "keywords": [
+   "진폭+위상 동시 변조",
+   "PSK + ASK",
+   "성상도(Constellation)",
+   "16/64/256/1024 QAM",
+   "계층적 변조(DVB-T)"
+  ],
+  "sections": [
+   {
+    "title": "직교 진폭 변조, QAM(Quadrature Amplitude Modulation)의 개요",
+    "bullets": [
+     "▸ QAM(Quadrature Amplitude Modulation)의 정의",
+     "▸ QAM(Quadrature Amplitude Modulation) 장/단점",
+     "높은 주파수 효율, 높은 정보 전송률, 구현 용이성(수신기 구현 및 복조 용이)",
+     "잡음 및 페이딩 등 오류에 민감하고 취약함"
+    ]
+   },
+   {
+    "title": "QAM(Quadrature Amplitude Modulation) 구성",
+    "bullets": [
+     "▸ 16 QAM 성상도(Constellation Diagram) 및 설명",
+     "X 축 : 동위상 반송파(In-Phase carrier)",
+     "Y 축 : 구상 반송파(Quadrature carrier)",
+     "한 심볼에 n bit 코딩 (16 QAM의 경우 1 symbol = 4 bits)",
+     "심볼 '0000'은 위상 φ, 진폭 a 를 이용",
+     "심볼 '0011', '0001'은 같은 위상, 다른 진폭"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   9,
+   10
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "reviewed": true
+ },
+ {
+  "id": "NW_011",
+  "code": "NW_011",
+  "title": "CSMA_CD",
+  "subtitle": "CSMA/CD(Carrier Sense Multiple Access with Collision Detection)",
+  "domain": "NW",
+  "category": "NW > 네트워크 기본 > CSMA/CD",
+  "definition": "각각의 호스트가 링크를 사용하기 전에 링크의 사용 상태를 감지하여 전송 충돌을 최소화 하기 위한 프로토콜",
+  "keywords": [
+   "반송파 감지",
+   "충돌 탐지(Collision Detection)",
+   "지속성 전략 3가지",
+   "유선 Ethernet",
+   "CSMA/CA와 비교(탐지 vs 회피)"
+  ],
+  "sections": [
+   {
+    "title": "반송파 감지 다중 접속 및 충돌탐지, CSMA/CD의 개념",
+    "bullets": [
+     "▸ CSMA/CD정의",
+     "충돌이 발생할 경우 Signal 전압은 단일스테이션의 데이터 Signal 전압보다 높음"
+    ]
+   },
+   {
+    "title": "CSMA/CD와 CSMA/CA 비교",
+    "bullets": [
+     "CSMA/CA와 CSMA/CD는 충돌을 회피(Avoid)하는가 탐지(Detect)하는가의 차이"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   11,
+   14
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "reviewed": true
+ },
+ {
+  "id": "NW_012",
+  "code": "NW_012",
+  "title": "CSMA_CA",
+  "subtitle": "CSMA/CA (Carrier Sense Multiple Access/Collision Avoidance)",
+  "domain": "NW",
+  "category": "NW > 네트워크 기본 > CSMA /CA",
+  "definition": "무선랜 환경에서 회선 상태를 모니터링하여 충돌을 미리 예측, 충돌 가능성을 최소화하는 접속기법.",
+  "keywords": [
+   "DIFS",
+   "RTS",
+   "SIFS",
+   "CTS",
+   "SIFS(NAV)"
+  ],
+  "sections": [
+   {
+    "title": "IEEE 802.11 Protocol 의 무선랜 MAC (Media Access Control) 기법, CSMA/CA의 개요",
+    "bullets": [
+     "▸ CSMA/CA (Carrier Sense Multiple Access/Collision Avoidance) 의 정의",
+     "▸ CSMA/CA 특징",
+     "Ethernet의 CSMA/CD를 무선으로 발전시킨 기법",
+     "충돌을 감지하지 못하므로 Ack메시지를 통해 충돌을 피해 가기 위한 기법."
+    ]
+   },
+   {
+    "title": "CSMA/CA개념도 및 충돌 회피 방법",
+    "bullets": [
+     "▸ CSMA/CA개념도",
+     "CSMA/CA 동작 : Idle → IFS대기 → Idle판단 → Random Time Wait → ACK수신대기 → (수신실패)K=K+1 → K>15판단 → Back-Off"
+    ]
+   },
+   {
+    "title": "CSMA/CA의 IFS(Inter Frame Space)와 Contention Window",
+    "bullets": [
+     "▸ IFS(Inter Frame Space)와 Contention Window의 개념도",
+     "IFS에서는 채널이 휴지 상태인 것으로 알려지더라도 전송을 늦추어서 충돌을 회피",
+     "▸ IFS(Inter Frame Space) 및 Contention Window 상세 설명",
+     "휴지 상태의 채널이 발견되면 지국은 즉시 전송하지 않음. IFS라는 일정 시간을 기다림",
+     "IFS시간으로 인해 멀리 떨어진 지국이 보낸 신호의 앞부분이 도달할 수 있도록 여유를 둠",
+     "만약 IFS시간 동안에도 휴지 상태이면 지국은 보낼 수 있으나 아직 경쟁 구간이라 불리는시간 동안 기다림"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   15,
+   17
+  ]
+ },
+ {
+  "id": "NW_023_00",
+  "code": "NW_023_00",
+  "title": "AdhocNetwork",
+  "subtitle": "Ad-hoc Network",
+  "domain": "NW",
+  "category": "NW > 유/무선 네트워크 형태",
+  "definition": "고정된 유선망을 가지지 않고 이동 호스트로만 이루어진 통신망으로 유선망을 구성하기 어렵거나, 망을 구성한 후 단기간 사용되는 경우에 적합한 네트워크",
+  "keywords": [
+   "Proactive(DSDV, 주기적 라우팅 정보 갱신)",
+   "Reactive(AODV, 필요 시 경로 탐색)",
+   "Hybrid",
+   "Self-organizing",
+   "인프라 없음"
+  ],
+  "sections": [
+   {
+    "title": "기지국과 유선망이 필요 없는, Ad-hoc Network의 개요",
+    "bullets": [
+     "▸ Ad-hoc Network의 정의",
+     "별도의 기반 시설(Infrastructure) 없이, 모바일 디바이스만으로 구성가능(Self-organizing) 하며, 네트워크의 변화에도 적응적(Adaptive)한 네트워크",
+     "▸ Ad-hoc Network의 특징",
+     "이동 ad-hoc 네트워크는 무선 인터페이스를 사용하여 이동 노드 간에 통신",
+     "무선 인터페이스는 기본적으로 전송 대역폭 및 전송거리 제약이 있음",
+     "동적인 네트워크 토폴로지 구성으로 노드의 일부 혹은 전체 노드가연결되거나 삭제될 수 있음"
+    ]
+   },
+   {
+    "title": "Ad-Hoc Network의 개념도 및 기술요소",
+    "bullets": [
+     "▸ Ad-Hoc Network의 개념도",
+     "게이트웨이를 통해서 인터넷 서비스 접속을 위해 기반 네트워크에 연동되는 형태로 구성",
+     "▸ Ad-Hoc Network의 기술요소",
+     "▸ Ad-Hoc Network의 구성",
+     "2진수 하이퍼텍스트 전송 규약(HTTP)으로 기술된 세션 프로토콜",
+     "개인 휴대 단말기 (PDA), 휴대폰과 같은 장치의 붙박이 적용"
+    ]
+   },
+   {
+    "title": "Ad-Hoc Routing 분류 및 Protocol 설명",
+    "bullets": [
+     "▸ Ad-Hoc Routing 분류",
+     "모든 이동 노드들이 항상 최신의루트정보를 유지하며, 라우팅 정보를 주기적으로, 변경 시에 네트워크 전체로 전파하여 각노드들이 자신의 라우팅 정보 변경하는 구조",
+     "지연없이 항상 최적의 루트유지",
+     "변화가 심한경우 전파하기 위한 오버헤드발생",
+     "DSDV, WRP, CGSR",
+     "트래픽이 발생 시에 루트를 탐색하는구조"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   18,
+   23
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_026",
+  "code": "NW_026",
+  "title": "DNS",
+  "subtitle": "DNS(Domain Name Server)",
+  "domain": "NW",
+  "category": "NW > 유/무선 네트워크 형태 > DNS",
+  "definition": "네트워크에서 도메인이나 호스트 이름을 숫자로 된 IP 주소로 해석해주는 TCP/IP 네트워크 서비스",
+  "keywords": [
+   "구성요소: Domain Name Space",
+   "Name Server",
+   "Resolver",
+   "RR 구성: Name, Type, Class, TTL, RD Length, RD(Resource Data)"
+  ],
+  "sections": [
+   {
+    "title": "네트워크 관리를 위한 DNS(Domain Name Server) 개요",
+    "bullets": [
+     "▸ DNS(Domain Name Server)의 정의",
+     "인터넷 사용에 있어 인터넷 IP 주소 대신 문자로 구성된 이름을 사용할 수 있도록 하는 명칭 체계",
+     "인터넷 정보를 담고 있는 호스트 이름과 IP주소를 매핑해 주는 거대 분산 시스템",
+     "▸ 네트워크 관리를 위한 DNS 역할",
+     "DNS가 적용되지 않은 환경에서는 인터넷의 네트워크 주소를 직접 사용하여야 원하는 호스트와 통신가능",
+     "초기 인터넷 환경에서는 호스트 파일을 이용하여 도메인 이름과 IP를 매칭하여 사용함"
+    ]
+   },
+   {
+    "title": "DNS 구성도, 구성요소 및 동작절차",
+    "bullets": [
+     "▸ DNS 구성도, 구성요소",
+     "▸ DNS의 구성 요소",
+     "도메인 네임의 데이터 조회 기능을 수행하는 소프트웨어 라이브러리 형태의 루틴",
+     "응용 어플리케이션으로부터 도메인 네임과 조회 대상이 되는 레코드 타입을 입력 받아인터넷 상에서 해당 도메인이 설정되어 있는 네임서버를 자동으로 추적 탐색하여 원하는데이터를 반환하는 기능 수행"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   24,
+   30
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_031_01",
+  "code": "NW_031_01",
+  "title": "다중화(multiplexing)과 다원접속(multi access)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 다중화/다중접속",
+  "definition": "다중화(Multiplexing)는 하나의 전송로를 분할해 여러 신호를 동시에 송수신하도록 다수 채널로 결합하는 기술이고, 다원접속(Multiple Access)은 한정된 전송 자원(시간·공간·코드·주파수)을 다수 노드가 효율적·공평하게 공유하는 기술.",
+  "keywords": [
+   "다중화: FDM, TDM, SDM, CDM, WDM",
+   "다원접속: FDMA, TDMA, SDMA, CDMA",
+   "동적할당: ALOHA, CSMA/CD, 토큰, 폴링",
+   "송신 지점 1곳 vs 여러 곳"
+  ],
+  "sections": [
+   {
+    "title": "네트워크 모델에서 다중화와 다원접속 설명",
+    "bullets": [
+     "▸ 전송방식의 다중화(Multiplexing)",
+     "Frequency Division Multiplexing",
+     "전송경로 상의 공통 채널을 더욱 효율적으로 이용하기 위한 주파수 분할에 의한 다중화 방식",
+     "Time Division Multiplexing",
+     "시간 분할된 여러 사용자 타임슬롯을 하나로 결합시키는 다중화방식",
+     "Spatial Division Multiplexing"
+    ]
+   },
+   {
+    "title": "다중화와 다중접속의 기술적 차이점",
+    "bullets": [
+     "전송매체의 효율적 이용 - 한정된 자원의 공동 이용",
+     "통신비용 절감 - 사용자의 구분",
+     "데이터 송신 지점이 한 곳, 동일 지점에 - 데이터 송신 지점이 여러 곳, 독립된 각터미널에서 송출",
+     "단일 송신국에서 신호가 다중화되어 발 - 여러 단말기 신호가 다중화되어 발신신",
+     "FDM, TDM, CDM, WDM, SDM - FDMA, TDMA, CDMA, WDMA",
+     "하향 Down-LINK - 상향 UP-LINK"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   31,
+   33
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "reviewed": true
+ },
+ {
+  "id": "NW_031_02",
+  "code": "NW_031_02",
+  "title": "비직교 다중접속(NOMA, Non-Orthogonal Multiple Access)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 다중화/다중접속",
+  "definition": "셀의 주파수 용량 향상을 위해 동일한 시간, 주파수, 공간 자원상에 다수의 사용자들을 위한 신호를 동시에전송하여 주파수 효율을 향상시키는 기술",
+  "keywords": [
+   "비직교성",
+   "다중접속",
+   "주파수/시간/코드 공유",
+   "주파수 향상 기술",
+   "5G 셀 용량 증대",
+   "순차적 간섭 제거(Successive Interference Cancellation: SIC)"
+  ],
+  "sections": [
+   {
+    "title": "5G 주파수 효율 향상 기술, NOMA (Non-Orthogonal Multiple Access)의 개요",
+    "bullets": [
+     "▸ NOMA (Non-Orthogonal Multiple Access)의 정의",
+     "▸ NOMA (Non-Orthogonal Multiple Access)의 특징",
+     "직교성을 의도적으로 위배함으로써 다수의 신호를 중첩시키고 순차적으로 간섭 제거",
+     "전력분배를 이용하여 신호를 전력영역에서 다중화하여 동일시간 동일주파수 대역사용 가능",
+     "기존 직교 다중 접속(OFDMA) 방식이 갖고 있던 주파수 자원 할당 관점에서의 직교성(orthogonality property)을 깨고 같은 주파수 자원 상에 두 대 이상의 단말 데이터를 동시에 중첩 할당하여 자원 효율 높임"
+    ]
+   },
+   {
+    "title": "NOMA (Non-Orthogonal Multiple Access)의 개념도와 원리 및 핵심기술",
+    "bullets": [
+     "▸ NOMA (Non-Orthogonal Multiple Access)의 개념도",
+     "NOMA는 기존의 다중 접속 방식에서의 직교성을 깨고, 동일한 주파수 대역에 둘 이상의 사용자들이 전송을가능하게 함으로써 주파수 자원 효율성을 높이는 기술",
+     "NOMA는 기존의 직교 다중 접속(Orthogonal Multiple Access: OMA)기술보다 우수한 주파수 효율 가지게 됨",
+     "▸ NOMA (Non-Orthogonal Multiple Access)의 원리 및 핵심기술",
+     "기존 다중접속 기법은 시간/주파수 영역에서 다중화 되지만, NOMA는 전력 영역의다중화 기법을 활용",
+     "전력 분배를 이용하여 신호를 전력 영역에서 다중화시키기 때문에 다수의 사용자가동일한 시간에 동일한 주파수 영역을 사용하는 것이 가능핵심 기술 설명"
+    ]
+   },
+   {
+    "title": "NOMA의 활용 연구",
+    "bullets": [
+     "동시 사용자 수 대비 더 많은 안테나가 기지국에 장착",
+     "다수의 릴레이의 도움을 통해 소스와 목적지 간의 통신 연결을 수행하는 협력통신",
+     "CRN(Cognitive Radio Network)",
+     "임의 접속 절차 없이 활용 가능하므로 액세스 지연과 신호 오버 헤드 감소"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   34,
+   35
+  ]
+ },
+ {
+  "id": "NW_032",
+  "code": "NW_032",
+  "title": "Multicast",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > Multicast > Multicast",
+  "definition": "서버와 네트워크의 부하를 줄이고 사용자단의 화질을 개선하는 등을 위해 한 개의 스트림만으로 모든 사용자에게 정보를 전달하는 네트워크 서비스",
+  "keywords": [
+   "1:특정다수 통신(목적지 주소 = 수신자 집합)",
+   "IGMP",
+   "224.x(예약)",
+   "225~239: 라우팅"
+  ],
+  "sections": [
+   {
+    "title": "데이터 중복전송 최소화한 1:N 전송기술, Multicast의 개요.",
+    "bullets": [
+     "▸ Multicast 정의",
+     "▸ Multicast 특징",
+     "정해진 여러 사용자에게 하나의 스트림을 동시에 전송",
+     "라우터, HUB, G/W 등의 장비 및 S/W 필요",
+     "인터넷을 통한 대용량전송이 용이하여 다양한 서비스 가능",
+     "네트워크 효율화가 가능하나 구현 복잡이 다소 복잡하고 고비용"
+    ]
+   },
+   {
+    "title": "개념도 및 기술요소",
+    "bullets": [
+     "▸ Multicast 개념도",
+     "▸ Multicast의 구성요소",
+     "라우터간 전달구간- 정보수신단말구간 IGMP, MLD : 그룹가입, 멤버"
+    ]
+   },
+   {
+    "title": "멀티캐스트 호스트 그룹에 대한 정의 (Addressing)",
+    "bullets": [
+     "IPv4 는 D Class 로 224.0.0.0~ 239.255.255.255 주소범위",
+     "IPv6 에서는 맨 첫번째 바이트를 모두'1'로 설정하여 멀티캐스트"
+    ]
+   },
+   {
+    "title": "IGMP(Internet Group Management Protocol)",
+    "bullets": [
+     "멀티캐스트 그룹에 대한 가입/탈퇴 기능에 대한 매커니즘",
+     "라우터와 호스트 단말간에 주기적인 Report 와 Query 메시지를 교환함으로써 라우터는 자신의 서브넷단말들이 어느 멀티캐스트 그룹주소 소속인지 파악",
+     "IPv6 망에서는 IPv4 의 IGMP 와 유사한 MLD(Multicast Listener Discovery)를 정의"
+    ]
+   },
+   {
+    "title": "멀티캐스트 라우팅 프로토콜",
+    "bullets": [
+     "라우터와 라우터 간의 멀티캐스트 데이터 전송경로(멀티캐스트 Tree)를 구성",
+     "IGMP 를 통해 그룹 가입자를 탐지한 라우터는 특정 그룹에 대한 멀티캐스트 트리를 구성하기 위해라우팅 프로토콜을 동작 시킴"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   36,
+   44
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_041",
+  "code": "NW_041",
+  "title": "Transport(4)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "네트워크 > OSI 7 layers > Transport(4)",
+  "definition": "종단간 사용자들이 신뢰성 있는 데이터를 송수신 할 수 있도록 흐름 제어, 오류 제어, 혼잡 제어의 역할을수행하는 OSI 7 Layer의 4계층",
+  "keywords": [
+   "데이터 송수신·QoS·4계층",
+   "전송단위: Segment",
+   "장비: L4 스위치",
+   "흐름제어: Sliding Window",
+   "혼잡제어: TCP 혼잡제어",
+   "오류제어: Sequence Number",
+   "주요 프로토콜: TCP, UDP"
+  ],
+  "sections": [
+   {
+    "title": "세그먼트 단위 데이터 전송 보장 계층, Transport Layer의 개요",
+    "bullets": [
+     "▸ 전송 계층(Transport Layer)의 정의",
+     "정보를 분할하고 상대편에 도착하기 전에 다시 합치는 과정을 담당(단위: Segment)",
+     "▸ 전송 계층의 역할",
+     "데이터 링크 계층처럼 흐름제어를 책임지는데 단일 링크라기 보다는 종단",
+     "Slow Start -> Congestion Avoidance -> Fast Retransmit -> Fast Recovery",
+     "전체 메시지가 수신 측 전송 계층에 오류(손상, 손실, 중복) 없이 도착하는"
+    ]
+   },
+   {
+    "title": "전송 계층의 구조 및 기능 설명",
+    "bullets": [
+     "▸ 전송 계층의 구조도",
+     "기능: 종단 간(End-to-End)에 신뢰성 있고 정확한 데이터 전송을 담당",
+     "4계층에서 전송되는 단위는 세그먼트이며, 종단 간의 에러복구와 흐름제어를 담당",
+     "4계층 장비로 L4 스위치를 두는 경우가 있는데, 3계층에서 온 트래픽을 분석하여 서비스 종류를 구분해주는 역할"
+    ]
+   },
+   {
+    "title": "전송 계층의 주요 기능 오류 제어",
+    "bullets": [
+     "▸ 오류 제어의 개념도",
+     "시퀀스 넘버를 기반으로 세그먼트에 오류가 있는 경우 세그먼트 재전송을 통해 오류 처리 기능을 수행",
+     "송신측은 세그먼트에 프레임에 대해 ACK 수신 여부를 통해 확인 가능",
+     "수신측은 CRC를 이용하여 오류 발생한 프레임 재전송 요청",
+     "RTO : Retransmission Time Out"
+    ]
+   },
+   {
+    "title": "송신측 전송데이터 크기 조정, 흐름 제어(Flow Control : 슬라이딩 원도우 기법)",
+    "bullets": [
+     "▸ TCP 흐름 제어(Flow Control)의 개념",
+     "수신 측에서 설정한 윈도우 크기만큼 송신 측에서 확인 응답(ACK) 없이 전송할 수 있게 하여 흐름을동적으로 조절하는 제어 알고리즘",
+     "윈도우(메모리 버퍼의 일정 영역)에 포함되는 모든 패킷을 전송하고, 그 패킷들이 전달이 확인되는 대로이 윈도우를 옆으로 옮겨(Slide) 다음 패킷들을 전송하는 방식",
+     "▸ 슬라이딩 원도우(Sliding Window) 기법",
+     "수신측에서 설정한 윈도우 크기만큼 송신측에서 응답(ACK) 없이 전송하여 흐름을 동적으로 조절",
+     "슬라이딩 윈도우 이용, 윈도우의 크기는 동적 변경"
+    ]
+   },
+   {
+    "title": "네트워크 유입 트래픽 조절, 혼잡 제어",
+    "bullets": [
+     "▸ 혼잡 제어(Congestion Control)의 개념",
+     "네트워크로 유입되는 사용자 트래픽(데이터에 대한 표현)의 양이 네트워크 용량을 초과하지 않도록",
+     "유지시키는 메커니즘과 기술",
+     "트래픽 양이 네트워크 용량을 초과 되면 혼잡 상태(Congestion Status)",
+     "일반적으로 TCP는 느린 출발 알고리즘과 혼잡 회피 알고리즘을 기반으로 하여 혼잡 제어를 수행"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   45,
+   54
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_042",
+  "code": "NW_042",
+  "title": "Network(3)",
+  "subtitle": "NETWORK(3)★",
+  "domain": "NW",
+  "category": "네트워크 > OSI7Layer > Network Layer",
+  "definition": "송신자, 수신자 간 Data 전송을 위해 Logical Address를 지정하고 이를 통해 포워딩과 라우팅을 수행할수 있도록 지원하는 계층",
+  "keywords": [
+   "ARP",
+   "IP",
+   "ICMP",
+   "IPsec",
+   "IGMP",
+   "장비: 라우터",
+   "L3 Switch",
+   "표준: ISO/IEC 8208"
+  ],
+  "sections": [
+   {
+    "title": "Data 전송을 통신 경로 선택, Network Layer의 개요",
+    "bullets": [
+     "▸ Network Layer의 정의",
+     "대표적 프로토콜 : ARP, IP, ICMP, IPsec, IGMP",
+     "▸ Network Layer의 구성도",
+     "Transport Layer로부터 받은 Segment에 논리 주소를 붙여 Packet 화 하고 Data Link Layer에 전달"
+    ]
+   },
+   {
+    "title": "Network Layer 프로토콜",
+    "bullets": [
+     "논리적인 IP 주소를 (망계층), 물리적인 MAC 주소로 (데이터링크 계층),",
+     "Proxy ARP, Gratuitous ARP, RARP(Reverse Address Resolution Protocol) 등",
+     "서브넷(로컬 네트워크) 상의 멀티캐스팅 멤버십 제어(그룹 관리)를 위한 프로토콜",
+     "IGMP Snooping은 라우터와 호스트 사이에 있는 스위치가 IGMP 메세지들을 들을 수있게 하는 기능을 말함",
+     "IGMP Querier Election은 동일 LAN에 여러 멀티캐스트 라우터가 있으면, IPv4 주소가장 낮은 주소를 갖는 라우터가 Querier 역할을 집중하게 함",
+     "TCP/IP 에서 IP 패킷을 처리할 때 발생되는 문제를 알리거나, 진단 등과 같이 IP 계층에서 필요한 기타 기능들을 수행하기위해 사용되는 프로토콜"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   55,
+   57
+  ]
+ },
+ {
+  "id": "NW_043",
+  "code": "NW_043",
+  "title": "Data Link(2)",
+  "subtitle": "Data Link",
+  "domain": "NW",
+  "category": "네트워크 > OSI 7 layers > Data Link",
+  "definition": "OSI 7 Layer의 하위 계층인 2계층으로 두 시스템 사이에서 오류 없이 정보 데이터를 전송하려고 상위 계층에서 받은 비트열의 데이터로 프레임을 구성하여 하위 계층으로 전송",
+  "keywords": [
+   "물리적 통신로",
+   "FRAME",
+   "오류제어(FEC, BEC, CRC)",
+   "흐름제어(ARQ)",
+   "접근제어(CSMA/CD, CSMA/CA)",
+   "주소지정(LLC, MAC)"
+  ],
+  "sections": [
+   {
+    "title": "Data Link Layer의 개요",
+    "bullets": []
+   },
+   {
+    "title": "Data Link Layer에서의 오류제어 유형 및 기법설명",
+    "bullets": []
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   58,
+   59
+  ]
+ },
+ {
+  "id": "NW_046",
+  "code": "NW_046",
+  "title": "TCP",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "네트워크 > TCP/IP 5계층 > TCP",
+  "definition": "네트워크를 상호 연결시켜 정보를 전송할 수 있도록 하는 기능을 가진 다수의 프로토콜이 모여있는 4계층의 통신 프로토콜 집합",
+  "keywords": [
+   "Three-way Handshaking",
+   "ISN",
+   "TCP Half Open"
+  ],
+  "sections": [
+   {
+    "title": "TCP 데이터 전송절차 및 Handshake설명",
+    "bullets": [
+     "▸ TCP 데이터 전송절차",
+     "위 3개의 세그먼트에 의해 연결이 설정되며 이것을 Three-way handshake라 부름"
+    ]
+   },
+   {
+    "title": "TCP 데이터 전송에 사용되는 TCP Flag",
+    "bullets": [
+     "이외에서 추가적으로 URG(Urgent - 긴급데이터), PSH(Push -밀어 넣기) Flag 가 있음.",
+     "------- 추가 2018.04.23 --------------- TCP 3-Way Handshake에서 서버가 SYN+ACK를보낸 후 클라이언트에서 ACK를 못 받게 되면 Half Open 상태가 되어 대기 상태에 머무른 후일정 시간(75초) 후에 해당 연결을 초기화 Half 백로그 큐 크기 변경 Syncookies 기능 활성화 SYN_RECEIVED 타이머 변경 SYN Cache Hal"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   60,
+   64
+  ]
+ },
+ {
+  "id": "NW_049",
+  "code": "NW_049",
+  "title": "TCP_오류제어",
+  "subtitle": "오류제어",
+  "domain": "NW",
+  "category": "TCP/IP 5계층 > 오류제어",
+  "definition": "신뢰성 있는 데이터 전송을 위해 세그먼트의 손상(checksum), 손실(sequence/ack number), 시간초과(Time-Over)를 처리하는 TCP의 오류제어 기능.",
+  "keywords": [
+   "Checksum",
+   "Sequence Number",
+   "Ack Number",
+   "TimeOut",
+   "RTO",
+   "3 Duplicate Ack's"
+  ],
+  "sections": [
+   {
+    "title": "신뢰성 있는 통신, TCP/IP 오류제어의 개요",
+    "bullets": [
+     "▸ TCP/IP 오류제어 정의",
+     "▸ TCP/IP 오류제어 기법",
+     "기본(Go-back-n(Cumulative ACK)), 옵션(selective repeat ARQ(Selective ACK))"
+    ]
+   },
+   {
+    "title": "TCP/IP 오류제어 과정 및 제어요소",
+    "bullets": [
+     "▸ TCP/IP 오류제어 과정",
+     "▸ TCP/IP 오류제어 요소",
+     "체크섬(Checksum) 계산을 통해 데이터 세그먼트 손상 여부 확인",
+     "정상적인 데이터 세그먼트의 수신 사실을 확인(ACK) 세그먼트를 통해 송신 TCP에게통지 (다음에 받을 데이터의 sequence를 ACK 값으로 하여, 수신 확인)",
+     "확인 세그먼트를 수신한 송신 TCP는 수신 TCP가 (확인번호 -1)번째 바이트까지누적적으로 완전하게 수신하였음을 확인",
+     "RTO(Retransmission Time Out) 만료"
+    ]
+   },
+   {
+    "title": "TCP/IP 오류제어 고려사항",
+    "bullets": [
+     "지나치게 짧은 타이머 값의 설정은 정상적으로 전달중인 데이터 세그먼트에 대한 재전송 초래",
+     "지나치게 긴 타이머 값의 설정은 재전송 대시 시간을 증가시켜 전체적인 지연시간 상승초래",
+     "일반적으로 재전송 타이머 값은 2 x RTT로 설정",
+     "RTT = a x 이전 RTT + (1-a) x 현재 RTT, 0<a<1"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   65,
+   67
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_050_1",
+  "code": "NW_050_1",
+  "title": "어리석은 윈도우 신드롬(Silly Window Syndrome)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "네트워크",
+  "definition": "송·수신측 응용 프로그램의 낮은 데이터 생성·소비 속도 때문에 전송 데이터보다 Header·Trailer가 더 커져 비효율성이 증가하는 흐름제어 현상.",
+  "keywords": [
+   "1byte 전송 오버헤드(헤더 40byte)",
+   "송신측 해결: Nagle's Algorithm",
+   "수신측 해결: Clark's Solution",
+   "MSS",
+   "Window Size 0"
+  ],
+  "sections": [
+   {
+    "title": "비효율적 네트워크 흐름제어 현상, 어리석은 윈도우 신드롬(Silly Window Syndrome) 설명",
+    "bullets": [
+     "▸ 어리석은 윈도우 신드롬 개념",
+     "데이터를 송수신하는 과정에서 송신측 및 수신측 응용 프로그램의 낮은 데이터 생성, 소비 속도로 인해 전송데이터보다 포함하는 Header, Trailer 데이터의 크기가 더 커짐으로써 비효율성이 증가하는 현상",
+     "▸ 어리석은 윈도우 신드롬 개념도, 상세설명",
+     "송신측은 수신측과 연결을 맺고 1byte 데이터를 전송",
+     "수신측은 송신측으로부터 1byte를 수신하고 즉시 ACK 회신",
+     "전송시마다 헤더 필드 추가(40byte)로 인한 오버헤드 발생"
+    ]
+   },
+   {
+    "title": "송신측 신드롬 해결 방안, Nagle's Algorithm 설명",
+    "bullets": [
+     "▸ Nagle'a Algorithm 개념",
+     "송신측에서 데이터 최초 전송시에는 1byte 그대로 전송하고 그 이후에는 버퍼에 데이터를 누적시키면서 수신측에서 ACK를 회신받은 시점에 누적된 버퍼의 데이터를 한번에 전송하는 방식의 신드롬 해결 알고리즘",
+     "▸ Nagle'a Algorithm 개념도, 상세설명",
+     "송수신측 최초 연결 수립 이후, 1 byte 데이터는 그대로 전송",
+     "수신측으로부터 ACK 회신 전까지 데이터를 버퍼에 점증 누적",
+     "버퍼에 적재된 100 byte 데이터를 헤더 필드 포함하여 전송"
+    ]
+   },
+   {
+    "title": "수신측 신드롬 해결 방안, Clark's Solution 설명",
+    "bullets": [
+     "▸ Clark's Solution 개념",
+     "수신측에서 버퍼 가용 공간을 확인하여 슬라이딩 윈도우 크기(Window Size)를 0으로 세팅하거나 수신측 버퍼가 MSS(Maximum Segment Size) 만큼 되었을 때 ACK를 회신하여 관리하는 방식의 신드롬 해결 알고리즘",
+     "▸ Clark's Solution 개념도, 상세설명",
+     "송수신측 최초 연결 수립 이후, 1 byte 데이터 전송",
+     "버퍼 적재 데이터 처리 및 송신측으로 ACK 전송",
+     "MSS를 기준으로 ACK 회신하는 방법 이외에 window size를 0으로 설정하여 수신측으로 회신하여 송신측의신규 데이터 전송을 일시 중지 시키고, 송신측의 버퍼 처리 이후 재전송 요청하는 방식으로 대응 가능"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   68,
+   70
+  ],
+  "keywords_note": "원문 키워드 칸에 다른 토픽(Harbor) 키워드가 잘못 들어가 있어 본문에서 발췌",
+  "reviewed": true
+ },
+ {
+  "id": "NW_053",
+  "code": "NW_053",
+  "title": "Subnetting",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "네트워크>TCP/IP 5계층 > Subnetting",
+  "definition": "동일 네트워크를 작은 그룹으로 나누기 위해 그룹화하는 방법",
+  "keywords": [
+   "VLSM(Variable Length Subnet Mask)",
+   "CIDR(Classless Inter-domain routing)"
+  ],
+  "sections": [],
+  "warnings": [],
+  "pages": [
+   71,
+   73
+  ]
+ },
+ {
+  "id": "NW_054",
+  "code": "NW_054",
+  "title": "Supernetting",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW>TCP/IP 5계층>Supernetting",
+  "definition": "다수의 작은 네트워크를 하나의 큰 네트워크로 통합하는 방법으로 네트워크 정보를 요약하여 라우팅 테이블의 크기 축소 및 라우팅 수를 줄이는 방법",
+  "keywords": [
+   "Subnetting의 반대 개념"
+  ],
+  "sections": [
+   {
+    "title": "라우팅 관리에 유용한 Supernetting 의 개념도",
+    "bullets": []
+   },
+   {
+    "title": "Supernetting의 계산방법",
+    "bullets": [
+     "192.168.1.100을 사용하는 호스트와 192.168.4.200을 사용하는 호스트가 물리적으로 하나의 세그먼트에 물려 있더라도, 255.255.248.0을 사용하면 통신이 가능하다는 것을 말함(네트워크 ID가 동일)",
+     "라우팅 테이블의 엔트리 수를 줄이기 위해서 고안",
+     "Supernetting을 지원하기 위한 라우팅 프로토콜"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   74,
+   75
+  ]
+ },
+ {
+  "id": "NW_055",
+  "code": "NW_055",
+  "title": "CIDR",
+  "subtitle": "CIDR(Classless inter-domain routing)",
+  "domain": "NW",
+  "category": "NW>TCP/IP 5계층 >CIDR(Classless inter-domain routing)",
+  "definition": "도메인간의 라우팅에 사용되는 인터넷 주소를, 원래의 IP 주소 클래스 체계를 쓰는 것보다 더욱 융통성 있도록할당하고, 지정하는 방식",
+  "keywords": [
+   "슈퍼네팅(병합) 적용",
+   "IP 주소 할당 방법",
+   "8비트 단위로 네트워크부/호스트부를 구획하지 않음",
+   "Prefix 표기(/24)"
+  ],
+  "sections": [],
+  "warnings": [],
+  "dueum": "슈퍼네팅 (사수라고 암기)",
+  "pages": [
+   76,
+   77
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_056",
+  "code": "NW_056",
+  "title": "VLSM",
+  "subtitle": "VLSM (Variable Length Subnet Mask)",
+  "domain": "NW",
+  "category": "네트워크 > TCP/IP 5계층 > VLSM",
+  "definition": "Classful Addressing 처럼 고정 길이의 서브넷 마스크를 적용하지 않고, 호스트 수가 적은 네트워크에는 긴 마스크, 그 반대에는 짧은 마스크 적용으로 동일 네트워크 주소공간에서 다른 크기의 서브넷 사용 허용 방법.",
+  "keywords": [
+   "서브넷의 서브넷",
+   "다른 크기 서브넷(/25, /26 분배)",
+   "RFC 1878",
+   "RIPv2, OSPF, BGP 지원"
+  ],
+  "sections": [
+   {
+    "title": "서브네트의 서브넷팅, VLSM 개요",
+    "bullets": [
+     "▸ VLSM 개념",
+     "▸ VLSM 특징",
+     "RFC 1878이 VLSM의 표준"
+    ]
+   },
+   {
+    "title": "VLSM 적용 및 상세설명",
+    "bullets": [
+     "서브넷마다 서브넷 마스크가 다른 기법",
+     "상기 그림에서 하나의 C급 클래스풀 네트워크(128.3.2.0) 하에서도 '/24', '/25'가 사용됨 알 수 있음",
+     "IP 주소 낭비 방지 및 더 많은 서브넷이 확보 가능"
+    ]
+   },
+   {
+    "title": "추가자료",
+    "bullets": [
+     "부족한 IP 주소를 해결하기 위해 만들어진 - 어떤 네트워크에서 IP를 효율적으로 할당하기 위한방법으로 서로 다른 크기의 서브넷을 지원하기 위한",
+     "라우팅간 전달 정보를 묶어서 트레픽을 줄임. 구조",
+     "주소블록을 ISP에게 할당하여 최종 기관으로 할당 -한 기관에 이미 할당된 주소공간을 가지고 분할하여 할당",
+     "인터넷 도메인 -인트라넷 도메인",
+     "10.1.123.9/20 - 192.168.30.0/24 C 클래스를 가진 회사에서 100개의",
+     "네트워크 영역(2^20) 주소가 필요한 2개 부서"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   78,
+   79
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_059",
+  "code": "NW_059",
+  "title": "패킷 단편화",
+  "subtitle": "패킷 단편화(Packet Fragmentation)",
+  "domain": "NW",
+  "category": "NW > TCP/IP 5계층 > 패킷 단편화(Packet Fragmentation)",
+  "definition": "프로토콜 기본 교환 단위인 PDU(Protocol Data Unit)를 여러 더 작은 단위로 나누는 동작",
+  "keywords": [
+   "MTU",
+   "재조립",
+   "IPv6 확장 헤더"
+  ],
+  "sections": [
+   {
+    "title": "IP 패킷 단편화의 개념과 특징",
+    "bullets": [
+     "큰 IP 패킷들이 작은 MTU(Maximum Transmission Unit)를 갖는 링크 통해 전송되려면 여러 개의 작은패킷으로 조각화 되어야 함.",
+     "송신자는 큰 데이터를 네트워크에서 한번에 보낼 수 있는 크기만큼 쪼개서 패킷을 발송하고, 수신자는쪼개진 패킷의 정보를 바탕으로 재조합하여 데이터 처리하는 방식",
+     "지속적인 단편화/재조합은 시스템의 CPU 등 자원을 많이 소비함일단 단편화되면, 최종 목적지에 도달할 때까지 재조립되지 않는 것이 일반적임. 재조립은항상 최종 수신지에서만 가능함",
+     "IPv4 에서는 발신지 뿐만 아니라 중간 라우터에서도 IP 단편화가 가능",
+     "IPv4 에서 MTU 최소 권고값 : 576 byte",
+     "IPv6 에서는 IP 단편화가 발신지에서 만 가능"
+    ]
+   },
+   {
+    "title": "Ipv4와 Ipv6에서의 처리방식",
+    "bullets": [
+     "▸ IPv4에서의 처리방식",
+     "분할의 특성을 나타내는 플래그",
+     "첫 번째 bit : 미사용 (항상 0)",
+     "두 번째 bit : D F bit (Don't Fragment)",
+     "분할(조각) 0 으로 셋팅되면 라우터에서도 분할(조각,단편)이 가능함을 뜻함",
+     "미분할 1 로 셋팅되면 목적지 컴퓨터가 조각들을 다시 모을 능력이 없기 때문에중간에 라우터로 하여금 데이터그램을 단편화하지 말라는 의미"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   80,
+   81
+  ]
+ },
+ {
+  "id": "NW_062",
+  "code": "NW_062",
+  "title": "IGMP",
+  "subtitle": "IGMP (Internet Group Management Protocol)",
+  "domain": "NW",
+  "category": "프로토콜 목록 > IGMP",
+  "definition": "다수 호스트를 논리적 단위 하나로 관리하기 위해 호스트와 라우터 사이에 그룹 멤버 정보를 교환하여, 그룹 생성·제거와 호스트의 가입·탈퇴 등 멀티캐스트 그룹 소속원을 관리하는 프로토콜.",
+  "keywords": [
+   "그룹 가입",
+   "멤버십 감시",
+   "멤버십 응답",
+   "멤버십 탈퇴",
+   "IPv6에서는 MLD(ICMPv6의 일부)"
+  ],
+  "sections": [
+   {
+    "title": "멀티캐스트의 기본 요소 및 IGMP",
+    "bullets": [
+     "▸ IGMP (Internet Group Management Protocol)의 정의",
+     "▸ 멀티캐스트의 기본 요소",
+     "각각의 그룹은 멀티캐스트 주소로 구분",
+     "멀티캐스트 그룹은 특정 호스트로 고정되지 않고, 필요에 따라 추가, 삭제되는 동적인 구조",
+     "멀티캐스트 데이터 전송시 라우팅 경로 설정은 중요한 사항",
+     "전송 가능한 최적의 경로를 찾기 위해 멀티캐스트의 라우팅 경로 설정은 송신 호스트를 루트로 하여 경로를 설정하는 방법과 여러 수신 호스트가 하나의 공유된 경로를 사용하는 방법을 사용"
+    ]
+   },
+   {
+    "title": "IGMP 역할 및 메시지 유형",
+    "bullets": [
+     "멀티캐스트를 지원하는 라우터가 멀티캐스트 그룹에 가입한 네트워크 내의 호스트를 관리 하기 위해사용하는 프로토콜",
+     "멀티캐스트 라우터는 네트워크에서 호스트가 사용하는 멀티캐스트 주소 목록을 알고 있어야 하며, 이러한 목적은 동적으로 변경",
+     "▸ IGMP 역할",
+     "호스트가 새로운 멀티캐스트 그룹에 가입하기 원하는 경우, 멤버쉽 문의 메시지를 라우터로 보냄",
+     "한 호스트에서 여러 프로세스가 동일한 멀티캐스트 그룹에 가입하고자 하는 경우에도 멤버쉽 가입 메시지는 한번만 전송",
+     "멀티캐스트 라우터는 호스트들이 계속 그룹 멤버쉽을 사용하기 원하는지 감시하기 위해 주기적으로 멤버쉽 문의 메시지를 전송"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   82,
+   84
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_064",
+  "code": "NW_064",
+  "title": "SCTP",
+  "subtitle": "SCTP(Stream Control Transmission Protocol)",
+  "domain": "NW",
+  "category": "NW > 프로토콜 목록 > SCTP(Stream Control Transmission Protocol)",
+  "definition": "UDP의 메시지 지향특성(Message Oriented)과 TCP의 연결지향(Connection Oriented) 및 신뢰성 특성 조합한 프로토콜로, 기존 TCP로 지원 어려운 멀티미디어 응용서비스 전송지원 위한 전송계층 프로토콜",
+  "keywords": [
+   "전송계층",
+   "TCP+UDP",
+   "멀티호밍",
+   "멀티스트리밍",
+   "4-way handshaking(연결)",
+   "3-way handshaking(종료)",
+   "SACK",
+   "HEATBEAT"
+  ],
+  "sections": [
+   {
+    "title": "SCTP 프로토콜 계층구조 및 기술요소",
+    "bullets": [
+     "▸ SCTP 프로토콜 계층구조",
+     "SCTP는 응용 계층과 네트워크 계층 사이 위치",
+     "SCTP Peer 간 응용 데이터를 API로 전달 받아 IP 망통해 전송하는 기능 수행",
+     "SCTP 단말은 하나의 SCTP 세션에서 여러 개의 IP 주소를 사용 (멀티호밍, Multi-homing)",
+     "두 지점 간 메시지 전송 위해 다중경로(Multi-path) 및 다중스트림(Multiple stream) 기능 사용",
+     "두 SCTP 지점간의 SCTP 연결을 SCTP association"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   85,
+   87
+  ]
+ },
+ {
+  "id": "NW_065",
+  "code": "NW_065",
+  "title": "ARP",
+  "subtitle": "ARP(Address Resolution Protocol)",
+  "domain": "NW",
+  "category": "NW > 프로토콜 목록 > ARP(Address Resolution Protocol)",
+  "definition": "LAN환경에서 논리주소인 IP주소를 물리주소인 MAC주소로 변환해 주는 네트워크 계층의 프로토콜",
+  "keywords": [
+   "ARP Cache Table"
+  ],
+  "sections": [
+   {
+    "title": "네트워크 주소변환, ARP(Address Resolution Protocol) 개요",
+    "bullets": [
+     "▸ ARP 정의",
+     "▸ 네트워크 주소변환, ARP(Address Resolution Protocol) 개념도",
+     "데이터를 전송할 때마다 ARP 사용하여 패킷을 브로드캐스팅하면 네트워크 트래픽이 증가",
+     "ARP 사용하는 호스트에서는 가장 최근에 얻은 IP 주소와 MAC 주소 매핑 값을 보관하는 캐시 정보를 사용 -"
+    ]
+   },
+   {
+    "title": "ARP의 보안 취약점 및 대응 방안",
+    "bullets": [
+     "▸ ARP Spoofing",
+     "공격자가 서버와 클라이언트 컴퓨터에 통신 상대방을 자기 자신으로 통보  서버와",
+     "공격자는 각자에게 받은 패킷 읽은 후 서버와 클라이언트에게 서로 전송하려는 패킷 전달",
+     "ARP table의 수동관리 통한 비정상 변경 방지",
+     "재부팅 시에도 정정 Table유지",
+     "안전한 서버도 동일 서브넷 내 스푸핑된 서버에 의해 Packet 스니핑이 가능하기에 민감정보와 PW 암호화"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   88,
+   92
+  ]
+ },
+ {
+  "id": "NW_066",
+  "code": "NW_066",
+  "title": "RARP",
+  "subtitle": "RARP(Reverse Address Resolution Protocol)",
+  "domain": "NW",
+  "category": "NW > 프로토콜 목록 > RARP(Reverse Address Resolution Protocol)",
+  "definition": "역순 주소 결정 프로토콜(Reverse Address Resolution Protocol, RARP)은 IP 호스트가 자신의 물리 네트워크주소(MAC)는 알지만 IP 주소를 모르는 경우, 서버로부터 IP 주소를 요청하기 위하여 사용하는 프로토콜",
+  "keywords": [
+   "RARP Server"
+  ],
+  "sections": [
+   {
+    "title": "RARP(Reverse Address Resolution Protocol) 개요",
+    "bullets": [
+     "▸ RARP 의 정의",
+     "▸ RARP(Reverse Address Resolution Protocol) 필요성",
+     "디스크가 존재하지 않는 시스템이나 X 윈도우 터미널 등에서는 자신의 LAN 카드 정보를 읽어 MAC 주소를얻을 수 있지만, 파일시스템이 없으므로 IP 주소를 보관할 방법이 없음",
+     "이런 경우 자신의 MAC 주소와 IP 주소의 매핑 값을 보관하는 호스트로부터 IP 주소를 얻어야 함"
+    ]
+   },
+   {
+    "title": "RARP 개념도",
+    "bullets": [
+     "Request 시 물리주소 요청, Response 시 논리주소 응답"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   93,
+   94
+  ]
+ },
+ {
+  "id": "NW_069",
+  "code": "NW_069",
+  "title": "DHCP",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 기타 > DHCP",
+  "definition": "한정된 IP주소를 정적/동적 할당 방식을 통해 일정기간 임대를 제공하는 프로토콜 (RFC 1541 규정)",
+  "keywords": [
+   "초기화: DORA",
+   "갱신: RA",
+   "종료: R"
+  ],
+  "sections": [
+   {
+    "title": "IP 주소 및 세부정보의 동적 호스트 구성 프로토콜, DHCP의 개념",
+    "bullets": [
+     "▸ DHCP(Dynamic Host Configuration Protocol)의 정의",
+     "▸ DHCP의 특징",
+     "IP 주소, 서브넷 마스크, 게이트웨이, DNS 등 IP 매개변수의 자동설정",
+     "2개의 구성요소 즉, DHCP 클라이언트(내 노트북) 및 DHCP 서버로 정의",
+     "IP 부족 해결을 위해 NAT(Network Address Translation)와 같이 사용됨"
+    ]
+   },
+   {
+    "title": "DHCP의 개념도 및 동작원리",
+    "bullets": [
+     "▸ DHCP의 개념도",
+     "관리자는 DHCP 서버를 통하여, IP Pool로부터 클라이언트에게 IP주소들을 동적으로 할당할 수 있으며, 더이상 사용되지 않는 경우 회수함.",
+     "▸ DHCP의 동작 원리",
+     "초기화에는 Discover, Offer, Request, Ack, 갱신시는: Request, Ack 종료시에는: Release사용"
+    ]
+   },
+   {
+    "title": "DHCP의 장단점",
+    "bullets": [
+     "안전하고 신뢰할 수 있는 구성 - 브로드캐스트 트래픽 유발, 네트워크 성능 저하",
+     "구성 관리 작업 간소화 - 실제 인터넷을 사용하지 않아도 IP 주소가 할당",
+     "뛰어난 확장성 - DHCP 서버에 전적으로 의존",
+     "네트워크를 통한 BOOTP의 지원",
+     "DHCP 데이터베이스의 관리",
+     "BOOTP : 서버와 클라이언트 간의 초기 적재 통신 규약"
+    ]
+   }
+  ],
+  "warnings": [],
+  "dueum": "DORA(도라)-RA-R(라)",
+  "pages": [
+   95,
+   97
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_070",
+  "code": "NW_070",
+  "title": "WebRTC",
+  "subtitle": "WebRTC(Web Real-Time Communication)",
+  "domain": "NW",
+  "category": "NW > 프로토콜",
+  "definition": "HTML5와 자바 스크립트 API 를 사용하여 웹 상에서 플러그인 없이 브라우저를 기반으로 실시간 음성, 영상 및데이터를 공유할 수 있는 개방형 실시간 통신 표준 기술",
+  "keywords": [
+   "MediaStream",
+   "RTCPeerConnection",
+   "RTCDataChannel",
+   "NAT",
+   "STUN",
+   "TURN",
+   "ICE",
+   "SDP",
+   "SRTP",
+   "JSEP",
+   "TLS/SSL",
+   "P2P(MESH)",
+   "MCU",
+   "SFU"
+  ],
+  "sections": [
+   {
+    "title": "브라우저 기반 음성/화상 통신, WebRTC의 개념",
+    "bullets": [
+     "브라우저 간에 Third-party 프로그램이나 Plug-in 없이도 실시간 멀티미디어 서비스가 가능하도록 설계된 API"
+    ]
+   },
+   {
+    "title": "WebRTC의 구성도 및 구성요소",
+    "bullets": [
+     "▸ WebRTC의 구성도",
+     "브라우저 개발자를 위한 WebRTC C++ API와 웹 어플리케이션 개발자를 위한 Web API를 제공",
+     "▸ WebRTC의 구성요소",
+     "App 간의 통신 초기화, 종료, 에러 리포트",
+     "IP Address, Port 교환",
+     "웹 브라우저 간 사용 가능한 코덱 및 해상도 전송"
+    ]
+   },
+   {
+    "title": "WebRTC의 다자간 통신의 유형",
+    "bullets": [
+     "중앙 미디어 서버 없이 - 스트림을 서버에서 mixing - 서버에서 mixing하지 않고해서 다시 전송하는 방식 스트림을 선택해서 전송",
+     "가장 낮은 latency - Client의 NW부담 저하 - 1:N 스트리밍 구조에 적합",
+     "서버 비용이 거의 발생 - NW에 대한 최적화 - 높은 속도, 서버 부하 적음",
+     "실시간성 빠름, 통화 품질 우수",
+     "클라이언트 수가 많아지면 - 서버 사이트 CPU 리소스 - 서버 사이드 NW트래픽 높음",
+     "NW 대역폭과 기기 환경이"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   98,
+   100
+  ]
+ },
+ {
+  "id": "NW_071",
+  "code": "NW_071",
+  "title": "QUIC",
+  "subtitle": "QUIC(Quick UDP Internet Connections)",
+  "domain": "NW",
+  "category": "NW > 2019 출제 예상 토픽 > QUIC",
+  "definition": "서버와 사용자 기기 간 연결 및 전송 지연을 최소화 하기 위해, TCP+TLS 조합 대신 UDP+TLS 조합을이용하는 전송단(Transport Layer) 프로토콜",
+  "keywords": [
+   "UDP",
+   "DTLS",
+   "RTT(Round Trip Time) 최소화"
+  ],
+  "sections": [
+   {
+    "title": "RTT 최소화 위한, QUIC 의 개요",
+    "bullets": [
+     "▸ QUIC(Quick UDP Internet Connections)의 개념",
+     "서버와 사용자 기기 간 네트워크 반응 속도를 높이기 위해 2013 년 6 월 구글에서 공개한 프로토콜",
+     "기기와 서버가 보안 통신할 때 주고 받는 신호를 완료하기 까지 걸리는 RTT를 줄여 인터넷 속도를 향상",
+     "▸ QUIC의 특징",
+     "TCP 대신 UDP Multiplexed Connection 사용",
+     "TLS 와 결합하여 보안 서비스 제공"
+    ]
+   },
+   {
+    "title": "QUIC 의 연결 수립과정 (기존 방식과 효율성 측면 비교)",
+    "bullets": [
+     "보안웹 브라우징을 위한 표준 방식은 TCP+TLS 연결이며 이는 브라우저가 웹 페이지를 활성화하기 전보안연결을 위해 2~3 회의 신호 왕복을 요구-",
+     "반면QUIC 은 전에 서버와 통신했던 클라이언트라면 왕복 없이 데이터를 받아 페이지 로드를 더 빠르게 수행"
+    ]
+   },
+   {
+    "title": "QUIC 최신 동향",
+    "bullets": [
+     "현재크롬과 구글 서버 간 요청의 절반 이상이 QUIC 을 통해 수행 중",
+     "최근 구글 IO 2016 에 소개된 알로 메신저의 핵심기술로서 WebRTC 와 더불어 사용",
+     "향후 QUIC을 더 개선한 뒤 IETF 에 인터넷 표준으로 제안할 계획 [참고: HTTP/2 over QUIC 적용 예시]"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   101,
+   102
+  ]
+ },
+ {
+  "id": "NW_072",
+  "code": "NW_072",
+  "title": "VRRP",
+  "subtitle": "VRRP (Virtual Router Redundancy Protocol)",
+  "domain": "NW",
+  "category": "NW > 2019 출제 예상 토픽 > VRRP",
+  "definition": "여러 대의 라우터를 그룹으로 묶어 하나의 가상 IP 어드레스를 부여해 마스터로 지정된 라우터 장애 시 VRRP 그룹 내의백업 라우터가 마스터로 자동 전환되어 라우팅 경로를 백업하는 프로토콜",
+  "keywords": [
+   "Master Router",
+   "Backup Router",
+   "VRID/Virtual IP/Virtual MAC/VRRP Priority"
+  ],
+  "sections": [
+   {
+    "title": "VRRP의 구성도 및 구성 요소",
+    "bullets": [
+     "▸ VRRP의 구성도",
+     "평상시 Priority가 높은 Router1이 Master가 되어, VIP를 소유하게 되고, Host는 Router 1 으로 데이터를 보냄",
+     "Master Router 장애 시 Backup Router는 VIP와 VMAC을 가져와 Host의 Default Gateway 역할을 수행 함",
+     "▸ VRRP의 구성요소",
+     "별도 설정 하지 않으면 Default 값인 100이 할당 됨"
+    ]
+   },
+   {
+    "title": "VRRS와 HSRP 비교",
+    "bullets": [
+     "HSRP(Hot Standby Routing Protocol)는 네트워크장비 제조업체인 Cisco의 독점프로토콜로 VRRP와 유사한 기능을수행하는 프로토콜임."
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   103,
+   104
+  ]
+ },
+ {
+  "id": "NW_073",
+  "code": "NW_073",
+  "title": "MTCP",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 기타 > MTCP",
+  "definition": "TCP 를 확장한 개념으로, 단말이나 서버에서 하나의 연결에 대해 동시에 여러 개의 인터페이스를사용하여 전송속도 및 대역폭을 향상시키는 기술",
+  "keywords": [
+   "TCP sub-flow",
+   "MP_CAPABLE",
+   "MP_JOIN"
+  ],
+  "sections": [
+   {
+    "title": "MPCTP 의 개요",
+    "bullets": [
+     "▸ MPTCP 의 개념",
+     "▸ MPTCP 의 특징",
+     "다중 경로 통합 대역폭 확장",
+     "다중 회선으로 데이터를 나누어서 전송",
+     "다중 연결통한 단말의 이동 안정성 확보",
+     "여러 경로 중 최적 경로 선택 전송"
+    ]
+   },
+   {
+    "title": "MPTCP 의 계층구조",
+    "bullets": [
+     "▸ MPTCP 의 계층구조",
+     "▸ MPTCP 계층구조 상세설명",
+     "MPTCP 기반 다중 연결 Application",
+     "MPTCP 기능 제공 및 Subflow 제어",
+     "개별 Subflow TCP",
+     "TCP 연결마다 개별 IP 할당"
+    ]
+   },
+   {
+    "title": "MPTCP 의 Subflow JOIN 절차",
+    "bullets": [
+     "▸ MP_CAPABLE, MP_JOIN 절차",
+     "▸ MP_CAPABLE, MP_JOIN 절차설명",
+     "MPTCP 는 최근 애플의 iOS 7 에 적용됨 이동통신망과 WiFi 의 동시 전송이 목적이 아닌 빠른 네트워크인터페이스 전환을 통한 끊김 없는 연결 Seamless connection) 지원에 무게를 두고 있음",
+     "국내 이동통신사의 경우 LTE 와 WiFi 결합을 통한 빠른 속도 제공을 목표로 세계 최초 상용화"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   105,
+   106
+  ]
+ },
+ {
+  "id": "NW_075",
+  "code": "NW_075",
+  "title": "L4 스위치",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > Ethernet Switch > L4 스위치",
+  "definition": "OSI 7 Layer 중 4번째 Layer인 전송계층에 해당되는 TCP/UDP 포트 정보를 이용하여 네트워크 트래픽을분산하고 경로를 결정하는 스위칭 기술.",
+  "keywords": [
+   "TCP/UDP 포트 기반 스위칭",
+   "VIP",
+   "부하분산 알고리즘: Round Robin, Least Connection, Response time, Hash",
+   "서버 감시: ICMP, TCP Connection, HTTP Request",
+   "Fail Over"
+  ],
+  "sections": [
+   {
+    "title": "L4 스위치의 개요",
+    "bullets": [
+     "▸ L4 스위치의 정의",
+     "TCP/UDP Header를 확인 후 우선시 해서 로드 밸런싱을 하고, VIP 지정을 통한 Load Balance 및 Fail Over 기능을 제공하는 4계층 스위치",
+     "Real IP를 묶은 VIP로 향하는 트래픽은 RR방식으로 로드 밸런싱 됨 *로드 밸런스",
+     "Redundancy(어느 한 회선이 다운되더라도 다른 회선으로 서비스 지속)",
+     "Link Aggregation(각각의 회선 용량을 합하여 사용함으로써 웹서버 회선 “총용량”을 늘이기 위함)"
+    ]
+   },
+   {
+    "title": "L4 스위치의 주요 기능",
+    "bullets": [
+     "서버 기반의 Load Balancing 제공",
+     "Firewall & VPN Load Balancing 제공 여러 대의 서버 가상화",
+     "부하 분산을 통해 네트워크 안정성 및 품질향상투명한 캐싱 서비스 제공 사용자 설정 필요 없음서비스 포트에 따라 서비스 N/W 트래픽 종류에 따라 서로 다른 서비스종류 인식",
+     "어플리케이션의 중요도에 따라 우선 순위 결정",
+     "TCP/UDP 헤더의 포트값을 인식하여 서비스별 분류가 가능 서비스 포트 이용",
+     "전자우편에 비해 화상회의에 더 많은 대역폭 제공"
+    ]
+   },
+   {
+    "title": "이더넷 스위치의 발전 방향",
+    "bullets": [
+     "현재 인터넷의 데이터의 대부분이라 할 수 있는 웹 데이터에 대한 부하분산 기능을 강화",
+     "IP주소나 TCP/UDP 포트값 뿐만 아니라 URL이나 Cookie정보 등을 이용하여 웹 데이터에 대한 보다 효율적인부하 분산 기능 수행."
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   107,
+   111
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_078",
+  "code": "NW_078",
+  "title": "로드밸런서(Load Balancer)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > Ethernet Switch > 로드밸런서",
+  "definition": "클라이언트와 서버 사이에 위치하여 한 대의 서버로 부하가 집중되지 않도록 서버에 가해지는 부하를 분산시켜주는 기술",
+  "keywords": [
+   "부하분산",
+   "L4",
+   "L7",
+   "Round Robin",
+   "Hashing",
+   "Least Response",
+   "Least Connection"
+  ],
+  "sections": [
+   {
+    "title": "로드밸런서의 유형과 기술요소",
+    "bullets": [
+     "▸ 로드밸런서의 유형",
+     "애플리케이션 계층(HTTP, FTP, SMTP)에서",
+     "네트워크 계층(IP, IPX)이나 트랜스포트 계층 HTTP 헤더, 쿠키 등과 같은 사용자 요청을 (TCP, UDP)의 정보를 바탕으로 로드 분산기준으로 트래픽 분산",
+     "Layer 4 (Transport Layer) - Layer 7 (Application Layer)",
+     "패킷 레벨 부하 분산으로 속도가 빠름 - 상위계층에서 상세한 라우팅 가능",
+     "복호화 불필요하고 가격이 저렴 - 캐싱 기능, 비정상 트래픽 필터링 가능"
+    ]
+   },
+   {
+    "title": "로드밸런서의 가용성 확보방안",
+    "bullets": [
+     "다중화된 Load Balancer는 서로 Health Check를 수행",
+     "Main Load Balancer가 동작하지 않으면 failover 수행",
+     "트래픽 폭주 발생시 시스템 자원을자동으로 확장하여 부하를 분산",
+     "로드밸런서의 가용성을 확보하기 위해서 로드밸런서의 다중화와 오토스케일링이 필요."
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   112,
+   113
+  ]
+ },
+ {
+  "id": "NW_079",
+  "code": "NW_079",
+  "title": "V2V",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > V2V > V2V",
+  "definition": "VANET(Vehicle Ad-hoc NETwork)의 요소기술로, 차량과 차량 사이 무선통신으로 달리는 자동차끼리 차량 안전을 위해 자동으로 통신을 주고받는 차량간 멀티홉 통신기술",
+  "keywords": [
+   "VANET",
+   "차량간 멀티홉 통신 기술",
+   "WAVE",
+   "브로드캐스팅",
+   "M2M(Machine to Machine)",
+   "5G"
+  ],
+  "sections": [
+   {
+    "title": "교통 효율성 증대 통신기술, V2V의 개요",
+    "bullets": [
+     "▸ V2V(Vehicle to Vehicle)의 정의",
+     "가까운 차량의 위치정보 및 속도 정보 등을 공유하면서 앞 차량과의 거리가 너무 근접하면 자동으로 브레이크를 작동함, 갑작스러운 충돌, 끼어들기 등이 예상되면 경보와 함께 스스로 차로를 변경함",
+     "▸ V2X의 종류",
+     "▸ V2V 요구사항",
+     "WAVE 를 기반으로 한 V2X 기술들과의 호환되는 성질",
+     "주기적 안전주행 메시지 브로드캐스팅을 통한 홉(차량)통신 지원"
+    ]
+   },
+   {
+    "title": "V2X 구성도에서의 V2V 개념도 및 기술요소",
+    "bullets": [
+     "▸ V2X 구성도에서의 V2V 개념도",
+     "달리는 차량간 안전을 위한 통신기술"
+    ]
+   },
+   {
+    "title": "V2V(Vehicle to Vehicle) 적용 시 고려사항",
+    "bullets": [
+     "메시지를 탈취하여 재전송하는 네트워크 혼란을 야기하는 재생공격을방지해야 함",
+     "차량통신시스템은 개인정보에 접근하면 안됨",
+     "신뢰성 있는 통신링크를 제공하기 위해서 다이버시티 기법의 적용",
+     "V2V의 성공적 적용을 위해서는 보안과 프라이버시 측면 이외에도 아래와 같은 선결과제가 존재함",
+     "폐지목록(Revocation List) 관리로 인해 불필요한 많은 자원을 소모하는 문제점 해결",
+     "상호인증 및 메시지의 서명과 검증에 많은 시간이 소모되어 효율성 저하되는 부분에 대한 해결 [참고] 프라이버시를 보장하는 V2V 인증기법 비교"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   114,
+   115
+  ]
+ },
+ {
+  "id": "NW_080",
+  "code": "NW_080",
+  "title": "Connected Car",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > V2V > Connected Car",
+  "definition": "통신망을 연결해 차량 자체를 정보기술(IT) 기기처럼 활용할 수 있는 자동차 차량 연결성(connectivity)을 강조하는 개념으로 자동차에 네트워크 기능을 탑재함으로써 실시간 네비게이션, 원격 차량제어 및 관리 서비스뿐만 아니라 이메일, 멀티미디어 스트리밍, SNS등 엔터테인먼트 서비스를 지원",
+  "keywords": [
+   "차량 연결성",
+   "개인화",
+   "양방향",
+   "실시간",
+   "LTE",
+   "WiFi",
+   "V2V",
+   "V2I"
+  ],
+  "sections": [
+   {
+    "title": "커넥티드 카의 개념도 및 구성요소",
+    "bullets": [
+     "▸ 커넥티드 카의 개념도",
+     "자동차를 3G/LTE등 네트워크와 연결해 실시간으로 맞춤형 양방향서비스를 가능하게 함으로써 자동차를 스마트 디바이스(smart device) 화"
+    ]
+   },
+   {
+    "title": "연결방식에 따른 분류 및 서비스 종류",
+    "bullets": [
+     "▸ 연결방식에 따른 분류",
+     "정보처리와 통신 접속 기능을모두 차량에 설치한 방식",
+     "초기하드웨어와 솔루션 비용이높지만, 끊김 없는(Seamless) 사용자 경험을 제공",
+     "정보처리 기능을 갖춘자동차로 휴대전화 테더링을통해 네트워크에 접속하는방식",
+     "끊김 없는 서비스 제공에한계가 있을 수 있으나, 서비스요금 부과가 용이함",
+     "자동차에 스마트폰을도킹(Docking)해 통신 접속과정보처리 기능을 스마트폰에의존하는 방식"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   116,
+   120
+  ]
+ },
+ {
+  "id": "NW_082",
+  "code": "NW_082",
+  "title": "V2X",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > V2V > V2X",
+  "definition": "차량간에 유무선망을 통해 다른 차량 및 도로 등 인프라가 구축된 사물과 정보를 교환하는 기술, C-ITS에서의 'Connected/Networked Vehicle(Car)'를 구현하기 위한 핵심기술",
+  "keywords": [
+   "V2V",
+   "V2I",
+   "V2N",
+   "V2P(Pedestrian, 보행자)",
+   "IVN",
+   "VANET",
+   "WAVE",
+   "C-ITS"
+  ],
+  "sections": [
+   {
+    "title": "지능형 교통시스템의 핵심 기술, V2X(Vehicle to Everything) 의 개요",
+    "bullets": [
+     "▸ V2X(Vehicle to Everything) 의 정의",
+     "▸ V2X 의 특징",
+     "V2X는 V2I(Vehicle to Infrastructure), V2V(Vehicle to Vehicle), V2N(Vehicle to Nomadic Device), V2P(Vehicle to Pedestrian), IVN(In-Vehicle Network)등을 총칭",
+     "통신표준 기술로는 WAVE, ISO TC204 WG16,17등이 있음"
+    ]
+   },
+   {
+    "title": "V2X 의 개념도 및 종류",
+    "bullets": [
+     "▸ V2X 의 개념도",
+     "▸ V2X(Vehicle to Everything)의 종류",
+     "V2X를 위한 통신 표준기술로 WAVE, LTE V2X 방식통신기술 설명 ISO TC204 - 도로 곳곳에 차량 내에 설치된 통신 단말기와 상호 정보를 교환할 수 WG16 CALM 있는 일종의 기지국을 설치하여 차량으로부터 주행 정보들을 수집하고, 이를 중앙 서버에서 분석하여 교통상황 및 대처 방법 등을 후속 차량에제공하는 기술",
+     "V2I 기술은 V2V 기술과 접목되어 활용되는 것이 효율적임",
+     "이 기술은 V2I 기술과 접목되어 도로 교통상황 파악, 사고 예방 등에활용될 수 있음",
+     "차량이 길을 건너는 보행자의 스마트폰을 인지해 운전자에게 보행자접근경보를 보내 사고를 예방"
+    ]
+   },
+   {
+    "title": "V2X(Vehicle to Everything)의 통신표준",
+    "bullets": [
+     "ISO 24102 : CALM anagement, CALM 미디어 간 통신 관리에서시스템 관리로 확장",
+     "CALM에서 수용 가능한 미디어와 이를 위한 인터페이스 표준을관장함",
+     "다양한 통신 미디어를 수용하고 차량에서 인터넷 접속을 위한 IPv6기반 네트워킹 기술 표준을 관장함",
+     "ISO 21210 : CALM Networking, CALM IPv6 기반 라우팅 및 미디어스위칭",
+     "차량 간에 non-IP 기반 통신방법 및 절차표준을 관장함",
+     "ISO 29281 : CALM non-IP Communication Mechanisms, CALM non-IP 기반 통신방법 및 절차 정의"
+    ]
+   },
+   {
+    "title": "V2X 표준 기술 비교",
+    "bullets": [
+     "5G상용화 되면 결국 5G에 통합될것으로 예상"
+    ]
+   },
+   {
+    "title": "국내 V2X(Vehicle to Everything)의 발전을 위한 현황 및 제언",
+    "bullets": [
+     "국토해양부의 스마트하이웨이 프로젝트나 -. 도로, 교통에 초점을 맞추는 정책이 아닌",
+     "시스템안정화, 기술현실화, 주파수할당, QoS향상방안등",
+     "국내 자동차메이커의 V2X기술개발의 참여 -. 정부와 자동차산업, ICT산업의 협력을 통해 경쟁력 향상 필요",
+     "미국, 유럽, 일본은 ITS서비스,법, 제도측면 -. 우리나라의 강점인 ICT기술을 바탕으로 정부차원에서 주요선진국들과의 협력이 필요"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   121,
+   125
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_083",
+  "code": "NW_083",
+  "title": "DSRC",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > V2V > DSRC",
+  "definition": "노변기지국(RSE: Road Side Equipment)과 차량탑재단말(OBE: OnBoard Equipment)이 근거리 무선통신을통해 각종 정보를 주고 받는 시스템으로서, ITS의 핵심기술",
+  "keywords": [
+   "ITS",
+   "노변기지국",
+   "차량탑재단말",
+   "LOS",
+   "고속전송",
+   "수동형",
+   "능동형",
+   "1Mbps"
+  ],
+  "sections": [
+   {
+    "title": "노변 기지국 통신을 위한 근거리 통신 DSRC의 개요",
+    "bullets": [
+     "▸ DSRC(Dedicated Short Range Communication)의 정의",
+     "차량과 노변 기지국간 100m 이내에서 1Mbps 급의 근거리 통신이 가능하여 요금징수 및 교통량 수집과정보 제공하는 네트워킹 기술",
+     "▸ DSRC의 특징",
+     "노변-차량간 양방향 근거리 통신(Coverage 100m 이하)",
+     "LOS(Line of Sight)를 유지할 수 있는 통신환경",
+     "고속전송(~1Mbps) 기능"
+    ]
+   },
+   {
+    "title": "DSRC의 통신방식 비교 및 고려사항",
+    "bullets": [
+     "▸ DSRC의 통신방식 비교",
+     "▸ DSRC의 고려사항",
+     "정통부와 도로공사는 ETCS를 포함한 ITS용 통신 인프라로 능동형 DSRC와 능동형 IR 기술을 병행 사용",
+     "능동형 ITS시장이 확산되기 위해서는 앞으로 단말기 보급 등 실질적인",
+     "상용화 방안이 관건이 될 것 유지할 수 있는 통신환경"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   126,
+   130
+  ]
+ },
+ {
+  "id": "NW_084",
+  "code": "NW_084",
+  "title": "WAVE",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > V2V > WAVE(IEEE 802.11p)",
+  "definition": "차량과 차량 혹은 차량과 인프라 간 무선통신을 위해 차량 최대 속도 200km/h, 100ms 이내의 지연시간을가지면서 최대 27Mbps(대역폭 10MHz)의 전송속도를 가지는 차량용 1km 내외의 근거리 무선통신 기술",
+  "keywords": [
+   "IEEE 802.11p / IEEE 1609.1~4",
+   "5.9GHz 대역, 75MHz 대역폭",
+   "최대 1km 커버리지",
+   "최대 200km/h 이동",
+   "100ms 이내 지연",
+   "V2V·V2I"
+  ],
+  "sections": [
+   {
+    "title": "자율주행차의 V2X를 위한 근거리 통신 표준기술, WAVE의 개요",
+    "bullets": [
+     "▸ WAVE(Wireless Access in Vehicular Environment)의 정의",
+     "IEEE 802.11p 물리 계층을 활용하여 5.85~5.925GHz 전용 주파수 대역을 사용하고 고속의 이동환경에서적합하도록 무선 랜에 비해 좁아진 채널 대역폭(10Mhz)과 높은 RF 출력(48dBM)을 제공하는 차량간 통신에적합한 프로토콜."
+    ]
+   },
+   {
+    "title": "표준관점에서 WAVE가 적용된 단말의 기본적인 스택 구조",
+    "bullets": [
+     "▸ WAVE 기반의 V2X 통신 표준",
+     "SAE J2735는 V2X 통신시 전송하는 메시지의 종류, 포맷, 우선순위 등을 정의",
+     "SAE J2945는 J2735에서 정의한 안전메시지 BSM(Basic Safety Message)을 초당 10회(10Hz)주기로 브로드캐스팅 하도록 정의",
+     "IEEE 802.11p는 IEEE 802.11p WAVE 표준화는 미국의 DSRC (Dedicated Short Range Communications) 주파수대역 할당과 사용기술의 개발을 위해 시작됨 < DSRC(5.9Hz) 주파수대역과 채널할당 >"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   131,
+   134
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_085_00",
+  "code": "NW_085_00",
+  "title": "차량 긴급구난체계(e-Call)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > V2V > 차량 긴급구난체계",
+  "definition": "차량 운행 중 교통사고가 발생하면 e-Call 단말에서 자동으로 사고를 감지하고, 관련 정보를 e-Call 센터로전송하여 경찰 119 안전신고센터 등 구조 기관(EA)에 최소사고정보(MSD : minimum set of data) 전달을 통해 인명 구조 등 사고를 처리하기 위한 시스템",
+  "keywords": [
+   "AM형",
+   "EU형",
+   "e-Call센터",
+   "소방/교통/경찰/응급기관"
+  ],
+  "sections": [
+   {
+    "title": "e-Call의 개념도 및 기술요소",
+    "bullets": [
+     "▸ e-Call 개념도",
+     "▸ IOB의 구성 요소",
+     "동의어로 BM(Before Marketing) 표현",
+     "사견 : EU형은 FPI와 동일한 의미로 예상(EU는 차량에 e-Call 단말의 설치가 의무화되었다는 점이 근거)"
+    ]
+   },
+   {
+    "title": "e-call 동향",
+    "bullets": [
+     "[교통사고 사상자 절반 줄이기 프로젝트] 일환으로 2013년부터 차량용긴급구난체계(한국형 e-Call) 기획진행. 과학기술정보통신부와 국토교통부의 다부처공동사업으로 진행.",
+     "아직까지 범국가적 e-Call 서비스가 도입되지 않아 시험.인증기관 없음모젠(Mozen) 서비스 센터는 국민안전처 U-119센터간 통합 연계 시스템을 구축하고 있으며, 모젠서비스 가입 차량 사고 발생 시, GPS로 파악된 위치정보와 차량종류 등 사고정보를 자동으로 국민안전처 산하 각 시도 소방본부(또는 소방서)에통보 9개국 시범사업으로 HeEro(Harmonized eCall European",
+     "ERA-GLONASS(Emergency Response to Accidents-GLONASS)",
+     "돌발사고 상황 발생 및 정보를 중앙관제센터와 도로내 다른 차량, 경찰에 관련정보를 전송하기 위한 시스템",
+     "GM사의 OnStar와 Ford사의 Sync 서비스",
+     "해당 서비스 장치가 내장된 차량이 사고 및 긴급상황이 발생했을 때 해당 서비스 콜센터로전화연결을 제공"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   135,
+   137
+  ]
+ },
+ {
+  "id": "NW_085_01",
+  "code": "NW_085_01",
+  "title": "6G-V2X",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW> V2X",
+  "definition": "인간이 느끼는 오감 정보를 실시간으로 상상할 수 있는 물리적 세계 및 사이버세계와 제약 받지 않고 통신할수 있는 차세대 이동통신 서비스",
+  "keywords": [
+   "저주파-고주파 캐리어 결합",
+   "AI 기반 센서 퓨전",
+   "높은 이동성을 고려한 빔 관리 기법",
+   "비 지상 네트워크와의 협력 통신"
+  ],
+  "sections": [
+   {
+    "title": "완전 자율주행 핵심 기술, 6G-V2X의 개요",
+    "bullets": [
+     "▸ 6G-V2X의 정의",
+     "사용자 개인의 체감 데이터 전송속도를 5G의 100Mbps 수준에서 1Gbps 수준으로 높이고, 5G의 1ms 지연시간에서 40분의 1수준으로 낮추고, 에너지 효율을 5G와 비교하여 100배 또는 1,000배 수준으로 높임",
+     "▸ 6G-V2X 의 등장 배경",
+     "앞으로 차량에 수백 개의 센서를 비롯해 비디오카메라, 적외선 카메라, 레이더, 라이더 등이 탑재될 것으로 예측",
+     "센서 관련 데이터는 완전자율주행 또는 차량 사고 방지 등에 이용될 것이며, 데이터 전송 속도가 1Gbps 이상 필요할 것으로 예측",
+     "FR1(Frequency Range 1) 위주의 동작을 하는 5G V2X로는 만족시키지 못할 것으로 보임"
+    ]
+   },
+   {
+    "title": ". 6G-V2X의 기술요소",
+    "bullets": [
+     "저주파-고주파 캐리어 결 - 안전 관련한 메시지들은 저주파 대역에 전송하고 대용량 트래픽은 mmWave 또는 Sub-THz 대역에 할당하는 방법 적용",
+     "메시지 별 우선순위를 고려한 자원 스케줄링이 필요하며 특히, 저주파 대역과 고주파 대역을 동시에 고려한 캐리어 결합방식 및 스케줄링 기법에 관한 연구 필요",
+     "AI 기반 센서 퓨전 - 많은 수의 차량으로부터 대량의 센서 데이터 융합을 처리 위해 머신러닝(Machine learning) 또는 딥러닝(Deep learning) 기술",
+     "스마트 교차로(Smart intersection) 등 센서퓨전을 담당하는 도로변 장치 등에서 MEC(Mobile edge computing) 기능을 통합한 네트워크 구조에 대한 고려가 필요",
+     "높은 이동성을 고려한 - 차량의 주행 중에 차량의 방향, 속도, 또는 방해물 등의 주변빔 관리 기법 환경(터널, 교량 등)의 변화가 빠르므로 고속 빔 관리 필요",
+     "센서 정보 또는 예상 경로 등을 이용한 빔 관리 기법 적용"
+    ]
+   },
+   {
+    "title": "6G-V2X와 5G-V2X의 비교",
+    "bullets": [
+     "1Tbps - 20Gbps",
+     "1km2 당 천만대 이상 - 1km2 당 십만대",
+     "1km 이상 - 최대 120m (플라잉카 불가능)",
+     "차량 사이버 보안 융합 등 무선 네트워 - 코어 네트워크에서 네트워크 자원 관리한정적 사용",
+     "향후 자율 주행차 레벨4이상에서는 6G-V2X가 상용화 될 것으로 기대"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   138,
+   139
+  ]
+ },
+ {
+  "id": "NW_085_02",
+  "code": "NW_085_02",
+  "title": "CAN(Controller Area Network)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > V2V",
+  "definition": "ISO 11898 표준 기반하여 컨트롤러 영역 네트워크(CAN) 버스는 지능형 디바이스를 네트워크로 연결하는고정밀 시리얼 버스 시스템",
+  "keywords": [
+   "ISO 11898",
+   "저비용 경량 네트워크",
+   "브로드캐스트 통신"
+  ],
+  "sections": [
+   {
+    "title": "ISO 11898, CAN(Controller Area Network)의 개요",
+    "bullets": [
+     "▸ CAN(Controller Area Network)의 정의",
+     "(역사) CAN은 Bosch가 1985년에 차량 내 네트워크를 위해 개발함"
+    ]
+   },
+   {
+    "title": "CAN(Controller Area Network)의 아키텍처와 기술요소",
+    "bullets": [
+     "▸ CAN(Controller Area Network)의 아키텍처",
+     "▸ CAN(Controller Area Network)의 기술요소",
+     "Multi Master - CAN 버스는 통신 버스를 여러 노드들이 공유",
+     "CAN_High - 두 개의 신호로 통신하므로 단 2개의 선 필요",
+     "CAN_Low - 많은 모듈이 추가되어도 배선의 양이 적음",
+     "Twist Pair 2선으로 되어 있어 전기적 잡음이"
+    ]
+   },
+   {
+    "title": "CAN 통신의 보안 약점 및 대응 방안",
+    "bullets": [
+     "CAN 네트워크 상에 패킷을 전체 수신자로 전송",
+     "패킷 암호화 하지 않고 원본 데이터 전송",
+     "인증이 안된 장치의 데이터 위조 가능",
+     "CAN버스에 직접 접근이 가능하여 위조된 메시지를 전송하거나 재전송 가능",
+     "(방안) 침입탐지시스템(IDS), HMAC 데이터 프레임 인증"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   140,
+   141
+  ]
+ },
+ {
+  "id": "NW_088",
+  "code": "NW_088",
+  "title": "Wireless LAN",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 유선랜 > Wireless LAN",
+  "definition": "IEEE802.11 표준에 기반하고 있는, 무선 신호전달 방식(OFMD)을 이용하여 두대 이상의 장치를 연결하는 기술",
+  "keywords": [
+   "IEEE 802.11",
+   "SSID",
+   "WEP",
+   "AP 간 로밍(Roaming)"
+  ],
+  "sections": [
+   {
+    "title": "무선랜 Topology 및 구성 요소",
+    "bullets": [
+     "▸ 무선랜 구성도",
+     "노트북 및 PC에는 무선랜카드가 필요",
+     "▸ 무선랜 구성요소",
+     "무지향성 안테나: 전파지역의 중심에 위치",
+     "반구형 안테나: 전파지역의 한편 끝에 위치",
+     "지향성 안테나: 매우 긴 거리도 통신이 가능대한 적합한 MAC 인터페이스 및 물리 계층 AD-HOC역할인터페이스를 갖는 장치"
+    ]
+   },
+   {
+    "title": "무선 LAN 보안",
+    "bullets": [
+     "▸ 무선 LAN 보안 취약점 공격 기술 발달 추이",
+     "무선랜은 기존 유선랜의 확장 개념에서 가정 또는 일반 사무실 환경에서 사용되는 경우가 많아 유선랜과무선랜의 분리는 전혀 고려되지 않는 경우가 많으며 이는 보안상 문제점이 존재",
+     "무선 인터넷 서비스의 취약점은 크게 무선 네트워크 접속 시 인증 과정에서의 문제점과 무선 데이터의암호화 취약점으로 구분",
+     "▸ 무선 LAN 보안 취약점",
+     "▸ 무선 LAN의 해킹 유형",
+     "무선LAN 신호를 capture한 후 분석/조합하여 정보 절취"
+    ]
+   },
+   {
+    "title": "무선랜 데이터 전송 취약성과 대응기술",
+    "bullets": [
+     "▸ 무선랜 데이터 전송 취약성",
+     "▸ 무선랜 데이터 전송 대응기술",
+     "▸ 무선 LAN 보안방법",
+     "속도가 빠른 RC4 암호화 알고리즘을 사용하여 무선LAN 통신에대한 암호화(64 또는 128bit 키를 사용)",
+     "AP에 접속할 수 있는 무선LAN 단말의 MAC을 지정하여 접속제한",
+     "MAC 필터링 우회가 가능한 단점이 있음"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   142,
+   151
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_099",
+  "code": "NW_099",
+  "title": "WIFI8(IEEE 802.11bn)",
+  "subtitle": "IEEE 802.11bn",
+  "domain": "NW",
+  "category": "네트워크",
+  "definition": "향상된 효율성을 핵심목표로 UHR(Ultra High Reliability, 극도로 높은 신뢰성)을 제공하는 차세대 Wi-Fi 표준",
+  "keywords": [
+   "Wi-Fi8",
+   "UHR(Ultra High Reliability)",
+   "대역폭(2.4GHz, 5GHz, 6GHz)",
+   "최대속도(100Gbps)"
+  ],
+  "sections": [
+   {
+    "title": "차세대 Wi-Fi 8 표준인 IEEE 802.11bn의 정의",
+    "bullets": [
+     "불안정한 Wi-Fi 연결로 인한 문제점을 해결하고, 사용자에게 더욱 안정적이고 일관된 무선 인터넷 환경을 제공하는 것을 목표"
+    ]
+   },
+   {
+    "title": "Wi-Fi 버전별 비교",
+    "bullets": [
+     "DL only UL & DL UL & DL UL & DL",
+     "- 개별, 방송 제한적 협조적",
+     "- Yes (단일) Yes (다중) Yes (다중)"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   152,
+   153
+  ]
+ },
+ {
+  "id": "NW_100",
+  "code": "NW_100",
+  "title": "단말위치설정",
+  "subtitle": "단말 위치 설정(Localization or Positioning)",
+  "domain": "NW",
+  "category": "NW > 무선 통신기술 > 단말 위치 설정",
+  "definition": "위치정보를 측위하는 기술은 측위에 사용하는 인프라의 유형에 따라 네트워크 기반, 위성신호 기반, Wi-Fi신호기반, 혼합측위 기반의 4가지로 분류 가능",
+  "keywords": [
+   "삼각측량",
+   "핑거프린트"
+  ],
+  "sections": [
+   {
+    "title": "위치 정보 측위 기술의 유형",
+    "bullets": [
+     "Wi-Fi단말이 자신의 위치를 요청할 경우 단말은 - 도심지역에서 저비용으",
+     "사전에 구축한 Wi-Fi AP의 위치정보 DB에서 해 - 전파 맵 작성 및 지속갱신 필요",
+     "ZigBee/Bluetooth 탑재 단말이 AP를 통해 단말의 - 건물의 층단위까지 정확한 위치정보 제공",
+     "이통망 LBS서버에서 ZigBee/Bluetooth 위치서버 10~30m - 모든 건물에 AP 구축 필와 연동하여 위치정보를 제공 (층단위 구분) 요",
+     "정확한 위치를 위해 서버와 연동 필요",
+     "UWB 단말기에 자신의 고유ID를 32bit로 송출 10cm - 투과성이 우수, 건물내"
+    ]
+   },
+   {
+    "title": "무선랜 기반 측위 기술",
+    "bullets": [
+     "▸ 무선랜 기반 측위 기술 유형",
+     "AP 에서 수신된 신호의 지연 시간 및 감쇠 정도를 이용",
+     "측위 지역을 셀로 나누어 장면 분석을 통해 위치를 측위",
+     "AP의 Mac address와 수신신호세기 정보를 이용해 위치 결정",
+     "위치측위 전에 측위 공간에 대해데이터베이스를 미리 구축해야 함",
+     "실내 환경이 바뀌면 재작업 필요"
+    ]
+   },
+   {
+    "title": "WLAN 기반 실내 위치 측위 사례",
+    "bullets": [
+     "GPS 가 닿지 않는 빌딩 내 실내 주차장의 주차 위치 확인 서비스 시행",
+     "반경 5m 정보의 정확성으로 주차구역과 번호를알려주고 주차위치까지 길안내 제공",
+     "코엑스 내부에서의 위치 검색 및 목적지 안내 서비스",
+     "실내 매장 등과 같은 POI 정보와 전시, 회의 및이벤트, 행사 안내 등 제공",
+     "Wi-Fi Fingerprinting 측위 기반",
+     "기존의 다음 맵과 연동하여 상점에 대한 실내공간의 이미지 및 정보 서비스"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   154,
+   156
+  ]
+ },
+ {
+  "id": "NW_101",
+  "code": "NW_101",
+  "title": "WPA3",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > Wireless LAN > 보안표준 > WPA3",
+  "definition": "개인 및 엔터프라이즈 네트워크에서 Wi-Fi 보안을 강화하여 최신 기능을 제공하는 차세대 Wi-Fi 보안",
+  "keywords": [
+   "SAE 프로토콜",
+   "WPA3-Personal",
+   "ECC 192bit",
+   "WPA3-Enterprise",
+   "WiFi Easy Connect",
+   "SHA-2 무결성 검증"
+  ],
+  "sections": [
+   {
+    "title": "차세대 무선랜 암호화 프토토콜, WPA3 의 개요",
+    "bullets": [
+     "▸ WPA3(Wi-Fi Protected Access 3) 의 정의",
+     "WIFI 얼라이언스의 WPA 의 단점을 보완하여 AES 알고리즘을 적용하여 보다 보안을 강화한 보안 프로토콜",
+     "무선 장비와 단말기간 가상 인증 기능을 제공하는 EAP(Extensible Authentication Protocol)의 도입 등의보안기술이 포함된 보다 강화된 인증과 데이터 암호화 기능 제공하는 보안 프로토콜",
+     "▸ WPA3 특징",
+     "구형 레거시 프로토콜 차단",
+     "PMF(Protected Management Frames) 사용 요구"
+    ]
+   },
+   {
+    "title": "WPA3 암호절차및 운영모드 설명",
+    "bullets": [
+     "▸ WPA3 암호절차 비교",
+     "▸ 주요 기능",
+     "▸ 운영모드 설명",
+     "WPA2-Personal의 PSK(Pre-shared Key)를 대체하는 SAE(Simultaneous Authentication of Equals)를 통해 구현, 사전공격 방어.",
+     "자연 암호 선택: 사용자가 기억하기 쉬운 암호 선택",
+     "간편한 사용: 사용자 네트워크 연결 방식 변경 없이 향상된 보안 제공"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   157,
+   160
+  ]
+ },
+ {
+  "id": "NW_102_0",
+  "code": "NW_102_0",
+  "title": "실내외 위치 측위 기술",
+  "subtitle": "실내 위치 측위 기술",
+  "domain": "NW",
+  "category": "NW > 무선 통신기술 > 실내 위치 측위 기술",
+  "definition": "실내외 위치 측위는 한 가지 기술이 아니라 GPS+센서+WiFi 등 여러 기술을 복합적으로 활용해 정확한 위치 정보를 파악하는 기술.",
+  "keywords": [
+   "CCTV",
+   "WiFi(RF fingerprinting, RSSI)",
+   "Bluetooth/비콘(iBeacon)",
+   "센서 기반",
+   "GPS"
+  ],
+  "sections": [
+   {
+    "title": "실내 위치 측위 기술 및 측위 방식",
+    "bullets": [
+     "▸ 실내 위치 측위 기술 종류 및 장단점",
+     "CCTV 의 고화질 서비스를 이용한 실내 위치 기반 서비스",
+     "최근 HD 기반의 고화질 CCTV 가 출현하여 실내 및 실외 감시 서비스 제공",
+     "CCTV 감시 카메라를 이용하여 서비스 제공 가능",
+     "고객의 정보를 묻지 않고 화면의 윤곽으로 고객 정보 예측 가능",
+     "구체적인 고객 정보 확인 (성별, 연령) Tracking 을 위한 별도의 정보 서버 필요 (예측을 위한 별도 서버 구축) WiFi 의 RF fingerprinting, RSSI 등의 기술을 이용하여 위치 정보 제공"
+    ]
+   },
+   {
+    "title": "실내외 위치 측위 기술 종류 및 장단점",
+    "bullets": [
+     "▸ 실외 측위기술",
+     "특정 기지국이 커버하는 Cell 내에 위치할 때 확인된 위치정보를 이동통신망을 통해 전달하여 위치를 확인하는 기술",
+     "두 개 이상의 기지국이 단말기로부터 오는신호의 방향을 측정하여 방향각(LOB, Line of Bearing)을 구하고, 이것을 이용하여 단말기의",
+     "이론상으로는 50~150m의 정확도를 보장하지만, 실제로는 150~200m의 정확도를 보장",
+     "단말기 신호를 수신한 한 개의 서비스 기지국과 2개의 주변 기지국들 사이의 신호 도달시간의 차이를 이용하여 위치 정보를 획득하",
+     "주로 실외에서 장애물이 없는 상황에서 사용하며, 기지국 간 동기 및 다중경로 간섭 처리기법에 따라 정확도 좌우"
+    ]
+   },
+   {
+    "title": "실내 공간 정보 응용 서비스의 핵심 기술, 실내 측위 Indoor Positioning",
+    "bullets": [
+     "▸ 실내 측위의 개념",
+     "WLAN, 블루투스, UWB 등을 이용하여 건물 내부에 있는 사용자의 위치를 파악하고, 이를 스마트폰을포함한 스마트 디바이스에 내장된 지도와 대조해 물건이나 장소의 위치를 쉽게 찾아주는 기술"
+    ]
+   },
+   {
+    "title": "WiFi 기반의 실내 측위 방식 상세 설명",
+    "bullets": [
+     "▸ 단일 AP 측위 기법",
+     "가장 단순한 WiFi 측위 방법이지만 정확도가 가장 떨어짐",
+     "▸ 삼각 측량 기법",
+     "삼각측량법은 다수의 수신신호세기 기반((RSSI：Received Signal Strength Indication), 도착시간 기반(TOA: Time of Arrival) , 왕복이동시간(RTT: Round Trip Time) 의 다변 측위가 있음"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   161,
+   172
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "reviewed": true
+ },
+ {
+  "id": "NW_102_1",
+  "code": "NW_102_1",
+  "title": "네트워크 실시간 측위(NRTK, Network RealTime Kinematic)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "네트워크",
+  "definition": "위성 내비게이션(Global Navigation Satellite System : 위성항법시스템(GNSS)) 시스템의 일반적인 오류를 수정하기 위한 측량 기술",
+  "keywords": [
+   "GNSS",
+   "보정신호",
+   "VRS",
+   "FKP",
+   "MAC"
+  ],
+  "sections": [
+   {
+    "title": "네트워크 실시간 측위(NRTK, Network RealTime Kinematic)의 개념",
+    "bullets": [
+     "▸ 네트워크 실시간 측위(NRTK, Network RealTime Kinematic)의 정의",
+     "▸ 네트워크 실시간 측위(NRTK, Network RealTime Kinematic)의 특징",
+     "양방향 및 단방향 지원 : 단방향 통신 뿐 아니라 양방향 통신까지 지원하는 네트워크 초정밀 측위 기술",
+     "개인용 장비 지원 : 군사, 산업 용도 외에도 개인용 골프 장비 등에 적용"
+    ]
+   },
+   {
+    "title": "네트워크 실시간 측위의 개념도 및 NRTK 보정신호의 구분",
+    "bullets": [
+     "▸ 네트워크 실시간 측위의 개념도",
+     "GNSS 네트워크 방식으로 계산한 NRTK 보정신호는 사용자가 위치한 지점 인근에 배치된 다수의 기준국으로부터 RTK 보정신호를 수집한 후 이를 종합적으로 계산해서 사용자 위치에 적합한 RTK 보정신호를 출력",
+     "▸ NRTK 보정신호의 구분",
+     "다수의 기준국에서 관측한 정보를 이용해 사용자 위치에 적합한 RTK 신호를계산.",
+     "NRTK 시스템이 보정신호 계산 작업을 서버에서 수행.",
+     "사용자 위치 정보를 서버에 지속 전송해야 하기 때문에 양방향 통신환경 필요"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   173,
+   174
+  ]
+ },
+ {
+  "id": "NW_104",
+  "code": "NW_104",
+  "title": "IoT",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 사물지능통신 > IOT",
+  "definition": "네트워크에 연결된 고유하게 식별 가능한 사물들(Things)이 인간의 명시적 개입 없이 상호 정보를 주고받으며 인간 중심적인 서비스를 제공할 수 있는 기반 인프라 기술",
+  "keywords": [
+   "M2M",
+   "IoT 표준: CoAP, MQTT, XMPP, LwM2M",
+   "WoT",
+   "IoE",
+   "LPWA: LoRa, SigFox, LTE-M, NB-IoT",
+   "IoV",
+   "D2D",
+   "소물인터넷",
+   "IoST"
+  ],
+  "sections": [
+   {
+    "title": "능동적 사물과 인간의 소통, IoT의 개요",
+    "bullets": [
+     "▸ IoT(Internet Of Things)의 정의",
+     "이동통신망을 이용하여 사람과 사물, 사물과 사물간 지능통신을 할 수 있는 M2M의 개념을 인터넷으로확장하여 사물은 물론, 현실과 가상세계의 모든 정보와 상호작용하는 개념으로 진화",
+     "▸ 사물인터넷의 등장배경",
+     "초고속 네트워크환경을 기반으로 센서 기술의 데이터 수집 능력 발달과 수집된 데이터의 분석능력 기술의 발달이 IOT 출현의 기반",
+     "▸ IoT의 주목이유",
+     "기존의 PC, Mobile 차원을 넘어, 인터넷과 연동되어 서비스가 가능한 주변기기 (냉장고, 에어컨, 전자레인"
+    ]
+   },
+   {
+    "title": "개념 관점의 특성",
+    "bullets": [
+     "사물과 서비스간 스스로 연결성 지향",
+     "사물과 사물, 사물과 서비스간의 상호 전송관점 연결 지향"
+    ]
+   },
+   {
+    "title": "소통 관점의 특성",
+    "bullets": [
+     "인간의 건강 상태를 지속적으로 모니터링"
+    ]
+   },
+   {
+    "title": "IoT의 구성도 및 구성요소",
+    "bullets": [
+     "▸ IoT의 구성도",
+     "▸ 기술요소",
+     "Wi-Fi 로 대표되는 802.11 a/b/g/n/ac",
+     "Wi-Fi Direct, WAVE Bluetooth, Zigbee, UWB, RFID, 6LoWPAN 802.1x, DHCP, 인증우회, 모니터링 DRM, 워터마킹, 핑거프린팅, CAS/DCAS",
+     "Resource/Property/Syntax 의 구조",
+     "웹서비스, 경량 전송 기술 REST 기반"
+    ]
+   },
+   {
+    "title": "IoT 3대 주요기술 및 핵심기술",
+    "bullets": [
+     "▸ 3대 주요기술",
+     "전통적인 온도/습도/열/가스/조도/초음파 센서 등에서부터 원격 감지, SAR, 레이더, 위치, 모션, 영상 센서 등 유형 사물과 주위 환경으로부터 정보를 얻을 수 있는 물리적 센서를포함",
+     "물리적인 센서는 응용 특성을 좋게 하기 위해 표준화된 인터페이스와 정보 처리 능력을내장한 스마트 센서로 발전하고 있으며, 또한, 이미 센싱한 데이터로부터 특정 정보를추출하는 가상 센싱 기능도 포함되며 가상 센싱 기술은 실제 IoT 서비스 인터페이스에 구현",
+     "기존의 독립적이고 개별적인 센서보다 한 차원 높은 다중(다분야) 센서 기술을 사용하므로한층 더 지능적/고차원적인 정보를 추출할 수 있음",
+     "IoT 의 유무선 통신 및 네트워크 장치로는 기존의 WPAN, WiFi, 3G/4G/LTE, Bluetooth, Ethernet, BcN, 위성통신, Microware, 시리얼 통신, PLC 등, 인간과 사물, 서비스를 연결시킬수 있는 모든 유·무선 네트워크를 의미 ※ WPAN(Wireless Personal Area Networks) ※ 시리얼 통신 : 일반적으로 컴퓨터 기기를 접속하는 방",
+     "IoT 서비스 인터페이스는 IoT 의 주요 3 대 구성 요소(인간·사물·서비스)를 특정 기능을수행하는 응용서비스와 연동하는 역할"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   175,
+   180
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_106",
+  "code": "NW_106",
+  "title": "CoAP",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 사물지능통신/IoT > CoAP",
+  "definition": "인터넷 표준 단체인 IETF(Internet Engineering Task Force)에서 만든 메모리, 에너지, 성능에 제약이 있는 환경을위한 웹 기반 프로토콜, '사물인터넷 국제표준'",
+  "keywords": [
+   "IETF CoRE WG",
+   "UDP 기반 REST",
+   "DTLS",
+   "6LoWPAN / IEEE 802.15.4",
+   "Sensor, Client, Server, Proxy",
+   "CoAP Transactions"
+  ],
+  "sections": [
+   {
+    "title": "낮은사양: 적은 메모리, 낮은 성능의 프로세서 사용",
+    "bullets": [
+     "▸ CoAP 특성",
+     "HTTP기반의 REST 아키텍쳐 사용, 파싱이 간단한 헤더, URI, contents-type지원,",
+     "Push Notification지원, Resource와 Discovery지원"
+    ]
+   },
+   {
+    "title": "CoAP 구성도 및 구성요소",
+    "bullets": [
+     "▸ CoAP 구성도",
+     "▸ CoAP 구성요소",
+     "CoAP 프로토콜을 사용하는 측정 장비",
+     "사물인터넷 정보를 사용하는 주체",
+     "사물인터넷 정보를 수집하여 저장",
+     "CoAP 센서망과 HTTP 인터넷망을 중계"
+    ]
+   },
+   {
+    "title": "CoAP 프로토콜 스택",
+    "bullets": [
+     "물리계층: 저전력, 저비용, 저속의 6LoWPAN 기반",
+     "전달계층: Datagram 단위의 UDP 프로토콜 사용",
+     "응용계층: HTTP 방식인 GET, POST, PUT, DELETE 사용"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   181,
+   182
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_107",
+  "code": "NW_107",
+  "title": "MQTT",
+  "subtitle": "MQTT (Message Queue Telemetry Transport)",
+  "domain": "NW",
+  "category": "네트워크 > 사물지능통신/IoT > MQTT",
+  "definition": "지연 및 손실이 심한 네트워크 환경에서 검침기, 센서 등 작은 기기들의 신뢰성 있는 메시지 전달을 위한오픈 애플리케이션 프로토콜",
+  "keywords": [
+   "최저 사이즈 2Bytes",
+   "Publish/Subscribe",
+   "TLS",
+   "MQTT over TCP"
+  ],
+  "sections": [
+   {
+    "title": "IoT 환경의 Publish/Subscribe 기반 경량화 프로토콜, MQTT의 개요",
+    "bullets": [
+     "▸ MQTT(Message Queue Telemetry Transport)의 정의",
+     "MQTT란 텔레메트리 장치, 모바일 기기에 최적화된 라이트 메시징 프로토콜 IBM 개발, OASIS에서 표준으로 선정",
+     "▸ MQTT의 특징",
+     "단순한 메시지 포맷을 바탕으로 네트워크 대역 및 배터리 소모가 작다는 것을 특징으로 하여 페이스북의모바일 메신저 프로토콜로도 이용설명단순하고 미니멀한 Pub/Sub 메시징 체계작은 메시지 사이즈 2byte, 가변길이 MQTT 헤더 + 오버헤드 최소화애플리케이션 Payload 중요메시지 전달 보장클라이언트와 서버간 연결 유실 시 자체 보정 기능",
+     "▸ MQTT의 필요성",
+     "다양한 앱과 서비스의 등장으로 HTTP 등의 기존 프로토콜만으로는 커뮤니케이션의 다양한 요구사항을 수용 불가능"
+    ]
+   },
+   {
+    "title": "MQTT의 구성도 및 프로토콜 메시지 타입, 구성요소",
+    "bullets": [
+     "▸ MQTT의 구성도",
+     "브로커라는 중계 서버를 기반으로 사물기기들 간의 Publish/Subscribe 관계 모델 사용",
+     "브로커에서는 Publish가 발행한 토픽에 대해 세션을 열고 Subscribe에게 중계해주는 방식",
+     "이를 바탕으로 사물기기들 사이에 전달되는 메시지들의 손실 복구 기능을 통해 전달되는 구조를 가짐",
+     "▸ MQTT 프로토콜 메시지 형식",
+     "MQTT는 크게 3가지 부분- Fixed Header, Variable Header, Payload"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   183,
+   185
+  ]
+ },
+ {
+  "id": "NW_108",
+  "code": "NW_108",
+  "title": "XMPP",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "네트워크 > 사물지능통신/IoT > XMPP",
+  "definition": "2인 이상의 참여자 간에 구조적 데이터를 거의 실시간에 가깝게 교환할 수 있게 해주는 XML 기반 TCP 커뮤니케이션 프로토콜",
+  "keywords": [
+   "TCP",
+   "Publish/Subscribe",
+   "Client/Server",
+   "TLS+SASL"
+  ],
+  "sections": [
+   {
+    "title": "XML기반 실시간 메시지 교환 프로토콜, XMPP의 개요",
+    "bullets": [
+     "▸ XMPP(eXtensible Messaging and Presence Protocol)의 정의",
+     "RFC3920, RFC3921 등 IETF에서 정의한 표준 프로토콜로 XML에 기반한 메시지 지향 미들웨어용 통신프로토콜"
+    ]
+   },
+   {
+    "title": "XMPP의 구성도",
+    "bullets": [
+     "▸ XMPP 구성도 개요",
+     "사물기기들은 전자우편 주소와 같은 형식을 가진 Jabber ID를 이용하여 구분되며, 도메인 서버를 통한 서버 클라이언트 통신 및 도메인 서버 간 통신을 통해 메시지 전달이 지원되는 구조",
+     "▸ XMPP 아키텍처",
+     "각 클라이언트는 프로토콜의 클라이언트 양식을 구현하고 서버에서는 라우팅 기능 제공",
+     "각 클라이언트가 같은 도메인에 속한 상태"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   186,
+   188
+  ]
+ },
+ {
+  "id": "NW_119",
+  "code": "NW_119",
+  "title": "V2X",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "네트워크 > V2V > V2X",
+  "definition": "차량이 유무선망을 통해 다른 차량 및 도로 등 인프라가 구축된 사물과 정보를 교환하는 기술로, C-ITS의 'Connected/Networked Vehicle'을 구현하는 핵심기술. LTE 진화 기술과 NR을 활용한 두 종류의 eV2X 기술로 구성.",
+  "keywords": [
+   "V2V",
+   "V2I",
+   "V2N",
+   "V2P",
+   "IVN"
+  ],
+  "sections": [
+   {
+    "title": "유무선 통신망을 활용한 차량 통신기술인 V2X(Vehicle to Everything)의 개요",
+    "bullets": [
+     "V2X 는 V2I(Vehicle to Infrastructure), V2V(Vehicle to Vehicle), V2N(Vehicle to Nomadic Device), V2P(Vehicle to Pedestrian), IVN(In-Vehicle Network)등을 총칭함",
+     "V2X 의 통신표준 기술로는 WAVE, ISO TC204 WG16,17등이 있음"
+    ]
+   },
+   {
+    "title": "V2X(Vehicle to Everything)의 종류",
+    "bullets": [
+     "정보를 주고 받을 수 있는 통신 단말기를 차량들에 설치하여 이들",
+     "이 기술은 V2I 기술과 접목되어 도로 교통상황 파악, 사고 예방 등에활용될 수 있음",
+     "현재는 블루투스를 이용한 모바일 기기 연결이 주로 적용되고 있으나향후 모바일 OS 등을 활용한 서비스가 예상됨",
+     "차량이 길을 건너는 보행자의 스마트폰을 인지해 운전자에게 보행자접근 경보를 보내 사고를 예방",
+     "다양한 교통 환경에서 ITS 를 구축,통합하기 위해서는 V2X 의 통신표준화가 필요함"
+    ]
+   },
+   {
+    "title": "V2X(Vehicle to Everything)의 통신표준",
+    "bullets": [
+     "ISO 24102 : CALM anagement, CALM 미디어 간 통신 관리에서 시스템관리로 확장",
+     "CALM 에서 수용 가능한 미디어와 이를 위한 인터페이스 표준을 관장함",
+     "다양한 통신 미디어를 수용하고 차량에서 인터넷 접속을 위한 IPv6기반네트워킹 기술 표준을 관장함",
+     "ISO 21210 : CALM Networking, CALM IPv6 기반 라우팅 및 미디어스위칭",
+     "차량 간에 non-IP 기반 통신방법 및 절차표준을 관장함",
+     "ISO 29281 : CALM non-IP Communication Mechanisms, CALM non-IP 기반 통신방법 및 절차 정의"
+    ]
+   },
+   {
+    "title": "국내 V2X(Vehicle to Everything)의 발전을 위한 현황 및 제언",
+    "bullets": [
+     "국토해양부의 스마트하이웨이 프로젝트나 -. 도로, 교통에 초점을 맞추는 정책이",
+     "시스템안정화, 기술현실화, 주파수할당, QoS 향상방안등",
+     "국내 자동차메이커의 V2X 기술개발의 참여도 -. 정부와 자동차산업, ICT 산업의 협력을 통해경쟁력 향상 필요",
+     "미국, 유럽, 일본은 ITS 서비스,법, 제도측면 -. 우리나라의 강점인 ICT 기술을 바탕으로정부차원에서 주요선진국들과의 협력이 필요"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   189,
+   194
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_121",
+  "code": "NW_121",
+  "title": "e-IoT",
+  "subtitle": "e-IoT(Energy IoT)",
+  "domain": "NW",
+  "category": "사물지능인터넷/IoT > e-IoT",
+  "definition": "e-IoT 는 기존 전력 인프라에 IoT 기술을 접목하여 전력∙에너지 분야 인프라 개선 및 신사업을 수행할 수 있도록 하는대화형/사용자 중심/실시간 데이터 분석을 통한 지능적인 서비스",
+  "keywords": [
+   "전력 인프라 + IoT",
+   "LwM2M/CoAP 기반 표준(한전)",
+   "디바이스-게이트웨이-플랫폼",
+   "AMI",
+   "DLMS/COSEM 변환"
+  ],
+  "sections": [
+   {
+    "title": "전력 에너지와 IoT 의 융합,e-IoT(Energy IoT)의 개요",
+    "bullets": [
+     "전력분야에 IoT 기술을 접목하여 정보의 효율적 수집∙관리∙분석을위한 기반 체계로 전력망 기반 IoT 센서와 디바이스데이터, 보안 기술로 구성된 IoT 서비스"
+    ]
+   },
+   {
+    "title": "e-IoT(Energy IoT)의 표준화 동향",
+    "bullets": [
+     "전력 IoT 기술은 다수의 제조사 간의 상호호환성을 만족시키기 위해 표준을 선제적으로 제정하는 것이 필요하여한국전력공사에서는 전력산업용 현장 디바이스 특성과 지배력을 고려하여 LwM2M/CoAP 기반의 표준을 제정",
+     "e-IoT 표준은 디바이스(센서 및 액추에이터), 게이트웨이 및 플랫폼 간의 통신인터페이스,CoAP 기반의 응용 프로토콜 정의, 단말 등록 및 관리절차, 데이터 수집 방법 등의 서비스 절차를 정의 - 향후 AMI 와 IoT 간의 경계가 허물어질 것으로 예상되어 DLMS/COSEM 프로토콜과 LwM2M/CoAP 프로토콜 간 상호 변환 방식을 논의 중에 있음"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   195,
+   197
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "reviewed": true
+ },
+ {
+  "id": "NW_123",
+  "code": "NW_123",
+  "title": "센서 라우팅",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "사물지능인터넷/IoT > 센서 라우팅",
+  "definition": "센서 노드가 임의로 배치되는 무선 센서네트워크에서 자가 구성(Self-Organizing)과 노드 간 협력으로 동작하며, 에너지 소비를 네트워크 전체에 분산시켜 시스템 수명을 늘리도록 설계된 라우팅.",
+  "keywords": [
+   "평면(Flat): DD, SPIN, SAR",
+   "계층(Hierarchical): LEACH, TEEN, APTEEN",
+   "위치기반: GAF, GEAR",
+   "다중경로",
+   "질의기반"
+  ],
+  "sections": [
+   {
+    "title": "센서 라우팅의 정의",
+    "bullets": [
+     "또한 무선 센서네트워크를 위한 프로토콜은에너지 소비를 네트워크 전체에 분산시켜 전체적 시스템 수명을 증가시키고 동적인 변화에 빠르게 대응할 수 있도록 설계",
+     "단말들이 독립적으로 존재하면서 자신을 인식할 수 있는 기기를 연결하여 망 구성을 하기 위해 사용하는 라우팅"
+    ]
+   },
+   {
+    "title": "무선 센서 네트워크 라우팅 프로토콜 상세 설명",
+    "bullets": [
+     "▸ 무선 센서 네트워크 라우팅 프로토콜의 분류",
+     "▸ 무선 센서 네트워크 주요 라우팅 프로토콜 상세 설명",
+     "싱크 노드가 특정 지역에 질의 후 노드들 응답 (Directed Diffusion), 대기 SPIN, COUGAR 등",
+     "중복 데이터 발생으로 불필요한 에너지 소모 발생",
+     "클러스터링을 통해 노드들 사이에 클러스터 생성 - LEACH, TEEN, TTDD,",
+     "클러스터 헤드 선출 후 멤버 노드들의 데이터 수 PEGASIS 등집하고 병합하여 싱크 노드 전송"
+    ]
+   },
+   {
+    "title": "센서 라우팅의 유형",
+    "bullets": [
+     "▸ 평면 라우팅 프로토콜",
+     "싱크의 Query Broadcasting에 기반을 둔 라우팅기법",
+     "질의 유포 처리 응용에 적합",
+     "Interest는 싱크에서 시작되어 네트워크 전체에유포되고, 데이터 요청 노드로 질의에 부합하는 데이터를 전송하기 위한 Gradient를 설정",
+     "협상과 자원 적응에 의한 플러딩의 결함을 처리하기 위해 설계",
+     "센서 노드가 데이터에 대해 광고하고 싱크로부터요청을 기다리는 형태의 데이터 중심 라우팅 기법"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   198,
+   201
+  ],
+  "note": "원문 키워드에는 'REACH'로 적혀 있으나 본문 표기는 LEACH",
+  "reviewed": true
+ },
+ {
+  "id": "NW_124_01",
+  "code": "NW_124_01",
+  "title": "매터 표준과 쓰레드 프로토콜",
+  "subtitle": "메터(Matter) 표준과 쓰레드(Thread) 프로토콜",
+  "domain": "NW",
+  "category": "DS > 신토픽",
+  "definition": "매터(Matter)는 스마트홈의 상호 연동성·신뢰성·안전성을 위해 IP, 와이파이, 쓰레드 등을 기반으로 한 개방형 스마트홈 기기 연동 표준이고, 쓰레드(Thread)는 TCP·UDP/IP, IEEE 802.15.4, 메쉬 네트워크 기반의 저전력 무선 통신 기술.",
+  "keywords": [
+   "쓰레드",
+   "IP",
+   "개방형",
+   "멀티어드민",
+   "로컬제어",
+   "저전력",
+   "매쉬 NW"
+  ],
+  "sections": [
+   {
+    "title": "스마트홈(Smart Home)의 개요",
+    "bullets": [
+     "타 브랜드 디바이스 간 상호 연동 불가",
+     "다양한 스마트홈 서비스 이용 난해",
+     "여러 통신 프로토콜 기반 스마트홈 네트워크 구성",
+     "디바이스별 통신 상이로 데이터 신뢰성 저하 가능",
+     "연동 복잡화에 따른 보안 취약점 증가",
+     "클라우드 플랫폼 연결로 반응 속도 저하 및 장애시 이용 불가 가능"
+    ]
+   },
+   {
+    "title": "매터(Matter)의 개념",
+    "bullets": [
+     "모든 디바이스들에 고유한 IP 기반 글로벌 ID 체계 활용",
+     "여러 플랫폼 동시 활용 및 반영 가능",
+     "쓰레드 기반 메시 네트워크 구성으로 네트워크 커버리지 확장",
+     "IP 기반 D2D, D2C 통신 가능하여 심리스(seamless) 가능",
+     "와이파이 기반 고속 통신 지원",
+     "쓰레드 기반 저속 저전력 통신 지원"
+    ]
+   },
+   {
+    "title": "매터의 프로토콜 스택 및 주요 프로토콜",
+    "bullets": [
+     "IEEE 802.11 표준 기반 고속 데이터 통신을 위해 활용",
+     "IEEE 802.15.4 표준 기반 저전력 디바이스 간의 통신 지원",
+     "저전력 디바이스의 등록, 연결 위해 활용",
+     "엔드포인트, 클러스터, 어트리뷰트 의 데이터 모델 구성으로 논리적 기능 단위 활용 지원",
+     "Thread 지원 장치의 라우팅 노드 역할로 저전력 IoT 디바이스 간의 넓은 통신 범위 확보 가능"
+    ]
+   },
+   {
+    "title": "Thread의 개념",
+    "bullets": [
+     "IoT 등 저전력 디바이스들의 확장성, 안전성, 신뢰성을 제공위해 TCP·UDP/IP , IEEE 802.15.4, 매쉬 네크워크 기술 기반 저전력 무선 통신 기술",
+     "매쉬 지원으로 SPOF 영향 미비",
+     "특정 디바이스 문제시 타 디바이스로 안정적 통신 가능",
+     "데이터 전송과 커미셔닝(commissioning)에 대한 보안 체계 확보",
+     "IP 프로토콜에서 제공하는 보안 특성 활용 가능",
+     "매쉬 특성 기반 네트워크 커버리지 확장"
+    ]
+   },
+   {
+    "title": "Thread의 스택 및 매시 네트워크 구성요소",
+    "bullets": [
+     "센서나 램프 등 종단에 위지한 장치",
+     "페어런트 라우터(parent router)를 통해서만 통신 가능",
+     "메쉬 구성 라우터들을 관리하는 마스터 역할",
+     "가장 먼저 쓰레드 네트워크에 참여한 장치가 쓰레드 리더 수행",
+     "메쉬 NW 구성, 네트워크 내 종단 장치에게 라우팅 기능 제공",
+     "조이닝( joining), 커미셔닝 시큐리티 서비스 제공"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   202,
+   205
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_125",
+  "code": "NW_125",
+  "title": "IPv6 ALL_IP",
+  "subtitle": "All IP",
+  "domain": "NW",
+  "category": "NW > IPv6",
+  "definition": "현재 IPv4 가 가지고 있는 주소고갈, 보안성, 이동성 지원 등의 문제점을 해결하기 위해서 개발된 128bit 주소체계를 갖는 차세대 인터넷 주소체계",
+  "keywords": [
+   "128bit 주소체계",
+   "전환 유형",
+   "보안 이슈",
+   "예) 2001:0DB8:0000:0000:0000:0000:1428:57ab"
+  ],
+  "sections": [
+   {
+    "title": "IPv6 헤더정보 및 전환방법",
+    "bullets": [
+     "▸ IPv6 헤더정보",
+     "▸ IPv4 에서 IPv6 로의 전환방법",
+     "IPv4 전용호스트와 IPv6 전용호스트간의 통신을 위한 기술이며 주소와 헤더의 변환을 수행개념/설명/장단점개념 DUAL STACK (라우팅관점)",
+     "IP 계층에 IPv4 와 IPv6 의 기능 모두 설치",
+     "IPv4/IPv6 의 라우터에 장착",
+     "DNS 주소 해석 라이브러리(DNS Resolver Library)가 두 가지 유형을 모두 지원필요"
+    ]
+   },
+   {
+    "title": "IPv6 프로토콜 자체에서 발생하는 보안위협 및 해결방안",
+    "bullets": [
+     "▸ IPv4 와 다른 확장 프로토콜을 설계하고자 추가한 기능들이 보안관점에서 위험이 된 경우",
+     "IPv6 로 인한 주소공간 확장으로 IP 필터링 o 스패머가 활용할 수 있는 IP 주소 확장방식 스팸방지 기법 적용 어려움 o IPv6 의 다양한 주소 의미를 방화벽에서 o 방화벽에서 링크-로컬, 유니크-로컬, 글로벌 등이해하고 처리하기 어려움 주소별 시멘틱의 필터링 미정의",
+     "IPv4 에는 없는 확장헤더의 전달, 재조합에 o 확장헤더에 대한 방화벽 필터링 규칙에 대한",
+     "라우팅헤더, 홉바이홉, 목적지옵션, 파편화 정의 부족확장헤더 이용한 DoS 공격",
+     "주소 자동설정 제어메시지 오용에 따른 문제 o 주소 자동설정 메시지가 라우터가 아닌공격자에 의해 전송되는 경우 o 다수의 많은 가입자에 잘못된 패킷을 o 멀티캐스트 패킷오류에 대한 응용메시지 범람범람시킬 수 있음 및 애니캐스트의 시멘틱 필터링 미정의",
+     "주소 보안 확장 방법을 이용한 DDoS 공격 o ICMPv6 패킷크기, 변수관련 필터링 부족가능"
+    ]
+   },
+   {
+    "title": "안전한 IPv6 전환을 위한 대응방안",
+    "bullets": [
+     "방화벽, 라우터 등 장비보완",
+     "IPv6 에서 어떠한 확장헤더들이 통과되고 처리되어야 하는지 필터링 규칙 추가",
+     "라우터에서는 내부망에서 사용될 IPv4 주소 필터링 규칙에 대한 정의 추가",
+     "ICMPv4 패킷 규칙에 패킷의 크기나 변수 문제와 관련한 ICMPv6 필터링 규칙 추가",
+     "터널링 및 IPv4/IPv6 전환 매커니즘에 사용되는 프로토콜 및 포트번호 정의",
+     "IPv6 환경에 대비한 철저한 대응전략, 정책수립 필요"
+    ]
+   }
+  ],
+  "warnings": [],
+  "dueum": "버터플파네호(Version-Traffic Class-Flow Label-Payload Length-Next Header-Hop Limit)",
+  "pages": [
+   205,
+   209
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_126",
+  "code": "NW_126",
+  "title": "Dual Stack",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > IPv6 > Dual Stack",
+  "definition": "IPv4와 IPv6를 같은 장치와 네트워크상에서 상호 공존시키는 방법(IPv4/IPv6 라우터에 장착).",
+  "keywords": [
+   "Dual Stack",
+   "Tunneling",
+   "G/W"
+  ],
+  "sections": [
+   {
+    "title": "IPv4/IPv6 Dual stack 방식의 개념",
+    "bullets": [
+     "프로토콜 스택 수정으로 인한 과다한 비용",
+     "정식 IPv4 주소를 사용하므로 주소고갈 문제 해결 못함.",
+     "다른 기술들의 기본 기술이고 쉽게 구축 가능",
+     "프로토콜 스택을 IPv4, IPv6등의 듀얼스택으로 변환기능 수행"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   210,
+   210
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_127",
+  "code": "NW_127",
+  "title": "터널링",
+  "subtitle": "터널링 ( Tunneling)",
+  "domain": "NW",
+  "category": "NW > IPv6",
+  "definition": "송신자가 보내는 데이터를 캡슐화해서 수신자 이외에는 알아볼 수 없도록 데이터를 정송하는 기반 기술",
+  "keywords": [
+   "캡슐화"
+  ],
+  "sections": [
+   {
+    "title": "전송 데이터의 캡슐화를 통한 보안기능, 터널링의 개요",
+    "bullets": [
+     "▸ 터널링 ( Tunneling)의 정의",
+     "▸ 터널링을 이용한 대표적인 사례",
+     "IPv4, IPv6 의 터널링 기술"
+    ]
+   },
+   {
+    "title": "IPV6의 변환기술에서의 Tunneling",
+    "bullets": [
+     "IPv6 헤더의 캡슐화를 통해서, 실제로 IPv4 인터넷 환경에서 IPv6의 패킷을 전달",
+     "IPv6 노드 간에 IPv6 패킷을 IPv4 패킷 속에 포함시켜 IPv4 망으로 전달"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   211,
+   211
+  ]
+ },
+ {
+  "id": "NW_128",
+  "code": "NW_128",
+  "title": "변환(GW) 관점",
+  "subtitle": "변환(G/W) 관점",
+  "domain": "NW",
+  "category": "NW > IPv6",
+  "definition": "IPv4에서 IPv6로 전환하기 위한 방안 관점의 토픽. IPv6 보안취약성, 서비스 모델 부재, 전환 성공사례 미흡으로 민간·공공 부문 전환이 지연되고 있어 전환 기술과 정책이 필요.",
+  "keywords": [
+   "IPv6 특징: 128bit 주소체계, Plug&Play, 이동성, ad-hoc, 보안",
+   "전환 기술: 듀얼스택, 터널링, 주소변환",
+   "전환 정책: 인프라 확충, 서비스 개발, 중소기업 지원, IPv6 의무화"
+  ],
+  "sections": [
+   {
+    "title": "IPv6 전환 필요성",
+    "bullets": [
+     "IPv6 전환 지연 시 신규서비스 수요 대응 지연 등 ICT 산업 발전 저해요인으로 확대 가능성 높음"
+    ]
+   },
+   {
+    "title": "IPv6 의 개념 및 주요 특징",
+    "bullets": [
+     "▸ IPv4 와 비교를 통한 주요 IPv6 의 특징",
+     "현재 IPv4 가 가지고 있는 주소고갈, 보안성, 이동성 지원등의 문제점을 해결하기 위해서 개발된, 128bit 주소체계를 갖는차세대 인터넷 프로토콜 IPv4 IPv6  원본과 대상 주소의 길이가 32비트  원본과 대상 주소의 길이가 128 비트 IPv6 브로드캐스트 주소 없음, 대신링서브넷의 모든 노드로 트래픽을 보내크로컬범위-모든노드 멀티캐스트 주기 위해 브로드캐스트 주소 사용소 사용",
+     "▸ IPv6 의 주요 특징",
+     "다양한 기술적 특징과 활용성을 가진 IPv6 주소체계를 현재 네트워크 환경에 적용하기 위해 다양한 IPv6 전환기술을 숙지하고, 전환을 위한 전략방안 모색이 필요한 시기임"
+    ]
+   },
+   {
+    "title": "IPv6 전환 기술",
+    "bullets": [
+     "▸ IPv6 전환의 개념",
+     "기존 IPv4 Only 장비(라우터, 스위치, 서버, PC 등), IPv4/IPv6 겸용장비 또는 IPv6 Only 장비 등으로 대체하는 것을 의미기존에 사용하고 있는 장비에 대해 IPv6 등의 지원여부를 확인하여 장비교체 및 소프트웨어 업데이트를 통해 가능",
+     "▸ IPv6 전환의 기술",
+     "IPv6 전환기술로는 듀얼스택, 터널링 및 주소변환의 3 가지기술이 있으며 상당기간 동안 IPv4 와 IPv6 가 호환되면서 공존할것으로 전망되어 IPv6 의 확산방안과 로드맵이 필요"
+    ]
+   },
+   {
+    "title": "IPv6 확산 추진 전략",
+    "bullets": [
+     "▸ IPv6 확산 로드맵",
+     "현재 망구축, 서비스제공분야, NW/보안장비분야, 단말기 각 영역별 IPv6 지원율을 점진적 향상 예정",
+     "▸ IPv6 확산 방안",
+     "IPv6 주소체계 도입을 통해 미래인터넷 서비스 기반을 조성하고 차세대 융합서비스의 기반을 마련하는 등 향상된 인터넷서비스 제공 기대"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   212,
+   215
+  ],
+  "note": "원문 키워드에는 'IPv4 특징 : 128 bit'로 적혀 있으나 128bit는 IPv6 특징",
+  "reviewed": true
+ },
+ {
+  "id": "NW_132",
+  "code": "NW_132",
+  "title": "Queue관리",
+  "subtitle": "Queue 관리",
+  "domain": "NW",
+  "category": "NW > QoS",
+  "definition": "QoS: 다양한 통신 서비스에 대한 서비스 품질과 성능을 일정 수준으로 보장하여 사용자 요구를 충족시키는 네트워크 기술.",
+  "keywords": [
+   "Bandwidth",
+   "Jitter",
+   "Delay",
+   "Packet Loss",
+   "IntServ",
+   "DiffServ",
+   "MPLS",
+   "CDN",
+   "ADN"
+  ],
+  "sections": [
+   {
+    "title": "네트워크 서비스 품질 향상을 위한 기술, QoS의 개요.",
+    "bullets": [
+     "▸ QoS 정의",
+     "▸ QoS 필요성",
+     "다양한 형태의 데이터가 인터넷에 유입됨(음성, 데이터, 화상 및 동영상 등)",
+     "서비스의 종류에 따른 서비스 품질을 보장하여 사용자의 권리를 보장(Service Level Agreement)",
+     "단순한 IP기술로는 서비스 수준을 통제하는데 어려움"
+    ]
+   },
+   {
+    "title": "QoS를 결정하는 요소 및 관리 기술",
+    "bullets": [
+     "▸ QoS 결정 주요 요소",
+     "특정 애플리케이션에 할당된 네트워크 자원의 양 - Queuing",
+     "일정시간에 처리한 데이터의 총량을 가리키는 지표 - Shapping",
+     "해결 : 대역폭이 부족한 경우 데이터를 압축하여 전송 - Policing",
+     "서비스 또는 특정처리를 위해 기다림으로 발생하는 지연",
+     "발생지에서 목적지까지 가는 경로에서 발생되는 지연 - Queuing"
+    ]
+   },
+   {
+    "title": "QoS 구현기술",
+    "bullets": [
+     "콘텐츠 전송을 효율적인 위치에서 처리함으로써 전송속도 및 부하관리",
+     "Network의 혼잡상태 발생을 감시하고 혼잡상태를 해결하는 기술",
+     "Multi-Path를 허용한 속도 및 품질보장",
+     "전송량 관리를 위한 압축 기능 장비"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   216,
+   217
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_133",
+  "code": "NW_133",
+  "title": "WFQ",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > QoS",
+  "definition": "특정 기준에 따라 가중치를 정하여 같은 양의 트래픽을 가진 플로우 간에서도 차별을 두는 스케쥴링 기법",
+  "keywords": [
+   "TOS",
+   "가중치"
+  ],
+  "sections": [
+   {
+    "title": "가중치를 통한 QoS 의 공정성 확보, WFQ 의 개요",
+    "bullets": [
+     "▸ WFQ(Weighted Fair Queuing)의 정의",
+     "Fair Queuing(공정 큐잉)의 변형",
+     "▸ WFQ 의 특징",
+     "양이 많은 트래픽이 남아 있는 용량을 공유하고, 대역폭을 동일하게 나누거나비례적으로 분배",
+     "한가지 예로 IP 헤더의 TOS(Type of Service) 필드 중 IP precedence 비트 사용하여구현 가능",
+     "PQ(우선순위 큐일)와 비슷한 특성을 가지고 있는 관계로, 고속의 네트워크 환경에서확장성에 어려움"
+    ]
+   },
+   {
+    "title": "WFQ 의 개념도 및 동작방식",
+    "bullets": [
+     "▸ WFQ 의 개념도",
+     "▸ WFQ 의 동작방식",
+     "라우터 장비(시스코社)에는 보통 4096 개까지의 Queue 를 사용가능 하도록 지원"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   218,
+   219
+  ]
+ },
+ {
+  "id": "NW_134",
+  "code": "NW_134",
+  "title": "Traffic Policing",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > QoS",
+  "definition": "미리 정해진 기준이상을 초과하는 트래픽은 버림으로써 트래픽 대역폭을 제어하는 기술",
+  "keywords": [
+   "초과 트래픽 폐기(Drop)",
+   "미터(meter)·마커(marker)",
+   "SLA 대역폭 제어",
+   "Token Bucket",
+   "Traffic Shaping과 비교"
+  ],
+  "sections": [
+   {
+    "title": "트래픽 대역폭 제어기술, 트래픽 감시 개념",
+    "bullets": [
+     "미터(meter), 마커(marker)를 사용하여 입력 트래픽 프로파일 분류",
+     "Enterprise 서비스를 제공하는 통신 사업자가 Enterprise(기업)와 계약(SLA)된 대역폭 만큼만 패킷이 통신 사업자망으로 유입될 수 있도록 대여폭 제어"
+    ]
+   },
+   {
+    "title": "Traffic Policing 구성요소 및 구현 알고리즘",
+    "bullets": []
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   220,
+   221
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "reviewed": true
+ },
+ {
+  "id": "NW_135",
+  "code": "NW_135",
+  "title": "Traffic Shaping",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > QoS",
+  "definition": "네트워크의 통신량을 제어하여, 패킷을 지연시킴으로써 대역폭을 확보하고 통신 성능을 보장하는 기법",
+  "keywords": [
+   "DiffServ Conditioner",
+   "패킷 지연(버퍼링)",
+   "Leaky Bucket",
+   "Token Bucket"
+  ],
+  "sections": [
+   {
+    "title": "Traffic Shaping 기법",
+    "bullets": [
+     "▸ Leaky Bucket 나. Token Bucket",
+     "망내로 들어오는 셀은 버킷에 저장후 일정 속도로 나감 - 전송 제어용 토큰을 트래픽 관리 용도로 사용",
+     "버킷이 넘칠 경우, 들어오는 셀을 저장하지 않고 버림",
+     "버킷의 용량이 큰 경우, 다수의 셀을 저장할 수 있음"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   222,
+   222
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_136",
+  "code": "NW_136",
+  "title": "사전 패킷 폐기",
+  "subtitle": "사전 패킷 폐기(Proactive Packet Discard)",
+  "domain": "NW",
+  "category": "NW > QoS > 사전 패킷 폐기",
+  "definition": "다양한 트래픽 수용으로 인하여 통신망에 혼잡 상황이 발생한 경우 이를 회피하거나 제어하기 위한 메커니즘",
+  "keywords": [
+   "RED",
+   "WRED"
+  ],
+  "sections": [
+   {
+    "title": "사전패킷 폐기(Proactive Packet Discard)",
+    "bullets": [
+     "▸ RED, WRED 설명",
+     "폭주 발생이전에 통신을 감지하기 위한 방법",
+     "폭주가 발생하기 이전에 이를 감지해서, 사전에 폭주의 가능성을 줄이기 위해 TCP 등에서 채용된 방법",
+     "중요 서비스 패킷을 먼저 DROP 할 수 있는 RED의 단점을 보완한 기법",
+     "서비스 차별성을 유지하면서도 혼잡제어가 가능한 방법",
+     "혼잡 발생 시 탈락시킬 플로우(Flow)를, 특정 기준/정책에 준하는 값에 따라 우선순위 (가중치)를 두고 선택하도록 하는 방법"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   223,
+   224
+  ]
+ },
+ {
+  "id": "NW_137",
+  "code": "NW_137",
+  "title": "혼잡제어",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > QoS > 혼잡제어",
+  "definition": "네트워크 내 대기하는 패킷 수를 줄여, 혼잡을 미연에 방지하거나 제어하는 기법 네트워크 계층 및 전송계층 모두 관여 가능(라우터 중심, 호스트 중심)",
+  "keywords": [
+   "송신자 전송률 제한",
+   "혼잡 감지",
+   "Slow Start",
+   "Congestion Avoidance",
+   "라우터 중심: Tail Drop, RED, WRED",
+   "호스트 중심: TCP 혼잡제어"
+  ],
+  "sections": [
+   {
+    "title": "호스트 중심의 혼잡제어(종단간 혼잡제어)",
+    "bullets": [
+     "구글 새로운 TCP 혼잡제어 알고리즘 (BBR, Botteneck Bandwidth and Round-Trip Time)"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   225,
+   227
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_138",
+  "code": "NW_138",
+  "title": "IntServ",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > QoS > IntServ",
+  "definition": "RSVP와 같은 자원예약 신호제어용 프로토콜에 의해 요구되는 자원을 사전에 예약하여 망으로 유입되는 트래픽에 대하여 수락제어를 함으로써 QoS를 제공하는 모델",
+  "keywords": [
+   "종단간 QOS보장(RSVP를사용)",
+   "PATH/RESV"
+  ],
+  "sections": [
+   {
+    "title": "QoS 보장기술인 IntServ모델의 개요",
+    "bullets": [
+     "▸ IntServ(Integrated Services)의 정의",
+     "▸ IntServ의 서비스의 종류",
+     "용량이나 전송 속도 면에서 확신한 수준 서비스 제공.",
+     "큐잉 지연시간에 대한 상한 규정을 지정",
+     "큐잉에 따른 패킷의 손실이 전혀 없는 서비스",
+     "부하가 없는 상태에서 Best-effort 서비스가 받는 수준의 QoS를 제공."
+    ]
+   },
+   {
+    "title": "IntServ 개념도 및 IntServ 동작 설명",
+    "bullets": [
+     "▸ IntServ 개념도",
+     "각 중간에 있는 라우터들이 RESV 메시지를 수신하여 트래픽에 대한 자원을 할당",
+     "▸ IntServ의 동작 설명",
+     "path 메시지는 트래픽 전송을 위해 필요한 요구사항 및 트래픽 형태를 각 라우터에 알리는 기능수행 path가 예약 되는 과정.",
+     "발신지에서는 경로를 따라 서비스가 제공됨"
+    ]
+   },
+   {
+    "title": "[참고]Resource Reservation Protocol)의 개요",
+    "bullets": [
+     "▸ Resource Reservation의 정의",
+     "비디오와 다른 고대역폭의 멀티캐스트 메시지 전송을 위해 인터넷 상의 채널들이나 경로들을 예약하는 프로토콜"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   228,
+   229
+  ]
+ },
+ {
+  "id": "NW_139",
+  "code": "NW_139",
+  "title": "DiffServ",
+  "subtitle": "DiffServ(Differentiated Service)",
+  "domain": "NW",
+  "category": "NW > QoS > DiffServ",
+  "definition": "DiffServ는 IntServ 방식을 보완한 모델로 비슷한 성질을 트래픽들을 클래스로 묶어 각 클래스 마다 가중치를두어 서비스를 처리",
+  "keywords": [
+   "IntServ 보완",
+   "클래스별 가중치",
+   "DSCP(6비트, IP 헤더)",
+   "ISP에서 할당"
+  ],
+  "sections": [
+   {
+    "title": "DiffServ 구현방식 및 구성요소",
+    "bullets": [
+     "▸ DiffServ 구현방식",
+     "▸ DiffServ 구성요소",
+     "해당 패킷을 클래스 별로 구분하는 단계로 ACL와 Class-Map을 통하여 구별",
+     "구분한 클래스에 대해 Policy-Map을 통해 마킹을 하여 우선순위를 지정",
+     "버퍼를 이용하여 조절하는 Shaping과 Drop을 이용한 Policing 두 가지 방법",
+     "큐잉 기법으로 FIFO, WFQ, CQ, PQ, CBWFQ, LLQ 등"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   230,
+   231
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_140",
+  "code": "NW_140",
+  "title": "MPLS",
+  "subtitle": "MPLS(Multi Protocol Label Switching)",
+  "domain": "NW",
+  "category": "NW > QoS> MPLS",
+  "definition": "Layer 2라벨 교환기술을 통해 IP패킷을 Label을 이용한 고속의 전송기술 IP Header를 이용한 Routing 대신 4Bytes의 단순한 Label을 참조하여 고속의 2계층 Forwarding 처리를 실현하기 위한 프로토콜",
+  "keywords": [
+   "Layer 2",
+   "Label",
+   "LER",
+   "LSR",
+   "LIB",
+   "LSP",
+   "LDP"
+  ],
+  "sections": [
+   {
+    "title": "고속 패킷 전달을 통한 QoS 구현기술 MPLS의 개념",
+    "bullets": [
+     "▸ MPLS",
+     "▸ MLPS 특징",
+     "- 소프트웨어 기반의 라우팅을 하드웨어기반 스위칭으로 대신하여 고속 전송이 가능",
+     "Constraint를 고려한 경로설정과 트래픽 할당을 통한 서비스 품질 향상",
+     "링크와 노드의 고장 시 이를 검출하여 대체 경로 설정을 통한 망 복구.",
+     "각각의 VPN을 Label로 구분하여 처리하여 Frame Relay수준 의 네트워크 보안 제공."
+    ]
+   },
+   {
+    "title": "MPLS(Multi Protocol Label Switching)의 구조 및 전송순서",
+    "bullets": [
+     "▸ MPLS(Multi Protocol Label Switching)의 구조",
+     "▸ MPLS(Multi Protocol Label Switching)의 요소기술",
+     "Label Edge Router",
+     "Packet 목적지를 분류하여 Label을 붙이는 라우터",
+     "Label Switch Router",
+     "Label을 붙인 패킷이 들어오면 Label스위칭을 통해 패킷 전달"
+    ]
+   },
+   {
+    "title": "MPLS와 기존 라우팅과의 비교",
+    "bullets": [
+     "Voip over MPLS 공 불가",
+     "MPLS VPN 종단 LSR에서 레이블을 할당할 때 한번 매 홉마다 필요수행 QoS등의 차별화 전략에 따라 변경이 가 주소만을 참조가능능한 유연성 부여가 가능다중 복합 알고리즘 하나의 forwarding 알고리즘"
+    ]
+   },
+   {
+    "title": "MPLS 트래픽 엔지니어링",
+    "bullets": [
+     "IGP의 Link State Packet을 확장하여 LSR사이에 링크의 대역폭과 같은 상태 정보를 교환.",
+     "트래픽 엔지니어링을 위한 수정된 Path를 계산하여 ERP(Explicit Route Object)생성.",
+     "CR-LDP(Constrained-Based Routing LDP) 또는 확장 RSVP 를 통하여 LSR간 ERO정보 공유",
+     "ERO에 따른 MPLS tunnel 생성 및 트래픽 전송"
+    ]
+   },
+   {
+    "title": "MPLS VPN",
+    "bullets": [
+     "VPN고객사이트에 위치한 모든 CE(Customer Edge) 라우터는 디폴트 PE (Provider Edge) 라우터와연결됨.",
+     "PE는 자신과 직접 연결된 VPN사이트별로 하나의 VRF(Virtual Routing and Forwarding)테이블 갖음",
+     "CE로부터 유입되는 패킷은 해당 인터페이스에 구성된 VRF테이블을 참조하여 VRF는 외부 트래픽과 VPN트래픽을 분리하여 전송."
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   232,
+   235
+  ]
+ },
+ {
+  "id": "NW_141",
+  "code": "NW_141",
+  "title": "IP_MPLS, Carrier Ethernet",
+  "subtitle": "IP-MPLS/Carrier Ethernet",
+  "domain": "NW",
+  "category": "NW > QOS > IP-MPLS/Carrier Ethernet",
+  "definition": "캐리어 이더넷: 이더넷에 표준 서비스·확장성·신뢰도·QoS·서비스 관리를 정의한 캐리어급 서비스로, 기존 LAN 영역의 이더넷 기술을 전달망(캐리어) 수준으로 향상시킨 기술/망.",
+  "keywords": [
+   "IP/MPLS",
+   "MPLS-TP",
+   "Control Plane",
+   "캐리어 이더넷 5대 속성: 표준화된 서비스, 확장성, 신뢰성/생존성, 서비스품질, 서비스관리"
+  ],
+  "sections": [],
+  "warnings": [],
+  "pages": [
+   236,
+   238
+  ],
+  "note": "원문 본문 대부분이 이미지라 텍스트로 확인된 내용만 정리",
+  "reviewed": true
+ },
+ {
+  "id": "NW_142",
+  "code": "NW_142",
+  "title": "QoE",
+  "subtitle": "QoE(Quality of Experience)",
+  "domain": "NW",
+  "category": "NW > QoS > QoE",
+  "definition": "고객이 서비스에 대해 총체적으로 경험하고 인지하는 품질로, 사용자가 요금을 지불한 서비스에 기대하는 기대값을 근거로 규정하는 품질 척도.",
+  "keywords": [
+   "기대값",
+   "품질 지표",
+   "품질 관리방법",
+   "MoS",
+   "PExQ"
+  ],
+  "sections": [
+   {
+    "title": "QoE의 개념도 및 QoE를 위한 주요 품질지표",
+    "bullets": [
+     "▸ QoE의 개념도",
+     "QoS 는 한정된 네트워크 망의 대역폭을 효율적으로 사용하게 하고, 네트워크 트래픽을 정책별로제어하여 인터넷 종단간 서비스 품질을 향상 시키는 기술",
+     "서비스 품질은 사업자 중심(NP, QoS)에서 사용자 중심(QoE)으로 관점 이동하고 있지만 QoS 보장 없이사용자 서비스 품질이 향상 될 수 없음."
+    ]
+   },
+   {
+    "title": "QoE를 위한 품질 관리방법",
+    "bullets": [
+     "음성 MOS(음성 품질기준 평균점수)",
+     "영상 MOS(영상 품질기준 평균점수)",
+     "Perceptual Evaluation of Speech/Audio/Video Quality",
+     "PESQ(Speech), PEAQ(Audio), PEVQ(Video) 품질관리 측정방법"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   239,
+   241
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_143",
+  "code": "NW_143",
+  "title": "NP(Network performance)",
+  "subtitle": "NP(Network Performance)",
+  "domain": "NW",
+  "category": "NW > QoS > NP(Network Performance)",
+  "definition": "통신망이 서비스품질(QoS)에 이바지하는 능력으로, 망 설계 특성에 의존하는 망의 개별 요소 성능. 통신망 사업자에게 유용한 품질 척도.",
+  "keywords": [
+   "QoS",
+   "QoE",
+   "NP"
+  ],
+  "sections": [
+   {
+    "title": "NP(Network Performance)의 개요",
+    "bullets": [
+     "▸ NP(Network Performance)의 정의",
+     "통신 시스템의 설계, 구성, 운용, 유지 보수 등에 사용하기 위해 측정하는 파라미터로 주로 통신망사업자들에게 유용한 품질 척도."
+    ]
+   },
+   {
+    "title": "서비스 품질을 나타내는 QoS, QoE, NP의 관계도 및 망 지표화 요건",
+    "bullets": [
+     "▸ QoS, QoE, NP의 관계도",
+     "▸ 망 지표화 요건",
+     "정보 제공자 또는 망관리자 중심적인 접속(연결) 요소 단위로 사업자의 계획, 설계, 운용 및 유지에대한 기준을 제시",
+     "단대단 또는 네트워크 개별요소 능력에 맞추어야 함"
+    ]
+   },
+   {
+    "title": "QoS, QoE, NP의 비교",
+    "bullets": [
+     "서비스의 성능평가 항목 - 고객 관점의 VoC, Engineer - 통신망 요소의 성능을 제공하",
+     "고객 단말기에 제공되는 관점 항목 는 항목으로 구성",
+     "Overall/본원적/indicator 구분",
+     "단말기에서 직접 측정 - 고객이 직접평가 - 통신망 요소에서 직접 측정",
+     "고객 유형에 따라 기타 통신 - 간접 indicator 지수로 제공",
+     "Packet Jitter, Packet Loss - 선명한 화질, 끊김 없음 - 이상 트래픽 건수"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   242,
+   243
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_147",
+  "code": "NW_147",
+  "title": "블루투스(Bluetooth 5.0)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 무선통신기술 > 블루투스(Bluetooth 5.0)",
+  "definition": "기존 블루투스보다 2배 빠른 전송속도, 4배 증가한 범위, 8배 증가한 데이터 전송 효율을 제공하는 IoT 대상 근거리 통신 네트워크(WPAN) 프로토콜",
+  "keywords": [
+   "비연결형 서비스 지원",
+   "저전력 프로토콜 추가",
+   "IoT 디바이스 타겟",
+   "하위 표준과 호환",
+   "SAM(Slot Availability Mask)"
+  ],
+  "sections": [
+   {
+    "title": "IoT를 위한 차세대 저전력 프로토콜, 블루투스5의 개요",
+    "bullets": [
+     "▸ 블루투스5(Bluetooth5)의 정의",
+     "▸ 블루투스5의 특징",
+     "범용 저전력 무선 프로토콜 사양 적용",
+     "데이터 전송 효율이 기존 대비 8배 증가",
+     "블루투스 기술 자체의 하위 버전은 기존 블루투스 장비들 과 완전호환",
+     "기존 장비 입장에서는 블루투스 5와 호환 불가"
+    ]
+   },
+   {
+    "title": "블루투스5의 개념도와 구성 요소",
+    "bullets": [
+     "▸ 블루투스 5 개념도",
+     "노드 들간의 그물망과 같은 Mesh 네트워킹을 통해 저전력으로 넓은 범위의 통신 가능"
+    ]
+   },
+   {
+    "title": "블루투스5에 추가된 기술 요소",
+    "bullets": [
+     "2.4GHz를 사용하는 기기 - 서로 통신하고 있는 블루투스 기기들 끼리 time slot 가 많아 발생하는 간섭 해 transmit/reception 가능의 유무를 mask를 체크하여 통신결",
+     "3개의 Advertising - 헤더에 새로운 advertsing 기능 추가를 위한 4가지 channel을 이용할 때, 저 advertising PDU와 새로운 packet format을 추가",
+     "PDU type ADV_EXT_IND,AUX_ADV_IND, AUX_SYNC_IND, AUX_CHAIN_IND",
+     "▸ 블루투스5를 활용한 IoT 아키텍쳐",
+     "▸ 아키텍쳐의 구성요소",
+     "자신의 정보를 제공하는 물리적 기기차량, 센서, 로봇, etc"
+    ]
+   },
+   {
+    "title": "블루투스 5의 동작 개념도 및 설명",
+    "bullets": [
+     "▸ 블루투스 5의 동작 개념도",
+     "Node 간 메시지 전송 메커니즘, publish & subscriber process",
+     "▸ 블루투스 5의 동작 요소",
+     "SAM 흐름도 예시참고] 강평야 2기 정리자료"
+    ]
+   },
+   {
+    "title": "Bluetooth 5.0의 상세 기술 및 활용 분야",
+    "bullets": [
+     "▸ Bluetooth 5.0의 상세 기술",
+     "저전력, 유연성 등도 개선됨",
+     "▸ Bluetooth 5.0 활용 분야",
+     "Bluetooth 5.0 기술로 IoT 성장이 가속화 되고, 확장 될 것으로 전망됨"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   244,
+   250
+  ]
+ },
+ {
+  "id": "NW_150",
+  "code": "NW_150",
+  "title": "NFC",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 무선 통신기술(들)> NFC",
+  "definition": "13.56MHz 주파수로 양방향 통신(최대 424Kbps)이 가능하고 RFID와 스마트 기능을 통합한 근거리 무선통신 기술. 기존 스마트카드의 Tag 역할에 더해 양방향 통신과 Read/Write 기능을 수행.",
+  "keywords": [
+   "ISO/IEC 18092",
+   "424Kbps",
+   "13.56Mhz",
+   "Card Emulation",
+   "Read/Write",
+   "Peer-to-Peer"
+  ],
+  "sections": [
+   {
+    "title": "10cm이내에서 양방향 통신하는 비접촉 근거리 무선 통신 기술, NFC의 개요",
+    "bullets": [
+     "기존 스마트 카드가 리더기에 데이터를 전송하는 Tag역할만 했지만 NFC는 Tag역할과더불어 read/write기능을 수행함",
+     "보안성과 편의성은 Trade-off관계",
+     "기존 Wifi와 블루투스를 이용한 전자거래의 경우 비밀번호를 입력하고 인증서를 받는등 사용자 입장에서 불편함을 초래했지만 NFC는 10Cm라는 근접거리 통신으로 편리함과 더불어 해킹의 위협을 근본적으로 차단가능",
+     "약 10Cm의 통신거리로 기기를 맞대야만 통신할 수 있는 구조로 사용자가 주의만 기울인다면 해킹의 위협을 원천차단",
+     "스마트 TV, 스마트폰, 스마트 패드 등의 스마트 기기는 OS(운영체제)를 통해구동되므로 GPS, 카메라, 자이로스코프 등의 인터페이스와 SNS, LBS와 연동가능",
+     "스마트 기기의 다양한 인터페이스와 수백, 수천의 application을 통해 서비스의확장성이 큼"
+    ]
+   },
+   {
+    "title": "대상 기기는 동일한 전송속도로 리더 역할을 하는 NFC 기기에 응답.",
+    "bullets": [
+     "▸ NFC 통신 동작방식",
+     "발신기(initiator)와 목표기(target) 모두 스스로 생성한 RF 필드를 사용하여 통신",
+     "Initiator: 리더 역할, Target: 태그 역할",
+     "리더와 리더간 P2P통신 Passive Communication Mode(자체 전원공급 미지원)",
+     "발신기가 RF필드를 생성하고 목표기는 발신기의 명령에 load modulation scheme으로 응답"
+    ]
+   },
+   {
+    "title": "NFC 기술 동향 및 활성화를 위한 주요 적용분야",
+    "bullets": [
+     "▸ NFC 기술 동향",
+     "스마트폰의 급격한 확산에 따라 다양한 융합 기술로 서비스 활성화 진행 중",
+     "카드업체와 통신업체 연합 및 제휴 활성화(SKT+하나카드, KT+BC)",
+     "디바이스 업체에서 NFC 기능이 탑재된 스마트폰 출시",
+     "모바일 신용카드, RFID 리더/태그 및 데이터 전송장치로 다양한 NFC 기술 활용"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   251,
+   255
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_160",
+  "code": "NW_160",
+  "title": "인지무선기술",
+  "subtitle": "인지무선 (Cognitive Radio)",
+  "domain": "NW",
+  "category": "네트워크 > 이동통신기술 > 인지무선",
+  "definition": "통신시스템 주변의 전파환경을 측정 인지하고 지능적으로 판단해 각 통신 시스템을 주변에 맞게 최적화해 동작시키는 기술, 주파수자원 고갈에 대한 해결책으로 주목됨",
+  "keywords": [
+   "스펙트럼 센싱",
+   "동적주파수 선택",
+   "잉여주파수 대역확보",
+   "충돌회피",
+   "TV White Space",
+   "SDR",
+   "IEEE 802.11af",
+   "IEEE 802.22 WRAN"
+  ],
+  "sections": [],
+  "warnings": [],
+  "pages": [
+   256,
+   258
+  ]
+ },
+ {
+  "id": "NW_166",
+  "code": "NW_166",
+  "title": "멀티캐리어(Multi Carrier)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW>LTE>멀티캐리어(Multi Carrier)",
+  "definition": "지역별 데이터 트래픽 혼잡도 등을 고려해 여러 개의 주파수 중 하나를 선택하여 사용하게 해최적의 LTE 품질 제공",
+  "keywords": [
+   "MC: 여러 주파수 중 하나 선택",
+   "로드밸런싱",
+   "트래픽 혼잡 분산"
+  ],
+  "sections": [
+   {
+    "title": "데이터 트래픽을 분산시키는 기술, 멀티캐리어(Multi Carrier)의 개요",
+    "bullets": []
+   },
+   {
+    "title": "멀티캐리어의 개념도 및 기술설명",
+    "bullets": [
+     "▸ 멀티캐리어의 개념도",
+     "▸ 멀티캐리어의 기술설명",
+     "사용자 분산 통한 속도향상",
+     "차선을 2 차선 이상 늘려 정체를 풀어 개별 차선의 속도를 높이는 효과 o 트레픽발생식 주파수 추가 o 대역폭 연계",
+     "로드밸런싱(Load Balancing)",
+     "주파수간 핸드오버(Inter-Frequency Handover) o 변함없음 o LTE 표준"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   259,
+   260
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_167",
+  "code": "NW_167",
+  "title": "Carrier Aggregation",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW>LTE>Carrier Aggregation",
+  "definition": "LTE 의 차세대 진화 시스템인 LTE-Advanced 의 핵심 기술로써 하나의 기지국에서 여러 개의 주파수 대역을결합하여 운용하는 효과적인 주파수 확장 기술",
+  "keywords": [
+   "CA: 여러 주파수 대역 결합",
+   "대역폭 확장(최대 5개 묶음)",
+   "속도 향상",
+   "분류: 대역내 연속 / 대역내 불연속 / 대역간 비연속 통합"
+  ],
+  "sections": [
+   {
+    "title": "LTE 의 차세대 진화 시스템 핵심기술, Carrier Aggregation 개요",
+    "bullets": [
+     "▸ Carrier Aggregation(반송파 직접) 의 정의",
+     "3GPP(3rd-Generation Partnership Project) Relese10 에 포함되어 있는 LTE-A 의 핵심기술",
+     "'반송파 집적 기술' 이라고 불리며, 다수의 요소 반송파(Component Carrier)를 하나로 묶어서 동시에 사용할 수있게 해줌.",
+     "2 개 이상(최대 5 개)의 주파수를 묶어 하나처럼 사용할 수 있게 해주는 기술",
+     "▸ Carrier Aggregation(반송파 직접기술)의 특징",
+     "요소 반송파(Component Carrier)를 묶어 대역폭(Bandwidth)확장 하는 기술"
+    ]
+   },
+   {
+    "title": "Carrier Aggregation 의 구성도 및 기술요소",
+    "bullets": [
+     "▸ Carrier Aggregation 의 구성도",
+     "현재 국내에서 사용하는 LTE 주파수의 대역폭은 10MHz 이고, 10MHz 의 대역폭으로는 최대 75Mbps 로 데이터전송이 가능.",
+     "LTE Advanced 에서는 두 개의 주파수에서 각각 10MHz 의 대역폭을 하나로 묶어 20MHz 대역폭으로 만든 뒤여기에 150Mbps 의 전송속도 제공.",
+     "▸ Carrier Aggregation 의 기술요소",
+     "Infra-band contiguous",
+     "Infra-band non-contiguous"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   261,
+   263
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_178",
+  "code": "NW_178",
+  "title": "해상재난망(LTE-M)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > LTE > 해상재난망",
+  "definition": "700MHz 주파수대역의 초고속 해상무선통신망(LTE-Maritime) 을 구축하여 연안선박과 어선에 항로지원 서비스를 제공하여충돌예방 및 인적과실에 의한 사고 예방하기 위해 구축한 재난안전통신망.",
+  "keywords": [
+   "700MHz",
+   "LTE-Maritime",
+   "100km 해상 커버리지",
+   "EPC, EMS, e-Navigation",
+   "DU/RU",
+   "PS-LTE·LTE-R 간섭"
+  ],
+  "sections": [
+   {
+    "title": "해상재난망의 구성",
+    "bullets": [
+     "▸ 해상재난망 구성도",
+     "기지국에서 DU 와 RU 를 이용하여 LTE-M 송수신기를 통한 100km 내 해상무선통신망을 지원",
+     "▸ 해상재난망 구성요소",
+     "기지국 연결 및 제어 담당",
+     "IP 할당, 가입 관리 등 역할 수행",
+     "기지국 정보, 상태, 알람 관리 및 모니터링 수행"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   264,
+   265
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "reviewed": true
+ },
+ {
+  "id": "NW_181",
+  "code": "NW_181",
+  "title": "국가재난안전통신망(PS-LTE)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > LTE-X > 국가재난안전통신망(PS-LTE)",
+  "definition": "화재·홍수·지진 등 재난 발생 시 국가 차원의 신속하고 효율적인 재난 관리를 위해, 4세대 이동통신 표준 LTE에 재난대응 무선 교신기술을 적용한 재난 관련 기관용 무선 통신망.",
+  "keywords": [
+   "ProSE(D2D)",
+   "IOPS",
+   "GCSE",
+   "MCPTT"
+  ],
+  "sections": [
+   {
+    "title": "LTE 기술을 기반 공공안전 통신망, PS-LTE (Public Safety - Long Term Evolution)의 정의",
+    "bullets": [
+     "특징 : 생존 및 신뢰성, 보안성, 운용 및 효율성, 상호 운용성, 재난 대응성"
+    ]
+   },
+   {
+    "title": "재난안전통신망(PS-LTE)의 구성도 및 구성요소",
+    "bullets": [
+     "▸ 재난안전통신망(PS-LTE)의 구성도",
+     "▸ 재난안전통신망(PS-LTE)의 구성요소",
+     "재난관리 지령센터, 망 관리센터, 연계망 관리센터, 기존 연계망 지령센터",
+     "HSS(Home Subscriber System) : 이동성 관리, 통화 및 세션 확립 지원, 사용자 인증",
+     "IMS(IP Multimedia Subsystem) : IP 기반 멀티미디어 서비스를 위한 서브 시스템",
+     "eMBMS(evolved Multimedia Broadcast Multicast Service) : 1:N 을 지원하는 LTE 기반동영상 전송 서비스로써 기지국 범위 내 수천명 이상이 HD 급 동영상 수신가능"
+    ]
+   },
+   {
+    "title": "재난안전통신망(PS-LTE)의 주요서비스",
+    "bullets": [
+     "무전기와 같이 스위치를 누르는 동작만으로 대기시간(0.3 초이내)을 최소화 하여일대일 또는 그룹통화가 가능한 서비스",
+     "기존 그룹통신을 위한 GCSE-LTE 기술을 사용",
+     "근접통신으로 만들어진 ProSe 사용",
+     "기존망 TETRA, Project25, TETRAPOL, GSM-R 과 연계 서비스 제공",
+     "망 운영센터 ↔ 기지국간 단절 시 임시적으로 커버리지 확보 및 용량 증설을 위해이동 기지국을 사용하는 기술",
+     "인프라 및 이동 기지국 주도의 로컬 라우팅 및 제한된 백홀 연결 - 넓은 범위를서비스 하는 단독 기지국 운용모드"
+    ]
+   },
+   {
+    "title": "재난안전통신망(PS-LTE)의 표준화 동향",
+    "bullets": [
+     "▸ PS-LTE 주요항목별 표준화 현황 내용",
+     "Rel. 12: 통신하고자 하는 단말들이 통신망 영역 내에 위치하는 경우를 고려하여 중점적으로직접통신 표준화 추진 - Rel. 13: 단말들이 통신망 영역 외에 있을 때 및 단말 중계기능까지 포함하여직접통신 표준화 추진",
+     "Rel. 12: 기본적인 그룹통화 호처리 절차, 통화 우선순위 처리 방안, 최대 그룹크기 등 표준화 추진 - Rel. 13: 지령대의 그룹통화 제어, 중계(Relay)기능 지원 시 그룹통화 방안 등이 추가적으로 표준화 될예정 Rel.13: 재난망의 기본기능인 단말의 PTT 가 LTE 망에서 지원 가능하도록 표준화 추진 ※ LTE 기반 PTT 구현 목적의 응용 계층 표준화를 위한 SA WG6 ",
+     "Rel.13: 기지국이 핵심망과의 접속이 끊겼을 경우에도 단독으로 동작하여 기지국 영역 내 단말들 간지속적 통신을 유지하는 표준화를 추진",
+     "Release 12 : 2015.12 freezing, Release 13: 2016.03 freezing"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   266,
+   269
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_184",
+  "code": "NW_184",
+  "title": "RAN Sharing",
+  "subtitle": "RAN-Sharing",
+  "domain": "NW",
+  "category": "PS-LTE > 공공안전망",
+  "definition": "공공안전망에서 사용하는 700Mhz 주파수 대역의 공유로 인한 간섭 문제 해결을 위하여 RAN-Sharing 기법을활용.",
+  "keywords": [
+   "700Mhz",
+   "주파수 간섭",
+   "MORAN",
+   "MOCN",
+   "GWCN"
+  ],
+  "sections": [
+   {
+    "title": "RAN-Sharing의 개념 및 목적",
+    "bullets": [
+     "▸ RAN-Sharing의 개념",
+     "다른 LTE 무선 접속망(RAN)의 통화권 내에 위치한 단말이 본래의 LTE서비스를 이용하기 위하여, 다른 LTE 무선접속망의 기지국 설비를 공유하여 트래픽을 전달하는 기술",
+     "Ran-Sharing은 동일한 대역의 주파수 스팩트럼을 복수 사업자가 사용할 경우 1개의 기지국을 물리적으로 공유하는 방식으로 Active RAN 공유 방식 유형임",
+     "▸ RAN-Sharing의 목적",
+     "최적화된 망 구축 - 통합된 공공안전망 구성 시 최적화된 망 구축 가능",
+     "간섭 최소화 - PS-LTE, LTE-R, LTE-M 망의 인접 기지국간의 간섭 최소화"
+    ]
+   },
+   {
+    "title": "RAN-Sharing 기술방식 설명",
+    "bullets": [
+     "▸ MORAN(Multi-operator RAN)",
+     "RAN 요소만 공유하고 주파수는 공유하지 않는 RAN-Sharing 기법",
+     "MORAN 방식은 주파수, RU, DU 등에 따라 망간 공유 정도를 조절할 수 있어 복잡성이 증가하지만 비용 절감효과는 낮아짐",
+     "▸ MOCN(Multi-operator core network)",
+     "RAN 요소와 주파수까지 공유하는 RAN-Sharing 기법",
+     "망간 공유하는 부분이 많기 때문에 비용 절감이 MORAN에 비해 더 저렴하게 구축이 가능함"
+    ]
+   },
+   {
+    "title": "국가 공공안전망 구축 현황",
+    "bullets": [
+     "21년 7월 PS-LTE 기반 전국 단일 재난 안전망 구축하였고 이는 재난관련 기관별 통신망을 일원화하는 전국 단일 통신망이며, 대한민국이 세계 최초로 구축 및 운영",
+     "재난안전통신망은 MCPTT(재난현장용 음성/영상 그룹통신), eMBMS(통화폭주 해소를 위한 동시 전송기술) 등 재난 대응에 특화된 서비스 사용이 가능",
+     "3GPP에서 재정한 재난안전통신규격(PS-LTE Standard Rel.13)을 준수하여 구축, All-IPv6를 세계 최초로 도입하여향후 IoT등 업그레이드(Rel.14 ~15) 가 가능하도록 구축"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   270,
+   272
+  ]
+ },
+ {
+  "id": "NW_185",
+  "code": "NW_185",
+  "title": "5G(IMT-2020)주요기술",
+  "subtitle": "5G(IMT-2020)",
+  "domain": "NW",
+  "category": "NW > 5G(IMT-2020) > 5G(IMT-2020)",
+  "definition": "4G 대비 10배 이상 향상된 초고속·초고용량·초저지연·초연결 네트워크 기술로, 다양한 디지털 디바이스를 수용하는 차세대 네트워크의 핵심 인프라이자 기술.",
+  "keywords": [
+   "최고 전송속도 20Gbps",
+   "체감 100~1,000Mbps",
+   "주파수 효율 3배",
+   "이동성 500km/h",
+   "지연 1ms",
+   "연결 10^6개/km²",
+   "에너지 효율 100배",
+   "면적당 10Mbps/m²"
+  ],
+  "sections": [
+   {
+    "title": "초연결시대, IMT-2020/5G의 개요",
+    "bullets": [
+     "▸ IMT-2020/5G의 개념",
+     "▸ 4G(IMT-Advanced)와 5G(IMT-2020) 핵심 성능 비교(전체주고지연에면)",
+     "초고용량 저지연 통신 등 IMT-2020/5G기술을 기반으로 다양한 5G 서비스와 활용분야 창출"
+    ]
+   },
+   {
+    "title": "5G 네트워크의 기술적 특징",
+    "bullets": [
+     "▸ 5G 네트워크의 기술적 특징 개요",
+     "5G 네트워크는 전송속도의 향상 뿐만 아니라 사물인터넷(IoT) 등 다수 기기접속 및 초저지연 연동을 목표로 설정하고",
+     "▸ 5G 네트워크의 기술적 특징 상세설명",
+     "TDD(Time Division Duplex) 주파수 대역의 업로드 및 다운로드 리소스를 상황에",
+     "Dynamic 맞게 유연하게 활용",
+     "Self-contained subframe 지원을 통해 단일 subframe에서 하향 스케줄링과 하향데이터 전송, 상향 전송 확인(Acknowledgement)"
+    ]
+   },
+   {
+    "title": "IMT-2020/5G 기술요소",
+    "bullets": [
+     "기지국에 수십 혹은 수백 개의 안테나를 장착하여 동일 자원으로 수십명의 사용자를 동시에 지원함으로 인해 높은 용량과 에너지 효율 증대",
+     "송신 무선자원과 수신 무선자원을 공유하여 무선 자원의 양을 높이는전이중 방식의 전송방식으로 전송 효율 증대",
+     "Non-Orthogonal Multiple Access. 주파수, 공간 자원상의 두 대 이상의단말에 대한 데이터를 동시에 전송하여 주파수 효율을 향상시키는 기술",
+     "광대역 초기접속 기술, 각 단말에 대용량 데이터를 효율적으로 전송하기위한 HARQ 전송 및 피드백 지원 기술, 기존 셀룰러 대역과의 협력 기술",
+     "무선 접속 구간은 스케줄링 요청, 자원할당 무선 구간에는 데이터 전송,",
+     "커버지리 내외에서의 단말간 통신 기술을 사용하여 IoT 환경 지원을 통해새로운 서비스 지원"
+    ]
+   },
+   {
+    "title": "5G 네트워크의 국내외 추진동향 및 시사점",
+    "bullets": [
+     "▸ 5G 네트워크의 국내외 추진동향",
+     "미국 National Broadband - 미 연방통신위원회는 24GHz 이상 고대역 주파수 발굴 및 이용을위한 FCC Spectrum Frontiers 명령 및 추가법령제안",
+     "유럽집행위원회5G 상용화를 위한 5G for Europe 액션플랜",
+     "영국 UK Spectrum Strategy 보고서를 발간",
+     "5G 발전전략 및 K-ICT 스펙트럼 플랜",
+     "유럽 '5G PPP(Public-Private Partnership)' 결성 '20년까지 Horizon"
+    ]
+   }
+  ],
+  "warnings": [],
+  "dueum": "전체주고지연에면",
+  "pages": [
+   273,
+   277
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문 성능 비교표(두음 '전체주고지연에면')에서 발췌",
+  "reviewed": true
+ },
+ {
+  "id": "NW_186",
+  "code": "NW_186",
+  "title": "Network Slicing",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 5G(IMT-2020) > Network Slicing",
+  "definition": "물리적으로 하나의 네트워크에서 Device·Access·Transport·Core를 포함해 End-to-End로 논리적으로 분리된 네트워크를 만들어, 서로 다른 특성의 서비스마다 특화된 전용 네트워크를 제공하는 5G 핵심기술.",
+  "keywords": [
+   "NFVI",
+   "NFVs",
+   "MANO",
+   "E2E Networking"
+  ],
+  "sections": [
+   {
+    "title": "5G의 핵심기술, Network Slicing의 개요",
+    "bullets": [
+     "▸ Network Slicing의 개념",
+     "▸ Network Slicing의 특징",
+     "5G의 다양한 단말 서비스를 이용하기 위하여 네트워크 슬라이싱 기술이 필요"
+    ]
+   },
+   {
+    "title": "Network Slicing의 개념도 및 핵심기술",
+    "bullets": [
+     "▸ Network Slicing의 개념도",
+     "네트워크 슬라이스는 특정 유스케이스에 대해 통신 서비스 요구사항 을 지원하기 위한 논리적인 네트워크 기능 집합",
+     "▸ Network Slicing의 핵심 기술",
+     "사업자가 제공하는 복수개의 네트워크 슬라이스 인스턴스(NSI: Network Slice Instance) 중 하나를 선택, 신규 연결에 대한 허가, 네트워크 슬라이스 인스턴스의 발견 및 식별자 포함네트워크 슬라이스 인스턴스 간의 간섭을 최소화 하기 위한 보안, 자원, OAM(Operations, administration and management)지원 등의 분리(Isolation) 방법 검"
+    ]
+   },
+   {
+    "title": "Network Slicing을 위한 NFV의 개념도 및 구성요소",
+    "bullets": [
+     "▸ NFV(Network Funcition Virtualization)의 개념도",
+     "가상화 기술기반 다양한 네트워크 기능(Function)을 분리하여 SW 적 제어 및 관리가 가능하도록 가상화시키는네트워크 기술",
+     "▸ NFV(Network Function Virtualization)의 구성요소",
+     "Network Function Virtualization Infrastructure VNF 실행",
+     "물리적 H/W 자원, 가상화 지원기능 및 VNF 실행지원기능 제공",
+     "Network Function Virtualization Functions VNF"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   278,
+   280
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_187",
+  "code": "NW_187",
+  "title": "NR.NR-MINO",
+  "subtitle": "NR/NR-MIMO",
+  "domain": "NW",
+  "category": "NW > 5G(IMT-2020) > NR/NR-MIMO",
+  "definition": "밀리미터 대역의 동작에 적합한 새로운 MIMO 기술의 도입 LTE (Long Term Evolution) 대비 3배의 주파수 효율의 획득",
+  "keywords": [
+   "5G",
+   "라디오규격"
+  ],
+  "sections": [
+   {
+    "title": "5G NR(new Radio) 개요",
+    "bullets": [
+     "▸ NR(New Radio) 의 정의",
+     "▸ NR 의 필요성",
+     "시스템 유연성 확보 : 다양한 단말, 다양한 서비스, 다양한 주파수에의 적용"
+    ]
+   },
+   {
+    "title": "NR의 구성도 및 기술요소",
+    "bullets": [
+     "▸ NR의 구성도",
+     "NSA(Non-StandAlone) : 기존의 LTE 무선 핵심망 + 5G 무선망",
+     "SA(StandAlone) : 5G NR 독자적 사용자 제어 플레인 기능을 포함, 5G 차세대 핵심망 구조 활용 [참고] 제어 플레인 - 네트워크 장비로 유입되는 패킷이 올바른 물리적 포트로 출력될 수 있도록, 경로를설정, 관리, 해제하는 기능 (Routing, Signaling)을 수행",
+     "▸ NR의 기술요소",
+     "더 다양한 스펙트럼 대역, 유형과 망 구축 모델 지원을 위한 가변적 채널 대역폭필요",
+     "부반송파 간격(Subcarrier spacing) 및 CP(Cyclic prefix) 길이를 가변 사용 가능"
+    ]
+   },
+   {
+    "title": "NR-MIMO 의 주요 기술 및 기대효과",
+    "bullets": [
+     "NCJT(Non-coherent joint transmission) : 더 많은 공간 레이어를 통해 데이터동일 주파수 및 시간 자원에서 상이한 송수신전송 : 네트워크 용량 확보, 전송률지점/패널로부터 서로 다른 공간 레이어를 통해증가데이터를 전송하는 기술서브 밴드 별 독립적 channel State 다수의 서브 밴드 채널 정보에 대한 주파수 Information 계산, 보고로 인한영역에서의 ",
+     "안테나 간 가상화 동작 적용 -균일한 5G 모바일 브로드밴드 형성",
+     "셀 경계 사용자의 Throughput 향상 -커버리지 향상"
+    ]
+   },
+   {
+    "title": "NR 의 표준화 동향",
+    "bullets": [
+     "2016년 : Release 14 의 study item 으로 시작, Release 15 에서 Work Item 으로 표준화 작업",
+     "2017년 : NR-Non StandAlone 규격 완성",
+     "2018년 : NR Standalone 규격 완성"
+    ]
+   },
+   {
+    "title": "NR의 사례 및 서비스 요구사항",
+    "bullets": [
+     "▸ NR의 사례",
+     "▸ NR 의 서비스 요구사항",
+     "다수의 차량이 일렬로 근접하게 주행하여 기차가 가는 것처럼 주행",
+     "인접한 차량 간 거리 유지를 위해 속도, 방향, 가감속 정보 공유",
+     "선두차량을 제외한 나머지 차량은 운전자 개입 없이 자동 주행이 가능하며 연료 효율 향상 등을 기대",
+     "군집 구성 및 해체는 동적으로 이루어지며, 개별 차량이 군집에 들어오거나 나갈 때 해당 정보가 공유"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   281,
+   285
+  ]
+ },
+ {
+  "id": "NW_188",
+  "code": "NW_188",
+  "title": "NSA_SA",
+  "subtitle": "NSA(Non Standalone)/SA(Standalone",
+  "domain": "NW",
+  "category": "네트워크> 5G(IMT-2020)",
+  "definition": "NSA와 SA 두가지 구조 모두에서 단말은 4G, 5G 두 무선 접속을 동시에 지원하는 형태로 진화",
+  "keywords": [
+   "EPC",
+   "LTE",
+   "NR",
+   "5GC",
+   "Data Plane",
+   "Control Plane"
+  ],
+  "sections": [
+   {
+    "title": "5G NSA와 SA의 비교",
+    "bullets": [
+     "NSA는 초기 상용망에 적용 구조로, 단말의 이동성(mobility) 관리 등을 제어하는 제어 플레인(control plane)의 동작은 4G LTE 망을 활용하면서 사용자 플레인(User plane/Data plane)에 해당하는 데이터 트래픽은 5G 망을 사용",
+     "2018년NG-RAN(Next Generation Radio Access Network)과 5GC(5th Generation Core Network)로 구성되는차세대(5G) 통신시스템 독자 운용(StandAlone, SA)을 지원하는 최초의 표준 제정"
+    ]
+   },
+   {
+    "title": "5G 표준화 및 사용화 일정",
+    "bullets": [
+     "국내 통신3사는 2020년 상반기 SA 상용화 추진중이며, AR, VR, 자율주행, 스마트팩토리 등 5G 서비스 활성화기대"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   286,
+   287
+  ]
+ },
+ {
+  "id": "NW_189",
+  "code": "NW_189",
+  "title": "Mobile Edge Computing",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 5G(IMT-2020) > Mobile Edge Computing",
+  "definition": "이동통신 기지국에 대용량 클라우드 기술을 적용하여 다양한 컨텐츠를 사용자와 가까운 위치에서제공하여 모바일 코어망의 혼잡을 최소화하는 기술",
+  "keywords": [
+   "근접성(Proximity)",
+   "다양한 지리적 분포",
+   "저지연(Low Latency)",
+   "위치인식(Location Awareness)",
+   "MEC Server(기지국 위치)"
+  ],
+  "sections": [
+   {
+    "title": "최저지연을 위한 모바일 엣지 컴퓨팅(MEC)의 개요",
+    "bullets": [
+     "▸ 모바일 엣지 컴퓨팅(Mobile Edge Computing)의 정의",
+     "eNodeB나 WiFi AP와 같은 엣지 노드에서 서비스를 제공하여, 증가된 모바일 트래픽에 대응하고보다 효율적이고 연관성 많은 방식으로 서비스를 제공하는 기술",
+     "기존에 설치된 무선 기지국에 분산 클라우드 컴퓨팅 기술을 적용하여 서비스와 데이터를 제공하는서버를 둔 클라우드 컴퓨팅의 한 유형"
+    ]
+   },
+   {
+    "title": "모바일 엣지 컴퓨팅(Mobile Edge Computing)의 플랫폼 구조 및 구성요소",
+    "bullets": [
+     "▸ MEC 플랫폼 구조",
+     "MEC 서버는 컴퓨팅 자원, 저장 능력, 연결 능력, 이용자 트래픽과 무선 및 네트워크 정보로의 액세스 능력제공, RAN 내부에서 멀티벤더 플랫폼 통하여 다양한 응용들을 효율적이고 끊김 없이 통합",
+     "▸ MEC 플랫폼 구성요소",
+     "MEC 구조 통해 영상인식 속도 확보, 대용량 스트리밍 데이터 처리의 효율성 확보, 빅데이터 분석의반응성 및 극대화 제공 가능"
+    ]
+   },
+   {
+    "title": "MEC 성공 위한 Enabler Technology",
+    "bullets": [
+     "MEC가 상업적으로 성공하기 해서는 대용량 IT 하드웨어가 필수적",
+     "최근 다용도 IT플랫폼들이 패킷 처리와 같이 막대한 HW 자원 사용하는 응용과 서비스처리하기 위하여 진화",
+     "소프트웨어 및 응용벤더들이 MEC 기능과 능력들을 이용하여 시장 혁신적/획기적 서비스와 응용들을 개발하는 것이 필수",
+     "생태계 조성 위한 지원프로그램으로서 레퍼런스 플랫폼, 개발 도구, 새로 개발된 응용프로그램들을 검증/최적화하기 위한 시험 환경 등이 필수적"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   288,
+   290
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "reviewed": true
+ },
+ {
+  "id": "NW_190_00",
+  "code": "NW_190_00",
+  "title": "엣지 컴퓨팅 스케줄링",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 엣지 컴퓨팅",
+  "definition": "산업현장이나 사무 환경에서 수집된 대규모 데이터가 클라우드에 있는 원격 서버로 가기전에 엣지 플랫폼에서 대규모로 분석하여 처리할 수 있는 컴퓨팅",
+  "keywords": [
+   "클라우드",
+   "엣지 클러스터",
+   "엣지 디바이스",
+   "모놀리식 스케쥴링",
+   "2단계 스케쥴링",
+   "공유상태 스케 쥴링",
+   "글로벌 엣지 스케줄러 제어기",
+   "3Lt",
+   "Application Type",
+   "Leveled 스케줄러",
+   "Shared 스케줄 러"
+  ],
+  "sections": [
+   {
+    "title": "대규모 데이터의 빠른 연산 처리, 엣지 컴퓨팅 개요",
+    "bullets": [
+     "클라우드 - 기존 Public/Private 클라우드나 데이터센터",
+     "엣지 클러스터 - 지역별로 분산된 엣지 간의 협업을 통해 서비스가 가능",
+     "엣지 디바이스 - 공장의 자동화 단말기/장비, IOT 장비, 홈서비스 단말기, 핸드폰",
+     "사용자의 몰입감을 최적화 위해 초저지연 연산 처리 및 높은 안정성, 큰 네트워크 대역폭 요구환경에 적합",
+     "▸ 엣지 컴퓨팅의 스케쥴러",
+     "요청된 서비스에 해당하는 컨테이너를 어느 호스트에 할당할지에대해 가장 알맞은 연산 노드를 찾아 할당하는 기술"
+    ]
+   },
+   {
+    "title": "가상화 기술 활용, 컨테이너 오케스트레이션의 스케쥴러",
+    "bullets": [
+     "▸ 컨테이너 오케스트레이션의 개념",
+     "엣지 컴퓨팅에서 사용되는 컨테이너 기반 가상화 기술의 서비스 영역을 확대하여 다양한응용 서비스를 컨테이너화하고 쉽고 빠르게 배포, 확장, 관리를 자동화해주는 플랫폼 기술",
+     "클러스터 자원 효율적 사용, 스케줄링 과정의 공정성, 작업 신속 배치 및 할당",
+     "▸ 컨테이너 오케스트레이션의 주요 스케쥴링",
+     "모든 요청을 처리하는 단일 스케쥴링 에이전트로 구성되며일반적으로 고성능 컴퓨팅에 사용",
+     "모든 수진 작업에 대해 단일 알고리즘 구현을 적용하므로작업 유형에 따라 논리 실행이 어려움"
+    ]
+   },
+   {
+    "title": "초저지연 지능형 엣지 SW플랫폼, GEdge 플랫폼의 스케줄러",
+    "bullets": [
+     "▸ GEdge 플랫폼의 개념",
+     "클라우드와 마스터 엣지 클러스터에 이웃 엣지 클러스터(Near Edge)로 구성된 3가지 위치 (3 Locations)적 특성을 고려한 상호 협력을 기반으로 서비스 플랫폼",
+     "초저지연 서비스에 적합한 스케줄링 가능",
+     "수직적 수평적인 통합적인 협업 가능",
+     "시스템 레벨에서 협업 적용 가능",
+     "끊김이 없는 서비스 연계 가능"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   291,
+   293
+  ]
+ },
+ {
+  "id": "NW_190_01",
+  "code": "NW_190_01",
+  "title": "컴퓨팅 컨티뉴엄 (Computing Continuum)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 엣지 컴퓨팅",
+  "definition": "임베디드-엣지-클라우드 컴퓨팅 등 여러 단계의 컴퓨팅 기능을 하나의 '연속체'로 바라보고, 이들 연속선상의 각기능들을 적절하게 작동하게 함으로써 원활하게 컴퓨팅 서비스가 이뤄지게 하는 기술",
+  "keywords": [
+   "연속체",
+   "GigaMEC",
+   "CompactEdge",
+   "EdgeCPS"
+  ],
+  "sections": [
+   {
+    "title": "사이버-물리 시스템 실현을 위한 컴퓨팅 컨티뉴엄 (Computing Continuum)",
+    "bullets": [
+     "▸ 컴퓨팅 컨티뉴엄 (Computing Continuum) 정의",
+     "개별 사물 관점에서의 서비스 응답 시간과 같은 체감 품질(Quality of Experience: QoE)을 만족할 수 있도록 최적 위치에서 최적의 형태로 서비스 제공이 가능하게 하는 기술",
+     "▸ 컴퓨팅 컨티뉴엄 (Computing Continuum) 의 등장 배경",
+     "사물이 속한 현실 세계는 시시각각 변화하는 동적 환경으로서 동일한 서비스 요청이더라도 상황에 따라 응답 속도와 체감하는 품질이 다르게 나타남",
+     "인구가 밀집된 도심지에서 통화 연결이나 멀티미디어 콘텐츠 재생이 지연됨",
+     "동일한 서비스를 요청하는 개별 사물의 규격이나 컴퓨팅 역량에 따라 제공할 서비스의형상이 다름"
+    ]
+   },
+   {
+    "title": "컴퓨팅 컨티뉴엄 (Computing Continuum)의 개념도와 실현기술",
+    "bullets": [
+     "▸ 컴퓨팅 컨티뉴엄 (Computing Continuum)의 개념도",
+     "▸ 컴퓨팅 컨티뉴엄 (Computing Continuum)의 실현 기술",
+     "이동통신사의 5G 네트워크의 말단부인 기지국/집중국에 배치되어 초저지연서비스를 제공할 수 있는 플랫폼",
+     "MEC서버 (GigaMEC 저지연/고 신뢰 서비스를 지원)",
+     "SDK(GigaMEC 플랫폼용 응용 서비스 개발을 지원)",
+     "MEC 관리 시스템 (분산된 GigaMEC 플랫폼과 서비스를 관리)"
+    ]
+   },
+   {
+    "title": "컴퓨팅 컨티뉴엄 (Computing Continuum)의 활용",
+    "bullets": [
+     "컴퓨팅 컨티뉴엄의 기술적용을 통해 무인/자율 시스템 제어, 메타버스, 빅데이터 분석, AI 응용, 텔레프레즌스/텔레오퍼레이션 등을 연계한 수많은 혁신적인 미래형 서비스 개발이 더욱 활발해질 것으로 기대함."
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   294,
+   296
+  ]
+ },
+ {
+  "id": "NW_191",
+  "code": "NW_191",
+  "title": "6G",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 6G",
+  "definition": "최대 전송률 1Tbs 바탕으로 5감 인지 미디어의 초현실을 지향하는 초지능 만물 인터넷 통신 (AIoE : Ambient Internet of Everything)",
+  "keywords": [
+   "최대 1Tbps",
+   "AIoE(Ambient Internet of Everything)",
+   "6대 성능 비전: 초성능, 초대역, 초경험, 초지능, 초정밀, 초공간",
+   "테라헤르츠(THz) 대역"
+  ],
+  "sections": [
+   {
+    "title": "만물지능인터넷, 6G 개요",
+    "bullets": [
+     "▸ 6G 정의",
+     "▸ 특징",
+     "AI 기반 지능형 무선 액세스 기술",
+     "멀티 도메인,멀티 스페이스 자동화 기술",
+     "3차원 공간미디어, Tangible 미디어",
+     "천음속급 이동통신 기술, 우주인프라 액세스 기술"
+    ]
+   },
+   {
+    "title": "6G 필요 기술 및 기술 성능 목표",
+    "bullets": [
+     "▸ 6G 기술 요소",
+     "테라헤르츠(THz) 및 초고속 프로세싱 가능한",
+     "테라헤르츠(THz) 대역 전파 기술모뎀과 RF 기술",
+     "장거리 전송 용 저전력 안테나 기술",
+     "테라헤르츠(THz) 스펙트럼과 광 전송 회선 간의",
+     "유선구간 Tbps급 광통신 인프라 기술인터페이스 기술"
+    ]
+   },
+   {
+    "title": "6G 기술 변화 및 비교",
+    "bullets": [
+     "▸ 6G 기술변화",
+     "4G 가 상용화된 다음해부터 5G 통신 비전을 수립하기 시작하였고, 5G 가 상용화된 지금 6G 기술을 선점하기 위한빠른 준비 필요",
+     "▸ 5G vs 6G 기술 비교",
+     "5G와 6G의 기술 성능 목표 비교를 통해, 6G 구현에 필요한 기술을 예상해 볼 수 있음 [참고] [6G 기술을 위한 역량 확보]",
+     "현재는 6G 에 대한 정확한 정의는 없지만, 6G 에 대한 국가차원의 선행 투자로 글로벌 6G 기술 선점이 필요 [4G 에서 5G 로의 기술 변화] 기술 변화 설명",
+     "넓어진 주파수 대역폭 - 3.5GHz(100MHz 대역폭), 28GHz(800MHz 대역폭)"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   297,
+   300
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_192_0",
+  "code": "NW_192_0",
+  "title": "5G 특화망(지역5G)",
+  "subtitle": "5G 특화망(지역 5G)",
+  "domain": "NW",
+  "category": "NW > 5G 특화망(지역 5G)",
+  "definition": "특정지역(건물, 공장 등)에 한해 사용 가능한 5G망으로서, 해당지역에서 도입하고자 하는 서비스에 특화된 맞춤형 네트워크",
+  "keywords": [
+   "Standalone Private",
+   "Public-Private Shared RAN",
+   "Public-Private Shared RAN and Control- plane",
+   "독립형",
+   "공유형"
+  ],
+  "sections": [
+   {
+    "title": "특정 산업만을 위한 전용망, 5G 특화망(지역 5G)의 개요",
+    "bullets": [
+     "▸ 5G 특화망(지역 5G)의 정의",
+     "▸ 5G 특화망(지역 5G)의 특징",
+     "28GHz대역, 600MHz600MHz폭의 광대역 주파수 공급",
+     "이동통신사 외에 지역(로컬) 5G 사업자를 서비스 제공 참여자로 허용",
+     "기존 이동통신의 고성능 장비와 달리 산업 맞춤형 경량·저비용 장비 요구",
+     "6GHz 이하 대역은 추후 검토 예정"
+    ]
+   },
+   {
+    "title": "5G 특화망(지역 5G) 5G 구축방식",
+    "bullets": [
+     "▸ 5G 특화망(지역 5G) 구축 아키텍처",
+     "▸ 5G 특화망(지역 5G) 구축방식별 상세",
+     "기업내(부지건물) 5G NW Full Set(gNB, UPF, 5GC CP, UDM, MEC) 구축",
+     "기업내의 5G 주파수는 이동통신사의 면허 주파수가 아닌 Local 5G",
+     "이동통신사가 자신의 면허주파수로 기업에 5G LAN을 구축해주고 운영 대행해주는 것이 다르며, Local 5G 주파수가 할당되어 있지 않은국가도 독립형 5G LAN을 구축 가능",
+     "UPF, 5GC CP, UDM, MEC는 기업내 별도 구축 공중망과 물리적 분리"
+    ]
+   },
+   {
+    "title": "5G 공중망과 특화망의 특성 비교",
+    "bullets": [
+     "전국 단위 - 토지 / 건물",
+     "소수의 이동통신사 - 이동통신사와 지역 사업자를",
+     "전국적 주파수 사용 - 지역적 공동사용",
+     "대규모 투자 필요 - 소규모 투자 가능"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   301,
+   303
+  ]
+ },
+ {
+  "id": "NW_192_1",
+  "code": "NW_192_1",
+  "title": "이음5G",
+  "subtitle": "이음 5G",
+  "domain": "NW",
+  "category": "네트워크",
+  "definition": "토지, 건물 등 특정구역 단위로 구축하는 초고속, 초저지연, 초연결의 5G 이동통신의 장점을 활용한 통신망",
+  "keywords": [
+   "5G Core Control Plane",
+   "5G Core User plane",
+   "RAN",
+   "MEC",
+   "UPF",
+   "mmWave"
+  ],
+  "sections": [
+   {
+    "title": "민간기업의 디지털전환 가속화, 이음5G의 개념",
+    "bullets": [
+     "▸ 이음5G의 정의",
+     "▸ 이음 5G의 필요성",
+     "제조, 서비스, 에너지 등 전체 산업에 걸쳐 5G 기술을 산업 특화 방식으로 제공",
+     "실시간 대용량 데이터 전송을 통한 공급망 관리와 생산성 향상",
+     "20Gbps를 속도 지원, 메타버스, VR, AR 등 다양한 서비스 공급을 위한 기반기술",
+     "2021년부터 이음 5G가 활용범위 확산되어 자동차, 조선, 교육 등 14개 분야에 54개소로 증가 추세."
+    ]
+   },
+   {
+    "title": "이음 5G의 기술요소",
+    "bullets": [
+     "▸ 이음 5G의 기술구성도",
+     "5G 코어 공유 여부에 따라 3가지로 이음5G는 구현되고, 온프레미스는 백홀없이 코어까지 자가 구축",
+     "▸ 이음 5G의 기술요소",
+     "AMF(Access and Mobility - NAS(Non Access Stratum) 신호 메시지에 대한 보안 기능, 등록지역관리 기능, 위치 필요정보 등을 포함한 코어 유닛",
+     "SMF(Session Management - 단말과 데이터 망과의 세션에 대항 제어평면을 처리하는 네 Function) 트워크 기능을 수행하는 코어 유닛",
+     "PCF(Policy Control Function) - 네트워크, 보안 표준 정책을 제어하는 기능"
+    ]
+   },
+   {
+    "title": "28GHz 주파수대역 활용 방안 및 한계점",
+    "bullets": [
+     "▸ 28GHz 주파수 대역 활용 방안",
+     "mmWAVE 대역 활용 - 주파수가 높을수록 파장이 매우 짧아지며, 직진성이 높고넓은 대역폭 확보가 가능함",
+     "이음5G는 50MHz, 100MHz, 200MHz, 400MHz 지원",
+     "5G코어 일부 또는 전부 공유 - 이음 5G 통신사업자는 코어망 일부 또는 전부 공유하여기업의 데이터 소유권을 보장 및 비용 절감",
+     "이음 5G의 보안 강화 - 이동통신 표준 선택에서 자유롭기 때문에 표준에서 발생하는 보안취약점에 노출되지 않음",
+     "중대재해 예방 서비스 - 기존 와이파이 대비 안정적이고 빠른 데이터 처리를 통해 생산성을 향상, 실시간 관제 가능"
+    ]
+   },
+   {
+    "title": "이음 5G의 활용 효과",
+    "bullets": [
+     "이통망과 별개의 자가망 구축 - 보안 위협예방과 기업 데이터 자산 보호",
+     "작업장 안전환경 개선 - 실시간 센싱 데이터를 딜레이 없이 지원",
+     "공정 첨단화를 통한 생산성 증대 - 공정별 관리 시스템 실시간 모니터링",
+     "소재, 부품, 장비 시장 활성화 - 이음 5G 구축, 운영, 서비스위한 소부장 개발",
+     "스마트팩토리에 한정된 것이 아니라, 의료, 연구개발, 에너지산업 등 다양한 산업으로 확산 중 “끝”"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   304,
+   306
+  ]
+ },
+ {
+  "id": "NW_193_02",
+  "code": "NW_193_02",
+  "title": "DTN(Digital Twin Network)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "네트워크",
+  "definition": "물리적 네트워크를 실시간 복제하여 6G 무선네트워크의 설계, 진단, 분석, AI/ML 기반 실시간 최적화 및 제어를하기 위한 기술",
+  "keywords": [
+   "신뢰성 & 지연시간",
+   "확장성",
+   "민첩성",
+   "일반화 가능성",
+   "보안",
+   "해석 가능성",
+   "물리 네트워크",
+   "Digital Twin",
+   "NW 어플리케이션",
+   "Data",
+   "Model",
+   "Interface"
+  ],
+  "sections": [
+   {
+    "title": "디지털 트윈과 네트워크의 결합, 6G의 DTN(Digital Twin Network) 개요",
+    "bullets": [
+     "▸ 6G의 DTN(Digital Twin Network) 정의",
+     "▸ 6G의 DTN(Digital Twin Network) 요구사항",
+     "운영 인프라의 높은 견고성이 필요하며 인적 오류, 장비고장 등 상황에 대응.",
+     "물리적 네트워크의 규모가 증가되거나 축소될 때, DTN의 규모도 자동 조정",
+     "On-Demand 방식 요청 시 측시 처리하기 위한 충분한 유연성 필요",
+     "다양한 NW 장비, 토폴로지, 애플리케이션을 가진 NW 적용 호환성 제공"
+    ]
+   },
+   {
+    "title": "6G 의 DTN(Digital Twin Network) 아키텍처",
+    "bullets": [
+     "▸ 6G의 DTN(Digital Twin Network) 아키텍처",
+     "▸ 6G의 DTN(Digital Twin Network) 아키텍처 상세 설명",
+     "물리적 네트워크 요소와 그 운영 환경으로 구성된 실제 6G 네트워크를 대상으로 참조",
+     "6G DTN의 핵심으로 데이터, 모델, 관리 세가지 도메인으로 구성",
+     "6G 디지털트윈 계층에 노출된 기능을 활용하는 다양한 어플리케이션",
+     "물리적 네트워크 인프라의 여러 부분에서 수집"
+    ]
+   },
+   {
+    "title": "6G DTN의 Use-Case",
+    "bullets": [
+     "물리적으로 정확한 대규모 디지털 복제본을 사용하여 네트워크 시뮬레이션 및 계획 프로세스를 개선",
+     "NW 구성 변경 적용 전 가상 드라이브 테스트를 생성하는 데 사용",
+     "네트워크 동작을 기반으로 미래의 중단 예측",
+     "합성 데이터는 실제 세계에서 측정되거나 수집되는 것이 아니라 물리",
+     "DTN의 실시간보다 빠른 시뮬레이션 기능은 AI 기반 네트워크 최적화및 실시간 제어",
+     "DTN은 네트워크 구성 오류, 링크 병목 현상 및 보안 문제를 식별하여향후 성능을 예측할 수 있는 가상 샌드박스 기능 활용"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   307,
+   308
+  ]
+ },
+ {
+  "id": "NW_194",
+  "code": "NW_194",
+  "title": "MOCN(Multi-Operator Core Network)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > MOCN(Multi-Operator Core Network)",
+  "definition": "코어 네트워크만 통신사의 소유이고 eNB/gNB의 기지국과 주파수 스펙트럼은 통신사 간 공유하는 Ran Sharing 기법",
+  "keywords": [
+   "RAN Sharing",
+   "코어망은 통신사별 소유",
+   "기지국(eNB/gNB)·주파수 공유",
+   "MORAN·GWCN과 비교"
+  ],
+  "sections": [
+   {
+    "title": "네트워크 쉐어링 기술, MOCN(Multi-Operator Core Network)의 개요",
+    "bullets": [
+     "▸ MOCN의 정의",
+     "▸ MOCN의 특징",
+     "통신사 간 공유하는 부분이 많아 구축비용, 운용 비용 절감",
+     "공유를 통한 서비스 범위 개선, 데이터 속도 향상",
+     "에너지 소비 감소, 전자파 감소",
+     "5G의 부족한 커버리지를 네트워크 쉐어링으로 해결 가능"
+    ]
+   },
+   {
+    "title": "MOCN 의 구성도와 동작절차",
+    "bullets": [
+     "▸ MOCN의 구성도",
+     "코어 네트워크는 독립적으로 사용하고, 기지국과 주파수대역은 공유",
+     "▸ MOCN의 동작절차",
+     "OP Broadcast - 통신망1,2는 기지국에 정보를 브로드캐스팅",
+     "UE Message 전송 - 공유 기지국과 근접한 사용자 단말에 정보 전송",
+     "Node에 응답 - 사용 대기중 상태 값 전송"
+    ]
+   },
+   {
+    "title": "MOCN과 MORAN의 비교",
+    "bullets": [
+     "RAN 요소와 주파수까지 공유하는 RAN - RAN 요소만 공유하고 주파수는 공유하지않는 RAN Sharing 기법 OP-A OP-B Core N/W OP-A OP-B shared G/W shared shared node shared shared Spectrum OP-A OP-B",
+     "기지국, G/W, 노드, 주파수 스펙트럼 - 기지국, G/W, 노드",
+     "코어 네트워크(EPC/5GC) - 코어 네트워크(EPC/5GC), 주파수 스펙트럼",
+     "MOCN, MORAN 기반의 Ran Sharing 기법은 공공망(Public Network)에 활용 가능"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   309,
+   310
+  ],
+  "keywords_note": "원문 키워드 칸에 다른 토픽(데이터거버넌스) 키워드가 들어가 있어 본문에서 발췌",
+  "reviewed": true
+ },
+ {
+  "id": "NW_197",
+  "code": "NW_197",
+  "title": "망중립성",
+  "subtitle": "망중립성(Network Neutrality)",
+  "domain": "NW",
+  "category": "NW > 망중립성 > 망중립성(Network Neutrality)",
+  "definition": "모든 네트워크 사업자는 모든 컨텐츠를 동등하게 취급하고 어떠한 차별도 하지 않는다는 개념",
+  "keywords": [
+   "no discrimination(차별금지)",
+   "모든 콘텐츠 동등 취급",
+   "미국 망 중립성 폐지"
+  ],
+  "sections": [
+   {
+    "title": "미래 인터넷을 위한 망중립성(Network Neutrality)의 개요",
+    "bullets": [
+     "▸ 미래 인터넷을 위한 망중립성(Network Neutrality)의 정의",
+     "모든 네트워크 사업자와 정부는 인터넷을 통해 발생하는 데이터 트래픽을 동등하게 취급하고, 대상, 내용, 유형, 사용자, 플랫폼, 전송방식에 따른 어떠한 차별도 없이 동등하게 처리해야 한다는 것",
+     "▸ 망중립성 이슈 발생 배경",
+     "4차 산업혁명시대로 5G 등 초고속 인터넷 기술로 네트워크 슬라이싱이 가능해지고, 관리형 서비스 요구가 대두됨에 따라 망중립성 이슈가 재부각됨",
+     "▸ 망중립성의 3가지 원칙",
+     "망중립성에 대한 이슈가 지속되고 있는 가운데, 최근 FCC (미국연방통신위원회)의 망중립성 폐지 결정에 따라시장에 미치는 영향에 대한 국내외의 관심이 집중되고, 국가별 망중립성 정책에 대한 논의가 활발함"
+    ]
+   },
+   {
+    "title": "망중립성 잼정사항 및 정책이슈",
+    "bullets": [
+     "▸ 망중립성 주요 쟁점사항",
+     "▸ 망중립성 정책이슈",
+     "다양한 네트워크 품질을 요구하는 지능정보형 서비스의 출현으로망중립성 규제 중심이 되는 인터넷 서비스 개념에 대한 검토 필요",
+     "5G 확대로 인한 네트워크 슬라이싱 서비스의 효율적인 활용을 위한",
+     "서비스의 확장서비스 확장 필요",
+     "자율주행자동차, 헬스케어 등 지능정보서비스 활용을 위한 검토필요"
+    ]
+   },
+   {
+    "title": "망중립성 이슈에 대한 시사점과 대응방안",
+    "bullets": [
+     "▸ 망중립성 이슈에 대한 시사점",
+     "시장의 지속적인 모니터링으로 사업자 간 불공정 행위요소를 감시하고 제재하는 것이 필요",
+     "찬성과 반대 입장의 충분한 고려로 산업성장 가능성이",
+     "불합리한 차별을 금지하고, 관리형 서비스 제공 조건이 5G 환경에 적합한지 지속적으로 논의",
+     "망중립성 기본 원칙에 벗어나지 않고, 관리형 서비스 제공시 5G 발전을 저해하지 않도록 노력",
+     "다양한 통신 사용 주체들의 정당한 네트워크 접근 보장"
+    ]
+   },
+   {
+    "title": "망중립성 및 인터넷 트래픽 관리에 관한 가이드라인 개정안 주요 내용(20.12.28)",
+    "bullets": [
+     "▸ 개정안 주요내용",
+     "망중립 예외서비스 제공요건을 명확히 위해, 해외 같이 특수 서비스 개념 도입",
+     "특수서비스 개념 도입으로 시장의 불확실성 해소 기대",
+     "특수서비스가 제공될 경우에도 일반 이용자가 이용하는 인터넷 품질은 적정수준으로 유지하는 등 남용 가능성을 차단",
+     "통신사업자가 서비스 품질 적정수준 유지, 지속적 고도화, 특수서비스를 망중립성원칙 회피 목적으로 제공하는 것을 금지",
+     "통신사업자와 콘텐츠사업자 등 이용자 간 정보비대칭성 완화를 위해 투명성 강화"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   311,
+   315
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_198",
+  "code": "NW_198",
+  "title": "넷플릭스(Netflix)법",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "DS > 망분리",
+  "definition": "과도한 트래픽을 유발하는 부가통신사업자에 통신서비스 품질 유지 의무를 부과하는 내용을 담은 전기통신사업법 개정안",
+  "keywords": [
+   "전기통신사업법 시행령",
+   "하루평균 100만명",
+   "트래픽 국내 총량 1%",
+   "부가통신사업자"
+  ],
+  "sections": [
+   {
+    "title": "통신서비스 품질유지의무, 넷플릭스(Netflix)법 개요",
+    "bullets": [
+     "부가통신사업자의 서비스 안정성 확보 등을 위한 조치, 제30조의 8",
+     "한국 이동통신망 무임승차 논란의 대표적인 기업인 넷플릭스의 명칭을 따 넷플릭스법으로 명명"
+    ]
+   },
+   {
+    "title": "넷플릭스법 규제대상 및 부과의무",
+    "bullets": [
+     "▸ 넷플릭스법 규제대상",
+     "이용자 - 전년도 말 기준 직전 3개월간 국내 하루 평균 이용자 100만 명 이상",
+     "트래픽 - 국내 일 평균 트래픽 양이 국내 총량의 1% 이상",
+     "사업자 - 과도한 트래픽 유발하는 부가통신사업자",
+     "컨텐츠사업자 - 넷플릭스, 구글, 페이스북, 네이버, 카카오, 웨이브 6개사",
+     "위반시 - 시정명령 및 과태료 2,000만원"
+    ]
+   },
+   {
+    "title": "넷플릭스법의 찬반 논란",
+    "bullets": [
+     "국내 CP사는 망 사용료를 지급함 - 트래픽 사용량 전체 1% 기준의 모호함",
+     "역차별 고려 글로벌 CP도 지불해야함 - 통신사 수용 용량 기준과 맞지 않음",
+     "서비스 안정성 고려한 품질 관리 - 망 사용료와 품질 의무 이중부담",
+     "재발방지 위한 서버 증설 서비스 - 망중립성 위배, 이용자 부담 가중",
+     "사전 점검, 일시중단시 고지 안내 - ISP 의무를 CP에게 전가",
+     "글로벌 CP 망 품질유지 의무 법적 근거 - 국내 CP 해외 진출 시 악영향"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   316,
+   317
+  ]
+ },
+ {
+  "id": "NW_199",
+  "code": "NW_199",
+  "title": "디지털세(Digital Tax)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "DS > 정책 > 디지털세(Digital Tax)",
+  "definition": "사업장의 물리적 위치와 관계없이 매출이 발생하는 국가에서 세금을 부과하여 조세 회피를 방지하는 새로운 세금 제도.",
+  "keywords": [
+   "필라1(Pillar 1)",
+   "필라2(Pillar 2)",
+   "과세권 배분",
+   "글로벌 최저한세",
+   "OECD 디지털세(Digital Tax)",
+   "디지털서비스세(Digital Service Tax, DST)"
+  ],
+  "sections": [
+   {
+    "title": "돈 번 나라에 세금 내는, 디지털세의 개념",
+    "bullets": [
+     "낮은 물리적 사업장 의존도",
+     "사용자에 의한 가치창출 ▶• 디지털 기업들의 낮은 실효 ▶",
+     "디지털기업들의 높은 • 국가별 독립적으로 DST",
+     "기 시행중인 DST 및 유사",
+     "OECD와 G20 국가가 고정사업장 유무와 관계없이 글로벌 IT기업에",
+     "OECD 디지털세세금 부과하기 위해 만든 국제 공동의 디지털 과세"
+    ]
+   },
+   {
+    "title": "디지털세의 과세 방식",
+    "bullets": [
+     "▸ 매출발생국에 과세권 배분하는 필라1(Pillar 1) 방식",
+     "일정 규모 이상인 다국적기업이 얻은 글로벌 초과 이익의 일정 부분에 대해 시장 소재국에과세권을 배분하는 방식 A 1국 과세소득국가별 A 통상이익 기여분매출액초과이익 2국 과세소득글로벌이익 A 3국 과세소득",
+     "연결 매출액 200억유로(27조원) 및 이익률 10%이상 다국적 기업대상",
+     "적용대상 (채굴업, 규제된 금융업은 적용 제외)",
+     "해당 관할권 내 매출액 100만 유로 이상 시 형성",
+     "과세 연계점 (과세권을 배분 받을 자격이 있는 시장 소재국을 판단하는 기준)"
+    ]
+   },
+   {
+    "title": "시행 불투명하게 만드는, 디지털세의 쟁점",
+    "bullets": [
+     "디지털서비스세와 디지 - 디지털세 본격 시행전까지 기존 디지털서비스세 유지",
+     "국가별 정책에 따라 국내기업 중복과세 피해 가능",
+     "IT 서비스기업에서 제조 - 무형자산에 과세하는 본연의 추진 목적에 불일치",
+     "소비재 생산의 제조업과 B2B까지로 확대 쟁점",
+     "국내 배당소득기준으로 - 자회사로부터 배당 회수 시 국내 법인세율로 과세",
+     "동일한 재원에 대해 이중과세 조정 필요"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   318,
+   322
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_201",
+  "code": "NW_201",
+  "title": "CDN",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW> CDN> CDN",
+  "definition": "콘텐츠를 효율적으로 전달하기 위해 여러 노드(웹캐시)를 가진 네트워크에 데이터를 저장하여 제공하는시스템",
+  "keywords": [
+   "Middle Mile",
+   "CDN SP",
+   "CP",
+   "ISP",
+   "User",
+   "POP",
+   "IX"
+  ],
+  "sections": [
+   {
+    "title": "Middle Mile 최소화를 통한 콘텐츠 유통 기술 혁명, CDN 개요",
+    "bullets": [
+     "▸ CDN (Contents Delivery Network) 정의",
+     "▸ 이해관계자 관점 별 특징",
+     "Middle Mile을 경유하지 않으므로 전송속도 향상",
+     "가입자망에서 분배형 구조로 Traffic busting시에도 전송속도 지연방지",
+     "Traffic Overflow 방지, - 스트리밍서비스 단절해소, - QoS 향상",
+     "웹호스팅 비용절감(공급자측면)"
+    ]
+   },
+   {
+    "title": "CDN(Contents Delivery Network) 개념도 및 구성요소",
+    "bullets": [
+     "▸ CDN 개념도",
+     "▸ CDN 구성요소",
+     "CDN Service Provider",
+     "CDN 사업을 총괄적으로 수행하는 사업자",
+     "전국의 수많은 CDN Server를 설치하고 설치된 서버들을 Network로 묶어 체계적으로 배치하고 관리",
+     "Contents Provider, 콘텐츠 제공하는 사업자"
+    ]
+   },
+   {
+    "title": "CDN 기술요소",
+    "bullets": [
+     "자주 찾는 페이지를 컴퓨터에 복사해 저장한 후 사용자가 찾으면 저장된 정보를 전송하는기술",
+     "Pull 모델: ISP들의 POP지점에 Cache를 배치",
+     "Push모델: Cashing Product를 웹 서버 앞에 설치",
+     "Pull & Push의 통합 모델",
+     "CDN서비스를 제공하기 위해 인터넷망에 분산 배치되어 있는 많은 캐시 서버 중에이용자에게 최상의 서비스를 제공할 수 있는 캐시 서버를 선정하여 연결하는 기술",
+     "서버 별로 트래픽 분산을 통해 웹 고객에 대한 서비스 성능 향상시키는 기술,"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   323,
+   327
+  ]
+ },
+ {
+  "id": "NW_203",
+  "code": "NW_203",
+  "title": "라우팅 프로토콜",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 라우팅 프로토콜",
+  "definition": "모든 라우터들은 라우팅을 위해서, 목적지에 따라서 패킷을 보낼 인터페이스를 먼저 계산해 놓아야 하는데, 이를 계산해 놓은 것을 라우팅 테이블이라 함",
+  "keywords": [
+   "Static",
+   "dynamic",
+   "RIP",
+   "IGRP",
+   "OSPF",
+   "EIGRP"
+  ],
+  "sections": [
+   {
+    "title": "라우팅 프로토콜",
+    "bullets": [
+     "▸ Routing과 Routing Protocol의 개념",
+     "라우팅을 수행할 때 최적의 경로 (optimum path/route)를 찾는방법을 라우팅 알고리즘이라 함",
+     "라우팅 테이블을 생성, 유지, 업데이트, 전달하는 프로토콜이 라우팅 프로토콜."
+    ]
+   },
+   {
+    "title": "라우팅 프로토콜의 분류 및 상세설명",
+    "bullets": [
+     "▸ 라우팅 프로토콜 분류",
+     "관리자의 관리부담 증가 및 정해진 경로 문제 발생시 라우팅불가능",
+     "라우터가 스스로 알아서 가장 좋은 길을 찾아가는 것, 경로를기록하는 테이블을 가지고 스스로 모든 경로를 일일이 다",
+     "RIP, IGRP, OSPF, EIGRP",
+     "AS 내에서의 라우팅을 담당하는 라우팅 프로토콜",
+     "-RIP, IGRP, OSPF, EIGRP"
+    ]
+   },
+   {
+    "title": "RIP : (Routing Information Protocol): RIPv1/RIPv2)",
+    "bullets": [
+     "거리 벡터(distance vector) 알고리즘을 사용하는 가장 단순한 라우팅 프로토콜 거리 벡터 알고리즘은메트릭(metric) 값을 인접 라우터와 주기적으로 교환하여 테이블을 갱신하고 이를 통해 경로를선택하는 알고리즘"
+    ]
+   },
+   {
+    "title": "IGRP (Interior Gateway Routing Protocol): CISCO 독자 프로토콜",
+    "bullets": [
+     "하나의 메트릭(hop count) 값만을 사용하는 대신 다양한 네트워크 파라미터를 (대역폭, 지연, 현재 부하 등) 이용하여 거리 벡터를 계산",
+     "멀티 패스 라우팅지원: 목적지에 대해 최대 4 개 까지의 경로를 관리",
+     "라우팅 테이블 갱신을 위해 꼭 필요한 정보만을 전송하기 때문에 회선에대한 오버헤드가 감소됨"
+    ]
+   },
+   {
+    "title": "IGRP 구성 예",
+    "bullets": [
+     "절차설명 ① IGRP 는 주기적으로 인접 라우터와 라우팅 정보를 교환하여 최적 경로를 결정하는데, RIP 와 달리 다중경로에 대해서 라우팅을 수행 한다."
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   328,
+   340
+  ]
+ },
+ {
+  "id": "NW_205",
+  "code": "NW_205",
+  "title": "라우팅 경로고정",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "라우팅 프로토콜 > 라우팅 경로 고정",
+  "definition": "라우팅 테이블을 생성·유지·업데이트·전달하는 프로토콜이 라우팅 프로토콜이며, 경로 고정 여부에 따라 관리자가 경로를 직접 입력하는 Static과 라우터가 스스로 최적 경로를 찾는 Dynamic으로 분류.",
+  "keywords": [
+   "Static Routing: 수동 입력, 라우터 부하 경감",
+   "Dynamic Routing: RIP, IGRP, OSPF, EIGRP"
+  ],
+  "sections": [
+   {
+    "title": "라우팅 프로토콜의 개요",
+    "bullets": []
+   },
+   {
+    "title": "라우팅 프로토콜의 분류 및 상세설명",
+    "bullets": [
+     "▸ 라우팅 프로토콜 분류",
+     "수동식, 사람이 일일이 경로입력, 라우터 부하 경감, 고속 라우팅",
+     "관리자의 관리부담 증가 및 정해진 경로 문제 발생시 라우팅 불가능",
+     "라우터가 스스로 알아서 가장 좋은 길을 찾아가는 것, 경로를 기록하는테이블을 가지고 스스로 모든 경로를 일일이 다 기록해 두고, 이를 보고 패킷의경로를 지정해 준다.",
+     "RIP, IGRP, OSPF, EIGRP",
+     "AS 내에서의 라우팅을 담당하는 라우팅 프로토콜 ("
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   341,
+   342
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_206",
+  "code": "NW_206",
+  "title": "내외부라우팅",
+  "subtitle": "내/외부 관점 라우팅",
+  "domain": "NW",
+  "category": "라우팅 프로토콜> 내/외부 관점 라우팅",
+  "definition": "AS(자율 시스템) 내부·외부 연결에 따라 AS 내부 라우팅을 담당하는 IGP와 서로 다른 AS 사이에서 사용하는 EGP로 구분하는 라우팅 분류.",
+  "keywords": [
+   "IGP: RIP, IGRP, OSPF, EIGRP, IS-IS (Multicast)",
+   "EGP: BGP, EGP (Unicast)",
+   "AS(Autonomous System)"
+  ],
+  "sections": [
+   {
+    "title": "내/외부 관점 라우팅 IGP, EGP 개념과 특성",
+    "bullets": []
+   },
+   {
+    "title": "내/외부 관점 라우팅 개념도",
+    "bullets": [
+     "▸ 내/외부 관점 라우팅 개념도",
+     "AS(Autonomous System, 자율(적인) 시스템) 내부, 외부 연결에 따라 IGP, EGP 로 구분"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   343,
+   344
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_207",
+  "code": "NW_207",
+  "title": "RIP",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "",
+  "definition": "Bellman 과 Ford 에 의해 개발된 거리 벡터(Distance Vector) 알고리즘을 사용하는 동적 라우팅 프로토콜",
+  "keywords": [
+   "Distance Vector 알고리즘",
+   "15 Hop",
+   "RIPv1",
+   "RIPv2",
+   "RIPng",
+   "UDP 통신"
+  ],
+  "sections": [
+   {
+    "title": "간단하고 가장 널리 사용되는 TCP/IP 내부 라우팅 프로토콜, RIP 개요",
+    "bullets": [
+     "▸ RIP(Routing Information Protocol) 정의",
+     "▸ RIP 특징",
+     "IPv4 사용(RIPv1, RIPv2), IPv6 사용(RIPng)",
+     "모든 라우팅 프로토콜 중에서 가장 설정하기 쉽고, 자원 소모가 적음"
+    ]
+   },
+   {
+    "title": "RIP 라우팅 정보와 경로 거리 척도 및 경로 결정 알고리즘",
+    "bullets": [
+     "▸ RIP 라우팅 정보와 경로 거리 척도",
+     "RIP 는 경로에 대한 정보를 교환하는 방식을 제공하여 라우터가 자신의 라우팅 테이블을 최신으로관리할 수 있게 함",
+     "RIP 인터네트워크에 있는 각 라우터는 라우팅 테이블에 인터네트워크 내 모든 NW(or host) 정보 저장",
+     "각 NW 나 host 에 대해 저장하는 정보",
+     "NW 나 host 의 주소",
+     "라우터에서 NW 나 host 까지의 거리"
+    ]
+   },
+   {
+    "title": "RIP 경로 결정과 정보 전파(4 개의 NW 로 이루어진 간단한 AS 의 예)",
+    "bullets": [
+     "라우터 RA 는 NW N1 과 NW N2 에 연결되어 있음",
+     "라우터 RB 와 라우터 RC 는 NW N2 와 NW N3 에 연결되어 있음",
+     "라우터 RD 는 NW N3 와 NW N4 에 연결되어 있음 1/5 설명",
+     "라우터 RA 는 RIP 메시지에 {N1, 1}을 실어 자신이 연결된 NW 에 전송",
+     "NW N1 에는 다른 라우터가 없기 때문에 아무 일도 일어나지 않음",
+     "NW N2 에는 라우터 RB 와 RC 가 있으므로 두 라우터가 정보를 받음"
+    ]
+   },
+   {
+    "title": "RIP 일반 동작, 메시지 교환, 타이머",
+    "bullets": [
+     "RIP 는 라우팅 정보를 교환하기 위한 프로토콜이기 때문에 정보를 주고 받기 위해 메시지를 사용",
+     "라우터에 있는 RIP SW 는 특정 이벤트와 타이머의 만료에 따라 메시지를 전송하거나 그 이외의 동작을취함",
+     "타이머는 갱신되지 않은 라우팅 정보를 언제 버릴지 결정할 때에도 사용함설명",
+     "라우터의 RIP SW 는 RIP 메시지로 서로 통신",
+     "RIPv1~v2 는 UDP 520 port, RIPng 는 UDP 521 port 사용",
+     "RIP 메시지를 한 장비로만 보낼 때는 유니캐스트 전송하며, 여러 장비에 전송할 때는 RIP 는브로드캐스트, RIPv2 와 RIPng 는 멀티캐스트 사용"
+    ]
+   },
+   {
+    "title": "RIP 버전별 특성",
+    "bullets": [
+     "▸ RIPv2 특성",
+     "RIPv1 문제점 및 한계 개선, 1998 년 RFC 2453 으로 최종적으로 정의됨설명",
+     "각 NW 주소에 대한 주소 항목에 서브넷 마스크를 추가하여 서브넷 지원",
+     "가변 길이 서브넷 마스킹(VLSM)과 CIDR 지원",
+     "각 RIP 항목은 자신이 가리키는 NW 로 데이터그램을 보낼 때 사용할 다음 hop 라우터를 명시적으로 알림",
+     "특정 목적지로 데이터그램을 보낼 때 불필요한 추가 hop 수를 줄여 라우팅효율을 높임"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   345,
+   349
+  ]
+ },
+ {
+  "id": "NW_208",
+  "code": "NW_208",
+  "title": "Distance Vector Algorithm",
+  "subtitle": "Distance Vector Algorithm (거리벡터알고리즘)",
+  "domain": "NW",
+  "category": "네트워크 > 라우팅 프로토콜 > Distance Vector Algorithm",
+  "definition": "각 노드가 직접 연결된 이웃이 보내는 정보로 목적지까지의 거리(Hop)와 방향을 계산하고 그 결과를 다시 이웃에게 알리는(분산적·반복적·비동기적) 라우팅 방식.",
+  "keywords": [
+   "RIP",
+   "IGRP",
+   "분산적·반복적·비동기적",
+   "Hop Count",
+   "이웃 라우터와 테이블 교환"
+  ],
+  "sections": [
+   {
+    "title": "거리중심의 프로토콜 Distance Vector Algorithm의 개요",
+    "bullets": [
+     "▸ Distance Vector Algorithm의 정의",
+     "▸ Distance Vector Algorithm 특징",
+     "각 노드는 직접 연결된 이웃들이 보내는 정보로부터 계산하고, 그 계산결과를 이웃에게 알림",
+     "이웃끼리 라우팅 정보를 반복적으로 수신",
+     "모든 노드가 비동기적으로 제각각 동작하며 계산"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   350,
+   351
+  ],
+  "note": "원문 '정의' 칸은 SPF로 적혀 있으나 이는 Link State 설명이라, 원문 특징·개념도 설명으로 정의를 정리함",
+  "reviewed": true
+ },
+ {
+  "id": "NW_209",
+  "code": "NW_209",
+  "title": "Link State Algorithm",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW>라우팅 프로토콜>Link State Algorithm",
+  "definition": "라우터가 네트워크 전반의 링크 상태 정보를 유지하고, 자신을 루트로 최단 경로 알고리즘(다익스트라)을 계산해 모든 목적지까지의 경로를 라우팅 테이블에 기록하는 방식(대표: OSPF).",
+  "keywords": [
+   "OSPF",
+   "다익스트라 알고리즘"
+  ],
+  "sections": [
+   {
+    "title": "라우팅 테이블 관리 Link State Algorithm 개요",
+    "bullets": []
+   },
+   {
+    "title": "Link State Algorithm 동작 방식",
+    "bullets": [
+     "라우터가 목적지까지 최단 경로 알고리즘 통해 라우팅 테이블에 기록",
+     "네트워크 전반 정보 유지, 개별 라우터는 자신을 루트로 하고 모든 목적지까지 도달 가능한 최단거리 spanning tree 계산 (다익스트라 알고리즘 이용)",
+     "확실한 전송 정보(자신과 직접 연결된 링크 상태)만을 전송",
+     "개별 라우터는 자신과 직접 연결된 네트워크 정보를 담아 자신과 이웃한 라우터에 전달",
+     "개별 라우터는 자신의 LSP 생성, 다른 라우터는 flooding 과정 통해 LSP 받음",
+     "개별 노드는 다른 모든 노드에 정보 전달"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   352,
+   353
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_210",
+  "code": "NW_210",
+  "title": "Routing Information Protocol",
+  "subtitle": "RIP (Routing Information Protocol)",
+  "domain": "NW",
+  "category": "NW > 라우팅프토토콜 > RIP",
+  "definition": "경유할 가능성이 있는 라우터를 홉수로 수치화하여, 거리백터(DVA :Distance Vector Algorithm)라는알고리즘으로 인접 호스트와의 경로를 동적으로 교환하는 프로토콜.",
+  "keywords": [
+   "Hop 수(최대 15)",
+   "거리벡터(DVA)",
+   "라우팅 테이블",
+   "UDP 520"
+  ],
+  "sections": [
+   {
+    "title": "RIP (Routing Information Protocol)",
+    "bullets": [
+     "▸ RIP의 정의",
+     "▸ RIP의 특징",
+     "동적라우팅 중 가장 단순하고 이해가 쉽지만, 주로 소규모 망에서 사용",
+     "RIP message는 UDP를 통해 전달",
+     "Simple Distance Vector 알고리즘"
+    ]
+   },
+   {
+    "title": "RIP(Routing Information Protocol) 의 패킷구조및 주요내용",
+    "bullets": [
+     "▸ RIP 의 패킷구조",
+     "▸ RIP 의 주요내용",
+     "경로비용을 단지 홉 수로 만 판단",
+     "속도나 거리 지연 등을 고려하지 않아 최적의 경로 산정에 비효율적",
+     "최대 15 홉 수(16은 무한대)로 제한",
+     "홉(hop)수는 라우터를 통과할 때 마다 1 씩 증가하게 됨"
+    ]
+   },
+   {
+    "title": "RIP의 한계및 해결책",
+    "bullets": [
+     "▸ RIP의 한계",
+     "라우터들끼리 주기적으로(30초 간격) 경로 업데이트를 하며 경로 재계산함에 따라몇 개 라우터 만 지나도 수분 이상 걸림",
+     "전체 경로를 담은 라우팅 테이블을 주기적으로 보로드캐스트함에 따라 network에이에따른 traffic 부하를 줌",
+     "전 라우터들 사이에 동기화를 시켜주지 않으면 패킷의 경로가 부적절하게될 수있음",
+     "매 30초 마다 업데이트되는 까닭에 다운(Down) 등의 나쁜 소식이 늦게 전달되어잘못된 경로로 무한 루프(Infinite Loop)를 도는 사태 발생",
+     "느린 수렴 시간 때문에, 나쁜 경로를 다른 라우터에게 전하면 그 라우터는 더 느리게 더 나쁜 정보로써 다른 라우터에게 전하게되면서 결국 무한(16) 홉 수로 가는현상"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   354,
+   355
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_211",
+  "code": "NW_211",
+  "title": "Open Shortest Path First",
+  "subtitle": "OSPF (Open Shortest Path First)",
+  "domain": "NW",
+  "category": "NW > 라우팅프로토콜 > OSPF",
+  "definition": "링크상태 라우팅 프로토콜에 기초하여, 자치시스템(AS) 내부의 라우터들끼리(IGP) 라우팅 정보를 교환하는 라우팅 프로토콜",
+  "keywords": [
+   "AS",
+   "ABR",
+   "ASBR",
+   "DR",
+   "BDR"
+  ],
+  "sections": [
+   {
+    "title": "OSPF(Open Shortest Path First)",
+    "bullets": [
+     "▸ OSPF 의 정의",
+     "▸ OSPF 의 특징",
+     "RIP를 대신할 IGP용 표준프로토콜로서 1990년 IETF에서 제정",
+     "빠른 정보 전달과 네트워크의 계층화로 큰 규모의 망에 적합하도록 설계",
+     "Link State 알고리즘으로 링크에 변화가 발생했을 경우에만 Triggered Update 수행",
+     "IGP중 가장 많이 사용되는 프로토콜임."
+    ]
+   },
+   {
+    "title": "OSPF 구조 및 주요내용",
+    "bullets": [
+     "▸ OSPF의 구조도",
+     "OSPF는 하나의 백본 Area를 경유하는 여러 개의 area로 구성됨",
+     "백본Area를 통해서만 라우팅 정보가 교환됨. 각각의 area내에서는 자신의 area내의 정보들만 공유함.",
+     "한 Area 내에 있는 모든 OSPF라우터는 동일 routing DB를 유지",
+     "계층적 라우팅을 통한 네트웍의 거대화 및 효율성을 이루어냄."
+    ]
+   },
+   {
+    "title": "AS external Link Advertisement: ASBR이 생성, 다른 AS내의 목적지 전달",
+    "bullets": [
+     "▸ 특징",
+     "계층구조로 라우팅의 단순화를 통해 대형 네트웍의 라우팅 정책에 적합",
+     "SPF알고리즘의 Metric으로 Hop count, Bandwidth, Delay, Throughput 등 다양",
+     "Distance Vector 방식의 라우팅보다 링크 상태변화시 빠른 Convergence 시간은 장점이나, 비이상적인 링크업다운시 전체 망의 라우팅 부하가 심해지는 단점 존재",
+     "한정된 IP주소자원 효율적 사용 : VLSM(Variable Length SubnetMask) 사용가능",
+     "표준프로토콜로서 모든 벤더가 지원"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   356,
+   359
+  ]
+ },
+ {
+  "id": "NW_212_00",
+  "code": "NW_212_00",
+  "title": "라우팅 프로토콜 메트릭(Routing Protocol Metric)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 라우팅",
+  "definition": "라우터가 목적지까지의 여러 경로 중 최적 경로를 선택하기 위한 기준 변수.",
+  "keywords": [
+   "최적 경로",
+   "홉수",
+   "대역폭",
+   "지연",
+   "신뢰도",
+   "부하",
+   "MTU"
+  ],
+  "sections": [
+   {
+    "title": "라우팅의 최적 경로 선정 기준, 라우팅 프로토콜 메트릭의 개요",
+    "bullets": [
+     "▸ 라우팅 프로토콜 메트릭의 정의",
+     "▸ 라우팅 경로 결정 요소",
+     "라우터 관리자가 설정한 값",
+     "AD 값이 낮을수록 우선순위가 높음",
+     "라우터는 3가지 요소를 활용하여 라우팅 테이블을 구성한 후, 경로 우선순위화 및 최적 경로 결정"
+    ]
+   },
+   {
+    "title": "라우팅 메트릭의 경로선정 메커니즘과 유형",
+    "bullets": [
+     "▸ 라우팅 메트릭의 경로선정 메커니즘",
+     "목적지까지 경로가 복수개일 때, 메트릭 값을 비교하여 최적의 네트워크 성능을 발휘하는 경로를 선정",
+     "▸ 라우팅 프로토콜 메트릭 유형",
+     "패킷 처리 지연, 대기열 지연, 전송 지연, 전파 지연",
+     "원하는 신호와 실제 신호간 발생하는 불안정한 신호 차이",
+     "라우터의 혼잡 상태를 나타내는 지표"
+    ]
+   },
+   {
+    "title": "라우팅 프로토콜 별 활용 메트릭",
+    "bullets": [
+     "대역폭, 지연, 신뢰도, 부하, MTU",
+     "Cost, Cost = 참조 대역폭/인터페이스 대역폭",
+     "Cost, 링크마다 기본 메트릭 값(10) 적용",
+     "라우터는 다중 경로의 메트릭이 같은 경우 로드밸런싱 수행, 다른 값인 경우 최선 경로로 라우팅하다가고장 시 후순위 경로로 대체"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   360,
+   361
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_212_01",
+  "code": "NW_212_01",
+  "title": "STP(Spinning Tree Protocol)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW> 라우팅 프로토콜",
+  "definition": "경로가 두개 이상 존재하는 스위치나 브리지에서 발생하는 루핑(Looping)을 방지하기 위한 프로토콜",
+  "keywords": [
+   "STP(Spinning Tree Protocol)",
+   "L2 스위치"
+  ],
+  "sections": [
+   {
+    "title": "스위치 이중화 구조 문제해결, STP의 개요",
+    "bullets": [
+     "▸ STP(Spinning Tree Protocol)의 정의",
+     "▸ 스위치 이중화 구조 문제점",
+     "스위치들은 브로드캐스트 트래픽을 무한정 반복",
+     "호스트 X가 라우터 Y에게 보낸 프레임이 다른 경로설정으로 인해 두개의 동일한 프레임을 수진",
+     "호스트 X가 라우터 Y에게 Unicast Frame을 보내려고 하며, 아직 라우터 Y에 MAC를 학습한 스위치가없을 경우",
+     "스위치 이중화 시 발생하는 루핑(Looping) 현상에 STP 프로토콜을 이용"
+    ]
+   },
+   {
+    "title": "STP의 구성도와 구성요소",
+    "bullets": [
+     "▸ STP의 구성도",
+     "스위치 이중화시 통신 경로의 문제(루핑) 발생시 하나의 경로를 비활성화 시키는 메커니즘",
+     "▸ STP의 구성요소",
+     "BID(Bridge ID)가 낮은 SW - STP의 중심에 위치한 Bridge로 BPDU(Bridge Protocol",
+     "BID=Priority+MAC Data Unit)를 통해 STP 구성",
+     "BPDU를 교환하여 Root Bridge 선택"
+    ]
+   },
+   {
+    "title": "STP와 VRRP의 비교",
+    "bullets": [
+     "OSI 2계층 - OSI 3계층",
+     "물리적 신호 루핑 방지 - Auto Failover 지원",
+     "Alternated Port의 Block 처리 - 가상IP로 자동 라우터 전환",
+     "L2 스위치, 브리지 - L4 스위치, 라우터",
+     "네트웨어 이중화 구성시 OSI 3계층에서는 VRRP(Virtual Router Redundancy Protocol)을 사용하여 장애를 대응하"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   362,
+   363
+  ]
+ },
+ {
+  "id": "NW_213",
+  "code": "NW_213",
+  "title": "Home Networking(스마트 홈)",
+  "subtitle": "Home Networking = 스마트 홈(Smart Home)",
+  "domain": "NW",
+  "category": "네트워크> Home Networking> Smart Home",
+  "definition": "가전제품을 비롯해 에너지 소비장치(수도, 전기, 냉난방 등), 보안기기(도어록, 감시카메라 등) 이외의 다양한 분야에서모든 것을 통신망으로 제어할 수 있는 기술",
+  "keywords": [
+   "Smart Tag",
+   "PLC",
+   "Smart Meter"
+  ],
+  "sections": [
+   {
+    "title": "스마트홈(Smart Home)의 개요",
+    "bullets": [
+     "▸ 스마트홈(Smart Home)의 정의",
+     "주거환경에 IT를 융합하여 국민의 편익과 복지증진, 안전한 생활이 가능하도록 하는 인간 중심적인 스마트 라이프 환경",
+     "▸ 스마트홈(Smart Home)의 적용분야",
+     "에너지 사용량을 효율적으로 관리",
+     "스마트폰으로 댁내 기기 제어 및 홈 포털에서 정보확인",
+     "외부에서 댁내 단말에 저장되어 있는 콘텐츠 조회"
+    ]
+   },
+   {
+    "title": "스마트홈(Smart Home)의 구성도 및 구성요소",
+    "bullets": [
+     "▸ 스마트홈(Smart Home)의 구성도",
+     "▸ 스마트홈(Smart Home)의 구성요소",
+     "▸ 스마트홈(Smart Home)의 기능 요소",
+     "시간대별 전력요금을 보고 사용자가 원하는 시간에 제품을 동작시키는",
+     "스마트폰, 태블릿 PC 등을 통해 제품의 작동 상태를 확인하고, 원격",
+     "제품에 이상이 생겼을 때, 스스로 상태를 진단해 서비스센터로 전송하고,"
+    ]
+   },
+   {
+    "title": "IoT 보안가이드에 기반한 스마트 홈 제품 유형별 보안 위협 및 대응방안",
+    "bullets": [
+     "▸ 스마트 홈 제품 유형별 보안위협",
+     "PC 환경에서의 모든 악용 행위 •강도가 약한 비밀번호",
+     "카메라/마이크 내장 시 사생활 침해 •펌웨어 업데이트 취약점",
+     "알려진 운영체제 취약점 및 인터넷 기반",
+     "로봇청소기에 내장된 카메라를 통해",
+     "사진 및 동영상을 공격자의 서버 및"
+    ]
+   },
+   {
+    "title": "국내 스마트 홈 활성화를 위한 중소기업 로드맵과 표준화 동향",
+    "bullets": [
+     "▸ 스마트 홈 플랫폼 중소기업형 기술 로드맵",
+     "▸ 표준화 동향",
+     "LG 전자, 하이얼, 퀄컴, MS,",
+     "IoT 의 컨넥티비티 표준화로 기기간파나소닉, AT&T 및 플랫폼 간 연결 호환성 확보",
+     "삼성전자, DELL, 인텔 등",
+     "Zigbee 기술의 단점을 보완한 보안 - 삼성전자, ARM, 프리스케일, 실리콘랩스"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   364,
+   368
+  ],
+  "note": "NW_222 스마트 홈과 거의 같은 내용",
+  "reviewed": true
+ },
+ {
+  "id": "NW_222",
+  "code": "NW_222",
+  "title": "스마트 홈(Smart Home)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "",
+  "definition": "가전제품, 에너지 소비장치(수도·전기·냉난방), 보안기기(도어록·감시카메라) 등 다양한 분야의 모든 것을 통신망으로 제어할 수 있는 기술. 주거환경에 IT를 융합한 인간 중심의 스마트 라이프 환경.",
+  "keywords": [
+   "Smart Tag",
+   "PLC",
+   "Smart Meter"
+  ],
+  "sections": [
+   {
+    "title": "스마트홈(Smart Home)의 개요",
+    "bullets": [
+     "▸ 스마트홈(Smart Home)의 정의",
+     "가전제품을 비롯해 에너지 소비장치(수도, 전기, 냉난방 등), 보안기기(도어록, 감시카메라 등) 이외의 다양한 분야에서모든 것을 통신망으로 제어할 수 있는 기술",
+     "주거환경에 IT를 융합하여 국민의 편익과 복지증진, 안전한 생활이 가능하도록 하는 인간 중심적인 스마트 라이프 환경",
+     "▸ 스마트홈(Smart Home)의 적용분야",
+     "에너지 사용량을 효율적으로 관리",
+     "스마트폰으로 댁내 기기 제어 및 홈 포털에서 정보확인"
+    ]
+   },
+   {
+    "title": "스마트홈(Smart Home)의 구성도 및 구성요소",
+    "bullets": [
+     "▸ 스마트홈(Smart Home)의 구성도",
+     "▸ 스마트홈(Smart Home)의 구성요소",
+     "▸ 스마트홈(Smart Home)의 기능 요소",
+     "시간대별 전력요금을 보고 사용자가 원하는 시간에 제품을 동작시키는",
+     "스마트폰, 태블릿 PC 등을 통해 제품의 작동 상태를 확인하고, 원격",
+     "제품에 이상이 생겼을 때, 스스로 상태를 진단해 서비스센터로 전송하고,"
+    ]
+   },
+   {
+    "title": "IoT 보안가이드에 기반한 스마트 홈 제품 유형별 보안 위협 및 대응방안",
+    "bullets": [
+     "▸ 스마트 홈 제품 유형별 보안위협",
+     "PC 환경에서의 모든 악용 행위 •강도가 약한 비밀번호",
+     "카메라/마이크 내장 시 사생활 침해 •펌웨어 업데이트 취약점",
+     "알려진 운영체제 취약점 및 인터넷 기반",
+     "로봇청소기에 내장된 카메라를 통해",
+     "사진 및 동영상을 공격자의 서버 및"
+    ]
+   },
+   {
+    "title": "국내 스마트 홈 활성화를 위한 중소기업 로드맵과 표준화 동향",
+    "bullets": [
+     "▸ 스마트 홈 플랫폼 중소기업형 기술 로드맵",
+     "▸ 표준화 동향",
+     "LG 전자, 하이얼, 퀄컴, MS,",
+     "IoT 의 컨넥티비티 표준화로 기기간파나소닉, AT&T 및 플랫폼 간 연결 호환성 확보",
+     "삼성전자, DELL, 인텔 등",
+     "Zigbee 기술의 단점을 보완한 보안 - 삼성전자, ARM, 프리스케일, 실리콘랩스"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   369,
+   374
+  ],
+  "note": "NW_213 Home Networking과 거의 같은 내용",
+  "reviewed": true
+ },
+ {
+  "id": "NW_233",
+  "code": "NW_233",
+  "title": "SDN",
+  "subtitle": "SDN(Software Defined Networking)",
+  "domain": "NW",
+  "category": "NW> SDx > SDN",
+  "definition": "개방형 API인 OpenFlow를 통해 네트워크의 트래픽 전달 동작을 프로그래밍하듯 SW기반으로 컨트롤러에서 제어하는 네트워크 인프라",
+  "keywords": [
+   "Control Plane / Data Plane 분리",
+   "OpenFlow",
+   "SDN 제어기",
+   "Network OS",
+   "NFV",
+   "SDx, SDS"
+  ],
+  "sections": [
+   {
+    "title": "네트워크의 추상화를 통한 효율적 네트워크 트래픽 관리, SDN의 개요",
+    "bullets": [
+     "▸ SDN(Software Defined Network)의 정의",
+     "기존 네트워크 장비의 SW영역과 HW 영역을 분리하여 OpenFlow를 사용하여 SW기반 컨트롤러에서 제어",
+     "네트워크 제어기능(Control Plane)과 데이터 전송기능(Data Plane)을 분리하고 개방형 프로토콜을 이용하여 SW기반의 다양한 네트워크 구성 및 제어를 수행하는 네트워크 기술"
+    ]
+   },
+   {
+    "title": "SDN 개념도 및 구성요소",
+    "bullets": [
+     "▸ SDN 개념도",
+     "전달/제어 기능이 결합한 기존의 전송 장치에서 제어기능을 분리하여 중앙집중화시키고, OpenFlow와같은 개방형 API를 통해 네트워크의 트래픽 전달동작을 S/W기반 컨트롤러에서 제어하는 네트워크 기술",
+     "▸ SDN LAYER 구성도",
+     "▸ SDN의 구성 요소",
+     "Openflow만을 지원하는 스위치 또는 기존 Layer2(스위칭), Layer3(라우팅) 기능을 지원하는 스위치에 Openflow 기능을",
+     "Forward Engine"
+    ]
+   },
+   {
+    "title": "SDN 주요 기술 요소",
+    "bullets": [
+     "▸ 주요 요소기술",
+     "▸ 주요 요소기술 상세",
+     "ONF 오픈플로우 기반 컨트롤러",
+     "HP VAN SDN Controller",
+     "Cisco Nexus1000v",
+     "Cisco ACI(Application Centric Infrastructure)"
+    ]
+   },
+   {
+    "title": "SDN과 기존 네트워크 비교",
+    "bullets": [
+     "기존 구성에 변경 영향도 전반적으",
+     "중앙 Controller에서 Flexible하게 소프트웨어로 프로그래밍 하듯 변경 가능",
+     "최악의 경우, 신규 구축필요네트워크 장비 설정 및 제어 정책에 중앙 관제 장비에서 통합 네트워크 제어부에대한 관리가 어려움 대한 통합 관리로 관리 효율성 증대"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   375,
+   378
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_234",
+  "code": "NW_234",
+  "title": "OpenFlow",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > SDx > OpenFlow",
+  "definition": "이기종의 스위치와 라우터의 플로우 테이블을 개방형 프로토콜에 따라서 패킷전달과 제어기능을 SW적으로분리 구현한 SDN을 위한 인터페이스 표준 기술",
+  "keywords": [
+   "Flow Table",
+   "Header",
+   "Action",
+   "Counter(HAC)"
+  ],
+  "sections": [
+   {
+    "title": "관심사의 분리를 통한 네트워크 가상화 기술, OpenFlow의 개요",
+    "bullets": [
+     "▸ OpenFlow의 정의",
+     "▸ OpenFlow의 특징",
+     "물리적 네트워크를 서비스에 따른 논리적 네트워크로 구성 가능",
+     "소프트웨어 중심의 네트워크",
+     "벤더에 독립적인 네트워크 구성",
+     "메인 컨트롤러에 의한 중앙 집중식 제어 시스템 구현"
+    ]
+   },
+   {
+    "title": "OpenFlow 시스템 구성도 및 구성요소",
+    "bullets": [
+     "▸ OpenFlow 시스템 구성도",
+     "▸ OpenFlow 시스템 구성요소",
+     "OpenFlow 프로토콜에 의해 스위치 내부의 플로우 테이블 작성",
+     "새로운 플로우를 등록하거나 삭제하는 기능 포함(SW로 구현)",
+     "망 상태에 대한 글로벌 뷰를 기반으로 포워딩 제어, 토폴로지 및 상태 관리, 라우팅제어 등의 중앙집중형 망 제어 기능 제공",
+     "상위 응용이나 정책 요구에 따라 차별화된 포워딩 및 패킷 처리 룰을결정하여 하위의 스위치 박스에 Rule을 전달함"
+    ]
+   },
+   {
+    "title": "OpenFlow 동작절차 개념도와 동작상세",
+    "bullets": [
+     "▸ OpenFlow 동작절차 개념도",
+     "OpenFlow Device와 Controller 간의 Session 연결",
+     "Controller는 OpenFlow Device에 초기 Flow Table 정보 전송",
+     "OpenFlow Device가 패킷 수신 시 Flow Table에서 Match 정보를",
+     "Controller에서 해당 패킷을 확인해서 최적화 된 Flow Table 전송",
+     "Flow matching을 통해 정의된 Action 수행예) Action-Forward/Drop/Modify/Enqueue"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   379,
+   384
+  ]
+ },
+ {
+  "id": "NW_235",
+  "code": "NW_235",
+  "title": "SD-WAN",
+  "subtitle": "SD-WAN(Software-Defined Wide-Area Networking)",
+  "domain": "NW",
+  "category": "NW > SDx > SD-WAN",
+  "definition": "네트워킹(SDN)을 통신망 사업자와 서비스 제공자 등의 WAN(Wide Area Network)로 확장하여 적용하는네트워크 기술",
+  "keywords": [
+   "SDN",
+   "SD-Core",
+   "SD-Edge"
+  ],
+  "sections": [
+   {
+    "title": "종단간 SDN 프로덕션 서비스를 위한 SDN-WAN의 개요",
+    "bullets": [
+     "▸ SD-WAN(Software-Defined Wide-Area Networking)의 정의",
+     "▸ SD-WAN 등장 배경 및 목적",
+     "사물인터넷, 멀티미디어, 모바일 데이터의 폭발적인 증가로 지능화된 네트워크의 필요성 및 SDN의 WAN로확장 요구"
+    ]
+   },
+   {
+    "title": "SD-WAN의 개념도와 기술 요소",
+    "bullets": [
+     "▸ SD-WAN의 개념도",
+     "▸ SD-WAN의 구성 및 기술 요소",
+     "사용자 네트워크와 직접 연계되는 SDN기반 네트워크",
+     "분산된 SD-Edge들을 상호 연동 할 수 있는 가상화된 네트워크",
+     "논리적으로 중앙 집중화된 WAN 경로 제어와 결함 극복",
+     "링크 트래픽 부하 분산 및 조절, 운영 관리 자동화, 망 유연성 제공"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   385,
+   387
+  ]
+ },
+ {
+  "id": "NW_236",
+  "code": "NW_236",
+  "title": "SDE",
+  "subtitle": "SDE(Software Defined Everything)",
+  "domain": "NW",
+  "category": "NW > SDx >SDE",
+  "definition": "최소한의 하드웨어와 최대한의 소프트웨어를 구성해 최적화된 IT 인프라를 생성하고 구현시키는 기술",
+  "keywords": [
+   "SDN",
+   "SDS",
+   "SDDC",
+   "VDC",
+   "IS",
+   "Open Stack",
+   "Fabric Based Computing",
+   "Flex Fabric",
+   "NW Convergence",
+   "Prototyping Engine",
+   "App. Programming I/F SW"
+  ],
+  "sections": [
+   {
+    "title": "기관 인프라의 미래, SDE의 개요",
+    "bullets": [
+     "▸ SDE(Software Defined Everything)의 정의",
+     "▸ SDE의 특징",
+     "전체 IT 성능 속도와 효율성 증대(SDE는 최소의 하드웨어 구성으로 최적화된 인프라와 데이터 센터, 컴퓨팅을 제공함. 이로 인해 전체 IT 성능 속도와 효율성 증대)",
+     "소프트웨어 구성요소를 극대화시키면 많은 기관들이 고객들에게 전달하는 소프트웨어 서비스의 속도와 효율성으로 수익을 낼 수 있게 됨"
+    ]
+   },
+   {
+    "title": "SDE의 구성도와 혁신 내용",
+    "bullets": [
+     "▸ SDE의 구성도",
+     "SDE의 혁명은 SDN의 확장 버전임. 기업들이 비즈니스 요구에 따라 구현 시나리오의 유연성을 잘라낼 수있도록 SDN물리 계층을 애플리케이션 계층으로부터 분리시킴"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   388,
+   391
+  ]
+ },
+ {
+  "id": "NW_237",
+  "code": "NW_237",
+  "title": "NFV",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > SDx > NFV",
+  "definition": "기존 Hardware Appliances들로 구현된 Route, NAT, Firewall, IDS, IPS, DNS, Caching등의 다양한 기능을 Software 형태의 Virtual Appliances 로 구현하여 운용하는 가상화 기술.",
+  "keywords": [
+   "OSS",
+   "BSS",
+   "VNF",
+   "NFVI(스토리지, 네트워크)"
+  ],
+  "sections": [
+   {
+    "title": "네트워크 기능 가상화, NFV의 개요",
+    "bullets": [
+     "▸ NFV(Network Function Virtualization )의 정의",
+     "▸ NFV 목적",
+     "표준 IT 가상화 기술을 활용하여 기존의 단일 Appliance로 동작하던 장비들을 Software형식으로 Virtual Appliance로 구현",
+     "Virtual Appliance로 구현된 S/W는 표준 대용량 서버/스위치/스토리지를 활용하여 하나의 서비스 자원으로운용",
+     "기능적인 구현을 Virtual Appliance에서 구현함으로써, 표준화된 대용량 장비 개발 장려",
+     "서비스 기능 구현을 위해 보다 민첩한 소프트웨어 기반 프레임워크를 사용하여 서비스 유연성을 향상"
+    ]
+   },
+   {
+    "title": "NFV의 프레임워크 및 구성요소",
+    "bullets": [
+     "▸ NFV 프레임워크",
+     "NFV 프레임워크는 3개의 기능그룹인 VNFs그룹, NFV 인프라, 그리고 관리 및 전달(Management and Orchestration)으로 구성",
+     "▸ NFV의 구성요소",
+     "기본적인 자원, 즉 컴퓨팅과 스토리지 및 네트워킹을 통해 하이퍼 바이저 및 SDN(Software Defined Networking) 기능에 대한 액세스를 제공 한다.",
+     "NFVI를 관리하고 가상 환경에서 실행 중인 응용 프로그램을 배포하는 데 필요한관리 기능을 제공하고, 이러한 응용 프로그램을 일반적으로 VNFs(가상 네트워크 기능)라고 한다.",
+     "물리적인 하드웨어에 대한 가상 네트워크 인터페이스를 제공 ① 다른 목적을 위한 인프라 자원의 공유 ② 다른 목적을 위한 자원의 재할당, ③ 병렬적으로 소프트웨어와 하드웨어를 사용하는 환경 제공, ④ 다양한 벤더로부터의 소프트웨어 및 하드웨어 구성요소 활성화를 목표"
+    ]
+   },
+   {
+    "title": "NFV와 SDN의 비교",
+    "bullets": [
+     "NFV은 SDN과의 보완을 통해서 상호 이익을 가져갈 수 있지만, 서로 비종속 구현",
+     "SDN은 네트워크를 보다 쉽게 설정/관리할 수 있게 해주며, NFV 네트워크를 보다 쉽게 배치(Deploy)하고 확장가능 SDN NFV",
+     "Control Plane과 Data Plane을 분리 - 네트워크 기능 이동",
+     "중앙집중식제어와 Network의 프로그램화 - 독립 Appliance → 일반서버 Campus / Datacenter / Cloud Service Provider Network 범용 서버와 스위치 범용 서버와 스위치 Cloud orchestration and networking - Routers, Firewalls, Gateways, CDN",
+     "WAN Accelerators, SLA Assurance"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   392,
+   395
+  ]
+ },
+ {
+  "id": "NW_238",
+  "code": "NW_238",
+  "title": "OPNFV",
+  "subtitle": "OPNFV(Open Platform for Network Functions Virtualization)",
+  "domain": "NW",
+  "category": "NW > SDx > OPNFV",
+  "definition": "NFV(Network Functions Virtualization)를 위한 오픈소스 소프트웨어 플랫폼",
+  "keywords": [
+   "NFV용 오픈소스 플랫폼",
+   "Vl-Ha 인터페이스",
+   "Vn-Nf 인터페이스",
+   "Nf-Vi 인터페이스",
+   "Or-Vi, Vi-Vnfm 인터페이스"
+  ],
+  "sections": [
+   {
+    "title": "NFV를 위한 오픈소스 소프트웨어 플랫폼, OPNFV의 개요",
+    "bullets": [
+     "NFV 기반 장비/애플리케이션 개발자와 솔루션 제공 업체의 커뮤니티 기여를 토대로, NFV 솔루션을 배포하기위한 오픈소스 소프트웨어 플랫폼을 제공하고자 하는 새로운 프로젝트",
+     "표준 IT 가상화 및 클라우드 기술을 활용하여, 표준 서버 플랫폼에서 실행되는 물리적 어플라이언스(전용하드웨어 기반 솔루션)의 필요성을 가상화된 환경으로 대체"
+    ]
+   },
+   {
+    "title": "OPNFV의 주요 개발 범위 및 구조",
+    "bullets": [
+     "▸ OPNFV의 개발 범위 개념도",
+     "OPNFV 프로젝트는 초기에 NFV인프라스트럭처 계층(Infrastructure Layer)에 집중하는 것으로 정의",
+     "▸ OPNFV의 기술구조",
+     "물리적인 하드웨어에 대한 가상 네트워크 인터페이스를 제공",
+     "하드웨어 플랫폼 사이의 공통 인터페이스를 생성하여 하드웨어와 소프트웨어의",
+     "응용 애플리케이션이 가상 인프라를 실행하기위한 Vn-Nf 인터페이스"
+    ]
+   },
+   {
+    "title": "OPNFV의 기술동향",
+    "bullets": [
+     "NFV표준화를 주도하던 유럽통신표준기구(ETSI) 산하 NFV 산업표준그룹(ISG)과 긴밀히 협력해 개방형 일관된 NFV레퍼런스플랫폼 표준을 구현 진행",
+     "소프트웨어정의네트워킹(SDN) 표준 프레임워크를 개발중인 '오픈데이라이트'와 클라우드 솔루션을 개발하는 '오픈스택' 그리고 오픈v스위치와 리눅스 커널 등 기존 오픈소스 프로젝트의 결과물과 연계 예정"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   395,
+   398
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_239",
+  "code": "NW_239",
+  "title": "SDDC",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > SDx > SDDC",
+  "definition": "서버, 스토리지, 네트워킹, 보안, 관리 솔루션 등 데이터센터의 모든 구성요소를 가상화하고, 이러한 가상화 환경의인프라를 소프트웨어로 자동 통제 및 관리하는 개념의 데이터센터",
+  "keywords": [
+   "Compute(CPU, Memory)",
+   "Storage",
+   "Network",
+   "Facility",
+   "가상화: SDN, SDS",
+   "프로비저닝",
+   "오케스트레이션",
+   "오토스케일링"
+  ],
+  "sections": [
+   {
+    "title": "SDDC 의 구성도 및 구성요소",
+    "bullets": [
+     "▸ SDDC 의 구성도",
+     "데이터센터를 구성하는 플랫폼, 공통영역 및 관리시스템 전 영역을 소프트웨어 정의로 구현"
+    ]
+   },
+   {
+    "title": "SDDC 의 주요 기술요소",
+    "bullets": [
+     "데이터센터를 구성하는 주요 서버, 스토리지, 네트워크 등의 장비들을 SW 기반으로 구현, 제어"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   399,
+   402
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_240",
+  "code": "NW_240",
+  "title": "O-RAN",
+  "subtitle": "O-RAN (Open Radio Access Network)",
+  "domain": "NW",
+  "category": "네트워크 > SDx > 출제예상 > O-RAN",
+  "definition": "네트워크 장비 운용에 필요한 RAN(Radio Access Network) 구간에 가상화 기술을 적용하여 Hardware와 Software를 분리하기 위한 Apache 2.0 License의 개방형 아키텍처",
+  "keywords": [
+   "가상화",
+   "O-RU",
+   "O-DU",
+   "O-CU"
+  ],
+  "sections": [
+   {
+    "title": "O-RAN(Open Radio Access Network) Architecture와 구성 요소",
+    "bullets": [
+     "▸ O-RAN(Open Radio Access Network) Architecture",
+     "O-RAN은 크게 중앙 제어를 하는 O-CU, 분배 역할을 하는 O-DU, 무선 송수신을 하는 O-RU로 구분",
+     "▸ O-RAN(Open Radio Access Network) 구성 요소",
+     "RIC near-RT(Realtime) - 데이터 수집과 분석을 기반으로 RAN 요소",
+     "RIC non-RT(Realtime) (element)와 자원을 제어하고 최적화를 수행",
+     "RRC (Radio Resource Control) - RRC 및 PDCP 계층을 실행하는 중앙 집중식 장"
+    ]
+   },
+   {
+    "title": "기존 RAN과 O-RAN의 비교",
+    "bullets": [
+     "단일 벤더(Single Vendor) - 다중 벤더(Multiple Vendors)",
+     "공급 업체에 종속되어 시장 출시 기간 - Software Defined",
+     "개방형 White-Box 하드웨어",
+     "제어(Control)와 데이터 및 고유 - 제어(Control)와 데이터 및 Open API 가 모두 분리",
+     "사전에 프로그래밍 된 고정된 제어 로 - 실제 네트워크 조건에 따라 프로그래직과 고정된 네트워크 리소스 밍 가능"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   403,
+   404
+  ]
+ },
+ {
+  "id": "NW_244",
+  "code": "NW_244",
+  "title": "FEC",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 오류제어(2계층) > FEC",
+  "definition": "송신측이 전송할 문자나 프레임에 부가적 정보(Redundancy)를 첨가해 전송하고, 수신측이 에러를 발견하면 이 부가 정보로 에러 검출과 에러 정정을 하는 방식. 재전송 요구 없이 오류 수정이 가능해 실시간 처리에 유리.",
+  "keywords": [
+   "Forward Error Correction(전진오류수정)",
+   "무선에서 많이 사용",
+   "Block: Hamming, RS",
+   "Non-Block: Convolutional(길쌈), Turbo",
+   "오류검출+오류정정"
+  ],
+  "sections": [
+   {
+    "title": "FEC의 주요 용도",
+    "bullets": [
+     "송신측이 한 곳이고 수신측이 여러 곳",
+     "재전송·피드백이 어려운 곳",
+     "채널 환경이 열악한 곳",
+     "높은 신뢰성이 요구되는 곳"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   405,
+   406
+  ],
+  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
+  "reviewed": true
+ },
+ {
+  "id": "NW_245",
+  "code": "NW_245",
+  "title": "BEC",
+  "subtitle": "BEC(Backward Error Correction)",
+  "domain": "NW",
+  "category": "디지털 네트워크 > 오류제어(2계층) > BEC(Backward Error Correction)",
+  "definition": "데이터링크 계층의 오류제어 방법중 하나로, 수신 측에서 오류 검출 기법을 통해 오류 발견시, 재전송을요구하는 방식.",
+  "keywords": [
+   "Backward Error Correction",
+   "후진오류수정",
+   "검출-패러티",
+   "CRC",
+   "재전송"
+  ],
+  "sections": [
+   {
+    "title": "패리티 비트 종류",
+    "bullets": [
+     "짝수 패리티 (Even Parity): 1의 전체 개수가 짝수 개가 되게 함",
+     "홀수 패리티 (Odd Parity): 1의 전체 개수가 홀수 개가 되게 함"
+    ]
+   },
+   {
+    "title": "동작 과정",
+    "bullets": [
+     "송신측 : 1. 짝수 또는 홀수 패리티의 협의에 따라 패리티 비트 생성 2. ASCII문자(7bit) + 패리티 비트(1bit) 전송",
+     "수신측 : 1의 개수를 세어 오류 유무 판단(짝수 또는 홀수)",
+     "> 틀리면 오류로 판단 재전송 요청"
+    ]
+   },
+   {
+    "title": "예시",
+    "bullets": [
+     "전송하고자 하는 데이터 : 1101001",
+     "1의 개수를 홀수로 하기 위해 패리티 비트를 1로 지정",
+     "패리티 비트 추가한 최종 전송 데이터 : 11101001",
+     "수신 측은 패리티 비트를 포함한 데이터 내의 1의 개수를 세어 홀수인지 판단, 홀수가 아니면 재전송요청"
+    ]
+   },
+   {
+    "title": "단점",
+    "bullets": [
+     "짝수개의 오류는 검출 불가"
+    ]
+   },
+   {
+    "title": "동작 과정",
+    "bullets": [
+     "데이터를 일정크기의 블록으로 묶음",
+     "각 블록을 배열의 열로 보고 패리티 비트를 계산하여 추가",
+     "각 블록의 행에 대한 패리티 비트를 계산하여 추가한 후 전송"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   407,
+   412
+  ]
+ },
+ {
+  "id": "NW_246",
+  "code": "NW_246",
+  "title": "순환중복검사",
+  "subtitle": "순환중복검사 (CRC : Cyclic Redundancy Check)",
+  "domain": "NW",
+  "category": "NW > 오류제어(2계층) > 순환중복검사(CRC)",
+  "definition": "이진 나눗셈 연산을 기반으로 오류를 검출하는 방식으로 성능이 우수하며, 여러 비트에서 발생하는 집단오류(burst error)도 검출 가능한 오류검출 방식",
+  "keywords": [
+   "이진 나눗셈(Modulo-2)",
+   "데이터워드",
+   "divisor(생성다항식)",
+   "XOR 기반 연산",
+   "집단오류(burst error) 검출"
+  ],
+  "sections": [
+   {
+    "title": "CRC의 개념도 및 송수신 계산방법",
+    "bullets": [
+     "▸ CRC의 개념도",
+     "Modulo-2의 연산의 덧셈과 뺄셈은 XOR 연산과 같음.",
+     "▸ CRC의 송수신측 계산방법",
+     "전송하고자 하는 데이터 뒤에 n개의 0을 삽입",
+     "사전에 약속 된 n+1 비트의 수로 이진나눗셈을 수행, 나머지를 구함",
+     "전송 받은 데이터에 이진 나눗셈 적용"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   413,
+   415
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_247",
+  "code": "NW_247",
+  "title": "자동재전송요구",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 오류제어(2 계층) > 자동재전송요구",
+  "definition": "데이터링크 계층에서 데이터 교환 중 오류가 검출되면 부정응답(NAK)이 되돌아오고 오류난 프레임의 재전송을 반복하는 오류제어 방식(오류제어 = 오류검출 + 재전송).",
+  "keywords": [
+   "ARQ(Automatic Repeat reQuest)",
+   "Stop and Wait",
+   "Go-Back-N",
+   "Selective Repeat",
+   "H-ARQ"
+  ],
+  "sections": [
+   {
+    "title": "데이터 링크 계층의 오류제어 개요",
+    "bullets": [
+     "▸ 오류제어의 개념",
+     "오류제어 = 오류검출 + 재전송",
+     "▸ 오류의 발생원인",
+     "통신회선의 순간 절단 현상에 의한 오류",
+     "통신 회선의 잡음, 감쇠, 혼선, 군 지연, 찌그러짐, 펄스성 잡음, 에코 현상에 의한 오류",
+     "장치의 기계적, 구조적 원인에 의한 오류"
+    ]
+   },
+   {
+    "title": "ARQ(Automatic Repeat Request)의 개념 및 방식",
+    "bullets": [
+     "▸ ARQ 의 개념",
+     "데이터링크계층에서 데이터 교환 중 오류가 검출되면 부정응답이 되돌아오고 오류난 프레임의재전송을 반복하는 과정",
+     "▸ ARQ 에 의한 재전송이 발생하는 경우",
+     "손상된 프레임 : 수신측에서 수신하였으나 데이터를 인식하지 못함",
+     "손실된 프레임 : 수신측에 프레임이 도착하지 않은 경우",
+     "손실된 확인응답 : 수신측에서 정상, 손상, 손실된 데이터에 대한 응답이 송신측에 도착하지 않은 경우"
+    ]
+   },
+   {
+    "title": "ARQ 처리 과정의 문제 설명",
+    "bullets": [
+     "▸ Go-back-n ARQ",
+     "Frame 6 는 오류 또는 손실 Data 로 폐기되고 Frame6 이후의 모든 Data 는 Frame6 가 오기 전까지는계속해서 폐기 된다",
+     "손실된 확인 응답의 경우 Timer 에 의하여 재전송 되고 수신측에서 다시 ACK 를 보내며 중복된데이터는 폐기한다",
+     "▸ Selective-reject ARQ",
+     "수신기는 오류가 수정되기를 기다리는 동안에도 새로운 프레임을 계속 받는다.",
+     "최종 ACK 는 지정된 특정 프레임뿐만 아니라 이전의 모든 프레임이 성공적으로 수신되었음을 나타내기때문에, 오류 프레임 이후로 수신된 프레임들은 정정된 프레임을 받은 후에 확인 응답된다"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   416,
+   421
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_248",
+  "code": "NW_248",
+  "title": "Checksum",
+  "subtitle": "58. Check sum",
+  "domain": "NW",
+  "category": "SW > 네트워크 > 오류제어",
+  "definition": "데이터 통신에서 송신측이 전송할 모든 데이터를 16비트 워드 단위로 구분해 순차적으로 합한 결과의 1의 보수를 데이터에 추가해 전송하고, 수신측이 동일한 연산을 수행해 오류 여부를 판단하는 기법(도구).",
+  "keywords": [
+   "16비트 워드 단위",
+   "1의 보수",
+   "덧셈 결과가 0이면 오류 없음",
+   "워드 순서 변경 오류 검출 불가",
+   "IPv4 헤더, TCP/UDP 헤더 체크섬",
+   "데이터링크 계층은 CRC로 대체 추세"
+  ],
+  "sections": [
+   {
+    "title": "검사합 처리 절차(16비트 기준)",
+    "bullets": [
+     "① 전송 데이터를 워드 단위로 구분",
+     "② 블록 단위 + 연산 결과 E 도출",
+     "③ E의 1의 보수 E' 도출",
+     "④ 전송 데이터 끝에 E'를 추가하여 전송",
+     "⑤ 수신측이 A+B+C+D+E' = F 연산",
+     "⑥ F의 1의 보수 F'가 0이면 오류 없음"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   422,
+   423
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
+  "reviewed": true
+ },
+ {
+  "id": "NW_249",
+  "code": "NW_249",
+  "title": "해밍코드",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 오류제어(2 계층) > 해밍코드",
+  "definition": "코드 전송 시 발생하는 오류를 Parity bit로 검출(Detection)할 뿐 아니라 오류 정정(Correction)까지 가능한 코드.",
+  "keywords": [
+   "2^p ≥ d+p+1 (d: 데이터 비트 수, p: 패리티 비트 수)",
+   "패리티 위치: 1, 2, 4, 8번째 비트",
+   "짝수 패리티",
+   "검사 결과 0이면 정상, 아니면 그 2진값 위치 오류 정정",
+   "데이터 4비트→패리티 3개, 7비트→4개"
+  ],
+  "sections": [
+   {
+    "title": "해밍 코드 설명",
+    "bullets": [
+     "▸ 해밍 코드(Hamming code)",
+     "▸ 해밍 코드 전송 방법",
+     "전송할 데이터: 88(이진수: 1011000)",
+     "even parity: 패리티를 포함한「1」인 비트의 수가 항상 짝수가 되도록 하는 것",
+     "'1'이 있는 위치 확인 -> 7 (0111), 9 (1001), 11(1011)",
+     "XOR 연산 수행 -> 결과 (0101) 3) 생성"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   424,
+   426
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_271",
+  "code": "NW_271",
+  "title": "대역확산(Spread Spectrum)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 2019 출제 예상 토픽 > 대역확산(Spread Spectrum)",
+  "definition": "무선채널에서 여러 신호가 경쟁하면서 공유할 때 외부의 전파잡음에 강하도록 넓은 주파수대역으로 분산시키는 일종의 변조방식.",
+  "keywords": [
+   "Jamming 방지",
+   "도청 방지",
+   "페이딩(Fading)에 강함",
+   "DSSS(Direct Sequence Spread Spectrum)",
+   "FHSS(Frequency Hopping Spread Spectrum)",
+   "확산(Spreading)/역확산(Despreading)"
+  ],
+  "sections": [
+   {
+    "title": "DSSS 동작",
+    "bullets": [
+     "송신부 확산: 미리 동일한 확산코드를 공유하고 송신데이터에 확산코드를 곱하여 송신",
+     "수신부 역확산: 동일한 확산코드와 수신된 확산신호로 송신데이터를 복원",
+     "간섭신호가 함께 수신되면 역확산 과정에서 원래 신호는 복원되고 간섭신호는 확산되어 줄어듦"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   427,
+   428
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
+  "reviewed": true
+ },
+ {
+  "id": "NW_273",
+  "code": "NW_273",
+  "title": "P2P",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW>출제예상>P2P",
+  "definition": "컴퓨터와 다른 디바이스 간에 서버 없이 직접적인 교환을 통한 분산 자원의 공유를 목적으로 동등한자격을 가진 자율적 Peer 로 디지털 자원을 함께 공유하는 기술",
+  "keywords": [
+   "수퍼노드",
+   "오버레이 구조",
+   "하이브리드 P2P vs 퓨어 P2P"
+  ],
+  "sections": [
+   {
+    "title": "분권화 된 시스템의 핵심 기술, P2P 네트워크의 기술 개요",
+    "bullets": [
+     "▸ P2P 네트워크의 개념",
+     "Peer-to-Peer'라는 뜻으로 중앙 서버없이 각 단말들이 서로 동등한 입장에서 통신을 하는 네트워크",
+     "▸ P2P 네트워크 사용 필요성",
+     "비용 절감, 쉬운 인프라 확장 등 P2P 를 활용함으로써 다양한 장점을 활용할 수 있음.",
+     "최근 중앙화에서 분권화 된 서비스 및 공유 경제의 개념으로 P2P 의 기술에 대한 관심이 다시늘어나고 있어 해당 기술에 대한 이해가 필요함"
+    ]
+   },
+   {
+    "title": "P2P 네트워크의 요소 기술 및 세부유형",
+    "bullets": [
+     "▸ P2P 네트워크의 요소 기술",
+     "▸ P2P 네트워크의 세부유형",
+     "P2P 네트워크는 비용절감, 유지보수 용이성, 높은 확장성 등을 가지고 있는 장점이 있지만, 공유에따른 보안 문제, 저작권 문제 등의 단점이 있음.",
+     "이에 따라 구현 또는 도입 시 여러 가지 사항들에 대한 고려가 필요함."
+    ]
+   },
+   {
+    "title": "P2P 네트워크 구현 시 고려사항",
+    "bullets": [
+     "P2P 기술은 아주 오래전부터 사용되어 지고 있는 기술이나 불법 파일 공유로 인해 인식이 좋지 못하지만, 비용 등의 이유로 인해 장점도 많은 기술임, 향후 다가오는 미래 사회에서는 P2P 에 대한 중요도가 높아지고있으므로 장점에 대해서는 선도자가 될 수 있는 사업화 방안, 단점은 전문가들의 Control Tower 의 집단지성활용하여 빠른 개선이 필요함."
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   429,
+   434
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "NW_275",
+  "code": "NW_275",
+  "title": "위성-상공-지상 통합형 무선 네트워크(SATIN)",
+  "subtitle": "위성-상공-지상 통합 무선 네트워크(Satellite-Aerial-Terrestrial Integrated Network, SATIN)",
+  "domain": "NW",
+  "category": "NW",
+  "definition": "위성망의 역할을 상공망과 지상망이 협력하여 보완적인 커버리지를 제공해 효율적인 방송 및 멀티캐스팅서비스를 가능케하는 프로젝트",
+  "keywords": [
+   "Satellite RANs",
+   "Aerial RANs",
+   "Terrestrial RANs",
+   "스마트 농업"
+  ],
+  "sections": [
+   {
+    "title": "SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 개념 및 네트워크 특징",
+    "bullets": [
+     "▸ SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 개념",
+     "▸ SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 특징",
+     "SATIN 시스템에서는 네트워크 커버리지가 늘어나면서 동시에망에 접속하는 유저의 수가 기하급수적으로 늘어남",
+     "현재 저주파 대역의 스펙트럼 자원은 매우 제한적이고 6G의요구사항을 만족하기에는 부족한 상황이기 때문에 고주파 대역의 주파수 자원을 활용하는 것은 앞으로 필수적",
+     "지상, 상공, 위성 RAN의 고유한 특성으로 인해 각 세그먼트의특성을 고려한 SATIN 공동 자원 스케줄링은 단일 RAN보다 훨씬 정교하게 수행",
+     "SATIN 구조에서는 지상국에서 UAV로, 지상국에서 위성으로 등의 다양한 종류의 핸드오버가 많이 발생"
+    ]
+   },
+   {
+    "title": "SATIN의 재난대비 활용방법",
+    "bullets": [
+     "▸ 재난대비, UAV 활용, 낙후지역 서비스 구성도",
+     "▸ SATIN의 재난대비 활용방법 시나리오",
+     "한 지역에서 대규모의 재난이 발생하면 통신 인프라가 심각하게 손상되어 제 기능을 하지 못하는 문제가 빈번히 발생",
+     "재난 환 경에서 발생하는 수많은 네트워크 트래픽을 처리하기 위한 기술 들이 부족",
+     "기지국 기능을 제공함과 동시에 상공 RAN의 자원을 활용하",
+     "재난 감지 정확도를 향상시켜 재난에 신속하고 시기 적절하게 대응"
+    ]
+   },
+   {
+    "title": "SATIN의 UAV 활용 및 낙후지역 네트워크 활용방법",
+    "bullets": [
+     "▸ SATIN의 UAV(Unmanned Aerial Vehicle) 활용 시나리오",
+     "SATIN 구조에서는 상공 및 위성 영역에서의 이동 객체가 미리 정의된 경로를 따라 이동하며 사용자에게 주어진 기간 동안 네트워킹 서비스를 제공할 수 있는 시나리오가 가능",
+     "빅데이터, 머신러닝 및 UAV와 같은 최신 정보 통신 기술을 농업운영에 통합",
+     "농부들은 농작물의 비료 살포 뿐만 아니라 농작물 모니터링 및 질병 감지를 포함한 많은 기능을 UAV를 활용하여 수행",
+     "▸ SATIN의 낙후지역 네트워크 서비스 활용 시나리오",
+     "SATIN 구조는 낙후된 지역에 네트워크 서비스를 전달 할 수 있는 중요한 기술 중 하나"
+    ]
+   },
+   {
+    "title": "SATIN 표준화 및 산업동향",
+    "bullets": [
+     "유즈케이스 및 요구사항에 대한 연구를 시작",
+     "지상, 상공, 위성 RAN의 통합을 위한 잠재적 솔루션을 조사 및 R16의 일부로 상공 RAN을 5G망에 통합하려는 연구가 진행중",
+     "2018년 말까지 위성과 고궤도 플랫폼 (HAP) 스테이션을 5G로 통합하기 위한 잠재적 아키텍처를 완성",
+     "위성 멀티캐스트를 통해 5G용 에지 콘텐츠 전송 작업을 하고 있으며,",
+     "기지국 기능을 제공함과 동시에 상공 RAN의 자원을 활용하여 안정적인 통신 링크를 제공",
+     "ITU(International Telecommunication Union)는 위성 기술을 차세대 액세스 시스템 통합 진행 예정이며, IMT- 2020 네트워크에서 NTN 통합에 대한 권장 사항을 작업 중"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   435,
+   437
+  ]
+ },
+ {
+  "id": "NW_276",
+  "code": "NW_276",
+  "title": "IBN(Intent-Based Networking)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "네트워크",
+  "definition": "네트워크 관리자의 의도(Intent)를 인공지능 기술로 파악하여 인터넷을 구성하는 유선망과 무선망 설정을 자동으로 수행하는 네트워크 기술",
+  "keywords": [
+   "Closed-Loop Intent Control",
+   "Intent Validation/Feedback",
+   "LLM"
+  ],
+  "sections": [
+   {
+    "title": "의도 기반 네트워킹(Intent-Based Networking)의 개념",
+    "bullets": [
+     "▸ 의도 기반 네트워킹의 정의",
+     "▸ 의도 기반 네트워킹의 등장 배경",
+     "다양한 형태의 IoT 기기 등장으로 인한 디바이스 수 기하급수적 증가",
+     "복잡한 NW의 수동적인 관리의 복잡성, 어려움, 오동작의 위험성 증가",
+     "IETF NMRG(Network Management Research Group)에서 정립한 RFC 9315 기반 기술"
+    ]
+   },
+   {
+    "title": "의도 기반 네트워킹의 매커니즘 및 기술요소",
+    "bullets": [
+     "▸ 의도 기반 네트워킹의 매커니즘",
+     "▸ 의도 기반 네트워킹의 기술요소",
+     "네트워크 관리 시스템(Network Monitoring System)",
+     "NMS, User - 네트워크 관리자(Admin, Client)",
+     "원하는 서비스의 목적 위한 선언적인 명령",
+     "Translation - High-level Policy"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   438,
+   439
+  ]
+ },
+ {
+  "id": "NW_277",
+  "code": "NW_277",
+  "title": "ZSM(Zero-touch Network and Service Management)",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "네트워크",
+  "definition": "모든 운영 프로세스와 작업이 이상적으로는 100 % 자동화로 자동 실행되도록 하는 차세대 관리 시스템",
+  "keywords": [
+   "네트워크",
+   "인공지능",
+   "자동화",
+   "E2E 서비스 도메인",
+   "관리 도메인",
+   "공통 데이터 서비스",
+   "통합 패브릭"
+  ],
+  "sections": [
+   {
+    "title": "ZSM(Zero-touch network and Service Management)의 구성도 및 구성요소",
+    "bullets": [
+     "▸ ZSM(Zero-touch network and Service Management)의 구성도",
+     "ZSM 은 인간 개입 없이 네트워크 인프라가 아닌 서비스의 자동화된 관리가 목적",
+     "▸ ZSM 의 구성요소",
+     "네트워크 및 서비스의 전체 생애 주기를 관리하는 영역 - 서비스 라이프사이클 관",
+     "종단간 고객 대면 서비스를 관리하는 도메인 - QoS",
+     "네트워크 및 IT 시스템의 다양한 측면을 제어하고 최적 - 오케스트레이션"
+    ]
+   },
+   {
+    "title": "ZSM 에서 AI 기술사용 시 제약사항",
+    "bullets": [
+     "ML 모델의 검증 및 정확성은 고품질 데이터 세트의",
+     "내린 결정과 그러한 결정을 유발한 입력 데이터 사 - 모델 해석성과 정확성은",
+     "네트워크는 동적이며 데이터 패턴이 변화해 예측 정 - 추론 정확도를 유지하면서 훈",
+     "정확도 향상은 계산, 메모리 및 에너지 자원에 대해 - 모델을 최적화하고 효율적인솔루션 개발 필요",
+     "IBN(Intent-Based Networking)과 연계하여 네트워크 구성을 자동화할 때 서비스 제공과 관리의 자동화를 ZSM 으로 상호보완"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   440,
+   441
+  ]
+ },
+ {
+  "id": "NW_278",
+  "code": "NW_278",
+  "title": "MODBUS 프로토콜",
+  "subtitle": "",
+  "domain": "NW",
+  "category": "NW > 통신 프로토콜",
+  "definition": "SCADA 시스템에서 RTU·PLC 간 제어 및 상태 정보 통신을 위해 시리얼과 TCP에서 구현 가능한 산업용 통신 응용 계층 메시징 프로토콜(1979년 Modicon 개발).",
+  "keywords": [
+   "Master-Slave",
+   "RS232",
+   "RS422",
+   "RS485",
+   "TCP/IP"
+  ],
+  "sections": [
+   {
+    "title": "산업용 직렬 방식 통신 프로토콜, Modbus 의 개요",
+    "bullets": [
+     "Master 는 요청을 보내고 Slave 는 응답",
+     "RS232, RS422, RS485, TCP/IP",
+     "프로토콜 Specification 이 모두 공개, 로열티 없음",
+     "raw 비트나 워드 단위 데이터 접근으로 유연한 처리",
+     "1979 년 자동화 디바이스간 통신을 위해 Modicon(Schneider Electric)에서 개발한 시리얼 통신 프로토콜. (2004 년 Modbus Organization 에 권한 양도되어 관리되고 있음)"
+    ]
+   },
+   {
+    "title": "Modbus 프로토콜 유형 및 프레임 구조",
+    "bullets": [
+     "▸ Modbus 프로토콜 유형",
+     "바이너리 형식으로 데이터를 표현(속도 빠름) - RS-232(1:1)",
+     "ASCII 문자로 데이터 표현(RTU 보다 느림) - RS-232(1:1)",
+     "Modbus 프로토콜의 TCP/IP 용 버전(502 port)",
+     "RUT 와 같이 페이로드에 체크섬이 포함된",
+     "데이터 모델 및 함수 코드는 동일하고 캡슐화만 다름.(Modbus +, Pemex Modbus, Enron Modbus 벤더에서 확장한프로토콜이기 때문에 데이터 모델과 함수 코드 다름)"
+    ]
+   },
+   {
+    "title": "Modbus 프로토콜 활용 사례",
+    "bullets": [
+     "공장 자동화에서 PLC ↔ SCADA 간 센서 데이터(온 - 실시간 설비 모니터링 및 제어 효율성 향상도·압력·유량) 교환",
+     "발전소·변전소의 계측기, 보호계전기 데이터를 EMS에 - 전력 계통 안정성 확보, 에너지 최적화전송",
+     "HVAC·조명·출입 통제 시스템",
+     "건물 관리 비용 절감, 에너지 효율 개선",
+     "IoT 게이트웨이에서 센서 데이터를 Modbus TCP로 클라 - 스마트팩토리·예지보전 서비스 구현우드 전송",
+     "신호제어기, 하수처리장, 환경 모니터링 센서 데이터 - 공공 인프라 운영 효율화, 안전성 강화수집"
+    ]
+   }
+  ],
+  "warnings": [],
+  "pages": [
+   442,
+   444
+  ],
+  "reviewed": true
+ }
+]
