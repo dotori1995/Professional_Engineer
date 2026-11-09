@@ -24359,52 +24359,97 @@
   "dueum": null,
   "name": "초자동화(Hyperautomation)",
   "title": "초자동화(Hyperautomation)",
-  "definition": "기존 정형화된 업무처리 자동화 기술(RPA)에 여러개의 머신러닝, 패키지 소프트웨어 및 자동화도구 등을 이 용하여 비정형화된 업무까지 자동화가 가능하도록 한 AI주도의 초자동화 기술",
+  "definition": "RPA에 머신러닝·프로세스 마이닝·iBPMS·로우코드 등 여러 자동화 도구를 결합해 업무 프로세스를 발견·분석·설계·자동화·측정·모니터링하는 과정 전체를 자동화하고 비정형 업무까지 확장하는 AI 주도 자동화 전략",
   "keywords_must": [
-   "Rule Mining",
+   "비즈니스 규칙 마이닝(Business Rule Mining)",
+   "프로세스 발견(Process Discovery)",
+   "프로세스 마이닝(Process Mining)",
+   "이벤트 로그",
    "RPA",
-   "초자동화의 절차",
-   "초자동화 아키텍처",
-   "초자동화 표준",
-   "초자동화 보안",
-   "전략기술(2021)"
+   "지능형 BPM 스위트(iBPMS)",
+   "로우코드 플랫폼",
+   "지능형 문서 처리(IDP)",
+   "디지털 트윈 오브 조직(DTO)",
+   "가트너 2020~2022 전략 기술"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "자율 컴퓨팅(Autonomic Computing)",
+   "오케스트레이션",
+   "에이전틱 AI",
+   "시민 개발자",
+   "자동화 ROI 측정"
+  ],
   "keywords": [
-   "핵심: Rule Mining · RPA · 초자동화의 절차",
-   "기술: 초자동화 아키텍처 · 초자동화 표준 · 초자동화 보안",
-   "운영: 전략기술(2021)"
+   "절차: 발견 → 분석 → 설계 → 자동화 → 측정 → 모니터링 → 재평가",
+   "구성: 식별(규칙 마이닝) · 분석(프로세스 발견·마이닝) · 구현(RPA·iBPMS·로우코드) · 지능(ML·IDP)",
+   "발전: 수동 → 기본 자동화 → 자율 컴퓨팅 → RPA → 초자동화"
   ],
   "outline": [
-   "초자동화의 절차 및 구성",
-   "- 초자동화의 절차",
-   "자동화의 발전 단계",
-   "- 초자동화 요점"
+   "개념과 등장 배경",
+   "- 개념: 자동화의 자동화",
+   "- 배경: 비정형 업무",
+   "구성 기술",
+   "- 식별·분석: 마이닝",
+   "- 구현: RPA·iBPMS·로우코드",
+   "- 지능: 문서·판단",
+   "추진 절차와 고려사항",
+   "- 절차: 순환 개선",
+   "- 고려: 통합·거버넌스"
   ],
   "sections": [
    {
-    "title": "초자동화 핵심",
+    "title": "개념과 등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 자동화의 자동화",
       "items": [
-       "Rule Mining: 초자동화에서 Rule Mining를 다루는 핵심 암기 포인트",
-       "RPA: 규칙 기반 UI 작업을 봇으로 자동화 (초자동화/07a3)",
-       "초자동화의 절차: 초자동화를 단계적으로 수행·이행하는 절차",
-       "초자동화 아키텍처: 초자동화의 계층·모듈 배치와 상호작용 구조"
+       "개별 과업 자동화(RPA)를 넘어 어떤 업무를 자동화할지 찾는 과정까지 도구로 자동화"
+      ]
+     },
+     {
+      "title": "배경: 비정형 업무",
+      "items": [
+       "근무시간 단축·비대면 업무로 효율 압박, 정형 규칙만 처리하는 RPA의 한계를 AI로 보완"
       ]
      }
     ]
    },
    {
-    "title": "초자동화 구성·기술",
+    "title": "구성 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "식별·분석: 마이닝",
       "items": [
-       "초자동화 표준: 초자동화 상호운용·품질을 맞추는 규격·기준",
-       "초자동화 보안: 초자동화에서 초자동화 보안을 다루는 핵심 암기 포인트",
-       "전략기술(2021): 초자동화에서 전략기술(2021)을 다루는 핵심 암기 포인트"
+       "비즈니스 규칙 마이닝(Business Rule Mining)은 데이터에서 규칙 도출, 프로세스 마이닝(Process Mining)은 이벤트 로그로 실제 흐름·병목 식별"
+      ]
+     },
+     {
+      "title": "구현: RPA·iBPMS·로우코드",
+      "items": [
+       "RPA가 화면 반복 작업, 지능형 BPM 스위트(iBPMS)가 프로세스 흐름 관리, 로우코드 플랫폼으로 빠른 업무 앱 개발"
+      ]
+     },
+     {
+      "title": "지능: 문서·판단",
+      "items": [
+       "지능형 문서 처리(IDP)로 비정형 문서 인식, 머신러닝으로 예외 판단과 분기 처리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "추진 절차와 고려사항",
+    "subsections": [
+     {
+      "title": "절차: 순환 개선",
+      "items": [
+       "드래그 앤 드롭 설계 도구로 자동화를 구성하고 측정 결과로 재평가, 디지털 트윈 오브 조직(DTO)으로 영향 시뮬레이션"
+      ]
+     },
+     {
+      "title": "고려: 통합·거버넌스",
+      "items": [
+       "도구 난립을 막는 오케스트레이션과 자동화 ROI 측정, 봇·AI 권한과 예외 처리 책임 정의"
       ]
      }
     ]
@@ -24413,20 +24458,29 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Rule Mining",
+   "비즈니스 규칙 마이닝(Business Rule Mining)",
+   "프로세스 발견(Process Discovery)",
+   "프로세스 마이닝(Process Mining)",
+   "이벤트 로그",
    "RPA",
-   "초자동화의 절차",
-   "초자동화 아키텍처",
-   "초자동화 표준",
-   "초자동화 보안",
-   "전략기술(2021)"
+   "지능형 BPM 스위트(iBPMS)",
+   "로우코드 플랫폼",
+   "지능형 문서 처리(IDP)",
+   "디지털 트윈 오브 조직(DTO)",
+   "가트너 2020~2022 전략 기술"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "iBPMS": "Intelligent Business Process Management Suite",
+   "IDP": "Intelligent Document Processing",
+   "DTO": "Digital Twin of an Organization"
+  },
+  "hand": true
  },
  {
   "id": "SV_285_1",
@@ -24437,61 +24491,93 @@
    344,
    345
   ],
-  "en": "AI TRiSM AI Trust Risk and Security Management",
+  "en": "AI Trust, Risk and Security Management",
   "dueum": null,
-  "name": "보안(AI TRiSM(AI Trust, Risk and Security Management))",
-  "title": "보안(AI TRiSM(AI Trust, Risk and Security Management))",
-  "definition": "AI 의 부적절한 사용을 방지하기 위해 가트너에서 제시한 AI 신뢰성(Trust), 위험(Risk), 보안관리(Security Management)에 관한 프레임워크",
+  "name": "AI 신뢰·위험·보안 관리(AI TRiSM, AI Trust, Risk and Security Management)",
+  "title": "AI 신뢰·위험·보안 관리(AI TRiSM, AI Trust, Risk and Security Management)",
+  "definition": "AI 모델이 공정하고 신뢰할 수 있으며 안전하게 운영되도록 설명 가능성·모델 운영·애플리케이션 보안·프라이버시를 통합 관리하는 가트너 제시 AI 거버넌스 프레임워크",
   "keywords_must": [
-   "Explainability",
-   "Model Monitoring",
-   "ModelOps",
-   "AI Application Security",
-   "Privacy",
-   "AI TRiSM 개념도",
-   "SHAP",
-   "XAI"
+   "설명 가능성·모델 모니터링(Explainability·Model Monitoring)",
+   "모델 운영(ModelOps)",
+   "AI 애플리케이션 보안",
+   "프라이버시 보호",
+   "편향·공정성 점검",
+   "데이터·모델 드리프트 감지",
+   "적대적 공격 방어",
+   "모델 수명주기 거버넌스",
+   "SHAP·Fairlearn"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "EU AI 법(AI Act)",
+   "ISO/IEC 42001(AI 경영시스템)",
+   "NIST AI RMF",
+   "차분 프라이버시",
+   "프롬프트 인젝션"
+  ],
   "keywords": [
-   "핵심: Explainability · Model Monitoring · ModelOps",
-   "기술: AI Application Security · Privacy · AI TRiSM 개념도",
-   "운영: SHAP · XAI"
+   "3대 목표: 신뢰(투명성·설명) · 위험(거버넌스·규정 준수) · 보안(무단 접근·조작 방어)",
+   "4대 기둥: 설명 가능성·모델 모니터링 · ModelOps · AI 애플리케이션 보안 · 프라이버시",
+   "연계 규범: EU AI 법 · ISO/IEC 42001 · NIST AI RMF"
   ],
   "outline": [
-   "AI 악용문제 해결, AI TRiSM 의 개념",
-   "- 보안 요점",
-   "AI TRiSM 의 개념도 및 구성요소",
-   "- AI TRiSM 개념도",
-   "- AI TRiSM 구성요소",
-   "AI TRiSM 적용시 고려사항",
-   "- 보안 요점"
+   "등장 배경과 목표",
+   "- 배경: 설명 불가 위험",
+   "- 목표: 신뢰·위험·보안",
+   "4대 기둥",
+   "- 모델 신뢰: 설명·운영",
+   "- 보호: 보안·프라이버시",
+   "적용 방안과 규제 연계",
+   "- 적용: 전 수명주기",
+   "- 규제: 국제 규범"
   ],
   "sections": [
    {
-    "title": "보안 핵심",
+    "title": "등장 배경과 목표",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 설명 불가 위험",
       "items": [
-       "Explainability: Explainability를 보안 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Model Monitoring: 보안에서 Model Monitoring를 다루는 핵심 암기 포인트",
-       "ModelOps: ModelOps를 보안 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "AI Application Security: 보안에서 AI Application Security를 다루는 핵심 암기 포인트"
+       "AI 활용 확대에도 블랙박스 판단·편향·환각으로 인한 피해와 규제 위반 위험 증가"
+      ]
+     },
+     {
+      "title": "목표: 신뢰·위험·보안",
+      "items": [
+       "투명한 판단 근거 제시, 개발~배포 단계 기록으로 무결성·규정 준수 확인, 무단 접근·조작으로부터 시스템 보호"
       ]
      }
     ]
    },
    {
-    "title": "보안 구성·기술",
+    "title": "4대 기둥",
     "subsections": [
      {
-      "title": null,
+      "title": "모델 신뢰: 설명·운영",
       "items": [
-       "Privacy: Privacy를 보안 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "AI TRiSM 개념도: 보안의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "SHAP: SHAP를 보안 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "XAI: XAI를 보안 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "설명 가능성·모델 모니터링은 SHAP·Fairlearn으로 판단 근거·편향 점검과 드리프트 감지, ModelOps는 개발·배포·유지의 단일 수명주기 관리"
+      ]
+     },
+     {
+      "title": "보호: 보안·프라이버시",
+      "items": [
+       "AI 애플리케이션 보안은 적대적 공격·데이터 오염·프롬프트 인젝션 방어, 프라이버시 보호는 학습 데이터 비식별·차분 프라이버시 적용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 방안과 규제 연계",
+    "subsections": [
+     {
+      "title": "적용: 전 수명주기",
+      "items": [
+       "모델 목록화와 위험 등급 분류, 배포 전 검증·배포 후 지속 모니터링, 책임자 지정"
+      ]
+     },
+     {
+      "title": "규제: 국제 규범",
+      "items": [
+       "EU AI 법(AI Act)의 위험 기반 의무, ISO/IEC 42001(AI 경영시스템) 인증, NIST AI RMF와 매핑해 대응"
       ]
      }
     ]
@@ -24500,21 +24586,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Explainability",
-   "Model Monitoring",
-   "ModelOps",
-   "AI Application Security",
-   "Privacy",
-   "AI TRiSM 개념도",
-   "SHAP",
-   "XAI"
+   "설명 가능성·모델 모니터링(Explainability·Model Monitoring)",
+   "모델 운영(ModelOps)",
+   "AI 애플리케이션 보안",
+   "프라이버시 보호",
+   "편향·공정성 점검",
+   "데이터·모델 드리프트 감지",
+   "적대적 공격 방어",
+   "모델 수명주기 거버넌스",
+   "SHAP·Fairlearn"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_286",
@@ -24525,75 +24613,101 @@
    315,
    317
   ],
-  "en": "SCORM",
+  "en": "Sharable Content Object Reference Model",
   "dueum": null,
-  "name": "디지털서비스(SCORM)",
-  "title": "디지털서비스(SCORM)",
-  "definition": "웹 기반 학습 콘텐츠에 상호운용성, 접근성, 재사용성 등과 같은 포괄적인 이러닝 기능이 가능하도록 하는교육용 컨텐츠 개발 표준안",
+  "name": "스콤(SCORM, Sharable Content Object Reference Model)",
+  "title": "스콤(SCORM, Sharable Content Object Reference Model)",
+  "definition": "미국 ADL이 제정한 이러닝 표준 참조모델로, 학습 콘텐츠를 재사용 가능한 공유 콘텐츠 객체(SCO) 단위로 패키징하고 학습관리시스템(LMS)과의 실행·추적 통신 규약을 정해 서로 다른 LMS 간 콘텐츠 상호운용성과 재사용성을 보장함",
   "keywords_must": [
-   "상호운용성",
-   "접근성",
-   "재사용성",
-   "CAM",
-   "Common Cartridge",
-   "SCORM과 Common Cartridge의 비교",
-   "SCORM의 구성도",
-   "LMS",
-   "SNS"
+   "공유 콘텐츠 객체(SCO)",
+   "애셋(Asset)",
+   "콘텐츠 집합 모델(CAM)",
+   "콘텐츠 패키징(imsmanifest.xml)",
+   "메타데이터",
+   "실행 환경(RTE)",
+   "API·데이터 모델(cmi)",
+   "시퀀싱·내비게이션(SN)",
+   "학습관리시스템(LMS)",
+   "상호운용성·재사용성·접근성·내구성"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "ADL(Advanced Distributed Learning)",
+   "xAPI(Experience API)",
+   "cmi5",
+   "IMS Common Cartridge",
+   "LTI(Learning Tools Interoperability)"
+  ],
   "keywords": [
-   "핵심: 상호운용성 · 접근성 · 재사용성",
-   "기술: CAM · Common Cartridge · SCORM과 Common Cartridge의 비교",
-   "운영: SCORM의 구성도 · LMS · SNS"
+   "3권 구성: 콘텐츠 집합 모델(CAM) · 실행 환경(RTE) · 시퀀싱·내비게이션(SN)",
+   "콘텐츠 단위: 애셋(Asset) → SCO → 콘텐츠 집합 → 패키지(imsmanifest.xml)",
+   "목표: 상호운용성 · 접근성 · 재사용성 · 내구성 / 후속: xAPI·cmi5"
   ],
   "outline": [
-   "교육용 컨텐츠의 재활용 극대화를 위한 표준 SCORM 의 개요",
-   "- SCORM(Shareable Courseware Object Refe…",
-   "SCORM 의 구성도 및 구성요소",
-   "- SCORM 의 구성도",
-   "e-Learning 의 미래 Common Cartridge 와의 비교",
-   "- Common Cartridge 의 정의",
-   "- SCORM 과 Common Cartridge 의 비교",
-   "e-Learning 의 향후 모델 방안",
-   "- 디지털서비스 요점"
+   "개념과 목표",
+   "- 개념: 콘텐츠-LMS 규약",
+   "- 목표: 4대 품질",
+   "3권 구성",
+   "- 집합 모델: 구조·패키징",
+   "- 실행 환경: API·추적",
+   "- 시퀀싱: 학습 분기",
+   "버전과 후속 표준",
+   "- 버전: 1.2와 2004",
+   "- 후속: xAPI·cmi5"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "개념과 목표",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 콘텐츠-LMS 규약",
       "items": [
-       "상호운용성: 디지털서비스에서 상호운용성을 다루는 핵심 암기 포인트",
-       "접근성: 디지털서비스에서 접근성을 다루는 핵심 암기 포인트",
-       "재사용성: 디지털서비스에서 재사용성을 다루는 핵심 암기 포인트",
-       "CAM: CAM를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "콘텐츠를 물리 파일과 분리해 논리적으로 구조화·순서화하고 LMS와 정해진 방식으로만 통신하게 함"
+      ]
+     },
+     {
+      "title": "목표: 4대 품질",
+      "items": [
+       "상호운용성·재사용성·접근성·내구성: 다른 플랫폼에서도 실행되고, 강의 요소를 조합 재사용하며, 시스템 변화에도 유지"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "3권 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "집합 모델: 구조·패키징",
       "items": [
-       "Common Cartridge: 디지털서비스에서 Common Cartridge를 다루는 핵심 암기 포인트",
-       "SCORM과 Common Cartridge의 비교: 디지털서비스와 유사 기술을 기준별로 대조하는 표 (디지털서비스/b2b9)",
-       "SCORM의 구성도: 디지털서비스의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램 (디지털서비스/39a7)",
-       "LMS: LMS를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "콘텐츠 집합 모델(CAM): 애셋(Asset)과 SCO로 구조를 정의하고 메타데이터를 붙여 imsmanifest.xml로 패키징"
+      ]
+     },
+     {
+      "title": "실행 환경: API·추적",
+      "items": [
+       "실행 환경(RTE): SCO가 LMS의 API로 시작·종료를 알리고 cmi 데이터 모델로 점수·진도·학습 시간 기록"
+      ]
+     },
+     {
+      "title": "시퀀싱: 학습 분기",
+      "items": [
+       "시퀀싱·내비게이션(SN): 성취도에 따른 다음 학습 활동 분기와 이동 규칙을 정의(SCORM 2004)"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "버전과 후속 표준",
     "subsections": [
      {
-      "title": null,
+      "title": "버전: 1.2와 2004",
       "items": [
-       "SNS: SNS를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "SCORM 1.2가 널리 쓰였고 SCORM 2004가 시퀀싱을 추가, 브라우저 안 LMS 실행에 묶이는 한계"
+      ]
+     },
+     {
+      "title": "후속: xAPI·cmi5",
+      "items": [
+       "xAPI(Experience API)는 모바일·오프라인·시뮬레이션 학습 경험까지 기록, cmi5는 xAPI 기반 LMS 실행 규칙, LTI는 외부 학습 도구 연동"
       ]
      }
     ]
@@ -24602,15 +24716,16 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "상호운용성",
-   "접근성",
-   "재사용성",
-   "CAM",
-   "Common Cartridge",
-   "SCORM과 Common Cartridge의 비교",
-   "SCORM의 구성도",
-   "LMS",
-   "SNS"
+   "공유 콘텐츠 객체(SCO)",
+   "애셋(Asset)",
+   "콘텐츠 집합 모델(CAM)",
+   "콘텐츠 패키징(imsmanifest.xml)",
+   "메타데이터",
+   "실행 환경(RTE)",
+   "API·데이터 모델(cmi)",
+   "시퀀싱·내비게이션(SN)",
+   "학습관리시스템(LMS)",
+   "상호운용성·재사용성·접근성·내구성"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -24620,7 +24735,8 @@
   "warnings": [],
   "gloss": {
    "CAM": "Content Aggregation Model"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_287",
@@ -24632,58 +24748,100 @@
    347
   ],
   "en": "Smart Learning",
-  "dueum": null,
-  "name": "스마트러닝(Smart Learning)",
-  "title": "스마트러닝(Smart Learning)",
-  "definition": "개방적 참여방식의 학습 인프라에 기반하여 개인 교육 수준별로 차별화되고 학습 터미널에 상관없이학습자가 스스로 몰입하여 학습 할 수 있는 교육환경을 제공함으로써 교육 효과를 극대화 할 수 있는교육방식",
+  "dueum": "SMART(Self-directed·Motivated·Adaptive·Resource Enriched·Technology Embedded)",
+  "name": "스마트 러닝(Smart Learning)",
+  "title": "스마트 러닝(Smart Learning)",
+  "definition": "ICT를 활용해 수직적·일방적 교수 방식을 학습자 중심의 수평적·쌍방향·참여적·지능적 학습으로 전환하고, 단말과 장소에 관계없이 개인 수준에 맞춘 자기주도 학습을 지원해 교육 효과를 높이는 교육 방식",
   "keywords_must": [
-   "수평적",
-   "쌍방향적",
-   "참여적",
-   "지능적",
-   "상호작용적",
-   "자기주도적",
-   "학습흥미",
-   "e-Learning과의 비교"
+   "자기주도적(Self-directed)",
+   "학습 흥미(Motivated)",
+   "수준·적성 맞춤(Adaptive)",
+   "풍부한 자료(Resource Enriched)",
+   "기술 기반(Technology Embedded)",
+   "상황 인식 푸시",
+   "학습 분석(Learning Analytics)",
+   "적응형 학습(Adaptive Learning)",
+   "클라우드 학습 환경",
+   "협력·집단지성 학습"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "이러닝(e-Learning)",
+   "모바일 러닝",
+   "AI 디지털교과서",
+   "플립 러닝",
+   "SCORM·xAPI"
+  ],
   "keywords": [
-   "핵심: 수평적 · 쌍방향적 · 참여적",
-   "기술: 지능적 · 상호작용적 · 자기주도적",
-   "운영: 학습흥미 · e-Learning과의 비교"
+   "5대 특성(SMART): 자기주도 · 흥미 · 맞춤 · 풍부한 자료 · 기술 기반",
+   "요소 기술: 스마트 인프라(태블릿·클라우드) · 지식 전달(상황 인식 푸시) · 상호작용(행동·음성·필기 인식) · 콘텐츠 개발(지능형 에이전트·3D·시뮬레이션)",
+   "이러닝 대비: PC·일방 전달 → 모바일·쌍방향·개인 맞춤·협력"
   ],
   "outline": [
-   "학습 패러다임의 변화, 스마트러닝(Smart Learning)의 개요",
-   "- 스마트러닝(Smart Learning)의 정의",
-   "스마트러닝의 요소 기술 및 e-Learning 과의 비교",
-   "- 스마트러닝의 요소 기술",
-   "- e-Learning 과의 비교"
+   "개념과 5대 특성",
+   "- 전환: 학습자 중심",
+   "- 특성: SMART",
+   "요소 기술",
+   "- 인프라·전달: 클라우드",
+   "- 상호작용·지능: 분석",
+   "- 콘텐츠·훈련: 실감",
+   "이러닝 비교와 과제",
+   "- 비교: 확장된 이러닝",
+   "- 과제: 격차·검증"
   ],
   "sections": [
    {
-    "title": "스마트러닝 핵심",
+    "title": "개념과 5대 특성",
     "subsections": [
      {
-      "title": null,
+      "title": "전환: 학습자 중심",
       "items": [
-       "수평적: 스마트러닝에서 수평적을 다루는 핵심 암기 포인트",
-       "쌍방향적: 스마트러닝에서 쌍방향적을 다루는 핵심 암기 포인트",
-       "참여적: 스마트러닝에서 참여적을 다루는 핵심 암기 포인트",
-       "지능적: 스마트러닝에서 지능적을 다루는 핵심 암기 포인트"
+       "교사 주도 일방 전달에서 학습자 참여·상호작용 중심으로, 단말·장소 제약 없는 몰입 학습"
+      ]
+     },
+     {
+      "title": "특성: SMART",
+      "items": [
+       "자기주도적(Self-directed)·학습 흥미(Motivated)·수준·적성 맞춤(Adaptive)·풍부한 자료(Resource Enriched)·기술 기반(Technology Embedded)"
       ]
      }
     ]
    },
    {
-    "title": "스마트러닝 구성·기술",
+    "title": "요소 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "인프라·전달: 클라우드",
       "items": [
-       "상호작용적: 스마트러닝에서 상호작용적을 다루는 핵심 암기 포인트",
-       "자기주도적: 스마트러닝에서 자기주도적을 다루는 핵심 암기 포인트",
-       "학습흥미: 스마트러닝에서 학습흥미를 다루는 핵심 암기 포인트",
-       "e-Learning과의 비교: 스마트러닝와 유사 기술을 기준별로 대조하는 표"
+       "클라우드 학습 환경과 태블릿·스마트TV, 상황 인식 푸시로 학습 시점·장소에 맞는 콘텐츠 전달"
+      ]
+     },
+     {
+      "title": "상호작용·지능: 분석",
+      "items": [
+       "행동·음성·필기 인식으로 상호작용, 학습 분석(Learning Analytics)과 적응형 학습(Adaptive Learning)으로 개인별 진도·난이도 조정"
+      ]
+     },
+     {
+      "title": "콘텐츠·훈련: 실감",
+      "items": [
+       "지능형 에이전트·실사 CG·시뮬레이션·가상체험 훈련 모델로 체험형 콘텐츠 제작"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "이러닝 비교와 과제",
+    "subsections": [
+     {
+      "title": "비교: 확장된 이러닝",
+      "items": [
+       "이러닝은 PC 기반·콘텐츠 일방 제공, 스마트 러닝은 모바일 기반·쌍방향·협력·집단지성 학습 모델"
+      ]
+     },
+     {
+      "title": "과제: 격차·검증",
+      "items": [
+       "디지털 격차와 과의존, 학습 데이터 개인정보 보호, AI 디지털교과서 도입 논란처럼 교육 효과 검증과 교사 역량 확보 필요"
       ]
      }
     ]
@@ -24692,21 +24850,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "수평적",
-   "쌍방향적",
-   "참여적",
-   "지능적",
-   "상호작용적",
-   "자기주도적",
-   "학습흥미",
-   "e-Learning과의 비교"
+   "자기주도적(Self-directed)",
+   "학습 흥미(Motivated)",
+   "수준·적성 맞춤(Adaptive)",
+   "풍부한 자료(Resource Enriched)",
+   "기술 기반(Technology Embedded)",
+   "상황 인식 푸시",
+   "학습 분석(Learning Analytics)",
+   "적응형 학습(Adaptive Learning)",
+   "클라우드 학습 환경",
+   "협력·집단지성 학습"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_295",
