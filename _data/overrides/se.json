@@ -8638,5 +8638,1899 @@
   "gloss": {
    "MAC": "Modified, Accessed, Changed"
   }
+ },
+ "SE_116": {
+  "title": "인증·권한부여·계정관리(AAA, Authentication, Authorization, Accounting)",
+  "category": "SE > 접근제어(AC) > AAA",
+  "definition": "네트워크·시스템 접근 시 사용자 신원을 확인하는 인증, 허용 범위를 정하는 권한부여, 사용 내역을 기록해 과금·감사에 쓰는 계정관리를 통합 제공하는 보안 프레임워크와 그 기술의 총칭",
+  "keywords": [
+   "3대 기능: 인증(Authentication) · 권한부여(Authorization) · 계정관리(Accounting)",
+   "구조: NAS(AAA 클라이언트) · AAA 서버 · 사용자 DB",
+   "프로토콜: RADIUS · Diameter · TACACS+"
+  ],
+  "sections": [
+   {
+    "title": "3대 기능",
+    "subsections": [
+     {
+      "title": "인증",
+      "items": [
+       "접근 허용 전 신원 검증(비밀번호·인증서·OTP)"
+      ]
+     },
+     {
+      "title": "권한부여",
+      "items": [
+       "검증된 사용자에게 허용할 서비스·권한 수준 결정"
+      ]
+     },
+     {
+      "title": "계정관리",
+      "items": [
+       "사용 시간·데이터량 수집 → 과금·감사·용량 계획"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구조와 동작",
+    "subsections": [
+     {
+      "title": "구조",
+      "items": [
+       "사용자 → NAS(AAA 클라이언트) → AAA 서버(사용자 DB 조회)"
+      ]
+     },
+     {
+      "title": "1 요청",
+      "items": [
+       "사용자가 NAS에 접속·인증 정보 제출"
+      ]
+     },
+     {
+      "title": "2 전달",
+      "items": [
+       "NAS가 AAA 서버로 인증 요청 전달"
+      ]
+     },
+     {
+      "title": "3 통지",
+      "items": [
+       "AAA 서버가 인증 결과와 권한 속성 통지"
+      ]
+     },
+     {
+      "title": "4 설정",
+      "items": [
+       "NAS가 권한에 맞게 서비스 설정, 계정 정보 기록 시작"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "프로토콜 비교",
+    "subsections": [
+     {
+      "title": "RADIUS",
+      "items": [
+       "UDP, 비밀번호만 암호화, 인증·권한부여 결합"
+      ]
+     },
+     {
+      "title": "Diameter",
+      "items": [
+       "RADIUS 후속, TCP·SCTP 신뢰 전송, 피어 간 메시지, 이동통신(LTE) 사용"
+      ]
+     },
+     {
+      "title": "TACACS+",
+      "items": [
+       "시스코, TCP, 패킷 전체 암호화, 인증·권한부여·계정관리 분리로 장비 관리자 명령 통제"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "3대 기능",
+   "- 인증",
+   "- 권한부여",
+   "- 계정관리",
+   "구조와 동작",
+   "- 구조",
+   "- 1 요청",
+   "- 2 전달",
+   "- 3 통지",
+   "- 4 설정",
+   "프로토콜 비교",
+   "- RADIUS",
+   "- Diameter",
+   "- TACACS+"
+  ],
+  "name": "인증·권한부여·계정관리(AAA, Authentication, Authorization, Accounting)",
+  "en": "Authentication, Authorization and Accounting",
+  "keywords_must": [
+   "인증(Authentication)",
+   "권한부여(Authorization)",
+   "계정관리(Accounting)",
+   "NAS(AAA 클라이언트)",
+   "AAA 서버",
+   "사용자 DB",
+   "RADIUS",
+   "Diameter",
+   "TACACS+"
+  ],
+  "keywords_ref": [
+   "동작 단계 요청·전달·통지·설정",
+   "RADIUS UDP 1812·1813",
+   "Diameter TCP·SCTP 3868",
+   "TACACS+ TCP 49",
+   "802.1X·EAP",
+   "로밍 과금",
+   "감사 추적"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "인증(Authentication)",
+   "권한부여(Authorization)",
+   "계정관리(Accounting)",
+   "NAS(AAA 클라이언트)",
+   "AAA 서버",
+   "사용자 DB",
+   "RADIUS",
+   "Diameter",
+   "TACACS+"
+  ],
+  "dueum": "요전통설",
+  "gloss": {
+   "OTP": "One-Time Password",
+   "NAS": "Network Access Server",
+   "TACACS": "Terminal Access Controller Access-Control System",
+   "EAP": "Extensible Authentication Protocol",
+   "SCTP": "Stream Control Transmission Protocol",
+   "RADIUS": "Remote Authentication Dial-In User Service"
+  }
+ },
+ "SE_123": {
+  "title": "접근통제 모델(Access Control Models)",
+  "category": "SE > 보안 > 접근통제 > AC(접근통제) 모델(Access Control Model)",
+  "definition": "주체가 객체에 어떤 접근을 할 수 있는지를 수학적·형식적으로 규정한 보안 모델로, 기밀성 중심의 벨-라파둘라, 무결성 중심의 비바·클라크-윌슨, 권한 표현 구조인 접근 행렬 등이 있다",
+  "keywords": [
+   "기밀성 모델: 벨-라파둘라(BLP, Bell-LaPadula) · No Read Up · No Write Down",
+   "무결성 모델: 비바(Biba) · No Read Down · No Write Up · 클라크-윌슨(Clark-Wilson)",
+   "권한 표현: 접근 행렬(Access Matrix) · ACL · 권한 리스트(Capability List)"
+  ],
+  "sections": [
+   {
+    "title": "기밀성 모델",
+    "subsections": [
+     {
+      "title": "BLP 구성",
+      "items": [
+       "주체·객체에 보안 등급 부여, 군사 기밀 유출 방지"
+      ]
+     },
+     {
+      "title": "단순 보안 속성",
+      "items": [
+       "주체는 자기보다 높은 등급 객체를 읽을 수 없음(No Read Up)"
+      ]
+     },
+     {
+      "title": "스타(*) 속성",
+      "items": [
+       "주체는 자기보다 낮은 등급 객체에 쓸 수 없음(No Write Down)"
+      ]
+     },
+     {
+      "title": "강한 스타 속성",
+      "items": [
+       "같은 등급에서만 읽기·쓰기"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "무결성 모델",
+    "subsections": [
+     {
+      "title": "비바",
+      "items": [
+       "단순 무결성(No Read Down), 스타 무결성(No Write Up)으로 BLP와 반대 방향"
+      ]
+     },
+     {
+      "title": "클라크-윌슨",
+      "items": [
+       "상용 환경용",
+       "주체는 TP를 통해서만 CDI 변경(잘 형성된 트랜잭션)",
+       "IVP로 무결성 검증",
+       "직무 분리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "접근 행렬",
+    "subsections": [
+     {
+      "title": "구조",
+      "items": [
+       "행은 주체, 열은 객체, 칸은 허용 권한"
+      ]
+     },
+     {
+      "title": "구현",
+      "items": [
+       "열 기준 ACL(객체별 접근 목록)",
+       "행 기준 권한 리스트(주체별 보유 권한)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "기밀성 모델",
+   "- BLP 구성",
+   "- 단순 보안 속성",
+   "- 스타(*) 속성",
+   "- 강한 스타 속성",
+   "무결성 모델",
+   "- 비바",
+   "- 클라크-윌슨",
+   "접근 행렬",
+   "- 구조",
+   "- 구현"
+  ],
+  "name": "접근통제 모델(Access Control Models)",
+  "en": "Access Control Models",
+  "keywords_must": [
+   "벨-라파둘라(BLP, Bell-LaPadula)",
+   "No Read Up",
+   "No Write Down",
+   "비바(Biba)",
+   "No Read Down",
+   "No Write Up",
+   "클라크-윌슨(Clark-Wilson)",
+   "접근 행렬(Access Matrix)",
+   "ACL",
+   "권한 리스트(Capability List)"
+  ],
+  "keywords_ref": [
+   "단순 보안 속성·스타 속성",
+   "강한 스타 속성",
+   "잘 형성된 트랜잭션",
+   "직무 분리",
+   "CDI·UDI·TP·IVP",
+   "만리장성 모델",
+   "MAC·DAC·RBAC 정책"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "벨-라파둘라(BLP, Bell-LaPadula)",
+   "No Read Up",
+   "No Write Down",
+   "비바(Biba)",
+   "No Read Down",
+   "No Write Up",
+   "클라크-윌슨(Clark-Wilson)",
+   "접근 행렬(Access Matrix)",
+   "ACL",
+   "권한 리스트(Capability List)"
+  ],
+  "gloss": {
+   "ACL": "Access Control List",
+   "CDI": "Constrained Data Item",
+   "UDI": "Unconstrained Data Item",
+   "TP": "Transformation Procedure",
+   "IVP": "Integrity Verification Procedure",
+   "MAC": "Mandatory Access Control",
+   "DAC": "Discretionary Access Control",
+   "RBAC": "Role-Based Access Control"
+  }
+ },
+ "SE_124_1": {
+  "title": "만리장성 모델(Chinese Wall Model)",
+  "category": "SE > 정보보안",
+  "definition": "브루어와 내시가 제안한 접근통제 모델로, 사용자가 한 회사 정보에 접근하면 같은 이해 충돌 집합에 속한 경쟁사 정보에는 접근할 수 없도록 과거 접근 이력에 따라 권한을 동적으로 제한해 이해 충돌을 막는다",
+  "keywords": [
+   "구성: 객체 · 회사 데이터 집합(Company Dataset) · 이해 충돌 집합(COI Class)",
+   "규칙: 단순 보안 규칙(읽기) · 스타 규칙(쓰기)",
+   "특징: 이력 기반 동적 통제 · 이해 충돌 방지 · 직무 분리",
+   "적용: 금융 투자·컨설팅·로펌"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "이해 충돌",
+      "items": [
+       "한 컨설턴트가 경쟁 은행 두 곳의 기밀을 동시에 보면 내부 정보 유출 위험"
+      ]
+     },
+     {
+      "title": "정적 모델 한계",
+      "items": [
+       "BLP는 고정 등급",
+       "상용 환경은 접근 이력에 따른 제한 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성과 규칙",
+    "subsections": [
+     {
+      "title": "계층",
+      "items": [
+       "객체 → 회사 데이터 집합 → 이해 충돌 집합(같은 업종 경쟁사 묶음)"
+      ]
+     },
+     {
+      "title": "읽기 규칙",
+      "items": [
+       "이미 접근한 데이터 집합이거나 그와 다른 충돌 집합일 때만 허용"
+      ]
+     },
+     {
+      "title": "쓰기 규칙",
+      "items": [
+       "다른 회사 데이터를 읽을 수 있는 주체는 쓰기 제한, 정보 흐름 차단"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "다른 모델과 비교",
+    "subsections": [
+     {
+      "title": "BLP",
+      "items": [
+       "고정 등급, 기밀성",
+       "만리장성: 동적 이력, 이해 충돌"
+      ]
+     },
+     {
+      "title": "적용 예",
+      "items": [
+       "증권사 리서치·투자은행 부서 간 정보 차단벽, 회계법인·로펌 사건 배정"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 이해 충돌",
+   "- 정적 모델 한계",
+   "구성과 규칙",
+   "- 계층",
+   "- 읽기 규칙",
+   "- 쓰기 규칙",
+   "다른 모델과 비교",
+   "- BLP",
+   "- 적용 예"
+  ],
+  "name": "만리장성 모델(Chinese Wall Model)",
+  "en": "Chinese Wall Model (Brewer-Nash Model)",
+  "keywords_must": [
+   "객체",
+   "회사 데이터 집합(Company Dataset)",
+   "이해 충돌 집합(COI Class)",
+   "단순 보안 규칙(읽기)",
+   "스타 규칙(쓰기)",
+   "이력 기반 동적 통제",
+   "이해 충돌 방지",
+   "직무 분리",
+   "금융 투자·컨설팅·로펌"
+  ],
+  "keywords_ref": [
+   "브루어-내시(Brewer-Nash, 1989)",
+   "비바·BLP 비교",
+   "소독된 정보(Sanitized) 예외",
+   "정보 장벽(Information Barrier)",
+   "상용 보안 모델"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "객체",
+   "회사 데이터 집합(Company Dataset)",
+   "이해 충돌 집합(COI Class)",
+   "단순 보안 규칙(읽기)",
+   "스타 규칙(쓰기)",
+   "이력 기반 동적 통제",
+   "이해 충돌 방지",
+   "직무 분리",
+   "금융 투자·컨설팅·로펌"
+  ],
+  "gloss": {
+   "COI": "Conflict of Interest"
+  }
+ },
+ "SE_127": {
+  "title": "허니팟(Honeypot)",
+  "category": "SE > 기업 보안 시스템 > Honey Pot(허니팟)",
+  "definition": "의도적으로 취약하게 보이도록 만든 유인 시스템에 공격자를 끌어들여 침입 행위와 기법을 기록·분석하고, 실제 자산에 대한 공격을 지연·분산시키는 보안 기법",
+  "keywords": [
+   "활용 목적: 신종 공격 기법 연구 · 조기 경보 · 공격자 혼란·지연",
+   "상호작용 수준: 저상호작용(Low-interaction) · 고상호작용(High-interaction)",
+   "배치 위치: 방화벽 외부 · DMZ · 내부망",
+   "구성 기술: 운영망 분리 · 실시간 로깅 · 데이터 통제(Data Control)"
+  ],
+  "sections": [
+   {
+    "title": "활용 목적",
+    "subsections": [
+     {
+      "title": "연구",
+      "items": [
+       "신종 해킹 기법·악성코드 수집"
+      ]
+     },
+     {
+      "title": "탐지",
+      "items": [
+       "정상 사용자가 접근할 이유가 없어 접근 자체가 경보"
+      ]
+     },
+     {
+      "title": "방어",
+      "items": [
+       "공격자 시간·자원 소모, 실제 시스템 노출 감소"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": "저상호작용",
+      "items": [
+       "서비스 일부만 에뮬레이션, 안전하지만 수집 정보 제한"
+      ]
+     },
+     {
+      "title": "고상호작용",
+      "items": [
+       "실제 OS·서비스 제공, 정보 풍부하나 장악 시 악용 위험"
+      ]
+     },
+     {
+      "title": "배치",
+      "items": [
+       "외부는 공격 동향",
+       "DMZ는 공개 서버 위협",
+       "내부망은 내부 침투·레터럴 무브먼트 탐지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구축 요구 기술",
+    "subsections": [
+     {
+      "title": "분리",
+      "items": [
+       "운영망과 분리, 허니팟 발 아웃바운드 트래픽 통제(데이터 통제)"
+      ]
+     },
+     {
+      "title": "수집",
+      "items": [
+       "의도적 취약점 노출, 키 입력·패킷 실시간 로깅(데이터 수집)"
+      ]
+     },
+     {
+      "title": "분석",
+      "items": [
+       "로그 정규화, 침입 패턴 분석, 보안 관제 연계"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "활용 목적",
+   "- 연구",
+   "- 탐지",
+   "- 방어",
+   "유형",
+   "- 저상호작용",
+   "- 고상호작용",
+   "- 배치",
+   "구축 요구 기술",
+   "- 분리",
+   "- 수집",
+   "- 분석"
+  ],
+  "name": "허니팟(Honeypot)",
+  "en": "Honeypot",
+  "keywords_must": [
+   "신종 공격 기법 연구",
+   "조기 경보",
+   "공격자 혼란·지연",
+   "저상호작용(Low-interaction)",
+   "고상호작용(High-interaction)",
+   "방화벽 외부",
+   "DMZ",
+   "내부망",
+   "운영망 분리",
+   "실시간 로깅",
+   "데이터 통제(Data Control)"
+  ],
+  "keywords_ref": [
+   "허니넷(Honeynet)",
+   "허니토큰·허니 계정",
+   "클라이언트 허니팟",
+   "사이버 디셉션",
+   "공격자 역이용 위험",
+   "법적 함정 수사 논란"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "신종 공격 기법 연구",
+   "조기 경보",
+   "공격자 혼란·지연",
+   "저상호작용(Low-interaction)",
+   "고상호작용(High-interaction)",
+   "방화벽 외부",
+   "DMZ",
+   "내부망",
+   "운영망 분리",
+   "실시간 로깅",
+   "데이터 통제(Data Control)"
+  ]
+ },
+ "SE_129": {
+  "title": "네트워크 주소 변환(NAT, Network Address Translation)",
+  "category": "SE > 기업 보안 시스템 > NAT(Network Address Translation)",
+  "definition": "내부망에서 쓰는 사설 IP 주소와 포트를 외부 공인 IP 주소와 포트로 상호 변환해 공인 주소를 절약하고 내부 구조를 외부에 숨기는 주소 변환 기술",
+  "keywords": [
+   "변환 유형: 정적 변환(Static NAT) · 동적 변환(Dynamic NAT) · PAT(NAPT)",
+   "핵심 기능: IP 마스커레이딩(Masquerading) · 포트 포워딩(Port Forwarding) · 부하 분산(LSNAT)",
+   "사설 주소: 10.0.0.0/8 · 172.16.0.0/12 · 192.168.0.0/16"
+  ],
+  "sections": [
+   {
+    "title": "동작 절차",
+    "subsections": [
+     {
+      "title": "1 아웃바운드",
+      "items": [
+       "내부 패킷이 게이트웨이를 지날 때 출발지 사설 IP·포트를 공인 IP·포트로 변환"
+      ]
+     },
+     {
+      "title": "2 기록",
+      "items": [
+       "변환 테이블에 매핑 저장, 세션 유지"
+      ]
+     },
+     {
+      "title": "3 인바운드",
+      "items": [
+       "응답 패킷의 목적지를 테이블로 역변환해 내부 호스트에 전달"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "변환 유형",
+    "subsections": [
+     {
+      "title": "정적 변환",
+      "items": [
+       "사설·공인 1:1 고정 매핑, 공개 서버용"
+      ]
+     },
+     {
+      "title": "동적 변환",
+      "items": [
+       "공인 주소 풀에서 1:1 동적 할당"
+      ]
+     },
+     {
+      "title": "PAT",
+      "items": [
+       "하나의 공인 IP를 포트로 구분해 N:1 공유"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "핵심 기능과 한계",
+    "subsections": [
+     {
+      "title": "마스커레이딩",
+      "items": [
+       "다수 사설 호스트가 하나의 공인 IP로 외부 접속"
+      ]
+     },
+     {
+      "title": "포트 포워딩",
+      "items": [
+       "인바운드 목적지 포트로 내부 서버 지정"
+      ]
+     },
+     {
+      "title": "부하 분산",
+      "items": [
+       "하나의 공인 주소로 들어온 요청을 여러 내부 서버에 분배(LSNAT)"
+      ]
+     },
+     {
+      "title": "부작용",
+      "items": [
+       "종단 간 연결성 훼손, P2P·IPsec 통과 시 NAT 트래버설 필요"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "동작 절차",
+   "- 1 아웃바운드",
+   "- 2 기록",
+   "- 3 인바운드",
+   "변환 유형",
+   "- 정적 변환",
+   "- 동적 변환",
+   "- PAT",
+   "핵심 기능과 한계",
+   "- 마스커레이딩",
+   "- 포트 포워딩",
+   "- 부하 분산",
+   "- 부작용"
+  ],
+  "name": "네트워크 주소 변환(NAT, Network Address Translation)",
+  "en": "Network Address Translation",
+  "keywords_must": [
+   "정적 변환(Static NAT)",
+   "동적 변환(Dynamic NAT)",
+   "PAT(NAPT)",
+   "IP 마스커레이딩(Masquerading)",
+   "포트 포워딩(Port Forwarding)",
+   "부하 분산(LSNAT)",
+   "10.0.0.0/8",
+   "172.16.0.0/12",
+   "192.168.0.0/16"
+  ],
+  "keywords_ref": [
+   "RFC 1918",
+   "변환 테이블",
+   "CGNAT",
+   "NAT 트래버설(STUN·TURN)",
+   "IPsec NAT-T",
+   "종단 간 연결성 훼손",
+   "투명 프록시"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "정적 변환(Static NAT)",
+   "동적 변환(Dynamic NAT)",
+   "PAT(NAPT)",
+   "IP 마스커레이딩(Masquerading)",
+   "포트 포워딩(Port Forwarding)",
+   "부하 분산(LSNAT)",
+   "10.0.0.0/8",
+   "172.16.0.0/12",
+   "192.168.0.0/16"
+  ],
+  "gloss": {
+   "PAT": "Port Address Translation",
+   "NAPT": "Network Address and Port Translation",
+   "LSNAT": "Load Sharing NAT",
+   "CGNAT": "Carrier-Grade NAT"
+  }
+ },
+ "SE_131": {
+  "title": "IP 마스커레이딩(IP Masquerading)",
+  "category": "SE > 기업 보안 시스템(기술적 보안) > IP Masquerading",
+  "definition": "NAT의 한 형태로, 리눅스 게이트웨이 등이 다수 내부 사설 호스트의 출발지 주소를 자신의 공인 IP 하나로 바꿔 외부와 통신하게 하는 N:1 동적 주소 변환 기술",
+  "keywords": [
+   "변환 방식: N:1 출발지 주소 변환 · 포트 기반 세션 구분 · 동적 공인 IP 대응",
+   "구현: 리눅스 iptables MASQUERADE · 연결 추적(conntrack)",
+   "특징: 내부 호스트 은닉 · 공인 주소 절약 · 외부 발 연결 제약",
+   "연계 기능: 포트 포워딩 · 부하 분산"
+  ],
+  "sections": [
+   {
+    "title": "특성",
+    "subsections": [
+     {
+      "title": "은닉",
+      "items": [
+       "외부에서 내부 호스트 IP 인식 불가 → 직접 공격 어려움"
+      ]
+     },
+     {
+      "title": "제약",
+      "items": [
+       "외부에서 먼저 내부로 연결 시작 불가, 포트 포워딩 필요"
+      ]
+     },
+     {
+      "title": "경제성",
+      "items": [
+       "공인 IP 하나로 내부망 전체 인터넷 사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작 원리",
+    "subsections": [
+     {
+      "title": "1 전송",
+      "items": [
+       "내부 PC(192.168.0.25)가 외부 서버로 세그먼트 전송"
+      ]
+     },
+     {
+      "title": "2 변환",
+      "items": [
+       "게이트웨이가 출발지를 자신의 공인 IP·임의 포트로 교체, 연결 추적 테이블 기록"
+      ]
+     },
+     {
+      "title": "3 응답",
+      "items": [
+       "외부 응답의 목적지 포트로 테이블 조회 → 원래 사설 IP·포트로 복원"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "SNAT 비교와 연계",
+    "subsections": [
+     {
+      "title": "SNAT",
+      "items": [
+       "고정 공인 IP로 변환 지정",
+       "마스커레이딩: 인터페이스 현재 IP를 자동 사용, 유동 IP 회선에 적합"
+      ]
+     },
+     {
+      "title": "포트 포워딩",
+      "items": [
+       "특정 포트를 내부 서버로 전달해 외부 공개"
+      ]
+     },
+     {
+      "title": "부하 분산",
+      "items": [
+       "요청을 여러 내부 서버로 분배"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "특성",
+   "- 은닉",
+   "- 제약",
+   "- 경제성",
+   "동작 원리",
+   "- 1 전송",
+   "- 2 변환",
+   "- 3 응답",
+   "SNAT 비교와 연계",
+   "- SNAT",
+   "- 포트 포워딩",
+   "- 부하 분산"
+  ],
+  "name": "IP 마스커레이딩(IP Masquerading)",
+  "en": "IP Masquerading",
+  "keywords_must": [
+   "N:1 출발지 주소 변환",
+   "포트 기반 세션 구분",
+   "동적 공인 IP 대응",
+   "리눅스 iptables MASQUERADE",
+   "연결 추적(conntrack)",
+   "내부 호스트 은닉",
+   "공인 주소 절약",
+   "외부 발 연결 제약",
+   "포트 포워딩",
+   "부하 분산"
+  ],
+  "keywords_ref": [
+   "SNAT 비교",
+   "POSTROUTING 체인",
+   "DHCP·PPPoE 회선",
+   "192.168.0.0/16",
+   "ALG(Application Level Gateway)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "N:1 출발지 주소 변환",
+   "포트 기반 세션 구분",
+   "동적 공인 IP 대응",
+   "리눅스 iptables MASQUERADE",
+   "연결 추적(conntrack)",
+   "내부 호스트 은닉",
+   "공인 주소 절약",
+   "외부 발 연결 제약",
+   "포트 포워딩",
+   "부하 분산"
+  ],
+  "gloss": {
+   "PC": "Personal Computer",
+   "SNAT": "Source NAT",
+   "ALG": "Application Level Gateway"
+  }
+ },
+ "SE_135": {
+  "title": "통합 보안 관리(ESM, Enterprise Security Management)",
+  "category": "SE > 기업 보안 시스템(기술적 보안) > ESM",
+  "definition": "방화벽·IDS·IPS·VPN 등 이기종 보안 솔루션의 이벤트를 에이전트로 수집·정규화·상관 분석해 한 콘솔에서 통합 모니터링·대응하고 보안 정책을 일괄 관리하는 통합 보안 관리 시스템",
+  "keywords": [
+   "구성: 단위 보안 시스템 · ESM 에이전트 · ESM 매니저 · 관리 콘솔",
+   "저장소: 이벤트 저장소(Event Repository) · 위험 패턴 저장소",
+   "핵심 기능: 이벤트 수집·정규화 · 상관 분석 · 정책 통합 관리 · 위협 대응 지휘"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "개별 관리 한계",
+      "items": [
+       "솔루션마다 콘솔·로그 형식이 달라 통합 판단 불가"
+      ]
+     },
+     {
+      "title": "요구",
+      "items": [
+       "보안 이벤트를 한곳에서 연관 분석하고 정책을 일관 적용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "수집·분석 계층",
+    "subsections": [
+     {
+      "title": "단위 보안 시스템",
+      "items": [
+       "방화벽·IDS·IPS·VPN에서 이벤트 발생"
+      ]
+     },
+     {
+      "title": "에이전트",
+      "items": [
+       "보안 제품에 설치되어 이벤트 수집, 매니저의 정책 반영"
+      ]
+     },
+     {
+      "title": "매니저",
+      "items": [
+       "필터링·정규화·축약, 규칙 기반 상관 분석"
+      ]
+     },
+     {
+      "title": "저장소·콘솔",
+      "items": [
+       "이벤트·위험 패턴 저장, 시각화와 대응 지휘"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "제약과 진화",
+    "subsections": [
+     {
+      "title": "제약",
+      "items": [
+       "보안 장비 이벤트 중심, 대용량 로그·장기 분석 부족"
+      ]
+     },
+     {
+      "title": "진화",
+      "items": [
+       "전체 IT 로그와 빅데이터 분석을 결합한 SIEM으로 발전"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 개별 관리 한계",
+   "- 요구",
+   "수집·분석 계층",
+   "- 단위 보안 시스템",
+   "- 에이전트",
+   "- 매니저",
+   "- 저장소·콘솔",
+   "제약과 진화",
+   "- 제약",
+   "- 진화"
+  ],
+  "name": "통합 보안 관리(ESM, Enterprise Security Management)",
+  "en": "Enterprise Security Management",
+  "keywords_must": [
+   "단위 보안 시스템",
+   "ESM 에이전트",
+   "ESM 매니저",
+   "관리 콘솔",
+   "이벤트 저장소(Event Repository)",
+   "위험 패턴 저장소",
+   "이벤트 수집·정규화",
+   "상관 분석",
+   "정책 통합 관리",
+   "위협 대응 지휘"
+  ],
+  "keywords_ref": [
+   "필터링·축약",
+   "보안 관제센터(SOC)",
+   "SIEM 진화",
+   "실시간 관제",
+   "이기종 연동 표준화",
+   "대응 자동화 한계"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "단위 보안 시스템",
+   "ESM 에이전트",
+   "ESM 매니저",
+   "관리 콘솔",
+   "이벤트 저장소(Event Repository)",
+   "위험 패턴 저장소",
+   "이벤트 수집·정규화",
+   "상관 분석",
+   "정책 통합 관리",
+   "위협 대응 지휘"
+  ],
+  "gloss": {
+   "IPS": "Intrusion Prevention System",
+   "SOC": "Security Operations Center"
+  }
+ },
+ "SE_136": {
+  "title": "보안 정보 및 이벤트 관리(SIEM, Security Information and Event Management)",
+  "category": "SE > 보안",
+  "definition": "네트워크·보안 장비·서버·애플리케이션 등 기업 내 모든 장비의 로그를 수집·저장하고 실시간 상관 분석과 사후 포렌식을 지원해 지능형 위협을 조기 경보하는 보안 관제 플랫폼",
+  "keywords": [
+   "주요 기능: 데이터 수집 · 데이터 관리 · 상관 분석 · 포렌식·리포팅",
+   "보안 효과: 외부 공격 탐지 · 내부 위협 탐지 · 컴플라이언스 대응",
+   "진화: 빅데이터 분석 · UEBA · SOAR 연계"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "ESM 한계",
+      "items": [
+       "보안 장비 이벤트만 분석, APT 같은 장기·저속 공격 탐지 곤란"
+      ]
+     },
+     {
+      "title": "규제",
+      "items": [
+       "로그 보존·감사 요구 증가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 기능",
+    "subsections": [
+     {
+      "title": "수집",
+      "items": [
+       "네트워크·보안·인프라·응용 로그 전체를 다양한 프로토콜로 수집"
+      ]
+     },
+     {
+      "title": "관리",
+      "items": [
+       "정규화, 무결성 보장, 확장형 저장소"
+      ]
+     },
+     {
+      "title": "분석",
+      "items": [
+       "이기종 로그 상관 분석, 실시간 경보, 대시보드"
+      ]
+     },
+     {
+      "title": "포렌식",
+      "items": [
+       "장기 로그 검색으로 사후 추적, 컴플라이언스 보고서"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "ESM 비교와 진화",
+    "subsections": [
+     {
+      "title": "범위",
+      "items": [
+       "ESM은 보안 이벤트",
+       "SIEM은 전체 IT 로그와 비즈니스 맥락"
+      ]
+     },
+     {
+      "title": "분석",
+      "items": [
+       "ESM은 규칙 기반 실시간",
+       "SIEM은 빅데이터·장기 이력 분석"
+      ]
+     },
+     {
+      "title": "진화",
+      "items": [
+       "UEBA로 이상 행위 학습",
+       "SOAR로 대응 자동화",
+       "XDR과 통합"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- ESM 한계",
+   "- 규제",
+   "주요 기능",
+   "- 수집",
+   "- 관리",
+   "- 분석",
+   "- 포렌식",
+   "ESM 비교와 진화",
+   "- 범위",
+   "- 분석",
+   "- 진화"
+  ],
+  "name": "보안 정보 및 이벤트 관리(SIEM, Security Information and Event Management)",
+  "en": "Security Information and Event Management",
+  "keywords_must": [
+   "데이터 수집",
+   "데이터 관리",
+   "상관 분석",
+   "포렌식·리포팅",
+   "외부 공격 탐지",
+   "내부 위협 탐지",
+   "컴플라이언스 대응",
+   "빅데이터 분석",
+   "UEBA",
+   "SOAR 연계"
+  ],
+  "keywords_ref": [
+   "ESM 비교",
+   "로그 무결성 관리",
+   "정규화·파싱",
+   "상관 규칙",
+   "차세대 SIEM",
+   "XDR 비교",
+   "로그 보존 기간"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "데이터 수집",
+   "데이터 관리",
+   "상관 분석",
+   "포렌식·리포팅",
+   "외부 공격 탐지",
+   "내부 위협 탐지",
+   "컴플라이언스 대응",
+   "빅데이터 분석",
+   "UEBA",
+   "SOAR 연계"
+  ],
+  "gloss": {
+   "XDR": "Extended Detection and Response",
+   "UEBA": "User and Entity Behavior Analytics",
+   "SOAR": "Security Orchestration, Automation and Response"
+  }
+ },
+ "SE_137": {
+  "title": "보안 오케스트레이션·자동화·대응(SOAR, Security Orchestration, Automation and Response)",
+  "category": "SE > 보안 > 기업 보안 시스템 > SOAR",
+  "definition": "이기종 보안 도구를 연동(오케스트레이션)하고 플레이북으로 반복 대응 업무를 자동화하며 위협 인텔리전스와 사고 대응 절차를 통합 관리해 보안 사고 대응 시간을 줄이는 보안 운영 플랫폼",
+  "keywords": [
+   "구성(가트너): SOA(보안 오케스트레이션·자동화) · SIRP(보안 사고 대응 플랫폼) · TIP(위협 인텔리전스 플랫폼)",
+   "주요 기능: 동적 플레이북(Playbook) · 시각적 워크플로 · 사고 시각화 · 사례 관리(Case Management)",
+   "효과: 평균 대응 시간(MTTR) 단축 · 경보 피로 감소"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "경보 폭증",
+      "items": [
+       "SIEM 경보가 분석 인력 처리 능력 초과"
+      ]
+     },
+     {
+      "title": "도구 분산",
+      "items": [
+       "방화벽·EDR·메일 보안 등을 수작업으로 오가며 대응"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "가트너 3요소",
+    "subsections": [
+     {
+      "title": "SOA",
+      "items": [
+       "보안 도구 API 연동, 반복 업무 자동화"
+      ]
+     },
+     {
+      "title": "SIRP",
+      "items": [
+       "사고 유형별 대응 정책·절차·티켓 관리"
+      ]
+     },
+     {
+      "title": "TIP",
+      "items": [
+       "여러 출처의 위협 정보를 실시간 수집·평판 조회"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응 흐름과 기대 이점",
+    "subsections": [
+     {
+      "title": "동작",
+      "items": [
+       "SIEM 경보 수신 → 플레이북 실행(IoC 평판 조회, 단말 격리, IP 차단) → 분석가 승인 → 사례 종결 보고"
+      ]
+     },
+     {
+      "title": "이점",
+      "items": [
+       "대응 시간 단축, 일관된 대응 품질, 분석가는 고난도 위협에 집중"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 경보 폭증",
+   "- 도구 분산",
+   "가트너 3요소",
+   "- SOA",
+   "- SIRP",
+   "- TIP",
+   "대응 흐름과 기대 이점",
+   "- 동작",
+   "- 이점"
+  ],
+  "name": "보안 오케스트레이션·자동화·대응(SOAR, Security Orchestration, Automation and Response)",
+  "en": "Security Orchestration, Automation and Response",
+  "keywords_must": [
+   "SOA(보안 오케스트레이션·자동화)",
+   "SIRP(보안 사고 대응 플랫폼)",
+   "TIP(위협 인텔리전스 플랫폼)",
+   "동적 플레이북(Playbook)",
+   "시각적 워크플로",
+   "사고 시각화",
+   "사례 관리(Case Management)",
+   "평균 대응 시간(MTTR) 단축",
+   "경보 피로 감소"
+  ],
+  "keywords_ref": [
+   "SIEM 연계",
+   "IoC 자동 차단",
+   "API 커넥터",
+   "런북(Runbook)",
+   "보안 인력 부족 대응",
+   "XDR 통합"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "SOA(보안 오케스트레이션·자동화)",
+   "SIRP(보안 사고 대응 플랫폼)",
+   "TIP(위협 인텔리전스 플랫폼)",
+   "동적 플레이북(Playbook)",
+   "시각적 워크플로",
+   "사고 시각화",
+   "사례 관리(Case Management)",
+   "평균 대응 시간(MTTR) 단축",
+   "경보 피로 감소"
+  ],
+  "gloss": {
+   "XDR": "Extended Detection and Response",
+   "SOA": "Security Orchestration and Automation",
+   "SIRP": "Security Incident Response Platform",
+   "TIP": "Threat Intelligence Platform",
+   "MTTR": "Mean Time To Respond",
+   "IoC": "Indicator of Compromise"
+  }
+ },
+ "SE_138": {
+  "title": "보안 접근 서비스 에지(SASE, Secure Access Service Edge)",
+  "category": "SE > 기업 보안 시스템 (기술적 보안) > SASE",
+  "definition": "가트너가 2019년 제시한 개념으로, SD-WAN 등 WAN 네트워크 기능과 SWG·CASB·ZTNA·FWaaS 등 보안 기능을 클라우드 기반 단일 서비스로 융합해 사용자 위치와 무관하게 에지에서 일관된 보안 접근을 제공하는 모델",
+  "keywords": [
+   "네트워크 기능: SD-WAN · WAN 최적화 · 콘텐츠 전송망(CDN)",
+   "보안 기능(SSE): SWG(Secure Web Gateway) · CASB(Cloud Access Security Broker) · ZTNA(Zero Trust Network Access) · FWaaS(Firewall as a Service)",
+   "특징: 신원 기반 정책 · 클라우드 네이티브 단일 플랫폼"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "트래픽 변화",
+      "items": [
+       "업무 트래픽이 데이터센터보다 클라우드·SaaS로 향함"
+      ]
+     },
+     {
+      "title": "백홀 비효율",
+      "items": [
+       "지사·재택 트래픽을 본사 보안 장비로 우회시키면 지연 증가"
+      ]
+     },
+     {
+      "title": "원격 근무",
+      "items": [
+       "위치와 무관한 사용자·기기 중심 보안 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "네트워크·보안 융합 요소",
+    "subsections": [
+     {
+      "title": "네트워크",
+      "items": [
+       "SD-WAN으로 다중 회선 중앙 제어",
+       "WAN 최적화·CDN으로 응답 개선"
+      ]
+     },
+     {
+      "title": "보안(SSE)",
+      "items": [
+       "SWG로 웹 위협 차단",
+       "CASB로 SaaS 가시성·통제",
+       "ZTNA로 앱 단위 최소 권한 접속",
+       "FWaaS로 클라우드 방화벽"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기존 환경 비교",
+    "subsections": [
+     {
+      "title": "기존",
+      "items": [
+       "데이터센터 중심 경계 보안, 장비별 개별 운영"
+      ]
+     },
+     {
+      "title": "융합 모델",
+      "items": [
+       "클라우드 PoP에서 네트워크와 보안을 한 번에 처리, 신원·맥락 기반 정책을 일관 적용"
+      ]
+     },
+     {
+      "title": "진화",
+      "items": [
+       "보안 기능만 분리한 SSE, 단일 벤더 SASE로 확산"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 트래픽 변화",
+   "- 백홀 비효율",
+   "- 원격 근무",
+   "네트워크·보안 융합 요소",
+   "- 네트워크",
+   "- 보안(SSE)",
+   "기존 환경 비교",
+   "- 기존",
+   "- 융합 모델",
+   "- 진화"
+  ],
+  "name": "보안 접근 서비스 에지(SASE, Secure Access Service Edge)",
+  "en": "Secure Access Service Edge",
+  "keywords_must": [
+   "SD-WAN",
+   "WAN 최적화",
+   "콘텐츠 전송망(CDN)",
+   "SWG(Secure Web Gateway)",
+   "CASB(Cloud Access Security Broker)",
+   "ZTNA(Zero Trust Network Access)",
+   "FWaaS(Firewall as a Service)",
+   "신원 기반 정책",
+   "클라우드 네이티브 단일 플랫폼"
+  ],
+  "keywords_ref": [
+   "SSE(Security Service Edge, 2021)",
+   "글로벌 PoP 백본",
+   "데이터센터 백홀 제거",
+   "에지 컴퓨팅",
+   "DLP 통합",
+   "단일 벤더 SASE"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "SD-WAN",
+   "WAN 최적화",
+   "콘텐츠 전송망(CDN)",
+   "SWG(Secure Web Gateway)",
+   "CASB(Cloud Access Security Broker)",
+   "ZTNA(Zero Trust Network Access)",
+   "FWaaS(Firewall as a Service)",
+   "신원 기반 정책",
+   "클라우드 네이티브 단일 플랫폼"
+  ],
+  "gloss": {
+   "SSE": "Security Service Edge",
+   "PoP": "Point of Presence",
+   "SD-WAN": "Software-Defined Wide Area Network",
+   "CDN": "Content Delivery Network"
+  }
+ },
+ "SE_140": {
+  "title": "네트워크 접근 제어(NAC, Network Access Control)",
+  "category": "SE > 기업 보안 시스템(기술적 보안) > NAC",
+  "definition": "단말이 내부 네트워크에 접속할 때 사용자·기기 인증과 백신·패치 등 보안 정책 준수 여부를 검사해 접속을 허용·격리·차단하고, 접속 후에도 지속 감시하는 네트워크 접근통제 시스템",
+  "keywords": [
+   "구현 방식: 802.1X · VLAN 기반 · ARP 기반 · 에이전트 기반",
+   "802.1X 구성: 신청자(Supplicant) · 인증자(Authenticator) · 인증 서버(RADIUS)",
+   "주요 기능: 단말 인증 · 무결성 검사 · 격리·치료(Remediation) · 지속 모니터링"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "비인가 단말",
+      "items": [
+       "외부 노트북·IoT 기기의 무단 접속"
+      ]
+     },
+     {
+      "title": "보안 미준수 단말",
+      "items": [
+       "패치·백신 미적용 단말이 감염 확산 통로"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작 단계",
+    "subsections": [
+     {
+      "title": "1 탐지·인증",
+      "items": [
+       "접속 단말 식별, 사용자·기기 인증"
+      ]
+     },
+     {
+      "title": "2 무결성 검사",
+      "items": [
+       "백신·OS 패치·보안 설정 준수 확인"
+      ]
+     },
+     {
+      "title": "3 결정",
+      "items": [
+       "정상은 업무 VLAN, 미준수는 격리 VLAN에서 치료 후 재검사, 비인가는 차단"
+      ]
+     },
+     {
+      "title": "4 사후 감시",
+      "items": [
+       "접속 중 이상 행위 시 재격리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구현 방식 비교",
+    "subsections": [
+     {
+      "title": "802.1X",
+      "items": [
+       "스위치 포트 단위 EAP 인증",
+       "강력하지만 802.1X 지원 장비 필요"
+      ]
+     },
+     {
+      "title": "VLAN 기반",
+      "items": [
+       "인증 결과에 따라 허가·비허가 VLAN 동적 할당"
+      ]
+     },
+     {
+      "title": "ARP 기반",
+      "items": [
+       "비인가 단말에 ARP 응답 조작으로 통신 차단",
+       "장비 교체 없이 도입 쉬움"
+      ]
+     },
+     {
+      "title": "에이전트 기반",
+      "items": [
+       "단말 에이전트로 정책 준수 상세 점검"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 비인가 단말",
+   "- 보안 미준수 단말",
+   "동작 단계",
+   "- 1 탐지·인증",
+   "- 2 무결성 검사",
+   "- 3 결정",
+   "- 4 사후 감시",
+   "구현 방식 비교",
+   "- 802.1X",
+   "- VLAN 기반",
+   "- ARP 기반",
+   "- 에이전트 기반"
+  ],
+  "name": "네트워크 접근 제어(NAC, Network Access Control)",
+  "en": "Network Access Control",
+  "keywords_must": [
+   "802.1X",
+   "VLAN 기반",
+   "ARP 기반",
+   "에이전트 기반",
+   "신청자(Supplicant)",
+   "인증자(Authenticator)",
+   "인증 서버(RADIUS)",
+   "단말 인증",
+   "무결성 검사",
+   "격리·치료(Remediation)",
+   "지속 모니터링"
+  ],
+  "keywords_ref": [
+   "EAPOL·PEAP",
+   "동적 VLAN 할당",
+   "게스트 망",
+   "IoT 단말 식별(프로파일링)",
+   "비인가 단말 차단",
+   "제로 트러스트 연계"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "802.1X",
+   "VLAN 기반",
+   "ARP 기반",
+   "에이전트 기반",
+   "신청자(Supplicant)",
+   "인증자(Authenticator)",
+   "인증 서버(RADIUS)",
+   "단말 인증",
+   "무결성 검사",
+   "격리·치료(Remediation)",
+   "지속 모니터링"
+  ],
+  "gloss": {
+   "EAPOL": "EAP over LAN",
+   "PEAP": "Protected Extensible Authentication Protocol",
+   "VLAN": "Virtual Local Area Network"
+  }
+ },
+ "SE_141": {
+  "title": "데이터 유출 방지(DLP, Data Loss Prevention)",
+  "category": "SE > 기업 보안 시스템(기술적 보안) > DLP",
+  "definition": "기업의 개인정보·지적재산·영업 기밀 등 민감 데이터를 식별·분류하고 저장·전송·사용 단계에서 정책에 따라 감시·차단해 내·외부 유출을 막는 정보 유출 방지 솔루션",
+  "keywords": [
+   "데이터 상태: 저장 데이터(Data at Rest) · 전송 데이터(Data in Motion) · 사용 데이터(Data in Use)",
+   "구성: DLP 관리자 · 데이터센터 DLP · 네트워크 DLP · 엔드포인트 DLP",
+   "탐지 기술: 정규식·키워드 · 문서 지문(Fingerprinting) · 정확 데이터 매칭(EDM)"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "유출 경로 다양화",
+      "items": [
+       "메일·메신저·USB·클라우드 업로드"
+      ]
+     },
+     {
+      "title": "규제",
+      "items": [
+       "개인정보보호법 등 유출 시 과징금·신고 의무"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 지점별 구성",
+    "subsections": [
+     {
+      "title": "중앙 관리자",
+      "items": [
+       "정책 수립, 사용자 권한, 사고 워크플로, 보고·대시보드"
+      ]
+     },
+     {
+      "title": "데이터센터",
+      "items": [
+       "저장소의 민감 데이터 탐색, 중요도별 접근 통제"
+      ]
+     },
+     {
+      "title": "네트워크",
+      "items": [
+       "메일·웹 전송 실시간 감시, 유출 차단"
+      ]
+     },
+     {
+      "title": "엔드포인트",
+      "items": [
+       "사용자 활동 감시, USB·출력 통제, DRM 암호화 강제"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "탐지 기술과 운영",
+    "subsections": [
+     {
+      "title": "탐지",
+      "items": [
+       "주민번호 등 정규식",
+       "기밀 문서 지문 비교",
+       "DB 원본 값 정확 매칭"
+      ]
+     },
+     {
+      "title": "운영",
+      "items": [
+       "데이터 분류 체계 선행",
+       "단계적 정책(모니터링 → 경고 → 차단)",
+       "오탐 조정과 위험 관리 체계 연계"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 유출 경로 다양화",
+   "- 규제",
+   "적용 지점별 구성",
+   "- 중앙 관리자",
+   "- 데이터센터",
+   "- 네트워크",
+   "- 엔드포인트",
+   "탐지 기술과 운영",
+   "- 탐지",
+   "- 운영"
+  ],
+  "name": "데이터 유출 방지(DLP, Data Loss Prevention)",
+  "en": "Data Loss Prevention",
+  "keywords_must": [
+   "저장 데이터(Data at Rest)",
+   "전송 데이터(Data in Motion)",
+   "사용 데이터(Data in Use)",
+   "DLP 관리자",
+   "데이터센터 DLP",
+   "네트워크 DLP",
+   "엔드포인트 DLP",
+   "정규식·키워드",
+   "문서 지문(Fingerprinting)",
+   "정확 데이터 매칭(EDM)"
+  ],
+  "keywords_ref": [
+   "민감 데이터 탐색(Discovery)",
+   "DRM 연계",
+   "매체 제어(USB)",
+   "클라우드 DLP(CASB)",
+   "개인정보보호법 대응",
+   "오탐 관리",
+   "포렌식 지원"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "저장 데이터(Data at Rest)",
+   "전송 데이터(Data in Motion)",
+   "사용 데이터(Data in Use)",
+   "DLP 관리자",
+   "데이터센터 DLP",
+   "네트워크 DLP",
+   "엔드포인트 DLP",
+   "정규식·키워드",
+   "문서 지문(Fingerprinting)",
+   "정확 데이터 매칭(EDM)"
+  ],
+  "gloss": {
+   "EDM": "Exact Data Matching",
+   "DRM": "Digital Rights Management"
+  }
+ },
+ "SE_143_01": {
+  "title": "사이버보안 메시(Cybersecurity Mesh)",
+  "category": "SE > 해킹공격 방어",
+  "definition": "가트너가 2022년 전략 기술로 제시한 개념으로, 하나의 경계 대신 사람·기기 등 신원을 중심으로 분산된 자산마다 보안 경계를 정의하고 개별 보안 도구를 공통 계층으로 연동해 통합 관리하는 분산형 보안 아키텍처",
+  "keywords": [
+   "기반 계층(CSMA): 보안 분석·인텔리전스 · 분산 ID 패브릭 · 통합 정책·태세 관리 · 통합 대시보드",
+   "핵심 기술: SWG · CASB · ZTNA · FWaaS",
+   "특징: 신원 중심 경계 · 상호 운용"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "경계 소멸",
+      "items": [
+       "클라우드·원격 근무로 자산이 데이터센터 밖에 분산"
+      ]
+     },
+     {
+      "title": "도구 사일로",
+      "items": [
+       "개별 보안 제품이 정보를 공유하지 못해 대응 지연"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기반 계층",
+    "subsections": [
+     {
+      "title": "보안 분석·인텔리전스",
+      "items": [
+       "도구 간 위협 데이터 통합 분석"
+      ]
+     },
+     {
+      "title": "분산 ID 패브릭",
+      "items": [
+       "디렉터리·적응형 인증·권한 관리"
+      ]
+     },
+     {
+      "title": "통합 정책·태세 관리",
+      "items": [
+       "정책을 각 도구의 설정으로 변환 배포"
+      ]
+     },
+     {
+      "title": "통합 대시보드",
+      "items": [
+       "보안 생태계 전체 가시성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "연동 보안 서비스",
+    "subsections": [
+     {
+      "title": "SWG",
+      "items": [
+       "웹 트래픽 분석, URL 필터링, 악성코드·피싱 차단, SSL 검사"
+      ]
+     },
+     {
+      "title": "CASB",
+      "items": [
+       "SaaS 사용 가시성, 섀도 IT 탐지, 데이터 보호"
+      ]
+     },
+     {
+      "title": "ZTNA·FWaaS",
+      "items": [
+       "앱 단위 최소 권한 접속, 클라우드 방화벽"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 경계 소멸",
+   "- 도구 사일로",
+   "기반 계층",
+   "- 보안 분석·인텔리전스",
+   "- 분산 ID 패브릭",
+   "- 통합 정책·태세 관리",
+   "- 통합 대시보드",
+   "연동 보안 서비스",
+   "- SWG",
+   "- CASB",
+   "- ZTNA·FWaaS"
+  ],
+  "name": "사이버보안 메시(Cybersecurity Mesh)",
+  "en": "Cybersecurity Mesh Architecture",
+  "keywords_must": [
+   "보안 분석·인텔리전스",
+   "분산 ID 패브릭",
+   "통합 정책·태세 관리",
+   "통합 대시보드",
+   "SWG",
+   "CASB",
+   "ZTNA",
+   "FWaaS",
+   "신원 중심 경계",
+   "상호 운용"
+  ],
+  "keywords_ref": [
+   "2024 보안 사고 재정 영향 90% 감소 전망",
+   "SASE 비교",
+   "제로 트러스트",
+   "URL 필터링",
+   "섀도 IT 가시성",
+   "컴포저블 보안"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "보안 분석·인텔리전스",
+   "분산 ID 패브릭",
+   "통합 정책·태세 관리",
+   "통합 대시보드",
+   "SWG",
+   "CASB",
+   "ZTNA",
+   "FWaaS",
+   "신원 중심 경계",
+   "상호 운용"
+  ],
+  "gloss": {
+   "CSMA": "Cybersecurity Mesh Architecture",
+   "SWG": "Secure Web Gateway",
+   "CASB": "Cloud Access Security Broker",
+   "ZTNA": "Zero Trust Network Access",
+   "FWaaS": "Firewall as a Service"
+  }
+ },
+ "SE_143_02": {
+  "title": "캡차(CAPTCHA, Completely Automated Public Turing test to tell Computers and Humans Apart)",
+  "category": "SE",
+  "definition": "사람은 쉽게 풀지만 컴퓨터 프로그램은 풀기 어려운 문제를 자동 출제해 웹 접근 주체가 사람인지 봇인지 판별하는 자동화 공개 튜링 테스트",
+  "keywords": [
+   "유형: 텍스트 방식 · 오디오 방식 · 이미지 방식 · 행위 분석 방식",
+   "왜곡 패턴: 색상(Color) · 크기(Scaling) · 회전(Rotation) · 비틀기(Local·Global Warps)",
+   "활용: 자동 가입·스팸 방지 · 사전 공격 방지 · 온라인 투표 조작 방지"
+  ],
+  "sections": [
+   {
+    "title": "원리",
+    "subsections": [
+     {
+      "title": "역 튜링 테스트",
+      "items": [
+       "컴퓨터가 출제·채점하고 사람만 통과"
+      ]
+     },
+     {
+      "title": "전제",
+      "items": [
+       "왜곡 문자·이미지 인식은 사람이 기계보다 우수"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형과 왜곡 패턴",
+    "subsections": [
+     {
+      "title": "텍스트",
+      "items": [
+       "왜곡된 문자 이미지 입력",
+       "오디오: 잡음 섞인 음성 받아쓰기",
+       "이미지: 조건에 맞는 사진 선택"
+      ]
+     },
+     {
+      "title": "행위 분석",
+      "items": [
+       "마우스 움직임·브라우저 신호로 위험 점수 산정(reCAPTCHA v3)"
+      ]
+     },
+     {
+      "title": "왜곡",
+      "items": [
+       "색상, 크기, 회전, 국소·전역 비틀기로 기계 인식 방해"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "위협과 강화 방안",
+    "subsections": [
+     {
+      "title": "위협",
+      "items": [
+       "딥러닝 이미지 인식, 사람 풀이 대행 서비스"
+      ]
+     },
+     {
+      "title": "강화",
+      "items": [
+       "다색 문자·명암 혼합 배경",
+       "사전에 없는 단어",
+       "행위 기반 비가시 판별",
+       "접근성 대안 제공"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "원리",
+   "- 역 튜링 테스트",
+   "- 전제",
+   "유형과 왜곡 패턴",
+   "- 텍스트",
+   "- 행위 분석",
+   "- 왜곡",
+   "위협과 강화 방안",
+   "- 위협",
+   "- 강화"
+  ],
+  "name": "캡차(CAPTCHA, Completely Automated Public Turing test to tell Computers and Humans Apart)",
+  "en": "Completely Automated Public Turing test to tell Computers and Humans Apart",
+  "keywords_must": [
+   "텍스트 방식",
+   "오디오 방식",
+   "이미지 방식",
+   "행위 분석 방식",
+   "색상(Color)",
+   "크기(Scaling)",
+   "회전(Rotation)",
+   "비틀기(Local·Global Warps)",
+   "자동 가입·스팸 방지",
+   "사전 공격 방지",
+   "온라인 투표 조작 방지"
+  ],
+  "keywords_ref": [
+   "reCAPTCHA v2(체크박스)·v3(점수 기반)",
+   "AI 인식 우회",
+   "CAPTCHA 풀이 대행 서비스",
+   "접근성 문제",
+   "사전에 없는 단어",
+   "프라이버시 패스"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "텍스트 방식",
+   "오디오 방식",
+   "이미지 방식",
+   "행위 분석 방식",
+   "색상(Color)",
+   "크기(Scaling)",
+   "회전(Rotation)",
+   "비틀기(Local·Global Warps)",
+   "자동 가입·스팸 방지",
+   "사전 공격 방지",
+   "온라인 투표 조작 방지"
+  ]
  }
 }
