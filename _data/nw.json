@@ -969,6 +969,26 @@
    "ip",
    "app"
   ],
+  "keywords_must": [
+   "DNS(Domain Name System)",
+   "도메인 네임 스페이스(Domain Name Space)",
+   "네임 서버(Name Server)",
+   "리졸버(Resolver)",
+   "루트·TLD·SLD 계층(Root/TLD/SLD)",
+   "권한 네임 서버(Authoritative Name Server)",
+   "재귀적 질의(Recursive Query)",
+   "반복적 질의(Iterative Query)",
+   "리소스 레코드(RR: A·AAAA·CNAME·MX·PTR·SOA)",
+   "UDP/TCP 53",
+   "DNSSEC(DNS Security Extensions)"
+  ],
+  "keywords_ref": [
+   "영역 전송(Zone Transfer, AXFR/IXFR)",
+   "DoT(DNS over TLS)·DoH(DNS over HTTPS)",
+   "캐시 포이즈닝(Cache Poisoning)",
+   "DNS 증폭 공격(DNS Amplification)",
+   "TTL(Time To Live) 캐싱"
+  ],
   "reviewed": true
  },
  {
@@ -1086,6 +1106,26 @@
   "quiz_groups": [
    "mux",
    "mac"
+  ],
+  "keywords_must": [
+   "다중화(Multiplexing)",
+   "다원접속(Multiple Access)",
+   "FDM(Frequency Division Multiplexing)",
+   "TDM(Time Division Multiplexing)",
+   "WDM(Wavelength Division Multiplexing)",
+   "OFDM(Orthogonal Frequency Division Multiplexing)",
+   "FDMA·TDMA",
+   "CDMA(Code Division Multiple Access)",
+   "OFDMA(Orthogonal Frequency Division Multiple Access)",
+   "랜덤 접속(Random Access: ALOHA·CSMA/CD·CSMA/CA)",
+   "제어 접속(Controlled Access: 폴링·토큰 패싱)"
+  ],
+  "keywords_ref": [
+   "동기식/통계적 TDM(Synchronous/Statistical TDM)",
+   "SDM·SDMA(Space Division)",
+   "CDM(Code Division Multiplexing)",
+   "하향(Downlink) vs 상향(Uplink) 구분",
+   "NOMA(Non-Orthogonal Multiple Access)"
   ],
   "reviewed": true
  },
@@ -3223,6 +3263,24 @@
   "quiz_groups": [
    "ip"
   ],
+  "keywords_must": [
+   "DHCP(Dynamic Host Configuration Protocol)",
+   "DORA(Discover·Offer·Request·ACK)",
+   "임대(Lease)",
+   "T1 갱신(Renewing, 50%)",
+   "T2 재바인딩(Rebinding, 87.5%)",
+   "UDP 67/68",
+   "릴레이 에이전트(Relay Agent)",
+   "동적·자동·수동 할당(Dynamic/Automatic/Manual)",
+   "DHCP 스누핑(DHCP Snooping)"
+  ],
+  "keywords_ref": [
+   "BOOTP(Bootstrap Protocol) 계승",
+   "NAK·Decline·Release·Inform 메시지",
+   "DHCP 스타베이션(Starvation)",
+   "위장 DHCP 서버(Rogue DHCP Server)",
+   "DHCPv6·SLAAC(Stateless Address Autoconfiguration)"
+  ],
   "reviewed": true
  },
  {
@@ -3475,6 +3533,25 @@
   "quiz_groups": [
    "transport",
    "app"
+  ],
+  "keywords_must": [
+   "QUIC",
+   "UDP 기반(UDP-based)",
+   "TLS 1.3 내장(Integrated TLS 1.3)",
+   "1-RTT 핸드셰이크(1-RTT Handshake)",
+   "0-RTT 재연결(0-RTT Resumption)",
+   "스트림 다중화(Stream Multiplexing)",
+   "HOL 블로킹 해소(Head-of-Line Blocking)",
+   "연결 ID(Connection ID)",
+   "연결 이전(Connection Migration)",
+   "HTTP/3(RFC 9114)"
+  ],
+  "keywords_ref": [
+   "RFC 9000·9001·9002",
+   "QPACK 헤더 압축",
+   "단조 증가 패킷 번호(Packet Number)",
+   "0-RTT 재전송 공격(Replay Attack)",
+   "사용자 공간 구현(User-space Implementation)"
   ],
   "reviewed": true
  },
