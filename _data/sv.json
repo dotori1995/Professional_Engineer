@@ -14234,73 +14234,94 @@
    187,
    191
   ],
-  "en": "SBC Server Based Computing",
+  "en": "Server Based Computing",
   "dueum": null,
-  "name": "디지털서비스(SBC(Server Based Computing))",
-  "title": "디지털서비스(SBC(Server Based Computing))",
-  "definition": "데이터와 어플리케이션을 서버에 저장하고 필요 시 클라이언트가 서버에 접속해 작업하는 기술",
+  "name": "서버 기반 컴퓨팅(SBC, Server Based Computing)",
+  "title": "서버 기반 컴퓨팅(SBC, Server Based Computing)",
+  "definition": "애플리케이션과 데이터를 중앙 서버에 두고 실행·배포·관리까지 모두 서버에서 수행하며, 사용자는 씬 클라이언트 등 단말로 접속해 화면만 받아 작업하는 컴퓨팅 방식으로 논리적 망분리와 단말 정보 유출 차단에 활용됨",
   "keywords_must": [
-   "논리적망분리",
-   "논리적가상화",
-   "Client Based Computing 비교",
-   "SBC의 논리적 구성",
-   "SBC 의 주요 기능",
-   "SBC",
-   "PC 보안, 업그레이드, 장애문제해결",
-   "Client Application 관리의 효율성",
-   "Sentiment"
+   "중앙 서버 실행(세션 공유형)",
+   "씬 클라이언트(Thin Client)",
+   "화면 전송 프로토콜(ICA·RDP)",
+   "통합 중앙관리 툴",
+   "액티브 디렉터리(AD) 계정 통합",
+   "서버 중심 소프트웨어 배포",
+   "논리적 망분리",
+   "서버 라이선스",
+   "CBC(Client Based Computing) 비교"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "Citrix Virtual Apps(구 XenApp)",
+   "Windows 원격 데스크톱 서비스(RDS)",
+   "VDI 비교",
+   "128비트 프로토콜 암호화",
+   "Secure Access"
+  ],
   "keywords": [
-   "핵심: 논리적망분리 · 논리적가상화 · Client Based Computing 비교",
-   "기술: SBC의 논리적 구성 · SBC 의 주요 기능 · SBC",
-   "운영: PC 보안, 업그레이드, 장애문제해결 · Client Application 관리의 효율성 · Sentiment"
+   "구성: SBC 서버 · 네트워크 · 단말(씬 클라이언트·PC)",
+   "기능: 통합 중앙관리 · 중앙 보안정책 · 소프트웨어 배포 관리",
+   "비교: SBC(서버 실행·유출 차단·서버 라이선스) vs PC 중심(개별 실행·개별 라이선스) · VDI(사용자별 VM)"
   ],
   "outline": [
-   "Thin 클라이언트와 완벽한 보안성의 구현 SBC",
-   "- SBC 의 주요 특징",
-   "SBC 의 논리적 구성 및 주요 기능",
-   "- SBC 의 논리적 구성",
-   "- SBC 의 주요 기능",
-   "SBC 와 PC 중심 환경과의 비교",
-   "- 디지털서비스 요점"
+   "주요 특징",
+   "- 효과: 보안·관리·규제 대응",
+   "- 장애요인: 초기 투자·거부감",
+   "논리 구성과 주요 기능",
+   "- 관리: 중앙관리 툴·계정",
+   "- 배포: 서버 중심 배포",
+   "PC 중심 환경·CBC 비교",
+   "- 비교: 유출·바이러스·유지보수",
+   "- 한계: 멀티미디어·네트워크 의존"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "주요 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "효과: 보안·관리·규제 대응",
       "items": [
-       "논리적망분리: 디지털서비스에서 논리적망분리를 다루는 핵심 암기 포인트",
-       "논리적가상화: 디지털서비스에서 논리적가상화를 다루는 핵심 암기 포인트",
-       "Client Based Computing 비교: 디지털서비스와 유사 기술을 기준별로 대조하는 표 (디지털서비스/8fa4)",
-       "SBC의 논리적 구성: 디지털서비스에서 SBC의 논리적 구성을 다루는 핵심 암기 포인트"
+       "개인정보보호법상 단말 개인정보 저장 금지 요건을 충족, PC 보안·업그레이드·장애 처리를 서버에서 일괄 해결"
+      ]
+     },
+     {
+      "title": "장애요인: 초기 투자·거부감",
+      "items": [
+       "신기술 불안, 높은 초기 투자, 도입 효과 불확실, 사용자 거부감이 확산 장벽"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "논리 구성과 주요 기능",
     "subsections": [
      {
-      "title": null,
+      "title": "관리: 중앙관리 툴·계정",
       "items": [
-       "SBC 의 주요 기능: 디지털서비스에서 SBC 의 주요 기능을 다루는 핵심 암기 포인트",
-       "SBC: SBC를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "PC 보안, 업그레이드, 장애문제해결: 디지털서비스에서 PC 보안, 업그레이드, 장애문제해결을 다루는 핵심 암기 포인트",
-       "Client Application 관리의 효율성: 디지털서비스에 접속하는 사용자 측 단말·앱 (디지털서비스/3c93)"
+       "통합 중앙관리 툴: 앱별 사용 현황으로 라이선스 회수·재분배, 그룹·개인별 환경과 웹 런치·바탕화면 배포",
+       "액티브 디렉터리(AD) 계정 통합과 128비트 프로토콜 암호화·파일별 보안정책"
+      ]
+     },
+     {
+      "title": "배포: 서버 중심 배포",
+      "items": [
+       "서버 중심 소프트웨어 배포: 관리자가 서버에만 설치, 단일 프로토콜로 어디서나 Secure Access 제공"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "PC 중심 환경·CBC 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "비교: 유출·바이러스·유지보수",
       "items": [
-       "Sentiment: 텍스트의 긍정·부정 등 감성 극성을 분류 (디지털서비스/bb23)"
+       "화면 전송 프로토콜(ICA·RDP)로 실데이터 대신 화면만 오가 유출 차단·대역폭 절감, 불필요한 SW 설치 불가"
+      ]
+     },
+     {
+      "title": "한계: 멀티미디어·네트워크 의존",
+      "items": [
+       "멀티미디어·고사양 앱 제약과 네트워크 장애 시 전체 업무 중단, VDI는 사용자별 VM으로 이 한계를 보완"
       ]
      }
     ]
@@ -14309,15 +14330,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "논리적망분리",
-   "논리적가상화",
-   "Client Based Computing 비교",
-   "SBC의 논리적 구성",
-   "SBC 의 주요 기능",
-   "SBC",
-   "PC 보안, 업그레이드, 장애문제해결",
-   "Client Application 관리의 효율성",
-   "Sentiment"
+   "중앙 서버 실행(세션 공유형)",
+   "씬 클라이언트(Thin Client)",
+   "화면 전송 프로토콜(ICA·RDP)",
+   "통합 중앙관리 툴",
+   "액티브 디렉터리(AD) 계정 통합",
+   "서버 중심 소프트웨어 배포",
+   "논리적 망분리",
+   "서버 라이선스",
+   "CBC(Client Based Computing) 비교"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -14327,7 +14348,8 @@
   "warnings": [],
   "gloss": {
    "PC": "Personal Computer"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_164",
@@ -14342,85 +14364,90 @@
   "dueum": null,
   "name": "도커(Docker)",
   "title": "도커(Docker)",
-  "definition": "하이퍼바이저(hypervisor) 없이 리눅스 컨테이너(Linux Container, LXC) 기술을 바탕으로 애플리케이션을 격리상태에서 실행하는 경량 가상화 기술(하나의 호스트에서 수백 개의 컨테이너로 격리하여, 관리)",
+  "definition": "리눅스 커널의 네임스페이스·cgroups 격리 기능과 계층형 이미지를 이용해 하이퍼바이저 없이 애플리케이션과 의존성을 컨테이너로 패키징·배포·실행하는 오픈소스 경량 컨테이너 플랫폼 (2013년 dotCloud 공개)",
   "keywords_must": [
-   "이미지·컨테이너",
+   "도커 엔진(dockerd)",
+   "도커 이미지(Image)·레이어",
    "Dockerfile",
-   "Docker Hub",
-   "컨테이너 런타임",
-   "볼륨(Volume)",
-   "브리지 네트워크",
-   "레이어 캐시",
-   "하이퍼바이저",
-   "컨테이너",
-   "LXC",
-   "이미지"
+   "도커 레지스트리(Docker Hub)",
+   "네임스페이스(Namespace)",
+   "컨트롤 그룹(cgroups)",
+   "유니온 파일시스템(OverlayFS)",
+   "containerd·runc",
+   "OCI(Open Container Initiative) 표준"
   ],
   "keywords_ref": [
-   "docker-compose",
-   "OCI",
-   "도커 엔진",
-   "swarm",
-   "도커(Docker)의 개념",
-   "CPU",
-   "Library + virtualization"
+   "LXC(초기 실행 드라이버)",
+   "libcontainer",
+   "Docker Compose",
+   "Docker Swarm",
+   "쿠버네티스 연계"
   ],
   "keywords": [
-   "핵심: 이미지·컨테이너 · Dockerfile · Docker Hub",
-   "기술: 컨테이너 런타임 · 볼륨(Volume) · 브리지 네트워크",
-   "운영: 레이어 캐시 · 하이퍼바이저 · 컨테이너",
-   "참고: docker-compose · OCI · 도커 엔진"
+   "구조: 클라이언트(docker CLI) → 도커 엔진(dockerd) → containerd → runc → 컨테이너",
+   "기반 기술: 네임스페이스(격리) · cgroups(자원 제한) · 유니온 파일시스템(레이어)",
+   "흐름: Dockerfile → build → 이미지 → push·pull(레지스트리) → run"
   ],
   "outline": [
-   "리눅스 기반의 가상화 솔루션 도커(Docker)의 개요",
-   "- 도커(Docker)의 개념",
-   "- 도커의 특징",
-   "도커의 개념도 및 구성요소",
-   "- 도커의 개념도",
-   "- 도커의 아키텍처",
-   "도커의 기반기술",
-   "- 도커 요점",
-   "주요 IT 기업의 Docker 도입현황",
-   "- 도커 요점"
+   "등장과 특징",
+   "- 특징: 경량·이식성",
+   "- 진화: LXC에서 OCI로",
+   "아키텍처와 구성요소",
+   "- 이미지: 빌드·레지스트리",
+   "- 런타임: 엔진·containerd·runc",
+   "커널 기반 기술",
+   "- 격리: 네임스페이스",
+   "- 자원 제한: cgroups"
   ],
   "sections": [
    {
-    "title": "도커 핵심",
+    "title": "등장과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "특징: 경량·이식성",
       "items": [
-       "이미지·컨테이너: 도커에서 이미지·컨테이너를 다루는 핵심 암기 포인트",
-       "Dockerfile: Dockerfile를 도커 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Docker Hub: 도커에서 Docker Hub를 다루는 핵심 암기 포인트",
-       "컨테이너 런타임: 컨테이너 이미지를 실행하는 CRI 구현체(containerd 등)"
+       "호스트 커널을 공유해 VM보다 빠르게 기동, 개발·운영 환경 차이를 없애 install→configure→run 대신 copy→run"
+      ]
+     },
+     {
+      "title": "진화: LXC에서 OCI로",
+      "items": [
+       "초기에는 LXC를 실행 드라이버로 사용, 2014년 libcontainer로 교체 후 runc·containerd로 분리돼 OCI(Open Container Initiative) 표준화"
       ]
      }
     ]
    },
    {
-    "title": "도커 구성·기술",
+    "title": "아키텍처와 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "이미지: 빌드·레지스트리",
       "items": [
-       "볼륨(Volume): 도커에서 볼륨(Volume)을 다루는 핵심 암기 포인트",
-       "브리지 네트워크: 도커에서 브리지 네트워크를 다루는 핵심 암기 포인트",
-       "레이어 캐시: 도커에서 레이어 캐시를 다루는 핵심 암기 포인트",
-       "하이퍼바이저: 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층 (도커/0bde)"
+       "Dockerfile: 베이스 이미지와 명령을 기술해 이미지 빌드, 도커 레지스트리(Docker Hub)에 push·pull로 배포",
+       "유니온 파일시스템(OverlayFS): 읽기 전용 레이어를 공유하고 컨테이너는 쓰기 레이어만 추가해 용량 절감"
+      ]
+     },
+     {
+      "title": "런타임: 엔진·containerd·runc",
+      "items": [
+       "도커 엔진(dockerd)이 API를 받아 containerd에 위임, runc가 커널 기능으로 컨테이너 프로세스 생성"
       ]
      }
     ]
    },
    {
-    "title": "도커 운영",
+    "title": "커널 기반 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "격리: 네임스페이스",
       "items": [
-       "컨테이너: OS 커널을 공유하며 앱과 의존성을 격리 실행하는 단위 (도커/7845)",
-       "LXC: LXC를 도커 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "이미지: 도커에서 이미지를 다루는 핵심 암기 포인트"
+       "네임스페이스(Namespace): PID·NET·MNT·UTS·IPC·USER를 분리해 컨테이너 간 서로 볼 수 없게 함"
+      ]
+     },
+     {
+      "title": "자원 제한: cgroups",
+      "items": [
+       "컨트롤 그룹(cgroups): 프로세스 그룹별 CPU·메모리·I/O 사용량 제한과 모니터링"
       ]
      }
     ]
@@ -14429,24 +14456,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "이미지·컨테이너",
+   "도커 엔진(dockerd)",
+   "도커 이미지(Image)·레이어",
    "Dockerfile",
-   "Docker Hub",
-   "컨테이너 런타임",
-   "볼륨(Volume)",
-   "브리지 네트워크",
-   "레이어 캐시",
-   "하이퍼바이저",
-   "컨테이너",
-   "LXC",
-   "이미지"
+   "도커 레지스트리(Docker Hub)",
+   "네임스페이스(Namespace)",
+   "컨트롤 그룹(cgroups)",
+   "유니온 파일시스템(OverlayFS)",
+   "containerd·runc",
+   "OCI(Open Container Initiative) 표준"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_165",
@@ -14461,81 +14487,82 @@
   "dueum": null,
   "name": "컨테이너(Container)",
   "title": "컨테이너(Container)",
-  "definition": "OS 커널을 공유하며 프로세스를 격리 실행하는 경량 가상화 단위",
+  "definition": "애플리케이션과 라이브러리·설정 등 실행 의존성을 하나의 이미지로 묶고 호스트 OS 커널을 공유하면서 네임스페이스·cgroups로 프로세스를 격리해 실행하는 OS 수준 가상화 단위",
   "keywords_must": [
-   "이미지(Image)",
-   "네임스페이스(Namespace)",
-   "cgroups",
-   "OCI",
-   "UnionFS/OverlayFS",
-   "레지스트리(Registry)",
-   "불변 인프라",
-   "프로세스 격리",
-   "도커(Docker)",
-   "네임스페이스",
-   "레지스트리"
+   "OS 수준 가상화",
+   "커널 공유",
+   "네임스페이스(PID·NET·MNT 격리)",
+   "cgroups 자원 제한",
+   "컨테이너 이미지(OCI Image)",
+   "컨테이너 런타임(containerd·CRI-O)",
+   "가상머신(VM) 비교",
+   "불변 인프라(Immutable Infrastructure)",
+   "오케스트레이션(쿠버네티스)"
   ],
   "keywords_ref": [
-   "VM 대비 경량",
-   "Dockerfile",
-   "containerd",
-   "VM 대비"
+   "게스트 OS 부재",
+   "기동 시간(초 단위)",
+   "커널 공유 보안 위험",
+   "gVisor·Kata Containers",
+   "DevOps·MSA"
   ],
   "keywords": [
-   "핵심: 이미지(Image) · 네임스페이스(Namespace) · cgroups",
-   "기술: OCI · UnionFS/OverlayFS · 레지스트리(Registry)",
-   "운영: 불변 인프라 · 프로세스 격리 · 도커(Docker)",
-   "참고: VM 대비 경량 · Dockerfile · containerd"
+   "VM: 하드웨어 → 하이퍼바이저 → 게스트 OS → 앱 (GB 단위·분 단위 기동)",
+   "컨테이너: 하드웨어 → 호스트 OS → 컨테이너 엔진 → 앱 (MB 단위·초 단위 기동)",
+   "격리: 네임스페이스(PID·NET·MNT·UTS·IPC·USER) · cgroups(CPU·메모리·I/O)"
   ],
   "outline": [
-   "컨테이너의 개요",
-   "- 컨테이너의 정의",
-   "- 컨테이너의 등장 배경",
-   "컨테이너의 구성과 핵심 요소",
-   "- 컨테이너의 핵심 요소",
-   "- 컨테이너의 구조",
-   "컨테이너의 적용과 사례",
-   "- 컨테이너의 적용",
-   "- 컨테이너의 과제"
+   "등장 배경",
+   "- 패러다임: 게스트 OS 없는 경량화",
+   "VM과의 비교",
+   "- 구조: 게스트 OS 유무",
+   "- 성능·밀도: 크기·기동",
+   "격리 기술과 전망",
+   "- 격리: 네임스페이스·cgroups",
+   "- 보안·전망: 샌드박스·오케스트레이션"
   ],
   "sections": [
    {
-    "title": "컨테이너 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "패러다임: 게스트 OS 없는 경량화",
       "items": [
-       "이미지(Image): 컨테이너에서 이미지(Image)를 다루는 핵심 암기 포인트",
-       "네임스페이스(Namespace): 컨테이너에서 네임스페이스(Namespace)를 다루는 핵심 암기 포인트",
-       "cgroups: cgroups를 컨테이너 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OCI: OCI를 컨테이너 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "클라우드·MSA·DevOps 확산으로 빠른 배포와 높은 집적도가 필요해 게스트 OS 없는 경량 가상화로 이동"
       ]
      }
     ]
    },
    {
-    "title": "컨테이너 구성·기술",
+    "title": "VM과의 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "구조: 게스트 OS 유무",
       "items": [
-       "UnionFS/OverlayFS: UnionFS/OverlayFS를 컨테이너 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "레지스트리(Registry): 컨테이너에서 레지스트리(Registry)를 다루는 핵심 암기 포인트",
-       "불변 인프라: 컨테이너에서 불변 인프라를 다루는 핵심 암기 포인트",
-       "프로세스 격리: 컨테이너를 단계적으로 수행·이행하는 절차"
+       "가상머신(VM)은 하이퍼바이저 위에 게스트 OS 전체를 올리고, 컨테이너는 호스트 커널을 공유해 앱 프로세스만 격리"
+      ]
+     },
+     {
+      "title": "성능·밀도: 크기·기동",
+      "items": [
+       "이미지가 MB 단위로 작고 초 단위로 기동해 같은 서버에 더 많은 인스턴스 배치, 대신 다른 커널 OS 실행 불가"
       ]
      }
     ]
    },
    {
-    "title": "컨테이너 운영",
+    "title": "격리 기술과 전망",
     "subsections": [
      {
-      "title": null,
+      "title": "격리: 네임스페이스·cgroups",
       "items": [
-       "도커(Docker): 이미지·컨테이너 실행을 쉽게 하는 컨테이너 플랫폼",
-       "네임스페이스: 컨테이너에서 네임스페이스를 다루는 핵심 암기 포인트",
-       "레지스트리: 컨테이너에서 레지스트리를 다루는 핵심 암기 포인트"
+       "네임스페이스(PID·NET·MNT 격리): 프로세스 ID·네트워크 스택·마운트 지점을 컨테이너별로 분리"
+      ]
+     },
+     {
+      "title": "보안·전망: 샌드박스·오케스트레이션",
+      "items": [
+       "커널 공유로 탈출 위험이 있어 gVisor·Kata Containers 같은 샌드박스 런타임 등장, 운영은 쿠버네티스로 표준화"
       ]
      }
     ]
@@ -14544,24 +14571,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "이미지(Image)",
-   "네임스페이스(Namespace)",
-   "cgroups",
-   "OCI",
-   "UnionFS/OverlayFS",
-   "레지스트리(Registry)",
-   "불변 인프라",
-   "프로세스 격리",
-   "도커(Docker)",
-   "네임스페이스",
-   "레지스트리"
+   "OS 수준 가상화",
+   "커널 공유",
+   "네임스페이스(PID·NET·MNT 격리)",
+   "cgroups 자원 제한",
+   "컨테이너 이미지(OCI Image)",
+   "컨테이너 런타임(containerd·CRI-O)",
+   "가상머신(VM) 비교",
+   "불변 인프라(Immutable Infrastructure)",
+   "오케스트레이션(쿠버네티스)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_166",
@@ -14576,84 +14602,86 @@
   "dueum": null,
   "name": "쿠버네티스(Kubernetes)",
   "title": "쿠버네티스(Kubernetes)",
-  "definition": "컨테이너화된 앱의 배포·확장·관리를 자동화하는 선언적 컨테이너 오케스트레이션 플랫폼. Control Plane이 원하는 상태로 수렴시킨다.",
+  "definition": "컨테이너화된 애플리케이션의 배포·확장·복구를 선언적 상태 기반으로 자동화하는 오픈소스 컨테이너 오케스트레이션 플랫폼으로, 구글 Borg 경험을 바탕으로 2014년 공개되어 CNCF가 관리함",
   "keywords_must": [
-   "Control Plane",
-   "API Server",
-   "etcd",
-   "Scheduler",
-   "Controller Manager",
-   "Kubelet",
-   "Kube-proxy",
-   "containerd/Docker",
-   "Pod",
-   "Deployment/ReplicaSet",
-   "K8s Service(ClusterIP/NodePort/LB)",
-   "HPA·Self-healing·Rolling Update"
+   "컨트롤 플레인(API 서버·etcd·스케줄러·컨트롤러 매니저)",
+   "워커 노드",
+   "kubelet",
+   "kube-proxy",
+   "컨테이너 런타임(containerd·CRI-O)",
+   "파드(Pod)",
+   "디플로이먼트·레플리카셋",
+   "서비스(Service)",
+   "선언적 상태 조정(Reconciliation Loop)",
+   "수평 자동 확장(HPA)"
   ],
   "keywords_ref": [
-   "Declarative(선언적 스펙)",
-   "고가용성(HA)",
-   "네임스페이스",
-   "ConfigMap/Secret",
-   "CNI"
+   "구글 Borg",
+   "dockershim 제거(1.24)",
+   "인그레스(Ingress)",
+   "Helm",
+   "다중 마스터 HA"
   ],
   "keywords": [
-   "핵심: Control Plane · API Server · etcd",
-   "기술: Scheduler · Controller Manager · Kubelet",
-   "운영: Kube-proxy · containerd/Docker · Pod",
-   "참고: Declarative(선언적 스펙) · 고가용성(HA) · 네임스페이스"
+   "컨트롤 플레인: kube-apiserver · etcd · kube-scheduler · kube-controller-manager",
+   "워커 노드: kubelet · kube-proxy · 컨테이너 런타임(CRI)",
+   "오브젝트: Pod · ReplicaSet · Deployment · Service · ConfigMap·Secret"
   ],
   "outline": [
-   "쿠버네티스의 개념",
-   "- Control Plane·Declarative",
-   "- HA·Self-healing",
-   "아키텍처와 구성요소",
-   "- Control Plane 구성",
-   "- Worker·Pod·런타임",
-   "운영 기능과 기대효과",
-   "- Deployment·Service·HPA",
-   "- Rolling Update"
+   "운영 자동화 특성",
+   "- 운영: 고가용성·자가 치유",
+   "아키텍처",
+   "- 컨트롤 플레인: 클러스터 두뇌",
+   "- 워커 노드: 실행 에이전트",
+   "핵심 오브젝트와 HA",
+   "- 워크로드: 파드·디플로이먼트",
+   "- 노출·HA: 서비스·다중 마스터"
   ],
   "sections": [
    {
-    "title": "쿠버네티스 핵심",
+    "title": "운영 자동화 특성",
     "subsections": [
      {
-      "title": null,
+      "title": "운영: 고가용성·자가 치유",
       "items": [
-       "Control Plane: 클러스터 상태를 감시·결정하는 마스터 제어 계층",
-       "API Server: K8s의 유일한 창구로 모든 컴포넌트가 경유하는 REST API",
-       "etcd: 클러스터 desired/actual 상태를 보관하는 분산 키-값 저장소",
-       "Scheduler: Pod를 조건에 맞는 Node에 배치하는 스케줄러 (쿠버네티스/43ca)"
+       "선언적 상태 조정(Reconciliation Loop): 원하는 상태와 실제 상태를 비교해 장애 파드를 정상 노드에 재생성",
+       "롤링 업데이트·롤백, 수평 자동 확장(HPA)으로 부하에 따라 파드 수 조정"
       ]
      }
     ]
    },
    {
-    "title": "쿠버네티스 구성·기술",
+    "title": "아키텍처",
     "subsections": [
      {
-      "title": null,
+      "title": "컨트롤 플레인: 클러스터 두뇌",
       "items": [
-       "Controller Manager: Deployment 등 컨트롤러를 실행해 desired state로 수렴",
-       "Kubelet: 노드에서 Pod 생명주기를 실행·보고하는 에이전트",
-       "Kube-proxy: Service 클러스터IP를 노드 네트워킹 규칙으로 구현",
-       "containerd/Docker: containerd/Docker를 쿠버네티스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "API 서버는 모든 요청의 관문, etcd는 클러스터 상태 키-값 저장소, 스케줄러는 자원에 맞춰 파드를 노드에 배치",
+       "컨트롤러 매니저가 레플리케이션·노드·엔드포인트 컨트롤러를 실행"
+      ]
+     },
+     {
+      "title": "워커 노드: 실행 에이전트",
+      "items": [
+       "kubelet은 파드 명세대로 컨테이너 실행·상태 보고, kube-proxy는 서비스 IP로 오는 트래픽을 파드로 분산",
+       "컨테이너 런타임: CRI로 containerd·CRI-O 사용, 1.24부터 dockershim 제거"
       ]
      }
     ]
    },
    {
-    "title": "쿠버네티스 운영",
+    "title": "핵심 오브젝트와 HA",
     "subsections": [
      {
-      "title": null,
+      "title": "워크로드: 파드·디플로이먼트",
       "items": [
-       "Pod: 하나 이상 컨테이너를 묶는 최소 배포 단위",
-       "Deployment/ReplicaSet: Deployment/ReplicaSet를 쿠버네티스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "K8s Service(ClusterIP/NodePort/LB): 쿠버네티스에서 K8s Service(ClusterIP/NodePort/LB)를 다루는 핵심 암기 포인트",
-       "HPA·Self-healing·Rolling Update: 쿠버네티스에서 HPA·Self-healing·Rolling Update를 다루는 핵심 암기 포인트"
+       "파드(Pod): 네트워크·볼륨을 공유하는 하나 이상의 컨테이너 묶음으로 최소 배포 단위, 디플로이먼트가 레플리카셋으로 개수 유지"
+      ]
+     },
+     {
+      "title": "노출·HA: 서비스·다중 마스터",
+      "items": [
+       "서비스(Service)는 파드 집합에 고정 IP·DNS 제공, 다중 컨트롤 플레인과 etcd 3·5대 구성으로 HA 확보"
       ]
      }
     ]
@@ -14662,25 +14690,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Control Plane",
-   "API Server",
-   "etcd",
-   "Scheduler",
-   "Controller Manager",
-   "Kubelet",
-   "Kube-proxy",
-   "containerd/Docker",
-   "Pod",
-   "Deployment/ReplicaSet",
-   "K8s Service(ClusterIP/NodePort/LB)",
-   "HPA·Self-healing·Rolling Update"
+   "컨트롤 플레인(API 서버·etcd·스케줄러·컨트롤러 매니저)",
+   "워커 노드",
+   "kubelet",
+   "kube-proxy",
+   "컨테이너 런타임(containerd·CRI-O)",
+   "파드(Pod)",
+   "디플로이먼트·레플리카셋",
+   "서비스(Service)",
+   "선언적 상태 조정(Reconciliation Loop)",
+   "수평 자동 확장(HPA)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_167",
@@ -14691,85 +14718,81 @@
    212,
    213
   ],
-  "en": "Docker Swarm",
+  "en": "Docker Swarm Mode",
   "dueum": null,
   "name": "도커 스웜(Docker Swarm)",
   "title": "도커 스웜(Docker Swarm)",
-  "definition": "도커 1.12 버전부터 도커에 스웜모드를 내장하여, 추가적인 툴을 설치하지 않고 컨테이너를 관리할 수 있는 기술",
+  "definition": "도커 1.12부터 엔진에 내장된 스웜 모드로 여러 도커 호스트를 하나의 클러스터로 묶어 별도 도구 설치 없이 도커 CLI·Compose 파일로 서비스 배포·복제·로드밸런싱·장애 복구를 수행하는 경량 컨테이너 오케스트레이션 도구",
   "keywords_must": [
-   "Manager 노드",
-   "Worker 노드",
-   "Task",
-   "라우팅 메시",
-   "내장 오케스트레이션",
-   "docker stack",
-   "오케스트레이션",
-   "컨테이너",
-   "도커 스웜의 구성",
-   "도커 스웜의 설명"
+   "스웜 모드(Swarm Mode, 도커 1.12)",
+   "매니저 노드(Manager Node)",
+   "워커 노드(Worker Node)",
+   "Raft 합의(매니저 상태 복제)",
+   "서비스(Service)",
+   "태스크(Task)",
+   "라우팅 메시(Ingress Routing Mesh)",
+   "롤링 업데이트",
+   "도커 스택(Compose 파일 배포)"
   ],
   "keywords_ref": [
-   "Kubernetes 대비",
-   "Raft 합의",
-   "경량화",
-   "단일화",
-   "스웜(Docker Swarm)",
-   "Engine (구글)"
+   "쿠버네티스 비교",
+   "Apache Mesos",
+   "오버레이 네트워크",
+   "홀수 매니저(3·5)",
+   "TLS 상호 인증"
   ],
   "keywords": [
-   "핵심: Manager 노드 · Worker 노드 · Task",
-   "기술: 라우팅 메시 · 내장 오케스트레이션 · docker stack",
-   "운영: 오케스트레이션 · 컨테이너 · 도커 스웜의 구성",
-   "참고: Kubernetes 대비 · Raft 합의 · 경량화"
+   "구성: 매니저 노드(클러스터 상태·스케줄링) · 워커 노드(태스크 실행)",
+   "배포 단위: 서비스(이미지·복제 수 정의) → 태스크(컨테이너 1개 관리)",
+   "비교: 스웜(쉬움·도커 CLI 그대로) vs 쿠버네티스(안정·대규모·다양한 환경)"
   ],
   "outline": [
-   "컨테이너 오케스트레이션, 도커스웜의 개요",
-   "- 도커 스웜(Docker Swarm)의 정의",
-   "- 도커스웜의 등장배경",
-   "도커 스웜의 구성 및 설명",
-   "- 도커 스웜의 구성",
-   "- 도커 스웜의 설명",
-   "컨테이너 오케스트레이션의 주요 플랫폼 비교",
-   "- 주요플랫폼 개념비교",
-   "- 주요플랫폼 상세비교"
+   "등장 배경",
+   "- 배경: 경량화·단일화",
+   "구성과 동작",
+   "- 노드: 매니저·워커",
+   "- 배포: 서비스·태스크",
+   "쿠버네티스 비교",
+   "- 비교: 학습 곡선·규모"
   ],
   "sections": [
    {
-    "title": "도커 스웜 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 경량화·단일화",
       "items": [
-       "Manager 노드: 도커 스웜에서 Manager 노드를 다루는 핵심 암기 포인트",
-       "Worker 노드: 도커 스웜에서 Worker 노드를 다루는 핵심 암기 포인트",
-       "Task: Task를 도커 스웜 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "라우팅 메시: 도커 스웜에서 라우팅 메시를 다루는 핵심 암기 포인트"
+       "쿠버네티스는 소규모 조직에 과한 기능을 포함, 도커와 별도 도구 설치를 줄이려 스웜 모드(Swarm Mode)를 엔진에 내장"
       ]
      }
     ]
    },
    {
-    "title": "도커 스웜 구성·기술",
+    "title": "구성과 동작",
     "subsections": [
      {
-      "title": null,
+      "title": "노드: 매니저·워커",
       "items": [
-       "내장 오케스트레이션: 도커 스웜에서 내장 오케스트레이션을 다루는 핵심 암기 포인트",
-       "docker stack: 도커 스웜에서 docker stack를 다루는 핵심 암기 포인트",
-       "오케스트레이션: 도커 스웜에서 오케스트레이션을 다루는 핵심 암기 포인트",
-       "컨테이너: OS 커널을 공유하며 앱과 의존성을 격리 실행하는 단위 (도커 스웜/8f43)"
+       "매니저 노드(Manager Node): Raft 합의로 클러스터 상태를 복제, 스웜 명령은 매니저에서만 실행하며 장애 대비 홀수 구성",
+       "워커 노드는 매니저가 할당한 태스크를 실행하고 상태를 보고"
+      ]
+     },
+     {
+      "title": "배포: 서비스·태스크",
+      "items": [
+       "서비스(Service): 하나의 이미지로 동일 컨테이너를 지정한 수만큼 실행, 태스크(Task)가 각 컨테이너를 관리",
+       "라우팅 메시(Ingress Routing Mesh): 어느 노드로 들어와도 서비스 컨테이너로 부하 분산해 외부 노출"
       ]
      }
     ]
    },
    {
-    "title": "도커 스웜 운영",
+    "title": "쿠버네티스 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "비교: 학습 곡선·규모",
       "items": [
-       "도커 스웜의 구성: 도커 스웜에서 도커 스웜의 구성을 다루는 핵심 암기 포인트",
-       "도커 스웜의 설명: 도커 스웜에서 도커 스웜의 설명을 다루는 핵심 암기 포인트"
+       "스웜은 Compose 파일을 도커 스택으로 그대로 배포해 쉽지만 자동 확장·생태계가 약하고, 쿠버네티스는 복잡하나 대규모·멀티클라우드에 안정적"
       ]
      }
     ]
@@ -14778,23 +14801,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Manager 노드",
-   "Worker 노드",
-   "Task",
-   "라우팅 메시",
-   "내장 오케스트레이션",
-   "docker stack",
-   "오케스트레이션",
-   "컨테이너",
-   "도커 스웜의 구성",
-   "도커 스웜의 설명"
+   "스웜 모드(Swarm Mode, 도커 1.12)",
+   "매니저 노드(Manager Node)",
+   "워커 노드(Worker Node)",
+   "Raft 합의(매니저 상태 복제)",
+   "서비스(Service)",
+   "태스크(Task)",
+   "라우팅 메시(Ingress Routing Mesh)",
+   "롤링 업데이트",
+   "도커 스택(Compose 파일 배포)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_168",
@@ -14805,80 +14828,89 @@
    214,
    218
   ],
-  "en": "Full and Para-Virtualization",
+  "en": "Full Virtualization and Para-Virtualization",
   "dueum": null,
   "name": "전가상화와 반가상화(Full/Para-Virtualization)",
   "title": "전가상화와 반가상화(Full/Para-Virtualization)",
-  "definition": "호스트 컴퓨터에서 다수의 운영 체제(operating system)를 동시에 실행하기 위한 논리적 플랫폼(platform)",
+  "definition": "하이퍼바이저 가상화를 게스트 OS 수정 여부로 구분한 것으로, 전가상화는 하드웨어를 완전히 가상화해 수정 없는 게스트를 실행하고 반가상화는 게스트 커널을 수정해 하이퍼바이저 API(하이퍼콜)로 하드웨어를 제어함",
   "keywords_must": [
-   "하이퍼바이저",
-   "OVF의 구성",
-   "클라우드 아키텍처 구성도",
-   "VMM",
-   "VMM(하이퍼바이저)",
-   "XML",
-   "OVF",
-   "HTTP",
-   "콘텐츠",
-   "OVF 디스크립터"
+   "전가상화(Full Virtualization)",
+   "반가상화(Para-virtualization)",
+   "게스트 OS 수정 여부",
+   "이진 변환(Binary Translation)",
+   "하드웨어 지원(Intel VT-x·AMD-V)",
+   "하이퍼콜(Hypercall)",
+   "트랩(Trap) 오버헤드",
+   "OVF(Open Virtualization Format)",
+   "OVF 디스크립터·OVA"
   ],
   "keywords_ref": [
-   "SDS"
+   "VMware ESXi·KVM",
+   "Xen PV·Hyper-V Enlightenment",
+   "virtio 드라이버",
+   "DMTF 표준",
+   "가상 어플라이언스"
   ],
   "keywords": [
-   "핵심: 하이퍼바이저 · OVF의 구성 · 클라우드 아키텍처 구성도",
-   "기술: VMM · VMM(하이퍼바이저) · XML",
-   "운영: OVF · HTTP · 콘텐츠",
-   "참고: SDS"
+   "전가상화: 게스트 OS 무수정 · 민감 명령 트랩·이진 변환 · 실제 하드웨어보다 성능 낮음",
+   "반가상화: 게스트 커널 수정 · 하이퍼콜로 직접 요청 · 네이티브에 가까운 성능",
+   "OVF: XML 디스크립터 + 가상 디스크 → 플랫폼 간 VM 이식(DMTF 표준)"
   ],
   "outline": [
-   "하이퍼바이저 개념",
-   "- 다수의 운영 체제를 동시에 실행하기 위한 논리적 플랫폼, 하이퍼바이저…",
-   "전가상화와 반가상화 개념도 및 특징",
-   "- 전가상화와 반가상화 요점",
-   "참고자료(OVF)",
-   "- 가상 머신 포맷 표준 OVF(Open Virtualization For…",
-   "- OVF 의 구성",
-   "클라우드 아키텍처 개요",
-   "- 전가상화와 반가상화 요점"
+   "개념 구분",
+   "- 기준: 게스트 OS 수정 여부",
+   "동작 방식과 특징",
+   "- 전가상화: 트랩·변환",
+   "- 반가상화: 가상화 인식",
+   "가상머신 포맷 표준",
+   "- OVF: 이식성 표준",
+   "- 구성: 디스크립터·콘텐츠"
   ],
   "sections": [
    {
-    "title": "전가상화와 반가상화 핵심",
+    "title": "개념 구분",
     "subsections": [
      {
-      "title": null,
+      "title": "기준: 게스트 OS 수정 여부",
       "items": [
-       "하이퍼바이저: 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층 (전가상화와 반가상화/8738)",
-       "OVF의 구성: 전가상화와 반가상화에서 OVF의 구성을 다루는 핵심 암기 포인트",
-       "클라우드 아키텍처 구성도: 전가상화와 반가상화의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "VMM: 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층 (전가상화와 반가상화/3367)"
+       "전가상화(Full Virtualization): 하이퍼바이저가 하드웨어를 완전히 흉내내 상용 OS도 그대로 실행",
+       "반가상화(Para-virtualization): 전면 가상화 없이 하이퍼바이저가 제공하는 API로 OS가 하드웨어 제어"
       ]
      }
     ]
    },
    {
-    "title": "전가상화와 반가상화 구성·기술",
+    "title": "동작 방식과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "전가상화: 트랩·변환",
       "items": [
-       "VMM(하이퍼바이저): 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층 (전가상화와 반가상화/56e0)",
-       "XML: XML를 전가상화와 반가상화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OVF: OVF를 전가상화와 반가상화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HTTP: 요청/응답 기반의 웹 응용 계층 프로토콜 (전가상화와 반가상화/ee31)"
+       "보호 대상 명령은 하이퍼바이저가 가로채 처리, 에뮬레이션보다 빠르나 트랩(Trap) 오버헤드로 네이티브보다 느림",
+       "하드웨어 지원(Intel VT-x·AMD-V) 등장 후 이진 변환 없이 전가상화 성능이 크게 개선"
+      ]
+     },
+     {
+      "title": "반가상화: 가상화 인식",
+      "items": [
+       "하이퍼콜(Hypercall): 게스트가 가상화를 인식하고 특권 작업을 직접 요청해 재컴파일·트래핑 불필요, 대신 OS 소스 수정 필요(Xen PV)",
+       "현재는 전가상화에 virtio 같은 반가상화 드라이버를 결합한 하이브리드가 일반적"
       ]
      }
     ]
    },
    {
-    "title": "전가상화와 반가상화 운영",
+    "title": "가상머신 포맷 표준",
     "subsections": [
      {
-      "title": null,
+      "title": "OVF: 이식성 표준",
       "items": [
-       "콘텐츠: 전가상화와 반가상화에서 콘텐츠를 다루는 핵심 암기 포인트",
-       "OVF 디스크립터: 전가상화와 반가상화에서 OVF 디스크립터를 다루는 핵심 암기 포인트"
+       "OVF(Open Virtualization Format): DMTF가 정의한 XML 기반 가상 어플라이언스 패키징·배포 표준"
+      ]
+     },
+     {
+      "title": "구성: 디스크립터·콘텐츠",
+      "items": [
+       "OVF 디스크립터·OVA: 가상 H/W·디스크·네트워크·자원 요구사항을 기술, 콘텐츠는 패키지에 포함하거나 HTTP 참조, OVA는 단일 tar 묶음"
       ]
      }
     ]
@@ -14887,23 +14919,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "하이퍼바이저",
-   "OVF의 구성",
-   "클라우드 아키텍처 구성도",
-   "VMM",
-   "VMM(하이퍼바이저)",
-   "XML",
-   "OVF",
-   "HTTP",
-   "콘텐츠",
-   "OVF 디스크립터"
+   "전가상화(Full Virtualization)",
+   "반가상화(Para-virtualization)",
+   "게스트 OS 수정 여부",
+   "이진 변환(Binary Translation)",
+   "하드웨어 지원(Intel VT-x·AMD-V)",
+   "하이퍼콜(Hypercall)",
+   "트랩(Trap) 오버헤드",
+   "OVF(Open Virtualization Format)",
+   "OVF 디스크립터·OVA"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_169",
@@ -14918,78 +14950,83 @@
   "dueum": null,
   "name": "컨버지드 인프라(Converged Infrastructure)",
   "title": "컨버지드 인프라(Converged Infrastructure)",
-  "definition": "컴퓨팅/서버, 데이터 스토리지, 네트워킹 장비, 인프라스트럭처 관리용 가상화 및 기타 소프트웨어 등 여러 기본 구성 요소를 최적화된 통합 단위로 패키징한 통합 인프라스트럭처",
+  "definition": "서버·스토리지·네트워크 장비와 가상화·관리 소프트웨어를 단일 벤더가 사전 통합·구성·검증된 랙 단위로 패키징해 제공함으로써 데이터센터 인프라를 신속히 구축·확장하는 통합 인프라",
   "keywords_must": [
-   "통합",
-   "가상화",
+   "사전 통합(Pre-Integrated)·사전 구성(Pre-Configured)",
+   "단일 벤더 통합 제공",
+   "물리 자원 계층",
+   "하이퍼바이저 계층",
+   "통합 관리 소프트웨어 계층",
+   "추상화·가상화·오케스트레이션",
    "자동 프로비저닝",
-   "SDS(Software Defined System)",
-   "Web Scale IT",
-   "컨버지드 인프라 정의",
-   "컨버지드 인프라 구성/스택",
-   "SDS",
-   "SSD"
+   "자동 계층화(Auto-Tiering)",
+   "HCI(Hyper-Converged Infrastructure) 비교"
   ],
   "keywords_ref": [
-   "일체형 제공",
-   "단일 벤더 제공",
-   "HCI",
-   "HPE"
+   "Dell VxBlock(구 Vblock)",
+   "NetApp FlexPod",
+   "레퍼런스 아키텍처",
+   "웹 스케일 IT",
+   "SDDC"
   ],
   "keywords": [
-   "핵심: 통합 · 가상화 · 자동 프로비저닝",
-   "기술: SDS(Software Defined System) · Web Scale IT · 컨버지드 인프라 정의",
-   "운영: 컨버지드 인프라 구성/스택 · SDS · SSD",
-   "참고: 일체형 제공 · 단일 벤더 제공 · HCI"
+   "스택: 물리 자원(서버·스토리지·네트워크) → 하이퍼바이저 → 통합 관리 SW",
+   "기능: Abstraction · Virtualization · Orchestration · Management · Provisioning · Auto-Tiering",
+   "비교: CI(검증된 장비 묶음·SAN 유지) → HCI(x86 노드 SW 통합·스케일 아웃)"
   ],
   "outline": [
-   "컨버지드 인프라(Converged Infrastructure) 개요",
-   "- 컨버지드 인프라 정의",
-   "- 컨버지드 인프라 특징",
-   "컨버지드 인프라 구성 및 주요 기능",
-   "- 컨버지드 인프라 구성/스택",
-   "- 컨버지드 인프라 주요 기능",
-   "컨버지드 인프라의 미래",
-   "- 컨버지드 인프라 요점",
-   "하이퍼 컨버지드 인프라 아키텍처 및 기술요소",
-   "- HCI 아키텍처 구성도"
+   "제공 형태",
+   "- 공급: 일체형·단일 벤더",
+   "스택 구성과 주요 기능",
+   "- 스택: 3계층",
+   "- 기능: 추상화~자동 계층화",
+   "HCI로의 진화",
+   "- 비교: 하드웨어 묶음 vs 소프트웨어 통합",
+   "- 제품: VxBlock·FlexPod"
   ],
   "sections": [
    {
-    "title": "컨버지드 인프라 핵심",
+    "title": "제공 형태",
     "subsections": [
      {
-      "title": null,
+      "title": "공급: 일체형·단일 벤더",
       "items": [
-       "통합: 컨버지드 인프라에서 통합을 다루는 핵심 암기 포인트",
-       "가상화: 컨버지드 인프라에서 가상화를 다루는 핵심 암기 포인트",
-       "자동 프로비저닝: 컨버지드 인프라에서 자동 프로비저닝을 다루는 핵심 암기 포인트",
-       "SDS(Software Defined System): SDS를 컨버지드 인프라 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "사전 통합(Pre-Integrated)·사전 구성: 공장에서 조립·검증된 랙으로 배송해 구축 기간 단축, 단일 벤더 통합 지원 창구"
       ]
      }
     ]
    },
    {
-    "title": "컨버지드 인프라 구성·기술",
+    "title": "스택 구성과 주요 기능",
     "subsections": [
      {
-      "title": null,
+      "title": "스택: 3계층",
       "items": [
-       "Web Scale IT: 컨버지드 인프라에서 Web Scale IT를 다루는 핵심 암기 포인트",
-       "컨버지드 인프라 정의: 컨버지드 인프라에서 컨버지드 인프라 정의를 다루는 핵심 암기 포인트",
-       "컨버지드 인프라 구성/스택: 컨버지드 인프라에서 컨버지드 인프라 구성/스택을 다루는 핵심 암기 포인트",
-       "SDS: SDS를 컨버지드 인프라 설계·구현·운영에 쓰는 핵심 기술 요소 (컨버지드 인프라/6860)"
+       "물리 자원 계층 위에 하이퍼바이저 계층, 최상위 통합 관리 소프트웨어 계층이 중앙 집중 관리"
+      ]
+     },
+     {
+      "title": "기능: 추상화~자동 계층화",
+      "items": [
+       "오케스트레이션: 하드웨어부터 가상화 솔루션까지 End-to-End 연결, 관리 기능은 설정·모니터링·측정 일원화",
+       "자동 계층화(Auto-Tiering): 데이터 접근 빈도(Hit Ratio)에 따라 SSD·HDD 계층 자동 이동"
       ]
      }
     ]
    },
    {
-    "title": "컨버지드 인프라 운영",
+    "title": "HCI로의 진화",
     "subsections": [
      {
-      "title": null,
+      "title": "비교: 하드웨어 묶음 vs 소프트웨어 통합",
       "items": [
-       "SSD: SSD를 컨버지드 인프라 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "HCI(Hyper-Converged Infrastructure) 비교: CI는 별도 SAN 스토리지를 유지한 장비 묶음, HCI는 x86 노드 로컬 디스크를 SDS로 통합"
+      ]
+     },
+     {
+      "title": "제품: VxBlock·FlexPod",
+      "items": [
+       "Dell VxBlock(구 Vblock)·NetApp FlexPod 같은 레퍼런스 아키텍처가 대표, 소프트웨어 정의 데이터센터로 진화"
       ]
      }
     ]
@@ -14998,15 +15035,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "통합",
-   "가상화",
+   "사전 통합(Pre-Integrated)·사전 구성(Pre-Configured)",
+   "단일 벤더 통합 제공",
+   "물리 자원 계층",
+   "하이퍼바이저 계층",
+   "통합 관리 소프트웨어 계층",
+   "추상화·가상화·오케스트레이션",
    "자동 프로비저닝",
-   "SDS(Software Defined System)",
-   "Web Scale IT",
-   "컨버지드 인프라 정의",
-   "컨버지드 인프라 구성/스택",
-   "SDS",
-   "SSD"
+   "자동 계층화(Auto-Tiering)",
+   "HCI(Hyper-Converged Infrastructure) 비교"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -15016,7 +15053,8 @@
   "warnings": [],
   "gloss": {
    "HCI": "Hyper-Converged Infrastructure"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_170",
@@ -15027,72 +15065,87 @@
    217,
    222
   ],
-  "en": "Cloud Architecture",
+  "en": "Cloud Computing Architecture",
   "dueum": null,
   "name": "클라우드 아키텍처(Cloud Architecture)",
   "title": "클라우드 아키텍처(Cloud Architecture)",
-  "definition": "다양한 기기에 인터넷 망을 통해 TV, 영화 등 다양한 미디어 콘텐츠를 제공하는 온라인 콘텐츠 전송 서비스",
+  "definition": "클라우드 인프라를 물리 Layer·가상화 Layer·프로비저닝 Layer·서비스 관리 체계 Layer로 계층화해 서비스 요청에 따라 가상 자원을 생성·삭제·관리하도록 구성한 클라우드 컴퓨팅 구조와 참조 모델",
   "keywords_must": [
-   "다양한 단말",
-   "인터넷",
-   "다양한 미디어 콘텐츠",
-   "넷플릭스",
-   "훌루",
-   "클라우드 아키텍처 아키텍처",
-   "OTT",
-   "SNS",
-   "IaaS"
+   "물리적 Layer(서버·스토리지·네트워크)",
+   "가상화 Layer(하이퍼바이저·스토리지·네트워크 가상화)",
+   "프로비저닝 Layer",
+   "서비스 관리 체계 Layer",
+   "성능·가용성 관리",
+   "자원 관리·과금(Metering)",
+   "NIST 클라우드 참조 아키텍처",
+   "IoT 개방형 센서정보 클라우드 참조모델",
+   "Idc·Iuc 인터페이스"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "클라우드 소비자·제공자·브로커·감사자·캐리어",
+   "오케스트레이션",
+   "셀프서비스 포털",
+   "OpenStack(Nova·Cinder·Neutron)",
+   "멀티테넌시"
+  ],
   "keywords": [
-   "핵심: 다양한 단말 · 인터넷 · 다양한 미디어 콘텐츠",
-   "기술: 넷플릭스 · 훌루 · 클라우드 아키텍처 아키텍처",
-   "운영: OTT · SNS · IaaS"
+   "4계층: 물리 → 가상화 → 프로비저닝 → 서비스 관리 체계",
+   "NIST 5행위자: 소비자 · 제공자 · 브로커 · 감사자 · 캐리어",
+   "IoT 참조모델: 스마트 센싱 디바이스 ↔(Idc) 센서정보 클라우드 ↔(Iuc) 활용자·서비스 사업자"
   ],
   "outline": [
-   "클라우드 아키텍처의 개념",
-   "- 클라우드 아키텍처 핵심 키워드",
-   "클라우드 아키텍처의 구성·기술",
-   "- 구성요소·표준",
-   "클라우드 아키텍처의 운영 가치·시사점",
-   "- 클라우드 아키텍처 요점"
+   "계층 구성",
+   "- 하위: 물리·가상화",
+   "- 상위: 프로비저닝·관리",
+   "참조 모델",
+   "- NIST: 5행위자",
+   "- IoT 센서정보 클라우드: 인터페이스",
+   "구현 사례",
+   "- 오픈소스: OpenStack"
   ],
   "sections": [
    {
-    "title": "클라우드 아키텍처 핵심",
+    "title": "계층 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "하위: 물리·가상화",
       "items": [
-       "다양한 단말: 클라우드 아키텍처에서 다양한 단말을 다루는 핵심 암기 포인트",
-       "인터넷: 클라우드 아키텍처에서 인터넷을 다루는 핵심 암기 포인트",
-       "다양한 미디어 콘텐츠: 클라우드 아키텍처에서 다양한 미디어 콘텐츠를 다루는 핵심 암기 포인트",
-       "넷플릭스: 클라우드 아키텍처에서 넷플릭스를 다루는 핵심 암기 포인트"
+       "물리적 Layer는 서버·스토리지·네트워크 장비, 가상화 Layer는 하이퍼바이저와 스토리지·네트워크 가상화 솔루션으로 가상 인프라 제공"
+      ]
+     },
+     {
+      "title": "상위: 프로비저닝·관리",
+      "items": [
+       "프로비저닝 Layer: 관리 체계의 명령에 따라 가상화 Layer 위에 VM·볼륨·네트워크를 생성·삭제",
+       "서비스 관리 체계 Layer: 성능·가용성, 자원 관리·과금, 계정·보안 정책 정의와 수행"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 아키텍처 구성·기술",
+    "title": "참조 모델",
     "subsections": [
      {
-      "title": null,
+      "title": "NIST: 5행위자",
       "items": [
-       "훌루: 클라우드 아키텍처에서 훌루를 다루는 핵심 암기 포인트",
-       "클라우드 아키텍처 아키텍처: 클라우드 아키텍처의 계층·모듈 배치와 상호작용 구조",
-       "OTT: 인터넷으로 미디어를 직접 전송하는 스트리밍 서비스 (클라우드 아키텍처/e5ae)",
-       "SNS: SNS를 클라우드 아키텍처 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "NIST 클라우드 참조 아키텍처: 소비자·제공자·브로커(중개)·감사자(독립 평가)·캐리어(연결 제공) 역할 정의"
+      ]
+     },
+     {
+      "title": "IoT 센서정보 클라우드: 인터페이스",
+      "items": [
+       "Idc·Iuc 인터페이스: Idc는 스마트 센싱 디바이스와 클라우드 간 메시지 통신, Iuc는 이용자·사업자가 API로 센서정보 활용"
       ]
      }
     ]
    },
    {
-    "title": "클라우드 아키텍처 운영",
+    "title": "구현 사례",
     "subsections": [
      {
-      "title": null,
+      "title": "오픈소스: OpenStack",
       "items": [
-       "IaaS: 가상머신·스토리지·네트워크를 온디맨드로 제공하는 클라우드 모델 (클라우드 아키텍처/9b84)"
+       "OpenStack(Nova·Cinder·Neutron): 컴퓨팅·블록 스토리지·네트워크 서비스로 가상화·프로비저닝 Layer 구현, Keystone이 인증"
       ]
      }
     ]
@@ -15101,22 +15154,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "다양한 단말",
-   "인터넷",
-   "다양한 미디어 콘텐츠",
-   "넷플릭스",
-   "훌루",
-   "클라우드 아키텍처 아키텍처",
-   "OTT",
-   "SNS",
-   "IaaS"
+   "물리적 Layer(서버·스토리지·네트워크)",
+   "가상화 Layer(하이퍼바이저·스토리지·네트워크 가상화)",
+   "프로비저닝 Layer",
+   "서비스 관리 체계 Layer",
+   "성능·가용성 관리",
+   "자원 관리·과금(Metering)",
+   "NIST 클라우드 참조 아키텍처",
+   "IoT 개방형 센서정보 클라우드 참조모델",
+   "Idc·Iuc 인터페이스"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_178",
