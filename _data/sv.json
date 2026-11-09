@@ -15181,59 +15181,94 @@
    196,
    197
   ],
-  "en": "OTA Over The Air",
+  "en": "Over-The-Air",
   "dueum": null,
-  "name": "인공지능(OTA (Over The Air))",
-  "title": "인공지능(OTA (Over The Air))",
-  "definition": "무선 통신 시스템에서 어플리케이션 관련 정보의 전송과 수신을 위한 무선 네트워킹 기술",
+  "name": "무선 업데이트(OTA, Over-The-Air)",
+  "title": "무선 업데이트(OTA, Over-The-Air)",
+  "definition": "단말을 서비스센터에 가져가거나 케이블을 연결하지 않고 이동통신·Wi-Fi 등 무선망으로 펌웨어·소프트웨어·설정 정보를 원격 전송해 갱신·진단하는 기술로, 휴대폰에서 시작해 차량·IoT 기기로 확대됨",
   "keywords_must": [
-   "SMS",
-   "WAP",
-   "FOTA",
-   "Firmware",
-   "OTA방법",
-   "OTA (Over The Air) 정의",
-   "인공지능 아키텍처",
-   "OTA"
+   "FOTA(Firmware Over-The-Air)",
+   "SOTA(Software Over-The-Air)",
+   "델타 업데이트(Delta·Diff 패키지)",
+   "패키지 생성기(Package Generator)",
+   "OTA 서버",
+   "OTA 클라이언트(단말 에이전트)",
+   "SMS·WAP 기반 OTA",
+   "원격 설정·실시간 진단",
+   "코드 서명·암호화 전송",
+   "UN R156(소프트웨어 업데이트 관리)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "CFOTA(압축 펌웨어)",
+   "A/B 파티션 롤백",
+   "UN R155(사이버보안)",
+   "OMA-DM",
+   "차량 ECU 업데이트"
+  ],
   "keywords": [
-   "핵심: SMS · WAP · FOTA",
-   "기술: Firmware · OTA방법 · OTA (Over The Air) 정의",
-   "운영: 인공지능 아키텍처 · OTA"
+   "동작: 이전·새 프로그램 비교 → 델타 생성 → 무선 전송 → 단말에서 이전 + 델타 = 새 프로그램",
+   "구성: 패키지 생성기 · OTA 서버 · OTA 클라이언트(단말 솔루션)",
+   "확장: 휴대폰(SMS·WAP·OMA-DM) → 차량(FOTA·SOTA, UN R155·R156) → IoT"
   ],
   "outline": [
-   "Wireless'를 무선 통신 및 무선 업데이트 기술, OTA 개요",
-   "- OTA (Over The Air) 정의",
-   "- OTA 방법",
-   "OTA 다운로드 시장의 변화",
-   "- 인공지능 요점"
+   "개념과 전송 방식",
+   "- 초기: SMS·WAP",
+   "- 기능: 원격 설정·진단",
+   "동작 원리와 구성요소",
+   "- 델타 방식: 차분 전송",
+   "- 구성: 생성기·서버·클라이언트",
+   "차량 적용과 보안",
+   "- 차량: 펌웨어·SW 이원화",
+   "- 보안·규제: 서명·UN 규정"
   ],
   "sections": [
    {
-    "title": "인공지능 핵심",
+    "title": "개념과 전송 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "초기: SMS·WAP",
       "items": [
-       "SMS: SMS를 인공지능 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "WAP: WAP를 인공지능 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "FOTA: FOTA를 인공지능 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Firmware: Firmware를 인공지능 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "SMS·WAP 기반 OTA: SMS로 설정·소형 데이터 전송, WAP으로 사업자 서버에 직접 접속해 콘텐츠 다운로드"
+      ]
+     },
+     {
+      "title": "기능: 원격 설정·진단",
+      "items": [
+       "원격 설정·실시간 진단: 단말 파라미터를 사람 조작 없이 생성·변경·조회, 원격 고장 진단"
       ]
      }
     ]
    },
    {
-    "title": "인공지능 구성·기술",
+    "title": "동작 원리와 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "델타 방식: 차분 전송",
       "items": [
-       "OTA방법: 인공지능에서 OTA방법을 다루는 핵심 암기 포인트",
-       "OTA (Over The Air) 정의: 인공지능에서 OTA (Over The Air) 정의를 다루는 핵심 암기 포인트",
-       "인공지능 아키텍처: 인공지능의 계층·모듈 배치와 상호작용 구조",
-       "OTA: OTA를 인공지능 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "델타 업데이트(Delta·Diff 패키지): 변경분만 보내 전송량 절감, CFOTA는 압축 상태 이미지에도 델타 적용"
+      ]
+     },
+     {
+      "title": "구성: 생성기·서버·클라이언트",
+      "items": [
+       "패키지 생성기(Package Generator)가 Diff 패키지를 만들고, OTA 서버가 배포, 단말의 OTA 클라이언트가 설치"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "차량 적용과 보안",
+    "subsections": [
+     {
+      "title": "차량: 펌웨어·SW 이원화",
+      "items": [
+       "FOTA는 ECU 펌웨어, SOTA는 인포테인먼트·앱 갱신, A/B 파티션으로 실패 시 롤백"
+      ]
+     },
+     {
+      "title": "보안·규제: 서명·UN 규정",
+      "items": [
+       "코드 서명·암호화 전송으로 위변조 차단, UN R156이 소프트웨어 업데이트 관리체계(SUMS)를 형식 승인 요건으로 규정"
       ]
      }
     ]
@@ -15242,21 +15277,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "SMS",
-   "WAP",
-   "FOTA",
-   "Firmware",
-   "OTA방법",
-   "OTA (Over The Air) 정의",
-   "인공지능 아키텍처",
-   "OTA"
+   "FOTA(Firmware Over-The-Air)",
+   "SOTA(Software Over-The-Air)",
+   "델타 업데이트(Delta·Diff 패키지)",
+   "패키지 생성기(Package Generator)",
+   "OTA 서버",
+   "OTA 클라이언트(단말 에이전트)",
+   "SMS·WAP 기반 OTA",
+   "원격 설정·실시간 진단",
+   "코드 서명·암호화 전송",
+   "UN R156(소프트웨어 업데이트 관리)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_179",
@@ -15267,62 +15305,94 @@
    219,
    226
   ],
-  "en": "Over The Top",
+  "en": "Over-The-Top",
   "dueum": null,
-  "name": "오버더탑(OTT)",
-  "title": "오버더탑(OTT)",
-  "definition": "GPS를 사용하거나 무선 네트워크 기지국 위치를 활용하여 서비스요청 단말기의 정확한 위치를 파악하는 기술 * LBS(location based service): 위치확인 기술을 이용해 이용자의 위치를 파악하고 이와 관련된 부가정보를 결합하여 다양한 생활편의를 제공하는 서비스",
+  "name": "오버더톱(OTT, Over-The-Top)",
+  "title": "오버더톱(OTT, Over-The-Top)",
+  "definition": "통신사·케이블의 셋톱박스나 전용망에 의존하지 않고 개방형 인터넷을 통해 TV·PC·스마트폰 등 다양한 단말로 영화·드라마·방송 등 동영상 콘텐츠를 제공하는 서비스",
   "keywords_must": [
-   "실내측위기술-셀ID측정",
-   "UWB",
-   "적외선",
-   "초음파",
-   "와이파이 무선랜 실내측위-셀ID측정",
-   "핑거프린트 기반",
-   "하이브리드"
+   "개방형 인터넷 전송",
+   "멀티 디바이스·N-스크린",
+   "적응형 비트레이트 스트리밍(ABR)",
+   "HLS·MPEG-DASH",
+   "콘텐츠 전송 네트워크(CDN)",
+   "디지털 저작권 관리(DRM)",
+   "추천 알고리즘(개인화)",
+   "SVOD·AVOD·TVOD",
+   "오리지널 콘텐츠"
   ],
   "keywords_ref": [
-   "SNS",
-   "RSSI"
+   "넷플릭스·디즈니+·티빙·웨이브",
+   "코드 커팅(Cord Cutting)",
+   "FAST(무료 광고형 스트리밍)",
+   "망 사용료 논쟁",
+   "전기통신사업법 부가통신사업자"
   ],
   "keywords": [
-   "핵심: 실내측위기술-셀ID측정 · UWB · 적외선",
-   "기술: 초음파 · 와이파이 무선랜 실내측위-셀ID측정 · 핑거프린트 기반",
-   "운영: 하이브리드",
-   "참고: SNS · RSSI"
+   "전송 기술: 인코딩 → 패키징(HLS·DASH) → DRM → CDN → 플레이어 ABR",
+   "수익 모델: SVOD(구독) · AVOD(광고) · TVOD(건별) · FAST",
+   "영향: 코드 커팅 · 유료방송 가입 감소 · 망 사용료 갈등"
   ],
   "outline": [
-   "오버더탑의 개념",
-   "- 오버더탑 핵심 키워드",
-   "오버더탑의 구성·기술",
-   "- 구성요소·표준",
-   "오버더탑의 운영 가치·시사점",
-   "- 오버더탑 요점"
+   "개념과 등장 배경",
+   "- 개념: 셋톱박스를 넘어",
+   "- 영향: 코드 커팅",
+   "전송 기술",
+   "- 스트리밍: ABR·HLS·DASH",
+   "- 전달·보호: CDN·DRM",
+   "서비스 모델과 이슈",
+   "- 수익: SVOD·AVOD·TVOD",
+   "- 이슈: 망 사용료·규제"
   ],
   "sections": [
    {
-    "title": "오버더탑 핵심",
+    "title": "개념과 등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 셋톱박스를 넘어",
       "items": [
-       "실내측위기술-셀ID측정: 오버더탑에서 실내측위기술-셀ID측정을 다루는 핵심 암기 포인트",
-       "UWB: UWB를 오버더탑 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "적외선: 오버더탑에서 적외선을 다루는 핵심 암기 포인트",
-       "초음파: 오버더탑에서 초음파를 다루는 핵심 암기 포인트"
+       "'Over-The-Top'은 셋톱박스 위(너머)라는 뜻, 초고속 인터넷과 스마트 단말 보급으로 확산"
+      ]
+     },
+     {
+      "title": "영향: 코드 커팅",
+      "items": [
+       "코드 커팅(Cord Cutting): 유료방송을 해지하고 OTT로 이동, 국내는 부가통신사업자로 분류"
       ]
      }
     ]
    },
    {
-    "title": "오버더탑 구성·기술",
+    "title": "전송 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "스트리밍: ABR·HLS·DASH",
       "items": [
-       "와이파이 무선랜 실내측위-셀ID측정: 오버더탑에서 와이파이 무선랜 실내측위-셀ID측정을 다루는 핵심 암기 포인트",
-       "핑거프린트 기반: 오버더탑에서 핑거프린트 기반을 다루는 핵심 암기 포인트",
-       "하이브리드: 오버더탑에서 하이브리드를 다루는 핵심 암기 포인트"
+       "적응형 비트레이트 스트리밍(ABR): 여러 화질로 인코딩한 짧은 세그먼트를 네트워크 상태에 따라 전환",
+       "HLS·MPEG-DASH: HTTP 기반 세그먼트 전송 표준으로 일반 웹 인프라·CDN 캐싱 활용"
+      ]
+     },
+     {
+      "title": "전달·보호: CDN·DRM",
+      "items": [
+       "콘텐츠 전송 네트워크(CDN): 엣지 서버 캐싱으로 지연·백본 부하 감소, DRM(Widevine·FairPlay·PlayReady)으로 불법 복제 방지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "서비스 모델과 이슈",
+    "subsections": [
+     {
+      "title": "수익: SVOD·AVOD·TVOD",
+      "items": [
+       "구독형 넷플릭스, 광고형 FAST, 건별 결제 TVOD 혼합, 추천 알고리즘으로 시청 시간 확대"
+      ]
+     },
+     {
+      "title": "이슈: 망 사용료·규제",
+      "items": [
+       "대규모 트래픽에 대한 망 사용료 분쟁, 콘텐츠 투자 경쟁과 국내 사업자 경쟁력 확보 과제"
       ]
      }
     ]
@@ -15331,13 +15401,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "실내측위기술-셀ID측정",
-   "UWB",
-   "적외선",
-   "초음파",
-   "와이파이 무선랜 실내측위-셀ID측정",
-   "핑거프린트 기반",
-   "하이브리드"
+   "개방형 인터넷 전송",
+   "멀티 디바이스·N-스크린",
+   "적응형 비트레이트 스트리밍(ABR)",
+   "HLS·MPEG-DASH",
+   "콘텐츠 전송 네트워크(CDN)",
+   "디지털 저작권 관리(DRM)",
+   "추천 알고리즘(개인화)",
+   "SVOD·AVOD·TVOD",
+   "오리지널 콘텐츠"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -15347,7 +15419,8 @@
   "warnings": [],
   "gloss": {
    "GPS": "Global Positioning System"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_180",
@@ -15360,61 +15433,99 @@
   ],
   "en": "Intelligent Transport Systems",
   "dueum": null,
-  "name": "지능형교통체계(ITS)",
-  "title": "지능형교통체계(ITS)",
-  "definition": "교통정체, 사고 등의 각종 교통문제에 체계적으로 대처하기 위해 정보통신 기술을 접목시켜 교통 운영과도로 이용자에게 안전 및 편리성을 제공하기 위한 종합교통정보관리시스템",
+  "name": "지능형 교통체계(ITS, Intelligent Transport Systems)",
+  "title": "지능형 교통체계(ITS, Intelligent Transport Systems)",
+  "definition": "교통수단과 시설에 정보통신·제어 기술을 접목해 교통정보를 수집·가공·제공하고 신호·통행을 최적 운영함으로써 교통 혼잡과 사고를 줄이고 안전·편의를 높이는 종합 교통정보관리 체계",
   "keywords_must": [
-   "C-ITS(Cooperative Information Traffic System)",
-   "지능형교통체계의 핵심 요소",
-   "지능형교통체계의 구조",
-   "지능형교통체계의 적용",
-   "SITMS",
-   "핵심 요소",
-   "구조",
-   "적용"
+   "ATMS(첨단 교통관리)",
+   "ATIS(첨단 교통정보)",
+   "APTS(첨단 대중교통)",
+   "CVO(첨단 화물운송)",
+   "AVHS(첨단 차량·도로)",
+   "교통정보센터(TIC)",
+   "노변기지국(RSU)·차량단말(OBU)",
+   "DSRC·WAVE",
+   "C-ITS(Cooperative Intelligent Transport Systems)",
+   "국가교통정보센터"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "하이패스(ETCS)",
+   "버스정보시스템(BIS)",
+   "차량검지기(VDS)",
+   "국가 ITS 아키텍처",
+   "교통체계효율화법"
+  ],
   "keywords": [
-   "핵심: C-ITS(Cooperative Information Traffic System) · 지능형교통체계의 핵심 요소 · 지능형교통체계의 구조",
-   "기술: 지능형교통체계의 적용 · SITMS · 핵심 요소",
-   "운영: 구조 · 적용"
+   "5대 서비스 분야: ATMS · ATIS · APTS · CVO · AVHS",
+   "구성: 수집(검지기·CCTV·RSU) → 교통정보센터(TIC) 가공 → 제공(VMS·내비·앱)",
+   "기술: 서버(GIS·LBS) · 통신(DSRC·WAVE·V2X) · 단말(OBU·DIS) · 차량 네트워크(WPAN·UWB)"
   ],
   "outline": [
-   "지능형교통체계의 개요",
-   "- 지능형교통체계의 정의",
-   "- 지능형교통체계의 등장 배경",
-   "지능형교통체계의 구성과 핵심 요소",
-   "- 지능형교통체계의 핵심 요소",
-   "- 지능형교통체계의 구조",
-   "지능형교통체계의 적용과 사례",
-   "- 지능형교통체계의 적용",
-   "- 지능형교통체계의 과제"
+   "필요성과 구성",
+   "- 필요성: 혼잡·사고 비용",
+   "- 구성: 수집·가공·제공",
+   "5대 서비스 분야",
+   "- 관리·정보: ATMS·ATIS",
+   "- 대중교통·화물: APTS·CVO",
+   "- 차량·도로: AVHS",
+   "기술 분류",
+   "- 통신: 노변·차량 간",
+   "- 서버·단말: GIS·OBU"
   ],
   "sections": [
    {
-    "title": "지능형교통체계 핵심",
+    "title": "필요성과 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "필요성: 혼잡·사고 비용",
       "items": [
-       "C-ITS(Cooperative Information Traffic System): C-ITS를 지능형교통체계 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "지능형교통체계의 핵심 요소: 지능형교통체계에서 지능형교통체계의 핵심 요소를 다루는 핵심 암기 포인트",
-       "지능형교통체계의 구조: 지능형교통체계에서 지능형교통체계의 구조를 다루는 핵심 암기 포인트",
-       "지능형교통체계의 적용: 지능형교통체계에서 지능형교통체계의 적용을 다루는 핵심 암기 포인트"
+       "도로 신설만으로는 혼잡 해소에 한계, 기존 시설의 운영 효율화와 사고 예방으로 사회적 비용 절감"
+      ]
+     },
+     {
+      "title": "구성: 수집·가공·제공",
+      "items": [
+       "교통정보센터(TIC): 차량검지기·CCTV·RSU 수집 정보를 가공해 VMS·내비게이션·앱으로 제공, 국가교통정보센터가 전국 연계"
       ]
      }
     ]
    },
    {
-    "title": "지능형교통체계 구성·기술",
+    "title": "5대 서비스 분야",
     "subsections": [
      {
-      "title": null,
+      "title": "관리·정보: ATMS·ATIS",
       "items": [
-       "SITMS: SITMS를 지능형교통체계 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "핵심 요소: 지능형교통체계에서 핵심 요소를 다루는 핵심 암기 포인트",
-       "구조: 지능형교통체계에서 구조를 다루는 핵심 암기 포인트",
-       "적용: 지능형교통체계에서 적용을 다루는 핵심 암기 포인트"
+       "ATMS(첨단 교통관리)는 실시간 신호 제어·돌발상황 관리·하이패스, ATIS(첨단 교통정보)는 경로 안내·소요시간 제공"
+      ]
+     },
+     {
+      "title": "대중교통·화물: APTS·CVO",
+      "items": [
+       "APTS(첨단 대중교통)는 버스정보시스템(BIS)·배차 관리, CVO(첨단 화물운송)는 화물차 위치 추적·위험물 관리"
+      ]
+     },
+     {
+      "title": "차량·도로: AVHS",
+      "items": [
+       "AVHS(첨단 차량·도로): 차량 센서와 도로 인프라 연계로 충돌 경고·자율주행 지원, C-ITS로 발전"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기술 분류",
+    "subsections": [
+     {
+      "title": "통신: 노변·차량 간",
+      "items": [
+       "노변기지국(RSU)·차량단말(OBU): DSRC(하이패스)·WAVE로 차량-노변 통신, 차량 간 통신은 V2X로 확장"
+      ]
+     },
+     {
+      "title": "서버·단말: GIS·OBU",
+      "items": [
+       "서버는 GIS·LBS 연계 교통정보 통합, 단말은 OBU 플랫폼·운전자 정보 시스템(DIS)·음성인식 인터페이스"
       ]
      }
     ]
@@ -15423,21 +15534,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "C-ITS(Cooperative Information Traffic System)",
-   "지능형교통체계의 핵심 요소",
-   "지능형교통체계의 구조",
-   "지능형교통체계의 적용",
-   "SITMS",
-   "핵심 요소",
-   "구조",
-   "적용"
+   "ATMS(첨단 교통관리)",
+   "ATIS(첨단 교통정보)",
+   "APTS(첨단 대중교통)",
+   "CVO(첨단 화물운송)",
+   "AVHS(첨단 차량·도로)",
+   "교통정보센터(TIC)",
+   "노변기지국(RSU)·차량단말(OBU)",
+   "DSRC·WAVE",
+   "C-ITS(Cooperative Intelligent Transport Systems)",
+   "국가교통정보센터"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_181",
@@ -15448,79 +15562,95 @@
    202,
    207
   ],
-  "en": "Cooperative ITS",
+  "en": "Cooperative Intelligent Transport Systems",
   "dueum": null,
-  "name": "협력형 ITS(C-ITS)",
-  "title": "협력형 ITS(C-ITS)",
-  "definition": "안정성, 이동성, 지속 가능성 (친환경, 효율성)을 목표로 차량과 차량, 차량과 인프라간 양방향 통신으로 교통 정보를 교환 및 공유하여 오픈 플랫폼 기반에서 서비스를 제공하는 차세대 ITS",
+  "name": "협력 지능형 교통체계(C-ITS, Cooperative Intelligent Transport Systems)",
+  "title": "협력 지능형 교통체계(C-ITS, Cooperative Intelligent Transport Systems)",
+  "definition": "차량이 주행 중 다른 차량·노변 인프라·보행자와 V2X 양방향 통신으로 급정거·낙하물·신호 정보 등 위험 정보를 실시간 교환해 사고를 예방하고 자율주행을 지원하는 차세대 ITS",
   "keywords_must": [
-   "V2V",
-   "V2I",
-   "V2R",
-   "V2P",
-   "V2C",
-   "IVN 안전운전지원",
-   "자율주행지원",
-   "교차로 통행 지원",
-   "교통약자보호",
-   "긴급상황 지원"
+   "V2X(Vehicle-to-Everything)",
+   "V2V(차량-차량)",
+   "V2I(차량-인프라)",
+   "V2P(차량-보행자)",
+   "V2N(차량-네트워크)",
+   "WAVE(IEEE 802.11p)",
+   "C-V2X(LTE-V2X·5G-V2X)",
+   "RSU·OBU",
+   "C-ITS 센터",
+   "보안인증체계(SCMS·PKI)"
   ],
   "keywords_ref": [
-   "ITS",
-   "IVN"
+   "국내 LTE-V2X 단일 표준 결정(2023)",
+   "대전-세종 시범사업",
+   "SPaT(신호 정보)",
+   "자율협력주행",
+   "차내 네트워크(IVN)"
   ],
   "keywords": [
-   "핵심: V2V · V2I · V2R",
-   "기술: V2P · V2C · IVN 안전운전지원",
-   "운영: 자율주행지원 · 교차로 통행 지원 · 교통약자보호",
-   "참고: ITS · IVN"
+   "통신: V2V · V2I · V2P · V2N (방식: WAVE vs C-V2X)",
+   "서비스: 안전운전 지원 · 교차로 통행 지원 · 교통약자 보호 · 긴급상황 지원 · 자율주행 지원",
+   "ITS 대비: 단방향 사후 대응 → 양방향 실시간 사전 예방"
   ],
   "outline": [
-   "협력형 ITS 의 개요",
-   "- 협력형 ITS 의 정의",
-   "- 협력형 ITS 의 특징",
-   "협력형 ITS 의 구성과 기술",
-   "- 협력형 ITS 의 핵심 요소",
-   "협력형 ITS 의 적용",
-   "- 협력형 ITS 요점"
+   "개념과 도입 배경",
+   "- 배경: 사후 대응의 한계",
+   "- 목표: 안전·이동성·친환경",
+   "구성요소와 통신 방식",
+   "- 구성: 차량·인프라·센터",
+   "- 통신: WAVE vs C-V2X",
+   "서비스와 ITS 비교",
+   "- 서비스: 위험 경고·교차로",
+   "- 비교: 기존 ITS 대비"
   ],
   "sections": [
    {
-    "title": "협력형 ITS 핵심",
+    "title": "개념과 도입 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 사후 대응의 한계",
       "items": [
-       "V2V: V2V를 협력형 ITS 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "V2I: V2I를 협력형 ITS 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "V2R: V2R를 협력형 ITS 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "V2P: V2P를 협력형 ITS 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "기존 ITS는 수집 후 제공하는 단방향·사후 대응이라 돌발 위험 회피에 한계, 차량이 직접 위험을 주고받는 협력형 필요"
+      ]
+     },
+     {
+      "title": "목표: 안전·이동성·친환경",
+      "items": [
+       "사고 사전 예방, 교통 흐름 효율화와 탄소 감축, 자율주행차의 센서 한계를 통신으로 보완"
       ]
      }
     ]
    },
    {
-    "title": "협력형 ITS 구성·기술",
+    "title": "구성요소와 통신 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "구성: 차량·인프라·센터",
       "items": [
-       "V2C: V2C를 협력형 ITS 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "IVN 안전운전지원: 협력형 ITS에서 IVN 안전운전지원을 다루는 핵심 암기 포인트",
-       "자율주행지원: 협력형 ITS에서 자율주행지원을 다루는 핵심 암기 포인트",
-       "교차로 통행 지원: 협력형 ITS에서 교차로 통행 지원을 다루는 핵심 암기 포인트"
+       "RSU·OBU: 노변 기지국과 차량 단말, C-ITS 센터가 정보 수집·전파, 보안인증체계(SCMS·PKI)로 메시지 위변조 차단"
+      ]
+     },
+     {
+      "title": "통신: WAVE vs C-V2X",
+      "items": [
+       "WAVE(IEEE 802.11p): 5.9GHz 대역 근거리 통신, C-V2X(LTE-V2X·5G-V2X)는 이동통신 기반",
+       "국내는 2023년 LTE-V2X를 단일 표준으로 결정해 C-ITS 전국 구축 추진"
       ]
      }
     ]
    },
    {
-    "title": "협력형 ITS 운영",
+    "title": "서비스와 ITS 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "서비스: 위험 경고·교차로",
       "items": [
-       "교통약자보호: 협력형 ITS에서 교통약자보호를 다루는 핵심 암기 포인트",
-       "긴급상황 지원: 협력형 ITS에서 긴급상황 지원을 다루는 핵심 암기 포인트"
+       "전방 급정거·낙하물 경고, SPaT(신호 정보) 기반 교차로 통행 지원, 보행자·교통약자 접근 경고"
+      ]
+     },
+     {
+      "title": "비교: 기존 ITS 대비",
+      "items": [
+       "기존 ITS는 인프라 중심 정보 제공, C-ITS는 V2X(Vehicle-to-Everything)로 차량이 주체가 되는 양방향 실시간 협력"
       ]
      }
     ]
@@ -15529,23 +15659,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "V2V",
-   "V2I",
-   "V2R",
-   "V2P",
-   "V2C",
-   "IVN 안전운전지원",
-   "자율주행지원",
-   "교차로 통행 지원",
-   "교통약자보호",
-   "긴급상황 지원"
+   "V2X(Vehicle-to-Everything)",
+   "V2V(차량-차량)",
+   "V2I(차량-인프라)",
+   "V2P(차량-보행자)",
+   "V2N(차량-네트워크)",
+   "WAVE(IEEE 802.11p)",
+   "C-V2X(LTE-V2X·5G-V2X)",
+   "RSU·OBU",
+   "C-ITS 센터",
+   "보안인증체계(SCMS·PKI)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_182",
@@ -15558,60 +15689,91 @@
   ],
   "en": "Vehicle-to-Vehicle",
   "dueum": null,
-  "name": "차량간통신(V2V)",
-  "title": "차량간통신(V2V)",
-  "definition": "가까운 차량의 위치정보 및 속도정도 등을 공유하면서 앞 차량과의 거리가 너무 근접하면 자동으로 브레이크를작동함, 갑작스러운 충돌, 끼어들기 등이 예상되면 경보와 함게 스스로 차로를 변경함",
+  "name": "차량 간 통신(V2V, Vehicle-to-Vehicle)",
+  "title": "차량 간 통신(V2V, Vehicle-to-Vehicle)",
+  "definition": "차량 애드혹 네트워크(VANET)의 요소기술로, 주행 중인 차량끼리 위치·속도·제동 상태를 주기적으로 브로드캐스팅하고 멀티홉으로 전달해 충돌 위험을 사전에 경고·회피하는 차량 간 직접 무선통신 기술",
   "keywords_must": [
-   "VANET",
-   "차량간 멀티홉 통신 기술",
-   "WAVE",
-   "브로드캐스팅",
-   "V2X",
-   "V2X의 종류",
-   "V2V 요구사항",
-   "V2"
+   "VANET(Vehicle Ad-hoc Network)",
+   "멀티홉 전달",
+   "기본 안전 메시지(BSM) 브로드캐스팅",
+   "WAVE(IEEE 802.11p)",
+   "C-V2X PC5 직접 통신",
+   "EEBL(긴급 제동등 경고)",
+   "SVA(전방 정지·저속 차량 경고)",
+   "가명 인증서(Pseudonym Certificate)",
+   "저지연·고신뢰"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "V2I·V2P·V2N·V2G",
+   "DSRC",
+   "RCHA(전방 도로 위험)",
+   "군집주행(Platooning)",
+   "SCMS"
+  ],
   "keywords": [
-   "핵심: VANET · 차량간 멀티홉 통신 기술 · WAVE",
-   "기술: 브로드캐스팅 · V2X · V2X의 종류",
-   "운영: V2V 요구사항 · V2"
+   "통신: VANET · 멀티홉 · BSM 브로드캐스팅 · WAVE / C-V2X PC5",
+   "서비스: EEBL · SVA · RCHA · 교차로 충돌 경고 · 군집주행",
+   "요구사항: 호환성 · 자체 구성 · 보안성 · 프라이버시(가명 인증서)"
   ],
   "outline": [
-   "교통 효율성 증대 통신기술, V2V 의 개요",
-   "- V2V(Vehicle to Vehicle)의 정의",
-   "- V2X 의 종류",
-   "- V2V 요구사항",
-   "V2X 구성도에서의 V2V 개념도 및 기술요소",
-   "- V2X 구성도에서의 V2V 개념도",
-   "V2V(Vehicle to Vehicle) 적용 시 고려사항",
-   "- 차량간통신 요점"
+   "V2X 속 위치",
+   "- V2X 유형: 통신 상대",
+   "- 동작: BSM 방송",
+   "통신 기술과 안전 서비스",
+   "- 통신: WAVE·PC5",
+   "- 서비스: 제동·전방 경고",
+   "적용 요구사항",
+   "- 성능: 저지연·호환",
+   "- 보안: 서명·가명"
   ],
   "sections": [
    {
-    "title": "차량간통신 핵심",
+    "title": "V2X 속 위치",
     "subsections": [
      {
-      "title": null,
+      "title": "V2X 유형: 통신 상대",
       "items": [
-       "VANET: VANET를 차량간통신 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "차량간 멀티홉 통신 기술: 차량간통신에서 차량간 멀티홉 통신 기술을 다루는 핵심 암기 포인트",
-       "WAVE: WAVE를 차량간통신 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "브로드캐스팅: 차량간통신에서 브로드캐스팅을 다루는 핵심 암기 포인트"
+       "V2I(인프라)·V2P(보행자)·V2N(이동통신망)·V2G(전력망) 중 V2V는 인프라 없이 차량끼리 직접 통신"
+      ]
+     },
+     {
+      "title": "동작: BSM 방송",
+      "items": [
+       "기본 안전 메시지(BSM) 브로드캐스팅: 초당 약 10회 위치·속도·방향 송신, VANET 멀티홉으로 시야 밖 차량까지 전달"
       ]
      }
     ]
    },
    {
-    "title": "차량간통신 구성·기술",
+    "title": "통신 기술과 안전 서비스",
     "subsections": [
      {
-      "title": null,
+      "title": "통신: WAVE·PC5",
       "items": [
-       "V2X: V2X를 차량간통신 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "V2X의 종류: 차량간통신에서 V2X의 종류를 다루는 핵심 암기 포인트",
-       "V2V 요구사항: 차량간통신에서 V2V 요구사항을 다루는 핵심 암기 포인트",
-       "V2: V2를 차량간통신 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "WAVE(IEEE 802.11p): 5.9GHz 근거리 통신, C-V2X는 기지국 없이 PC5 인터페이스로 직접 통신"
+      ]
+     },
+     {
+      "title": "서비스: 제동·전방 경고",
+      "items": [
+       "EEBL(긴급 제동등 경고): 앞앞 차의 급제동을 즉시 전달, SVA는 전방 정지·저속 차량, RCHA는 전방 노면 위험 경고"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 요구사항",
+    "subsections": [
+     {
+      "title": "성능: 저지연·호환",
+      "items": [
+       "100ms 이내 지연과 높은 전달 성공률, WAVE·C-V2X 간 호환과 단말 보급률 확보가 효과의 전제"
+      ]
+     },
+     {
+      "title": "보안: 서명·가명",
+      "items": [
+       "메시지 전자서명으로 위조 차단, 가명 인증서(Pseudonym Certificate)를 주기적으로 교체해 차량 위치 추적 방지"
       ]
      }
     ]
@@ -15620,21 +15782,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "VANET",
-   "차량간 멀티홉 통신 기술",
-   "WAVE",
-   "브로드캐스팅",
-   "V2X",
-   "V2X의 종류",
-   "V2V 요구사항",
-   "V2"
+   "VANET(Vehicle Ad-hoc Network)",
+   "멀티홉 전달",
+   "기본 안전 메시지(BSM) 브로드캐스팅",
+   "WAVE(IEEE 802.11p)",
+   "C-V2X PC5 직접 통신",
+   "EEBL(긴급 제동등 경고)",
+   "SVA(전방 정지·저속 차량 경고)",
+   "가명 인증서(Pseudonym Certificate)",
+   "저지연·고신뢰"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_183",
@@ -15645,78 +15809,101 @@
    210,
    212
   ],
-  "en": "LDT",
+  "en": "Location Determination Technology",
   "dueum": null,
-  "name": "디지털서비스(LDT)",
-  "title": "디지털서비스(LDT)",
-  "definition": "위치기반 서비스(LBS) 제공을 위해 모바일 단말의 위치를 측정하는 위치 확인 기술",
+  "name": "무선 측위 기술(LDT, Location Determination Technology)",
+  "title": "무선 측위 기술(LDT, Location Determination Technology)",
+  "definition": "위치기반 서비스(LBS) 제공을 위해 기지국 신호·위성 신호·Wi-Fi 등을 이용해 이동 단말의 위치를 계산하는 기술로, 측정 주체에 따라 네트워크 기반·단말 기반·혼합 방식으로 구분됨",
   "keywords_must": [
-   "네트워크",
-   "위성신호",
-   "Wi-Fi",
-   "혼합",
+   "네트워크 기반 측위",
+   "단말 기반 측위",
+   "혼합 측위(Hybrid)",
    "Cell ID",
-   "AOA",
-   "TOA",
-   "TDOA",
-   "RSSI",
-   "E-OTD"
+   "도래각(AOA, Angle of Arrival)",
+   "도래시간(TOA, Time of Arrival)",
+   "도래시간차(TDOA)",
+   "E-OTD(Enhanced Observed Time Difference)",
+   "A-GPS(Assisted GPS)",
+   "수신신호세기(RSSI)"
   ],
   "keywords_ref": [
-   "LBS",
-   "OTD"
+   "DGPS",
+   "Wi-Fi 측위(WPS)",
+   "삼변측량",
+   "긴급구조 위치정보(E911·119)",
+   "위치정보법"
   ],
   "keywords": [
-   "핵심: 네트워크 · 위성신호 · Wi-Fi",
-   "기술: 혼합 · Cell ID · AOA",
-   "운영: TOA · TDOA · RSSI",
-   "참고: LBS · OTD"
+   "네트워크 기반: Cell ID · AOA · TOA · TDOA",
+   "단말 기반: GPS · E-OTD · Wi-Fi(RSSI)",
+   "혼합: A-GPS(망이 위성 보조정보 제공) · Cell ID + GPS"
   ],
   "outline": [
-   "LBS 무선측위기술, LDT 개요",
-   "- 디지털서비스의 정의",
-   "- 디지털서비스의 등장 배경",
-   "무선측위기술",
-   "- 디지털서비스의 핵심 요소",
-   "- 디지털서비스의 구조"
+   "측위 방식 분류",
+   "- 네트워크 기반: 기지국 계산",
+   "- 단말 기반: 단말 계산",
+   "- 혼합: A-GPS",
+   "네트워크 측위 원리",
+   "- 셀·각도: Cell ID·AOA",
+   "- 시간: TOA·TDOA",
+   "단말 측위와 적용",
+   "- 단말 측정: E-OTD·RSSI",
+   "- 적용: 긴급구조·LBS"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "측위 방식 분류",
     "subsections": [
      {
-      "title": null,
+      "title": "네트워크 기반: 기지국 계산",
       "items": [
-       "네트워크: 디지털서비스에서 네트워크를 다루는 핵심 암기 포인트",
-       "위성신호: 디지털서비스에서 위성신호를 다루는 핵심 암기 포인트",
-       "Wi-Fi: Wi-Fi를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "혼합: 디지털서비스에서 혼합을 다루는 핵심 암기 포인트"
+       "기지국이 단말 신호를 측정해 위치 계산, 단말 수정 불필요하나 기지국 밀도에 정확도 좌우"
+      ]
+     },
+     {
+      "title": "단말 기반: 단말 계산",
+      "items": [
+       "단말이 위성·기지국 신호를 직접 측정, GPS는 수 m 정확도이나 실내·음영지역 취약"
+      ]
+     },
+     {
+      "title": "혼합: A-GPS",
+      "items": [
+       "A-GPS(Assisted GPS): 망이 위성 궤도·시각 보조정보를 내려줘 초기 위치 확보 시간(TTFF) 단축"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "네트워크 측위 원리",
     "subsections": [
      {
-      "title": null,
+      "title": "셀·각도: Cell ID·AOA",
       "items": [
-       "Cell ID: 디지털서비스에서 Cell ID를 다루는 핵심 암기 포인트",
-       "AOA: AOA를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "TOA: TOA를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "TDOA: TDOA를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "Cell ID: 접속 기지국 위치로 추정, 수백 m~수 km 오차, AOA는 2개 이상 기지국 안테나의 신호 도래 각도 교차점"
+      ]
+     },
+     {
+      "title": "시간: TOA·TDOA",
+      "items": [
+       "TOA: 3개 기지국까지 전파 도달 시간으로 원의 교점 계산, TDOA는 도달 시간 차로 쌍곡선 교점 계산해 단말 시각 동기 불필요"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "단말 측위와 적용",
     "subsections": [
      {
-      "title": null,
+      "title": "단말 측정: E-OTD·RSSI",
       "items": [
-       "RSSI: RSSI를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "E-OTD: E-OTD를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "E-OTD: 단말이 여러 기지국 신호 도착 시간 차를 측정(GSM), RSSI는 Wi-Fi 신호 세기로 거리 추정"
+      ]
+     },
+     {
+      "title": "적용: 긴급구조·LBS",
+      "items": [
+       "119 긴급구조 위치 조회는 Cell ID·GPS·Wi-Fi 혼합 사용, 위치정보법에 따른 수집 동의·보호 필요"
       ]
      }
     ]
@@ -15725,23 +15912,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "네트워크",
-   "위성신호",
-   "Wi-Fi",
-   "혼합",
+   "네트워크 기반 측위",
+   "단말 기반 측위",
+   "혼합 측위(Hybrid)",
    "Cell ID",
-   "AOA",
-   "TOA",
-   "TDOA",
-   "RSSI",
-   "E-OTD"
+   "도래각(AOA, Angle of Arrival)",
+   "도래시간(TOA, Time of Arrival)",
+   "도래시간차(TDOA)",
+   "E-OTD(Enhanced Observed Time Difference)",
+   "A-GPS(Assisted GPS)",
+   "수신신호세기(RSSI)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_185",
@@ -15752,64 +15940,100 @@
    223,
    227
   ],
-  "en": "Positioning Technology",
+  "en": "Indoor Positioning Technology",
   "dueum": null,
-  "name": "측위기술(Positioning Technology)",
-  "title": "측위기술(Positioning Technology)",
-  "definition": "위성·이동통신·무선랜·센서 등으로 단말의 절대·상대 위치를 추정하는 기술. LBS·내비·물류·안전의 기반이다.",
+  "name": "실내 측위 기술(Indoor Positioning Technology)",
+  "title": "실내 측위 기술(Indoor Positioning Technology)",
+  "definition": "위성 신호가 닿지 않는 건물·지하 공간에서 Wi-Fi·BLE 비콘·UWB·관성센서 등을 이용해 사용자나 사물의 위치를 미터 이하~수 미터 정확도로 파악하는 측위 기술",
   "keywords_must": [
-   "측위기술의 핵심 요소",
-   "측위기술의 구조",
-   "측위기술의 적용",
-   "측위기술의 과제",
-   "LBS",
-   "전파예측기반(RSSI,삼각측량)",
-   "서비스(LBS)"
+   "핑거프린트(Fingerprint) 방식",
+   "전파 모델 기반 삼변측량(RSSI)",
+   "셀 ID(근접) 방식",
+   "BLE 비콘",
+   "초광대역(UWB)",
+   "보행자 추측항법(PDR)",
+   "적외선·초음파 측위",
+   "하이브리드 측위",
+   "지자기 측위"
   ],
   "keywords_ref": [
-   "RSSI"
+   "Wi-Fi RTT(IEEE 802.11mc)",
+   "실내 지도",
+   "실시간 위치 추적(RTLS)",
+   "칼만 필터",
+   "다중경로(Multipath) 오차"
   ],
   "keywords": [
-   "핵심: 측위기술의 핵심 요소 · 측위기술의 구조 · 측위기술의 적용",
-   "기술: 측위기술의 과제 · LBS · 전파예측기반(RSSI,삼각측량)",
-   "운영: 서비스(LBS)",
-   "참고: RSSI"
+   "무선랜 방식: 셀 ID · 핑거프린트 · 전파 모델(RSSI 삼변측량) · 하이브리드",
+   "신호 매체: Wi-Fi · BLE 비콘 · UWB · 적외선 · 초음파 · 지자기",
+   "보완: PDR(관성센서) + 무선 측위 융합(칼만 필터)"
   ],
   "outline": [
-   "측위기술의 개요",
-   "- 측위기술의 정의",
-   "- 측위기술의 등장 배경",
-   "측위기술의 구성과 핵심 요소",
-   "- 측위기술의 핵심 요소",
-   "- 측위기술의 구조",
-   "측위기술의 적용과 사례",
-   "- 측위기술의 적용",
-   "- 측위기술의 과제"
+   "실내 측위의 필요성",
+   "- 한계: 위성 음영",
+   "무선랜 측위 방식",
+   "- 근접: 셀 ID",
+   "- 학습: 핑거프린트",
+   "- 계산: 전파 모델·하이브리드",
+   "신호 매체별 특성",
+   "- 저비용: BLE·Wi-Fi",
+   "- 고정밀: UWB",
+   "- 센서 융합: PDR"
   ],
   "sections": [
    {
-    "title": "측위기술 핵심",
+    "title": "실내 측위의 필요성",
     "subsections": [
      {
-      "title": null,
+      "title": "한계: 위성 음영",
       "items": [
-       "측위기술의 핵심 요소: 측위기술에서 측위기술의 핵심 요소를 다루는 핵심 암기 포인트",
-       "측위기술의 구조: 측위기술에서 측위기술의 구조를 다루는 핵심 암기 포인트",
-       "측위기술의 적용: 측위기술에서 측위기술의 적용을 다루는 핵심 암기 포인트",
-       "측위기술의 과제: 측위기술에서 측위기술의 과제를 다루는 핵심 암기 포인트"
+       "GPS 신호는 실내·지하에서 감쇠·다중경로(Multipath)로 사용 불가, 대형 쇼핑몰·병원·공장·긴급구조 수요 증가"
       ]
      }
     ]
    },
    {
-    "title": "측위기술 구성·기술",
+    "title": "무선랜 측위 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "근접: 셀 ID",
       "items": [
-       "LBS: LBS를 측위기술 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "전파예측기반(RSSI,삼각측량): 측위기술에서 전파예측기반(RSSI,삼각측량)을 다루는 핵심 암기 포인트",
-       "서비스(LBS): 측위기술에서 서비스(LBS)를 다루는 핵심 암기 포인트"
+       "셀 ID(근접) 방식: 접속 AP 위치로 추정, 구현 간단하나 AP 간격만큼 오차"
+      ]
+     },
+     {
+      "title": "학습: 핑거프린트",
+      "items": [
+       "핑거프린트(Fingerprint) 방식: 지점별 RSSI 패턴을 사전 수집한 DB와 실시간 측정값 비교, 환경 변화 시 재수집 부담"
+      ]
+     },
+     {
+      "title": "계산: 전파 모델·하이브리드",
+      "items": [
+       "전파 모델 기반 삼변측량(RSSI): 신호 감쇠 모델로 거리 환산 후 3개 이상 AP로 위치 계산, 하이브리드는 방식 결합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "신호 매체별 특성",
+    "subsections": [
+     {
+      "title": "저비용: BLE·Wi-Fi",
+      "items": [
+       "BLE 비콘: 저전력·저비용으로 수 m 정확도, Wi-Fi RTT는 왕복 시간 측정으로 1~2m 수준"
+      ]
+     },
+     {
+      "title": "고정밀: UWB",
+      "items": [
+       "초광대역(UWB): 나노초 펄스로 ToF 측정, 수십 cm 정확도로 RTLS·디지털 키에 사용"
+      ]
+     },
+     {
+      "title": "센서 융합: PDR",
+      "items": [
+       "보행자 추측항법(PDR): 가속도·자이로로 걸음 수·방향 누적, 오차 누적을 무선 측위로 보정"
       ]
      }
     ]
@@ -15818,20 +16042,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "측위기술의 핵심 요소",
-   "측위기술의 구조",
-   "측위기술의 적용",
-   "측위기술의 과제",
-   "LBS",
-   "전파예측기반(RSSI,삼각측량)",
-   "서비스(LBS)"
+   "핑거프린트(Fingerprint) 방식",
+   "전파 모델 기반 삼변측량(RSSI)",
+   "셀 ID(근접) 방식",
+   "BLE 비콘",
+   "초광대역(UWB)",
+   "보행자 추측항법(PDR)",
+   "적외선·초음파 측위",
+   "하이브리드 측위",
+   "지자기 측위"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_186",
@@ -15844,59 +16071,98 @@
   ],
   "en": "Global Positioning System",
   "dueum": null,
-  "name": "GPS(Global Positioning System)",
-  "title": "GPS(Global Positioning System)",
-  "definition": "지구상의 어느곳에나 인공위성에서 보내오는 정보를 수신하여 정지 또는 이동하는 물체의 위치를 측정 할 수있는 전천후 위치측정 시스템",
+  "name": "위성항법시스템(GPS, Global Positioning System)",
+  "title": "위성항법시스템(GPS, Global Positioning System)",
+  "definition": "미국이 운용하는 위성항법시스템으로, 약 20,200km 궤도의 위성들이 보내는 시각·궤도 신호를 수신기가 4개 이상 받아 전파 도달 시간으로 거리를 구하고 3차원 위치와 시각을 계산하는 전천후 측위 체계",
   "keywords_must": [
-   "GPS의 핵심 요소",
-   "GPS의 구조",
-   "GPS의 적용",
-   "GPS의 과제",
-   "LDT(Location Determination Technology)",
-   "LBS(Location Based Service)",
-   "GNSS"
+   "우주 부문(위성군)",
+   "관제 부문(Control Segment)",
+   "사용자 부문(수신기)",
+   "의사거리(Pseudorange)",
+   "4개 위성 측위",
+   "수신기 시계 오차",
+   "궤도력(Ephemeris)·알마낙(Almanac)",
+   "L1·L2·L5 신호",
+   "오차 요인(전리층·대류층·다중경로)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "GNSS(GLONASS·Galileo·BeiDou)",
+   "KPS(한국형 위성항법시스템)",
+   "DGPS·RTK",
+   "SBAS",
+   "정밀도 저하율(DOP)"
+  ],
   "keywords": [
-   "핵심: GPS의 핵심 요소 · GPS의 구조 · GPS의 적용",
-   "기술: GPS의 과제 · LDT(Location Determination Technology) · LBS(Location Based Service)",
-   "운영: GNSS"
+   "구성: 우주 부문(24기 이상 위성) · 관제 부문 · 사용자 부문",
+   "원리: 의사거리 × 4개 위성 → 위도·경도·고도 + 시계 오차",
+   "오차: 위성 시계·궤도 · 전리층·대류층 지연 · 다중경로 · DOP"
   ],
   "outline": [
-   "GPS 의 개요",
-   "- GPS 의 정의",
-   "- GPS 의 등장 배경",
-   "GPS 의 구성과 핵심 요소",
-   "- GPS 의 핵심 요소",
-   "- GPS 의 구조",
-   "GPS 의 적용과 사례",
-   "- GPS 의 적용",
-   "- GPS 의 과제"
+   "3대 구성 부문",
+   "- 우주: 위성군",
+   "- 지상·사용자: 관제·수신기",
+   "측위 원리",
+   "- 거리: 의사거리",
+   "- 해: 4개 위성",
+   "- 항법 메시지: 궤도 정보",
+   "오차와 보정·확장",
+   "- 오차: 대기·반사",
+   "- 보정·GNSS: 다중 시스템"
   ],
   "sections": [
    {
-    "title": "GPS 핵심",
+    "title": "3대 구성 부문",
     "subsections": [
      {
-      "title": null,
+      "title": "우주: 위성군",
       "items": [
-       "GPS의 핵심 요소: GPS에서 GPS의 핵심 요소를 다루는 핵심 암기 포인트",
-       "GPS의 구조: GPS에서 GPS의 구조를 다루는 핵심 암기 포인트",
-       "GPS의 적용: GPS에서 GPS의 적용을 다루는 핵심 암기 포인트",
-       "GPS의 과제: GPS에서 GPS의 과제를 다루는 핵심 암기 포인트"
+       "우주 부문(위성군): 6개 궤도면에 24기 이상, 약 20,200km 고도, 원자시계 탑재로 정밀 시각 송신"
+      ]
+     },
+     {
+      "title": "지상·사용자: 관제·수신기",
+      "items": [
+       "관제 부문(Control Segment): 위성 궤도·시계 감시와 보정값 업로드, 사용자 부문(수신기)은 신호 수신·위치 계산"
       ]
      }
     ]
    },
    {
-    "title": "GPS 구성·기술",
+    "title": "측위 원리",
     "subsections": [
      {
-      "title": null,
+      "title": "거리: 의사거리",
       "items": [
-       "LDT(Location Determination Technology): LDT를 GPS 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "LBS(Location Based Service): LBS를 GPS 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "GNSS: GNSS를 GPS 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "의사거리(Pseudorange): 신호 송신·수신 시각 차 × 광속, 수신기 시계 오차가 포함되어 '의사'라 부름"
+      ]
+     },
+     {
+      "title": "해: 4개 위성",
+      "items": [
+       "4개 위성 측위: 미지수 x·y·z와 수신기 시계 오차 4개를 풀기 위해 최소 4기 필요"
+      ]
+     },
+     {
+      "title": "항법 메시지: 궤도 정보",
+      "items": [
+       "궤도력(Ephemeris)은 개별 위성의 정밀 궤도, 알마낙(Almanac)은 전체 위성의 개략 궤도로 탐색 시간 단축"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "오차와 보정·확장",
+    "subsections": [
+     {
+      "title": "오차: 대기·반사",
+      "items": [
+       "오차 요인(전리층·대류층·다중경로): 대기 굴절에 의한 지연, 건물 반사 신호, 위성 배치가 나쁘면 DOP 증가"
+      ]
+     },
+     {
+      "title": "보정·GNSS: 다중 시스템",
+      "items": [
+       "DGPS·RTK·SBAS로 cm~m급 보정, GLONASS·Galileo·BeiDou와 함께 GNSS로 수신, 한국은 KPS 개발 중"
       ]
      }
     ]
@@ -15905,13 +16171,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "GPS의 핵심 요소",
-   "GPS의 구조",
-   "GPS의 적용",
-   "GPS의 과제",
-   "LDT(Location Determination Technology)",
-   "LBS(Location Based Service)",
-   "GNSS"
+   "우주 부문(위성군)",
+   "관제 부문(Control Segment)",
+   "사용자 부문(수신기)",
+   "의사거리(Pseudorange)",
+   "4개 위성 측위",
+   "수신기 시계 오차",
+   "궤도력(Ephemeris)·알마낙(Almanac)",
+   "L1·L2·L5 신호",
+   "오차 요인(전리층·대류층·다중경로)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -15921,7 +16189,8 @@
   "warnings": [],
   "gloss": {
    "GPS": "Global Positioning System"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_187",
