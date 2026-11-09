@@ -15662,6 +15662,300 @@
    "NAT-T": "NAT Traversal"
   }
  },
+ "SE_108": {
+  "title": "MPLS VPN(Multiprotocol Label Switching VPN)",
+  "category": "SE > VPN > MPLS (VPN)",
+  "definition": "통신사업자의 MPLS 망에서 가입자 VPN별로 레이블과 라우팅 테이블을 분리해 패킷을 스위칭함으로써, 공용 백본 위에 서로 격리된 사설망과 품질 보장(QoS)을 제공하는 사업자 기반 VPN",
+  "keywords": [
+   "구성 장비: 고객 경계(CE) 라우터 · 사업자 경계(PE) 라우터 · 사업자 코어(P) 라우터",
+   "핵심 요소: VPN 라우팅·포워딩 테이블(VRF) · 레이블(VPN·전송) · MP-BGP",
+   "유형: 3계층 MPLS VPN · 2계층 VPN(VPWS·VPLS)",
+   "특징: 가입자별 트래픽 분리 · 품질 보장(QoS) · 주소 공간 중복 허용"
+  ],
+  "sections": [
+   {
+    "title": "동작",
+    "subsections": [
+     {
+      "title": "1 수신",
+      "items": [
+       "CE가 일반 IP 패킷을 PE로 전달"
+      ]
+     },
+     {
+      "title": "2 분류",
+      "items": [
+       "PE가 가입자 VRF에서 경로를 찾고 VPN 레이블과 전송 레이블 부착"
+      ]
+     },
+     {
+      "title": "3 전달",
+      "items": [
+       "P 라우터는 전송 레이블만 보고 고속 스위칭"
+      ]
+     },
+     {
+      "title": "4 해제",
+      "items": [
+       "반대편 PE가 VPN 레이블로 해당 VRF를 찾아 CE에 전달"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 관점",
+    "subsections": [
+     {
+      "title": "분리",
+      "items": [
+       "VPN마다 라우팅·주소 공간을 나눠 다른 VPN에서 접근 불가"
+      ]
+     },
+     {
+      "title": "암호화 부재",
+      "items": [
+       "망 분리일 뿐 기밀성 암호화는 없음"
+      ]
+     },
+     {
+      "title": "보완",
+      "items": [
+       "민감 트래픽은 IPSec 병행, PE 설정 관리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형별 차이",
+    "subsections": [
+     {
+      "title": "3계층",
+      "items": [
+       "PE가 고객 경로를 학습해 IP 라우팅 제공"
+      ]
+     },
+     {
+      "title": "2계층 점대점",
+      "items": [
+       "회선 에뮬레이션(VPWS)"
+      ]
+     },
+     {
+      "title": "2계층 다지점",
+      "items": [
+       "이더넷 LAN 확장(VPLS)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "동작",
+   "- 1 수신",
+   "- 2 분류",
+   "- 3 전달",
+   "- 4 해제",
+   "보안 관점",
+   "- 분리",
+   "- 암호화 부재",
+   "- 보완",
+   "유형별 차이",
+   "- 3계층",
+   "- 2계층 점대점",
+   "- 2계층 다지점"
+  ],
+  "name": "MPLS VPN(Multiprotocol Label Switching VPN)",
+  "en": "MPLS VPN",
+  "keywords_must": [
+   "고객 경계(CE) 라우터",
+   "사업자 경계(PE) 라우터",
+   "사업자 코어(P) 라우터",
+   "VPN 라우팅·포워딩 테이블(VRF)",
+   "레이블(VPN·전송)",
+   "MP-BGP",
+   "3계층 MPLS VPN",
+   "2계층 VPN(VPWS·VPLS)",
+   "가입자별 트래픽 분리",
+   "품질 보장(QoS)",
+   "주소 공간 중복 허용"
+  ],
+  "keywords_ref": [
+   "경로 구분자(RD)·경로 대상(RT)",
+   "BGP/MPLS IP VPN(RFC 4364)",
+   "레이블 교환 경로(LSP)",
+   "암호화는 기본 제공하지 않아 IPSec 결합",
+   "영상회의·VoIP 통합",
+   "SD-WAN과 혼용 추세"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "고객 경계(CE) 라우터",
+   "사업자 경계(PE) 라우터",
+   "사업자 코어(P) 라우터",
+   "VPN 라우팅·포워딩 테이블(VRF)",
+   "레이블(VPN·전송)",
+   "MP-BGP",
+   "3계층 MPLS VPN",
+   "2계층 VPN(VPWS·VPLS)",
+   "가입자별 트래픽 분리",
+   "품질 보장(QoS)",
+   "주소 공간 중복 허용"
+  ],
+  "gloss": {
+   "CE": "Customer Edge",
+   "PE": "Provider Edge",
+   "P": "Provider",
+   "VRF": "VPN Routing and Forwarding",
+   "MP-BGP": "Multiprotocol BGP",
+   "VPWS": "Virtual Private Wire Service",
+   "VPLS": "Virtual Private LAN Service",
+   "QoS": "Quality of Service",
+   "RD": "Route Distinguisher",
+   "RT": "Route Target",
+   "LSP": "Label Switched Path",
+   "SD-WAN": "Software-Defined WAN"
+  }
+ },
+ "SE_109": {
+  "title": "모바일 VPN(MoVPN, Mobile VPN)",
+  "category": "SE > VPN > MoVPN",
+  "definition": "스마트폰·노트북 같은 모바일 단말이 LTE·5G·무선랜 사이를 이동하거나 연결이 끊겨도 VPN 세션과 애플리케이션 연결을 유지하면서 암호화 통신을 제공하는 VPN",
+  "keywords": [
+   "구성 요소: VPN 게이트웨이 · 모바일 VPN 클라이언트 · 무선 네트워크",
+   "핵심 기술: IPSec 터널 · 모바일 IP 결합 · 세션 지속성(로밍)",
+   "장점: 이동 중 접속 유지 · 앱 재로그인 불필요 · 업무 생산성",
+   "단점: 단말 분실·악성 앱 위협 · 무선 구간 공격 노출"
+  ],
+  "sections": [
+   {
+    "title": "구성 장치",
+    "subsections": [
+     {
+      "title": "게이트웨이",
+      "items": [
+       "사내망과 연동하며 터널 종단, 인증·암호화"
+      ]
+     },
+     {
+      "title": "클라이언트",
+      "items": [
+       "단말에서 데이터 전송 요청, 인증·암복호화 수행"
+      ]
+     },
+     {
+      "title": "무선망",
+      "items": [
+       "LTE·5G·무선랜 등 이동 통신 기반"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작",
+    "subsections": [
+     {
+      "title": "1 터널 수립",
+      "items": [
+       "단말과 게이트웨이 간 IPSec 터널 생성"
+      ]
+     },
+     {
+      "title": "2 이동",
+      "items": [
+       "망이 바뀌어 IP가 변해도 가상 주소·세션 유지"
+      ]
+     },
+     {
+      "title": "3 재연결",
+      "items": [
+       "끊김 후 자동 재연결, 애플리케이션 세션 보존"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "도입 고려",
+    "subsections": [
+     {
+      "title": "단말 보안",
+      "items": [
+       "분실·탈옥 단말 차단, MDM 연동"
+      ]
+     },
+     {
+      "title": "인증",
+      "items": [
+       "인증서·다중 인증"
+      ]
+     },
+     {
+      "title": "성능",
+      "items": [
+       "배터리·대역폭 부담 최소화"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "구성 장치",
+   "- 게이트웨이",
+   "- 클라이언트",
+   "- 무선망",
+   "동작",
+   "- 1 터널 수립",
+   "- 2 이동",
+   "- 3 재연결",
+   "도입 고려",
+   "- 단말 보안",
+   "- 인증",
+   "- 성능"
+  ],
+  "name": "모바일 VPN(MoVPN, Mobile VPN)",
+  "en": "Mobile Virtual Private Network",
+  "keywords_must": [
+   "VPN 게이트웨이",
+   "모바일 VPN 클라이언트",
+   "무선 네트워크",
+   "IPSec 터널",
+   "모바일 IP 결합",
+   "세션 지속성(로밍)",
+   "이동 중 접속 유지",
+   "앱 재로그인 불필요",
+   "업무 생산성",
+   "단말 분실·악성 앱 위협",
+   "무선 구간 공격 노출"
+  ],
+  "keywords_ref": [
+   "RFC 5265: 모바일 IPv4의 IPSec VPN 게이트웨이 통과",
+   "등장 배경: 모바일 금융 거래 증가, 무선 구간 취약",
+   "스마트 워크",
+   "단말 관리(MDM) 연동",
+   "IKEv2 MOBIKE(RFC 4555)",
+   "상시 연결(Always-on) VPN"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "VPN 게이트웨이",
+   "모바일 VPN 클라이언트",
+   "무선 네트워크",
+   "IPSec 터널",
+   "모바일 IP 결합",
+   "세션 지속성(로밍)",
+   "이동 중 접속 유지",
+   "앱 재로그인 불필요",
+   "업무 생산성",
+   "단말 분실·악성 앱 위협",
+   "무선 구간 공격 노출"
+  ],
+  "gloss": {
+   "MDM": "Mobile Device Management",
+   "MOBIKE": "IKEv2 Mobility and Multihoming",
+   "IKEv2": "Internet Key Exchange version 2"
+  }
+ },
  "SE_110": {
   "title": "오픈VPN(OpenVPN)",
   "category": "SE > NW > 이동통신기술 > OpenVPN",
@@ -15960,6 +16254,155 @@
    "보고"
   ],
   "dueum": "정재신연무 ; 준획보분보"
+ },
+ "SE_112": {
+  "title": "모바일 포렌식(Mobile Forensics)",
+  "category": "SE > 정보보안",
+  "definition": "스마트폰 등 모바일 기기에 저장된 데이터를 법정에서 증거 능력을 갖도록 무결성을 유지하며 수집·추출·분석·보고하는 디지털 포렌식 분야",
+  "keywords": [
+   "절차: 현장 보존 · 증거 확보 · 수집·분석 · 보고서 작성",
+   "추출 방법: 논리적 추출 · 물리적 추출(JTAG·칩오프)",
+   "대상 데이터: 통화·문자·연락처 · 위치(GPS) · 메신저·SNS · 단말 식별자(IMEI·IMSI)"
+  ],
+  "sections": [
+   {
+    "title": "절차",
+    "subsections": [
+     {
+      "title": "1 현장 보존",
+      "items": [
+       "발견 상태 촬영, 켜진 화면 캡처"
+      ]
+     },
+     {
+      "title": "2 증거 확보",
+      "items": [
+       "네트워크 차단으로 원격 삭제 방지, 전원 공급 유지, 수사 범위·권한 검토"
+      ]
+     },
+     {
+      "title": "3 수집·분석",
+      "items": [
+       "이미징 후 사본으로 추출·분석"
+      ]
+     },
+     {
+      "title": "4 보고서",
+      "items": [
+       "사건 정보, 획득 과정, 분석 결과를 객관적으로 기록"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "추출 방법",
+    "subsections": [
+     {
+      "title": "논리적",
+      "items": [
+       "USB로 파일·디렉터리 추출, 안드로이드 ADB, iOS 백업 활용"
+      ]
+     },
+     {
+      "title": "물리적",
+      "items": [
+       "플래시 메모리 전체 비트 단위 복사, JTAG·칩 분리·부트로더 이용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분석 기법",
+    "subsections": [
+     {
+      "title": "시그니처",
+      "items": [
+       "매직 넘버로 실제 파일 유형 판별"
+      ]
+     },
+     {
+      "title": "해시",
+      "items": [
+       "원본 무결성과 변경 여부 확인"
+      ]
+     },
+     {
+      "title": "타임라인",
+      "items": [
+       "생성·수정·접근 시간으로 사용 행적 재구성"
+      ]
+     },
+     {
+      "title": "앱 데이터",
+      "items": [
+       "메신저 대화, 금융 앱 인증 정보, 클라우드 계정 분석"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "절차",
+   "- 1 현장 보존",
+   "- 2 증거 확보",
+   "- 3 수집·분석",
+   "- 4 보고서",
+   "추출 방법",
+   "- 논리적",
+   "- 물리적",
+   "분석 기법",
+   "- 시그니처",
+   "- 해시",
+   "- 타임라인",
+   "- 앱 데이터"
+  ],
+  "name": "모바일 포렌식(Mobile Forensics)",
+  "en": "Mobile Forensics",
+  "keywords_must": [
+   "현장 보존",
+   "증거 확보",
+   "수집·분석",
+   "보고서 작성",
+   "논리적 추출",
+   "물리적 추출(JTAG·칩오프)",
+   "통화·문자·연락처",
+   "위치(GPS)",
+   "메신저·SNS",
+   "단말 식별자(IMEI·IMSI)"
+  ],
+  "keywords_ref": [
+   "분석 기법: 파일 시그니처·해시·타임라인(MAC 타임)",
+   "네트워크 차단(패러데이 백)",
+   "전원 유지로 활성 데이터 보존",
+   "안드로이드 ADB·루팅, iOS 백업·탈옥",
+   "플래셔 박스·부트로더",
+   "암호화·잠금 우회 한계",
+   "클라우드 동기화 데이터",
+   "연계 보관성(Chain of Custody)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "현장 보존",
+   "증거 확보",
+   "수집·분석",
+   "보고서 작성",
+   "논리적 추출",
+   "물리적 추출(JTAG·칩오프)",
+   "통화·문자·연락처",
+   "위치(GPS)",
+   "메신저·SNS",
+   "단말 식별자(IMEI·IMSI)"
+  ],
+  "gloss": {
+   "JTAG": "Joint Test Action Group",
+   "ADB": "Android Debug Bridge",
+   "IMEI": "International Mobile Equipment Identity",
+   "IMSI": "International Mobile Subscriber Identity",
+   "GPS": "Global Positioning System",
+   "MAC": "Modified, Accessed, Changed",
+   "SNS": "Social Network Service"
+  }
  },
  "SE_114": {
   "title": "안티 포렌식(Anti-Forensics)",
