@@ -1569,3 +1569,5 @@ IC: Integrated Circuit
 XNOR: Exclusive NOR
 RTL: [Register Transfer Level, Resistor-Transistor Logic]
 VTL: Virtual Tape Library
+GPIO: General Purpose Input/Output
+JVM: Java Virtual Machine

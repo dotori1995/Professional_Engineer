@@ -20219,6 +20219,976 @@
     }
   },
   {
+    "id": "CA_189",
+    "code": "CA_189",
+    "title": "자바 가상 머신(JVM, Java Virtual Machine)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 소프트웨어 실행 환경 > 가상 머신",
+    "definition": "자바 컴파일러가 만든 플랫폼 독립적인 바이트코드(.class)를 읽어 각 운영체제·하드웨어에서 실행해 주는 메모리상의 가상 컴퓨터로, 클래스 로더·실행 엔진·런타임 데이터 영역·가비지 컬렉터로 구성됨",
+    "keywords": [
+      "핵심: 바이트코드(Bytecode, .class) · 클래스 로더(Class Loader) · 실행 엔진(인터프리터 + JIT 컴파일러) · 런타임 데이터 영역(Runtime Data Area)",
+      "필수: 메서드 영역·힙(공유) · 스택·PC 레지스터·네이티브 메서드 스택(스레드별) · 가비지 컬렉터(GC) · WORA(Write Once Run Anywhere)",
+      "참고: JRE = JVM + 핵심 클래스 라이브러리 · JDK = JRE + 개발 도구 · 바이트코드 검증기로 보안 강화 · HotSpot·GraalVM · JNI로 네이티브 코드 호출 · Kotlin·Scala 등 JVM 언어"
+    ],
+    "sections": [
+      {
+        "title": "실행 특성",
+        "subsections": [
+          {
+            "title": "플랫폼 독립",
+            "items": [
+              "같은 바이트코드를 각 OS용 가상 머신이 실행"
+            ]
+          },
+          {
+            "title": "실행 속도",
+            "items": [
+              "순수 인터프리터 언어보다 빠르나 네이티브 컴파일 언어보다는 느림"
+            ]
+          },
+          {
+            "title": "자동 메모리 관리",
+            "items": [
+              "사용하지 않는 객체를 가비지 컬렉터가 회수"
+            ]
+          },
+          {
+            "title": "보안",
+            "items": [
+              "바이트코드 검증과 샌드박스로 자원 접근 보호"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "내부 구조",
+        "subsections": [
+          {
+            "title": "클래스 로더",
+            "items": [
+              "클래스 파일을 적재·링크·초기화"
+            ]
+          },
+          {
+            "title": "실행 엔진",
+            "items": [
+              "바이트코드를 해석하고 자주 쓰는 코드는 JIT로 기계어 변환"
+            ]
+          },
+          {
+            "title": "런타임 데이터 영역",
+            "items": [
+              "프로그램 실행에 필요한 메모리 영역 관리"
+            ]
+          },
+          {
+            "title": "가비지 컬렉터",
+            "items": [
+              "힙에서 참조되지 않는 객체 회수"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "런타임 메모리 영역",
+        "subsections": [
+          {
+            "title": "메서드 영역",
+            "items": [
+              "클래스 정보·상수·정적 변수, 모든 스레드가 공유"
+            ]
+          },
+          {
+            "title": "힙 영역",
+            "items": [
+              "new로 생성한 객체와 배열, 가비지 컬렉션 대상"
+            ]
+          },
+          {
+            "title": "스택 영역",
+            "items": [
+              "메서드 호출마다 지역 변수·매개변수를 담은 프레임 생성, 스레드별"
+            ]
+          },
+          {
+            "title": "PC 레지스터·네이티브 스택",
+            "items": [
+              "현재 실행 명령 위치와 네이티브 메서드 호출 정보"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      379,
+      386
+    ],
+    "outline": [
+      "실행 특성",
+      "- 플랫폼 독립",
+      "- 실행 속도",
+      "- 자동 메모리 관리",
+      "- 보안",
+      "내부 구조",
+      "- 클래스 로더",
+      "- 실행 엔진",
+      "- 런타임 데이터 영역",
+      "- 가비지 컬렉터",
+      "런타임 메모리 영역",
+      "- 메서드 영역",
+      "- 힙 영역",
+      "- 스택 영역",
+      "- PC 레지스터·네이티브 스택"
+    ],
+    "name": "자바 가상 머신(JVM, Java Virtual Machine)",
+    "en": "Java Virtual Machine",
+    "keywords_must": [
+      "바이트코드(Bytecode, .class)",
+      "클래스 로더(Class Loader)",
+      "실행 엔진(인터프리터 + JIT 컴파일러)",
+      "런타임 데이터 영역(Runtime Data Area)",
+      "메서드 영역·힙(공유)",
+      "스택·PC 레지스터·네이티브 메서드 스택(스레드별)",
+      "가비지 컬렉터(GC)",
+      "WORA(Write Once Run Anywhere)"
+    ],
+    "keywords_ref": [
+      "JRE = JVM + 핵심 클래스 라이브러리",
+      "JDK = JRE + 개발 도구",
+      "바이트코드 검증기로 보안 강화",
+      "HotSpot·GraalVM",
+      "JNI로 네이티브 코드 호출",
+      "Kotlin·Scala 등 JVM 언어"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "바이트코드(Bytecode, .class)",
+      "클래스 로더(Class Loader)",
+      "실행 엔진(인터프리터 + JIT 컴파일러)",
+      "런타임 데이터 영역(Runtime Data Area)",
+      "메서드 영역·힙(공유)",
+      "스택·PC 레지스터·네이티브 메서드 스택(스레드별)",
+      "가비지 컬렉터(GC)",
+      "WORA(Write Once Run Anywhere)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "JIT": "Just-In-Time",
+      "JRE": "Java Runtime Environment",
+      "JDK": "Java Development Kit",
+      "JNI": "Java Native Interface",
+      "WORA": "Write Once Run Anywhere",
+      "PC": "Program Counter"
+    }
+  },
+  {
+    "id": "CA_190",
+    "code": "CA_190",
+    "title": "가비지 컬렉션(Garbage Collection)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 소프트웨어 실행 환경 > 메모리 관리",
+    "definition": "프로그램 실행 중 더 이상 참조되지 않는 힙 메모리 객체를 런타임이 자동으로 찾아 회수하는 메모리 관리 기능으로, 개발자가 malloc·free로 직접 해제하는 부담과 누수·이중 해제 오류를 줄임",
+    "keywords": [
+      "핵심: 도달 가능성(Reachability)·GC 루트 · Young 영역(Eden·Survivor)·Old 영역 · Minor GC(Young 영역) · Full GC(전체·Old 영역)",
+      "필수: Copy & Scavenge(복사) · Mark & Compact(표시·압축) · Stop-the-World 정지 · 세대 가설(Weak Generational Hypothesis)",
+      "참고: 병렬 GC·동시 GC(CMS)·G1 GC(Java 9 기본) · 저지연 ZGC·Shenandoah · Java 8부터 Perm 영역을 Metaspace로 대체 · 참조 카운팅은 순환 참조 회수 불가 · 튜닝 -Xms·-Xmx 동일 설정"
+    ],
+    "sections": [
+      {
+        "title": "도입 효과",
+        "subsections": [
+          {
+            "title": "개발 편의",
+            "items": [
+              "메모리 해제 코드를 작성하지 않아도 됨"
+            ]
+          },
+          {
+            "title": "품질 향상",
+            "items": [
+              "해제 누락·이중 해제·댕글링 포인터 오류 감소"
+            ]
+          },
+          {
+            "title": "가독성",
+            "items": [
+              "메모리 관리 코드가 빠져 유지보수성 향상"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "세대별 동작",
+        "subsections": [
+          {
+            "title": "Minor GC",
+            "items": [
+              "Eden이 차면 살아 있는 객체를 Survivor로 복사, 여러 번 살아남으면 Old로 승격"
+            ]
+          },
+          {
+            "title": "Full GC",
+            "items": [
+              "Old 영역까지 표시 후 압축, 수초 정지로 응용 성능에 큰 영향"
+            ]
+          },
+          {
+            "title": "세대 가설",
+            "items": [
+              "대부분 객체는 금방 사라지므로 Young 영역을 자주, 작게 수집"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "수집 알고리즘 발전",
+        "subsections": [
+          {
+            "title": "복사 방식",
+            "items": [
+              "살아 있는 객체만 다른 공간으로 옮겨 빠르고 단편화 없음"
+            ]
+          },
+          {
+            "title": "표시·압축",
+            "items": [
+              "사용 객체를 표시하고 나머지를 지운 뒤 한쪽으로 모음"
+            ]
+          },
+          {
+            "title": "병렬·동시 수집",
+            "items": [
+              "다중 스레드로 처리하거나 응용과 함께 실행해 정지 최소화"
+            ]
+          },
+          {
+            "title": "영역 기반 수집",
+            "items": [
+              "힙을 작은 구역으로 나눠 쓰레기가 많은 구역부터 회수"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "튜닝 방안",
+        "subsections": [
+          {
+            "title": "목표 설정",
+            "items": [
+              "메모리 사용량·GC 횟수·정지 시간 목표를 먼저 수립"
+            ]
+          },
+          {
+            "title": "크기 설정",
+            "items": [
+              "초기·최대 힙 크기를 같게 해 재조정 비용 제거"
+            ]
+          },
+          {
+            "title": "알고리즘 선택",
+            "items": [
+              "응용 형태와 CPU 수에 맞춰 시험 후 수집기 결정"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      387,
+      389
+    ],
+    "outline": [
+      "도입 효과",
+      "- 개발 편의",
+      "- 품질 향상",
+      "- 가독성",
+      "세대별 동작",
+      "- Minor GC",
+      "- Full GC",
+      "- 세대 가설",
+      "수집 알고리즘 발전",
+      "- 복사 방식",
+      "- 표시·압축",
+      "- 병렬·동시 수집",
+      "- 영역 기반 수집",
+      "튜닝 방안",
+      "- 목표 설정",
+      "- 크기 설정",
+      "- 알고리즘 선택"
+    ],
+    "name": "가비지 컬렉션(Garbage Collection)",
+    "en": "Garbage Collection",
+    "keywords_must": [
+      "도달 가능성(Reachability)·GC 루트",
+      "Young 영역(Eden·Survivor)·Old 영역",
+      "Minor GC(Young 영역)",
+      "Full GC(전체·Old 영역)",
+      "Copy & Scavenge(복사)",
+      "Mark & Compact(표시·압축)",
+      "Stop-the-World 정지",
+      "세대 가설(Weak Generational Hypothesis)"
+    ],
+    "keywords_ref": [
+      "병렬 GC·동시 GC(CMS)·G1 GC(Java 9 기본)",
+      "저지연 ZGC·Shenandoah",
+      "Java 8부터 Perm 영역을 Metaspace로 대체",
+      "참조 카운팅은 순환 참조 회수 불가",
+      "튜닝 -Xms·-Xmx 동일 설정"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "도달 가능성(Reachability)·GC 루트",
+      "Young 영역(Eden·Survivor)·Old 영역",
+      "Minor GC(Young 영역)",
+      "Full GC(전체·Old 영역)",
+      "Copy & Scavenge(복사)",
+      "Mark & Compact(표시·압축)",
+      "Stop-the-World 정지",
+      "세대 가설(Weak Generational Hypothesis)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "CMS": "Concurrent Mark Sweep",
+      "G1": "Garbage First",
+      "ZGC": "Z Garbage Collector",
+      "GC": "Garbage Collection"
+    }
+  },
+  {
+    "id": "CA_191",
+    "code": "CA_191",
+    "title": "메모리 누수(Memory Leak)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 소프트웨어 실행 환경 > 메모리 관리",
+    "definition": "프로그램이 할당받은 메모리를 사용 후 반환하지 않거나 불필요한 참조를 계속 유지해, 쓰지 않는 메모리가 점유된 채 사용량이 점점 늘어나는 현상",
+    "keywords": [
+      "핵심: 미반환 메모리 · 불필요한 참조 유지 · 의도치 않은 전역 변수 · 잊힌 타이머·콜백(setInterval)",
+      "필수: DOM 외부 참조 · 클로저(Closure) 참조 · 메모리 사용량 지속 증가 · 메모리 부족(OOM)",
+      "참고: C/C++ malloc 후 free 누락 · GC 언어도 참조가 남으면 회수 불가 · 힙 덤프·프로파일러 분석 · Valgrind·AddressSanitizer · 약한 참조(WeakMap·WeakReference) · RAII·스마트 포인터"
+    ],
+    "sections": [
+      {
+        "title": "문제점",
+        "subsections": [
+          {
+            "title": "안정성 저하",
+            "items": [
+              "메모리 고갈로 비정상 종료나 오동작 발생"
+            ]
+          },
+          {
+            "title": "자원 낭비",
+            "items": [
+              "반환되지 않은 영역만큼 가용 메모리 감소"
+            ]
+          },
+          {
+            "title": "성능 저하",
+            "items": [
+              "스와핑과 잦은 가비지 컬렉션으로 응답 지연"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "자바스크립트 주요 원인",
+        "subsections": [
+          {
+            "title": "의도치 않은 전역",
+            "items": [
+              "선언 없이 쓴 변수가 전역으로 생성되어 계속 남음"
+            ]
+          },
+          {
+            "title": "잊힌 타이머",
+            "items": [
+              "주기 실행 함수가 해제되지 않아 참조 객체 유지"
+            ]
+          },
+          {
+            "title": "DOM 외부 참조",
+            "items": [
+              "테이블 셀 하나를 참조해 테이블 전체가 메모리에 남음"
+            ]
+          },
+          {
+            "title": "클로저",
+            "items": [
+              "내부 함수가 외부 변수를 붙잡아 범위가 끝나도 해제 안 됨"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "예방과 진단",
+        "subsections": [
+          {
+            "title": "명시적 해제",
+            "items": [
+              "할당과 해제를 짝지어 관리, 범위 기반 자동 해제 기법 활용"
+            ]
+          },
+          {
+            "title": "참조 정리",
+            "items": [
+              "타이머 해제·이벤트 리스너 제거·약한 참조 사용"
+            ]
+          },
+          {
+            "title": "도구 진단",
+            "items": [
+              "힙 스냅샷 비교와 메모리 검사 도구로 누수 지점 추적"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      390,
+      391
+    ],
+    "outline": [
+      "문제점",
+      "- 안정성 저하",
+      "- 자원 낭비",
+      "- 성능 저하",
+      "자바스크립트 주요 원인",
+      "- 의도치 않은 전역",
+      "- 잊힌 타이머",
+      "- DOM 외부 참조",
+      "- 클로저",
+      "예방과 진단",
+      "- 명시적 해제",
+      "- 참조 정리",
+      "- 도구 진단"
+    ],
+    "name": "메모리 누수(Memory Leak)",
+    "en": "Memory Leak",
+    "keywords_must": [
+      "미반환 메모리",
+      "불필요한 참조 유지",
+      "의도치 않은 전역 변수",
+      "잊힌 타이머·콜백(setInterval)",
+      "DOM 외부 참조",
+      "클로저(Closure) 참조",
+      "메모리 사용량 지속 증가",
+      "메모리 부족(OOM)"
+    ],
+    "keywords_ref": [
+      "C/C++ malloc 후 free 누락",
+      "GC 언어도 참조가 남으면 회수 불가",
+      "힙 덤프·프로파일러 분석",
+      "Valgrind·AddressSanitizer",
+      "약한 참조(WeakMap·WeakReference)",
+      "RAII·스마트 포인터"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "미반환 메모리",
+      "불필요한 참조 유지",
+      "의도치 않은 전역 변수",
+      "잊힌 타이머·콜백(setInterval)",
+      "DOM 외부 참조",
+      "클로저(Closure) 참조",
+      "메모리 사용량 지속 증가",
+      "메모리 부족(OOM)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "OOM": "Out Of Memory",
+      "DOM": "Document Object Model",
+      "RAII": "Resource Acquisition Is Initialization"
+    }
+  },
+  {
+    "id": "CA_192",
+    "code": "CA_192",
+    "title": "스택(Stack)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 자료구조 > 선형 구조",
+    "definition": "삽입과 삭제가 리스트의 한쪽 끝(Top)에서만 이루어지는 후입선출(LIFO) 선형 자료구조로, 함수 호출·복귀 주소 저장·수식 계산·0-주소 명령어 등에 쓰임",
+    "keywords": [
+      "핵심: 후입선출(LIFO, Last-In First-Out) · Top·Bottom · PUSH(삽입) · POP(삭제)",
+      "필수: 스택 포인터(SP) · 오버플로(Overflow)·언더플로(Underflow) · 스택 프레임(복귀 주소·EBP·ESP) · 배열·연결 리스트 구현",
+      "참고: 0-주소 명령어 형식 · 후위 표기식 계산 · 재귀 호출·인터럽트 복귀 · 스택 기반 버퍼 오버플로 공격 · 스택 가드(카나리)·DEP·ASLR 대응"
+    ],
+    "sections": [
+      {
+        "title": "기본 연산과 오류",
+        "subsections": [
+          {
+            "title": "삽입",
+            "items": [
+              "Top 위치에 값을 넣고 포인터 증가, 공간이 가득 차면 오버플로"
+            ]
+          },
+          {
+            "title": "삭제",
+            "items": [
+              "Top 값을 꺼내고 포인터 감소, 비어 있으면 언더플로"
+            ]
+          },
+          {
+            "title": "Bottom",
+            "items": [
+              "Top의 반대쪽 끝으로 삽입·삭제가 일어나지 않음"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "함수 호출 프레임",
+        "subsections": [
+          {
+            "title": "복귀 주소",
+            "items": [
+              "호출 전으로 돌아갈 명령 위치 저장"
+            ]
+          },
+          {
+            "title": "베이스 포인터",
+            "items": [
+              "현재 프레임의 시작 위치로 지역 변수 참조 기준"
+            ]
+          },
+          {
+            "title": "최상단 포인터",
+            "items": [
+              "가장 최근에 넣은 데이터 위치를 가리킴"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "구현 방식",
+        "subsections": [
+          {
+            "title": "배열",
+            "items": [
+              "용량을 정해 생성, 접근이 빠르나 크기 고정"
+            ]
+          },
+          {
+            "title": "연결 리스트",
+            "items": [
+              "노드를 동적으로 연결해 크기 제한이 없으나 포인터 오버헤드"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "컴퓨터 구조 활용",
+        "subsections": [
+          {
+            "title": "호출 관리",
+            "items": [
+              "함수·재귀 호출 순서와 활성화 레코드 관리"
+            ]
+          },
+          {
+            "title": "복귀 주소 저장",
+            "items": [
+              "인터럽트·부프로그램 호출 시 상태 보존"
+            ]
+          },
+          {
+            "title": "명령어 피연산자",
+            "items": [
+              "0-주소 명령어가 피연산자를 Top에서 꺼내 연산"
+            ]
+          },
+          {
+            "title": "보안 대응",
+            "items": [
+              "버퍼 넘침으로 복귀 주소가 덮이는 공격을 카나리 값·실행 방지로 차단"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      392,
+      401
+    ],
+    "outline": [
+      "기본 연산과 오류",
+      "- 삽입",
+      "- 삭제",
+      "- Bottom",
+      "함수 호출 프레임",
+      "- 복귀 주소",
+      "- 베이스 포인터",
+      "- 최상단 포인터",
+      "구현 방식",
+      "- 배열",
+      "- 연결 리스트",
+      "컴퓨터 구조 활용",
+      "- 호출 관리",
+      "- 복귀 주소 저장",
+      "- 명령어 피연산자",
+      "- 보안 대응"
+    ],
+    "name": "스택(Stack)",
+    "en": "Stack",
+    "keywords_must": [
+      "후입선출(LIFO, Last-In First-Out)",
+      "Top·Bottom",
+      "PUSH(삽입)",
+      "POP(삭제)",
+      "스택 포인터(SP)",
+      "오버플로(Overflow)·언더플로(Underflow)",
+      "스택 프레임(복귀 주소·EBP·ESP)",
+      "배열·연결 리스트 구현"
+    ],
+    "keywords_ref": [
+      "0-주소 명령어 형식",
+      "후위 표기식 계산",
+      "재귀 호출·인터럽트 복귀",
+      "스택 기반 버퍼 오버플로 공격",
+      "스택 가드(카나리)·DEP·ASLR 대응"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "후입선출(LIFO, Last-In First-Out)",
+      "Top·Bottom",
+      "PUSH(삽입)",
+      "POP(삭제)",
+      "스택 포인터(SP)",
+      "오버플로(Overflow)·언더플로(Underflow)",
+      "스택 프레임(복귀 주소·EBP·ESP)",
+      "배열·연결 리스트 구현"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "SP": "Stack Pointer",
+      "EBP": "Extended Base Pointer",
+      "ESP": "Extended Stack Pointer",
+      "DEP": "Data Execution Prevention",
+      "ASLR": "Address Space Layout Randomization",
+      "POP": null,
+      "PUSH": null
+    }
+  },
+  {
+    "id": "CA_193",
+    "code": "CA_193",
+    "title": "힙(Heap)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 소프트웨어 실행 환경 > 메모리 관리",
+    "definition": "프로그램 실행 중에 필요한 크기만큼 동적으로 메모리를 할당받고 해제하는 주기억장치 영역으로, C에서는 malloc·free로 직접, 자바에서는 new와 가비지 컬렉션으로 관리함",
+    "keywords": [
+      "핵심: 동적 메모리 할당 · malloc()·free() · 실행 시간(Runtime) 할당 · 낮은 주소 → 높은 주소로 증가",
+      "필수: 프로세스 메모리 구조(코드·데이터·힙·스택) · 단편화(Fragmentation) · Young·Old 세대 영역 · 누수·이중 해제 위험",
+      "참고: 스택은 컴파일 시 크기 결정·자동 해제, 힙은 실행 시 결정·명시 해제 · 메모리 할당기(ptmalloc·jemalloc·tcmalloc) · 힙 오버플로 공격 · 자료구조의 힙(우선순위 큐)과 동음이의"
+    ],
+    "sections": [
+      {
+        "title": "메모리 할당 특성",
+        "subsections": [
+          {
+            "title": "할당 시기",
+            "items": [
+              "프로그램 실행 중 필요할 때마다"
+            ]
+          },
+          {
+            "title": "할당 장소",
+            "items": [
+              "주기억장치의 프로세스 주소 공간"
+            ]
+          },
+          {
+            "title": "수명",
+            "items": [
+              "명시적으로 해제하거나 가비지 컬렉터가 회수할 때까지 유지"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "프로세스 주소 공간",
+        "subsections": [
+          {
+            "title": "코드 영역",
+            "items": [
+              "실행할 기계어 명령 저장"
+            ]
+          },
+          {
+            "title": "데이터 영역",
+            "items": [
+              "전역·정적 변수 저장"
+            ]
+          },
+          {
+            "title": "동적 할당 영역",
+            "items": [
+              "실행 중 할당 요청을 받아 위쪽 주소로 확장"
+            ]
+          },
+          {
+            "title": "호출 영역",
+            "items": [
+              "지역 변수와 함수 프레임, 아래쪽 주소로 확장"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "자바 세대별 영역",
+        "subsections": [
+          {
+            "title": "Young 영역",
+            "items": [
+              "새 객체가 생성되는 Eden과 두 Survivor 공간"
+            ]
+          },
+          {
+            "title": "Old 영역",
+            "items": [
+              "오래 살아남은 객체를 보관, 수집 빈도 낮음"
+            ]
+          },
+          {
+            "title": "분리 목적",
+            "items": [
+              "수명이 다른 객체를 나눠 수집 효율 향상"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      402,
+      403
+    ],
+    "outline": [
+      "메모리 할당 특성",
+      "- 할당 시기",
+      "- 할당 장소",
+      "- 수명",
+      "프로세스 주소 공간",
+      "- 코드 영역",
+      "- 데이터 영역",
+      "- 동적 할당 영역",
+      "- 호출 영역",
+      "자바 세대별 영역",
+      "- Young 영역",
+      "- Old 영역",
+      "- 분리 목적"
+    ],
+    "name": "힙(Heap)",
+    "en": "Heap",
+    "keywords_must": [
+      "동적 메모리 할당",
+      "malloc()·free()",
+      "실행 시간(Runtime) 할당",
+      "낮은 주소 → 높은 주소로 증가",
+      "프로세스 메모리 구조(코드·데이터·힙·스택)",
+      "단편화(Fragmentation)",
+      "Young·Old 세대 영역",
+      "누수·이중 해제 위험"
+    ],
+    "keywords_ref": [
+      "스택은 컴파일 시 크기 결정·자동 해제, 힙은 실행 시 결정·명시 해제",
+      "메모리 할당기(ptmalloc·jemalloc·tcmalloc)",
+      "힙 오버플로 공격",
+      "자료구조의 힙(우선순위 큐)과 동음이의"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "동적 메모리 할당",
+      "malloc()·free()",
+      "실행 시간(Runtime) 할당",
+      "낮은 주소 → 높은 주소로 증가",
+      "프로세스 메모리 구조(코드·데이터·힙·스택)",
+      "단편화(Fragmentation)",
+      "Young·Old 세대 영역",
+      "누수·이중 해제 위험"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_195",
+    "code": "CA_195",
+    "title": "가속 처리 장치(APU, Accelerated Processing Unit)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 프로세서 > 이종 통합 프로세서",
+    "definition": "직렬 처리에 강한 CPU 코어와 대규모 병렬 연산에 강한 GPU를 하나의 다이에 통합하고 메모리와 버스를 공유하도록 설계한 프로세서로, AMD가 2011년 처음 상용화함",
+    "keywords": [
+      "핵심: CPU(직렬 처리) + GPU(병렬 처리) 단일 다이 · 공유 메모리 컨트롤러·버스 · 통합 그래픽(iGPU) · 이종 시스템 아키텍처(HSA)",
+      "필수: 통합 메모리 주소 공간(hUMA) · 저전력·소형화 · 데이터 복사 오버헤드 감소",
+      "참고: AMD Fusion(2011) · 콘솔(PS5·Xbox Series)·노트북 SoC · 애플 M 시리즈 통합 메모리 · ARM big.LITTLE 이종 코어 · NPU 내장 AI PC로 확장"
+    ],
+    "sections": [
+      {
+        "title": "통합 특성",
+        "subsections": [
+          {
+            "title": "데이터 전달 효율",
+            "items": [
+              "같은 버스와 메모리를 써서 CPU·GPU 간 복사 감소"
+            ]
+          },
+          {
+            "title": "소형·박형",
+            "items": [
+              "별도 그래픽 칩이 없어 노트북 등 작은 기기에 적합"
+            ]
+          },
+          {
+            "title": "저전력",
+            "items": [
+              "칩 수가 줄어 배터리 사용 시간 증가"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "칩 구성",
+        "subsections": [
+          {
+            "title": "CPU 모듈",
+            "items": [
+              "범용 정수 연산과 순차 제어 담당"
+            ]
+          },
+          {
+            "title": "내장 GPU",
+            "items": [
+              "부동소수점 병렬 연산과 그래픽 처리"
+            ]
+          },
+          {
+            "title": "공유 캐시·메모리 컨트롤러",
+            "items": [
+              "두 처리기가 같은 메모리 공간 사용"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "발전 동향",
+        "subsections": [
+          {
+            "title": "이종 코어",
+            "items": [
+              "성능이 다른 코어 쌍을 함께 넣어 저전력과 성능 동시 확보"
+            ]
+          },
+          {
+            "title": "통합 메모리",
+            "items": [
+              "단일 주소 공간으로 포인터를 그대로 공유"
+            ]
+          },
+          {
+            "title": "AI 가속",
+            "items": [
+              "신경망 처리 장치까지 한 칩에 통합"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      404,
+      405
+    ],
+    "outline": [
+      "통합 특성",
+      "- 데이터 전달 효율",
+      "- 소형·박형",
+      "- 저전력",
+      "칩 구성",
+      "- CPU 모듈",
+      "- 내장 GPU",
+      "- 공유 캐시·메모리 컨트롤러",
+      "발전 동향",
+      "- 이종 코어",
+      "- 통합 메모리",
+      "- AI 가속"
+    ],
+    "name": "가속 처리 장치(APU, Accelerated Processing Unit)",
+    "en": "Accelerated Processing Unit",
+    "keywords_must": [
+      "CPU(직렬 처리) + GPU(병렬 처리) 단일 다이",
+      "공유 메모리 컨트롤러·버스",
+      "통합 그래픽(iGPU)",
+      "이종 시스템 아키텍처(HSA)",
+      "통합 메모리 주소 공간(hUMA)",
+      "저전력·소형화",
+      "데이터 복사 오버헤드 감소"
+    ],
+    "keywords_ref": [
+      "AMD Fusion(2011)",
+      "콘솔(PS5·Xbox Series)·노트북 SoC",
+      "애플 M 시리즈 통합 메모리",
+      "ARM big.LITTLE 이종 코어",
+      "NPU 내장 AI PC로 확장"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "CPU(직렬 처리) + GPU(병렬 처리) 단일 다이",
+      "공유 메모리 컨트롤러·버스",
+      "통합 그래픽(iGPU)",
+      "이종 시스템 아키텍처(HSA)",
+      "통합 메모리 주소 공간(hUMA)",
+      "저전력·소형화",
+      "데이터 복사 오버헤드 감소"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "APU": "Accelerated Processing Unit",
+      "HSA": "Heterogeneous System Architecture",
+      "hUMA": "heterogeneous Uniform Memory Access",
+      "iGPU": "integrated GPU",
+      "NPU": "Neural Processing Unit"
+    }
+  },
+  {
     "id": "CA_061",
     "code": "CA_061",
     "title": "읽기 전용 메모리(ROM, Read Only Memory) 종류",
