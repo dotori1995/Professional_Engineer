@@ -294,3 +294,5 @@ html.dr-open,html.dr-open body{overflow:hidden}
 .fitbox.tight .outline .subs{display:none}
 .fitbox.tight2 .wnotes,.fitbox.tight2 #wRef{display:none}
 .fitbox.tight2 .outline{display:none}
+.lbl.must-lbl{display:flex;align-items:center;gap:.4em;font-size:.95em;font-weight:800;color:#fff;background:var(--accent);border-radius:8px;padding:.3em .6em;margin:.7em 0 .3em}
+.lbl.must-lbl .wnote{color:#fff;opacity:.9;font-weight:600;font-size:.78em;background:rgba(255,255,255,.2);border-radius:999px;padding:.05em .5em;margin-left:auto}

@@ -108,7 +108,7 @@
         <div class="wdef">${PE.gl(t.definition || '')}</div>
         <div class="lbl">목차</div>
         ${PE.outlineHtml(t.outline, true)}
-        <div class="lbl">필수 키워드 <span class="wnote">비슷한 표현이면 체크</span></div>
+        <div class="lbl must-lbl">★ 필수 키워드 <span class="wnote">비슷한 표현이면 체크</span></div>
         <div class="wkws" id="wMust">${mustHtml || '<span class="meta">없음</span>'}</div>
         ${ref.length ? `<div class="lbl">참고 키워드</div><div class="wkws" id="wRef">${refHtml}</div>` : ''}
         ${notes.trim() ? `<div class="lbl">내가 적은 것</div><div class="wnotes">${PE.esc(notes)}</div>` : ''}`;
