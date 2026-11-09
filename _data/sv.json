@@ -9078,55 +9078,97 @@
   "dueum": null,
   "name": "포그 컴퓨팅(Fog Computing)",
   "title": "포그 컴퓨팅(Fog Computing)",
-  "definition": "포그 컴퓨팅(Fog Computing)은 방대한 양의 데이터가 발생되는 IoT 시대에 대비해 모든 데이터를 원거리의클라우드로 보내는 대신 데이터 발생 지점 주변에서 선별적으로 분석, 활용 가능하도록 시스코가 새롭게 제안한아키텍처",
+  "definition": "IoT 기기가 만드는 대량 데이터를 모두 원거리 클라우드로 보내지 않고 라우터·스위치·AP 등 데이터 발생 지점 주변의 포그 노드에서 선별적으로 분석·처리하도록 시스코가 2012년 제안한 분산 컴퓨팅 아키텍처",
   "keywords_must": [
-   "FOG 노드",
-   "포그 컴퓨팅 구성도",
-   "포그 컴퓨팅 아키텍처",
-   "포그 컴퓨팅 표준",
-   "IDC",
-   "SDN",
-   "장기간 데이터 저장 3/3",
-   "FOG"
+   "포그 노드(Fog Node)",
+   "엔드포인트(센서·스마트폰)",
+   "클라우드·IDC 계층",
+   "저지연(Low Latency)",
+   "위치 인식(Location Awareness)",
+   "이기종 장치 지원(Heterogeneity)",
+   "실시간 스트리밍 QoS",
+   "데이터 필터링·전처리",
+   "OpenFog 참조 아키텍처(IEEE 1934)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "시스코 IOx",
+   "SDN 연계",
+   "엣지 컴퓨팅 비교",
+   "열차 바퀴·브레이크 감시",
+   "변전소 이상 알람"
+  ],
   "keywords": [
-   "핵심: FOG 노드 · 포그 컴퓨팅 구성도 · 포그 컴퓨팅 아키텍처",
-   "기술: 포그 컴퓨팅 표준 · IDC · SDN",
-   "운영: 장기간 데이터 저장 3/3 · FOG"
+   "특징: Low Latency · Location Awareness · High Reliability · 스트리밍 QoS · Heterogeneity",
+   "계층: 엔드포인트 → 포그 노드 → 클라우드·IDC",
+   "포그 vs 클라우드: 실시간·소규모·분석·필터링·광역 분산 vs 비실시간·빅데이터·저장·중앙 집중"
   ],
   "outline": [
-   "포그 컴퓨팅의 구성도 및 구성요소",
-   "- 포그 컴퓨팅 구성도",
-   "- 포그 컴퓨팅의 주요 구성요소",
-   ". 포그컴퓨팅과 클라우드 컴퓨팅 비교",
-   "- 포그 컴퓨팅 요점"
+   "등장 배경과 특징",
+   "- 배경: IoT 데이터 폭증",
+   "- 특징: 지연·위치·이기종",
+   "3계층 구성",
+   "- 하위: 엔드포인트·포그 노드",
+   "- 상위: 클라우드·IDC",
+   "- 표준: OpenFog",
+   "적용 사례와 클라우드 비교",
+   "- 사례: 운송·제조·전력",
+   "- 비교: 실시간 분석 vs 대용량 저장"
   ],
   "sections": [
    {
-    "title": "포그 컴퓨팅 핵심",
+    "title": "등장 배경과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: IoT 데이터 폭증",
       "items": [
-       "FOG 노드: 포그 컴퓨팅에서 FOG 노드를 다루는 핵심 암기 포인트",
-       "포그 컴퓨팅 구성도: 포그 컴퓨팅의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "포그 컴퓨팅 아키텍처: 포그 컴퓨팅의 계층·모듈 배치와 상호작용 구조",
-       "포그 컴퓨팅 표준: 포그 컴퓨팅 상호운용·품질을 맞추는 규격·기준"
+       "시스코 2012년 제안: 모든 데이터를 클라우드로 보내면 대역폭·지연 한계, 주변 네트워크 장비에서 선처리"
+      ]
+     },
+     {
+      "title": "특징: 지연·위치·이기종",
+      "items": [
+       "위치 인식(Location Awareness): 특정 AP 접속 사용자가 자주 요청하는 데이터를 캐싱",
+       "이기종 장치 지원: 라우터·스위치·AP·단말을 포그 장치로 활용, 스트리밍 QoS로 실시간 품질 보장"
       ]
      }
     ]
    },
    {
-    "title": "포그 컴퓨팅 구성·기술",
+    "title": "3계층 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "하위: 엔드포인트·포그 노드",
       "items": [
-       "IDC: IDC를 포그 컴퓨팅 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "SDN: SDN를 포그 컴퓨팅 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "장기간 데이터 저장 3/3: 포그 컴퓨팅에서 장기간 데이터 저장 3/3를 다루는 핵심 암기 포인트",
-       "FOG: FOG를 포그 컴퓨팅 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "포그 노드(Fog Node): 메모리·저장 기능으로 소량 데이터 즉시 분석, 처리 불가분은 IDC로 전달"
+      ]
+     },
+     {
+      "title": "상위: 클라우드·IDC",
+      "items": [
+       "클라우드·IDC 계층: 대용량·장기 데이터 분석, 기계학습과 시뮬레이션 수행"
+      ]
+     },
+     {
+      "title": "표준: OpenFog",
+      "items": [
+       "OpenFog 참조 아키텍처(IEEE 1934): 2018년 표준화, 포그 노드의 보안·확장성·개방성 정의"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 사례와 클라우드 비교",
+    "subsections": [
+     {
+      "title": "사례: 운송·제조·전력",
+      "items": [
+       "열차·역 카메라로 바퀴·브레이크 상태 감시, 제조장비 접근권한 관리, 발전소·변전소 이상 알람"
+      ]
+     },
+     {
+      "title": "비교: 실시간 분석 vs 대용량 저장",
+      "items": [
+       "포그는 수집·전처리·규칙 기반 판단·단기 저장, 클라우드는 패턴 분석·예측 유지보수·장기 저장"
       ]
      }
     ]
@@ -9135,21 +9177,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "FOG 노드",
-   "포그 컴퓨팅 구성도",
-   "포그 컴퓨팅 아키텍처",
-   "포그 컴퓨팅 표준",
-   "IDC",
-   "SDN",
-   "장기간 데이터 저장 3/3",
-   "FOG"
+   "포그 노드(Fog Node)",
+   "엔드포인트(센서·스마트폰)",
+   "클라우드·IDC 계층",
+   "저지연(Low Latency)",
+   "위치 인식(Location Awareness)",
+   "이기종 장치 지원(Heterogeneity)",
+   "실시간 스트리밍 QoS",
+   "데이터 필터링·전처리",
+   "OpenFog 참조 아키텍처(IEEE 1934)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_077_1",
@@ -9164,68 +9208,91 @@
   "dueum": null,
   "name": "엣지 컴퓨팅(Edge Computing)",
   "title": "엣지 컴퓨팅(Edge Computing)",
-  "definition": "응답 시간을 개선하고 대역폭을 절약하기 위해 필요한 곳에 연산과 데이터 스토리지를 도입하는 분산 컴퓨팅패러다임",
+  "definition": "응답 시간을 개선하고 대역폭을 절약하기 위해 연산과 데이터 저장을 클라우드 중앙이 아닌 데이터 발생 지점과 물리적으로 가까운 네트워크 가장자리(엣지)에 배치하는 분산 컴퓨팅 패러다임",
   "keywords_must": [
-   "3중 구조",
-   "인텔리전스 레이어",
-   "클라우드렛",
-   "엣지 컴퓨팅의 구성도",
-   "Fog Devices",
-   "Fog Nodes",
-   "Cloud",
-   "Data Center",
-   "컴퓨팅(Edge Computing)"
+   "3중 구조(디바이스·엣지·클라우드)",
+   "엣지 게이트웨이(Edge Gateway)",
+   "클라우드렛(Cloudlet)",
+   "마이크로 데이터센터(Micro Datacenter)",
+   "소프트웨어 정의 머신(SDM)",
+   "MEC(Multi-access Edge Computing, ETSI)",
+   "실시간 분석·엣지 AI",
+   "데이터 필터링(대역폭 절감)",
+   "5G 초저지연(URLLC)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "Open Compute Project",
+   "포그 컴퓨팅",
+   "지능형 계층·액션 계층",
+   "AWS Wavelength·Outposts",
+   "KubeEdge"
+  ],
   "keywords": [
-   "핵심: 3중 구조 · 인텔리전스 레이어 · 클라우드렛",
-   "기술: 엣지 컴퓨팅의 구성도 · Fog Devices · Fog Nodes",
-   "운영: Cloud · Data Center · 컴퓨팅(Edge Computing)"
+   "구조: 디바이스(센서) → 엣지(게이트웨이·클라우드렛) → 클라우드",
+   "이점: 지연 감소 · 비용 절감 · 확장성 · 신뢰성 · 보안",
+   "엣지 vs 포그: 엣지는 근접 처리 노드, 포그는 엣지 처리 + 클라우드까지 네트워크 연결 포함"
   ],
   "outline": [
-   "물리적 근접위치에서의 컴퓨팅, 엣지 컴퓨팅의 개념",
-   "- 엣지 컴퓨팅(Edge Computing)의 정의",
-   "- 엣지 컴퓨팅의 필요성",
-   "엣지 컴퓨팅의 구성도 및 기술요소",
-   "- 엣지 컴퓨팅의 구성도",
-   "- 엣지 컴퓨팅의 기술요소"
+   "등장 배경",
+   "- 동인: 실시간·대역폭",
+   "구조와 기술요소",
+   "- 디바이스: 센서·게이트웨이",
+   "- 아키텍처: 클라우드렛·마이크로 DC",
+   "- 알고리즘: 실시간 분석·기계학습",
+   "이점과 포그 비교",
+   "- 이점: 지연·비용·신뢰성·보안",
+   "- 비교: 엣지와 포그"
   ],
   "sections": [
    {
-    "title": "엣지 컴퓨팅 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "동인: 실시간·대역폭",
       "items": [
-       "3중 구조: 엣지 컴퓨팅에서 3중 구조를 다루는 핵심 암기 포인트",
-       "인텔리전스 레이어: 엣지 컴퓨팅에서 인텔리전스 레이어를 다루는 핵심 암기 포인트",
-       "클라우드렛: 엣지 컴퓨팅에서 클라우드렛을 다루는 핵심 암기 포인트",
-       "엣지 컴퓨팅의 구성도: 엣지 컴퓨팅의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램"
+       "5G 초저지연(URLLC): 자율주행·스마트팩토리처럼 수 ms 응답이 필요한 서비스 증가",
+       "운영 효율화와 민첩한 비즈니스 지원, 클라우드 전송량 감소로 비용 절감"
       ]
      }
     ]
    },
    {
-    "title": "엣지 컴퓨팅 구성·기술",
+    "title": "구조와 기술요소",
     "subsections": [
      {
-      "title": null,
+      "title": "디바이스: 센서·게이트웨이",
       "items": [
-       "Fog Devices: 엣지 컴퓨팅에서 Fog Devices를 다루는 핵심 암기 포인트",
-       "Fog Nodes: 엣지 컴퓨팅에서 Fog Nodes를 다루는 핵심 암기 포인트",
-       "Cloud: Cloud를 엣지 컴퓨팅 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Data Center: 엣지 컴퓨팅에서 Data Center를 다루는 핵심 암기 포인트"
+       "엣지 게이트웨이(Edge Gateway): 현장 센서 데이터를 정규화·최적화, 소프트웨어 정의 머신은 터빈·의료장비·기관차의 엣지 SW화"
+      ]
+     },
+     {
+      "title": "아키텍처: 클라우드렛·마이크로 DC",
+      "items": [
+       "클라우드렛(Cloudlet): 모바일 기기 1홉 거리의 소형 클라우드, 마이크로 데이터센터는 스토리지·프로세싱·네트워킹 일체형",
+       "MEC(Multi-access Edge Computing, ETSI): 이동통신 기지국에 컴퓨팅을 배치하는 표준"
+      ]
+     },
+     {
+      "title": "알고리즘: 실시간 분석·기계학습",
+      "items": [
+       "실시간 분석·엣지 AI: 수집 데이터를 현장에서 추론·조치, 학습은 클라우드에서 수행"
       ]
      }
     ]
    },
    {
-    "title": "엣지 컴퓨팅 운영",
+    "title": "이점과 포그 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "이점: 지연·비용·신뢰성·보안",
       "items": [
-       "컴퓨팅(Edge Computing): 엣지 컴퓨팅에서 컴퓨팅(Edge Computing)을 다루는 핵심 암기 포인트"
+       "데이터센터 중단 시에도 엣지 장치가 핵심 처리 지속, 데이터 분산으로 유출 범위 축소"
+      ]
+     },
+     {
+      "title": "비교: 엣지와 포그",
+      "items": [
+       "엣지는 데이터소스·지능형·액션 계층, 포그는 Fog Device·Fog Node·Cloud 구성으로 엣지를 포함하는 개념"
       ]
      }
     ]
@@ -9234,22 +9301,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "3중 구조",
-   "인텔리전스 레이어",
-   "클라우드렛",
-   "엣지 컴퓨팅의 구성도",
-   "Fog Devices",
-   "Fog Nodes",
-   "Cloud",
-   "Data Center",
-   "컴퓨팅(Edge Computing)"
+   "3중 구조(디바이스·엣지·클라우드)",
+   "엣지 게이트웨이(Edge Gateway)",
+   "클라우드렛(Cloudlet)",
+   "마이크로 데이터센터(Micro Datacenter)",
+   "소프트웨어 정의 머신(SDM)",
+   "MEC(Multi-access Edge Computing, ETSI)",
+   "실시간 분석·엣지 AI",
+   "데이터 필터링(대역폭 절감)",
+   "5G 초저지연(URLLC)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_078",
@@ -9264,58 +9332,83 @@
   "dueum": null,
   "name": "앰비언트 컴퓨팅(Ambient Computing)",
   "title": "앰비언트 컴퓨팅(Ambient Computing)",
-  "definition": "IT 기기가 사용자의 일상에서 너무 자연스럽게 자리잡아, 인지되지 못한 상태로 활용되는 개념",
+  "definition": "센서·음성·AI가 생활 공간 곳곳의 기기에 녹아들어 사용자가 기기를 조작한다고 인식하지 못한 채 상황에 맞는 서비스를 자연스럽게 제공받는 보이지 않는 컴퓨팅 환경",
   "keywords_must": [
-   "앰비언트 컴퓨팅의 구성",
-   "앰비언트 컴퓨팅의 주요기술",
-   "앰비언트 컴퓨팅 아키텍처",
-   "IT 기기의 발달",
-   "토픽이름 (기출문제)",
-   "컴퓨팅(Ambient Computing)",
-   "하베스팅(Energy Harvesting)",
-   "빠른 서비스"
+   "보이지 않는 컴퓨팅(Invisible Computing)",
+   "상황인식(Context Awareness)",
+   "음성 인터페이스(VUI)·AI 비서",
+   "제로 UI(Zero UI)",
+   "스마트 스피커·웨어러블",
+   "사물인터넷(IoT) 센서망",
+   "Matter 표준(스마트홈 상호운용)",
+   "엣지 AI 추론",
+   "개인정보 보호(상시 수집)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "마크 와이저 유비쿼터스 컴퓨팅",
+   "구글 홈·아마존 알렉사",
+   "제스처·생체 인식",
+   "Thread 네트워크",
+   "앰비언트 인텔리전스(AmI)"
+  ],
   "keywords": [
-   "핵심: 앰비언트 컴퓨팅의 구성 · 앰비언트 컴퓨팅의 주요기술 · 앰비언트 컴퓨팅 아키텍처",
-   "기술: IT 기기의 발달 · 토픽이름 (기출문제) · 컴퓨팅(Ambient Computing)",
-   "운영: 하베스팅(Energy Harvesting) · 빠른 서비스"
+   "구성: 입력(센서·음성) · 전송(IoT 네트워크) · 분석(AI·클라우드) · 출력(자동 제어)",
+   "기술: 상황인식 · VUI · Zero UI · Matter · 엣지 AI",
+   "이슈: 상시 수집 프라이버시 · 기기 간 호환 · 보안"
   ],
   "outline": [
-   "보이지 않는 IT 기술, 앰비언트 컴퓨팅의 개요",
-   "- 앰비언트 컴퓨팅의 정의",
-   "- 앰비언트 컴퓨팅의 등장배경",
-   "앰비언트 컴퓨팅의 구성 및 주요기술",
-   "- 앰비언트 컴퓨팅의 구성",
-   "- 앰비언트 컴퓨팅의 주요기술",
-   "앰비언트 컴퓨팅의 사례",
-   "- 앰비언트 컴퓨팅 요점"
+   "등장 배경",
+   "- 배경: 기기 생활화·빠른 서비스",
+   "구성과 주요 기술",
+   "- 입출력: 음성·제로 UI",
+   "- 전송·분석: IoT·AI",
+   "사례와 과제",
+   "- 사례: 스마트홈·차량·헬스케어",
+   "- 과제: 프라이버시·보안"
   ],
   "sections": [
    {
-    "title": "앰비언트 컴퓨팅 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 기기 생활화·빠른 서비스",
       "items": [
-       "앰비언트 컴퓨팅의 구성: 앰비언트 컴퓨팅에서 앰비언트 컴퓨팅의 구성을 다루는 핵심 암기 포인트",
-       "앰비언트 컴퓨팅의 주요기술: 앰비언트 컴퓨팅에서 앰비언트 컴퓨팅의 주요기술을 다루는 핵심 암기 포인트",
-       "앰비언트 컴퓨팅 아키텍처: 앰비언트 컴퓨팅의 계층·모듈 배치와 상호작용 구조",
-       "IT 기기의 발달: 앰비언트 컴퓨팅에서 IT 기기의 발달을 다루는 핵심 암기 포인트"
+       "보이지 않는 컴퓨팅(Invisible Computing): 마크 와이저 유비쿼터스 비전의 연장, 스마트폰·스피커·가전이 일상화"
       ]
      }
     ]
    },
    {
-    "title": "앰비언트 컴퓨팅 구성·기술",
+    "title": "구성과 주요 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "입출력: 음성·제로 UI",
       "items": [
-       "토픽이름 (기출문제): 앰비언트 컴퓨팅에서 토픽이름 (기출문제)을 다루는 핵심 암기 포인트",
-       "컴퓨팅(Ambient Computing): 앰비언트 컴퓨팅에서 컴퓨팅(Ambient Computing)을 다루는 핵심 암기 포인트",
-       "하베스팅(Energy Harvesting): 앰비언트 컴퓨팅에서 하베스팅(Energy Harvesting)을 다루는 핵심 암기 포인트",
-       "빠른 서비스: 앰비언트 컴퓨팅에서 빠른 서비스를 다루는 핵심 암기 포인트"
+       "음성 인터페이스(VUI)·AI 비서: 화면 없이 말로 요청, 제로 UI는 제스처·존재 감지로 조작 자체를 생략"
+      ]
+     },
+     {
+      "title": "전송·분석: IoT·AI",
+      "items": [
+       "Matter 표준(스마트홈 상호운용): 제조사가 달라도 Thread·Wi-Fi로 연동, 엣지 AI 추론으로 즉시 반응",
+       "상황인식(Context Awareness): 위치·시간·활동을 파악해 조명·온도를 선제 제어"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "사례와 과제",
+    "subsections": [
+     {
+      "title": "사례: 스마트홈·차량·헬스케어",
+      "items": [
+       "귀가 시 조명·난방 자동 조정, 차량 탑승자 인식 설정, 웨어러블의 건강 이상 알림"
+      ]
+     },
+     {
+      "title": "과제: 프라이버시·보안",
+      "items": [
+       "개인정보 보호(상시 수집): 마이크·카메라 상시 작동에 따른 동의·저장 최소화와 기기 보안 필요"
       ]
      }
     ]
@@ -9324,21 +9417,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "앰비언트 컴퓨팅의 구성",
-   "앰비언트 컴퓨팅의 주요기술",
-   "앰비언트 컴퓨팅 아키텍처",
-   "IT 기기의 발달",
-   "토픽이름 (기출문제)",
-   "컴퓨팅(Ambient Computing)",
-   "하베스팅(Energy Harvesting)",
-   "빠른 서비스"
+   "보이지 않는 컴퓨팅(Invisible Computing)",
+   "상황인식(Context Awareness)",
+   "음성 인터페이스(VUI)·AI 비서",
+   "제로 UI(Zero UI)",
+   "스마트 스피커·웨어러블",
+   "사물인터넷(IoT) 센서망",
+   "Matter 표준(스마트홈 상호운용)",
+   "엣지 AI 추론",
+   "개인정보 보호(상시 수집)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_079_0",
@@ -9353,58 +9448,91 @@
   "dueum": null,
   "name": "인터미턴트 컴퓨팅(Intermittent Computing)",
   "title": "인터미턴트 컴퓨팅(Intermittent Computing)",
-  "definition": "초 연결 사회에서 신뢰성 있는 컴퓨팅 환경 구현을 위한 인터미턴트 컴퓨팅 기술의 연구가 중요해짐",
+  "definition": "배터리 없이 에너지 하베스팅으로 얻은 불안정한 전력으로 동작하는 기기가 잦은 전원 차단 속에서도 비휘발성 메모리와 체크포인트·태스크 기반 실행 모델로 프로그램 진행 상태를 보존해 신뢰성 있게 연산을 이어가는 컴퓨팅 기술",
   "keywords_must": [
-   "에너지 하베스팅",
-   "에너지 저장장치",
-   "비휘발성 메모리",
+   "에너지 하베스팅(Energy Harvesting)",
+   "에너지 저장 장치(커패시터)",
+   "비휘발성 메모리(FRAM·NVM)",
+   "비휘발성 프로세서(NVP, Nonvolatile Processor)",
+   "노멀리 오프 컴퓨팅(Normally-Off Computing)",
+   "체크포인트·복원(Checkpointing)",
    "다중 버전 모델",
-   "NoC",
-   "NVP",
-   "Chain",
-   "Alpaca"
+   "태스크 기반 프로그래밍(Chain·Alpaca)",
+   "초저전력 MCU(MSP430)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "CMU Capybara",
+   "메모리 불일치(Idempotence 위반)",
+   "배터리리스 IoT",
+   "무선 전력 전송(RF)",
+   "WISP"
+  ],
   "keywords": [
-   "핵심: 에너지 하베스팅 · 에너지 저장장치 · 비휘발성 메모리",
-   "기술: 다중 버전 모델 · NoC · NVP",
-   "운영: Chain · Alpaca"
+   "해결 과제: 안정적 데이터 수집(하베스팅·저장) · 신뢰성 있는 저장·전송(메모리·실행 모델)",
+   "하드웨어: MSP430·FRAM · 동적 재구성 저장장치(Capybara) · NVP",
+   "소프트웨어: 체크포인트 · 다중 버전 · 태스크 모델(Chain·Alpaca)"
   ],
   "outline": [
-   "인터미턴트 컴퓨팅 개념 및 해결 과제",
-   "- 인터미턴트 컴퓨팅 개념",
-   "- 인터미턴트 컴퓨팅의 해결 과제",
-   "에너지 하베스팅 기반 인터미턴트 컴퓨팅 기술 동향",
-   "- 간헐적 환경에서 안정적인 데이터 수집을 위한, 인터미턴트 컴퓨팅 기술…",
-   "- 신뢰성 있는 데이터 저장 및 전송을 위한, 인터미턴트 컴퓨팅 기술 동향",
-   "에너지 하베스팅 기반 인터미턴트 컴퓨팅 기술의 시사점",
-   "- 인터미턴트 컴퓨팅 요점"
+   "등장 배경",
+   "- 인프라: 전력 불안정·신뢰성",
+   "- 소프트웨어: 실행 흐름 지속",
+   "해결 과제와 필요 기술",
+   "- 데이터 수집: 하베스팅·저장",
+   "- 저장·전송: 메모리·실행 모델",
+   "기술 동향",
+   "- 하드웨어: MCU·저장장치",
+   "- 소프트웨어: 태스크 모델"
   ],
   "sections": [
    {
-    "title": "인터미턴트 컴퓨팅 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "인프라: 전력 불안정·신뢰성",
       "items": [
-       "에너지 하베스팅: 인터미턴트 컴퓨팅에서 에너지 하베스팅을 다루는 핵심 암기 포인트",
-       "에너지 저장장치: 인터미턴트 컴퓨팅에서 에너지 저장장치를 다루는 핵심 암기 포인트",
-       "비휘발성 메모리: 인터미턴트 컴퓨팅에서 비휘발성 메모리를 다루는 핵심 암기 포인트",
-       "다중 버전 모델: 인터미턴트 컴퓨팅에서 다중 버전 모델을 다루는 핵심 암기 포인트"
+       "배터리 교체가 어려운 초연결 IoT 센서를 사람 개입 없이 구동하려면 간헐 전원에서도 정확한 실행 보장 필요"
+      ]
+     },
+     {
+      "title": "소프트웨어: 실행 흐름 지속",
+      "items": [
+       "전원 온·오프 반복 시 메모리 보존과 진행 상태 복원이 핵심 요구"
       ]
      }
     ]
    },
    {
-    "title": "인터미턴트 컴퓨팅 구성·기술",
+    "title": "해결 과제와 필요 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "데이터 수집: 하베스팅·저장",
       "items": [
-       "NoC: NoC를 인터미턴트 컴퓨팅 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "NVP: NVP를 인터미턴트 컴퓨팅 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Chain: Chain를 인터미턴트 컴퓨팅 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Alpaca: Alpaca를 인터미턴트 컴퓨팅 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "에너지 하베스팅(Energy Harvesting): 태양광·RF·진동 에너지 수집, 에너지 저장 장치 크기가 기기 크기 결정",
+       "부품별 저장장치 배치로 부품 간 에너지 간섭 제거"
+      ]
+     },
+     {
+      "title": "저장·전송: 메모리·실행 모델",
+      "items": [
+       "비휘발성 메모리(FRAM·NVM): 휘발성 SRAM과 혼용 시 재실행으로 인한 메모리 불일치 발생",
+       "다중 버전 모델: 비휘발성 메모리 일부에 이전 값을 보존·복원해 일관성 확보"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기술 동향",
+    "subsections": [
+     {
+      "title": "하드웨어: MCU·저장장치",
+      "items": [
+       "초저전력 MCU(MSP430): TI FRAM MCU가 하베스팅 시스템 표준 플랫폼, CMU Capybara는 필요 시 저장 용량을 동적 재구성"
+      ]
+     },
+     {
+      "title": "소프트웨어: 태스크 모델",
+      "items": [
+       "태스크 기반 프로그래밍(Chain·Alpaca): 프로그램을 원자적 태스크로 나눠 전원 차단 시 태스크 단위로 재실행, Chain은 채널, Alpaca는 데이터 사유화(Privatization)로 일관성 유지"
       ]
      }
     ]
@@ -9413,21 +9541,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "에너지 하베스팅",
-   "에너지 저장장치",
-   "비휘발성 메모리",
+   "에너지 하베스팅(Energy Harvesting)",
+   "에너지 저장 장치(커패시터)",
+   "비휘발성 메모리(FRAM·NVM)",
+   "비휘발성 프로세서(NVP, Nonvolatile Processor)",
+   "노멀리 오프 컴퓨팅(Normally-Off Computing)",
+   "체크포인트·복원(Checkpointing)",
    "다중 버전 모델",
-   "NoC",
-   "NVP",
-   "Chain",
-   "Alpaca"
+   "태스크 기반 프로그래밍(Chain·Alpaca)",
+   "초저전력 MCU(MSP430)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_079_1",
@@ -9438,81 +9568,96 @@
    139,
    142
   ],
-  "en": "HPC High-Performance Computing",
+  "en": "High-Performance Computing",
   "dueum": null,
-  "name": "디지털서비스(HPC(High-Performance Computing))",
-  "title": "디지털서비스(HPC(High-Performance Computing))",
-  "definition": "일반 컴퓨터보다 압도적으로 빠른 속도로 대용량 연산을 수행하는 대형 컴퓨터 시스템과 이를 활용하기 위한 응용기술을 통칭",
+  "name": "고성능 컴퓨팅(HPC, High-Performance Computing)",
+  "title": "고성능 컴퓨팅(HPC, High-Performance Computing)",
+  "definition": "수많은 CPU·GPU 계산 노드를 고대역폭·저지연 인터커넥트와 병렬 파일시스템으로 묶어 일반 컴퓨터보다 압도적으로 빠르게 대규모 과학·공학·AI 연산을 수행하는 컴퓨터 시스템과 이를 활용하는 응용기술의 총칭",
   "keywords_must": [
-   "Top500",
-   "초고성능",
-   "고성능",
-   "CPU",
-   "GPU",
-   "고대역폭 저지연 인터커넥트",
-   "병렬파일시스템",
-   "Frontier",
-   "뉴론",
-   "HPC의 개념"
+   "Top500(LINPACK, 매년 6월 ISC·11월 SC 발표)",
+   "초고성능컴퓨터(Supercomputer)",
+   "계산 노드·로그인 노드·스토리지 노드",
+   "작업 스케줄러(Slurm·PBS)",
+   "CPU·GPU 이기종 구성",
+   "메시지 전달 인터페이스(MPI)",
+   "인피니밴드(InfiniBand) 인터커넥트",
+   "Fat-tree·Dragonfly 토폴로지",
+   "병렬 파일시스템(Lustre)",
+   "엑사스케일(Exascale, 10^18 FLOPS)"
   ],
   "keywords_ref": [
-   "HPC",
-   "LUMI",
-   "HPL"
+   "Frontier(ORNL, 2022 최초 엑사스케일)",
+   "KISTI 누리온·뉴론",
+   "국가초고성능컴퓨터법",
+   "수냉식 냉각·PUE",
+   "GPU Direct Storage"
   ],
   "keywords": [
-   "핵심: Top500 · 초고성능 · 고성능",
-   "기술: CPU · GPU · 고대역폭 저지연 인터커넥트",
-   "운영: 병렬파일시스템 · Frontier · 뉴론",
-   "참고: HPC · LUMI · HPL"
+   "구성: 로그인 노드 → 스케줄러 → 계산 노드(CPU·GPU) · 스토리지 노드 · 인터커넥트",
+   "핵심 기술: 이기종 프로세서 · MPI 병렬 · 저지연 인터커넥트 · 병렬 파일시스템 · 계층형 스토리지",
+   "순위·제도: Top500 · Green500 · 국가초고성능컴퓨터 활용 및 육성에 관한 법률"
   ],
   "outline": [
-   "세계의 주요 문제 해결!, HPC(고성능 PC",
-   "- HPC 의 개념",
-   "- HPC 의 유형",
-   "HPC 개념도 및 구성요소",
-   "- HPC 개념도",
-   "- HPC 의 구성요소",
-   "HPC 기술 동향 및 활용분야",
-   "- HPC 기술 동향"
+   "개념과 유형",
+   "- 유형: Top500·초고성능·고성능",
+   "시스템 구성",
+   "- 노드: 로그인·계산·스토리지",
+   "- 연산·연결: GPU·인터커넥트",
+   "- 저장: 병렬 파일시스템",
+   "운영과 활용",
+   "- 운영: 무중단·냉각",
+   "- 활용: 기상·신약·AI"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "개념과 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "유형: Top500·초고성능·고성능",
       "items": [
-       "Top500: Top500를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "초고성능: 디지털서비스에서 초고성능을 다루는 핵심 암기 포인트",
-       "고성능: 디지털서비스에서 고성능을 다루는 핵심 암기 포인트",
-       "CPU: CPU를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "Top500(LINPACK, 매년 6월 ISC·11월 SC 발표): 세계 상위 500대 시스템, 국내 초고성능컴퓨터는 국가초고성능컴퓨터법에 정의",
+       "엑사스케일(Exascale): 2022년 미국 ORNL Frontier가 최초로 1 EFLOPS 돌파"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "시스템 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "노드: 로그인·계산·스토리지",
       "items": [
-       "GPU: GPU를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "고대역폭 저지연 인터커넥트: 디지털서비스에서 고대역폭 저지연 인터커넥트를 다루는 핵심 암기 포인트",
-       "병렬파일시스템: 디지털서비스에서 병렬파일시스템을 다루는 핵심 암기 포인트",
-       "Frontier: Frontier를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "사용자는 SSH로 로그인 노드 접속, 작업 스케줄러(Slurm·PBS)가 계산 노드에 배정"
+      ]
+     },
+     {
+      "title": "연산·연결: GPU·인터커넥트",
+      "items": [
+       "CPU·GPU 이기종 구성: GPU·CPU 파티션 분할, CPU:GPU 1:2 수준으로 AI·계산과학 호환",
+       "인피니밴드(InfiniBand) 인터커넥트: 노드 간 수백 Gbps 저지연, Fat-tree(non-blocking)·Dragonfly 토폴로지"
+      ]
+     },
+     {
+      "title": "저장: 병렬 파일시스템",
+      "items": [
+       "병렬 파일시스템(Lustre): Flash와 HDD를 1:9로 계층화, 자동 티어링·GPU Direct로 I/O 병목 완화"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "운영과 활용",
     "subsections": [
      {
-      "title": null,
+      "title": "운영: 무중단·냉각",
       "items": [
-       "뉴론: 디지털서비스에서 뉴론을 다루는 핵심 암기 포인트",
-       "HPC의 개념: 디지털서비스에서 HPC의 개념을 다루는 핵심 암기 포인트"
+       "전원·냉수 2N 이중화와 수냉식 냉각으로 무중단 운영, Green500으로 전력 효율 평가"
+      ]
+     },
+     {
+      "title": "활용: 기상·신약·AI",
+      "items": [
+       "기상 예측·신약 개발·핵융합 시뮬레이션·초거대 AI 학습, 국내는 KISTI 누리온(5호기)·뉴론(GPU) 운영"
       ]
      }
     ]
@@ -9521,23 +9666,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Top500",
-   "초고성능",
-   "고성능",
-   "CPU",
-   "GPU",
-   "고대역폭 저지연 인터커넥트",
-   "병렬파일시스템",
-   "Frontier",
-   "뉴론",
-   "HPC의 개념"
+   "Top500(LINPACK, 매년 6월 ISC·11월 SC 발표)",
+   "초고성능컴퓨터(Supercomputer)",
+   "계산 노드·로그인 노드·스토리지 노드",
+   "작업 스케줄러(Slurm·PBS)",
+   "CPU·GPU 이기종 구성",
+   "메시지 전달 인터페이스(MPI)",
+   "인피니밴드(InfiniBand) 인터커넥트",
+   "Fat-tree·Dragonfly 토폴로지",
+   "병렬 파일시스템(Lustre)",
+   "엑사스케일(Exascale, 10^18 FLOPS)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_081",
@@ -9550,71 +9696,93 @@
   ],
   "en": "Smart City",
   "dueum": null,
-  "name": "스마트(Smart City)",
-  "title": "스마트(Smart City)",
-  "definition": "스스로 인지하고 발전하는 IT 인프라인 하드 인프라와 교육, 안전, 복지 등 시민의 삶을 윤택하게 하는 IT∙ 비 IT 를 망라한 각종 서비스인 소프트 인프라가 조화를 이루어 모든 시민이 지능형 서비스를 이용할 수 있도록설계된 신개념 도시",
+  "name": "스마트시티(Smart City)",
+  "title": "스마트시티(Smart City)",
+  "definition": "사물인터넷·빅데이터 등 스스로 인지·발전하는 하드 인프라와 교육·안전·복지 등 시민 서비스인 소프트 인프라를 스마트시티 플랫폼으로 결합해 도시 데이터로 교통·에너지·안전 문제를 해결하고 새 가치를 창출하는 시민 중심 미래 도시",
   "keywords_must": [
-   "스마트 시티 플랫폼",
-   "스마트 공공",
-   "공유경제",
-   "공공서비스",
-   "지능형관리 스마트 빌딩",
-   "스마트 유틸리티",
-   "스마트 정부",
-   "센서네트워크",
-   "스마트 단말",
-   "통신 플랫폼"
+   "하드 인프라·소프트 인프라",
+   "스마트시티 플랫폼(수집·분석·활용)",
+   "도시 데이터 개방",
+   "ICT 융합 기술(IoT·빅데이터·클라우드)",
+   "스마트 그리드·BEMS·HEMS",
+   "시민 중심(리빙랩)",
+   "스마트도시법(스마트도시 조성 및 산업진흥 등에 관한 법률)",
+   "U-City 대비 서비스 중심",
+   "국가 시범도시(세종 5-1·부산 에코델타)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "ISO 37120·37122 도시 지표",
+   "디지털 트윈 도시",
+   "스마트시티 데이터 허브",
+   "P2P·M2M 연동",
+   "공유경제"
+  ],
   "keywords": [
-   "핵심: 스마트 시티 플랫폼 · 스마트 공공 · 공유경제",
-   "기술: 공공서비스 · 지능형관리 스마트 빌딩 · 스마트 유틸리티",
-   "운영: 스마트 정부 · 센서네트워크 · 스마트 단말"
+   "특징: 스마트 서비스 · 데이터 개방 · 플랫폼 기반 · ICT 융합 · 시민 중심",
+   "전환: 인프라 확대(1:1) → 스마트 서비스(1:N), 공급자 → 시민, 물리 → 사이버 공간",
+   "플랫폼: 수집(RFID·센서·CCTV) → 분석(빅데이터) → 활용(교통·행정·에너지)"
   ],
   "outline": [
-   "첨단 산업 융합의 미래 도시, 스마트시티(Smart City)의 개요",
-   "- 스마트시티(Smart City)의 정의",
-   "- 스마트시티(Smart City)의 확산 배경",
-   "스마트시티(Smart City) 향후 과제",
-   "- 스마트 요점"
+   "5대 특성",
+   "- 서비스·데이터: 플랫폼 기반 해결",
+   "- 기술·주체: ICT 융합·시민 중심",
+   "문제 해결 방식 비교",
+   "- AS-IS: 인프라 중심 U-City",
+   "- TO-BE: 서비스 중심",
+   "제도와 향후 과제",
+   "- 제도: 법·시범도시",
+   "- 과제: 민관 협력·서비스 발굴"
   ],
   "sections": [
    {
-    "title": "스마트 핵심",
+    "title": "5대 특성",
     "subsections": [
      {
-      "title": null,
+      "title": "서비스·데이터: 플랫폼 기반 해결",
       "items": [
-       "스마트 시티 플랫폼: 스마트에서 스마트 시티 플랫폼을 다루는 핵심 암기 포인트",
-       "스마트 공공: 스마트에서 스마트 공공을 다루는 핵심 암기 포인트",
-       "공유경제: 스마트에서 공유경제를 다루는 핵심 암기 포인트",
-       "공공서비스: 스마트에서 공공서비스를 다루는 핵심 암기 포인트"
+       "스마트시티 플랫폼(수집·분석·활용): 도시 데이터를 모아 한정된 자원을 최적 분배",
+       "도시 데이터 개방: 교통·공공행정 데이터 공개로 민간 서비스와 경제적 가치 창출"
+      ]
+     },
+     {
+      "title": "기술·주체: ICT 융합·시민 중심",
+      "items": [
+       "ICT 융합 기술: IoT·클라우드·빅데이터·스마트 미터·BEMS·HEMS·스마트카·기가급 통신망",
+       "시민 중심(리빙랩): 시민이 문제 정의와 실증에 참여하는 리빙랩 방식"
       ]
      }
     ]
    },
    {
-    "title": "스마트 구성·기술",
+    "title": "문제 해결 방식 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "AS-IS: 인프라 중심 U-City",
       "items": [
-       "지능형관리 스마트 빌딩: 스마트에서 지능형관리 스마트 빌딩을 다루는 핵심 암기 포인트",
-       "스마트 유틸리티: 스마트에서 스마트 유틸리티를 다루는 핵심 암기 포인트",
-       "스마트 정부: 스마트에서 스마트 정부를 다루는 핵심 암기 포인트",
-       "센서네트워크: 스마트에서 센서네트워크를 다루는 핵심 암기 포인트"
+       "교통체증에 도로 건설 같은 1:1 대응, 공급자·물리 공간 중심, 스마트 플랫폼 부재"
+      ]
+     },
+     {
+      "title": "TO-BE: 서비스 중심",
+      "items": [
+       "우회로 안내·대중교통 신설 같은 1:N 서비스, 스마트 그리드·스마트 파킹으로 사이버 공간에서 해결"
       ]
      }
     ]
    },
    {
-    "title": "스마트 운영",
+    "title": "제도와 향후 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "제도: 법·시범도시",
       "items": [
-       "스마트 단말: 스마트에서 스마트 단말을 다루는 핵심 암기 포인트",
-       "통신 플랫폼: 스마트에서 통신 플랫폼을 다루는 핵심 암기 포인트"
+       "스마트도시법: 2017년 유비쿼터스도시법을 개정, 세종 5-1생활권·부산 에코델타시티 국가 시범도시 추진"
+      ]
+     },
+     {
+      "title": "과제: 민관 협력·서비스 발굴",
+      "items": [
+       "시민 생활 서비스 개발 중심 전환, 민간 장기 투자와 공공·민간 협력, 데이터 표준·보안 확보"
       ]
      }
     ]
@@ -9623,23 +9791,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "스마트 시티 플랫폼",
-   "스마트 공공",
-   "공유경제",
-   "공공서비스",
-   "지능형관리 스마트 빌딩",
-   "스마트 유틸리티",
-   "스마트 정부",
-   "센서네트워크",
-   "스마트 단말",
-   "통신 플랫폼"
+   "하드 인프라·소프트 인프라",
+   "스마트시티 플랫폼(수집·분석·활용)",
+   "도시 데이터 개방",
+   "ICT 융합 기술(IoT·빅데이터·클라우드)",
+   "스마트 그리드·BEMS·HEMS",
+   "시민 중심(리빙랩)",
+   "스마트도시법(스마트도시 조성 및 산업진흥 등에 관한 법률)",
+   "U-City 대비 서비스 중심",
+   "국가 시범도시(세종 5-1·부산 에코델타)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_082",
@@ -9654,82 +9822,84 @@
   "dueum": null,
   "name": "스마트시티 통합플랫폼(Smart City Integrated Platform)",
   "title": "스마트시티 통합플랫폼(Smart City Integrated Platform)",
-  "definition": "지자체 스마트시티 정보시스템을 통합 관제·운영·연계하기 위한 플랫폼. 상호연동과 통합 DB가 핵심이다.",
+  "definition": "방범·방재·교통·환경 등 지자체별로 따로 운영되던 도시 정보시스템을 통합관제·통합운영·통합연계·통합DB 4개 모듈로 연계해 도시 상황정보를 수집·표출·공유함으로써 중복 투자를 없애고 112·119 등 긴급 대응을 지원하는 플랫폼",
   "keywords_must": [
-   "* 통합관제",
-   "통합운영",
-   "통합연계",
-   "통합되지 않고",
-   "스마트팩토리(Smart Factory)의 개념도",
-   "스마트팩토리의 요건",
-   "KIOSK",
-   "MEMS",
-   "PLC",
-   "CNC(Computerized Numerical Control)"
+   "통합관제(상황판·GIS)",
+   "통합운영(이벤트 처리·포털)",
+   "통합연계(외부 기관 시스템 연계)",
+   "통합DB(공통 DB)",
+   "상황 이벤트 동시 표출",
+   "5대 연계 서비스(112·119·재난·사회적 약자)",
+   "스마트도시 통합운영센터",
+   "국토교통부 보급 사업",
+   "개별 연결(N:N)→허브(1:N) 구조"
   ],
   "keywords_ref": [
-   "DNC(Direct Numerical Control)",
-   "HMI",
-   "AGV",
-   "CPS",
-   "FMES",
-   "ESS",
-   "SCADA(Supervisory Control and Data Acquisition)",
-   "DCS(분산제어시스템)"
+   "112 긴급영상 지원",
+   "119 긴급출동 지원",
+   "재난상황 긴급대응",
+   "사회적 약자 지원",
+   "표준 인터페이스"
   ],
   "keywords": [
-   "핵심: * 통합관제 · 통합운영 · 통합연계",
-   "기술: 통합되지 않고 · 스마트팩토리(Smart Factory)의 개념도 · 스마트팩토리의 요건",
-   "운영: KIOSK · MEMS · PLC",
-   "참고: DNC(Direct Numerical Control) · HMI · AGV"
+   "4대 모듈: 통합관제 · 통합운영 · 통합연계 · 통합DB",
+   "연계 서비스: 112 긴급영상·출동 · 119 긴급출동 · 재난 긴급대응 · 사회적 약자 지원",
+   "구조 변화: 서비스 간 개별 연결 → 통합플랫폼 허브 연결"
   ],
   "outline": [
-   "공장설비부터 생산까지의 새로운 생산 체계, 스마트 Factory 개요",
-   "- 스마트팩토리(Smart Factory)의 정의",
-   "- 스마트팩토리의 요건",
-   "스마트팩토리(Smart Factory)의 개념도 및 기술요소",
-   "- 스마트팩토리(Smart Factory)의 개념도",
-   "- 스마트팩토리의 기술요소",
-   "스마트팩토리시스템의 수준 5단계",
-   "- 스마트시티 통합플랫폼 요점"
+   "도입 배경",
+   "- 문제: 개별 운영·중복 투자",
+   "4대 구성 모듈",
+   "- 관제·운영: 상황 표출·이벤트 처리",
+   "- 연계·DB: 외부 시스템·공통 데이터",
+   "확산 효과",
+   "- 구조: N:N에서 허브형으로",
+   "- 서비스: 5대 연계"
   ],
   "sections": [
    {
-    "title": "스마트시티 통합플랫폼 핵심",
+    "title": "도입 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "문제: 개별 운영·중복 투자",
       "items": [
-       "* 통합관제: 스마트시티 통합플랫폼에서 * 통합관제를 다루는 핵심 암기 포인트",
-       "통합운영: 스마트시티 통합플랫폼에서 통합운영을 다루는 핵심 암기 포인트",
-       "통합연계: 스마트시티 통합플랫폼에서 통합연계를 다루는 핵심 암기 포인트",
-       "통합되지 않고: 스마트시티 통합플랫폼에서 통합되지 않고를 다루는 핵심 암기 포인트"
+       "방범·방재·교통·환경 시스템이 개별 구축되어 신규 서비스마다 N:N 연계가 필요하고 중복 투자 발생"
       ]
      }
     ]
    },
    {
-    "title": "스마트시티 통합플랫폼 구성·기술",
+    "title": "4대 구성 모듈",
     "subsections": [
      {
-      "title": null,
+      "title": "관제·운영: 상황 표출·이벤트 처리",
       "items": [
-       "스마트팩토리(Smart Factory)의 개념도: 스마트시티 통합플랫폼의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "스마트팩토리의 요건: 스마트시티 통합플랫폼에서 스마트팩토리의 요건을 다루는 핵심 암기 포인트",
-       "KIOSK: KIOSK를 스마트시티 통합플랫폼 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "MEMS: MEMS를 스마트시티 통합플랫폼 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "통합관제(상황판·GIS): U-서비스별 상황 이벤트를 동시 표출해 관제, GIS 유틸리티 제공",
+       "통합운영(이벤트 처리·포털): 담당자 할당·상황 전파·처리, 융·복합 서비스 생성"
+      ]
+     },
+     {
+      "title": "연계·DB: 외부 시스템·공통 데이터",
+      "items": [
+       "통합연계: 경찰·소방 등 관계기관 시스템 연계와 현장 단말 표출정보 전달",
+       "통합DB(공통 DB): 교통·방범 등 공공서비스 공통 DB, 서비스 데이터 지속 확대"
       ]
      }
     ]
    },
    {
-    "title": "스마트시티 통합플랫폼 운영",
+    "title": "확산 효과",
     "subsections": [
      {
-      "title": null,
+      "title": "구조: N:N에서 허브형으로",
       "items": [
-       "PLC: PLC를 스마트시티 통합플랫폼 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CNC(Computerized Numerical Control): CNC를 스마트시티 통합플랫폼 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "개별 연결(N:N)→허브(1:N) 구조: 신규 서비스는 플랫폼에만 연결하면 기존 서비스와 정보 공유"
+      ]
+     },
+     {
+      "title": "서비스: 5대 연계",
+      "items": [
+       "5대 연계 서비스: 112 긴급영상·출동 지원, 119 긴급출동, 재난상황 긴급대응, 사회적 약자 지원으로 골든타임 단축"
       ]
      }
     ]
@@ -9738,16 +9908,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "* 통합관제",
-   "통합운영",
-   "통합연계",
-   "통합되지 않고",
-   "스마트팩토리(Smart Factory)의 개념도",
-   "스마트팩토리의 요건",
-   "KIOSK",
-   "MEMS",
-   "PLC",
-   "CNC(Computerized Numerical Control)"
+   "통합관제(상황판·GIS)",
+   "통합운영(이벤트 처리·포털)",
+   "통합연계(외부 기관 시스템 연계)",
+   "통합DB(공통 DB)",
+   "상황 이벤트 동시 표출",
+   "5대 연계 서비스(112·119·재난·사회적 약자)",
+   "스마트도시 통합운영센터",
+   "국토교통부 보급 사업",
+   "개별 연결(N:N)→허브(1:N) 구조"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -9758,7 +9927,8 @@
   "gloss": {
    "ESS": "Energy Storage System",
    "PLC": "Programmable Logic Controller"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_083",
@@ -9773,70 +9943,85 @@
   "dueum": null,
   "name": "스마트시티 서비스 모델(Smart City Service Model)",
   "title": "스마트시티 서비스 모델(Smart City Service Model)",
-  "definition": "ICT 핵심기술이 혁신적으로 스마트시티 물리시스템 도메인과 CPS 융합 시 세계 GDP 는 2030 년까지 10 조 6 천억 불 규모에 달하며, 법 제정 등 제도정비가 뒷받침되면 추가적으로 30% 증가하여 14 조 2 천억 불이 될것으로 전망",
+  "definition": "5G·IoT·빅데이터·AI 등 ICT 핵심기술과 통신설비, 제조·교통·에너지 등 물리 도메인을 CPS로 융합한 스마트시티에서 통신설비·플랫폼 인프라의 구축·운영 주체에 따라 OBM·BOM·BOT·BOO 4가지로 구분한 사업 모델",
   "keywords_must": [
-   "OBM",
-   "BOM",
-   "BOO",
-   "4 차 산업혁명과 CPS 시스템",
-   "스마트시티 모델의 4 가지 유형",
-   "스마트시티 서비스 모델 아키텍처",
-   "CPS",
+   "5G CPS(Cyber-Physical System)",
+   "물리 도메인(제조·교통·에너지·헬스케어)",
+   "통신설비(관로·전주·맨홀·광케이블·스몰셀)",
+   "클라우드 플랫폼 인프라",
    "OBM(Open Business Model)",
    "BOM(Build, Operate, Manage)",
-   "BOO(Build, Own, Operate)"
+   "BOT(Build, Operate, Transfer)",
+   "BOO(Build, Own, Operate)",
+   "오픈 네트워크 게이트웨이"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "구도시·신도시·미래도시",
+   "플랫폼 인큐베이터 모델",
+   "계약자 모델",
+   "중앙 모델",
+   "gNB 스몰셀"
+  ],
   "keywords": [
-   "핵심: OBM · BOM · BOO",
-   "기술: 4 차 산업혁명과 CPS 시스템 · 스마트시티 모델의 4 가지 유형 · 스마트시티 서비스 모델 아키텍처",
-   "운영: CPS · OBM(Open Business Model) · BOM(Build, Operate, Manage)"
+   "CPS 구성: Physical domain · Communications · IT · Data · ICT Core",
+   "4유형: OBM(개방) · BOM(계약자) · BOT(서비스·이양) · BOO(중앙 소유)",
+   "적용: OBM·BOM 구도시 · BOT 신도시 · BOO 미래도시"
   ],
   "outline": [
-   "4 차 산업혁명과 CPS 시스템, 통신설비 구성요소",
-   "- 4 차 산업혁명과 CPS 시스템",
-   "- 4 차 산업혁명 시스템과 통신설비 구성요소",
-   "스마트시티 모델의 4 가지 유형",
-   "- 스마트시티 모델의 4 가지 유형",
-   "- 스마트시트 모델의 4 가지 유형 상세설명"
+   "5G CPS 기반 구조",
+   "- 융합: 물리 도메인·통신·플랫폼",
+   "- 연동: 지자체 플랫폼·오픈 네트워크",
+   "4가지 사업 유형",
+   "- 민간 주도: OBM·BOM",
+   "- 지자체 주도: BOT·BOO",
+   "도시 유형별 적용",
+   "- 적용: 구도시·신도시·미래도시"
   ],
   "sections": [
    {
-    "title": "스마트시티 서비스 모델 핵심",
+    "title": "5G CPS 기반 구조",
     "subsections": [
      {
-      "title": null,
+      "title": "융합: 물리 도메인·통신·플랫폼",
       "items": [
-       "OBM: OBM를 스마트시티 서비스 모델 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "BOM: BOM를 스마트시티 서비스 모델 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "BOO: BOO를 스마트시티 서비스 모델 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "4 차 산업혁명과 CPS 시스템: 스마트시티 서비스 모델에서 4 차 산업혁명과 CPS 시스템을 다루는 핵심 암기 포인트"
+       "5G CPS: ICT 핵심기술·통신설비·물리 도메인 융합, 2030년 세계 GDP 효과 10.6조 달러 전망",
+       "통신설비: 5G 스몰셀(gNB)·Wi-Fi·관로·전주·맨홀·광케이블이 통신사업자와 지자체의 필수설비"
+      ]
+     },
+     {
+      "title": "연동: 지자체 플랫폼·오픈 네트워크",
+      "items": [
+       "지자체가 구축한 AI·빅데이터 클라우드 플랫폼이 통신사업자 오픈 네트워크 게이트웨이에 접속해 서비스 연계"
       ]
      }
     ]
    },
    {
-    "title": "스마트시티 서비스 모델 구성·기술",
+    "title": "4가지 사업 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "민간 주도: OBM·BOM",
       "items": [
-       "스마트시티 모델의 4 가지 유형: 스마트시티 서비스 모델에서 스마트시티 모델의 4 가지 유형을 다루는 핵심 암기 포인트",
-       "스마트시티 서비스 모델 아키텍처: 스마트시티 서비스 모델의 계층·모듈 배치와 상호작용 구조",
-       "CPS: CPS를 스마트시티 서비스 모델 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OBM(Open Business Model): OBM를 스마트시티 서비스 모델 설계·구현·운영에 쓰는 핵심 기술 요소 (스마트시티 서비스 모델/f603)"
+       "OBM(Open Business Model): 모든 사업자 참여, 정부는 통신망 사업자에 규제의무 부여하는 플랫폼 인큐베이터 모델",
+       "BOM(Build, Operate, Manage): 지자체가 지정한 파트너사가 독립 구축·운영, 지자체 역할 없음(계약자 모델)"
+      ]
+     },
+     {
+      "title": "지자체 주도: BOT·BOO",
+      "items": [
+       "BOT(Build, Operate, Transfer): 민간이 구축·운영 후 일정 기간 뒤 지자체 인수 또는 지자체 직접 구축",
+       "BOO(Build, Own, Operate): 지자체가 통신설비·플랫폼을 소유·운영·통제하는 중앙 모델"
       ]
      }
     ]
    },
    {
-    "title": "스마트시티 서비스 모델 운영",
+    "title": "도시 유형별 적용",
     "subsections": [
      {
-      "title": null,
+      "title": "적용: 구도시·신도시·미래도시",
       "items": [
-       "BOM(Build, Operate, Manage): BOM를 스마트시티 서비스 모델 설계·구현·운영에 쓰는 핵심 기술 요소 (스마트시티 서비스 모델/0728)",
-       "BOO(Build, Own, Operate): BOO를 스마트시티 서비스 모델 설계·구현·운영에 쓰는 핵심 기술 요소 (스마트시티 서비스 모델/271b)"
+       "기존 인프라가 있는 구도시는 OBM·BOM, 신도시는 BOT, 백지 상태 미래도시는 BOO가 적합"
       ]
      }
     ]
@@ -9845,16 +10030,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "OBM",
-   "BOM",
-   "BOO",
-   "4 차 산업혁명과 CPS 시스템",
-   "스마트시티 모델의 4 가지 유형",
-   "스마트시티 서비스 모델 아키텍처",
-   "CPS",
+   "5G CPS(Cyber-Physical System)",
+   "물리 도메인(제조·교통·에너지·헬스케어)",
+   "통신설비(관로·전주·맨홀·광케이블·스몰셀)",
+   "클라우드 플랫폼 인프라",
    "OBM(Open Business Model)",
    "BOM(Build, Operate, Manage)",
-   "BOO(Build, Own, Operate)"
+   "BOT(Build, Operate, Transfer)",
+   "BOO(Build, Own, Operate)",
+   "오픈 네트워크 게이트웨이"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -9864,7 +10048,8 @@
   "warnings": [],
   "gloss": {
    "BOM": "Build-Operate-Manage"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_084",
@@ -9875,58 +10060,90 @@
    112,
    117
   ],
-  "en": "BIM BIM BIM",
+  "en": "Building Information Modeling",
   "dueum": null,
-  "name": "디지털서비스(BIM BIM BIM)",
-  "title": "디지털서비스(BIM BIM BIM)",
-  "definition": "컴퓨터로 인공적 가상세계를 구현해 사용자가 느끼기에 실제와 같은 경험 제공 기술 컴퓨터를 이용하여 만들어내 가상의 상황을 사람의 감각 기관을 통해 몰입감을 느끼고 상호작용 하도록 하는기술",
+  "name": "건축정보모델링(BIM, Building Information Modeling)",
+  "title": "건축정보모델링(BIM, Building Information Modeling)",
+  "definition": "건물의 개념 설계부터 시공·유지관리까지 전 수명주기 동안 형상·속성·관계 정보를 파라메트릭 3D 객체 모델에 통합해 생산·공유·관리하는 건설 정보화 기술",
   "keywords_must": [
-   "AV(Argumented Virtuality)",
-   "가상현실(假想現實, Virtual Reality, VR)",
-   "증강현실(增強現實, Augmented Reality, AR)",
-   "Projection Augmented Model (PA Model)",
-   "HMD",
-   "디지털서비스 표준"
+   "3D·4D·5D 모델(공정·비용)",
+   "IFC(Industry Foundation Classes, ISO 16739)",
+   "파라메트릭 컴포넌트(Parametric Component)",
+   "파라메트릭 어셈블리",
+   "파라메트릭 컨트롤",
+   "확장 가능한 객체 속성",
+   "생애주기 비용(LCC) 산출",
+   "간섭 검토(Clash Detection)",
+   "buildingSMART",
+   "조달청 BIM 의무화(공사비 규모별)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "3D 레이저 스캐닝",
+   "ISO 19650",
+   "CFD·에너지 분석",
+   "미국 GSA 3D-4D-BIM",
+   "싱가포르 CORENET e-Plan Checker"
+  ],
   "keywords": [
-   "핵심: AV(Argumented Virtuality) · 가상현실(假想現實, Virtual Reality, VR) · 증강현실(增強現實, Augmented Reality, AR)",
-   "기술: Projection Augmented Model (PA Model) · HMD · 디지털서비스 표준"
+   "속성: 기하 정보 · 확장 가능한 객체 속성 · 속성 통합",
+   "기술: 파라메트릭 컴포넌트 → 어셈블리 → 컨트롤 · IFC 교환 표준",
+   "활용: 3D 형상 · 4D 공정 · 비용 추정 · 에너지 분석 · 시설관리"
   ],
   "outline": [
-   "VR, AR, MR 정의",
-   "- 가상현실(假想現實, Virtual Reality, VR)",
-   "- 증강현실(增強現實, Augmented Reality, AR)",
-   "- 혼합 현실 (Mixed reality, MR), 혼성 현실 (Hybr…",
-   "혼합현실, 가상현실, 증강현실 비교",
-   "- 디지털서비스 요점",
-   "추가자료",
-   "- Projection Augmented Model (PA Model)",
-   "- HMD (Head Mounted Display, 헤드 마운티드 디스플…"
+   "개념과 속성",
+   "- 속성: 기하·객체·통합",
+   "핵심 파라메트릭 기술",
+   "- 계층: 컴포넌트·어셈블리·컨트롤",
+   "- 교환 표준: IFC",
+   "이점과 활용",
+   "- 이점: 설계·비용·프로세스",
+   "- 활용: 4D 공정·시설관리"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "개념과 속성",
     "subsections": [
      {
-      "title": null,
+      "title": "속성: 기하·객체·통합",
       "items": [
-       "AV(Argumented Virtuality): AV를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "가상현실(假想現實, Virtual Reality, VR): 디지털서비스에서 가상현실(假想現實, Virtual Reality, VR)을 다루는 핵심 암기 포인트",
-       "증강현실(增強現實, Augmented Reality, AR): 디지털서비스에서 증강현실(增強現實, Augmented Reality, AR)을 다루는 핵심 암기 포인트",
-       "Projection Augmented Model (PA Model): 디지털서비스에서 Projection Augmented Model (PA Model)를 다루는 핵심 암기 포인트"
+       "확장 가능한 객체 속성: 벽·창 객체가 크기·재질·가격 속성을 갖고 사용자 정의 속성 추가 허용",
+       "조달청 BIM 의무화: 300억 미만 계획·중간설계 수준, 300억 이상 실시설계 수준, 500억 이상 추가 건설정보 요구"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "핵심 파라메트릭 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "계층: 컴포넌트·어셈블리·컨트롤",
       "items": [
-       "HMD: HMD를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "디지털서비스 표준: 디지털서비스 상호운용·품질을 맞추는 규격·기준 (디지털서비스/08d0)"
+       "파라메트릭 컴포넌트: 크기·무게·재질 파라미터와 제약·관계로 객체 정의",
+       "파라메트릭 어셈블리는 컴포넌트 간 관계를 정의해 조합, 파라메트릭 컨트롤은 설계 규칙으로 변경을 전파"
+      ]
+     },
+     {
+      "title": "교환 표준: IFC",
+      "items": [
+       "IFC(Industry Foundation Classes, ISO 16739): buildingSMART가 관리하는 소프트웨어 간 BIM 데이터 교환 형식"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "이점과 활용",
+    "subsections": [
+     {
+      "title": "이점: 설계·비용·프로세스",
+      "items": [
+       "도면·시방서 연계와 성능 분석 자동화, 생애주기 비용(LCC) 자동 산출, 간섭 검토로 재시공 감소"
+      ]
+     },
+     {
+      "title": "활용: 4D 공정·시설관리",
+      "items": [
+       "3D 레이저 스캐닝으로 준공 품질 확인, 4D 모델로 공정 순서·자재 발주 검토, 에너지·CFD 분석과 시설관리",
+       "해외는 미국 GSA·싱가포르 CORENET e-Plan Checker, 국내는 buildingSMART Korea·행복청 적용"
       ]
      }
     ]
@@ -9935,19 +10152,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "AV(Argumented Virtuality)",
-   "가상현실(假想現實, Virtual Reality, VR)",
-   "증강현실(增強現實, Augmented Reality, AR)",
-   "Projection Augmented Model (PA Model)",
-   "HMD",
-   "디지털서비스 표준"
+   "3D·4D·5D 모델(공정·비용)",
+   "IFC(Industry Foundation Classes, ISO 16739)",
+   "파라메트릭 컴포넌트(Parametric Component)",
+   "파라메트릭 어셈블리",
+   "파라메트릭 컨트롤",
+   "확장 가능한 객체 속성",
+   "생애주기 비용(LCC) 산출",
+   "간섭 검토(Clash Detection)",
+   "buildingSMART",
+   "조달청 BIM 의무화(공사비 규모별)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_085",
@@ -9960,85 +10182,94 @@
   ],
   "en": "Radio Frequency Identification",
   "dueum": null,
-  "name": "무선식별(RFID)",
-  "title": "무선식별(RFID)",
-  "definition": "마이크로 칩을 내장한 태그, 라벨, 카드 등에 저장된 데이터를 무선 주파수를 이용하여 리더기에서 자동 인식하는 기술을 모든 사물에 전자 태그를 부착, 무선통신 기술을 이용하여 사물의 정보 및 주변 상황정보를감지하는 인식기술",
+  "name": "무선식별(RFID, Radio Frequency Identification)",
+  "title": "무선식별(RFID, Radio Frequency Identification)",
+  "definition": "마이크로칩과 안테나를 내장한 전자태그에 저장된 식별정보를 리더가 무선 주파수로 비접촉 판독해 사물을 자동 식별하고, 미들웨어·EPCIS를 통해 사물 정보를 응용 서비스에 제공하는 자동인식 기술",
   "keywords_must": [
-   "RFID Tag",
-   "Reader",
-   "RFID 시스템의 개념",
-   "RFID 시스템 구조",
-   "RFID 개념도(USN 포함)",
-   "RF(주파수 변조)",
+   "태그(수동형·능동형)",
+   "리더(Reader)·안테나",
+   "충돌방지(Anti-collision) 알고리즘",
+   "EPC(Electronic Product Code, 96비트)",
+   "ALE(Application Level Events) 미들웨어",
    "ONS(Object Name Service)",
-   "RP(Reader Protocol)",
-   "RM(Reader Management)",
-   "ALE(Application Level Event)"
+   "EPCIS(EPC Information Services)",
+   "Gen2(ISO/IEC 18000-63)",
+   "주파수 대역(LF·HF 13.56MHz·UHF 900MHz)",
+   "태그 메모리 4뱅크"
   ],
   "keywords_ref": [
-   "TDT(Tag Data Translator)",
-   "EPC",
-   "EPCIS",
-   "WRITE",
-   "WORM(Write Only Read Many)",
-   "ONS"
+   "USN",
+   "Kill 명령·블로커 태그",
+   "해시 락(Hash Lock)",
+   "NFC 비교",
+   "바코드 비교"
   ],
   "keywords": [
-   "핵심: RFID Tag · Reader · RFID 시스템의 개념",
-   "기술: RFID 시스템 구조 · RFID 개념도(USN 포함) · RF(주파수 변조)",
-   "운영: ONS(Object Name Service) · RP(Reader Protocol) · RM(Reader Management)",
-   "참고: TDT(Tag Data Translator) · EPC · EPCIS"
+   "구성: 태그 · 리더·안테나 · 미들웨어(ALE·TDT) · ONS · EPCIS",
+   "동작: 태그 부착 → 리더 RF 발산 → 태그 응답 → 안테나 → 리더 → 미들웨어",
+   "대역: LF 125kHz · HF 13.56MHz · UHF 860~960MHz · 마이크로파 2.45GHz"
   ],
   "outline": [
-   "무선 주파수(RF)를 이용하여 대상을 식별하는 기술",
-   "- RFID(Radio Frequency Identification)의 정의",
-   "- RFID 시스템의 개념",
-   "RFID 시스템 구조, 개념도 및 구성요소",
-   "- RFID 시스템 구조",
-   "- RFID 개념도(USN 포함)",
-   "- RFID 구성요소",
-   "RFID Tag",
-   "- 무선식별 요점",
-   "RFID Reader",
-   "- 무선식별 요점"
+   "바코드 대비 장점",
+   "- 인식 방식: 비접촉·대량 인식",
+   "시스템 구조와 구성요소",
+   "- 동작 흐름: 태그→리더→미들웨어",
+   "- 하드웨어: 태그·리더",
+   "- 소프트웨어: 미들웨어·네트워크",
+   "식별 체계와 보안",
+   "- 코드: EPC·메모리 뱅크",
+   "- 보안: 도청·추적 대응"
   ],
   "sections": [
    {
-    "title": "무선식별 핵심",
+    "title": "바코드 대비 장점",
     "subsections": [
      {
-      "title": null,
+      "title": "인식 방식: 비접촉·대량 인식",
       "items": [
-       "RFID Tag: 무선식별에서 RFID Tag를 다루는 핵심 암기 포인트",
-       "Reader: Reader를 무선식별 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "RFID 시스템의 개념: 무선식별에서 RFID 시스템의 개념을 다루는 핵심 암기 포인트",
-       "RFID 시스템 구조: 무선식별에서 RFID 시스템 구조를 다루는 핵심 암기 포인트"
+       "포장 여부와 관계없이 원거리 비접촉 인식, 칩 메모리에 정보 쓰기·삭제 가능, 동시 다수 판독"
       ]
      }
     ]
    },
    {
-    "title": "무선식별 구성·기술",
+    "title": "시스템 구조와 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "동작 흐름: 태그→리더→미들웨어",
       "items": [
-       "RFID 개념도(USN 포함): 무선식별의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "RF(주파수 변조): RF를 무선식별 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ONS(Object Name Service): ONS를 무선식별 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "RP(Reader Protocol): RP를 무선식별 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "리더가 안테나로 RF를 발산하면 태그가 반응해 EPC를 전송, 리더가 미들웨어로 전달"
+      ]
+     },
+     {
+      "title": "하드웨어: 태그·리더",
+      "items": [
+       "태그(수동형·능동형): 수동형은 리더 전파로 전원 유도, 능동형은 배터리 내장으로 원거리",
+       "충돌방지(Anti-collision) 알고리즘: 초당 100개 이상 판독, 리더는 2~4개 안테나 배열, Gen2(ISO/IEC 18000-63) 적용"
+      ]
+     },
+     {
+      "title": "소프트웨어: 미들웨어·네트워크",
+      "items": [
+       "ALE(Application Level Events) 미들웨어: 판독 데이터를 필터링·요약해 응용에 전달(사실상 표준)",
+       "ONS(Object Name Service)는 EPC로 EPCIS 위치를 찾고, EPCIS는 사물 이력 정보를 제공"
       ]
      }
     ]
    },
    {
-    "title": "무선식별 운영",
+    "title": "식별 체계와 보안",
     "subsections": [
      {
-      "title": null,
+      "title": "코드: EPC·메모리 뱅크",
       "items": [
-       "RM(Reader Management): RM를 무선식별 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ALE(Application Level Event): ALE를 무선식별 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "EPC(Electronic Product Code, 96비트): 가장 많이 쓰는 식별 코드, 태그 메모리 4뱅크 중 User 영역에 수백 바이트 부가 저장"
+      ]
+     },
+     {
+      "title": "보안: 도청·추적 대응",
+      "items": [
+       "Kill 명령으로 태그 영구 비활성화, 블로커 태그로 판독 방해, 해시 락으로 ID 노출 방지"
       ]
      }
     ]
@@ -10047,23 +10278,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "RFID Tag",
-   "Reader",
-   "RFID 시스템의 개념",
-   "RFID 시스템 구조",
-   "RFID 개념도(USN 포함)",
-   "RF(주파수 변조)",
+   "태그(수동형·능동형)",
+   "리더(Reader)·안테나",
+   "충돌방지(Anti-collision) 알고리즘",
+   "EPC(Electronic Product Code, 96비트)",
+   "ALE(Application Level Events) 미들웨어",
    "ONS(Object Name Service)",
-   "RP(Reader Protocol)",
-   "RM(Reader Management)",
-   "ALE(Application Level Event)"
+   "EPCIS(EPC Information Services)",
+   "Gen2(ISO/IEC 18000-63)",
+   "주파수 대역(LF·HF 13.56MHz·UHF 900MHz)",
+   "태그 메모리 4뱅크"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_094",
@@ -10075,63 +10307,87 @@
    150
   ],
   "en": "Augmented Reality",
-  "dueum": "정보마추삼아이디",
+  "dueum": "정보마추삼아이디(정합·보정·마커·추적·3D 처리·인터랙션·디스플레이)",
   "name": "증강현실(AR, Augmented Reality)",
   "title": "증강현실(AR, Augmented Reality)",
-  "definition": "실세계와 가상정보를 seamless하게 실시간으로 합성하여 사용자에게 보다 향상된 몰입감과 현실감을 제공하는 기술내 용실 세계와 가상 세계를 Seamless, Real Time으로 혼합하여 제공공간 모델링, 대화형 지능 부여를 통한 사용자 상호 작용 제공",
+  "definition": "카메라로 본 실제 환경에 가상 객체·정보를 실시간으로 이음매 없이(seamless) 정합해 원래 존재하는 사물처럼 보이게 함으로써 현실감과 상호작용성을 높이는 기술",
   "keywords_must": [
-   "HMD",
-   "HUD(Head Up Display)",
-   "센싱기술",
-   "5G",
-   "마커인식기술",
-   "모션트래킹"
+   "보정(Calibration)",
+   "추적(Tracking)",
+   "정합(Registration)",
+   "마커 인식(Marker)",
+   "인터랙션(Interaction)",
+   "3D 처리(3D Processing)",
+   "디스플레이(HMD·HUD)",
+   "위치기반·마커기반·비마커기반 AR",
+   "SLAM(동시적 위치추정 및 지도작성)"
   ],
   "keywords_ref": [
-   "마커",
-   "VRML",
-   "MRI",
-   "CAD"
+   "ARKit·ARCore",
+   "광학식·비디오 투과형(See-through)",
+   "ARMAR(정비 지원)",
+   "차량 AR HUD",
+   "로널드 아즈마 3요건"
   ],
   "keywords": [
-   "핵심: HMD · HUD(Head Up Display) · 센싱기술",
-   "기술: 5G · 마커인식기술 · 모션트래킹",
-   "참고: 마커 · VRML · MRI"
+   "요건: 현실감(실시간 혼합) · 상호작용성 · 3차원 정합",
+   "구성요소: 정합 · 보정 · 마커 · 추적 · 3D 처리 · 인터랙션 · 디스플레이",
+   "유형: 위치기반(GPS) · 마커기반 · 비마커기반(이미지·SLAM)"
   ],
   "outline": [
-   "증강현실의 구성도 및 구성요소",
-   "- 증강현실의 구성도",
-   "- 증강현실의 구성요소(정보마추삼아이디)",
-   "증강현실 응용사례",
-   "- 증강현실 요점",
-   "모바일 증강 현실의 문제점 및 해결 방안",
-   "- 증강현실 요점",
-   "모바일 증강 현실의 기대 효과",
-   "- 증강현실 요점"
+   "요건",
+   "- 요건: 현실감·상호작용·정합",
+   "7대 구성",
+   "- 위치 계산: 보정·추적·정합",
+   "- 인식·표현: 마커·3D·디스플레이",
+   "유형과 응용",
+   "- 유형: 위치·마커·비마커",
+   "- 응용: 방송·의료·군사"
   ],
   "sections": [
    {
-    "title": "증강현실 핵심",
+    "title": "요건",
     "subsections": [
      {
-      "title": null,
+      "title": "요건: 현실감·상호작용·정합",
       "items": [
-       "HMD: HMD를 증강현실 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HUD(Head Up Display): HUD를 증강현실 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "센싱기술: 증강현실에서 센싱기술을 다루는 핵심 암기 포인트",
-       "5G: 초저지연·대용량·다수 연결을 목표로 한 이동통신 세대"
+       "로널드 아즈마 3요건: 현실과 가상의 결합, 실시간 상호작용, 3차원 공간 정합"
       ]
      }
     ]
    },
    {
-    "title": "증강현실 구성·기술",
+    "title": "7대 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "위치 계산: 보정·추적·정합",
       "items": [
-       "마커인식기술: 증강현실에서 마커인식기술을 다루는 핵심 암기 포인트",
-       "모션트래킹: 증강현실에서 모션트래킹을 다루는 핵심 암기 포인트"
+       "보정(Calibration): 카메라 좌표와 실세계 좌표 관계 계산, 추적(Tracking)은 객체 위치·회전 정보 획득",
+       "정합(Registration): 원하는 위치에 가상 객체를 오차 없이 겹치는 기술"
+      ]
+     },
+     {
+      "title": "인식·표현: 마커·3D·디스플레이",
+      "items": [
+       "마커 인식(Marker): 영상 속 마커로 카메라의 3차원 좌표 확보, 3D 처리는 VRML·물리 엔진으로 객체 모델링",
+       "디스플레이(HMD·HUD): 머리 착용형과 차량·항공기 전방 투영형으로 이동성 확보"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형과 응용",
+    "subsections": [
+     {
+      "title": "유형: 위치·마커·비마커",
+      "items": [
+       "위치기반 AR은 GPS로 길찾기(Layar·Wikitude), 마커기반은 특정 표식 인식, 비마커기반은 일반 이미지·특징점을 SLAM으로 인식"
+      ]
+     },
+     {
+      "title": "응용: 방송·의료·군사",
+      "items": [
+       "스포츠 중계 선수 정보 합성, MRI·CT 3D 영상을 환부에 중첩한 수술, ARMAR(정비 지원) HMD 조립 지시"
       ]
      }
     ]
@@ -10140,19 +10396,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "HMD",
-   "HUD(Head Up Display)",
-   "센싱기술",
-   "5G",
-   "마커인식기술",
-   "모션트래킹"
+   "보정(Calibration)",
+   "추적(Tracking)",
+   "정합(Registration)",
+   "마커 인식(Marker)",
+   "인터랙션(Interaction)",
+   "3D 처리(3D Processing)",
+   "디스플레이(HMD·HUD)",
+   "위치기반·마커기반·비마커기반 AR",
+   "SLAM(동시적 위치추정 및 지도작성)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_095",
@@ -10163,75 +10423,87 @@
    115,
    118
   ],
-  "en": "Augmented Reality Types",
+  "en": "Immersive Reality Types",
   "dueum": null,
-  "name": "증강현실 유형(AR Types)",
-  "title": "증강현실 유형(AR Types)",
-  "definition": "증강현실을 디스플레이·추적 방식에 따라 분류한 유형. 광학/비디오 투시, 마커/마커리스 등으로 나뉜다.",
+  "name": "실감기술 유형 비교(Immersive Reality Types)",
+  "title": "실감기술 유형 비교(Immersive Reality Types)",
+  "definition": "현실 차단 여부와 현실·가상 정보의 혼합 방식에 따라 가상현실(VR)·증강현실(AR)·증강가상(AV)·혼합현실(MR)을 구분하고 구현 방식·장단점·표시 장치를 비교한 실감기술 분류",
   "keywords_must": [
-   "증강현실 유형의 핵심 요소",
-   "증강현실 유형의 구조",
-   "증강현실 유형의 적용",
-   "증강현실 유형의 과제",
-   "핵심 요소",
-   "구조",
-   "적용",
-   "과제",
-   "트래킹"
+   "현실-가상 연속체(Reality-Virtuality Continuum, Milgram 1994)",
+   "가상현실(VR, 현실 차단)",
+   "증강현실(AR, 현실 위 가상 정보)",
+   "증강가상(AV, Augmented Virtuality)",
+   "혼합현실(MR, 실시간 상호작용 융합)",
+   "HMD(Head Mounted Display)",
+   "HUD(Head-Up Display)",
+   "PA 모델(Projection Augmented Model)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "이반 서덜랜드 1968 HMD",
+   "확장현실(XR)",
+   "비디오·광학 투과",
+   "홀로렌즈",
+   "몰입감·현실감"
+  ],
   "keywords": [
-   "핵심: 증강현실 유형의 핵심 요소 · 증강현실 유형의 구조 · 증강현실 유형의 적용",
-   "기술: 증강현실 유형의 과제 · 핵심 요소 · 구조",
-   "운영: 적용 · 과제 · 트래킹"
+   "연속체: 현실 → AR → AV → 가상 (MR = AR + AV 구간)",
+   "구현 방식: VR 현실 차단 · AR 현실 위 정보 · MR 현실 기반 가상 융합·상호작용",
+   "장치: HMD · HUD · PA 모델"
   ],
   "outline": [
-   "증강현실 유형의 개요",
-   "- 증강현실 유형의 정의",
-   "- 증강현실 유형의 등장 배경",
-   "증강현실 유형의 구성과 핵심 요소",
-   "- 증강현실 유형의 핵심 요소",
-   "- 증강현실 유형의 구조",
-   "증강현실 유형의 적용과 사례",
-   "- 증강현실 유형의 적용",
-   "- 증강현실 유형의 과제"
+   "유형별 정의",
+   "- 연속체: 밀그램 분류",
+   "- 유형: VR·AR·AV·MR",
+   "장단점 비교",
+   "- VR: 몰입감 vs 현실 차단",
+   "- AR·MR: 현실 정보 vs 처리 부담",
+   "표시 장치",
+   "- 장치: HMD·HUD·PA 모델"
   ],
   "sections": [
    {
-    "title": "증강현실 유형 핵심",
+    "title": "유형별 정의",
     "subsections": [
      {
-      "title": null,
+      "title": "연속체: 밀그램 분류",
       "items": [
-       "증강현실 유형의 핵심 요소: 증강현실 유형에서 증강현실 유형의 핵심 요소를 다루는 핵심 암기 포인트",
-       "증강현실 유형의 구조: 증강현실 유형에서 증강현실 유형의 구조를 다루는 핵심 암기 포인트",
-       "증강현실 유형의 적용: 증강현실 유형에서 증강현실 유형의 적용을 다루는 핵심 암기 포인트",
-       "증강현실 유형의 과제: 증강현실 유형에서 증강현실 유형의 과제를 다루는 핵심 암기 포인트"
+       "현실-가상 연속체: 실제 환경과 완전 가상 환경 사이를 AR·AV가 채우고 그 중간 전체를 MR로 정의"
+      ]
+     },
+     {
+      "title": "유형: VR·AR·AV·MR",
+      "items": [
+       "증강가상(AV, Augmented Virtuality): 가상 공간에 실제 사람·사물 영상을 합성(가상 스튜디오)",
+       "혼합현실(MR): 현실 배경에 가상 객체를 놓고 손·사물과 실시간 상호작용"
       ]
      }
     ]
    },
    {
-    "title": "증강현실 유형 구성·기술",
+    "title": "장단점 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "VR: 몰입감 vs 현실 차단",
       "items": [
-       "핵심 요소: 증강현실 유형에서 핵심 요소를 다루는 핵심 암기 포인트",
-       "구조: 증강현실 유형에서 구조를 다루는 핵심 암기 포인트",
-       "적용: 증강현실 유형에서 적용을 다루는 핵심 암기 포인트",
-       "과제: 증강현실 유형에서 과제를 다루는 핵심 암기 포인트"
+       "가상현실(VR): CG로 입체감·몰입감 극대화, 현실과 차단돼 어지러움·현실감 저하"
+      ]
+     },
+     {
+      "title": "AR·MR: 현실 정보 vs 처리 부담",
+      "items": [
+       "증강현실(AR)은 현실에 유용한 정보를 덧붙이나 시야·정보 분리, MR은 사실감 최대지만 데이터량·장비 제약"
       ]
      }
     ]
    },
    {
-    "title": "증강현실 유형 운영",
+    "title": "표시 장치",
     "subsections": [
      {
-      "title": null,
+      "title": "장치: HMD·HUD·PA 모델",
       "items": [
-       "트래킹: 증강현실 유형에서 트래킹을 다루는 핵심 암기 포인트"
+       "HMD(Head Mounted Display): 1968년 유타대 이반 서덜랜드가 최초 개발, 전투기용은 Helmet Mounted Display",
+       "HUD(Head-Up Display)는 시야 전면에 정보 투영, PA 모델은 투사 영상을 입히는 물리적 입체 모델"
       ]
      }
     ]
@@ -10240,22 +10512,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "증강현실 유형의 핵심 요소",
-   "증강현실 유형의 구조",
-   "증강현실 유형의 적용",
-   "증강현실 유형의 과제",
-   "핵심 요소",
-   "구조",
-   "적용",
-   "과제",
-   "트래킹"
+   "현실-가상 연속체(Reality-Virtuality Continuum, Milgram 1994)",
+   "가상현실(VR, 현실 차단)",
+   "증강현실(AR, 현실 위 가상 정보)",
+   "증강가상(AV, Augmented Virtuality)",
+   "혼합현실(MR, 실시간 상호작용 융합)",
+   "HMD(Head Mounted Display)",
+   "HUD(Head-Up Display)",
+   "PA 모델(Projection Augmented Model)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_096",
@@ -10267,71 +10539,87 @@
    153
   ],
   "en": "Virtual Reality",
-  "dueum": "오출입음모",
+  "dueum": "오출입음모(오감·출력·입력·음향·모션)",
   "name": "가상현실(VR, Virtual Reality)",
   "title": "가상현실(VR, Virtual Reality)",
-  "definition": "컴퓨터를 이용하여 가상세계를 만들어내 가상의 상황을 사람의 감각기관을 통해 몰입감을 느끼고 실제와같은 경험 제공 기술",
+  "definition": "컴퓨터로 만든 3차원 가상세계를 HMD·3D 음향·모션 인식으로 시각·청각·촉각 등 감각기관에 제시해 사용자가 현실과 차단된 상태에서 실제와 같은 몰입감과 상호작용을 경험하게 하는 기술",
   "keywords_must": [
-   "분류 유형 정리 디바이스",
-   "플랫폼",
-   "네트워크",
-   "디스플레이기술",
-   "인터렉션",
-   "오큘러스",
-   "깊이 카메라",
-   "NVI(natural User interface)",
-   "HMD",
-   "렌더링"
+   "HMD(Head Mounted Display)",
+   "출력 기술(해상도·주사율·잔상 제거)",
+   "입력 기술(음성·동작 인식, NUI)",
+   "3D 실감 음향(입체 음향)",
+   "오감 기술(햅틱·에어리얼)",
+   "모션 기술(모션 플랫폼·트래킹)",
+   "렌더링(Rendering)",
+   "3DoF·6DoF 추적",
+   "사이버 멀미(Motion Sickness)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "오큘러스·메타 퀘스트",
+   "깊이 카메라",
+   "PPI(Pixels Per Inch)",
+   "360 VR 영상",
+   "MTP 지연(Motion-to-Photon, 20ms 이하)"
+  ],
   "keywords": [
-   "핵심: 분류 유형 정리 디바이스 · 플랫폼 · 네트워크",
-   "기술: 디스플레이기술 · 인터렉션 · 오큘러스",
-   "운영: 깊이 카메라 · NVI(natural User interface) · HMD"
+   "핵심 기술: 오감 · 출력 · 입력 · 음향 · 모션",
+   "게임 구성: HW(HMD·컨트롤러) · SW(시나리오·3D 그래픽·플랫폼) · NW(Wi-Fi·블루투스)",
+   "활용: 게임 · 영화 · 교육 · 전시 · 관광 · 기업 회의 · 의료 치료"
   ],
   "outline": [
-   "가상현실 구현 방식 및 핵심 기술",
-   "- 가상현실 구현 방식",
-   "가상현실 활용 현황",
-   "- 가상현실 요점"
+   "구현 방식",
+   "- 방식: 3D 영상·음향·모션",
+   "오감 구현 기술",
+   "- 감각 제시: 출력·음향·오감",
+   "- 사용자 입력: 입력·모션",
+   "활용 분야",
+   "- 콘텐츠: 게임·영화·전시",
+   "- 산업: 교육·의료·기업"
   ],
   "sections": [
    {
-    "title": "가상현실 핵심",
+    "title": "구현 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "방식: 3D 영상·음향·모션",
       "items": [
-       "분류 유형 정리 디바이스: 가상현실에서 분류 유형 정리 디바이스를 다루는 핵심 암기 포인트",
-       "플랫폼: 가상현실에서 플랫폼을 다루는 핵심 암기 포인트",
-       "네트워크: 가상현실에서 네트워크를 다루는 핵심 암기 포인트",
-       "디스플레이기술: 가상현실에서 디스플레이기술을 다루는 핵심 암기 포인트"
+       "HMD(Head Mounted Display): 좌우 눈에 다른 영상을 보여 입체감, 3DoF·6DoF 추적으로 머리 움직임 반영",
+       "MTP 지연(Motion-to-Photon)이 20ms를 넘으면 사이버 멀미 유발"
       ]
      }
     ]
    },
    {
-    "title": "가상현실 구성·기술",
+    "title": "오감 구현 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "감각 제시: 출력·음향·오감",
       "items": [
-       "인터렉션: 가상현실에서 인터렉션을 다루는 핵심 암기 포인트",
-       "오큘러스: 가상현실에서 오큘러스를 다루는 핵심 암기 포인트",
-       "깊이 카메라: 가상현실에서 깊이 카메라를 다루는 핵심 암기 포인트",
-       "NVI(natural User interface): NVI를 가상현실 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "출력 기술: 고해상도·고PPI와 높은 주사율로 잔상(모션 블러)·어지러움 제거",
+       "3D 실감 음향으로 방향감 표현, 오감 기술은 디즈니 에어리얼처럼 압축공기로 촉각 제공"
+      ]
+     },
+     {
+      "title": "사용자 입력: 입력·모션",
+      "items": [
+       "입력 기술(음성·동작 인식, NUI): 컨트롤러 없이 자연스러운 조작, 모션 기술은 소형·저비용 플랫폼으로 발전"
       ]
      }
     ]
    },
    {
-    "title": "가상현실 운영",
+    "title": "활용 분야",
     "subsections": [
      {
-      "title": null,
+      "title": "콘텐츠: 게임·영화·전시",
       "items": [
-       "HMD: HMD를 가상현실 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "렌더링: 가상현실에서 렌더링을 다루는 핵심 암기 포인트"
+       "1인칭 게임, 참여에 따라 스토리가 바뀌는 인터랙티브 시네마, 가상 미술관·박물관"
+      ]
+     },
+     {
+      "title": "산업: 교육·의료·기업",
+      "items": [
+       "원격 가상교실, 수술 시뮬레이션·고소공포증 치료, 가상 원격회의와 건축 시뮬레이션"
       ]
      }
     ]
@@ -10340,23 +10628,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "분류 유형 정리 디바이스",
-   "플랫폼",
-   "네트워크",
-   "디스플레이기술",
-   "인터렉션",
-   "오큘러스",
-   "깊이 카메라",
-   "NVI(natural User interface)",
-   "HMD",
-   "렌더링"
+   "HMD(Head Mounted Display)",
+   "출력 기술(해상도·주사율·잔상 제거)",
+   "입력 기술(음성·동작 인식, NUI)",
+   "3D 실감 음향(입체 음향)",
+   "오감 기술(햅틱·에어리얼)",
+   "모션 기술(모션 플랫폼·트래킹)",
+   "렌더링(Rendering)",
+   "3DoF·6DoF 추적",
+   "사이버 멀미(Motion Sickness)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_097",
@@ -10367,58 +10655,95 @@
    118,
    123
   ],
-  "en": "VR Media Capture",
+  "en": "VR Media Acquisition (3DoF, 6DoF)",
   "dueum": null,
   "name": "VR 미디어 획득(VR Media Capture)",
   "title": "VR 미디어 획득(VR Media Capture)",
-  "definition": "VR(Virtual Reality) 미디어 획득 — 실감·몰입 미디어 및 메타버스 관련 개념",
+  "definition": "다수 카메라·깊이 센서로 360도 전방위 영상과 공간정보를 촬영·스티칭·인코딩해 사용자의 머리 회전(3DoF) 또는 회전과 이동(6DoF)에 맞춰 시점을 재현할 수 있는 VR 콘텐츠를 생성하는 기술",
   "keywords_must": [
-   "VR 미디어 획득의 핵심 요소",
-   "VR 미디어 획득의 구조",
-   "VR 미디어 획득의 적용",
-   "VR 미디어 획득의 과제",
-   "VR(Virtual Reality)",
-   "VR 미디어 획득 표준"
+   "자유도(DoF, Degrees of Freedom)",
+   "3DoF(Yaw·Pitch·Roll 회전)",
+   "6DoF(회전 + 전후·좌우·상하 이동)",
+   "MPEG-I(몰입형 미디어 표준)",
+   "스티칭·프로젝션(ERP 등)",
+   "스테레오스코픽 3D(S3D)",
+   "포인트 클라우드(Point Cloud)·라이다(LiDAR)",
+   "라이트 필드(Light Field)",
+   "시점 합성(Virtual View Synthesis)",
+   "헤드·아이 트래킹 메타데이터"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "3DoF+",
+   "삼성 프로젝트 비욘드",
+   "노키아 OZO",
+   "구글 점프·점프 어셈블러",
+   "페이스북 서라운드 360·x24"
+  ],
   "keywords": [
-   "핵심: VR 미디어 획득의 핵심 요소 · VR 미디어 획득의 구조 · VR 미디어 획득의 적용",
-   "기술: VR 미디어 획득의 과제 · VR(Virtual Reality) · VR 미디어 획득 표준"
+   "자유도: 3DoF(회전 3축) → 3DoF+(제한 이동) → 6DoF(회전 + 이동 3축)",
+   "3DoF 파이프라인: 획득 → 스티칭·프로젝션 → 인코딩 → 캡슐화 → 전송 → 디코딩 → 뷰포트 렌더링",
+   "6DoF 추가: 깊이 센싱 · 포인트 클라우드·라이트 필드 인코딩 · 가상 시점 합성"
   ],
   "outline": [
-   "VR 미디어 획득의 개요",
-   "- VR 미디어 획득의 정의",
-   "- VR 미디어 획득의 등장 배경",
-   "VR 미디어 획득의 구성과 핵심 요소",
-   "- VR 미디어 획득의 핵심 요소",
-   "- VR 미디어 획득의 구조",
-   "VR 미디어 획득의 적용과 사례",
-   "- VR 미디어 획득의 적용",
-   "- VR 미디어 획득의 과제"
+   "자유도 개념",
+   "- 3DoF: 회전만 반영",
+   "- 6DoF: 회전과 이동",
+   "3DoF 획득 기술",
+   "- 구조: MPEG-I 파이프라인",
+   "- 제품: 다중 카메라 리그",
+   "6DoF 획득 기술",
+   "- 구조: 깊이·포인트 클라우드",
+   "- 제품: 인텔·페이스북 x24"
   ],
   "sections": [
    {
-    "title": "VR 미디어 획득 핵심",
+    "title": "자유도 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "3DoF: 회전만 반영",
       "items": [
-       "VR 미디어 획득의 핵심 요소: VR 미디어 획득에서 VR 미디어 획득의 핵심 요소를 다루는 핵심 암기 포인트",
-       "VR 미디어 획득의 구조: VR 미디어 획득에서 VR 미디어 획득의 구조를 다루는 핵심 암기 포인트",
-       "VR 미디어 획득의 적용: VR 미디어 획득에서 VR 미디어 획득의 적용을 다루는 핵심 암기 포인트",
-       "VR 미디어 획득의 과제: VR 미디어 획득에서 VR 미디어 획득의 과제를 다루는 핵심 암기 포인트"
+       "3DoF(Yaw·Pitch·Roll 회전): Yaw는 좌우 회전, Pitch는 위아래, Roll은 기울임으로 시점 재현"
+      ]
+     },
+     {
+      "title": "6DoF: 회전과 이동",
+      "items": [
+       "6DoF: 3DoF의 위치 표현 한계를 극복해 병진 운동까지 반영, 자연스러운 몰입감"
       ]
      }
     ]
    },
    {
-    "title": "VR 미디어 획득 구성·기술",
+    "title": "3DoF 획득 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "구조: MPEG-I 파이프라인",
       "items": [
-       "VR(Virtual Reality): VR를 VR 미디어 획득 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "VR 미디어 획득 표준: VR 미디어 획득 상호운용·품질을 맞추는 규격·기준"
+       "MPEG-I(몰입형 미디어 표준): 영상 스티칭·프로젝션 후 오디오·비디오 인코딩, 헤드 트래킹 메타데이터로 뷰포트만 렌더링"
+      ]
+     },
+     {
+      "title": "제품: 다중 카메라 리그",
+      "items": [
+       "삼성 프로젝트 비욘드는 FHD 카메라 17대로 S3D 실시간 스트리밍, 노키아 OZO는 어안렌즈 8대로 8K×4K",
+       "구글 점프는 고프로 16대와 점프 어셈블러로 최대 8K 출력, 페이스북 서라운드 360은 17대 카메라 설계를 오픈소스 공개"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "6DoF 획득 기술",
+    "subsections": [
+     {
+      "title": "구조: 깊이·포인트 클라우드",
+      "items": [
+       "포인트 클라우드(Point Cloud)·라이다(LiDAR): 깊이 센싱으로 3차원 공간정보 획득, 라이트 필드 인코딩과 가상 시점 합성으로 임의 위치 영상 생성"
+      ]
+     },
+     {
+      "title": "제품: 인텔·페이스북 x24",
+      "items": [
+       "인텔은 6K 카메라 14대와 3D LiDAR 1대로 세계 최초 6DoF 전방위 영상 시연(제한 범위 이동), 페이스북 x24·x6은 24대·6대 카메라 구성"
       ]
      }
     ]
@@ -10427,19 +10752,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "VR 미디어 획득의 핵심 요소",
-   "VR 미디어 획득의 구조",
-   "VR 미디어 획득의 적용",
-   "VR 미디어 획득의 과제",
-   "VR(Virtual Reality)",
-   "VR 미디어 획득 표준"
+   "자유도(DoF, Degrees of Freedom)",
+   "3DoF(Yaw·Pitch·Roll 회전)",
+   "6DoF(회전 + 전후·좌우·상하 이동)",
+   "MPEG-I(몰입형 미디어 표준)",
+   "스티칭·프로젝션(ERP 등)",
+   "스테레오스코픽 3D(S3D)",
+   "포인트 클라우드(Point Cloud)·라이다(LiDAR)",
+   "라이트 필드(Light Field)",
+   "시점 합성(Virtual View Synthesis)",
+   "헤드·아이 트래킹 메타데이터"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_099",
@@ -10450,59 +10780,95 @@
    124,
    126
   ],
-  "en": "AR ARC ARC",
+  "en": "Augmented Reality Continuum",
   "dueum": null,
-  "name": "디지털서비스(AR ARC ARC)",
-  "title": "디지털서비스(AR ARC ARC)",
-  "definition": "현실세계와 가상세계 사이에 두 가지, 증강현실(AR, Augmented Reality)과 증강가상(AV, Augmented Virtuality)인 혼합현실(MR, Mixed Reality)을 총칭",
+  "name": "증강현실 연속체(ARC, Augmented Reality Continuum)",
+  "title": "증강현실 연속체(ARC, Augmented Reality Continuum)",
+  "definition": "1994년 폴 밀그램과 기시노 후미오가 「A Taxonomy of Mixed Reality Visual Displays」에서 실제 환경과 가상 환경을 양 끝으로 놓고 그 사이의 증강현실(AR)과 증강가상(AV)을 혼합현실(MR)로 총칭해 경계를 구분한 연속 스펙트럼 개념",
   "keywords_must": [
-   "ARC의 요소 개념",
-   "ARC의 개념도",
-   "디지털서비스 아키텍처",
-   "디지털서비스 표준",
-   "ARC",
-   "X3D",
-   "VRML"
+   "밀그램·기시노(Milgram & Kishino, 1994)",
+   "현실-가상 연속체(Reality-Virtuality Continuum)",
+   "실제 환경(Real Environment)",
+   "증강현실(AR)",
+   "증강가상(AV, Augmented Virtuality)",
+   "가상 환경(Virtual Environment)",
+   "혼합현실(MR = AR + AV)",
+   "광학·비디오 투과형 HMD(See-through HMD)",
+   "카메라 보정·포즈 추정"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "포스 피드백(Force Feedback) 장치",
+   "모니터 기반 AR",
+   "입체 음향(양이 시간차·음량차)",
+   "시각 해상도 약 90 line/degree",
+   "확장현실(XR)"
+  ],
   "keywords": [
-   "핵심: ARC의 요소 개념 · ARC의 개념도 · 디지털서비스 아키텍처",
-   "기술: 디지털서비스 표준 · ARC · X3D",
-   "운영: VRML"
+   "스펙트럼: 실제 환경 → AR → AV → 가상 환경 (AR·AV 구간 = MR)",
+   "기술: VR(영상생성·위치추적·포스백) · AR(모니터·광학 HMD·비디오 HMD) · MR(보정·포즈 추정·최적화·CG)",
+   "관련 공학: 시각 · 청각 · 촉각 · 공간 인식 · 컨버전스 · 컴퓨터 과학"
   ],
   "outline": [
-   "실 세계와 가상세계와의 경계 구분, 증강현실 연속체(ARC",
-   "- 증강현실 연속체(ARC, Augmented Reality Contin…",
-   "- ARC 의 요소 개념",
-   "ARC 의 개념도 및 기술요소",
-   "- ARC 의 개념도",
-   "ARC 의 추진 동향",
-   "- 디지털서비스 요점"
+   "연속체 요소",
+   "- 양 끝: 실제·가상 환경",
+   "- 중간: AR·AV·MR",
+   "영역별 기술요소",
+   "- VR·AR: 장치와 투과 방식",
+   "- MR: 보정·추정·최적화",
+   "구현 관련 공학",
+   "- 감각 공학: 시각·청각·촉각",
+   "- 공간·동기화: 공간 인식·컨버전스"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "연속체 요소",
     "subsections": [
      {
-      "title": null,
+      "title": "양 끝: 실제·가상 환경",
       "items": [
-       "ARC의 요소 개념: 디지털서비스에서 ARC의 요소 개념을 다루는 핵심 암기 포인트",
-       "ARC의 개념도: 디지털서비스의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램 (디지털서비스/80aa)",
-       "디지털서비스 아키텍처: 디지털서비스의 계층·모듈 배치와 상호작용 구조 (디지털서비스/0188)",
-       "디지털서비스 표준: 디지털서비스 상호운용·품질을 맞추는 규격·기준 (디지털서비스/c435)"
+       "가상 환경(Virtual Environment): 시공간을 넘어 상상의 세계에 몰입, 컴퓨터와 만든 감각의 세계"
+      ]
+     },
+     {
+      "title": "중간: AR·AV·MR",
+      "items": [
+       "증강현실(AR)은 현실에 생성 데이터를 합성, 증강가상(AV)은 가상 공간에 실제 객체 영상을 합성",
+       "혼합현실(MR = AR + AV): 사용자 움직임에 따라 가상 객체를 실시간 조작하는 조작된 현실"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "영역별 기술요소",
     "subsections": [
      {
-      "title": null,
+      "title": "VR·AR: 장치와 투과 방식",
       "items": [
-       "ARC: ARC를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "X3D: X3D를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "VRML: VRML를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "광학·비디오 투과형 HMD: 광학식은 렌즈로 실영상과 가상영상을 합성, 비디오식은 카메라 영상과 CG를 합성해 출력",
+       "VR은 영상생성·위치추적·포스 피드백 장치와 구현 소프트웨어로 구성"
+      ]
+     },
+     {
+      "title": "MR: 보정·추정·최적화",
+      "items": [
+       "카메라 보정·포즈 추정: 카메라 내부 매개변수와 외부(자세) 매개변수를 구해 가상 객체를 정확히 배치"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구현 관련 공학",
+    "subsections": [
+     {
+      "title": "감각 공학: 시각·청각·촉각",
+      "items": [
+       "시각은 약 90 line/degree 고해상도, 청각은 양 귀 도달 시간차·음량차 모델링, 촉각은 공기압·진동·전기 자극"
+      ]
+     },
+     {
+      "title": "공간·동기화: 공간 인식·컨버전스",
+      "items": [
+       "공간 인식은 사영 기하·투영 기법, 컨버전스는 시각·청각·움직임 동기화로 몰입감 확보"
       ]
      }
     ]
@@ -10511,20 +10877,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "ARC의 요소 개념",
-   "ARC의 개념도",
-   "디지털서비스 아키텍처",
-   "디지털서비스 표준",
-   "ARC",
-   "X3D",
-   "VRML"
+   "밀그램·기시노(Milgram & Kishino, 1994)",
+   "현실-가상 연속체(Reality-Virtuality Continuum)",
+   "실제 환경(Real Environment)",
+   "증강현실(AR)",
+   "증강가상(AV, Augmented Virtuality)",
+   "가상 환경(Virtual Environment)",
+   "혼합현실(MR = AR + AV)",
+   "광학·비디오 투과형 HMD(See-through HMD)",
+   "카메라 보정·포즈 추정"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_102",
@@ -10539,55 +10908,98 @@
   "dueum": null,
   "name": "혼합현실(MR, Mixed Reality)",
   "title": "혼합현실(MR, Mixed Reality)",
-  "definition": "현실 배경 위에 현실과 가상의 정보를 혼합하여 기존보다 진화된 가상세계를 구현하는 기술",
+  "definition": "현실 배경 위에 3D 가상 객체를 정합해 현실과 가상 정보를 융합하고, 사용자의 손·시선·공간과 실시간으로 상호작용하게 하는 AR과 AV를 포괄한 복합형 가상현실 기술",
   "keywords_must": [
-   "포즈평가",
-   "최적화이론",
-   "포토닉스 라이트 필드 공간상황이해",
-   "스마트객체생성 및 제어",
-   "인체기반 인터페이스",
-   "서비스네트워킹 Holographic",
-   "Immersive"
+   "카메라 보정(내부 매개변수)",
+   "포즈 추정(외부 매개변수)",
+   "영상 최적화(안구 각도·화질)",
+   "포토닉스 라이트 필드(Photonics Light Field)",
+   "공간 상황 이해(공간 매핑)",
+   "스마트 객체 생성·제어",
+   "인체 기반 인터페이스(제스처·시선)",
+   "서비스 네트워킹(동적 오버레이 네트워크)",
+   "홀로그래픽 디바이스(HoloLens)",
+   "몰입형 디바이스(Immersive)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "매직리프(Magic Leap)",
+   "베이지안 필터 다중 센서",
+   "멀티모달 인터페이스",
+   "크로스토크·멀미 해소",
+   "Windows Mixed Reality"
+  ],
   "keywords": [
-   "핵심: 포즈평가 · 최적화이론 · 포토닉스 라이트 필드 공간상황이해",
-   "기술: 스마트객체생성 및 제어 · 인체기반 인터페이스 · 서비스네트워킹 Holographic",
-   "운영: Immersive"
+   "특징: 고속 처리(멀미·크로스토크 해소) · 리얼리티(현실 연결·제어)",
+   "요소기술: 카메라 보정 · 포즈 추정 · 최적화 · CG · HMD · 라이트 필드",
+   "주요 기술: 공간 상황 이해 · 스마트 객체 · 인체 기반 UI · 서비스 네트워킹"
   ],
   "outline": [
-   "현실환경과 가상환경의 융합, 혼합현실(Mixed Reality)의 개요",
-   "- 혼합현실(Mixed Reality)의 정의",
-   "- 혼합현실(Mixed Reality)의 특징",
-   "- MR-AR-VR 관계도",
-   "혼합현실의 개념도 및 요소기술",
-   "- 혼합현실의 개념도",
-   "- 혼합현실의 요소기술"
+   "처리 특성과 위치",
+   "- 특징: 고속 처리·리얼리티",
+   "- 관계: AR + AV",
+   "요소기술",
+   "- 정합: 보정·포즈·최적화",
+   "- 표시: HMD·라이트 필드",
+   "- 응용 기술: 공간·객체·인터페이스",
+   "디바이스 유형",
+   "- 홀로그래픽: 투과형",
+   "- 몰입형: 비투과형"
   ],
   "sections": [
    {
-    "title": "혼합현실 핵심",
+    "title": "처리 특성과 위치",
     "subsections": [
      {
-      "title": null,
+      "title": "특징: 고속 처리·리얼리티",
       "items": [
-       "포즈평가: 혼합현실에서 포즈평가를 다루는 핵심 암기 포인트",
-       "최적화이론: 혼합현실에서 최적화이론을 다루는 핵심 암기 포인트",
-       "포토닉스 라이트 필드 공간상황이해: 혼합현실에서 포토닉스 라이트 필드 공간상황이해를 다루는 핵심 암기 포인트",
-       "스마트객체생성 및 제어: 혼합현실에서 스마트객체생성 및 제어를 다루는 핵심 암기 포인트"
+       "고속 처리로 기존 3D·AR·VR의 크로스토크와 멀미 해소, 콘텐츠 중심에서 현실 연결·제어 환경으로 발전"
+      ]
+     },
+     {
+      "title": "관계: AR + AV",
+      "items": [
+       "AR(현실 위 가상)과 AV(가상 위 현실)를 포괄하는 연속체 중간 영역 전체"
       ]
      }
     ]
    },
    {
-    "title": "혼합현실 구성·기술",
+    "title": "요소기술",
     "subsections": [
      {
-      "title": null,
+      "title": "정합: 보정·포즈·최적화",
       "items": [
-       "인체기반 인터페이스: 혼합현실에서 인체기반 인터페이스를 다루는 핵심 암기 포인트",
-       "서비스네트워킹 Holographic: 혼합현실에서 서비스네트워킹 Holographic를 다루는 핵심 암기 포인트",
-       "Immersive: Immersive를 혼합현실 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "카메라 보정(내부 매개변수): 다초점 카메라 고유값 산출, 포즈 추정은 각도·거리에 따른 외부 매개변수 산출"
+      ]
+     },
+     {
+      "title": "표시: HMD·라이트 필드",
+      "items": [
+       "포토닉스 라이트 필드(Photonics Light Field): 소형 프로젝터가 투명 렌즈로 망막에 닿는 빛 방향을 조정해 가상 객체를 실물처럼 표현(매직리프)"
+      ]
+     },
+     {
+      "title": "응용 기술: 공간·객체·인터페이스",
+      "items": [
+       "공간 상황 이해: 베이지안 필터 다중 센서와 3D 공간 객체 모델로 의미적 공간 추론",
+       "인체 기반 인터페이스: 머신러닝 제스처 인식·멀티모달 UI, 서비스 네트워킹은 동적 오버레이 네트워크"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "디바이스 유형",
+    "subsections": [
+     {
+      "title": "홀로그래픽: 투과형",
+      "items": [
+       "홀로그래픽 디바이스(HoloLens): 투명 디스플레이로 실세계에 디지털 콘텐츠가 실존하듯 표시"
+      ]
+     },
+     {
+      "title": "몰입형: 비투과형",
+      "items": [
+       "몰입형 디바이스(Immersive): 시야를 가려 높은 몰입감, 인사이드아웃 트래킹으로 공간 인식"
       ]
      }
     ]
@@ -10596,20 +11008,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "포즈평가",
-   "최적화이론",
-   "포토닉스 라이트 필드 공간상황이해",
-   "스마트객체생성 및 제어",
-   "인체기반 인터페이스",
-   "서비스네트워킹 Holographic",
-   "Immersive"
+   "카메라 보정(내부 매개변수)",
+   "포즈 추정(외부 매개변수)",
+   "영상 최적화(안구 각도·화질)",
+   "포토닉스 라이트 필드(Photonics Light Field)",
+   "공간 상황 이해(공간 매핑)",
+   "스마트 객체 생성·제어",
+   "인체 기반 인터페이스(제스처·시선)",
+   "서비스 네트워킹(동적 오버레이 네트워크)",
+   "홀로그래픽 디바이스(HoloLens)",
+   "몰입형 디바이스(Immersive)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_108",
@@ -10620,73 +11036,89 @@
    154,
    155
   ],
-  "en": "Extended Reality",
+  "en": "eXtended Reality",
   "dueum": null,
   "name": "확장현실(XR, Extended Reality)",
   "title": "확장현실(XR, Extended Reality)",
-  "definition": "가상현실(VR)과 증강현실(AR) 혼합현실(MR)의 기술 망라하는 초실감형 기술 현실과 가상현실간의 상호작용이 더욱 강화되어 물체를 직접 만질 수 있는 가상현실",
+  "definition": "가상현실(VR)·증강현실(AR)·혼합현실(MR)을 모두 포괄해 현실과 가상 간 상호작용을 강화하고 시각·청각·촉각으로 현실과 구분하기 어려운 경험을 제공하는 초실감형 기술의 총칭",
   "keywords_must": [
-   "XR의 핵심기술",
-   "XR의 개선점",
-   "확장현실 아키텍처",
-   "확장현실 표준",
-   "확장현실 보안",
-   "초기 2k 이하의 해상도 개선",
-   "OLED",
-   "OLED를 이용 2160*1200 영상 구현",
-   "PPI",
-   "PPD"
+   "VR·AR·MR 포괄",
+   "6DoF(회전 3축 + 이동 3축)",
+   "Yaw·Pitch·Roll",
+   "시선 추적(Eye Tracking)",
+   "PPI(Pixels Per Inch)",
+   "PPD(Pixels Per Degree)",
+   "시야각(FOV, Field of View)",
+   "주사율(90Hz 이상)",
+   "스크린 도어 효과(격자무늬)",
+   "VR 멀미(Motion-to-Photon 지연)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "OLED 2160×1200",
+   "포비티드 렌더링",
+   "입체 음향(공간 음향)",
+   "햅틱 장갑",
+   "OpenXR 표준"
+  ],
   "keywords": [
-   "핵심: XR의 핵심기술 · XR의 개선점 · 확장현실 아키텍처",
-   "기술: 확장현실 표준 · 확장현실 보안 · 초기 2k 이하의 해상도 개선",
-   "운영: OLED · OLED를 이용 2160*1200 영상 구현 · PPI"
+   "핵심 기술: 컴퓨터 그래픽(가상 객체·시선 추적·FPS) · 6DoF · PPI·PPD",
+   "영상 개선: 해상도 · 격자무늬 · 좁은 시야각 · 깜박임",
+   "기타 개선: 입체 음향 · VR 멀미(헤드 트래킹 지연)"
   ],
   "outline": [
-   "XR(eXtended Reality) 개요",
-   "- 확장현실 요점",
-   "XR 의 핵심기술 및 개선점",
-   "- XR 의 핵심기술",
-   "- XR 의 개선점"
+   "개념과 범위",
+   "- 범위: VR·AR·MR 총칭",
+   "몰입 구현 기술",
+   "- 그래픽·추적: 가상 객체·6DoF",
+   "- 화질 지표: PPI·PPD",
+   "문제점과 개선",
+   "- 영상: 해상도·시야·깜박임",
+   "- 음향·멀미: 입체감·지연"
   ],
   "sections": [
    {
-    "title": "확장현실 핵심",
+    "title": "개념과 범위",
     "subsections": [
      {
-      "title": null,
+      "title": "범위: VR·AR·MR 총칭",
       "items": [
-       "XR의 핵심기술: 확장현실에서 XR의 핵심기술을 다루는 핵심 암기 포인트",
-       "XR의 개선점: 확장현실에서 XR의 개선점을 다루는 핵심 암기 포인트",
-       "확장현실 아키텍처: 확장현실의 계층·모듈 배치와 상호작용 구조",
-       "확장현실 표준: 확장현실 상호운용·품질을 맞추는 규격·기준"
+       "현실 차단형 VR부터 투과형 AR·MR까지 하나의 연속 경험으로 통합, OpenXR로 기기 간 호환"
       ]
      }
     ]
    },
    {
-    "title": "확장현실 구성·기술",
+    "title": "몰입 구현 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "그래픽·추적: 가상 객체·6DoF",
       "items": [
-       "확장현실 보안: 확장현실에서 확장현실 보안을 다루는 핵심 암기 포인트",
-       "초기 2k 이하의 해상도 개선: 확장현실에서 초기 2k 이하의 해상도 개선을 다루는 핵심 암기 포인트",
-       "OLED: OLED를 확장현실 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OLED를 이용 2160*1200 영상 구현: 확장현실에서 OLED를 이용 2160*1200 영상 구현을 다루는 핵심 암기 포인트"
+       "6DoF(회전 3축 + 이동 3축): Yaw(좌우 회전)·Pitch(상하 끄덕임)·Roll(기울임)에 전후·좌우·상하 이동을 더함",
+       "시선 추적(Eye Tracking): 응시점만 고해상도로 그리는 포비티드 렌더링으로 연산 절감"
+      ]
+     },
+     {
+      "title": "화질 지표: PPI·PPD",
+      "items": [
+       "PPI(Pixels Per Inch)는 패널 밀도, PPD(Pixels Per Degree)는 시야 1도당 픽셀 수로 체감 선명도 지표"
       ]
      }
     ]
    },
    {
-    "title": "확장현실 운영",
+    "title": "문제점과 개선",
     "subsections": [
      {
-      "title": null,
+      "title": "영상: 해상도·시야·깜박임",
       "items": [
-       "PPI: PPI를 확장현실 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "PPD: PPD를 확장현실 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "스크린 도어 효과(격자무늬): 픽셀 간 틈이 보이는 현상, 해상도·PPD 향상으로 해소",
+       "시야각(FOV): 사람 수평 약 180°·수직 120° 대비 좁은 HMD 시야를 광시야각 광학계로 개선, 주사율은 90Hz 이상"
+      ]
+     },
+     {
+      "title": "음향·멀미: 입체감·지연",
+      "items": [
+       "VR 멀미(Motion-to-Photon 지연): 머리 움직임보다 영상이 늦으면 발생, 헤드 트래킹 고속화와 20ms 이하 지연 목표"
       ]
      }
     ]
@@ -10695,23 +11127,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "XR의 핵심기술",
-   "XR의 개선점",
-   "확장현실 아키텍처",
-   "확장현실 표준",
-   "확장현실 보안",
-   "초기 2k 이하의 해상도 개선",
-   "OLED",
-   "OLED를 이용 2160*1200 영상 구현",
-   "PPI",
-   "PPD"
+   "VR·AR·MR 포괄",
+   "6DoF(회전 3축 + 이동 3축)",
+   "Yaw·Pitch·Roll",
+   "시선 추적(Eye Tracking)",
+   "PPI(Pixels Per Inch)",
+   "PPD(Pixels Per Degree)",
+   "시야각(FOV, Field of View)",
+   "주사율(90Hz 이상)",
+   "스크린 도어 효과(격자무늬)",
+   "VR 멀미(Motion-to-Photon 지연)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_109",
@@ -10726,53 +11159,89 @@
   "dueum": null,
   "name": "실감경제(Immersive Economy)",
   "title": "실감경제(Immersive Economy)",
-  "definition": "실감 기술을 적용하여 산업, 사회, 문화적 가치를 창출하는 경제 2018년 영국 혁신기관(Inovate UK)에서 발행된 'The Immersive economy in UK'에서 처음 등장한 개념",
+  "definition": "VR·AR·MR·홀로그램 등 실감기술을 적용해 가상과 현실이 융합된 공간에서 산업·사회·문화적 가치를 창출하는 경제로, 2018년 영국 Innovate UK 보고서 「The Immersive Economy in the UK」에서 처음 제시된 개념",
   "keywords_must": [
-   "실감경제 정의",
-   "실감 경제 구성기술",
-   "실감경제 아키텍처",
-   "AR/VR/MR",
-   "Head Up Display",
-   "실감경제 표준"
+   "Innovate UK(2018)",
+   "실감기술(AR·VR·MR·XR)",
+   "홀로그램(Hologram)",
+   "HMD·HUD",
+   "스마트 글러브(햅틱)",
+   "시선 추적 센서",
+   "5G(고용량 미디어 전송)",
+   "6G(초공간·AI 융합)",
+   "가상융합경제 발전 전략(2020)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "가트너 2019 10대 전략기술",
+   "경험 경제 대비",
+   "록히드마틴 AR 제조",
+   "메타 호라이즌",
+   "디지털 뉴딜"
+  ],
   "keywords": [
-   "핵심: 실감경제 정의 · 실감 경제 구성기술 · 실감경제 아키텍처",
-   "기술: AR/VR/MR · Head Up Display · 실감경제 표준"
+   "구성: 디바이스(HMD·HUD·글러브·시선 추적) · 네트워크(5G·6G) · 실감기술(AR·VR·홀로그램·XR)",
+   "특징: 현실보다 리얼한 가상 세계 · 가상에서 창출한 부가 현실에 반영",
+   "사례: 록히드마틴 제조 · 메타 호라이즌 · 중국 후난성 · 일본 국토교통 데이터 플랫폼"
   ],
   "outline": [
-   "실감 기술로 이루어진 경제 활동 생태계, 실감경제 개요",
-   "- 실감경제 정의",
-   "- 실감경제 부각 배경",
-   "실감경제 특징 및 구성기술",
-   "- 실감경제 특징",
-   "- 실감 경제 구성기술",
-   "실감경제 적용 사례",
-   "- 실감경제 요점"
+   "부각 배경",
+   "- 배경: 인프라·전략기술",
+   "- 특징: 경험 경제를 넘어",
+   "구성 기술",
+   "- 디바이스: 착용형 입출력",
+   "- 네트워크·실감기술: 5G·홀로그램",
+   "적용 사례와 정책",
+   "- 기업: 제조·커뮤니티",
+   "- 국가: 중국·일본·한국"
   ],
   "sections": [
    {
-    "title": "실감경제 핵심",
+    "title": "부각 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 인프라·전략기술",
       "items": [
-       "실감경제 정의: 실감경제에서 실감경제 정의를 다루는 핵심 암기 포인트",
-       "실감 경제 구성기술: 실감경제에서 실감 경제 구성기술을 다루는 핵심 암기 포인트",
-       "실감경제 아키텍처: 실감경제의 계층·모듈 배치와 상호작용 구조",
-       "AR/VR/MR: AR/VR/MR를 실감경제 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "5G 상용화로 고용량 실감 미디어 전송 기반 확보, 가트너 2019 10대 전략기술에 몰입형 경험 선정"
+      ]
+     },
+     {
+      "title": "특징: 경험 경제를 넘어",
+      "items": [
+       "경험 경제는 현실에 가상 객체 삽입, 실감경제는 가상 세계에 생활이 투영되고 가상의 부가 현실 경제로 연결"
       ]
      }
     ]
    },
    {
-    "title": "실감경제 구성·기술",
+    "title": "구성 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "디바이스: 착용형 입출력",
       "items": [
-       "Head Up Display: 실감경제에서 Head Up Display를 다루는 핵심 암기 포인트",
-       "실감경제 표준: 실감경제 상호운용·품질을 맞추는 규격·기준"
+       "스마트 글러브(햅틱)는 손 동작 입력·촉감 피드백, 시선 추적 센서는 안구 운동 추적, HUD는 시야 전면 투영"
+      ]
+     },
+     {
+      "title": "네트워크·실감기술: 5G·홀로그램",
+      "items": [
+       "홀로그램(Hologram): 여러 방향 빛의 간섭으로 공간에 입체영상 생성, 6G는 AI 융합 대용량 처리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 사례와 정책",
+    "subsections": [
+     {
+      "title": "기업: 제조·커뮤니티",
+      "items": [
+       "록히드마틴은 AR로 우주선 드릴링을 8시간에서 45분, 패널 삽입을 6주에서 2주로 단축, 메타는 호라이즌 가상 커뮤니티"
+      ]
+     },
+     {
+      "title": "국가: 중국·일본·한국",
+      "items": [
+       "가상융합경제 발전 전략(2020): 디지털 뉴딜과 함께 2025년 가상융합경제 선도국가 목표, 일본은 국토교통 데이터 플랫폼으로 재난·물류 시뮬레이션"
       ]
      }
     ]
@@ -10781,19 +11250,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "실감경제 정의",
-   "실감 경제 구성기술",
-   "실감경제 아키텍처",
-   "AR/VR/MR",
-   "Head Up Display",
-   "실감경제 표준"
+   "Innovate UK(2018)",
+   "실감기술(AR·VR·MR·XR)",
+   "홀로그램(Hologram)",
+   "HMD·HUD",
+   "스마트 글러브(햅틱)",
+   "시선 추적 센서",
+   "5G(고용량 미디어 전송)",
+   "6G(초공간·AI 융합)",
+   "가상융합경제 발전 전략(2020)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_110_0",
