@@ -2,7 +2,7 @@
 """콘텐츠 품질 검사: 템플릿 문구·제목 번호·중복 정의·빈약한 키워드/목차를 잡는다.
 사용: python3 tools/validate_content.py [도메인키 ...]   (예: sv sw). 인자 없으면 전체. 실패 시 exit 1."""
 import json, re, sys, glob, os
-from collections import defaultdict
+from collections import defaultdict, Counter
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FILLER = re.compile(r'^\s*(핵심:?\s*)?(개념|정의|개념\s*·\s*정의|핵심\s*구성\s*요소|구성\s*요소|핵심\s*기술|활용\s*사례|관련\s*표준(\s*·\s*기법)?|구성\s*·\s*유형|활용\s*·\s*시사점|적용\s*효과|한계\s*·\s*(이슈|주의점)|효과|목적|절차/유형|기법)\s*$')
 SEC_FILLER = re.compile(r'^\s*(개념\s*·\s*정의|핵심\s*구성\s*요소|핵심\s*기술|활용\s*사례|관련\s*표준(\s*·\s*기법)?|적용\s*효과|한계\s*·\s*(이슈|주의점)|절차/유형|구성\s*·\s*유형|활용\s*·\s*시사점)\s*$')
@@ -36,7 +36,7 @@ def name_bases(title):
 
 def main(keys):
     files = [f'{ROOT}/_data/{k}.json' for k in keys] if keys else sorted(glob.glob(f'{ROOT}/_data/*.json'))
-    errs = []; defs = defaultdict(list)
+    errs = []; defs = defaultdict(list); dom_descs = defaultdict(list)
     for f in files:
         try: d = json.load(open(f))
         except Exception: continue
@@ -85,6 +85,39 @@ def main(keys):
             secs = t.get('sections') or []
             items = sum(len(ss.get('items') or []) for s in secs for ss in (s.get('subsections') or []))
             if items < 4: errs.append(f'{tid}: 자세히 항목 부족 ({items})')
+            # (b) banned phrase 시험 답안
+            for s in texts(t):
+                if '시험 답안' in s:
+                    errs.append(f'{tid}: 금지 문구 "시험 답안"'); break
+            # section description quality
+            descs = []
+            for s in secs:
+                for ss in (s.get('subsections') or []):
+                    for it in (ss.get('items') or []):
+                        if '시험 답안' in it:
+                            errs.append(f'{tid}: 섹션 템플릿 문구 "{it[:40]}"')
+                        if ':' in it:
+                            descs.append(it.split(':', 1)[1].strip())
+                        else:
+                            descs.append(it.strip())
+            # (a) description repeated 3+ in a topic
+            for d, c in Counter(descs).items():
+                if d and c >= 3:
+                    errs.append(f'{tid}: 설명 반복 {c}회 "{d[:40]}"')
+                    break
+            # collect domain-level descs
+            for d in descs:
+                if d: dom_descs[d].append(tid)
+            # (c) outline length / glued
+            for o in (t.get('outline') or []):
+                if len(o) > 45:
+                    errs.append(f'{tid}: outline 과장 "{o[:40]}" ({len(o)}자)')
+                if re.search(r'[가-힣][A-Za-zA-Z]|[a-zA-Z][가-힣]|개요[가-힣A-Za-z]|정의[가-힣A-Za-z]|특징[가-힣A-Za-z]', o):
+                    errs.append(f'{tid}: outline 붙음 "{o[:40]}"')
+    # (a) description repeated 20+ in a domain
+    for d, ids in dom_descs.items():
+        if len(ids) >= 20:
+            errs.append(f'도메인 설명 반복 {len(ids)}회 "{d[:40]}" (예: {ids[0]})')
     for df, ids in defs.items():
         if len(ids) > 1: errs.append(f'정의 중복 {ids}: "{df[:40]}"')
     for e in errs: print(e)
