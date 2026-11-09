@@ -2628,7 +2628,7 @@
     "keywords": [
       "핵심: 클라우드 재해복구 · 복제(Replication) · 페일오버·페일백(Failover·Failback) · 목표 복구 시간(RTO)",
       "필수: 목표 복구 시점(RPO) · 종량제 과금(Pay-as-you-go) · 서비스 수준 협약(SLA) · 관리형·지원형·DIY형 DRaaS",
-      "참고: BaaS(Backup as a Service) · 하이브리드 클라우드 · 셀프 서비스형·관리형 DRaaS · 데이터 주권 · 복구 테스트 자동화"
+      "참고: BaaS(Backup as a Service) · 하이브리드 클라우드 · 데이터 주권 · 복구 테스트 자동화"
     ],
     "sections": [
       {
@@ -2662,7 +2662,7 @@
             "items": [
               "관리형(Managed)",
               "지원형(Assisted)",
-              "셀프 서비스형(Self-service)"
+              "DIY형(셀프 서비스)"
             ]
           }
         ]
@@ -2716,7 +2716,6 @@
     "keywords_ref": [
       "BaaS(Backup as a Service)",
       "하이브리드 클라우드",
-      "셀프 서비스형·관리형 DRaaS",
       "데이터 주권",
       "복구 테스트 자동화"
     ],
@@ -2749,7 +2748,7 @@
     "keywords": [
       "핵심: 파장분할다중화(DWDM) · 스토리지 영역 네트워크(SAN) · 스토리지 복제(Storage Replication) · 동기·비동기 복제",
       "필수: 서버 가상화(Server Virtualization) · 스토리지 가상화 · 라이브 마이그레이션(Live Migration)",
-      "참고: FC(Fibre Channel) · FCIP·iSCSI · 클러스터링(HA) · CDP(Continuous Data Protection) · 스냅샷 · 고가용성(HA, High Availability)·고장 감내(FT, Fault Tolerant)"
+      "참고: FC(Fibre Channel) · FCIP·iSCSI · 클러스터링 · CDP(Continuous Data Protection) · 스냅샷 · 고가용성(HA, High Availability)·고장 감내(FT, Fault Tolerant)"
     ],
     "sections": [
       {
@@ -2843,7 +2842,7 @@
     "keywords_ref": [
       "FC(Fibre Channel)",
       "FCIP·iSCSI",
-      "클러스터링(HA)",
+      "클러스터링",
       "CDP(Continuous Data Protection)",
       "스냅샷",
       "고가용성(HA, High Availability)·고장 감내(FT, Fault Tolerant)"
@@ -3375,9 +3374,9 @@
     "category": "MG > 전략수립도구 > 4C",
     "definition": "3C(고객·경쟁사·자사)에 환경(Circumstance)을 더해 시장·규제 환경·경쟁·자사 역량을 종합 분석하고 핵심 성공 요인과 차별화 전략을 도출하는 시장 분석 기법",
     "keywords": [
-      "핵심: 고객(Customer) · 경쟁사(Competitor) · 자사(Company) · 유통 채널(Channel)",
-      "필수: 핵심 성공 요인(KSF) · 차별화 포인트 · 고객 니즈 분석",
-      "참고: 오마에 겐이치(3C) · 마케팅 4C(Customer Value·Cost·Convenience·Communication) · 마케팅 4P · SWOT 연계"
+      "핵심: 고객 분석(Customer) · 환경 분석(Circumstance) · 경쟁 분석(Competition) · 자사 분석(Company)",
+      "필수: 핵심 성공 요인(KSF) · 시장 세분화 · 차별화 포인트",
+      "참고: 오마에 겐이치(3C) · 3C+채널(Channel) 변형 · 마케팅 4C(Customer Value·Cost·Convenience·Communication) · 마케팅 4P · SWOT 연계"
     ],
     "sections": [
       {
@@ -3465,29 +3464,30 @@
     "name": "3C·4C 분석(3C/4C Analysis)",
     "en": "3C/4C Analysis",
     "keywords_must": [
-      "고객(Customer)",
-      "경쟁사(Competitor)",
-      "자사(Company)",
-      "유통 채널(Channel)",
+      "고객 분석(Customer)",
+      "환경 분석(Circumstance)",
+      "경쟁 분석(Competition)",
+      "자사 분석(Company)",
       "핵심 성공 요인(KSF)",
-      "차별화 포인트",
-      "고객 니즈 분석"
+      "시장 세분화",
+      "차별화 포인트"
     ],
     "keywords_ref": [
       "오마에 겐이치(3C)",
+      "3C+채널(Channel) 변형",
       "마케팅 4C(Customer Value·Cost·Convenience·Communication)",
       "마케팅 4P",
       "SWOT 연계"
     ],
     "curated": true,
     "quiz_terms": [
-      "고객(Customer)",
-      "경쟁사(Competitor)",
-      "자사(Company)",
-      "유통 채널(Channel)",
+      "고객 분석(Customer)",
+      "환경 분석(Circumstance)",
+      "경쟁 분석(Competition)",
+      "자사 분석(Company)",
       "핵심 성공 요인(KSF)",
-      "차별화 포인트",
-      "고객 니즈 분석"
+      "시장 세분화",
+      "차별화 포인트"
     ],
     "quiz_groups": [
       "mg"
@@ -7822,7 +7822,7 @@
     "keywords": [
       "핵심: 성과참조모델(PRM) · 업무참조모델(BRM) · 서비스 컴포넌트 참조모델(SRM) · 데이터 참조모델(DRM)",
       "필수: 기술참조모델(TRM) · 표준 프로파일(Standard Profile) · 재사용(Reuse) · 공통 분류 체계",
-      "참고: FEAF 5대 참조모델 · 범정부 참조모델(정부 EA) · 보안 참조모델(SRM) · 중복 투자 식별 · 상호운용성"
+      "참고: FEAF 5대 참조모델 · 범정부 참조모델(정부 EA) · 보안 참조모델(Security RM, FEAF v2) · 중복 투자 식별 · 상호운용성"
     ],
     "sections": [
       {
@@ -7911,7 +7911,7 @@
     "keywords_ref": [
       "FEAF 5대 참조모델",
       "범정부 참조모델(정부 EA)",
-      "보안 참조모델(SRM)",
+      "보안 참조모델(Security RM, FEAF v2)",
       "중복 투자 식별",
       "상호운용성"
     ],
@@ -8322,7 +8322,7 @@
     "keywords": [
       "핵심: 재무 관점(Financial) · 고객 관점(Customer) · 내부 프로세스 관점(Internal Process) · 학습과 성장 관점(Learning & Growth)",
       "필수: 핵심성과지표(KPI) · 전략 맵(Strategy Map) · 인과관계 · IT BSC",
-      "참고: 캐플런·노턴(Kaplan & Norton) · 선행·후행 지표 · 무형 자산 · 기업 공헌도·사용자·운영 프로세스·미래 지향 관점 · MBO 비교"
+      "참고: 캐플런·노턴(Kaplan & Norton) · 선행·후행 지표 · 무형 자산 · 기업 공헌도·사용자·운영 프로세스·미래 지향 관점 · MBO 비교 · 두음 재고내학(재무·고객·내부 프로세스·학습과 성장)"
     ],
     "sections": [
       {
@@ -8420,7 +8420,8 @@
       "선행·후행 지표",
       "무형 자산",
       "기업 공헌도·사용자·운영 프로세스·미래 지향 관점",
-      "MBO 비교"
+      "MBO 비교",
+      "두음 재고내학(재무·고객·내부 프로세스·학습과 성장)"
     ],
     "curated": true,
     "quiz_terms": [
@@ -13091,7 +13092,7 @@
     "definition": "금융·결제·소득 정보를 빅데이터로 처리하고 딥러닝 알고리즘으로 분석해 신용평가·가상비서·챗봇 등 지능형 금융 서비스를 제공하며 금융 생태계를 변화시키는 AI 융합 금융",
     "keywords": [
       "핵심: 프로세스 간소화(효율성) · 개인화된 서비스(맞춤성) · 서비스 범위 확장(편재성) · 지능적 의사결정(지능성)",
-      "필수: 미개척 시장 진출(고기치) · 챗봇(Chat-bot) · 가상비서(Virtual Assistant) · 소셜로봇(Social Robot)",
+      "필수: 미개척 시장 진출(고가치) · 챗봇(Chat-bot) · 가상비서(Virtual Assistant) · 소셜로봇(Social Robot)",
       "참고: 신용평가 모델 · 로보어드바이저 · 이상거래탐지(FDS) · 고품질 데이터·사이버 보안·인재 확보 · 설명 가능한 AI(XAI)·AI 윤리"
     ],
     "sections": [
@@ -13193,7 +13194,7 @@
       "개인화된 서비스(맞춤성)",
       "서비스 범위 확장(편재성)",
       "지능적 의사결정(지능성)",
-      "미개척 시장 진출(고기치)",
+      "미개척 시장 진출(고가치)",
       "챗봇(Chat-bot)",
       "가상비서(Virtual Assistant)",
       "소셜로봇(Social Robot)"
@@ -13211,7 +13212,7 @@
       "개인화된 서비스(맞춤성)",
       "서비스 범위 확장(편재성)",
       "지능적 의사결정(지능성)",
-      "미개척 시장 진출(고기치)",
+      "미개척 시장 진출(고가치)",
       "챗봇(Chat-bot)",
       "가상비서(Virtual Assistant)",
       "소셜로봇(Social Robot)"
@@ -16077,8 +16078,8 @@
     "definition": "인터넷상에서 불특정 다수의 공급자(판매자)와 수요자(구매자)가 상품 정보를 검색하고 거래·결제·물류를 전자적으로 수행할 수 있도록 중개하는 가상 시장",
     "keywords": [
       "핵심: 다대다(N:N) 거래 · 중개자(제3자 운영) · B2B e-Marketplace · B2C e-Marketplace",
-      "필수: 오픈마켓(옥션형 C2C) · 에스크로(Escrow, 결제대금 예치) · 키 에스크로(Key Escrow) · SW 임치제도",
-      "참고: 공급사슬(Supply Chain) 공통 가치 극대화 · 수직형·수평형 마켓플레이스 · 역경매 · 물류·결제 인프라 · 전자상거래법"
+      "필수: 오픈마켓(옥션형 C2C) · 에스크로(Escrow, 결제대금 예치) · 수직형·수평형 마켓플레이스",
+      "참고: 키 에스크로·SW 임치제도(에스크로 변형) · 공급사슬(Supply Chain) 공통 가치 극대화 · 역경매 · 물류·결제 인프라 · 전자상거래법"
     ],
     "sections": [
       {
@@ -16172,12 +16173,11 @@
       "B2C e-Marketplace",
       "오픈마켓(옥션형 C2C)",
       "에스크로(Escrow, 결제대금 예치)",
-      "키 에스크로(Key Escrow)",
-      "SW 임치제도"
+      "수직형·수평형 마켓플레이스"
     ],
     "keywords_ref": [
+      "키 에스크로·SW 임치제도(에스크로 변형)",
       "공급사슬(Supply Chain) 공통 가치 극대화",
-      "수직형·수평형 마켓플레이스",
       "역경매",
       "물류·결제 인프라",
       "전자상거래법"
@@ -16190,8 +16190,7 @@
       "B2C e-Marketplace",
       "오픈마켓(옥션형 C2C)",
       "에스크로(Escrow, 결제대금 예치)",
-      "키 에스크로(Key Escrow)",
-      "SW 임치제도"
+      "수직형·수평형 마켓플레이스"
     ],
     "quiz_groups": [
       "mg"
@@ -17493,7 +17492,7 @@
     "keywords": [
       "핵심: 제품(Product) · 가격(Price) · 유통(Place) · 촉진(Promotion)",
       "필수: 마케팅 믹스(Marketing Mix) · STP(시장 세분화·표적·포지셔닝) · 고객 관점 4C · 서비스 마케팅 7P",
-      "참고: 매카시(McCarthy, 1960) 4P 정형화 · 레이저·켈리(1958) · 4C(고객 가치·비용·편의·소통) · 7P(사람·프로세스·물리적 증거) · 디지털 마케팅 전환"
+      "참고: 매카시(McCarthy, 1960) 4P 정형화 · 닐 보든(Neil Borden) 마케팅 믹스 용어 · 4C(고객 가치·비용·편의·소통) · 7P(사람·프로세스·물리적 증거) · 디지털 마케팅 전환"
     ],
     "sections": [
       {
@@ -17597,7 +17596,7 @@
     ],
     "keywords_ref": [
       "매카시(McCarthy, 1960) 4P 정형화",
-      "레이저·켈리(1958)",
+      "닐 보든(Neil Borden) 마케팅 믹스 용어",
       "4C(고객 가치·비용·편의·소통)",
       "7P(사람·프로세스·물리적 증거)",
       "디지털 마케팅 전환"
