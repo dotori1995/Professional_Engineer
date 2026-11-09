@@ -12013,80 +12013,91 @@
   "dueum": null,
   "name": "지능형 에이전트(Intelligent Agent)",
   "title": "지능형 에이전트(Intelligent Agent)",
-  "definition": "복잡한 동적인 환경에서 목표 달성을 시도하는 지능적 특성을 갖춘 에이전트로써 학습(LEARNING), 추론 (INFERRING, REASONING), 계획(PLANNING) 능력 중 하나 이상을 갖는 에이전트",
+  "definition": "센서로 환경을 지각하고 학습·추론·계획 능력 중 하나 이상을 이용해 성능 척도를 최대화하는 행동을 액추에이터로 실행하며 복잡하고 동적인 환경에서 목표를 달성하는 에이전트",
   "keywords_must": [
-   "학습(Learning)",
-   "추론(Reasoning)",
-   "계획(Planning)",
-   "BDI 모델",
-   "반응형 에이전트",
-   "목표기반 에이전트",
-   "효용기반 에이전트",
-   "다중 에이전트",
-   "지능형 에이전트 아키텍처",
-   "지능형 에이전트 표준",
-   "지능형 에이전트 보안",
-   "지능형 에이전트 성능"
+   "단순 반사 에이전트(Simple Reflex Agent)",
+   "모델 기반 반사 에이전트(Model-based, 내부 상태 유지)",
+   "목표 기반 에이전트(Goal-based)",
+   "효용 기반 에이전트(Utility-based)",
+   "학습 에이전트(Learning Agent)",
+   "PEAS(성능·환경·액추에이터·센서)",
+   "BDI 모델(Belief·Desire·Intention)",
+   "포함 구조(Subsumption Architecture)",
+   "심사숙고형·반응형·상호작용 에이전트"
   ],
   "keywords_ref": [
-   "강화 학습",
-   "인터페이스 에이전트",
-   "지능형 에이전트 상호운용",
-   "BDI",
-   "특성",
-   "CMU"
+   "러셀·노빅 AIMA",
+   "조건-행동 규칙",
+   "물리적 기호 시스템 가설",
+   "강화학습 에이전트",
+   "LLM 에이전트(도구 호출)"
   ],
   "keywords": [
-   "핵심: 학습(Learning) · 추론(Reasoning) · 계획(Planning)",
-   "기술: BDI 모델 · 반응형 에이전트 · 목표기반 에이전트",
-   "운영: 효용기반 에이전트 · 다중 에이전트 · 지능형 에이전트 아키텍처",
-   "참고: 강화 학습 · 인터페이스 에이전트 · 지능형 에이전트 상호운용"
+   "설계 4형태: 단순 반사 → 모델 기반(상태 추적) → 목표 기반 → 효용 기반",
+   "AI 모델: 심사숙고형(BDI) · 반응형(Subsumption) · 상호작용형(조정·협력)",
+   "학습 에이전트: 성능 요소 · 비평가 · 학습 요소 · 문제 생성기"
   ],
   "outline": [
-   "인공지능에서의 에이전트 모델",
-   "- 지능형 에이전트 요점",
-   "지능형 에이전트의 기능과 역할에 따른 분류",
-   "- 지능형 에이전트 요점"
+   "설계 방법에 따른 4형태",
+   "- 반사형: 규칙·내부 상태",
+   "- 목표·효용형: 탐색·최적 선택",
+   "AI 에이전트 모델",
+   "- 심사숙고형: BDI 구조",
+   "- 반응형·상호작용형",
+   "기능별 분류와 학습",
+   "- 학습: 구성과 기법",
+   "- 인터페이스: 사용자 의도 해석"
   ],
   "sections": [
    {
-    "title": "지능형 에이전트 핵심",
+    "title": "설계 방법에 따른 4형태",
     "subsections": [
      {
-      "title": null,
+      "title": "반사형: 규칙·내부 상태",
       "items": [
-       "학습(Learning): 지능형 에이전트에서 학습(Learning)을 다루는 핵심 암기 포인트",
-       "추론(Reasoning): 지능형 에이전트에서 추론(Reasoning)을 다루는 핵심 암기 포인트",
-       "계획(Planning): 지능형 에이전트에서 계획(Planning)을 다루는 핵심 암기 포인트",
-       "BDI 모델: 지능형 에이전트에서 BDI 모델을 다루는 핵심 암기 포인트"
+       "단순 반사 에이전트: 현재 지각만으로 조건-행동 규칙 실행, 완전 관측 환경에서만 적합",
+       "모델 기반 반사 에이전트: 세계가 어떻게 변하는지 내부 상태로 추적해 부분 관측 환경 대응"
+      ]
+     },
+     {
+      "title": "목표·효용형: 탐색·최적 선택",
+      "items": [
+       "목표 기반 에이전트: 목표 상태 도달을 위해 탐색·계획, 효용 기반은 효용 함수로 여러 경로 중 최적 선택"
       ]
      }
     ]
    },
    {
-    "title": "지능형 에이전트 구성·기술",
+    "title": "AI 에이전트 모델",
     "subsections": [
      {
-      "title": null,
+      "title": "심사숙고형: BDI 구조",
       "items": [
-       "반응형 에이전트: 지능형 에이전트 단말·노드에서 상태 수집·제어를 수행하는 에이전트",
-       "목표기반 에이전트: 지능형 에이전트 단말·노드에서 상태 수집·제어를 수행하는 에이전트 (지능형 에이전트/ce61)",
-       "효용기반 에이전트: 지능형 에이전트 단말·노드에서 상태 수집·제어를 수행하는 에이전트 (지능형 에이전트/d7d7)",
-       "다중 에이전트: 지능형 에이전트 단말·노드에서 상태 수집·제어를 수행하는 에이전트 (지능형 에이전트/19d0)"
+       "BDI 모델(Belief·Desire·Intention): 뉴웰·사이먼의 물리적 기호 시스템 가설에 근거해 믿음·욕망·의도로 계획"
+      ]
+     },
+     {
+      "title": "반응형·상호작용형",
+      "items": [
+       "포함 구조(Subsumption Architecture): 브룩스가 제안한 기호 추론 없는 계층형 행동 제어, 상호작용형은 다수 에이전트 조정·협력"
       ]
      }
     ]
    },
    {
-    "title": "지능형 에이전트 운영",
+    "title": "기능별 분류와 학습",
     "subsections": [
      {
-      "title": null,
+      "title": "학습: 구성과 기법",
       "items": [
-       "지능형 에이전트 아키텍처: 지능형 에이전트의 계층·모듈 배치와 상호작용 구조",
-       "지능형 에이전트 표준: 지능형 에이전트 상호운용·품질을 맞추는 규격·기준",
-       "지능형 에이전트 보안: 지능형 에이전트 단말·노드에서 상태 수집·제어를 수행하는 에이전트 (지능형 에이전트/bdbf)",
-       "지능형 에이전트 성능: 지능형 에이전트 단말·노드에서 상태 수집·제어를 수행하는 에이전트 (지능형 에이전트/6618)"
+       "학습 에이전트: 비평가 피드백으로 학습 요소가 성능 요소 개선, 문제 생성기가 탐험 유도",
+       "웹 사용 습관을 데이터 마이닝해 취향 판단, 결정트리·신경망·강화학습·진화학습 기반"
+      ]
+     },
+     {
+      "title": "인터페이스: 사용자 의도 해석",
+      "items": [
+       "인터페이스 에이전트: 모호한 사용자 요구를 해석해 작업을 대신 실행, 쿠키·회원정보로 사용자 식별 필요"
       ]
      }
     ]
@@ -12095,25 +12106,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "학습(Learning)",
-   "추론(Reasoning)",
-   "계획(Planning)",
-   "BDI 모델",
-   "반응형 에이전트",
-   "목표기반 에이전트",
-   "효용기반 에이전트",
-   "다중 에이전트",
-   "지능형 에이전트 아키텍처",
-   "지능형 에이전트 표준",
-   "지능형 에이전트 보안",
-   "지능형 에이전트 성능"
+   "단순 반사 에이전트(Simple Reflex Agent)",
+   "모델 기반 반사 에이전트(Model-based, 내부 상태 유지)",
+   "목표 기반 에이전트(Goal-based)",
+   "효용 기반 에이전트(Utility-based)",
+   "학습 에이전트(Learning Agent)",
+   "PEAS(성능·환경·액추에이터·센서)",
+   "BDI 모델(Belief·Desire·Intention)",
+   "포함 구조(Subsumption Architecture)",
+   "심사숙고형·반응형·상호작용 에이전트"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_130",
@@ -12128,68 +12137,90 @@
   "dueum": null,
   "name": "온톨로지(Ontology)",
   "title": "온톨로지(Ontology)",
-  "definition": "특정 도메인에서 특정 지식과 관련된 용어 및 용어 사이의 관계를 정의하는 일종의 사전",
+  "definition": "특정 도메인에서 공유된 개념화를 형식적·명시적으로 명세한 것(그루버, 1993)으로, 개념·속성·관계·제약조건·공리·인스턴스를 정의해 컴퓨터가 의미를 이해하고 추론할 수 있게 하는 지식 표현 체계",
   "keywords_must": [
-   "내용",
-   "추론",
-   "특화",
-   "속성",
-   "관계",
-   "온톨로지의 개념도",
-   "온톨로지 아키텍처",
-   "온톨로지 표준",
-   "온톨로지 보안"
+   "개념(Concept·Class)",
+   "속성(Property)",
+   "관계(Relationship: is-a·part-of)",
+   "제약조건(Constraint)",
+   "공리(Axiom)",
+   "인스턴스(Instance)",
+   "추론(Reasoning)",
+   "OWL·RDF(S)",
+   "시맨틱 웹(Semantic Web)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "그루버(Gruber) 정의",
+   "택소노미·시소러스 비교",
+   "Protégé",
+   "KQML",
+   "지식 그래프"
+  ],
   "keywords": [
-   "핵심: 내용 · 추론 · 특화",
-   "기술: 속성 · 관계 · 온톨로지의 개념도",
-   "운영: 온톨로지 아키텍처 · 온톨로지 표준 · 온톨로지 보안"
+   "특징: 내용 중심 · 추론 기능 · 특화·세분화 · 정보 통합·공유",
+   "구성요소: 개념 · 속성 · 관계 · 제약조건 · 공리 · 인스턴스",
+   "적용: 인공지능 지식표현 · 정보검색 · 시맨틱 웹 · 전자 카탈로그"
   ],
   "outline": [
-   "온톨로지의 개념",
-   "- 온톨로지 핵심 키워드",
-   "온톨로지의 구성·기술",
-   "- 구성요소·표준",
-   "온톨로지의 운영 가치·시사점",
-   "- 온톨로지 요점"
+   "개념과 특징",
+   "- 정의: 공유된 개념화의 명세",
+   "- 특징: 내용 중심·추론",
+   "6대 구성",
+   "- 개념·속성·관계",
+   "- 제약·공리·인스턴스",
+   "검색 비교와 적용",
+   "- 비교: 의미 기반 vs 패턴 매칭",
+   "- 적용: AI·시맨틱 웹·카탈로그"
   ],
   "sections": [
    {
-    "title": "온톨로지 핵심",
+    "title": "개념과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "정의: 공유된 개념화의 명세",
       "items": [
-       "내용: 온톨로지에서 내용을 다루는 핵심 암기 포인트",
-       "추론: 온톨로지에서 추론을 다루는 핵심 암기 포인트",
-       "특화: 온톨로지에서 특화를 다루는 핵심 암기 포인트",
-       "속성: 온톨로지에서 속성을 다루는 핵심 암기 포인트"
+       "그루버(Gruber) 정의: 공유된 개념화에 대한 형식적·명시적 명세, 용어와 용어 간 관계를 정의한 사전"
+      ]
+     },
+     {
+      "title": "특징: 내용 중심·추론",
+      "items": [
+       "추론(Reasoning): 정의된 관계로 새로운 사실을 자동 도출하고 제약조건으로 오류 방지"
       ]
      }
     ]
    },
    {
-    "title": "온톨로지 구성·기술",
+    "title": "6대 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "개념·속성·관계",
       "items": [
-       "관계: 온톨로지에서 관계를 다루는 핵심 암기 포인트",
-       "온톨로지의 개념도: 온톨로지의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "온톨로지 아키텍처: 온톨로지의 계층·모듈 배치와 상호작용 구조",
-       "온톨로지 표준: 온톨로지 상호운용·품질을 맞추는 규격·기준"
+       "개념(Concept·Class)은 '프린터' 같은 사물 표현 단위, 속성은 가격·색상·무게, 관계(is-a·part-of)는 상속·부분 연결"
+      ]
+     },
+     {
+      "title": "제약·공리·인스턴스",
+      "items": [
+       "제약조건(Constraint): '컴퓨터는 CPU를 1개 이상 가진다' 같은 값·관계 규정",
+       "공리(Axiom)는 증명 없이 참인 명제(프린터는 용지를 사용), 인스턴스는 삼성 프린터 a모델 같은 실제 개체"
       ]
      }
     ]
    },
    {
-    "title": "온톨로지 운영",
+    "title": "검색 비교와 적용",
     "subsections": [
      {
-      "title": null,
+      "title": "비교: 의미 기반 vs 패턴 매칭",
       "items": [
-       "온톨로지 보안: 온톨로지에서 온톨로지 보안을 다루는 핵심 암기 포인트"
+       "온톨로지 검색은 도메인 용어 관계로 논리적 추론, 기존 검색은 키워드 패턴 매칭으로 추론 불가"
+      ]
+     },
+     {
+      "title": "적용: AI·시맨틱 웹·카탈로그",
+      "items": [
+       "시맨틱 웹(Semantic Web)에서 도메인별 분산 온톨로지로 지식 검색, 전자 카탈로그는 상품 계층 정의"
       ]
      }
     ]
@@ -12198,22 +12229,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "내용",
-   "추론",
-   "특화",
-   "속성",
-   "관계",
-   "온톨로지의 개념도",
-   "온톨로지 아키텍처",
-   "온톨로지 표준",
-   "온톨로지 보안"
+   "개념(Concept·Class)",
+   "속성(Property)",
+   "관계(Relationship: is-a·part-of)",
+   "제약조건(Constraint)",
+   "공리(Axiom)",
+   "인스턴스(Instance)",
+   "추론(Reasoning)",
+   "OWL·RDF(S)",
+   "시맨틱 웹(Semantic Web)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_132",
@@ -12226,72 +12258,100 @@
   ],
   "en": "Semantic Web",
   "dueum": null,
-  "name": "웹(Semantic Web)",
-  "title": "웹(Semantic Web)",
-  "definition": "기존 웹을 확장하여 컴퓨터가 이해할 수 있는 잘 정의된 의미를 기반으로 의미적 상호운용성(semantic interoperability)을 실현하여, 다양한 정보자원의 처리 자동화, 데이터의 통합 및 재사용 등을 컴퓨터가 스스로 수행하여, 인간과 컴퓨터 모두 잘 이해할 수 있는 웹",
+  "name": "시맨틱 웹(Semantic Web)",
+  "title": "시맨틱 웹(Semantic Web)",
+  "definition": "기존 웹 자원에 RDF·OWL 등으로 컴퓨터가 이해할 수 있는 명시적 의미(메타데이터·온톨로지)를 부여해 에이전트가 정보를 자동 처리·통합·추론할 수 있도록 팀 버너스리가 2001년 제안한 의미 기반 차세대 웹",
   "keywords_must": [
-   "RDF",
-   "Ontology",
-   "Agent",
-   "XML",
-   "개인",
-   "웹 아키텍처",
-   "웹 표준",
-   "웹 보안",
-   "OWL",
-   "HTTP"
+   "팀 버너스리(2001)",
+   "명시적 메타데이터(Explicit Metadata)",
+   "온톨로지(Ontology)",
+   "논리적 추론(Logical Reasoning)",
+   "에이전트(Agent) 활용",
+   "URI·IRI",
+   "RDF·RDFS",
+   "OWL(Web Ontology Language)",
+   "SPARQL·RIF",
+   "증명·신뢰(Proof·Trust)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "시맨틱 웹 계층 구조(Layer Cake)",
+   "링크드 데이터(Linked Data)",
+   "JSON-LD·schema.org",
+   "지식 그래프",
+   "W3C"
+  ],
   "keywords": [
-   "핵심: RDF · Ontology · Agent",
-   "기술: XML · 개인 · 웹 아키텍처",
-   "운영: 웹 표준 · 웹 보안 · OWL"
+   "특징: 명시적 메타데이터 · 온톨로지 · 논리적 추론 · 에이전트",
+   "계층: URI·IRI → XML·Namespace → RDF → RDFS → OWL·SPARQL·RIF → 증명 → 신뢰",
+   "비교: 시맨틱 웹(의미 표현·재사용·추론) vs 현재 웹(HTML 구문만)"
   ],
   "outline": [
-   "웹의 개념",
-   "- 웹 핵심 키워드",
-   "웹의 구성·기술",
-   "- 구성요소·표준",
-   "웹의 운영 가치·시사점",
-   "- 웹 요점"
+   "4대 특성",
+   "- 의미 표현: 메타데이터·온톨로지",
+   "- 활용: 추론·에이전트",
+   "기술 계층구조",
+   "- 기반: 식별·구문",
+   "- 의미: RDF·OWL",
+   "- 상위: 증명·신뢰",
+   "현재 웹과 비교",
+   "- 차이: 표현·재사용·추론",
+   "- 발전: 링크드 데이터"
   ],
   "sections": [
    {
-    "title": "웹 핵심",
+    "title": "4대 특성",
     "subsections": [
      {
-      "title": null,
+      "title": "의미 표현: 메타데이터·온톨로지",
       "items": [
-       "RDF: RDF를 웹 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Ontology: Ontology를 웹 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Agent: 웹 단말·노드에서 상태 수집·제어를 수행하는 에이전트",
-       "XML: XML를 웹 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "명시적 메타데이터: XML·RDF로 데이터와 추론 규칙을 기계가 읽게 표현, 온톨로지로 의미·관계 체계화"
+      ]
+     },
+     {
+      "title": "활용: 추론·에이전트",
+      "items": [
+       "논리적 추론으로 관계 정보에서 새 정보 도출, 에이전트가 사용자 대신 자율 수행"
       ]
      }
     ]
    },
    {
-    "title": "웹 구성·기술",
+    "title": "기술 계층구조",
     "subsections": [
      {
-      "title": null,
+      "title": "기반: 식별·구문",
       "items": [
-       "개인: 웹에서 개인을 다루는 핵심 암기 포인트",
-       "웹 아키텍처: 웹의 계층·모듈 배치와 상호작용 구조",
-       "웹 표준: 웹 상호운용·품질을 맞추는 규격·기준",
-       "웹 보안: 웹에서 웹 보안을 다루는 핵심 암기 포인트"
+       "URI·IRI: 웹 자원 식별자(IRI는 유니코드 확장), XML·Namespace·XML Schema로 구문 표현"
+      ]
+     },
+     {
+      "title": "의미: RDF·OWL",
+      "items": [
+       "RDF·RDFS: 주어-술어-목적어 트리플로 자원 기술, RDFS는 경량 온톨로지(클래스·속성 계층)",
+       "OWL(Web Ontology Language)은 도메인 개념·관계 정의, SPARQL은 RDF 질의, RIF는 규칙 교환"
+      ]
+     },
+     {
+      "title": "상위: 증명·신뢰",
+      "items": [
+       "증명·신뢰(Proof·Trust): 추론 결과의 근거와 정보 출처 신뢰성 보장 계층"
       ]
      }
     ]
    },
    {
-    "title": "웹 운영",
+    "title": "현재 웹과 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "차이: 표현·재사용·추론",
       "items": [
-       "OWL: OWL를 웹 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HTTP: 요청/응답 기반의 웹 응용 계층 프로토콜 (웹/64fb)"
+       "현재 웹은 HTML로 구문만 표현해 자원 통합·재사용·추론 불가, 시맨틱 웹은 의미까지 표현"
+      ]
+     },
+     {
+      "title": "발전: 링크드 데이터",
+      "items": [
+       "링크드 데이터(Linked Data): URI로 데이터 간 연결, schema.org·JSON-LD로 검색엔진 지식 그래프에 활용"
       ]
      }
     ]
@@ -12300,23 +12360,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "RDF",
-   "Ontology",
-   "Agent",
-   "XML",
-   "개인",
-   "웹 아키텍처",
-   "웹 표준",
-   "웹 보안",
-   "OWL",
-   "HTTP"
+   "팀 버너스리(2001)",
+   "명시적 메타데이터(Explicit Metadata)",
+   "온톨로지(Ontology)",
+   "논리적 추론(Logical Reasoning)",
+   "에이전트(Agent) 활용",
+   "URI·IRI",
+   "RDF·RDFS",
+   "OWL(Web Ontology Language)",
+   "SPARQL·RIF",
+   "증명·신뢰(Proof·Trust)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_133",
@@ -12327,61 +12388,94 @@
    143,
    144
   ],
-  "en": "OWL",
+  "en": "Web Ontology Language",
   "dueum": null,
-  "name": "디지털서비스(OWL)",
-  "title": "디지털서비스(OWL)",
-  "definition": "DAML+OIL 기반으로 Class 와 Property 의 상속적 계층구조의 개념과 관계를 명료하게 정의하는 온톨로지 명세언어",
+  "name": "웹 온톨로지 언어(OWL, Web Ontology Language)",
+  "title": "웹 온톨로지 언어(OWL, Web Ontology Language)",
+  "definition": "RDF·RDFS 위에 DAML+OIL을 계승해 클래스·속성의 상속 계층과 관계·제약을 기술 논리(Description Logic) 기반으로 명확히 정의하는 W3C 표준 온톨로지 명세 언어 (OWL 2004, OWL 2 2009)",
   "keywords_must": [
-   "DAML+OIL 기반",
-   "온톨로지 명세 언어",
-   "디지털서비스 아키텍처",
-   "디지털서비스 표준",
-   "디지털서비스 보안",
-   "DAML",
-   "OIL",
-   "Sentiment"
+   "DAML+OIL(DARPA 마크업 + 추론 계층)",
+   "클래스(Class)·속성(Property) 계층",
+   "기술 논리(Description Logic)",
+   "OWL Lite",
+   "OWL DL",
+   "OWL Full",
+   "결정가능성(Decidability)",
+   "계산적 완전성(Computational Completeness)",
+   "OWL 2 프로파일(EL·QL·RL)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "owl:sameAs·equivalentClass",
+   "추론기(HermiT·Pellet)",
+   "Protégé",
+   "RDFS 대비 표현력",
+   "W3C 권고안"
+  ],
   "keywords": [
-   "핵심: DAML+OIL 기반 · 온톨로지 명세 언어 · 디지털서비스 아키텍처",
-   "기술: 디지털서비스 표준 · 디지털서비스 보안 · DAML",
-   "운영: OIL · Sentiment"
+   "계통: RDF·RDFS + DAML(미국 DARPA) + OIL(유럽) → DAML+OIL → OWL → OWL 2",
+   "유형: OWL Lite(단순 계층) ⊂ OWL DL(결정가능·최대 표현) ⊂ OWL Full(RDF 문법 자유)",
+   "OWL 2 프로파일: EL(대규모 클래스) · QL(DB 질의) · RL(규칙 추론)"
   ],
   "outline": [
-   "디지털서비스의 개요",
-   "- 디지털서비스의 정의",
-   "- 디지털서비스의 특징",
-   "디지털서비스의 구성과 기술",
-   "- 디지털서비스의 핵심 요소",
-   "디지털서비스의 적용",
-   "- 디지털서비스 요점"
+   "개념과 계통",
+   "- 기원: DAML+OIL",
+   "- 기반: 기술 논리",
+   "유형",
+   "- 1세대: Lite·DL·Full",
+   "- 2세대: EL·QL·RL 프로파일",
+   "언어 비교와 활용",
+   "- 비교: RDF·DAML+OIL 대비",
+   "- 활용: 의미 검색·추론"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "개념과 계통",
     "subsections": [
      {
-      "title": null,
+      "title": "기원: DAML+OIL",
       "items": [
-       "DAML+OIL 기반: 디지털서비스에서 DAML+OIL 기반을 다루는 핵심 암기 포인트",
-       "온톨로지 명세 언어: 디지털서비스에서 온톨로지 명세 언어를 다루는 핵심 암기 포인트",
-       "디지털서비스 아키텍처: 디지털서비스의 계층·모듈 배치와 상호작용 구조 (디지털서비스/83c0)",
-       "디지털서비스 표준: 디지털서비스 상호운용·품질을 맞추는 규격·기준 (디지털서비스/59a7)"
+       "DAML+OIL: 미국 DARPA의 DAML과 유럽 OIL을 통합한 RDF 기반 온톨로지 언어, 2004년 OWL로 W3C 권고"
+      ]
+     },
+     {
+      "title": "기반: 기술 논리",
+      "items": [
+       "기술 논리(Description Logic): 클래스 포함·동치·교집합·카디널리티 제약을 형식 의미로 추론"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "유형",
     "subsections": [
      {
-      "title": null,
+      "title": "1세대: Lite·DL·Full",
       "items": [
-       "디지털서비스 보안: 디지털서비스에서 디지털서비스 보안을 다루는 핵심 암기 포인트",
-       "DAML: DAML를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OIL: OIL를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Sentiment: 텍스트의 긍정·부정 등 감성 극성을 분류 (디지털서비스/9c72)"
+       "OWL Lite: 분류 계층과 단순 제약, 시소러스를 빠르게 OWL화하는 용도",
+       "OWL DL: 결정가능성과 계산적 완전성을 유지하며 최대 표현력, OWL Full은 표현력 최대지만 완전한 추론기 불가"
+      ]
+     },
+     {
+      "title": "2세대: EL·QL·RL 프로파일",
+      "items": [
+       "OWL 2 프로파일(EL·QL·RL): 의료 용어 같은 대규모 계층(EL), DB 질의 재작성(QL), 규칙 엔진 구현(RL)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "언어 비교와 활용",
+    "subsections": [
+     {
+      "title": "비교: RDF·DAML+OIL 대비",
+      "items": [
+       "RDF는 메타데이터 기술·교환 표준이나 의미 표현 부족, OWL은 풍부한 어휘·형식 의미를 제공하지만 복잡"
+      ]
+     },
+     {
+      "title": "활용: 의미 검색·추론",
+      "items": [
+       "시맨틱 문서 간 관계를 밝혀 의미 검색, 추론기(HermiT·Pellet)로 모순 검사·분류 자동화"
       ]
      }
     ]
@@ -12390,21 +12484,27 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "DAML+OIL 기반",
-   "온톨로지 명세 언어",
-   "디지털서비스 아키텍처",
-   "디지털서비스 표준",
-   "디지털서비스 보안",
-   "DAML",
-   "OIL",
-   "Sentiment"
+   "DAML+OIL(DARPA 마크업 + 추론 계층)",
+   "클래스(Class)·속성(Property) 계층",
+   "기술 논리(Description Logic)",
+   "OWL Lite",
+   "OWL DL",
+   "OWL Full",
+   "결정가능성(Decidability)",
+   "계산적 완전성(Computational Completeness)",
+   "OWL 2 프로파일(EL·QL·RL)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true,
+  "gloss": {
+   "DAML": "DARPA Agent Markup Language",
+   "OIL": "Ontology Inference Layer"
+  }
  },
  {
   "id": "SV_134",
@@ -12415,56 +12515,88 @@
    145,
    146
   ],
-  "en": "RDF",
+  "en": "Resource Description Framework",
   "dueum": null,
-  "name": "디지털서비스(RDF)",
-  "title": "디지털서비스(RDF)",
-  "definition": "인터넷과 웹 상의 메타데이터를 지원하기 위한 기반구조를 제공하기 위하여 W3C에 의해 개발되고 있는 규격",
+  "name": "자원 기술 프레임워크(RDF, Resource Description Framework)",
+  "title": "자원 기술 프레임워크(RDF, Resource Description Framework)",
+  "definition": "웹 자원에 대한 메타데이터를 주어(자원)·술어(속성)·목적어(값)의 트리플 그래프로 표현해 서로 다른 응용 간 메타데이터 교환·통합을 지원하는 W3C 표준 프레임워크 (1999 권고, RDF 1.1 2014)",
   "keywords_must": [
-   "RDF Data Model",
-   "RDF Syntax",
-   "RDF Schema",
-   "RDF의 구조도",
-   "W3C",
-   "Sentiment"
+   "트리플(Triple: 주어·술어·목적어)",
+   "자원(Resource)·URI",
+   "속성 타입(Property Type)",
+   "속성값(Value)·리터럴",
+   "노드·아크 그래프",
+   "RDF 데이터 모델",
+   "RDF 구문(RDF/XML·Turtle·JSON-LD)",
+   "RDF 스키마(RDFS: Class·subClassOf·domain·range)",
+   "SPARQL"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "더블린 코어(Dublin Core)",
+   "HTML meta 태그 한계",
+   "트리플 스토어",
+   "링크드 데이터",
+   "지식베이스"
+  ],
   "keywords": [
-   "핵심: RDF Data Model · RDF Syntax · RDF Schema",
-   "기술: RDF의 구조도 · W3C · Sentiment"
+   "구성: RDF 데이터 모델 · RDF 구문 · RDF 스키마",
+   "트리플 예: 세종대왕(주어) — ~의 왕이다(술어) — 조선(목적어)",
+   "그래프: 자원 = 타원 노드 · 속성 = 아크 · 리터럴 값 = 사각형"
   ],
   "outline": [
-   "I XML 기반의 온톨로지 표현언어 RDF 의 개요",
-   "- RDF 의 정의",
-   "RDF 의 구조도 및 구성요소",
-   "- RDF 의 구조도",
-   "- RDF 구성요소",
-   "RDF 의 활용",
-   "- 디지털서비스 요점"
+   "등장 배경",
+   "- 한계: HTML meta 태그",
+   "- 요구: 메타데이터 공통 구조",
+   "구조와 구성요소",
+   "- 데이터 모델: 트리플 그래프",
+   "- 구문·스키마: 직렬화·어휘 정의",
+   "활용",
+   "- 활용: 서비스 발견·지식베이스"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "한계: HTML meta 태그",
       "items": [
-       "RDF Data Model: 디지털서비스에서 RDF Data Model를 다루는 핵심 암기 포인트",
-       "RDF Syntax: 디지털서비스에서 RDF Syntax를 다루는 핵심 암기 포인트",
-       "RDF Schema: 디지털서비스에서 RDF Schema를 다루는 핵심 암기 포인트",
-       "RDF의 구조도: 디지털서비스에서 RDF의 구조도를 다루는 핵심 암기 포인트"
+       "HTML meta 태그는 keywords 수준이라 의미 표현 불가, 더블린 코어 등 기존 메타데이터 명세도 상호 교환 구조 부재"
+      ]
+     },
+     {
+      "title": "요구: 메타데이터 공통 구조",
+      "items": [
+       "데이터와 메타데이터 분리로 포털별 다른 관점 분류 지원, 생성자 간 메타데이터 교환을 위한 포괄적 구조 필요"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "구조와 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "데이터 모델: 트리플 그래프",
       "items": [
-       "W3C: W3C를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Sentiment: 텍스트의 긍정·부정 등 감성 극성을 분류 (디지털서비스/b6ab)"
+       "트리플(Triple): '세종대왕은 조선의 왕이었다'를 주어·술어·목적어로 분해해 노드·아크로 표현"
+      ]
+     },
+     {
+      "title": "구문·스키마: 직렬화·어휘 정의",
+      "items": [
+       "RDF 구문: RDF/XML 외에 Turtle·JSON-LD로 직렬화해 응용 간 교환",
+       "RDF 스키마(RDFS): Class·subClassOf·domain·range로 속성 유효성 검증과 클래스 관계 정의"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": "활용: 서비스 발견·지식베이스",
+      "items": [
+       "시맨틱 웹 서비스 발견, 전문가 시스템 지식베이스, 웹페이지 자동 분류로 디지털 라이브러리 구축",
+       "SPARQL: 트리플 스토어에 저장된 RDF 그래프를 패턴 매칭으로 질의"
       ]
      }
     ]
@@ -12473,19 +12605,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "RDF Data Model",
-   "RDF Syntax",
-   "RDF Schema",
-   "RDF의 구조도",
-   "W3C",
-   "Sentiment"
+   "트리플(Triple: 주어·술어·목적어)",
+   "자원(Resource)·URI",
+   "속성 타입(Property Type)",
+   "속성값(Value)·리터럴",
+   "노드·아크 그래프",
+   "RDF 데이터 모델",
+   "RDF 구문(RDF/XML·Turtle·JSON-LD)",
+   "RDF 스키마(RDFS: Class·subClassOf·domain·range)",
+   "SPARQL"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_135",
@@ -12498,79 +12634,86 @@
   ],
   "en": "Natural Language Processing",
   "dueum": null,
-  "name": "자연어처리(NLP)",
-  "title": "자연어처리(NLP)",
-  "definition": "인간의 언어 현상을 기계적으로 분석해 컴퓨터가 이해가능한 형태로 만드는 자연언어 이해/변환과정 혹은 그러한 형태를 다시 인간이 이해가능한 언어로 표현하는 제반 기술",
+  "name": "자연어처리(NLP, Natural Language Processing)",
+  "title": "자연어처리(NLP, Natural Language Processing)",
+  "definition": "인간의 언어를 형태소·구문·의미·담화 단계로 분석해 컴퓨터가 이해 가능한 형태로 바꾸고(NLU), 이를 다시 상황에 맞는 자연어로 생성(NLG)하는 컴퓨터과학·인공지능·언어학 융합 기술",
   "keywords_must": [
-   "NLG",
-   "NLU",
-   "대화관리",
-   "형태소",
-   "구문 분석",
-   "의미 분석",
-   "담론 분석",
-   "인공지능 기술과 NLP 관계",
-   "형태소/구문 분석/의미 분석/담론 분석",
-   "단점"
+   "자연어 이해(NLU)",
+   "자연어 생성(NLG)",
+   "형태소 분석(Morphological Analysis)",
+   "구문 분석(Parsing)",
+   "의미 분석(Semantic Analysis)",
+   "담화 분석(Discourse Analysis)",
+   "대화 관리(Dialogue Management)",
+   "음성인식(STT)·음성합성(TTS)",
+   "트랜스포머(Transformer)·사전학습 언어모델"
   ],
   "keywords_ref": [
-   "CBOW(Continuous Bag-of-Words)"
+   "개체명 인식(NER)",
+   "단어 임베딩(Word2Vec)",
+   "BERT·GPT",
+   "품사 태깅",
+   "챗봇·가상비서"
   ],
   "keywords": [
-   "핵심: NLG · NLU · 대화관리",
-   "기술: 형태소 · 구문 분석 · 의미 분석",
-   "운영: 담론 분석 · 인공지능 기술과 NLP 관계 · 형태소/구문 분석/의미 분석/담론 분석",
-   "참고: CBOW(Continuous Bag-of-Words)"
+   "대화 UI 흐름: 음성인식 → 언어 이해 → 대화 관리 → 발화 생성·음성합성",
+   "NLU: 형태소 → 구문 → 의미 → 담화 분석",
+   "NLG: 담화 생성 → 문장 계획 → 어휘 선택 → 문장 생성 → 형태 생성"
   ],
   "outline": [
-   "인간의 언어를 컴퓨터로 이해, 해석하는 자연어처리 기술 개요",
-   "- 자연어 처리기술의 정의",
-   "- 인공지능 기술과 NLP 관계",
-   "자연어 처리 UI 기술구성 및 주요기술",
-   "- 자연어 처리 UI 기술구성도",
-   "- 자연어 처리 주요기술",
-   "NLP 기술요소",
-   "- 자연어처리 요점",
-   "NLP(Natural Language Processing) 활용사례",
-   "- 자연어처리 요점"
+   "AI와의 관계",
+   "- 관계: 포함 아닌 교집합",
+   "대화형 처리 흐름",
+   "- 입력: 음성인식·언어 이해",
+   "- 처리·출력: 대화 관리·생성",
+   "NLU·NLG 세부 단계",
+   "- 이해: 형태소~담화",
+   "- 생성: 계획~형태 생성"
   ],
   "sections": [
    {
-    "title": "자연어처리 핵심",
+    "title": "AI와의 관계",
     "subsections": [
      {
-      "title": null,
+      "title": "관계: 포함 아닌 교집합",
       "items": [
-       "NLG: NLG를 자연어처리 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "NLU: NLU를 자연어처리 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "대화관리: 자연어처리에서 대화관리를 다루는 핵심 암기 포인트",
-       "형태소: 자연어처리에서 형태소를 다루는 핵심 암기 포인트"
+       "NLP는 AI 한 분야로 머신러닝 없이 규칙 기반도 가능, 현재는 트랜스포머(Transformer)·사전학습 언어모델이 주류"
       ]
      }
     ]
    },
    {
-    "title": "자연어처리 구성·기술",
+    "title": "대화형 처리 흐름",
     "subsections": [
      {
-      "title": null,
+      "title": "입력: 음성인식·언어 이해",
       "items": [
-       "구문 분석: 자연어처리에서 구문 분석을 다루는 핵심 암기 포인트",
-       "의미 분석: 자연어처리에서 의미 분석을 다루는 핵심 암기 포인트",
-       "담론 분석: 자연어처리에서 담론 분석을 다루는 핵심 암기 포인트",
-       "인공지능 기술과 NLP 관계: 자연어처리에서 인공지능 기술과 NLP 관계를 다루는 핵심 암기 포인트"
+       "음성인식(STT)으로 발화를 텍스트화, 언어 이해 모듈이 의미 분석으로 사용자 의도 파악"
+      ]
+     },
+     {
+      "title": "처리·출력: 대화 관리·생성",
+      "items": [
+       "대화 관리(Dialogue Management): 의도·상황 정보로 부족한 정보를 되묻고 태스크 에이전트에 전달",
+       "발화 생성 후 음성합성(TTS)으로 자연스러운 음성 응답"
       ]
      }
     ]
    },
    {
-    "title": "자연어처리 운영",
+    "title": "NLU·NLG 세부 단계",
     "subsections": [
      {
-      "title": null,
+      "title": "이해: 형태소~담화",
       "items": [
-       "형태소/구문 분석/의미 분석/담론 분석: 자연어처리에서 형태소/구문 분석/의미 분석/담론 분석을 다루는 핵심 암기 포인트",
-       "단점: 자연어처리에서 단점을 다루는 핵심 암기 포인트"
+       "형태소 분석은 명사·동사·조사 등 품사 인식, 구문 분석(Parsing)은 명사구·동사구로 묶고 관계 분석",
+       "의미 분석은 문장 성분 간 의미 관계, 담화 분석(Discourse Analysis)은 문맥 속 지시어·생략 해석"
+      ]
+     },
+     {
+      "title": "생성: 계획~형태 생성",
+      "items": [
+       "문장 계획으로 문법 구조 결정, 어휘 선택 후 문장 생성, 형태 생성에서 성별 불일치 등 표현 오류 교정"
       ]
      }
     ]
@@ -12579,23 +12722,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "NLG",
-   "NLU",
-   "대화관리",
-   "형태소",
-   "구문 분석",
-   "의미 분석",
-   "담론 분석",
-   "인공지능 기술과 NLP 관계",
-   "형태소/구문 분석/의미 분석/담론 분석",
-   "단점"
+   "자연어 이해(NLU)",
+   "자연어 생성(NLG)",
+   "형태소 분석(Morphological Analysis)",
+   "구문 분석(Parsing)",
+   "의미 분석(Semantic Analysis)",
+   "담화 분석(Discourse Analysis)",
+   "대화 관리(Dialogue Management)",
+   "음성인식(STT)·음성합성(TTS)",
+   "트랜스포머(Transformer)·사전학습 언어모델"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_136",
@@ -12606,86 +12749,95 @@
    154,
    159
   ],
-  "en": "AR SPARQL SPARQL",
+  "en": "SPARQL Protocol and RDF Query Language",
   "dueum": null,
-  "name": "디지털서비스(AR SPARQL SPARQL)",
-  "title": "디지털서비스(AR SPARQL SPARQL)",
-  "definition": "기본적으로 RDF에서 검색 결과로 보고자 하는 부분에 대해서 SELECT 절에 명세를 하고, FROM 절에는 대상 RDF를 열거하며, WHERE 절에는 조건에해당하는 부분이 기술",
+  "name": "스파클(SPARQL, SPARQL Protocol and RDF Query Language)",
+  "title": "스파클(SPARQL, SPARQL Protocol and RDF Query Language)",
+  "definition": "RDF 트리플 그래프에서 변수가 포함된 트리플 패턴을 매칭해 데이터를 검색·조작하도록 W3C가 정의한 질의 언어·프로토콜·결과 포맷 규격 (2008 권고, SPARQL 1.1 2013)",
   "keywords_must": [
-   "XML",
-   "SPARQL 엔진",
-   "PDF",
-   "GRDDL",
-   "SQL-SPARQL",
-   "PDFa",
-   "PREFIX",
-   "FROM",
-   "NAMED",
-   "ORDER"
+   "트리플 패턴(Triple Pattern) 매칭",
+   "변수(?var·$var)",
+   "PREFIX 선언",
+   "질의 형식(SELECT·CONSTRUCT·ASK·DESCRIBE)",
+   "기본 그래프·명명 그래프(Default·Named Graph)",
+   "그래프 패턴(OPTIONAL·FILTER·UNION)",
+   "솔루션 수정자(ORDER BY·LIMIT·OFFSET)",
+   "SPARQL 엔드포인트(HTTP 프로토콜)",
+   "결과 포맷(XML·JSON·CSV)"
   ],
   "keywords_ref": [
-   "SELECT",
-   "CONSTRUCT",
-   "ASK",
-   "DESCRIBE",
-   "DISTINCT",
-   "REDUCED",
-   "WHERE",
-   "OPTIONAL"
+   "SPARQL 1.1 Update(INSERT·DELETE)",
+   "페더레이션 질의(SERVICE)",
+   "재귀 약어",
+   "Apache Jena·Virtuoso",
+   "Wikidata 질의 서비스"
   ],
   "keywords": [
-   "핵심: XML · SPARQL 엔진 · PDF",
-   "기술: GRDDL · SQL-SPARQL · PDFa",
-   "운영: PREFIX · FROM · NAMED",
-   "참고: SELECT · CONSTRUCT · ASK"
+   "구조: PREFIX → 질의 형식 → FROM (NAMED) → WHERE 그래프 패턴 → ORDER BY·LIMIT·OFFSET",
+   "질의 형식: SELECT(변수 바인딩) · CONSTRUCT(새 RDF 그래프) · ASK(참·거짓) · DESCRIBE(자원 기술)",
+   "규격 3요소: 질의 언어 · 프로토콜 · 결과 포맷"
   ],
   "outline": [
-   "사용법",
-   "- Query 형태",
-   "PREFIX",
-   "- 디지털서비스 요점",
-   "FROM (NAMED)",
-   "- 디지털서비스 요점",
-   "ORDER BY",
-   "- 디지털서비스 요점"
+   "개념과 필요성",
+   "- 정의: 재귀 약어",
+   "- 필요성: 시맨틱 웹 질의",
+   "질의 구성",
+   "- 기본: SELECT·FROM·WHERE",
+   "- 데이터셋: 기본·명명 그래프",
+   "문법 요소",
+   "- 패턴: OPTIONAL·FILTER·UNION",
+   "- 수정자: 정렬·개수 제한"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "개념과 필요성",
     "subsections": [
      {
-      "title": null,
+      "title": "정의: 재귀 약어",
       "items": [
-       "XML: XML를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "SPARQL 엔진: 디지털서비스에서 SPARQL 엔진을 다루는 핵심 암기 포인트",
-       "PDF: PDF를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "GRDDL: GRDDL를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "SPARQL은 'SPARQL Protocol and RDF Query Language'의 재귀 약어, W3C RDF Data Access WG가 개발"
+      ]
+     },
+     {
+      "title": "필요성: 시맨틱 웹 질의",
+      "items": [
+       "SQL처럼 시맨틱 웹 데이터도 쉽게 질의할 표준 필요, 바이오·유전체 데이터 통합에 활용"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "질의 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "기본: SELECT·FROM·WHERE",
       "items": [
-       "SQL-SPARQL: SQL-SPARQL를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "PDFa: PDFa를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "PREFIX: PREFIX를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "FROM: FROM를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "트리플 패턴(Triple Pattern) 매칭: WHERE 절에 '?person foaf:name ?name' 같은 패턴을 쓰고 일치하는 값을 변수에 바인딩",
+       "PREFIX 선언으로 foaf: 등 긴 URI를 축약"
+      ]
+     },
+     {
+      "title": "데이터셋: 기본·명명 그래프",
+      "items": [
+       "기본 그래프·명명 그래프: RDF Dataset은 하나의 기본 그래프와 여러 명명 그래프로 구성, FROM NAMED·GRAPH로 지정"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "문법 요소",
     "subsections": [
      {
-      "title": null,
+      "title": "패턴: OPTIONAL·FILTER·UNION",
       "items": [
-       "NAMED: NAMED를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ORDER: ORDER를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "OPTIONAL은 없는 값도 허용(Left Join), FILTER는 조건식 제한, UNION은 대안 패턴 합집합"
+      ]
+     },
+     {
+      "title": "수정자: 정렬·개수 제한",
+      "items": [
+       "ORDER BY ASC·DESC(ASK에서는 불가), LIMIT로 개수 제한, OFFSET으로 시작 위치 지정해 페이징",
+       "SPARQL 1.1 Update(INSERT·DELETE)로 그래프 수정, SERVICE로 원격 엔드포인트 페더레이션 질의"
       ]
      }
     ]
@@ -12694,23 +12846,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "XML",
-   "SPARQL 엔진",
-   "PDF",
-   "GRDDL",
-   "SQL-SPARQL",
-   "PDFa",
-   "PREFIX",
-   "FROM",
-   "NAMED",
-   "ORDER"
+   "트리플 패턴(Triple Pattern) 매칭",
+   "변수(?var·$var)",
+   "PREFIX 선언",
+   "질의 형식(SELECT·CONSTRUCT·ASK·DESCRIBE)",
+   "기본 그래프·명명 그래프(Default·Named Graph)",
+   "그래프 패턴(OPTIONAL·FILTER·UNION)",
+   "솔루션 수정자(ORDER BY·LIMIT·OFFSET)",
+   "SPARQL 엔드포인트(HTTP 프로토콜)",
+   "결과 포맷(XML·JSON·CSV)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_152",
@@ -12725,74 +12877,93 @@
   "dueum": null,
   "name": "가상화(Virtualization)",
   "title": "가상화(Virtualization)",
-  "definition": "물리적으로 다른 시스템을 논리적으로 통합하거나 하나의 시스템을 논리적으로 분할해 자원을 사용하게하는 기술",
+  "definition": "하이퍼바이저·컨테이너 등 추상화 계층으로 물리 자원을 논리적으로 분할하거나 여러 자원을 하나로 통합해, 사용자가 물리적 구성과 무관하게 CPU·메모리·스토리지·네트워크를 사용하게 하는 기술",
   "keywords_must": [
-   "서버가상화",
-   "네트워크가상화",
-   "스토리지가상화",
-   "데스크톱 가상화",
-   "Scalability",
-   "Realiability",
-   "Flexibility",
-   "Agility",
-   "Optimization",
-   "ZeroPC"
+   "공유(Sharing: 파티셔닝·VLAN)",
+   "단일화(Aggregation: 클러스터링)",
+   "에뮬레이션(Emulation: VTL)",
+   "절연(Insulation: RAID·HA)",
+   "서버 가상화",
+   "스토리지 가상화",
+   "네트워크 가상화(SDN·NFV)",
+   "데스크톱 가상화(VDI·SBC)",
+   "전가상화·반가상화",
+   "컨테이너(OS 수준 가상화)"
   ],
   "keywords_ref": [
-   "PRM"
+   "하이퍼바이저(Type1·Type2)",
+   "Zero PC",
+   "JVM(OS 에뮬레이션)",
+   "자원 풀",
+   "라이브 마이그레이션"
   ],
   "keywords": [
-   "핵심: 서버가상화 · 네트워크가상화 · 스토리지가상화",
-   "기술: 데스크톱 가상화 · Scalability · Realiability",
-   "운영: Flexibility · Agility · Optimization",
-   "참고: PRM"
+   "원리: 공유 · 단일화 · 에뮬레이션 · 절연",
+   "대상: 서버 · 스토리지 · 네트워크 · 데스크톱 · 애플리케이션",
+   "목적: 성능 · 확장성 · 가용성 · 유연성·민첩성 · 자원 최적화"
   ],
   "outline": [
-   "정보 시스템의 자원 사용 효율화, 가상화의 개요",
-   "- 가상화의 정의",
-   "- 가상화의 성과",
-   "- 가상화의 목적",
-   "가상화 유형 및 기술의 구분",
-   "- 가상화의 유형",
-   "- 가상화 기술의 구분"
+   "효과와 목적",
+   "- 효과: 그린 IT·TCO·보안",
+   "- 목적: 확장·가용·민첩",
+   "4대 동작 원리",
+   "- 분할·통합: 공유·단일화",
+   "- 대체·보호: 에뮬레이션·절연",
+   "유형과 구현 방식",
+   "- 대상별: 서버·스토리지·네트워크·데스크톱",
+   "- 방식: 하드웨어·OS 수준"
   ],
   "sections": [
    {
-    "title": "가상화 핵심",
+    "title": "효과와 목적",
     "subsections": [
      {
-      "title": null,
+      "title": "효과: 그린 IT·TCO·보안",
       "items": [
-       "서버가상화: 가상화에서 서버가상화를 다루는 핵심 암기 포인트",
-       "네트워크가상화: 가상화에서 네트워크가상화를 다루는 핵심 암기 포인트",
-       "스토리지가상화: 가상화에서 스토리지가상화를 다루는 핵심 암기 포인트",
-       "데스크톱 가상화: 가상화에서 데스크톱 가상화를 다루는 핵심 암기 포인트"
+       "CPU·메모리 유휴 자원 재사용으로 TCO 절감과 열·탄소 감소, 논리 분리로 정보 유출 위험 저하"
+      ]
+     },
+     {
+      "title": "목적: 확장·가용·민첩",
+      "items": [
+       "다중 사본으로 가용성 확보, 인스턴스를 수분 내 생성·폐기해 민첩성, 물리 재구성 없이 자원 최적화"
       ]
      }
     ]
    },
    {
-    "title": "가상화 구성·기술",
+    "title": "4대 동작 원리",
     "subsections": [
      {
-      "title": null,
+      "title": "분할·통합: 공유·단일화",
       "items": [
-       "Scalability: Scalability를 가상화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Realiability: Realiability를 가상화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Flexibility: Flexibility를 가상화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Agility: Agility를 가상화 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "공유(Sharing): 하나의 물리 자원을 파티셔닝·VLAN으로 나눠 사용, 단일화(Aggregation)는 클러스터링으로 분산 자원 통합"
+      ]
+     },
+     {
+      "title": "대체·보호: 에뮬레이션·절연",
+      "items": [
+       "에뮬레이션(Emulation): 테이프 없이 디스크로 테이프를 흉내내는 VTL처럼 논리 객체가 물리 객체와 동일 기능 수행",
+       "절연(Insulation): RAID·HA·L4 스위치로 물리 자원 교체·장애에도 서비스 유지"
       ]
      }
     ]
    },
    {
-    "title": "가상화 운영",
+    "title": "유형과 구현 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "대상별: 서버·스토리지·네트워크·데스크톱",
       "items": [
-       "Optimization: Optimization를 가상화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ZeroPC: ZeroPC를 가상화 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "데스크톱 가상화(VDI·SBC): 중앙 서버에서 데스크톱을 실행해 화면만 전송, Zero PC 단말과 결합",
+       "네트워크 가상화(SDN·NFV)와 스토리지 가상화로 데이터센터 전체를 소프트웨어 정의화"
+      ]
+     },
+     {
+      "title": "방식: 하드웨어·OS 수준",
+      "items": [
+       "전가상화·반가상화: 게스트 OS 수정 없이 하드웨어 완전 가상화 vs 커널 수정 후 하이퍼콜 호출",
+       "컨테이너(OS 수준 가상화): 호스트 커널을 공유하고 네임스페이스·cgroups로 격리(도커)"
       ]
      }
     ]
@@ -12801,16 +12972,16 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "서버가상화",
-   "네트워크가상화",
-   "스토리지가상화",
-   "데스크톱 가상화",
-   "Scalability",
-   "Realiability",
-   "Flexibility",
-   "Agility",
-   "Optimization",
-   "ZeroPC"
+   "공유(Sharing: 파티셔닝·VLAN)",
+   "단일화(Aggregation: 클러스터링)",
+   "에뮬레이션(Emulation: VTL)",
+   "절연(Insulation: RAID·HA)",
+   "서버 가상화",
+   "스토리지 가상화",
+   "네트워크 가상화(SDN·NFV)",
+   "데스크톱 가상화(VDI·SBC)",
+   "전가상화·반가상화",
+   "컨테이너(OS 수준 가상화)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -12820,7 +12991,8 @@
   "warnings": [],
   "gloss": {
    "PRM": "Partner Relationship Management"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_153",
@@ -12831,76 +13003,88 @@
    190,
    193
   ],
-  "en": "Hypervisor",
-  "dueum": "BH 반전 모모",
+  "en": "Hypervisor (Virtual Machine Monitor)",
+  "dueum": "BH 반전 모모(Bare-metal·Hosted·반가상화·전가상화·모놀리식·마이크로커널)",
   "name": "하이퍼바이저(Hypervisor)",
   "title": "하이퍼바이저(Hypervisor)",
-  "definition": "호스트 컴퓨터에서 다수의 운영체제를 동시에 실행하기 위한 논리적 플랫폼으로, 여러 개의 OS가 단일 하드웨어 호스트를 공유할 수 있도록 하는 기술.",
+  "definition": "하나의 물리 호스트에서 여러 게스트 운영체제가 서로 간섭 없이 동시에 실행되도록 가상머신(VM)에 CPU·메모리·I/O를 할당하고 특권 명령을 중재하는 가상머신 모니터(VMM) 소프트웨어 계층",
   "keywords_must": [
-   "Type1 : Native",
-   "Bare-metal Type2 : Hosted 기반형",
-   "하이퍼바이저(Hypervisor) 정의",
-   "가상화 기법",
-   "호스트 타입별 구성도",
-   "가상화 방식에 따른 분류",
-   "VM(Virtual Machine)",
-   "VMM",
-   "x86 서버로 통합 구성됨"
+   "Type 1(Bare-metal·Native)",
+   "Type 2(Hosted)",
+   "이진 변환(Binary Translation)",
+   "하드웨어 보조 가상화(Intel VT-x·AMD-V)",
+   "반가상화(Para-virtualization)·하이퍼콜(Hypercall)",
+   "전가상화(Full Virtualization)",
+   "모놀리식 커널형(드라이버 내장)",
+   "마이크로커널형(드라이버 분리)",
+   "특권 명령 트랩(Trap-and-Emulate)"
   ],
   "keywords_ref": [
-   "Type1",
-   "Bare-metal Type2"
+   "VMware ESXi·Xen·KVM·Hyper-V",
+   "VirtualBox·VMware Workstation",
+   "Dom0(관리 도메인)",
+   "링 0·링 -1",
+   "포펙·골드버그 가상화 요건"
   ],
   "keywords": [
-   "핵심: Type1 : Native · Bare-metal Type2 : Hosted 기반형 · 하이퍼바이저(Hypervisor) 정의",
-   "기술: 가상화 기법 · 호스트 타입별 구성도 · 가상화 방식에 따른 분류",
-   "운영: VM(Virtual Machine) · VMM · x86 서버로 통합 구성됨",
-   "참고: Type1 · Bare-metal Type2"
+   "호스트 유형: Type 1(하드웨어 위 직접 · 데이터센터) · Type 2(호스트 OS 위 · 클라이언트)",
+   "가상화 기법: 이진 변환 · 하드웨어 보조 · 반가상화(하이퍼콜)",
+   "드라이버 구조: 모놀리식(VMware ESXi) · 마이크로커널(Hyper-V·Xen)"
   ],
   "outline": [
-   "하이퍼바이저(Hypervisor) 정의 및 가상화 기법",
-   "- 하이퍼바이저(Hypervisor) 정의",
-   "- 가상화 기법",
-   "하이퍼바이저 타입별 구성도 및 분류",
-   "- 호스트 타입별 구성도",
-   "- 가상화 방식에 따른 분류"
+   "가상화 기법",
+   "- CPU 특권 명령 처리",
+   "호스트 유형별 비교",
+   "- Type 1: 베어메탈",
+   "- Type 2: 호스티드",
+   "드라이버 구조별 유형",
+   "- 모놀리식: 드라이버 내장",
+   "- 마이크로커널: 드라이버 분리"
   ],
   "sections": [
    {
-    "title": "하이퍼바이저 핵심",
+    "title": "가상화 기법",
     "subsections": [
      {
-      "title": null,
+      "title": "CPU 특권 명령 처리",
       "items": [
-       "Type1 : Native: 하이퍼바이저가 하드웨어 위에서 직접 동작하는 유형 (하이퍼바이저/834a)",
-       "Bare-metal Type2 : Hosted 기반형: 하이퍼바이저가 하드웨어 위에서 직접 동작하는 유형 (하이퍼바이저/5fdf)",
-       "하이퍼바이저(Hypervisor) 정의: 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층 (하이퍼바이저/aeda)",
-       "가상화 기법: 하이퍼바이저에서 가상화 기법을 다루는 핵심 암기 포인트"
+       "이진 변환(Binary Translation): 게스트 커널의 민감 명령을 실행 중 동적으로 바꿔 실행, 호스트형 제품이 주로 사용",
+       "하드웨어 보조 가상화(Intel VT-x·AMD-V): 링 -1 루트 모드를 두어 코드 변경 없이 특권 명령을 트랩",
+       "반가상화(Para-virtualization)·하이퍼콜: 게스트 OS 소스를 수정해 하이퍼바이저를 직접 호출, 성능 우수하나 OS 수정 필요"
       ]
      }
     ]
    },
    {
-    "title": "하이퍼바이저 구성·기술",
+    "title": "호스트 유형별 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "Type 1: 베어메탈",
       "items": [
-       "호스트 타입별 구성도: 하이퍼바이저의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "가상화 방식에 따른 분류: 하이퍼바이저에서 가상화 방식에 따른 분류를 다루는 핵심 암기 포인트",
-       "VM(Virtual Machine): VM를 하이퍼바이저 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "VMM: 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층 (하이퍼바이저/3ae8)"
+       "Type 1(Bare-metal·Native): 하드웨어 위 2계층 실행으로 오버헤드 적어 데이터센터용, 별도 관리 콘솔 필요(ESXi·Xen·KVM)"
+      ]
+     },
+     {
+      "title": "Type 2: 호스티드",
+      "items": [
+       "Type 2(Hosted): 호스트 OS 위 3계층 실행으로 설치 쉽고 게스트 OS 제약 적지만 오버헤드 큼(VirtualBox)"
       ]
      }
     ]
    },
    {
-    "title": "하이퍼바이저 운영",
+    "title": "드라이버 구조별 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "모놀리식: 드라이버 내장",
       "items": [
-       "x86 서버로 통합 구성됨: 하이퍼바이저에서 x86 서버로 통합 구성됨을 다루는 핵심 암기 포인트"
+       "모놀리식 커널형: 하이퍼바이저가 드라이버를 포함해 구현 간단·효율적이나 드라이버 결함이 전체에 영향(VMware ESXi)"
+      ]
+     },
+     {
+      "title": "마이크로커널: 드라이버 분리",
+      "items": [
+       "마이크로커널형: 드라이버를 부모 파티션(Dom0)에 두고 IPC·스케줄링·메모리만 제공해 다계층 방어, 통신 오버헤드 증가(Hyper-V)"
       ]
      }
     ]
@@ -12909,22 +13093,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Type1 : Native",
-   "Bare-metal Type2 : Hosted 기반형",
-   "하이퍼바이저(Hypervisor) 정의",
-   "가상화 기법",
-   "호스트 타입별 구성도",
-   "가상화 방식에 따른 분류",
-   "VM(Virtual Machine)",
-   "VMM",
-   "x86 서버로 통합 구성됨"
+   "Type 1(Bare-metal·Native)",
+   "Type 2(Hosted)",
+   "이진 변환(Binary Translation)",
+   "하드웨어 보조 가상화(Intel VT-x·AMD-V)",
+   "반가상화(Para-virtualization)·하이퍼콜(Hypercall)",
+   "전가상화(Full Virtualization)",
+   "모놀리식 커널형(드라이버 내장)",
+   "마이크로커널형(드라이버 분리)",
+   "특권 명령 트랩(Trap-and-Emulate)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_154",
