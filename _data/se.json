@@ -26,7 +26,7 @@
       ]
      },
      {
-      "title": "보안 서비스",
+      "title": "부가 서비스",
       "items": [
        "인증: 신원 확인",
        "부인방지: 송수신 사실 부인 차단",
@@ -85,7 +85,7 @@
   "outline": [
    "기본 특성",
    "- CIA 3요소",
-   "- 보안 서비스",
+   "- 부가 서비스",
    "사용자 인증과 3A",
    "- 인증 요소",
    "- 3A",
@@ -273,7 +273,10 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "ECC": "Elliptic Curve Cryptography"
+  }
  },
  {
   "id": "SE_004",
@@ -1081,7 +1084,10 @@
   "quiz_groups": [
    "se"
   ],
-  "dueum": "다코격아해"
+  "dueum": "다코격아해",
+  "gloss": {
+   "ECC": "Elliptic Curve Cryptography"
+  }
  },
  {
   "id": "SE_016_01",
@@ -1463,7 +1469,10 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SE_018",
@@ -2121,7 +2130,11 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "CAM": "Content Addressable Memory",
+   "MAC": "Media Access Control"
+  }
  },
  {
   "id": "SE_026",
@@ -2382,6 +2395,7 @@
    "se"
   ],
   "gloss": {
+   "MAC": "Media Access Control",
    "PC": "Personal Computer"
   }
  },
@@ -2511,7 +2525,10 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "MAC": "Media Access Control"
+  }
  },
  {
   "id": "SE_029",
@@ -2648,7 +2665,10 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "MAC": "Media Access Control"
+  }
  },
  {
   "id": "SE_030",
@@ -2778,7 +2798,10 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "MAC": "Media Access Control"
+  }
  },
  {
   "id": "SE_031",
@@ -6881,7 +6904,7 @@
       ]
      },
      {
-      "title": "EDR",
+      "title": "탐지·대응형",
       "items": [
        "침해 가정 후 탐지·조사·대응(Detection & Response)"
       ]
@@ -6905,7 +6928,7 @@
    "- 대응",
    "EPP·XDR 비교",
    "- EPP",
-   "- EDR",
+   "- 탐지·대응형",
    "- XDR"
   ],
   "name": "엔드포인트 탐지 및 대응(EDR, Endpoint Detection and Response)",

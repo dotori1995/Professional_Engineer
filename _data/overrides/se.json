@@ -22,7 +22,7 @@
       ]
      },
      {
-      "title": "보안 서비스",
+      "title": "부가 서비스",
       "items": [
        "인증: 신원 확인",
        "부인방지: 송수신 사실 부인 차단",
@@ -81,7 +81,7 @@
   "outline": [
    "기본 특성",
    "- CIA 3요소",
-   "- 보안 서비스",
+   "- 부가 서비스",
    "사용자 인증과 3A",
    "- 인증 요소",
    "- 3A",
@@ -259,7 +259,10 @@
    "치환(Substitution)",
    "전치(Transposition)",
    "혼돈·확산(Confusion·Diffusion)"
-  ]
+  ],
+  "gloss": {
+   "ECC": "Elliptic Curve Cryptography"
+  }
  },
  "SE_004": {
   "title": "블록 암호화(Block Cipher)",
@@ -1025,7 +1028,10 @@
    "ML-DSA(FIPS 204, Dilithium)",
    "SLH-DSA(FIPS 205, SPHINCS+)"
   ],
-  "dueum": "다코격아해"
+  "dueum": "다코격아해",
+  "gloss": {
+   "ECC": "Elliptic Curve Cryptography"
+  }
  },
  "SE_016_01": {
   "title": "큐비트(Qubit)",
@@ -1386,7 +1392,10 @@
    "양자 전기장 센서",
    "양자 자기장 센서",
    "양자 광학 센서"
-  ]
+  ],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  "SE_018": {
   "title": "암호화 원리(Principles of Encryption)",
@@ -2009,7 +2018,11 @@
    "SNMPv1·v2c",
    "TLS·SSH 암호화",
    "포트 보안·Dynamic ARP Inspection"
-  ]
+  ],
+  "gloss": {
+   "CAM": "Content Addressable Memory",
+   "MAC": "Media Access Control"
+  }
  },
  "SE_026": {
   "title": "IP 스푸핑(IP Spoofing)",
@@ -2256,6 +2269,7 @@
    "DHCP 스누핑"
   ],
   "gloss": {
+   "MAC": "Media Access Control",
    "PC": "Personal Computer"
   }
  },
@@ -2378,7 +2392,10 @@
    "RARP(MAC → IP)",
    "라우터 미통과",
    "서브넷마스크·게이트웨이 미제공"
-  ]
+  ],
+  "gloss": {
+   "MAC": "Media Access Control"
+  }
  },
  "SE_029": {
   "title": "ARP 캐시 포이즈닝(ARP Cache Poisoning)",
@@ -2508,7 +2525,10 @@
    "정적 ARP 엔트리",
    "DAI(Dynamic ARP Inspection)",
    "ARP 감시 도구(ARPwatch)"
-  ]
+  ],
+  "gloss": {
+   "MAC": "Media Access Control"
+  }
  },
  "SE_030": {
   "title": "ARP 리다이렉트(ARP Redirect)",
@@ -2631,7 +2651,10 @@
    "게이트웨이 정적 ARP",
    "DAI(Dynamic ARP Inspection)",
    "MAC 중복 탐지"
-  ]
+  ],
+  "gloss": {
+   "MAC": "Media Access Control"
+  }
  },
  "SE_031": {
   "title": "TCP SYN 플러딩(TCP SYN Flooding)",
@@ -6527,7 +6550,7 @@
       ]
      },
      {
-      "title": "EDR",
+      "title": "탐지·대응형",
       "items": [
        "침해 가정 후 탐지·조사·대응(Detection & Response)"
       ]
@@ -6551,7 +6574,7 @@
    "- 대응",
    "EPP·XDR 비교",
    "- EPP",
-   "- EDR",
+   "- 탐지·대응형",
    "- XDR"
   ],
   "name": "엔드포인트 탐지 및 대응(EDR, Endpoint Detection and Response)",
