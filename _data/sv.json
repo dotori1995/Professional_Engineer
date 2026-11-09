@@ -15940,100 +15940,100 @@
    223,
    227
   ],
-  "en": "Indoor Positioning Technology",
+  "en": "Positioning Technology",
   "dueum": null,
-  "name": "실내 측위 기술(Indoor Positioning Technology)",
-  "title": "실내 측위 기술(Indoor Positioning Technology)",
-  "definition": "위성 신호가 닿지 않는 건물·지하 공간에서 Wi-Fi·BLE 비콘·UWB·관성센서 등을 이용해 사용자나 사물의 위치를 미터 이하~수 미터 정확도로 파악하는 측위 기술",
+  "name": "측위 기술(Positioning Technology)",
+  "title": "측위 기술(Positioning Technology)",
+  "definition": "위치기반 서비스(LBS)를 위해 위성·기지국·무선 신호·관성센서 등의 측정값으로 단말의 좌표를 산출하는 기술로, 측정 원리에 따라 근접·삼변·삼각·패턴 매칭·추측항법 방식으로 나뉘고 실외와 실내에서 적용 기술이 달라짐",
   "keywords_must": [
-   "핑거프린트(Fingerprint) 방식",
-   "전파 모델 기반 삼변측량(RSSI)",
-   "셀 ID(근접) 방식",
-   "BLE 비콘",
-   "초광대역(UWB)",
-   "보행자 추측항법(PDR)",
-   "적외선·초음파 측위",
-   "하이브리드 측위",
-   "지자기 측위"
+   "근접 방식(Proximity·Cell ID)",
+   "삼변측량(Trilateration)",
+   "삼각측량(Triangulation·AOA)",
+   "패턴 매칭(핑거프린트)",
+   "추측항법(Dead Reckoning)",
+   "위성항법(GNSS)",
+   "이동통신 측위(TDOA)",
+   "실내 측위(Wi-Fi·BLE·UWB)",
+   "하이브리드 측위"
   ],
   "keywords_ref": [
-   "Wi-Fi RTT(IEEE 802.11mc)",
-   "실내 지도",
-   "실시간 위치 추적(RTLS)",
+   "정밀도 저하율(DOP)",
    "칼만 필터",
-   "다중경로(Multipath) 오차"
+   "다중경로 오차",
+   "5G 측위(NR Positioning)",
+   "위치정보법"
   ],
   "keywords": [
-   "무선랜 방식: 셀 ID · 핑거프린트 · 전파 모델(RSSI 삼변측량) · 하이브리드",
-   "신호 매체: Wi-Fi · BLE 비콘 · UWB · 적외선 · 초음파 · 지자기",
-   "보완: PDR(관성센서) + 무선 측위 융합(칼만 필터)"
+   "측정 원리: 근접 · 삼변(거리) · 삼각(각도) · 패턴 매칭 · 추측항법",
+   "실외: GNSS(GPS·DGPS·RTK) · 이동통신(Cell ID·TDOA)",
+   "실내: Wi-Fi · BLE 비콘 · UWB · 지자기 · PDR → 하이브리드 융합"
   ],
   "outline": [
-   "실내 측위의 필요성",
-   "- 한계: 위성 음영",
-   "무선랜 측위 방식",
-   "- 근접: 셀 ID",
-   "- 학습: 핑거프린트",
-   "- 계산: 전파 모델·하이브리드",
-   "신호 매체별 특성",
-   "- 저비용: BLE·Wi-Fi",
-   "- 고정밀: UWB",
-   "- 센서 융합: PDR"
+   "측정 원리별 분류",
+   "- 기하 계산: 거리·각도",
+   "- 근접·패턴: 셀·지문",
+   "- 상대 이동: 추측항법",
+   "실외 측위",
+   "- 위성: GNSS",
+   "- 이동통신: 기지국 기반",
+   "실내 측위와 융합",
+   "- 실내: 무선·센서",
+   "- 융합: 하이브리드"
   ],
   "sections": [
    {
-    "title": "실내 측위의 필요성",
+    "title": "측정 원리별 분류",
     "subsections": [
      {
-      "title": "한계: 위성 음영",
+      "title": "기하 계산: 거리·각도",
       "items": [
-       "GPS 신호는 실내·지하에서 감쇠·다중경로(Multipath)로 사용 불가, 대형 쇼핑몰·병원·공장·긴급구조 수요 증가"
+       "삼변측량(Trilateration): 3개 이상 기준점까지 거리(TOA·RSSI)로 원의 교점, 삼각측량은 AOA 각도 교차점"
+      ]
+     },
+     {
+      "title": "근접·패턴: 셀·지문",
+      "items": [
+       "근접 방식(Proximity·Cell ID)은 가장 가까운 기준점 위치 사용, 패턴 매칭(핑거프린트)은 사전 수집 신호 지도와 비교"
+      ]
+     },
+     {
+      "title": "상대 이동: 추측항법",
+      "items": [
+       "추측항법(Dead Reckoning): 가속도·자이로로 이동 거리·방향 누적, 단독 사용 시 오차 누적"
       ]
      }
     ]
    },
    {
-    "title": "무선랜 측위 방식",
+    "title": "실외 측위",
     "subsections": [
      {
-      "title": "근접: 셀 ID",
+      "title": "위성: GNSS",
       "items": [
-       "셀 ID(근접) 방식: 접속 AP 위치로 추정, 구현 간단하나 AP 간격만큼 오차"
+       "위성항법(GNSS): GPS·Galileo 등으로 수 m, DGPS·RTK 보정 시 cm급, 도심 협곡·실내에서 성능 저하"
       ]
      },
      {
-      "title": "학습: 핑거프린트",
+      "title": "이동통신: 기지국 기반",
       "items": [
-       "핑거프린트(Fingerprint) 방식: 지점별 RSSI 패턴을 사전 수집한 DB와 실시간 측정값 비교, 환경 변화 시 재수집 부담"
-      ]
-     },
-     {
-      "title": "계산: 전파 모델·하이브리드",
-      "items": [
-       "전파 모델 기반 삼변측량(RSSI): 신호 감쇠 모델로 거리 환산 후 3개 이상 AP로 위치 계산, 하이브리드는 방식 결합"
+       "이동통신 측위(TDOA): 기지국 도달 시간 차 이용, 5G는 빔·광대역으로 측위 정밀도 향상"
       ]
      }
     ]
    },
    {
-    "title": "신호 매체별 특성",
+    "title": "실내 측위와 융합",
     "subsections": [
      {
-      "title": "저비용: BLE·Wi-Fi",
+      "title": "실내: 무선·센서",
       "items": [
-       "BLE 비콘: 저전력·저비용으로 수 m 정확도, Wi-Fi RTT는 왕복 시간 측정으로 1~2m 수준"
+       "실내 측위(Wi-Fi·BLE·UWB): Wi-Fi·BLE는 m급 저비용, UWB는 수십 cm 정밀, 지자기·PDR로 보완"
       ]
      },
      {
-      "title": "고정밀: UWB",
+      "title": "융합: 하이브리드",
       "items": [
-       "초광대역(UWB): 나노초 펄스로 ToF 측정, 수십 cm 정확도로 RTLS·디지털 키에 사용"
-      ]
-     },
-     {
-      "title": "센서 융합: PDR",
-      "items": [
-       "보행자 추측항법(PDR): 가속도·자이로로 걸음 수·방향 누적, 오차 누적을 무선 측위로 보정"
+       "하이브리드 측위: 칼만 필터 등으로 여러 측정을 결합해 실내외 끊김 없는(Seamless) 위치 제공"
       ]
      }
     ]
@@ -16042,15 +16042,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "핑거프린트(Fingerprint) 방식",
-   "전파 모델 기반 삼변측량(RSSI)",
-   "셀 ID(근접) 방식",
-   "BLE 비콘",
-   "초광대역(UWB)",
-   "보행자 추측항법(PDR)",
-   "적외선·초음파 측위",
-   "하이브리드 측위",
-   "지자기 측위"
+   "근접 방식(Proximity·Cell ID)",
+   "삼변측량(Trilateration)",
+   "삼각측량(Triangulation·AOA)",
+   "패턴 매칭(핑거프린트)",
+   "추측항법(Dead Reckoning)",
+   "위성항법(GNSS)",
+   "이동통신 측위(TDOA)",
+   "실내 측위(Wi-Fi·BLE·UWB)",
+   "하이브리드 측위"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -16201,77 +16201,93 @@
    215,
    216
   ],
-  "en": "GPS DGPS DGPS",
+  "en": "Differential GPS",
   "dueum": null,
-  "name": "디지털서비스(GPS DGPS DGPS)",
-  "title": "디지털서비스(GPS DGPS DGPS)",
-  "definition": "기준국에서 오차보정정보를 생성하여 중계소를 통해 각 단말기에 제공",
+  "name": "차분 위성항법(DGPS, Differential GPS)",
+  "title": "차분 위성항법(DGPS, Differential GPS)",
+  "definition": "정확한 좌표를 아는 지상 기준국이 GPS 측정값과 실제 위치의 차이로 의사거리 오차 보정값을 생성해 방송하고, 인근 사용자가 이를 적용해 단독 측위 오차를 1~5m 수준으로 줄이는 위성항법 보정 방식",
   "keywords_must": [
-   "SBAS : 기준국",
-   "중앙처리국",
-   "위성통신국",
-   "정지궤도위성 DGPS : 기준국",
-   "GPS 위성",
-   "RTK",
-   "DGPS",
-   "Sentiment",
-   "GNSS"
+   "지상 기준국(Reference Station)",
+   "의사거리 보정치(PRC)",
+   "코드(C/A) 관측",
+   "공통 오차 상쇄",
+   "보정정보 방송(중파 비콘)",
+   "기준국-사용자 거리 의존성",
+   "RTK(Real-Time Kinematic)",
+   "반송파 위상 관측",
+   "정수 모호성(Integer Ambiguity)"
   ],
   "keywords_ref": [
    "SBAS",
-   "정지궤도위성 DGPS",
-   "GPS"
+   "네트워크 RTK(VRS)",
+   "국가 DGPS(해양·내륙)",
+   "RTCM 보정 메시지",
+   "후처리 DGPS"
   ],
   "keywords": [
-   "핵심: SBAS : 기준국 · 중앙처리국 · 위성통신국",
-   "기술: 정지궤도위성 DGPS : 기준국 · GPS 위성 · RTK",
-   "운영: DGPS · Sentiment · GNSS",
-   "참고: SBAS · 정지궤도위성 DGPS · GPS"
+   "원리: 기준국 기지 좌표 vs 측정 위치 → 보정치 생성 → 방송 → 사용자 보정",
+   "DGPS: 코드 의사거리 · 4개 이상 위성 · 100~200km · 1~5m",
+   "RTK: 반송파 위상 · 5개 이상 위성 · 10~20km · 수 cm"
   ],
   "outline": [
-   "디지털서비스의 개념",
-   "- 디지털서비스 핵심 키워드",
-   "디지털서비스의 구성·기술",
-   "- 구성요소·표준",
-   "디지털서비스의 운영 가치·시사점",
-   "- 디지털서비스 요점"
+   "보정 원리",
+   "- 전제: 공통 오차",
+   "- 절차: 기준국 방송",
+   "코드 보정 vs 반송파 보정",
+   "- 코드 보정: 광역·m급",
+   "- 반송파 보정: 근거리·cm급",
+   "한계와 발전",
+   "- 한계: 거리 의존",
+   "- 발전: 네트워크 RTK"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "보정 원리",
     "subsections": [
      {
-      "title": null,
+      "title": "전제: 공통 오차",
       "items": [
-       "SBAS : 기준국: 디지털서비스에서 SBAS : 기준국을 다루는 핵심 암기 포인트",
-       "중앙처리국: 디지털서비스에서 중앙처리국을 다루는 핵심 암기 포인트",
-       "위성통신국: 디지털서비스에서 위성통신국을 다루는 핵심 암기 포인트",
-       "정지궤도위성 DGPS : 기준국: 디지털서비스에서 정지궤도위성 DGPS : 기준국을 다루는 핵심 암기 포인트"
+       "공통 오차 상쇄: 가까운 기준국과 사용자는 위성 시계·궤도·전리층 오차를 비슷하게 겪으므로 차분으로 제거"
+      ]
+     },
+     {
+      "title": "절차: 기준국 방송",
+      "items": [
+       "지상 기준국(Reference Station)이 의사거리 보정치(PRC)를 계산, 중파 비콘·인터넷(RTCM 형식)으로 실시간 전송"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "코드 보정 vs 반송파 보정",
     "subsections": [
      {
-      "title": null,
+      "title": "코드 보정: 광역·m급",
       "items": [
-       "GPS 위성: 디지털서비스에서 GPS 위성을 다루는 핵심 암기 포인트",
-       "RTK: RTK를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "DGPS: DGPS를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Sentiment: 텍스트의 긍정·부정 등 감성 극성을 분류 (디지털서비스/7c2d)"
+       "코드(C/A) 관측: 전송 데이터가 적고 100~200km까지 유효, 정확도 1~5m로 선박 항법에 활용"
+      ]
+     },
+     {
+      "title": "반송파 보정: 근거리·cm급",
+      "items": [
+       "반송파 위상 관측: 정수 모호성(Integer Ambiguity)을 풀어 수 cm 정확도, 대신 10~20km 이내와 고속 데이터 링크 필요"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "한계와 발전",
     "subsections": [
      {
-      "title": null,
+      "title": "한계: 거리 의존",
       "items": [
-       "GNSS: GNSS를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "기준국-사용자 거리 의존성: 멀어질수록 대기 오차가 달라져 보정 효과 저하, 다중경로는 보정 불가"
+      ]
+     },
+     {
+      "title": "발전: 네트워크 RTK",
+      "items": [
+       "네트워크 RTK(VRS): 여러 기준국 관측으로 사용자 근처 가상 기준국 생성, 측량·자율주행·드론 정밀 측위에 활용"
       ]
      }
     ]
@@ -16280,15 +16296,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "SBAS : 기준국",
-   "중앙처리국",
-   "위성통신국",
-   "정지궤도위성 DGPS : 기준국",
-   "GPS 위성",
-   "RTK",
-   "DGPS",
-   "Sentiment",
-   "GNSS"
+   "지상 기준국(Reference Station)",
+   "의사거리 보정치(PRC)",
+   "코드(C/A) 관측",
+   "공통 오차 상쇄",
+   "보정정보 방송(중파 비콘)",
+   "기준국-사용자 거리 의존성",
+   "RTK(Real-Time Kinematic)",
+   "반송파 위상 관측",
+   "정수 모호성(Integer Ambiguity)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -16298,7 +16314,8 @@
   "warnings": [],
   "gloss": {
    "GPS": "Global Positioning System"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_188",
@@ -16309,59 +16326,93 @@
    217,
    217
   ],
-  "en": "SBAS",
+  "en": "Satellite-Based Augmentation System",
   "dueum": null,
-  "name": "SBAS(Satellite-Based Augmentation System)",
-  "title": "SBAS(Satellite-Based Augmentation System)",
-  "definition": "기존의 GPS 오차(17~37m)를 1m 이내로 보정하여 항공기에 정밀 위치 정보를 제공하는 위성 기반 항법 시스템",
+  "name": "위성기반 보정시스템(SBAS, Satellite-Based Augmentation System)",
+  "title": "위성기반 보정시스템(SBAS, Satellite-Based Augmentation System)",
+  "definition": "광역에 분산된 지상 기준국이 GPS 오차와 무결성 정보를 산출하고 정지궤도위성으로 방송해 항공기 등 사용자가 1m 내외 정확도와 신뢰할 수 있는 위치를 얻도록 하는 광역 위성항법 보정시스템",
   "keywords_must": [
-   "SBAS 아키텍처",
-   "SBAS 표준",
-   "SBAS 보안",
-   "SBAS 성능",
-   "SBAS 상호운용",
-   "GPS",
-   "DGPS(Differential GPS)"
+   "기준국(Reference Station)",
+   "중앙처리국(Master Station)",
+   "위성통신국(Uplink Station)",
+   "정지궤도위성(GEO)",
+   "보정정보·무결성 정보",
+   "항공 정밀접근(APV·LPV)",
+   "KASS(한국형 SBAS)",
+   "WAAS·EGNOS·MSAS",
+   "정확성·무결성·가용성·연속성"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "DGPS",
+   "GBAS(지상기반 보정)",
+   "ICAO 성능 요구",
+   "보호 수준(Protection Level)",
+   "정밀농업·드론"
+  ],
   "keywords": [
-   "핵심: SBAS 아키텍처 · SBAS 표준 · SBAS 보안",
-   "기술: SBAS 성능 · SBAS 상호운용 · GPS",
-   "운영: DGPS(Differential GPS)"
+   "흐름: 기준국 수신 → 중앙처리국 보정·무결성 생성 → 위성통신국 업링크 → 정지궤도위성 방송 → 사용자",
+   "4대 성능: 정확성 · 무결성 · 가용성 · 연속성",
+   "시스템: WAAS(미국) · EGNOS(유럽) · MSAS(일본) · GAGAN(인도) · KASS(한국)"
   ],
   "outline": [
-   "SBAS 의 개요",
-   "- SBAS 의 정의",
-   "- SBAS 의 특징",
-   "SBAS 의 구성과 기술",
-   "- SBAS 의 핵심 요소",
-   "SBAS 의 적용",
-   "- SBAS 요점"
+   "목적과 성능 요건",
+   "- 목적: 항공 항법 신뢰",
+   "- 요건: ICAO 4대 성능",
+   "구성과 작동 원리",
+   "- 지상: 기준국·중앙처리국",
+   "- 방송: 정지궤도위성",
+   "국내외 현황과 활용",
+   "- 해외: WAAS·EGNOS",
+   "- 국내: KASS"
   ],
   "sections": [
    {
-    "title": "SBAS 핵심",
+    "title": "목적과 성능 요건",
     "subsections": [
      {
-      "title": null,
+      "title": "목적: 항공 항법 신뢰",
       "items": [
-       "SBAS 아키텍처: SBAS의 계층·모듈 배치와 상호작용 구조",
-       "SBAS 표준: SBAS 상호운용·품질을 맞추는 규격·기준",
-       "SBAS 보안: SBAS에서 SBAS 보안을 다루는 핵심 암기 포인트",
-       "SBAS 성능: SBAS에서 SBAS 성능을 다루는 핵심 암기 포인트"
+       "단독 GPS의 수~십수 m 오차와 고장 경고 부재를 보완, 항공기 정밀접근에 필요한 무결성 정보 제공"
+      ]
+     },
+     {
+      "title": "요건: ICAO 4대 성능",
+      "items": [
+       "정확성·무결성·가용성·연속성: 무결성은 위성 이상 시 정해진 시간 내 사용자에게 경고하는 능력"
       ]
      }
     ]
    },
    {
-    "title": "SBAS 구성·기술",
+    "title": "구성과 작동 원리",
     "subsections": [
      {
-      "title": null,
+      "title": "지상: 기준국·중앙처리국",
       "items": [
-       "SBAS 상호운용: SBAS에서 SBAS 상호운용을 다루는 핵심 암기 포인트",
-       "GPS: GPS를 SBAS 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "DGPS(Differential GPS): DGPS를 SBAS 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "기준국(Reference Station)이 GPS 신호 수집, 중앙처리국(Master Station)이 위성별 궤도·시계·전리층 보정과 무결성 정보 생성"
+      ]
+     },
+     {
+      "title": "방송: 정지궤도위성",
+      "items": [
+       "위성통신국(Uplink Station)이 정지궤도위성(GEO)에 업링크, GPS L1과 같은 주파수로 방송해 별도 수신기 없이 수신"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "국내외 현황과 활용",
+    "subsections": [
+     {
+      "title": "해외: WAAS·EGNOS",
+      "items": [
+       "미국 WAAS, 유럽 EGNOS, 일본 MSAS, 인도 GAGAN 운영, 국가별 광역 서비스 지역 구분"
+      ]
+     },
+     {
+      "title": "국내: KASS",
+      "items": [
+       "KASS(한국형 SBAS): 2023년 말 일반 서비스 시작, 항공 정밀접근·드론·정밀농업·철도 위치 파악에 활용"
       ]
      }
     ]
@@ -16370,13 +16421,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "SBAS 아키텍처",
-   "SBAS 표준",
-   "SBAS 보안",
-   "SBAS 성능",
-   "SBAS 상호운용",
-   "GPS",
-   "DGPS(Differential GPS)"
+   "기준국(Reference Station)",
+   "중앙처리국(Master Station)",
+   "위성통신국(Uplink Station)",
+   "정지궤도위성(GEO)",
+   "보정정보·무결성 정보",
+   "항공 정밀접근(APV·LPV)",
+   "KASS(한국형 SBAS)",
+   "WAAS·EGNOS·MSAS",
+   "정확성·무결성·가용성·연속성"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -16386,7 +16439,8 @@
   "warnings": [],
   "gloss": {
    "GPS": "Global Positioning System"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_189",
@@ -16397,58 +16451,100 @@
    218,
    218
   ],
-  "en": "RTLS",
+  "en": "Real-Time Locating System",
   "dueum": null,
-  "name": "디지털서비스(RTLS)",
-  "title": "디지털서비스(RTLS)",
-  "definition": "사물에 RTLS 태그를 부착하여 사물의 정보와 위치 정보를 실시간으로 제공해주는 시스템",
+  "name": "실시간 위치 추적 시스템(RTLS, Real-Time Locating System)",
+  "title": "실시간 위치 추적 시스템(RTLS, Real-Time Locating System)",
+  "definition": "사람·장비·자재에 태그를 부착하고 실내 인프라가 태그 신호를 수신해 위치를 실시간 계산·표시함으로써 공장·병원·물류창고의 자산 추적과 안전 관리를 지원하는 시스템",
   "keywords_must": [
-   "실시간 위치 추적",
-   "정확한 재고 파악",
-   "RTLS구성도",
-   "RFID",
-   "Wi-Fi/RFID 기반의 사물 부착 Tag",
-   "Sentiment",
-   "GNSS"
+   "RTLS 태그(Active·Passive)",
+   "리더·앵커(Access Point)",
+   "위치 엔진(Location Engine)",
+   "모니터링 뷰어",
+   "UWB 기반 RTLS",
+   "BLE·Wi-Fi 기반 RTLS",
+   "지오펜스(Geofence) 알람",
+   "ISO/IEC 24730",
+   "자산 추적·재고 가시성"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "능동형 RFID",
+   "TDOA·TWR 측위",
+   "MES·WMS 연동",
+   "작업자 안전(중대재해)",
+   "LBS"
+  ],
   "keywords": [
-   "핵심: 실시간 위치 추적 · 정확한 재고 파악 · RTLS구성도",
-   "기술: RFID · Wi-Fi/RFID 기반의 사물 부착 Tag · Sentiment",
-   "운영: GNSS"
+   "3계층: 단말·태그(Mobile Resource) · 인프라(AP·리더·위치 엔진) · 소프트웨어(뷰어·서드파티 앱)",
+   "매체: UWB(수십 cm) · BLE · Wi-Fi · 능동형 RFID",
+   "활용: 자산 추적 · 지오펜스 알람 · 환자·작업자 안전 · 재고 가시성"
   ],
   "outline": [
-   "유비쿼터스 서비스 구현을 위한 위치 정보 기술, RTLS 의 개요",
-   "- 디지털서비스의 정의",
-   "- 디지털서비스의 등장 배경",
-   "RTLS 구성도 및 3계층별 구성요소",
-   "- RTLS 구성도",
-   "- RTLS 3계층별 구성요소"
+   "LBS와의 구분",
+   "- 대상: 시설 내 실시간 추적",
+   "- 비교: LBS는 광역 서비스",
+   "3계층 구성요소",
+   "- 단말: 태그",
+   "- 인프라: 앵커·엔진",
+   "- 소프트웨어: 뷰어·API",
+   "측위 매체와 활용",
+   "- 매체: UWB·BLE",
+   "- 활용: 지오펜스"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "LBS와의 구분",
     "subsections": [
      {
-      "title": null,
+      "title": "대상: 시설 내 실시간 추적",
       "items": [
-       "실시간 위치 추적: 디지털서비스에서 실시간 위치 추적을 다루는 핵심 암기 포인트",
-       "정확한 재고 파악: 디지털서비스에서 정확한 재고 파악을 다루는 핵심 암기 포인트",
-       "RTLS구성도: 디지털서비스의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램 (디지털서비스/57f9)",
-       "RFID: RFID를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "특정 시설 안에서 태그 부착 대상을 연속 추적, 자산 추적·재고 가시성이 주목적"
+      ]
+     },
+     {
+      "title": "비교: LBS는 광역 서비스",
+      "items": [
+       "LBS는 실시간·비실시간 모두 포함하며 교통·광고·기상 등 위치 결합 부가 서비스 중심"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "3계층 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "단말: 태그",
       "items": [
-       "Wi-Fi/RFID 기반의 사물 부착 Tag: 디지털서비스에서 Wi-Fi/RFID 기반의 사물 부착 Tag를 다루는 핵심 암기 포인트",
-       "Sentiment: 텍스트의 긍정·부정 등 감성 극성을 분류 (디지털서비스/50c6)",
-       "GNSS: GNSS를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소 (디지털서비스/b4cc)"
+       "RTLS 태그(Active·Passive): 능동형은 배터리로 주기 송신, 수동형은 리더 전파로 응답해 저가·근거리"
+      ]
+     },
+     {
+      "title": "인프라: 앵커·엔진",
+      "items": [
+       "리더·앵커(Access Point)가 신호 수신, 위치 엔진(Location Engine)이 TDOA·RSSI로 좌표 계산"
+      ]
+     },
+     {
+      "title": "소프트웨어: 뷰어·API",
+      "items": [
+       "모니터링 뷰어가 지도에 표시, 표준 API로 MES·WMS 등 서드파티 앱과 연동"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "측위 매체와 활용",
+    "subsections": [
+     {
+      "title": "매체: UWB·BLE",
+      "items": [
+       "UWB 기반 RTLS는 수십 cm 정확도로 정밀 공정·로봇 협업, BLE·Wi-Fi 기반은 저비용 넓은 범위"
+      ]
+     },
+     {
+      "title": "활용: 지오펜스",
+      "items": [
+       "지오펜스(Geofence) 알람: 위험구역 진입 시 경보, 병원 환자 이탈·장비 위치, 국제 표준 ISO/IEC 24730"
       ]
      }
     ]
@@ -16457,20 +16553,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "실시간 위치 추적",
-   "정확한 재고 파악",
-   "RTLS구성도",
-   "RFID",
-   "Wi-Fi/RFID 기반의 사물 부착 Tag",
-   "Sentiment",
-   "GNSS"
+   "RTLS 태그(Active·Passive)",
+   "리더·앵커(Access Point)",
+   "위치 엔진(Location Engine)",
+   "모니터링 뷰어",
+   "UWB 기반 RTLS",
+   "BLE·Wi-Fi 기반 RTLS",
+   "지오펜스(Geofence) 알람",
+   "ISO/IEC 24730",
+   "자산 추적·재고 가시성"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_190",
@@ -16481,80 +16580,99 @@
    219,
    222
   ],
-  "en": "LAS",
+  "en": "Location Aware System",
   "dueum": null,
-  "name": "디지털서비스(LAS)",
-  "title": "디지털서비스(LAS)",
-  "definition": "특정한 위치에 있는 사물(사람, 대상체)의 물리적, 논리적 위치를 알아내어 그에 적절한 서비스를 제공하기위한 인식 기술",
+  "name": "위치 인식 시스템(LAS, Location Aware System)",
+  "title": "위치 인식 시스템(LAS, Location Aware System)",
+  "definition": "사람이나 사물의 물리적·논리적 위치를 위성·이동통신·근거리 무선·영상 인식으로 파악하고 그 위치 맥락에 맞는 서비스를 자동 제공하는 상황 인식형 위치 기술 체계",
   "keywords_must": [
-   "삼각측량방식",
-   "초음파방식",
-   "RFID방식",
-   "컴퓨터비전기반 여상위치 인식방식",
-   "LAS의 중요성",
-   "LAS 기술의 종류",
-   "GPS",
-   "TOA",
-   "AOA",
-   "TDOA"
+   "위성 기반 위치 인식(GPS·A-GPS)",
+   "이동통신 기반 위치 인식(TOA·TDOA·Cell ID)",
+   "근거리 무선 기반(적외선·초음파·RFID·UWB)",
+   "영상 인식 기반(컴퓨터 비전)",
+   "매크로 영역",
+   "마이크로 영역",
+   "물리적·논리적 위치",
+   "상황 인식(Context Awareness)"
   ],
   "keywords_ref": [
-   "RFID",
-   "UWB",
-   "a, b, c"
+   "Active Badge(적외선)",
+   "Cricket(초음파)",
+   "하이브리드 측위",
+   "LBS",
+   "위치정보 보호"
   ],
   "keywords": [
-   "핵심: 삼각측량방식 · 초음파방식 · RFID방식",
-   "기술: 컴퓨터비전기반 여상위치 인식방식 · LAS의 중요성 · LAS 기술의 종류",
-   "운영: GPS · TOA · AOA",
-   "참고: RFID · UWB · a, b, c"
+   "인식 수단: 위성 · 이동통신 · 근거리 무선(IrDA·초음파·RFID·UWB) · 영상",
+   "커버 영역: 매크로(GPS·이동통신, 광역) · 마이크로(실내 무선·영상, 실내 정밀)",
+   "지향점: 물리적 좌표 + 논리적 위치(방·층) → 상황 인식 서비스"
   ],
   "outline": [
-   "LBS 의 응용 분야(LAS)",
-   "- LAS(Location Aware System) 정의",
-   "- LAS 의 중요성",
-   "LAS 기술의 종류 및 위치 측정 방식",
-   "- LAS 기술의 종류",
-   "LAS 기술의 종류에 따른 위치 즉정방식",
-   "- 삼각측량방식"
+   "개념과 중요성",
+   "- 개념: 위치 + 맥락",
+   "- 중요성: 위치 비즈니스",
+   "인식 수단별 분류",
+   "- 광역: 위성·이동통신",
+   "- 근거리: 무선 신호",
+   "- 영상: 컴퓨터 비전",
+   "커버 영역별 분류",
+   "- 매크로: 실외 광역",
+   "- 마이크로: 실내 정밀"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "개념과 중요성",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 위치 + 맥락",
       "items": [
-       "삼각측량방식: 디지털서비스에서 삼각측량방식을 다루는 핵심 암기 포인트",
-       "초음파방식: 디지털서비스에서 초음파방식을 다루는 핵심 암기 포인트",
-       "RFID방식: 디지털서비스에서 RFID방식을 다루는 핵심 암기 포인트",
-       "컴퓨터비전기반 여상위치 인식방식: 디지털서비스에서 컴퓨터비전기반 여상위치 인식방식을 다루는 핵심 암기 포인트"
+       "물리적·논리적 위치: 좌표뿐 아니라 '회의실 3' 같은 의미 위치를 인식해 상황 인식(Context Awareness) 서비스로 연결"
+      ]
+     },
+     {
+      "title": "중요성: 위치 비즈니스",
+      "items": [
+       "모바일 확산으로 위치 기반 비즈니스 모델 증가, 정확한 위치 인식이 서비스 경쟁력 좌우"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "인식 수단별 분류",
     "subsections": [
      {
-      "title": null,
+      "title": "광역: 위성·이동통신",
       "items": [
-       "LAS의 중요성: 디지털서비스에서 LAS의 중요성을 다루는 핵심 암기 포인트",
-       "LAS 기술의 종류: 디지털서비스에서 LAS 기술의 종류를 다루는 핵심 암기 포인트",
-       "GPS: GPS를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "TOA: TOA를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소 (디지털서비스/e494)"
+       "위성 기반 위치 인식(GPS·A-GPS)은 반송파 위상·코드 추적, 이동통신 기반은 TOA·TDOA·Cell ID 삼각측량"
+      ]
+     },
+     {
+      "title": "근거리: 무선 신호",
+      "items": [
+       "근거리 무선 기반(적외선·초음파·RFID·UWB): Active Badge(적외선 ID), Cricket(초음파 도달 시간) 등 실내 연구 시스템"
+      ]
+     },
+     {
+      "title": "영상: 컴퓨터 비전",
+      "items": [
+       "영상 인식 기반(컴퓨터 비전): 카메라 영상의 시공간 차이로 위치 인식, 태그 불필요하나 조명·가림에 취약"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "커버 영역별 분류",
     "subsections": [
      {
-      "title": null,
+      "title": "매크로: 실외 광역",
       "items": [
-       "AOA: AOA를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소 (디지털서비스/73f2)",
-       "TDOA: TDOA를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소 (디지털서비스/e2b4)"
+       "매크로 영역: GPS·이동통신망·하이브리드로 LBS용 광역 위치 제공, 정확도 수 m~수백 m"
+      ]
+     },
+     {
+      "title": "마이크로: 실내 정밀",
+      "items": [
+       "마이크로 영역: 실내 무선·영상으로 cm~m 정확도, 스마트홈·병원·공장 상황 인식 서비스"
       ]
      }
     ]
@@ -16563,16 +16681,14 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "삼각측량방식",
-   "초음파방식",
-   "RFID방식",
-   "컴퓨터비전기반 여상위치 인식방식",
-   "LAS의 중요성",
-   "LAS 기술의 종류",
-   "GPS",
-   "TOA",
-   "AOA",
-   "TDOA"
+   "위성 기반 위치 인식(GPS·A-GPS)",
+   "이동통신 기반 위치 인식(TOA·TDOA·Cell ID)",
+   "근거리 무선 기반(적외선·초음파·RFID·UWB)",
+   "영상 인식 기반(컴퓨터 비전)",
+   "매크로 영역",
+   "마이크로 영역",
+   "물리적·논리적 위치",
+   "상황 인식(Context Awareness)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -16582,7 +16698,8 @@
   "warnings": [],
   "gloss": {
    "GPS": "Global Positioning System"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_191",
@@ -16593,65 +16710,95 @@
    223,
    225
   ],
-  "en": "GIS GIS D GIS GIS D GIS",
+  "en": "Geographic Information System, 3D GIS",
   "dueum": null,
-  "name": "디지털서비스(GIS GIS D GIS GIS D GIS)",
-  "title": "디지털서비스(GIS GIS D GIS GIS D GIS)",
-  "definition": "지리 정보의 그래프, 이미지 처리, 공간 및 속성 Data의 신속한 저장/검색, 지리 정보 실시간 분석 및 제공",
+  "name": "지리정보시스템(GIS, Geographic Information System)·3D GIS",
+  "title": "지리정보시스템(GIS, Geographic Information System)·3D GIS",
+  "definition": "지형·지물의 위치를 나타내는 공간 데이터와 이에 연결된 속성 데이터를 디지털로 구축해 저장·검색·분석·시각화하는 시스템이며, 3D GIS는 지형과 시설물을 3차원 모델로 구축해 가시권·일조·침수 분석 등 입체 분석과 시뮬레이션을 지원함",
   "keywords_must": [
-   "Mobile GIS",
-   "3차원 GIS 구성요소 : 하드웨어",
-   "소프트웨어",
-   "데이터베이스",
-   "3D지형생성(렌터링)",
-   "분석",
-   "공간정보",
-   "증강현실 기술과 연동"
+   "공간 데이터(Spatial Data)",
+   "속성 데이터(Attribute Data)",
+   "래스터(Raster)",
+   "벡터(Vector)",
+   "레이어 중첩(Overlay)",
+   "버퍼 분석(Buffer)",
+   "수치표고모델(DEM)",
+   "불규칙삼각망(TIN)",
+   "상세 수준(LOD)",
+   "좌표계(투영)"
   ],
   "keywords_ref": [
-   "DEM",
-   "TIN",
-   "지형분석",
-   "공간분석",
-   "GIS"
+   "Web GIS·Mobile GIS",
+   "CityGML",
+   "공간 DB(PostGIS)",
+   "디지털 트윈 국토",
+   "브이월드(V-World)"
   ],
   "keywords": [
-   "핵심: Mobile GIS · 3차원 GIS 구성요소 : 하드웨어 · 소프트웨어",
-   "기술: 데이터베이스 · 3D지형생성(렌터링) · 분석",
-   "운영: 공간정보 · 증강현실 기술과 연동",
-   "참고: DEM · TIN · 지형분석"
+   "데이터: 공간(위치·형상) + 속성(이름·용도) / 표현: 래스터 · 벡터",
+   "구성: 하드웨어 · 소프트웨어 · 데이터베이스 · 조직·인력",
+   "3D GIS: DEM·TIN 지형 → 3D 시설물 모델링 → 가시권·경사 분석 → Fly-Through 시뮬레이션 → LOD 가시화"
   ],
   "outline": [
-   "3D GIS 의 기능 및 기반기술",
-   "- 3D GIS 의 기능",
-   "5D 지형 생성 및 이미지 매핑",
-   "- 디지털서비스 요점"
+   "데이터 모델",
+   "- 데이터: 공간 + 속성",
+   "- 표현: 래스터·벡터",
+   "구성요소와 분석 기능",
+   "- 4대 구성: 장비·SW·DB·인력",
+   "- 분석: 중첩·버퍼",
+   "입체 지형 확장",
+   "- 지형: DEM·TIN",
+   "- 분석·가시화: 가시권·LOD"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "데이터 모델",
     "subsections": [
      {
-      "title": null,
+      "title": "데이터: 공간 + 속성",
       "items": [
-       "Mobile GIS: 디지털서비스에서 Mobile GIS를 다루는 핵심 암기 포인트",
-       "3차원 GIS 구성요소 : 하드웨어: 디지털서비스에서 3차원 GIS 구성요소 : 하드웨어를 다루는 핵심 암기 포인트",
-       "소프트웨어: 디지털서비스에서 소프트웨어를 다루는 핵심 암기 포인트",
-       "데이터베이스: 디지털서비스에서 데이터베이스를 다루는 핵심 암기 포인트"
+       "공간 데이터(Spatial Data)는 좌표·형상, 속성 데이터(Attribute Data)는 이름·용도 등으로 키로 연결해 관리"
+      ]
+     },
+     {
+      "title": "표현: 래스터·벡터",
+      "items": [
+       "래스터(Raster): 격자 셀 값, 위성영상·연속면에 적합하나 해상도↑ 시 용량 급증",
+       "벡터(Vector): 점·선·면 좌표, 도로·필지 경계 표현과 위상 분석에 적합"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "구성요소와 분석 기능",
     "subsections": [
      {
-      "title": null,
+      "title": "4대 구성: 장비·SW·DB·인력",
       "items": [
-       "3D지형생성(렌터링): 디지털서비스에서 3D지형생성(렌터링)을 다루는 핵심 암기 포인트",
-       "분석: 디지털서비스에서 분석을 다루는 핵심 암기 포인트",
-       "공간정보: 디지털서비스에서 공간정보를 다루는 핵심 암기 포인트",
-       "증강현실 기술과 연동: 디지털서비스에서 증강현실 기술과 연동을 다루는 핵심 암기 포인트"
+       "하드웨어(서버·디지타이저), 소프트웨어(GIS 엔진·DBMS), 데이터베이스(수치지도·항공사진), 조직·인력"
+      ]
+     },
+     {
+      "title": "분석: 중첩·버퍼",
+      "items": [
+       "레이어 중첩(Overlay)으로 입지 선정, 버퍼 분석(Buffer)으로 시설 영향권 산출, 좌표계(투영) 통일이 전제"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "입체 지형 확장",
+    "subsections": [
+     {
+      "title": "지형: DEM·TIN",
+      "items": [
+       "수치표고모델(DEM)은 격자형 고도, 불규칙삼각망(TIN)은 삼각형 면으로 지형 표현 후 위성영상 텍스처 매핑"
+      ]
+     },
+     {
+      "title": "분석·가시화: 가시권·LOD",
+      "items": [
+       "가시권·경사·일조 분석과 Fly-Through 시뮬레이션, 상세 수준(LOD)으로 거리별 모델 정밀도 조절해 렌더링 부담 감소"
       ]
      }
     ]
@@ -16660,21 +16807,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Mobile GIS",
-   "3차원 GIS 구성요소 : 하드웨어",
-   "소프트웨어",
-   "데이터베이스",
-   "3D지형생성(렌터링)",
-   "분석",
-   "공간정보",
-   "증강현실 기술과 연동"
+   "공간 데이터(Spatial Data)",
+   "속성 데이터(Attribute Data)",
+   "래스터(Raster)",
+   "벡터(Vector)",
+   "레이어 중첩(Overlay)",
+   "버퍼 분석(Buffer)",
+   "수치표고모델(DEM)",
+   "불규칙삼각망(TIN)",
+   "상세 수준(LOD)",
+   "좌표계(투영)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_192",
@@ -16685,58 +16835,93 @@
    226,
    227
   ],
-  "en": "Fingerprint",
+  "en": "Fingerprint Positioning",
   "dueum": null,
-  "name": "기법(Fingerprint)",
-  "title": "기법(Fingerprint)",
-  "definition": "기법(Fingerprint)의 시험 핵심 개념을 키워드 중심으로 정리한 디지털서비스 토픽이다.",
+  "name": "핑거프린트 측위(Fingerprint Positioning)",
+  "title": "핑거프린트 측위(Fingerprint Positioning)",
+  "definition": "서비스 지역의 지점별 위치 좌표와 수신 신호 특성(RSSI 등)을 사전에 데이터베이스로 구축한 뒤, 단말이 측정한 신호 패턴을 DB와 매칭해 가장 유사한 지점을 위치로 결정하는 패턴 매칭형 측위 방식",
   "keywords_must": [
-   "RSSI",
-   "기법의 핵심 요소",
-   "기법의 구조",
-   "기법의 적용",
-   "LBS",
-   "메타버스 (Metaverse)"
+   "전파 지도(Radio Map)",
+   "수신신호세기(RSSI)",
+   "학습 단계(Training·Offline)",
+   "측위 단계(Positioning·Online)",
+   "기준점(Reference Point) 격자",
+   "K-최근접 이웃(KNN)",
+   "확률적 매칭(베이지안)",
+   "크라우드소싱 수집",
+   "DB 갱신 부담"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "삼변측량",
+   "셀 ID",
+   "지자기 핑거프린트",
+   "딥러닝 측위",
+   "CSI(Channel State Information)"
+  ],
   "keywords": [
-   "핵심: RSSI · 기법의 핵심 요소 · 기법의 구조",
-   "기술: 기법의 적용 · LBS · 메타버스 (Metaverse)"
+   "2단계: 학습(지점별 RSSI 수집 → 전파 지도 구축) → 측위(실측 RSSI → DB 매칭 → 위치)",
+   "매칭: 결정적(KNN·유클리드 거리) · 확률적(베이지안)",
+   "한계: 구축·갱신 비용 · 환경 변화 민감 · 기준점 밀도 의존"
   ],
   "outline": [
-   "기법의 개요",
-   "- 기법의 정의",
-   "- 기법의 등장 배경",
-   "기법의 구성과 핵심 요소",
-   "- 기법의 핵심 요소",
-   "- 기법의 구조",
-   "기법의 적용과 사례",
-   "- 기법의 적용",
-   "- 기법의 과제"
+   "원리와 특성",
+   "- 원리: 신호 지문",
+   "- 정확도: 기준점 밀도",
+   "위치 추정 프로세스",
+   "- 학습: 전파 지도 구축",
+   "- 측위: DB 매칭",
+   "한계와 개선",
+   "- 한계: 구축·갱신",
+   "- 개선: 크라우드소싱·학습"
   ],
   "sections": [
    {
-    "title": "기법 핵심",
+    "title": "원리와 특성",
     "subsections": [
      {
-      "title": null,
+      "title": "원리: 신호 지문",
       "items": [
-       "RSSI: RSSI를 기법 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "기법의 핵심 요소: 기법에서 기법의 핵심 요소를 다루는 핵심 암기 포인트",
-       "기법의 구조: 기법에서 기법의 구조를 다루는 핵심 암기 포인트",
-       "기법의 적용: 기법에서 기법의 적용을 다루는 핵심 암기 포인트"
+       "다중경로·벽 감쇠 같은 환경 영향을 오차가 아닌 지점 고유의 '지문'으로 활용, 무선랜 실내 측위에서 가장 널리 사용"
+      ]
+     },
+     {
+      "title": "정확도: 기준점 밀도",
+      "items": [
+       "기준점(Reference Point) 격자가 촘촘하고 지점 간 지문이 잘 구별될수록 정확도 향상"
       ]
      }
     ]
    },
    {
-    "title": "기법 구성·기술",
+    "title": "위치 추정 프로세스",
     "subsections": [
      {
-      "title": null,
+      "title": "학습: 전파 지도 구축",
       "items": [
-       "LBS: LBS를 기법 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "메타버스 (Metaverse): 가상·현실 융합의 몰입형 디지털 공간 (기법/1479)"
+       "학습 단계(Training·Offline): 공간을 격자로 구획, 각 지점에서 AP별 RSSI를 반복 측정해 전파 지도(Radio Map) 저장"
+      ]
+     },
+     {
+      "title": "측위: DB 매칭",
+      "items": [
+       "측위 단계(Positioning·Online): 단말 측정값을 서버로 전송, K-최근접 이웃(KNN)으로 유사 지점 K개 가중 평균"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한계와 개선",
+    "subsections": [
+     {
+      "title": "한계: 구축·갱신",
+      "items": [
+       "DB 갱신 부담: 가구 배치·AP 교체·사람 밀집에 따라 지문이 변해 재수집 필요, 초기 구축 시간·비용 큼"
+      ]
+     },
+     {
+      "title": "개선: 크라우드소싱·학습",
+      "items": [
+       "크라우드소싱 수집으로 사용자 측정값 자동 반영, CSI·지자기 결합과 딥러닝 모델로 정확도 향상"
       ]
      }
     ]
@@ -16745,19 +16930,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "RSSI",
-   "기법의 핵심 요소",
-   "기법의 구조",
-   "기법의 적용",
-   "LBS",
-   "메타버스 (Metaverse)"
+   "전파 지도(Radio Map)",
+   "수신신호세기(RSSI)",
+   "학습 단계(Training·Offline)",
+   "측위 단계(Positioning·Online)",
+   "기준점(Reference Point) 격자",
+   "K-최근접 이웃(KNN)",
+   "확률적 매칭(베이지안)",
+   "크라우드소싱 수집",
+   "DB 갱신 부담"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_193",
@@ -16768,71 +16957,94 @@
    228,
    231
   ],
-  "en": "GML",
+  "en": "Geography Markup Language",
   "dueum": null,
-  "name": "디지털서비스(GML)",
-  "title": "디지털서비스(GML)",
-  "definition": "OGC(Open Geospatial Consortium)에서 개발한 XML 기반 지리 정보를 교환, 저장하기 위한정보 모델 기술 언어",
+  "name": "지리 마크업 언어(GML, Geography Markup Language)",
+  "title": "지리 마크업 언어(GML, Geography Markup Language)",
+  "definition": "OGC가 제정하고 ISO 19136으로 표준화된 XML 기반 지리정보 모델링·교환 언어로, 지형지물(Feature)의 기하 형상과 공간·비공간 속성을 응용 스키마로 정의해 이기종 GIS 간 상호운용을 가능하게 함",
   "keywords_must": [
-   "OGC",
-   "ISO 19136:2007",
-   "CBD(Component Based Development)",
-   "GML(Geography Markup Language) 정의",
-   "디지털서비스 아키텍처",
-   "디지털서비스 표준",
-   "ISO",
+   "OGC(Open Geospatial Consortium)",
    "ISO 19136",
-   "GML 이용한 Feature 설계예제"
+   "XML 스키마(XSD)",
+   "지형지물(Feature)",
+   "기하 객체(Point·LineString·Polygon)",
+   "좌표참조체계(CRS·srsName)",
+   "응용 스키마(Application Schema)",
+   "CityGML",
+   "WFS(Web Feature Service)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "ISO 19100 시리즈",
+   "KML",
+   "GeoJSON",
+   "IndoorGML",
+   "Simple Feature"
+  ],
   "keywords": [
-   "핵심: OGC · ISO 19136:2007 · CBD(Component Based Development)",
-   "기술: GML(Geography Markup Language) 정의 · 디지털서비스 아키텍처 · 디지털서비스 표준",
-   "운영: ISO · ISO 19136 · GML 이용한 Feature 설계예제"
+   "표준: OGC 개발 → ISO 19136 / 기반: XML 스키마",
+   "모델: Feature(속성 + Geometry) · CRS · 2D·3D 좌표",
+   "확장: 응용 스키마 → CityGML(3D 도시) · IndoorGML(실내) / 전송: WFS"
   ],
   "outline": [
-   "지리정보 모델기술 언어, GML 개요",
-   "- GML(Geography Markup Language) 정의",
-   "- GML 특징",
-   "GML 응용방법",
-   "- 디지털서비스 요점"
+   "표준과 특징",
+   "- 표준: OGC·ISO",
+   "- 특징: 공간·비공간 속성",
+   "기하 스키마 구조",
+   "- 형상: 기하 객체",
+   "- 좌표: CRS 명시",
+   "응용과 한계",
+   "- 응용: 도메인 확장",
+   "- 한계: 깊은 상속"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "표준과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "표준: OGC·ISO",
       "items": [
-       "OGC: OGC를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ISO 19136:2007: 디지털서비스에서 ISO 19136:2007를 다루는 핵심 암기 포인트",
-       "CBD(Component Based Development): CBD를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "GML(Geography Markup Language) 정의: 디지털서비스에서 GML(Geography Markup Language) 정의를 다루는 핵심 암기 포인트"
+       "OGC(Open Geospatial Consortium) 추상 명세 기반, ISO 19136으로 국제 표준화, 3차원 좌표까지 표현"
+      ]
+     },
+     {
+      "title": "특징: 공간·비공간 속성",
+      "items": [
+       "지형지물(Feature) 하나에 기하 형상과 이름·용도 등 비공간 속성을 함께 기술, 벤더 중립 교환"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "기하 스키마 구조",
     "subsections": [
      {
-      "title": null,
+      "title": "형상: 기하 객체",
       "items": [
-       "디지털서비스 아키텍처: 디지털서비스의 계층·모듈 배치와 상호작용 구조 (디지털서비스/5a1b)",
-       "디지털서비스 표준: 디지털서비스 상호운용·품질을 맞추는 규격·기준 (디지털서비스/6b96)",
-       "ISO: ISO를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ISO 19136: 디지털서비스에서 ISO 19136를 다루는 핵심 암기 포인트"
+       "기하 객체(Point·LineString·Polygon): 추상 Geometry 클래스를 상속하는 계층 구조로 UML 정의"
+      ]
+     },
+     {
+      "title": "좌표: CRS 명시",
+      "items": [
+       "좌표참조체계(CRS·srsName): 각 형상에 좌표계를 지정해 서로 다른 투영 데이터 통합 가능"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "응용과 한계",
     "subsections": [
      {
-      "title": null,
+      "title": "응용: 도메인 확장",
       "items": [
-       "GML 이용한 Feature 설계예제: 디지털서비스에서 GML 이용한 Feature 설계예제를 다루는 핵심 암기 포인트"
+       "응용 스키마(Application Schema)로 분야별 Feature 정의, CityGML(3D 도시 모델)·IndoorGML의 기반",
+       "WFS(Web Feature Service)로 GML 형식 지형지물 질의·전송"
+      ]
+     },
+     {
+      "title": "한계: 깊은 상속",
+      "items": [
+       "상속 계층이 깊어 파생 클래스가 무거워짐, 웹 경량 교환에는 GeoJSON·KML이 주로 쓰임"
       ]
      }
     ]
@@ -16841,22 +17053,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "OGC",
-   "ISO 19136:2007",
-   "CBD(Component Based Development)",
-   "GML(Geography Markup Language) 정의",
-   "디지털서비스 아키텍처",
-   "디지털서비스 표준",
-   "ISO",
+   "OGC(Open Geospatial Consortium)",
    "ISO 19136",
-   "GML 이용한 Feature 설계예제"
+   "XML 스키마(XSD)",
+   "지형지물(Feature)",
+   "기하 객체(Point·LineString·Polygon)",
+   "좌표참조체계(CRS·srsName)",
+   "응용 스키마(Application Schema)",
+   "CityGML",
+   "WFS(Web Feature Service)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_196",
@@ -16867,82 +17080,100 @@
    232,
    235
   ],
-  "en": "IPS",
+  "en": "Indoor Positioning System",
   "dueum": null,
-  "name": "디지털서비스(IPS)",
-  "title": "디지털서비스(IPS)",
-  "definition": "Wi-Fi, 블루투스, Beacon, 자기장 등을 이용하여 건물 내부에 있는 사용자의 위치를 파악하고, 이를 스마트폰등에 내장된 지도와 대조해 물건이나 장소의 위치를 쉽게 찾아주는 시스템",
+  "name": "실내 위치 확인 시스템(IPS, Indoor Positioning System)",
+  "title": "실내 위치 확인 시스템(IPS, Indoor Positioning System)",
+  "definition": "Wi-Fi·BLE 비콘·UWB·관성센서·CCTV 등으로 건물 내부 사용자나 사물의 위치를 파악하고 실내 지도와 결합해 길 안내·매장 탐색·자산 관리 같은 공간 서비스를 제공하는 시스템",
   "keywords_must": [
-   "Wi-Fi",
-   "센서",
-   "비콘",
-   "RFID",
-   "IPS 측위 기술 원리",
-   "IPS 활용 서비스 유형이 분류",
-   "IPS 확용한 서비스이 상세 유형",
-   "O2O",
-   "RSSI"
+   "Wi-Fi 기반 측위",
+   "BLE 비콘(Advertising 패킷)",
+   "UWB 기반 측위",
+   "보행자 추측항법(PDR)",
+   "CCTV·영상 측위",
+   "RFID 측위",
+   "실내 지도(다층 구조)",
+   "이동 제약(구조물) 반영",
+   "O2O·리테일 테크"
   ],
   "keywords_ref": [
-   "POI(Point Of Interest)",
-   "GPS",
-   "BLE(Bluetooth Low Energy)"
+   "핑거프린트",
+   "Wi-Fi RTT",
+   "IndoorGML",
+   "디지털 트윈",
+   "긴급구조 실내 위치(119)"
   ],
   "keywords": [
-   "핵심: Wi-Fi · 센서 · 비콘",
-   "기술: RFID · IPS 측위 기술 원리 · IPS 활용 서비스 유형이 분류",
-   "운영: IPS 확용한 서비스이 상세 유형 · O2O · RSSI",
-   "참고: POI(Point Of Interest) · GPS · BLE(Bluetooth Low Energy)"
+   "측위 기반: Wi-Fi · 비콘 · UWB · 센서(PDR) · CCTV · RFID",
+   "기술 특성: 다양한 측위 기술 · 입체(다층) 구조 반영 · 이동 제약 고려",
+   "비즈니스: O2O · 리테일 테크 · 물류 · 로봇 · 긴급구조"
   ],
   "outline": [
-   "IPS(Indoor Positioning System)의 정의 및 특징",
-   "- IPS(Indoor Positioning System) 정의",
-   "- IPS(Indoor Positioning System)의 특징",
-   "측위 기반 따른 IPS 측위 기술 및 원리",
-   "- 측위 기반에 따른 IPS 측위 기술",
-   "- IPS 측위 기술 원리",
-   "IPS 활용 서비스의 유형",
-   "- IPS 활용 서비스 유형이 분류",
-   "- IPS 확용한 서비스이 상세 유형",
-   "주요 실내 측위기술 비교",
-   "- 디지털서비스 요점"
+   "실내 서비스 특성",
+   "- 비즈니스: 산업 융합",
+   "- 공간: 다층·이동 제약",
+   "측위 기반별 기술",
+   "- Wi-Fi: 기존 AP 활용",
+   "- 비콘·UWB: 전용 설비",
+   "- 센서·영상: 인프라 보완",
+   "도입 고려사항",
+   "- 선택: 정확도 vs 비용",
+   "- 보호: 실내 동선 정보"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "실내 서비스 특성",
     "subsections": [
      {
-      "title": null,
+      "title": "비즈니스: 산업 융합",
       "items": [
-       "Wi-Fi: Wi-Fi를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소 (디지털서비스/f9f6)",
-       "센서: 디지털서비스에서 센서를 다루는 핵심 암기 포인트",
-       "비콘: 디지털서비스에서 비콘을 다루는 핵심 암기 포인트",
-       "RFID: RFID를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소 (디지털서비스/7496)"
+       "O2O·리테일 테크: 매장 내 위치별 쿠폰·동선 분석, 물류 창고 피킹·로봇 내비게이션 등 산업 프로세스 혁신"
+      ]
+     },
+     {
+      "title": "공간: 다층·이동 제약",
+      "items": [
+       "실내 지도(다층 구조): 층 판별이 필수이며 벽·기둥 등 이동 제약(구조물) 반영으로 경로를 보정"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "측위 기반별 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "Wi-Fi: 기존 AP 활용",
       "items": [
-       "IPS 측위 기술 원리: 디지털서비스에서 IPS 측위 기술 원리를 다루는 핵심 암기 포인트",
-       "IPS 활용 서비스 유형이 분류: 디지털서비스에서 IPS 활용 서비스 유형이 분류를 다루는 핵심 암기 포인트",
-       "IPS 확용한 서비스이 상세 유형: 디지털서비스에서 IPS 확용한 서비스이 상세 유형을 다루는 핵심 암기 포인트",
-       "O2O: O2O를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "Wi-Fi 기반 측위: 셀 ID·RSSI 삼변측량·핑거프린트·RTT 왕복시간, 추가 설비 없이 수~10m"
+      ]
+     },
+     {
+      "title": "비콘·UWB: 전용 설비",
+      "items": [
+       "BLE 비콘(Advertising 패킷): ID를 주기 송신해 근접 판단, UWB는 ToA·TDoA로 수십 cm 정확도"
+      ]
+     },
+     {
+      "title": "센서·영상: 인프라 보완",
+      "items": [
+       "보행자 추측항법(PDR): 걸음 검출·보폭·방향 추정, CCTV·영상 측위는 태그 없이 사람 식별·추적"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "도입 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "선택: 정확도 vs 비용",
       "items": [
-       "RSSI: RSSI를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소 (디지털서비스/1743)"
+       "상업 공간은 BLE·Wi-Fi, 공장·병원 정밀 추적은 UWB, 여러 방식 하이브리드로 음영 보완"
+      ]
+     },
+     {
+      "title": "보호: 실내 동선 정보",
+      "items": [
+       "실내 동선은 민감 개인정보, 위치정보법 동의·최소 수집과 긴급구조 실내 측위 정확도 기준 충족"
       ]
      }
     ]
@@ -16951,15 +17182,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Wi-Fi",
-   "센서",
-   "비콘",
-   "RFID",
-   "IPS 측위 기술 원리",
-   "IPS 활용 서비스 유형이 분류",
-   "IPS 확용한 서비스이 상세 유형",
-   "O2O",
-   "RSSI"
+   "Wi-Fi 기반 측위",
+   "BLE 비콘(Advertising 패킷)",
+   "UWB 기반 측위",
+   "보행자 추측항법(PDR)",
+   "CCTV·영상 측위",
+   "RFID 측위",
+   "실내 지도(다층 구조)",
+   "이동 제약(구조물) 반영",
+   "O2O·리테일 테크"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -16969,7 +17200,8 @@
   "warnings": [],
   "gloss": {
    "GPS": "Global Positioning System"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_197",
@@ -16982,56 +17214,91 @@
   ],
   "en": "Geofencing",
   "dueum": null,
-  "name": "디지털서비스(Geofencing)",
-  "title": "디지털서비스(Geofencing)",
-  "definition": "실제 지형에 구획된 가상의 경계선으로 구획된 영역에 대해 디바이스의 진입/진출을 감지하는 측위 기반 기술",
+  "name": "지오펜싱(Geofencing)",
+  "title": "지오펜싱(Geofencing)",
+  "definition": "실제 지리 공간에 가상의 경계(지오펜스)를 설정하고 GPS·Wi-Fi·셀·비콘으로 파악한 단말 위치가 경계에 진입·이탈·체류할 때 이벤트를 발생시켜 알림·자동화 동작을 수행하는 위치 기반 기술",
   "keywords_must": [
-   "가상 구획면",
-   "GPS",
-   "비콘(Beacon)",
-   "위치추적",
-   "디지털서비스의 핵심 요소",
-   "Sentiment"
+   "가상 경계(Geofence)",
+   "진입·이탈·체류(Enter·Exit·Dwell) 이벤트",
+   "원형·다각형 펜스",
+   "GPS·Wi-Fi·셀 위치",
+   "비콘 마이크로 펜싱",
+   "OS 지오펜싱 API",
+   "배터리 소모 최적화",
+   "위치 기반 마케팅",
+   "위치정보 동의"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "지오태깅",
+   "텔레매틱스",
+   "RTLS",
+   "스마트홈 자동화",
+   "위치정보법"
+  ],
   "keywords": [
-   "핵심: 가상 구획면 · GPS · 비콘(Beacon)",
-   "기술: 위치추적 · 디지털서비스의 핵심 요소 · Sentiment"
+   "동작: 펜스 등록(중심·반경) → 위치 감시 → 진입·이탈·체류 판정 → 알림·액션",
+   "위치원: GPS · Wi-Fi · 셀 · 비콘(실내 마이크로 펜싱)",
+   "활용: 마케팅 · 스마트홈 · 출퇴근 관리 · 차량·보안 구역 · 아동 안심"
   ],
   "outline": [
-   "디지털서비스의 개요",
-   "- 디지털서비스의 정의",
-   "- 디지털서비스의 등장 배경",
-   "디지털서비스의 구성과 핵심 요소",
-   "- 디지털서비스의 핵심 요소",
-   "- 디지털서비스의 구조",
-   "디지털서비스의 적용과 사례",
-   "- 디지털서비스의 적용",
-   "- 디지털서비스의 과제"
+   "개념과 동작",
+   "- 경계: 원형·다각형",
+   "- 이벤트: 진입·이탈·체류",
+   "구현 기술",
+   "- API: OS 제공",
+   "- 효율: 배터리",
+   "활용과 개인정보 이슈",
+   "- 활용: 마케팅·자동화",
+   "- 이슈: 민감 위치"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "개념과 동작",
     "subsections": [
      {
-      "title": null,
+      "title": "경계: 원형·다각형",
       "items": [
-       "가상 구획면: 디지털서비스에서 가상 구획면을 다루는 핵심 암기 포인트",
-       "GPS: GPS를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소 (디지털서비스/5043)",
-       "비콘(Beacon): 디지털서비스에서 비콘(Beacon)을 다루는 핵심 암기 포인트",
-       "위치추적: 디지털서비스에서 위치추적을 다루는 핵심 암기 포인트"
+       "가상 경계(Geofence): 중심 좌표와 반경의 원형 또는 다각형으로 정의, 실내는 비콘 마이크로 펜싱"
+      ]
+     },
+     {
+      "title": "이벤트: 진입·이탈·체류",
+      "items": [
+       "진입·이탈·체류(Enter·Exit·Dwell) 이벤트: 체류 시간 조건으로 오탐 감소, 위치 오차 고려한 최소 반경 설정"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "구현 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "API: OS 제공",
       "items": [
-       "디지털서비스의 핵심 요소: 디지털서비스에서 디지털서비스의 핵심 요소를 다루는 핵심 암기 포인트",
-       "Sentiment: 텍스트의 긍정·부정 등 감성 극성을 분류 (디지털서비스/692c)"
+       "OS 지오펜싱 API: 안드로이드·iOS가 백그라운드 감시를 제공해 앱별 별도 장비 없이 구현"
+      ]
+     },
+     {
+      "title": "효율: 배터리",
+      "items": [
+       "배터리 소모 최적화: 평소 셀·Wi-Fi 저전력 위치로 감시, 경계 근처에서만 GPS 정밀 측위"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용과 개인정보 이슈",
+    "subsections": [
+     {
+      "title": "활용: 마케팅·자동화",
+      "items": [
+       "위치 기반 마케팅으로 매장 근처 쿠폰 발송, 귀가 시 조명·난방 자동화, 차량·보안 구역 출입 경보"
+      ]
+     },
+     {
+      "title": "이슈: 민감 위치",
+      "items": [
+       "병원 주변 표적 광고 사례처럼 민감 위치 악용 우려, 위치정보 동의·목적 제한과 직원 감시 남용 방지 필요"
       ]
      }
     ]
@@ -17040,12 +17307,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "가상 구획면",
-   "GPS",
-   "비콘(Beacon)",
-   "위치추적",
-   "디지털서비스의 핵심 요소",
-   "Sentiment"
+   "가상 경계(Geofence)",
+   "진입·이탈·체류(Enter·Exit·Dwell) 이벤트",
+   "원형·다각형 펜스",
+   "GPS·Wi-Fi·셀 위치",
+   "비콘 마이크로 펜싱",
+   "OS 지오펜싱 API",
+   "배터리 소모 최적화",
+   "위치 기반 마케팅",
+   "위치정보 동의"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -17055,7 +17325,8 @@
   "warnings": [],
   "gloss": {
    "GPS": "Global Positioning System"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_198",
@@ -17066,82 +17337,93 @@
    239,
    241
   ],
-  "en": "AR Wearable Computer Wearable Computer",
+  "en": "Wearable Computer",
   "dueum": null,
-  "name": "디지털서비스(AR Wearable Computer Wearable Computer)",
-  "title": "디지털서비스(AR Wearable Computer Wearable Computer)",
-  "definition": "컴퓨터를 모듈별로 분해하여 각각의 모듈들을 의복 또는 신체에 분산해서 작용하는 컴퓨터 기술",
+  "name": "웨어러블 컴퓨터(Wearable Computer)",
+  "title": "웨어러블 컴퓨터(Wearable Computer)",
+  "definition": "컴퓨터의 입출력·처리·통신 기능을 모듈화해 시계·안경·의복 등 신체에 착용함으로써 손을 자유롭게 한 채 상시 정보를 획득·처리·제공하는 인간 중심 컴퓨팅 기기",
   "keywords_must": [
-   "플랫폼",
-   "인터페이스",
-   "센싱",
-   "통신",
-   "섬유",
-   "에너지",
-   "Wearable Computer의 분류",
-   "웨어러블 컴퓨터의 개념도",
-   "디지털서비스 아키텍처",
-   "CPU"
+   "착용감·항시성·안정성·사회성",
+   "정보 입출력 모듈",
+   "정보 필터링 모듈",
+   "정보 표현 모듈",
+   "명령 전달 모듈",
+   "머리 착용 디스플레이(HMD)",
+   "생체 신호 센싱",
+   "스마트 섬유(e-Textile)",
+   "저전력·에너지 하베스팅"
   ],
   "keywords_ref": [
-   "입력장치",
-   "출력장치",
-   "FPD(Flat Panel Display)",
-   "HMD(Head Mount Display)",
-   "확장팩",
-   "USB",
-   "VGA",
-   "PCMCIA"
+   "스마트워치",
+   "스마트 글래스",
+   "멀티모달 인터페이스",
+   "체내 통신(BAN)",
+   "의료기기 인증"
   ],
   "keywords": [
-   "핵심: 플랫폼 · 인터페이스 · 센싱",
-   "기술: 통신 · 섬유 · 에너지",
-   "운영: Wearable Computer의 분류 · 웨어러블 컴퓨터의 개념도 · 디지털서비스 아키텍처",
-   "참고: 입력장치 · 출력장치 · FPD(Flat Panel Display)"
+   "4대 모듈: 정보 입출력 · 정보 필터링 · 정보 표현 · 명령 전달",
+   "요소기술: 플랫폼 · 인터페이스 · 센싱 · 통신(BAN·BLE) · 섬유 · 에너지",
+   "형태: 액세서리형(시계·안경) → 의류 일체형 → 신체 부착형(패치)"
   ],
   "outline": [
-   "웨어러블 컴퓨터의 개념도",
-   "- 웨어러블 컴퓨터의 개념도",
-   "웨어러블 컴퓨터의 분류 및 응용분야",
-   "- Wearable Computer 의 분류"
+   "개념과 요건",
+   "- 개념: 신체 분산 컴퓨팅",
+   "- 요건: 착용 기본 기능",
+   "4대 모듈 구성",
+   "- 입력·필터링: 수집·판단",
+   "- 표현·명령: 출력·조작",
+   "요소기술과 응용",
+   "- 요소기술: 센싱·섬유·에너지",
+   "- 응용: 헬스·산업"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "개념과 요건",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 신체 분산 컴퓨팅",
       "items": [
-       "플랫폼: 디지털서비스에서 플랫폼을 다루는 핵심 암기 포인트",
-       "인터페이스: 디지털서비스에서 인터페이스를 다루는 핵심 암기 포인트",
-       "센싱: 디지털서비스에서 센싱을 다루는 핵심 암기 포인트",
-       "통신: 디지털서비스에서 통신을 다루는 핵심 암기 포인트"
+       "스마트폰 이후(Beyond Smartphone) 기기로, 컴퓨터 모듈을 신체·의복에 분산해 상시 접속"
+      ]
+     },
+     {
+      "title": "요건: 착용 기본 기능",
+      "items": [
+       "착용감·항시성·안정성·사회성: 장시간 착용 편안함, 끊김 없는 동작, 인체 안전, 타인 앞 사용의 사회적 수용성"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "4대 모듈 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "입력·필터링: 수집·판단",
       "items": [
-       "섬유: 디지털서비스에서 섬유를 다루는 핵심 암기 포인트",
-       "에너지: 디지털서비스에서 에너지를 다루는 핵심 암기 포인트",
-       "Wearable Computer의 분류: 디지털서비스에서 Wearable Computer의 분류를 다루는 핵심 암기 포인트",
-       "웨어러블 컴퓨터의 개념도: 디지털서비스의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램 (디지털서비스/9825)"
+       "정보 입출력 모듈은 카메라·HMD·스피커·무선 통신, 정보 필터링 모듈은 AI로 상황·취향·위치에 맞는 정보 선별"
+      ]
+     },
+     {
+      "title": "표현·명령: 출력·조작",
+      "items": [
+       "정보 표현 모듈은 문자·영상·소리·진동·빛을 상황별 혼합, 명령 전달 모듈은 음성·제스처·가상 키보드 입력"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "요소기술과 응용",
     "subsections": [
      {
-      "title": null,
+      "title": "요소기술: 센싱·섬유·에너지",
       "items": [
-       "디지털서비스 아키텍처: 디지털서비스의 계층·모듈 배치와 상호작용 구조 (디지털서비스/a668)",
-       "CPU: CPU를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소 (디지털서비스/6458)"
+       "생체 신호 센싱(심박·혈중산소·심전도), 스마트 섬유(e-Textile)로 의류 일체화, 저전력·에너지 하베스팅으로 사용 시간 확보"
+      ]
+     },
+     {
+      "title": "응용: 헬스·산업",
+      "items": [
+       "헬스케어 모니터링, 산업 현장 스마트 글래스 작업 지시, 군사·스포츠, 의료 용도는 의료기기 인증 필요"
       ]
      }
     ]
@@ -17150,23 +17432,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "플랫폼",
-   "인터페이스",
-   "센싱",
-   "통신",
-   "섬유",
-   "에너지",
-   "Wearable Computer의 분류",
-   "웨어러블 컴퓨터의 개념도",
-   "디지털서비스 아키텍처",
-   "CPU"
+   "착용감·항시성·안정성·사회성",
+   "정보 입출력 모듈",
+   "정보 필터링 모듈",
+   "정보 표현 모듈",
+   "명령 전달 모듈",
+   "머리 착용 디스플레이(HMD)",
+   "생체 신호 센싱",
+   "스마트 섬유(e-Textile)",
+   "저전력·에너지 하베스팅"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_201",
