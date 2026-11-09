@@ -15948,6 +15948,182 @@
   }
  },
  {
+  "id": "SE_105",
+  "code": "SE_105",
+  "title": "가상 사설망(VPN, Virtual Private Network)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > VPN > VPN(Virtual Private Network)",
+  "definition": "인터넷 같은 공중망 위에 터널링과 암호화로 논리적인 전용 통로를 만들어, 원격 사용자나 본사·지점 네트워크가 전용선을 연결한 것처럼 안전하게 통신하게 하는 가상 네트워크",
+  "keywords": [
+   "구현 기술: 터널링 · 암호화 · 인증 · 키 관리(IKE)",
+   "계층별 프로토콜: 2계층 PPTP·L2TP·L2F · 2.5계층 MPLS · 3계층 IPSec · 4계층 이상 SSL·TLS",
+   "접속 유형: 원격 접속 VPN · 인트라넷 VPN(사이트 간) · 엑스트라넷 VPN"
+  ],
+  "sections": [
+   {
+    "title": "구현 기술",
+    "subsections": [
+     {
+      "title": "터널링",
+      "items": [
+       "원래 패킷을 다른 프로토콜로 캡슐화해 가상 통로 구성"
+      ]
+     },
+     {
+      "title": "암호화",
+      "items": [
+       "전송 데이터 기밀성 보장(AES 등)"
+      ]
+     },
+     {
+      "title": "인증",
+      "items": [
+       "송신자와 장비 신원 확인"
+      ]
+     },
+     {
+      "title": "키 관리",
+      "items": [
+       "IKE로 암호 키를 안전하게 분배·갱신"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "터널링 프로토콜 비교",
+    "subsections": [
+     {
+      "title": "PPTP",
+      "items": [
+       "마이크로소프트, 2계층, 클라이언트-서버, PPP 인증·암호 활용, 단일 터널"
+      ]
+     },
+     {
+      "title": "L2TP",
+      "items": [
+       "RFC 2661, 2계층, 다중 터널, 자체 암호화 없음"
+      ]
+     },
+     {
+      "title": "IPSec",
+      "items": [
+       "3계층, 피어 간 패킷 단위 암호화, ISAKMP·IKE 키 관리, 사이트 간"
+      ]
+     },
+     {
+      "title": "SOCKS v5",
+      "items": [
+       "5계층, 사용자 인증, 메시지 단위 암호화, 원격 접속"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 모델",
+    "subsections": [
+     {
+      "title": "원격 접속",
+      "items": [
+       "재택·이동 근무자가 SSL VPN으로 사내망 접속"
+      ]
+     },
+     {
+      "title": "인트라넷",
+      "items": [
+       "본사·지점 사이트 간 IPSec 터널"
+      ]
+     },
+     {
+      "title": "엑스트라넷",
+      "items": [
+       "협력사와 제한적 망 연동"
+      ]
+     },
+     {
+      "title": "통신사형",
+      "items": [
+       "MPLS 레이블 기반 망 분리 VPN"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "구현 기술",
+   "- 터널링",
+   "- 암호화",
+   "- 인증",
+   "- 키 관리",
+   "터널링 프로토콜 비교",
+   "- PPTP",
+   "- L2TP",
+   "- IPSec",
+   "- SOCKS v5",
+   "적용 모델",
+   "- 원격 접속",
+   "- 인트라넷",
+   "- 엑스트라넷",
+   "- 통신사형"
+  ],
+  "name": "가상 사설망(VPN, Virtual Private Network)",
+  "en": "Virtual Private Network",
+  "keywords_must": [
+   "터널링",
+   "암호화",
+   "인증",
+   "키 관리(IKE)",
+   "2계층 PPTP·L2TP·L2F",
+   "2.5계층 MPLS",
+   "3계층 IPSec",
+   "4계층 이상 SSL·TLS",
+   "원격 접속 VPN",
+   "인트라넷 VPN(사이트 간)",
+   "엑스트라넷 VPN"
+  ],
+  "keywords_ref": [
+   "장점: 전용선 대비 저비용·광역 구성, 대역폭 탄력",
+   "단점: 인터넷 품질 의존, 라우터 기반 확장성 제한",
+   "PPTP는 취약해 사용 중단 권고",
+   "L2TP는 암호화 없어 IPSec과 결합",
+   "SOCKS v5(5계층)",
+   "WireGuard",
+   "제로 트러스트 접근(ZTNA)으로 대체 추세",
+   "모바일 VPN(MoVPN)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "터널링",
+   "암호화",
+   "인증",
+   "키 관리(IKE)",
+   "2계층 PPTP·L2TP·L2F",
+   "2.5계층 MPLS",
+   "3계층 IPSec",
+   "4계층 이상 SSL·TLS",
+   "원격 접속 VPN",
+   "인트라넷 VPN(사이트 간)",
+   "엑스트라넷 VPN"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "IKE": "Internet Key Exchange",
+   "PPTP": "Point-to-Point Tunneling Protocol",
+   "L2TP": "Layer 2 Tunneling Protocol",
+   "L2F": "Layer 2 Forwarding",
+   "MPLS": "Multiprotocol Label Switching",
+   "ZTNA": "Zero Trust Network Access",
+   "SOCKS": "Socket Secure",
+   "MoVPN": "Mobile VPN",
+   "AES": "Advanced Encryption Standard",
+   "PPP": "Point-to-Point Protocol",
+   "ISAKMP": "Internet Security Association and Key Management Protocol"
+  }
+ },
+ {
   "id": "SE_106",
   "code": "SE_106",
   "title": "보안 소켓 계층(SSL, Secure Sockets Layer)",
@@ -16086,6 +16262,188 @@
   ],
   "gloss": {
    "MAC": "Message Authentication Code"
+  }
+ },
+ {
+  "id": "SE_107",
+  "code": "SE_107",
+  "title": "IP 보안 프로토콜(IPSec, IP Security)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안",
+  "definition": "IP 계층에서 패킷 단위로 데이터 원천 인증·무결성·재전송 방지를 제공하는 AH와 기밀성까지 제공하는 ESP, 키 교환 프로토콜 IKE로 구성된 네트워크 계층 보안 프로토콜로, 상위 응용 수정 없이 사이트 간 VPN에 주로 쓰인다",
+  "keywords": [
+   "보안 프로토콜: 인증 헤더(AH) · 캡슐화 보안 페이로드(ESP)",
+   "동작 모드: 전송 모드 · 터널 모드",
+   "정책 DB: 보안 정책 DB(SPD) · 보안 연관 DB(SAD)",
+   "키 관리: IKE · ISAKMP · 보안 연관(SA)",
+   "IKE 단계: Phase 1 IKE SA · Phase 2 IPSec SA"
+  ],
+  "sections": [
+   {
+    "title": "프로토콜과 모드",
+    "subsections": [
+     {
+      "title": "AH",
+      "items": [
+       "데이터 원천 인증·무결성·재전송 방지, 기밀성 없음"
+      ]
+     },
+     {
+      "title": "ESP",
+      "items": [
+       "암호화로 기밀성, 선택적 무결성·인증, 헤더·트레일러·인증 데이터로 구성"
+      ]
+     },
+     {
+      "title": "전송 모드",
+      "items": [
+       "원래 IP 헤더 유지, 페이로드만 보호, 호스트 간"
+      ]
+     },
+     {
+      "title": "터널 모드",
+      "items": [
+       "원래 패킷 전체를 캡슐화하고 새 IP 헤더 추가, 게이트웨이 간"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "정책·키 관리 구조",
+    "subsections": [
+     {
+      "title": "SPD",
+      "items": [
+       "트래픽마다 폐기·우회·적용 정책 결정"
+      ]
+     },
+     {
+      "title": "SAD",
+      "items": [
+       "SA별 알고리즘·키·SPI·순서 번호 등 보관"
+      ]
+     },
+     {
+      "title": "IKE",
+      "items": [
+       "ISAKMP 틀 위에 Oakley·SKEME를 결합해 SA와 키 생성"
+      ]
+     },
+     {
+      "title": "엔진",
+      "items": [
+       "패킷을 가로채 정책에 따라 암복호화·인증 처리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "SA 수립 과정",
+    "subsections": [
+     {
+      "title": "1 Phase 1 협상",
+      "items": [
+       "암호·해시·인증 방식(사전 공유 키·인증서) 협상"
+      ]
+     },
+     {
+      "title": "2 Phase 1 키 교환",
+      "items": [
+       "난수와 디피-헬먼 교환으로 IKE SA 마스터 키 생성"
+      ]
+     },
+     {
+      "title": "3 Phase 1 상호 인증",
+      "items": [
+       "암호화된 메시지로 서명·인증서 교환"
+      ]
+     },
+     {
+      "title": "4 Phase 2",
+      "items": [
+       "IKE SA 보호 아래 IPSec SA 파라미터와 세션 키 생성"
+      ]
+     },
+     {
+      "title": "5 데이터 전송",
+      "items": [
+       "생성된 SA로 AH·ESP 처리"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "프로토콜과 모드",
+   "- AH",
+   "- ESP",
+   "- 전송 모드",
+   "- 터널 모드",
+   "정책·키 관리 구조",
+   "- SPD",
+   "- SAD",
+   "- IKE",
+   "- 엔진",
+   "SA 수립 과정",
+   "- 1 Phase 1 협상",
+   "- 2 Phase 1 키 교환",
+   "- 3 Phase 1 상호 인증",
+   "- 4 Phase 2",
+   "- 5 데이터 전송"
+  ],
+  "name": "IP 보안 프로토콜(IPSec, IP Security)",
+  "en": "IP Security",
+  "keywords_must": [
+   "인증 헤더(AH)",
+   "캡슐화 보안 페이로드(ESP)",
+   "전송 모드",
+   "터널 모드",
+   "보안 정책 DB(SPD)",
+   "보안 연관 DB(SAD)",
+   "IKE",
+   "ISAKMP",
+   "보안 연관(SA)",
+   "Phase 1 IKE SA",
+   "Phase 2 IPSec SA"
+  ],
+  "keywords_ref": [
+   "AH 프로토콜 번호 51, ESP 50",
+   "보안 파라미터 인덱스(SPI)·순서 번호로 재전송 방지",
+   "SPD 처리: 폐기·우회·적용",
+   "AH는 IP 헤더까지 인증해 NAT와 충돌, NAT-T(UDP 4500)",
+   "IKEv2(RFC 7296)",
+   "Phase 1 메인·어그레시브 모드, Phase 2 퀵 모드",
+   "SSL VPN과 비교: 4계층·원격 접속 대 3계층·사이트 간"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "인증 헤더(AH)",
+   "캡슐화 보안 페이로드(ESP)",
+   "전송 모드",
+   "터널 모드",
+   "보안 정책 DB(SPD)",
+   "보안 연관 DB(SAD)",
+   "IKE",
+   "ISAKMP",
+   "보안 연관(SA)",
+   "Phase 1 IKE SA",
+   "Phase 2 IPSec SA"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "AH": "Authentication Header",
+   "ESP": "Encapsulating Security Payload",
+   "SPD": "Security Policy Database",
+   "SAD": "Security Association Database",
+   "IKE": "Internet Key Exchange",
+   "ISAKMP": "Internet Security Association and Key Management Protocol",
+   "SA": "Security Association",
+   "SPI": "Security Parameter Index",
+   "NAT-T": "NAT Traversal"
   }
  },
  {
