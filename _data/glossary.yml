@@ -68,6 +68,7 @@ AS: [Autonomous System, Application Server, Architectural Strategy]
 ASBR: Autonomous System Boundary Router
 ASCII: American Standard Code for Information Interchange
 ASIC: Application-Specific Integrated Circuit
+ASID: Address Space Identifier
 ASK: Amplitude Shift Keying
 ASN.1: Abstract Syntax Notation One
 AST: Abstract Syntax Tree
@@ -125,6 +126,8 @@ BSS: [Basic Service Set, Business Support System]
 BST: Binary Search Tree
 BVI: Business Value of Information
 BWS: Broadcast Website
+C-LOOK: Circular LOOK
+C-SCAN: Circular SCAN
 C-V2X: Cellular Vehicle-to-Everything
 CALM: Communications Access for Land Mobiles
 CAM: [Cooperative Awareness Message, Computer-Aided Manufacturing, Content Aggregation Model]
@@ -177,6 +180,7 @@ COQ: Cost of Quality
 CoRE: Constrained RESTful Environments
 CORS: Continuously Operating Reference Station
 COSMIC: Common Software Measurement International Consortium
+COW: Copy-On-Write
 CPAF: Cost Plus Award Fee
 CPE: Customer Premises Equipment
 CPFF: Cost Plus Fixed Fee
@@ -317,11 +321,13 @@ ECN: Explicit Congestion Notification
 ECU: Electronic Control Unit
 EDA: [Event-Driven Architecture, Exploratory Data Analysis]
 EDCA: Enhanced Distributed Channel Access
+EDF: Earliest Deadline First
 EDFA: Erbium-Doped Fiber Amplifier
 EDNS0: Extension Mechanisms for DNS version 0
 EEBL: Emergency Electronic Brake Light
 EEF: Enterprise Environmental Factors
 EERD: Enhanced Entity Relationship Diagram
+EEVDF: Earliest Eligible Virtual Deadline First
 EF: [Expedited Forwarding, Early Finish]
 EGP: Exterior Gateway Protocol
 EHT: Extremely High Throughput
@@ -355,6 +361,7 @@ EVM: [Earned Value Management, Error Vector Magnitude]
 FANET: Flying Ad-hoc Network
 FAR: False Acceptance Rate
 FCC: Federal Communications Commission
+FCFS: First-Come, First-Served
 FCS: Frame Check Sequence
 FCW: Forward Collision Warning
 FDD: Frequency Division Duplex
@@ -445,6 +452,7 @@ HOL: Head-of-Line
 HOLAP: Hybrid OLAP
 HPACK: HTTP/2 Header Compression
 HQL: Hive Query Language
+HRN: Highest Response-ratio Next
 HSD: Honestly Significant Difference
 HSRP: Hot Standby Router Protocol
 HSS: Home Subscriber Server
@@ -522,6 +530,7 @@ ITU: International Telecommunication Union
 IVI: In-Vehicle Infotainment
 IVN: In-Vehicle Network
 IVS: In-Vehicle System
+IVT: Interrupt Vector Table
 IX: [Internet eXchange, Intention Exclusive Lock]
 IXFR: Incremental Zone Transfer
 IXP: Internet Exchange Point
@@ -570,7 +579,9 @@ Li-Fi: Light Fidelity
 LIA: Linked Increases Algorithm
 LIB: Label Information Base
 LIN: Local Interconnect Network
+LKM: Loadable Kernel Module
 LLC: Logical Link Control
+LLF: Least Laxity First
 LLM: Large Language Model
 LLQ: Low Latency Queuing
 LOB: Large Object
@@ -633,12 +644,15 @@ MITM: Man-in-the-Middle
 ML: Machine Learning
 MLD: Multicast Listener Discovery
 MLE: Maximum Likelihood Estimation
+MLFQ: Multi-Level Feedback Queue
 MLGF: Multi-Level Grid File
 MLO: Multi-Link Operation
+MLQ: Multi-Level Queue
 MMDB: Main Memory Database
 MMDBMS: Main Memory Database Management System
 MME: Mobility Management Entity
 MMF: Multi-Mode Fiber
+MMIO: Memory-Mapped I/O
 MNO: Mobile Network Operator
 MOCN: Multi-Operator Core Network
 MOF: Meta-Object Facility
@@ -657,6 +671,7 @@ MPLS-TP: MPLS Transport Profile
 MPP: Magnetic Power Profile
 MPR: Multipoint Relay
 MPTCP: Multipath TCP
+MQMS: Multiple Queue Multiple Server
 MQTT: MQ Telemetry Transport (현재 OASIS 표준명은 약어 아님)
 MRO: Maintenance, Repair and Operations
 MSA: Microservice Architecture
@@ -803,6 +818,7 @@ PDR: Pedestrian Dead Reckoning
 PDU: Protocol Data Unit
 PERT: Program Evaluation and Review Technique
 PESQ: Perceptual Evaluation of Speech Quality
+PFF: Page Fault Frequency
 PHB: Per-Hop Behavior
 PHP: Penultimate Hop Popping
 PHY: Physical Layer
@@ -834,6 +850,7 @@ POJO: Plain Old Java Object
 POLQA: Perceptual Objective Listening Quality Analysis
 POP: [Point of Presence, Point of Purchase, Point of Production]
 POP3: Post Office Protocol version 3
+POSIX: Portable Operating System Interface
 POTN: Packet Optical Transport Network
 PPP: [Point-to-Point Protocol, Public Private Partnership]
 PQ: Priority Queuing
@@ -906,6 +923,7 @@ RIS: Reconfigurable Intelligent Surface
 RJ: Registered Jack
 RLC: Radio Link Control
 RLE: Run-Length Encoding
+RMA: Rate Monotonic Analysis
 RMAN: Recovery Manager
 RMON: Remote Network Monitoring
 RMSE: Root Mean Squared Error
@@ -1003,15 +1021,18 @@ SIIT: Stateless IP/ICMP Translation
 SIM: Subscriber Identity Module
 SINR: Signal-to-Interference-plus-Noise Ratio
 SIX: Shared Intention Exclusive
+SJF: Shortest Job First
 SLA: Service Level Agreement
 SLAAC: Stateless Address Autoconfiguration
 SLB: Server Load Balancing
 SLD: Second-Level Domain
 SLM: Service Level Management
+SLTF: Shortest Latency Time First
 SMDS: Switched Multimegabit Data Service
 SMF: [Session Management Function, Single-Mode Fiber]
 SMO: Service Management and Orchestration
 SMON: System Monitor
+SMT: Simultaneous Multi-Threading
 SNAT: Source Network Address Translation
 SNMP: Simple Network Management Protocol
 SNPN: Standalone Non-Public Network
@@ -1030,10 +1051,13 @@ SPF: [Shortest Path First, Sender Policy Framework]
 SPIN: Sensor Protocols for Information via Negotiation
 SPOF: Single Point of Failure
 SPT: Shortest Path Tree
+SQMS: Single Queue Multiple Server
 SQNR: Signal-to-Quantization-Noise Ratio
 SRE: Site Reliability Engineering
 SREJ: Selective Reject
 SRS: Software Requirements Specification
+SRT: Shortest Remaining Time
+SRTF: Shortest Remaining Time First
 SRTP: Secure Real-time Transport Protocol
 SRTT: Smoothed Round-Trip Time
 SSB: Synchronization Signal Block
@@ -1048,6 +1072,7 @@ SSOT: Single Source of Truth
 SSP: Supply-Side Platform
 SSRC: Synchronization Source
 SST: [Slice/Service Type, Total Sum of Squares]
+SSTF: Shortest Seek Time First
 STBC: Space-Time Block Coding
 STL: Seasonal-Trend decomposition using Loess
 STM: Synchronous Transport Module
