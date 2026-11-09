@@ -13621,69 +13621,90 @@
   "dueum": null,
   "name": "애플리케이션 가상화(Application Virtualization)",
   "title": "애플리케이션 가상화(Application Virtualization)",
-  "definition": "실행되는 기반 운영 체제로부터 응용 소프트웨어를 캡슐화하는 소프트웨어 기술. 어플리케이션 가상화에서 이용하고자 하는 어플리케이션은 가상 시스템 파일, 가상 레지스트리를 가진 가상 OS (Virtual OS)와 하나로 패키징됨. 이를 샌드박싱한다고 함.",
+  "definition": "응용 프로그램을 가상 파일시스템·가상 레지스트리를 가진 가상화 계층과 함께 하나의 패키지로 캡슐화(샌드박싱)해 설치 없이 기반 OS와 분리된 상태로 실행하거나 서버에서 스트리밍·원격 제공하는 기술",
   "keywords_must": [
-   "캡슐화",
-   "샌드박싱",
-   "Native",
-   "Non-Native",
-   "업무 연속성",
-   "관리용이",
-   "보안",
-   "비용절감",
-   "업무 연속성/관리용이/보안/비용절감"
+   "캡슐화(Encapsulation)",
+   "샌드박싱(Sandboxing)",
+   "가상 파일시스템·가상 레지스트리",
+   "리다이렉션(Redirection)",
+   "네이티브·비네이티브(Non-Native) 실행",
+   "애플리케이션 스트리밍(Streaming)",
+   "원격 애플리케이션 게시(RemoteApp)",
+   "애플리케이션 충돌 해소(DLL Hell)",
+   "중앙 패치·배포"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "Microsoft App-V",
+   "VMware ThinApp",
+   "Citrix Virtual Apps",
+   "MSIX App Attach",
+   "컨테이너 비교"
+  ],
   "keywords": [
-   "핵심: 캡슐화 · 샌드박싱 · Native",
-   "기술: Non-Native · 업무 연속성 · 관리용이",
-   "운영: 보안 · 비용절감 · 업무 연속성/관리용이/보안/비용절감"
+   "방식: 로컬 샌드박스 실행(App-V·ThinApp) · 서버 원격 실행(Citrix·RemoteApp) · 스트리밍",
+   "원리: 런타임 일부 대체 → 파일·레지스트리 호출 가로채기 → 가상 위치로 리다이렉션",
+   "유의점: 데이터센터 인프라 · 네트워크 대역폭 · 클라이언트 성능 · 수용성"
   ],
   "outline": [
-   "효율적인 애플리케이션 관리, 애플리케이션 가상화의 개요",
-   "- 애플리케이션 가상화 (Application VIrtualization…",
-   "- 어플리케이션 자체를 가상화 운영체계와 묶어서 서버에 가지고 있다가 이…",
-   "- 애플리케이션 가상화의 특징",
-   "애플리케이션 가상화의 개념도 및 운영원리",
-   "- 애플리케이션 가상화의 개념도",
-   "- 애플리케이션 가상화의 운영원리"
+   "개념과 효과",
+   "- 개념: 앱과 OS 분리",
+   "- 효과: 관리·보안·비용",
+   "운영원리",
+   "- 가상화 계층: 호출 가로채기",
+   "- 제공 방식: 로컬·원격·스트리밍",
+   "적용 시 유의점",
+   "- 인프라: 서버·대역폭",
+   "- 클라이언트: 성능·호환성"
   ],
   "sections": [
    {
-    "title": "애플리케이션 가상화 핵심",
+    "title": "개념과 효과",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 앱과 OS 분리",
       "items": [
-       "캡슐화: 애플리케이션 가상화에서 캡슐화를 다루는 핵심 암기 포인트",
-       "샌드박싱: 애플리케이션 가상화에서 샌드박싱을 다루는 핵심 암기 포인트",
-       "Native: 하이퍼바이저가 하드웨어 위에서 직접 동작하는 유형 (애플리케이션 가상화/74f9)",
-       "Non-Native: 하이퍼바이저가 하드웨어 위에서 직접 동작하는 유형 (애플리케이션 가상화/a3e1)"
+       "샌드박싱(Sandboxing): 앱을 가상 OS 계층과 묶어 PC에 내려받아 로컬 자원으로 실행, 실제 OS는 변경 안 됨"
+      ]
+     },
+     {
+      "title": "효과: 관리·보안·비용",
+      "items": [
+       "애플리케이션 충돌 해소(DLL Hell): 버전이 다른 라이브러리를 앱별로 격리, 중앙 패치로 배포·운영비 절감"
       ]
      }
     ]
    },
    {
-    "title": "애플리케이션 가상화 구성·기술",
+    "title": "운영원리",
     "subsections": [
      {
-      "title": null,
+      "title": "가상화 계층: 호출 가로채기",
       "items": [
-       "업무 연속성: 애플리케이션 가상화에서 업무 연속성을 다루는 핵심 암기 포인트",
-       "관리용이: 애플리케이션 가상화에서 관리용이를 다루는 핵심 암기 포인트",
-       "보안: 애플리케이션 가상화에서 보안을 다루는 핵심 암기 포인트",
-       "비용절감: 애플리케이션 가상화에서 비용절감을 다루는 핵심 암기 포인트"
+       "리다이렉션(Redirection): 가상화 계층이 OS 런타임 일부를 대체해 파일·레지스트리 접근을 가상 위치(단일 파일)로 투명하게 전환"
+      ]
+     },
+     {
+      "title": "제공 방식: 로컬·원격·스트리밍",
+      "items": [
+       "비네이티브(Non-Native) 실행은 I/O·드라이버 인터페이스를 에뮬레이트, 원격 게시는 서버에서 실행하고 화면만 전송",
+       "애플리케이션 스트리밍(Streaming): 실행에 필요한 블록부터 내려받아 즉시 기동, 데스크톱 가상화의 필수 요소"
       ]
      }
     ]
    },
    {
-    "title": "애플리케이션 가상화 운영",
+    "title": "적용 시 유의점",
     "subsections": [
      {
-      "title": null,
+      "title": "인프라: 서버·대역폭",
       "items": [
-       "업무 연속성/관리용이/보안/비용절감: 애플리케이션 가상화에서 업무 연속성/관리용이/보안/비용절감을 다루는 핵심 암기 포인트"
+       "중앙화로 서버·스토리지 투자 증가, 해외지사 등 저대역 환경은 트래픽·생산성 영향 검토"
+      ]
+     },
+     {
+      "title": "클라이언트: 성능·호환성",
+      "items": [
+       "고성능 앱은 서버 실행과 로컬 샌드박스 간 성능 트레이드오프, 드라이버·셸 확장 앱은 가상화 불가 사례 확인"
       ]
      }
     ]
@@ -13692,22 +13713,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "캡슐화",
-   "샌드박싱",
-   "Native",
-   "Non-Native",
-   "업무 연속성",
-   "관리용이",
-   "보안",
-   "비용절감",
-   "업무 연속성/관리용이/보안/비용절감"
+   "캡슐화(Encapsulation)",
+   "샌드박싱(Sandboxing)",
+   "가상 파일시스템·가상 레지스트리",
+   "리다이렉션(Redirection)",
+   "네이티브·비네이티브(Non-Native) 실행",
+   "애플리케이션 스트리밍(Streaming)",
+   "원격 애플리케이션 게시(RemoteApp)",
+   "애플리케이션 충돌 해소(DLL Hell)",
+   "중앙 패치·배포"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_159",
@@ -13718,80 +13740,101 @@
    171,
    177
   ],
-  "en": "VMM",
+  "en": "Virtual Machine Monitor",
   "dueum": null,
-  "name": "가상머신모니터(VMM)",
-  "title": "가상머신모니터(VMM)",
-  "definition": "하나의 호스트 컴퓨터상에서 동시에 다수의 운영체제(OS)를 구동시킬 수 있는 HW와 OS사이의 얇은 SW가",
+  "name": "가상머신 모니터(VMM, Virtual Machine Monitor)",
+  "title": "가상머신 모니터(VMM, Virtual Machine Monitor)",
+  "definition": "하드웨어와 게스트 OS 사이의 얇은 소프트웨어 계층으로서 각 가상머신에 격리된 가상 하드웨어를 제공하고 CPU·메모리·I/O 가상화와 VM 스케줄링을 수행하는 가상화 플랫폼으로, 하이퍼바이저라고도 함",
   "keywords_must": [
-   "Native",
-   "Bare-metal 형: Type1",
-   "Hosted 기반형: Type2",
-   "하이퍼바이저(hypervisor)",
-   "젠 (Xen)",
-   "VMware Server",
-   "VMM의 역할",
-   "VMM의 2가지 유형",
-   "Native/Bare-metal 형: Type1"
+   "포펙·골드버그 요건(동등성·자원 제어·효율성)",
+   "트랩 앤 에뮬레이트(Trap-and-Emulate)",
+   "이진 변환(Binary Translation)",
+   "반가상화 하이퍼콜(Hypercall)",
+   "하드웨어 보조(Intel VT-x·AMD-V)",
+   "메모리 가상화(섀도 페이지 테이블·EPT/NPT)",
+   "I/O 가상화(에뮬레이션·virtio·SR-IOV)",
+   "Type 1·Type 2 VMM",
+   "Xen·KVM·ESXi"
   ],
   "keywords_ref": [
-   "Bare-metal 형",
-   "Hosted 기반형",
-   "Native/Bare-metal 형"
+   "VMCS(VM Control Structure)",
+   "IOMMU(VT-d)",
+   "vCPU 스케줄링",
+   "메모리 벌루닝(Ballooning)",
+   "페이지 공유(KSM)"
   ],
   "keywords": [
-   "핵심: Native · Bare-metal 형: Type1 · Hosted 기반형: Type2",
-   "기술: 하이퍼바이저(hypervisor) · 젠 (Xen) · VMware Server",
-   "운영: VMM의 역할 · VMM의 2가지 유형 · Native/Bare-metal 형: Type1",
-   "참고: Bare-metal 형 · Hosted 기반형 · Native/Bare-metal 형"
+   "역할: 강력한 격리 · 자원 할당 · VM 스케줄링 · 가상화 API 제공 · 에너지 효율화",
+   "가상화 대상: CPU(트랩·이진 변환·VT-x) · 메모리(섀도·EPT) · I/O(에뮬레이션·virtio·SR-IOV)",
+   "유형: Type 1(ESXi·Xen·POWER Hypervisor) · Type 2(Workstation·VirtualBox)"
   ],
   "outline": [
-   "효율적 서버가상화를 위한 가상 Layer VMM 의 개요",
-   "- VMM(Virtual Machine Monitor)의 정의",
-   "- VMM 의 역할",
-   "VMM 의 2가지 유형 및 드라이버 지원 위치에 따른 2가지 구현기술",
-   "- VMM 의 2가지 유형",
-   "I/O 가상화 종류 및 특징",
-   "- 가상머신모니터 요점",
-   "하이퍼바이저의 두 가지 유형별 활용 및 선정 시 고려사항",
-   "- 가상머신모니터 요점"
+   "가상화 요건과 역할",
+   "- 요건: 포펙·골드버그",
+   "- 역할: 격리·할당·스케줄링",
+   "CPU·메모리·I/O 가상화",
+   "- CPU: 특권 명령 처리",
+   "- 메모리: 주소 이중 변환",
+   "- I/O: 에뮬레이션에서 직접 할당",
+   "설치 유형과 구현",
+   "- Type 1·Type 2: 동작 방식",
+   "- 구현: 드라이버 위치"
   ],
   "sections": [
    {
-    "title": "가상머신모니터 핵심",
+    "title": "가상화 요건과 역할",
     "subsections": [
      {
-      "title": null,
+      "title": "요건: 포펙·골드버그",
       "items": [
-       "Native: 하이퍼바이저가 하드웨어 위에서 직접 동작하는 유형 (가상머신모니터/13f4)",
-       "Bare-metal 형: Type1: 하이퍼바이저가 하드웨어 위에서 직접 동작하는 유형 (가상머신모니터/2f89)",
-       "Hosted 기반형: Type2: 호스트 OS 위에서 하이퍼바이저가 동작하는 유형",
-       "하이퍼바이저(hypervisor): 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층 (가상머신모니터/9596)"
+       "포펙·골드버그 요건(동등성·자원 제어·효율성): 1974년 제시, 민감 명령이 모두 특권 명령이어야 트랩으로 가상화 가능"
+      ]
+     },
+     {
+      "title": "역할: 격리·할당·스케줄링",
+      "items": [
+       "강력한 격리로 VM 장애 전파 차단, 호스트 자원 통합으로 전력 절감, 게스트용 가상화 API 제공"
       ]
      }
     ]
    },
    {
-    "title": "가상머신모니터 구성·기술",
+    "title": "CPU·메모리·I/O 가상화",
     "subsections": [
      {
-      "title": null,
+      "title": "CPU: 특권 명령 처리",
       "items": [
-       "젠 (Xen): 가상머신모니터에서 젠 (Xen)을 다루는 핵심 암기 포인트",
-       "VMware Server: 가상머신모니터에서 VMware Server를 다루는 핵심 암기 포인트",
-       "VMM의 역할: 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층 (가상머신모니터/cfc7)",
-       "VMM의 2가지 유형: 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층 (가상머신모니터/49b8)"
+       "트랩 앤 에뮬레이트(Trap-and-Emulate): 게스트 특권 명령을 VMM이 가로채 대신 수행, x86은 민감 명령 문제로 이진 변환이나 VT-x 필요",
+       "하드웨어 보조(Intel VT-x·AMD-V): VMX root·non-root 모드와 VMCS로 VM 진입·탈출 처리"
+      ]
+     },
+     {
+      "title": "메모리: 주소 이중 변환",
+      "items": [
+       "메모리 가상화: 섀도 페이지 테이블은 VMM이 게스트 테이블을 복제, EPT/NPT는 하드웨어가 2단계 변환"
+      ]
+     },
+     {
+      "title": "I/O: 에뮬레이션에서 직접 할당",
+      "items": [
+       "I/O 가상화: 장치 에뮬레이션 → virtio 반가상화 드라이버 → SR-IOV로 NIC 가상 기능(VF)을 VM에 직접 할당"
       ]
      }
     ]
    },
    {
-    "title": "가상머신모니터 운영",
+    "title": "설치 유형과 구현",
     "subsections": [
      {
-      "title": null,
+      "title": "Type 1·Type 2: 동작 방식",
       "items": [
-       "Native/Bare-metal 형: Type1: 하이퍼바이저가 하드웨어 위에서 직접 동작하는 유형 (가상머신모니터/dd3c)"
+       "Type 1은 하드웨어와 직접 통신하며 저수준 드라이버를 보유(ESXi·Xen), Type 2는 호스트 OS를 통해 I/O 요청 전달(VirtualBox)"
+      ]
+     },
+     {
+      "title": "구현: 드라이버 위치",
+      "items": [
+       "드라이버를 VMM에 두면 모놀리식, 관리 도메인(Dom0)에 두면 마이크로커널형"
       ]
      }
     ]
@@ -13800,22 +13843,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Native",
-   "Bare-metal 형: Type1",
-   "Hosted 기반형: Type2",
-   "하이퍼바이저(hypervisor)",
-   "젠 (Xen)",
-   "VMware Server",
-   "VMM의 역할",
-   "VMM의 2가지 유형",
-   "Native/Bare-metal 형: Type1"
+   "포펙·골드버그 요건(동등성·자원 제어·효율성)",
+   "트랩 앤 에뮬레이트(Trap-and-Emulate)",
+   "이진 변환(Binary Translation)",
+   "반가상화 하이퍼콜(Hypercall)",
+   "하드웨어 보조(Intel VT-x·AMD-V)",
+   "메모리 가상화(섀도 페이지 테이블·EPT/NPT)",
+   "I/O 가상화(에뮬레이션·virtio·SR-IOV)",
+   "Type 1·Type 2 VMM",
+   "Xen·KVM·ESXi"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_160",
@@ -13826,76 +13870,87 @@
    178,
    181
   ],
-  "en": "Hypervisor Types",
-  "dueum": "BH 반전 모모",
+  "en": "Type-1 (Bare-metal) and Type-2 (Hosted) Hypervisors",
+  "dueum": null,
   "name": "하이퍼바이저 유형(Hypervisor Type-1/Type-2)",
   "title": "하이퍼바이저 유형(Hypervisor Type-1/Type-2)",
-  "definition": "호스트 컴퓨터에서 다수의 운영체제를 동시에 실행하기 위한 논리적 플랫폼으로, 여러 개의 OS가 단일 하드웨어 호스트를 공유할 수 있도록 하는 기술 (하이퍼바이저 유형(Hypervisor Type-1/Type-2) 기준).",
+  "definition": "하이퍼바이저가 물리 하드웨어 위에 직접 설치되는지(Type 1, 베어메탈) 아니면 호스트 운영체제 위의 응용으로 실행되는지(Type 2, 호스티드)에 따라 구분한 분류로, 성능·보안·관리 방식과 적용 영역이 달라짐",
   "keywords_must": [
-   "Type1 : Native",
-   "Bare-metal Type2 : Hosted 기반형",
-   "하이퍼바이저(Hypervisor) 정의",
-   "가상화 기법",
-   "호스트 타입별 구성도",
-   "가상화 방식에 따른 분류",
-   "VM(Virtual Machine)",
-   "VMM",
-   "하이퍼바이저"
+   "Type 1 베어메탈(Bare-metal·Native)",
+   "Type 2 호스티드(Hosted)",
+   "호스트 OS 유무",
+   "2계층·3계층 실행 구조",
+   "관리 콘솔(vCenter 등)",
+   "공격 표면(Attack Surface)",
+   "데이터센터·클라우드 서버",
+   "데스크톱·개발 테스트",
+   "KVM 분류 논쟁(커널 모듈형)"
   ],
   "keywords_ref": [
-   "Type1",
-   "Bare-metal Type2"
+   "VMware ESXi·Microsoft Hyper-V·Xen",
+   "VMware Workstation·VirtualBox·Parallels",
+   "모놀리식·마이크로커널",
+   "중첩 가상화(Nested Virtualization)",
+   "AWS Nitro"
   ],
   "keywords": [
-   "핵심: Type1 : Native · Bare-metal Type2 : Hosted 기반형 · 하이퍼바이저(Hypervisor) 정의",
-   "기술: 가상화 기법 · 호스트 타입별 구성도 · 가상화 방식에 따른 분류",
-   "운영: VM(Virtual Machine) · VMM · 하이퍼바이저",
-   "참고: Type1 · Bare-metal Type2"
+   "Type 1: 하드웨어 → 하이퍼바이저 → 게스트 OS (2계층)",
+   "Type 2: 하드웨어 → 호스트 OS → 하이퍼바이저 → 게스트 OS (3계층)",
+   "선택 기준: 성능·안정성(Type 1) vs 설치 용이·OS 다양성(Type 2)"
   ],
   "outline": [
-   "하이퍼바이저(Hypervisor) 정의 및 가상화 기법",
-   "- 하이퍼바이저(Hypervisor) 정의",
-   "- 가상화 기법",
-   "하이퍼바이저 타입별 구성도 및 분류",
-   "- 호스트 타입별 구성도",
-   "- 가상화 방식에 따른 분류"
+   "구조 차이",
+   "- 계층: 2계층 vs 3계층",
+   "장단점 비교",
+   "- Type 1: 성능·보안",
+   "- Type 2: 편의·호환",
+   "적용 영역과 사례",
+   "- 영역: 서버 vs 데스크톱",
+   "- 경계 사례: KVM"
   ],
   "sections": [
    {
-    "title": "하이퍼바이저 유형 핵심",
+    "title": "구조 차이",
     "subsections": [
      {
-      "title": null,
+      "title": "계층: 2계층 vs 3계층",
       "items": [
-       "Type1 : Native: 하이퍼바이저가 하드웨어 위에서 직접 동작하는 유형 (하이퍼바이저 유형/af14)",
-       "Bare-metal Type2 : Hosted 기반형: 하이퍼바이저가 하드웨어 위에서 직접 동작하는 유형 (하이퍼바이저 유형/2f77)",
-       "하이퍼바이저(Hypervisor) 정의: 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층 (하이퍼바이저 유형/8edf)",
-       "가상화 기법: 하이퍼바이저 유형에서 가상화 기법을 다루는 핵심 암기 포인트"
+       "Type 1 베어메탈: 하이퍼바이저가 곧 경량 OS 역할을 하며 스케줄링·메모리를 직접 관리",
+       "Type 2 호스티드: 하이퍼바이저가 호스트 OS 프로세스로 동작해 장치 드라이버를 호스트 OS에 의존"
       ]
      }
     ]
    },
    {
-    "title": "하이퍼바이저 유형 구성·기술",
+    "title": "장단점 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "Type 1: 성능·보안",
       "items": [
-       "호스트 타입별 구성도: 하이퍼바이저 유형의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "가상화 방식에 따른 분류: 하이퍼바이저 유형에서 가상화 방식에 따른 분류를 다루는 핵심 암기 포인트",
-       "VM(Virtual Machine): VM를 하이퍼바이저 유형 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "VMM: 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층 (하이퍼바이저 유형/bdbc)"
+       "호스트 OS가 없어 오버헤드와 공격 표면(Attack Surface)이 작고 자원 관리가 유연, 단 vCenter 같은 별도 관리 콘솔 필요"
+      ]
+     },
+     {
+      "title": "Type 2: 편의·호환",
+      "items": [
+       "기존 PC에 앱처럼 설치해 Windows·Linux·FreeBSD 등 게스트 제약이 적으나, 호스트 OS 경유로 오버헤드가 크고 호스트 장애에 종속"
       ]
      }
     ]
    },
    {
-    "title": "하이퍼바이저 유형 운영",
+    "title": "적용 영역과 사례",
     "subsections": [
      {
-      "title": null,
+      "title": "영역: 서버 vs 데스크톱",
       "items": [
-       "하이퍼바이저: 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층 (하이퍼바이저 유형/278f)"
+       "데이터센터·클라우드 서버는 Type 1(ESXi·Hyper-V·Xen), 개발·테스트·교육용 데스크톱은 Type 2(Workstation·VirtualBox)"
+      ]
+     },
+     {
+      "title": "경계 사례: KVM",
+      "items": [
+       "KVM 분류 논쟁: 리눅스 커널 모듈로 커널 자체가 하이퍼바이저가 되어 Type 1으로 보는 견해가 일반적, AWS Nitro도 KVM 기반"
       ]
      }
     ]
@@ -13904,22 +13959,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Type1 : Native",
-   "Bare-metal Type2 : Hosted 기반형",
-   "하이퍼바이저(Hypervisor) 정의",
-   "가상화 기법",
-   "호스트 타입별 구성도",
-   "가상화 방식에 따른 분류",
-   "VM(Virtual Machine)",
-   "VMM",
-   "하이퍼바이저"
+   "Type 1 베어메탈(Bare-metal·Native)",
+   "Type 2 호스티드(Hosted)",
+   "호스트 OS 유무",
+   "2계층·3계층 실행 구조",
+   "관리 콘솔(vCenter 등)",
+   "공격 표면(Attack Surface)",
+   "데이터센터·클라우드 서버",
+   "데스크톱·개발 테스트",
+   "KVM 분류 논쟁(커널 모듈형)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_161",
@@ -13930,80 +13986,93 @@
    182,
    183
   ],
-  "en": "ZeroPC",
+  "en": "ZeroPC (Web-based Desktop as a Service)",
   "dueum": null,
-  "name": "디지털서비스(ZeroPC)",
-  "title": "디지털서비스(ZeroPC)",
-  "definition": "가상화와 클라우드 컴퓨팅을 활용, 웹 브라우저를 통해 마치 일반 PC 환경과 같은 모양과 환경으로운영체계와 어플리케이션을 사용할 수 있도록 지원하는 서비스",
+  "name": "제로PC(ZeroPC)",
+  "title": "제로PC(ZeroPC)",
+  "definition": "가상화와 클라우드 컴퓨팅을 활용해 별도 설치 없이 웹 브라우저만으로 일반 PC와 같은 데스크톱 환경·애플리케이션·파일을 어떤 기기에서든 동일하게 사용하도록 제공하는 웹 기반 DaaS 서비스",
   "keywords_must": [
-   "웹 기반 데스크탑 서비스",
-   "가상화",
-   "데스크탑 가상화",
-   "클라우드 컴퓨팅",
-   "RIA",
-   "HTML5",
-   "JavaScript",
-   "AJAX",
-   "OAuth",
-   "SSL(HTTPS)"
+   "웹 기반 DaaS(Desktop as a Service)",
+   "크로스 브라우저(Cross Browser)",
+   "N-스크린 동기화",
+   "RIA(Rich Internet Application)",
+   "HTML5·JavaScript·AJAX",
+   "클라우드 스토리지 통합 탐색기",
+   "OAuth 로그인",
+   "SSL/TLS(HTTPS) 전송 암호화",
+   "AES-256 저장 암호화"
   ],
   "keywords_ref": [
-   "Seamless한 N-Screen 지원"
+   "제로 클라이언트 단말 구분",
+   "웹 오피스",
+   "SNS·웹메일 연계",
+   "JSON·Node.js",
+   "국내 Zero PC 서비스"
   ],
   "keywords": [
-   "핵심: 웹 기반 데스크탑 서비스 · 가상화 · 데스크탑 가상화",
-   "기술: 클라우드 컴퓨팅 · RIA · HTML5",
-   "운영: JavaScript · AJAX · OAuth",
-   "참고: Seamless한 N-Screen 지원"
+   "특징: Any Where · Any Time · Any Device · Any Browser · N-스크린",
+   "서비스 기능: 브라우저 UI/UX · 클라우드 연계 · 파일 통합 관리 · 앱 통합 · 백업 · 보안 인증 · 콘텐츠 분석",
+   "요소 기술: Web/RIA(HTML5·JS·AJAX) · 보안(OAuth·HTTPS·AES-256)"
   ],
   "outline": [
-   "언제 어디서나 동일한 사용자 환경을 제공하는 웹 기반 데스크탑 서비스",
-   "- ZeroPC 의 정의",
-   "- ZeroPC 의 특징",
-   "ZeroPC 의 서비스 기능 및 요소 기술, 기능",
-   "- ZeroPC 의 서비스 기능",
-   "- ZeroPC 의 요소 기술",
-   "ZeroPC 의 이슈 사항 및 활용 방안",
-   "- ZeroPC 의 이슈 사항",
-   "- ZeroPC 의 활용 방안"
+   "서비스 특성",
+   "- 접근성: 4-Any",
+   "- 연속성: N-스크린",
+   "서비스 기능",
+   "- 사용자 기능: UI·파일·앱",
+   "- 관리 기능: 백업·보안·분석",
+   "요소 기술",
+   "- Web/RIA: 플랫폼 역할",
+   "- 보안: 전송·저장 암호화"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "서비스 특성",
     "subsections": [
      {
-      "title": null,
+      "title": "접근성: 4-Any",
       "items": [
-       "웹 기반 데스크탑 서비스: 디지털서비스에서 웹 기반 데스크탑 서비스를 다루는 핵심 암기 포인트",
-       "가상화: 디지털서비스에서 가상화를 다루는 핵심 암기 포인트 (디지털서비스/7130)",
-       "데스크탑 가상화: 디지털서비스에서 데스크탑 가상화를 다루는 핵심 암기 포인트 (디지털서비스/ddd0)",
-       "클라우드 컴퓨팅: 디지털서비스에서 클라우드 컴퓨팅을 다루는 핵심 암기 포인트"
+       "웹 기반 DaaS(Desktop as a Service): 브라우저만 있으면 장소·시간·기기·브라우저 종류와 무관하게 접속"
+      ]
+     },
+     {
+      "title": "연속성: N-스크린",
+      "items": [
+       "N-스크린 동기화: 어느 PC에서 접속해도 서버의 동일 데스크톱·데이터로 이질감 없이 이어서 작업"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "서비스 기능",
     "subsections": [
      {
-      "title": null,
+      "title": "사용자 기능: UI·파일·앱",
       "items": [
-       "RIA: RIA를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HTML5: HTML5를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "JavaScript: JavaScript를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "AJAX: AJAX를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "클라우드 스토리지 통합 탐색기: 여러 온라인 저장소 공간을 하나의 탐색기로 관리, 웹 오피스·멀티미디어 앱 통합 제공"
+      ]
+     },
+     {
+      "title": "관리 기능: 백업·보안·분석",
+      "items": [
+       "사용자 데이터 백업·복구, OAuth 로그인, 저장 콘텐츠의 유형·용량 분석"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "요소 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "Web/RIA: 플랫폼 역할",
       "items": [
-       "OAuth: 위임 인가로 제3자 앱에 제한 접근을 허용하는 프로토콜",
-       "SSL(HTTPS): SSL를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "HTML5·JavaScript·AJAX: HTML5가 웹앱 구동 플랫폼, JS·JSON이 데이터 송수신, AJAX는 구형 브라우저 RIA 지원"
+      ]
+     },
+     {
+      "title": "보안: 전송·저장 암호화",
+      "items": [
+       "SSL/TLS(HTTPS)로 브라우저-서버 구간 보호, AES-256으로 사용자 기밀 데이터 저장, 성공 요인은 클라우드 연동 편의성과 UX"
       ]
      }
     ]
@@ -14012,16 +14081,15 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "웹 기반 데스크탑 서비스",
-   "가상화",
-   "데스크탑 가상화",
-   "클라우드 컴퓨팅",
-   "RIA",
-   "HTML5",
-   "JavaScript",
-   "AJAX",
-   "OAuth",
-   "SSL(HTTPS)"
+   "웹 기반 DaaS(Desktop as a Service)",
+   "크로스 브라우저(Cross Browser)",
+   "N-스크린 동기화",
+   "RIA(Rich Internet Application)",
+   "HTML5·JavaScript·AJAX",
+   "클라우드 스토리지 통합 탐색기",
+   "OAuth 로그인",
+   "SSL/TLS(HTTPS) 전송 암호화",
+   "AES-256 저장 암호화"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -14031,7 +14099,8 @@
   "warnings": [],
   "gloss": {
    "PC": "Personal Computer"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_162",
@@ -14042,59 +14111,94 @@
    184,
    186
   ],
-  "en": "VDI",
+  "en": "Virtual Desktop Infrastructure",
   "dueum": null,
-  "name": "데스크톱 가상화(VDI)",
-  "title": "데스크톱 가상화(VDI)",
-  "definition": "중앙 데이터 센터의 서버 자원을 이용해 데스크탑 업무 환경을 개별 사용자에게 네트워크 상에서 제공하는컴퓨팅 환경",
+  "name": "가상 데스크톱 인프라(VDI, Virtual Desktop Infrastructure)",
+  "title": "가상 데스크톱 인프라(VDI, Virtual Desktop Infrastructure)",
+  "definition": "데이터센터 서버의 하이퍼바이저 위에 사용자별 데스크톱 가상머신을 두고 네트워크로 화면을 전송해 제공하는 데스크톱 가상화 구현 방식으로, 스마트워크와 내부정보 유출 통제 요구로 확산됨",
   "keywords_must": [
-   "단말기 세션브로커 인증서버하이퍼바이저",
-   "VDI 도입 시 고려사항",
-   "구성도",
-   "데스크톱 가상화 아키텍처",
-   "데스크톱 가상화 표준",
-   "IDC",
-   "TCO",
-   "하이퍼바이저"
+   "사용자별 전용 VM(1:1)",
+   "연결 브로커(Connection Broker)",
+   "원격 디스플레이 프로토콜(RDP·PCoIP·Blast·HDX)",
+   "영구형·비영구형 데스크톱(Persistent·Non-persistent)",
+   "골든 이미지·링크드 클론",
+   "PoC·BMT 검증",
+   "TCO 검증(숨은 비용)",
+   "이중 라이선스",
+   "VDI 이중화"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "SBC(세션 공유형) 비교",
+   "DaaS(Amazon WorkSpaces·Azure Virtual Desktop)",
+   "주변기기 표준화",
+   "스마트워크센터",
+   "개인정보보호법"
+  ],
   "keywords": [
-   "핵심: 단말기 세션브로커 인증서버하이퍼바이저 · VDI 도입 시 고려사항 · 구성도",
-   "기술: 데스크톱 가상화 아키텍처 · 데스크톱 가상화 표준 · IDC",
-   "운영: TCO · 하이퍼바이저"
+   "확산 배경: 업무환경 변화(재택·스마트워크) · 보안성 강화(정보 유출 통제)",
+   "고려사항: 사용자 만족도 · TCO 검증 · 라이선스 · 보안정책 연계 · 단계별 구축 · 안정화 기간",
+   "위험·대응: 성능 불만족(PoC) · 업무 마비(이중화) · 주변기기(표준화) · 앱 호환(BMT) · 대역폭(저사용 솔루션)"
   ],
   "outline": [
-   "VDI 구성도 및 구성요소",
-   "- 구성도",
-   "- 데스크톱 가상화의 구성요소",
-   "VDI 도입 시 고려사항 및 위험요소",
-   "- VDI 도입 시 고려사항"
+   "확산 배경",
+   "- 환경 변화: 스마트워크",
+   "- 보안: 내부정보 유출 통제",
+   "구현 구조",
+   "- 데스크톱 방식: 영구형·비영구형",
+   "- 전송: 원격 디스플레이 프로토콜",
+   "도입 고려사항과 위험",
+   "- 고려사항: 만족도·TCO·단계",
+   "- 위험: 성능·마비·호환"
   ],
   "sections": [
    {
-    "title": "데스크톱 가상화 핵심",
+    "title": "확산 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "환경 변화: 스마트워크",
       "items": [
-       "단말기 세션브로커 인증서버하이퍼바이저: 요청을 중개해 대상 자원에 연결하는 중재 컴포넌트 (데스크톱 가상화/3f55)",
-       "VDI 도입 시 고려사항: 데스크톱 가상화에서 VDI 도입 시 고려사항을 다루는 핵심 암기 포인트",
-       "구성도: 데스크톱 가상화의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "데스크톱 가상화 아키텍처: 데스크톱 가상화의 계층·모듈 배치와 상호작용 구조"
+       "재택·모바일·스마트워크센터에서 언제 어디서나 동일한 업무환경 요구"
+      ]
+     },
+     {
+      "title": "보안: 내부정보 유출 통제",
+      "items": [
+       "개인정보보호법 등 규제로 데이터가 단말에 남지 않는 중앙 실행 방식 선호"
       ]
      }
     ]
    },
    {
-    "title": "데스크톱 가상화 구성·기술",
+    "title": "구현 구조",
     "subsections": [
      {
-      "title": null,
+      "title": "데스크톱 방식: 영구형·비영구형",
       "items": [
-       "데스크톱 가상화 표준: 데스크톱 가상화 상호운용·품질을 맞추는 규격·기준",
-       "IDC: IDC를 데스크톱 가상화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "TCO: 도입부터 폐기까지 총소유비용 (데스크톱 가상화/b301)",
-       "하이퍼바이저: 다중 OS를 하드웨어 위에 격리 실행하는 가상화 계층 (데스크톱 가상화/3a17)"
+       "영구형·비영구형: 사용자별 고정 VM 또는 로그아웃 시 초기화되는 풀 VM, 골든 이미지와 링크드 클론으로 저장 공간 절감"
+      ]
+     },
+     {
+      "title": "전송: 원격 디스플레이 프로토콜",
+      "items": [
+       "원격 디스플레이 프로토콜(RDP·PCoIP·Blast·HDX): 화면 변화만 압축 전송, SBC는 하나의 OS 세션을 여러 사용자가 공유하는 점이 차이"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "도입 고려사항과 위험",
+    "subsections": [
+     {
+      "title": "고려사항: 만족도·TCO·단계",
+      "items": [
+       "TCO 검증(숨은 비용): 운영 인력·초기 투자 이자·IDC 비용 반영, 단말 OS와 VM OS 이중 라이선스 확인",
+       "영향도 낮은 그룹부터 단계별 구축하고 오픈 전 안정화 기간 확보"
+      ]
+     },
+     {
+      "title": "위험: 성능·마비·호환",
+      "items": [
+       "VDI 서비스 중단 시 전 사용자 업무 마비라 VDI 이중화, CAD 등 고성능 SW 제약은 PoC·BMT로 사전 검증"
       ]
      }
     ]
@@ -14103,21 +14207,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "단말기 세션브로커 인증서버하이퍼바이저",
-   "VDI 도입 시 고려사항",
-   "구성도",
-   "데스크톱 가상화 아키텍처",
-   "데스크톱 가상화 표준",
-   "IDC",
-   "TCO",
-   "하이퍼바이저"
+   "사용자별 전용 VM(1:1)",
+   "연결 브로커(Connection Broker)",
+   "원격 디스플레이 프로토콜(RDP·PCoIP·Blast·HDX)",
+   "영구형·비영구형 데스크톱(Persistent·Non-persistent)",
+   "골든 이미지·링크드 클론",
+   "PoC·BMT 검증",
+   "TCO 검증(숨은 비용)",
+   "이중 라이선스",
+   "VDI 이중화"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_163",
