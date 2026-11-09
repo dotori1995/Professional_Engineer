@@ -15480,5 +15480,1104 @@
    "OTA": "Over-the-Air",
    "IDS": "Intrusion Detection System"
   }
+ },
+ {
+  "id": "SE_226",
+  "code": "SE_226",
+  "title": "가상화폐 거래소 보안 취약점과 대응(Cryptocurrency Exchange Security)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 취약점 > 가상화폐거래소 취약점 및 대응",
+  "definition": "이용자 자산과 개인키를 중앙에서 보관하는 가상자산 거래소가 키 관리, 블록체인 합의, 내부 통제, 소프트웨어 측면에서 해킹·횡령에 노출되는 취약점과 이를 막는 관리·기술 대책",
+  "keywords": [
+   "취약 영역: 중앙집중 키 관리 · 거래 검증·합의 · 권한 관리 · 기술적 미흡(SW·스마트 계약)",
+   "주요 위협: 핫월렛 키 탈취 · 51% 공격 · 내부자 권한 오남용 · 스마트 계약 취약점",
+   "대응: 콜드월렛 분리 보관 · 다중 서명(Multi-sig)·MPC 지갑 · 망분리·접근 통제 · ISMS 인증 의무"
+  ],
+  "sections": [
+   {
+    "title": "거래소 특성",
+    "subsections": [
+     {
+      "title": "24시간 거래",
+      "items": [
+       "정해진 장 시간 없이 실시간 매매"
+      ]
+     },
+     {
+      "title": "중앙 보관",
+      "items": [
+       "탈중앙 자산이지만 거래소가 이용자 키·자산을 일괄 관리"
+      ]
+     },
+     {
+      "title": "법정화폐 교환",
+      "items": [
+       "원화·달러와 가상자산 간 교환 창구"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "영역별 취약점",
+    "subsections": [
+     {
+      "title": "키 관리",
+      "items": [
+       "키 도난·분실, 취약한 난수로 키 재생성 공격"
+      ]
+     },
+     {
+      "title": "거래 검증",
+      "items": [
+       "과반 해시파워 장악으로 이중 지불, 사이드체인 비정상 거래"
+      ]
+     },
+     {
+      "title": "권한 관리",
+      "items": [
+       "거래 정보 접근 통제 미흡, 내부 직원 오남용"
+      ]
+     },
+     {
+      "title": "기술",
+      "items": [
+       "블록체인 SW·스마트 계약 취약점, 웹 취약점, DDoS"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응 방안",
+    "subsections": [
+     {
+      "title": "자산 보관",
+      "items": [
+       "대부분 자산을 오프라인 콜드월렛에, 출금용만 핫월렛",
+       "다중 서명·MPC·HSM"
+      ]
+     },
+     {
+      "title": "통제",
+      "items": [
+       "망분리, 최소 권한, 출금 이중 승인, 이상 거래 모니터링"
+      ]
+     },
+     {
+      "title": "제도",
+      "items": [
+       "ISMS 인증·실명 계정 의무, 이용자 자산 분리 보관·보험(가상자산이용자보호법)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "거래소 특성",
+   "- 24시간 거래",
+   "- 중앙 보관",
+   "- 법정화폐 교환",
+   "영역별 취약점",
+   "- 키 관리",
+   "- 거래 검증",
+   "- 권한 관리",
+   "- 기술",
+   "대응 방안",
+   "- 자산 보관",
+   "- 통제",
+   "- 제도"
+  ],
+  "name": "가상화폐 거래소 보안 취약점과 대응(Cryptocurrency Exchange Security)",
+  "en": "Cryptocurrency Exchange Security",
+  "keywords_must": [
+   "중앙집중 키 관리",
+   "거래 검증·합의",
+   "권한 관리",
+   "기술적 미흡(SW·스마트 계약)",
+   "핫월렛 키 탈취",
+   "51% 공격",
+   "내부자 권한 오남용",
+   "스마트 계약 취약점",
+   "콜드월렛 분리 보관",
+   "다중 서명(Multi-sig)·MPC 지갑",
+   "망분리·접근 통제",
+   "ISMS 인증 의무"
+  ],
+  "keywords_ref": [
+   "중앙화 거래소(CEX)·탈중앙 거래소(DEX)",
+   "마운트곡스·코인체크 해킹",
+   "특정금융정보법 실명 계정",
+   "가상자산이용자보호법(2024)",
+   "이상 거래 탐지",
+   "HSM 키 보관",
+   "이용자 자산 분리 보관"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "중앙집중 키 관리",
+   "거래 검증·합의",
+   "권한 관리",
+   "기술적 미흡(SW·스마트 계약)",
+   "핫월렛 키 탈취",
+   "51% 공격",
+   "내부자 권한 오남용",
+   "스마트 계약 취약점",
+   "콜드월렛 분리 보관",
+   "다중 서명(Multi-sig)·MPC 지갑",
+   "망분리·접근 통제",
+   "ISMS 인증 의무"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "CEX": "Centralized Exchange",
+   "DEX": "Decentralized Exchange",
+   "MPC": "Multi-Party Computation",
+   "HSM": "Hardware Security Module",
+   "ISMS": "Information Security Management System"
+  }
+ },
+ {
+  "id": "SE_227",
+  "code": "SE_227",
+  "title": "블록체인 플랫폼 보안 위협(Blockchain Platform Security Threats)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 취약점 및 대응 > 블록체인(Block Chain) 플랫폼 보안위협",
+  "definition": "분산 원장에 거래를 기록하는 블록체인이 위변조에 강하다는 장점과 별개로 키 관리, 합의 알고리즘, 스마트 계약, 노드 네트워크, 상호 운용 과정에서 갖는 보안 위협",
+  "keywords": [
+   "플랫폼 구분: 퍼블릭(Public) · 프라이빗(Private) · 컨소시엄(Consortium)",
+   "공통 위협: 키 도난·분실 · 취약한 키 생성 · 블록체인 SW 취약점 · DDoS·스팸 거래 · 상호 운용성 미비",
+   "특성별 위협: 51% 공격 · 이클립스 공격 · 스마트 계약 취약점(재진입) · 프라이버시 노출"
+  ],
+  "sections": [
+   {
+    "title": "플랫폼 구분",
+    "subsections": [
+     {
+      "title": "퍼블릭",
+      "items": [
+       "누구나 참여·블록 생성, PoW·PoS 합의, 익명 거래"
+      ]
+     },
+     {
+      "title": "프라이빗",
+      "items": [
+       "단일 기관 통제, PBFT 등으로 빠른 합의"
+      ]
+     },
+     {
+      "title": "컨소시엄",
+      "items": [
+       "허가된 기관 그룹이 사전 규칙으로 검증"
+      ]
+     },
+     {
+      "title": "대표",
+      "items": [
+       "비트코인(UTXO·머클 트리), 이더리움(EVM 스마트 계약), 하이퍼레저 패브릭(멤버십 서비스, endorser·committer)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공통 위협",
+    "subsections": [
+     {
+      "title": "키",
+      "items": [
+       "개인키 도난·분실 시 자산 회복 불가",
+       "취약 난수로 키 재생성"
+      ]
+     },
+     {
+      "title": "SW·네트워크",
+      "items": [
+       "노드 SW 취약점으로 합의 조작, 다수 노드 장악 후 스팸 거래로 서비스 중단"
+      ]
+     },
+     {
+      "title": "상호 운용",
+      "items": [
+       "체인 간 브리지 책임 주체·표준 부재"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "특성별 위협과 대응",
+    "subsections": [
+     {
+      "title": "퍼블릭",
+      "items": [
+       "51% 공격으로 이중 지불, 이클립스 공격으로 노드 고립"
+      ]
+     },
+     {
+      "title": "스마트 계약",
+      "items": [
+       "재진입·정수 오버플로로 자산 유출 → 코드 감사·형식 검증"
+      ]
+     },
+     {
+      "title": "프라이빗·컨소시엄",
+      "items": [
+       "멤버십 인증서·권한 관리, 거래 정보 접근 통제"
+      ]
+     },
+     {
+      "title": "공통 대응",
+      "items": [
+       "하드웨어 지갑·다중 서명, 노드 다양화, 프라이버시 보호(영지식 증명)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "플랫폼 구분",
+   "- 퍼블릭",
+   "- 프라이빗",
+   "- 컨소시엄",
+   "- 대표",
+   "공통 위협",
+   "- 키",
+   "- SW·네트워크",
+   "- 상호 운용",
+   "특성별 위협과 대응",
+   "- 퍼블릭",
+   "- 스마트 계약",
+   "- 프라이빗·컨소시엄",
+   "- 공통 대응"
+  ],
+  "name": "블록체인 플랫폼 보안 위협(Blockchain Platform Security Threats)",
+  "en": "Blockchain Platform Security Threats",
+  "keywords_must": [
+   "퍼블릭(Public)",
+   "프라이빗(Private)",
+   "컨소시엄(Consortium)",
+   "키 도난·분실",
+   "취약한 키 생성",
+   "블록체인 SW 취약점",
+   "DDoS·스팸 거래",
+   "상호 운용성 미비",
+   "51% 공격",
+   "이클립스 공격",
+   "스마트 계약 취약점(재진입)",
+   "프라이버시 노출"
+  ],
+  "keywords_ref": [
+   "비트코인 UTXO·머클 트리",
+   "이더리움 EVM·Solidity",
+   "하이퍼레저 패브릭 멤버십 서비스",
+   "PoW·PoS·PBFT",
+   "더 다오(The DAO) 해킹",
+   "브리지 해킹",
+   "형식 검증·감사"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "퍼블릭(Public)",
+   "프라이빗(Private)",
+   "컨소시엄(Consortium)",
+   "키 도난·분실",
+   "취약한 키 생성",
+   "블록체인 SW 취약점",
+   "DDoS·스팸 거래",
+   "상호 운용성 미비",
+   "51% 공격",
+   "이클립스 공격",
+   "스마트 계약 취약점(재진입)",
+   "프라이버시 노출"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "UTXO": "Unspent Transaction Output",
+   "EVM": "Ethereum Virtual Machine",
+   "PBFT": "Practical Byzantine Fault Tolerance",
+   "PoW": "Proof of Work",
+   "PoS": "Proof of Stake"
+  }
+ },
+ {
+  "id": "SE_230",
+  "code": "SE_230",
+  "title": "DNS 취약점 공격(DNS Vulnerability Attacks)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 취약점 및 대응 > DNS 취약점 공격",
+  "definition": "인증 없이 UDP 기반으로 질의·응답하는 도메인 이름 시스템(DNS, Domain Name System)의 구조와 설정·코드 취약점을 악용해 응답 위조, 캐시 오염, 정보 노출, 서비스 거부를 일으켜 파밍 등 피해를 유발하는 공격",
+  "keywords": [
+   "공격 유형: DNS 캐시 포이즈닝 · DNS 스푸핑(Address Spoofing) · 존 전송(Zone Transfer) 정보 노출 · DNS 증폭 DDoS",
+   "취약 요인: 응답 인증 부재 · 재귀 질의 개방(Open Resolver) · BIND 코드 취약점",
+   "대응: DNSSEC · 재귀 질의 제한 · 존 전송 허용 호스트 제한 · 내·외부 DNS 분리 운영"
+  ],
+  "sections": [
+   {
+    "title": "보안 필요성",
+    "subsections": [
+     {
+      "title": "파밍 피해",
+      "items": [
+       "DNS 변조로 정상 주소 입력 시 가짜 금융 사이트 접속"
+      ]
+     },
+     {
+      "title": "파급력",
+      "items": [
+       "DNS 장애 시 해당 도메인의 모든 서비스 마비"
+      ]
+     },
+     {
+      "title": "추가 피해",
+      "items": [
+       "민감정보 유출, 기업 평판 하락"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 유형",
+    "subsections": [
+     {
+      "title": "캐시 포이즈닝",
+      "items": [
+       "재귀 서버에 위조 응답을 먼저 도달시켜 캐시 오염(카민스키 공격)"
+      ]
+     },
+     {
+      "title": "스푸핑",
+      "items": [
+       "같은 네트워크에서 질의를 가로채 위조 응답"
+      ]
+     },
+     {
+      "title": "존 전송 악용",
+      "items": [
+       "제한 없는 AXFR로 내부 호스트 목록 노출"
+      ]
+     },
+     {
+      "title": "DDoS",
+      "items": [
+       "공개 재귀 서버로 증폭 반사, 대량 무작위 서브도메인 질의"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "인증",
+      "items": [
+       "DNSSEC 전자서명으로 응답 출처·무결성 검증"
+      ]
+     },
+     {
+      "title": "설정",
+      "items": [
+       "재귀 질의를 내부 사용자로 제한, 존 전송 허용 보조 서버만 지정, 트랜잭션 ID·포트 무작위화"
+      ]
+     },
+     {
+      "title": "운영",
+      "items": [
+       "BIND 최신 패치, 내·외부 DNS 분리, 응답률 제한, DoH·DoT 암호화"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "보안 필요성",
+   "- 파밍 피해",
+   "- 파급력",
+   "- 추가 피해",
+   "공격 유형",
+   "- 캐시 포이즈닝",
+   "- 스푸핑",
+   "- 존 전송 악용",
+   "- DDoS",
+   "대응",
+   "- 인증",
+   "- 설정",
+   "- 운영"
+  ],
+  "name": "DNS 취약점 공격(DNS Vulnerability Attacks)",
+  "en": "Domain Name System Vulnerability Attacks",
+  "keywords_must": [
+   "DNS 캐시 포이즈닝",
+   "DNS 스푸핑(Address Spoofing)",
+   "존 전송(Zone Transfer) 정보 노출",
+   "DNS 증폭 DDoS",
+   "응답 인증 부재",
+   "재귀 질의 개방(Open Resolver)",
+   "BIND 코드 취약점",
+   "DNSSEC",
+   "재귀 질의 제한",
+   "존 전송 허용 호스트 제한",
+   "내·외부 DNS 분리 운영"
+  ],
+  "keywords_ref": [
+   "카민스키 공격(2008)",
+   "트랜잭션 ID·출발지 포트 무작위화",
+   "파밍",
+   "호스트 파일 변조",
+   "DoH·DoT",
+   "응답률 제한(RRL)",
+   "BIND 최신 업데이트"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "DNS 캐시 포이즈닝",
+   "DNS 스푸핑(Address Spoofing)",
+   "존 전송(Zone Transfer) 정보 노출",
+   "DNS 증폭 DDoS",
+   "응답 인증 부재",
+   "재귀 질의 개방(Open Resolver)",
+   "BIND 코드 취약점",
+   "DNSSEC",
+   "재귀 질의 제한",
+   "존 전송 허용 호스트 제한",
+   "내·외부 DNS 분리 운영"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "DNSSEC": "DNS Security Extensions",
+   "DoH": "DNS over HTTPS",
+   "DoT": "DNS over TLS",
+   "RRL": "Response Rate Limiting",
+   "BIND": "Berkeley Internet Name Domain"
+  }
+ },
+ {
+  "id": "SE_231",
+  "code": "SE_231",
+  "title": "딥러닝 적대적 공격(Adversarial Attack on Deep Learning)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 > 보안 취약점 및 대응 > 딥러닝취약점",
+  "definition": "사람 눈에는 구별되지 않는 미세한 노이즈를 입력에 더한 적대적 예제로 심층 신경망(DNN, Deep Neural Network)이 잘못 판단하게 만드는 공격으로, 악성코드 탐지·침입 탐지 등 보안용 AI도 우회할 수 있다",
+  "keywords": [
+   "공격 시점: 회피 공격(Evasion) · 오염 공격(Poisoning) · 모델 추출(Extraction) · 모델 전도(Inversion)",
+   "공격자 지식: 화이트박스 · 블랙박스(전이성)",
+   "생성 기법: FGSM · PGD · C&W",
+   "방어: 적대적 학습(Adversarial Training) · 입력 전처리·노이즈 제거 · 방어적 증류"
+  ],
+  "sections": [
+   {
+    "title": "원리",
+    "subsections": [
+     {
+      "title": "적대적 예제",
+      "items": [
+       "손실 함수 기울기 방향으로 작은 섭동을 더해 결정 경계를 넘김"
+      ]
+     },
+     {
+      "title": "사례",
+      "items": [
+       "57.7% 판다 이미지가 노이즈 후 99%대 긴팔원숭이로 분류",
+       "스티커 붙인 정지 표지판을 속도 제한으로 인식"
+      ]
+     },
+     {
+      "title": "보안 영향",
+      "items": [
+       "DNN 기반 악성코드·침입 탐지 시스템 우회"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 유형",
+    "subsections": [
+     {
+      "title": "회피",
+      "items": [
+       "추론 단계 입력 조작"
+      ]
+     },
+     {
+      "title": "오염",
+      "items": [
+       "학습 데이터에 악성 샘플 주입, 백도어 삽입"
+      ]
+     },
+     {
+      "title": "추출·전도",
+      "items": [
+       "질의 응답으로 모델 복제, 학습 데이터 복원"
+      ]
+     },
+     {
+      "title": "지식 수준",
+      "items": [
+       "화이트박스는 모델 기울기 이용",
+       "블랙박스는 대리 모델 예제 전이"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "방어",
+    "subsections": [
+     {
+      "title": "적대적 학습",
+      "items": [
+       "적대적 예제를 학습 데이터에 포함"
+      ]
+     },
+     {
+      "title": "입력 정제",
+      "items": [
+       "압축·노이즈 제거·특징 압착으로 섭동 제거"
+      ]
+     },
+     {
+      "title": "모델 강화",
+      "items": [
+       "방어적 증류, 앙상블, 인증된 강건성 기법",
+       "질의 수 제한으로 추출 방지"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "원리",
+   "- 적대적 예제",
+   "- 사례",
+   "- 보안 영향",
+   "공격 유형",
+   "- 회피",
+   "- 오염",
+   "- 추출·전도",
+   "- 지식 수준",
+   "방어",
+   "- 적대적 학습",
+   "- 입력 정제",
+   "- 모델 강화"
+  ],
+  "name": "딥러닝 적대적 공격(Adversarial Attack on Deep Learning)",
+  "en": "Adversarial Attack on Deep Learning",
+  "keywords_must": [
+   "회피 공격(Evasion)",
+   "오염 공격(Poisoning)",
+   "모델 추출(Extraction)",
+   "모델 전도(Inversion)",
+   "화이트박스",
+   "블랙박스(전이성)",
+   "FGSM",
+   "PGD",
+   "C&W",
+   "적대적 학습(Adversarial Training)",
+   "입력 전처리·노이즈 제거",
+   "방어적 증류"
+  ],
+  "keywords_ref": [
+   "판다→긴팔원숭이 오분류",
+   "정지 표지판 스티커",
+   "MDS·IDS 우회",
+   "인증된 강건성",
+   "앙상블 방어",
+   "그래디언트 마스킹 한계"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "회피 공격(Evasion)",
+   "오염 공격(Poisoning)",
+   "모델 추출(Extraction)",
+   "모델 전도(Inversion)",
+   "화이트박스",
+   "블랙박스(전이성)",
+   "FGSM",
+   "PGD",
+   "C&W",
+   "적대적 학습(Adversarial Training)",
+   "입력 전처리·노이즈 제거",
+   "방어적 증류"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "FGSM": "Fast Gradient Sign Method",
+   "PGD": "Projected Gradient Descent",
+   "C&W": "Carlini and Wagner",
+   "MDS": "Malware Detection System",
+   "IDS": "Intrusion Detection System"
+  }
+ },
+ {
+  "id": "SE_232_0",
+  "code": "SE_232_0",
+  "title": "실감 콘텐츠 보안(Immersive Content Security)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 취약점 및 대응 > 실감콘텐츠 보안",
+  "definition": "센서로 사용자 동작·음성·시선을 인식해 가상 객체를 실제처럼 조작하게 하는 VR·AR·MR 실감 콘텐츠 환경에서 생체·행동 데이터 유출, 기기 해킹, 콘텐츠 불법 복제 등을 막는 보안",
+  "keywords": [
+   "실감 기술: VR(Virtual Reality) · AR(Augmented Reality) · MR(Mixed Reality) · XR(eXtended Reality)",
+   "보안 위협: 생체·행동 데이터 유출 · 기기·플랫폼 해킹 · 콘텐츠 불법 복제 · 아바타 사칭·사이버 성범죄",
+   "대응: 데이터 최소 수집·암호화 · DRM·워터마킹 · 기기 인증·보안 업데이트"
+  ],
+  "sections": [
+   {
+    "title": "구현 기술 계층",
+    "subsections": [
+     {
+      "title": "콘텐츠",
+      "items": [
+       "VR은 현실 차단 몰입, AR은 현실 위 가상 투영, MR은 혼합(홀로렌즈)"
+      ]
+     },
+     {
+      "title": "플랫폼",
+      "items": [
+       "유니티·언리얼 엔진, 볼류메트릭 캡처"
+      ]
+     },
+     {
+      "title": "인프라",
+      "items": [
+       "5G 저지연 전송, 클라우드 렌더링"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 위협",
+    "subsections": [
+     {
+      "title": "프라이버시",
+      "items": [
+       "시선·동작·음성 등 고유 행동 데이터로 개인 재식별, 주변 공간 촬영 정보 노출"
+      ]
+     },
+     {
+      "title": "기기·플랫폼",
+      "items": [
+       "헤드셋 펌웨어 해킹, 가상 객체 조작으로 지각 교란"
+      ]
+     },
+     {
+      "title": "콘텐츠",
+      "items": [
+       "3D 자산 불법 복제·유포"
+      ]
+     },
+     {
+      "title": "사회적",
+      "items": [
+       "아바타 사칭, 가상 공간 괴롭힘"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "데이터",
+      "items": [
+       "최소 수집, 온디바이스 처리, 전송·저장 암호화"
+      ]
+     },
+     {
+      "title": "콘텐츠",
+      "items": [
+       "DRM·워터마킹으로 복제 방지·추적"
+      ]
+     },
+     {
+      "title": "플랫폼",
+      "items": [
+       "기기 인증, 안전한 업데이트, 이용자 신고·차단 기능"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "구현 기술 계층",
+   "- 콘텐츠",
+   "- 플랫폼",
+   "- 인프라",
+   "보안 위협",
+   "- 프라이버시",
+   "- 기기·플랫폼",
+   "- 콘텐츠",
+   "- 사회적",
+   "대응",
+   "- 데이터",
+   "- 콘텐츠",
+   "- 플랫폼"
+  ],
+  "name": "실감 콘텐츠 보안(Immersive Content Security)",
+  "en": "Immersive Content Security",
+  "keywords_must": [
+   "VR(Virtual Reality)",
+   "AR(Augmented Reality)",
+   "MR(Mixed Reality)",
+   "XR(eXtended Reality)",
+   "생체·행동 데이터 유출",
+   "기기·플랫폼 해킹",
+   "콘텐츠 불법 복제",
+   "아바타 사칭·사이버 성범죄",
+   "데이터 최소 수집·암호화",
+   "DRM·워터마킹",
+   "기기 인증·보안 업데이트"
+  ],
+  "keywords_ref": [
+   "3I 특징(몰입감·상호작용·지능화)",
+   "시선 추적·동작 데이터 재식별",
+   "몰입 상태 악용(지각 조작)",
+   "메타버스",
+   "5G 저지연",
+   "볼류메트릭 비디오",
+   "연령 확인"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "VR(Virtual Reality)",
+   "AR(Augmented Reality)",
+   "MR(Mixed Reality)",
+   "XR(eXtended Reality)",
+   "생체·행동 데이터 유출",
+   "기기·플랫폼 해킹",
+   "콘텐츠 불법 복제",
+   "아바타 사칭·사이버 성범죄",
+   "데이터 최소 수집·암호화",
+   "DRM·워터마킹",
+   "기기 인증·보안 업데이트"
+  ],
+  "quiz_groups": [
+   "se"
+  ]
+ },
+ {
+  "id": "SE_232_2",
+  "code": "SE_232_2",
+  "title": "노코드·로우코드 보안(No-code and Low-code Security)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안",
+  "definition": "드래그 앤 드롭 UI로 코드 없이(노코드) 또는 최소 코드로(로우코드) 앱을 만드는 SaaS형 개발 환경이 시민 개발자에게 확산되며 생기는 블랙박스 코드, 권한·데이터 노출, 섀도 IT 등의 보안 취약점과 대응",
+  "keywords": [
+   "개발 방식: 노코드(No-code) · 로우코드(Low-code) · 시민 개발자(Citizen Developer)",
+   "보안 위협: 블랙박스 생성 코드 · 과도한 권한·계정 공유 · 데이터 유출·잘못된 구성 · 섀도 IT · 서드파티 커넥터",
+   "대응: 거버넌스·앱 등록 관리 · 최소 권한·DLP 정책 · 샌드박스 환경 분리"
+  ],
+  "sections": [
+   {
+    "title": "개념과 차이",
+    "subsections": [
+     {
+      "title": "노코드",
+      "items": [
+       "프로그래밍 없이 화면·기능 선택으로 앱 제작",
+       "단순 내부 업무 자동화, 비개발자 대상"
+      ]
+     },
+     {
+      "title": "로우코드",
+      "items": [
+       "GUI와 최소 코드로 신속 개발",
+       "외부 시스템 연계·복잡 업무 확장, 시민 개발자·개발자 대상"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 위협",
+    "subsections": [
+     {
+      "title": "블랙박스",
+      "items": [
+       "생성 코드를 검토하기 어려워 취약점 파악 곤란"
+      ]
+     },
+     {
+      "title": "권한",
+      "items": [
+       "개발자 계정 권한이 앱에 그대로 위임, 계정 공유"
+      ]
+     },
+     {
+      "title": "데이터",
+      "items": [
+       "잘못된 공개 설정, 커넥터로 민감정보 외부 전송"
+      ]
+     },
+     {
+      "title": "관리",
+      "items": [
+       "IT 부서 모르게 앱 확산(섀도 IT), 플랫폼 공급자 취약점 의존"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "거버넌스",
+      "items": [
+       "앱 목록·소유자 등록, CoE 중심 정책"
+      ]
+     },
+     {
+      "title": "기술",
+      "items": [
+       "최소 권한, DLP 정책, 샌드박스·운영 환경 분리, 자동 보안 점검"
+      ]
+     },
+     {
+      "title": "교육",
+      "items": [
+       "시민 개발자 보안 교육, 감사 로그 모니터링"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "개념과 차이",
+   "- 노코드",
+   "- 로우코드",
+   "보안 위협",
+   "- 블랙박스",
+   "- 권한",
+   "- 데이터",
+   "- 관리",
+   "대응",
+   "- 거버넌스",
+   "- 기술",
+   "- 교육"
+  ],
+  "name": "노코드·로우코드 보안(No-code and Low-code Security)",
+  "en": "No-code and Low-code Security",
+  "keywords_must": [
+   "노코드(No-code)",
+   "로우코드(Low-code)",
+   "시민 개발자(Citizen Developer)",
+   "블랙박스 생성 코드",
+   "과도한 권한·계정 공유",
+   "데이터 유출·잘못된 구성",
+   "섀도 IT",
+   "서드파티 커넥터",
+   "거버넌스·앱 등록 관리",
+   "최소 권한·DLP 정책",
+   "샌드박스 환경 분리"
+  ],
+  "keywords_ref": [
+   "OWASP Low-Code/No-Code Top 10",
+   "플랫폼 공급망 의존",
+   "자동 보안 점검",
+   "감사 로그",
+   "CoE(Center of Excellence) 운영"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "노코드(No-code)",
+   "로우코드(Low-code)",
+   "시민 개발자(Citizen Developer)",
+   "블랙박스 생성 코드",
+   "과도한 권한·계정 공유",
+   "데이터 유출·잘못된 구성",
+   "섀도 IT",
+   "서드파티 커넥터",
+   "거버넌스·앱 등록 관리",
+   "최소 권한·DLP 정책",
+   "샌드박스 환경 분리"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "CoE": "Center of Excellence"
+  }
+ },
+ {
+  "id": "SE_232_3",
+  "code": "SE_232_3",
+  "title": "제로데이 취약점(Zero-day Vulnerability)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 키워드(암기)",
+  "definition": "제조사가 아직 인지하지 못했거나 공개되었더라도 패치가 나오지 않은 소프트웨어 취약점으로, 이를 악용한 제로데이 공격은 방어 수단이 없는 시점에 스피어피싱 등으로 이뤄진다",
+  "keywords": [
+   "특징: 미공개·미패치 · 시그니처 탐지 불가 · 고가 거래(익스플로잇 시장)",
+   "대응 프로세스: 취약점 발견 · 보고·분석 · 보안 솔루션 개발 · 패치 배포 · 사용자 시스템 업데이트",
+   "예방: 최신성 유지 · 필수 앱만 사용 · 방화벽 설정 · 보안 교육"
+  ],
+  "sections": [
+   {
+    "title": "노출 시점",
+    "subsections": [
+     {
+      "title": "시점",
+      "items": [
+       "취약점 발견~패치 적용 사이의 무방비 기간 공격"
+      ]
+     },
+     {
+      "title": "비교",
+      "items": [
+       "n-day는 패치가 나왔지만 미적용 시스템을 노림"
+      ]
+     },
+     {
+      "title": "주 경로",
+      "items": [
+       "스피어피싱, 워터링 홀"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응 프로세스",
+    "subsections": [
+     {
+      "title": "1 발견",
+      "items": [
+       "위협 인텔리전스·버그 바운티로 식별"
+      ]
+     },
+     {
+      "title": "2 보고·분석",
+      "items": [
+       "정적·동적 분석, 퍼징, 침투 테스트"
+      ]
+     },
+     {
+      "title": "3 솔루션 개발",
+      "items": [
+       "탐지 규칙·가상 패치 마련"
+      ]
+     },
+     {
+      "title": "4 패치 배포",
+      "items": [
+       "자동화 도구·수동 적용"
+      ]
+     },
+     {
+      "title": "5 업데이트",
+      "items": [
+       "OS·브라우저·앱 갱신"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "예방",
+    "subsections": [
+     {
+      "title": "최신성",
+      "items": [
+       "모든 SW·OS 최신 유지, 백신 설치"
+      ]
+     },
+     {
+      "title": "공격면 축소",
+      "items": [
+       "필수 애플리케이션만 사용, 방화벽으로 필요한 포트만 허용"
+      ]
+     },
+     {
+      "title": "탐지",
+      "items": [
+       "샌드박스·EDR 행위 탐지, 가상 패치"
+      ]
+     },
+     {
+      "title": "사람",
+      "items": [
+       "보안 교육으로 스피어피싱 대응"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "노출 시점",
+   "- 시점",
+   "- 비교",
+   "- 주 경로",
+   "대응 프로세스",
+   "- 1 발견",
+   "- 2 보고·분석",
+   "- 3 솔루션 개발",
+   "- 4 패치 배포",
+   "- 5 업데이트",
+   "예방",
+   "- 최신성",
+   "- 공격면 축소",
+   "- 탐지",
+   "- 사람"
+  ],
+  "name": "제로데이 취약점(Zero-day Vulnerability)",
+  "en": "Zero-day Vulnerability",
+  "keywords_must": [
+   "미공개·미패치",
+   "시그니처 탐지 불가",
+   "고가 거래(익스플로잇 시장)",
+   "취약점 발견",
+   "보고·분석",
+   "보안 솔루션 개발",
+   "패치 배포",
+   "사용자 시스템 업데이트",
+   "최신성 유지",
+   "필수 앱만 사용",
+   "방화벽 설정",
+   "보안 교육"
+  ],
+  "keywords_ref": [
+   "n-day 취약점 비교",
+   "퍼징(Fuzzing)",
+   "행위 기반 탐지·샌드박스",
+   "가상 패치(WAF·IPS)",
+   "버그 바운티",
+   "책임 있는 공개(CVD)",
+   "로그4셸(Log4Shell)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "미공개·미패치",
+   "시그니처 탐지 불가",
+   "고가 거래(익스플로잇 시장)",
+   "취약점 발견",
+   "보고·분석",
+   "보안 솔루션 개발",
+   "패치 배포",
+   "사용자 시스템 업데이트",
+   "최신성 유지",
+   "필수 앱만 사용",
+   "방화벽 설정",
+   "보안 교육"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "CVD": "Coordinated Vulnerability Disclosure",
+   "WAF": "Web Application Firewall",
+   "IPS": "Intrusion Prevention System"
+  }
  }
 ]
