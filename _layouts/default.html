@@ -14,7 +14,7 @@
   <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
   <link rel="icon" href="{{ '/assets/icons/icon-192.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/icons/apple-touch-icon.png' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   <script>
     window.PE = { domainsMeta: {{ site.domains | jsonify }}, base: "{{ site.baseurl }}", data: "{{ '/data.json' | relative_url }}", sw: "{{ '/sw.js' | relative_url }}" };
     (function(){ var t = localStorage.getItem('pe-theme'); if (t) document.documentElement.setAttribute('data-theme', t); })();
@@ -41,7 +41,7 @@
   <main class="wrap">
     {{ content }}
   </main>
-  <script src="{{ '/assets/js/app.js' | relative_url }}"></script>
-  {% if page.script %}<script src="{{ page.script | relative_url }}"></script>{% endif %}
+  <script src="{{ '/assets/js/app.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+  {% if page.script %}<script src="{{ page.script | relative_url }}?v={{ site.time | date: '%s' }}"></script>{% endif %}
 </body>
 </html>
