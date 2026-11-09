@@ -32261,74 +32261,106 @@
   ],
   "en": "JavaScript and Frameworks",
   "dueum": null,
-  "name": "자바스크립트와 프레임워크(JavaScript Frameworks)",
-  "title": "자바스크립트와 프레임워크(JavaScript Frameworks)",
-  "definition": "이벤트 핸들러, XML,HTTP, DOM 등의 기술요소를 통해,html (Hyper text markup language) 문서에서동적인 기능을 구현할 수 있는 스크립트 언어",
+  "name": "자바스크립트와 프레임워크(JavaScript and Frameworks)",
+  "title": "자바스크립트와 프레임워크(JavaScript and Frameworks)",
+  "definition": "자바스크립트는 ECMAScript 표준을 따르며 브라우저와 서버에서 이벤트 기반 비동기로 동작하는 동적 스크립트 언어이고, 프레임워크는 컴포넌트·상태 관리·라우팅을 표준화해 대규모 웹 화면 개발을 돕는 React·Angular·Vue 등의 개발 기반임",
   "keywords_must": [
-   "Interactive",
-   "IoT 시대의 자바 스크립트",
-   "웹문서의 구성도",
-   "자바스크립트 기술요소",
-   "자바 스크립트 활용 시 고려사항",
-   "XPATH",
-   "HTML5",
-   "HTTP",
-   "REST",
-   "인증"
+   "ECMAScript(ES2015+)",
+   "자바스크립트 엔진(V8)",
+   "문서 객체 모델(DOM)·브라우저 객체 모델(BOM)",
+   "이벤트 루프",
+   "비동기(Promise·async/await)",
+   "Ajax(XMLHttpRequest·fetch)",
+   "웹 스토리지",
+   "컴포넌트 기반 UI",
+   "가상 DOM",
+   "타입스크립트(TypeScript)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "Node.js",
+   "Next.js·Nuxt",
+   "Svelte",
+   "웹어셈블리(Wasm)",
+   "번들러(Vite·webpack)"
+  ],
   "keywords": [
-   "핵심: Interactive · IoT 시대의 자바 스크립트 · 웹문서의 구성도",
-   "기술: 자바스크립트 기술요소 · 자바 스크립트 활용 시 고려사항 · XPATH",
-   "운영: HTML5 · HTTP · REST"
+   "언어 특성: 동적 타입 · 일급 함수·클로저 · 프로토타입 상속 · 단일 스레드 + 이벤트 루프 · 모듈(ESM)",
+   "브라우저 API: DOM 조작 · 이벤트 핸들러 · Ajax(fetch) · 쿠키·로컬 스토리지 · 웹 소켓",
+   "프레임워크: React(UI 라이브러리·JSX·가상 DOM) · Angular(TypeScript 풀 프레임워크·DI) · Vue(점진적 도입·반응형 바인딩) · Svelte(컴파일 방식)"
   ],
   "outline": [
-   "웹문서의 구성도 및 자바스크립트 기술요소",
-   "- 웹문서의 구성도",
-   "- 자바스크립트 기술요소",
-   "IoT 시대의 가볍고 빠른 플랫폼 핸들러, 자바 스크립트",
-   "- 자바 스크립트의 정의",
-   "- IoT 시대의 자바 스크립트",
-   "자바 스크립트 활용 시 장점 및 고려사항",
-   "- 자바 스크립트 활용 시 고려사항"
+   "언어 특징",
+   "- 표준: ECMAScript",
+   "- 실행: 이벤트 루프",
+   "웹 기술 요소",
+   "- 문서: DOM·BOM",
+   "- 통신: Ajax",
+   "- 저장: 클라이언트",
+   "프레임워크 비교",
+   "- 방식: 컴포넌트",
+   "- 선택: 규모별",
+   "- 동향: 타입·메타"
   ],
   "sections": [
    {
-    "title": "자바스크립트와 프레임워크 핵심",
+    "title": "언어 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "표준: ECMAScript",
       "items": [
-       "Interactive: Interactive를 자바스크립트와 프레임워크 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "IoT 시대의 자바 스크립트: 자바스크립트와 프레임워크에서 IoT 시대의 자바 스크립트를 다루는 핵심 암기 포인트",
-       "웹문서의 구성도: 자바스크립트와 프레임워크의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "자바스크립트 기술요소: 자바스크립트와 프레임워크에서 자바스크립트 기술요소를 다루는 핵심 암기 포인트"
+       "ECMAScript(ES2015+): 2015년 클래스·모듈·화살표 함수 도입 후 매년 개정, 브라우저 엔진별 지원 범위 차이"
+      ]
+     },
+     {
+      "title": "실행: 이벤트 루프",
+      "items": [
+       "단일 스레드에서 이벤트 루프가 콜백 큐를 처리, 비동기(Promise·async/await)로 네트워크 대기 중에도 화면 반응 유지"
       ]
      }
     ]
    },
    {
-    "title": "자바스크립트와 프레임워크 구성·기술",
+    "title": "웹 기술 요소",
     "subsections": [
      {
-      "title": null,
+      "title": "문서: DOM·BOM",
       "items": [
-       "자바 스크립트 활용 시 고려사항: 자바스크립트와 프레임워크에서 자바 스크립트 활용 시 고려사항을 다루는 핵심 암기 포인트",
-       "XPATH: XPATH를 자바스크립트와 프레임워크 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HTML5: HTML5를 자바스크립트와 프레임워크 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HTTP: 요청/응답 기반의 웹 응용 계층 프로토콜 (자바스크립트와 프레임워크/132a)"
+       "문서 객체 모델(DOM)로 HTML 요소를 탐색·수정하고 브라우저 객체 모델(BOM)로 창·주소·기록 제어"
+      ]
+     },
+     {
+      "title": "통신: Ajax",
+      "items": [
+       "Ajax(XMLHttpRequest·fetch): 페이지 새로 고침 없이 JSON 데이터를 받아 화면 일부만 갱신"
+      ]
+     },
+     {
+      "title": "저장: 클라이언트",
+      "items": [
+       "쿠키는 서버 전송용 소용량, 웹 스토리지(로컬·세션)는 키-값으로 브라우저에 데이터 보관"
       ]
      }
     ]
    },
    {
-    "title": "자바스크립트와 프레임워크 운영",
+    "title": "프레임워크 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "방식: 컴포넌트",
       "items": [
-       "REST: 자원·동사·무상태로 웹 API를 설계하는 아키텍처 스타일 (자바스크립트와 프레임워크/474c)",
-       "인증: 자바스크립트와 프레임워크에서 인증을 다루는 핵심 암기 포인트"
+       "컴포넌트 기반 UI: 화면을 재사용 가능한 조각으로 나누고 상태 변화 시 가상 DOM 비교로 필요한 부분만 갱신"
+      ]
+     },
+     {
+      "title": "선택: 규모별",
+      "items": [
+       "React는 생태계가 가장 크고, Angular는 대규모 기업용 일관 구조, Vue는 학습 곡선이 낮아 점진 도입에 유리"
+      ]
+     },
+     {
+      "title": "동향: 타입·메타",
+      "items": [
+       "타입스크립트(TypeScript) 표준화, 서버 렌더링을 결합한 Next.js·Nuxt 메타 프레임워크 확산"
       ]
      }
     ]
@@ -32337,23 +32369,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Interactive",
-   "IoT 시대의 자바 스크립트",
-   "웹문서의 구성도",
-   "자바스크립트 기술요소",
-   "자바 스크립트 활용 시 고려사항",
-   "XPATH",
-   "HTML5",
-   "HTTP",
-   "REST",
-   "인증"
+   "ECMAScript(ES2015+)",
+   "자바스크립트 엔진(V8)",
+   "문서 객체 모델(DOM)·브라우저 객체 모델(BOM)",
+   "이벤트 루프",
+   "비동기(Promise·async/await)",
+   "Ajax(XMLHttpRequest·fetch)",
+   "웹 스토리지",
+   "컴포넌트 기반 UI",
+   "가상 DOM",
+   "타입스크립트(TypeScript)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_384",
@@ -32364,80 +32397,101 @@
    361,
    362
   ],
-  "en": "JSON",
+  "en": "JavaScript Object Notation",
   "dueum": null,
-  "name": "제이슨(JSON)",
-  "title": "제이슨(JSON)",
-  "definition": "JavaScript 객체 표기법에 기반한 경량 데이터 교환 형식으로, 이름/값 쌍과 배열로 구성되며 REST API에서 널리 쓰인다(RFC 8259).",
+  "name": "제이슨(JSON, JavaScript Object Notation)",
+  "title": "제이슨(JSON, JavaScript Object Notation)",
+  "definition": "자바스크립트 객체 표기법에서 유래했으나 언어 독립적인 텍스트 기반 경량 데이터 교환 형식으로, 이름·값 쌍의 객체와 순서 있는 배열을 조합해 구조화된 데이터를 사람이 읽기 쉽고 기계가 파싱하기 쉽게 표현함",
   "keywords_must": [
-   "Javascript",
-   "XML",
-   "경량",
-   "자료형",
-   "name",
-   "value",
-   "구조화",
-   "도구",
-   "eval()",
-   "name/value 쌍"
+   "이름·값 쌍(Name/Value)",
+   "객체({ })",
+   "배열([ ])",
+   "6가지 자료형",
+   "RFC 8259·ECMA-404",
+   "UTF-8 인코딩",
+   "JSON.parse()",
+   "eval() 보안 위험",
+   "JSON 스키마(JSON Schema)",
+   "XML 대비 경량"
   ],
   "keywords_ref": [
-   "name/value",
-   "REST"
+   "JSONP",
+   "JSON-LD",
+   "NDJSON",
+   "BSON·CBOR",
+   "REST API"
   ],
   "keywords": [
-   "핵심: Javascript · XML · 경량",
-   "기술: 자료형 · name · value",
-   "운영: 구조화 · 도구 · eval()",
-   "참고: name/value · REST"
+   "자료형: 문자열 · 숫자 · 불리언(true/false) · null · 객체 · 배열 (날짜·주석 미지원)",
+   "XML 비교: JSON(간결·파싱 빠름·배열 지원·스키마 선택) ↔ XML(태그 중복·네임스페이스·XSD·XSLT·문서 표현 강함)",
+   "파생: JSON 스키마(검증) · JSON-LD(링크드 데이터) · NDJSON(스트리밍 줄 단위) · BSON·CBOR(이진 직렬화)"
   ],
   "outline": [
-   "JSON 의 개요",
-   "- JSON 의 정의",
-   "- 등장 배경",
-   "JSON 문법과 자료형",
-   "- 객체·배열",
-   "- 자료형",
-   "JSON 활용과 XML 비교",
-   "- 제이슨 요점"
+   "개념과 특징",
+   "- 개념: 경량 교환 형식",
+   "- 특징: 가독성·간결성",
+   "문법 구조",
+   "- 구조: 객체·배열",
+   "- 자료형: 6종",
+   "- 인코딩: UTF-8",
+   "XML 비교와 보안",
+   "- 비교: 경량성",
+   "- 보안: 안전한 파싱"
   ],
   "sections": [
    {
-    "title": "제이슨 핵심",
+    "title": "개념과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 경량 교환 형식",
       "items": [
-       "Javascript: Javascript를 제이슨 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "XML: XML를 제이슨 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "경량: 제이슨에서 경량을 다루는 핵심 암기 포인트",
-       "자료형: 제이슨에서 자료형을 다루는 핵심 암기 포인트"
+       "RFC 8259·ECMA-404로 표준화된 언어 독립 텍스트 형식, 확장자 .json·MIME 형식 application/json"
+      ]
+     },
+     {
+      "title": "특징: 가독성·간결성",
+      "items": [
+       "태그 없이 중괄호·대괄호로 구조 표현, REST API와 설정 파일의 사실상 표준 형식"
       ]
      }
     ]
    },
    {
-    "title": "제이슨 구성·기술",
+    "title": "문법 구조",
     "subsections": [
      {
-      "title": null,
+      "title": "구조: 객체·배열",
       "items": [
-       "name: name를 제이슨 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "value: value를 제이슨 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "구조화: 제이슨에서 구조화를 다루는 핵심 암기 포인트",
-       "도구: 제이슨에서 도구를 다루는 핵심 암기 포인트"
+       "객체({ })는 이름·값 쌍(Name/Value)의 집합, 배열([ ])은 순서 있는 값 목록으로 서로 중첩 가능"
+      ]
+     },
+     {
+      "title": "자료형: 6종",
+      "items": [
+       "6가지 자료형: 문자열·숫자·불리언·null·객체·배열, 날짜는 ISO 8601 문자열로 표현하고 주석은 불허"
+      ]
+     },
+     {
+      "title": "인코딩: UTF-8",
+      "items": [
+       "UTF-8 인코딩 필수, 문자열은 큰따옴표만 허용하고 특수 문자는 역슬래시로 이스케이프"
       ]
      }
     ]
    },
    {
-    "title": "제이슨 운영",
+    "title": "XML 비교와 보안",
     "subsections": [
      {
-      "title": null,
+      "title": "비교: 경량성",
       "items": [
-       "eval(): eval를 제이슨 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "name/value 쌍: 제이슨에서 name/value 쌍을 다루는 핵심 암기 포인트"
+       "XML 대비 경량: 종료 태그가 없어 크기가 작고 파싱이 빠르지만 네임스페이스·문서 혼합 콘텐츠 표현은 약함"
+      ]
+     },
+     {
+      "title": "보안: 안전한 파싱",
+      "items": [
+       "eval() 보안 위험: 문자열을 코드로 실행해 스크립트 주입 가능, JSON.parse()와 JSON 스키마(JSON Schema) 검증 사용"
       ]
      }
     ]
@@ -32446,23 +32500,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Javascript",
-   "XML",
-   "경량",
-   "자료형",
-   "name",
-   "value",
-   "구조화",
-   "도구",
-   "eval()",
-   "name/value 쌍"
+   "이름·값 쌍(Name/Value)",
+   "객체({ })",
+   "배열([ ])",
+   "6가지 자료형",
+   "RFC 8259·ECMA-404",
+   "UTF-8 인코딩",
+   "JSON.parse()",
+   "eval() 보안 위험",
+   "JSON 스키마(JSON Schema)",
+   "XML 대비 경량"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_386",
@@ -32477,74 +32532,97 @@
   "dueum": null,
   "name": "제이쿼리(jQuery)",
   "title": "제이쿼리(jQuery)",
-  "definition": "HTML 속 클라이언트 사이드 스크립트 언어를 단순화하도록 설계된 브라우저 호환성이 있는 JavaScript 라이브러리(MIT 허가서와 GPL v2의 듀얼 라이선스를 가진 자유 소프트웨어)",
+  "definition": "CSS 선택자 기반의 간결한 문법과 메서드 체이닝으로 DOM 탐색·조작, 이벤트 처리, 애니메이션, Ajax를 브라우저 차이 없이 쉽게 구현하도록 만든 MIT 라이선스 자바스크립트 라이브러리",
   "keywords_must": [
-   "DOM",
-   "애니메이션",
-   "이벤트 제어",
-   "JQuery 의 개념",
-   "JQuery의 장점",
-   "제이쿼리 아키텍처",
-   "CSS",
-   "IE8",
-   "AJAX"
+   "$() 선택자 함수",
+   "CSS 선택자(Sizzle 엔진)",
+   "메서드 체이닝",
+   "플루언트 인터페이스",
+   "DOM 탐색·조작",
+   "이벤트 위임(.on)",
+   "$.ajax()",
+   "시각 효과(fade·slide·animate)",
+   "플러그인 확장",
+   "브라우저 호환성"
   ],
   "keywords_ref": [
-   "XML",
+   "jQuery UI",
    "jQuery Migrate",
-   "each 함수"
+   "querySelectorAll",
+   "fetch API",
+   "존 레식(2006)"
   ],
   "keywords": [
-   "핵심: DOM · 애니메이션 · 이벤트 제어",
-   "기술: JQuery 의 개념 · JQuery의 장점 · 제이쿼리 아키텍처",
-   "운영: CSS · IE8 · AJAX",
-   "참고: XML · jQuery Migrate · each 함수"
+   "기능: 선택(CSS 선택자) · 탐색·수정(DOM) · 스타일(CSS 조작) · 이벤트 · 효과(fade·slide·animate) · Ajax · 유틸리티",
+   "확장: jQuery UI(위젯·복잡한 애니메이션) · jQuery Migrate(버전 호환) · 플러그인 생태계",
+   "위상 변화: IE 호환 시대 필수 → 표준 API(querySelectorAll·fetch·classList) 보급과 컴포넌트 프레임워크로 신규 사용 감소"
   ],
   "outline": [
-   "브라우저 호환성이 있는 JavaScript 라이브러리, JQuery 의 개요",
-   "- JQuery 의 개념",
-   "- JQuery 의 장점",
-   "JQuery 의 주요기능",
-   "- 제이쿼리 요점",
-   "JQuery , React, AngularJS 등을 활용한 웹 개발 트렌드",
-   "- 제이쿼리 요점"
+   "개념과 장점",
+   "- 개념: DOM 단순화",
+   "- 장점: 쉬운 학습",
+   "선택·조작·통신 기능",
+   "- 선택: $() 함수",
+   "- 조작: 체이닝",
+   "- 통신: Ajax·애니메이션",
+   "확장성과 현재 위상",
+   "- 확장: 플러그인",
+   "- 위상: 레거시 유지"
   ],
   "sections": [
    {
-    "title": "제이쿼리 핵심",
+    "title": "개념과 장점",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: DOM 단순화",
       "items": [
-       "DOM: DOM를 제이쿼리 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "애니메이션: 제이쿼리에서 애니메이션을 다루는 핵심 암기 포인트",
-       "이벤트 제어: 제이쿼리에서 이벤트 제어를 다루는 핵심 암기 포인트",
-       "JQuery 의 개념: 제이쿼리에서 JQuery 의 개념을 다루는 핵심 암기 포인트"
+       "2006년 존 레식이 발표, \"적게 쓰고 많이 하라\"는 목표로 클라이언트 스크립트를 단순화한 라이브러리"
+      ]
+     },
+     {
+      "title": "장점: 쉬운 학습",
+      "items": [
+       "CSS와 DOM 구조만 알면 사용 가능해 웹 디자이너도 활용, 브라우저 호환성 문제를 라이브러리가 흡수"
       ]
      }
     ]
    },
    {
-    "title": "제이쿼리 구성·기술",
+    "title": "선택·조작·통신 기능",
     "subsections": [
      {
-      "title": null,
+      "title": "선택: $() 함수",
       "items": [
-       "JQuery의 장점: 제이쿼리에서 JQuery의 장점을 다루는 핵심 암기 포인트",
-       "제이쿼리 아키텍처: 제이쿼리의 계층·모듈 배치와 상호작용 구조",
-       "CSS: CSS를 제이쿼리 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "IE8: IE8를 제이쿼리 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "$() 선택자 함수: CSS 선택자(Sizzle 엔진)로 요소 집합을 찾고 감싼 jQuery 객체 반환"
+      ]
+     },
+     {
+      "title": "조작: 체이닝",
+      "items": [
+       "메서드 체이닝: 메서드가 자기 자신을 반환하는 플루언트 인터페이스로 탐색·수정·스타일을 한 줄로 연결"
+      ]
+     },
+     {
+      "title": "통신: Ajax·애니메이션",
+      "items": [
+       "$.ajax()로 JSON·XML 비동기 통신, fade·slide 효과와 animate로 간단한 애니메이션 구현"
       ]
      }
     ]
    },
    {
-    "title": "제이쿼리 운영",
+    "title": "확장성과 현재 위상",
     "subsections": [
      {
-      "title": null,
+      "title": "확장: 플러그인",
       "items": [
-       "AJAX: AJAX를 제이쿼리 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "플러그인 확장으로 슬라이더·검증 기능 추가, 이벤트 위임(.on)으로 동적 요소 이벤트 처리"
+      ]
+     },
+     {
+      "title": "위상: 레거시 유지",
+      "items": [
+       "표준 DOM API와 React·Vue 등 컴포넌트 방식이 대체해 신규 채택은 줄었으나 기존 웹사이트에 널리 남아 유지보수 대상"
       ]
      }
     ]
@@ -32553,15 +32631,16 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "DOM",
-   "애니메이션",
-   "이벤트 제어",
-   "JQuery 의 개념",
-   "JQuery의 장점",
-   "제이쿼리 아키텍처",
-   "CSS",
-   "IE8",
-   "AJAX"
+   "$() 선택자 함수",
+   "CSS 선택자(Sizzle 엔진)",
+   "메서드 체이닝",
+   "플루언트 인터페이스",
+   "DOM 탐색·조작",
+   "이벤트 위임(.on)",
+   "$.ajax()",
+   "시각 효과(fade·slide·animate)",
+   "플러그인 확장",
+   "브라우저 호환성"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -32571,7 +32650,8 @@
   "warnings": [],
   "gloss": {
    "CSS": "Cascading Style Sheets"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_387",
@@ -32586,55 +32666,97 @@
   "dueum": null,
   "name": "노드제이에스(Node.js)",
   "title": "노드제이에스(Node.js)",
-  "definition": "Event 기반의 비동기 I/O Framework 로 확장성 있는 네트워크 애플리케이션(Server-Side) 개발에 사용되는소프트웨어 플랫폼",
+  "definition": "크롬 V8 자바스크립트 엔진과 libuv 비동기 I/O 라이브러리 위에서 단일 스레드 이벤트 루프와 논블로킹 I/O로 동작해 동시 접속이 많은 네트워크 서버를 자바스크립트로 개발하게 하는 서버 측 런타임",
   "keywords_must": [
-   "싱글쓰레드",
-   "비동기처리",
-   "이벤트루프",
-   "V8크롬 자바스크립트 엔진",
-   "Non-Blocking I",
-   "Non-Blocking I/O",
-   "V8"
+   "V8 엔진",
+   "libuv",
+   "단일 스레드 이벤트 루프",
+   "논블로킹 I/O",
+   "콜백·Promise",
+   "스레드 풀",
+   "내장 HTTP 모듈",
+   "npm 패키지 관리자",
+   "워커 스레드(worker_threads)",
+   "CPU 집약 작업 약점"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "Express",
+   "CommonJS·ES 모듈",
+   "Deno·Bun",
+   "장기 지원(LTS) 버전",
+   "서버 측 렌더링(SSR)"
+  ],
   "keywords": [
-   "핵심: 싱글쓰레드 · 비동기처리 · 이벤트루프",
-   "기술: V8크롬 자바스크립트 엔진 · Non-Blocking I · Non-Blocking I/O",
-   "운영: V8"
+   "구조: 자바스크립트 애플리케이션 → Node.js API(http·fs·net) → 바인딩 → V8(실행) + libuv(이벤트 루프·스레드 풀)",
+   "이벤트 루프 단계: 타이머 → 대기 콜백 → 폴(I/O) → 체크(setImmediate) → 종료 콜백",
+   "적합: 실시간 채팅·API 게이트웨이·스트리밍 / 부적합: 대규모 연산(워커 스레드·별도 서비스로 분리)"
   ],
   "outline": [
-   "노드제이에스의 개요",
-   "- 노드제이에스의 정의",
-   "- 노드제이에스의 특징",
-   "노드제이에스의 구성과 기술",
-   "- 노드제이에스의 핵심 요소",
-   "노드제이에스의 적용",
-   "- 노드제이에스 요점"
+   "개념과 특징",
+   "- 개념: 서버 측 JS",
+   "- 특징: 경량 서버",
+   "동작 모델",
+   "- 구조: V8·libuv",
+   "- 처리: 논블로킹",
+   "- 보조: 스레드 풀",
+   "장단점과 보완",
+   "- 장점: 동시성",
+   "- 단점: CPU 작업"
   ],
   "sections": [
    {
-    "title": "노드제이에스 핵심",
+    "title": "개념과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 서버 측 JS",
       "items": [
-       "싱글쓰레드: 노드제이에스에서 싱글쓰레드를 다루는 핵심 암기 포인트",
-       "비동기처리: 노드제이에스에서 비동기처리를 다루는 핵심 암기 포인트",
-       "이벤트루프: 노드제이에스에서 이벤트루프를 다루는 핵심 암기 포인트",
-       "V8크롬 자바스크립트 엔진: 노드제이에스에서 V8크롬 자바스크립트 엔진을 다루는 핵심 암기 포인트"
+       "2009년 라이언 달이 발표, 브라우저 밖에서 자바스크립트를 실행해 프런트엔드·백엔드 언어 통일"
+      ]
+     },
+     {
+      "title": "특징: 경량 서버",
+      "items": [
+       "내장 HTTP 모듈로 별도 웹 서버 없이 서버 구동, npm 패키지 관리자로 세계 최대 오픈소스 패키지 생태계 이용"
       ]
      }
     ]
    },
    {
-    "title": "노드제이에스 구성·기술",
+    "title": "동작 모델",
     "subsections": [
      {
-      "title": null,
+      "title": "구조: V8·libuv",
       "items": [
-       "Non-Blocking I: 노드제이에스에서 Non-Blocking I를 다루는 핵심 암기 포인트",
-       "Non-Blocking I/O: 노드제이에스에서 Non-Blocking I/O를 다루는 핵심 암기 포인트",
-       "V8: V8를 노드제이에스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "V8 엔진이 JS를 기계어로 JIT 컴파일하고 libuv가 OS별 비동기 I/O와 이벤트 루프를 제공"
+      ]
+     },
+     {
+      "title": "처리: 논블로킹",
+      "items": [
+       "단일 스레드 이벤트 루프가 I/O 요청을 넘기고 즉시 다음 요청을 처리, 완료되면 콜백·Promise로 결과 수신"
+      ]
+     },
+     {
+      "title": "보조: 스레드 풀",
+      "items": [
+       "파일·DNS·암호화처럼 OS 비동기가 없는 작업은 libuv 스레드 풀(기본 4개)에서 실행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "장단점과 보완",
+    "subsections": [
+     {
+      "title": "장점: 동시성",
+      "items": [
+       "스레드 생성 없이 수만 개 연결을 적은 메모리로 처리, 실시간 채팅·API 서버에 적합"
+      ]
+     },
+     {
+      "title": "단점: CPU 작업",
+      "items": [
+       "CPU 집약 작업 약점: 긴 연산이 이벤트 루프를 막아 전체 응답 지연, 워커 스레드(worker_threads)나 별도 서비스로 분리"
       ]
      }
     ]
@@ -32643,20 +32765,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "싱글쓰레드",
-   "비동기처리",
-   "이벤트루프",
-   "V8크롬 자바스크립트 엔진",
-   "Non-Blocking I",
-   "Non-Blocking I/O",
-   "V8"
+   "V8 엔진",
+   "libuv",
+   "단일 스레드 이벤트 루프",
+   "논블로킹 I/O",
+   "콜백·Promise",
+   "스레드 풀",
+   "내장 HTTP 모듈",
+   "npm 패키지 관리자",
+   "워커 스레드(worker_threads)",
+   "CPU 집약 작업 약점"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_388",
@@ -32671,52 +32797,97 @@
   "dueum": null,
   "name": "뷰제이에스(Vue.js)",
   "title": "뷰제이에스(Vue.js)",
-  "definition": "웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트프레임워크",
+  "definition": "화면 영역에 필요한 만큼 점진적으로 도입할 수 있는 오픈소스 자바스크립트 프레임워크로, MVVM 패턴의 뷰모델 역할을 맡아 반응형 데이터 바인딩과 가상 DOM, 단일 파일 컴포넌트로 사용자 인터페이스를 구축함",
   "keywords_must": [
-   "자바스크립트 프레임워크",
-   "MVVM",
-   "Vue.js 프레임워크 구성도",
-   "뷰제이에스 아키텍처",
-   "뷰제이에스 표준",
-   "뷰제이에스 프로토콜"
+   "MVVM 패턴",
+   "뷰모델(ViewModel)",
+   "반응형 시스템(Reactivity)",
+   "양방향 바인딩(v-model)",
+   "디렉티브(v-bind·v-if·v-for)",
+   "가상 DOM",
+   "단일 파일 컴포넌트(SFC)",
+   "컴포지션 API",
+   "점진적 프레임워크(Progressive)",
+   "Pinia 상태 관리"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "Vue Router",
+   "Vite",
+   "Nuxt",
+   "옵션 API",
+   "에반 유(2014)"
+  ],
   "keywords": [
-   "핵심: 자바스크립트 프레임워크 · MVVM · Vue.js 프레임워크 구성도",
-   "기술: 뷰제이에스 아키텍처 · 뷰제이에스 표준 · 뷰제이에스 프로토콜"
+   "MVVM: 뷰(DOM) ↔ 뷰모델(Vue: DOM 리스너·데이터 바인딩) ↔ 모델(JS 객체·서버 데이터)",
+   "핵심: 반응형(Vue 3 Proxy 기반) · 템플릿 디렉티브 · 가상 DOM · .vue 단일 파일 컴포넌트(템플릿·스크립트·스타일)",
+   "생태계: Vue Router(라우팅) · Pinia(상태) · Vite(빌드) · Nuxt(서버 렌더링)"
   ],
   "outline": [
-   "MVVM 패턴 기반의 자바스크립트 프레임워크, Vue.js 개요",
-   "- 뷰제이에스 요점",
-   "Vue.js 프레임워크 구성도와 구성요소",
-   "- Vue.js 프레임워크 구성도",
-   "- Vue.js 프레임워크 구성요소",
-   "자바스크립트 기반 프레임워크 비교",
-   "- 뷰제이에스 요점"
+   "개념과 특징",
+   "- 개념: 점진적 도입",
+   "- 특징: 낮은 학습 곡선",
+   "MVVM 구조",
+   "- 뷰·모델",
+   "- 뷰모델: 바인딩",
+   "반응형·컴포넌트 기능",
+   "- 반응형: 자동 갱신",
+   "- 컴포넌트: SFC",
+   "- 로직 재사용: 컴포지션"
   ],
   "sections": [
    {
-    "title": "뷰제이에스 핵심",
+    "title": "개념과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 점진적 도입",
       "items": [
-       "자바스크립트 프레임워크: 뷰제이에스에서 자바스크립트 프레임워크를 다루는 핵심 암기 포인트",
-       "MVVM: 뷰와 모델을 바인딩으로 연결하는 패턴",
-       "Vue.js 프레임워크 구성도: 뷰제이에스의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "뷰제이에스 아키텍처: 뷰제이에스의 계층·모듈 배치와 상호작용 구조"
+       "점진적 프레임워크(Progressive): 기존 페이지 일부에 라이브러리처럼 붙이다가 라우터·상태 관리를 더해 SPA로 확장"
+      ]
+     },
+     {
+      "title": "특징: 낮은 학습 곡선",
+      "items": [
+       "HTML 템플릿 기반이라 익히기 쉽고 번들 크기가 작음, 2014년 에반 유가 공개"
       ]
      }
     ]
    },
    {
-    "title": "뷰제이에스 구성·기술",
+    "title": "MVVM 구조",
     "subsections": [
      {
-      "title": null,
+      "title": "뷰·모델",
       "items": [
-       "뷰제이에스 표준: 뷰제이에스 상호운용·품질을 맞추는 규격·기준",
-       "뷰제이에스 프로토콜: 뷰제이에스에서 뷰제이에스 프로토콜을 다루는 핵심 암기 포인트"
+       "뷰는 사용자에게 보이는 DOM, 모델은 서버에서 가져온 데이터를 담은 자바스크립트 객체"
+      ]
+     },
+     {
+      "title": "뷰모델: 바인딩",
+      "items": [
+       "뷰모델(ViewModel)이 DOM 리스너로 입력을 받고 데이터 바인딩으로 화면과 모델을 동기화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "반응형·컴포넌트 기능",
+    "subsections": [
+     {
+      "title": "반응형: 자동 갱신",
+      "items": [
+       "반응형 시스템(Reactivity): Vue 3는 Proxy로 데이터 변경을 추적해 의존 컴포넌트만 재렌더링, v-model로 양방향 바인딩"
+      ]
+     },
+     {
+      "title": "컴포넌트: SFC",
+      "items": [
+       "단일 파일 컴포넌트(SFC)에 템플릿·스크립트·스타일을 함께 두고 디렉티브(v-bind·v-if·v-for)로 선언적 렌더링"
+      ]
+     },
+     {
+      "title": "로직 재사용: 컴포지션",
+      "items": [
+       "컴포지션 API로 관련 로직을 함수 단위로 묶어 재사용, 상태는 Pinia 상태 관리로 공유"
       ]
      }
     ]
@@ -32725,19 +32896,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "자바스크립트 프레임워크",
-   "MVVM",
-   "Vue.js 프레임워크 구성도",
-   "뷰제이에스 아키텍처",
-   "뷰제이에스 표준",
-   "뷰제이에스 프로토콜"
+   "MVVM 패턴",
+   "뷰모델(ViewModel)",
+   "반응형 시스템(Reactivity)",
+   "양방향 바인딩(v-model)",
+   "디렉티브(v-bind·v-if·v-for)",
+   "가상 DOM",
+   "단일 파일 컴포넌트(SFC)",
+   "컴포지션 API",
+   "점진적 프레임워크(Progressive)",
+   "Pinia 상태 관리"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_389",
