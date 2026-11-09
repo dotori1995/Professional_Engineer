@@ -60,7 +60,7 @@
     ]
    },
    {
-    "title": "정보화사업 예타의 특징과 개선 방향",
+    "title": "정보화사업 예타의 특징·개선 방향",
     "subsections": [
      {
       "title": "정보화사업 특성",
@@ -92,7 +92,7 @@
    "- 경제성 분석",
    "- 정책성·지역균형 분석",
    "- 종합 평가",
-   "정보화사업 예타의 특징과 개선 방향",
+   "정보화사업 예타의 특징·개선 방향",
    "- 정보화사업 특성",
    "- 개선 방향"
   ],
@@ -154,7 +154,7 @@
     "title": "소프트웨어 공학의 개념",
     "subsections": [
      {
-      "title": "정의와 목표",
+      "title": "정의·목표",
       "items": [
        "공학적 원리로 고품질 SW를 경제적으로 생산",
        "생산성·품질·유지보수성 향상"
@@ -216,7 +216,7 @@
   ],
   "outline": [
    "소프트웨어 공학의 개념",
-   "- 정의와 목표",
+   "- 정의·목표",
    "- 등장 배경",
    "구성 요소와 지식 체계",
    "- 3요소",
@@ -837,7 +837,7 @@
   ],
   "sections": [
    {
-    "title": "RAD의 개념",
+    "title": "RAD 개념",
     "subsections": [
      {
       "title": "빠른 응용 개발 정의",
@@ -906,7 +906,7 @@
    16
   ],
   "outline": [
-   "RAD의 개념",
+   "RAD 개념",
    "- 빠른 응용 개발 정의",
    "- 빠른 응용 개발 핵심 요소",
    "개발 단계",
@@ -1237,7 +1237,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SPIN": "Simple Promela Interpreter"
+  }
  },
  {
   "id": "SW_011",
@@ -1651,7 +1654,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ISP": "Information Strategy Planning"
+  }
  },
  {
   "id": "SW_014",
@@ -1807,7 +1813,7 @@
   ],
   "sections": [
    {
-    "title": "SOLID의 개념",
+    "title": "SOLID 개념",
     "subsections": [
      {
       "title": "객체지향 설계 원칙 정의",
@@ -1877,7 +1883,7 @@
    20
   ],
   "outline": [
-   "SOLID의 개념",
+   "SOLID 개념",
    "- 객체지향 설계 원칙 정의",
    "- 객체지향 설계 원칙 필요성",
    "5대 원칙",
@@ -1925,7 +1931,11 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ISP": "Interface Segregation Principle",
+   "LSP": "Liskov Substitution Principle"
+  }
  },
  {
   "id": "SW_021",
@@ -1970,7 +1980,7 @@
       ]
      },
      {
-      "title": "Booch와 Jacobson",
+      "title": "Booch·Jacobson",
       "items": [
        "Booch: 설계 중심, 미시·거시 개발 프로세스",
        "OOSE: 유스케이스 중심 분석"
@@ -2022,7 +2032,7 @@
    "- 객체지향 개발 방법론 특징",
    "주요 방법론",
    "- Rumbaugh OMT",
-   "- Booch와 Jacobson",
+   "- Booch·Jacobson",
    "- RUP",
    "장단점과 적용",
    "- 장점",
@@ -2220,7 +2230,7 @@
   ],
   "sections": [
    {
-    "title": "CBD의 개념",
+    "title": "CBD 개념",
     "subsections": [
      {
       "title": "컴포넌트 기반 개발 정의",
@@ -2294,7 +2304,7 @@
    58
   ],
   "outline": [
-   "CBD의 개념",
+   "CBD 개념",
    "- 컴포넌트 기반 개발 정의",
    "- 컴포넌트 기반 개발 특징",
    "개발 프로세스",
@@ -2910,7 +2920,7 @@
     ]
    },
    {
-    "title": "좋은 SRS의 특성과 구성",
+    "title": "좋은 SRS 특성과 구성",
     "subsections": [
      {
       "title": "품질 특성",
@@ -2958,7 +2968,7 @@
    "요구사항 명세서의 개념",
    "- 요구사항 명세서 정의",
    "- 요구사항 명세서 필요성",
-   "좋은 SRS의 특성과 구성",
+   "좋은 SRS 특성과 구성",
    "- 품질 특성",
    "- 표준 목차",
    "작성·검증 방안",
@@ -3275,7 +3285,7 @@
   ],
   "sections": [
    {
-    "title": "AOP의 개념",
+    "title": "AOP 개념",
     "subsections": [
      {
       "title": "관점지향 프로그래밍 정의",
@@ -3345,7 +3355,7 @@
    80
   ],
   "outline": [
-   "AOP의 개념",
+   "AOP 개념",
    "- 관점지향 프로그래밍 정의",
    "- 등장 배경",
    "AOP 구성 요소",
@@ -3550,7 +3560,7 @@
   ],
   "sections": [
    {
-    "title": "XP의 개념",
+    "title": "XP 개념",
     "subsections": [
      {
       "title": "익스트림 프로그래밍 정의",
@@ -3625,7 +3635,7 @@
    87
   ],
   "outline": [
-   "XP의 개념",
+   "XP 개념",
    "- 익스트림 프로그래밍 정의",
    "- 익스트림 프로그래밍 특징",
    "가치와 실천 사항",
@@ -4224,7 +4234,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TPS": "Transactions Per Second"
+  }
  },
  {
   "id": "SW_038",
@@ -4493,7 +4506,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ISP": "Information Strategy Planning"
+  }
  },
  {
   "id": "SW_040",
@@ -4896,7 +4912,7 @@
   ],
   "sections": [
    {
-    "title": "SOA의 개념",
+    "title": "SOA 개념",
     "subsections": [
      {
       "title": "서비스 지향 아키텍처 정의",
@@ -4934,10 +4950,10 @@
     ]
    },
    {
-    "title": "MSA와 비교 및 고려사항",
+    "title": "MSA 비교 및 고려사항",
     "subsections": [
      {
-      "title": "MSA와 비교",
+      "title": "MSA 비교",
       "items": [
        "SOA: 전사 통합, ESB 중심, 공유 데이터",
        "MSA: 독립 배포, 경량 통신(REST), 서비스별 DB"
@@ -4959,14 +4975,14 @@
    106
   ],
   "outline": [
-   "SOA의 개념",
+   "SOA 개념",
    "- 서비스 지향 아키텍처 정의",
    "- 서비스 지향 아키텍처 특징",
    "구성과 기술",
    "- 역할 구조",
    "- SOA 구현 기술",
-   "MSA와 비교 및 고려사항",
-   "- MSA와 비교",
+   "MSA 비교 및 고려사항",
+   "- MSA 비교",
    "- 고려사항"
   ],
   "name": "서비스 지향 아키텍처(SOA, Service Oriented Architecture)",
@@ -5025,7 +5041,7 @@
   ],
   "sections": [
    {
-    "title": "ESB의 개념",
+    "title": "ESB 개념",
     "subsections": [
      {
       "title": "엔터프라이즈 서비스 버스 정의",
@@ -5089,7 +5105,7 @@
    49
   ],
   "outline": [
-   "ESB의 개념",
+   "ESB 개념",
    "- 엔터프라이즈 서비스 버스 정의",
    "- 등장 배경",
    "주요 기능과 구조",
@@ -5197,7 +5213,7 @@
     ]
    },
    {
-    "title": "REST와의 비교",
+    "title": "REST 비교",
     "subsections": [
      {
       "title": "SOAP 방식",
@@ -5229,7 +5245,7 @@
    "- 웹 서비스 구성 요소",
    "- 동작 흐름",
    "- WS-* 확장",
-   "REST와의 비교",
+   "REST 비교",
    "- SOAP 방식",
    "- REST 방식"
   ],
@@ -5285,7 +5301,7 @@
   ],
   "sections": [
    {
-    "title": "RPC의 개념",
+    "title": "RPC 개념",
     "subsections": [
      {
       "title": "원격 프로시저 호출 정의",
@@ -5322,7 +5338,7 @@
     ]
    },
    {
-    "title": "최신 RPC와 비교",
+    "title": "최신 RPC 비교",
     "subsections": [
      {
       "title": "gRPC",
@@ -5332,7 +5348,7 @@
       ]
      },
      {
-      "title": "REST와 비교",
+      "title": "REST 비교",
       "items": [
        "REST: 자원 중심, 범용·가독성",
        "RPC: 행위 중심, 고성능·강한 타입"
@@ -5347,15 +5363,15 @@
    113
   ],
   "outline": [
-   "RPC의 개념",
+   "RPC 개념",
    "- 원격 프로시저 호출 정의",
    "- 원격 프로시저 호출 특징",
    "구성 요소와 동작 과정",
    "- 원격 프로시저 호출 구성 요소",
    "- 동작 과정",
-   "최신 RPC와 비교",
+   "최신 RPC 비교",
    "- gRPC",
-   "- REST와 비교"
+   "- REST 비교"
   ],
   "name": "원격 프로시저 호출(RPC, Remote Procedure Call)",
   "en": "Remote Procedure Call",
@@ -5398,7 +5414,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "DCE": "Distributed Computing Environment"
+  }
  },
  {
   "id": "SW_048",
@@ -5418,7 +5437,7 @@
     "title": "소프트웨어 아키텍처의 개념",
     "subsections": [
      {
-      "title": "정의와 역할",
+      "title": "정의·역할",
       "items": [
        "시스템의 골격과 설계 결정의 집합",
        "이해관계자 의사소통·품질 달성·재사용의 기반"
@@ -5479,7 +5498,7 @@
   ],
   "outline": [
    "소프트웨어 아키텍처의 개념",
-   "- 정의와 역할",
+   "- 정의·역할",
    "- 중요성",
    "구성 요소와 기술 방법",
    "- 소프트웨어 아키텍처 구성 요소",
@@ -5715,7 +5734,7 @@
       ]
      },
      {
-      "title": "CBAM과 ARID",
+      "title": "CBAM·ARID",
       "items": [
        "CBAM: ATAM 결과에 비용·편익 분석 추가",
        "ARID: 부분 설계 검토(ADR+ATAM)"
@@ -5755,7 +5774,7 @@
    "평가 방법",
    "- SAAM",
    "- ATAM",
-   "- CBAM과 ARID",
+   "- CBAM·ARID",
    "평가 결과와 활용",
    "- 산출물",
    "- 활용"
@@ -5797,7 +5816,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ADR": "Active Design Review"
+  }
  },
  {
   "id": "SW_051",
@@ -5814,7 +5836,7 @@
   ],
   "sections": [
    {
-    "title": "ATAM의 개념",
+    "title": "ATAM 개념",
     "subsections": [
      {
       "title": "ATAM 정의",
@@ -5881,7 +5903,7 @@
    126
   ],
   "outline": [
-   "ATAM의 개념",
+   "ATAM 개념",
    "- ATAM 정의",
    "- ATAM 특징",
    "수행 절차(9단계)",
@@ -5950,7 +5972,7 @@
   ],
   "sections": [
    {
-    "title": "CBAM의 개념",
+    "title": "CBAM 개념",
     "subsections": [
      {
       "title": "CBAM 정의",
@@ -6019,7 +6041,7 @@
    129
   ],
   "outline": [
-   "CBAM의 개념",
+   "CBAM 개념",
    "- CBAM 정의",
    "- CBAM 필요성",
    "수행 절차",
@@ -6065,7 +6087,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "AS": "Architectural Strategy"
+  }
  },
  {
   "id": "SW_053",
@@ -6243,7 +6268,7 @@
       ]
      },
      {
-      "title": "MVC와 이벤트 버스",
+      "title": "MVC·이벤트 버스",
       "items": [
        "MVC: 모델·뷰·컨트롤러 분리",
        "이벤트 버스: 발행·구독 비동기 통신"
@@ -6283,7 +6308,7 @@
    "주요 패턴",
    "- 계층형과 클라이언트-서버",
    "- 파이프-필터와 브로커",
-   "- MVC와 이벤트 버스",
+   "- MVC·이벤트 버스",
    "분류와 선택 기준",
    "- Shaw·Garlan 분류",
    "- 선택 기준"
@@ -6331,7 +6356,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MVC": "Model-View-Controller"
+  }
  },
  {
   "id": "SW_055",
@@ -6617,7 +6645,7 @@
   ],
   "sections": [
    {
-    "title": "SAD의 개념",
+    "title": "SAD 개념",
     "subsections": [
      {
       "title": "소프트웨어 아키텍처 기술서 정의",
@@ -6687,7 +6715,7 @@
    144
   ],
   "outline": [
-   "SAD의 개념",
+   "SAD 개념",
    "- 소프트웨어 아키텍처 기술서 정의",
    "- 소프트웨어 아키텍처 기술서 필요성",
    "구성 내용",
@@ -6737,7 +6765,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ADR": "Architecture Decision Record"
+  }
  },
  {
   "id": "SW_058",
@@ -6754,7 +6785,7 @@
   ],
   "sections": [
    {
-    "title": "MSA의 개념",
+    "title": "MSA 개념",
     "subsections": [
      {
       "title": "마이크로서비스 아키텍처 정의",
@@ -6824,7 +6855,7 @@
    59
   ],
   "outline": [
-   "MSA의 개념",
+   "MSA 개념",
    "- 마이크로서비스 아키텍처 정의",
    "- 등장 배경",
    "구성 요소와 설계 원칙",
@@ -7027,7 +7058,7 @@
   ],
   "sections": [
    {
-    "title": "EDM의 개념",
+    "title": "EDM 개념",
     "subsections": [
      {
       "title": "이벤트 기반 마이크로서비스 정의",
@@ -7102,7 +7133,7 @@
    64
   ],
   "outline": [
-   "EDM의 개념",
+   "EDM 개념",
    "- 이벤트 기반 마이크로서비스 정의",
    "- 이벤트 기반 마이크로서비스 특징",
    "구성과 패턴",
@@ -7151,7 +7182,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "EDM": "Event-Driven Microservice"
+  }
  },
  {
   "id": "SW_060_01",
@@ -7712,7 +7746,7 @@
   ],
   "sections": [
    {
-    "title": "EDA의 개념",
+    "title": "EDA 개념",
     "subsections": [
      {
       "title": "이벤트 기반 아키텍처 정의",
@@ -7786,7 +7820,7 @@
    80
   ],
   "outline": [
-   "EDA의 개념",
+   "EDA 개념",
    "- 이벤트 기반 아키텍처 정의",
    "- 이벤트 기반 아키텍처 특징",
    "구성과 토폴로지",
@@ -7833,7 +7867,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "EDM": "Event-Driven Microservice"
+  }
  },
  {
   "id": "SW_061",
@@ -7982,7 +8019,7 @@
   ],
   "sections": [
    {
-    "title": "MDA의 개념",
+    "title": "MDA 개념",
     "subsections": [
      {
       "title": "모델 주도 아키텍처 정의",
@@ -8051,7 +8088,7 @@
    150
   ],
   "outline": [
-   "MDA의 개념",
+   "MDA 개념",
    "- 모델 주도 아키텍처 정의",
    "- 모델 주도 아키텍처 목적",
    "모델 계층과 변환",
@@ -8099,7 +8136,11 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "PIM": "Platform Independent Model",
+   "PSM": "Platform Specific Model"
+  }
  },
  {
   "id": "SW_063",
@@ -8116,7 +8157,7 @@
   ],
   "sections": [
    {
-    "title": "MDD의 개념",
+    "title": "MDD 개념",
     "subsections": [
      {
       "title": "모델 주도 개발 정의",
@@ -8184,7 +8225,7 @@
    153
   ],
   "outline": [
-   "MDD의 개념",
+   "MDD 개념",
    "- 모델 주도 개발 정의",
    "- 관계",
    "구성과 절차",
@@ -8232,7 +8273,11 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "M2M": "Model-to-Model",
+   "MVC": "Model-View-Controller"
+  }
  },
  {
   "id": "SW_064",
@@ -8364,7 +8409,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MVC": "Model-View-Controller"
+  }
  },
  {
   "id": "SW_066",
@@ -8381,7 +8429,7 @@
   ],
   "sections": [
    {
-    "title": "IoC의 개념",
+    "title": "IoC 개념",
     "subsections": [
      {
       "title": "제어의 역전 정의",
@@ -8450,7 +8498,7 @@
    85
   ],
   "outline": [
-   "IoC의 개념",
+   "IoC 개념",
    "- 제어의 역전 정의",
    "- 라이브러리와 구분",
    "구현 방식",
@@ -9979,7 +10027,7 @@
       ]
      },
      {
-      "title": "상호작용 개요와 타이밍",
+      "title": "상호작용 개요·타이밍",
       "items": [
        "개요: 활동 다이어그램 형식으로 상호작용 흐름 연결",
        "타이밍: 시간축 상태 변화·시간 제약"
@@ -10019,7 +10067,7 @@
    "- 상호작용 다이어그램 목적",
    "4가지 유형",
    "- 시퀀스와 커뮤니케이션",
-   "- 상호작용 개요와 타이밍",
+   "- 상호작용 개요·타이밍",
    "선택 기준",
    "- 선택 기준",
    "- 활용"
@@ -10580,7 +10628,7 @@
   ],
   "sections": [
    {
-    "title": "UML 2.x의 개념",
+    "title": "UML 2.x 개념",
     "subsections": [
      {
       "title": "UML 2.x 정의",
@@ -10648,7 +10696,7 @@
    113
   ],
   "outline": [
-   "UML 2.x의 개념",
+   "UML 2.x 개념",
    "- UML 2.x 정의",
    "- 개정 배경",
    "주요 변경 사항",
@@ -10822,7 +10870,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "UTP": "UML Testing Profile"
+  }
  },
  {
   "id": "SW_086",
@@ -10839,7 +10890,7 @@
   ],
   "sections": [
    {
-    "title": "MOF의 개념",
+    "title": "MOF 개념",
     "subsections": [
      {
       "title": "메타 객체 시설 정의",
@@ -10907,7 +10958,7 @@
    192
   ],
   "outline": [
-   "MOF의 개념",
+   "MOF 개념",
    "- 메타 객체 시설 정의",
    "- 메타 객체 시설 목적",
    "4계층 메타데이터 아키텍처",
@@ -10970,7 +11021,7 @@
   ],
   "sections": [
    {
-    "title": "OCL의 개념",
+    "title": "OCL 개념",
     "subsections": [
      {
       "title": "객체 제약 언어 정의",
@@ -11037,7 +11088,7 @@
    194
   ],
   "outline": [
-   "OCL의 개념",
+   "OCL 개념",
    "- 객체 제약 언어 정의",
    "- 객체 제약 언어 특징",
    "제약 유형과 표기",
@@ -11247,7 +11298,7 @@
     "title": "디자인 패턴의 개요",
     "subsections": [
      {
-      "title": "정의와 목적",
+      "title": "패턴의 의의",
       "items": [
        "반복되는 설계 문제의 유형별 해법",
        "전문가 설계 노하우 공유로 확장성·재사용성·유지보수성 향상"
@@ -11316,7 +11367,7 @@
   ],
   "outline": [
    "디자인 패턴의 개요",
-   "- 정의와 목적",
+   "- 패턴의 의의",
    "- 디자인 패턴 특징",
    "GoF 디자인 패턴의 형식과 분류",
    "- 패턴 형식",
@@ -11430,7 +11481,7 @@
       ]
      },
      {
-      "title": "DIP와 비교",
+      "title": "DIP 비교",
       "items": [
        "공통: 객체 분리 목표",
        "헐리우드: 하위를 다양하게 쓰되 상위 의존 최소화",
@@ -11454,7 +11505,7 @@
    "- 저수준 구성요소",
    "활용 패턴과 DIP 비교",
    "- 활용 패턴",
-   "- DIP와 비교"
+   "- DIP 비교"
   ],
   "name": "헐리우드 원칙(Hollywood Principle)",
   "en": "Hollywood Principle",
@@ -12037,14 +12088,14 @@
     "title": "팩토리 메서드 패턴의 개념도",
     "subsections": [
      {
-      "title": "Creator와 ConcreteCreator",
+      "title": "Creator·ConcreteCreator",
       "items": [
        "Creator: 추상 팩토리 메서드 정의",
        "ConcreteCreator: factoryMethod() 구현해 구상 객체 생성"
       ]
      },
      {
-      "title": "Product와 ConcreteProduct",
+      "title": "Product·ConcreteProduct",
       "items": [
        "Product: 생성될 객체의 인터페이스",
        "ConcreteProduct: 인터페이스 구현(예: Shape → Circle)"
@@ -12082,8 +12133,8 @@
    "- 팩토리 메서드 패턴 정의",
    "- 장단점",
    "팩토리 메서드 패턴의 개념도",
-   "- Creator와 ConcreteCreator",
-   "- Product와 ConcreteProduct",
+   "- Creator·ConcreteCreator",
+   "- Product·ConcreteProduct",
    "팩토리 메서드 패턴 예시",
    "- 예시",
    "- 팩토리 메서드 패턴 효과"
@@ -13699,14 +13750,14 @@
     "title": "이터레이터 패턴의 구성도와 구성요소",
     "subsections": [
      {
-      "title": "Iterator와 ConcreteIterator",
+      "title": "Iterator·ConcreteIterator",
       "items": [
        "요소 접근·순회 인터페이스",
        "구현 클래스로 현재 위치 기억"
       ]
      },
      {
-      "title": "Aggregate와 ConcreteAggregate",
+      "title": "Aggregate·ConcreteAggregate",
       "items": [
        "Iterator 생성 인터페이스 정의",
        "해당 ConcreteIterator 인스턴스 반환"
@@ -13744,8 +13795,8 @@
    "- 이터레이터 패턴 정의",
    "- 이터레이터 패턴 특징",
    "이터레이터 패턴의 구성도와 구성요소",
-   "- Iterator와 ConcreteIterator",
-   "- Aggregate와 ConcreteAggregate",
+   "- Iterator·ConcreteIterator",
+   "- Aggregate·ConcreteAggregate",
    "활용과 효과",
    "- 이터레이터 패턴 효과",
    "- 활용"
@@ -14090,7 +14141,7 @@
       ]
      },
      {
-      "title": "Observer와 ConcreteObserver",
+      "title": "Observer·ConcreteObserver",
       "items": [
        "Observer 인터페이스에 update()만 존재",
        "구현 클래스(ViewOne, ViewTwo)가 주제에 등록해 통지 수신"
@@ -14136,7 +14187,7 @@
    "- 예시",
    "구성도와 기술요소",
    "- Subject",
-   "- Observer와 ConcreteObserver",
+   "- Observer·ConcreteObserver",
    "옵저버 패턴의 알림 방식",
    "- 푸시 모델",
    "- 풀 모델",
@@ -14179,7 +14230,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MVC": "Model-View-Controller"
+  }
  },
  {
   "id": "SW_113",
@@ -14343,14 +14397,14 @@
     "title": "비지터 패턴 구성도와 참여 객체",
     "subsections": [
      {
-      "title": "Visitor와 ConcreteVisitor",
+      "title": "Visitor·ConcreteVisitor",
       "items": [
        "각 ConcreteElement별 visit() 선언",
        "구현 클래스에 실제 알고리즘"
       ]
      },
      {
-      "title": "Element와 ConcreteElement",
+      "title": "Element·ConcreteElement",
       "items": [
        "Visitor를 인자로 받는 accept() 정의·구현"
       ]
@@ -14393,8 +14447,8 @@
    "- 비지터 패턴 정의",
    "- 비지터 패턴 목적",
    "비지터 패턴 구성도와 참여 객체",
-   "- Visitor와 ConcreteVisitor",
-   "- Element와 ConcreteElement",
+   "- Visitor·ConcreteVisitor",
+   "- Element·ConcreteElement",
    "- ObjectStructure",
    "방문 순서와 장단점",
    "- 방문 순서",
@@ -14565,7 +14619,11 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MVC": "Model-View-Controller",
+   "MVP": "Model-View-Presenter"
+  }
  },
  {
   "id": "SW_116",
@@ -14631,7 +14689,7 @@
       ]
      },
      {
-      "title": "MVP와 비교",
+      "title": "MVP 비교",
       "items": [
        "MVP: View와 Presenter 1:1 의존",
        "MVVM: 뷰모델은 뷰를 모르고 바인딩으로 연결"
@@ -14654,7 +14712,7 @@
    "- 처리 흐름",
    "적용 시 유의사항과 비교",
    "- 유의사항",
-   "- MVP와 비교"
+   "- MVP 비교"
   ],
   "name": "MVVM 패턴(Model-View-ViewModel Pattern)",
   "en": "MVVM Pattern",
@@ -14695,7 +14753,11 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MVC": "Model-View-Controller",
+   "MVP": "Model-View-Presenter"
+  }
  },
  {
   "id": "SW_117",
@@ -14846,7 +14908,7 @@
   ],
   "sections": [
    {
-    "title": "TDD의 개요",
+    "title": "TDD 개요",
     "subsections": [
      {
       "title": "테스트 주도 개발 정의",
@@ -14865,7 +14927,7 @@
     ]
    },
    {
-    "title": "TDD의 개념도와 절차",
+    "title": "TDD 개념도와 절차",
     "subsections": [
      {
       "title": "5단계 절차",
@@ -14916,10 +14978,10 @@
    285
   ],
   "outline": [
-   "TDD의 개요",
+   "TDD 개요",
    "- 테스트 주도 개발 정의",
    "- 테스트 주도 개발 특징",
-   "TDD의 개념도와 절차",
+   "TDD 개념도와 절차",
    "- 5단계 절차",
    "- Red-Green-Refactor",
    "TDD 적용 시 고려사항과 장단점",
@@ -15519,10 +15581,10 @@
   ],
   "sections": [
    {
-    "title": "SRE의 정의와 원칙",
+    "title": "SRE 정의·원칙",
     "subsections": [
      {
-      "title": "정의와 배경",
+      "title": "정의·배경",
       "items": [
        "적절한 수준의 안정성 달성을 지원하는 엔지니어링",
        "DevOps 철학에서 운영자의 새로운 역할 필요"
@@ -15539,7 +15601,7 @@
     ]
    },
    {
-    "title": "SRE의 구성 요소",
+    "title": "SRE 구성 요소",
     "subsections": [
      {
       "title": "모니터링과 용량 계획",
@@ -15565,7 +15627,7 @@
     ]
    },
    {
-    "title": "SRE의 수행 방법과 DevOps 비교",
+    "title": "SRE 수행 방법과 DevOps 비교",
     "subsections": [
      {
       "title": "수행 방법",
@@ -15575,7 +15637,7 @@
       ]
      },
      {
-      "title": "DevOps와 비교",
+      "title": "DevOps 비교",
       "items": [
        "DevOps: 철학·문화",
        "SRE: DevOps를 구현하는 구체적 실천(\"class SRE implements DevOps\")"
@@ -15590,16 +15652,16 @@
    135
   ],
   "outline": [
-   "SRE의 정의와 원칙",
-   "- 정의와 배경",
+   "SRE 정의·원칙",
+   "- 정의·배경",
    "- 원칙",
-   "SRE의 구성 요소",
+   "SRE 구성 요소",
    "- 모니터링과 용량 계획",
    "- 변경 관리와 긴급 대응",
    "- 문화",
-   "SRE의 수행 방법과 DevOps 비교",
+   "SRE 수행 방법과 DevOps 비교",
    "- 수행 방법",
-   "- DevOps와 비교"
+   "- DevOps 비교"
   ],
   "name": "사이트 신뢰성 공학(SRE, Site Reliability Engineering)",
   "en": "Site Reliability Engineering",
@@ -15961,7 +16023,7 @@
     ]
    },
    {
-    "title": "DevOps, SRE와의 비교",
+    "title": "DevOps, SRE 비교",
     "subsections": [
      {
       "title": "DevOps",
@@ -15970,7 +16032,7 @@
       ]
      },
      {
-      "title": "SRE와 플랫폼 엔지니어링",
+      "title": "SRE·플랫폼 엔지니어링",
       "items": [
        "SRE: 신뢰성·가용성 목표 관리",
        "플랫폼 엔지니어링: 개발자 생산성과 셀프서비스 플랫폼 제공"
@@ -15991,9 +16053,9 @@
    "플랫폼 엔지니어링의 구성과 역할",
    "- 구성",
    "- 역할",
-   "DevOps, SRE와의 비교",
+   "DevOps, SRE 비교",
    "- DevOps",
-   "- SRE와 플랫폼 엔지니어링"
+   "- SRE·플랫폼 엔지니어링"
   ],
   "name": "플랫폼 엔지니어링(Platform Engineering)",
   "en": "Platform Engineering",
@@ -17640,7 +17702,10 @@
    "sw"
   ],
   "reviewed": true,
-  "dueum": "화제루"
+  "dueum": "화제루",
+  "gloss": {
+   "DU": "Definition-Use"
+  }
  },
  {
   "id": "SW_137",
@@ -18304,7 +18369,7 @@
   ],
   "sections": [
    {
-    "title": "MC/DC의 개요",
+    "title": "MC/DC 개요",
     "subsections": [
      {
       "title": "MC/DC 정의",
@@ -18373,7 +18438,7 @@
    325
   ],
   "outline": [
-   "MC/DC의 개요",
+   "MC/DC 개요",
    "- MC/DC 정의",
    "- MC/DC 특징",
    "MC/DC 테스트 케이스 생성",
@@ -18920,7 +18985,11 @@
    "sw"
   ],
   "reviewed": true,
-  "dueum": "경탐오체분"
+  "dueum": "경탐오체분",
+  "gloss": {
+   "ITA": "-",
+   "FTA": "-"
+  }
  },
  {
   "id": "SW_147_0",
@@ -19699,7 +19768,7 @@
   ],
   "sections": [
    {
-    "title": "JTAG의 개념",
+    "title": "JTAG 개념",
     "subsections": [
      {
       "title": "JTAG 정의",
@@ -19766,7 +19835,7 @@
    337
   ],
   "outline": [
-   "JTAG의 개념",
+   "JTAG 개념",
    "- JTAG 정의",
    "- 활용",
    "JTAG 구성과 신호",
@@ -19961,7 +20030,7 @@
     "title": "성능 테스트의 개요",
     "subsections": [
      {
-      "title": "정의와 목적",
+      "title": "성능 검증 목표",
       "items": [
        "부하 조건에서 성능 목표 충족 검증",
        "병목 식별, 용량 산정, 서비스 안정화"
@@ -20031,7 +20100,7 @@
   ],
   "outline": [
    "성능 테스트의 개요",
-   "- 정의와 목적",
+   "- 성능 검증 목표",
    "- 리틀의 법칙",
    "성능 테스트 용어와 유형",
    "- 주요 용어",
@@ -20078,7 +20147,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TPS": "Transactions Per Second"
+  }
  },
  {
   "id": "SW_153_1",
@@ -20634,7 +20706,7 @@
     ]
    },
    {
-    "title": "BMT와 PoC 비교·고려사항",
+    "title": "BMT·PoC 비교·고려사항",
     "subsections": [
      {
       "title": "비교",
@@ -20665,7 +20737,7 @@
    "절차와 주요 활동",
    "- 참여 주체",
    "- 주요 활동",
-   "BMT와 PoC 비교·고려사항",
+   "BMT·PoC 비교·고려사항",
    "- 비교",
    "- 고려사항"
   ],
@@ -22446,7 +22518,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ANR": "Application Not Responding"
+  }
  },
  {
   "id": "SW_169_03",
@@ -23085,7 +23160,10 @@
    "sw"
   ],
   "reviewed": true,
-  "dueum": "범참용오성"
+  "dueum": "범참용오성",
+  "gloss": {
+   "PAM": "Process Assessment Model"
+  }
  },
  {
   "id": "SW_173",
@@ -25046,7 +25124,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ITO": "Inputs, Tools & Techniques, Outputs"
+  }
  },
  {
   "id": "SW_192",
@@ -25092,7 +25173,7 @@
       ]
      },
      {
-      "title": "DfX와 문제 해결",
+      "title": "DfX·문제 해결",
       "items": [
        "조립·비용·신뢰성 등 특정 측면 최적 설계",
        "문제 정의 → 원인 → 해결책"
@@ -25135,7 +25216,7 @@
    "- 품질보증과 통제 차이",
    "프로세스와 기법",
    "- 품질 감사",
-   "- DfX와 문제 해결",
+   "- DfX·문제 해결",
    "- 개선 방법",
    "품질관리 ITO",
    "- 입력",
@@ -25176,7 +25257,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ITO": "Inputs, Tools & Techniques, Outputs"
+  }
  },
  {
   "id": "SW_193",
@@ -25238,10 +25322,10 @@
     ]
    },
    {
-    "title": "신QC 7가지 도구",
+    "title": "신 QC 7가지 도구",
     "subsections": [
      {
-      "title": "신QC 도구",
+      "title": "신 QC 도구",
       "items": [
        "친화도 · 연관도 · 계통도 · 매트릭스도 · 매트릭스 데이터 해석 · PDPC · 애로우 다이어그램"
       ]
@@ -25262,8 +25346,8 @@
    "- 원인 분석",
    "- 현상 파악",
    "- 공정 관리",
-   "신QC 7가지 도구",
-   "- 신QC 도구"
+   "신 QC 7가지 도구",
+   "- 신 QC 도구"
   ],
   "name": "품질통제 7가지 도구(Seven Basic Quality Tools)",
   "en": "Seven Basic Quality Tools",
@@ -26361,7 +26445,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SVC": "CMMI for Services"
+  }
  },
  {
   "id": "SW_202",
@@ -26668,7 +26755,7 @@
     ]
    },
    {
-    "title": "특징과 동향",
+    "title": "특징·동향",
     "subsections": [
      {
       "title": "오토모티브 SPICE 특징",
@@ -26699,7 +26786,7 @@
    "프로세스 참조 모델",
    "- 기본 생명주기",
    "- 지원·조직",
-   "특징과 동향",
+   "특징·동향",
    "- 오토모티브 SPICE 특징",
    "- 동향"
   ],
@@ -26746,7 +26833,12 @@
    "sw"
   ],
   "reviewed": true,
-  "dueum": "불수관확예최"
+  "dueum": "불수관확예최",
+  "gloss": {
+   "MAN": "Management",
+   "MLE": "Machine Learning Engineering",
+   "PIM": "Process Improvement"
+  }
  },
  {
   "id": "SW_205",
@@ -27308,7 +27400,7 @@
       ]
      },
      {
-      "title": "QA와 QC 비교",
+      "title": "QA·QC 비교",
       "items": [
        "QA: 프로세스 중심, 예방, 전 기간",
        "QC: 산출물 중심, 검사·결함 발견"
@@ -27363,7 +27455,7 @@
   "outline": [
    "품질보증 개요",
    "- 품질보증 정의",
-   "- QA와 QC 비교",
+   "- QA·QC 비교",
    "품질보증 유형",
    "- 감사",
    "- 개선 활동",
@@ -27473,7 +27565,7 @@
     "title": "활용",
     "subsections": [
      {
-      "title": "CMMI와 관계",
+      "title": "CMMI·관계",
       "items": [
        "CMMI의 테스트 영역(VER·VAL) 보완"
       ]
@@ -27501,7 +27593,7 @@
    "- L3·L4",
    "- L5",
    "활용",
-   "- CMMI와 관계",
+   "- CMMI·관계",
    "- 활용"
   ],
   "name": "TMMi(Test Maturity Model integration)",
@@ -27984,7 +28076,7 @@
     ]
    },
    {
-    "title": "ISO 25237과 비교",
+    "title": "ISO 25237 비교",
     "subsections": [
      {
       "title": "14971",
@@ -28013,7 +28105,7 @@
    "위험관리 프로세스와 구성요소",
    "- 프로세스",
    "- ISO 14971 의료기기 위험관리 구성요소",
-   "ISO 25237과 비교",
+   "ISO 25237 비교",
    "- 14971",
    "- 25237"
   ],
@@ -28570,7 +28662,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "AP": "Action Priority"
+  }
  },
  {
   "id": "SW_219",
@@ -28875,7 +28970,7 @@
       ]
      },
      {
-      "title": "기반 SW와 고려사항",
+      "title": "기반 SW·고려사항",
       "items": [
        "OS·라이브러리 안전성",
        "진단 독립성·전문 인력"
@@ -28897,7 +28992,7 @@
    "진단 영역별 방법",
    "- 안전기능 충분성",
    "- SW 품질 안전성",
-   "- 기반 SW와 고려사항"
+   "- 기반 SW·고려사항"
   ],
   "name": "소프트웨어 안전 진단 가이드(Software Safety Diagnosis Guide)",
   "en": "Software Safety Diagnosis Guide",
@@ -29427,7 +29522,10 @@
    "sw"
   ],
   "reviewed": true,
-  "dueum": "시영관"
+  "dueum": "시영관",
+  "gloss": {
+   "ISP": "Information Strategy Planning"
+  }
  },
  {
   "id": "SW_228",
@@ -30532,7 +30630,11 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "OSI": "Open Source Initiative",
+   "OSS": "Open Source Software"
+  }
  },
  {
   "id": "SW_235",
@@ -30654,7 +30756,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "OSS": "Open Source Software"
+  }
  },
  {
   "id": "SW_236",
@@ -30783,7 +30888,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "OSS": "Open Source Software"
+  }
  },
  {
   "id": "SW_237",
@@ -30902,7 +31010,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "OSS": "Open Source Software"
+  }
  },
  {
   "id": "SW_238_00",
@@ -31034,7 +31145,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "OSS": "Open Source Software"
+  }
  },
  {
   "id": "SW_239",
@@ -31162,7 +31276,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "OSS": "Open Source Software"
+  }
  },
  {
   "id": "SW_240",
@@ -31323,7 +31440,7 @@
     ]
    },
    {
-    "title": "LOC와 FP 비교",
+    "title": "LOC·FP 비교",
     "subsections": [
      {
       "title": "LOC",
@@ -31363,7 +31480,7 @@
    "LOC 개요",
    "- LOC 기법 정의",
    "- 계산",
-   "LOC와 FP 비교",
+   "LOC·FP 비교",
    "- LOC",
    "- FP",
    "LOC 기법의 한계",
@@ -31809,7 +31926,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "CPM": "Counting Practices Manual"
+  }
  },
  {
   "id": "SW_245",
@@ -31939,14 +32059,14 @@
     "title": "대가산정 가이드 개요",
     "subsections": [
      {
-      "title": "SW사업 대가산정 가이드 정의",
+      "title": "SW 사업 대가산정 가이드 정의",
       "items": [
        "공공 SW 사업 대가 산정 기준",
        "12207 생명주기 기반"
       ]
      },
      {
-      "title": "SW사업 대가산정 가이드 목적",
+      "title": "SW 사업 대가산정 가이드 목적",
       "items": [
        "객관적 기준 제공",
        "공정·투명 집행, SW 제값 받기"
@@ -31998,8 +32118,8 @@
   ],
   "outline": [
    "대가산정 가이드 개요",
-   "- SW사업 대가산정 가이드 정의",
-   "- SW사업 대가산정 가이드 목적",
+   "- SW 사업 대가산정 가이드 정의",
+   "- SW 사업 대가산정 가이드 목적",
    "산정 절차와 사업 유형",
    "- 절차",
    "- 사업 유형",
@@ -32050,7 +32170,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ISP": "Information Strategy Planning"
+  }
  },
  {
   "id": "SW_247",
@@ -32202,7 +32325,7 @@
   ],
   "sections": [
    {
-    "title": "SW사업정보 저장소 개념",
+    "title": "SW 사업정보 저장소 개념",
     "subsections": [
      {
       "title": "개념",
@@ -32240,7 +32363,7 @@
     "title": "기대효과",
     "subsections": [
      {
-      "title": "SW사업정보 저장소 효과",
+      "title": "SW 사업정보 저장소 효과",
       "items": [
        "객관적 대가·기간 산정 근거",
        "사업 계획 정확도 향상"
@@ -32255,14 +32378,14 @@
    481
   ],
   "outline": [
-   "SW사업정보 저장소 개념",
+   "SW 사업정보 저장소 개념",
    "- 개념",
    "- 근거",
    "운영 개념도와 주요 정보",
    "- 운영",
    "- 주요 정보",
    "기대효과",
-   "- SW사업정보 저장소 효과"
+   "- SW 사업정보 저장소 효과"
   ],
   "name": "SW사업정보 저장소(SW Project Information Repository)",
   "en": "SW Project Information Repository",
@@ -32663,7 +32786,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SAM": "Software Asset Management"
+  }
  },
  {
   "id": "SW_252_1",
@@ -33385,7 +33511,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "PPP": "Public Private Partnership"
+  }
  },
  {
   "id": "SW_260",
@@ -33513,7 +33642,10 @@
    "sw"
   ],
   "reviewed": true,
-  "dueum": "구데집제예"
+  "dueum": "구데집제예",
+  "gloss": {
+   "IP": "Intellectual Property"
+  }
  },
  {
   "id": "SW_261",
@@ -33793,7 +33925,7 @@
     ]
    },
    {
-    "title": "특징과 기법",
+    "title": "함수형 핵심 원리와 기법",
     "subsections": [
      {
       "title": "함수형 프로그래밍 특징",
@@ -33838,7 +33970,7 @@
    "함수형 프로그래밍 개요",
    "- 함수형 프로그래밍 정의",
    "- 등장 배경",
-   "특징과 기법",
+   "함수형 핵심 원리와 기법",
    "- 함수형 프로그래밍 특징",
    "- 기법",
    "명령형과 비교",
@@ -34323,7 +34455,7 @@
     ]
    },
    {
-    "title": "REST와 비교",
+    "title": "REST 비교",
     "subsections": [
      {
       "title": "비교",
@@ -34354,7 +34486,7 @@
    "개념도와 구성요소",
    "- 개념도",
    "- GraphQL 구성요소",
-   "REST와 비교",
+   "REST 비교",
    "- 비교",
    "- 고려사항"
   ],
@@ -34667,16 +34799,16 @@
   ],
   "sections": [
    {
-    "title": "SW사업 영향평가 개요",
+    "title": "SW 사업 영향평가 개요",
     "subsections": [
      {
-      "title": "SW사업 영향평가 정의",
+      "title": "SW 사업 영향평가 정의",
       "items": [
        "공공 SW 사업의 민간 시장 영향 사전 평가"
       ]
      },
      {
-      "title": "SW사업 영향평가 목적",
+      "title": "SW 사업 영향평가 목적",
       "items": [
        "민간 시장 침해 방지, 생태계 활성화"
       ]
@@ -34711,7 +34843,7 @@
       ]
      },
      {
-      "title": "SW사업 영향평가 효과",
+      "title": "SW 사업 영향평가 효과",
       "items": [
        "중복 개발 방지, 민간 SW 수요 창출"
       ]
@@ -34725,15 +34857,15 @@
    427
   ],
   "outline": [
-   "SW사업 영향평가 개요",
-   "- SW사업 영향평가 정의",
-   "- SW사업 영향평가 목적",
+   "SW 사업 영향평가 개요",
+   "- SW 사업 영향평가 정의",
+   "- SW 사업 영향평가 목적",
    "대상 기관과 평가 체계",
    "- 대상",
    "- 체계",
    "평가 항목과 기대효과",
    "- 항목",
-   "- SW사업 영향평가 효과"
+   "- SW 사업 영향평가 효과"
   ],
   "name": "SW사업 영향평가(Software Project Impact Assessment)",
   "en": "Software Project Impact Assessment",

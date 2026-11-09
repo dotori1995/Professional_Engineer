@@ -21,7 +21,7 @@ ADC: Application Delivery Controller
 ADF: Augmented Dickey-Fuller
 ADN: Application Delivery Network
 ADPCM: Adaptive Differential Pulse Code Modulation
-ADR: Adaptive Data Rate
+ADR: [Adaptive Data Rate, Architecture Decision Record, Active Design Review]
 AECD: Automatic Emergency Call Device
 AES: Advanced Encryption Standard
 AH: Authentication Header
@@ -44,7 +44,7 @@ ANSI: American National Standards Institute
 AoA: Angle of Arrival
 AODV: Ad hoc On-demand Distance Vector
 AOP: Aspect-Oriented Programming
-AP: [Access Point, Application Processor]
+AP: [Access Point, Application Processor, Action Priority]
 APIPA: Automatic Private IP Addressing
 APS: Automatic Protection Switching
 APTEEN: Adaptive Periodic Threshold-sensitive Energy Efficient sensor Network
@@ -55,7 +55,7 @@ ARM: Asynchronous Response Mode
 ARMA: Autoregressive Moving Average
 ARP: Address Resolution Protocol
 ARQ: Automatic Repeat reQuest
-AS: [Autonomous System, Application Server]
+AS: [Autonomous System, Application Server, Architectural Strategy]
 ASBR: Autonomous System Boundary Router
 ASCII: American Standard Code for Information Interchange
 ASIC: Application-Specific Integrated Circuit
@@ -141,7 +141,7 @@ COQ: Cost of Quality
 CoRE: Constrained RESTful Environments
 CORS: Continuously Operating Reference Station
 CPE: Customer Premises Equipment
-CPM: Critical Path Method
+CPM: [Critical Path Method, Counting Practices Manual]
 CPU: Central Processing Unit
 CQ: Custom Queuing
 CQI: Channel Quality Indicator
@@ -166,7 +166,7 @@ D2D: Device-to-Device
 DAC: Device Attestation Certificate
 DAI: Dynamic ARP Inspection
 DASH: Dynamic Adaptive Streaming over HTTP
-DCE: Data Circuit-terminating Equipment
+DCE: [Data Circuit-terminating Equipment, Distributed Computing Environment]
 DCF: Distributed Coordination Function
 DCT: Discrete Cosine Transform
 DEMUX: Demultiplexer
@@ -389,7 +389,7 @@ ISDN: Integrated Services Digital Network
 ISM: Industrial, Scientific and Medical
 ISN: Initial Sequence Number
 ISO: International Organization for Standardization
-ISP: Internet Service Provider
+ISP: [Internet Service Provider, Information Strategy Planning, Interface Segregation Principle]
 ITIL: Information Technology Infrastructure Library
 ITS: Intelligent Transport Systems
 ITSM: IT Service Management
@@ -443,7 +443,7 @@ LSDB: Link State Database
 LSH: Locality-Sensitive Hashing
 LSN: Log Sequence Number
 LSNAT: Load Sharing Network Address Translation
-LSP: Label Switched Path
+LSP: [Label Switched Path, Liskov Substitution Principle]
 LSR: Label Switching Router
 LSTM: Long Short-Term Memory
 LTE: Long Term Evolution
@@ -507,11 +507,11 @@ MTC: Machine-Type Communication
 MTU: Maximum Transmission Unit
 MU-MIMO: Multi-User MIMO
 MUX: Multiplexer
-MVC: Multiview Video Coding
+MVC: [Multiview Video Coding, Model-View-Controller]
 MVCC: Multi-Version Concurrency Control
 MVD: Multi-Valued Dependency
 MVNO: Mobile Virtual Network Operator
-MVP: Minimum Viable Product
+MVP: [Minimum Viable Product, Model-View-Presenter]
 MVTO: Multi-Version Timestamp Ordering
 MVUE: Minimum Variance Unbiased Estimator
 MX: Mail Exchanger
@@ -595,7 +595,7 @@ OQPSK: Offset Quadrature Phase Shift Keying
 OSGi: Open Services Gateway initiative
 OSI: Open Systems Interconnection
 OSPF: Open Shortest Path First
-OSS: Operations Support System
+OSS: [Operations Support System, Open Source Software]
 OTA: Over-The-Air
 OTAA: Over-The-Air Activation
 OTDOA: Observed Time Difference of Arrival
@@ -603,7 +603,7 @@ OTN: Optical Transport Network
 OWE: Opportunistic Wireless Encryption
 P2P: Peer-to-Peer
 PACF: Partial Autocorrelation Function
-PAM: Pulse Amplitude Modulation
+PAM: [Pulse Amplitude Modulation, Process Assessment Model]
 PAT: Port Address Translation
 PAwR: Periodic Advertising with Responses
 PBB: Provider Backbone Bridge
@@ -621,7 +621,7 @@ PHP: Penultimate Hop Popping
 PHY: Physical Layer
 PIE: Proportional Integral controller Enhanced
 PIFS: PCF Inter-Frame Space
-PIM: Protocol Independent Multicast
+PIM: [Protocol Independent Multicast, Platform Independent Model, Process Improvement]
 PITR: Point-in-Time Recovery
 PJNF: Project-Join Normal Form
 PKI: Public Key Infrastructure
@@ -642,7 +642,7 @@ POLQA: Perceptual Objective Listening Quality Analysis
 POP: Point of Presence
 POP3: Post Office Protocol version 3
 POTN: Packet Optical Transport Network
-PPP: Point-to-Point Protocol
+PPP: [Point-to-Point Protocol, Public Private Partnership]
 PQ: Priority Queuing
 PRB: Physical Resource Block
 PRM: Partner Relationship Management
@@ -651,7 +651,7 @@ PS-LTE: Public Safety LTE
 PSAP: Public Safety Answering Point
 PSH: Push
 PSK: Phase Shift Keying
-PSM: Power Saving Mode
+PSM: [Power Saving Mode, Platform Specific Model]
 PSTN: Public Switched Telephone Network
 PTR: Pointer
 PVC: Permanent Virtual Circuit
@@ -839,7 +839,7 @@ TOC: Theory of Constraints
 TOS: Type of Service
 TPID: Tag Protocol Identifier
 TPR: True Positive Rate
-TPS: Toyota Production System
+TPS: [Toyota Production System, Transactions Per Second]
 TSN: Time-Sensitive Networking
 TTL: Time To Live
 TURN: Traversal Using Relays around NAT
@@ -1022,7 +1022,7 @@ DQM: Data Quality Management
 DoDAF: Department of Defense Architecture Framework
 EAMS: Enterprise Architecture Management System
 ECM: Enterprise Content Management
-EDM: Evaluate, Direct and Monitor
+EDM: ["Evaluate, Direct and Monitor", Event-Driven Microservice]
 EIP: Enterprise Information Portal
 EKP: Enterprise Knowledge Portal
 ERM: Enterprise Risk Management
