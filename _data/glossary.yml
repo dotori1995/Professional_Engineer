@@ -24,8 +24,10 @@ BDR: Backup Designated Router
 BEC: Backward Error Correction
 BGP: Border Gateway Protocol
 BOOTP: Bootstrap Protocol
+BSM: Basic Safety Message
 BSS: Business Support System
 C-V2X: Cellular Vehicle-to-Everything
+CAM: Cooperative Awareness Message
 CAN: Controller Area Network
 CCTV: Closed-Circuit Television
 CDM: Code Division Multiplexing
@@ -47,6 +49,8 @@ CWDM: Coarse Wavelength Division Multiplexing
 D2D: Device-to-Device
 DAI: Dynamic ARP Inspection
 DCF: Distributed Coordination Function
+DENM: Decentralized Environmental Notification Message
+DF: Don't Fragment
 DHCP: Dynamic Host Configuration Protocol
 DiffServ: Differentiated Services
 DIFS: DCF Inter-Frame Space
@@ -83,10 +87,12 @@ FHSS: Frequency Hopping Spread Spectrum
 FIN: Finish
 FQDN: Fully Qualified Domain Name
 GAF: Geographic Adaptive Fidelity
+GARP: Gratuitous ARP
 GCSE: Group Communication System Enablers
 GEAR: Geographical and Energy Aware Routing
 GNSS: Global Navigation Satellite System
 GPS: Global Positioning System
+GSLB: Global Server Load Balancing
 GSM: Global System for Mobile Communications
 GWCN: Gateway Core Network
 HARQ: Hybrid Automatic Repeat reQuest
@@ -147,6 +153,7 @@ MANO: Management and Orchestration
 MCPTT: Mission Critical Push-To-Talk
 MCU: Multipoint Control Unit
 MEC: Multi-access Edge Computing
+MF: More Fragments
 MIMO: Multiple-Input Multiple-Output
 MLD: Multicast Listener Discovery
 MOCN: Multi-Operator Core Network
@@ -176,6 +183,7 @@ NR-V2X: New Radio Vehicle-to-Everything
 NRTK: Network Real-Time Kinematic
 NRZ: Non-Return-to-Zero
 NSA: Non-Standalone
+OBU: On-Board Unit
 OECD: Organisation for Economic Co-operation and Development
 OFDM: Orthogonal Frequency Division Multiplexing
 OFDMA: Orthogonal Frequency Division Multiple Access
@@ -190,6 +198,7 @@ PCF: Point Coordination Function
 PIFS: PCF Inter-Frame Space
 PIM: Protocol Independent Multicast
 PLC: Programmable Logic Controller
+PMTUD: Path MTU Discovery
 POP: Point of Presence
 PPP: Point-to-Point Protocol
 PS-LTE: Public Safety LTE

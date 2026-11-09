@@ -1811,12 +1811,74 @@
   "subtitle": "",
   "domain": "NW",
   "category": "네트워크>TCP/IP 5계층 > Subnetting",
-  "definition": "동일 네트워크를 작은 그룹으로 나누기 위해 그룹화하는 방법",
+  "definition": "하나의 IP 네트워크를 서브넷 마스크로 호스트 비트 일부를 빌려 여러 개의 작은 논리 네트워크(서브넷)로 나누는 기법",
   "keywords": [
-   "VLSM(Variable Length Subnet Mask)",
-   "CIDR(Classless Inter-domain routing)"
+   "서브넷 마스크(Subnet Mask): 네트워크부/호스트부 구분",
+   "호스트 비트를 빌려 서브넷 비트로 사용 → 서브넷 수 2^n",
+   "서브넷당 호스트 수 = 2^h − 2 (네트워크·브로드캐스트 주소 제외)",
+   "효과: IP 낭비 감소 · 브로드캐스트 도메인 축소 · 보안·관리 분리",
+   "확장: VLSM(가변 길이) · 반대 개념: 슈퍼네팅(CIDR 요약)"
   ],
-  "sections": [],
+  "sections": [
+   {
+    "title": "서브네팅의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "IP 주소의 호스트부 상위 비트를 서브넷 번호로 사용해 하나의 네트워크를 여러 서브넷으로 분할"
+      ]
+     },
+     {
+      "title": "필요성",
+      "items": [
+       "클래스 단위 할당의 주소 낭비 감소",
+       "브로드캐스트 도메인 축소로 트래픽 감소",
+       "부서·용도별 분리로 보안·관리 용이"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "서브네팅 계산",
+    "subsections": [
+     {
+      "title": "서브넷 마스크",
+      "items": [
+       "네트워크 비트는 1, 호스트 비트는 0인 32비트 값 (예: 255.255.255.192 = /26)",
+       "IP 주소 AND 서브넷 마스크 = 네트워크 주소"
+      ]
+     },
+     {
+      "title": "서브넷·호스트 수 계산",
+      "items": [
+       "빌린 비트 n개 → 서브넷 2^n개",
+       "남은 호스트 비트 h개 → 서브넷당 사용 가능 호스트 2^h − 2개 (모두 0: 네트워크 주소, 모두 1: 브로드캐스트 주소)"
+      ]
+     },
+     {
+      "title": "계산 예",
+      "items": [
+       "192.168.10.0/24를 /26으로 나누면 서브넷 4개, 각 62호스트",
+       "서브넷: .0, .64, .128, .192 (브로드캐스트: .63, .127, .191, .255)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "관련 기법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "VLSM(Variable Length Subnet Mask): 서브넷마다 다른 길이의 마스크 사용",
+       "슈퍼네팅(Supernetting)·CIDR: 여러 네트워크를 하나로 묶어 경로 요약",
+       "/31(점대점 링크, RFC 3021), /32(단일 호스트)는 특수 용도"
+      ]
+     }
+    ]
+   }
+  ],
   "warnings": [],
   "pages": [
    71,
@@ -1824,8 +1886,28 @@
   ],
   "name": "서브네팅(Subnetting)",
   "en": "Subnetting",
-  "reviewed": true,
-  "outline": []
+  "outline": [
+   "서브네팅의 개념",
+   "- 정의",
+   "- 필요성",
+   "서브네팅 계산",
+   "- 서브넷 마스크",
+   "- 서브넷·호스트 수 계산",
+   "- 계산 예",
+   "관련 기법"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "서브넷 마스크(Subnet Mask)",
+   "서브넷(Subnet)",
+   "브로드캐스트 주소(Broadcast Address)",
+   "호스트 비트 차용(Borrowing Host Bits)"
+  ],
+  "quiz_groups": [
+   "ip"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_054",
@@ -1834,24 +1916,62 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW>TCP/IP 5계층>Supernetting",
-  "definition": "다수의 작은 네트워크를 하나의 큰 네트워크로 통합하는 방법으로 네트워크 정보를 요약하여 라우팅 테이블의 크기 축소 및 라우팅 수를 줄이는 방법",
+  "definition": "연속된 여러 개의 작은 네트워크를 공통 접두사(Prefix)를 가진 하나의 큰 네트워크로 묶어, 라우팅 테이블 엔트리와 라우팅 정보 교환량을 줄이는 기법 (서브네팅의 반대)",
   "keywords": [
-   "Subnetting의 반대 개념"
+   "서브네팅의 반대: 네트워크 비트를 줄여 여러 네트워크를 통합",
+   "경로 요약(Route Summarization) · 경로 집성(Route Aggregation)",
+   "조건: 연속된 주소 블록, 개수가 2의 거듭제곱, 경계 정렬",
+   "효과: 라우팅 테이블 축소 · 라우팅 업데이트 감소",
+   "CIDR 표기(/22) · 클래스리스 라우팅 프로토콜(RIPv2·OSPF·BGP) 필요"
   ],
   "sections": [
    {
-    "title": "라우팅 관리에 유용한 Supernetting 의 개념도",
-    "subsections": []
+    "title": "슈퍼네팅의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "여러 개의 연속된 네트워크 주소를 공통 상위 비트만 남겨 하나의 요약 경로로 표현하는 기법"
+      ]
+     },
+     {
+      "title": "필요성",
+      "items": [
+       "인터넷 라우팅 테이블 폭증 억제",
+       "C 클래스 여러 개를 묶어 중간 규모 조직에 할당"
+      ]
+     }
+    ]
    },
    {
-    "title": "Supernetting의 계산방법",
+    "title": "슈퍼네팅 계산",
+    "subsections": [
+     {
+      "title": "적용 조건",
+      "items": [
+       "주소 블록이 연속적이어야 함",
+       "묶는 네트워크 개수가 2의 거듭제곱(2, 4, 8 …)",
+       "첫 네트워크 주소가 묶는 크기의 경계에 정렬"
+      ]
+     },
+     {
+      "title": "계산 예",
+      "items": [
+       "192.168.0.0/24 ~ 192.168.3.0/24(4개) → 공통 비트 22개 → 192.168.0.0/22",
+       "마스크 255.255.252.0, 호스트 1,022개 수용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "효과 및 고려사항",
     "subsections": [
      {
       "title": null,
       "items": [
-       "192.168.1.100을 사용하는 호스트와 192.168.4.200을 사용하는 호스트가 물리적으로 하나의 세그먼트에 물려 있더라도, 255.255.248.0을 사용하면 통신이 가능하다는 것을 말함(네트워크 ID가 동일)",
-       "라우팅 테이블의 엔트리 수를 줄이기 위해서 고안",
-       "Supernetting을 지원하기 위한 라우팅 프로토콜"
+       "효과: 라우팅 테이블 엔트리·메모리 감소, 라우팅 업데이트 트래픽 감소, 경로 변동 영향 국소화",
+       "고려: 마스크 정보를 함께 전달하는 클래스리스 라우팅 프로토콜(RIPv2, OSPF, EIGRP, BGP) 필요",
+       "요약 범위에 실제 없는 주소가 포함되면 블랙홀 라우팅 위험"
       ]
      }
     ]
@@ -1864,11 +1984,26 @@
   ],
   "name": "슈퍼네팅(Supernetting)",
   "en": "Supernetting",
-  "reviewed": true,
   "outline": [
-   "라우팅 관리에 유용한 Supernetting 의 개념도",
-   "Supernetting의 계산방법"
-  ]
+   "슈퍼네팅의 개념",
+   "- 정의",
+   "- 필요성",
+   "슈퍼네팅 계산",
+   "- 적용 조건",
+   "- 계산 예",
+   "효과 및 고려사항"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "경로 요약(Route Summarization)",
+   "경로 집성(Route Aggregation)",
+   "공통 접두사(Common Prefix)"
+  ],
+  "quiz_groups": [
+   "ip"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_055",
@@ -1877,24 +2012,98 @@
   "subtitle": "CIDR(Classless inter-domain routing)",
   "domain": "NW",
   "category": "NW>TCP/IP 5계층 >CIDR(Classless inter-domain routing)",
-  "definition": "도메인간의 라우팅에 사용되는 인터넷 주소를, 원래의 IP 주소 클래스 체계를 쓰는 것보다 더욱 융통성 있도록할당하고, 지정하는 방식",
+  "definition": "IP 주소의 A·B·C 클래스 구분을 없애고 임의 길이의 네트워크 접두사(Prefix)로 주소를 할당하고 경로를 요약하는 방식 (RFC 4632)",
   "keywords": [
-   "슈퍼네팅(병합) 적용",
-   "IP 주소 할당 방법",
-   "8비트 단위로 네트워크부/호스트부를 구획하지 않음",
-   "Prefix 표기(/24)"
+   "클래스리스(Classless): 8비트 단위 구획 없음",
+   "접두사 표기(Prefix Notation): 203.0.113.0/24",
+   "주소 할당 효율화 · 슈퍼네팅(경로 집성) 적용",
+   "최장 접두사 일치(Longest Prefix Match) 포워딩",
+   "표준: RFC 1519(1993) → RFC 4632"
   ],
-  "sections": [],
+  "sections": [
+   {
+    "title": "CIDR의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "클래스 경계 대신 가변 길이 접두사로 네트워크를 정의하는 IP 주소 할당·라우팅 방식"
+      ]
+     },
+     {
+      "title": "등장 배경",
+      "items": [
+       "클래스풀 주소의 낭비(B 클래스 65,534호스트는 너무 크고 C 클래스 254는 너무 작음)",
+       "인터넷 라우팅 테이블 급증 → 1993년 RFC 1519로 도입"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "CIDR 주요 기술",
+    "subsections": [
+     {
+      "title": "접두사 표기",
+      "items": [
+       "주소/접두사 길이 (예: 10.1.0.0/16), 서브넷 마스크를 비트 수로 표현"
+      ]
+     },
+     {
+      "title": "경로 집성",
+      "items": [
+       "ISP가 큰 블록을 받아 고객에게 나눠 주고, 외부에는 하나의 요약 경로만 광고 (슈퍼네팅)"
+      ]
+     },
+     {
+      "title": "최장 접두사 일치",
+      "items": [
+       "라우터는 목적지와 일치하는 경로 중 접두사가 가장 긴(가장 구체적인) 경로를 선택"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "CIDR의 효과",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "IPv4 주소 고갈 지연, 필요한 크기만큼 할당",
+       "라우팅 테이블 증가 억제",
+       "IPv6도 CIDR 표기 사용(/64, /48)"
+      ]
+     }
+    ]
+   }
+  ],
   "warnings": [],
-  "dueum": "슈퍼네팅 (사수라고 암기)",
   "pages": [
    76,
    77
   ],
   "name": "CIDR(Classless Inter-Domain Routing)",
   "en": "Classless Inter-Domain Routing",
-  "reviewed": true,
-  "outline": []
+  "outline": [
+   "CIDR의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "CIDR 주요 기술",
+   "- 접두사 표기",
+   "- 경로 집성",
+   "- 최장 접두사 일치",
+   "CIDR의 효과"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "접두사 표기(Prefix Notation)",
+   "최장 접두사 일치(Longest Prefix Match)",
+   "클래스리스 주소(Classless Addressing)"
+  ],
+  "quiz_groups": [
+   "ip"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_056",
@@ -1903,54 +2112,55 @@
   "subtitle": "VLSM (Variable Length Subnet Mask)",
   "domain": "NW",
   "category": "네트워크 > TCP/IP 5계층 > VLSM",
-  "definition": "Classful Addressing 처럼 고정 길이의 서브넷 마스크를 적용하지 않고, 호스트 수가 적은 네트워크에는 긴 마스크, 그 반대에는 짧은 마스크 적용으로 동일 네트워크 주소공간에서 다른 크기의 서브넷 사용 허용 방법.",
+  "definition": "하나의 네트워크 안에서 서브넷마다 서로 다른 길이의 서브넷 마스크를 적용해, 호스트 수에 맞게 주소를 나눠 IP 낭비를 줄이는 기법 (서브넷의 서브넷)",
   "keywords": [
-   "서브넷의 서브넷",
-   "다른 크기 서브넷(/25, /26 분배)",
-   "RFC 1878",
-   "RIPv2, OSPF, BGP 지원"
+   "서브넷마다 다른 마스크 길이 (/25, /26, /30 혼용)",
+   "큰 서브넷부터 할당 · 점대점 링크는 /30(/31)",
+   "표준: RFC 1009(1987)에서 개념 도입",
+   "클래스리스 라우팅 프로토콜 필요: RIPv2 · OSPF · EIGRP · IS-IS · BGP",
+   "효과: 주소 낭비 감소 · 계층적 경로 요약"
   ],
   "sections": [
    {
-    "title": "서브네트의 서브넷팅, VLSM 개요",
+    "title": "VLSM의 개념",
     "subsections": [
      {
-      "title": "VLSM 개념",
-      "items": []
+      "title": "정의",
+      "items": [
+       "이미 서브네팅한 서브넷을 다시 다른 길이로 나누는 '서브넷의 서브넷' 기법"
+      ]
      },
      {
-      "title": "VLSM 특징",
+      "title": "FLSM과 비교",
       "items": [
-       "RFC 1878이 VLSM의 표준"
+       "FLSM(Fixed Length Subnet Mask): 모든 서브넷이 같은 크기 → 작은 링크에도 큰 블록 낭비",
+       "VLSM: 필요한 호스트 수에 맞춰 마스크 길이 선택"
       ]
      }
     ]
    },
    {
-    "title": "VLSM 적용 및 상세설명",
+    "title": "VLSM 설계 절차 및 예",
     "subsections": [
      {
       "title": null,
       "items": [
-       "서브넷마다 서브넷 마스크가 다른 기법",
-       "상기 그림에서 하나의 C급 클래스풀 네트워크(128.3.2.0) 하에서도 '/24', '/25'가 사용됨 알 수 있음",
-       "IP 주소 낭비 방지 및 더 많은 서브넷이 확보 가능"
+       "① 서브넷별 필요 호스트 수 산정 → ② 큰 서브넷부터 정렬 → ③ 2^h − 2 ≥ 호스트 수인 최소 블록 할당 → ④ 남은 공간에서 다음 할당",
+       "예: 192.168.1.0/24에서 100호스트 → /25(.0), 50호스트 → /26(.128), 20호스트 → /27(.192), 점대점 링크 → /30(.224)",
+       "예: 128.10.0.0/16(B 클래스)을 /20, /24, /30으로 나눠 사용"
       ]
      }
     ]
    },
    {
-    "title": "추가자료",
+    "title": "적용 조건 및 효과",
     "subsections": [
      {
       "title": null,
       "items": [
-       "부족한 IP 주소를 해결하기 위해 만들어진 - 어떤 네트워크에서 IP를 효율적으로 할당하기 위한방법으로 서로 다른 크기의 서브넷을 지원하기 위한",
-       "라우팅간 전달 정보를 묶어서 트레픽을 줄임. 구조",
-       "주소블록을 ISP에게 할당하여 최종 기관으로 할당 -한 기관에 이미 할당된 주소공간을 가지고 분할하여 할당",
-       "인터넷 도메인 -인트라넷 도메인",
-       "10.1.123.9/20 - 192.168.30.0/24 C 클래스를 가진 회사에서 100개의",
-       "네트워크 영역(2^20) 주소가 필요한 2개 부서"
+       "조건: 업데이트에 마스크를 함께 싣는 클래스리스 라우팅 프로토콜(RIPv2, OSPF, EIGRP, IS-IS, BGP) — RIPv1·IGRP는 불가",
+       "효과: 주소 공간 효율 향상, 계층적 할당으로 경로 요약 쉬움",
+       "주의: 블록 겹침이 없도록 설계 필요"
       ]
      }
     ]
@@ -1963,14 +2173,24 @@
   ],
   "name": "VLSM(Variable Length Subnet Mask)",
   "en": "Variable Length Subnet Mask",
-  "reviewed": true,
   "outline": [
-   "서브네트의 서브넷팅, VLSM 개요",
-   "- VLSM 개념",
-   "- VLSM 특징",
-   "VLSM 적용 및 상세설명",
-   "추가자료"
-  ]
+   "VLSM의 개념",
+   "- 정의",
+   "- FLSM과 비교",
+   "VLSM 설계 절차 및 예",
+   "적용 조건 및 효과"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "FLSM(Fixed Length Subnet Mask)",
+   "서브넷의 서브넷(Subnet of Subnet)",
+   "클래스리스 라우팅 프로토콜(Classless Routing Protocol)"
+  ],
+  "quiz_groups": [
+   "ip"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_059",
@@ -1979,40 +2199,66 @@
   "subtitle": "패킷 단편화(Packet Fragmentation)",
   "domain": "NW",
   "category": "NW > TCP/IP 5계층 > 패킷 단편화(Packet Fragmentation)",
-  "definition": "프로토콜 기본 교환 단위인 PDU(Protocol Data Unit)를 여러 더 작은 단위로 나누는 동작",
+  "definition": "IP 패킷이 경로상 링크의 MTU보다 클 때 여러 조각(Fragment)으로 나누어 전송하고, 최종 목적지에서 재조립하는 기능",
   "keywords": [
-   "MTU",
-   "재조립",
-   "IPv6 확장 헤더"
+   "MTU(최대 전송 단위): 이더넷 1500바이트",
+   "IPv4 헤더: 식별자(Identification) · 플래그(DF·MF) · 단편 오프셋(8바이트 단위)",
+   "IPv4: 출발지·중간 라우터 모두 단편화 / IPv6: 출발지만(단편 확장 헤더)",
+   "최소 MTU: IPv4 68바이트(재조립 보장 576) · IPv6 1280바이트",
+   "재조립(Reassembly)은 최종 목적지에서만",
+   "PMTUD(경로 MTU 발견) · 단편화 공격(Teardrop)"
   ],
   "sections": [
    {
-    "title": "IP 패킷 단편화의 개념과 특징",
+    "title": "패킷 단편화의 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "정의",
       "items": [
-       "큰 IP 패킷들이 작은 MTU(Maximum Transmission Unit)를 갖는 링크 통해 전송되려면 여러 개의 작은패킷으로 조각화 되어야 함.",
-       "송신자는 큰 데이터를 네트워크에서 한번에 보낼 수 있는 크기만큼 쪼개서 패킷을 발송하고, 수신자는쪼개진 패킷의 정보를 바탕으로 재조합하여 데이터 처리하는 방식",
-       "지속적인 단편화/재조합은 시스템의 CPU 등 자원을 많이 소비함일단 단편화되면, 최종 목적지에 도달할 때까지 재조립되지 않는 것이 일반적임. 재조립은항상 최종 수신지에서만 가능함",
-       "IPv4 에서는 발신지 뿐만 아니라 중간 라우터에서도 IP 단편화가 가능",
-       "IPv4 에서 MTU 최소 권고값 : 576 byte",
-       "IPv6 에서는 IP 단편화가 발신지에서 만 가능"
+       "큰 IP 패킷을 다음 링크의 MTU(Maximum Transmission Unit) 이하 조각으로 나누고, 목적지에서 다시 합치는 기능"
+      ]
+     },
+     {
+      "title": "필요성과 문제점",
+      "items": [
+       "필요: 이더넷(1500), PPPoE(1492) 등 링크마다 MTU가 다름",
+       "문제: 조각 하나만 손실돼도 전체 재전송, 라우터·호스트 CPU 부담, 방화벽 검사 어려움"
       ]
      }
     ]
    },
    {
-    "title": "Ipv4와 Ipv6에서의 처리방식",
+    "title": "IPv4와 IPv6의 단편화",
     "subsections": [
      {
-      "title": "IPv4에서의 처리방식",
+      "title": "IPv4 헤더 필드",
       "items": [
-       "분할의 특성을 나타내는 플래그",
-       "첫 번째 bit : 미사용 (항상 0)",
-       "두 번째 bit : D F bit (Don't Fragment)",
-       "분할(조각) 0 으로 셋팅되면 라우터에서도 분할(조각,단편)이 가능함을 뜻함",
-       "미분할 1 로 셋팅되면 목적지 컴퓨터가 조각들을 다시 모을 능력이 없기 때문에중간에 라우터로 하여금 데이터그램을 단편화하지 말라는 의미"
+       "식별자(Identification, 16비트): 같은 원본 패킷의 조각을 묶음",
+       "플래그: DF(Don't Fragment) = 1이면 단편화 금지, MF(More Fragments) = 1이면 뒤에 조각이 더 있음",
+       "단편 오프셋(Fragment Offset): 원본 내 위치, 8바이트 단위",
+       "출발지와 중간 라우터 모두 단편화 가능, 재조립은 목적지에서만"
+      ]
+     },
+     {
+      "title": "IPv6 처리 방식",
+      "items": [
+       "중간 라우터는 단편화하지 않고 ICMPv6 Packet Too Big을 보냄",
+       "출발지만 단편 확장 헤더(Fragment Header)로 단편화",
+       "모든 링크 최소 MTU 1280바이트 보장"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "경로 MTU 발견과 보안",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "IPv4 최소 MTU 68바이트, 모든 호스트는 576바이트까지 재조립 가능해야 함",
+       "PMTUD(Path MTU Discovery): DF=1로 보내고 ICMP 오류로 경로상 최소 MTU를 찾아 단편화 회피 (IPv4 RFC 1191, IPv6 RFC 8201)",
+       "TCP MSS 조정으로 단편화 회피",
+       "공격: 티어드롭(Teardrop, 오프셋 겹침), 작은 조각으로 방화벽 우회 → 조각 재조립 후 검사"
       ]
      }
     ]
@@ -2025,12 +2271,28 @@
   ],
   "name": "패킷 단편화(Packet Fragmentation)",
   "en": "Packet Fragmentation",
-  "reviewed": true,
   "outline": [
-   "IP 패킷 단편화의 개념과 특징",
-   "Ipv4와 Ipv6에서의 처리방식",
-   "- IPv4에서의 처리방식"
-  ]
+   "패킷 단편화의 개념",
+   "- 정의",
+   "- 필요성과 문제점",
+   "IPv4와 IPv6의 단편화",
+   "- IPv4 헤더 필드",
+   "- IPv6 처리 방식",
+   "경로 MTU 발견과 보안"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "MTU(Maximum Transmission Unit)",
+   "DF 플래그(Don't Fragment)",
+   "단편 오프셋(Fragment Offset)",
+   "PMTUD(Path MTU Discovery)",
+   "재조립(Reassembly)"
+  ],
+  "quiz_groups": [
+   "ip"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_062",
@@ -2039,49 +2301,65 @@
   "subtitle": "IGMP (Internet Group Management Protocol)",
   "domain": "NW",
   "category": "프로토콜 목록 > IGMP",
-  "definition": "다수 호스트를 논리적 단위 하나로 관리하기 위해 호스트와 라우터 사이에 그룹 멤버 정보를 교환하여, 그룹 생성·제거와 호스트의 가입·탈퇴 등 멀티캐스트 그룹 소속원을 관리하는 프로토콜.",
+  "definition": "IPv4 호스트와 인접 멀티캐스트 라우터가 그룹 멤버십 정보를 주고받아, 호스트의 멀티캐스트 그룹 가입·탈퇴를 관리하는 프로토콜",
   "keywords": [
-   "그룹 가입",
-   "멤버십 감시",
-   "멤버십 응답",
-   "멤버십 탈퇴",
-   "IPv6에서는 MLD(ICMPv6의 일부)"
+   "메시지: 멤버십 질의(Query) · 멤버십 보고(Report) · 탈퇴(Leave, v2)",
+   "호스트 → 라우터: 가입 시 Membership Report",
+   "라우터 → 호스트: 주기적 General Query로 멤버 확인",
+   "버전: v1(RFC 1112) · v2(RFC 2236, Leave) · v3(RFC 9776, 출발지 지정 SSM)",
+   "IPv6: MLD(ICMPv6의 일부) · L2: IGMP 스누핑"
   ],
   "sections": [
    {
-    "title": "멀티캐스트의 기본 요소 및 IGMP",
+    "title": "IGMP의 개념",
     "subsections": [
      {
-      "title": "IGMP (Internet Group Management Protocol)의 정의",
-      "items": []
+      "title": "정의",
+      "items": [
+       "멀티캐스트 그룹 멤버십을 관리하는 IPv4 프로토콜, IP 프로토콜 번호 2, TTL 1(로컬 링크만)"
+      ]
      },
      {
-      "title": "멀티캐스트의 기본 요소",
+      "title": "위치와 역할",
       "items": [
-       "각각의 그룹은 멀티캐스트 주소로 구분",
-       "멀티캐스트 그룹은 특정 호스트로 고정되지 않고, 필요에 따라 추가, 삭제되는 동적인 구조",
-       "멀티캐스트 데이터 전송시 라우팅 경로 설정은 중요한 사항",
-       "전송 가능한 최적의 경로를 찾기 위해 멀티캐스트의 라우팅 경로 설정은 송신 호스트를 루트로 하여 경로를 설정하는 방법과 여러 수신 호스트가 하나의 공유된 경로를 사용하는 방법을 사용"
+       "호스트-라우터 사이에서 동작 (라우터 간 경로 설정은 PIM 등 멀티캐스트 라우팅 프로토콜 담당)",
+       "라우터는 각 인터페이스에 어떤 그룹의 수신자가 있는지만 알면 됨"
       ]
      }
     ]
    },
    {
-    "title": "IGMP 역할 및 메시지 유형",
+    "title": "IGMP 메시지 및 동작",
+    "subsections": [
+     {
+      "title": "메시지 유형",
+      "items": [
+       "멤버십 질의(Membership Query): 라우터 → 호스트, General/Group-Specific",
+       "멤버십 보고(Membership Report): 호스트 → 라우터, 가입 알림·질의 응답",
+       "그룹 탈퇴(Leave Group): IGMPv2부터"
+      ]
+     },
+     {
+      "title": "가입·감시·탈퇴 절차",
+      "items": [
+       "가입: 호스트가 그룹 주소로 Membership Report 전송 (한 호스트의 여러 프로세스가 가입해도 한 번만)",
+       "감시: 라우터가 주기적으로 General Query, 호스트는 임의 지연 후 Report (같은 그룹의 다른 Report를 들으면 생략)",
+       "탈퇴: v2 Leave → 라우터가 Group-Specific Query로 남은 멤버 확인, 응답 없으면 전달 중지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "IGMP 버전 비교 및 관련 기술",
     "subsections": [
      {
       "title": null,
       "items": [
-       "멀티캐스트를 지원하는 라우터가 멀티캐스트 그룹에 가입한 네트워크 내의 호스트를 관리 하기 위해사용하는 프로토콜",
-       "멀티캐스트 라우터는 네트워크에서 호스트가 사용하는 멀티캐스트 주소 목록을 알고 있어야 하며, 이러한 목적은 동적으로 변경"
-      ]
-     },
-     {
-      "title": "IGMP 역할",
-      "items": [
-       "호스트가 새로운 멀티캐스트 그룹에 가입하기 원하는 경우, 멤버쉽 문의 메시지를 라우터로 보냄",
-       "한 호스트에서 여러 프로세스가 동일한 멀티캐스트 그룹에 가입하고자 하는 경우에도 멤버쉽 가입 메시지는 한번만 전송",
-       "멀티캐스트 라우터는 호스트들이 계속 그룹 멤버쉽을 사용하기 원하는지 감시하기 위해 주기적으로 멤버쉽 문의 메시지를 전송"
+       "IGMPv1(RFC 1112): Query/Report만, 탈퇴는 타임아웃",
+       "IGMPv2(RFC 2236): Leave, 그룹별 질의, 질의자 선출",
+       "IGMPv3(RFC 3376 → RFC 9776): 출발지 포함/제외 필터 → SSM(Source-Specific Multicast) 지원",
+       "MLD(Multicast Listener Discovery): IPv6용, ICMPv6 메시지 (MLDv2 ≈ IGMPv3)",
+       "IGMP 스누핑: L2 스위치가 Report를 엿봐 가입 포트로만 전달"
       ]
      }
     ]
@@ -2094,14 +2372,29 @@
   ],
   "name": "IGMP(Internet Group Management Protocol)",
   "en": "Internet Group Management Protocol",
-  "reviewed": true,
   "outline": [
-   "멀티캐스트의 기본 요소 및 IGMP",
-   "- IGMP (Internet Group Management Protocol)의 정의",
-   "- 멀티캐스트의 기본 요소",
-   "IGMP 역할 및 메시지 유형",
-   "- IGMP 역할"
-  ]
+   "IGMP의 개념",
+   "- 정의",
+   "- 위치와 역할",
+   "IGMP 메시지 및 동작",
+   "- 메시지 유형",
+   "- 가입·감시·탈퇴 절차",
+   "IGMP 버전 비교 및 관련 기술"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "멤버십 질의(Membership Query)",
+   "멤버십 보고(Membership Report)",
+   "그룹 탈퇴(Leave Group)",
+   "IGMPv3(Source Filtering)",
+   "MLD(Multicast Listener Discovery)"
+  ],
+  "quiz_groups": [
+   "ip",
+   "multicast"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_064",
@@ -2110,29 +2403,69 @@
   "subtitle": "SCTP(Stream Control Transmission Protocol)",
   "domain": "NW",
   "category": "NW > 프로토콜 목록 > SCTP(Stream Control Transmission Protocol)",
-  "definition": "UDP의 메시지 지향특성(Message Oriented)과 TCP의 연결지향(Connection Oriented) 및 신뢰성 특성 조합한 프로토콜로, 기존 TCP로 지원 어려운 멀티미디어 응용서비스 전송지원 위한 전송계층 프로토콜",
+  "definition": "TCP의 연결형·신뢰성과 UDP의 메시지 경계 보존을 결합하고, 멀티스트리밍과 멀티호밍을 지원하는 전송 계층 프로토콜 (RFC 9260)",
   "keywords": [
-   "전송계층",
-   "TCP+UDP",
-   "멀티호밍",
-   "멀티스트리밍",
-   "4-way handshaking(연결)",
-   "3-way handshaking(종료)",
-   "SACK",
-   "HEATBEAT"
+   "연결 단위: 어소시에이션(Association)",
+   "멀티스트리밍(Multi-streaming) → HOL 블로킹 완화",
+   "멀티호밍(Multi-homing): 여러 IP 주소, HEARTBEAT로 경로 감시·장애 전환",
+   "4-way 핸드셰이크(INIT·INIT-ACK·COOKIE-ECHO·COOKIE-ACK) → SYN 플러딩 방어",
+   "3-way 종료(SHUTDOWN · SHUTDOWN-ACK · SHUTDOWN-COMPLETE)",
+   "메시지 지향 · SACK 기본 · 용도: SIGTRAN·Diameter·5G NGAP·WebRTC 데이터 채널"
   ],
   "sections": [
    {
-    "title": "SCTP 프로토콜 계층구조 및 기술요소",
+    "title": "SCTP의 개념",
     "subsections": [
      {
-      "title": "SCTP 프로토콜 계층구조",
+      "title": "정의",
       "items": [
-       "SCTP는 응용 계층과 네트워크 계층 사이 위치",
-       "SCTP Peer 간 응용 데이터를 API로 전달 받아 IP 망통해 전송하는 기능 수행",
-       "SCTP 단말은 하나의 SCTP 세션에서 여러 개의 IP 주소를 사용 (멀티호밍, Multi-homing)",
-       "두 지점 간 메시지 전송 위해 다중경로(Multi-path) 및 다중스트림(Multiple stream) 기능 사용",
-       "두 SCTP 지점간의 SCTP 연결을 SCTP association"
+       "IETF SIGTRAN에서 전화망 신호(SS7)를 IP로 나르기 위해 만든 전송 계층 프로토콜, RFC 2960 → 4960 → 9260(2022)"
+      ]
+     },
+     {
+      "title": "등장 배경",
+      "items": [
+       "TCP: 바이트 스트림이라 메시지 경계 없음, 한 패킷 손실이 전체를 막는 HOL(Head-of-Line) 블로킹, 단일 경로",
+       "UDP: 신뢰성·혼잡 제어 없음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "SCTP 주요 기능",
+    "subsections": [
+     {
+      "title": "멀티스트리밍",
+      "items": [
+       "한 어소시에이션 안에 독립 스트림 여러 개 → 한 스트림 손실이 다른 스트림 전달을 막지 않음"
+      ]
+     },
+     {
+      "title": "멀티호밍",
+      "items": [
+       "양 끝단이 여러 IP 주소 사용, 주 경로 장애 시 대체 경로로 전환",
+       "HEARTBEAT 청크로 각 경로 도달성 주기적 확인"
+      ]
+     },
+     {
+      "title": "연결 설정·종료",
+      "items": [
+       "4-way: INIT → INIT-ACK(상태 쿠키) → COOKIE-ECHO → COOKIE-ACK, 서버는 쿠키 확인 전 자원 할당 안 함 → SYN 플러딩류 공격 방어",
+       "3-way 종료: SHUTDOWN → SHUTDOWN-ACK → SHUTDOWN-COMPLETE (반쪽 종료 없음)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "TCP·UDP와 비교 및 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "TCP 대비: 메시지 경계 보존, 멀티스트림·멀티호밍, 쿠키 기반 연결",
+       "UDP 대비: 연결형, 순서·신뢰성 보장(순서 없는 전달도 선택 가능)",
+       "공통: SACK 기반 오류 제어, TCP 유사 혼잡 제어",
+       "활용: SIGTRAN, Diameter, LTE S1-AP/X2-AP, 5G NGAP, WebRTC 데이터 채널(DTLS 위 SCTP)"
       ]
      }
     ]
@@ -2145,11 +2478,29 @@
   ],
   "name": "SCTP(Stream Control Transmission Protocol)",
   "en": "Stream Control Transmission Protocol",
-  "reviewed": true,
   "outline": [
-   "SCTP 프로토콜 계층구조 및 기술요소",
-   "- SCTP 프로토콜 계층구조"
-  ]
+   "SCTP의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "SCTP 주요 기능",
+   "- 멀티스트리밍",
+   "- 멀티호밍",
+   "- 연결 설정·종료",
+   "TCP·UDP와 비교 및 활용"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "멀티스트리밍(Multi-streaming)",
+   "멀티호밍(Multi-homing)",
+   "어소시에이션(Association)",
+   "HEARTBEAT 청크(Heartbeat Chunk)",
+   "상태 쿠키(State Cookie)"
+  ],
+  "quiz_groups": [
+   "transport"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_065",
@@ -2158,38 +2509,57 @@
   "subtitle": "ARP(Address Resolution Protocol)",
   "domain": "NW",
   "category": "NW > 프로토콜 목록 > ARP(Address Resolution Protocol)",
-  "definition": "LAN환경에서 논리주소인 IP주소를 물리주소인 MAC주소로 변환해 주는 네트워크 계층의 프로토콜",
+  "definition": "같은 LAN에서 목적지의 IP 주소(논리 주소)로 MAC 주소(물리 주소)를 알아내는 주소 해석 프로토콜 (RFC 826)",
   "keywords": [
-   "ARP Cache Table"
+   "ARP 요청(Request): 브로드캐스트 / ARP 응답(Reply): 유니캐스트",
+   "ARP 캐시 테이블(ARP Cache): 매핑 일정 시간 보관",
+   "다른 네트워크 목적지 → 기본 게이트웨이의 MAC 조회",
+   "GARP(Gratuitous ARP): IP 중복 검사·캐시 갱신",
+   "ARP 스푸핑(ARP Spoofing) → 정적 ARP · DAI",
+   "IPv6: NDP(Neighbor Discovery Protocol)로 대체"
   ],
   "sections": [
    {
-    "title": "네트워크 주소변환, ARP(Address Resolution Protocol) 개요",
+    "title": "ARP의 개념",
     "subsections": [
      {
-      "title": "ARP 정의",
-      "items": []
+      "title": "정의",
+      "items": [
+       "IP 패킷을 이더넷 프레임에 담을 때 필요한 목적지 MAC 주소를 찾는 프로토콜, 2계층과 3계층 사이에서 동작(EtherType 0x0806)"
+      ]
      },
      {
-      "title": "네트워크 주소변환, ARP(Address Resolution Protocol) 개념도",
+      "title": "동작 절차",
       "items": [
-       "데이터를 전송할 때마다 ARP 사용하여 패킷을 브로드캐스팅하면 네트워크 트래픽이 증가",
-       "ARP 사용하는 호스트에서는 가장 최근에 얻은 IP 주소와 MAC 주소 매핑 값을 보관하는 캐시 정보를 사용 -"
+       "① ARP 캐시 확인 → ② 없으면 'IP X의 MAC은?' ARP 요청을 브로드캐스트(FF:FF:FF:FF:FF:FF)",
+       "③ 해당 호스트가 자기 MAC을 담아 유니캐스트 응답 → ④ 캐시에 저장 후 프레임 전송",
+       "목적지가 다른 네트워크면 기본 게이트웨이(라우터)의 MAC을 조회"
       ]
      }
     ]
    },
    {
-    "title": "ARP의 보안 취약점 및 대응 방안",
+    "title": "ARP 관련 기법",
     "subsections": [
      {
-      "title": "ARP Spoofing",
+      "title": null,
       "items": [
-       "공격자가 서버와 클라이언트 컴퓨터에 통신 상대방을 자기 자신으로 통보  서버와",
-       "공격자는 각자에게 받은 패킷 읽은 후 서버와 클라이언트에게 서로 전송하려는 패킷 전달",
-       "ARP table의 수동관리 통한 비정상 변경 방지",
-       "재부팅 시에도 정정 Table유지",
-       "안전한 서버도 동일 서브넷 내 스푸핑된 서버에 의해 Packet 스니핑이 가능하기에 민감정보와 PW 암호화"
+       "ARP 캐시: 매번 브로드캐스트하면 트래픽 증가 → 일정 시간(수 분) 매핑 보관",
+       "GARP(Gratuitous ARP): 자기 IP로 요청 → IP 중복 검사, 이중화(VRRP) 전환 시 캐시 갱신",
+       "프록시 ARP(Proxy ARP): 라우터가 다른 네트워크 호스트 대신 응답",
+       "RARP: 반대로 MAC → IP (현재는 DHCP로 대체)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "ARP 보안 취약점 및 대응",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "ARP 스푸핑: 인증 없는 ARP 응답을 위조해 상대의 캐시에 자기 MAC을 등록 → 중간자 공격(MITM)·스니핑",
+       "대응: 중요 장비 정적 ARP 엔트리, 스위치 DAI(Dynamic ARP Inspection) + DHCP 스누핑, ARP 감시 도구, 통신 암호화(TLS)"
       ]
      }
     ]
@@ -2202,14 +2572,26 @@
   ],
   "name": "ARP(Address Resolution Protocol)",
   "en": "Address Resolution Protocol",
-  "reviewed": true,
   "outline": [
-   "네트워크 주소변환, ARP(Address Resolution Protocol) 개요",
-   "- ARP 정의",
-   "- 네트워크 주소변환, ARP(Address Resolution Protocol) 개념도",
-   "ARP의 보안 취약점 및 대응 방안",
-   "- ARP Spoofing"
-  ]
+   "ARP의 개념",
+   "- 정의",
+   "- 동작 절차",
+   "ARP 관련 기법",
+   "ARP 보안 취약점 및 대응"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "ARP 캐시(ARP Cache)",
+   "ARP 스푸핑(ARP Spoofing)",
+   "GARP(Gratuitous ARP)",
+   "프록시 ARP(Proxy ARP)",
+   "DAI(Dynamic ARP Inspection)"
+  ],
+  "quiz_groups": [
+   "ip"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_066",
@@ -2218,34 +2600,55 @@
   "subtitle": "RARP(Reverse Address Resolution Protocol)",
   "domain": "NW",
   "category": "NW > 프로토콜 목록 > RARP(Reverse Address Resolution Protocol)",
-  "definition": "역순 주소 결정 프로토콜(Reverse Address Resolution Protocol, RARP)은 IP 호스트가 자신의 물리 네트워크주소(MAC)는 알지만 IP 주소를 모르는 경우, 서버로부터 IP 주소를 요청하기 위하여 사용하는 프로토콜",
+  "definition": "자신의 MAC 주소는 알지만 IP 주소를 모르는 호스트가 RARP 서버에 MAC 주소를 보내 자기 IP 주소를 받아 오는 프로토콜 (RFC 903, 현재는 BOOTP·DHCP로 대체)",
   "keywords": [
-   "RARP Server"
+   "MAC 주소 → IP 주소 (ARP의 반대)",
+   "RARP 요청: 브로드캐스트 / RARP 서버 응답",
+   "용도: 디스크 없는 워크스테이션 · X 터미널 부팅",
+   "한계: 같은 네트워크에 서버 필요 · IP 외 정보(마스크·게이트웨이) 없음",
+   "대체: BOOTP → DHCP"
   ],
   "sections": [
    {
-    "title": "RARP(Reverse Address Resolution Protocol) 개요",
+    "title": "RARP의 개념",
     "subsections": [
      {
-      "title": "RARP 의 정의",
-      "items": []
+      "title": "정의",
+      "items": [
+       "역순 주소 결정 프로토콜: 물리 주소로 논리 주소를 얻음, ARP와 같은 패킷 형식(EtherType 0x8035)"
+      ]
      },
      {
-      "title": "RARP(Reverse Address Resolution Protocol) 필요성",
+      "title": "필요성",
       "items": [
-       "디스크가 존재하지 않는 시스템이나 X 윈도우 터미널 등에서는 자신의 LAN 카드 정보를 읽어 MAC 주소를얻을 수 있지만, 파일시스템이 없으므로 IP 주소를 보관할 방법이 없음",
-       "이런 경우 자신의 MAC 주소와 IP 주소의 매핑 값을 보관하는 호스트로부터 IP 주소를 얻어야 함"
+       "디스크 없는 시스템·X 윈도 터미널은 LAN 카드에서 MAC은 읽지만 IP를 저장할 파일 시스템이 없음 → 부팅 시 서버에서 IP 수신"
       ]
      }
     ]
    },
    {
-    "title": "RARP 개념도",
+    "title": "RARP 동작 절차",
     "subsections": [
      {
       "title": null,
       "items": [
-       "Request 시 물리주소 요청, Response 시 논리주소 응답"
+       "① 클라이언트가 자기 MAC을 담아 RARP 요청을 브로드캐스트",
+       "② RARP 서버가 MAC-IP 매핑 테이블을 조회",
+       "③ 해당 IP 주소를 클라이언트에게 응답"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "RARP의 한계와 대체 기술",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "2계층 브로드캐스트라 라우터를 넘지 못함 → 서브넷마다 RARP 서버 필요",
+       "IP 주소만 제공, 서브넷 마스크·게이트웨이·DNS 정보 없음, 수동 매핑 관리",
+       "BOOTP(Bootstrap Protocol): UDP 기반, 릴레이로 라우터 통과, 부팅 정보 제공",
+       "DHCP: BOOTP 확장, 동적 임대·자동 할당 → 현재 표준"
       ]
      }
     ]
@@ -2258,13 +2661,24 @@
   ],
   "name": "RARP(Reverse Address Resolution Protocol)",
   "en": "Reverse Address Resolution Protocol",
-  "reviewed": true,
   "outline": [
-   "RARP(Reverse Address Resolution Protocol) 개요",
-   "- RARP 의 정의",
-   "- RARP(Reverse Address Resolution Protocol) 필요성",
-   "RARP 개념도"
-  ]
+   "RARP의 개념",
+   "- 정의",
+   "- 필요성",
+   "RARP 동작 절차",
+   "RARP의 한계와 대체 기술"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "RARP 서버(RARP Server)",
+   "디스크 없는 워크스테이션(Diskless Workstation)",
+   "BOOTP(Bootstrap Protocol)"
+  ],
+  "quiz_groups": [
+   "ip"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_069",
@@ -2384,66 +2798,74 @@
   "subtitle": "WebRTC(Web Real-Time Communication)",
   "domain": "NW",
   "category": "NW > 프로토콜",
-  "definition": "HTML5와 자바 스크립트 API 를 사용하여 웹 상에서 플러그인 없이 브라우저를 기반으로 실시간 음성, 영상 및데이터를 공유할 수 있는 개방형 실시간 통신 표준 기술",
+  "definition": "웹 브라우저·앱 사이에서 플러그인 없이 음성·영상·데이터를 P2P로 실시간 주고받게 하는 W3C API와 IETF 프로토콜 묶음 (2021년 W3C·IETF 표준)",
   "keywords": [
-   "MediaStream",
-   "RTCPeerConnection",
-   "RTCDataChannel",
-   "NAT",
-   "STUN",
-   "TURN",
-   "ICE",
-   "SDP",
-   "SRTP",
-   "JSEP",
-   "TLS/SSL",
-   "P2P(MESH)",
-   "MCU",
-   "SFU"
+   "API: getUserMedia · RTCPeerConnection · RTCDataChannel",
+   "시그널링(Signaling): SDP Offer/Answer, 전송 방식은 표준 밖(WebSocket 등)",
+   "NAT 통과: ICE · STUN · TURN",
+   "보안: DTLS-SRTP 암호화 필수",
+   "미디어: RTP/SRTP, 코덱 VP8·H.264·Opus / 데이터: SCTP over DTLS",
+   "구조: P2P · Mesh · SFU · MCU"
   ],
   "sections": [
    {
-    "title": "브라우저 기반 음성/화상 통신, WebRTC의 개념",
+    "title": "WebRTC의 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "정의",
       "items": [
-       "브라우저 간에 Third-party 프로그램이나 Plug-in 없이도 실시간 멀티미디어 서비스가 가능하도록 설계된 API"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "WebRTC의 구성도 및 구성요소",
-    "subsections": [
-     {
-      "title": "WebRTC의 구성도",
-      "items": [
-       "브라우저 개발자를 위한 WebRTC C++ API와 웹 어플리케이션 개발자를 위한 Web API를 제공"
+       "W3C(API)와 IETF RTCWEB(프로토콜)가 표준화한 브라우저 간 실시간 통신 기술, 2021년 정식 표준"
       ]
      },
      {
-      "title": "WebRTC의 구성요소",
+      "title": "특징",
       "items": [
-       "App 간의 통신 초기화, 종료, 에러 리포트",
-       "IP Address, Port 교환",
-       "웹 브라우저 간 사용 가능한 코덱 및 해상도 전송"
+       "플러그인·별도 설치 없이 브라우저에서 바로 사용",
+       "P2P 직접 전송으로 지연 최소화",
+       "암호화 의무화"
       ]
      }
     ]
    },
    {
-    "title": "WebRTC의 다자간 통신의 유형",
+    "title": "WebRTC 구성 요소",
+    "subsections": [
+     {
+      "title": "주요 API",
+      "items": [
+       "getUserMedia: 카메라·마이크 스트림 획득",
+       "RTCPeerConnection: 피어 간 연결·코덱 협상·미디어 전송",
+       "RTCDataChannel: 임의 데이터 양방향 전송"
+      ]
+     },
+     {
+      "title": "시그널링과 NAT 통과",
+      "items": [
+       "시그널링: SDP(Session Description Protocol) Offer/Answer와 ICE 후보 교환, 전달 수단은 WebSocket 등 자유",
+       "ICE(Interactive Connectivity Establishment): 후보 경로를 시험해 최적 경로 선택",
+       "STUN: 자신의 공인 IP·포트 확인 / TURN: 직접 연결 불가 시 릴레이 서버 경유"
+      ]
+     },
+     {
+      "title": "미디어·보안 프로토콜",
+      "items": [
+       "미디어: SRTP(Secure RTP), 키 교환은 DTLS-SRTP",
+       "데이터 채널: SCTP over DTLS over UDP",
+       "필수 코덱: 영상 VP8·H.264, 음성 Opus·G.711"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "WebRTC 서버 구조 및 활용",
     "subsections": [
      {
       "title": null,
       "items": [
-       "중앙 미디어 서버 없이 - 스트림을 서버에서 mixing - 서버에서 mixing하지 않고해서 다시 전송하는 방식 스트림을 선택해서 전송",
-       "가장 낮은 latency - Client의 NW부담 저하 - 1:N 스트리밍 구조에 적합",
-       "서버 비용이 거의 발생 - NW에 대한 최적화 - 높은 속도, 서버 부하 적음",
-       "실시간성 빠름, 통화 품질 우수",
-       "클라이언트 수가 많아지면 - 서버 사이트 CPU 리소스 - 서버 사이드 NW트래픽 높음",
-       "NW 대역폭과 기기 환경이"
+       "Mesh: 모든 참가자가 서로 직접 연결 → 소규모",
+       "SFU(Selective Forwarding Unit): 서버가 스트림을 선택 중계(디코딩 없음) → 화상회의 주류",
+       "MCU(Multipoint Control Unit): 서버가 디코딩·합성 → 클라이언트 부담 적음, 서버 부담 큼",
+       "활용: 화상회의(Google Meet), 원격 진료, 클라우드 게임, 실시간 방송(WHIP/WHEP)"
       ]
      }
     ]
@@ -2456,14 +2878,31 @@
   ],
   "name": "WebRTC(Web Real-Time Communication)",
   "en": "Web Real-Time Communication",
-  "reviewed": true,
   "outline": [
-   "브라우저 기반 음성/화상 통신, WebRTC의 개념",
-   "WebRTC의 구성도 및 구성요소",
-   "- WebRTC의 구성도",
-   "- WebRTC의 구성요소",
-   "WebRTC의 다자간 통신의 유형"
-  ]
+   "WebRTC의 개념",
+   "- 정의",
+   "- 특징",
+   "WebRTC 구성 요소",
+   "- 주요 API",
+   "- 시그널링과 NAT 통과",
+   "- 미디어·보안 프로토콜",
+   "WebRTC 서버 구조 및 활용"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "RTCPeerConnection API",
+   "시그널링(Signaling)",
+   "ICE(Interactive Connectivity Establishment)",
+   "STUN(Session Traversal Utilities for NAT)",
+   "TURN(Traversal Using Relays around NAT)",
+   "SFU(Selective Forwarding Unit)",
+   "DTLS-SRTP"
+  ],
+  "quiz_groups": [
+   "app"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_071",
@@ -2590,38 +3029,64 @@
   "subtitle": "VRRP (Virtual Router Redundancy Protocol)",
   "domain": "NW",
   "category": "NW > 2019 출제 예상 토픽 > VRRP",
-  "definition": "여러 대의 라우터를 그룹으로 묶어 하나의 가상 IP 어드레스를 부여해 마스터로 지정된 라우터 장애 시 VRRP 그룹 내의백업 라우터가 마스터로 자동 전환되어 라우팅 경로를 백업하는 프로토콜",
+  "definition": "여러 라우터를 하나의 가상 라우터(가상 IP·가상 MAC)로 묶어, 마스터 라우터 장애 시 백업 라우터가 자동으로 기본 게이트웨이 역할을 이어받게 하는 표준 게이트웨이 이중화 프로토콜 (RFC 9568)",
   "keywords": [
-   "Master Router",
-   "Backup Router",
-   "VRID/Virtual IP/Virtual MAC/VRRP Priority"
+   "가상 라우터(Virtual Router): 가상 IP(VIP) + 가상 MAC 00-00-5E-00-01-{VRID}",
+   "마스터(Master) · 백업(Backup), 우선순위(Priority, 기본 100)로 선출",
+   "애드버타이즈먼트: 멀티캐스트 224.0.0.18, IP 프로토콜 112, 1초 주기",
+   "선점(Preemption) · 인터페이스 추적(Tracking)",
+   "비교: HSRP(시스코 전용) · GLBP(부하 분산)"
   ],
   "sections": [
    {
-    "title": "VRRP의 구성도 및 구성 요소",
+    "title": "VRRP의 개념",
     "subsections": [
      {
-      "title": "VRRP의 구성도",
+      "title": "정의",
       "items": [
-       "평상시 Priority가 높은 Router1이 Master가 되어, VIP를 소유하게 되고, Host는 Router 1 으로 데이터를 보냄",
-       "Master Router 장애 시 Backup Router는 VIP와 VMAC을 가져와 Host의 Default Gateway 역할을 수행 함"
+       "IETF 표준 FHRP(First Hop Redundancy Protocol), RFC 3768(v2) → RFC 5798(v3, IPv6 지원) → RFC 9568"
       ]
      },
      {
-      "title": "VRRP의 구성요소",
+      "title": "필요성",
       "items": [
-       "별도 설정 하지 않으면 Default 값인 100이 할당 됨"
+       "호스트는 기본 게이트웨이를 하나만 설정 → 그 라우터 장애 시 외부 통신 단절",
+       "호스트 설정 변경 없이 게이트웨이 단일 장애점 제거"
       ]
      }
     ]
    },
    {
-    "title": "VRRS와 HSRP 비교",
+    "title": "VRRP 구성 및 동작",
+    "subsections": [
+     {
+      "title": "구성 요소",
+      "items": [
+       "VRID(가상 라우터 ID, 1~255), 가상 IP와 가상 MAC(00-00-5E-00-01-VRID)",
+       "마스터: 가상 IP로 오는 트래픽 처리 / 백업: 대기",
+       "우선순위 1~254 (255는 가상 IP를 실제 소유한 라우터)"
+      ]
+     },
+     {
+      "title": "동작 절차",
+      "items": [
+       "① 우선순위가 가장 높은 라우터가 마스터로 선출",
+       "② 마스터가 주기적으로 애드버타이즈먼트를 224.0.0.18로 전송",
+       "③ 일정 시간(약 3회 주기) 수신 없으면 백업이 마스터로 전환, GARP로 스위치 MAC 테이블 갱신",
+       "선점: 우선순위 높은 라우터가 복구되면 마스터 재탈환(기본 허용)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "관련 프로토콜 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "HSRP(Hot Standby Routing Protocol)는 네트워크장비 제조업체인 Cisco의 독점프로토콜로 VRRP와 유사한 기능을수행하는 프로토콜임."
+       "HSRP(Hot Standby Router Protocol): 시스코 전용, Active/Standby",
+       "GLBP(Gateway Load Balancing Protocol): 시스코 전용, 여러 라우터가 동시에 트래픽 분담",
+       "VRRP: 표준·벤더 중립, 기본은 Active/Standby(여러 그룹으로 부하 분산 가능)"
       ]
      }
     ]
@@ -2634,13 +3099,29 @@
   ],
   "name": "VRRP(Virtual Router Redundancy Protocol)",
   "en": "Virtual Router Redundancy Protocol",
-  "reviewed": true,
   "outline": [
-   "VRRP의 구성도 및 구성 요소",
-   "- VRRP의 구성도",
-   "- VRRP의 구성요소",
-   "VRRS와 HSRP 비교"
-  ]
+   "VRRP의 개념",
+   "- 정의",
+   "- 필요성",
+   "VRRP 구성 및 동작",
+   "- 구성 요소",
+   "- 동작 절차",
+   "관련 프로토콜 비교"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "가상 라우터(Virtual Router)",
+   "마스터 라우터(Master Router)",
+   "선점(Preemption)",
+   "HSRP(Hot Standby Router Protocol)",
+   "FHRP(First Hop Redundancy Protocol)"
+  ],
+  "quiz_groups": [
+   "lb",
+   "routing"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_073",
@@ -2649,61 +3130,70 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > 기타 > MTCP",
-  "definition": "TCP 를 확장한 개념으로, 단말이나 서버에서 하나의 연결에 대해 동시에 여러 개의 인터페이스를사용하여 전송속도 및 대역폭을 향상시키는 기술",
+  "definition": "하나의 TCP 연결을 여러 네트워크 경로(서브플로우)로 동시에 나눠 전송해 처리량과 연결 복원력을 높이는 TCP 확장 (RFC 8684, MPTCP v1)",
   "keywords": [
-   "TCP sub-flow",
-   "MP_CAPABLE",
-   "MP_JOIN"
+   "서브플로우(Subflow): 경로별 일반 TCP 연결",
+   "TCP 옵션으로 협상: MP_CAPABLE · MP_JOIN · ADD_ADDR",
+   "데이터 순서 번호(DSN, Data Sequence Number)로 전체 재조립",
+   "결합 혼잡 제어(Coupled Congestion Control, LIA·OLIA)",
+   "활용: Wi-Fi+셀룰러 동시 사용(Apple Siri), 5G ATSSS",
+   "기존 TCP·미들박스 호환"
   ],
   "sections": [
    {
-    "title": "MPCTP 의 개요",
+    "title": "MPTCP의 개념",
     "subsections": [
      {
-      "title": "MPTCP 의 개념",
-      "items": []
+      "title": "정의",
+      "items": [
+       "응용에는 일반 TCP 소켓처럼 보이면서 여러 인터페이스·경로를 함께 쓰는 TCP 확장, RFC 6824(실험) → RFC 8684(2020, v1)"
+      ]
      },
      {
-      "title": "MPTCP 의 특징",
+      "title": "등장 배경",
       "items": [
-       "다중 경로 통합 대역폭 확장",
-       "다중 회선으로 데이터를 나누어서 전송",
-       "다중 연결통한 단말의 이동 안정성 확보",
-       "여러 경로 중 최적 경로 선택 전송"
+       "스마트폰·서버의 다중 인터페이스(Wi-Fi, LTE/5G, 다중 NIC)",
+       "TCP는 4-튜플에 묶여 경로 변경 시 연결 끊김"
       ]
      }
     ]
    },
    {
-    "title": "MPTCP 의 계층구조",
+    "title": "MPTCP 구조 및 동작",
     "subsections": [
      {
-      "title": "MPTCP 의 계층구조",
-      "items": []
+      "title": "구조",
+      "items": [
+       "MPTCP 계층이 응용과 여러 서브플로우(TCP) 사이에서 데이터 분배·재조립",
+       "DSN(Data Sequence Number)으로 연결 수준 순서 유지, 서브플로우는 각자 순서 번호 사용"
+      ]
      },
      {
-      "title": "MPTCP 계층구조 상세설명",
+      "title": "연결 수립과 서브플로우 추가",
       "items": [
-       "MPTCP 기반 다중 연결 Application",
-       "MPTCP 기능 제공 및 Subflow 제어",
-       "개별 Subflow TCP",
-       "TCP 연결마다 개별 IP 할당"
+       "MP_CAPABLE 옵션으로 첫 핸드셰이크에서 지원 확인·키 교환",
+       "MP_JOIN으로 다른 경로의 서브플로우 추가(HMAC 인증)",
+       "ADD_ADDR·REMOVE_ADDR로 주소 알림, 미지원 상대면 일반 TCP로 폴백"
+      ]
+     },
+     {
+      "title": "혼잡 제어·스케줄링",
+      "items": [
+       "결합 혼잡 제어(LIA, OLIA, BALIA): 병목 공유 시 일반 TCP보다 공격적이지 않게",
+       "스케줄러: 최소 RTT 우선, 중복 전송(Redundant) 등"
       ]
      }
     ]
    },
    {
-    "title": "MPTCP 의 Subflow JOIN 절차",
+    "title": "장단점 및 활용",
     "subsections": [
      {
-      "title": "MP_CAPABLE, MP_JOIN 절차",
-      "items": []
-     },
-     {
-      "title": "MP_CAPABLE, MP_JOIN 절차설명",
+      "title": null,
       "items": [
-       "MPTCP 는 최근 애플의 iOS 7 에 적용됨 이동통신망과 WiFi 의 동시 전송이 목적이 아닌 빠른 네트워크인터페이스 전환을 통한 끊김 없는 연결 Seamless connection) 지원에 무게를 두고 있음",
-       "국내 이동통신사의 경우 LTE 와 WiFi 결합을 통한 빠른 속도 제공을 목표로 세계 최초 상용화"
+       "장점: 대역폭 집성, 끊김 없는 경로 전환(핸드오버), 장애 복원력",
+       "단점: 경로 간 지연 차이로 순서 재정렬 버퍼 증가, 미들박스가 옵션 제거 시 폴백, 보안 검사 복잡",
+       "활용: Apple iOS(Siri·지도), 삼성·LG 다운로드 부스터, 3GPP 5G ATSSS(Access Traffic Steering, Switching, Splitting), 데이터센터"
       ]
      }
     ]
@@ -2716,17 +3206,28 @@
   ],
   "name": "MPTCP(Multipath TCP, 다중 경로 TCP)",
   "en": "Multipath TCP",
-  "reviewed": true,
   "outline": [
-   "MPCTP 의 개요",
-   "- MPTCP 의 개념",
-   "- MPTCP 의 특징",
-   "MPTCP 의 계층구조",
-   "- MPTCP 계층구조 상세설명",
-   "MPTCP 의 Subflow JOIN 절차",
-   "- MP_CAPABLE, MP_JOIN 절차",
-   "- MP_CAPABLE, MP_JOIN 절차설명"
-  ]
+   "MPTCP의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "MPTCP 구조 및 동작",
+   "- 구조",
+   "- 연결 수립과 서브플로우 추가",
+   "- 혼잡 제어·스케줄링",
+   "장단점 및 활용"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "서브플로우(Subflow)",
+   "MP_CAPABLE 옵션",
+   "결합 혼잡 제어(Coupled Congestion Control)",
+   "ATSSS(Access Traffic Steering, Switching, Splitting)"
+  ],
+  "quiz_groups": [
+   "transport"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_075",
@@ -2735,53 +3236,67 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > Ethernet Switch > L4 스위치",
-  "definition": "OSI 7 Layer 중 4번째 Layer인 전송계층에 해당되는 TCP/UDP 포트 정보를 이용하여 네트워크 트래픽을분산하고 경로를 결정하는 스위칭 기술.",
+  "definition": "IP 주소와 TCP·UDP 포트 번호(4계층 정보)를 보고 트래픽을 여러 서버로 분산하는 스위치로, 서버 부하 분산(SLB)·방화벽 부하 분산 등에 쓰임",
   "keywords": [
-   "TCP/UDP 포트 기반 스위칭",
-   "VIP",
-   "부하분산 알고리즘: Round Robin, Least Connection, Response time, Hash",
-   "서버 감시: ICMP, TCP Connection, HTTP Request",
-   "Fail Over"
+   "판단 기준: IP 주소 + 포트 번호 (세션 단위)",
+   "가상 IP(VIP)로 받아 실제 서버(Real Server)로 분배 · NAT",
+   "분산 알고리즘: 라운드 로빈 · 가중치 · 최소 연결 · 해시",
+   "헬스 체크(Health Check) · 세션 유지(Persistence)",
+   "구성: 인라인 · 원암(One-arm) · DSR(Direct Server Return)",
+   "비교: L2·L3 스위치 / L7 스위치(HTTP 내용 기반)"
   ],
   "sections": [
    {
-    "title": "L4 스위치의 개요",
+    "title": "L4 스위치의 개념",
     "subsections": [
      {
-      "title": "L4 스위치의 정의",
+      "title": "정의",
       "items": [
-       "TCP/UDP Header를 확인 후 우선시 해서 로드 밸런싱을 하고, VIP 지정을 통한 Load Balance 및 Fail Over 기능을 제공하는 4계층 스위치",
-       "Real IP를 묶은 VIP로 향하는 트래픽은 RR방식으로 로드 밸런싱 됨 *로드 밸런스",
-       "Redundancy(어느 한 회선이 다운되더라도 다른 회선으로 서비스 지속)",
-       "Link Aggregation(각각의 회선 용량을 합하여 사용함으로써 웹서버 회선 “총용량”을 늘이기 위함)"
+       "전송 계층 정보(포트 번호)까지 확인해 세션 단위로 트래픽을 분배하는 장비"
+      ]
+     },
+     {
+      "title": "스위치 계층별 비교",
+      "items": [
+       "L2: MAC 주소 기반 프레임 전달",
+       "L3: IP 주소 기반 라우팅",
+       "L4: IP+포트 기반 부하 분산",
+       "L7: URL·쿠키·HTTP 헤더 등 응용 내용 기반 분배, 보안 필터링"
       ]
      }
     ]
    },
    {
-    "title": "L4 스위치의 주요 기능",
+    "title": "L4 스위치 주요 기능",
     "subsections": [
      {
-      "title": null,
+      "title": "부하 분산 알고리즘",
       "items": [
-       "서버 기반의 Load Balancing 제공",
-       "Firewall & VPN Load Balancing 제공 여러 대의 서버 가상화",
-       "부하 분산을 통해 네트워크 안정성 및 품질향상투명한 캐싱 서비스 제공 사용자 설정 필요 없음서비스 포트에 따라 서비스 N/W 트래픽 종류에 따라 서로 다른 서비스종류 인식",
-       "어플리케이션의 중요도에 따라 우선 순위 결정",
-       "TCP/UDP 헤더의 포트값을 인식하여 서비스별 분류가 가능 서비스 포트 이용",
-       "전자우편에 비해 화상회의에 더 많은 대역폭 제공"
+       "라운드 로빈(Round Robin): 순서대로",
+       "가중치 라운드 로빈(Weighted RR): 서버 성능 비율대로",
+       "최소 연결(Least Connection): 연결 수가 가장 적은 서버",
+       "해시(Hash): 출발지 IP 등으로 서버 고정"
+      ]
+     },
+     {
+      "title": "헬스 체크와 세션 유지",
+      "items": [
+       "헬스 체크: ICMP·TCP 포트·HTTP 응답으로 서버 상태 확인, 장애 서버 제외",
+       "세션 유지(Persistence, Sticky): 같은 클라이언트를 같은 서버로 (출발지 IP 기반)"
       ]
      }
     ]
    },
    {
-    "title": "이더넷 스위치의 발전 방향",
+    "title": "구성 방식 및 활용",
     "subsections": [
      {
       "title": null,
       "items": [
-       "현재 인터넷의 데이터의 대부분이라 할 수 있는 웹 데이터에 대한 부하분산 기능을 강화",
-       "IP주소나 TCP/UDP 포트값 뿐만 아니라 URL이나 Cookie정보 등을 이용하여 웹 데이터에 대한 보다 효율적인부하 분산 기능 수행."
+       "인라인(Inline): 모든 트래픽이 스위치를 통과",
+       "원암(One-arm): 스위치를 옆에 붙이고 출발지 NAT로 응답 회수",
+       "DSR(Direct Server Return): 요청만 스위치를 거치고 응답은 서버가 직접 → 대용량 응답에 유리",
+       "활용: 웹·DB 서버 부하 분산(SLB), 방화벽·캐시 부하 분산, 링크 부하 분산"
       ]
      }
     ]
@@ -2794,13 +3309,28 @@
   ],
   "name": "L4 스위치(Layer 4 Switch)",
   "en": "Layer 4 Switch",
-  "reviewed": true,
   "outline": [
-   "L4 스위치의 개요",
-   "- L4 스위치의 정의",
-   "L4 스위치의 주요 기능",
-   "이더넷 스위치의 발전 방향"
-  ]
+   "L4 스위치의 개념",
+   "- 정의",
+   "- 스위치 계층별 비교",
+   "L4 스위치 주요 기능",
+   "- 부하 분산 알고리즘",
+   "- 헬스 체크와 세션 유지",
+   "구성 방식 및 활용"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "가상 IP(VIP, Virtual IP)",
+   "라운드 로빈(Round Robin)",
+   "최소 연결(Least Connection)",
+   "헬스 체크(Health Check)",
+   "DSR(Direct Server Return)"
+  ],
+  "quiz_groups": [
+   "lb"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_078",
@@ -2809,42 +3339,67 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > Ethernet Switch > 로드밸런서",
-  "definition": "클라이언트와 서버 사이에 위치하여 한 대의 서버로 부하가 집중되지 않도록 서버에 가해지는 부하를 분산시켜주는 기술",
+  "definition": "들어오는 요청을 여러 서버(자원)에 알고리즘에 따라 나눠 주어, 처리 성능과 가용성을 높이고 장애 서버를 자동으로 제외하는 장치 또는 소프트웨어",
   "keywords": [
-   "부하분산",
-   "L4",
-   "L7",
-   "Round Robin",
-   "Hashing",
-   "Least Response",
-   "Least Connection"
+   "계층: L4(IP·포트) · L7(HTTP 내용, ALB)",
+   "정적 알고리즘: 라운드 로빈 · 가중치 · IP 해시",
+   "동적 알고리즘: 최소 연결 · 최소 응답 시간",
+   "헬스 체크 · 세션 지속성(Sticky Session) · SSL 오프로딩",
+   "GSLB(전역 서버 부하 분산): DNS 기반 지역 분산",
+   "형태: 하드웨어(F5) · 소프트웨어(Nginx·HAProxy) · 클라우드(AWS ELB)"
   ],
   "sections": [
    {
-    "title": "로드밸런서의 유형과 기술요소",
+    "title": "로드밸런서의 개념",
     "subsections": [
      {
-      "title": "로드밸런서의 유형",
+      "title": "정의",
       "items": [
-       "애플리케이션 계층(HTTP, FTP, SMTP)에서",
-       "네트워크 계층(IP, IPX)이나 트랜스포트 계층 HTTP 헤더, 쿠키 등과 같은 사용자 요청을 (TCP, UDP)의 정보를 바탕으로 로드 분산기준으로 트래픽 분산",
-       "Layer 4 (Transport Layer) - Layer 7 (Application Layer)",
-       "패킷 레벨 부하 분산으로 속도가 빠름 - 상위계층에서 상세한 라우팅 가능",
-       "복호화 불필요하고 가격이 저렴 - 캐싱 기능, 비정상 트래픽 필터링 가능"
+       "클라이언트와 서버 팜 사이에서 요청을 분배하는 역방향 프록시형 장치"
+      ]
+     },
+     {
+      "title": "필요성",
+      "items": [
+       "스케일 아웃(서버 수 확장)으로 처리량 증대",
+       "단일 서버 장애 시 서비스 지속(고가용성)",
+       "무중단 배포(블루-그린, 카나리)"
       ]
      }
     ]
    },
    {
-    "title": "로드밸런서의 가용성 확보방안",
+    "title": "로드밸런서 유형과 알고리즘",
+    "subsections": [
+     {
+      "title": "계층별 유형",
+      "items": [
+       "L4 로드밸런서: IP·포트 기반, 빠르고 단순 (AWS NLB)",
+       "L7 로드밸런서: URL·헤더·쿠키 기반 라우팅, 콘텐츠별 분배, WAF 연동 (AWS ALB)",
+       "GSLB(Global Server Load Balancing): DNS 응답으로 가까운·정상 데이터센터 선택"
+      ]
+     },
+     {
+      "title": "분산 알고리즘",
+      "items": [
+       "정적: 라운드 로빈, 가중치 라운드 로빈, IP 해시(같은 클라이언트 → 같은 서버)",
+       "동적: 최소 연결(Least Connection), 최소 응답 시간(Least Response Time)",
+       "일관 해싱(Consistent Hashing): 서버 증감 시 재배치 최소화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 기능 및 구성",
     "subsections": [
      {
       "title": null,
       "items": [
-       "다중화된 Load Balancer는 서로 Health Check를 수행",
-       "Main Load Balancer가 동작하지 않으면 failover 수행",
-       "트래픽 폭주 발생시 시스템 자원을자동으로 확장하여 부하를 분산",
-       "로드밸런서의 가용성을 확보하기 위해서 로드밸런서의 다중화와 오토스케일링이 필요."
+       "헬스 체크: 장애 서버 자동 제외·복구 시 재투입",
+       "세션 지속성: 쿠키·출발지 IP로 같은 서버 유지",
+       "SSL/TLS 오프로딩: 암호화 처리를 로드밸런서가 대신",
+       "이중화: 로드밸런서 자체를 Active-Standby(VRRP)로 구성해 단일 장애점 제거",
+       "형태: 하드웨어 어플라이언스, 소프트웨어(Nginx, HAProxy, Envoy), 클라우드 관리형(ELB)"
       ]
      }
     ]
@@ -2857,12 +3412,28 @@
   ],
   "name": "로드밸런서(Load Balancer)",
   "en": "Load Balancer",
-  "reviewed": true,
   "outline": [
-   "로드밸런서의 유형과 기술요소",
-   "- 로드밸런서의 유형",
-   "로드밸런서의 가용성 확보방안"
-  ]
+   "로드밸런서의 개념",
+   "- 정의",
+   "- 필요성",
+   "로드밸런서 유형과 알고리즘",
+   "- 계층별 유형",
+   "- 분산 알고리즘",
+   "주요 기능 및 구성"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "L7 로드밸런서(Application Load Balancer)",
+   "GSLB(Global Server Load Balancing)",
+   "세션 지속성(Session Persistence)",
+   "SSL 오프로딩(SSL Offloading)",
+   "일관 해싱(Consistent Hashing)"
+  ],
+  "quiz_groups": [
+   "lb"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_079",
@@ -2871,61 +3442,63 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > V2V > V2V",
-  "definition": "VANET(Vehicle Ad-hoc NETwork)의 요소기술로, 차량과 차량 사이 무선통신으로 달리는 자동차끼리 차량 안전을 위해 자동으로 통신을 주고받는 차량간 멀티홉 통신기술",
+  "definition": "주행 중인 차량끼리 위치·속도·방향 등 상태 정보를 직접 무선으로 주고받아 충돌 위험 경고, 협력 주행 등을 제공하는 차량 간 통신",
   "keywords": [
-   "VANET",
-   "차량간 멀티홉 통신 기술",
-   "WAVE",
-   "브로드캐스팅",
-   "M2M(Machine to Machine)",
-   "5G"
+   "직접 통신(인프라 경유 없음) · 초저지연 · 고신뢰",
+   "메시지: BSM(SAE J2735) · CAM/DENM(ETSI)",
+   "통신 기술: WAVE(IEEE 802.11p) · C-V2X PC5(사이드링크)",
+   "서비스: 전방 추돌 경고 · 교차로 충돌 경고 · 긴급 제동 경고 · 군집 주행",
+   "보안: 인증서 기반 서명(IEEE 1609.2) · 가명 인증서(프라이버시)"
   ],
   "sections": [
    {
-    "title": "교통 효율성 증대 통신기술, V2V의 개요",
+    "title": "V2V의 개념",
     "subsections": [
      {
-      "title": "V2V(Vehicle to Vehicle)의 정의",
+      "title": "정의",
       "items": [
-       "가까운 차량의 위치정보 및 속도 정보 등을 공유하면서 앞 차량과의 거리가 너무 근접하면 자동으로 브레이크를 작동함, 갑작스러운 충돌, 끼어들기 등이 예상되면 경보와 함께 스스로 차로를 변경함"
+       "V2X(Vehicle-to-Everything)의 한 유형으로 차량 탑재 단말(OBU)끼리 직접 통신"
       ]
      },
      {
-      "title": "V2X의 종류",
-      "items": []
-     },
-     {
-      "title": "V2V 요구사항",
+      "title": "특징",
       "items": [
-       "WAVE 를 기반으로 한 V2X 기술들과의 호환되는 성질",
-       "주기적 안전주행 메시지 브로드캐스팅을 통한 홉(차량)통신 지원"
+       "센서(카메라·레이더)가 볼 수 없는 가려진 차량·앞앞 차량 정보도 획득",
+       "수~수백 ms 이내 지연, 초당 10회 수준 주기적 방송",
+       "고속 이동으로 토폴로지 변화가 큼"
       ]
      }
     ]
    },
    {
-    "title": "V2X 구성도에서의 V2V 개념도 및 기술요소",
+    "title": "V2V 기술 요소",
     "subsections": [
      {
-      "title": "V2X 구성도에서의 V2V 개념도",
+      "title": "통신 기술",
       "items": [
-       "달리는 차량간 안전을 위한 통신기술"
+       "WAVE(Wireless Access in Vehicular Environments): IEEE 802.11p + IEEE 1609 (DSRC 계열)",
+       "C-V2X: LTE-V2X·NR-V2X의 PC5 사이드링크로 기지국 없이 직접 통신"
+      ]
+     },
+     {
+      "title": "메시지 표준",
+      "items": [
+       "BSM(Basic Safety Message, SAE J2735): 위치·속도·방향·제동 상태",
+       "CAM(Cooperative Awareness Message)·DENM(Decentralized Environmental Notification Message): 유럽 ETSI"
       ]
      }
     ]
    },
    {
-    "title": "V2V(Vehicle to Vehicle) 적용 시 고려사항",
+    "title": "V2V 서비스 및 보안",
     "subsections": [
      {
       "title": null,
       "items": [
-       "메시지를 탈취하여 재전송하는 네트워크 혼란을 야기하는 재생공격을방지해야 함",
-       "차량통신시스템은 개인정보에 접근하면 안됨",
-       "신뢰성 있는 통신링크를 제공하기 위해서 다이버시티 기법의 적용",
-       "V2V의 성공적 적용을 위해서는 보안과 프라이버시 측면 이외에도 아래와 같은 선결과제가 존재함",
-       "폐지목록(Revocation List) 관리로 인해 불필요한 많은 자원을 소모하는 문제점 해결",
-       "상호인증 및 메시지의 서명과 검증에 많은 시간이 소모되어 효율성 저하되는 부분에 대한 해결 [참고] 프라이버시를 보장하는 V2V 인증기법 비교"
+       "안전: 전방 추돌 경고, 교차로 이동 지원, 사각지대·차로 변경 경고, 긴급 전자 브레이크등",
+       "효율: 군집 주행(Platooning), 협력형 적응 순항 제어(CACC)",
+       "보안: IEEE 1609.2 인증서 서명으로 메시지 위조 방지, 주기적으로 바꾸는 가명 인증서로 위치 추적 방지",
+       "과제: 보급률(모든 차량 장착 필요), 통신 방식 표준 경쟁"
       ]
      }
     ]
@@ -2938,16 +3511,28 @@
   ],
   "name": "V2V(Vehicle-to-Vehicle, 차량 간 통신)",
   "en": "Vehicle-to-Vehicle",
-  "reviewed": true,
   "outline": [
-   "교통 효율성 증대 통신기술, V2V의 개요",
-   "- V2V(Vehicle to Vehicle)의 정의",
-   "- V2X의 종류",
-   "- V2V 요구사항",
-   "V2X 구성도에서의 V2V 개념도 및 기술요소",
-   "- V2X 구성도에서의 V2V 개념도",
-   "V2V(Vehicle to Vehicle) 적용 시 고려사항"
-  ]
+   "V2V의 개념",
+   "- 정의",
+   "- 특징",
+   "V2V 기술 요소",
+   "- 통신 기술",
+   "- 메시지 표준",
+   "V2V 서비스 및 보안"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "BSM(Basic Safety Message)",
+   "PC5 사이드링크(PC5 Sidelink)",
+   "군집 주행(Platooning)",
+   "OBU(On-Board Unit)",
+   "가명 인증서(Pseudonym Certificate)"
+  ],
+  "quiz_groups": [
+   "vehicle"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_080",
@@ -3085,89 +3670,73 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > V2V > V2X",
-  "definition": "차량간에 유무선망을 통해 다른 차량 및 도로 등 인프라가 구축된 사물과 정보를 교환하는 기술, C-ITS에서의 'Connected/Networked Vehicle(Car)'를 구현하기 위한 핵심기술",
+  "definition": "차량이 다른 차량·도로 인프라·보행자·네트워크 등 주변의 모든 대상과 무선으로 정보를 주고받는 통신 기술로, 자율주행과 C-ITS의 기반",
   "keywords": [
-   "V2V",
-   "V2I",
-   "V2N",
-   "V2P(Pedestrian, 보행자)",
-   "IVN",
-   "VANET",
-   "WAVE",
-   "C-ITS"
+   "유형: V2V(차량) · V2I(인프라) · V2P(보행자) · V2N(네트워크)",
+   "WAVE(IEEE 802.11p, DSRC 계열) vs C-V2X(3GPP LTE-V2X·NR-V2X)",
+   "C-V2X 인터페이스: PC5(직접 사이드링크) · Uu(기지국 경유)",
+   "NR-V2X(Rel-16): 고급 서비스(군집 주행·원격 주행·센서 공유)",
+   "국내 C-ITS: 2023년 LTE-V2X 단일 방식 결정",
+   "보안: PKI 기반 인증서(SCMS)"
   ],
   "sections": [
    {
-    "title": "지능형 교통시스템의 핵심 기술, V2X(Vehicle to Everything) 의 개요",
+    "title": "V2X의 개념",
     "subsections": [
      {
-      "title": "V2X(Vehicle to Everything) 의 정의",
-      "items": []
+      "title": "정의",
+      "items": [
+       "차량 중심의 사물 통신, 센서 한계를 보완하는 '연결된 감지'로 자율주행 안전성 향상"
+      ]
      },
      {
-      "title": "V2X 의 특징",
+      "title": "통신 유형",
       "items": [
-       "V2X는 V2I(Vehicle to Infrastructure), V2V(Vehicle to Vehicle), V2N(Vehicle to Nomadic Device), V2P(Vehicle to Pedestrian), IVN(In-Vehicle Network)등을 총칭",
-       "통신표준 기술로는 WAVE, ISO TC204 WG16,17등이 있음"
+       "V2V(Vehicle-to-Vehicle): 차량 간 직접 통신",
+       "V2I(Vehicle-to-Infrastructure): 신호등·노변 기지국(RSU)",
+       "V2P(Vehicle-to-Pedestrian): 보행자 단말",
+       "V2N(Vehicle-to-Network): 이동통신망을 통한 클라우드·서버"
       ]
      }
     ]
    },
    {
-    "title": "V2X 의 개념도 및 종류",
+    "title": "V2X 통신 기술",
     "subsections": [
      {
-      "title": "V2X 의 개념도",
-      "items": []
+      "title": "WAVE",
+      "items": [
+       "IEEE 802.11p(PHY·MAC) + IEEE 1609(상위), 5.9GHz, 인프라 없이 즉시 통신",
+       "후속 IEEE 802.11bd(NGV)로 성능 개선"
+      ]
      },
      {
-      "title": "V2X(Vehicle to Everything)의 종류",
+      "title": "C-V2X",
       "items": [
-       "V2X를 위한 통신 표준기술로 WAVE, LTE V2X 방식통신기술 설명 ISO TC204 - 도로 곳곳에 차량 내에 설치된 통신 단말기와 상호 정보를 교환할 수 WG16 CALM 있는 일종의 기지국을 설치하여 차량으로부터 주행 정보들을 수집하고, 이를 중앙 서버에서 분석하여 교통상황 및 대처 방법 등을 후속 차량에제공하는 기술",
-       "V2I 기술은 V2V 기술과 접목되어 활용되는 것이 효율적임",
-       "이 기술은 V2I 기술과 접목되어 도로 교통상황 파악, 사고 예방 등에활용될 수 있음",
-       "차량이 길을 건너는 보행자의 스마트폰을 인지해 운전자에게 보행자접근경보를 보내 사고를 예방"
+       "3GPP 이동통신 기반: LTE-V2X(Rel-14) → NR-V2X(Rel-16)",
+       "PC5: 단말 간 직접(사이드링크), Uu: 기지국 경유 V2N"
+      ]
+     },
+     {
+      "title": "기술 비교",
+      "items": [
+       "WAVE: 성숙도 높음, 단거리, 인프라 별도 구축",
+       "C-V2X: 통신 범위·신뢰성 우수, 기존 이동통신망 활용, 5G로 진화 경로",
+       "국내: 2023년 12월 C-ITS 통신방식을 LTE-V2X로 단일화, 미국 FCC도 5.9GHz를 C-V2X로 전환"
       ]
      }
     ]
    },
    {
-    "title": "V2X(Vehicle to Everything)의 통신표준",
+    "title": "V2X 서비스 및 동향",
     "subsections": [
      {
       "title": null,
       "items": [
-       "ISO 24102 : CALM anagement, CALM 미디어 간 통신 관리에서시스템 관리로 확장",
-       "CALM에서 수용 가능한 미디어와 이를 위한 인터페이스 표준을관장함",
-       "다양한 통신 미디어를 수용하고 차량에서 인터넷 접속을 위한 IPv6기반 네트워킹 기술 표준을 관장함",
-       "ISO 21210 : CALM Networking, CALM IPv6 기반 라우팅 및 미디어스위칭",
-       "차량 간에 non-IP 기반 통신방법 및 절차표준을 관장함",
-       "ISO 29281 : CALM non-IP Communication Mechanisms, CALM non-IP 기반 통신방법 및 절차 정의"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "V2X 표준 기술 비교",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "5G상용화 되면 결국 5G에 통합될것으로 예상"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "국내 V2X(Vehicle to Everything)의 발전을 위한 현황 및 제언",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "국토해양부의 스마트하이웨이 프로젝트나 -. 도로, 교통에 초점을 맞추는 정책이 아닌",
-       "시스템안정화, 기술현실화, 주파수할당, QoS향상방안등",
-       "국내 자동차메이커의 V2X기술개발의 참여 -. 정부와 자동차산업, ICT산업의 협력을 통해 경쟁력 향상 필요",
-       "미국, 유럽, 일본은 ITS서비스,법, 제도측면 -. 우리나라의 강점인 ICT기술을 바탕으로 정부차원에서 주요선진국들과의 협력이 필요"
+       "기본 안전: 충돌 경고, 신호 정보(SPaT), 보행자 경고",
+       "고급(NR-V2X): 군집 주행, 확장 센서 공유, 원격 주행, 고급 자율주행",
+       "보안: SCMS(Security Credential Management System) 기반 인증서·가명",
+       "동향: C-ITS 전국 확대, 6G-V2X 연구"
       ]
      }
     ]
@@ -3180,18 +3749,30 @@
   ],
   "name": "V2X(Vehicle-to-Everything, 차량-사물 통신)",
   "en": "Vehicle-to-Everything",
-  "reviewed": true,
   "outline": [
-   "지능형 교통시스템의 핵심 기술, V2X(Vehicle to Everything) 의 개요",
-   "- V2X(Vehicle to Everything) 의 정의",
-   "- V2X 의 특징",
-   "V2X 의 개념도 및 종류",
-   "- V2X 의 개념도",
-   "- V2X(Vehicle to Everything)의 종류",
-   "V2X(Vehicle to Everything)의 통신표준",
-   "V2X 표준 기술 비교",
-   "국내 V2X(Vehicle to Everything)의 발전을 위한 현황 및 제언"
-  ]
+   "V2X의 개념",
+   "- 정의",
+   "- 통신 유형",
+   "V2X 통신 기술",
+   "- WAVE",
+   "- C-V2X",
+   "- 기술 비교",
+   "V2X 서비스 및 동향"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "V2I(Vehicle-to-Infrastructure)",
+   "V2N(Vehicle-to-Network)",
+   "V2P(Vehicle-to-Pedestrian)",
+   "C-V2X(Cellular V2X)",
+   "NR-V2X(New Radio V2X)",
+   "SCMS(Security Credential Management System)"
+  ],
+  "quiz_groups": [
+   "vehicle"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_083",
@@ -3200,50 +3781,61 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > V2V > DSRC",
-  "definition": "노변기지국(RSE: Road Side Equipment)과 차량탑재단말(OBE: OnBoard Equipment)이 근거리 무선통신을통해 각종 정보를 주고 받는 시스템으로서, ITS의 핵심기술",
+  "definition": "차량과 노변 장치(RSU) 또는 차량 간에 수십~수백 m 단거리에서 고속으로 데이터를 주고받는 전용 무선통신 방식으로, 국내 하이패스(5.8GHz)와 미국 V2X(5.9GHz, WAVE)에 쓰임",
   "keywords": [
-   "ITS",
-   "노변기지국",
-   "차량탑재단말",
-   "LOS",
-   "고속전송",
-   "수동형",
-   "능동형",
-   "1Mbps"
+   "구성: OBU(차량 단말) · RSU(노변 기지국)",
+   "국내: 5.8GHz 능동형 DSRC → 하이패스(ETCS) · 교통 정보 수집",
+   "미국: 5.9GHz DSRC = IEEE 802.11p + IEEE 1609(WAVE)",
+   "특징: 단거리·저지연·고속 이동 지원",
+   "동향: 미국 5.9GHz 대역 C-V2X로 전환(FCC, 2020·2024)"
   ],
   "sections": [
    {
-    "title": "노변 기지국 통신을 위한 근거리 통신 DSRC의 개요",
+    "title": "DSRC의 개념",
     "subsections": [
      {
-      "title": "DSRC(Dedicated Short Range Communication)의 정의",
+      "title": "정의",
       "items": [
-       "차량과 노변 기지국간 100m 이내에서 1Mbps 급의 근거리 통신이 가능하여 요금징수 및 교통량 수집과정보 제공하는 네트워킹 기술"
+       "ITS(지능형 교통 시스템)용으로 특정 짧은 구간에서 차량과 도로 장치가 통신하도록 만든 전용 단거리 통신"
       ]
      },
      {
-      "title": "DSRC의 특징",
+      "title": "구성 요소",
       "items": [
-       "노변-차량간 양방향 근거리 통신(Coverage 100m 이하)",
-       "LOS(Line of Sight)를 유지할 수 있는 통신환경",
-       "고속전송(~1Mbps) 기능"
+       "OBU(On-Board Unit): 차량 탑재 단말",
+       "RSU(Road Side Unit): 도로변 기지국, 센터와 유선 연결"
       ]
      }
     ]
    },
    {
-    "title": "DSRC의 통신방식 비교 및 고려사항",
+    "title": "DSRC 기술 특징",
     "subsections": [
      {
-      "title": "DSRC의 통신방식 비교",
-      "items": []
+      "title": "국내 DSRC(5.8GHz)",
+      "items": [
+       "5.8GHz 대역 능동형 방식(TTA 표준), 수십 m 통신 영역",
+       "하이패스 요금 징수(ETCS), 교통 정보 수집(통행 시간 측정)"
+      ]
      },
      {
-      "title": "DSRC의 고려사항",
+      "title": "미국 DSRC(5.9GHz)",
       "items": [
-       "정통부와 도로공사는 ETCS를 포함한 ITS용 통신 인프라로 능동형 DSRC와 능동형 IR 기술을 병행 사용",
-       "능동형 ITS시장이 확산되기 위해서는 앞으로 단말기 보급 등 실질적인",
-       "상용화 방안이 관건이 될 것 유지할 수 있는 통신환경"
+       "5.850~5.925GHz, 10MHz 채널, IEEE 802.11p + IEEE 1609 = WAVE",
+       "수백 m~1km, 차량 고속 이동·짧은 접속 시간에 맞게 인증 절차 생략(OCB 모드)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용 서비스 및 동향",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "서비스: 자동 요금 징수, 교통 정보 수집·제공, 차량 안전 경고(V2V·V2I)",
+       "동향: 미국 FCC가 5.9GHz 대역 일부를 Wi-Fi로 돌리고 나머지를 C-V2X로 전환(2020 결정, 2024 규칙)",
+       "국내 C-ITS는 LTE-V2X로 단일화, 하이패스 DSRC는 계속 운용"
       ]
      }
     ]
@@ -3256,15 +3848,27 @@
   ],
   "name": "DSRC(Dedicated Short Range Communications, 단거리 전용 통신)",
   "en": "Dedicated Short Range Communications",
-  "reviewed": true,
   "outline": [
-   "노변 기지국 통신을 위한 근거리 통신 DSRC의 개요",
-   "- DSRC(Dedicated Short Range Communication)의 정의",
-   "- DSRC의 특징",
-   "DSRC의 통신방식 비교 및 고려사항",
-   "- DSRC의 통신방식 비교",
-   "- DSRC의 고려사항"
-  ]
+   "DSRC의 개념",
+   "- 정의",
+   "- 구성 요소",
+   "DSRC 기술 특징",
+   "- 국내 DSRC(5.8GHz)",
+   "- 미국 DSRC(5.9GHz)",
+   "활용 서비스 및 동향"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "RSU(Road Side Unit)",
+   "OBU(On-Board Unit)",
+   "하이패스(ETCS, Electronic Toll Collection System)",
+   "IEEE 802.11p(WAVE PHY/MAC)"
+  ],
+  "quiz_groups": [
+   "vehicle"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_084",
@@ -3273,36 +3877,63 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > V2V > WAVE(IEEE 802.11p)",
-  "definition": "차량과 차량 혹은 차량과 인프라 간 무선통신을 위해 차량 최대 속도 200km/h, 100ms 이내의 지연시간을가지면서 최대 27Mbps(대역폭 10MHz)의 전송속도를 가지는 차량용 1km 내외의 근거리 무선통신 기술",
+  "definition": "고속 이동 차량 환경에서 차량 간(V2V)·차량-인프라 간(V2I) 통신을 위해 IEEE 802.11p와 IEEE 1609 표준군으로 정의한 5.9GHz 무선 접속 기술",
   "keywords": [
-   "IEEE 802.11p / IEEE 1609.1~4",
-   "5.9GHz 대역, 75MHz 대역폭",
-   "최대 1km 커버리지",
-   "최대 200km/h 이동",
-   "100ms 이내 지연",
-   "V2V·V2I"
+   "PHY·MAC: IEEE 802.11p (OFDM, 10MHz 채널)",
+   "상위 계층: IEEE 1609.2(보안)·.3(WSMP 네트워킹)·.4(멀티채널)",
+   "채널: 제어 채널(CCH) 1개 + 서비스 채널(SCH) 6개",
+   "OCB(BSS 밖 통신): 인증·결합 없이 즉시 통신",
+   "후속: IEEE 802.11bd(NGV, 2022)",
+   "국내 C-ITS: 2023-12 LTE-V2X로 단일화"
   ],
   "sections": [
    {
-    "title": "자율주행차의 V2X를 위한 근거리 통신 표준기술, WAVE의 개요",
+    "title": "WAVE의 개념",
     "subsections": [
      {
-      "title": "WAVE(Wireless Access in Vehicular Environment)의 정의",
+      "title": "정의",
       "items": [
-       "IEEE 802.11p 물리 계층을 활용하여 5.85~5.925GHz 전용 주파수 대역을 사용하고 고속의 이동환경에서적합하도록 무선 랜에 비해 좁아진 채널 대역폭(10Mhz)과 높은 RF 출력(48dBM)을 제공하는 차량간 통신에적합한 프로토콜."
+       "차량 환경 무선 접속: Wi-Fi(802.11a)를 차량용으로 변형한 V2X 통신 기술, DSRC 계열"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "최대 시속 200km 수준 이동성, 100ms 이내 지연, 최대 약 1km 통신",
+       "AP 연결·인증 없이 바로 방송(OCB, Outside the Context of a BSS)"
       ]
      }
     ]
    },
    {
-    "title": "표준관점에서 WAVE가 적용된 단말의 기본적인 스택 구조",
+    "title": "WAVE 프로토콜 구조",
     "subsections": [
      {
-      "title": "WAVE 기반의 V2X 통신 표준",
+      "title": "IEEE 802.11p",
       "items": [
-       "SAE J2735는 V2X 통신시 전송하는 메시지의 종류, 포맷, 우선순위 등을 정의",
-       "SAE J2945는 J2735에서 정의한 안전메시지 BSM(Basic Safety Message)을 초당 10회(10Hz)주기로 브로드캐스팅 하도록 정의",
-       "IEEE 802.11p는 IEEE 802.11p WAVE 표준화는 미국의 DSRC (Dedicated Short Range Communications) 주파수대역 할당과 사용기술의 개발을 위해 시작됨 < DSRC(5.9Hz) 주파수대역과 채널할당 >"
+       "5.9GHz, 10MHz 채널(802.11a 대비 심볼 길이 2배 → 다중 경로·도플러에 강함), 3~27Mbps"
+      ]
+     },
+     {
+      "title": "IEEE 1609 표준군",
+      "items": [
+       "1609.2: 보안 서비스(인증서 서명·암호화)",
+       "1609.3: 네트워킹 서비스, WSMP(WAVE Short Message Protocol) 경량 메시지 + IPv6",
+       "1609.4: 멀티채널 운용 — 제어 채널(CCH, 안전 메시지)과 서비스 채널(SCH)을 시분할 전환"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "WAVE와 C-V2X 비교 및 동향",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "WAVE: 상용 칩 성숙, 기지국 불필요, 혼잡 시 성능 저하",
+       "C-V2X(LTE/NR-V2X): 통신 범위·신뢰성 우수, 이동통신망과 연계, 5G 진화",
+       "후속 표준 IEEE 802.11bd(NGV, Next Generation V2X): 전송률·거리 향상, 802.11p 하위 호환",
+       "국내: 시범 사업은 WAVE·LTE-V2X 병행 후 2023년 12월 12일 LTE-V2X 단일 표준 결정, 미국도 C-V2X로 전환"
       ]
      }
     ]
@@ -3315,13 +3946,28 @@
   ],
   "name": "WAVE(Wireless Access in Vehicular Environments)",
   "en": "Wireless Access in Vehicular Environments",
-  "reviewed": true,
   "outline": [
-   "자율주행차의 V2X를 위한 근거리 통신 표준기술, WAVE의 개요",
-   "- WAVE(Wireless Access in Vehicular Environment)의 정의",
-   "표준관점에서 WAVE가 적용된 단말의 기본적인 스택 구조",
-   "- WAVE 기반의 V2X 통신 표준"
-  ]
+   "WAVE의 개념",
+   "- 정의",
+   "- 특징",
+   "WAVE 프로토콜 구조",
+   "- IEEE 802.11p",
+   "- IEEE 1609 표준군",
+   "WAVE와 C-V2X 비교 및 동향"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "IEEE 802.11p",
+   "IEEE 1609 표준군(IEEE 1609 Family)",
+   "WSMP(WAVE Short Message Protocol)",
+   "제어 채널(CCH, Control Channel)",
+   "IEEE 802.11bd(NGV, Next Generation V2X)"
+  ],
+  "quiz_groups": [
+   "vehicle"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_085_00",
