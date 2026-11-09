@@ -17625,5 +17625,1036 @@
    "HPM": "High Power Microwave",
    "CISPR": "Comité International Spécial des Perturbations Radioélectriques"
   }
+ },
+ "SE_253": {
+  "title": "소프트웨어 난독화(Software Obfuscation)",
+  "category": "SE > SW 저작권 보호",
+  "definition": "프로그램의 기능은 그대로 두면서 코드·데이터·제어 흐름을 읽고 분석하기 어렵게 변환해 역공학(Reverse Engineering)에 의한 불법 복제, 키·알고리즘 유출, 취약점 악용을 막는 소프트웨어 보호 기법",
+  "keywords": [
+   "기법 분류: 구획 난독화(Layout) · 데이터 난독화(Data) · 집합 난독화(Aggregation) · 제어 난독화(Control) · 예방 난독화(Preventive)",
+   "세부 기법: 식별자 변경·주석 제거 · 문자열 분할·인코딩 · 클래스 분할·배열 변환 · 불투명 술어(Opaque Predicate) · 안티 디버깅"
+  ],
+  "sections": [
+   {
+    "title": "적용 목적",
+    "subsections": [
+     {
+      "title": "불법 복제 방지",
+      "items": [
+       "시리얼 키·라이선스 검사 루틴 우회 방지"
+      ]
+     },
+     {
+      "title": "해킹 방지",
+      "items": [
+       "취약점 분석과 변조 지연"
+      ]
+     },
+     {
+      "title": "경량화",
+      "items": [
+       "식별자 축약으로 배포 크기 감소(자바·자바스크립트)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기법 분류",
+    "subsections": [
+     {
+      "title": "구획",
+      "items": [
+       "형식 변경, 주석 제거, 식별자 의미 없는 이름으로 변경",
+       "성능 저하 없지만 로직 보호 불가"
+      ]
+     },
+     {
+      "title": "데이터",
+      "items": [
+       "변수 분할·병합, 저장 형태·인코딩 변경"
+      ]
+     },
+     {
+      "title": "집합",
+      "items": [
+       "배열 재배치, 클래스 분할·병합"
+      ]
+     },
+     {
+      "title": "제어",
+      "items": [
+       "불필요한 분기·불투명 술어 삽입, 제어 흐름 평탄화"
+      ]
+     },
+     {
+      "title": "예방",
+      "items": [
+       "알려진 역난독화 도구·디버거 탐지 방해"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "평가 기준과 한계",
+    "subsections": [
+     {
+      "title": "평가",
+      "items": [
+       "강도(분석 난이도), 탄력성(자동 역난독화 저항), 비용(성능·크기 증가)"
+      ]
+     },
+     {
+      "title": "보호 수준",
+      "items": [
+       "완전한 보호가 아닌 분석 지연, 제어·데이터 난독화는 성능 저하"
+      ]
+     },
+     {
+      "title": "보완",
+      "items": [
+       "무결성 검사·안티 탬퍼링, 런타임 앱 자가 보호(RASP) 결합"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "적용 목적",
+   "- 불법 복제 방지",
+   "- 해킹 방지",
+   "- 경량화",
+   "기법 분류",
+   "- 구획",
+   "- 데이터",
+   "- 집합",
+   "- 제어",
+   "- 예방",
+   "평가 기준과 한계",
+   "- 평가",
+   "- 보호 수준",
+   "- 보완"
+  ],
+  "name": "소프트웨어 난독화(Software Obfuscation)",
+  "en": "Software Obfuscation",
+  "keywords_must": [
+   "구획 난독화(Layout)",
+   "데이터 난독화(Data)",
+   "집합 난독화(Aggregation)",
+   "제어 난독화(Control)",
+   "예방 난독화(Preventive)",
+   "식별자 변경·주석 제거",
+   "문자열 분할·인코딩",
+   "클래스 분할·배열 변환",
+   "불투명 술어(Opaque Predicate)",
+   "안티 디버깅"
+  ],
+  "keywords_ref": [
+   "절차: 어휘·구문 분석 → 기법 선택 → 난독화 수행",
+   "콜버그(Collberg) 분류",
+   "강도·탄력성·비용 평가",
+   "ProGuard·LLVM 기반 난독화",
+   "앱 위변조 방지",
+   "악성코드 난독화 악용"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "구획 난독화(Layout)",
+   "데이터 난독화(Data)",
+   "집합 난독화(Aggregation)",
+   "제어 난독화(Control)",
+   "예방 난독화(Preventive)",
+   "식별자 변경·주석 제거",
+   "문자열 분할·인코딩",
+   "클래스 분할·배열 변환",
+   "불투명 술어(Opaque Predicate)",
+   "안티 디버깅"
+  ],
+  "dueum": "구데집제예 (구획·데이터·집합·제어·예방)",
+  "gloss": {
+   "RASP": "Runtime Application Self-Protection"
+  }
+ },
+ "SE_257_1": {
+  "title": "신뢰 플랫폼 모듈(TPM, Trusted Platform Module)",
+  "category": "SE > CA",
+  "definition": "암호키·패스워드·인증서를 안전하게 저장하고 키 생성·서명·암호화 연산과 부팅 무결성 측정을 하드웨어 내부에서 수행하는 신뢰 컴퓨팅 그룹(TCG) 표준 보안 칩(ISO/IEC 11889)",
+  "keywords": [
+   "TPM 2.0 계층: 보증 계층(Endorsement) · 저장 계층(Storage) · 플랫폼 계층(Platform)",
+   "핵심 키·레지스터: 보증 키(EK) · 저장 루트 키(SRK) · 플랫폼 구성 레지스터(PCR)",
+   "핵심 기능: 측정 부팅(Measured Boot) · 원격 증명(Attestation) · 봉인(Sealing)",
+   "구현 형태: 개별 칩(dTPM) · 통합 TPM · 펌웨어 TPM(fTPM)"
+  ],
+  "sections": [
+   {
+    "title": "구성",
+    "subsections": [
+     {
+      "title": "암호 엔진",
+      "items": [
+       "난수 생성기, 키 생성, RSA·ECC 서명, SHA 해시, AES"
+      ]
+     },
+     {
+      "title": "저장",
+      "items": [
+       "비휘발 메모리, PCR(부팅 단계별 측정값 누적)"
+      ]
+     },
+     {
+      "title": "보호",
+      "items": [
+       "키는 칩 밖으로 평문 반출 불가, 사전 공격 잠금"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "키 계층(Hierarchy)",
+    "subsections": [
+     {
+      "title": "보증 계층",
+      "items": [
+       "제조 시 주입된 EK로 TPM 진위 증명, 프라이버시 관리자 통제"
+      ]
+     },
+     {
+      "title": "저장 계층",
+      "items": [
+       "SRK 아래 사용자·OS 키 보호, 소유자 통제"
+      ]
+     },
+     {
+      "title": "플랫폼 계층",
+      "items": [
+       "플랫폼 펌웨어(OEM)가 사용하는 계층"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": "측정 부팅",
+      "items": [
+       "부팅 구성요소 해시를 PCR에 확장 기록"
+      ]
+     },
+     {
+      "title": "원격 증명",
+      "items": [
+       "PCR 값에 서명해 원격 검증자에게 무결성 증명"
+      ]
+     },
+     {
+      "title": "봉인",
+      "items": [
+       "특정 PCR 상태에서만 키 복호(BitLocker 디스크 암호 키)"
+      ]
+     },
+     {
+      "title": "형태",
+      "items": [
+       "개별 칩은 물리 공격에 강함, fTPM은 비용 낮지만 펌웨어 취약점 영향"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "구성",
+   "- 암호 엔진",
+   "- 저장",
+   "- 보호",
+   "키 계층(Hierarchy)",
+   "- 보증 계층",
+   "- 저장 계층",
+   "- 플랫폼 계층",
+   "활용",
+   "- 측정 부팅",
+   "- 원격 증명",
+   "- 봉인",
+   "- 형태"
+  ],
+  "name": "신뢰 플랫폼 모듈(TPM, Trusted Platform Module)",
+  "en": "Trusted Platform Module",
+  "keywords_must": [
+   "보증 계층(Endorsement)",
+   "저장 계층(Storage)",
+   "플랫폼 계층(Platform)",
+   "보증 키(EK)",
+   "저장 루트 키(SRK)",
+   "플랫폼 구성 레지스터(PCR)",
+   "측정 부팅(Measured Boot)",
+   "원격 증명(Attestation)",
+   "봉인(Sealing)",
+   "개별 칩(dTPM)",
+   "통합 TPM",
+   "펌웨어 TPM(fTPM)"
+  ],
+  "keywords_ref": [
+   "TPM 2.0 알고리즘 민첩성: RSA·ECC, SHA-1·SHA-256, AES",
+   "BitLocker 키 보호",
+   "Windows 11 요구",
+   "신뢰 루트(RoT)",
+   "사전 공격 방지(Dictionary Attack Lockout)",
+   "보안 부팅(UEFI Secure Boot)과 구분"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "보증 계층(Endorsement)",
+   "저장 계층(Storage)",
+   "플랫폼 계층(Platform)",
+   "보증 키(EK)",
+   "저장 루트 키(SRK)",
+   "플랫폼 구성 레지스터(PCR)",
+   "측정 부팅(Measured Boot)",
+   "원격 증명(Attestation)",
+   "봉인(Sealing)",
+   "개별 칩(dTPM)",
+   "통합 TPM",
+   "펌웨어 TPM(fTPM)"
+  ],
+  "gloss": {
+   "ECC": "Elliptic Curve Cryptography",
+   "TCG": "Trusted Computing Group",
+   "EK": "Endorsement Key",
+   "SRK": "Storage Root Key",
+   "PCR": "Platform Configuration Register"
+  }
+ },
+ "SE_259": {
+  "title": "공통 취약점 식별자(CVE, Common Vulnerabilities and Exposures)",
+  "category": "SE > 기타/시사 > CVE",
+  "definition": "공개된 소프트웨어·하드웨어 보안 취약점마다 고유 식별 번호를 부여해 기관·제품 간 같은 취약점을 일관되게 가리키도록 MITRE가 1999년 시작한 공개 취약점 목록 체계",
+  "keywords": [
+   "ID 체계: CVE-연도-일련번호 · 2014 표기 변경(4자리 이상 가변) · 2015년 적용",
+   "운영 주체: MITRE · CVE 번호 부여 기관(CNA) · 미국 CISA 후원",
+   "연계 체계: 국가 취약점 DB(NVD) · 취약점 점수(CVSS) · 약점 분류(CWE)",
+   "활용: 패치 관리 · 취약점 스캐너 DB · IPS 시그니처"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "혼란",
+      "items": [
+       "보안 업체마다 같은 취약점을 다른 이름으로 부름"
+      ]
+     },
+     {
+      "title": "필요",
+      "items": [
+       "도구·DB·권고문 간 상호 참조용 공통 식별자"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "관리 절차",
+    "subsections": [
+     {
+      "title": "1 발견·보고",
+      "items": [
+       "연구자·벤더가 CNA에 취약점 보고"
+      ]
+     },
+     {
+      "title": "2 ID 예약",
+      "items": [
+       "CNA가 CVE ID 할당"
+      ]
+     },
+     {
+      "title": "3 검증·공개",
+      "items": [
+       "설명·영향 제품·참조와 함께 레코드 공개"
+      ]
+     },
+     {
+      "title": "4 분석·활용",
+      "items": [
+       "NVD가 CVSS 점수·CWE 부여, 패치·시그니처·스캐너 DB 반영"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "표기 변경 영향",
+    "subsections": [
+     {
+      "title": "배경",
+      "items": [
+       "연간 취약점이 9,999건을 넘을 것에 대비해 일련번호를 4자리 이상 가변 길이로 변경"
+      ]
+     },
+     {
+      "title": "개발자",
+      "items": [
+       "취약점 관리 DB 컬럼 길이·정렬·검색 수정"
+      ]
+     },
+     {
+      "title": "운영자",
+      "items": [
+       "보안 솔루션이 새 ID를 수용해 시그니처·패치가 정상 반영되는지 확인"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 혼란",
+   "- 필요",
+   "관리 절차",
+   "- 1 발견·보고",
+   "- 2 ID 예약",
+   "- 3 검증·공개",
+   "- 4 분석·활용",
+   "표기 변경 영향",
+   "- 배경",
+   "- 개발자",
+   "- 운영자"
+  ],
+  "name": "공통 취약점 식별자(CVE, Common Vulnerabilities and Exposures)",
+  "en": "Common Vulnerabilities and Exposures",
+  "keywords_must": [
+   "CVE-연도-일련번호",
+   "2014 표기 변경(4자리 이상 가변)",
+   "2015년 적용",
+   "MITRE",
+   "CVE 번호 부여 기관(CNA)",
+   "미국 CISA 후원",
+   "국가 취약점 DB(NVD)",
+   "취약점 점수(CVSS)",
+   "약점 분류(CWE)",
+   "패치 관리",
+   "취약점 스캐너 DB",
+   "IPS 시그니처"
+  ],
+  "keywords_ref": [
+   "도입 배경: 기관별 다른 명칭으로 혼란",
+   "2014 보고 건수 9,000건 초과",
+   "표기 변경으로 DB 컬럼 확장 필요",
+   "KISA KNVD",
+   "버그 바운티",
+   "제로데이",
+   "CVE 레코드 상태(예약·공개·거부)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "CVE-연도-일련번호",
+   "2014 표기 변경(4자리 이상 가변)",
+   "2015년 적용",
+   "MITRE",
+   "CVE 번호 부여 기관(CNA)",
+   "미국 CISA 후원",
+   "국가 취약점 DB(NVD)",
+   "취약점 점수(CVSS)",
+   "약점 분류(CWE)",
+   "패치 관리",
+   "취약점 스캐너 DB",
+   "IPS 시그니처"
+  ],
+  "gloss": {
+   "CNA": "CVE Numbering Authority",
+   "NVD": "National Vulnerability Database",
+   "CVSS": "Common Vulnerability Scoring System",
+   "CWE": "Common Weakness Enumeration",
+   "CISA": "Cybersecurity and Infrastructure Security Agency",
+   "IPS": "Intrusion Prevention System"
+  }
+ },
+ "SE_261": {
+  "title": "악성 광고(Malvertising)",
+  "category": "SE > 보안 출제 예상 토픽",
+  "definition": "정상 온라인 광고 네트워크에 악성 코드나 악성 사이트 링크를 숨긴 광고(Malicious Advertising)를 게재해, 신뢰도 높은 웹사이트를 방문한 불특정 다수 사용자를 감염시키는 공격",
+  "keywords": [
+   "공격 특징: 정상 광고 플랫폼 경유 · 유포지 은닉 · 불특정 다수 동시 공격",
+   "공격 수법: 위장 광고 의뢰 · 악성 iframe·리다이렉트 · 드라이브 바이 다운로드 · 익스플로잇 킷",
+   "대응: 광고주 신원·계약 검증 · 광고 콘텐츠 악성 점검 · 광고 차단·브라우저 패치"
+  ],
+  "sections": [
+   {
+    "title": "공격 절차",
+    "subsections": [
+     {
+      "title": "1 광고 의뢰",
+      "items": [
+       "공격자가 정상 광고주로 위장해 광고 등록"
+      ]
+     },
+     {
+      "title": "2 광고 게시",
+      "items": [
+       "광고 네트워크가 정상 사이트에 노출"
+      ]
+     },
+     {
+      "title": "3 유인",
+      "items": [
+       "클릭 또는 단순 노출로 리다이렉트"
+      ]
+     },
+     {
+      "title": "4 취약점 점검",
+      "items": [
+       "브라우저·플러그인 취약점 확인"
+      ]
+     },
+     {
+      "title": "5 감염",
+      "items": [
+       "드라이브 바이 다운로드로 악성 코드 설치"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "탐지 어려움",
+    "subsections": [
+     {
+      "title": "은닉",
+      "items": [
+       "정상 광고로 심사 통과 후 악성으로 교체, 특정 조건에서만 악성 동작"
+      ]
+     },
+     {
+      "title": "추적 곤란",
+      "items": [
+       "여러 광고 중개 단계를 거쳐 유포지 파악 어려움"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "광고 업체",
+      "items": [
+       "광고주 재무·신원·도메인 검증, 광고 링크·파일 지속 점검"
+      ]
+     },
+     {
+      "title": "웹사이트",
+      "items": [
+       "광고 영역 격리(샌드박스 iframe), 콘텐츠 보안 정책(CSP)"
+      ]
+     },
+     {
+      "title": "이용자",
+      "items": [
+       "OS·브라우저 최신 패치, 백신, 광고 차단 확장"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 절차",
+   "- 1 광고 의뢰",
+   "- 2 광고 게시",
+   "- 3 유인",
+   "- 4 취약점 점검",
+   "- 5 감염",
+   "탐지 어려움",
+   "- 은닉",
+   "- 추적 곤란",
+   "대응",
+   "- 광고 업체",
+   "- 웹사이트",
+   "- 이용자"
+  ],
+  "name": "악성 광고(Malvertising)",
+  "en": "Malvertising",
+  "keywords_must": [
+   "정상 광고 플랫폼 경유",
+   "유포지 은닉",
+   "불특정 다수 동시 공격",
+   "위장 광고 의뢰",
+   "악성 iframe·리다이렉트",
+   "드라이브 바이 다운로드",
+   "익스플로잇 킷",
+   "광고주 신원·계약 검증",
+   "광고 콘텐츠 악성 점검",
+   "광고 차단·브라우저 패치"
+  ],
+  "keywords_ref": [
+   "랜섬웨어 유포 경로",
+   "실시간 입찰(RTB) 악용",
+   "클로킹(Cloaking)",
+   "애드웨어",
+   "검색 광고 위장 사이트",
+   "난독화 스크립트"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "정상 광고 플랫폼 경유",
+   "유포지 은닉",
+   "불특정 다수 동시 공격",
+   "위장 광고 의뢰",
+   "악성 iframe·리다이렉트",
+   "드라이브 바이 다운로드",
+   "익스플로잇 킷",
+   "광고주 신원·계약 검증",
+   "광고 콘텐츠 악성 점검",
+   "광고 차단·브라우저 패치"
+  ],
+  "gloss": {
+   "RTB": "Real-Time Bidding",
+   "CSP": "Content Security Policy"
+  }
+ },
+ "SE_262": {
+  "title": "비즈니스 이메일 침해(BEC, Business Email Compromise)",
+  "category": "SE > 보안 출제 예상 토픽 > 비즈니스 스캠(Business SCAM)",
+  "definition": "무역·거래 당사자 간 이메일을 해킹하거나 유사 도메인으로 위장해 거래 상황을 지켜보다가 결제 시점에 계좌가 바뀌었다는 메일을 보내 대금을 가로채는 기업 대상 사기(비즈니스 스캠)",
+  "keywords": [
+   "공격 기법: 이메일 계정 탈취 · 이메일 스푸핑 · 유사 도메인(타이포스쿼팅) · 사회공학",
+   "유형: 결제 계좌 변경 사기 · CEO 사칭 송금 지시 · 협력사 위장 청구",
+   "대응: 계좌 변경 시 전화 재확인 · 2단계 인증 · SPF·DKIM·DMARC"
+  ],
+  "sections": [
+   {
+    "title": "공격 절차",
+    "subsections": [
+     {
+      "title": "1 정찰",
+      "items": [
+       "거래 관계·담당자·결제 일정 파악"
+      ]
+     },
+     {
+      "title": "2 침투",
+      "items": [
+       "피싱으로 메일 계정 탈취 또는 유사 도메인 등록"
+      ]
+     },
+     {
+      "title": "3 감시",
+      "items": [
+       "메일 전달 규칙으로 거래 진행 상황 관찰"
+      ]
+     },
+     {
+      "title": "4 사칭",
+      "items": [
+       "결제 직전 계좌 변경 메일 발송"
+      ]
+     },
+     {
+      "title": "5 사취",
+      "items": [
+       "대금 입금 후 자금 세탁·잠적"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "성공 요인",
+    "subsections": [
+     {
+      "title": "신뢰 악용",
+      "items": [
+       "실제 거래 맥락의 메일이라 의심 적음"
+      ]
+     },
+     {
+      "title": "탐지 회피",
+      "items": [
+       "악성 첨부·링크 없이 텍스트만 사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "예방과 대응",
+    "subsections": [
+     {
+      "title": "절차",
+      "items": [
+       "계좌 변경은 기존 연락처로 전화 확인, 송금 이중 승인"
+      ]
+     },
+     {
+      "title": "기술",
+      "items": [
+       "메일 계정 다중 요소 인증, SPF·DKIM·DMARC, 유사 도메인 탐지"
+      ]
+     },
+     {
+      "title": "사고 시",
+      "items": [
+       "즉시 은행 지급정지 요청, 수사기관 신고"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 절차",
+   "- 1 정찰",
+   "- 2 침투",
+   "- 3 감시",
+   "- 4 사칭",
+   "- 5 사취",
+   "성공 요인",
+   "- 신뢰 악용",
+   "- 탐지 회피",
+   "예방과 대응",
+   "- 절차",
+   "- 기술",
+   "- 사고 시"
+  ],
+  "name": "비즈니스 이메일 침해(BEC, Business Email Compromise)",
+  "en": "Business Email Compromise (Business Scam)",
+  "keywords_must": [
+   "이메일 계정 탈취",
+   "이메일 스푸핑",
+   "유사 도메인(타이포스쿼팅)",
+   "사회공학",
+   "결제 계좌 변경 사기",
+   "CEO 사칭 송금 지시",
+   "협력사 위장 청구",
+   "계좌 변경 시 전화 재확인",
+   "2단계 인증",
+   "SPF·DKIM·DMARC"
+  ],
+  "keywords_ref": [
+   "중간자 공격 형태",
+   "419 스캠(나이지리아)",
+   "악성 코드 없는 공격으로 탐지 곤란",
+   "메일 자동 전달 규칙 악용",
+   "외부 메일 경고 표시",
+   "FBI IC3 최대 피해 유형",
+   "딥페이크 음성 결합"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "이메일 계정 탈취",
+   "이메일 스푸핑",
+   "유사 도메인(타이포스쿼팅)",
+   "사회공학",
+   "결제 계좌 변경 사기",
+   "CEO 사칭 송금 지시",
+   "협력사 위장 청구",
+   "계좌 변경 시 전화 재확인",
+   "2단계 인증",
+   "SPF·DKIM·DMARC"
+  ],
+  "gloss": {
+   "DKIM": "DomainKeys Identified Mail",
+   "DMARC": "Domain-based Message Authentication, Reporting and Conformance",
+   "SPF": "Sender Policy Framework",
+   "IC3": "Internet Crime Complaint Center"
+  }
+ },
+ "SE_263": {
+  "title": "비대면 실명확인",
+  "category": "SE > 출제 예상 > 비대면 실명확인",
+  "definition": "고객이 금융회사를 방문하지 않고 온라인·모바일로 계좌 개설 등 금융거래를 할 때 신분증 사본, 영상통화, 기존 계좌 등 복수 수단을 조합해 본인임을 확인하는 제도(2015 금융위원회 도입)",
+  "keywords": [
+   "필수 확인 수단: 신분증 사본 제출 · 영상통화 · 접근매체 전달 시 확인 · 기존 계좌 활용(소액이체) · 생체인증 등 이에 준하는 방법",
+   "적용 원칙: 필수 수단 중 2가지 이상 중복 확인",
+   "권고 수단: 타 기관 확인 결과 활용 · 다수 개인정보 검증",
+   "인증 기술: 소지 기반 · 지식 기반 · 생체 기반 · 특징 기반"
+  ],
+  "sections": [
+   {
+    "title": "확인 방식",
+    "subsections": [
+     {
+      "title": "신분증 사본",
+      "items": [
+       "촬영·스캔 제출 후 발급기관에 진위 확인"
+      ]
+     },
+     {
+      "title": "영상통화",
+      "items": [
+       "직원이 육안·안면인식으로 신분증 사진과 얼굴 대조"
+      ]
+     },
+     {
+      "title": "접근매체 전달",
+      "items": [
+       "카드 등 배송 시 배달 직원이 신분증 확인"
+      ]
+     },
+     {
+      "title": "기존 계좌",
+      "items": [
+       "타 금융회사 계좌 소액이체로 거래 권한 확인"
+      ]
+     },
+     {
+      "title": "이에 준하는 방법",
+      "items": [
+       "바이오 정보 검증 등"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "인증 기술 분류",
+    "subsections": [
+     {
+      "title": "소지",
+      "items": [
+       "문자·전화·OTP 토큰 등 별도 채널(OOB) 인증"
+      ]
+     },
+     {
+      "title": "지식",
+      "items": [
+       "비밀번호, 패턴, 가상 키패드, OTP 값 입력"
+      ]
+     },
+     {
+      "title": "생체",
+      "items": [
+       "지문·홍채·정맥·얼굴·음성"
+      ]
+     },
+     {
+      "title": "상황 정보",
+      "items": [
+       "기기 정보·위치·접근 기록 등 상황 정보(보조)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "위험과 대응",
+    "subsections": [
+     {
+      "title": "위험",
+      "items": [
+       "신분증 위조·도용, 대포통장 개설"
+      ]
+     },
+     {
+      "title": "대응",
+      "items": [
+       "2가지 이상 중복 확인, 이상거래 탐지(FDS), 신분증 위조 판별 기술"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "확인 방식",
+   "- 신분증 사본",
+   "- 영상통화",
+   "- 접근매체 전달",
+   "- 기존 계좌",
+   "- 이에 준하는 방법",
+   "인증 기술 분류",
+   "- 소지",
+   "- 지식",
+   "- 생체",
+   "- 상황 정보",
+   "위험과 대응",
+   "- 위험",
+   "- 대응"
+  ],
+  "name": "비대면 실명확인",
+  "en": "Non-face-to-face Identity Verification",
+  "keywords_must": [
+   "신분증 사본 제출",
+   "영상통화",
+   "접근매체 전달 시 확인",
+   "기존 계좌 활용(소액이체)",
+   "생체인증 등 이에 준하는 방법",
+   "필수 수단 중 2가지 이상 중복 확인",
+   "타 기관 확인 결과 활용",
+   "다수 개인정보 검증",
+   "소지 기반",
+   "지식 기반",
+   "생체 기반",
+   "특징 기반"
+  ],
+  "keywords_ref": [
+   "신분증 진위 확인(발급기관 연계)",
+   "안면인식 대조",
+   "휴대폰 본인확인·아이핀",
+   "대포통장·명의도용 위험",
+   "신분증 위조 딥페이크 대응",
+   "모바일 신분증"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "신분증 사본 제출",
+   "영상통화",
+   "접근매체 전달 시 확인",
+   "기존 계좌 활용(소액이체)",
+   "생체인증 등 이에 준하는 방법",
+   "필수 수단 중 2가지 이상 중복 확인",
+   "타 기관 확인 결과 활용",
+   "다수 개인정보 검증",
+   "소지 기반",
+   "지식 기반",
+   "생체 기반",
+   "특징 기반"
+  ],
+  "gloss": {
+   "OOB": "Out-of-Band",
+   "FDS": "Fraud Detection System",
+   "OTP": "One-Time Password"
+  }
+ },
+ "SE_265": {
+  "title": "코드 서명(Code Signing)",
+  "category": "SE > 보안 > 코드서명",
+  "definition": "소프트웨어 배포자가 코드의 해시값을 인증기관(CA)이 발급한 코드 서명 인증서의 개인키로 전자서명해, 사용자가 게시자 신원과 배포 후 변조되지 않았음을 검증하도록 하는 객체 서명 기술",
+  "keywords": [
+   "보장 요소: 무결성 · 게시자 인증 · 부인 방지",
+   "검증 절차: 서명 복호화로 해시 추출 · 코드 해시 재계산 · 해시 비교 · 인증서 체인 검증",
+   "대응: 하드웨어 보안 모듈(HSM) 키 보관 · 서명 시스템 망 분리 · 인증서 폐기 절차"
+  ],
+  "sections": [
+   {
+    "title": "동작 원리",
+    "subsections": [
+     {
+      "title": "서명",
+      "items": [
+       "코드 해시를 개인키로 서명해 인증서와 함께 첨부, 타임스탬프로 만료 후에도 유효성 유지"
+      ]
+     },
+     {
+      "title": "검증",
+      "items": [
+       "공개키로 서명을 풀어 얻은 해시와 다운로드 코드의 해시 비교, 인증서 체인·폐기 여부 확인"
+      ]
+     },
+     {
+      "title": "결과",
+      "items": [
+       "일치하면 게시자 표시, 불일치·미서명이면 경고"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "서명 절차",
+    "subsections": [
+     {
+      "title": "1 빌드",
+      "items": [
+       "컴파일 후 배포 패키지 생성"
+      ]
+     },
+     {
+      "title": "2 인증서 발급",
+      "items": [
+       "CA에서 코드 서명 인증서 발급"
+      ]
+     },
+     {
+      "title": "3 서명",
+      "items": [
+       "서명 도구로 패키지에 서명과 타임스탬프 적용"
+      ]
+     },
+     {
+      "title": "4 배포",
+      "items": [
+       "웹·앱스토어로 배포"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "인증서 보안 가이드",
+    "subsections": [
+     {
+      "title": "키 보관",
+      "items": [
+       "HSM·보안 토큰에 개인키 저장, 비밀번호 보호"
+      ]
+     },
+     {
+      "title": "서명 시스템",
+      "items": [
+       "망 분리, 인터넷 차단, 공용 계정 삭제, 최신 패치"
+      ]
+     },
+     {
+      "title": "사고 대응",
+      "items": [
+       "유출 시 즉시 폐기 절차와 비상 연락망, 서명 로그 6개월 이상 보관"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "동작 원리",
+   "- 서명",
+   "- 검증",
+   "- 결과",
+   "서명 절차",
+   "- 1 빌드",
+   "- 2 인증서 발급",
+   "- 3 서명",
+   "- 4 배포",
+   "인증서 보안 가이드",
+   "- 키 보관",
+   "- 서명 시스템",
+   "- 사고 대응"
+  ],
+  "name": "코드 서명(Code Signing)",
+  "en": "Code Signing",
+  "keywords_must": [
+   "무결성",
+   "게시자 인증",
+   "부인 방지",
+   "서명 복호화로 해시 추출",
+   "코드 해시 재계산",
+   "해시 비교",
+   "인증서 체인 검증",
+   "하드웨어 보안 모듈(HSM) 키 보관",
+   "서명 시스템 망 분리",
+   "인증서 폐기 절차"
+  ],
+  "keywords_ref": [
+   "타임스탬프",
+   "위협: 인증서·개인키 탈취, 빌드 서버 침해, 폐기 인증서 사용",
+   "적용 형식: EXE·DLL·CAB·JAR·APK·PDF",
+   "EV 코드 서명",
+   "2023 CA/B 포럼 하드웨어 키 보관 의무",
+   "시그스토어(Sigstore)",
+   "스턱스넷 탈취 인증서 악용",
+   "서명 로그 보관"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "무결성",
+   "게시자 인증",
+   "부인 방지",
+   "서명 복호화로 해시 추출",
+   "코드 해시 재계산",
+   "해시 비교",
+   "인증서 체인 검증",
+   "하드웨어 보안 모듈(HSM) 키 보관",
+   "서명 시스템 망 분리",
+   "인증서 폐기 절차"
+  ],
+  "gloss": {
+   "CA": "Certificate Authority",
+   "HSM": "Hardware Security Module",
+   "EV": "Extended Validation"
+  }
  }
 }
