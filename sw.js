@@ -2,7 +2,7 @@
 layout: null
 permalink: /sw.js
 ---
-// 간단한 서비스 워커: 정적 파일은 캐시 우선, data.json·페이지는 네트워크 우선(오프라인이면 캐시)
+// 서비스 워커: 모든 요청 네트워크 우선(배포 직후 옛 JS와 새 페이지가 섞이지 않게), 오프라인이면 캐시
 const VERSION = 'pe-{{ site.time | date: "%Y%m%d%H%M%S" }}';
 const BASE = '{{ site.baseurl }}';
 const PRECACHE = [
@@ -21,7 +21,7 @@ self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET' || new URL(req.url).origin !== location.origin) return;
   const url = new URL(req.url);
-  const networkFirst = req.mode === 'navigate' || (url.pathname.endsWith('/data.json') || url.pathname.endsWith('/glossary.json') || url.pathname.endsWith('/quiz.json'));
+  const networkFirst = true; // 항상 최신 우선, 오프라인일 때만 캐시
   if (networkFirst) {
     e.respondWith(fetch(req).then(res => {
       const copy = res.clone(); caches.open(VERSION).then(c => c.put(req, copy)); return res;
