@@ -253,7 +253,8 @@
    "ECC·DSA(이산대수)",
    "격자(Lattice) 기반",
    "하이브리드 암호(전자봉투)",
-   "케르크호프스 원리"
+   "케르크호프스 원리",
+   "대칭키 n명 통신 시 키 n(n-1)/2개, 공개키는 2n개"
   ],
   "curated": true,
   "reviewed": true,
@@ -276,6 +277,154 @@
   ],
   "gloss": {
    "ECC": "Elliptic Curve Cryptography"
+  }
+ },
+ {
+  "id": "SE_003",
+  "code": "SE_003",
+  "title": "스트림 암호(Stream Cipher)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 암호화 > 스트림 암호화(Stream Cipher)",
+  "definition": "짧은 비밀키로 의사 난수 키스트림을 생성해 평문과 비트(바이트) 단위로 XOR하여 암호화하는 대칭키 암호로, 일회용 패드를 실용화한 방식이다",
+  "keywords": [
+   "원리: 키스트림 생성기 · 비트 단위 XOR · 일회용 패드(버냄 암호) 근사",
+   "특징: 고속·경량 하드웨어 · 오류 전파 없음 · 버퍼링 불필요",
+   "분류: 동기식 스트림 암호 · 자기 동기식(비동기식) 스트림 암호",
+   "대표 알고리즘: RC4 · ChaCha20 · A5/1 · SEAL"
+  ],
+  "sections": [
+   {
+    "title": "원리",
+    "subsections": [
+     {
+      "title": "키스트림",
+      "items": [
+       "비밀키와 초기값(IV·논스)으로 긴 의사 난수열 생성"
+      ]
+     },
+     {
+      "title": "암호화",
+      "items": [
+       "Ci = Mi ⊕ Ki, 복호화는 같은 키스트림을 다시 XOR"
+      ]
+     },
+     {
+      "title": "일회용 패드",
+      "items": [
+       "키가 평문 길이만큼 완전 난수이고 1회만 쓰이면 완전 비밀성, 스트림 암호는 이를 의사 난수로 근사"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분류와 알고리즘",
+    "subsections": [
+     {
+      "title": "동기식",
+      "items": [
+       "키스트림이 평문·암호문과 독립, 비트 오류가 전파되지 않으나 동기 상실 시 복구 필요(RC4, ChaCha20)"
+      ]
+     },
+     {
+      "title": "자기 동기식",
+      "items": [
+       "이전 암호문으로 키스트림 생성, 동기 자동 회복하나 오류 일부 전파"
+      ]
+     },
+     {
+      "title": "알고리즘",
+      "items": [
+       "RC4(무선랜·과거 TLS), ChaCha20(TLS 1.3·모바일), A5/1(GSM), SEAL(소프트웨어 최적화)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "블록 암호 비교와 보안",
+    "subsections": [
+     {
+      "title": "블록 암호 대비",
+      "items": [
+       "처리 단위가 작고 빠르며 지연이 적어 실시간 음성·무선 통신에 적합"
+      ]
+     },
+     {
+      "title": "위험",
+      "items": [
+       "같은 키스트림을 두 번 쓰면 두 평문의 XOR이 노출, 무결성 미제공으로 비트 변조 가능"
+      ]
+     },
+     {
+      "title": "대책",
+      "items": [
+       "메시지마다 새 논스, MAC 결합 인증 암호(ChaCha20-Poly1305)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "원리",
+   "- 키스트림",
+   "- 암호화",
+   "- 일회용 패드",
+   "분류와 알고리즘",
+   "- 동기식",
+   "- 자기 동기식",
+   "- 알고리즘",
+   "블록 암호 비교와 보안",
+   "- 블록 암호 대비",
+   "- 위험",
+   "- 대책"
+  ],
+  "name": "스트림 암호(Stream Cipher)",
+  "en": "Stream Cipher",
+  "keywords_must": [
+   "키스트림 생성기",
+   "비트 단위 XOR",
+   "일회용 패드(버냄 암호) 근사",
+   "고속·경량 하드웨어",
+   "오류 전파 없음",
+   "버퍼링 불필요",
+   "동기식 스트림 암호",
+   "자기 동기식(비동기식) 스트림 암호",
+   "RC4",
+   "ChaCha20",
+   "A5/1",
+   "SEAL"
+  ],
+  "keywords_ref": [
+   "선형 귀환 시프트 레지스터(LFSR)",
+   "Ci = Mi ⊕ Ki",
+   "키스트림 재사용 금지(논스·IV)",
+   "RC4는 편향 취약으로 TLS 사용 금지(RFC 7465)",
+   "ChaCha20-Poly1305 AEAD",
+   "블록 암호 CTR·OFB 모드로 스트림화"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "키스트림 생성기",
+   "비트 단위 XOR",
+   "일회용 패드(버냄 암호) 근사",
+   "고속·경량 하드웨어",
+   "오류 전파 없음",
+   "버퍼링 불필요",
+   "동기식 스트림 암호",
+   "자기 동기식(비동기식) 스트림 암호",
+   "RC4",
+   "ChaCha20",
+   "A5/1",
+   "SEAL"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "MAC": "Message Authentication Code",
+   "LFSR": "Linear Feedback Shift Register",
+   "AEAD": "Authenticated Encryption with Associated Data"
   }
  },
  {
@@ -407,6 +556,162 @@
   "dueum": "이씨씨오씨",
   "gloss": {
    "IV": "Initialization Vector"
+  }
+ },
+ {
+  "id": "SE_006",
+  "code": "SE_006",
+  "title": "파이스텔 구조(Feistel Cipher)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 암호화 > Feistel(파스텔)",
+  "definition": "N비트 블록을 좌우 N/2비트로 나누고, 오른쪽 절반과 라운드 키로 계산한 라운드 함수 결과를 왼쪽 절반과 XOR한 뒤 좌우를 교환하는 과정을 R라운드 반복하는 블록 암호 구조",
+  "keywords": [
+   "라운드 연산: Li = Ri-1 · Ri = Li-1 ⊕ F(Ri-1, Ki)",
+   "설계 원리: 혼돈(Confusion, S-Box) · 확산(Diffusion, P-Box)",
+   "장점: 암·복호화 구조 동일(역함수 불필요) · 라운드 함수가 비가역이어도 됨",
+   "단점: 좌우 교환으로 한 라운드에 절반만 변환 · 라운드 수 증가 필요",
+   "적용 사례: DES · SEED · Blowfish · Camellia"
+  ],
+  "sections": [
+   {
+    "title": "동작",
+    "subsections": [
+     {
+      "title": "1 분할",
+      "items": [
+       "평문 블록을 L0, R0로 나눔"
+      ]
+     },
+     {
+      "title": "2 라운드",
+      "items": [
+       "Li = Ri-1, Ri = Li-1 ⊕ F(Ri-1, Ki)"
+      ]
+     },
+     {
+      "title": "3 반복",
+      "items": [
+       "R라운드 수행, 마지막 라운드는 교환 생략"
+      ]
+     },
+     {
+      "title": "4 복호화",
+      "items": [
+       "같은 구조에 라운드 키만 역순 적용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "혼돈과 확산",
+    "subsections": [
+     {
+      "title": "혼돈",
+      "items": [
+       "암호문과 키의 관계를 복잡하게 숨김, S-Box 치환"
+      ]
+     },
+     {
+      "title": "확산",
+      "items": [
+       "평문 한 비트 변화가 암호문 전체에 퍼지게 함, P-Box 전치"
+      ]
+     },
+     {
+      "title": "반복",
+      "items": [
+       "라운드를 거듭해 두 성질을 누적"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "SPN 구조 비교",
+    "subsections": [
+     {
+      "title": "변환 범위",
+      "items": [
+       "파이스텔은 라운드당 절반",
+       "SPN은 블록 전체"
+      ]
+     },
+     {
+      "title": "역연산",
+      "items": [
+       "파이스텔은 F 역함수 불필요",
+       "SPN은 치환·전치의 역연산 필요"
+      ]
+     },
+     {
+      "title": "사례",
+      "items": [
+       "파이스텔은 DES·SEED",
+       "SPN은 AES·ARIA"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "동작",
+   "- 1 분할",
+   "- 2 라운드",
+   "- 3 반복",
+   "- 4 복호화",
+   "혼돈과 확산",
+   "- 혼돈",
+   "- 확산",
+   "- 반복",
+   "SPN 구조 비교",
+   "- 변환 범위",
+   "- 역연산",
+   "- 사례"
+  ],
+  "name": "파이스텔 구조(Feistel Cipher)",
+  "en": "Feistel Cipher Structure",
+  "keywords_must": [
+   "Li = Ri-1",
+   "Ri = Li-1 ⊕ F(Ri-1, Ki)",
+   "혼돈(Confusion, S-Box)",
+   "확산(Diffusion, P-Box)",
+   "암·복호화 구조 동일(역함수 불필요)",
+   "라운드 함수가 비가역이어도 됨",
+   "좌우 교환으로 한 라운드에 절반만 변환",
+   "라운드 수 증가 필요",
+   "DES",
+   "SEED",
+   "Blowfish",
+   "Camellia"
+  ],
+  "keywords_ref": [
+   "복호화는 라운드 키를 역순 적용",
+   "섀넌(Shannon) 혼돈·확산",
+   "SPN 구조(AES·ARIA)와 대비",
+   "일반화 파이스텔(형태 보존 암호)",
+   "루비-라코프(Luby-Rackoff) 3~4라운드 안전성"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "Li = Ri-1",
+   "Ri = Li-1 ⊕ F(Ri-1, Ki)",
+   "혼돈(Confusion, S-Box)",
+   "확산(Diffusion, P-Box)",
+   "암·복호화 구조 동일(역함수 불필요)",
+   "라운드 함수가 비가역이어도 됨",
+   "좌우 교환으로 한 라운드에 절반만 변환",
+   "라운드 수 증가 필요",
+   "DES",
+   "SEED",
+   "Blowfish",
+   "Camellia"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "SPN": "Substitution-Permutation Network"
   }
  },
  {
@@ -546,6 +851,167 @@
   ]
  },
  {
+  "id": "SE_008_00",
+  "code": "SE_008_00",
+  "title": "해시 기반 메시지 인증 코드(HMAC, Hash-based Message Authentication Code)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 암호화 > HMAC",
+  "definition": "송수신자가 공유한 비밀키와 SHA-256 같은 암호 해시 함수를 내부·외부 두 번 결합해 메시지 인증 코드를 만들어, 메시지 무결성과 송신자 인증을 제공하는 키 기반 메시지 인증 기법(RFC 2104)",
+  "keywords": [
+   "계산식: HMAC(K, M) = H((K' ⊕ opad) ∥ H((K' ⊕ ipad) ∥ M))",
+   "구성 요소: 비밀키 · 해시 함수(SHA-256 등) · 내부 패딩(ipad 0x36) · 외부 패딩(opad 0x5C)",
+   "제공 기능: 무결성 · 메시지 출처 인증",
+   "한계: 부인 방지 불가(대칭키 공유)"
+  ],
+  "sections": [
+   {
+    "title": "생성 절차",
+    "subsections": [
+     {
+      "title": "1 키 패딩",
+      "items": [
+       "키를 해시 블록 길이에 맞춤(K')"
+      ]
+     },
+     {
+      "title": "2 내부 패딩",
+      "items": [
+       "K' ⊕ ipad"
+      ]
+     },
+     {
+      "title": "3 메시지 결합",
+      "items": [
+       "결과 뒤에 메시지 연결"
+      ]
+     },
+     {
+      "title": "4 내부 해시",
+      "items": [
+       "H((K' ⊕ ipad) ∥ M)"
+      ]
+     },
+     {
+      "title": "5 외부 패딩",
+      "items": [
+       "K' ⊕ opad"
+      ]
+     },
+     {
+      "title": "6 결합",
+      "items": [
+       "외부 패딩 뒤에 내부 해시 연결"
+      ]
+     },
+     {
+      "title": "7 외부 해시",
+      "items": [
+       "최종 HMAC 값"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "검증",
+    "subsections": [
+     {
+      "title": "수신 측",
+      "items": [
+       "같은 키로 HMAC을 다시 계산해 받은 값과 비교"
+      ]
+     },
+     {
+      "title": "결과",
+      "items": [
+       "일치하면 메시지 무결성과 키 보유자 송신 확인"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "안전성과 응용",
+    "subsections": [
+     {
+      "title": "안전성",
+      "items": [
+       "이중 해시 구조로 단순 H(K∥M)의 길이 확장 공격 차단"
+      ]
+     },
+     {
+      "title": "유연성",
+      "items": [
+       "해시 함수를 MD5·SHA-1·SHA-256·SHA-512 등으로 교체 가능, 출력 길이는 해시에 따름"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "TLS·IPsec 무결성, API 요청 서명, HOTP·TOTP, JWT 서명"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "생성 절차",
+   "- 1 키 패딩",
+   "- 2 내부 패딩",
+   "- 3 메시지 결합",
+   "- 4 내부 해시",
+   "- 5 외부 패딩",
+   "- 6 결합",
+   "- 7 외부 해시",
+   "검증",
+   "- 수신 측",
+   "- 결과",
+   "안전성과 응용",
+   "- 안전성",
+   "- 유연성",
+   "- 활용"
+  ],
+  "name": "해시 기반 메시지 인증 코드(HMAC, Hash-based Message Authentication Code)",
+  "en": "Hash-based Message Authentication Code",
+  "keywords_must": [
+   "HMAC(K, M) = H((K' ⊕ opad) ∥ H((K' ⊕ ipad) ∥ M))",
+   "비밀키",
+   "해시 함수(SHA-256 등)",
+   "내부 패딩(ipad 0x36)",
+   "외부 패딩(opad 0x5C)",
+   "무결성",
+   "메시지 출처 인증",
+   "부인 방지 불가(대칭키 공유)"
+  ],
+  "keywords_ref": [
+   "키가 블록보다 길면 해시, 짧으면 0 패딩",
+   "길이 확장 공격 방지",
+   "TLS·IPsec·JWT(HS256)·OTP(HOTP) 활용",
+   "CMAC(블록 암호 기반)과 비교",
+   "해시 함수 교체 가능한 모듈 구조"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "HMAC(K, M) = H((K' ⊕ opad) ∥ H((K' ⊕ ipad) ∥ M))",
+   "비밀키",
+   "해시 함수(SHA-256 등)",
+   "내부 패딩(ipad 0x36)",
+   "외부 패딩(opad 0x5C)",
+   "무결성",
+   "메시지 출처 인증",
+   "부인 방지 불가(대칭키 공유)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "OTP": "One-Time Password",
+   "HOTP": "HMAC-based One-Time Password",
+   "CMAC": "Cipher-based Message Authentication Code",
+   "JWT": "JSON Web Token"
+  }
+ },
+ {
   "id": "SE_008_01",
   "code": "SE_008_01",
   "title": "해시 솔트·페퍼와 키 스트레칭(Hash Salt, Pepper and Key Stretching)",
@@ -681,6 +1147,329 @@
   "quiz_groups": [
    "se"
   ]
+ },
+ {
+  "id": "SE_009",
+  "code": "SE_009",
+  "title": "타원곡선 암호(ECC, Elliptic Curve Cryptography)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 암호화 > 타원곡선",
+  "definition": "유한체 위 타원곡선 y² = x³ + ax + b의 점 연산에서 정의되는 타원곡선 이산대수 문제(ECDLP)의 어려움에 기반한 공개키 암호로, RSA보다 짧은 키로 같은 안전도를 제공한다(1985 밀러·코블리츠 제안)",
+  "keywords": [
+   "수학 기반: 타원곡선 방정식 · 점 덧셈·스칼라 곱 · 타원곡선 이산대수 문제(ECDLP)",
+   "도메인 파라미터: (p, a, b, G, n, h) · 표준 곡선(P-256·secp256k1)",
+   "응용 알고리즘: ECDH 키 교환 · ECDSA 전자서명 · EdDSA(Ed25519)",
+   "특징: 짧은 키 · 적은 연산·저장량 · 모바일·IoT 적합"
+  ],
+  "sections": [
+   {
+    "title": "원리",
+    "subsections": [
+     {
+      "title": "곡선",
+      "items": [
+       "유한체 Fp 위 y² = x³ + ax + b 를 만족하는 점과 무한원점의 군"
+      ]
+     },
+     {
+      "title": "연산",
+      "items": [
+       "두 점을 잇는 직선의 세 번째 교점을 x축 대칭한 점이 덧셈 결과"
+      ]
+     },
+     {
+      "title": "키",
+      "items": [
+       "개인키 d(정수), 공개키 Q = dG",
+       "Q와 G로 d를 구하는 것이 ECDLP"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "도메인 파라미터",
+    "subsections": [
+     {
+      "title": "p",
+      "items": [
+       "유한체 크기, a·b: 곡선 계수"
+      ]
+     },
+     {
+      "title": "G",
+      "items": [
+       "기준점, n: G의 위수, h: 보조 인수"
+      ]
+     },
+     {
+      "title": "표준 곡선",
+      "items": [
+       "NIST P-256, 비트코인 secp256k1, Curve25519"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "RSA 비교와 응용",
+    "subsections": [
+     {
+      "title": "키 길이",
+      "items": [
+       "같은 보안 수준에서 ECC 256비트 ≈ RSA 3072비트"
+      ]
+     },
+     {
+      "title": "성능",
+      "items": [
+       "키 생성·서명이 빠르고 대역폭·저장 공간 절약"
+      ]
+     },
+     {
+      "title": "응용",
+      "items": [
+       "TLS 1.3 ECDHE, 전자서명, 스마트카드·IoT, 암호화폐 지갑"
+      ]
+     },
+     {
+      "title": "양자 위협",
+      "items": [
+       "양자 컴퓨터 쇼어 알고리즘에 취약해 PQC 전환 대상"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "원리",
+   "- 곡선",
+   "- 연산",
+   "- 키",
+   "도메인 파라미터",
+   "- p",
+   "- G",
+   "- 표준 곡선",
+   "RSA 비교와 응용",
+   "- 키 길이",
+   "- 성능",
+   "- 응용",
+   "- 양자 위협"
+  ],
+  "name": "타원곡선 암호(ECC, Elliptic Curve Cryptography)",
+  "en": "Elliptic Curve Cryptography",
+  "keywords_must": [
+   "타원곡선 방정식",
+   "점 덧셈·스칼라 곱",
+   "타원곡선 이산대수 문제(ECDLP)",
+   "(p, a, b, G, n, h)",
+   "표준 곡선(P-256·secp256k1)",
+   "ECDH 키 교환",
+   "ECDSA 전자서명",
+   "EdDSA(Ed25519)",
+   "짧은 키",
+   "적은 연산·저장량",
+   "모바일·IoT 적합"
+  ],
+  "keywords_ref": [
+   "ECC 256비트 ≈ RSA 3072비트 안전도",
+   "비트코인 secp256k1·ECDSA",
+   "커브25519(X25519)",
+   "쇼어 알고리즘으로 양자 컴퓨터에 취약",
+   "부채널 공격 대비 상수 시간 구현",
+   "무효 곡선 공격"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "타원곡선 방정식",
+   "점 덧셈·스칼라 곱",
+   "타원곡선 이산대수 문제(ECDLP)",
+   "(p, a, b, G, n, h)",
+   "표준 곡선(P-256·secp256k1)",
+   "ECDH 키 교환",
+   "ECDSA 전자서명",
+   "EdDSA(Ed25519)",
+   "짧은 키",
+   "적은 연산·저장량",
+   "모바일·IoT 적합"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "ECDLP": "Elliptic Curve Discrete Logarithm Problem",
+   "ECDH": "Elliptic Curve Diffie-Hellman",
+   "ECDSA": "Elliptic Curve Digital Signature Algorithm",
+   "EdDSA": "Edwards-curve Digital Signature Algorithm"
+  }
+ },
+ {
+  "id": "SE_010",
+  "code": "SE_010",
+  "title": "데이터 암호화 표준(DES, Data Encryption Standard)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 암호화 > DES",
+  "definition": "IBM 루시퍼를 바탕으로 1977년 미국 표준(FIPS 46)이 된 대칭키 블록 암호로, 56비트 키로 64비트 블록을 16라운드 파이스텔 구조로 암호화한다",
+  "keywords": [
+   "규격: 64비트 블록 · 56비트 키(8비트 패리티 포함 64비트) · 16라운드",
+   "구조: 초기 전치(IP)·최종 전치 · 파이스텔 라운드 · 48비트 라운드 키",
+   "F 함수: 확장(32→48비트) · 라운드 키 XOR · S-Box 8개(6→4비트) · P-Box 전치",
+   "보완: 3DES(EDE) · AES 대체"
+  ],
+  "sections": [
+   {
+    "title": "구조",
+    "subsections": [
+     {
+      "title": "1 초기 전치",
+      "items": [
+       "64비트 평문 비트 재배치"
+      ]
+     },
+     {
+      "title": "2 16라운드",
+      "items": [
+       "좌우 32비트로 나눠 파이스텔 연산"
+      ]
+     },
+     {
+      "title": "3 최종 전치",
+      "items": [
+       "초기 전치의 역"
+      ]
+     },
+     {
+      "title": "키 스케줄",
+      "items": [
+       "56비트 키를 순환 이동해 라운드마다 48비트 키 생성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "F 함수",
+    "subsections": [
+     {
+      "title": "확장",
+      "items": [
+       "오른쪽 32비트를 48비트로 확장"
+      ]
+     },
+     {
+      "title": "키 혼합",
+      "items": [
+       "라운드 키와 XOR"
+      ]
+     },
+     {
+      "title": "치환",
+      "items": [
+       "S-Box 8개가 각 6비트를 4비트로 비선형 치환"
+      ]
+     },
+     {
+      "title": "전치",
+      "items": [
+       "P-Box로 32비트 재배치"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "취약점과 보완",
+    "subsections": [
+     {
+      "title": "전수 조사",
+      "items": [
+       "56비트 키는 전용 하드웨어로 수일 내 해독(1998)"
+      ]
+     },
+     {
+      "title": "이중 암호화",
+      "items": [
+       "2-DES는 중간 일치(Meet-in-the-Middle) 공격으로 강도 증가가 거의 없음"
+      ]
+     },
+     {
+      "title": "삼중 암호화",
+      "items": [
+       "3DES는 서로 다른 키로 암호·복호·암호(EDE) 3회, 112비트 실효 강도이나 느리고 폐기 예정"
+      ]
+     },
+     {
+      "title": "대체",
+      "items": [
+       "AES(2001), 국내 SEED·ARIA"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "구조",
+   "- 1 초기 전치",
+   "- 2 16라운드",
+   "- 3 최종 전치",
+   "- 키 스케줄",
+   "F 함수",
+   "- 확장",
+   "- 키 혼합",
+   "- 치환",
+   "- 전치",
+   "취약점과 보완",
+   "- 전수 조사",
+   "- 이중 암호화",
+   "- 삼중 암호화",
+   "- 대체"
+  ],
+  "name": "데이터 암호화 표준(DES, Data Encryption Standard)",
+  "en": "Data Encryption Standard",
+  "keywords_must": [
+   "64비트 블록",
+   "56비트 키(8비트 패리티 포함 64비트)",
+   "16라운드",
+   "초기 전치(IP)·최종 전치",
+   "파이스텔 라운드",
+   "48비트 라운드 키",
+   "확장(32→48비트)",
+   "라운드 키 XOR",
+   "S-Box 8개(6→4비트)",
+   "P-Box 전치",
+   "3DES(EDE)",
+   "AES 대체"
+  ],
+  "keywords_ref": [
+   "취약점: 짧은 키 전수 조사·차분·선형 공격",
+   "1998 EFF 딥 크랙 56시간 해독",
+   "2-DES는 중간 일치 공격으로 실효 강도 2^57",
+   "3DES는 NIST 2023년 이후 사용 금지",
+   "2005 FIPS 46-3 폐지"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "64비트 블록",
+   "56비트 키(8비트 패리티 포함 64비트)",
+   "16라운드",
+   "초기 전치(IP)·최종 전치",
+   "파이스텔 라운드",
+   "48비트 라운드 키",
+   "확장(32→48비트)",
+   "라운드 키 XOR",
+   "S-Box 8개(6→4비트)",
+   "P-Box 전치",
+   "3DES(EDE)",
+   "AES 대체"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "IP": "Initial Permutation",
+   "EDE": "Encrypt-Decrypt-Encrypt",
+   "EFF": "Electronic Frontier Foundation"
+  }
  },
  {
   "id": "SE_012",
