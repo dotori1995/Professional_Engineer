@@ -115,6 +115,7 @@ BSC: Balanced Scorecard
 BSM: Basic Safety Message
 BSON: Binary JSON
 BSS: [Basic Service Set, Business Support System]
+BVI: Business Value of Information
 BWS: Broadcast Website
 C-V2X: Cellular Vehicle-to-Everything
 CALM: Communications Access for Land Mobiles
@@ -144,12 +145,14 @@ CFD: Cumulative Flow Diagram
 CIDR: Classless Inter-Domain Routing
 CIFS: Common Internet File System
 CIR: Committed Information Rate
+CKAN: Comprehensive Knowledge Archive Network
 CKPT: Checkpoint Process
 CLAT: Customer-side Translator
 CLI: Command-Line Interface
 CLOB: Character Large Object
 CLR: Compensation Log Record
 CLT: Central Limit Theorem
+CLV: Customer Lifetime Value
 CMMI: Capability Maturity Model Integration
 CNAME: Canonical Name
 CNF: Cloud-native Network Function
@@ -170,6 +173,7 @@ CPE: Customer Premises Equipment
 CPFF: Cost Plus Fixed Fee
 CPIF: Cost Plus Incentive Fee
 CPM: [Critical Path Method, Counting Practices Manual, Corporate Performance Management]
+CPO: Chief Privacy Officer
 CPS: Cyber-Physical System
 CPU: Central Processing Unit
 CQ: Custom Queuing
@@ -190,15 +194,19 @@ CSMS: Cyber Security Management System
 CSRC: Contributing Source
 CSS: [Cascading Style Sheets, Chirp Spread Spectrum]
 CSSI: Console Subsystem Interface
+CSV: Comma-Separated Values
 CTE: Common Table Expression
 CTS: Clear To Send
 CU: Central Unit
 CUBIC: CUBIC TCP Congestion Control
+CVI: Cost Value of Information
 CWDM: Coarse Wavelength Division Multiplexing
 D2D: Device-to-Device
 DAC: Device Attestation Certificate
+DAG: Directed Acyclic Graph
 DAI: Dynamic ARP Inspection
 DASH: Dynamic Adaptive Streaming over HTTP
+DAWEX: Data Exchange
 DBA: Database Administrator
 DBD: Database Description
 DBWR: Database Writer
@@ -229,6 +237,7 @@ DLL: Dynamic Link Library
 DLNA: Digital Living Network Alliance
 DML: Data Manipulation Language
 DMO: Direct Mode Operation
+DMP: Data Management Platform
 DMT: Discrete Multi-Tone
 DNS: Domain Name System
 DNS64: DNS extensions for NAT64
@@ -249,6 +258,7 @@ DPP: Device Provisioning Protocol
 DPSK: Differential Phase Shift Keying
 DPWS: Devices Profile for Web Services
 DQDB: Distributed Queue Dual Bus
+DQM3: Data Quality Management Maturity Model
 DRaaS: Disaster Recovery as a Service
 DRC: Domain Relational Calculus
 DRP: Disaster Recovery Plan
@@ -325,6 +335,7 @@ ETC: Estimate to Complete
 ETL: Extract Transform Load
 ETRI: Electronics and Telecommunications Research Institute
 EVC: Ethernet Virtual Connection
+EVI: Economic Value of Information
 EVM: [Earned Value Management, Error Vector Magnitude]
 FANET: Flying Ad-hoc Network
 FAR: False Acceptance Rate
@@ -400,6 +411,7 @@ GWCN: Gateway Core Network
 HAL: Hardware Abstraction Layer
 HAPS: High Altitude Platform Station
 HARQ: Hybrid Automatic Repeat reQuest
+HAT: Hub of All Things
 HAZOP: Hazard and Operability Study
 HBC: Human Body Communication
 HCE: Host Card Emulation
@@ -415,6 +427,7 @@ HNSW: Hierarchical Navigable Small World
 HOL: Head-of-Line
 HOLAP: Hybrid OLAP
 HPACK: HTTP/2 Header Compression
+HQL: Hive Query Language
 HSD: Honestly Significant Difference
 HSRP: Hot Standby Router Protocol
 HSS: Home Subscriber Server
@@ -469,6 +482,7 @@ IPSO: IP for Smart Objects
 IPTV: Internet Protocol Television
 IPv4: Internet Protocol version 4
 IPv6: Internet Protocol version 6
+IRI: Internationalized Resource Identifier
 IRR: Internal Rate of Return
 IS-IS: Intermediate System to Intermediate System
 ISAC: Integrated Sensing and Communication
@@ -581,6 +595,7 @@ MCU: [Microcontroller Unit, Multipoint Control Unit]
 MD5: Message Digest 5
 MDA: Model-Driven Architecture
 MDD: Model-Driven Development
+MDS: Master Data Server
 MEC: Multi-access Edge Computing
 MEF: Metro Ethernet Forum
 MEO: [Medium Earth Orbit, MEC Orchestrator]
@@ -636,6 +651,7 @@ MV2PL: Multi-Version Two-Phase Locking
 MVC: Model-View-Controller
 MVCC: Multi-Version Concurrency Control
 MVD: Multi-Valued Dependency
+MVI: Market Value of Information
 MVNE: Mobile Virtual Network Enabler
 MVNO: Mobile Virtual Network Operator
 MVP: [Minimum Viable Product, Model-View-Presenter]
@@ -741,6 +757,7 @@ OTAA: Over-The-Air Activation
 OTDOA: Observed Time Difference of Arrival
 OTN: Optical Transport Network
 OWE: Opportunistic Wireless Encryption
+OWL: Web Ontology Language
 P2P: Peer-to-Peer
 PACF: Partial Autocorrelation Function
 PAM: [Pulse Amplitude Modulation, Process Assessment Model, Point Access Method]
@@ -802,6 +819,7 @@ PRM: [Performance Reference Model, Partner Relationship Management]
 ProSe: Proximity Services
 PS-LTE: Public Safety LTE
 PSAP: Public Safety Answering Point
+PSD2: Revised Payment Service Directive 2
 PSH: Push
 PSK: [Phase Shift Keying, Pre-Shared Key]
 PSM: [Power Saving Mode, Platform Specific Model]
@@ -811,6 +829,7 @@ PTR: Pointer
 PTT: Push To Talk
 PV: Present Value
 PVC: Permanent Virtual Circuit
+PVI: Performance Value of Information
 PVST: Per-VLAN Spanning Tree
 PWM: Pulse Width Modulation
 QA: Quality Assurance
@@ -828,6 +847,7 @@ QPSK: Quadrature Phase Shift Keying
 QR: Quick Response
 QUEL: Query Language (Ingres)
 QUIC: Quick UDP Internet Connections
+R2RML: RDB to RDF Mapping Language
 RAC: Real Application Clusters
 RACI: Responsible Accountable Consulted Informed
 RAD: Rapid Application Development
@@ -838,6 +858,8 @@ RARP: Reverse Address Resolution Protocol
 RCA: Root Cause Analysis
 RCSI: Read Committed Snapshot Isolation
 RDBMS: Relational Database Management System
+RDD: Resilient Distributed Dataset
+RDFS: RDF Schema
 RED: Random Early Detection
 RegTech: Regulatory Technology
 REJ: Reject
@@ -849,6 +871,7 @@ RFID: Radio Frequency Identification
 RFP: Request for Proposal
 RIB: Routing Information Base
 RIC: RAN Intelligent Controller
+RIF: Rule Interchange Format
 RIP: Routing Information Protocol
 RIPng: RIP next generation
 RIR: Regional Internet Registry
@@ -974,6 +997,7 @@ SONET: Synchronous Optical Network
 SONiC: Software for Open Networking in the Cloud
 SoW: Statement of Work
 SOW: Statement of Work
+SPARQL: SPARQL Protocol and RDF Query Language
 SPF: [Shortest Path First, Sender Policy Framework]
 SPIN: Sensor Protocols for Information via Negotiation
 SPOF: Single Point of Failure
@@ -992,6 +1016,7 @@ SSH: Secure Shell
 SSID: Service Set Identifier
 SSL: Secure Sockets Layer
 SSM: Source-Specific Multicast
+SSOT: Single Source of Truth
 SSP: Supply-Side Platform
 SSRC: Synchronization Source
 SST: [Slice/Service Type, Total Sum of Squares]

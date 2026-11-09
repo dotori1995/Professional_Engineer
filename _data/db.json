@@ -2567,7 +2567,10 @@
    "고속 상호 연결(Interconnect)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "MPP": "Massively Parallel Processing"
+  }
  },
  {
   "id": "DB_026",
@@ -10030,7 +10033,10 @@
    "MPP(Massively Parallel Processing) DB"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "MPP": "Massively Parallel Processing"
+  }
  },
  {
   "id": "DB_100",
@@ -11900,6 +11906,2607 @@
   "gloss": {
    "SMC": "Secure Multi-party Computation"
   }
+ },
+ {
+  "id": "DB_123",
+  "code": "DB_123",
+  "domain": "DB",
+  "category": "DB > 빅데이터",
+  "title": "아파치 스파크(Apache Spark)",
+  "subtitle": "",
+  "name": "아파치 스파크(Apache Spark)",
+  "en": "Apache Spark",
+  "definition": "하둡 맵리듀스의 디스크 I/O 병목과 반복 연산 비효율을 해결하기 위해 RDD 단위 인메모리 처리로 일괄·반복·스트리밍 분석을 수행하는 분산 데이터 처리 프레임워크.",
+  "keywords": [
+   "등장 배경: 맵리듀스의 I/O 부하 · 반복 작업 비효율 · 산발적 연산 부적합",
+   "특징: HDFS 사용 · 스칼라 기반 간결한 코드 · RDD 단위 연산",
+   "스택: Spark Core · Spark SQL · Spark Streaming · MLlib · GraphX · SparkR",
+   "클러스터: Driver(SparkContext) · Cluster Manager · Worker Node의 Executor"
+  ],
+  "keywords_must": [
+   "인메모리 분산 처리(In-memory Processing)",
+   "RDD(Resilient Distributed Dataset)",
+   "스파크 코어(Spark Core)",
+   "Spark SQL",
+   "Spark Streaming",
+   "MLlib(Machine Learning Library)",
+   "GraphX",
+   "드라이버(Driver Program)",
+   "익스큐터(Executor)",
+   "클러스터 매니저(Cluster Manager)"
+  ],
+  "keywords_ref": [
+   "SparkContext",
+   "YARN(Yet Another Resource Negotiator)·Mesos",
+   "DAG(Directed Acyclic Graph) 스케줄러",
+   "Parquet·Hive 테이블"
+  ],
+  "outline": [
+   "맵리듀스 한계를 해결한 인메모리 처리",
+   "- 등장 배경: I/O 부하·반복 작업",
+   "- RDD 기반 특징",
+   "스택 구성",
+   "- Core·SQL·Streaming·MLlib·GraphX·SparkR",
+   "클러스터 구조와 실행 순서",
+   "- Driver·Cluster Manager·Executor",
+   "하둡·스파크·스톰 비교"
+  ],
+  "sections": [
+   {
+    "title": "맵리듀스 한계를 해결한 인메모리 처리",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "I/O 부하: 맵리듀스 중간 데이터 전송에서 디스크 I/O·네트워크 트래픽 과다",
+       "반복 작업: 맵 → 리듀스 2단계 구조라 반복 연산 시 비효율",
+       "RDD: 데이터 집합을 추상화한 분산 파티션 객체, 계보(Lineage)로 장애 시 재계산 복구"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "스택 구성",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Spark Core: 기본 컴퓨팅 엔진, RDD API, 스토리지(HDFS)·클러스터 매니저(YARN) 연동",
+       "Spark SQL: 구조적 데이터 처리, SQL·HQL(Hive Query Language) 지원",
+       "Spark Streaming: 저지연 실시간 스트림 처리(센서·로그)",
+       "MLlib: 분류·회귀·협업 필터링 머신러닝 라이브러리, GraphX: 그래프 연산",
+       "SparkR: R 데이터 프레임 호환, 대용량 분산 저장소와 직접 연동"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "클러스터 구조와 실행 순서",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Driver: 중앙 관리 지점, 작업을 병렬 Task로 분할해 Worker에 분배",
+       "Executor: Worker Node에서 Task 수행·데이터 캐시",
+       "실행 순서: ① Cluster Manager에 리소스 요청 ② SparkContext가 Executor 할당 ③ 코드 전송 ④ Executor 내 Task 수행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "하둡·스파크·스톰 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "처리 방식: 하둡 일괄 · 스파크 일괄·반복 · 스톰 실시간 스트리밍",
+       "컴퓨팅 기반: 하둡 디스크 · 스파크 인메모리 · 스톰 인메모리",
+       "반복 연산: 하둡 Weak · 스파크 Strong · 스톰 Medium",
+       "주 언어: 하둡 Java · 스파크 Scala · 스톰 Clojure"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "인메모리 분산 처리(In-memory Processing)",
+   "RDD(Resilient Distributed Dataset)",
+   "스파크 코어(Spark Core)",
+   "Spark SQL",
+   "Spark Streaming",
+   "MLlib(Machine Learning Library)",
+   "GraphX",
+   "드라이버(Driver Program)",
+   "익스큐터(Executor)",
+   "클러스터 매니저(Cluster Manager)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_124",
+  "code": "DB_124",
+  "domain": "DB",
+  "category": "DB > 빅데이터",
+  "title": "아파치 스톰(Apache Storm)",
+  "subtitle": "",
+  "name": "아파치 스톰(Apache Storm)",
+  "en": "Apache Storm",
+  "definition": "일괄 처리 중심의 하둡과 달리 끊임없이 유입되는 스트리밍 데이터를 인메모리 기반으로 실시간 처리하는 분산 실시간 연산 시스템으로, 님버스·슈퍼바이저·워커·주키퍼로 구성된다.",
+  "keywords": [
+   "특징: 실시간 처리 · 스트리밍 처리 · 장애 허용 · 프로그래밍 언어 독립 · 다양한 언어 지원",
+   "구성: Nimbus(마스터) · Supervisor · Worker · Zookeeper · UI",
+   "처리 모델: 토폴로지(Topology) = Spout(데이터 입력) + Bolt(처리)",
+   "비교: 하둡 일괄 · 스파크 일괄·반복 · 스톰 실시간"
+  ],
+  "keywords_must": [
+   "실시간 스트림 처리(Real-time Stream Processing)",
+   "님버스(Nimbus)",
+   "슈퍼바이저(Supervisor)",
+   "워커(Worker)",
+   "주키퍼(Zookeeper)",
+   "토폴로지(Topology)",
+   "장애 허용(Fault Tolerance)",
+   "Clojure"
+  ],
+  "keywords_ref": [
+   "스파우트(Spout)·볼트(Bolt)",
+   "ZeroMQ·Thrift",
+   "Storm UI",
+   "IoT 스트리밍 데이터"
+  ],
+  "outline": [
+   "하둡과 다른 실시간 데이터 처리 시스템",
+   "- 실시간·스트리밍·장애 허용",
+   "- 언어 독립과 다양한 언어 지원",
+   "아키텍처와 구성요소",
+   "- Nimbus·Supervisor·Worker·Zookeeper·UI",
+   "하둡·스파크·스톰 비교"
+  ],
+  "sections": [
+   {
+    "title": "하둡과 다른 실시간 데이터 처리 시스템",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "실시간 처리: 인메모리 스트리밍으로 맵리듀스 병목 제거",
+       "장애 허용: Nimbus가 Supervisor를 감시해 재시작·재할당",
+       "언어 독립: JVM 바이트코드로 컴파일되는 Clojure로 개발, Java·Python·Scala·Ruby 지원"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "아키텍처와 구성요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Nimbus: 마스터 노드, 토폴로지 코드 배포·작업 할당·장애 감시(하둡 JobTracker 유사)",
+       "Supervisor: 슬레이브 노드 관리, 할당받은 작업에 맞춰 Worker 프로세스 시작·중지",
+       "Zookeeper: Nimbus와 Supervisor 간 상태 저장·조율을 맡는 분산 코디네이터",
+       "Worker: 토폴로지 일부를 실행하는 프로세스, Worker 간 ZeroMQ로 메시지 전달",
+       "UI: Zookeeper 정보 기반 클러스터·토폴로지 상태 모니터링"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "하둡·스파크·스톰 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "처리 방식: 하둡 일괄 · 스파크 일괄·반복 · 스톰 실시간 스트리밍",
+       "업데이트 단위: 하둡 레코드 · 스파크 파일·테이블 · 스톰 스트림",
+       "컴퓨팅 기반: 하둡 디스크 · 스파크·스톰 인메모리",
+       "SQL 지원: 하둡 연관 프로젝트(Hive·Tajo) · Spark SQL · 스톰 해당 없음"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "실시간 스트림 처리(Real-time Stream Processing)",
+   "님버스(Nimbus)",
+   "슈퍼바이저(Supervisor)",
+   "워커(Worker)",
+   "주키퍼(Zookeeper)",
+   "토폴로지(Topology)",
+   "장애 허용(Fault Tolerance)",
+   "Clojure"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_125_2",
+  "code": "DB_125_2",
+  "domain": "DB",
+  "category": "DB > 분산 DB",
+  "title": "셔플 조인(Shuffle Join)과 브로드캐스트 조인(Broadcast Join)",
+  "subtitle": "",
+  "name": "셔플 조인(Shuffle Join)과 브로드캐스트 조인(Broadcast Join)",
+  "en": "Shuffle Join and Broadcast Join",
+  "definition": "분산 데이터베이스에서 조인을 수행할 때 양쪽 데이터셋을 조인 키 기준으로 노드에 재분배하는 셔플 조인과, 소규모 데이터셋을 모든 노드에 복제 전송해 로컬에서 결합하는 브로드캐스트 조인 방식.",
+  "keywords": [
+   "셔플 조인 동작: 데이터 파티셔닝(해싱) → 셔플링(노드 간 전송) → 동일 조인 키 Merge → Aggregation",
+   "브로드캐스트 조인 동작: 소규모 데이터셋 복제 → 전체 노드 브로드캐스트 → 로컬 병렬 Merge → Aggregation",
+   "선택 기준: 양쪽 대용량 → 셔플 · 한쪽 소규모(Dimension) → 브로드캐스트",
+   "실무: Spark 옵티마이저가 비용 기반으로 조인 전략 선정"
+  ],
+  "keywords_must": [
+   "데이터 파티셔닝(Data Partitioning)",
+   "셔플링(Shuffling)",
+   "조인 키(Join Key)",
+   "브로드캐스트(Broadcast)",
+   "로컬 병렬 Merge",
+   "네트워크 트래픽(Network Traffic)",
+   "Dimension·Fact 테이블 결합",
+   "결과 집계(Aggregation)"
+  ],
+  "keywords_ref": [
+   "Spark 옵티마이저(Catalyst)",
+   "해시 파티셔닝(Hash Partitioning)",
+   "Sort-Merge Join",
+   "데이터 스큐(Data Skew)"
+  ],
+  "outline": [
+   "조인 키 기준 재분배 방식",
+   "- 파티셔닝·셔플링·Merge·집계",
+   "- 대량 네트워크 트래픽 유의",
+   "소규모 데이터 복제 결합 방식",
+   "- 복제·브로드캐스트·로컬 Merge·집계",
+   "- Dimension · Fact 결합 용도",
+   "데이터 크기·비용·성능 비교"
+  ],
+  "sections": [
+   {
+    "title": "조인 키 기준 재분배 방식",
+    "subsections": [
+     {
+      "title": "셔플 조인",
+      "items": [
+       "데이터 파티셔닝: 논리적 데이터 집합을 조인 키 해싱으로 청크 분할",
+       "데이터 셔플링: 네트워크로 연결된 노드로 데이터 전송",
+       "조인 키 Merge: 동일 조인 키를 물리적으로 같은 노드로 모아 결합",
+       "결과 집계: 단일 노드 컴퓨팅 파워로 Aggregation 수행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "소규모 데이터 복제 결합 방식",
+    "subsections": [
+     {
+      "title": "브로드캐스트 조인",
+      "items": [
+       "소규모 데이터셋 복제: 메모리 적재 가능한 데이터셋 식별·전송 준비",
+       "브로드캐스트: 클러스터 전체 노드로 동일 데이터 전송",
+       "로컬 병렬 Merge: 각 노드의 대용량 데이터와 로컬 결합",
+       "결과 집계: 특정 단위 group by 후 결과 저장·적재"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "데이터 크기·비용·성능 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 크기: 셔플 양쪽 대용량 · 브로드캐스트 한쪽 소규모",
+       "네트워크 비용: 셔플 고비용 · 브로드캐스트 저비용",
+       "처리 성능: 셔플 대역폭 병목 가능 · 브로드캐스트 상대적 고속",
+       "사용 사례: 셔플 복잡한 대용량 결합 · 브로드캐스트 Dimension·Fact 결합"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "데이터 파티셔닝(Data Partitioning)",
+   "셔플링(Shuffling)",
+   "조인 키(Join Key)",
+   "브로드캐스트(Broadcast)",
+   "로컬 병렬 Merge",
+   "네트워크 트래픽(Network Traffic)",
+   "Dimension·Fact 테이블 결합",
+   "결과 집계(Aggregation)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_128",
+  "code": "DB_128",
+  "domain": "DB",
+  "category": "DB > 공공데이터",
+  "title": "공공데이터(Public Data)",
+  "subtitle": "",
+  "name": "공공데이터(Public Data)",
+  "en": "Public Data",
+  "definition": "공공기관이 생성 또는 취득하여 관리하는 광(光) 또는 전자적 방식으로 처리된 모든 자료나 정보로, 공공데이터법에 따라 최초 목적 외에도 누구나 영리·비영리로 재이용할 수 있도록 개방된다.",
+  "keywords": [
+   "근거: 공공데이터의 제공 및 이용 활성화에 관한 법률(공공데이터법) 제3조 기본원칙",
+   "제공 원칙: 이용권의 보편적 확대 · 이용 평등 · 이용권 보장 · 영리적 활용 보장",
+   "이용 원칙: 이용자의 의무 준수(공익·타인 권리 침해 금지)",
+   "오픈데이터 플랫폼 기능: 데이터 등록 · 제공 · 현황(카탈로그·검색) · 포털 · 시각화",
+   "품질관리: 공공데이터법 제22조, 품질진단·개선(PDCA)"
+  ],
+  "keywords_must": [
+   "공공데이터법(Public Data Act)",
+   "재이용(Re-use) 권한",
+   "이용권의 보편적 확대",
+   "이용의 평등 원칙",
+   "영리적 활용 보장",
+   "이용자 의무 준수",
+   "오픈데이터 플랫폼(Open Data Platform)",
+   "데이터 카탈로그(Data Catalog)",
+   "공공데이터 품질관리"
+  ],
+  "keywords_ref": [
+   "CKAN(Comprehensive Knowledge Archive Network)",
+   "LOD(Linked Open Data)",
+   "공공데이터포털(data.go.kr)",
+   "정부 3.0"
+  ],
+  "outline": [
+   "신규 서비스 창출과 알 권리 보장",
+   "- 법상 정의",
+   "- 재이용·영리 활용 권한 부여",
+   "제공·이용 기본원칙",
+   "- 제공 측면 4원칙",
+   "- 이용 측면 의무 준수",
+   "오픈데이터 플랫폼 기능",
+   "활용 사례와 기대효과",
+   "- 경제·정치·사회·행정·기술 측면"
+  ],
+  "sections": [
+   {
+    "title": "신규 서비스 창출과 알 권리 보장",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "공공데이터 플랫폼: 데이터를 편리하게 개방·활용하게 하는 오픈소스 기반 플랫폼",
+       "재이용: 공무상 최초 목적 외 이용자에게 제공, 영리·비영리 이용 권한 부여"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "제공·이용 기본원칙",
+    "subsections": [
+     {
+      "title": "제공 측면",
+      "items": [
+       "이용권의 보편적 확대: 공공기관은 편리한 이용을 위해 노력",
+       "이용의 평등: 국민의 접근과 이용에 평등 보장",
+       "이용권 보장: 접근 제한·차단 금지(제3자 권리 침해·불법 악용 제외)",
+       "영리적 활용 보장: 영리 이용도 금지·제한 불가"
+      ]
+     },
+     {
+      "title": "이용 측면",
+      "items": [
+       "이용자 의무 준수: 국가안전보장 등 공익·타인 권리 침해 금지, 이용조건 준수"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "오픈데이터 플랫폼 기능",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 등록: 업로드·저장, 지원 파일 형식 정의, API 추출",
+       "데이터 제공: 파일 형태 제공, 보안·표준 관리",
+       "데이터 현황: 출처·분류·내용을 담은 카탈로그와 검색",
+       "데이터 포털: 사용자·고객센터·포털 운영 지원, 기타 시각화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용 사례와 기대효과",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "국내: 관광 정보, 약국·동물병원 위치, 지진 경보, 버스 도착 안내",
+       "해외: 영국 기후 정보, 일본 방사능 레벨, 잉글랜드·웨일즈 부동산 정보",
+       "경제적: 신규 서비스·일자리 창출, 매시업(Mash-up) 서비스",
+       "정치·사회적: 알 권리와 행정 투명성, 행정적: 부처 간 협업·효율, 기술적: 빅데이터·스마트 서비스 기반"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "공공데이터법(Public Data Act)",
+   "재이용(Re-use) 권한",
+   "이용권의 보편적 확대",
+   "이용의 평등 원칙",
+   "영리적 활용 보장",
+   "이용자 의무 준수",
+   "오픈데이터 플랫폼(Open Data Platform)",
+   "데이터 카탈로그(Data Catalog)",
+   "공공데이터 품질관리"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_132_00",
+  "code": "DB_132_00",
+  "domain": "DB",
+  "category": "DB > 공공데이터",
+  "title": "개방형 연결 데이터(LOD, Linked Open Data)",
+  "subtitle": "",
+  "name": "개방형 연결 데이터(LOD, Linked Open Data)",
+  "en": "Linked Open Data",
+  "definition": "웹상의 데이터를 개별 HTTP URI로 식별하고 RDF로 구조화해 링크로 상호 연결·공개함으로써 사람뿐 아니라 기계가 의미를 이해하는 데이터의 웹(Web of Data)을 지향하는 개방 데이터 모형.",
+  "keywords": [
+   "제안: 팀 버너스리(2006), 시맨틱 웹 기술 활용",
+   "4원칙: URI 사용 · HTTP URI 사용 · RDF 사용 · 링크 정보 부여",
+   "구축 절차: 생성 → 관리 → 발행(SPARQL Endpoint) → 협업",
+   "구성요소: URI·IRI · XML·Namespace · RDF·RDFS · Ontology(OWL) · SPARQL · RIF · Logic · Proof·Trust",
+   "5스타 전개 스킴: LOD 형식 개방은 4·5단계"
+  ],
+  "keywords_must": [
+   "HTTP URI(Uniform Resource Identifier)",
+   "RDF(Resource Description Framework)",
+   "트리플(Triple, 주어-술어-목적어)",
+   "링크 정보 부여",
+   "SPARQL(SPARQL Protocol and RDF Query Language)",
+   "온톨로지(Ontology)",
+   "OWL(Web Ontology Language)",
+   "데이터의 웹(Web of Data)",
+   "5스타 전개 스킴(5-Star Deployment Scheme)"
+  ],
+  "keywords_ref": [
+   "RDFS(RDF Schema)",
+   "R2RML(RDB to RDF Mapping Language)",
+   "RIF(Rule Interchange Format)",
+   "DBpedia·GeoNames"
+  ],
+  "outline": [
+   "기계가 이해하는 데이터의 웹",
+   "- 4가지 원칙",
+   "구축 절차",
+   "- 생성·관리·발행·협업",
+   "시맨틱 웹 계층별 구성요소",
+   "활용 사례와 5스타 전개 스킴"
+  ],
+  "sections": [
+   {
+    "title": "기계가 이해하는 데이터의 웹",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "URI 사용: 문서 URL이 아닌 문서 내 개별 객체마다 URI 부여",
+       "HTTP URI 사용: HTTP로 접근 가능한 URI로 접근성 강화",
+       "RDF 사용: 트리플 모형으로 구조화해 데이터 연계",
+       "링크 정보 부여: 다른 데이터와 링크를 연결해 발전된 시맨틱 웹 구현"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구축 절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "생성: Linked Data 모델과 지식 베이스 생성",
+       "관리: 대용량 Linked Data 저장·질의 처리·추론 지원",
+       "발행: SPARQL Endpoint 접점 생성 후 발행",
+       "협업: Linked Data 기반 협업 설계"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "시맨틱 웹 계층별 구성요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "URI·IRI: 자원 식별자, IRI는 유니코드 지원 국제화 식별자",
+       "XML·Namespace: 문서 구조 표현, 동일 용어의 의미 충돌 해소",
+       "RDF·RDFS: 주어-술어-목적어 기술, RDFS로 경량 온톨로지 표현",
+       "R2RML: RDB 데이터를 RDF로 변환하는 매핑 언어",
+       "OWL: 클래스 관계·동치성·속성 특성 표현, OWL Lite·DL·Full",
+       "SPARQL: RDF 그래프 질의 언어, RIF: 규칙 정의·교환, Proof·Trust: 정보 신뢰"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용 사례와 5스타 전개 스킴",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "해외 사례: DBpedia(위키피디아 추출) · BBC · OCLC WorldCat · GeoNames",
+       "5스타: ★ 개방 라이선스 → ★★ 구조화 → ★★★ 비독점 형식(CSV) → ★★★★ URI·RDF → ★★★★★ 타 데이터 링크"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "HTTP URI(Uniform Resource Identifier)",
+   "RDF(Resource Description Framework)",
+   "트리플(Triple, 주어-술어-목적어)",
+   "링크 정보 부여",
+   "SPARQL(SPARQL Protocol and RDF Query Language)",
+   "온톨로지(Ontology)",
+   "OWL(Web Ontology Language)",
+   "데이터의 웹(Web of Data)",
+   "5스타 전개 스킴(5-Star Deployment Scheme)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_132_01",
+  "code": "DB_132_01",
+  "domain": "DB",
+  "category": "DB > 데이터 가치",
+  "title": "데이터 가치평가 제도(Data Valuation System)",
+  "subtitle": "",
+  "name": "데이터 가치평가 제도(Data Valuation System)",
+  "en": "Data Valuation System",
+  "definition": "데이터 산업진흥 및 이용촉진에 관한 기본법(데이터 기본법) 제14조에 근거해, 시장에서 유통·거래되는 데이터의 경제적 가치를 지정된 평가기관이 가액·등급·점수로 평가하는 제도.",
+  "keywords": [
+   "근거: 데이터 기본법 제14조, 데이터 가치평가기관 지정 및 운영에 관한 지침",
+   "평가 체계: 가치평가 자문단(위원 9명·간사 1명) · 평가 기법 및 평가 체계",
+   "평가기관 지정 요건: 전문인력 6인 포함 10인 이상 상시 고용 · 평가모델·시설 보유",
+   "평가 기법: 시장접근법 · 수익접근법 · 원가접근법",
+   "원가 유형: 역사적 원가 · 재생산 원가 · 대체 원가",
+   "절차: 사전협의·상담 → 서류제출·계약 → 평가계획 수립 → 평가 실시 → 결과보고서 작성 → 결과 통보"
+  ],
+  "keywords_must": [
+   "데이터 기본법(Data Industry Act)",
+   "데이터 가치평가기관",
+   "가액·등급·점수 평가",
+   "시장접근법(Market Approach)",
+   "수익접근법(Income Approach)",
+   "원가접근법(Cost Approach)",
+   "가치평가 자문단",
+   "평가 절차(사전협의 → 결과 통보)"
+  ],
+  "keywords_ref": [
+   "데이터 안심구역",
+   "역사적·재생산·대체 원가",
+   "과학기술정보통신부 지정",
+   "디지털 플랫폼 정부"
+  ],
+  "outline": [
+   "데이터 경제적 가치 평가",
+   "- 데이터 기본법과 하위 지침",
+   "제도의 주요 내용",
+   "- 평가 체계와 평가기관 요건",
+   "평가 기법",
+   "- 시장·수익·원가접근법",
+   "평가 절차"
+  ],
+  "sections": [
+   {
+    "title": "데이터 경제적 가치 평가",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 기본법: 가치평가기관 지침(가치평가), 안심구역 지정 지침, 안심구역 보안대책 기준으로 구성",
+       "지정 주체: 과학기술정보통신부 장관이 데이터 가치평가기관 지정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "제도의 주요 내용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "가치평가 자문단: 평가기관 지정·관리·운영 자문, 위원 9명(단장 포함)·간사 1명",
+       "평가 기법·체계: 데이터 유형·특성·용도에 따라 기법 하나 또는 둘 이상 병행, 윤리기준·평가원칙 규정",
+       "지정 요건: 기술사·변호사·데이터 경력자 등 전문인력 6인 포함 10인 이상, 평가모델·전산망 보유",
+       "지정 절차: 신청공고 → 신청·서류제출 → 지정심의(자문단) → 지정 공고·지정서 발급"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "평가 기법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "시장접근법: 유사 데이터 거래사례와 비교해 차이 조정, 거래사례 부족 시 적용 불가",
+       "수익접근법: 사업계획 기반 수익 창출 가능성 판단, 경제적 수명·가치 추정",
+       "원가접근법: 역사적 원가(과거 생산 비용 합산)·재생산 원가(동일 방법 재생산)·대체 원가(동일 효용 대체 데이터)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "평가 절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① 사전협의 및 상담: 평가 절차·기법·범위, 일정·수수료 협의",
+       "② 서류제출 및 계약 ③ 평가계획 수립 및 준비(미비 시 보완 요청)",
+       "④ 평가 실시: 서류 검토·자료 수집·현장실사 ⑤ 결과보고서 작성 ⑥ 결과 통보"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "데이터 기본법(Data Industry Act)",
+   "데이터 가치평가기관",
+   "가액·등급·점수 평가",
+   "시장접근법(Market Approach)",
+   "수익접근법(Income Approach)",
+   "원가접근법(Cost Approach)",
+   "가치평가 자문단",
+   "평가 절차(사전협의 → 결과 통보)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_132_2",
+  "code": "DB_132_2",
+  "domain": "DB",
+  "category": "DB > 데이터 가치",
+  "title": "인포노믹스 데이터 가치평가모델(Infonomics Data Valuation Model)",
+  "subtitle": "",
+  "name": "인포노믹스 데이터 가치평가모델(Infonomics Data Valuation Model)",
+  "en": "Infonomics Data Valuation Model",
+  "definition": "가트너가 개발한 데이터 자산 가치 평가 모델로, 품질 관리 체계 측면의 기본 지표 3개와 경제적 편익 측면의 재무 지표 3개, 총 6개 지표로 데이터의 잠재적·실현 가치를 평가한다.",
+  "keywords": [
+   "개발: 가트너(Gartner)",
+   "기본 지표(Fundamental): 내재적 가치(IVI) · 비즈니스 가치(BVI) · 성과 가치(PVI)",
+   "재무 지표(Financial): 비용 가치(CVI) · 시장 가치(MVI) · 경제적 가치(EVI)",
+   "특징: 재무 지표 외 품질·완전성을 정량 평가 · 미래 잠재 가치와 과거 실현 가치 함께 고려",
+   "비교 모델: 기술보증기금(대출 보증) · DAWEX(마켓플레이스 거래)"
+  ],
+  "keywords_must": [
+   "기본 지표(Fundamental Measures)",
+   "재무 지표(Financial Measures)",
+   "내재적 가치(IVI, Intrinsic Value of Information)",
+   "비즈니스 가치(BVI, Business Value of Information)",
+   "성과 가치(PVI, Performance Value of Information)",
+   "비용 가치(CVI, Cost Value of Information)",
+   "시장 가치(MVI, Market Value of Information)",
+   "경제적 가치(EVI, Economic Value of Information)"
+  ],
+  "keywords_ref": [
+   "가트너(Gartner)",
+   "기술보증기금 가치평가모델",
+   "DAWEX(Data Exchange) 가치평가모델",
+   "데이터 자산(Data Asset)"
+  ],
+  "outline": [
+   "6개 지표 기반 데이터 가치 산정",
+   "- 기본 지표 3개와 재무 지표 3개",
+   "6개 평가 지표",
+   "- 기본 지표: IVI·BVI·PVI",
+   "- 재무 지표: CVI·MVI·EVI",
+   "기관별 가치평가모델 비교"
+  ],
+  "sections": [
+   {
+    "title": "6개 지표 기반 데이터 가치 산정",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "기본 지표: 데이터 관리 체계·품질 측면에서 완전성·배타성·유용성 평가",
+       "재무 지표: 데이터 유통·활용으로 경제적 편익이 증가하는지 평가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "6개 평가 지표",
+    "subsections": [
+     {
+      "title": "기본 지표",
+      "items": [
+       "IVI: 데이터의 정확성·완전성·배타성",
+       "BVI: 데이터와 사업 목표의 합목적성·일치성",
+       "PVI: 데이터가 핵심 사업 모델·확장 전략에 미치는 영향"
+      ]
+     },
+     {
+      "title": "재무 지표",
+      "items": [
+       "CVI: 데이터 유실·손실 시 소모되는 비용 수준",
+       "MVI: 데이터를 시장에 판매·거래해 얻는 가치",
+       "EVI: 데이터로 창출하는 수익과 손실의 기여 정도"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기관별 가치평가모델 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "가트너 인포노믹스(미국): 품질·활용 가치 평가, 자산 가치 + 유통 가치",
+       "기술보증기금(한국): 기업 자금 조달·대출 보증, 데이터 자산 가치 측정",
+       "DAWEX(프랑스): 마켓플레이스 거래 지원, 데이터 유통 가치 측정"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "기본 지표(Fundamental Measures)",
+   "재무 지표(Financial Measures)",
+   "내재적 가치(IVI, Intrinsic Value of Information)",
+   "비즈니스 가치(BVI, Business Value of Information)",
+   "성과 가치(PVI, Performance Value of Information)",
+   "비용 가치(CVI, Cost Value of Information)",
+   "시장 가치(MVI, Market Value of Information)",
+   "경제적 가치(EVI, Economic Value of Information)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "IVI": "Intrinsic Value of Information"
+  }
+ },
+ {
+  "id": "DB_134_00",
+  "code": "DB_134_00",
+  "domain": "DB",
+  "category": "DB > 마이데이터",
+  "title": "마이데이터(MyData)",
+  "subtitle": "",
+  "name": "마이데이터(MyData)",
+  "en": "MyData",
+  "definition": "정보주체인 개인이 데이터 주권에 따라 기관이 보유한 자신의 데이터를 직접 받거나 제3자에게 전송하도록 요구해 신용·자산·건강관리 등 개인 생활에 능동적으로 활용하는 정보주체 중심 데이터 활용 체계.",
+  "keywords": [
+   "촉발: GDPR(데이터 이동권) · PSD2(EU 지불 서비스 지침 개정, 2018.01)",
+   "3원칙: 인간 중심의 통제와 사생활 · 사용 가능한 데이터 · 개방된 사업 환경",
+   "사용 절차: 기관 보유 데이터 → 정보주체 다운로드·전송 요구 → 서비스 사업자 분석 → 맞춤 혜택",
+   "활용 분야: 금융(자산관리·상품 추천) · 공공 · 의료(개인 진료·신약 개발) · 기업(마케팅)",
+   "해외 동향: 미국 Smart Disclosure · 영국 Midata · 프랑스 MesInfos · 핀란드 MyData"
+  ],
+  "keywords_must": [
+   "정보주체(Data Subject)",
+   "데이터 주권(Data Sovereignty)",
+   "개인정보 전송요구권(Right to Data Portability)",
+   "자기결정권",
+   "인간 중심의 통제(Human-centric Control)",
+   "사용 가능한 데이터(Usable Data)",
+   "개방된 사업 환경(Open Business Environment)",
+   "표준 API(Machine Readable)",
+   "데이터 생태계"
+  ],
+  "keywords_ref": [
+   "GDPR(General Data Protection Regulation)",
+   "PSD2(Revised Payment Service Directive 2)",
+   "마이데이터 선언문(MyData Declaration)",
+   "Smart Disclosure·Midata·MesInfos"
+  ],
+  "outline": [
+   "정보주체 중심 데이터 활용 체계",
+   "- GDPR·PSD2 촉발",
+   "- 3대 원칙",
+   "개념도와 사용 절차",
+   "- 기관·정보주체·서비스 사업자",
+   "활용 분야",
+   "기대효과와 고려사항"
+  ],
+  "sections": [
+   {
+    "title": "정보주체 중심 데이터 활용 체계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "인간 중심의 통제와 사생활: 개인이 자신의 데이터를 관리할 권한과 실질적 방법 보유",
+       "사용 가능한 데이터: 표준화된 API로 기계 판독 가능한 개방형 형식 제공",
+       "개방된 사업 환경: 개인이 데이터 종속 없이 서비스 제공자 변경 가능"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "개념도와 사용 절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "흐름: 기관 보유 데이터 → 정보주체 다운로드·전송 요구 → 스마트폰·제3자 사업자 → 개인 데이터 분석 → 실시간 건강관리·안정적 재테크",
+       "관리 주체 변경: 정보주체가 A사에서 B사로 정보 관리 주체를 바꿔 더 나은 상품 선택"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용 분야",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "금융: 개인 자산 정보 통합 관리, 최적 상품 추천",
+       "공공: 맞춤형 공공 서비스, 개인정보 활용 서비스",
+       "의료: 개인별 최적 진료, 신약 개발·연구",
+       "기업: 고객 맞춤 마케팅, 선호 상품 개발"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기대효과와 고려사항",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "기대효과: 경제(신규 비즈니스) · 사회(새로운 민주적 생태계) · 기술(보안·간편인증 발전) · 국가(자국 산업 데이터 보호)",
+       "고려사항: 데이터 범위 결정, 개인정보 침해 요인 사전 예방"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "정보주체(Data Subject)",
+   "데이터 주권(Data Sovereignty)",
+   "개인정보 전송요구권(Right to Data Portability)",
+   "자기결정권",
+   "인간 중심의 통제(Human-centric Control)",
+   "사용 가능한 데이터(Usable Data)",
+   "개방된 사업 환경(Open Business Environment)",
+   "표준 API(Machine Readable)",
+   "데이터 생태계"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_134_2",
+  "code": "DB_134_2",
+  "domain": "DB",
+  "category": "DB > 마이데이터",
+  "title": "마이데이터 전송 보안 가이드라인(MyData Transmission Security Guideline)",
+  "subtitle": "",
+  "name": "마이데이터 전송 보안 가이드라인(MyData Transmission Security Guideline)",
+  "en": "MyData Transmission Security Guideline",
+  "definition": "정보제공자·정보수신자 등 마이데이터 참여주체가 개인정보처리자로서 전송 대상 개인정보의 분실·도난·유출·위변조·훼손을 막기 위해 개인정보 보호법과 안전성 확보조치 기준에 따라 이행하는 보호 조치.",
+  "keywords": [
+   "보호책임자 지정: 개인정보 보호법 제31조 · 시행령 제32조",
+   "책임자 영역: 책임자 지정·자격·역할 · 직무 및 권한 분리 · 보호조직 구성·운영",
+   "접근 관리: 안전성 확보조치 기준 제5조(권한 내역 3년 보관) · 제8조(접속기록 1년 이상, 조건부 2년)",
+   "접근 통제 수단: 최소 권한 · 접속기록 점검 · VPN 등 안전한 접속 · API 보안",
+   "개인정보 관리: 서비스 활용 고지 · 수집·이용 범위 준수 · 처리 기록 보존 · 즉시 파기(제13조)",
+   "재해·재난 대비(제11조): 위기 대응 체계 · 백업 및 복구"
+  ],
+  "keywords_must": [
+   "정보제공자·정보수신자",
+   "개인정보처리자",
+   "개인정보 보호책임자(CPO)",
+   "직무 및 권한 분리",
+   "최소 권한(Least Privilege)",
+   "접근 권한 내역 3년 보관",
+   "접속기록 1년 이상 보관",
+   "API 시스템 보안",
+   "위기 대응 체계",
+   "백업 및 복구"
+  ],
+  "keywords_ref": [
+   "개인정보 보호법 제31조",
+   "개인정보의 안전성 확보조치 기준",
+   "VPN(Virtual Private Network)",
+   "개인정보 파기"
+  ],
+  "outline": [
+   "개인정보의 안전한 처리 보장",
+   "전송 대상 개인정보 보호책임자 지정",
+   "- 책임자·직무 분리·보호조직",
+   "개인정보처리시스템 접근 관리",
+   "- 권한·접속기록·접속 수단·API",
+   "개인정보 관리와 재해·재난 대비"
+  ],
+  "sections": [
+   {
+    "title": "개인정보의 안전한 처리 보장",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "참여주체: 정보제공자·정보수신자 모두 개인정보처리자로서 안전성 확보조치 기준 준수"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "전송 대상 개인정보 보호책임자 지정",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "책임자 지정·자격: 처리 전반을 결정할 실질 권한과 독자적 의사결정 지위 보유",
+       "책임자 역할: 내부 관리계획 수립·시행, 내부 관리체계 강화",
+       "직무 및 권한 분리: 개인정보취급자의 직무별 권한·책임 명확화",
+       "보호조직: 전송요구 등 처리 전 과정을 보호하는 조직 구성·운영"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "개인정보처리시스템 접근 관리",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "접근 권한 관리: 업무상 최소 범위 차등 부여, 전보·퇴직 시 즉시 변경·말소, 내역 3년 보관",
+       "접속기록 관리: 최소 1년(조건부 2년) 보관, 정기 점검, 위변조 방지",
+       "안전한 접속 수단: 외부 접속 시 VPN·인증 수단 적용",
+       "API 시스템 보안: 공격 시도 대비, 비정상 접근 모니터링·차단"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "개인정보 관리와 재해·재난 대비",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "개인정보 관리: 서비스 활용 고지, 목적 범위 내 수집·이용, 처리 기록 보존, 목적 달성·탈퇴 시 즉시 파기",
+       "재해·재난 대비: 문서화된 위기 대응 절차와 정기 훈련, 백업·복구 시스템 구축"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "정보제공자·정보수신자",
+   "개인정보처리자",
+   "개인정보 보호책임자(CPO)",
+   "직무 및 권한 분리",
+   "최소 권한(Least Privilege)",
+   "접근 권한 내역 3년 보관",
+   "접속기록 1년 이상 보관",
+   "API 시스템 보안",
+   "위기 대응 체계",
+   "백업 및 복구"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_135",
+  "code": "DB_135",
+  "domain": "DB",
+  "category": "DB > 마이데이터",
+  "title": "고객 데이터 플랫폼(CDP, Customer Data Platform)",
+  "subtitle": "",
+  "name": "고객 데이터 플랫폼(CDP, Customer Data Platform)",
+  "en": "Customer Data Platform",
+  "definition": "여러 채널에서 수집한 고객 정보를 중앙에서 통합해 다른 시스템이 접근할 수 있는 영구적 단일 고객 데이터베이스를 생성·제공하는 디지털 마케팅용 소프트웨어 플랫폼.",
+  "keywords": [
+   "중요성: 기술(AI·ML 예측 모델) · 데이터 가치(CRM·DMP로 처리 못 한 정보 통합) · 개인정보 보호(GDPR 대응)",
+   "주요 기능 4단계: 데이터 수집 → 데이터 통합 → 데이터 활성화 → 데이터 관리",
+   "수집: 거래·로그·외부·소셜 데이터, 단일 정보 저장소(SSOT)",
+   "통합: 표준화 · 아이덴티티 식별 · 기준 데이터 통합",
+   "활성화: 페르소나 · 예측·처방 분석 · 개인 맞춤 캠페인(CLV 극대화)"
+  ],
+  "keywords_must": [
+   "고객 데이터 통합(Unified Customer Profile)",
+   "데이터 수집(Data Collection)",
+   "데이터 통합(Data Synthesis)",
+   "데이터 활성화(Data Activation)",
+   "데이터 관리(Data Governance)",
+   "단일 정보 저장소(SSOT, Single Source of Truth)",
+   "아이덴티티 식별(Identity Resolution)",
+   "페르소나(Persona)",
+   "CLV(Customer Lifetime Value)"
+  ],
+  "keywords_ref": [
+   "CRM(Customer Relationship Management)",
+   "DMP(Data Management Platform)",
+   "디지털 흔적(Digital Footprint)",
+   "오케스트레이션 데이터(Orchestration Data)"
+  ],
+  "outline": [
+   "디지털 마케팅용 고객 정보 통합 플랫폼",
+   "- 기술·데이터 가치·개인정보 측면 중요성",
+   "아키텍처와 주요 기능",
+   "- 수집·통합·활성화·관리"
+  ],
+  "sections": [
+   {
+    "title": "디지털 마케팅용 고객 정보 통합 플랫폼",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "기술 측면: AI·ML로 예측 모델을 생성해 마케팅에 적용",
+       "데이터 가치 측면: CRM·DMP로 처리할 수 없던 고객 정보 통합",
+       "개인정보 보호 측면: GDPR 등 규제 대응을 위한 효율적 개인정보 관리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "아키텍처와 주요 기능",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 수집: 거래·로그·외부·소셜 원천 데이터, SSOT 기반 수집 엔진",
+       "데이터 통합: 품질·무결성 위한 표준화, 익명 프로필·디지털 흔적 식별, 기준 데이터로 고객 단일화",
+       "데이터 활성화: 페르소나 수립, 예측·처방 분석, 개인 맞춤 캠페인으로 CLV 극대화",
+       "데이터 관리: 3rd Party 채널 데이터 접근, 무결성·개인정보보호법 준수 확인"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "고객 데이터 통합(Unified Customer Profile)",
+   "데이터 수집(Data Collection)",
+   "데이터 통합(Data Synthesis)",
+   "데이터 활성화(Data Activation)",
+   "데이터 관리(Data Governance)",
+   "단일 정보 저장소(SSOT, Single Source of Truth)",
+   "아이덴티티 식별(Identity Resolution)",
+   "페르소나(Persona)",
+   "CLV(Customer Lifetime Value)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_136",
+  "code": "DB_136",
+  "domain": "DB",
+  "category": "DB > 마이데이터",
+  "title": "개인 데이터 저장소(PDS, Personal Data Store)",
+  "subtitle": "",
+  "name": "개인 데이터 저장소(PDS, Personal Data Store)",
+  "en": "Personal Data Store",
+  "definition": "개인이 안전하고 구조화된 방법으로 자신의 주요 데이터를 저장·관리·활용하도록 지원하는 저장소로, 마이데이터 서비스에서 개인 허브 역할을 한다.",
+  "keywords": [
+   "역할: 마이데이터의 개인 허브 · 이용자에게 개인정보 집중 통제 권한 부여",
+   "구성요소: Unit(셀 호스팅 서버) · Cell(데이터 주체별 저장소) · Box(앱별 저장소)",
+   "특징: 모든 사용자에게 고유 웹 주소 제공",
+   "주요 플랫폼: Digi.me · Mydex · Citizen.me · HAT",
+   "저장 방식: 공동 저장소 또는 외부 다중 분산 저장소"
+  ],
+  "keywords_must": [
+   "개인 허브(Personal Hub)",
+   "유닛(Unit)",
+   "셀(Cell)",
+   "박스(Box)",
+   "고유 웹 주소",
+   "집중형·비집중형 허브",
+   "정보주체 통제권"
+  ],
+  "keywords_ref": [
+   "Personium",
+   "Digi.me·Mydex",
+   "Citizen.me·HAT(Hub of All Things)",
+   "블루버튼(Blue Button)"
+  ],
+  "outline": [
+   "마이데이터의 개인 허브 역할",
+   "아키텍처와 구성요소",
+   "- Unit·Cell·Box",
+   "주요 플랫폼 비교"
+  ],
+  "sections": [
+   {
+    "title": "마이데이터의 개인 허브 역할",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "개인 허브: 금융 분야 마이데이터 서비스 가이드라인 이후 개인 데이터 저장소 구축 방법론 논의 본격화",
+       "통제 권한: 개인 데이터는 공동 저장소 또는 외부 다중 분산 저장소에 관리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "아키텍처와 구성요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Unit: 여러 Cell을 호스팅하는 서버",
+       "Cell: 데이터 주체(개인)를 위한 데이터 저장소, 사용자별 고유 웹 주소",
+       "Box: 각 Cell에 설치된 앱별 데이터 저장소"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 플랫폼 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Digi.me: 비집중형 허브, 민간, SNS·금융·건강 데이터, 블루버튼 연계",
+       "Mydex: 집중형 허브, 정부 인증 기업, 자동차·전기·세금, 공공서비스",
+       "Citizen.me: 비집중형 허브, 민간, 금융·메일, 익명 처리·옵트인",
+       "HAT: 집중형 허브, 민간, 위치·개인 기록, Mydex 연계"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "개인 허브(Personal Hub)",
+   "유닛(Unit)",
+   "셀(Cell)",
+   "박스(Box)",
+   "고유 웹 주소",
+   "집중형·비집중형 허브",
+   "정보주체 통제권"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_140",
+  "code": "DB_140",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "데이터 아키텍처(DA, Data Architecture)",
+  "subtitle": "",
+  "name": "데이터 아키텍처(DA, Data Architecture)",
+  "en": "Data Architecture",
+  "definition": "개괄적 단계부터 데이터베이스 단계까지 전사 데이터에 관한 모든 구조와 흐름을 통합·연계한 체계로, 데이터 원칙·프레임워크·참조 모델·거버넌스로 구성된다.",
+  "keywords": [
+   "구성요소: Data Principle · Data Architecture Framework · Data Reference Model · Data Governance",
+   "프레임워크 관점: 개괄적 → 개념적 → 논리적 → 물리적 모델(데이터 구조 + 데이터 흐름)",
+   "수립 절차: 현행 모델 역공학(물리 → 논리 → 개념 → 개괄) → 목표 모델 순공학(개괄 → 개념 → 논리 → 물리 → 운용)",
+   "데이터 모델링과 차이: 전사 표준화·생명주기 관리 vs 단위 시스템 완전성"
+  ],
+  "keywords_must": [
+   "데이터 원칙(Data Principle)",
+   "데이터 아키텍처 프레임워크(Data Architecture Framework)",
+   "데이터 참조 모델(DRM, Data Reference Model)",
+   "데이터 거버넌스(Data Governance)",
+   "개괄적(Contextual) 모델",
+   "개념적(Conceptual) 모델",
+   "논리적(Logical) 모델",
+   "물리적(Physical) 모델",
+   "현행 → 목표 모델 전환"
+  ],
+  "keywords_ref": [
+   "EA(Enterprise Architecture)",
+   "Logicalization(역공학)",
+   "전사 데이터 상호 운용성",
+   "메타데이터 관리"
+  ],
+  "outline": [
+   "전사 데이터 구조 통합 체계",
+   "- 개괄에서 물리까지 4단계 모델 관점",
+   "개념도와 구성요소",
+   "- 원칙·프레임워크·참조 모델·거버넌스",
+   "수립 절차",
+   "데이터 모델링과 비교"
+  ],
+  "sections": [
+   {
+    "title": "전사 데이터 구조 통합 체계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "개괄적 모델: 데이터 대상·범위, 외부 비즈니스 주체와의 데이터 거래",
+       "개념적 모델: 핵심 엔티티 구조, 데이터 그룹 간 흐름",
+       "논리적 모델: 논리적 실체·관계·속성, 논리 집합 변환과 흐름",
+       "물리적 모델: 물리적 저장 단위와 연결, 물리적 이동·전환"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "개념도와 구성요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Data Principle: 전사 데이터 관리·유지를 위한 기본 원칙",
+       "Data Architecture Framework: 전사 데이터를 해석·이해하는 기본 틀(구조·흐름)",
+       "Data Reference Model: 전사 데이터 참조 모델, 상호 운용성 지원(표준)",
+       "Data Governance: 관리 원칙·조직·절차·QA 등 관리·통제 수단"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "수립 절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "현행 분석: 현행 운용적·물리적 모델에서 논리 → 개념 → 개괄 모델로 역공학(Logicalization)",
+       "목표 수립: 목표 개괄 → 개념 → 논리 → 물리 → 부가적 → 운용적 모델 순으로 설계"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "데이터 모델링과 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "목적: DA 전사 데이터 표준화 · 모델링 단위 시스템 데이터 완전성",
+       "범위: DA 정의·모델링·구축·운영 전체 · 모델링 단위 시스템 설계",
+       "절차: DA 개괄 → 개념 → 논리 → 물리 → 운영 · 모델링 개념 → 논리 → 물리",
+       "목표: DA 데이터 생명주기 관리 · 모델링 결과 중심"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "데이터 원칙(Data Principle)",
+   "데이터 아키텍처 프레임워크(Data Architecture Framework)",
+   "데이터 참조 모델(DRM, Data Reference Model)",
+   "데이터 거버넌스(Data Governance)",
+   "개괄적(Contextual) 모델",
+   "개념적(Conceptual) 모델",
+   "논리적(Logical) 모델",
+   "물리적(Physical) 모델",
+   "현행 → 목표 모델 전환"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "DRM": "Data Reference Model"
+  }
+ },
+ {
+  "id": "DB_141",
+  "code": "DB_141",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "데이터 거버넌스(Data Governance)",
+  "subtitle": "",
+  "name": "데이터 거버넌스(Data Governance)",
+  "en": "Data Governance",
+  "definition": "전사 데이터에 대한 정책·지침·표준·전략을 수립하고 이를 관리하는 조직과 프로세스를 구축해 고품질 데이터로 기업 목표 달성과 가치 창출을 지원하는 의사결정 체계.",
+  "keywords": [
+   "도입 배경: 데이터 관리 복잡성 · 데이터 품질 문제 · 체계적 관리 미흡",
+   "구성요소: 원칙(Principle) · 조직(Organization) · 프로세스(Process)",
+   "프레임워크: 관리 정책·원칙 → 관리 기능(업무 용어·표준·구조·품질·흐름·기준 정보) → 관리 프로세스 → 관리 조직(R&R)",
+   "주요 기능: 데이터 품질 관리(DQM) · 메타데이터 관리 · 데이터 주기 관리 · 보안·프라이버시",
+   "성숙도 5단계: 도입 → 프로세스화 → 통합경영 → 위험대응 → 가치창출"
+  ],
+  "keywords_must": [
+   "거버넌스 3요소: 원칙·조직·프로세스",
+   "데이터 관리 정책",
+   "데이터 표준 관리",
+   "데이터 품질 관리(DQM, Data Quality Management)",
+   "메타데이터 관리(Metadata Management)",
+   "데이터 생명주기 관리",
+   "데이터 관리 조직 R&R(Role & Responsibility)",
+   "거버넌스 성숙도 5단계"
+  ],
+  "keywords_ref": [
+   "데이터 아키텍처(DA)",
+   "데이터 스튜어드(Data Steward)",
+   "기준 정보 관리(MDM)",
+   "IT 거버넌스·EA 거버넌스"
+  ],
+  "outline": [
+   "전사 데이터 의사결정 지원 체계",
+   "- 관리 복잡성·품질 문제·체계 미흡",
+   "구성요소와 프레임워크",
+   "- 원칙·조직·프로세스",
+   "주요 기능",
+   "구축 전략과 성숙도",
+   "- 참조 모델과 성공 요소",
+   "- 성숙도 5단계"
+  ],
+  "sections": [
+   {
+    "title": "전사 데이터 의사결정 지원 체계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "관리 복잡성: 이기종 시스템 간 인터페이스 증가, 모델·DB 형상 관리 어려움",
+       "품질 문제: 대용량 데이터 정합성 유지 곤란, 전사 품질 통합 관리 조직 미흡",
+       "체계 미흡: 데이터 분류·흐름 자료 미비, 접근·활용 복잡"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성요소와 프레임워크",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "원칙: 데이터를 유지·관리하는 지침과 가이드(보안·품질 기준·변경 관리)",
+       "조직: 데이터 관리자·DBA·데이터 아키텍트 등 역할과 책임",
+       "프로세스: 작업 절차·모니터링·측정 활동",
+       "프레임워크: 관리 정책·원칙 아래 관리 기능·프로세스·조직을 두고 데이터 아키텍처·메타 관리 시스템이 지원"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 기능",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 품질 관리: 프로파일링·정제 등 사용 방법에 따른 품질 활동",
+       "메타데이터 관리: 데이터 검색과 분석 도구의 정확한 해석 지원",
+       "데이터 주기 관리: 생성·저장부터 폐기까지 데이터 흐름 정책",
+       "보안·프라이버시: 사용자 역할 기반 데이터 보호 수준 정의"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구축 전략과 성숙도",
+    "subsections": [
+     {
+      "title": "구축 전략과 참조 모델",
+      "items": [
+       "구축 전략: Business Goal → Strategy → Requirement → IT Strategy → 데이터 구조·가치로 연결",
+       "참조 모델: 활용 체계(시나리오·지침·시스템) · 진화 관리(진단·적용·평가) · 조직 역량(역할·책임·관리자 양성) · DA",
+       "성공 요소: 신뢰성·데이터 품질·정보화 대응능력·투명성 확보"
+      ]
+     },
+     {
+      "title": "성숙도 5단계",
+      "items": [
+       "1단계 도입: 거버넌스 연계 없음, 통제되지 않음",
+       "2단계 프로세스화: 품질 관리 프로세스 보유, 의사결정 체계 구축",
+       "3단계 통합경영: 경영진 주도, 전략·비전에 거버넌스 반영",
+       "4단계 위험대응: 정량화된 품질 관리, 전사 데이터 위험 평가",
+       "5단계 가치창출: 품질 데이터로 성과 창출, 분석 결과를 전략에 반영"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "거버넌스 3요소: 원칙·조직·프로세스",
+   "데이터 관리 정책",
+   "데이터 표준 관리",
+   "데이터 품질 관리(DQM, Data Quality Management)",
+   "메타데이터 관리(Metadata Management)",
+   "데이터 생명주기 관리",
+   "데이터 관리 조직 R&R(Role & Responsibility)",
+   "거버넌스 성숙도 5단계"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_142",
+  "code": "DB_142",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "기준 정보 관리(MDM, Master Data Management)",
+  "subtitle": "",
+  "name": "기준 정보 관리(MDM, Master Data Management)",
+  "en": "Master Data Management",
+  "definition": "고객·공급자·품목·자산 등 기업 운영의 근간이 되는 기준 정보(Master Data)를 애플리케이션과 분리해 단일 저장소에서 일관되게 통합·관리·공유하는 기술·프로세스·거버넌스의 집합.",
+  "keywords": [
+   "마스터 데이터 특징: 동일성 · 고정성 · 수명주기",
+   "관리 문제점: 중복성 · 부족성 · 불일치성 · 부정확성",
+   "역할: 데이터 통합 · 품질 유지 · 협업 지원",
+   "구성요소: Repository · 데이터 체계 관리 · 프로세스 관리 · EAI · Legacy",
+   "구축 유형: 분산관리(Consolidation) · 집중관리(Central) · 혼합관리(Harmonization)",
+   "구축 절차: 원칙 수립 → 거버넌스 정의 → 데이터 표준화 → 시스템 구축 → 연계 및 운영"
+  ],
+  "keywords_must": [
+   "마스터 데이터(Master Data, 기준 정보)",
+   "동일성·고정성·수명주기",
+   "중복성·부족성·불일치성·부정확성",
+   "리포지토리(Repository)",
+   "데이터 체계 관리",
+   "프로세스 관리(Workflow)",
+   "EAI(Enterprise Application Integration)",
+   "분산·집중·혼합 관리 방식",
+   "Think Big, Start Small"
+  ],
+  "keywords_ref": [
+   "MDS(Master Data Server)·MDC(Master Data Client)",
+   "트랜잭션 데이터(Transaction Data)",
+   "메타데이터 관리(Metadata Management)",
+   "SOA(Service-Oriented Architecture)"
+  ],
+  "outline": [
+   "기업 기준 정보 통합 관리 체계",
+   "- 마스터 데이터 특징·관리 문제점",
+   "- 통합·품질 유지·협업 지원",
+   "구성도와 구성요소",
+   "구축 유형 비교",
+   "- 분산·집중·혼합 관리",
+   "구축 절차와 성공 전략"
+  ],
+  "sections": [
+   {
+    "title": "기업 기준 정보 통합 관리 체계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "동일성: 수정 시 사용하는 모든 곳에서 동시에 갱신",
+       "고정성: 자주 변경되지 않고 일정 기간 값 유지",
+       "관리 문제점: 동일 개체의 중복, 필요 속성 부족, 시스템 간 값 불일치, 실제와 다른 부정확 값",
+       "역할: 공통 데이터 통합·일관성, 중복·부정확·불일치 제거, 관리 프로세스 협업 지원"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성도와 구성요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Repository: 기준 정보를 모아 공유하는 저장소",
+       "데이터 체계 관리: 속성·코드·분류 체계와 변경이력 관리",
+       "프로세스 관리: 기준 정보 접근·권한 표준 프로세스(Workflow)",
+       "EAI: MDM과 Legacy 이기종 간 정보 연계(Middleware·Adapter)",
+       "Legacy: 실제 업무 애플리케이션(ERP·CRM·SCM)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구축 유형 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "분산관리(Consolidation): 마스터 데이터는 MDC에, 중앙은 매핑 정보만 유지 → 관리 복잡·통제 어려움",
+       "집중관리(Central): MDS에서 생성·관리 후 MDC에 배포 → 초기 표준화·구축 부하 큼",
+       "혼합관리(Harmonization): MDS에서 관리하되 일부 Local 속성은 MDC가 관리 → Local 속성 통제 어려움"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구축 절차와 성공 전략",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① MDM 원칙 수립(요구사항·구축 유형·대상 선정) ② 거버넌스 정의(요청·승인 절차, 전담 조직)",
+       "③ 데이터 표준화(중복·부족·불일치 해결, 클렌징) ④ 시스템 구축·적재 ⑤ 연계 및 운영(DQM·DA 연계)",
+       "성공 전략: 비즈니스 주도·전사적 접근, Think Big Start Small, 표준 인터페이스(SOA·웹서비스)",
+       "효과: 연계 방식이 다대다에서 일대다로 전환돼 유지보수 비용 절감"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "마스터 데이터(Master Data, 기준 정보)",
+   "동일성·고정성·수명주기",
+   "중복성·부족성·불일치성·부정확성",
+   "리포지토리(Repository)",
+   "데이터 체계 관리",
+   "프로세스 관리(Workflow)",
+   "EAI(Enterprise Application Integration)",
+   "분산·집중·혼합 관리 방식",
+   "Think Big, Start Small"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "MDS": "Master Data Server",
+   "MDC": "Master Data Client"
+  }
+ },
+ {
+  "id": "DB_143",
+  "code": "DB_143",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "데이터 품질 관리(Data Quality Management)",
+  "subtitle": "",
+  "name": "데이터 품질 관리(Data Quality Management)",
+  "en": "Data Quality Management",
+  "definition": "조직 내외부 정보시스템과 DB 사용자의 기대를 만족시키기 위해 데이터 값·데이터 구조·데이터 관리 프로세스를 대상으로 지속적으로 수행하는 데이터 관리 및 개선 활동.",
+  "keywords": [
+   "관리 대상: 데이터 값 · 데이터 구조 · 데이터 관리 프로세스",
+   "관리 조직 관점: CIO(개괄적) · DA(개념적) · Modeler(논리적) · DBA(물리적) · User(운용적)",
+   "품질관리 기법: 데이터 클렌징(변환·파싱·보강) · 데이터 프로파일링(컬럼·구조·룰·값 분석)",
+   "성숙 모형 DQM3: 품질 기준 · 품질관리 프로세스 · 성숙 수준 5단계",
+   "성숙 수준: 도입 → 정형화 → 통합화 → 정량화 → 최적화"
+  ],
+  "keywords_must": [
+   "데이터 값(Data Value)",
+   "데이터 구조(Data Structure)",
+   "데이터 관리 프로세스(Data Management Process)",
+   "CIO·DA·Modeler·DBA·User 관점",
+   "데이터 클렌징(Data Cleansing)",
+   "데이터 프로파일링(Data Profiling)",
+   "DQM3(Data Quality Management Maturity Model)",
+   "성숙 수준 5단계"
+  ],
+  "keywords_ref": [
+   "데이터 파싱(Data Parsing)",
+   "데이터 보강(Data Enhancement)",
+   "룰 세트(Rule Set)",
+   "품질 기준: 정확성·일관성·유용성·접근성·적시성·보안성"
+  ],
+  "outline": [
+   "지속적 데이터 관리·개선 활동",
+   "프레임워크와 관리 대상",
+   "- 대상: 값·구조·프로세스",
+   "- 조직: CIO·DA·Modeler·DBA·User",
+   "품질관리 기법",
+   "- 클렌징·프로파일링",
+   "품질관리 성숙 모형 DQM3"
+  ],
+  "sections": [
+   {
+    "title": "지속적 데이터 관리·개선 활동",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "품질 요소 연계: 데이터 값·구조·관리 프로세스가 서로 연계돼 조직 데이터 품질에 영향"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "프레임워크와 관리 대상",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "CIO(개괄적): 데이터 관리 정책(모델·품질관리 규정)",
+       "DA(개념적): 표준 데이터(용어·명칭·도메인·코드), 개념·참조 모델, 표준·요구사항 관리",
+       "Modeler(논리적): 모델 데이터·DB 구조 데이터, 논리 모델, 모델 형상·흐름·이력 관리",
+       "DBA(물리적): 관리 데이터(흐름·정합성 검증 데이터), 물리 모델, 백업·보안·튜닝·모니터링",
+       "User(운용적): 업무 데이터(원천·운영·분석), 사용 View, 데이터 활용 관리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "품질관리 기법",
+    "subsections": [
+     {
+      "title": "데이터 클렌징",
+      "items": [
+       "데이터 변환: 코드 체계 변환(성별)·형식 재구성(일자)·수학적 변환(화폐 단위)",
+       "데이터 파싱: 정제 규칙 적용을 위해 최소 의미 단위로 분할(주민번호 유효성)",
+       "데이터 보강: 변환·파싱·표준화로 추가 정보 반영"
+      ]
+     },
+     {
+      "title": "데이터 프로파일링",
+      "items": [
+       "컬럼 속성 분석: 단일 컬럼 값과 룰 세트 분석",
+       "구조 분석: 테이블 컬럼 간 관계 분석",
+       "데이터 룰 분석: 단순·복잡 비즈니스 객체 룰 분석",
+       "값 룰 분석: 집계값·발생 빈도로 부정확 데이터 탐지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "품질관리 성숙 모형 DQM3",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "품질 기준: 정확성·일관성·유용성·접근성·적시성·보안성",
+       "품질관리 프로세스: 요구사항·구조·흐름·DB·활용·표준·오너십·사용자 뷰 관리",
+       "성숙 수준: 도입 → 정형화 → 통합화 → 정량화 → 최적화"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "데이터 값(Data Value)",
+   "데이터 구조(Data Structure)",
+   "데이터 관리 프로세스(Data Management Process)",
+   "CIO·DA·Modeler·DBA·User 관점",
+   "데이터 클렌징(Data Cleansing)",
+   "데이터 프로파일링(Data Profiling)",
+   "DQM3(Data Quality Management Maturity Model)",
+   "성숙 수준 5단계"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_144_0",
+  "code": "DB_144_0",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "데이터 이력관리(Data History Management)",
+  "subtitle": "",
+  "name": "데이터 이력관리(Data History Management)",
+  "en": "Data History Management",
+  "definition": "하나의 업무 단위가 시간 흐름에 따라 발생시키는 과거와 현재 데이터를 지속적으로 유지해 시점별 통계, 변화 이력 분석, 과거 시점 데이터 조회를 지원하는 데이터 관리 기법.",
+  "keywords": [
+   "이력 데이터 유형: 발생이력 · 변경이력 · 진행이력",
+   "이력관리 유형: 시점이력 · 선분이력",
+   "선분이력 관리 유형: 인스턴스 레벨 · 속성 레벨 · 주제 레벨",
+   "성능 저하 원인: 최근 데이터 조회 시 Group 함수(Max) · 인라인 뷰·Sort",
+   "해결: 최신 여부 컬럼 · 종료일자 Default(9999-12-31) + 인덱스"
+  ],
+  "keywords_must": [
+   "발생이력",
+   "변경이력",
+   "진행이력",
+   "시점이력(Point-in-Time History)",
+   "선분이력(Period History)",
+   "인스턴스 레벨 이력관리(Row Level)",
+   "속성 레벨 이력관리(Column Level)",
+   "주제 레벨 이력관리(Subject Level)",
+   "시작일자·종료일자 관리"
+  ],
+  "keywords_ref": [
+   "최신 여부 플래그",
+   "종료일자 Default 9999-12-31",
+   "BETWEEN 시작시각 AND 종료시각",
+   "이력관리 대상 검증"
+  ],
+  "outline": [
+   "시간 추이에 따른 데이터 관리",
+   "- 시점별 통계·예측·변경 추적 요구",
+   "- 이력 데이터 유형과 이력관리 유형",
+   "시점이력과 선분이력 비교",
+   "선분이력 관리 유형",
+   "- 인스턴스·속성·주제 레벨",
+   "성능 저하 원인과 관리 방안"
+  ],
+  "sections": [
+   {
+    "title": "시간 추이에 따른 데이터 관리",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "발생이력: 정기적으로 발생하는 데이터를 시간에 따라 모두 관리",
+       "변경이력: 이미 관리하는 데이터에 변경이 생길 때 신규 데이터를 모두 관리",
+       "진행이력: 업무 진행 상태에 따라 변경되는 데이터를 모두 관리",
+       "시점이력: 데이터 변경이 발생한 시점의 데이터만 관리",
+       "선분이력: 변경의 시작 시점부터 종료 시점까지 관리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "시점이력과 선분이력 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "시점이력 장점: 개체 무결성 보장, DML 쉬움 · 단점: 특정 시점 조회 쿼리 복잡(Max 서브쿼리)",
+       "선분이력 장점: 쿼리 간단(BETWEEN), 특정 시점 조회 성능 유리 · 단점: 시작·종료 동시 변경 불편, DML 부하",
+       "실무: 선분이력은 시점이력의 확장으로 대부분 사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "선분이력 관리 유형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "인스턴스 레벨: 어떤 변경이든 전체 인스턴스를 새로 생성, 저장 쉬움·공간 낭비",
+       "속성 레벨: 변화가 생긴 속성만 이력 생성, 변경 명확·다수 속성 이력 시 Merge 다발",
+       "주제 레벨: 유사·연동 속성을 주제별로 묶어 관리, 두 방식의 장점 수용·전체 참조 시 Merge"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "성능 저하 원인과 관리 방안",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Group 함수 사용: 누적 이력에서 최근 데이터 Max 추출 → 최신 여부 컬럼으로 해결",
+       "인라인 뷰 사용: 과도한 변경이력으로 Sort·Max 부하 → 종료일자 Default 값과 인덱스",
+       "관리 방안: 이력관리 대상 검증(변경 감시·과거 조회 필요성), 시점·선분 유형 선택"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "발생이력",
+   "변경이력",
+   "진행이력",
+   "시점이력(Point-in-Time History)",
+   "선분이력(Period History)",
+   "인스턴스 레벨 이력관리(Row Level)",
+   "속성 레벨 이력관리(Column Level)",
+   "주제 레벨 이력관리(Subject Level)",
+   "시작일자·종료일자 관리"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_144_1",
+  "code": "DB_144_1",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "데이터 오케스트레이션(Data Orchestration)",
+  "subtitle": "",
+  "name": "데이터 오케스트레이션(Data Orchestration)",
+  "en": "Data Orchestration",
+  "definition": "조직 내 다양한 데이터 소스·도구·프로세스를 워크플로우로 연결해 수집·저장·처리·품질·거버넌스·제공 전 과정을 자동화하고 통합 관리하는 전략적 데이터 관리 접근 방식.",
+  "keywords": [
+   "핵심 목표: 데이터 통합 · 프로세스 자동화 · 품질 관리 · 확장성 확보 · 거버넌스 강화",
+   "처리 단계: 데이터 소스 → 수집(ETL·ELT, 배치·스트리밍) → 저장(데이터 레이크) → 처리 → 품질관리",
+   "관리 단계: 데이터 거버넌스 · 모니터링 및 최적화 · API 및 서비스",
+   "공통: 워크플로우 관리(실행 순서·의존성·스케줄링·오류 처리)",
+   "클라우드 서비스: AWS Step Functions · Azure Data Factory · GCP Cloud Composer"
+  ],
+  "keywords_must": [
+   "데이터 통합(Data Integration)",
+   "프로세스 자동화(Process Automation)",
+   "워크플로우 관리(Workflow Management)",
+   "의존성 관리(Dependency)",
+   "작업 스케줄링(Scheduling)",
+   "ETL·ELT",
+   "데이터 공급망 추적(Data Lineage)",
+   "모니터링 및 최적화"
+  ],
+  "keywords_ref": [
+   "DAG(Directed Acyclic Graph)",
+   "Apache Airflow",
+   "AWS Step Functions",
+   "Azure Data Factory"
+  ],
+  "outline": [
+   "데이터 관리 자동화 접근 방식",
+   "- 통합·자동화·품질·확장성·거버넌스",
+   "개념도와 단계별 기술요소",
+   "- 처리·관리·공통 워크플로우",
+   "클라우드 기반 서비스"
+  ],
+  "sections": [
+   {
+    "title": "데이터 관리 자동화 접근 방식",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 통합: 다양한 소스를 일관된 방식으로 통합",
+       "프로세스 자동화: 반복 데이터 작업을 자동화해 효율 증대",
+       "확장성: 데이터 볼륨 증가에 유연한 구조, 거버넌스: 사용·접근의 체계적 관리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "개념도와 단계별 기술요소",
+    "subsections": [
+     {
+      "title": "처리",
+      "items": [
+       "데이터 소스: DB·API·파일 시스템 등 고유 형식과 프로토콜 처리",
+       "데이터 수집: ETL·ELT로 추출·적재, 배치·실시간 스트리밍 지원",
+       "데이터 저장·처리: 데이터 레이크 등 중앙 저장소, 전처리·비즈니스 로직 적용",
+       "품질관리: 일관성과 무결성 유지"
+      ]
+     },
+     {
+      "title": "관리",
+      "items": [
+       "데이터 거버넌스: 보안·규정 준수·메타데이터·공급망 추적",
+       "모니터링 및 최적화: 파이프라인 상태 실시간 감시, 이상 징후 알림",
+       "API 및 서비스: 처리 데이터를 외부 시스템에 제공",
+       "워크플로우 관리: 실행 순서·의존성, 스케줄링·오류 처리 자동화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "클라우드 기반 서비스",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "AWS Step Functions: 서버리스 오케스트레이션, 워크플로우를 시각적으로 설계해 AWS 서비스 조율",
+       "Azure Data Factory: 완전 관리형 데이터 통합 서비스",
+       "GCP Cloud Composer: 관리형 서비스, 파이썬으로 작성한 DAG로 워크플로우 정의"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "데이터 통합(Data Integration)",
+   "프로세스 자동화(Process Automation)",
+   "워크플로우 관리(Workflow Management)",
+   "의존성 관리(Dependency)",
+   "작업 스케줄링(Scheduling)",
+   "ETL·ELT",
+   "데이터 공급망 추적(Data Lineage)",
+   "모니터링 및 최적화"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_144_2",
+  "code": "DB_144_2",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "데이터 파이프라인(Data Pipeline)",
+  "subtitle": "",
+  "name": "데이터 파이프라인(Data Pipeline)",
+  "en": "Data Pipeline",
+  "definition": "다양한 데이터 소스의 원시 데이터를 수집·변환·적재(ETL)해 분석과 AI가 활용할 수 있는 정제된 형태로 지속적으로 전달하는 자동화된 워크플로우 체계.",
+  "keywords": [
+   "등장 배경: 기업 AI가 개념증명에서 운영 단계로 전환 · 경쟁 축이 모델 중심에서 데이터 흐름 중심으로 이동",
+   "구성 5영역: 데이터 수집 · 데이터 인프라 · 데이터 품질관리 · 데이터 라벨링 · 마켓플레이스",
+   "처리 방식 변화: 배치 → 스트리밍, ETL → ELT, 수동 → 자동 라벨링",
+   "데이터 특성: 전 세계 데이터의 약 90%가 비정형(이미지·동영상·음성·문서)"
+  ],
+  "keywords_must": [
+   "데이터 수집(Data Ingestion)",
+   "데이터 인프라(Data Infrastructure)",
+   "데이터 품질관리(Data Quality)",
+   "데이터 라벨링(Data Labeling)",
+   "데이터 마켓플레이스(Data Marketplace)",
+   "ETL(추출·변환·적재)",
+   "ELT(적재 후 변환)",
+   "배치·스트리밍 처리",
+   "워크플로우 관리"
+  ],
+  "keywords_ref": [
+   "AutoML(Automated Machine Learning)",
+   "데이터 관측성(Data Observability)",
+   "피처 생성(Feature Engineering)",
+   "Databricks·Snowflake"
+  ],
+  "outline": [
+   "데이터 흐름 중심 AI 인프라",
+   "- 모델 중심에서 데이터 흐름 중심으로",
+   "구성도와 구성요소",
+   "- 수집·인프라·품질관리",
+   "- 라벨링·마켓플레이스",
+   "국내외 주요 사례"
+  ],
+  "sections": [
+   {
+    "title": "데이터 흐름 중심 AI 인프라",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 운송 시스템: 현장의 원시 데이터를 AI가 쓰는 정제 데이터로 자동 전달",
+       "비정형 데이터: 이미지·동영상·음성·문서를 AI 활용 형태로 자동 변환하는 파이프라인 필수"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성도와 구성요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 수집: 추출·파싱·다중 소스 통합·적재, 배치에서 스트리밍으로 전환",
+       "데이터 인프라: 처리 엔진·저장소·분산 컴퓨팅·플랫폼, ETL에서 ELT로 전환",
+       "품질관리: 검증·정제·표준화·품질 모니터링",
+       "데이터 라벨링: 스키마 정의·피처 생성·변환, AutoML 자동 라벨링",
+       "마켓플레이스: 워크플로우 관리·모니터링·접근 제어·공급자-수요자 인터페이스"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "국내외 주요 사례",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "End-to-End: Palantir · Databricks(레이크하우스) · AWS · Google Cloud · Azure",
+       "수집·인프라: Fivetran(무코드 ETL) · Confluent(실시간 스트리밍) · Snowflake(컴퓨팅-스토리지 분리)",
+       "품질관리: Monte Carlo(데이터 관측성) · Great Expectations(오픈소스 검증)",
+       "라벨링·마켓: Scale AI · 크라우드웍스 · AWS Data Exchange · NIA AI 허브"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "데이터 수집(Data Ingestion)",
+   "데이터 인프라(Data Infrastructure)",
+   "데이터 품질관리(Data Quality)",
+   "데이터 라벨링(Data Labeling)",
+   "데이터 마켓플레이스(Data Marketplace)",
+   "ETL(추출·변환·적재)",
+   "ELT(적재 후 변환)",
+   "배치·스트리밍 처리",
+   "워크플로우 관리"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_145",
+  "code": "DB_145",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "DB 고가용성 관리(DB High Availability Management)",
+  "subtitle": "",
+  "name": "DB 고가용성 관리(DB High Availability Management)",
+  "en": "Database High Availability Management",
+  "definition": "24시간 365일 무중단 서비스 요구에 대응해 클러스터링·Standby DB·병렬 DB·RAID 등으로 장애 시에도 빠르게 서비스를 재개하도록 데이터베이스 아키텍처를 설계·운영하는 관리 활동.",
+  "keywords": [
+   "요구사항: 비즈니스(무중단 서비스·저비용 가용성) · 기술(요구별 DBMS 아키텍처 설계)",
+   "설계 전략: Mission Critical 여부 · Application Partitioning · DBMS 도입 비용 · Take Over 시간 · RAID 레벨 · 원격 백업",
+   "확보 방안: HA 솔루션(Take Over) · Standby DB(Archive Log 적용) · 병렬 DB(클러스터) · RAID 1·5",
+   "고려사항: 사용 목적 · 도입 비용 · 성능(파일 I/O)"
+  ],
+  "keywords_must": [
+   "고가용성(HA, High Availability)",
+   "무중단 서비스(24×365)",
+   "클러스터링(Clustering)",
+   "페일오버·테이크오버(Failover·Take Over)",
+   "Standby DB",
+   "아카이브 로그(Archive Log)",
+   "병렬 데이터베이스(Parallel Database)",
+   "RAID 1·RAID 5",
+   "원격 백업(Remote Backup)"
+  ],
+  "keywords_ref": [
+   "Active-Standby·Active-Active",
+   "Oracle RAC(Real Application Clusters)",
+   "Data Guard",
+   "결함 허용(Fault Tolerance)"
+  ],
+  "outline": [
+   "무중단 서비스 요구와 대응",
+   "아키텍처 디자인 전략",
+   "- 미션 크리티컬·파티셔닝·비용",
+   "- 테이크오버 시간·RAID·원격 백업",
+   "고가용성 확보 방안",
+   "- HA 솔루션·Standby·병렬 DB·RAID",
+   "DBMS 설계 고려사항"
+  ],
+  "sections": [
+   {
+    "title": "무중단 서비스 요구와 대응",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "비즈니스 측면: 24시간 365일 무중단 서비스, 저비용 가용성·고성능, 신속한 백업·재개",
+       "기술 측면: 고객 요구별 DBMS 아키텍처 설계, 고성능·고가용성 확보"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "아키텍처 디자인 전략",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Mission Critical: 무중단이면 복수 서버 클러스터링, 아니면 주기 백업과 모니터링",
+       "Application Partitioning: 노드별 독립 애플리케이션으로 동기화 오버헤드 최소화",
+       "도입 비용: 병렬 DB는 OS HA 외 추가 DBMS 비용 필요",
+       "Take Over 시간: HA 전환은 unmount·mount·기동 시간 소요, Standby는 빠른 재개",
+       "RAID: RAID 1 고속 I/O·낮은 이용률, RAID 5 높은 이용률·쓰기 성능 저하",
+       "원격 백업: 천재지변 대비 원격지 백업센터 스토리지 구조"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "고가용성 확보 방안",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "HA 솔루션: 서버 장애를 감지해 정상 서버로 Take Over",
+       "Standby DB: Production DB의 Archive Log를 계속 적용해 동일 상태 유지, 장애 시 전환",
+       "병렬 DB: 클러스터 인스턴스가 하나의 물리 DB 공유, 장애 시 다른 인스턴스로 지속",
+       "RAID: 미러링(RAID 1)·패리티(RAID 5)로 디스크 장애 대비"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "DBMS 설계 고려사항",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "사용 목적: 중요 업무는 클러스터링 기반 무중단·고성능 구조",
+       "도입 비용: HA 솔루션 비용 대비 예산 확보",
+       "성능: 파일 I/O 효율과 데이터 관리 고려"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "고가용성(HA, High Availability)",
+   "무중단 서비스(24×365)",
+   "클러스터링(Clustering)",
+   "페일오버·테이크오버(Failover·Take Over)",
+   "Standby DB",
+   "아카이브 로그(Archive Log)",
+   "병렬 데이터베이스(Parallel Database)",
+   "RAID 1·RAID 5",
+   "원격 백업(Remote Backup)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_146",
+  "code": "DB_146",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "샤딩(Sharding)",
+  "subtitle": "",
+  "name": "샤딩(Sharding)",
+  "en": "Sharding",
+  "definition": "DBMS 내부가 아니라 물리적으로 다른 데이터베이스에 데이터를 샤드(Shard)라는 개별 파티션으로 수평 분할해 분산 저장·조회하는 대용량 데이터 처리 기법.",
+  "keywords": [
+   "장점: 성능 개선 · 신뢰성 개선(한 샤드 장애 격리) · 위치 추상화",
+   "구조(MongoDB): 샤드 키 범위로 저장, 애플리케이션은 라우팅 프로세스(mongos)만 연결",
+   "분할 방법: Vertical · Range Based · Key(Hash) Based · Directory Based",
+   "DB 설계 가이드: 무중단 데이터 재분배 · 조인 불가로 역정규화 · 해시 함수 설계 · 작은 테이블",
+   "응용 설계 가이드: Global Transaction · 애플리케이션 레벨 GUID"
+  ],
+  "keywords_must": [
+   "샤드(Shard)",
+   "샤드 키(Shard Key)",
+   "수평 분할(Horizontal Partitioning)",
+   "라우팅 프로세스(mongos)",
+   "Vertical Partitioning",
+   "Range Based Partitioning",
+   "Key(Hash) Based Partitioning",
+   "Directory Based Partitioning",
+   "GUID(Globally Unique Identifier)"
+  ],
+  "keywords_ref": [
+   "Scale-out·Scale-up",
+   "역정규화(Denormalization)",
+   "Global Transaction",
+   "쿼리 오프로딩(Query Off-loading)"
+  ],
+  "outline": [
+   "물리 DB 간 수평 분할 저장",
+   "- 성능·신뢰성·위치 추상화",
+   "- 샤드 키와 라우팅 프로세스",
+   "분할 방법",
+   "- Vertical·Range·Hash·Directory",
+   "적용 가이드라인",
+   "- DB 설계와 응용 설계",
+   "일반 DB · 비교"
+  ],
+  "sections": [
+   {
+    "title": "물리 DB 간 수평 분할 저장",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "성능 개선: 개별 테이블을 각 샤드에서 더 빠르게 처리",
+       "신뢰성 개선: 한 샤드 장애에도 다른 샤드는 서비스 지속",
+       "위치 추상화: 애플리케이션은 데이터 위치를 몰라도 됨",
+       "MongoDB: 샤드 키 범위 기반 저장, mongos 라우팅으로 구조 변경 영향 없음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분할 방법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Vertical: 테이블(기능)별 서버 분할, 구현 간단하나 서버 데이터가 커지면 추가 샤딩",
+       "Range Based: 지역·연도·우편번호 등 범위로 분할, 분할 기준 예측 가능해야 함",
+       "Key(Hash) Based: 해시 결과로 서버 결정, 균등 분포 해시 함수가 핵심",
+       "Directory Based: 샤드 키 Look-up 서비스로 추상화, DB·캐시 조합 구현"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 가이드라인",
+    "subsections": [
+     {
+      "title": "DB 설계",
+      "items": [
+       "데이터 재분배: 서비스 정지 없이 확장 가능해야 함",
+       "조인: 샤드 간 조인 불가로 처음부터 역정규화 고려",
+       "파티션·크기: 해시 함수 설계 중요, 테이블 단위는 작게"
+      ]
+     },
+     {
+      "title": "응용 설계",
+      "items": [
+       "트랜잭션: Global Transaction으로 샤드 간 트랜잭션 지원",
+       "Global Unique Key: auto-increment 중복 위험으로 애플리케이션 GUID 생성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "일반 DB · 비교",
+    "subsections": [
+     {
+      "title": "일반 DB와 비교",
+      "items": [
+       "일반 DB: 데이터·정보 관리 기술, 클러스터링·HA 중심",
+       "샤딩 DB: 테라바이트 단위 데이터 관리, Vertical·Range·Hash·Directory 분할"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "샤드(Shard)",
+   "샤드 키(Shard Key)",
+   "수평 분할(Horizontal Partitioning)",
+   "라우팅 프로세스(mongos)",
+   "Vertical Partitioning",
+   "Range Based Partitioning",
+   "Key(Hash) Based Partitioning",
+   "Directory Based Partitioning",
+   "GUID(Globally Unique Identifier)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_147_00",
+  "code": "DB_147_00",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "데이터 품질인증(DQ 인증, Data Quality Certification)",
+  "subtitle": "",
+  "name": "데이터 품질인증(DQ 인증, Data Quality Certification)",
+  "en": "Data Quality Certification",
+  "definition": "과학기술정보통신부가 지정한 품질인증기관이 데이터 기본법 제20조에 근거해 데이터 내용과 데이터 관리체계를 진단하고 수준을 평가해 품질을 인증하는 제도.",
+  "keywords": [
+   "법적 근거: 데이터 기본법 제20조, 제20조의3~5, 시행규칙 제4조의2·3",
+   "인증 대상: 데이터 내용(값) · 데이터 관리체계",
+   "데이터 내용 인증: Complex·Normal·Simple-Type 유형, A·B·C Class 등급",
+   "정형 필수 지표: 완전성 · 유효성 · 일관성",
+   "비정형 필수 지표: 완전성 · 유효성 · 정확성 · 유일성",
+   "관리체계 인증: ISO/IEC 33020·8000-61 기반 Level 2~5",
+   "기대효과: 비용 절감 · 의사결정 효과성 · 관리 체계 정비 · 신뢰도 향상"
+  ],
+  "keywords_must": [
+   "데이터 기본법 제20조",
+   "데이터 내용 인증",
+   "데이터 관리체계 인증",
+   "완전성(Completeness)",
+   "유효성(Validity)",
+   "일관성(Consistency)",
+   "정확성(Accuracy)",
+   "유일성(Uniqueness)",
+   "A·B·C Class 등급",
+   "관리체계 Level 2~5"
+  ],
+  "keywords_ref": [
+   "ISO/IEC 33020",
+   "ISO/IEC 8000-61",
+   "Complex·Normal·Simple-Type",
+   "DQC(Database Quality Certification)"
+  ],
+  "outline": [
+   "데이터 품질·신뢰성 확보 제도",
+   "- 데이터 기본법 근거",
+   "인증 항목 구성",
+   "- 데이터 내용 인증",
+   "- 데이터 관리체계 인증",
+   "기대효과"
+  ],
+  "sections": [
+   {
+    "title": "데이터 품질·신뢰성 확보 제도",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "인증 주체: 과기정통부 지정 품질인증기관",
+       "인증 기준: 완전성·유효성·일관성·정확성·보안성·유용성·접근성·적시성·다양성·유일성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "인증 항목 구성",
+    "subsections": [
+     {
+      "title": "데이터 내용 인증",
+      "items": [
+       "인증 유형: 구조·관리 특성과 복잡도에 따라 Complex·Normal·Simple-Type, 필수·선택 지표 구분",
+       "심사 등급: 품질 수준에 따라 A·B·C Class 판정",
+       "정형 데이터: 테이블·컬럼 심사, 필수 완전성·유효성·일관성",
+       "비정형 데이터: 객체·메타데이터·반정형(XML·JSON) 심사, 필수 완전성·유효성·정확성·유일성"
+      ]
+     },
+     {
+      "title": "데이터 관리체계 인증",
+      "items": [
+       "관리체계: 데이터 표준·품질·구조·연계의 업무 기능·조직·프로세스·제도 정립",
+       "인증 등급: ISO/IEC 33020 기반 5단계 성숙도 중 Level 2(관리)부터 부여",
+       "성숙도: 도입(1) → 관리(2) → 체계화(3) → 예측화(4) → 혁신화(5)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기대효과",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "비용 절감: 데이터 오류로 인한 불필요 비용 예방",
+       "의사결정 효과성: 분석 품질 향상",
+       "관리 체계 정비: 정책·조직·프로세스·절차 재정립",
+       "신뢰도 향상: 시장에서 조직 신뢰도·인지도 제고"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "데이터 기본법 제20조",
+   "데이터 내용 인증",
+   "데이터 관리체계 인증",
+   "완전성(Completeness)",
+   "유효성(Validity)",
+   "일관성(Consistency)",
+   "정확성(Accuracy)",
+   "유일성(Uniqueness)",
+   "A·B·C Class 등급",
+   "관리체계 Level 2~5"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_147_01",
+  "code": "DB_147_01",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "데이터 표준화(Data Standardization)",
+  "subtitle": "",
+  "name": "데이터 표준화(Data Standardization)",
+  "en": "Data Standardization",
+  "definition": "시스템별로 산재한 데이터 정보 요소의 명칭·정의·형식·규칙에 대한 원칙을 수립해 전사적으로 적용함으로써 데이터의 정확한 의미를 공유하고 상반된 시각을 조정하는 활동.",
+  "keywords": [
+   "표준화 요소: 데이터 명칭 · 데이터 정의 · 데이터 형식 · 데이터 규칙",
+   "필요성(운영): 데이터 불일치 · 의미 파악 지연(적시성 결여)",
+   "필요성(처리): 데이터 통합 어려움 · 시스템 변경·유지보수 곤란",
+   "기대효과(품질·연계): 일관성 확보 · 품질 향상 · 통합 용이성 · 상호운용성",
+   "기대효과(기업·컴플라이언스): 비용 절감 · 전략 강화 · 법적 규정 준수 · 보안 강화"
+  ],
+  "keywords_must": [
+   "데이터 명칭(Data Name)",
+   "데이터 정의(Data Definition)",
+   "데이터 형식(Data Format)",
+   "데이터 규칙(Data Rule)",
+   "데이터 불일치",
+   "적시성 결여",
+   "데이터 일관성 확보",
+   "상호운용성(Interoperability)",
+   "컴플라이언스 준수"
+  ],
+  "keywords_ref": [
+   "표준 용어·단어·도메인·코드",
+   "메타데이터 관리시스템",
+   "DQC 인증",
+   "전사 DW 통합"
+  ],
+  "outline": [
+   "데이터 중심 경영의 기반",
+   "- 명칭부터 규칙까지 4대 표준 요소",
+   "표준화 부재의 문제",
+   "- 운영: 불일치·의미 파악 지연",
+   "- 처리: 통합·유지보수 곤란",
+   "기대효과"
+  ],
+  "sections": [
+   {
+    "title": "데이터 중심 경영의 기반",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 명칭: 기업 내 데이터를 유일하게 구별하는 이름",
+       "데이터 정의: 데이터 의미 범위와 자격 요건 규정",
+       "데이터 형식: 표현 형태 정의로 입력 오류·통제 위험 최소화",
+       "데이터 규칙: 허용 값을 사전 정의해 입력 오류 최소화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "표준화 부재의 문제",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 불일치: 동일 의미 데이터를 다른 명칭으로 중복 관리",
+       "의미 파악 지연: 신규·변경 요건 시 필요한 데이터 파악에 시간 낭비",
+       "통합 어려움: 전사 DW 구축 시 의미·중복 여부 파악 곤란",
+       "유지보수 곤란: 시스템 변경 시 기존 데이터 활용 가능 여부 판단 어려움"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기대효과",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "품질 측면: 일관성 확보로 비교·분석·의사결정 지원, 오류·불일치 감소",
+       "연계 측면: 형식·구조 일치로 통합 용이, 업계 표준 준수로 상호운용성 향상",
+       "기업 측면: 관리·유지보수 비용 절감, 경쟁우위 확보",
+       "컴플라이언스 측면: GDPR·개인정보 규정 준수, 민감 데이터 보호"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "데이터 명칭(Data Name)",
+   "데이터 정의(Data Definition)",
+   "데이터 형식(Data Format)",
+   "데이터 규칙(Data Rule)",
+   "데이터 불일치",
+   "적시성 결여",
+   "데이터 일관성 확보",
+   "상호운용성(Interoperability)",
+   "컴플라이언스 준수"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_147_2",
+  "code": "DB_147_2",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "공공데이터베이스 표준화 관리(Public Database Standardization)",
+  "subtitle": "",
+  "name": "공공데이터베이스 표준화 관리(Public Database Standardization)",
+  "en": "Public Database Standardization Management",
+  "definition": "공공기관의 데이터베이스 표준화 지침에 따라 데이터 표준을 관리하고, 정보시스템 구축·컨설팅 사업의 계획 단계부터 4개 진단영역 점검항목을 사전 반영하는 예방적 품질관리 체계.",
+  "keywords": [
+   "지침 개정: 관리항목 유연성 강화 · 비표준데이터 관리체계(제8조 제5항) · 메타정보 관리항목 정비(43 → 38개) · 용어 정의 추가 · 관리시스템 현행화",
+   "구축 사업 5단계: 계획 → 발주 → 설계 → 개발 → 완료",
+   "컨설팅 사업 5단계: 계획 → 발주 → 현황분석 → 목표시스템 정의 → 이행 계획",
+   "예방적 품질관리: 4개 진단영역 · 9개 진단항목 · 18개 진단기준",
+   "4개 진단영역: 데이터 표준 · 데이터 구조 · 데이터 값 · 데이터 관리체계"
+  ],
+  "keywords_must": [
+   "공공기관의 데이터베이스 표준화 지침",
+   "비표준데이터 매핑 관리",
+   "메타정보 관리항목(38개)",
+   "예방적 품질관리(Preventive Quality Management)",
+   "계획·발주·설계·개발·완료 단계",
+   "4개 진단영역·9개 진단항목",
+   "데이터 표준·구조·값·관리체계",
+   "이관 데이터 값 검증"
+  ],
+  "keywords_ref": [
+   "ISP·ISMP 사업",
+   "중앙 메타데이터 관리시스템",
+   "공통표준·기관표준",
+   "표준관리 통합시스템"
+  ],
+  "outline": [
+   "DB 표준화 지침 개정 내용",
+   "단계별 예방적 품질관리 활동",
+   "- 구축 사업과 컨설팅 사업 단계",
+   "4개 진단영역과 9개 진단항목"
+  ],
+  "sections": [
+   {
+    "title": "DB 표준화 지침 개정 내용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "관리항목 유연성: 표준 산출물과 별지·별표 관리항목 일치",
+       "비표준데이터: 운영 DB의 비표준데이터를 표준 데이터와 매핑·관리",
+       "메타정보: 공통항목 중심으로 43개에서 38개로 정비",
+       "현행화: 표준관리 통합시스템·메타데이터 관리시스템 기능에 맞게 조항 조정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "단계별 예방적 품질관리 활동",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "계획: ISP·ISMP로 기능·서비스와 품질 개선 과제 정의",
+       "발주: 표준·구조·값·연계 개선과제를 요구사항으로 도출, 과업 확정",
+       "설계: 운영 단계까지 품질이 유지되는 유연한 구조 설계",
+       "개발: 시나리오 테스트로 오류 수정, 데이터 완성도 향상",
+       "완료: 이관 시 데이터 완결성 확보, 관리체계 점검"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "4개 진단영역과 9개 진단항목",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 표준: 표준화 및 상위표준 준수 · 표준 관리",
+       "데이터 구조: 구조 설계 · 구조 검증 · 구조 관리",
+       "데이터 값: 값 검증 · 이관 데이터 값 검증",
+       "데이터 관리체계: 품질관리 체계 · 개방 및 메타데이터 관리체계"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "공공기관의 데이터베이스 표준화 지침",
+   "비표준데이터 매핑 관리",
+   "메타정보 관리항목(38개)",
+   "예방적 품질관리(Preventive Quality Management)",
+   "계획·발주·설계·개발·완료 단계",
+   "4개 진단영역·9개 진단항목",
+   "데이터 표준·구조·값·관리체계",
+   "이관 데이터 값 검증"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
  },
  {
   "id": "DB_160",
