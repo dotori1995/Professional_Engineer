@@ -3,80 +3,100 @@
     "name": "PMBOK 7판(PMBOK Guide 7th Edition)",
     "en": "PMBOK Guide 7th Edition",
     "title": "PMBOK 7판(PMBOK Guide 7th Edition)",
-    "definition": "프로세스 중심(PMBOK 6)에서 원칙·성과 중심으로 전환해, 8개 성과 영역과 12개 프로젝트 관리 원칙으로 이해관계자에게 가치를 제공하는 PMI 표준 가이드",
+    "definition": "PMI가 2021년 발간한 프로젝트 관리 지식체계로, 6판의 프로세스·ITTO 중심에서 벗어나 가치 전달 시스템 관점의 12가지 원칙과 8가지 성과 영역 중심으로 재구성한 원칙 기반 표준",
     "outline": [
-      "PMBOK 7의 개념",
-      "- 정의",
-      "- 6판과의 차이",
-      "8개 성과 영역(Performance Domains)",
-      "12개 프로젝트 관리 원칙"
+      "7판 등장 배경",
+      "- 변화 요인",
+      "성과 영역과 원칙",
+      "- 8개 성과 영역",
+      "- 12원칙",
+      "6판과 비교",
+      "- 6판 대비"
     ],
     "keywords_must": [
-      "성과 영역(Performance Domain)",
-      "프로젝트 관리 원칙(12 Principles)",
-      "가치 제공(Value Delivery)",
-      "이해관계자(Stakeholders)",
-      "팀(Team)",
-      "개발 접근법·수명주기(Development Approach & Life Cycle)",
-      "기획(Planning)",
-      "프로젝트 업무(Project Work)",
-      "인도(Delivery)",
-      "측정(Measurement)",
-      "불확실성(Uncertainty)"
+      "가치 전달 시스템(Value Delivery System)",
+      "12원칙(Principles)",
+      "8개 성과 영역(Performance Domains)",
+      "이해관계자",
+      "팀",
+      "개발 접근법·생애주기",
+      "기획",
+      "프로젝트 작업",
+      "인도",
+      "측정",
+      "불확실성"
     ],
     "keywords_ref": [
-      "테일링(Tailoring)",
-      "시스템 사고(Systems Thinking)",
-      "품질(Quality)",
-      "복잡성(Complexity)",
-      "위험(Risk)",
-      "적응가능성·회복탄력성(Adaptability & Resiliency)"
+      "12원칙: 스튜어드십·가치 중심·시스템 사고·테일러링·복원력",
+      "모델·방법·산출물(Models, Methods, Artifacts)",
+      "예측형·적응형·하이브리드",
+      "PMIstandards+",
+      "6판 49개 프로세스·10개 지식 영역 → 7판 원칙",
+      "8판(2025) 7원칙·7성과 영역·40프로세스 재도입"
     ],
     "keywords": [
-      "성과 영역: 이해관계자 · 팀 · 개발접근법·수명주기 · 기획 · 프로젝트업무 · 인도 · 측정 · 불확실성",
-      "12원칙: 청지기 · 팀 · 이해관계자 · 가치 · 시스템사고 · 리더십 · 테일링 · 품질 · 복잡성 · 위험 · 적응·회복 · 변화",
-      "6판 대비: 프로세스 그룹 → 원칙·성과 중심",
-      "가치 제공 시스템(Value Delivery System)"
+      "구조: 가치 전달 시스템(Value Delivery System) · 12원칙(Principles) · 8개 성과 영역(Performance Domains)",
+      "8개 성과 영역: 이해관계자 · 팀 · 개발 접근법·생애주기 · 기획 · 프로젝트 작업 · 인도 · 측정 · 불확실성"
     ],
     "sections": [
       {
-        "title": "PMBOK 7의 개념",
+        "title": "7판 등장 배경",
         "subsections": [
           {
-            "title": "정의",
+            "title": "변화 요인",
             "items": [
-              "조직과 이해관계자에게 가치를 제공하기 위한 프로젝트 관리의 원칙·성과 영역 가이드 (PMI)"
+              "애자일·하이브리드 확산",
+              "산출물보다 가치·성과 중시",
+              "프로세스 규범 대신 원칙 기반 테일러링"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "성과 영역과 원칙",
+        "subsections": [
+          {
+            "title": "8개 성과 영역",
+            "items": [
+              "이해관계자: 참여·관계",
+              "팀: 리더십·문화",
+              "개발 접근법: 예측·적응형 선택",
+              "기획",
+              "프로젝트 작업",
+              "인도: 가치·품질",
+              "측정: 성과 지표",
+              "불확실성: 리스크·모호성"
             ]
           },
           {
-            "title": "6판과의 차이",
+            "title": "12원칙",
             "items": [
-              "6판: 5개 프로세스 그룹·10개 지식영역·49개 프로세스",
-              "7판: 12원칙 + 8성과 영역, 다양한 개발 접근법(예측·애자일·하이브리드) 수용"
+              "스튜어드십",
+              "팀",
+              "이해관계자",
+              "가치",
+              "시스템 사고",
+              "리더십",
+              "테일러링",
+              "품질",
+              "복잡성",
+              "리스크",
+              "적응성·복원력",
+              "변화 관리"
             ]
           }
         ]
       },
       {
-        "title": "8개 성과 영역",
+        "title": "6판과 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "6판 대비",
             "items": [
-              "이해관계자 · 팀 · 개발 접근법과 수명주기 · 기획 · 프로젝트 업무 · 인도 · 측정 · 불확실성",
-              "각 영역은 원하는 성과(Outcome)를 정의하고 상호작용함"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "12개 프로젝트 관리 원칙",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "청지기 의식, 협력적 팀, 이해관계자 참여, 가치 집중, 시스템 사고, 리더십",
-              "테일링, 품질 내재화, 복잡성 탐색, 위험 최적화, 적응·회복탄력성, 변화 수용"
+              "기준: 프로세스(ITTO) vs 원칙·성과",
+              "구조: 5개 프로세스 그룹·10개 지식 영역 vs 8개 성과 영역",
+              "초점: 산출물 vs 가치 전달",
+              "방법론: 예측형 중심 vs 모든 접근법"
             ]
           }
         ]
@@ -88,98 +108,93 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "성과 영역(Performance Domain)",
-      "프로젝트 관리 원칙(12 Principles)",
-      "가치 제공(Value Delivery)",
-      "이해관계자(Stakeholders)",
-      "팀(Team)",
-      "개발 접근법·수명주기(Development Approach & Life Cycle)",
-      "기획(Planning)",
-      "프로젝트 업무(Project Work)",
-      "인도(Delivery)",
-      "측정(Measurement)",
-      "불확실성(Uncertainty)"
+      "가치 전달 시스템(Value Delivery System)",
+      "12원칙(Principles)",
+      "8개 성과 영역(Performance Domains)",
+      "이해관계자",
+      "팀",
+      "개발 접근법·생애주기",
+      "기획",
+      "프로젝트 작업",
+      "인도",
+      "측정",
+      "불확실성"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_002": {
-    "name": "비용편익분석(BCR, Benefit-Cost Ratio)",
+    "name": "비용편익비율(BCR, Benefit-Cost Ratio)",
     "en": "Benefit-Cost Ratio",
-    "title": "비용편익분석(BCR, Benefit-Cost Ratio)",
-    "definition": "사업·투자 타당성을 판단하는 재무 지표로, 편익의 현재가치를 비용의 현재가치로 나눈 비율(BCR ≥ 1이면 경제성 있음)",
+    "title": "비용편익비율(BCR, Benefit-Cost Ratio)",
+    "definition": "프로젝트 기간 동안 발생하는 편익의 현재가치 합을 비용의 현재가치 합으로 나눈 비율로, 1보다 크면 경제성이 있다고 판단하는 투자 평가 지표",
     "outline": [
-      "비용편익분석의 개념",
-      "- 정의",
-      "- 산식",
-      "판정 기준과 활용",
-      "다른 재무 지표와 비교"
+      "경제성 평가 지표",
+      "- 주요 특징",
+      "계산과 판단",
+      "- 계산",
+      "다른 지표와 비교",
+      "- 비교"
     ],
     "keywords_must": [
-      "편익-비용 비율(BCR, Benefit-Cost Ratio)",
-      "현재가치(Present Value)",
-      "비즈니스 케이스(Business Case)",
-      "타당성 분석(Feasibility Analysis)",
-      "편익(Benefit)",
-      "비용(Cost)",
+      "BCR = Σ편익 현재가치 / Σ비용 현재가치",
       "할인율(Discount Rate)",
-      "BCR ≥ 1 판정"
+      "현재가치(PV)",
+      "BCR > 1 투자 타당",
+      "BCR = 1 손익분기",
+      "BCR < 1 기각"
     ],
     "keywords_ref": [
-      "순현재가치(NPV, Net Present Value)",
-      "내부수익률(IRR, Internal Rate of Return)",
-      "투자회수기간(Payback Period)",
-      "ROI(Return on Investment)",
-      "기회비용(Opportunity Cost)"
+      "예비타당성조사(B/C 분석)",
+      "NPV·IRR과 함께 사용",
+      "규모 다른 사업 비교 시 NPV 병행",
+      "무형 편익 화폐화 어려움",
+      "할인율 민감도"
     ],
     "keywords": [
-      "산식: BCR = PV(편익) / PV(비용)",
-      "판정: BCR ≥ 1 → 채택 검토",
-      "용도: 비즈니스 케이스·공공사업 타당성",
-      "한계: 규모 무시(비율만 봄)"
+      "공식: BCR = Σ편익 현재가치 / Σ비용 현재가치 · 할인율(Discount Rate) · 현재가치(PV)",
+      "판단: BCR > 1 투자 타당 · BCR = 1 손익분기 · BCR < 1 기각"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "경제성 평가 지표",
         "subsections": [
           {
-            "title": "정의",
+            "title": "주요 특징",
             "items": [
-              "편익의 현재가치를 비용의 현재가치로 나눈 비율로 투자 경제성을 비교"
-            ]
-          },
-          {
-            "title": "산식",
-            "items": [
-              "BCR = Σ PV(Benefit) / Σ PV(Cost)"
+              "화폐 가치로 편익·비용 비교",
+              "비율 지표라 사업 규모 무관 비교",
+              "공공 사업 타당성 판단에 널리 사용"
             ]
           }
         ]
       },
       {
-        "title": "판정·활용",
+        "title": "계산과 판단",
         "subsections": [
           {
-            "title": null,
+            "title": "계산",
             "items": [
-              "BCR > 1: 편익이 비용보다 큼",
-              "복수 대안 비교 시 비율이 큰 안을 우선 검토",
-              "규모가 다른 안은 NPV와 함께 판단"
+              "편익·비용 현금흐름 추정",
+              "할인율로 현재가치 환산",
+              "편익 PV 합 ÷ 비용 PV 합",
+              "1 초과 시 채택"
             ]
           }
         ]
       },
       {
-        "title": "비교",
+        "title": "다른 지표와 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "비교",
             "items": [
-              "NPV: 절대 금액 차이",
-              "IRR: 수익률(%)",
-              "Payback: 회수 기간"
+              "NPV: 절대 금액",
+              "IRR: 수익률",
+              "PP: 회수 기간",
+              "BCR: 효율 비율, 상호 배타 사업은 NPV 우선"
             ]
           }
         ]
@@ -191,70 +206,75 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "편익-비용 비율(BCR, Benefit-Cost Ratio)",
-      "현재가치(Present Value)",
-      "비즈니스 케이스(Business Case)",
-      "타당성 분석(Feasibility Analysis)",
-      "편익(Benefit)",
-      "비용(Cost)",
+      "BCR = Σ편익 현재가치 / Σ비용 현재가치",
       "할인율(Discount Rate)",
-      "BCR ≥ 1 판정"
+      "현재가치(PV)",
+      "BCR > 1 투자 타당",
+      "BCR = 1 손익분기",
+      "BCR < 1 기각"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_003": {
     "name": "투자회수기간(PP, Payback Period)",
     "en": "Payback Period",
     "title": "투자회수기간(PP, Payback Period)",
-    "definition": "투자한 현금을 모두 회수하는 데 걸리는 기간. 짧을수록 유동성·위험 측면에서 유리하나 화폐의 시간가치를 반영하지 않는 단순법이 흔함",
+    "definition": "프로젝트에 투자한 초기 비용을 사업에서 발생하는 순현금유입으로 모두 회수하는 데 걸리는 기간으로, 짧을수록 위험이 낮고 유리하다고 판단하는 투자 평가 지표",
     "outline": [
-      "투자회수기간의 개념",
-      "- 정의",
-      "- 산정 방법",
+      "회수 기간 개념",
+      "- 활용",
+      "계산 방법",
+      "- 계산",
       "장단점",
-      "손익분기점과의 관계"
+      "- 장단점"
     ],
     "keywords_must": [
-      "투자회수기간(Payback Period)",
-      "누적 현금흐름(Cumulative Cash Flow)",
-      "초기 투자(Initial Investment)",
-      "단순 회수기간(Simple Payback)",
-      "할인 회수기간(Discounted Payback)",
-      "유동성(Liquidity)",
-      "위험(Risk)",
-      "손익분기점(BEP, Break-Even Point)"
+      "회수기간 = 초기 투자액 / 연간 순현금유입(균등 시)",
+      "누적 현금흐름 = 0 시점",
+      "단순 회수기간(Simple)",
+      "할인 회수기간(Discounted PP)",
+      "목표 회수기간 이내 채택",
+      "짧을수록 유리"
     ],
     "keywords_ref": [
-      "순현재가치(NPV)",
-      "내부수익률(IRR)",
-      "비용편익분석(BCR)",
-      "자본 비용(Cost of Capital)",
-      "회수 후 현금흐름 무시"
+      "계산 간단·유동성 판단",
+      "화폐의 시간 가치 무시(단순)",
+      "회수 이후 현금흐름 무시",
+      "NPV·IRR 보완",
+      "손익분기점(BEP)과 구분"
     ],
     "keywords": [
-      "정의: 초기투자 회수까지 기간",
-      "단순/할인 회수기간",
-      "짧을수록 선호(유동성·위험)",
-      "한계: 회수 이후 수익·시간가치(단순법)"
+      "공식: 회수기간 = 초기 투자액 / 연간 순현금유입(균등 시) · 누적 현금흐름 = 0 시점",
+      "유형: 단순 회수기간(Simple) · 할인 회수기간(Discounted PP)",
+      "판단: 목표 회수기간 이내 채택 · 짧을수록 유리"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "회수 기간 개념",
         "subsections": [
           {
-            "title": "정의",
+            "title": "활용",
             "items": [
-              "투자금을 회수하는 데 필요한 기간"
+              "불확실성 큰 IT 투자의 위험 판단",
+              "자금 유동성 검토",
+              "1차 선별 기준"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "title": "계산 방법",
+        "subsections": [
           {
-            "title": "산정",
+            "title": "계산",
             "items": [
-              "단순: 누적 현금흐름이 0 이상이 되는 시점",
-              "할인: 할인된 현금흐름 기준"
+              "연도별 순현금흐름 누적",
+              "누적값이 0이 되는 시점 보간",
+              "예: 투자 1,000·연 400 유입 → 2.5년",
+              "할인 PP는 현재가치 기준 누적"
             ]
           }
         ]
@@ -263,28 +283,10 @@
         "title": "장단점",
         "subsections": [
           {
-            "title": "장점",
+            "title": "장단점",
             "items": [
-              "계산 간단, 유동성·위험 직관적"
-            ]
-          },
-          {
-            "title": "단점",
-            "items": [
-              "회수 이후 현금흐름 무시",
-              "단순법은 시간가치 미반영"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "관련 개념",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "BEP: 손익이 0이 되는 조업·매출 수준",
-              "PP는 투자 현금 회수에 초점"
+              "장점: 이해 쉬움·위험 지표",
+              "단점: 시간 가치 무시(단순)·회수 후 수익 무시·수익성 판단 불가"
             ]
           }
         ]
@@ -296,94 +298,89 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "투자회수기간(Payback Period)",
-      "누적 현금흐름(Cumulative Cash Flow)",
-      "초기 투자(Initial Investment)",
-      "단순 회수기간(Simple Payback)",
-      "할인 회수기간(Discounted Payback)",
-      "유동성(Liquidity)",
-      "위험(Risk)",
-      "손익분기점(BEP, Break-Even Point)"
+      "회수기간 = 초기 투자액 / 연간 순현금유입(균등 시)",
+      "누적 현금흐름 = 0 시점",
+      "단순 회수기간(Simple)",
+      "할인 회수기간(Discounted PP)",
+      "목표 회수기간 이내 채택",
+      "짧을수록 유리"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_004": {
     "name": "내부수익률(IRR, Internal Rate of Return)",
     "en": "Internal Rate of Return",
     "title": "내부수익률(IRR, Internal Rate of Return)",
-    "definition": "투자안의 순현재가치(NPV)를 0으로 만드는 할인율. 비율(%)로 표시되며, 자본비용(또는 요구수익률)보다 크면 채택을 검토",
+    "definition": "투자로 발생하는 현금유입의 현재가치 합과 현금유출의 현재가치 합을 같게 만드는, 즉 NPV를 0으로 만드는 할인율로서 프로젝트의 기대 수익률을 나타내는 지표",
     "outline": [
-      "IRR의 개념",
-      "- 정의",
-      "- 의미",
-      "판정 기준",
-      "한계와 주의점"
+      "수익률 기반 평가",
+      "- 투자 가치 판단",
+      "공식과 계산",
+      "- 계산",
+      "NPV 비교",
+      "- 비교 항목"
     ],
     "keywords_must": [
-      "내부수익률(IRR, Internal Rate of Return)",
-      "순현재가치(NPV = 0)",
-      "할인율(Discount Rate)",
-      "자본비용(Cost of Capital)",
-      "요구수익률(Hurdle Rate)",
-      "현금흐름(Cash Flow)",
-      "투자 의사결정(Investment Decision)",
-      "비율 지표(Rate Metric)"
+      "ΣPV(현금유입) = ΣPV(현금유출)",
+      "NPV = 0이 되는 할인율",
+      "IRR > 자본비용(요구수익률, 허들 레이트) 채택",
+      "높을수록 우선",
+      "IRR은 IRR로 재투자",
+      "NPV는 자본비용으로 재투자"
     ],
     "keywords_ref": [
-      "순현재가치(NPV)",
-      "수정 IRR(MIRR, Modified IRR)",
-      "수익성 지수(PI, Profitability Index)",
-      "복수 IRR(Multiple IRR)",
-      "상호배타적 대안(Mutually Exclusive)"
+      "시행착오·보간법 계산",
+      "복수 IRR(현금흐름 부호 다회 변경)",
+      "수정 내부수익률(MIRR)",
+      "상호 배타 사업 순위 충돌 시 NPV 우선",
+      "규모 미반영"
     ],
     "keywords": [
-      "정의: NPV=0인 할인율",
-      "판정: IRR ≥ 자본비용 → 채택 검토",
-      "NPV와 순위가 어긋날 수 있음",
-      "비정상 현금흐름 → 복수 IRR"
+      "공식: ΣPV(현금유입) = ΣPV(현금유출) · NPV = 0이 되는 할인율",
+      "판단: IRR > 자본비용(요구수익률, 허들 레이트) 채택 · 높을수록 우선",
+      "재투자율 가정: IRR은 IRR로 재투자 · NPV는 자본비용으로 재투자"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "수익률 기반 평가",
         "subsections": [
           {
-            "title": "정의",
+            "title": "투자 가치 판단",
             "items": [
-              "미래 현금유입의 PV와 유출의 PV를 같게 만드는 할인율"
-            ]
-          },
-          {
-            "title": "의미",
-            "items": [
-              "그 투자안이 벌어들이는 기대 수익률"
+              "IRR이 높을수록 수익성 큼",
+              "자본비용 초과 시 가치 창출",
+              "우선 선택 기준"
             ]
           }
         ]
       },
       {
-        "title": "판정",
+        "title": "공식과 계산",
         "subsections": [
           {
-            "title": null,
+            "title": "계산",
             "items": [
-              "IRR ≥ 자본비용(또는 요구수익률)이면 경제성 있음",
-              "독립안: 기준 이상이면 채택",
-              "상호배타: NPV와 함께 판단"
+              "연도별 현금흐름 CFₜ",
+              "Σ CFₜ/(1+IRR)ᵗ − 초기 투자 = 0",
+              "엑셀 IRR 함수·보간법"
             ]
           }
         ]
       },
       {
-        "title": "한계",
+        "title": "NPV 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "비교 항목",
             "items": [
-              "규모·재투자 가정 차이로 NPV와 순위 불일치 가능",
-              "부호가 여러 번 바뀌면 복수 IRR"
+              "개념: 수익률(%) vs 순이익 금액",
+              "재투자 가정: IRR vs 자본비용",
+              "규모: 미반영 vs 반영",
+              "해: 복수 가능 vs 유일",
+              "상충 시 NPV 기준 선택"
             ]
           }
         ]
@@ -395,94 +392,89 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "내부수익률(IRR, Internal Rate of Return)",
-      "순현재가치(NPV = 0)",
-      "할인율(Discount Rate)",
-      "자본비용(Cost of Capital)",
-      "요구수익률(Hurdle Rate)",
-      "현금흐름(Cash Flow)",
-      "투자 의사결정(Investment Decision)",
-      "비율 지표(Rate Metric)"
+      "ΣPV(현금유입) = ΣPV(현금유출)",
+      "NPV = 0이 되는 할인율",
+      "IRR > 자본비용(요구수익률, 허들 레이트) 채택",
+      "높을수록 우선",
+      "IRR은 IRR로 재투자",
+      "NPV는 자본비용으로 재투자"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_005": {
     "name": "순현재가치(NPV, Net Present Value)",
     "en": "Net Present Value",
     "title": "순현재가치(NPV, Net Present Value)",
-    "definition": "미래 현금흐름을 할인율로 현재가치화한 합에서 초기 투자를 뺀 값. NPV ≥ 0이면 가치 창출, 같은 조건이면 NPV가 큰 안을 선호",
+    "definition": "프로젝트 기간의 현금유입 현재가치 합에서 현금유출(초기 투자 포함) 현재가치 합을 뺀 값으로, 0보다 크면 투자 가치가 있다고 판단하는 대표적 할인 현금흐름(DCF) 평가 지표",
     "outline": [
-      "NPV의 개념",
-      "- 정의",
-      "- 산식",
-      "판정 기준",
-      "다른 지표와의 비교"
+      "현재가치 평가 개념",
+      "- 주요 특징",
+      "계산 방법",
+      "- 계산",
+      "계산 예시",
+      "- 예시"
     ],
     "keywords_must": [
-      "순현재가치(NPV, Net Present Value)",
-      "현재가치(Present Value)",
-      "할인율(Discount Rate)",
-      "현금흐름(Cash Flow)",
-      "초기 투자(Initial Investment)",
-      "화폐의 시간가치(Time Value of Money)",
-      "NPV ≥ 0 판정",
-      "자본비용(Cost of Capital)"
+      "NPV = Σ CFₜ/(1+r)ᵗ − C₀",
+      "할인율 r(자본비용)",
+      "현재가치 PV(Present Value) = FV(Future Value)/(1+r)ⁿ",
+      "NPV > 0 채택",
+      "NPV < 0 기각",
+      "상호 배타 시 NPV 큰 것"
     ],
     "keywords_ref": [
-      "내부수익률(IRR)",
-      "비용편익분석(BCR)",
-      "투자회수기간(Payback Period)",
-      "수익성 지수(PI)",
-      "잔존가치(Terminal Value)"
+      "화폐의 시간 가치 반영",
+      "가치 가산 원칙",
+      "할인율 결정 어려움",
+      "IRR·BCR·PP와 비교",
+      "TCO·ROI",
+      "민감도 분석"
     ],
     "keywords": [
-      "산식: NPV = Σ CFt/(1+r)^t − I0",
-      "판정: NPV ≥ 0 채택 검토",
-      "절대 금액으로 규모 반영",
-      "할인율 가정이 결과에 민감"
+      "공식: NPV = Σ CFₜ/(1+r)ᵗ − C₀ · 할인율 r(자본비용) · 현재가치 PV(Present Value) = FV(Future Value)/(1+r)ⁿ",
+      "판단: NPV > 0 채택 · NPV < 0 기각 · 상호 배타 시 NPV 큰 것"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "현재가치 평가 개념",
         "subsections": [
           {
-            "title": "정의",
+            "title": "주요 특징",
             "items": [
-              "할인된 순현금흐름의 합 − 초기투자"
-            ]
-          },
-          {
-            "title": "산식",
-            "items": [
-              "NPV = Σ (CFt / (1+r)^t) − I0"
+              "시간 가치 반영",
+              "절대 금액으로 기업 가치 증가분 표시",
+              "할인율에 민감",
+              "여러 사업 합산 가능"
             ]
           }
         ]
       },
       {
-        "title": "판정",
+        "title": "계산 방법",
         "subsections": [
           {
-            "title": null,
+            "title": "계산",
             "items": [
-              "NPV > 0: 가치 창출",
-              "NPV = 0: 자본비용만큼 회수",
-              "복수 대안: NPV 최대안 우선"
+              "연도별 현금흐름 추정",
+              "할인율 결정(WACC)",
+              "각 연도 현재가치 환산·합산",
+              "초기 투자 차감"
             ]
           }
         ]
       },
       {
-        "title": "비교",
+        "title": "계산 예시",
         "subsections": [
           {
-            "title": null,
+            "title": "예시",
             "items": [
-              "IRR·BCR은 비율, NPV는 절대액",
-              "상호배타적 대형 투자는 NPV가 의사결정에 유리"
+              "투자 1,000, 3년간 매년 400 유입, r=10%",
+              "PV = 364+331+301 = 996",
+              "NPV = −4 → 기각(근소)"
             ]
           }
         ]
@@ -494,91 +486,102 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "순현재가치(NPV, Net Present Value)",
-      "현재가치(Present Value)",
-      "할인율(Discount Rate)",
-      "현금흐름(Cash Flow)",
-      "초기 투자(Initial Investment)",
-      "화폐의 시간가치(Time Value of Money)",
-      "NPV ≥ 0 판정",
-      "자본비용(Cost of Capital)"
+      "NPV = Σ CFₜ/(1+r)ᵗ − C₀",
+      "할인율 r(자본비용)",
+      "현재가치 PV(Present Value) = FV(Future Value)/(1+r)ⁿ",
+      "NPV > 0 채택",
+      "NPV < 0 기각",
+      "상호 배타 시 NPV 큰 것"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "DCF": "Discounted Cash Flow"
+    }
   },
   "PM_009": {
-    "name": "프로젝트 관리 지침(ISO 21500)",
-    "en": "ISO 21500",
-    "title": "프로젝트 관리 지침(ISO 21500)",
-    "definition": "프로젝트 관리의 개념·프로세스에 대한 국제 지침 표준(2012). 5개 프로세스 그룹과 10개 주제 그룹으로 구성되며 PMI PMBOK와 유사하게 정렬됨",
+    "name": "ISO 21500 프로젝트 관리 지침(ISO 21500)",
+    "en": "ISO 21500 Guidance on Project Management",
+    "title": "ISO 21500 프로젝트 관리 지침(ISO 21500)",
+    "definition": "ISO가 2012년 제정한 프로젝트 관리 국제 표준 지침으로, PMBOK 기반의 5개 프로세스 그룹과 10개 주제 그룹, 39개 프로세스로 프로젝트 관리 개념과 프로세스를 정의함",
     "outline": [
-      "ISO 21500의 개념",
-      "- 정의",
-      "- 구성",
-      "5개 프로세스 그룹",
-      "10개 주제 그룹"
+      "국제 표준 개요",
+      "- 의의",
+      "프로세스 그룹과 주제 그룹",
+      "- 프로세스 그룹",
+      "- 주제 그룹",
+      "범위 관리 활동",
+      "- 기획 단계"
     ],
     "keywords_must": [
-      "ISO 21500",
-      "프로세스 그룹(Process Groups)",
-      "주제 그룹(Subject Groups)",
       "착수(Initiating)",
       "기획(Planning)",
       "이행(Implementing)",
       "통제(Controlling)",
       "종료(Closing)",
-      "통합(Integration)"
+      "통합·이해관계자·범위·자원·일정·원가·리스크·품질·조달·의사소통",
+      "39개 프로세스"
     ],
     "keywords_ref": [
-      "이해관계자(Stakeholders)",
-      "범위·자원·시간·원가·위험·품질·조달·의사소통",
-      "PMBOK(Project Management Body of Knowledge)",
-      "ISO 21502(최신 관련 지침)"
+      "PMBOK 4판 기반",
+      "ISO 21502(2020, 실무 지침)·21503(프로그램)·21504(포트폴리오)로 확장",
+      "인증 표준 아님(지침)",
+      "국제 공통 용어",
+      "이해관계자를 주제 그룹으로 독립"
     ],
     "keywords": [
-      "구성: 본문 4장 + 부속서",
-      "프로세스 그룹 5: 착수·기획·이행·통제·종료",
-      "주제그룹 10: 통합·이해관계자·범위·자원·시간·원가·위험·품질·조달·의사소통",
-      "PMBOK와 개념 정렬"
+      "프로세스 그룹(5): 착수(Initiating) · 기획(Planning) · 이행(Implementing) · 통제(Controlling) · 종료(Closing)",
+      "주제 그룹(10): 통합·이해관계자·범위·자원·일정·원가·리스크·품질·조달·의사소통",
+      "규모: 39개 프로세스"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "국제 표준 개요",
         "subsections": [
           {
-            "title": "정의",
+            "title": "의의",
             "items": [
-              "프로젝트 관리 개념과 프로세스를 기술한 ISO 지침 표준"
+              "국가·산업 공통 프로젝트 관리 용어·프로세스",
+              "조직 간 협업 기준",
+              "PMBOK·PRINCE2와 정합"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "프로세스 그룹과 주제 그룹",
+        "subsections": [
+          {
+            "title": "프로세스 그룹",
+            "items": [
+              "착수: 헌장·PM 임명",
+              "기획: 계획 수립",
+              "이행: 작업 수행",
+              "통제: 성과 감시·변경 통제",
+              "종료: 인수·교훈"
             ]
           },
           {
-            "title": "구성",
+            "title": "주제 그룹",
             "items": [
-              "개념, 용어, 프로젝트 관리 핵심 개념, 프로세스"
+              "통합·이해관계자·범위·자원·일정·원가·리스크·품질·조달·의사소통"
             ]
           }
         ]
       },
       {
-        "title": "프로세스 그룹",
+        "title": "범위 관리 활동",
         "subsections": [
           {
-            "title": null,
+            "title": "기획 단계",
             "items": [
-              "착수 → 기획 → 이행 → 통제 → 종료"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "주제 그룹",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "통합, 이해관계자, 범위, 자원, 시간, 원가, 위험, 품질, 조달, 의사소통"
+              "범위 정의",
+              "WBS 작성",
+              "활동 정의",
+              "통제 단계: 범위 통제(변경 요청 처리)",
+              "WBS 활용: 일정·원가·의사소통 기준"
             ]
           }
         ]
@@ -590,101 +593,93 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "ISO 21500",
-      "프로세스 그룹(Process Groups)",
-      "주제 그룹(Subject Groups)",
       "착수(Initiating)",
       "기획(Planning)",
       "이행(Implementing)",
       "통제(Controlling)",
       "종료(Closing)",
-      "통합(Integration)"
+      "통합·이해관계자·범위·자원·일정·원가·리스크·품질·조달·의사소통",
+      "39개 프로세스"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_010": {
     "name": "프로젝트·프로그램·포트폴리오(Project, Program, Portfolio)",
-    "en": "Project, Program, Portfolio",
+    "en": "Project, Program and Portfolio",
     "title": "프로젝트·프로그램·포트폴리오(Project, Program, Portfolio)",
-    "definition": "일시적 고유 산출물을 만드는 프로젝트가 모이면 프로그램, 전략 목표에 맞춰 프로그램·프로젝트를 묶은 최상위가 포트폴리오",
+    "definition": "프로젝트는 고유한 결과물을 만드는 일시적 노력, 프로그램은 개별 관리로 얻을 수 없는 편익을 위해 연관 프로젝트를 조정 관리하는 묶음, 포트폴리오는 전략 목표 달성을 위한 프로젝트·프로그램·운영의 집합임",
     "outline": [
-      "계층 구조",
-      "- 프로젝트",
-      "- 프로그램",
-      "- 포트폴리오",
-      "관리 초점 비교",
-      "조직에서의 역할"
+      "관리 분류별 정의",
+      "- 정의 요지",
+      "개념도",
+      "- 관계",
+      "특성 비교",
+      "- 비교 항목"
     ],
     "keywords_must": [
-      "프로젝트(Project)",
-      "프로그램(Program)",
-      "포트폴리오(Portfolio)",
       "일시성(Temporary)",
-      "고유성(Unique)",
+      "유일성(Unique)",
+      "점진적 상세화(Progressive Elaboration)",
+      "산출물 중심",
+      "편익 실현(Benefits)",
+      "상호 의존 프로젝트 조정",
+      "프로그램 관리자",
       "전략 정렬(Strategic Alignment)",
-      "프로그램 관리(Program Management)",
-      "포트폴리오 관리(Portfolio Management)"
+      "우선순위·투자 선정",
+      "가치 극대화"
     ],
     "keywords_ref": [
       "PMO(Project Management Office)",
-      "비즈니스 가치(Business Value)",
-      "우선순위(Prioritization)",
-      "자원 배분(Resource Allocation)",
-      "편익 실현(Benefits Realization)"
+      "범위: 좁음→넓음",
+      "성공 기준: 일정·원가·품질 → 편익 → 투자 성과",
+      "변경: 통제 → 기대 관리 → 환경 변화 감시",
+      "ISO 21503·21504"
     ],
     "keywords": [
-      "계층: 프로젝트 < 프로그램 < 포트폴리오",
-      "프로젝트: 고유·일시적 산출물",
-      "프로그램: 관련 프로젝트 통합 편익",
-      "포트폴리오: 전략·우선순위·투자"
+      "프로젝트: 일시성(Temporary) · 유일성(Unique) · 점진적 상세화(Progressive Elaboration) · 산출물 중심",
+      "프로그램: 편익 실현(Benefits) · 상호 의존 프로젝트 조정 · 프로그램 관리자",
+      "포트폴리오: 전략 정렬(Strategic Alignment) · 우선순위·투자 선정 · 가치 극대화"
     ],
     "sections": [
       {
-        "title": "계층",
+        "title": "관리 분류별 정의",
         "subsections": [
           {
-            "title": "프로젝트",
+            "title": "정의 요지",
             "items": [
-              "정해진 기간에 고유 제품·서비스·결과를 창출"
-            ]
-          },
-          {
-            "title": "프로그램",
-            "items": [
-              "관련 프로젝트를 조정해 개별 합보다 큰 편익"
-            ]
-          },
-          {
-            "title": "포트폴리오",
-            "items": [
-              "전략 목표에 맞춰 프로그램·프로젝트를 선택·우선순위화"
+              "프로젝트 관리: 지식·기술을 적용해 요구사항 충족",
+              "프로그램 관리: 프로젝트 묶음을 중앙에서 통합 관리",
+              "포트폴리오 관리: 전략 목표 달성을 위해 선택·우선순위·자원 배분"
             ]
           }
         ]
       },
       {
-        "title": "관리 초점",
+        "title": "개념도",
         "subsections": [
           {
-            "title": null,
+            "title": "관계",
             "items": [
-              "프로젝트: 범위·일정·원가·품질",
-              "프로그램: 편익·의존성",
-              "포트폴리오: 투자·균형·전략"
+              "포트폴리오 ⊃ 프로그램 ⊃ 프로젝트",
+              "운영 업무도 포트폴리오에 포함",
+              "전략 → 포트폴리오 → 프로그램 → 프로젝트로 하향 정렬"
             ]
           }
         ]
       },
       {
-        "title": "조직",
+        "title": "특성 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "비교 항목",
             "items": [
-              "PMO·EPMO가 표준·가시성·우선순위를 지원"
+              "범위: 정의된 목표 vs 편익 범위 vs 조직 전략",
+              "변경: 통제 vs 수용·관리 vs 환경 감시",
+              "계획: 점진적 상세화 vs 상위 계획 vs 포트폴리오 프로세스",
+              "성공: 일정·원가·품질 vs 편익 vs 총 투자 성과"
             ]
           }
         ]
@@ -696,95 +691,104 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "프로젝트(Project)",
-      "프로그램(Program)",
-      "포트폴리오(Portfolio)",
       "일시성(Temporary)",
-      "고유성(Unique)",
+      "유일성(Unique)",
+      "점진적 상세화(Progressive Elaboration)",
+      "산출물 중심",
+      "편익 실현(Benefits)",
+      "상호 의존 프로젝트 조정",
+      "프로그램 관리자",
       "전략 정렬(Strategic Alignment)",
-      "프로그램 관리(Program Management)",
-      "포트폴리오 관리(Portfolio Management)"
+      "우선순위·투자 선정",
+      "가치 극대화"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_011": {
     "name": "프로젝트 관리자(Project Manager)",
     "en": "Project Manager",
     "title": "프로젝트 관리자(Project Manager)",
-    "definition": "스폰서로부터 목표 달성을 위임받아 착수부터 종료까지 통합 관리하는 책임자. 지식·수행·대인(소프트) 역량을 균형 있게 갖춰야 함",
+    "definition": "수행 조직이 프로젝트 목표 달성에 책임을 지도록 선임한 사람으로, 팀을 이끌고 이해관계자를 조정하며 범위·일정·원가·품질 등을 통합 관리함",
     "outline": [
-      "PM의 개념",
-      "- 정의",
+      "PM 역할과 역량",
+      "- 3대 역량",
+      "관리 영역과 역할",
+      "- 관리 영역",
       "- 역할",
-      "필요 역량",
-      "스폰서·팀과의 관계"
+      "자격 요건",
+      "- 자격"
     ],
     "keywords_must": [
-      "프로젝트 관리자(Project Manager)",
-      "스폰서(Sponsor)",
-      "통합 관리(Integration Management)",
-      "리더십(Leadership)",
-      "의사소통(Communication)",
-      "이해관계자 관리(Stakeholder Management)",
-      "권한(Authority)",
-      "책임(Accountability)"
+      "기술적 프로젝트 관리(Ways of Working)",
+      "전략·비즈니스 관리(Business Acumen)",
+      "리더십(Power Skills)",
+      "지식 역량(Knowledge)",
+      "수행 역량(Performance)",
+      "개인 역량(Personal)",
+      "통합 관리자",
+      "의사소통 촉진",
+      "이해관계자 조정",
+      "의사결정·리스크 대응"
     ],
     "keywords_ref": [
-      "촉진자(Facilitator)",
-      "스크럼 마스터(Scrum Master)",
-      "하드 스킬(Hard Skills)",
-      "소프트 스킬(Soft Skills)",
-      "섬김형 리더십(Servant Leadership)"
+      "서번트 리더십(애자일)",
+      "PMP 자격",
+      "영향력 범위: 프로젝트·조직·산업·전문 분야",
+      "협상·갈등 관리·감성 지능",
+      "스크럼 마스터와 비교"
     ],
     "keywords": [
-      "역할: 목표 달성·통합·의사소통",
-      "역량: 지식·수행·대인",
-      "스폰서: 권한·자원 부여",
-      "팀: 동기·갈등·성과"
+      "PMI 인재 삼각형: 기술적 프로젝트 관리(Ways of Working) · 전략·비즈니스 관리(Business Acumen) · 리더십(Power Skills)",
+      "PMCD 역량: 지식 역량(Knowledge) · 수행 역량(Performance) · 개인 역량(Personal)",
+      "역할: 통합 관리자 · 의사소통 촉진 · 이해관계자 조정 · 의사결정·리스크 대응"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "PM 역할과 역량",
         "subsections": [
           {
-            "title": "정의",
+            "title": "3대 역량",
             "items": [
-              "프로젝트 목표 달성을 책임지고 팀을 이끄는 선임 책임자"
+              "기술적 PM: 일정·원가·리스크 도구",
+              "전략·비즈니스: 조직 목표·시장 이해",
+              "리더십: 동기 부여·협상·영향력"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "관리 영역과 역할",
+        "subsections": [
+          {
+            "title": "관리 영역",
+            "items": [
+              "프로젝트·조직·산업·전문 분야로 영향력 확장"
             ]
           },
           {
             "title": "역할",
             "items": [
-              "계획·실행·감시통제·종료, 이슈·변경·위험 통합"
+              "지식: 프레임워크 제공·계획 대비 진행 관리",
+              "수행: 지식 적용·기술 동향 반영",
+              "개인: 태도·윤리·리더십"
             ]
           }
         ]
       },
       {
-        "title": "역량",
+        "title": "자격 요건",
         "subsections": [
           {
-            "title": null,
+            "title": "자격",
             "items": [
-              "지식 역량: 방법론·도구·도메인",
-              "수행 역량: 일정·원가·품질·조달",
-              "개인 역량: 리더십·협상·갈등관리"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "관계",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "스폰서: 헌장·예산·우선순위",
-              "기능 관리자: 자원 협조",
-              "팀: 일상 과업·동기"
+              "도메인·기술 이해",
+              "의사소통·협상",
+              "문제 해결·의사결정",
+              "윤리·책임감",
+              "PMP 등 자격"
             ]
           }
         ]
@@ -796,97 +800,114 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "프로젝트 관리자(Project Manager)",
-      "스폰서(Sponsor)",
-      "통합 관리(Integration Management)",
-      "리더십(Leadership)",
-      "의사소통(Communication)",
-      "이해관계자 관리(Stakeholder Management)",
-      "권한(Authority)",
-      "책임(Accountability)"
+      "기술적 프로젝트 관리(Ways of Working)",
+      "전략·비즈니스 관리(Business Acumen)",
+      "리더십(Power Skills)",
+      "지식 역량(Knowledge)",
+      "수행 역량(Performance)",
+      "개인 역량(Personal)",
+      "통합 관리자",
+      "의사소통 촉진",
+      "이해관계자 조정",
+      "의사결정·리스크 대응"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_012": {
-    "name": "프로젝트 조직유형(Project Organization Types)",
-    "en": "Project Organization Types",
-    "title": "프로젝트 조직유형(Project Organization Types)",
-    "definition": "직무·책임·권한을 기준으로 구성원을 연결한 조직 형태. 기능형·매트릭스형·프로젝트형으로 구분하며 권한 강도가 다름",
+    "name": "프로젝트 조직 유형(Project Organization Types)",
+    "en": "Project Organization Structures",
+    "title": "프로젝트 조직 유형(Project Organization Types)",
+    "definition": "프로젝트 수행을 위한 조직 구조를 PM 권한 수준에 따라 기능 조직, 매트릭스 조직(약·균형·강), 프로젝트 중심 조직으로 구분한 유형 분류",
     "outline": [
-      "조직유형의 개념",
-      "기능형 조직",
-      "매트릭스 조직",
-      "프로젝트 중심 조직",
-      "선택 기준"
+      "조직 유형 정의",
+      "- 선택 기준",
+      "유형별 특징",
+      "- 기능 조직",
+      "- 매트릭스",
+      "- 프로젝트 중심",
+      "유형 비교",
+      "- 비교 항목"
     ],
     "keywords_must": [
-      "기능형 조직(Functional Organization)",
-      "매트릭스 조직(Matrix Organization)",
-      "프로젝트형 조직(Projectized Organization)",
-      "약한·균형·강한 매트릭스(Weak/Balanced/Strong Matrix)",
-      "PM 권한(Project Manager Authority)",
-      "이중 보고(Dual Reporting)",
-      "자원 공유(Resource Sharing)",
-      "전담 팀(Dedicated Team)"
+      "기능 조직(Functional)",
+      "약한 매트릭스(Weak Matrix)",
+      "균형 매트릭스(Balanced Matrix)",
+      "강한 매트릭스(Strong Matrix)",
+      "프로젝트 중심 조직(Projectized)",
+      "낮음(기능) → 높음(프로젝트 중심)",
+      "조정자(Coordinator)·촉진자(Expediter)"
     ],
     "keywords_ref": [
-      "PMO(Project Management Office)",
-      "가상 팀(Virtual Team)",
-      "조직 분해도(OBS, Organizational Breakdown Structure)",
-      "책임 배정 매트릭스(RAM)"
+      "이중 보고 체계(매트릭스)",
+      "자원 가용성",
+      "예산 통제 주체",
+      "PMO 유형(지원·통제·지시)",
+      "가상 조직·애자일 팀",
+      "복합 조직"
     ],
     "keywords": [
-      "기능형: 부서장 권한 큼",
-      "매트릭스: 기능×프로젝트 이중 보고",
-      "프로젝트형: PM 권한 최대",
-      "선택: 전략 중요도·기간·자원"
+      "유형: 기능 조직(Functional) · 약한 매트릭스(Weak Matrix) · 균형 매트릭스(Balanced Matrix) · 강한 매트릭스(Strong Matrix) · 프로젝트 중심 조직(Projectized)",
+      "PM 권한: 낮음(기능) → 높음(프로젝트 중심) · 조정자(Coordinator)·촉진자(Expediter)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "조직 유형 정의",
         "subsections": [
           {
-            "title": null,
+            "title": "선택 기준",
             "items": [
-              "프로젝트 권한과 자원 배분 방식에 따라 조직 형태가 달라짐"
+              "PM 권한",
+              "자원 가용성",
+              "예산 통제",
+              "의사소통 경로",
+              "프로젝트 규모·기간"
             ]
           }
         ]
       },
       {
-        "title": "유형",
+        "title": "유형별 특징",
         "subsections": [
           {
-            "title": "기능형",
+            "title": "기능 조직",
             "items": [
-              "일상 업무 중심, PM 권한 약함"
+              "기능 관리자가 권한",
+              "수직 의사소통 원활·안정",
+              "프로젝트 우선순위 낮음"
             ]
           },
           {
             "title": "매트릭스",
             "items": [
-              "Weak/Balanced/Strong — PM과 기능관리자 권한 비중"
+              "약: PM은 촉진자",
+              "균형: 기능·PM 권한 공유",
+              "강: PM 권한 강함·전담 인력",
+              "이중 보고로 갈등"
             ]
           },
           {
-            "title": "프로젝트형",
+            "title": "프로젝트 중심",
             "items": [
-              "전담 팀, PM이 인사·자원 권한"
+              "PM 전권·전담 팀",
+              "신속 의사결정",
+              "종료 후 인력 재배치 문제"
             ]
           }
         ]
       },
       {
-        "title": "선택",
+        "title": "유형 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "비교 항목",
             "items": [
-              "복잡·장기·전략 중요 → 강한 매트릭스·프로젝트형",
-              "표준·단기 → 기능형·약한 매트릭스"
+              "PM 권한: 거의 없음 → 높음",
+              "자원 가용성: 낮음 → 높음",
+              "예산 통제: 기능 관리자 → PM",
+              "PM 역할: 시간제 → 전임"
             ]
           }
         ]
@@ -898,190 +919,219 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "기능형 조직(Functional Organization)",
-      "매트릭스 조직(Matrix Organization)",
-      "프로젝트형 조직(Projectized Organization)",
-      "약한·균형·강한 매트릭스(Weak/Balanced/Strong Matrix)",
-      "PM 권한(Project Manager Authority)",
-      "이중 보고(Dual Reporting)",
-      "자원 공유(Resource Sharing)",
-      "전담 팀(Dedicated Team)"
+      "기능 조직(Functional)",
+      "약한 매트릭스(Weak Matrix)",
+      "균형 매트릭스(Balanced Matrix)",
+      "강한 매트릭스(Strong Matrix)",
+      "프로젝트 중심 조직(Projectized)",
+      "낮음(기능) → 높음(프로젝트 중심)",
+      "조정자(Coordinator)·촉진자(Expediter)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_013": {
-    "name": "지식영역(KA, Knowledge Areas)",
-    "en": "Knowledge Areas",
-    "title": "지식영역(KA, Knowledge Areas)",
-    "definition": "PMBOK 6 기준 프로젝트 관리를 구성하는 10개 지식영역. 통합을 중심으로 범위·일정·원가·품질·자원·의사소통·위험·조달·이해관계자를 다룸",
+    "name": "지식 영역(KA, Knowledge Areas)",
+    "en": "PMBOK Knowledge Areas",
+    "title": "지식 영역(KA, Knowledge Areas)",
+    "definition": "PMBOK 6판이 프로젝트 관리 프로세스를 전문 분야별로 묶은 10개 지식 영역으로, 5개 프로세스 그룹과 교차해 49개 프로세스를 구성함",
     "outline": [
-      "지식영역의 개념",
-      "10개 지식영역",
-      "통합관리의 역할",
-      "프로세스 그룹과의 관계"
+      "구조와 계층",
+      "- 구조",
+      "10대",
+      "- 영역별 핵심",
+      "실패 사례 적용",
+      "- 사례 분석"
     ],
     "keywords_must": [
-      "지식영역(Knowledge Area)",
-      "통합 관리(Integration)",
-      "범위 관리(Scope)",
-      "일정 관리(Schedule)",
-      "원가 관리(Cost)",
-      "품질 관리(Quality)",
-      "자원 관리(Resource)",
-      "의사소통 관리(Communications)",
-      "위험 관리(Risk)",
-      "조달 관리(Procurement)",
-      "이해관계자 관리(Stakeholder)"
+      "통합",
+      "범위",
+      "일정",
+      "원가",
+      "품질",
+      "자원",
+      "의사소통",
+      "리스크",
+      "조달",
+      "이해관계자",
+      "5개 프로세스 그룹(착수·기획·실행·감시통제·종료)"
     ],
     "keywords_ref": [
-      "프로세스 그룹(Process Groups)",
-      "프로젝트 헌장(Project Charter)",
-      "프로젝트 관리 계획서(Project Management Plan)",
-      "PMBOK 6",
-      "성과 영역(PMBOK 7)"
+      "49개 프로세스",
+      "ITTO(투입물·도구·산출물)",
+      "프로젝트 특성: 유일성·일시성·목적성·점진적 상세화",
+      "6판 신규: 프로젝트 지식 관리·리스크 대응 실행·자원 통제",
+      "7판은 8개 성과 영역으로 전환",
+      "3중 제약(범위·일정·원가)"
     ],
     "keywords": [
-      "10KA: 통합·범위·일정·원가·품질·자원·의사소통·위험·조달·이해관계자",
-      "통합이 나머지 조정",
-      "5 프로세스 그룹과 매트릭스",
-      "7판은 성과영역으로 재편"
+      "10대 지식 영역: 통합 · 범위 · 일정 · 원가 · 품질 · 자원 · 의사소통 · 리스크 · 조달 · 이해관계자",
+      "교차 구조: 5개 프로세스 그룹(착수·기획·실행·감시통제·종료)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "구조와 계층",
         "subsections": [
           {
-            "title": null,
+            "title": "구조",
             "items": [
-              "프로젝트 관리 지식을 주제별로 묶은 영역 (PMBOK 6: 10개)"
+              "지식 영역(무엇) × 프로세스 그룹(언제) 행렬",
+              "각 프로세스는 ITTO로 정의"
             ]
           }
         ]
       },
       {
-        "title": "10개 지식영역",
+        "title": "10대",
         "subsections": [
           {
-            "title": null,
+            "title": "영역별 핵심",
             "items": [
-              "통합, 범위, 일정, 원가, 품질",
-              "자원, 의사소통, 위험, 조달, 이해관계자"
+              "통합: 헌장·계획서·변경 통제",
+              "범위: 요구사항·WBS",
+              "일정: 활동·CPM",
+              "원가: 예산·EVM",
+              "품질: 품질 관리",
+              "자원: 팀·물자",
+              "의사소통",
+              "리스크: 식별·분석·대응",
+              "조달: 계약",
+              "이해관계자: 참여"
             ]
           }
         ]
       },
       {
-        "title": "관계",
+        "title": "실패 사례 적용",
         "subsections": [
           {
-            "title": null,
+            "title": "사례 분석",
             "items": [
-              "각 KA는 착수·기획·실행·감시통제·종료 프로세스에 걸쳐 수행",
-              "통합관리가 변경·기준선을 총괄"
+              "납기 지연 → 일정",
+              "M/M 초과 → 원가·자원",
+              "범위 1.6배 증가 → 범위·변경 통제",
+              "요구사항 확정 지연 → 범위",
+              "고객 갈등 → 이해관계자·의사소통"
             ]
           }
         ]
       }
     ],
-    "dueum": null,
+    "dueum": "1+3+1+RCR+P+S(통합 / 범위·일정·원가 / 품질 / 자원·의사소통·리스크 / 조달 / 이해관계자)",
     "curated": true,
     "keywords_note": null,
     "note": null,
     "review": null,
     "quiz_terms": [
-      "지식영역(Knowledge Area)",
-      "통합 관리(Integration)",
-      "범위 관리(Scope)",
-      "일정 관리(Schedule)",
-      "원가 관리(Cost)",
-      "품질 관리(Quality)",
-      "자원 관리(Resource)",
-      "의사소통 관리(Communications)",
-      "위험 관리(Risk)",
-      "조달 관리(Procurement)",
-      "이해관계자 관리(Stakeholder)"
+      "통합",
+      "범위",
+      "일정",
+      "원가",
+      "품질",
+      "자원",
+      "의사소통",
+      "리스크",
+      "조달",
+      "이해관계자",
+      "5개 프로세스 그룹(착수·기획·실행·감시통제·종료)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "EVM": "Earned Value Management",
+      "CPM": "Critical Path Method"
+    }
   },
   "PM_014": {
     "name": "브레인스토밍(Brainstorming)",
     "en": "Brainstorming",
     "title": "브레인스토밍(Brainstorming)",
-    "definition": "비판 없이 자유롭게 아이디어를 쏟아내 양적 발산을 유도하는 집단 창의 기법. 요구사항 수집·위험 식별·대안 도출에 사용",
+    "definition": "오스본이 제안한 집단 아이디어 발상 기법으로, 비판 없이 자유롭게 많은 아이디어를 내고 다른 사람의 아이디어에 편승·결합해 창의적 해결안을 도출함",
     "outline": [
-      "브레인스토밍의 개념",
-      "- 정의",
+      "집단 발상 개념",
+      "- 단계",
+      "4대 원칙과 종류",
       "- 원칙",
-      "진행 절차",
-      "변형 기법"
+      "- 종류",
+      "브레인라이팅 비교",
+      "- 브레인라이팅"
     ],
     "keywords_must": [
-      "브레인스토밍(Brainstorming)",
-      "발산적 사고(Divergent Thinking)",
-      "비판 보류(Defer Judgment)",
+      "비판 금지(Defer Judgment)",
       "자유분방(Freewheeling)",
-      "양 우선(Quantity over Quality)",
-      "결합·개선(Build on Ideas)",
-      "촉진자(Facilitator)",
-      "위험 식별(Risk Identification)"
+      "질보다 양(Quantity)",
+      "결합·편승 환영(Combination)",
+      "주제 선정",
+      "아이디어 발산",
+      "정리·분류",
+      "평가·선택",
+      "브레인라이팅(Brainwriting, 6-3-5)",
+      "명목 집단 기법(NGT)",
+      "역 브레인스토밍"
     ],
     "keywords_ref": [
-      "명목 집단 기법(NGT, Nominal Group Technique)",
-      "델파이 기법(Delphi Technique)",
-      "친화도(Affinity Diagram)",
-      "마인드맵(Mind Mapping)",
-      "역브레인스토밍(Reverse Brainstorming)"
+      "알렉스 오스본(1939)",
+      "퍼실리테이터·기록자",
+      "소수 의견 위축·집단 사고",
+      "친화도·마인드맵 정리",
+      "PMBOK 요구사항 수집·리스크 식별 기법"
     ],
     "keywords": [
-      "원칙: 비판 금지·자유·양·결합",
-      "용도: 요구·위험·대안",
-      "촉진자가 분위기·기록 관리",
-      "이후 수렴(친화도·투표)"
+      "4대 원칙: 비판 금지(Defer Judgment) · 자유분방(Freewheeling) · 질보다 양(Quantity) · 결합·편승 환영(Combination)",
+      "절차: 주제 선정 · 아이디어 발산 · 정리·분류 · 평가·선택",
+      "변형: 브레인라이팅(Brainwriting, 6-3-5) · 명목 집단 기법(NGT) · 역 브레인스토밍"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "집단 발상 개념",
         "subsections": [
           {
-            "title": "정의",
+            "title": "단계",
             "items": [
-              "집단이 자유롭게 아이디어를 생성하는 발산 기법"
+              "주제·목표 명확화",
+              "4대 원칙 공유",
+              "제한 시간 발산",
+              "유사 아이디어 묶기",
+              "기준에 따라 평가"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "title": "4대 원칙과 종류",
+        "subsections": [
           {
             "title": "원칙",
             "items": [
-              "비판 보류, 자유로운 발상, 양 중시, 아이디어 결합"
+              "비판 금지: 판단 유보",
+              "자유분방: 엉뚱한 의견 환영",
+              "양 추구: 많을수록 좋음",
+              "편승: 개선·결합"
+            ]
+          },
+          {
+            "title": "종류",
+            "items": [
+              "구조적(순서대로 발언)",
+              "비구조적(자유 발언)",
+              "전자 브레인스토밍"
             ]
           }
         ]
       },
       {
-        "title": "절차",
+        "title": "브레인라이팅 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "브레인라이팅",
             "items": [
-              "주제 명확화 → 발산 기록 → 분류·우선순위 → 실행 후보 선정"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "변형",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "명목집단: 개인 작성 후 공유",
-              "델파이: 익명·반복 합의",
-              "친화도: 유사 아이디어 군집"
+              "6명·3개·5분 서면 발상(6-3-5)",
+              "발언 부담·지배적 인물 영향 감소",
+              "내성적 구성원·갈등 상황에 유리"
             ]
           }
         ]
@@ -1093,193 +1143,213 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "브레인스토밍(Brainstorming)",
-      "발산적 사고(Divergent Thinking)",
-      "비판 보류(Defer Judgment)",
+      "비판 금지(Defer Judgment)",
       "자유분방(Freewheeling)",
-      "양 우선(Quantity over Quality)",
-      "결합·개선(Build on Ideas)",
-      "촉진자(Facilitator)",
-      "위험 식별(Risk Identification)"
+      "질보다 양(Quantity)",
+      "결합·편승 환영(Combination)",
+      "주제 선정",
+      "아이디어 발산",
+      "정리·분류",
+      "평가·선택",
+      "브레인라이팅(Brainwriting, 6-3-5)",
+      "명목 집단 기법(NGT)",
+      "역 브레인스토밍"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_015": {
-    "name": "테일링(Tailoring)",
+    "name": "테일러링(Tailoring)",
     "en": "Tailoring",
-    "title": "테일링(Tailoring)",
-    "definition": "조직 표준 프로세스·기법·산출물을 프로젝트의 규모·복잡성·위험·개발 접근법에 맞게 적합화하는 활동. ‘무엇을 어떻게’ 적용할지 결정",
+    "title": "테일러링(Tailoring)",
+    "definition": "표준 개발 방법론이나 프로젝트 관리 프로세스를 프로젝트의 특성·규모·환경에 맞게 선택·수정·보완해 최적의 수행 프로세스를 정의하는 활동",
     "outline": [
-      "테일링의 개념",
-      "- 정의",
-      "- 목적",
-      "고려 요소",
-      "산출과 거버넌스"
+      "도입 필요성",
+      "- 관리적 측면",
+      "- 기술적 측면",
+      "절차와 상세 활동",
+      "- 절차",
+      "수행 시 고려사항",
+      "- 내부 요건"
     ],
     "keywords_must": [
-      "테일링(Tailoring)",
-      "조직 표준 프로세스(Organizational Standard Process)",
-      "개발 접근법(Development Approach)",
-      "규모·복잡성(Scale & Complexity)",
-      "거버넌스(Governance)",
-      "프로세스 적합화(Process Adaptation)",
-      "산출물 선택(Artifact Selection)",
-      "지속적 개선(Continuous Improvement)"
+      "How-to-Do 제시",
+      "지속적 개선",
+      "가이드라인 제공",
+      "최적화",
+      "최신 기술 수용",
+      "산출물 연계 설계",
+      "프로젝트 특성 분석",
+      "표준 프로세스 선정",
+      "상세 커스터마이징",
+      "문서화·승인",
+      "적용·피드백"
     ],
     "keywords_ref": [
-      "PMBOK 7 원칙(Tailoring)",
-      "생명주기(Life Cycle)",
-      "하이브리드(Hybrid)",
-      "컴플라이언스(Compliance)",
-      "교훈(Lessons Learned)"
+      "고려 요소: 내부(납기·인력 역량·규모) vs 외부(발주 요구·법규·기술 환경)",
+      "방법론 활동·작업·산출물 단위 조정",
+      "PMBOK 7판 원칙",
+      "과도한 생략 위험"
     ],
     "keywords": [
-      "정의: 표준을 프로젝트에 맞게 조정",
-      "고려: 규모·위험·규제·접근법",
-      "과도한 프로세스 = 낭비",
-      "거버넌스·감사 요건은 유지"
+      "필요성(관리적): How-to-Do 제시 · 지속적 개선 · 가이드라인 제공",
+      "필요성(기술적): 최적화 · 최신 기술 수용 · 산출물 연계 설계",
+      "절차: 프로젝트 특성 분석 · 표준 프로세스 선정 · 상세 커스터마이징 · 문서화·승인 · 적용·피드백"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "도입 필요성",
         "subsections": [
           {
-            "title": "정의",
+            "title": "관리적 측면",
             "items": [
-              "표준 방법론을 프로젝트 맥락에 맞게 선택·조정"
+              "수행 방법(How-to-do) 제시",
+              "방법론 지속 개선·유지보수",
+              "일관된 가이드라인"
             ]
           },
           {
-            "title": "목적",
+            "title": "기술적 측면",
             "items": [
-              "가치 대비 적정 통제, 낭비 제거, 팀 속도 확보"
+              "프로젝트별 최적 프로세스",
+              "신기술 수용",
+              "산출물 효과적 연계"
             ]
           }
         ]
       },
       {
-        "title": "고려 요소",
+        "title": "절차와 상세 활동",
         "subsections": [
           {
-            "title": null,
+            "title": "절차",
             "items": [
-              "규모·기간·복잡도·위험",
-              "규제·계약·이해관계자",
-              "예측/애자일/하이브리드"
+              "1. 프로젝트 특성 분석(규모·위험·기술)",
+              "2. 표준 방법론 선정",
+              "3. 단계·활동·산출물 추가·삭제·변경",
+              "4. 테일러링 결과서 문서화·승인",
+              "5. 적용 후 개선"
             ]
           }
         ]
       },
       {
-        "title": "거버넌스",
+        "title": "수행 시 고려사항",
         "subsections": [
           {
-            "title": null,
+            "title": "내부 요건",
             "items": [
-              "필수 통제·감사 포인트는 유지",
-              "테일링 근거를 계획서에 기록"
+              "납기·비용",
+              "인력 역량",
+              "조직 표준",
+              "외부 요건: 고객 요구",
+              "법·제도(공공 산출물 기준)",
+              "기술 환경"
             ]
           }
         ]
       }
     ],
-    "dueum": null,
+    "dueum": "관-하우지 기-최적신(관리적: How-to·지속 개선, 기술적: 최적화·최신 기술)",
     "curated": true,
     "keywords_note": null,
     "note": null,
     "review": null,
     "quiz_terms": [
-      "테일링(Tailoring)",
-      "조직 표준 프로세스(Organizational Standard Process)",
-      "개발 접근법(Development Approach)",
-      "규모·복잡성(Scale & Complexity)",
-      "거버넌스(Governance)",
-      "프로세스 적합화(Process Adaptation)",
-      "산출물 선택(Artifact Selection)",
-      "지속적 개선(Continuous Improvement)"
+      "How-to-Do 제시",
+      "지속적 개선",
+      "가이드라인 제공",
+      "최적화",
+      "최신 기술 수용",
+      "산출물 연계 설계",
+      "프로젝트 특성 분석",
+      "표준 프로세스 선정",
+      "상세 커스터마이징",
+      "문서화·승인",
+      "적용·피드백"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_016": {
-    "name": "작업기술서(SoW, Statement of Work)",
+    "name": "작업 기술서(SoW, Statement of Work)",
     "en": "Statement of Work",
-    "title": "작업기술서(SoW, Statement of Work)",
-    "definition": "수행할 작업·인도물·일정·제약·인수 기준을 기술한 문서. 내부 프로젝트 SoW와 조달(계약) SoW로 쓰이며 범위의 출발점이 됨",
+    "title": "작업 기술서(SoW, Statement of Work)",
+    "definition": "프로젝트 또는 조달 대상이 수행해야 할 작업 범위·산출물·일정·책임·품질 요건을 서술한 문서로, 계약·SLA와 범위 기준선의 근거가 됨",
     "outline": [
-      "SoW의 개념",
-      "- 정의",
-      "- 목적",
-      "주요 구성",
-      "관련 문서"
+      "작업 범위 문서 개념",
+      "- SLA·SLM 관계",
+      "구성 요소별 역할",
+      "- 구성",
+      "작성 시 고려사항",
+      "- 고려"
     ],
     "keywords_must": [
-      "작업기술서(SoW, Statement of Work)",
-      "인도물(Deliverables)",
-      "범위 기술서(Scope Statement)",
-      "인수 기준(Acceptance Criteria)",
-      "제약·가정(Constraints & Assumptions)",
-      "조달 SoW(Procurement SoW)",
-      "타임라인(Timeline)",
-      "업무 정의"
+      "프로젝트 작업 기술서(Project SOW)",
+      "조달 작업 기술서(Procurement SOW)",
+      "업무 범위(Scope)",
+      "책임 범위(Responsibility)",
+      "산출물·인도 일정",
+      "프로세스·품질 요건",
+      "SLA(Service Level Agreement)",
+      "SLM(Service Level Management)",
+      "범위 기술서·WBS"
     ],
     "keywords_ref": [
-      "프로젝트 헌장(Project Charter)",
-      "요구사항 문서(Requirements Documentation)",
-      "WBS(Work Breakdown Structure)",
-      "계약서(Contract)",
-      "RFP(Request for Proposal)"
+      "사업 요구·제품 범위 기술·전략 계획(PMBOK 투입물)",
+      "예측 고장 시간·지원 시간·보안 항목",
+      "모호성 최소화·측정 가능 기준",
+      "RFP 첨부",
+      "과업 지시서"
     ],
     "keywords": [
-      "내용: 작업·인도물·일정·기준",
-      "조달 SoW = 계약 범위 근거",
-      "헌장·범위기술서와 정합",
-      "모호하면 Scope Creep 유발"
+      "유형: 프로젝트 작업 기술서(Project SOW) · 조달 작업 기술서(Procurement SOW)",
+      "구성 요소: 업무 범위(Scope) · 책임 범위(Responsibility) · 산출물·인도 일정 · 프로세스·품질 요건",
+      "관계: SLA(Service Level Agreement) · SLM(Service Level Management) · 범위 기술서·WBS"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "작업 범위 문서 개념",
         "subsections": [
           {
-            "title": "정의",
+            "title": "SLA·SLM 관계",
             "items": [
-              "수행할 작업을 서술형으로 정의한 문서"
-            ]
-          },
-          {
-            "title": "목적",
-            "items": [
-              "범위 합의, 조달·계약의 기준"
+              "SoW: 수행 업무·범위 정의",
+              "SLA: 서비스 수준 합의",
+              "SLM: SLA 이행 관리 활동"
             ]
           }
         ]
       },
       {
-        "title": "구성",
+        "title": "구성 요소별 역할",
         "subsections": [
           {
-            "title": null,
+            "title": "구성",
             "items": [
-              "목표·범위, 인도물, 일정·마일스톤",
-              "성과·인수 기준, 제약·가정, 보고"
+              "업무 범위: 수행·제외 범위",
+              "책임 범위: 발주자·수행자 역할",
+              "프로세스: 수행 절차·보고",
+              "구성 항목 사례: 예측 고장 시간·지원 시간·보안 요건"
             ]
           }
         ]
       },
       {
-        "title": "관련",
+        "title": "작성 시 고려사항",
         "subsections": [
           {
-            "title": null,
+            "title": "고려",
             "items": [
-              "헌장: 권한·목표",
-              "SoW: 작업 서술",
-              "WBS: 작업 분해"
+              "범위 관리에서 범위 기술서·WBS의 기준",
+              "측정 가능한 표현",
+              "모호한 용어 최소화",
+              "변경 절차 명시",
+              "인수 기준 포함"
             ]
           }
         ]
@@ -1291,91 +1361,222 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "작업기술서(SoW, Statement of Work)",
-      "인도물(Deliverables)",
-      "범위 기술서(Scope Statement)",
-      "인수 기준(Acceptance Criteria)",
-      "제약·가정(Constraints & Assumptions)",
-      "조달 SoW(Procurement SoW)",
-      "타임라인(Timeline)",
-      "업무 정의"
+      "프로젝트 작업 기술서(Project SOW)",
+      "조달 작업 기술서(Procurement SOW)",
+      "업무 범위(Scope)",
+      "책임 범위(Responsibility)",
+      "산출물·인도 일정",
+      "프로세스·품질 요건",
+      "SLA(Service Level Agreement)",
+      "SLM(Service Level Management)",
+      "범위 기술서·WBS"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_017": {
-    "name": "교훈 관리 대장(Lessons Learned Register)",
+    "name": "교훈 관리대장(Lessons Learned Register)",
     "en": "Lessons Learned Register",
-    "title": "교훈 관리 대장(Lessons Learned Register)",
-    "definition": "프로젝트 수행 중 얻은 성공·실패 경험을 기록·공유하는 문서. 현재 프로젝트에 즉시 활용하고 조직 교훈 저장소에 축적",
+    "title": "교훈 관리대장(Lessons Learned Register)",
+    "definition": "프로젝트 수행 중 얻은 성공·실패 경험과 개선 사항을 지속 기록·공유하는 문서로, PMBOK 6판 프로젝트 지식 관리 프로세스의 산출물이며 종료 시 조직 교훈 저장소로 이관됨",
     "outline": [
-      "교훈 관리의 개념",
-      "- 정의",
-      "- 목적",
-      "기록 항목",
-      "활용 시점"
+      "교훈 관리 목적",
+      "- 도입 목적",
+      "관리 절차",
+      "- 절차",
+      "활용과 유의점",
+      "- 활용"
     ],
     "keywords_must": [
-      "교훈(Lessons Learned)",
-      "교훈 대장(Lessons Learned Register)",
-      "교훈 저장소(Lessons Learned Repository)",
-      "지식 관리(Knowledge Management)",
-      "회고(Retrospective)",
-      "지속적 개선(Continuous Improvement)",
-      "이슈(Issue)",
-      "성공 요인(Success Factor)"
+      "교훈 프로젝트 정의",
+      "교훈·사례 수집",
+      "적용성 검토(Review for Applicability)",
+      "교훈 저장소(Repository) 저장",
+      "보급·활용(Dissemination)",
+      "범주·상황",
+      "영향",
+      "권고·대응",
+      "제안자",
+      "프로젝트 지식 관리(Manage Project Knowledge)",
+      "조직 프로세스 자산(OPA)"
     ],
     "keywords_ref": [
-      "종료 프로세스(Closing)",
-      "스프린트 회고(Sprint Retrospective)",
-      "조직 프로세스 자산(OPA)",
-      "사후 검토(Postmortem)"
+      "형식지·암묵지",
+      "회고(Retrospective)",
+      "착수 시 과거 교훈 검토",
+      "최적 사례(Best Practice)",
+      "보급이 가장 중요"
     ],
     "keywords": [
-      "기록: 상황·원인·대응·권고",
-      "시점: 수시 + 단계/종료",
-      "저장소에 이관해 다음 프로젝트 활용",
-      "비난이 아닌 학습 목적"
+      "절차: 교훈 프로젝트 정의 · 교훈·사례 수집 · 적용성 검토(Review for Applicability) · 교훈 저장소(Repository) 저장 · 보급·활용(Dissemination)",
+      "기록 항목: 범주·상황 · 영향 · 권고·대응 · 제안자",
+      "연계: 프로젝트 지식 관리(Manage Project Knowledge) · 조직 프로세스 자산(OPA)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "교훈 관리 목적",
         "subsections": [
           {
-            "title": "정의",
+            "title": "도입 목적",
             "items": [
-              "프로젝트에서 얻은 지식을 구조화해 기록한 대장"
+              "반복 실수 방지",
+              "성공 사례 확산",
+              "프로젝트 지식의 조직 자산화",
+              "차기 프로젝트 기획 정확도 향상"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "관리 절차",
+        "subsections": [
+          {
+            "title": "절차",
+            "items": [
+              "정의: 수집 범위·책임자",
+              "수집: 회의·인터뷰·회고",
+              "검토: 적용 가능성·일반화",
+              "저장: 저장소 데이터베이스",
+              "보급: 검색·공유·교육"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "활용과 유의점",
+        "subsections": [
+          {
+            "title": "활용",
+            "items": [
+              "기획 단계 리스크 식별",
+              "견적 보정",
+              "유의: 종료 시점만이 아닌 상시 기록",
+              "비난 없는 문화"
+            ]
+          }
+        ]
+      }
+    ],
+    "dueum": null,
+    "curated": true,
+    "keywords_note": null,
+    "note": null,
+    "review": null,
+    "quiz_terms": [
+      "교훈 프로젝트 정의",
+      "교훈·사례 수집",
+      "적용성 검토(Review for Applicability)",
+      "교훈 저장소(Repository) 저장",
+      "보급·활용(Dissemination)",
+      "범주·상황",
+      "영향",
+      "권고·대응",
+      "제안자",
+      "프로젝트 지식 관리(Manage Project Knowledge)",
+      "조직 프로세스 자산(OPA)"
+    ],
+    "quiz_groups": [
+      "pm"
+    ],
+    "reviewed": true
+  },
+  "PM_018": {
+    "name": "프로젝트 통합 관리(Project Integration Management)",
+    "en": "Project Integration Management",
+    "title": "프로젝트 통합 관리(Project Integration Management)",
+    "definition": "프로젝트 관리 프로세스와 활동을 식별·정의·결합·조정하여 전체 관점에서 프로젝트를 일관되게 착수·계획·실행·통제·종료하는 지식 영역",
+    "outline": [
+      "통합 관리 역할",
+      "- 역할",
+      "7개 프로세스",
+      "- 착수·기획",
+      "- 실행",
+      "- 감시·종료",
+      "통합 변경 통제",
+      "- 절차"
+    ],
+    "keywords_must": [
+      "프로젝트 헌장 개발",
+      "프로젝트 관리 계획서 개발",
+      "프로젝트 작업 지시·관리",
+      "프로젝트 지식 관리(6판 신규)",
+      "작업 감시·통제",
+      "통합 변경 통제",
+      "프로젝트·단계 종료",
+      "프로젝트 헌장(Project Charter)",
+      "프로젝트 관리 계획서",
+      "변경 요청·변경 로그",
+      "교훈 관리대장(Lessons Learned Register)",
+      "변경 통제 위원회(CCB, Change Control Board)"
+    ],
+    "keywords_ref": [
+      "인도물·작업 성과 데이터",
+      "형상 관리",
+      "이슈 기록부",
+      "최종 보고서",
+      "PM의 핵심 책임 영역",
+      "7판: 성과 영역 전반에 분산"
+    ],
+    "keywords": [
+      "7개 프로세스: 프로젝트 헌장 개발 · 프로젝트 관리 계획서 개발 · 프로젝트 작업 지시·관리 · 프로젝트 지식 관리(6판 신규) · 작업 감시·통제 · 통합 변경 통제 · 프로젝트·단계 종료",
+      "핵심 산출물: 프로젝트 헌장(Project Charter) · 프로젝트 관리 계획서 · 변경 요청·변경 로그 · 교훈 관리대장(Lessons Learned Register)",
+      "변경 통제: 변경 통제 위원회(CCB, Change Control Board)"
+    ],
+    "sections": [
+      {
+        "title": "통합 관리 역할",
+        "subsections": [
+          {
+            "title": "역할",
+            "items": [
+              "지식 영역 간 상충 조정",
+              "전체 관점 의사결정",
+              "변경 영향 통합 분석",
+              "PM 고유 책임"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "7개 프로세스",
+        "subsections": [
+          {
+            "title": "착수·기획",
+            "items": [
+              "헌장 개발: 프로젝트 공식 승인·PM 권한",
+              "계획서 개발: 보조 계획 통합"
             ]
           },
           {
-            "title": "목적",
+            "title": "실행",
             "items": [
-              "반복 실수 방지, 모범사례 전파"
+              "작업 지시·관리: 인도물 생성",
+              "지식 관리: 교훈 관리대장"
+            ]
+          },
+          {
+            "title": "감시·종료",
+            "items": [
+              "감시·통제: 성과 보고",
+              "통합 변경 통제: CCB 승인",
+              "종료: 인수·이관·교훈"
             ]
           }
         ]
       },
       {
-        "title": "항목",
+        "title": "통합 변경 통제",
         "subsections": [
           {
-            "title": null,
+            "title": "절차",
             "items": [
-              "카테고리, 상황, 영향, 근본원인, 조치, 권고, 담당"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "활용",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "진행 중 즉시 반영",
-              "단계 종료·프로젝트 종료 시 저장소 갱신"
+              "변경 요청 접수",
+              "영향 분석(범위·일정·원가·품질)",
+              "CCB 승인·기각",
+              "계획서·기준선 갱신",
+              "변경 로그 기록"
             ]
           }
         ]
@@ -1387,182 +1588,114 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "교훈(Lessons Learned)",
-      "교훈 대장(Lessons Learned Register)",
-      "교훈 저장소(Lessons Learned Repository)",
-      "지식 관리(Knowledge Management)",
-      "회고(Retrospective)",
-      "지속적 개선(Continuous Improvement)",
-      "이슈(Issue)",
-      "성공 요인(Success Factor)"
+      "프로젝트 헌장 개발",
+      "프로젝트 관리 계획서 개발",
+      "프로젝트 작업 지시·관리",
+      "프로젝트 지식 관리(6판 신규)",
+      "작업 감시·통제",
+      "통합 변경 통제",
+      "프로젝트·단계 종료",
+      "프로젝트 헌장(Project Charter)",
+      "프로젝트 관리 계획서",
+      "변경 요청·변경 로그",
+      "교훈 관리대장(Lessons Learned Register)",
+      "변경 통제 위원회(CCB, Change Control Board)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
-  },
-  "PM_018": {
-    "name": "프로젝트 통합관리(Project Integration Management)",
-    "en": "Project Integration Management",
-    "title": "프로젝트 통합관리(Project Integration Management)",
-    "definition": "헌장·관리계획 수립부터 지시·관리, 지식 관리, 변경 통제, 종료까지 전 요소를 일관되게 맞추는 지식영역",
-    "outline": [
-      "통합관리의 개념",
-      "주요 프로세스",
-      "변경 통제",
-      "산출물"
-    ],
-    "keywords_must": [
-      "통합 관리(Integration Management)",
-      "프로젝트 헌장(Project Charter)",
-      "프로젝트 관리 계획서(Project Management Plan)",
-      "변경 통제(Change Control)",
-      "변경요청(CR, Change Request)",
-      "통합 변경 통제 위원회(CCB)",
-      "프로젝트 지식 관리(Manage Project Knowledge)",
-      "종료(Close Project or Phase)"
-    ],
-    "keywords_ref": [
-      "기준선(Baseline)",
-      "형상 관리(Configuration Management)",
-      "이슈 로그(Issue Log)",
-      "작업 성과 데이터(Work Performance Data)"
-    ],
-    "keywords": [
-      "핵심: 헌장→계획→실행·지식→변경→종료",
-      "변경은 CCB·통합변경통제",
-      "기준선(범위·일정·원가) 정합",
-      "지식관리(교훈) 포함"
-    ],
-    "sections": [
-      {
-        "title": "개념",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "다른 지식영역의 활동·산출물을 조정·통합해 목표를 달성"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "프로세스",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "헌장 개발, 관리계획 수립, 프로젝트 작업 지시·관리",
-              "지식 관리, 감시·통제, 통합 변경 통제, 종료"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "변경",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "영향 분석 → CR → CCB 승인 → 기준선 갱신"
-            ]
-          }
-        ]
-      }
-    ],
-    "dueum": null,
-    "curated": true,
-    "keywords_note": null,
-    "note": null,
-    "review": null,
-    "quiz_terms": [
-      "통합 관리(Integration Management)",
-      "프로젝트 헌장(Project Charter)",
-      "프로젝트 관리 계획서(Project Management Plan)",
-      "변경 통제(Change Control)",
-      "변경요청(CR, Change Request)",
-      "통합 변경 통제 위원회(CCB)",
-      "프로젝트 지식 관리(Manage Project Knowledge)",
-      "종료(Close Project or Phase)"
-    ],
-    "quiz_groups": [
-      "pm"
-    ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_019": {
     "name": "프로젝트 헌장(Project Charter)",
     "en": "Project Charter",
     "title": "프로젝트 헌장(Project Charter)",
-    "definition": "프로젝트 존재를 공식적으로 승인하고 PM에게 자원을 쓸 권한을 부여하는 문서. 스폰서(또는 착수 권한자)가 승인",
+    "definition": "프로젝트 착수자·스폰서가 발행해 프로젝트의 존재를 공식 승인하고 PM에게 조직 자원을 사용할 권한을 부여하는 문서로, 착수 프로세스 그룹의 핵심 산출물",
     "outline": [
-      "헌장의 개념",
-      "- 정의",
-      "- 목적",
-      "주요 내용",
-      "관리계획서와의 차이"
+      "헌장 역할",
+      "- 역할",
+      "개발 ITTO",
+      "- 투입물",
+      "- 기법",
+      "공통 구성 요소",
+      "- 헌장 항목"
     ],
     "keywords_must": [
-      "프로젝트 헌장(Project Charter)",
-      "스폰서(Sponsor)",
-      "공식 승인(Formal Authorization)",
-      "PM 권한(Authority)",
-      "높은 수준 요구사항(High-level Requirements)",
-      "목적·정당성(Purpose/Justification)",
-      "요약 마일스톤(Summary Milestones)",
-      "예산 요약(Summary Budget)"
+      "비즈니스 문서(비즈니스 케이스·편익 관리 계획)",
+      "협약(Agreements)",
+      "기업 환경 요인(EEF)",
+      "조직 프로세스 자산(OPA)",
+      "프로젝트 공식 승인·PM 권한 부여",
+      "가정사항 기록부(Assumption Log)",
+      "측정 가능한 목표·성공 기준",
+      "상위 수준 요구사항·위험",
+      "요약 마일스톤·예산",
+      "PM 지정·권한"
     ],
     "keywords_ref": [
-      "비즈니스 케이스(Business Case)",
-      "편익 관리 계획(Benefits Management Plan)",
-      "SoW(Statement of Work)",
-      "프로젝트 관리 계획서(PMP)"
+      "도구·기법: 전문가 판단·데이터 수집·대인 관계 기술·회의",
+      "스폰서 서명",
+      "계약서 아님",
+      "성공 기준·종료 기준",
+      "핵심 이해관계자 목록",
+      "사전 승인된 재무 자원"
     ],
     "keywords": [
-      "승인 = 프로젝트 공식 착수",
-      "내용: 목적·목표·요구·위험·마일스톤·예산",
-      "PM 임명·권한 명시",
-      "상세 계획은 관리계획서"
+      "ITTO 투입물: 비즈니스 문서(비즈니스 케이스·편익 관리 계획) · 협약(Agreements) · 기업 환경 요인(EEF) · 조직 프로세스 자산(OPA)",
+      "산출물: 프로젝트 공식 승인·PM 권한 부여 · 가정사항 기록부(Assumption Log)",
+      "구성 요소: 측정 가능한 목표·성공 기준 · 상위 수준 요구사항·위험 · 요약 마일스톤·예산 · PM 지정·권한"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "헌장 역할",
         "subsections": [
           {
-            "title": "정의",
+            "title": "역할",
             "items": [
-              "프로젝트를 승인하고 PM 권한을 부여하는 착수 문서"
+              "프로젝트 공식 승인",
+              "PM 선임·권한 부여",
+              "전략과 프로젝트 연결",
+              "상위 범위 합의"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "개발 ITTO",
+        "subsections": [
+          {
+            "title": "투입물",
+            "items": [
+              "비즈니스 케이스: 타당성·편익",
+              "협약: 계약·MOU",
+              "EEF·OPA"
             ]
           },
           {
-            "title": "목적",
+            "title": "기법",
             "items": [
-              "존재 정당화, 경계·권한 명확화"
+              "전문가 판단",
+              "데이터 수집",
+              "갈등 관리·퍼실리테이션",
+              "산출물: 헌장·가정사항 기록부"
             ]
           }
         ]
       },
       {
-        "title": "내용",
+        "title": "공통 구성 요소",
         "subsections": [
           {
-            "title": null,
+            "title": "헌장 항목",
             "items": [
-              "목적·비즈니스 니즈, 목표·성공기준",
-              "고수준 요구·위험·가정·제약",
-              "요약 일정·예산, PM·스폰서"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "비교",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "헌장: Why/Who/고수준 What",
-              "관리계획서: How를 상세히"
+              "목적·목표·성공 기준",
+              "상위 요구사항·경계",
+              "전체 위험",
+              "요약 일정·예산",
+              "이해관계자",
+              "승인 요건",
+              "PM 책임·권한",
+              "스폰서"
             ]
           }
         ]
@@ -1574,85 +1707,96 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "프로젝트 헌장(Project Charter)",
-      "스폰서(Sponsor)",
-      "공식 승인(Formal Authorization)",
-      "PM 권한(Authority)",
-      "높은 수준 요구사항(High-level Requirements)",
-      "목적·정당성(Purpose/Justification)",
-      "요약 마일스톤(Summary Milestones)",
-      "예산 요약(Summary Budget)"
+      "비즈니스 문서(비즈니스 케이스·편익 관리 계획)",
+      "협약(Agreements)",
+      "기업 환경 요인(EEF)",
+      "조직 프로세스 자산(OPA)",
+      "프로젝트 공식 승인·PM 권한 부여",
+      "가정사항 기록부(Assumption Log)",
+      "측정 가능한 목표·성공 기준",
+      "상위 수준 요구사항·위험",
+      "요약 마일스톤·예산",
+      "PM 지정·권한"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_020": {
     "name": "프로젝트 관리 계획서(Project Management Plan)",
     "en": "Project Management Plan",
     "title": "프로젝트 관리 계획서(Project Management Plan)",
-    "definition": "프로젝트를 어떻게 계획·실행·감시통제·종료할지 정의한 종합 계획. 보조 관리계획과 범위·일정·원가 기준선을 포함",
+    "definition": "프로젝트를 어떻게 실행·감시·통제·종료할지를 정의한 문서로, 각 보조 관리 계획서와 범위·일정·원가 기준선을 통합한 통합 관리의 핵심 산출물",
     "outline": [
-      "관리계획서의 개념",
-      "구성 요소",
-      "기준선",
-      "갱신 통제"
+      "계획서 개념",
+      "- 역할",
+      "개발 데이터 흐름과 ITTO",
+      "- 흐름",
+      "목차 구성",
+      "- 목차 사례"
     ],
     "keywords_must": [
-      "프로젝트 관리 계획서(Project Management Plan)",
-      "보조 관리 계획(Subsidiary Plans)",
-      "범위 기준선(Scope Baseline)",
-      "일정 기준선(Schedule Baseline)",
-      "원가 기준선(Cost Baseline)",
-      "성과 측정 기준선(Performance Measurement Baseline)",
-      "변경 관리 계획(Change Management Plan)",
-      "형상 관리 계획(Configuration Management Plan)"
+      "범위·요구사항·일정·원가·품질·자원·의사소통·리스크·조달·이해관계자 관리 계획서",
+      "변경·형상 관리 계획서",
+      "범위 기준선(범위 기술서·WBS·WBS 사전)",
+      "일정 기준선",
+      "원가 기준선",
+      "성과 측정 기준선(PMB)",
+      "투입물(헌장·타 프로세스 산출물·EEF·OPA)",
+      "도구(전문가 판단·데이터 수집·회의)"
     ],
     "keywords_ref": [
-      "프로젝트 헌장(Project Charter)",
-      "통합 변경 통제(Integrated Change Control)",
-      "사업수행계획서",
-      "테일링(Tailoring)"
+      "생애주기·개발 접근법 기술",
+      "관리 검토 주기",
+      "점진적 상세화",
+      "통합 변경 통제로만 기준선 변경",
+      "사업 수행 계획서(공공 SI)"
     ],
     "keywords": [
-      "통합본: 보조계획 + 기준선",
-      "PMB = 범위+일정+원가 기준선",
-      "승인 후 변경은 공식 절차",
-      "실행·통제의 How"
+      "구성(보조 계획서): 범위·요구사항·일정·원가·품질·자원·의사소통·리스크·조달·이해관계자 관리 계획서 · 변경·형상 관리 계획서",
+      "기준선(Baselines): 범위 기준선(범위 기술서·WBS·WBS 사전) · 일정 기준선 · 원가 기준선 · 성과 측정 기준선(PMB)",
+      "ITTO: 투입물(헌장·타 프로세스 산출물·EEF·OPA) · 도구(전문가 판단·데이터 수집·회의)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "계획서 개념",
         "subsections": [
           {
-            "title": null,
+            "title": "역할",
             "items": [
-              "실행·통제의 기준이 되는 종합 관리 문서"
+              "프로젝트 수행 기준",
+              "기준선 대비 성과 측정",
+              "이해관계자 합의 근거",
+              "변경 통제 대상"
             ]
           }
         ]
       },
       {
-        "title": "구성",
+        "title": "개발 데이터 흐름과 ITTO",
         "subsections": [
           {
-            "title": null,
+            "title": "흐름",
             "items": [
-              "범위·일정·원가·품질·자원·의사소통·위험·조달·이해관계자 관리계획",
-              "변경·형상·요구사항 관리계획"
+              "헌장 → 타 기획 프로세스 보조 계획 통합 → 프로젝트 관리 계획서 → 실행·감시 프로세스에 투입"
             ]
           }
         ]
       },
       {
-        "title": "기준선",
+        "title": "목차 구성",
         "subsections": [
           {
-            "title": null,
+            "title": "목차 사례",
             "items": [
-              "Scope/Schedule/Cost Baseline → PMB",
-              "변경 승인 시에만 갱신"
+              "개요·목표",
+              "조직·역할",
+              "범위·WBS",
+              "일정·마일스톤",
+              "원가·예산",
+              "품질·위험·의사소통·형상 관리",
+              "보고·변경 절차"
             ]
           }
         ]
@@ -1664,92 +1808,202 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "프로젝트 관리 계획서(Project Management Plan)",
-      "보조 관리 계획(Subsidiary Plans)",
-      "범위 기준선(Scope Baseline)",
-      "일정 기준선(Schedule Baseline)",
-      "원가 기준선(Cost Baseline)",
-      "성과 측정 기준선(Performance Measurement Baseline)",
-      "변경 관리 계획(Change Management Plan)",
-      "형상 관리 계획(Configuration Management Plan)"
+      "범위·요구사항·일정·원가·품질·자원·의사소통·리스크·조달·이해관계자 관리 계획서",
+      "변경·형상 관리 계획서",
+      "범위 기준선(범위 기술서·WBS·WBS 사전)",
+      "일정 기준선",
+      "원가 기준선",
+      "성과 측정 기준선(PMB)",
+      "투입물(헌장·타 프로세스 산출물·EEF·OPA)",
+      "도구(전문가 판단·데이터 수집·회의)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_021": {
     "name": "인도물(Deliverable)",
     "en": "Deliverable",
     "title": "인도물(Deliverable)",
-    "definition": "프로젝트 단계 또는 종료 시 인수자에게 넘기는 검증 가능한 작업 산출물. 수량·일정·장소·인수 기준이 협약·계획에 명시됨",
+    "definition": "프로세스·단계·프로젝트를 완료하기 위해 생산해야 하는 고유하고 검증 가능한 제품·결과·서비스 수행 역량으로, 작업 지시·관리 프로세스에서 생성되고 범위 확인으로 인수됨",
     "outline": [
-      "인도물의 개념",
-      "- 정의",
-      "- 특징",
-      "검증과 인수",
-      "관련 개념"
+      "개념과 주요 특징",
+      "- 주요 특징",
+      "생성과 인수 흐름",
+      "- 흐름",
+      "관리 포인트",
+      "- 관리"
     ],
     "keywords_must": [
-      "인도물(Deliverable)",
-      "작업 산출물(Work Product)",
-      "인수 기준(Acceptance Criteria)",
-      "검증(Verification)",
-      "확인(Validation)",
-      "단계 종료(Phase Gate)",
-      "중간 인도물(Interim Deliverable)",
-      "최종 인도물(Final Deliverable)"
+      "생성 인도물(작업 지시·관리)",
+      "검증된 인도물(Verified, 품질 통제)",
+      "인수된 인도물(Accepted, 범위 확인)",
+      "프로젝트 작업 지시·관리",
+      "품질 통제(Control Quality)",
+      "범위 확인(Validate Scope)",
+      "프로젝트 종료",
+      "형상 관리(Configuration Management)",
+      "인수 기준(Acceptance Criteria)"
     ],
     "keywords_ref": [
-      "WBS(Work Breakdown Structure)",
-      "범위 기준선(Scope Baseline)",
-      "품질 통제(Quality Control)",
-      "계약(Contract)"
+      "작업 패키지(WBS 최하위)와 대응",
+      "산출물(Artifact)과 구분",
+      "증빙 문서",
+      "애자일: 완료 정의(DoD)·증분(Increment)",
+      "변경 요청 발생"
     ],
     "keywords": [
-      "정의: 검증 가능한 산출물",
-      "인수 기준·일정·장소 명시",
-      "단계/최종 인도물",
-      "검증(올바르게 만들었는가) vs 확인(올바른가)"
+      "상태 흐름: 생성 인도물(작업 지시·관리) · 검증된 인도물(Verified, 품질 통제) · 인수된 인도물(Accepted, 범위 확인)",
+      "관련 프로세스: 프로젝트 작업 지시·관리 · 품질 통제(Control Quality) · 범위 확인(Validate Scope) · 프로젝트 종료",
+      "관리: 형상 관리(Configuration Management) · 인수 기준(Acceptance Criteria)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "개념과 주요 특징",
         "subsections": [
           {
-            "title": "정의",
+            "title": "주요 특징",
             "items": [
-              "합의된 조건으로 인도·인수되는 고유하고 검증 가능한 산출물"
+              "고유성",
+              "검증 가능",
+              "유형(제품) 또는 무형(서비스·결과)",
+              "프로젝트 목표 달성 수단"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "생성과 인수 흐름",
+        "subsections": [
+          {
+            "title": "흐름",
+            "items": [
+              "작업 지시·관리에서 생성 → 품질 통제로 검증 → 범위 확인에서 고객 공식 인수 → 종료 프로세스로 이관"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "관리 포인트",
+        "subsections": [
+          {
+            "title": "관리",
+            "items": [
+              "WBS 작업 패키지 단위 정의",
+              "인수 기준 사전 합의",
+              "형상 관리로 버전 통제",
+              "애자일은 스프린트 증분이 인도물"
+            ]
+          }
+        ]
+      }
+    ],
+    "dueum": null,
+    "curated": true,
+    "keywords_note": null,
+    "note": null,
+    "review": null,
+    "quiz_terms": [
+      "생성 인도물(작업 지시·관리)",
+      "검증된 인도물(Verified, 품질 통제)",
+      "인수된 인도물(Accepted, 범위 확인)",
+      "프로젝트 작업 지시·관리",
+      "품질 통제(Control Quality)",
+      "범위 확인(Validate Scope)",
+      "프로젝트 종료",
+      "형상 관리(Configuration Management)",
+      "인수 기준(Acceptance Criteria)"
+    ],
+    "quiz_groups": [
+      "pm"
+    ],
+    "reviewed": true
+  },
+  "PM_022": {
+    "name": "프로젝트 범위 관리(Project Scope Management)",
+    "en": "Project Scope Management",
+    "title": "프로젝트 범위 관리(Project Scope Management)",
+    "definition": "프로젝트를 성공적으로 완료하는 데 필요한 작업을 모두, 그리고 필요한 작업만 포함하도록 정의·통제하는 지식 영역",
+    "outline": [
+      "범위 관리 개념",
+      "- 중요성",
+      "프로세스와 산출물",
+      "- 기획",
+      "- 감시·통제",
+      "WBS 활용",
+      "- WBS"
+    ],
+    "keywords_must": [
+      "범위 관리 계획",
+      "요구사항 수집",
+      "범위 정의",
+      "WBS 작성",
+      "범위 확인(Validate Scope)",
+      "범위 통제(Control Scope)",
+      "요구사항 추적 매트릭스(RTM)",
+      "프로젝트 범위 기술서",
+      "WBS·WBS 사전",
+      "범위 기준선(Scope Baseline)",
+      "범위 추가(Scope Creep)",
+      "골드 플레이팅(Gold Plating)"
+    ],
+    "keywords_ref": [
+      "제품 범위 vs 프로젝트 범위",
+      "100% 규칙",
+      "작업 패키지·통제 계정",
+      "분해(Decomposition)",
+      "애자일: 백로그로 범위 관리"
+    ],
+    "keywords": [
+      "6개 프로세스: 범위 관리 계획 · 요구사항 수집 · 범위 정의 · WBS 작성 · 범위 확인(Validate Scope) · 범위 통제(Control Scope)",
+      "핵심 산출물: 요구사항 추적 매트릭스(RTM) · 프로젝트 범위 기술서 · WBS·WBS 사전 · 범위 기준선(Scope Baseline)",
+      "문제 대응: 범위 추가(Scope Creep) · 골드 플레이팅(Gold Plating)"
+    ],
+    "sections": [
+      {
+        "title": "범위 관리 개념",
+        "subsections": [
+          {
+            "title": "중요성",
+            "items": [
+              "일정·원가 산정의 기준",
+              "변경 통제의 기준선",
+              "실패 사례: 범위 1.6배 증가·요구사항 확정 지연"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "프로세스와 산출물",
+        "subsections": [
+          {
+            "title": "기획",
+            "items": [
+              "계획: 범위·요구사항 관리 계획서",
+              "수집: 인터뷰·워크숍·프로토타입 → 요구사항 문서·RTM",
+              "정의: 범위 기술서",
+              "WBS: 범위 기준선"
             ]
           },
           {
-            "title": "특징",
+            "title": "감시·통제",
             "items": [
-              "유형·무형 모두 가능, 수량·일정·장소가 계획에 명시"
+              "범위 확인: 인도물 공식 인수",
+              "범위 통제: 차이 분석·변경 요청"
             ]
           }
         ]
       },
       {
-        "title": "검증·인수",
+        "title": "WBS 활용",
         "subsections": [
           {
-            "title": null,
+            "title": "WBS",
             "items": [
-              "검증: 명세 충족 여부",
-              "확인: 이해관계자 니즈 충족",
-              "인수 기준 통과 후 공식 인수"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "관련",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "WBS 산출물 분해, 범위 기준선에 포함"
+              "인도물 중심 계층 분해",
+              "100% 규칙",
+              "활용: 일정(활동 정의)·원가(산정)·의사소통(책임 할당 RAM)·리스크 식별"
             ]
           }
         ]
@@ -1761,284 +2015,225 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "인도물(Deliverable)",
-      "작업 산출물(Work Product)",
-      "인수 기준(Acceptance Criteria)",
-      "검증(Verification)",
-      "확인(Validation)",
-      "단계 종료(Phase Gate)",
-      "중간 인도물(Interim Deliverable)",
-      "최종 인도물(Final Deliverable)"
-    ],
-    "quiz_groups": [
-      "pm"
-    ],
-    "quiz_avoid": []
-  },
-  "PM_022": {
-    "name": "프로젝트 범위관리(Project Scope Management)",
-    "en": "Project Scope Management",
-    "title": "프로젝트 범위관리(Project Scope Management)",
-    "definition": "프로젝트를 완료하는 데 필요한 모든 작업(과 불필요한 작업 배제)을 정의·관리하는 지식영역. 요구사항→범위정의→WBS→확인·통제",
-    "outline": [
-      "범위관리의 개념",
-      "주요 프로세스",
-      "범위 기준선",
-      "Scope Creep 예방"
-    ],
-    "keywords_must": [
-      "범위 관리(Scope Management)",
-      "요구사항 수집(Collect Requirements)",
-      "범위 정의(Define Scope)",
-      "WBS 작성(Create WBS)",
+      "범위 관리 계획",
+      "요구사항 수집",
+      "범위 정의",
+      "WBS 작성",
       "범위 확인(Validate Scope)",
       "범위 통제(Control Scope)",
-      "범위 기준선(Scope Baseline)",
-      "제품 범위 vs 프로젝트 범위(Product vs Project Scope)"
-    ],
-    "keywords_ref": [
       "요구사항 추적 매트릭스(RTM)",
-      "Scope Creep",
-      "Gold Plating",
-      "변경 통제(Change Control)"
-    ],
-    "keywords": [
-      "프로세스: 계획→요구→정의→WBS→확인→통제",
-      "기준선: 범위기술서+WBS+WBS사전",
-      "제품범위 vs 프로젝트범위",
-      "비승인 추가는 Creep"
-    ],
-    "sections": [
-      {
-        "title": "개념",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "필요한 일만 포함해 목표를 달성하도록 범위를 정의·통제"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "프로세스",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "범위관리 계획, 요구사항 수집, 범위 정의, WBS 작성, 범위 확인, 범위 통제"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "기준선·위험",
-        "subsections": [
-          {
-            "title": null,
-            "items": [
-              "Scope Baseline = 범위기술서 + WBS + WBS Dictionary",
-              "비공식 추가는 Scope Creep, 초과 기능은 Gold Plating"
-            ]
-          }
-        ]
-      }
-    ],
-    "dueum": null,
-    "curated": true,
-    "keywords_note": null,
-    "note": null,
-    "review": null,
-    "quiz_terms": [
-      "범위 관리(Scope Management)",
-      "요구사항 수집(Collect Requirements)",
-      "범위 정의(Define Scope)",
-      "WBS 작성(Create WBS)",
-      "범위 확인(Validate Scope)",
-      "범위 통제(Control Scope)",
+      "프로젝트 범위 기술서",
+      "WBS·WBS 사전",
       "범위 기준선(Scope Baseline)",
-      "제품 범위 vs 프로젝트 범위(Product vs Project Scope)"
+      "범위 추가(Scope Creep)",
+      "골드 플레이팅(Gold Plating)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "RAM": "Responsibility Assignment Matrix"
+    }
   },
   "PM_024_0": {
     "name": "요구사항 수집 기법(Requirements Collection Techniques)",
-    "en": "Requirements Collection Techniques",
+    "en": "Collect Requirements Techniques",
     "title": "요구사항 수집 기법(Requirements Collection Techniques)",
-    "definition": "이해관계자 니즈를 수집·문서화하는 기법 묶음. 데이터 수집·분석·표현, 의사결정, 대인 스킬, 프로토타입 등으로 분류",
+    "definition": "이해관계자의 요구와 기대를 파악·문서화하기 위해 PMBOK 요구사항 수집 프로세스에서 사용하는 데이터 수집·분석·표현·의사결정 등의 도구와 기법",
     "outline": [
-      "요구사항 수집의 개념",
-      "데이터 수집·분석·표현",
-      "의사결정·대인 스킬",
-      "기타 기법"
+      "요구사항 수집 필요성",
+      "- 도입 필요성",
+      "기법 유형",
+      "- 데이터 수집",
+      "- 의사결정·대인 관계",
+      "표현 기법 활용",
+      "- 활용"
     ],
     "keywords_must": [
-      "인터뷰(Interview)",
-      "포커스 그룹(Focus Group)",
-      "설문(Questionnaire/Survey)",
-      "브레인스토밍(Brainstorming)",
-      "벤치마킹(Benchmarking)",
-      "문서 분석(Document Analysis)",
+      "인터뷰",
+      "포커스 그룹",
+      "설문 조사",
+      "브레인스토밍",
+      "문서 분석",
+      "마인드 매핑",
       "친화도(Affinity Diagram)",
-      "명목 집단 기법(NGT)",
-      "프로토타입(Prototype)",
-      "컨텍스트 다이어그램(Context Diagram)"
+      "다기준 의사결정 분석",
+      "투표(만장일치·다수결·과반수)",
+      "프로토타입",
+      "컨텍스트 다이어그램"
     ],
     "keywords_ref": [
-      "다기준 의사결정(Multi-criteria Decision Analysis)",
-      "관찰(Observation)",
-      "촉진(Facilitation)",
-      "마인드맵(Mind Mapping)",
-      "전문가 판단(Expert Judgment)"
+      "벤치마킹",
+      "관찰·대화",
+      "필요성: 범위 기준선 제공·일정과 원가 영향·추적성 제공",
+      "퍼실리테이션 워크숍(JAD·QFD)",
+      "명목 집단 기법",
+      "산출물: 요구사항 문서·RTM"
     ],
     "keywords": [
-      "수집: 인터뷰·포커스·설문·벤치·브레인",
-      "분석: 문서분석",
-      "표현: 친화도·마인드맵",
-      "기타: 프로토타입·컨텍스트 다이어그램"
+      "데이터 수집: 인터뷰 · 포커스 그룹 · 설문 조사 · 브레인스토밍",
+      "분석·표현: 문서 분석 · 마인드 매핑 · 친화도(Affinity Diagram)",
+      "의사결정: 다기준 의사결정 분석 · 투표(만장일치·다수결·과반수)",
+      "기타: 프로토타입 · 컨텍스트 다이어그램"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "요구사항 수집 필요성",
         "subsections": [
           {
-            "title": null,
+            "title": "도입 필요성",
             "items": [
-              "이해관계자 요구를 빠짐없이 수집해 추적 가능한 문서로 만듦"
+              "범위 기준선 제공",
+              "일정·원가 산정 근거",
+              "추적성 확보",
+              "이해관계자 기대 관리"
             ]
           }
         ]
       },
       {
-        "title": "기법 분류",
+        "title": "기법 유형",
         "subsections": [
           {
             "title": "데이터 수집",
             "items": [
-              "인터뷰, 포커스 그룹, 설문, 벤치마킹, 브레인스토밍"
+              "인터뷰·포커스 그룹·설문·벤치마킹",
+              "분석: 문서 분석",
+              "표현: 마인드맵·친화도"
             ]
           },
           {
-            "title": "분석·표현",
+            "title": "의사결정·대인 관계",
             "items": [
-              "문서 분석, 친화도, 마인드맵"
-            ]
-          },
-          {
-            "title": "의사결정·대인",
-            "items": [
-              "투표, 다기준 분석, NGT, 관찰, 촉진"
+              "투표·다기준 분석",
+              "명목 집단·관찰·퍼실리테이션"
             ]
           }
         ]
       },
       {
-        "title": "기타",
+        "title": "표현 기법 활용",
         "subsections": [
           {
-            "title": null,
+            "title": "활용",
             "items": [
-              "프로토타입, 컨텍스트 다이어그램, 전문가 판단"
+              "프로토타입: 조기 피드백",
+              "컨텍스트 다이어그램: 시스템 경계·외부 개체",
+              "결과는 요구사항 문서·RTM으로 관리"
             ]
           }
         ]
       }
     ],
-    "dueum": null,
+    "dueum": "수-분-표-의-대-프-컨(수집·분석·표현·의사결정·대인관계·프로토타입·컨텍스트)",
     "curated": true,
     "keywords_note": null,
     "note": null,
     "review": null,
     "quiz_terms": [
-      "인터뷰(Interview)",
-      "포커스 그룹(Focus Group)",
-      "설문(Questionnaire/Survey)",
-      "브레인스토밍(Brainstorming)",
-      "벤치마킹(Benchmarking)",
-      "문서 분석(Document Analysis)",
+      "인터뷰",
+      "포커스 그룹",
+      "설문 조사",
+      "브레인스토밍",
+      "문서 분석",
+      "마인드 매핑",
       "친화도(Affinity Diagram)",
-      "명목 집단 기법(NGT)",
-      "프로토타입(Prototype)",
-      "컨텍스트 다이어그램(Context Diagram)"
+      "다기준 의사결정 분석",
+      "투표(만장일치·다수결·과반수)",
+      "프로토타입",
+      "컨텍스트 다이어그램"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_024_1": {
     "name": "요구사항 추적 매트릭스(RTM, Requirements Traceability Matrix)",
     "en": "Requirements Traceability Matrix",
     "title": "요구사항 추적 매트릭스(RTM, Requirements Traceability Matrix)",
-    "definition": "요구사항 ID부터 설계·구현·시험까지 전후방 추적을 가능하게 하는 표. 변경 영향 분석과 누락 방지에 사용",
+    "definition": "요구사항을 출처부터 설계·구현·테스트·인도물까지 연결해 추적하는 표로, 모든 요구사항이 구현·검증되었는지와 변경 영향을 확인하게 함",
     "outline": [
-      "RTM의 개념",
-      "- 정의",
-      "- 목적",
-      "주요 열(항목)",
-      "활용"
+      "추적표 개념",
+      "- 역할",
+      "주요 항목",
+      "- 항목 예",
+      "활용 분야",
+      "- 활용"
     ],
     "keywords_must": [
-      "요구사항 추적 매트릭스(RTM)",
-      "요구사항 ID(Requirement ID)",
-      "양방향 추적성(Bidirectional Traceability)",
-      "전방 추적(Forward Traceability)",
-      "후방 추적(Backward Traceability)",
-      "영향 분석(Impact Analysis)",
-      "우선순위(Priority)",
-      "요구사항 유형(Requirement Type)"
+      "요구사항 ID",
+      "요구사항 설명·유형",
+      "우선순위",
+      "연관 모듈·설계·코드 참조",
+      "테스트 케이스 ID·결과",
+      "순방향(Forward)",
+      "역방향(Backward)",
+      "양방향(Bidirectional)",
+      "요구사항 검증",
+      "테스트 커버리지 확인",
+      "변경 영향 분석"
     ],
     "keywords_ref": [
-      "SRS(Software Requirements Specification)",
-      "범위 기준선(Scope Baseline)",
-      "시험 케이스(Test Case)",
-      "변경요청(Change Request)"
+      "변경 이력",
+      "범위 확인 근거",
+      "골드 플레이팅 방지",
+      "품질 보증·감리",
+      "규정 준수 증빙",
+      "결함 추적",
+      "ALM 도구 자동화"
     ],
     "keywords": [
-      "열: ID·설명·유형·우선순위·설계·모듈·시험",
-      "전방: 요구→설계→코드→시험",
-      "후방: 시험→요구 근거",
-      "변경 시 영향 범위 파악"
+      "주요 항목: 요구사항 ID · 요구사항 설명·유형 · 우선순위 · 연관 모듈·설계·코드 참조 · 테스트 케이스 ID·결과",
+      "추적 방향: 순방향(Forward) · 역방향(Backward) · 양방향(Bidirectional)",
+      "활용: 요구사항 검증 · 테스트 커버리지 확인 · 변경 영향 분석"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "추적표 개념",
         "subsections": [
           {
-            "title": "정의",
+            "title": "역할",
             "items": [
-              "요구사항을 수명주기 산출물과 연결한 추적표"
-            ]
-          },
-          {
-            "title": "목적",
-            "items": [
-              "누락·과잉 방지, 변경 영향 분석, 검증 근거"
+              "요구사항 누락·추가 방지",
+              "변경 이력 관리",
+              "범위 기준선과 인도물 연결"
             ]
           }
         ]
       },
       {
-        "title": "항목",
+        "title": "주요 항목",
         "subsections": [
           {
-            "title": null,
+            "title": "항목 예",
             "items": [
-              "ID, 설명, 유형, 우선순위, 출처, 관련 모듈, 설계·시험 참조, 상태"
+              "ID: REQ-001",
+              "설명: 비밀번호 로그인",
+              "유형: 기능",
+              "우선순위: 상",
+              "모듈: AuthModule",
+              "설계·코드 참조",
+              "테스트 케이스·결과",
+              "변경 이력: 최소 길이 8→10"
             ]
           }
         ]
       },
       {
-        "title": "추적",
+        "title": "활용 분야",
         "subsections": [
           {
-            "title": null,
+            "title": "활용",
             "items": [
-              "전방·후방·양방향 추적성 유지"
+              "요구사항 검증·검토",
+              "테스트 커버리지",
+              "변경 관리",
+              "품질 보증",
+              "진행 관리",
+              "규정 준수",
+              "결함 추적"
             ]
           }
         ]
@@ -2050,109 +2245,139 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "요구사항 추적 매트릭스(RTM)",
-      "요구사항 ID(Requirement ID)",
-      "양방향 추적성(Bidirectional Traceability)",
-      "전방 추적(Forward Traceability)",
-      "후방 추적(Backward Traceability)",
-      "영향 분석(Impact Analysis)",
-      "우선순위(Priority)",
-      "요구사항 유형(Requirement Type)"
+      "요구사항 ID",
+      "요구사항 설명·유형",
+      "우선순위",
+      "연관 모듈·설계·코드 참조",
+      "테스트 케이스 ID·결과",
+      "순방향(Forward)",
+      "역방향(Backward)",
+      "양방향(Bidirectional)",
+      "요구사항 검증",
+      "테스트 커버리지 확인",
+      "변경 영향 분석"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "ALM": "Application Lifecycle Management"
+    }
   },
   "PM_025": {
     "name": "요구사항 명세서(SRS, Software Requirements Specification)",
     "en": "Software Requirements Specification",
     "title": "요구사항 명세서(SRS, Software Requirements Specification)",
-    "definition": "소프트웨어가 무엇을 해야 하는지를 정의한 명세 문서. 분석·설계·구현·시험·인수의 기준이 되며 IEEE 830 등 품질 속성을 따름",
+    "definition": "소프트웨어가 수행해야 할 기능·비기능 요구사항과 제약조건을 명확하고 검증 가능하게 기술한 문서로, 설계·개발·시험·계약의 기준이 됨",
     "outline": [
-      "SRS의 개념",
-      "구성 내용",
-      "좋은 요구사항의 속성",
-      "관련 산출물"
+      "주요 역할",
+      "- 역할",
+      "품질 특성과 목차",
+      "- 품질 특성",
+      "- 목차",
+      "공공 SW 사업 적용",
+      "- 적용"
     ],
     "keywords_must": [
-      "요구사항 명세서(SRS)",
-      "기능 요구사항(Functional Requirements)",
-      "비기능 요구사항(Non-functional Requirements)",
+      "정확성(Correct)",
       "명확성(Unambiguous)",
       "완전성(Complete)",
-      "검증가능성(Verifiable)",
       "일관성(Consistent)",
-      "수정용이성(Modifiable)",
-      "추적성(Traceable)"
+      "순위화(Ranked: 중요도·안정성)",
+      "검증 가능성(Verifiable)",
+      "수정 용이성(Modifiable)",
+      "추적성(Traceable)",
+      "소개(목적·범위)",
+      "전체 설명",
+      "상세 요구사항(기능·성능·인터페이스·제약)"
     ],
     "keywords_ref": [
-      "IEEE 830 / ISO/IEC/IEEE 29148",
-      "유스케이스(Use Case)",
-      "사용자 스토리(User Story)",
-      "RTM(Requirements Traceability Matrix)"
+      "ISO/IEC/IEEE 29148(대체 표준)",
+      "SW진흥법 요구사항 상세화·과업심의위원회",
+      "SRS 없는 사업 문제: 과업 변경·분쟁",
+      "RTM·시험 계획 연계",
+      "상세화 수준 적정성"
     ],
     "keywords": [
-      "기능·비기능 요구 구분",
-      "속성: 명료·완전·검증·일관·수정·추적",
-      "설계 해가 아닌 What 기술",
-      "인수·시험의 기준"
+      "품질 특성(IEEE 830-1998): 정확성(Correct) · 명확성(Unambiguous) · 완전성(Complete) · 일관성(Consistent) · 순위화(Ranked: 중요도·안정성) · 검증 가능성(Verifiable) · 수정 용이성(Modifiable) · 추적성(Traceable)",
+      "목차 구성: 소개(목적·범위) · 전체 설명 · 상세 요구사항(기능·성능·인터페이스·제약)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "주요 역할",
         "subsections": [
           {
-            "title": null,
+            "title": "역할",
             "items": [
-              "SW가 충족해야 할 요구를 체계적으로 기술한 명세"
+              "발주자–개발자 합의 기준",
+              "설계·시험 기준",
+              "과업 범위·대가 산정 근거",
+              "변경 관리 기준선"
             ]
           }
         ]
       },
       {
-        "title": "구성",
+        "title": "품질 특성과 목차",
         "subsections": [
           {
-            "title": null,
+            "title": "품질 특성",
             "items": [
-              "개요, 전체 기술, 기능 요구, 비기능(성능·보안·가용성 등), 인터페이스, 부록"
+              "정확·명확·완전·일관",
+              "순위화: 중요도·안정성",
+              "검증 가능",
+              "수정 용이",
+              "추적 가능"
+            ]
+          },
+          {
+            "title": "목차",
+            "items": [
+              "1. 소개",
+              "2. 전체 설명(제품 관점·사용자·제약)",
+              "3. 상세 요구사항"
             ]
           }
         ]
       },
       {
-        "title": "품질 속성",
+        "title": "공공 SW 사업 적용",
         "subsections": [
           {
-            "title": null,
+            "title": "적용",
             "items": [
-              "명확·완전·검증가능·일관·수정용이·추적가능·순위화 가능"
+              "기획: 요구사항 상세화",
+              "발주: RFP에 SRS 반영·과업심의위원회",
+              "수행: SRS 기준 설계·시험",
+              "문제 예방: 과업 변경 분쟁·추가 비용"
             ]
           }
         ]
       }
     ],
-    "dueum": "명완검일수추개",
+    "dueum": "명완검일수추개(명확·완전·검증·일관·수정·추적·운영 중 사용 가능)",
     "curated": true,
     "keywords_note": null,
     "note": null,
     "review": null,
     "quiz_terms": [
-      "요구사항 명세서(SRS)",
-      "기능 요구사항(Functional Requirements)",
-      "비기능 요구사항(Non-functional Requirements)",
+      "정확성(Correct)",
       "명확성(Unambiguous)",
       "완전성(Complete)",
-      "검증가능성(Verifiable)",
       "일관성(Consistent)",
-      "수정용이성(Modifiable)",
-      "추적성(Traceable)"
+      "순위화(Ranked: 중요도·안정성)",
+      "검증 가능성(Verifiable)",
+      "수정 용이성(Modifiable)",
+      "추적성(Traceable)",
+      "소개(목적·범위)",
+      "전체 설명",
+      "상세 요구사항(기능·성능·인터페이스·제약)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_026": {
     "name": "작업분류체계(WBS, Work Breakdown Structure)",

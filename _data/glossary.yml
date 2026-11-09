@@ -134,6 +134,7 @@ CDF: Cumulative Distribution Function
 CDM: Code Division Multiplexing
 CDMA: Code Division Multiple Access
 CDN: Content Delivery Network
+CF: Cash Flow
 CFD: Cumulative Flow Diagram
 CIDR: Classless Inter-Domain Routing
 CIFS: Common Internet File System
@@ -331,6 +332,7 @@ FTA: Fault Tree Analysis
 FTM: Fine Timing Measurement
 FTP: File Transfer Protocol
 FTPS: FTP Secure
+FV: Future Value
 FWA: Fixed Wireless Access
 FWLB: Firewall Load Balancing
 G20: Group of Twenty
@@ -441,6 +443,7 @@ ISSI: Inter-RF Subsystem Interface
 ITIL: Information Technology Infrastructure Library
 ITS: Intelligent Transport Systems
 ITSM: IT Service Management
+ITTO: Inputs, Tools & Techniques, Outputs
 ITU: International Telecommunication Union
 IVI: In-Vehicle Infotainment
 IVN: In-Vehicle Network
@@ -448,6 +451,7 @@ IVS: In-Vehicle System
 IX: [Internet eXchange, Intention Exclusive Lock]
 IXFR: Incremental Zone Transfer
 IXP: Internet Exchange Point
+JAD: Joint Application Development
 JAR: Java Archive
 JID: Jabber ID
 JIT: Just In Time
@@ -535,6 +539,7 @@ MIB: Management Information Base
 MICS: Medical Implant Communication Service
 MIME: Multipurpose Internet Mail Extensions
 MIMO: Multiple-Input Multiple-Output
+MIRR: Modified Internal Rate of Return
 MITM: Man-in-the-Middle
 ML: Machine Learning
 MLD: Multicast Listener Discovery
@@ -550,6 +555,7 @@ MoS: Mean Opinion Score
 MOS: Mean Opinion Score
 MOSPF: Multicast Open Shortest Path First
 MOT: Management of Technology
+MOU: Memorandum of Understanding
 MPDU: MAC Protocol Data Unit
 MPEG: Moving Picture Experts Group
 MPLS: Multi-Protocol Label Switching
@@ -706,6 +712,7 @@ PMC: Project Management Consulting
 PMF: [Protected Management Frames, Product-Market Fit, Probability Mass Function]
 PMI: Project Management Institute
 PMO: Project Management Office
+PMP: Project Management Professional
 PMTUD: Path MTU Discovery
 PN: Pseudo-Noise
 PNG: Portable Network Graphics
@@ -714,9 +721,11 @@ POLQA: Perceptual Objective Listening Quality Analysis
 POP: [Point of Presence, Point of Purchase, Point of Production]
 POP3: Post Office Protocol version 3
 POTN: Packet Optical Transport Network
+PP: Payback Period
 PPP: [Point-to-Point Protocol, Public Private Partnership]
 PQ: Priority Queuing
 PRB: Physical Resource Block
+PRINCE2: PRojects IN Controlled Environments 2
 PRM: [Performance Reference Model, Partner Relationship Management]
 ProSe: Proximity Services
 PS-LTE: Public Safety LTE
@@ -727,12 +736,14 @@ PSM: [Power Saving Mode, Platform Specific Model]
 PSTN: Public Switched Telephone Network
 PTR: Pointer
 PTT: Push To Talk
+PV: Present Value
 PVC: Permanent Virtual Circuit
 PVST: Per-VLAN Spanning Tree
 PWM: Pulse Width Modulation
 QAM: Quadrature Amplitude Modulation
 QCI: QoS Class Identifier
 QDMTT: Qualified Domestic Minimum Top-up Tax
+QFD: Quality Function Deployment
 QoE: Quality of Experience
 QoS: Quality of Service
 QPACK: QUIC Header Compression
@@ -848,6 +859,7 @@ SEP: Standard-Essential Patent
 SFC: Service Function Chaining
 SFTP: SSH File Transfer Protocol
 SFU: Selective Forwarding Unit
+SI: System Integration
 SIC: Successive Interference Cancellation
 SIFS: Short Inter-Frame Space
 SIGTRAN: Signaling Transport
@@ -873,6 +885,7 @@ SON: Self-Organizing Network
 SONET: Synchronous Optical Network
 SONiC: Software for Open Networking in the Cloud
 SoW: Statement of Work
+SOW: Statement of Work
 SPF: [Shortest Path First, Sender Policy Framework]
 SPIN: Sensor Protocols for Information via Negotiation
 SPOF: Single Point of Failure
