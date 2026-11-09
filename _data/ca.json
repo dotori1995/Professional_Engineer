@@ -3201,7 +3201,7 @@
     "warnings": [],
     "pages": [
       47,
-      161
+      171
     ],
     "outline": [
       "가상 메모리 개념과 필요성",
@@ -3999,7 +3999,7 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": "반배교할(반입·배치·교체·할당)"
+    "dueum": null
   },
   {
     "id": "CA_022",
@@ -4621,6 +4621,7226 @@
       "MBR": "Master Boot Record",
       "GPT": "GUID Partition Table",
       "RAM": "Random Access Memory"
+    }
+  },
+  {
+    "id": "CA_027",
+    "code": "CA_027",
+    "title": "쓰기 절벽(Write Cliff)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 보조기억장치 > SSD",
+    "definition": "NAND 기반 SSD가 덮어쓰기를 못해 소거된 빈 블록을 미리 확보해야 하는데, 쓰기 부하가 블록 소거 능력을 넘어서 여유 블록이 고갈되면 쓰기 성능이 갑자기 크게 떨어지는 현상",
+    "keywords": [
+      "핵심: 덮어쓰기 불가(Erase-before-Write) · 여유 블록(Free Block) 고갈 · 오버 프로비저닝(Over-Provisioning) · 웨어 레벨링(Wear Leveling)",
+      "필수: 가비지 컬렉션(Garbage Collection) · 쓰기 증폭(Write Amplification) · 정상 상태 성능(Steady State)",
+      "참고: 셀 쓰기 수명(P/E Cycle) 수천~수만 회 · 로그 구조 파일 시스템(LFS) · TRIM 명령 · SLC 캐시 소진 · 페이지 레지스터 재기록 횟수 관리"
+    ],
+    "sections": [
+      {
+        "title": "쓰기 절벽 발생 원리",
+        "subsections": [
+          {
+            "title": "쓰기 제약",
+            "items": [
+              "페이지 단위 쓰기, 블록 단위 소거로 수정 시 새 페이지에 기록"
+            ]
+          },
+          {
+            "title": "성능 급락",
+            "items": [
+              "빈 블록이 바닥나면 쓰기 도중 가비지 컬렉션이 끼어들어 지연 폭증"
+            ]
+          },
+          {
+            "title": "내구성 문제",
+            "items": [
+              "셀당 기록 횟수가 제한되어 특정 블록 집중 쓰기 시 조기 고장"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "해결 방안",
+        "subsections": [
+          {
+            "title": "오버 프로비저닝",
+            "items": [
+              "사용자에게 숨긴 예비 영역을 임시 버퍼로 사용 후 부하가 줄면 정위치 이동"
+            ]
+          },
+          {
+            "title": "웨어 레벨링",
+            "items": [
+              "재기록 횟수를 참고해 덜 쓴 페이지 위주로 매핑해 쓰기 분산"
+            ]
+          },
+          {
+            "title": "가비지 컬렉션",
+            "items": [
+              "유효 페이지를 빈 블록으로 복사 후 무효 페이지가 많은 블록을 일괄 소거"
+            ]
+          },
+          {
+            "title": "로그 구조화",
+            "items": [
+              "순차 추가 쓰기 구조로 GC 발생 빈도 최소화"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "웨어 레벨링 동작 예",
+        "subsections": [
+          {
+            "title": "최초 쓰기",
+            "items": [
+              "블록 0의 빈 페이지에 기록하고 매핑 테이블 등록"
+            ]
+          },
+          {
+            "title": "파일 수정",
+            "items": [
+              "기존 페이지를 무효 표시하고 다른 블록 빈 페이지에 새로 기록"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      51,
+      52
+    ],
+    "outline": [
+      "쓰기 절벽 발생 원리",
+      "- 쓰기 제약",
+      "- 성능 급락",
+      "- 내구성 문제",
+      "해결 방안",
+      "- 오버 프로비저닝",
+      "- 웨어 레벨링",
+      "- 가비지 컬렉션",
+      "- 로그 구조화",
+      "웨어 레벨링 동작 예",
+      "- 최초 쓰기",
+      "- 파일 수정"
+    ],
+    "name": "쓰기 절벽(Write Cliff)",
+    "en": "Write Cliff",
+    "keywords_must": [
+      "덮어쓰기 불가(Erase-before-Write)",
+      "여유 블록(Free Block) 고갈",
+      "오버 프로비저닝(Over-Provisioning)",
+      "웨어 레벨링(Wear Leveling)",
+      "가비지 컬렉션(Garbage Collection)",
+      "쓰기 증폭(Write Amplification)",
+      "정상 상태 성능(Steady State)"
+    ],
+    "keywords_ref": [
+      "셀 쓰기 수명(P/E Cycle) 수천~수만 회",
+      "로그 구조 파일 시스템(LFS)",
+      "TRIM 명령",
+      "SLC 캐시 소진",
+      "페이지 레지스터 재기록 횟수 관리"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "덮어쓰기 불가(Erase-before-Write)",
+      "여유 블록(Free Block) 고갈",
+      "오버 프로비저닝(Over-Provisioning)",
+      "웨어 레벨링(Wear Leveling)",
+      "가비지 컬렉션(Garbage Collection)",
+      "쓰기 증폭(Write Amplification)",
+      "정상 상태 성능(Steady State)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_028",
+    "code": "CA_028",
+    "title": "플래시 모듈 드라이브(FMD, Flash Module Drive)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 보조기억장치 > SSD",
+    "definition": "범용 SSD의 쓰기 절벽과 NAND 내구성 한계를 해결하기 위해 멀티코어 전용 플래시 컨트롤러와 고밀도 MLC 패키징을 결합한 엔터프라이즈 스토리지용 플래시 모듈",
+    "keywords": [
+      "핵심: 멀티코어 플래시 컨트롤러 · 플래시 모듈 묶음 병렬화 · MLC 기반 SLC급 성능 · 웨어 레벨링 고도화",
+      "필수: 실시간 인라인 압축 · 엔터프라이즈 스토리지 · 쓰기 절벽 완화",
+      "참고: 히타치(HDS) VSP 계열 FMD · 대용량 모듈(수 TB) · 데이터 포인터 맵·체크 코드 저장 · 올플래시 어레이(AFA)"
+    ],
+    "sections": [
+      {
+        "title": "플래시 모듈 드라이브 개요",
+        "subsections": [
+          {
+            "title": "등장 배경",
+            "items": [
+              "범용 SSD 컨트롤러로는 기업용 지속 쓰기 부하와 수명 요구를 충족하기 어려움"
+            ]
+          },
+          {
+            "title": "구조 특징",
+            "items": [
+              "모듈마다 멀티코어 프로세서를 탑재하고 여러 모듈을 묶어 속도·효율 극대화"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "성능 및 수명 보강 기술",
+        "subsections": [
+          {
+            "title": "멀티 레벨 셀",
+            "items": [
+              "셀당 여러 비트를 저장하는 MLC를 전용 컨트롤러로 제어해 SLC 수준 성능 구현"
+            ]
+          },
+          {
+            "title": "웨어 레벨링",
+            "items": [
+              "셀마다 사용 빈도를 추적해 모든 셀에 균등하게 기록"
+            ]
+          },
+          {
+            "title": "실시간 압축",
+            "items": [
+              "쓰기 전에 데이터를 압축해 실제 기록량과 쓰기 증폭 감소"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "기대 성과",
+        "subsections": [
+          {
+            "title": "수명 연장",
+            "items": [
+              "실제 셀 기록량 감소로 내구성 향상"
+            ]
+          },
+          {
+            "title": "용량 효율",
+            "items": [
+              "압축과 고밀도 패키징으로 랙 공간당 용량 증가"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      53,
+      54
+    ],
+    "outline": [
+      "플래시 모듈 드라이브 개요",
+      "- 등장 배경",
+      "- 구조 특징",
+      "성능 및 수명 보강 기술",
+      "- 멀티 레벨 셀",
+      "- 웨어 레벨링",
+      "- 실시간 압축",
+      "기대 성과",
+      "- 수명 연장",
+      "- 용량 효율"
+    ],
+    "name": "플래시 모듈 드라이브(FMD, Flash Module Drive)",
+    "en": "Flash Module Drive",
+    "keywords_must": [
+      "멀티코어 플래시 컨트롤러",
+      "플래시 모듈 묶음 병렬화",
+      "MLC 기반 SLC급 성능",
+      "웨어 레벨링 고도화",
+      "실시간 인라인 압축",
+      "엔터프라이즈 스토리지",
+      "쓰기 절벽 완화"
+    ],
+    "keywords_ref": [
+      "히타치(HDS) VSP 계열 FMD",
+      "대용량 모듈(수 TB)",
+      "데이터 포인터 맵·체크 코드 저장",
+      "올플래시 어레이(AFA)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "멀티코어 플래시 컨트롤러",
+      "플래시 모듈 묶음 병렬화",
+      "MLC 기반 SLC급 성능",
+      "웨어 레벨링 고도화",
+      "실시간 인라인 압축",
+      "엔터프라이즈 스토리지",
+      "쓰기 절벽 완화"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_029",
+    "code": "CA_029",
+    "title": "플래시 메모리(Flash Memory, NOR·NAND)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 보조기억장치 > 플래시 메모리",
+    "definition": "플로팅 게이트(또는 전하 트랩층)에 전자를 가두거나 빼내 데이터를 기록하고 전원 없이도 유지하는 전기적 소거·재기록 가능 비휘발성 메모리로, 셀 배열 방식에 따라 NOR와 NAND로 구분됨",
+    "keywords": [
+      "핵심: 플로팅 게이트(Floating Gate) · 터널 산화막·ONO 절연막 · 프로그램(전자 주입)·소거(전자 방출) · 워드 라인·비트 라인",
+      "필수: NOR(병렬 연결·바이트 랜덤 읽기) · NAND(직렬 스트링·페이지 읽기·블록 소거) · 고집적·저전력·내충격 · 플래시 파일 시스템(JFFS2·YAFFS2·UBIFS)",
+      "참고: F-N 터널링(Fowler-Nordheim) · 핫 일렉트론 주입 · 문턱 전압(Vth) 변화로 0·1 판별 · XIP(eXecute In Place) · 코드 저장(NOR)·대용량 데이터(NAND)"
+    ],
+    "sections": [
+      {
+        "title": "플래시 메모리 셀 동작",
+        "subsections": [
+          {
+            "title": "쓰기(프로그램)",
+            "items": [
+              "컨트롤 게이트에 고전압을 걸어 전자를 플로팅 게이트로 주입, 문턱 전압 상승"
+            ]
+          },
+          {
+            "title": "소거",
+            "items": [
+              "기판 쪽 고전압으로 전자를 빼내 초기 상태로 복원"
+            ]
+          },
+          {
+            "title": "읽기",
+            "items": [
+              "약한 전압 인가 시 채널 전류 유무로 저장 값 판별"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "NOR 및 NAND 비교",
+        "subsections": [
+          {
+            "title": "셀 연결",
+            "items": [
+              "NOR(비트 라인에 셀 병렬 연결)",
+              "NAND(셀을 직렬 스트링으로 연결)"
+            ]
+          },
+          {
+            "title": "접근 단위",
+            "items": [
+              "NOR(바이트 단위 랜덤 읽기)",
+              "NAND(페이지 읽기·쓰기, 블록 소거)"
+            ]
+          },
+          {
+            "title": "성능",
+            "items": [
+              "NOR(읽기 빠름, 쓰기·소거 느림)",
+              "NAND(쓰기·소거 빠름, 순차 접근 유리)"
+            ]
+          },
+          {
+            "title": "집적도·용도",
+            "items": [
+              "NOR(낮음, 펌웨어 코드 직접 실행)",
+              "NAND(높음, SSD·메모리 카드)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "플래시 파일 시스템",
+        "subsections": [
+          {
+            "title": "필요성 보완",
+            "items": [
+              "블록 소거·수명 제한을 고려한 로그 구조 기록"
+            ]
+          },
+          {
+            "title": "대표 예",
+            "items": [
+              "JFFS2(NOR 중심)",
+              "YAFFS2(NAND 전용)",
+              "UBIFS(UBI 볼륨 기반 대용량 NAND)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      55,
+      118
+    ],
+    "outline": [
+      "플래시 메모리 셀 동작",
+      "- 쓰기(프로그램)",
+      "- 소거",
+      "- 읽기",
+      "NOR 및 NAND 비교",
+      "- 셀 연결",
+      "- 접근 단위",
+      "- 성능",
+      "- 집적도·용도",
+      "플래시 파일 시스템",
+      "- 필요성 보완",
+      "- 대표 예"
+    ],
+    "name": "플래시 메모리(Flash Memory, NOR·NAND)",
+    "en": "Flash Memory (NOR, NAND)",
+    "keywords_must": [
+      "플로팅 게이트(Floating Gate)",
+      "터널 산화막·ONO 절연막",
+      "프로그램(전자 주입)·소거(전자 방출)",
+      "워드 라인·비트 라인",
+      "NOR(병렬 연결·바이트 랜덤 읽기)",
+      "NAND(직렬 스트링·페이지 읽기·블록 소거)",
+      "고집적·저전력·내충격",
+      "플래시 파일 시스템(JFFS2·YAFFS2·UBIFS)"
+    ],
+    "keywords_ref": [
+      "F-N 터널링(Fowler-Nordheim)",
+      "핫 일렉트론 주입",
+      "문턱 전압(Vth) 변화로 0·1 판별",
+      "XIP(eXecute In Place)",
+      "코드 저장(NOR)·대용량 데이터(NAND)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "플로팅 게이트(Floating Gate)",
+      "터널 산화막·ONO 절연막",
+      "프로그램(전자 주입)·소거(전자 방출)",
+      "워드 라인·비트 라인",
+      "NOR(병렬 연결·바이트 랜덤 읽기)",
+      "NAND(직렬 스트링·페이지 읽기·블록 소거)",
+      "고집적·저전력·내충격",
+      "플래시 파일 시스템(JFFS2·YAFFS2·UBIFS)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_030",
+    "code": "CA_030",
+    "title": "3차원 낸드 플래시(3D NAND, V-NAND)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 보조기억장치 > 플래시 메모리",
+    "definition": "2차원 낸드의 미세화 한계(셀 간 간섭)를 극복하기 위해 메모리 셀을 수직으로 수십~수백 층 적층하고 원통형 전하 트랩 구조를 적용해 용량·속도·전력 효율을 높인 낸드 플래시",
+    "keywords": [
+      "핵심: 수직 적층(Vertical Stacking) · 전하 트랩 플래시(CTF, Charge Trap Flash) · 원통형 게이트(GAA 구조) · 셀 간 간섭 감소",
+      "필수: 채널 홀 식각(Etching) · 증착(PVD·CVD) · 화학적 기계 연마(CMP) · 적층 단수(층수) 경쟁",
+      "참고: 삼성 V-NAND 24단(2013) 최초 양산 · 200단 이상 상용화 · 더블 스택(String Stacking) · CMOS 언더 어레이(CuA·PUC) · QLC 결합 고용량"
+    ],
+    "sections": [
+      {
+        "title": "3차원 낸드 플래시 특징",
+        "subsections": [
+          {
+            "title": "밀도 향상",
+            "items": [
+              "평면 미세화 없이 층수 증가로 같은 면적의 용량 증대"
+            ]
+          },
+          {
+            "title": "간섭 해소",
+            "items": [
+              "셀 간격을 확보해 2D 낸드의 셀 간 간섭 한계 극복"
+            ]
+          },
+          {
+            "title": "속도·전력",
+            "items": [
+              "셀 연결 경로 개선으로 쓰기 속도 향상과 소비 전력 절감"
+            ]
+          },
+          {
+            "title": "원가",
+            "items": [
+              "일정 층수 이상 적층 시 비트당 원가가 평면 낸드보다 낮아짐"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "셀 구조",
+        "subsections": [
+          {
+            "title": "CTF 적용",
+            "items": [
+              "도체 플로팅 게이트 대신 질화막 부도체에 전하를 가둬 누설·간섭 감소"
+            ]
+          },
+          {
+            "title": "원통형 셀",
+            "items": [
+              "채널을 컨트롤 게이트가 둘러싸 셀당 제어력 향상"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "핵심 공정 기술",
+        "subsections": [
+          {
+            "title": "증착",
+            "items": [
+              "산화막·질화막을 교대로 수십 층 박막 형성"
+            ]
+          },
+          {
+            "title": "식각",
+            "items": [
+              "최상단에서 바닥까지 한 번에 채널 홀을 뚫는 고종횡비 식각"
+            ]
+          },
+          {
+            "title": "게이트 패턴",
+            "items": [
+              "각 홀에 수직 셀 형성 후 워드 라인 계단(Staircase) 연결"
+            ]
+          },
+          {
+            "title": "연마(CMP)",
+            "items": [
+              "웨이퍼 표면의 불필요한 박막을 평탄하게 제거"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      58,
+      120
+    ],
+    "outline": [
+      "3차원 낸드 플래시 특징",
+      "- 밀도 향상",
+      "- 간섭 해소",
+      "- 속도·전력",
+      "- 원가",
+      "셀 구조",
+      "- CTF 적용",
+      "- 원통형 셀",
+      "핵심 공정 기술",
+      "- 증착",
+      "- 식각",
+      "- 게이트 패턴",
+      "- 연마(CMP)"
+    ],
+    "name": "3차원 낸드 플래시(3D NAND, V-NAND)",
+    "en": "3D NAND Flash",
+    "keywords_must": [
+      "수직 적층(Vertical Stacking)",
+      "전하 트랩 플래시(CTF, Charge Trap Flash)",
+      "원통형 게이트(GAA 구조)",
+      "셀 간 간섭 감소",
+      "채널 홀 식각(Etching)",
+      "증착(PVD·CVD)",
+      "화학적 기계 연마(CMP)",
+      "적층 단수(층수) 경쟁"
+    ],
+    "keywords_ref": [
+      "삼성 V-NAND 24단(2013) 최초 양산",
+      "200단 이상 상용화",
+      "더블 스택(String Stacking)",
+      "CMOS 언더 어레이(CuA·PUC)",
+      "QLC 결합 고용량"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "수직 적층(Vertical Stacking)",
+      "전하 트랩 플래시(CTF, Charge Trap Flash)",
+      "원통형 게이트(GAA 구조)",
+      "셀 간 간섭 감소",
+      "채널 홀 식각(Etching)",
+      "증착(PVD·CVD)",
+      "화학적 기계 연마(CMP)",
+      "적층 단수(층수) 경쟁"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_031",
+    "code": "CA_031",
+    "title": "플래시 변환 계층(FTL, Flash Translation Layer)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 보조기억장치 > 플래시 메모리",
+    "definition": "파일 시스템과 NAND 플래시 사이에 위치해 논리 주소를 물리 주소로 변환하고 덮어쓰기 불가·수명 제한 같은 플래시의 결점을 감춰, 플래시를 하드디스크처럼 블록 장치로 쓸 수 있게 하는 소프트웨어 계층",
+    "keywords": [
+      "핵심: STL(Sector Translation Layer) · BML(Bad Block Management Layer) · LLD(Low Level Driver) · 주소 매핑(Address Mapping)",
+      "필수: 섹터·블록·하이브리드 매핑 · 가비지 컬렉션 · 웨어 레벨링 · 오버 프로비저닝",
+      "참고: 페이지 매핑(Page-level) FTL · 로그 블록 기법(BAST·FAST) · DFTL(매핑 캐시) · 오류 처리·플래시 복구 알고리즘 · SSD 컨트롤러 펌웨어"
+    ],
+    "sections": [
+      {
+        "title": "플래시 변환 계층 위치",
+        "subsections": [
+          {
+            "title": "계층 구조",
+            "items": [
+              "응용 → 파일 시스템 → FTL → 플래시 디바이스 드라이버 → NAND"
+            ]
+          },
+          {
+            "title": "도입 효과",
+            "items": [
+              "파일 시스템의 섹터 요청과 플래시 특성 간 불일치 해소"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "계층별 구성",
+        "subsections": [
+          {
+            "title": "STL",
+            "items": [
+              "주소 매핑·가비지 컬렉션·웨어 레벨링 수행"
+            ]
+          },
+          {
+            "title": "BML",
+            "items": [
+              "불량 블록을 관리하고 오류 처리 담당"
+            ]
+          },
+          {
+            "title": "LLD",
+            "items": [
+              "NAND 컨트롤러 명령을 내리는 플래시 인터페이스 제공"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "매핑 방식 비교",
+        "subsections": [
+          {
+            "title": "섹터 매핑",
+            "items": [
+              "섹터 단위 테이블로 소거 연산 최소화, 테이블 크기 큼"
+            ]
+          },
+          {
+            "title": "블록 매핑",
+            "items": [
+              "블록 번호만 변환해 테이블 작음, 같은 오프셋 덮어쓰기 시 성능 저하"
+            ]
+          },
+          {
+            "title": "하이브리드 매핑",
+            "items": [
+              "블록 매핑 기반에 로그 블록만 섹터 단위로 관리해 두 장점 절충"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      64,
+      65
+    ],
+    "outline": [
+      "플래시 변환 계층 위치",
+      "- 계층 구조",
+      "- 도입 효과",
+      "계층별 구성",
+      "- STL",
+      "- BML",
+      "- LLD",
+      "매핑 방식 비교",
+      "- 섹터 매핑",
+      "- 블록 매핑",
+      "- 하이브리드 매핑"
+    ],
+    "name": "플래시 변환 계층(FTL, Flash Translation Layer)",
+    "en": "Flash Translation Layer",
+    "keywords_must": [
+      "STL(Sector Translation Layer)",
+      "BML(Bad Block Management Layer)",
+      "LLD(Low Level Driver)",
+      "주소 매핑(Address Mapping)",
+      "섹터·블록·하이브리드 매핑",
+      "가비지 컬렉션",
+      "웨어 레벨링",
+      "오버 프로비저닝"
+    ],
+    "keywords_ref": [
+      "페이지 매핑(Page-level) FTL",
+      "로그 블록 기법(BAST·FAST)",
+      "DFTL(매핑 캐시)",
+      "오류 처리·플래시 복구 알고리즘",
+      "SSD 컨트롤러 펌웨어"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "STL(Sector Translation Layer)",
+      "BML(Bad Block Management Layer)",
+      "LLD(Low Level Driver)",
+      "주소 매핑(Address Mapping)",
+      "섹터·블록·하이브리드 매핑",
+      "가비지 컬렉션",
+      "웨어 레벨링",
+      "오버 프로비저닝"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_032",
+    "code": "CA_032",
+    "title": "직렬 ATA 및 직렬 SCSI(SATA, SAS)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 보조기억장치 > 저장장치 인터페이스",
+    "definition": "병렬 ATA(IDE)와 병렬 SCSI의 속도·케이블 한계를 극복하기 위해 점대점 고속 직렬 차동 신호로 저장장치를 연결하는 인터페이스로, SATA는 PC·보급형, SAS는 서버·엔터프라이즈용으로 쓰임",
+    "keywords": [
+      "핵심: 점대점 직렬 전송(Point-to-Point Serial) · 차동 신호(Differential Signaling) · 8b/10b 인코딩 · SATA 1.5·3·6Gbps(150·300·600MB/s)",
+      "필수: 핫 플러그(Hot Plug) · AHCI·NCQ · SAS 듀얼 포트(Dual Port) · SAS 12·22.5Gbps",
+      "참고: PATA 40·80핀 리본 케이블 대체 · 케이블 최대 1m · SAS 확장기(Expander) · SAS 백플레인에 SATA 드라이브 호환 · eSATA·mSATA·M.2"
+    ],
+    "sections": [
+      {
+        "title": "SATA 특징",
+        "subsections": [
+          {
+            "title": "얇은 케이블",
+            "items": [
+              "핀 수 감소로 통풍·배선 공간 확보, 최대 1m 지원"
+            ]
+          },
+          {
+            "title": "저전압 신호",
+            "items": [
+              "수백 mV급 차동 신호로 간섭·노이즈 감소"
+            ]
+          },
+          {
+            "title": "운용 편의",
+            "items": [
+              "전원 인가 상태 탈부착, 기존 IDE와 어댑터로 호환"
+            ]
+          },
+          {
+            "title": "명령 큐",
+            "items": [
+              "NCQ로 여러 요청을 재정렬해 헤드 이동 최소화"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "SAS 특징",
+        "subsections": [
+          {
+            "title": "듀얼 포트",
+            "items": [
+              "두 컨트롤러에 동시 연결해 경로 이중화"
+            ]
+          },
+          {
+            "title": "확장성",
+            "items": [
+              "확장기로 수백 대 장치 연결, 전이중 전송"
+            ]
+          },
+          {
+            "title": "호환성",
+            "items": [
+              "SAS 컨트롤러에 SATA 드라이브 연결 가능(역방향은 불가)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "SATA 및 SAS 비교",
+        "subsections": [
+          {
+            "title": "용도",
+            "items": [
+              "SATA(데스크톱·대용량 저가)",
+              "SAS(서버·고신뢰 스토리지)"
+            ]
+          },
+          {
+            "title": "신뢰성",
+            "items": [
+              "SATA(단일 포트, 반이중)",
+              "SAS(듀얼 포트, 전이중, 높은 MTBF)"
+            ]
+          },
+          {
+            "title": "속도",
+            "items": [
+              "SATA(최대 6Gbps)",
+              "SAS(12Gbps, SAS-4 22.5Gbps)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      66,
+      68
+    ],
+    "outline": [
+      "SATA 특징",
+      "- 얇은 케이블",
+      "- 저전압 신호",
+      "- 운용 편의",
+      "- 명령 큐",
+      "SAS 특징",
+      "- 듀얼 포트",
+      "- 확장성",
+      "- 호환성",
+      "SATA 및 SAS 비교",
+      "- 용도",
+      "- 신뢰성",
+      "- 속도"
+    ],
+    "name": "직렬 ATA 및 직렬 SCSI(SATA, SAS)",
+    "en": "Serial ATA, Serial Attached SCSI",
+    "keywords_must": [
+      "점대점 직렬 전송(Point-to-Point Serial)",
+      "차동 신호(Differential Signaling)",
+      "8b/10b 인코딩",
+      "SATA 1.5·3·6Gbps(150·300·600MB/s)",
+      "핫 플러그(Hot Plug)",
+      "AHCI·NCQ",
+      "SAS 듀얼 포트(Dual Port)",
+      "SAS 12·22.5Gbps"
+    ],
+    "keywords_ref": [
+      "PATA 40·80핀 리본 케이블 대체",
+      "케이블 최대 1m",
+      "SAS 확장기(Expander)",
+      "SAS 백플레인에 SATA 드라이브 호환",
+      "eSATA·mSATA·M.2"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "점대점 직렬 전송(Point-to-Point Serial)",
+      "차동 신호(Differential Signaling)",
+      "8b/10b 인코딩",
+      "SATA 1.5·3·6Gbps(150·300·600MB/s)",
+      "핫 플러그(Hot Plug)",
+      "AHCI·NCQ",
+      "SAS 듀얼 포트(Dual Port)",
+      "SAS 12·22.5Gbps"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "NCQ": "Native Command Queuing"
+    }
+  },
+  {
+    "id": "CA_033",
+    "code": "CA_033",
+    "title": "소형 컴퓨터 시스템 인터페이스(SCSI, Small Computer System Interface)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 보조기억장치 > 저장장치 인터페이스",
+    "definition": "하드디스크·테이프·광학 장치 등 주변기기를 컴퓨터에 연결하기 위한 ANSI 표준 입출력 버스로, 물리·전기 규격과 함께 장치 독립적인 명령어 집합(CDB)을 정의하며 전용 호스트 어댑터가 제어함",
+    "keywords": [
+      "핵심: ANSI 표준 병렬 버스 · SCSI 호스트 어댑터(HBA) · 이니시에이터·타깃(Initiator·Target) · SCSI ID·LUN",
+      "필수: 명령 기술 블록(CDB) · 종단 저항(Terminator) · 데이지 체인 연결 · 버스 단계(중재→선택→명령→데이터→상태)",
+      "참고: SCSI-1·2·3, Ultra320 · 50·68핀 커넥터 · 명령 집합은 SAS·iSCSI·FC·UAS로 계승 · IDE 대비 CPU 부하 적음 · 장치 최대 8·16대"
+    ],
+    "sections": [
+      {
+        "title": "SCSI 어댑터 구조",
+        "subsections": [
+          {
+            "title": "독립 제어",
+            "items": [
+              "메인보드 BIOS와 별도로 어댑터 자체 BIOS·컨트롤러가 장치 관리"
+            ]
+          },
+          {
+            "title": "내부 헤더",
+            "items": [
+              "내장형 SCSI 기기 연결"
+            ]
+          },
+          {
+            "title": "외부 커넥터",
+            "items": [
+              "외장형 주변기기 연결"
+            ]
+          },
+          {
+            "title": "설정 수단",
+            "items": [
+              "점퍼·DIP 스위치로 I/O 주소·DMA·인터럽트 채널 지정"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "SCSI 동작 방식",
+        "subsections": [
+          {
+            "title": "버스 중재",
+            "items": [
+              "여러 장치 중 SCSI ID 우선순위가 높은 장치가 사용권 획득"
+            ]
+          },
+          {
+            "title": "선택 및 명령",
+            "items": [
+              "이니시에이터가 타깃을 선택하고 CDB 전송"
+            ]
+          },
+          {
+            "title": "데이터 및 상태",
+            "items": [
+              "데이터 단계 후 상태·메시지로 완료 통보"
+            ]
+          },
+          {
+            "title": "연결 해제",
+            "items": [
+              "처리 중 버스를 놓았다가 재접속해 다른 장치와 병행"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "IDE 대비 비교",
+        "subsections": [
+          {
+            "title": "연결 수",
+            "items": [
+              "IDE(채널당 2대)",
+              "SCSI(버스당 7~15대)"
+            ]
+          },
+          {
+            "title": "처리 방식",
+            "items": [
+              "IDE(CPU 개입 많음)",
+              "SCSI(어댑터가 명령 큐 처리)"
+            ]
+          },
+          {
+            "title": "계승 기술",
+            "items": [
+              "병렬 SCSI는 SAS(직렬)·iSCSI(IP)·FC로 명령 체계 유지"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      69,
+      74
+    ],
+    "outline": [
+      "SCSI 어댑터 구조",
+      "- 독립 제어",
+      "- 내부 헤더",
+      "- 외부 커넥터",
+      "- 설정 수단",
+      "SCSI 동작 방식",
+      "- 버스 중재",
+      "- 선택 및 명령",
+      "- 데이터 및 상태",
+      "- 연결 해제",
+      "IDE 대비 비교",
+      "- 연결 수",
+      "- 처리 방식",
+      "- 계승 기술"
+    ],
+    "name": "소형 컴퓨터 시스템 인터페이스(SCSI, Small Computer System Interface)",
+    "en": "Small Computer System Interface",
+    "keywords_must": [
+      "ANSI 표준 병렬 버스",
+      "SCSI 호스트 어댑터(HBA)",
+      "이니시에이터·타깃(Initiator·Target)",
+      "SCSI ID·LUN",
+      "명령 기술 블록(CDB)",
+      "종단 저항(Terminator)",
+      "데이지 체인 연결",
+      "버스 단계(중재→선택→명령→데이터→상태)"
+    ],
+    "keywords_ref": [
+      "SCSI-1·2·3, Ultra320",
+      "50·68핀 커넥터",
+      "명령 집합은 SAS·iSCSI·FC·UAS로 계승",
+      "IDE 대비 CPU 부하 적음",
+      "장치 최대 8·16대"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "ANSI 표준 병렬 버스",
+      "SCSI 호스트 어댑터(HBA)",
+      "이니시에이터·타깃(Initiator·Target)",
+      "SCSI ID·LUN",
+      "명령 기술 블록(CDB)",
+      "종단 저항(Terminator)",
+      "데이지 체인 연결",
+      "버스 단계(중재→선택→명령→데이터→상태)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "HBA": "Host Bus Adapter",
+      "LUN": "Logical Unit Number",
+      "CDB": "Command Descriptor Block"
+    }
+  },
+  {
+    "id": "CA_038",
+    "code": "CA_038",
+    "title": "원격 직접 메모리 접근(RDMA, Remote Direct Memory Access)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 입출력 > 고속 네트워크",
+    "definition": "네트워크로 연결된 두 시스템이 상대 측 CPU와 운영체제를 거치지 않고 메모리 간에 데이터를 직접 읽고 쓰는 기술로, 제로 카피와 커널 우회로 지연과 CPU 부하를 크게 줄임",
+    "keywords": [
+      "핵심: 제로 카피(Zero-Copy) · 커널 우회(Kernel Bypass) · CPU 오프로드 · 인피니밴드(InfiniBand)",
+      "필수: RoCE(RDMA over Converged Ethernet) · iWARP(Internet Wide Area RDMA Protocol) · RNIC(RDMA 지원 NIC) · 큐 페어(Queue Pair)",
+      "참고: 버브(Verbs) API · 메모리 등록(Memory Registration)·원격 키 · RoCEv2(UDP/IP 라우팅) · 무손실 이더넷(PFC) · NVMe-oF·분산 스토리지·AI 학습 클러스터"
+    ],
+    "sections": [
+      {
+        "title": "RDMA 동작 원리",
+        "subsections": [
+          {
+            "title": "직접 배치",
+            "items": [
+              "NIC가 애플리케이션 버퍼에 데이터를 바로 기록해 중간 복사 제거"
+            ]
+          },
+          {
+            "title": "단방향 연산",
+            "items": [
+              "Read·Write 시 원격 CPU 개입 없이 처리"
+            ]
+          },
+          {
+            "title": "송수신 구조",
+            "items": [
+              "송신·수신 큐로 이뤄진 큐 페어와 완료 큐로 비동기 처리"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "RDMA 장점",
+        "subsections": [
+          {
+            "title": "제로 카피",
+            "items": [
+              "네트워크 계층 간 복사 없이 버퍼로 직접 전송"
+            ]
+          },
+          {
+            "title": "커널 우회",
+            "items": [
+              "사용자 공간에서 바로 NIC에 명령해 문맥 전환 제거"
+            ]
+          },
+          {
+            "title": "CPU 효율",
+            "items": [
+              "프로토콜 처리를 NIC가 맡아 호스트 메모리·버스 경합 감소"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "전송 방식 비교",
+        "subsections": [
+          {
+            "title": "인피니밴드",
+            "items": [
+              "전용 스위치·NIC, 최저 지연, 높은 비용"
+            ]
+          },
+          {
+            "title": "RoCE",
+            "items": [
+              "이더넷 위 RDMA, v2는 UDP/IP로 라우팅 가능, 무손실 설정 필요"
+            ]
+          },
+          {
+            "title": "iWARP",
+            "items": [
+              "TCP 기반으로 손실망·광역에서도 동작, 처리 부담은 큼"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      75,
+      77
+    ],
+    "outline": [
+      "RDMA 동작 원리",
+      "- 직접 배치",
+      "- 단방향 연산",
+      "- 송수신 구조",
+      "RDMA 장점",
+      "- 제로 카피",
+      "- 커널 우회",
+      "- CPU 효율",
+      "전송 방식 비교",
+      "- 인피니밴드",
+      "- RoCE",
+      "- iWARP"
+    ],
+    "name": "원격 직접 메모리 접근(RDMA, Remote Direct Memory Access)",
+    "en": "Remote Direct Memory Access",
+    "keywords_must": [
+      "제로 카피(Zero-Copy)",
+      "커널 우회(Kernel Bypass)",
+      "CPU 오프로드",
+      "인피니밴드(InfiniBand)",
+      "RoCE(RDMA over Converged Ethernet)",
+      "iWARP(Internet Wide Area RDMA Protocol)",
+      "RNIC(RDMA 지원 NIC)",
+      "큐 페어(Queue Pair)"
+    ],
+    "keywords_ref": [
+      "버브(Verbs) API",
+      "메모리 등록(Memory Registration)·원격 키",
+      "RoCEv2(UDP/IP 라우팅)",
+      "무손실 이더넷(PFC)",
+      "NVMe-oF·분산 스토리지·AI 학습 클러스터"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "제로 카피(Zero-Copy)",
+      "커널 우회(Kernel Bypass)",
+      "CPU 오프로드",
+      "인피니밴드(InfiniBand)",
+      "RoCE(RDMA over Converged Ethernet)",
+      "iWARP(Internet Wide Area RDMA Protocol)",
+      "RNIC(RDMA 지원 NIC)",
+      "큐 페어(Queue Pair)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "RNIC": "RDMA Network Interface Card",
+      "PFC": "Priority-based Flow Control"
+    }
+  },
+  {
+    "id": "CA_039",
+    "code": "CA_039",
+    "title": "SCSI RDMA 프로토콜(SRP, SCSI RDMA Protocol)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 입출력 > 고속 네트워크",
+    "definition": "원격 시스템에 연결된 SCSI 저장장치에 TCP/IP 네트워크 스택 대신 RDMA를 이용해 CPU 개입 없이 블록 명령과 데이터를 주고받는 원격 스토리지 접근 프로토콜로, 주로 인피니밴드 SAN에서 사용됨",
+    "keywords": [
+      "핵심: SCSI 명령 원격 전달 · RDMA 전송 계층 · 인피니밴드 SAN · 이니시에이터·타깃 구조",
+      "필수: 저지연·고대역 · 제로 카피 블록 I/O · 리눅스 SRP 이니시에이터 모듈",
+      "참고: iSCSI(TCP 기반) 비교 · iSER(iSCSI Extensions for RDMA) · NVMe-oF RDMA 전송으로 진화 · SCST·LIO 타깃 · HPC 병렬 파일 시스템"
+    ],
+    "sections": [
+      {
+        "title": "SRP 개요",
+        "subsections": [
+          {
+            "title": "역할",
+            "items": [
+              "SCSI 명령 블록을 RDMA 메시지로 캡슐화해 원격 디스크를 로컬처럼 사용"
+            ]
+          },
+          {
+            "title": "위치",
+            "items": [
+              "응용 → SCSI 계층 → SRP → RDMA(인피니밴드) → 타깃 스토리지"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "동작 절차",
+        "subsections": [
+          {
+            "title": "로그인",
+            "items": [
+              "이니시에이터가 타깃에 연결 요청과 채널 설정"
+            ]
+          },
+          {
+            "title": "명령 전달",
+            "items": [
+              "SCSI 명령을 SRP 요청 메시지로 송신"
+            ]
+          },
+          {
+            "title": "데이터 전송",
+            "items": [
+              "타깃이 RDMA Read·Write로 이니시에이터 메모리에 직접 접근"
+            ]
+          },
+          {
+            "title": "응답",
+            "items": [
+              "처리 결과를 SRP 응답으로 통보"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "원격 블록 프로토콜 비교",
+        "subsections": [
+          {
+            "title": "iSCSI",
+            "items": [
+              "범용 IP망 사용, TCP 처리로 CPU 부담"
+            ]
+          },
+          {
+            "title": "SRP·iSER",
+            "items": [
+              "RDMA 기반으로 저지연, 전용 패브릭 필요"
+            ]
+          },
+          {
+            "title": "NVMe-oF",
+            "items": [
+              "NVMe 명령을 RDMA·FC·TCP로 전달하는 차세대 방식"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      78,
+      79
+    ],
+    "outline": [
+      "SRP 개요",
+      "- 역할",
+      "- 위치",
+      "동작 절차",
+      "- 로그인",
+      "- 명령 전달",
+      "- 데이터 전송",
+      "- 응답",
+      "원격 블록 프로토콜 비교",
+      "- iSCSI",
+      "- SRP·iSER",
+      "- NVMe-oF"
+    ],
+    "name": "SCSI RDMA 프로토콜(SRP, SCSI RDMA Protocol)",
+    "en": "SCSI RDMA Protocol",
+    "keywords_must": [
+      "SCSI 명령 원격 전달",
+      "RDMA 전송 계층",
+      "인피니밴드 SAN",
+      "이니시에이터·타깃 구조",
+      "저지연·고대역",
+      "제로 카피 블록 I/O",
+      "리눅스 SRP 이니시에이터 모듈"
+    ],
+    "keywords_ref": [
+      "iSCSI(TCP 기반) 비교",
+      "iSER(iSCSI Extensions for RDMA)",
+      "NVMe-oF RDMA 전송으로 진화",
+      "SCST·LIO 타깃",
+      "HPC 병렬 파일 시스템"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "SCSI 명령 원격 전달",
+      "RDMA 전송 계층",
+      "인피니밴드 SAN",
+      "이니시에이터·타깃 구조",
+      "저지연·고대역",
+      "제로 카피 블록 I/O",
+      "리눅스 SRP 이니시에이터 모듈"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "SAN": "Storage Area Network"
+    }
+  },
+  {
+    "id": "CA_040",
+    "code": "CA_040",
+    "title": "아이스퀘어드시 버스(I2C, Inter-Integrated Circuit)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 입출력 > 직렬 버스",
+    "definition": "마이크로프로세서와 저속 주변장치 간 통신을 위해 필립스가 개발한 2선식 동기 직렬 버스로, 데이터선(SDA)과 클럭선(SCL)만으로 주소 기반 다중 마스터·다중 슬레이브 연결을 지원함",
+    "keywords": [
+      "핵심: SDA(Serial Data Line) · SCL(Serial Clock Line) · 오픈 드레인·풀업 저항 · 마스터·슬레이브(Master·Slave)",
+      "필수: 7비트 주소(최대 128개) · ACK·NACK 응답 · 시작·정지 조건(Start·Stop) · 표준 100kbps·고속 400kbps·HS 3.4Mbps",
+      "참고: TWI(Two Wire Interface) · 10비트 주소 확장 · Fast-mode Plus 1Mbps · 클럭 스트레칭 · 다중 마스터 중재 · SPI·UART 비교 · SMBus·I3C"
+    ],
+    "sections": [
+      {
+        "title": "I2C 버스 특징",
+        "subsections": [
+          {
+            "title": "선로 구성",
+            "items": [
+              "오픈 드레인 2선에 풀업 저항 연결, 와이어드 AND 동작"
+            ]
+          },
+          {
+            "title": "주소 방식",
+            "items": [
+              "장치마다 소프트웨어 주소를 부여해 선 추가 없이 확장"
+            ]
+          },
+          {
+            "title": "다중 마스터",
+            "items": [
+              "여러 마스터 연결 가능, 한 순간에는 하나만 버스 점유"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "데이터 전송 절차",
+        "subsections": [
+          {
+            "title": "시작 조건",
+            "items": [
+              "SCL이 High일 때 SDA를 Low로 내려 전송 시작"
+            ]
+          },
+          {
+            "title": "주소 전송",
+            "items": [
+              "7비트 슬레이브 주소와 읽기·쓰기 1비트 송신"
+            ]
+          },
+          {
+            "title": "응답 확인",
+            "items": [
+              "해당 슬레이브가 ACK로 응답 후 8비트 단위 데이터 교환"
+            ]
+          },
+          {
+            "title": "정지 조건",
+            "items": [
+              "SCL이 High일 때 SDA를 High로 올려 버스 해제"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "직렬 버스 비교",
+        "subsections": [
+          {
+            "title": "I2C",
+            "items": [
+              "2선, 주소 기반 다중 장치, 저속·간단"
+            ]
+          },
+          {
+            "title": "SPI",
+            "items": [
+              "4선(MOSI·MISO·SCLK·SS), 전이중 고속, 장치마다 선택선 필요"
+            ]
+          },
+          {
+            "title": "UART",
+            "items": [
+              "비동기 2선, 클럭 없이 보율 약속으로 1:1 통신"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      80,
+      84
+    ],
+    "outline": [
+      "I2C 버스 특징",
+      "- 선로 구성",
+      "- 주소 방식",
+      "- 다중 마스터",
+      "데이터 전송 절차",
+      "- 시작 조건",
+      "- 주소 전송",
+      "- 응답 확인",
+      "- 정지 조건",
+      "직렬 버스 비교",
+      "- I2C",
+      "- SPI",
+      "- UART"
+    ],
+    "name": "아이스퀘어드시 버스(I2C, Inter-Integrated Circuit)",
+    "en": "Inter-Integrated Circuit",
+    "keywords_must": [
+      "SDA(Serial Data Line)",
+      "SCL(Serial Clock Line)",
+      "오픈 드레인·풀업 저항",
+      "마스터·슬레이브(Master·Slave)",
+      "7비트 주소(최대 128개)",
+      "ACK·NACK 응답",
+      "시작·정지 조건(Start·Stop)",
+      "표준 100kbps·고속 400kbps·HS 3.4Mbps"
+    ],
+    "keywords_ref": [
+      "TWI(Two Wire Interface)",
+      "10비트 주소 확장",
+      "Fast-mode Plus 1Mbps",
+      "클럭 스트레칭",
+      "다중 마스터 중재",
+      "SPI·UART 비교",
+      "SMBus·I3C"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "SDA(Serial Data Line)",
+      "SCL(Serial Clock Line)",
+      "오픈 드레인·풀업 저항",
+      "마스터·슬레이브(Master·Slave)",
+      "7비트 주소(최대 128개)",
+      "ACK·NACK 응답",
+      "시작·정지 조건(Start·Stop)",
+      "표준 100kbps·고속 400kbps·HS 3.4Mbps"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "SPI": "Serial Peripheral Interface",
+      "MOSI": "Master Out Slave In",
+      "MISO": "Master In Slave Out",
+      "SS": "Slave Select"
+    }
+  },
+  {
+    "id": "CA_042",
+    "code": "CA_042",
+    "title": "고속 직렬 버스 표준(IEEE 1394, FireWire)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 입출력 > 직렬 버스",
+    "definition": "애플과 TI가 파이어와이어라는 이름으로 개발한 고속 직렬 버스 표준으로, 플러그 앤 플레이·핫 플러깅·등시성 전송을 지원해 캠코더·오디오 등 실시간 멀티미디어 기기 연결에 쓰였음",
+    "keywords": [
+      "핵심: 파이어와이어(FireWire)·아이링크(i.Link) · 등시성 전송(Isochronous) · 비동기 전송(Asynchronous) · 피어 투 피어(호스트 불필요)",
+      "필수: 최대 63개 장치 · 데이지 체인·트리 토폴로지 · 400Mbps(1394a)·800Mbps(1394b) · 데이터·스트로브 부호화(DS Encoding)",
+      "참고: 1394b 규격상 최대 3.2Gbps · 케이블 1구간 4.5m · 버스 전원 공급 · 물리·링크·트랜잭션 계층과 버스 관리 · USB·썬더볼트로 대체"
+    ],
+    "sections": [
+      {
+        "title": "IEEE 1394 특징",
+        "subsections": [
+          {
+            "title": "실시간성",
+            "items": [
+              "등시성 채널로 일정 대역폭을 보장해 영상·음성 끊김 방지"
+            ]
+          },
+          {
+            "title": "피어 투 피어",
+            "items": [
+              "PC 없이 기기 간 직접 통신"
+            ]
+          },
+          {
+            "title": "편의성",
+            "items": [
+              "전원 공급선 내장 케이블, 동작 중 연결·분리"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "프로토콜 계층",
+        "subsections": [
+          {
+            "title": "물리 계층",
+            "items": [
+              "한 순간에 한 노드만 전송하도록 중재하고 신호 부호화"
+            ]
+          },
+          {
+            "title": "링크 계층",
+            "items": [
+              "패킷 조립·분해, 등시성·비동기 패킷 구분"
+            ]
+          },
+          {
+            "title": "트랜잭션 계층",
+            "items": [
+              "비동기 읽기·쓰기·잠금 요청과 응답 처리"
+            ]
+          },
+          {
+            "title": "버스 관리",
+            "items": [
+              "등시성 자원 관리자와 사이클 마스터가 대역폭·타이밍 할당"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "USB 대비 비교",
+        "subsections": [
+          {
+            "title": "구조",
+            "items": [
+              "1394(피어 투 피어)",
+              "USB(호스트 중심 마스터·슬레이브)"
+            ]
+          },
+          {
+            "title": "활용",
+            "items": [
+              "1394(영상 편집·전문 오디오)",
+              "USB(범용 주변기기)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      85,
+      86
+    ],
+    "outline": [
+      "IEEE 1394 특징",
+      "- 실시간성",
+      "- 피어 투 피어",
+      "- 편의성",
+      "프로토콜 계층",
+      "- 물리 계층",
+      "- 링크 계층",
+      "- 트랜잭션 계층",
+      "- 버스 관리",
+      "USB 대비 비교",
+      "- 구조",
+      "- 활용"
+    ],
+    "name": "고속 직렬 버스 표준(IEEE 1394, FireWire)",
+    "en": "IEEE 1394 FireWire",
+    "keywords_must": [
+      "파이어와이어(FireWire)·아이링크(i.Link)",
+      "등시성 전송(Isochronous)",
+      "비동기 전송(Asynchronous)",
+      "피어 투 피어(호스트 불필요)",
+      "최대 63개 장치",
+      "데이지 체인·트리 토폴로지",
+      "400Mbps(1394a)·800Mbps(1394b)",
+      "데이터·스트로브 부호화(DS Encoding)"
+    ],
+    "keywords_ref": [
+      "1394b 규격상 최대 3.2Gbps",
+      "케이블 1구간 4.5m",
+      "버스 전원 공급",
+      "물리·링크·트랜잭션 계층과 버스 관리",
+      "USB·썬더볼트로 대체"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "파이어와이어(FireWire)·아이링크(i.Link)",
+      "등시성 전송(Isochronous)",
+      "비동기 전송(Asynchronous)",
+      "피어 투 피어(호스트 불필요)",
+      "최대 63개 장치",
+      "데이지 체인·트리 토폴로지",
+      "400Mbps(1394a)·800Mbps(1394b)",
+      "데이터·스트로브 부호화(DS Encoding)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "DS": "Data-Strobe"
+    }
+  },
+  {
+    "id": "CA_043",
+    "code": "CA_043",
+    "title": "영상 출력 인터페이스(VGA, DVI, HDMI)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 입출력 > 영상 인터페이스",
+    "definition": "그래픽 장치와 모니터를 연결하는 영상 인터페이스로, 아날로그 RGB를 보내는 VGA(D-SUB)에서 디지털 영상 전용 DVI를 거쳐 비압축 영상·음성을 함께 전송하는 HDMI로 발전함",
+    "keywords": [
+      "핵심: VGA(Video Graphics Array, D-SUB 15핀) · 아날로그 RGB 신호 · DVI(Digital Visual Interface) · DVI-A·DVI-D·DVI-I",
+      "필수: HDMI(High-Definition Multimedia Interface) · TMDS 전송 · HDCP 저작권 보호 · CEC 기기 제어",
+      "참고: DDC·EDID(모니터 정보 교환) · DVI 싱글·듀얼 링크 · HDMI 2.1 FRL 48Gbps·8K · ARC·eARC 음성 회신 · 디스플레이포트(DisplayPort)·USB-C 대체 흐름"
+    ],
+    "sections": [
+      {
+        "title": "인터페이스별 특징",
+        "subsections": [
+          {
+            "title": "VGA",
+            "items": [
+              "D-SUB 15핀 아날로그 출력, 디지털 패널에서 변환 손실로 화질 저하"
+            ]
+          },
+          {
+            "title": "DVI",
+            "items": [
+              "TMDS 디지털 전송, 아날로그 겸용(DVI-I) 지원, 음성 미전송"
+            ]
+          },
+          {
+            "title": "HDMI",
+            "items": [
+              "하나의 케이블로 비압축 영상·다채널 음성·제어 신호 전송"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "HDMI 신호 구성",
+        "subsections": [
+          {
+            "title": "TMDS 채널",
+            "items": [
+              "데이터 3쌍과 클럭 1쌍의 차동 신호"
+            ]
+          },
+          {
+            "title": "DDC 채널",
+            "items": [
+              "모니터 해상도 정보(EDID) 읽기와 HDCP 인증"
+            ]
+          },
+          {
+            "title": "CEC 채널",
+            "items": [
+              "리모컨 하나로 연결 기기 제어"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "비교 및 동향",
+        "subsections": [
+          {
+            "title": "신호 방식",
+            "items": [
+              "VGA(아날로그)",
+              "DVI(디지털 영상)",
+              "HDMI(디지털 영상·음성)"
+            ]
+          },
+          {
+            "title": "동향",
+            "items": [
+              "HDMI 2.1은 FRL로 48Gbps, PC는 디스플레이포트·USB-C 확산"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      87,
+      89
+    ],
+    "outline": [
+      "인터페이스별 특징",
+      "- VGA",
+      "- DVI",
+      "- HDMI",
+      "HDMI 신호 구성",
+      "- TMDS 채널",
+      "- DDC 채널",
+      "- CEC 채널",
+      "비교 및 동향",
+      "- 신호 방식",
+      "- 동향"
+    ],
+    "name": "영상 출력 인터페이스(VGA, DVI, HDMI)",
+    "en": "VGA, DVI, HDMI",
+    "keywords_must": [
+      "VGA(Video Graphics Array, D-SUB 15핀)",
+      "아날로그 RGB 신호",
+      "DVI(Digital Visual Interface)",
+      "DVI-A·DVI-D·DVI-I",
+      "HDMI(High-Definition Multimedia Interface)",
+      "TMDS 전송",
+      "HDCP 저작권 보호",
+      "CEC 기기 제어"
+    ],
+    "keywords_ref": [
+      "DDC·EDID(모니터 정보 교환)",
+      "DVI 싱글·듀얼 링크",
+      "HDMI 2.1 FRL 48Gbps·8K",
+      "ARC·eARC 음성 회신",
+      "디스플레이포트(DisplayPort)·USB-C 대체 흐름"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "VGA(Video Graphics Array, D-SUB 15핀)",
+      "아날로그 RGB 신호",
+      "DVI(Digital Visual Interface)",
+      "DVI-A·DVI-D·DVI-I",
+      "HDMI(High-Definition Multimedia Interface)",
+      "TMDS 전송",
+      "HDCP 저작권 보호",
+      "CEC 기기 제어"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "TMDS": "Transition-Minimized Differential Signaling",
+      "HDCP": "High-bandwidth Digital Content Protection",
+      "CEC": "Consumer Electronics Control",
+      "FRL": "Fixed Rate Link"
+    }
+  },
+  {
+    "id": "CA_044",
+    "code": "CA_044",
+    "title": "고속 직렬 확장 버스(PCIe, PCI Express)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 입출력 > 확장 버스",
+    "definition": "병렬 공유 버스인 PCI를 대체해 레인 단위 점대점 고속 직렬 링크로 CPU와 그래픽카드·SSD·NIC 등 장치를 연결하며, 트랜잭션·데이터 링크·물리 계층의 패킷 기반 프로토콜을 사용하는 확장 버스 표준",
+    "keywords": [
+      "핵심: 점대점 직렬 링크 · 레인(Lane) x1·x4·x8·x16 · 트랜잭션 계층 패킷(TLP) · 데이터 링크 계층(DLLP, CRC·재전송)",
+      "필수: 물리 계층 인코딩(8b/10b→128b/130b) · 세대별 레인당 대역폭 2배 · 하위 호환성 · 루트 콤플렉스·스위치·엔드포인트",
+      "참고: Gen3 8GT/s·Gen4 16GT/s·Gen5 32GT/s·Gen6 64GT/s(PAM4·FLIT) · 크레딧 기반 흐름 제어 · MSI 인터럽트 · NVMe·CXL 물리 계층 공유"
+    ],
+    "sections": [
+      {
+        "title": "PCIe 특징",
+        "subsections": [
+          {
+            "title": "확장성",
+            "items": [
+              "레인 수를 늘려 대역폭을 선형 확장"
+            ]
+          },
+          {
+            "title": "고속 전송",
+            "items": [
+              "클럭 내장 직렬 차동 신호로 스큐 문제 해소"
+            ]
+          },
+          {
+            "title": "호환성",
+            "items": [
+              "세대가 달라도 낮은 쪽 속도로 협상해 동작"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "계층 구조",
+        "subsections": [
+          {
+            "title": "트랜잭션 계층",
+            "items": [
+              "유형·주소·크기·페이로드를 담은 TLP 생성, 크레딧 기반 흐름 제어"
+            ]
+          },
+          {
+            "title": "데이터 링크 계층",
+            "items": [
+              "순서 번호와 LCRC로 오류 검출, ACK·NAK 재전송"
+            ]
+          },
+          {
+            "title": "물리 계층",
+            "items": [
+              "직렬화·인코딩과 링크 속도·폭 협상"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "토폴로지 구성",
+        "subsections": [
+          {
+            "title": "루트 콤플렉스",
+            "items": [
+              "CPU·메모리와 PCIe 계층을 연결하는 최상위 장치"
+            ]
+          },
+          {
+            "title": "스위치",
+            "items": [
+              "여러 엔드포인트로 링크를 분기"
+            ]
+          },
+          {
+            "title": "엔드포인트",
+            "items": [
+              "그래픽카드·NVMe SSD·NIC 등 최종 장치"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      90,
+      91
+    ],
+    "outline": [
+      "PCIe 특징",
+      "- 확장성",
+      "- 고속 전송",
+      "- 호환성",
+      "계층 구조",
+      "- 트랜잭션 계층",
+      "- 데이터 링크 계층",
+      "- 물리 계층",
+      "토폴로지 구성",
+      "- 루트 콤플렉스",
+      "- 스위치",
+      "- 엔드포인트"
+    ],
+    "name": "고속 직렬 확장 버스(PCIe, PCI Express)",
+    "en": "PCI Express",
+    "keywords_must": [
+      "점대점 직렬 링크",
+      "레인(Lane) x1·x4·x8·x16",
+      "트랜잭션 계층 패킷(TLP)",
+      "데이터 링크 계층(DLLP, CRC·재전송)",
+      "물리 계층 인코딩(8b/10b→128b/130b)",
+      "세대별 레인당 대역폭 2배",
+      "하위 호환성",
+      "루트 콤플렉스·스위치·엔드포인트"
+    ],
+    "keywords_ref": [
+      "Gen3 8GT/s·Gen4 16GT/s·Gen5 32GT/s·Gen6 64GT/s(PAM4·FLIT)",
+      "크레딧 기반 흐름 제어",
+      "MSI 인터럽트",
+      "NVMe·CXL 물리 계층 공유"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "점대점 직렬 링크",
+      "레인(Lane) x1·x4·x8·x16",
+      "트랜잭션 계층 패킷(TLP)",
+      "데이터 링크 계층(DLLP, CRC·재전송)",
+      "물리 계층 인코딩(8b/10b→128b/130b)",
+      "세대별 레인당 대역폭 2배",
+      "하위 호환성",
+      "루트 콤플렉스·스위치·엔드포인트"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "TLP": "Transaction Layer Packet",
+      "DLLP": "Data Link Layer Packet",
+      "MSI": "Message Signaled Interrupt",
+      "PAM4": "4-level Pulse Amplitude Modulation",
+      "FLIT": "Flow Control Unit"
+    }
+  },
+  {
+    "id": "CA_045",
+    "code": "CA_045",
+    "title": "메모리 계층 구조(Memory Hierarchy)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 계층 구조",
+    "definition": "용량·속도·비트당 가격의 상충 관계를 해결하기 위해 레지스터·캐시·주기억장치·보조기억장치를 계층으로 배치하고, 참조 지역성을 이용해 상위 계층에서 대부분의 접근을 처리하도록 한 기억장치 구성 방식",
+    "keywords": [
+      "핵심: 용량·속도·가격 상충(Trade-off) · 레지스터→캐시→주기억→보조기억 · 참조 지역성(Locality of Reference) · 시간 지역성·공간 지역성",
+      "필수: 적중률(Hit Ratio) · 평균 접근 시간(AMAT) · 3C 실패 모델(Compulsory·Capacity·Conflict)",
+      "참고: 블록(클러스터) 단위 상위 이동 · 일관성 실패(Coherence Miss, 4C) · 접근 빈도는 하위로 갈수록 감소 · SCM(저장 클래스 메모리) 계층 추가"
+    ],
+    "sections": [
+      {
+        "title": "계층 설계 원리",
+        "subsections": [
+          {
+            "title": "설계 요건",
+            "items": [
+              "대용량",
+              "프로세서에 맞춘 속도",
+              "낮은 가격"
+            ]
+          },
+          {
+            "title": "상관관계",
+            "items": [
+              "빠를수록 비트당 가격 상승, 클수록 비트당 가격 하락·접근 지연 증가"
+            ]
+          },
+          {
+            "title": "하위 계층 성질",
+            "items": [
+              "용량 증가, 접근 시간 증가, CPU 접근 빈도 감소"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "참조 지역성",
+        "subsections": [
+          {
+            "title": "시간 지역성",
+            "items": [
+              "최근 참조한 데이터를 곧 다시 참조(반복문·스택)"
+            ]
+          },
+          {
+            "title": "공간 지역성",
+            "items": [
+              "참조한 주소 근처를 이어서 참조(배열·순차 코드)"
+            ]
+          },
+          {
+            "title": "활용",
+            "items": [
+              "하위 계층에서 블록 단위로 끌어올려 한동안 상위 계층만 사용"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "3C 실패 유형과 대책",
+        "subsections": [
+          {
+            "title": "필수 실패",
+            "items": [
+              "첫 접근 시 발생(콜드 스타트), 블록 크기 확대로 감소하나 실패 손실 증가"
+            ]
+          },
+          {
+            "title": "용량 실패",
+            "items": [
+              "작업 집합이 캐시보다 클 때 발생, 캐시 확대로 감소하나 접근 시간 증가"
+            ]
+          },
+          {
+            "title": "대립 실패",
+            "items": [
+              "같은 집합에 블록이 몰려 충돌, 연관도 증가로 감소하나 탐색 지연 증가"
+            ]
+          },
+          {
+            "title": "3C 모델 의의",
+            "items": [
+              "설계 요소 간 상충을 정량적으로 판단하는 기준 제공"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      92,
+      94
+    ],
+    "outline": [
+      "계층 설계 원리",
+      "- 설계 요건",
+      "- 상관관계",
+      "- 하위 계층 성질",
+      "참조 지역성",
+      "- 시간 지역성",
+      "- 공간 지역성",
+      "- 활용",
+      "3C 실패 유형과 대책",
+      "- 필수 실패",
+      "- 용량 실패",
+      "- 대립 실패",
+      "- 3C 모델 의의"
+    ],
+    "name": "메모리 계층 구조(Memory Hierarchy)",
+    "en": "Memory Hierarchy",
+    "keywords_must": [
+      "용량·속도·가격 상충(Trade-off)",
+      "레지스터→캐시→주기억→보조기억",
+      "참조 지역성(Locality of Reference)",
+      "시간 지역성·공간 지역성",
+      "적중률(Hit Ratio)",
+      "평균 접근 시간(AMAT)",
+      "3C 실패 모델(Compulsory·Capacity·Conflict)"
+    ],
+    "keywords_ref": [
+      "블록(클러스터) 단위 상위 이동",
+      "일관성 실패(Coherence Miss, 4C)",
+      "접근 빈도는 하위로 갈수록 감소",
+      "SCM(저장 클래스 메모리) 계층 추가"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "용량·속도·가격 상충(Trade-off)",
+      "레지스터→캐시→주기억→보조기억",
+      "참조 지역성(Locality of Reference)",
+      "시간 지역성·공간 지역성",
+      "적중률(Hit Ratio)",
+      "평균 접근 시간(AMAT)",
+      "3C 실패 모델(Compulsory·Capacity·Conflict)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "SCM": "Storage Class Memory"
+    }
+  },
+  {
+    "id": "CA_046",
+    "code": "CA_046",
+    "title": "상태 레지스터(Status Register)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 컴퓨터 구조 > CPU 구성",
+    "definition": "산술·논리 연산 결과의 상태와 CPU 제어 상태를 나타내는 플래그 비트들의 모음으로, 조건 분기 명령이 이 값을 검사해 실행 순서를 결정하며 프로그램 상태 워드(PSW)의 핵심 부분을 이룸",
+    "keywords": [
+      "핵심: 제로 플래그(Z) · 캐리 플래그(C) · 오버플로 플래그(V·O) · 부호 플래그(S·N)",
+      "필수: 보조 캐리 플래그(A, BCD 연산) · 패리티 플래그(P) · 인터럽트 플래그(I) · 방향 플래그(D) · 트랩 플래그(T, 단일 단계 디버깅)",
+      "참고: 8086 FLAGS 16비트 → EFLAGS 32비트·RFLAGS 64비트 · 6502 플래그 바이트(브레이크·십진 플래그) · Z80 하프 캐리 · ARM CPSR(NZCV) · 문맥 교환 시 PSW 저장"
+    ],
+    "sections": [
+      {
+        "title": "연산 결과 플래그",
+        "subsections": [
+          {
+            "title": "Z",
+            "items": [
+              "결과가 0이면 1"
+            ]
+          },
+          {
+            "title": "C",
+            "items": [
+              "부호 없는 연산에서 자리 올림·빌림 발생 시 1"
+            ]
+          },
+          {
+            "title": "V",
+            "items": [
+              "부호 있는 연산에서 표현 범위 초과 시 1"
+            ]
+          },
+          {
+            "title": "S·N",
+            "items": [
+              "결과의 최상위 비트가 1(음수)이면 1"
+            ]
+          },
+          {
+            "title": "P",
+            "items": [
+              "결과에서 1인 비트 수가 짝수이면 1"
+            ]
+          },
+          {
+            "title": "A",
+            "items": [
+              "하위 4비트에서 자리 올림 발생 시 1, BCD 보정에 사용"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "제어 플래그",
+        "subsections": [
+          {
+            "title": "I",
+            "items": [
+              "1일 때만 마스크 가능 인터럽트 수용, 관리자 모드에서 변경"
+            ]
+          },
+          {
+            "title": "D",
+            "items": [
+              "문자열 명령의 주소 자동 증가·감소 방향 결정"
+            ]
+          },
+          {
+            "title": "T",
+            "items": [
+              "명령 하나마다 인터럽트를 발생시켜 디버거가 단계 실행"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "프로세서별 구조",
+        "subsections": [
+          {
+            "title": "6502",
+            "items": [
+              "8비트 플래그 바이트, 브레이크·십진 모드 비트 포함"
+            ]
+          },
+          {
+            "title": "Z80",
+            "items": [
+              "하프 캐리와 패리티·오버플로 겸용 비트 보유"
+            ]
+          },
+          {
+            "title": "8086",
+            "items": [
+              "16비트 플래그 레지스터, 이후 EFLAGS·RFLAGS로 확장"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      95,
+      96
+    ],
+    "outline": [
+      "연산 결과 플래그",
+      "- Z",
+      "- C",
+      "- V",
+      "- S·N",
+      "- P",
+      "- A",
+      "제어 플래그",
+      "- I",
+      "- D",
+      "- T",
+      "프로세서별 구조",
+      "- 6502",
+      "- Z80",
+      "- 8086"
+    ],
+    "name": "상태 레지스터(Status Register)",
+    "en": "Status Register, Flag Register",
+    "keywords_must": [
+      "제로 플래그(Z)",
+      "캐리 플래그(C)",
+      "오버플로 플래그(V·O)",
+      "부호 플래그(S·N)",
+      "보조 캐리 플래그(A, BCD 연산)",
+      "패리티 플래그(P)",
+      "인터럽트 플래그(I)",
+      "방향 플래그(D)",
+      "트랩 플래그(T, 단일 단계 디버깅)"
+    ],
+    "keywords_ref": [
+      "8086 FLAGS 16비트 → EFLAGS 32비트·RFLAGS 64비트",
+      "6502 플래그 바이트(브레이크·십진 플래그)",
+      "Z80 하프 캐리",
+      "ARM CPSR(NZCV)",
+      "문맥 교환 시 PSW 저장"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "제로 플래그(Z)",
+      "캐리 플래그(C)",
+      "오버플로 플래그(V·O)",
+      "부호 플래그(S·N)",
+      "보조 캐리 플래그(A, BCD 연산)",
+      "패리티 플래그(P)",
+      "인터럽트 플래그(I)",
+      "방향 플래그(D)",
+      "트랩 플래그(T, 단일 단계 디버깅)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "CPSR": "Current Program Status Register"
+    }
+  },
+  {
+    "id": "CA_050",
+    "code": "CA_050",
+    "title": "메모리 인터리빙(Memory Interleaving)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 주기억장치",
+    "definition": "주기억장치를 여러 독립 모듈(뱅크)로 나누고 연속 주소를 모듈마다 분산 배치해, 한 모듈이 접근·리프레시 중일 때 다른 모듈에 동시에 접근함으로써 실효 대역폭을 높이는 기법",
+    "keywords": [
+      "핵심: 메모리 뱅크(Bank)·모듈 · 상위 인터리빙(High-order) · 하위 인터리빙(Low-order) · 혼합 인터리빙(뱅크 그룹)",
+      "필수: C-Access(Concurrent Access) · S-Access(Simultaneous Access) · 접근 시간 중첩 · 결함 허용도",
+      "참고: 주소 비트로 모듈 선택 · 멀티채널 메모리(듀얼·쿼드 채널) · DDR4·DDR5 뱅크 그룹 · 랭크 인터리빙 · 주소 버스 경합 해소"
+    ],
+    "sections": [
+      {
+        "title": "동작 원리",
+        "subsections": [
+          {
+            "title": "1단계",
+            "items": [
+              "CPU가 뱅크 0에 주소 0 전달"
+            ]
+          },
+          {
+            "title": "2단계",
+            "items": [
+              "뱅크 0이 데이터를 준비하는 동안 뱅크 1에 주소 1 전달"
+            ]
+          },
+          {
+            "title": "3단계",
+            "items": [
+              "반복으로 뱅크별 지연을 겹쳐 연속 데이터를 매 사이클 수신"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "인터리빙 유형",
+        "subsections": [
+          {
+            "title": "상위 인터리빙",
+            "items": [
+              "상위 비트로 모듈 선택, 한 모듈 장애가 국소화되나 동시 접근 효과 작음"
+            ]
+          },
+          {
+            "title": "하위 인터리빙",
+            "items": [
+              "하위 비트로 모듈 선택, 연속 주소가 여러 모듈에 퍼져 병렬 접근 극대화"
+            ]
+          },
+          {
+            "title": "하위 방식 약점",
+            "items": [
+              "한 모듈 오류가 전체 주소 공간에 영향, 모듈 추가 시 구조 변경 필요"
+            ]
+          },
+          {
+            "title": "혼합 인터리빙",
+            "items": [
+              "뱅크 선택은 상위, 뱅크 내 모듈은 하위 방식으로 결함 허용과 병렬성 절충"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "접근 방식",
+        "subsections": [
+          {
+            "title": "C-Access",
+            "items": [
+              "모듈별 주소 래치로 시차를 두고 순차 접근, 벡터 순차 데이터에 유리"
+            ]
+          },
+          {
+            "title": "S-Access",
+            "items": [
+              "모든 모듈에 같은 주소를 동시에 주고 결과를 래치 후 차례로 출력, 주소 버스 경합 해소"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      97,
+      99
+    ],
+    "outline": [
+      "동작 원리",
+      "- 1단계",
+      "- 2단계",
+      "- 3단계",
+      "인터리빙 유형",
+      "- 상위 인터리빙",
+      "- 하위 인터리빙",
+      "- 하위 방식 약점",
+      "- 혼합 인터리빙",
+      "접근 방식",
+      "- C-Access",
+      "- S-Access"
+    ],
+    "name": "메모리 인터리빙(Memory Interleaving)",
+    "en": "Memory Interleaving",
+    "keywords_must": [
+      "메모리 뱅크(Bank)·모듈",
+      "상위 인터리빙(High-order)",
+      "하위 인터리빙(Low-order)",
+      "혼합 인터리빙(뱅크 그룹)",
+      "C-Access(Concurrent Access)",
+      "S-Access(Simultaneous Access)",
+      "접근 시간 중첩",
+      "결함 허용도"
+    ],
+    "keywords_ref": [
+      "주소 비트로 모듈 선택",
+      "멀티채널 메모리(듀얼·쿼드 채널)",
+      "DDR4·DDR5 뱅크 그룹",
+      "랭크 인터리빙",
+      "주소 버스 경합 해소"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "메모리 뱅크(Bank)·모듈",
+      "상위 인터리빙(High-order)",
+      "하위 인터리빙(Low-order)",
+      "혼합 인터리빙(뱅크 그룹)",
+      "C-Access(Concurrent Access)",
+      "S-Access(Simultaneous Access)",
+      "접근 시간 중첩",
+      "결함 허용도"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": "상하혼뱅모 CS(상위·하위·혼합 인터리빙, 뱅크·모듈, C·S-Access)"
+  },
+  {
+    "id": "CA_051",
+    "code": "CA_051",
+    "title": "버디 및 슬랩 할당자(Buddy Allocator, Slab Allocator)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 관리 > 커널 메모리 할당",
+    "definition": "커널 메모리를 2의 거듭제곱 크기 블록으로 반씩 나누고 합쳐 관리하는 버디 할당자와, 자주 쓰는 객체 크기별로 미리 캐시를 만들어 작은 객체를 빠르게 재사용하는 슬랩 할당자로 구성된 리눅스·유닉스의 메모리 관리 기법",
+    "keywords": [
+      "핵심: 2의 거듭제곱 분할(2^n) · 버디 병합(Coalescing) · 외부 단편화 완화 · 내부 단편화 발생",
+      "필수: 슬랩 캐시(Cache)→슬랩(Slab)→객체(Object) · slabs_full·partial·empty · 객체 재사용·초기화 비용 절감 · 페이지 단위 할당",
+      "참고: 리눅스 kmalloc·kmem_cache · SLUB·SLOB 변형 · 솔라리스 최초 도입(본윅, 1994) · 버디 블록 주소 XOR 계산 · 페이지 프레임 할당"
+    ],
+    "sections": [
+      {
+        "title": "버디 할당자",
+        "subsections": [
+          {
+            "title": "할당 절차",
+            "items": [
+              "64KB 블록에서 8KB 요청 시 32KB → 16KB → 8KB로 반복 이등분 후 할당"
+            ]
+          },
+          {
+            "title": "해제 절차",
+            "items": [
+              "해제된 블록과 짝(버디)이 모두 비면 상위 크기로 병합"
+            ]
+          },
+          {
+            "title": "성질",
+            "items": [
+              "병합이 빨라 외부 단편화가 적으나 요청 크기 반올림으로 내부 단편화 발생"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "슬랩 할당자",
+        "subsections": [
+          {
+            "title": "구조",
+            "items": [
+              "객체 유형별 캐시가 여러 슬랩을 갖고, 슬랩은 연속 페이지에 같은 크기 객체를 담음"
+            ]
+          },
+          {
+            "title": "상태 목록",
+            "items": [
+              "전부 사용 중(full)",
+              "일부 사용(partial)",
+              "미사용(empty)"
+            ]
+          },
+          {
+            "title": "할당 순서",
+            "items": [
+              "크기가 맞는 캐시의 partial 슬랩 → empty 슬랩 → 버디에서 새 페이지 확보"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "두 할당자 관계",
+        "subsections": [
+          {
+            "title": "계층 구성",
+            "items": [
+              "버디가 페이지 단위로 공급하고 슬랩이 그 위에서 작은 객체 단위로 분배"
+            ]
+          },
+          {
+            "title": "비교",
+            "items": [
+              "버디(큰 연속 영역, 페이지 단위)",
+              "슬랩(작은 커널 객체, 빈번한 할당·해제)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      100,
+      101
+    ],
+    "outline": [
+      "버디 할당자",
+      "- 할당 절차",
+      "- 해제 절차",
+      "- 성질",
+      "슬랩 할당자",
+      "- 구조",
+      "- 상태 목록",
+      "- 할당 순서",
+      "두 할당자 관계",
+      "- 계층 구성",
+      "- 비교"
+    ],
+    "name": "버디 및 슬랩 할당자(Buddy Allocator, Slab Allocator)",
+    "en": "Buddy Allocator, Slab Allocator",
+    "keywords_must": [
+      "2의 거듭제곱 분할(2^n)",
+      "버디 병합(Coalescing)",
+      "외부 단편화 완화",
+      "내부 단편화 발생",
+      "슬랩 캐시(Cache)→슬랩(Slab)→객체(Object)",
+      "slabs_full·partial·empty",
+      "객체 재사용·초기화 비용 절감",
+      "페이지 단위 할당"
+    ],
+    "keywords_ref": [
+      "리눅스 kmalloc·kmem_cache",
+      "SLUB·SLOB 변형",
+      "솔라리스 최초 도입(본윅, 1994)",
+      "버디 블록 주소 XOR 계산",
+      "페이지 프레임 할당"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "2의 거듭제곱 분할(2^n)",
+      "버디 병합(Coalescing)",
+      "외부 단편화 완화",
+      "내부 단편화 발생",
+      "슬랩 캐시(Cache)→슬랩(Slab)→객체(Object)",
+      "slabs_full·partial·empty",
+      "객체 재사용·초기화 비용 절감",
+      "페이지 단위 할당"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_052",
+    "code": "CA_052",
+    "title": "랜덤 접근 메모리(RAM, Random Access Memory)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > RAM",
+    "definition": "저장 위치와 무관하게 동일한 시간으로 임의 주소를 읽고 쓸 수 있는 휘발성 반도체 기억장치로, 트랜지스터 플립플롭 셀의 SRAM과 트랜지스터·커패시터 셀의 DRAM으로 나뉨",
+    "keywords": [
+      "핵심: 휘발성(Volatile) · 임의 접근 동일 시간 · SRAM(6T 플립플롭 셀) · DRAM(1T1C 커패시터 셀)",
+      "필수: 리프레시(Refresh) 유무 · 비동기·동기 SRAM · 파이프라인 버스트 SRAM · 집적도·속도·전력 차이",
+      "참고: FPM·EDO·BEDO DRAM → SDRAM 대체 · 캐시는 SRAM, 주기억은 DRAM · 임베디드 기기 제어용 SRAM · 순차 접근 메모리(테이프) 대비"
+    ],
+    "sections": [
+      {
+        "title": "SRAM 특성",
+        "subsections": [
+          {
+            "title": "셀 구조",
+            "items": [
+              "4~6개 트랜지스터 플립플롭으로 전원이 있는 동안 값 유지"
+            ]
+          },
+          {
+            "title": "장점",
+            "items": [
+              "리프레시 불필요, 고속, 주변 회로 단순"
+            ]
+          },
+          {
+            "title": "단점",
+            "items": [
+              "셀 면적이 커 집적도 낮고 비트당 비용 높음"
+            ]
+          },
+          {
+            "title": "종류",
+            "items": [
+              "비동기 SRAM",
+              "동기 SRAM(버스트 지원)",
+              "파이프라인 버스트 SRAM"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "DRAM 특성",
+        "subsections": [
+          {
+            "title": "셀 구조",
+            "items": [
+              "트랜지스터 1개와 커패시터 1개, 전하 유무로 비트 저장"
+            ]
+          },
+          {
+            "title": "장점",
+            "items": [
+              "셀이 작아 대용량·저가"
+            ]
+          },
+          {
+            "title": "단점",
+            "items": [
+              "누설 전하로 주기적 리프레시 필요, 상대적으로 느림"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "SRAM 및 DRAM 비교",
+        "subsections": [
+          {
+            "title": "속도·용도",
+            "items": [
+              "SRAM(빠름, 캐시·레지스터 파일)",
+              "DRAM(느림, 주기억장치)"
+            ]
+          },
+          {
+            "title": "회로·칩 크기",
+            "items": [
+              "SRAM(셀 복잡, 칩 큼)",
+              "DRAM(셀 단순, 칩 작음)"
+            ]
+          },
+          {
+            "title": "가격·전력",
+            "items": [
+              "SRAM(고가, 정적 전력)",
+              "DRAM(저가, 리프레시 전력)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      102,
+      103
+    ],
+    "outline": [
+      "SRAM 특성",
+      "- 셀 구조",
+      "- 장점",
+      "- 단점",
+      "- 종류",
+      "DRAM 특성",
+      "- 셀 구조",
+      "- 장점",
+      "- 단점",
+      "SRAM 및 DRAM 비교",
+      "- 속도·용도",
+      "- 회로·칩 크기",
+      "- 가격·전력"
+    ],
+    "name": "랜덤 접근 메모리(RAM, Random Access Memory)",
+    "en": "Random Access Memory",
+    "keywords_must": [
+      "휘발성(Volatile)",
+      "임의 접근 동일 시간",
+      "SRAM(6T 플립플롭 셀)",
+      "DRAM(1T1C 커패시터 셀)",
+      "리프레시(Refresh) 유무",
+      "비동기·동기 SRAM",
+      "파이프라인 버스트 SRAM",
+      "집적도·속도·전력 차이"
+    ],
+    "keywords_ref": [
+      "FPM·EDO·BEDO DRAM → SDRAM 대체",
+      "캐시는 SRAM, 주기억은 DRAM",
+      "임베디드 기기 제어용 SRAM",
+      "순차 접근 메모리(테이프) 대비"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "휘발성(Volatile)",
+      "임의 접근 동일 시간",
+      "SRAM(6T 플립플롭 셀)",
+      "DRAM(1T1C 커패시터 셀)",
+      "리프레시(Refresh) 유무",
+      "비동기·동기 SRAM",
+      "파이프라인 버스트 SRAM",
+      "집적도·속도·전력 차이"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_053",
+    "code": "CA_053",
+    "title": "동적 램(DRAM, Dynamic Random Access Memory)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > RAM",
+    "definition": "트랜지스터 하나와 커패시터 하나로 구성된 셀을 행·열 배열로 연결하고, 커패시터 전하가 새어 나가므로 주기적으로 다시 충전(리프레시)해야 데이터가 유지되는 휘발성 주기억장치용 메모리",
+    "keywords": [
+      "핵심: 1T1C 셀 구조 · 리프레시(Refresh, 통상 64ms 주기) · 행 주소 스트로브(/RAS) · 열 주소 스트로브(/CAS)",
+      "필수: 쓰기 활성화(/WE) · 주소 다중화(Address Multiplexing) · 센스 앰프(Sense Amplifier) · 파괴적 읽기 후 재기록",
+      "참고: 리프레시 카운터·컨트롤러 · FPM·EDO·BEDO 비동기 DRAM · 셀프 리프레시·오토 리프레시 · 로우 해머(Row Hammer) 취약점 · 1z·1a·1b 공정"
+    ],
+    "sections": [
+      {
+        "title": "DRAM 동작",
+        "subsections": [
+          {
+            "title": "행 활성화",
+            "items": [
+              "/RAS로 행 주소를 받아 한 행 전체를 센스 앰프로 읽음"
+            ]
+          },
+          {
+            "title": "열 선택",
+            "items": [
+              "/CAS로 열 주소를 받아 해당 비트만 입출력"
+            ]
+          },
+          {
+            "title": "읽기·쓰기 구분",
+            "items": [
+              "/WE 신호 상태로 결정, 읽은 행은 센스 앰프가 다시 기록"
+            ]
+          },
+          {
+            "title": "리프레시",
+            "items": [
+              "행 단위로 주기적으로 읽고 재충전"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "비동기 DRAM 발전",
+        "subsections": [
+          {
+            "title": "FPM",
+            "items": [
+              "같은 행 내 연속 열 접근 시 행 주소 재전송 생략"
+            ]
+          },
+          {
+            "title": "EDO",
+            "items": [
+              "다음 열 주소 입력 중에도 이전 데이터 출력 유지"
+            ]
+          },
+          {
+            "title": "BEDO",
+            "items": [
+              "첫 주소로 다음 주소를 예측하는 버스트 접근, 이후 SDRAM으로 대체"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "DRAM 주요 이슈",
+        "subsections": [
+          {
+            "title": "미세화 한계",
+            "items": [
+              "커패시터 용량 확보가 어려워 고종횡비 구조 필요"
+            ]
+          },
+          {
+            "title": "로우 해머",
+            "items": [
+              "특정 행을 반복 활성화하면 인접 행 비트가 뒤집히는 보안 취약점"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      104,
+      105
+    ],
+    "outline": [
+      "DRAM 동작",
+      "- 행 활성화",
+      "- 열 선택",
+      "- 읽기·쓰기 구분",
+      "- 리프레시",
+      "비동기 DRAM 발전",
+      "- FPM",
+      "- EDO",
+      "- BEDO",
+      "DRAM 주요 이슈",
+      "- 미세화 한계",
+      "- 로우 해머"
+    ],
+    "name": "동적 램(DRAM, Dynamic Random Access Memory)",
+    "en": "Dynamic Random Access Memory",
+    "keywords_must": [
+      "1T1C 셀 구조",
+      "리프레시(Refresh, 통상 64ms 주기)",
+      "행 주소 스트로브(/RAS)",
+      "열 주소 스트로브(/CAS)",
+      "쓰기 활성화(/WE)",
+      "주소 다중화(Address Multiplexing)",
+      "센스 앰프(Sense Amplifier)",
+      "파괴적 읽기 후 재기록"
+    ],
+    "keywords_ref": [
+      "리프레시 카운터·컨트롤러",
+      "FPM·EDO·BEDO 비동기 DRAM",
+      "셀프 리프레시·오토 리프레시",
+      "로우 해머(Row Hammer) 취약점",
+      "1z·1a·1b 공정"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "1T1C 셀 구조",
+      "리프레시(Refresh, 통상 64ms 주기)",
+      "행 주소 스트로브(/RAS)",
+      "열 주소 스트로브(/CAS)",
+      "쓰기 활성화(/WE)",
+      "주소 다중화(Address Multiplexing)",
+      "센스 앰프(Sense Amplifier)",
+      "파괴적 읽기 후 재기록"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_054",
+    "code": "CA_054",
+    "title": "동기식 DRAM(SDRAM, Synchronous DRAM)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > RAM",
+    "definition": "입출력과 명령을 시스템 버스 클럭에 동기화하고 내부를 여러 뱅크로 나누어, 명령 한 번으로 연속 데이터를 클럭마다 내보내는 버스트 접근으로 비동기 DRAM의 성능 한계를 개선한 메모리",
+    "keywords": [
+      "핵심: 버스 클럭 동기화 · 다중 뱅크(Multi-bank) · 버스트 접근(Burst Access) · 명령어 방식 제어(/CS·/RAS·/CAS·/WE 조합)",
+      "필수: CAS 지연(CAS Latency) · 클럭 활성화(CKE) · 데이터 마스크(DQM) · 상태 천이(IDLE→Row Active→Read·Write→Precharge)",
+      "참고: EIA/JEDEC JC-42.3 표준 · 모드 레지스터 설정(MRS) · 오토 프리차지 · 셀프 리프레시·파워다운 모드 · SDR → DDR 계열로 발전"
+    ],
+    "sections": [
+      {
+        "title": "SDRAM 특징",
+        "subsections": [
+          {
+            "title": "클럭 동기",
+            "items": [
+              "컨트롤러와의 비동기 대기 시간을 없애고 타이밍을 클럭 정수배로 고정"
+            ]
+          },
+          {
+            "title": "버스트",
+            "items": [
+              "첫 데이터 이후 연속 주소 데이터를 매 클럭 출력"
+            ]
+          },
+          {
+            "title": "다중 뱅크",
+            "items": [
+              "한 뱅크 프리차지 중 다른 뱅크를 활성화해 지연 은닉"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "제어 신호",
+        "subsections": [
+          {
+            "title": "CLK·CKE",
+            "items": [
+              "동기 클럭과 저전력 모드 진입 제어"
+            ]
+          },
+          {
+            "title": "/CS·/RAS·/CAS·/WE",
+            "items": [
+              "조합으로 활성화·읽기·쓰기·프리차지·리프레시 명령 전달"
+            ]
+          },
+          {
+            "title": "DQM",
+            "items": [
+              "입력 마스크·출력 활성 제어"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "상태 천이",
+        "subsections": [
+          {
+            "title": "IDLE",
+            "items": [
+              "프리차지가 끝나 센스 앰프가 빈 상태"
+            ]
+          },
+          {
+            "title": "Row Active",
+            "items": [
+              "활성화 명령으로 한 행이 센스 앰프에 래치"
+            ]
+          },
+          {
+            "title": "Read·Write",
+            "items": [
+              "센스 앰프 데이터를 버스트로 입출력"
+            ]
+          },
+          {
+            "title": "Precharge",
+            "items": [
+              "비트 라인 전압을 기준값으로 맞춘 뒤 IDLE 복귀"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      106,
+      107
+    ],
+    "outline": [
+      "SDRAM 특징",
+      "- 클럭 동기",
+      "- 버스트",
+      "- 다중 뱅크",
+      "제어 신호",
+      "- CLK·CKE",
+      "- /CS·/RAS·/CAS·/WE",
+      "- DQM",
+      "상태 천이",
+      "- IDLE",
+      "- Row Active",
+      "- Read·Write",
+      "- Precharge"
+    ],
+    "name": "동기식 DRAM(SDRAM, Synchronous DRAM)",
+    "en": "Synchronous Dynamic Random Access Memory",
+    "keywords_must": [
+      "버스 클럭 동기화",
+      "다중 뱅크(Multi-bank)",
+      "버스트 접근(Burst Access)",
+      "명령어 방식 제어(/CS·/RAS·/CAS·/WE 조합)",
+      "CAS 지연(CAS Latency)",
+      "클럭 활성화(CKE)",
+      "데이터 마스크(DQM)",
+      "상태 천이(IDLE→Row Active→Read·Write→Precharge)"
+    ],
+    "keywords_ref": [
+      "EIA/JEDEC JC-42.3 표준",
+      "모드 레지스터 설정(MRS)",
+      "오토 프리차지",
+      "셀프 리프레시·파워다운 모드",
+      "SDR → DDR 계열로 발전"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "버스 클럭 동기화",
+      "다중 뱅크(Multi-bank)",
+      "버스트 접근(Burst Access)",
+      "명령어 방식 제어(/CS·/RAS·/CAS·/WE 조합)",
+      "CAS 지연(CAS Latency)",
+      "클럭 활성화(CKE)",
+      "데이터 마스크(DQM)",
+      "상태 천이(IDLE→Row Active→Read·Write→Precharge)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "MRS": "Mode Register Set"
+    }
+  },
+  {
+    "id": "CA_055",
+    "code": "CA_055",
+    "title": "더블 데이터 레이트 SDRAM(DDR SDRAM)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > RAM",
+    "definition": "클럭의 상승·하강 에지 양쪽에서 데이터를 전송하고 세대마다 프리페치 비트 수와 입출력 버스 주파수를 높여, 내부 셀 동작 속도를 크게 올리지 않고도 전송률을 향상시킨 SDRAM 계열 주기억장치",
+    "keywords": [
+      "핵심: 상승·하강 에지 전송(Double Pumping) · 프리페치(Prefetch) 2n·4n·8n·16n · 셀 코어 주파수 · 입출력 버스 주파수",
+      "필수: 전송률(MT/s) · 뱅크 그룹(Bank Group) · 동작 전압 하향 · JEDEC 표준",
+      "참고: DDR 2.5V → DDR2 1.8V → DDR3 1.5V → DDR4 1.2V → DDR5 1.1V · ODT(온다이 종단) · 플라이바이 토폴로지(DDR3) · GDDR·LPDDR 파생"
+    ],
+    "sections": [
+      {
+        "title": "DDR 기본 원리",
+        "subsections": [
+          {
+            "title": "SDR 대비",
+            "items": [
+              "SDR은 상승 에지만, DDR은 같은 클럭의 양 에지에서 전송"
+            ]
+          },
+          {
+            "title": "프리페치 확대",
+            "items": [
+              "셀 배열에서 한 번에 여러 비트를 I/O 버퍼로 미리 읽어 고속 직렬 출력"
+            ]
+          },
+          {
+            "title": "전송률 계산",
+            "items": [
+              "버스 클럭 × 2 × 버스 폭으로 모듈 대역폭 산출"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "세대별 발전",
+        "subsections": [
+          {
+            "title": "DDR",
+            "items": [
+              "2n 프리페치, 버스 클럭 = 코어 클럭"
+            ]
+          },
+          {
+            "title": "DDR2",
+            "items": [
+              "4n 프리페치, 버스 클럭이 코어의 2배"
+            ]
+          },
+          {
+            "title": "DDR3",
+            "items": [
+              "8n 프리페치, 플라이바이 배선과 저전압화"
+            ]
+          },
+          {
+            "title": "DDR4",
+            "items": [
+              "8n 프리페치에 뱅크 그룹 도입으로 병렬성 확대"
+            ]
+          },
+          {
+            "title": "DDR5",
+            "items": [
+              "16n 프리페치(BL16)와 채널 분할"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "세대 공통 추세",
+        "subsections": [
+          {
+            "title": "저전압",
+            "items": [
+              "세대마다 동작 전압을 낮춰 전력 절감"
+            ]
+          },
+          {
+            "title": "고밀도",
+            "items": [
+              "칩당 용량이 수십 Mb에서 수십 Gb로 증가"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      108,
+      110
+    ],
+    "outline": [
+      "DDR 기본 원리",
+      "- SDR 대비",
+      "- 프리페치 확대",
+      "- 전송률 계산",
+      "세대별 발전",
+      "- DDR",
+      "- DDR2",
+      "- DDR3",
+      "- DDR4",
+      "- DDR5",
+      "세대 공통 추세",
+      "- 저전압",
+      "- 고밀도"
+    ],
+    "name": "더블 데이터 레이트 SDRAM(DDR SDRAM)",
+    "en": "Double Data Rate SDRAM",
+    "keywords_must": [
+      "상승·하강 에지 전송(Double Pumping)",
+      "프리페치(Prefetch) 2n·4n·8n·16n",
+      "셀 코어 주파수",
+      "입출력 버스 주파수",
+      "전송률(MT/s)",
+      "뱅크 그룹(Bank Group)",
+      "동작 전압 하향",
+      "JEDEC 표준"
+    ],
+    "keywords_ref": [
+      "DDR 2.5V → DDR2 1.8V → DDR3 1.5V → DDR4 1.2V → DDR5 1.1V",
+      "ODT(온다이 종단)",
+      "플라이바이 토폴로지(DDR3)",
+      "GDDR·LPDDR 파생"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "상승·하강 에지 전송(Double Pumping)",
+      "프리페치(Prefetch) 2n·4n·8n·16n",
+      "셀 코어 주파수",
+      "입출력 버스 주파수",
+      "전송률(MT/s)",
+      "뱅크 그룹(Bank Group)",
+      "동작 전압 하향",
+      "JEDEC 표준"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "ODT": "On-Die Termination"
+    }
+  },
+  {
+    "id": "CA_056",
+    "code": "CA_056",
+    "title": "5세대 DDR SDRAM(DDR5)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > RAM",
+    "definition": "JEDEC가 2020년 표준화한 5세대 DDR 메모리로, 1.1V 전압에서 DDR4 대비 두 배 이상의 전송률을 제공하고 모듈을 두 개의 독립 32비트 서브채널로 나누며 온다이 ECC·모듈 내 전원 관리 칩을 도입함",
+    "keywords": [
+      "핵심: 전송률 4800~8400MT/s · 동작 전압 1.1V · 독립 서브채널 2개(32비트, ECC 포함 40비트) · 버스트 길이 BL16",
+      "필수: 뱅크 32개·뱅크 그룹 8개 · 온다이 ECC(On-Die ECC) · 모듈 전원 관리 IC(PMIC) · 결정 궤환 등화기(DFE)",
+      "참고: 칩 용량 16~64Gb · 고속 트레이닝 · 4위상 클로킹 · DLL·DCC 회로 · LPDDR5·LPDDR5X 모바일 · CXL 메모리 확장 · MRDIMM"
+    ],
+    "sections": [
+      {
+        "title": "DDR4 대비 개선",
+        "subsections": [
+          {
+            "title": "대역폭",
+            "items": [
+              "전송률을 3200MT/s 상한에서 4800MT/s 이상으로 확대"
+            ]
+          },
+          {
+            "title": "채널 구조",
+            "items": [
+              "64비트 단일 채널을 32비트 서브채널 2개로 나눠 동시 접근 효율 향상"
+            ]
+          },
+          {
+            "title": "뱅크·버스트",
+            "items": [
+              "뱅크 16개→32개, BL8→BL16으로 확장"
+            ]
+          },
+          {
+            "title": "전원 관리",
+            "items": [
+              "메인보드가 하던 전압 조정을 DIMM의 PMIC가 담당"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "신호 품질 기술",
+        "subsections": [
+          {
+            "title": "DFE",
+            "items": [
+              "고속 동작 시 반사 잡음을 제거하는 수신 등화"
+            ]
+          },
+          {
+            "title": "DLL",
+            "items": [
+              "출력 데이터를 외부 클럭에 정렬해 왜곡 최소화"
+            ]
+          },
+          {
+            "title": "DCC",
+            "items": [
+              "클럭 펄스 고점과 저점 비율을 50대 50으로 보정"
+            ]
+          },
+          {
+            "title": "고속 트레이닝",
+            "items": [
+              "읽기·쓰기 회로 타이밍을 고속에 맞게 미세 조정"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "신뢰성 강화",
+        "subsections": [
+          {
+            "title": "온다이 ECC",
+            "items": [
+              "칩 내부에서 셀 단일 비트 오류를 자동 정정"
+            ]
+          },
+          {
+            "title": "적용 분야",
+            "items": [
+              "서버·AI 학습·고성능 PC의 대용량 메모리"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      111,
+      114
+    ],
+    "outline": [
+      "DDR4 대비 개선",
+      "- 대역폭",
+      "- 채널 구조",
+      "- 뱅크·버스트",
+      "- 전원 관리",
+      "신호 품질 기술",
+      "- DFE",
+      "- DLL",
+      "- DCC",
+      "- 고속 트레이닝",
+      "신뢰성 강화",
+      "- 온다이 ECC",
+      "- 적용 분야"
+    ],
+    "name": "5세대 DDR SDRAM(DDR5)",
+    "en": "DDR5 SDRAM",
+    "keywords_must": [
+      "전송률 4800~8400MT/s",
+      "동작 전압 1.1V",
+      "독립 서브채널 2개(32비트, ECC 포함 40비트)",
+      "버스트 길이 BL16",
+      "뱅크 32개·뱅크 그룹 8개",
+      "온다이 ECC(On-Die ECC)",
+      "모듈 전원 관리 IC(PMIC)",
+      "결정 궤환 등화기(DFE)"
+    ],
+    "keywords_ref": [
+      "칩 용량 16~64Gb",
+      "고속 트레이닝",
+      "4위상 클로킹",
+      "DLL·DCC 회로",
+      "LPDDR5·LPDDR5X 모바일",
+      "CXL 메모리 확장",
+      "MRDIMM"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "전송률 4800~8400MT/s",
+      "동작 전압 1.1V",
+      "독립 서브채널 2개(32비트, ECC 포함 40비트)",
+      "버스트 길이 BL16",
+      "뱅크 32개·뱅크 그룹 8개",
+      "온다이 ECC(On-Die ECC)",
+      "모듈 전원 관리 IC(PMIC)",
+      "결정 궤환 등화기(DFE)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "PMIC": "Power Management Integrated Circuit",
+      "DFE": "Decision Feedback Equalization",
+      "DLL": "Delay-Locked Loop",
+      "DCC": "Duty Cycle Correction"
+    }
+  },
+  {
+    "id": "CA_059",
+    "code": "CA_059",
+    "title": "강유전체 메모리(FeRAM, Ferroelectric RAM)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 차세대 비휘발성 메모리",
+    "definition": "전압을 걸었다 떼어도 분극이 남는 강유전체의 이력 현상(히스테리시스)을 이용해, 커패시터 강유전체 막의 잔류 분극 방향으로 0과 1을 저장하는 DRAM 유사 구조의 비휘발성 메모리",
+    "keywords": [
+      "핵심: 강유전체(Ferroelectric) · 히스테리시스(Hysteresis) · 잔류 분극(Remanent Polarization) · 페로브스카이트 구조(Perovskite)",
+      "필수: PZT·SBT·BLT 소재 · 1T1C·2T2C 셀 · 파괴적 읽기 후 재기록 · 저전압·고속 쓰기",
+      "참고: 1T(FeFET) 셀 · HfO2 기반 강유전체(CMOS 호환) · 스마트카드·계량기·의료기기 · 쓰기 내구성 10^12회 이상 · 집적도 한계"
+    ],
+    "sections": [
+      {
+        "title": "저장 원리",
+        "subsections": [
+          {
+            "title": "분극 형성",
+            "items": [
+              "페로브스카이트 격자 중심의 Ti·Zr 원자가 전계 방향으로 변위"
+            ]
+          },
+          {
+            "title": "데이터 기록",
+            "items": [
+              "양·음 전압 인가 후 0V로 돌려도 잔류 분극 a점(1)·c점(0)에 머묾"
+            ]
+          },
+          {
+            "title": "데이터 판독",
+            "items": [
+              "전압 인가 순간 비트 라인으로 흐르는 전하량으로 판별, 읽은 뒤 재기록"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "셀 유형",
+        "subsections": [
+          {
+            "title": "2T2C",
+            "items": [
+              "두 커패시터에 반대 값을 저장하고 BL·/BL 전압차를 센스 앰프로 비교"
+            ]
+          },
+          {
+            "title": "1T1C",
+            "items": [
+              "1과 0의 중간 기준 전압을 문턱값으로 판정해 집적도 향상"
+            ]
+          },
+          {
+            "title": "1T(FeFET)",
+            "items": [
+              "트랜지스터 게이트 절연막을 강유전체로 바꿔 비파괴 읽기 가능"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "장단점",
+        "subsections": [
+          {
+            "title": "장점",
+            "items": [
+              "플래시보다 수백 배 빠른 쓰기, 낮은 전압, 높은 재기록 횟수"
+            ]
+          },
+          {
+            "title": "단점",
+            "items": [
+              "커패시터 미세화가 어려워 대용량화 한계, 읽기 후 재기록 필요"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      61,
+      123
+    ],
+    "outline": [
+      "저장 원리",
+      "- 분극 형성",
+      "- 데이터 기록",
+      "- 데이터 판독",
+      "셀 유형",
+      "- 2T2C",
+      "- 1T1C",
+      "- 1T(FeFET)",
+      "장단점",
+      "- 장점",
+      "- 단점"
+    ],
+    "name": "강유전체 메모리(FeRAM, Ferroelectric RAM)",
+    "en": "Ferroelectric Random Access Memory",
+    "keywords_must": [
+      "강유전체(Ferroelectric)",
+      "히스테리시스(Hysteresis)",
+      "잔류 분극(Remanent Polarization)",
+      "페로브스카이트 구조(Perovskite)",
+      "PZT·SBT·BLT 소재",
+      "1T1C·2T2C 셀",
+      "파괴적 읽기 후 재기록",
+      "저전압·고속 쓰기"
+    ],
+    "keywords_ref": [
+      "1T(FeFET) 셀",
+      "HfO2 기반 강유전체(CMOS 호환)",
+      "스마트카드·계량기·의료기기",
+      "쓰기 내구성 10^12회 이상",
+      "집적도 한계"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "강유전체(Ferroelectric)",
+      "히스테리시스(Hysteresis)",
+      "잔류 분극(Remanent Polarization)",
+      "페로브스카이트 구조(Perovskite)",
+      "PZT·SBT·BLT 소재",
+      "1T1C·2T2C 셀",
+      "파괴적 읽기 후 재기록",
+      "저전압·고속 쓰기"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "PZT": "Lead Zirconate Titanate",
+      "SBT": "Strontium Bismuth Tantalate",
+      "BLT": "Bismuth Lanthanum Titanate",
+      "FeFET": "Ferroelectric Field-Effect Transistor"
+    }
+  },
+  {
+    "id": "CA_060",
+    "code": "CA_060",
+    "title": "자기저항 메모리(MRAM, STT-MRAM)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 차세대 비휘발성 메모리",
+    "definition": "두 자성층 사이에 얇은 절연막을 둔 자기 터널 접합(MTJ)의 자화 방향이 같으면 저항이 낮고 반대면 높은 터널 자기저항 효과로 비트를 저장해, 플래시의 비휘발성과 DRAM급 속도를 함께 갖는 메모리",
+    "keywords": [
+      "핵심: 자기 터널 접합(MTJ, Magnetic Tunnel Junction) · 터널 자기저항(TMR, Tunneling Magnetoresistance) · 고정층·자유층(Pinned·Free Layer) · 평행(저저항)·반평행(고저항)",
+      "필수: 자기장 스위칭(1세대 Toggle MRAM) · 스핀 전달 토크(STT) · 스핀 궤도 토크(SOT) · 셀 면적 F²",
+      "참고: 반선택(Half-Select) 문제 · 1세대 셀 20F² 이상·STT 약 6~8F² · 임베디드 MRAM(eMRAM) 파운드리 공정 · 무한에 가까운 내구성·방사선 내성 · 우주·자동차·IoT MCU"
+    ],
+    "sections": [
+      {
+        "title": "저장 구조",
+        "subsections": [
+          {
+            "title": "MTJ 구성",
+            "items": [
+              "고정층·터널 절연막(MgO)·자유층의 3층 구조"
+            ]
+          },
+          {
+            "title": "상태 판별",
+            "items": [
+              "자화 평행이면 저저항(0), 반평행이면 고저항(1)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "구현 방식 비교",
+        "subsections": [
+          {
+            "title": "자기장 스위칭",
+            "items": [
+              "외부 배선 자기장으로 자화 반전, 반선택 오류와 미세화 시 큰 구동 전류 문제"
+            ]
+          },
+          {
+            "title": "STT 방식",
+            "items": [
+              "MTJ에 직접 흘린 스핀 편극 전류의 토크로 자유층 반전, 선택 셀만 스위칭하고 작아질수록 전류 감소"
+            ]
+          },
+          {
+            "title": "SOT 방식",
+            "items": [
+              "금속·강자성 이중층에서 스핀 궤도 결합을 이용해 읽기·쓰기 경로 분리, STT 대비 기록 전류 대폭 감소"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "활용 분야",
+        "subsections": [
+          {
+            "title": "임베디드 메모리",
+            "items": [
+              "MCU·SoC 내장 플래시·SRAM 대체"
+            ]
+          },
+          {
+            "title": "고신뢰 환경",
+            "items": [
+              "우주·군사·자동차 전장 등 방사선·온도 변화가 큰 환경"
+            ]
+          },
+          {
+            "title": "저전력 기기",
+            "items": [
+              "대기 전력이 없는 IoT 센서·웨어러블"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      61,
+      126
+    ],
+    "outline": [
+      "저장 구조",
+      "- MTJ 구성",
+      "- 상태 판별",
+      "구현 방식 비교",
+      "- 자기장 스위칭",
+      "- STT 방식",
+      "- SOT 방식",
+      "활용 분야",
+      "- 임베디드 메모리",
+      "- 고신뢰 환경",
+      "- 저전력 기기"
+    ],
+    "name": "자기저항 메모리(MRAM, STT-MRAM)",
+    "en": "Magnetoresistive RAM, Spin-Transfer Torque MRAM",
+    "keywords_must": [
+      "자기 터널 접합(MTJ, Magnetic Tunnel Junction)",
+      "터널 자기저항(TMR, Tunneling Magnetoresistance)",
+      "고정층·자유층(Pinned·Free Layer)",
+      "평행(저저항)·반평행(고저항)",
+      "자기장 스위칭(1세대 Toggle MRAM)",
+      "스핀 전달 토크(STT)",
+      "스핀 궤도 토크(SOT)",
+      "셀 면적 F²"
+    ],
+    "keywords_ref": [
+      "반선택(Half-Select) 문제",
+      "1세대 셀 20F² 이상·STT 약 6~8F²",
+      "임베디드 MRAM(eMRAM) 파운드리 공정",
+      "무한에 가까운 내구성·방사선 내성",
+      "우주·자동차·IoT MCU"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "자기 터널 접합(MTJ, Magnetic Tunnel Junction)",
+      "터널 자기저항(TMR, Tunneling Magnetoresistance)",
+      "고정층·자유층(Pinned·Free Layer)",
+      "평행(저저항)·반평행(고저항)",
+      "자기장 스위칭(1세대 Toggle MRAM)",
+      "스핀 전달 토크(STT)",
+      "스핀 궤도 토크(SOT)",
+      "셀 면적 F²"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "TMR": "Tunneling Magnetoresistance",
+      "SOT": "Spin-Orbit Torque"
+    }
+  },
+  {
+    "id": "CA_065",
+    "code": "CA_065",
+    "title": "비휘발성 메모리(NVM, Non-Volatile Memory)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 비휘발성 메모리",
+    "definition": "전원이 끊겨도 저장된 정보를 유지하는 반도체 메모리로, 마스크 ROM에서 PROM·EPROM·EEPROM·플래시로 발전했으며 RAM 수준 속도를 목표로 FeRAM·MRAM·PRAM·ReRAM 같은 차세대 메모리가 개발되고 있음",
+    "keywords": [
+      "핵심: 전원 차단 시 데이터 유지 · 롬 계열(Mask ROM·PROM·EPROM·EEPROM) · 플래시 메모리(블록 소거) · 플로팅 게이트 전하 저장",
+      "필수: 차세대 메모리(FeRAM·MRAM·PRAM·ReRAM) · 저장 클래스 메모리(SCM) · 유니버설 메모리(Universal Memory)",
+      "참고: EAROM(전기적 변경 가능 ROM) · EEPROM 재기록 약 10만~100만 회 · 저장 방식별 분류(전하·분극·자화·상변화·저항) · 3D XPoint·옵테인 단종 사례 · NVDIMM"
+    ],
+    "sections": [
+      {
+        "title": "저장 방식별 분류",
+        "subsections": [
+          {
+            "title": "전하 저장형",
+            "items": [
+              "플로팅 게이트·전하 트랩에 전자를 가두는 플래시·EEPROM"
+            ]
+          },
+          {
+            "title": "분극형",
+            "items": [
+              "강유전체 잔류 분극을 쓰는 FeRAM"
+            ]
+          },
+          {
+            "title": "자화형",
+            "items": [
+              "자성층 자화 방향을 쓰는 MRAM"
+            ]
+          },
+          {
+            "title": "저항형",
+            "items": [
+              "상변화 물질(PRAM)·금속 산화물 필라멘트(ReRAM)의 저항 차이 이용"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "롬 계열 발전 흐름",
+        "subsections": [
+          {
+            "title": "Mask ROM·PROM",
+            "items": [
+              "제조 시 고정 또는 퓨즈를 끊어 한 번만 기록"
+            ]
+          },
+          {
+            "title": "EPROM·EAROM",
+            "items": [
+              "자외선 또는 전기 신호로 지울 수 있으나 느리고 제약이 많음"
+            ]
+          },
+          {
+            "title": "EEPROM",
+            "items": [
+              "회로에서 떼지 않고 바이트 단위로 전기적 소거"
+            ]
+          },
+          {
+            "title": "플래시",
+            "items": [
+              "블록 단위 일괄 소거로 EEPROM보다 저가·대용량"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "차세대 메모리 방향",
+        "subsections": [
+          {
+            "title": "유니버설 메모리",
+            "items": [
+              "DRAM 속도와 플래시의 비휘발성·집적도를 동시에 추구"
+            ]
+          },
+          {
+            "title": "저장 클래스 메모리",
+            "items": [
+              "DRAM과 SSD 사이 계층을 채워 메모리 계층 재편"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      127,
+      130
+    ],
+    "outline": [
+      "저장 방식별 분류",
+      "- 전하 저장형",
+      "- 분극형",
+      "- 자화형",
+      "- 저항형",
+      "롬 계열 발전 흐름",
+      "- Mask ROM·PROM",
+      "- EPROM·EAROM",
+      "- EEPROM",
+      "- 플래시",
+      "차세대 메모리 방향",
+      "- 유니버설 메모리",
+      "- 저장 클래스 메모리"
+    ],
+    "name": "비휘발성 메모리(NVM, Non-Volatile Memory)",
+    "en": "Non-Volatile Memory",
+    "keywords_must": [
+      "전원 차단 시 데이터 유지",
+      "롬 계열(Mask ROM·PROM·EPROM·EEPROM)",
+      "플래시 메모리(블록 소거)",
+      "플로팅 게이트 전하 저장",
+      "차세대 메모리(FeRAM·MRAM·PRAM·ReRAM)",
+      "저장 클래스 메모리(SCM)",
+      "유니버설 메모리(Universal Memory)"
+    ],
+    "keywords_ref": [
+      "EAROM(전기적 변경 가능 ROM)",
+      "EEPROM 재기록 약 10만~100만 회",
+      "저장 방식별 분류(전하·분극·자화·상변화·저항)",
+      "3D XPoint·옵테인 단종 사례",
+      "NVDIMM"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "전원 차단 시 데이터 유지",
+      "롬 계열(Mask ROM·PROM·EPROM·EEPROM)",
+      "플래시 메모리(블록 소거)",
+      "플로팅 게이트 전하 저장",
+      "차세대 메모리(FeRAM·MRAM·PRAM·ReRAM)",
+      "저장 클래스 메모리(SCM)",
+      "유니버설 메모리(Universal Memory)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "EAROM": "Electrically Alterable Read-Only Memory"
+    }
+  },
+  {
+    "id": "CA_067",
+    "code": "CA_067",
+    "title": "상변화 메모리(PRAM, Phase-change RAM)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 차세대 비휘발성 메모리",
+    "definition": "칼코게나이드 계열 상변화 물질에 전류를 흘려 생기는 줄 열로 물질을 비정질(고저항)과 결정질(저저항) 상태로 가역적으로 바꾸고, 그 저항 차이로 데이터를 저장하는 비휘발성 메모리",
+    "keywords": [
+      "핵심: 상변화 물질(GST, Ge2Sb2Te5) · 줄 발열(Joule Heating) · 비정질(Amorphous, 고저항, 0) · 결정질(Crystalline, 저저항, 1)",
+      "필수: RESET(용융 후 급랭) · SET(결정화 온도 유지) · 큰 저항비·높은 판독 신뢰성 · 멀티 레벨 셀 가능",
+      "참고: 칼코게나이드(Chalcogenide) 소재 · 히터 전극 구조 · 3D XPoint(인텔·마이크론) 교차점 구조 · 쓰기 전력 큼·저항 드리프트 · 뉴로모픽 시냅스 소자 연구"
+    ],
+    "sections": [
+      {
+        "title": "셀 상태",
+        "subsections": [
+          {
+            "title": "비정질 상태",
+            "items": [
+              "원자 배열이 무질서해 저항이 커 논리 0"
+            ]
+          },
+          {
+            "title": "결정질 상태",
+            "items": [
+              "원자가 규칙적으로 정렬해 저항이 작아 논리 1"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "동작 방식",
+        "subsections": [
+          {
+            "title": "RESET(1→0)",
+            "items": [
+              "짧고 큰 전류로 녹는점 이상 가열 후 급랭해 비정질화"
+            ]
+          },
+          {
+            "title": "SET(0→1)",
+            "items": [
+              "중간 세기 전류를 길게 흘려 결정화 온도에서 재결정"
+            ]
+          },
+          {
+            "title": "READ",
+            "items": [
+              "상태를 바꾸지 않는 작은 전류로 저항을 측정, 지연이 짧음"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "장단점",
+        "subsections": [
+          {
+            "title": "장점",
+            "items": [
+              "미세화 용이로 대용량화, 비트 단위 덮어쓰기, 플래시보다 빠른 쓰기"
+            ]
+          },
+          {
+            "title": "단점",
+            "items": [
+              "SET·RESET 모두 가열이 필요해 쓰기 전력 큼, 반복 시 소재 열화"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      131,
+      132
+    ],
+    "outline": [
+      "셀 상태",
+      "- 비정질 상태",
+      "- 결정질 상태",
+      "동작 방식",
+      "- RESET(1→0)",
+      "- SET(0→1)",
+      "- READ",
+      "장단점",
+      "- 장점",
+      "- 단점"
+    ],
+    "name": "상변화 메모리(PRAM, Phase-change RAM)",
+    "en": "Phase-change Random Access Memory",
+    "keywords_must": [
+      "상변화 물질(GST, Ge2Sb2Te5)",
+      "줄 발열(Joule Heating)",
+      "비정질(Amorphous, 고저항, 0)",
+      "결정질(Crystalline, 저저항, 1)",
+      "RESET(용융 후 급랭)",
+      "SET(결정화 온도 유지)",
+      "큰 저항비·높은 판독 신뢰성",
+      "멀티 레벨 셀 가능"
+    ],
+    "keywords_ref": [
+      "칼코게나이드(Chalcogenide) 소재",
+      "히터 전극 구조",
+      "3D XPoint(인텔·마이크론) 교차점 구조",
+      "쓰기 전력 큼·저항 드리프트",
+      "뉴로모픽 시냅스 소자 연구"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "상변화 물질(GST, Ge2Sb2Te5)",
+      "줄 발열(Joule Heating)",
+      "비정질(Amorphous, 고저항, 0)",
+      "결정질(Crystalline, 저저항, 1)",
+      "RESET(용융 후 급랭)",
+      "SET(결정화 온도 유지)",
+      "큰 저항비·높은 판독 신뢰성",
+      "멀티 레벨 셀 가능"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "GST": "Germanium-Antimony-Tellurium"
+    }
+  },
+  {
+    "id": "CA_072",
+    "code": "CA_072",
+    "title": "저항 변화 메모리(ReRAM, Resistive RAM)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 차세대 비휘발성 메모리",
+    "definition": "두 전극 사이 금속 산화물 절연층에 충분한 전압을 가하면 전도성 필라멘트가 생겨 저항이 낮아지고, 반대 조건에서 끊어져 높아지는 저항 스위칭 현상으로 데이터를 저장하는 차세대 비휘발성 메모리",
+    "keywords": [
+      "핵심: 금속-절연체-금속(MIM) 구조 · 전이 금속 산화물(HfOx·TaOx) · 전도성 필라멘트(Conductive Filament) · 산소 공공(Oxygen Vacancy)",
+      "필수: 고저항 OFF(0)·저저항 ON(1) · 단극성 스위칭(Unipolar) · 양극성 스위칭(Bipolar) · 크로스바 어레이(Crossbar Array)",
+      "참고: 포밍(Forming) 공정 · 셀 특성 불균일·산포 · 아날로그 저항 상태로 인메모리 연산·뉴로모픽 시냅스 · CBRAM(도전성 브리지) · 선택 소자(1S1R)"
+    ],
+    "sections": [
+      {
+        "title": "동작 원리",
+        "subsections": [
+          {
+            "title": "SET",
+            "items": [
+              "문턱 전압 이상에서 필라멘트가 형성되어 ON 상태로 전환"
+            ]
+          },
+          {
+            "title": "RESET",
+            "items": [
+              "필라멘트가 끊겨 OFF 상태로 복귀"
+            ]
+          },
+          {
+            "title": "비휘발 유지",
+            "items": [
+              "전원을 꺼도 필라멘트 상태가 남아 저항값 보존"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "스위칭 유형",
+        "subsections": [
+          {
+            "title": "단극성",
+            "items": [
+              "같은 극성에서 전압 크기만 바꿔 ON·OFF 전환"
+            ]
+          },
+          {
+            "title": "양극성",
+            "items": [
+              "ON은 한 극성, OFF는 반대 극성 전압이 필요해 제어 안정성 높음"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "차세대 메모리 비교",
+        "subsections": [
+          {
+            "title": "ReRAM",
+            "items": [
+              "금속 산화물 저항 차, 고속·저전력·고집적, 소자 특성 산포가 과제"
+            ]
+          },
+          {
+            "title": "MRAM",
+            "items": [
+              "자화 방향 전환, 반복 내구성·고속, 저항비가 작아 판독 마진 부족"
+            ]
+          },
+          {
+            "title": "FeRAM",
+            "items": [
+              "강유전체 분극, 저전력·고속, 대용량화와 내구 열화가 과제"
+            ]
+          },
+          {
+            "title": "PRAM",
+            "items": [
+              "상변화 저항 차, 대용량화 유리, 쓰기 전력·열 관리가 과제"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      133,
+      134
+    ],
+    "outline": [
+      "동작 원리",
+      "- SET",
+      "- RESET",
+      "- 비휘발 유지",
+      "스위칭 유형",
+      "- 단극성",
+      "- 양극성",
+      "차세대 메모리 비교",
+      "- ReRAM",
+      "- MRAM",
+      "- FeRAM",
+      "- PRAM"
+    ],
+    "name": "저항 변화 메모리(ReRAM, Resistive RAM)",
+    "en": "Resistive Random Access Memory",
+    "keywords_must": [
+      "금속-절연체-금속(MIM) 구조",
+      "전이 금속 산화물(HfOx·TaOx)",
+      "전도성 필라멘트(Conductive Filament)",
+      "산소 공공(Oxygen Vacancy)",
+      "고저항 OFF(0)·저저항 ON(1)",
+      "단극성 스위칭(Unipolar)",
+      "양극성 스위칭(Bipolar)",
+      "크로스바 어레이(Crossbar Array)"
+    ],
+    "keywords_ref": [
+      "포밍(Forming) 공정",
+      "셀 특성 불균일·산포",
+      "아날로그 저항 상태로 인메모리 연산·뉴로모픽 시냅스",
+      "CBRAM(도전성 브리지)",
+      "선택 소자(1S1R)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "금속-절연체-금속(MIM) 구조",
+      "전이 금속 산화물(HfOx·TaOx)",
+      "전도성 필라멘트(Conductive Filament)",
+      "산소 공공(Oxygen Vacancy)",
+      "고저항 OFF(0)·저저항 ON(1)",
+      "단극성 스위칭(Unipolar)",
+      "양극성 스위칭(Bipolar)",
+      "크로스바 어레이(Crossbar Array)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "MIM": "Metal-Insulator-Metal",
+      "CBRAM": "Conductive-Bridging RAM"
+    }
+  },
+  {
+    "id": "CA_074",
+    "code": "CA_074",
+    "title": "캐시 일관성 유지 방법(Cache Coherence)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 캐시",
+    "definition": "다중 프로세서 환경에서 각 코어의 로컬 캐시에 복사된 같은 메모리 블록 값이 서로 달라지는 문제를 막기 위해, 소프트웨어 제한이나 스누핑·디렉터리 기반 하드웨어 프로토콜로 모든 캐시가 최신 값을 보도록 보장하는 기법",
+    "keywords": [
+      "핵심: 공유 데이터 불일치 · 프로세스 이주(Migration) · 입출력(DMA) 불일치 · 스누핑 프로토콜(Snooping)",
+      "필수: 디렉터리 기반 프로토콜(Directory-based) · 무효화 방식(Write-Invalidate) · 갱신 방식(Write-Update) · 공유 데이터 캐시 저장 금지",
+      "참고: MESI·MOESI·MESIF 프로토콜 · 완전 맵·제한·체인 디렉터리 · 거짓 공유(False Sharing) · NUMA·ccNUMA · CXL.cache 일관성"
+    ],
+    "sections": [
+      {
+        "title": "불일치 발생 요인",
+        "subsections": [
+          {
+            "title": "쓰기 가능 데이터 공유",
+            "items": [
+              "한 코어가 수정한 값을 다른 코어 캐시가 모름"
+            ]
+          },
+          {
+            "title": "프로세스 이주",
+            "items": [
+              "다른 코어로 옮겨간 프로세스가 이전 캐시의 옛 값을 참조"
+            ]
+          },
+          {
+            "title": "입출력 동작",
+            "items": [
+              "DMA가 메모리를 직접 갱신해 캐시 사본이 낡음"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "소프트웨어 해결 방안",
+        "subsections": [
+          {
+            "title": "공유 캐시 사용",
+            "items": [
+              "모든 프로세서가 하나의 캐시를 공유"
+            ]
+          },
+          {
+            "title": "공유 데이터 캐시 금지",
+            "items": [
+              "쓰기 가능한 공유 데이터는 캐시에 두지 않음"
+            ]
+          },
+          {
+            "title": "임계 영역 제한",
+            "items": [
+              "잠금 변수 등 동기화 데이터를 캐시 저장 대상에서 제외"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "하드웨어 해결 방안",
+        "subsections": [
+          {
+            "title": "스누핑",
+            "items": [
+              "각 캐시 제어기가 공유 버스를 감시해 다른 코어의 쓰기를 감지하고 사본 무효화·갱신"
+            ]
+          },
+          {
+            "title": "디렉터리",
+            "items": [
+              "메모리 블록별로 사본 보유 캐시 목록을 두고 필요한 캐시에만 메시지 전송"
+            ]
+          },
+          {
+            "title": "방식 선택",
+            "items": [
+              "소수 코어 버스 구조는 스누핑, 대규모 다중 소켓·NUMA는 디렉터리"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      138,
+      139
+    ],
+    "outline": [
+      "불일치 발생 요인",
+      "- 쓰기 가능 데이터 공유",
+      "- 프로세스 이주",
+      "- 입출력 동작",
+      "소프트웨어 해결 방안",
+      "- 공유 캐시 사용",
+      "- 공유 데이터 캐시 금지",
+      "- 임계 영역 제한",
+      "하드웨어 해결 방안",
+      "- 스누핑",
+      "- 디렉터리",
+      "- 방식 선택"
+    ],
+    "name": "캐시 일관성 유지 방법(Cache Coherence)",
+    "en": "Cache Coherence Methods",
+    "keywords_must": [
+      "공유 데이터 불일치",
+      "프로세스 이주(Migration)",
+      "입출력(DMA) 불일치",
+      "스누핑 프로토콜(Snooping)",
+      "디렉터리 기반 프로토콜(Directory-based)",
+      "무효화 방식(Write-Invalidate)",
+      "갱신 방식(Write-Update)",
+      "공유 데이터 캐시 저장 금지"
+    ],
+    "keywords_ref": [
+      "MESI·MOESI·MESIF 프로토콜",
+      "완전 맵·제한·체인 디렉터리",
+      "거짓 공유(False Sharing)",
+      "NUMA·ccNUMA",
+      "CXL.cache 일관성"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "공유 데이터 불일치",
+      "프로세스 이주(Migration)",
+      "입출력(DMA) 불일치",
+      "스누핑 프로토콜(Snooping)",
+      "디렉터리 기반 프로토콜(Directory-based)",
+      "무효화 방식(Write-Invalidate)",
+      "갱신 방식(Write-Update)",
+      "공유 데이터 캐시 저장 금지"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "MOESI": "Modified Owned Exclusive Shared Invalid",
+      "MESIF": "Modified Exclusive Shared Invalid Forward"
+    }
+  },
+  {
+    "id": "CA_075",
+    "code": "CA_075",
+    "title": "캐시 사상 기법(Cache Mapping: 직접·연관·집합 연관)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 캐시",
+    "definition": "캐시 라인 수가 주기억장치 블록 수보다 적어 어떤 블록을 캐시의 어느 라인에 둘지 정하는 규칙으로, 지정 라인 하나만 허용하는 직접 사상, 어느 라인이든 허용하는 연관 사상, 두 방식을 절충한 집합 연관 사상이 있음",
+    "keywords": [
+      "핵심: 태그 필드(Tag) · 라인·집합 인덱스 필드(Line·Set Index) · 단어(오프셋) 필드(Word·Offset) · 직접 사상(1:1 대응)",
+      "필수: 완전 연관 사상(Fully Associative) · N-웨이 집합 연관(N-way Set Associative) · 태그 병렬 비교기 · 적중·미스 판정",
+      "참고: 주소 = 태그 + 인덱스 + 오프셋 · 직접 사상 = 1-웨이, 완전 연관 = 전체 라인 수 웨이 · 대립 실패와 연관도 관계 · CAM 기반 태그 검색 · L1 4~8웨이·LLC 16웨이 이상"
+    ],
+    "sections": [
+      {
+        "title": "직접 사상",
+        "subsections": [
+          {
+            "title": "배치 규칙",
+            "items": [
+              "블록 번호 mod 라인 수로 정해진 한 라인에만 적재"
+            ]
+          },
+          {
+            "title": "적중 판정",
+            "items": [
+              "인덱스로 라인을 고르고 저장된 태그와 주소 태그 1회 비교"
+            ]
+          },
+          {
+            "title": "장단점",
+            "items": [
+              "회로 단순·고속이나 같은 라인에 몰리면 교체가 잦아 적중률 저하"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "연관 사상",
+        "subsections": [
+          {
+            "title": "배치 규칙",
+            "items": [
+              "블록이 캐시의 어느 라인에나 적재 가능"
+            ]
+          },
+          {
+            "title": "적중 판정",
+            "items": [
+              "모든 라인의 태그를 동시에 비교하는 연관 기억장치 필요"
+            ]
+          },
+          {
+            "title": "장단점",
+            "items": [
+              "적중률은 가장 높으나 비교 회로가 커 비용·지연 증가"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "집합 연관 사상",
+        "subsections": [
+          {
+            "title": "배치 규칙",
+            "items": [
+              "집합 인덱스로 집합을 정하고 그 안의 N개 라인 중 하나에 적재"
+            ]
+          },
+          {
+            "title": "적중 판정",
+            "items": [
+              "선택된 집합 안 N개 태그만 병렬 비교"
+            ]
+          },
+          {
+            "title": "절충 효과",
+            "items": [
+              "직접 사상의 충돌을 줄이면서 연관 사상의 하드웨어 부담 완화"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      140,
+      143
+    ],
+    "outline": [
+      "직접 사상",
+      "- 배치 규칙",
+      "- 적중 판정",
+      "- 장단점",
+      "연관 사상",
+      "- 배치 규칙",
+      "- 적중 판정",
+      "- 장단점",
+      "집합 연관 사상",
+      "- 배치 규칙",
+      "- 적중 판정",
+      "- 절충 효과"
+    ],
+    "name": "캐시 사상 기법(Cache Mapping: 직접·연관·집합 연관)",
+    "en": "Direct, Associative, Set-Associative Mapping",
+    "keywords_must": [
+      "태그 필드(Tag)",
+      "라인·집합 인덱스 필드(Line·Set Index)",
+      "단어(오프셋) 필드(Word·Offset)",
+      "직접 사상(1:1 대응)",
+      "완전 연관 사상(Fully Associative)",
+      "N-웨이 집합 연관(N-way Set Associative)",
+      "태그 병렬 비교기",
+      "적중·미스 판정"
+    ],
+    "keywords_ref": [
+      "주소 = 태그 + 인덱스 + 오프셋",
+      "직접 사상 = 1-웨이, 완전 연관 = 전체 라인 수 웨이",
+      "대립 실패와 연관도 관계",
+      "CAM 기반 태그 검색",
+      "L1 4~8웨이·LLC 16웨이 이상"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "태그 필드(Tag)",
+      "라인·집합 인덱스 필드(Line·Set Index)",
+      "단어(오프셋) 필드(Word·Offset)",
+      "직접 사상(1:1 대응)",
+      "완전 연관 사상(Fully Associative)",
+      "N-웨이 집합 연관(N-way Set Associative)",
+      "태그 병렬 비교기",
+      "적중·미스 판정"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_078",
+    "code": "CA_078",
+    "title": "MESI 프로토콜(MESI Protocol)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 캐시",
+    "definition": "쓰기 후 기록(Write-back) 캐시를 쓰는 다중 프로세서에서 각 캐시 라인을 수정·배타·공유·무효 네 상태 중 하나로 관리하고, 스누핑으로 다른 캐시의 접근을 감시해 상태를 전이시키는 무효화 기반 캐시 일관성 프로토콜",
+    "keywords": [
+      "핵심: 수정(Modified) · 배타(Exclusive) · 공유(Shared) · 무효(Invalid)",
+      "필수: 스누피 제어기(Snoopy Controller) · 무효화 신호·사이클 · 상태 전이도(State Transition) · 버스 읽기·소유권 요청(RFO)",
+      "참고: 일리노이 프로토콜 · MSI 대비 E 상태로 불필요한 버스 트랜잭션 감소 · MOESI(AMD, O 상태)·MESIF(인텔, F 상태) · 쓰기 즉시 기록 방식은 단순 무효화로 충분"
+    ],
+    "sections": [
+      {
+        "title": "네 가지 상태",
+        "subsections": [
+          {
+            "title": "수정(M)",
+            "items": [
+              "이 캐시에만 있고 주기억장치와 값이 다름, 교체 시 되써야 함"
+            ]
+          },
+          {
+            "title": "배타(E)",
+            "items": [
+              "이 캐시에만 있고 주기억장치와 값이 같음, 버스 통보 없이 쓰기 가능"
+            ]
+          },
+          {
+            "title": "공유(S)",
+            "items": [
+              "여러 캐시에 같은 값이 있으며 주기억장치와 일치"
+            ]
+          },
+          {
+            "title": "무효(I)",
+            "items": [
+              "라인에 유효한 데이터가 없음"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "주요 상태 전이",
+        "subsections": [
+          {
+            "title": "읽기 미스",
+            "items": [
+              "다른 캐시에 사본이 없으면 E, 있으면 S로 적재"
+            ]
+          },
+          {
+            "title": "쓰기 적중",
+            "items": [
+              "S 상태면 무효화 신호를 보내 다른 사본을 I로 바꾼 뒤 M으로 전이"
+            ]
+          },
+          {
+            "title": "스누핑 적중",
+            "items": [
+              "다른 코어가 M 라인을 읽으면 값을 되쓰고 S로 전이"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "쓰기 정책별 일관성 유지",
+        "subsections": [
+          {
+            "title": "즉시 기록 캐시",
+            "items": [
+              "버스에 실린 쓰기 주소를 감시해 해당 블록만 무효화"
+            ]
+          },
+          {
+            "title": "나중 기록 캐시",
+            "items": [
+              "주기억장치를 즉시 갱신하지 않으므로 MESI 상태 관리와 소유권 요청 필요"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      144,
+      146
+    ],
+    "outline": [
+      "네 가지 상태",
+      "- 수정(M)",
+      "- 배타(E)",
+      "- 공유(S)",
+      "- 무효(I)",
+      "주요 상태 전이",
+      "- 읽기 미스",
+      "- 쓰기 적중",
+      "- 스누핑 적중",
+      "쓰기 정책별 일관성 유지",
+      "- 즉시 기록 캐시",
+      "- 나중 기록 캐시"
+    ],
+    "name": "MESI 프로토콜(MESI Protocol)",
+    "en": "MESI Protocol",
+    "keywords_must": [
+      "수정(Modified)",
+      "배타(Exclusive)",
+      "공유(Shared)",
+      "무효(Invalid)",
+      "스누피 제어기(Snoopy Controller)",
+      "무효화 신호·사이클",
+      "상태 전이도(State Transition)",
+      "버스 읽기·소유권 요청(RFO)"
+    ],
+    "keywords_ref": [
+      "일리노이 프로토콜",
+      "MSI 대비 E 상태로 불필요한 버스 트랜잭션 감소",
+      "MOESI(AMD, O 상태)·MESIF(인텔, F 상태)",
+      "쓰기 즉시 기록 방식은 단순 무효화로 충분"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "수정(Modified)",
+      "배타(Exclusive)",
+      "공유(Shared)",
+      "무효(Invalid)",
+      "스누피 제어기(Snoopy Controller)",
+      "무효화 신호·사이클",
+      "상태 전이도(State Transition)",
+      "버스 읽기·소유권 요청(RFO)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "RFO": "Read For Ownership"
+    }
+  },
+  {
+    "id": "CA_079",
+    "code": "CA_079",
+    "title": "캐시 쓰기 정책(Cache Write Policy)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 캐시",
+    "definition": "CPU가 캐시 데이터를 갱신할 때 주기억장치에 언제 반영할지 정하는 규칙으로, 캐시와 주기억장치에 동시에 쓰는 즉시 기록(Write-through)과 블록이 교체될 때만 되쓰는 나중 기록(Write-back) 방식이 대표적임",
+    "keywords": [
+      "핵심: 즉시 기록(Write-through) · 나중 기록(Write-back) · 더티 비트(Dirty Bit) · 쓰기 버퍼(Write Buffer)",
+      "필수: 쓰기 할당(Write-allocate) · 쓰기 비할당(No-write-allocate) · 버스 트래픽·쓰기 지연 · 캐시 일관성 문제",
+      "참고: 즉시 기록 + 비할당, 나중 기록 + 할당 조합이 일반적 · 정전 시 데이터 손실 위험(Write-back) · 스토리지 캐시에도 동일 개념 적용 · 공유 데이터 캐시 저장 금지·버스 감시"
+    ],
+    "sections": [
+      {
+        "title": "즉시 기록 방식",
+        "subsections": [
+          {
+            "title": "동작",
+            "items": [
+              "쓰기마다 캐시와 주기억장치를 함께 갱신"
+            ]
+          },
+          {
+            "title": "장점",
+            "items": [
+              "구조가 단순하고 주기억장치가 항상 최신 값 유지"
+            ]
+          },
+          {
+            "title": "단점",
+            "items": [
+              "버스 트래픽이 많고 주기억장치 쓰기 시간이 성능에 포함"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "나중 기록 방식",
+        "subsections": [
+          {
+            "title": "동작",
+            "items": [
+              "캐시에만 쓰고 블록이 교체(스왑 아웃)될 때 주기억장치로 복사"
+            ]
+          },
+          {
+            "title": "장점",
+            "items": [
+              "같은 블록 반복 쓰기를 한 번으로 줄여 쓰기 횟수·시간 절감"
+            ]
+          },
+          {
+            "title": "단점",
+            "items": [
+              "주기억장치와 불일치 기간이 생겨 일관성 관리와 더티 비트 확인 필요"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "쓰기 미스 처리",
+        "subsections": [
+          {
+            "title": "쓰기 할당",
+            "items": [
+              "블록을 캐시로 가져온 뒤 쓰기, 시간 지역성 활용"
+            ]
+          },
+          {
+            "title": "쓰기 비할당",
+            "items": [
+              "주기억장치에만 쓰고 캐시는 그대로 유지"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      147,
+      147
+    ],
+    "outline": [
+      "즉시 기록 방식",
+      "- 동작",
+      "- 장점",
+      "- 단점",
+      "나중 기록 방식",
+      "- 동작",
+      "- 장점",
+      "- 단점",
+      "쓰기 미스 처리",
+      "- 쓰기 할당",
+      "- 쓰기 비할당"
+    ],
+    "name": "캐시 쓰기 정책(Cache Write Policy)",
+    "en": "Cache Write Policy",
+    "keywords_must": [
+      "즉시 기록(Write-through)",
+      "나중 기록(Write-back)",
+      "더티 비트(Dirty Bit)",
+      "쓰기 버퍼(Write Buffer)",
+      "쓰기 할당(Write-allocate)",
+      "쓰기 비할당(No-write-allocate)",
+      "버스 트래픽·쓰기 지연",
+      "캐시 일관성 문제"
+    ],
+    "keywords_ref": [
+      "즉시 기록 + 비할당, 나중 기록 + 할당 조합이 일반적",
+      "정전 시 데이터 손실 위험(Write-back)",
+      "스토리지 캐시에도 동일 개념 적용",
+      "공유 데이터 캐시 저장 금지·버스 감시"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "즉시 기록(Write-through)",
+      "나중 기록(Write-back)",
+      "더티 비트(Dirty Bit)",
+      "쓰기 버퍼(Write Buffer)",
+      "쓰기 할당(Write-allocate)",
+      "쓰기 비할당(No-write-allocate)",
+      "버스 트래픽·쓰기 지연",
+      "캐시 일관성 문제"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_080",
+    "code": "CA_080",
+    "title": "캐시 플러시 및 캐시 클린(Cache Flush, Cache Clean)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 캐시",
+    "definition": "캐시 유지 관리 연산으로, 캐시 클린은 변경된(더티) 라인을 주기억장치에 기록해 캐시와 메모리를 일치시키고, 캐시 플러시(무효화)는 라인을 무효 처리해 다음 접근 시 메모리에서 새로 읽어 오게 하는 동작",
+    "keywords": [
+      "핵심: 더티 비트(D-bit) · 유효 비트(V-bit) · 클린(Clean = 되쓰기 후 D 비트 해제) · 플러시·무효화(Flush·Invalidate = V 비트 해제)",
+      "필수: 명령 캐시·데이터 캐시 선택 수행 · DMA 버퍼 일관성 · 클린 앤 인밸리데이트(Clean & Invalidate)",
+      "참고: ARM DC CVAC·DC IVAC·DC CIVAC 명령 · x86 CLFLUSH·WBINVD · 자기 수정 코드 후 I-Cache 무효화 · 영속 메모리 쓰기 보장(CLWB) · 용어 혼용 주의(x86 flush는 되쓰기 포함)"
+    ],
+    "sections": [
+      {
+        "title": "캐시 클린",
+        "subsections": [
+          {
+            "title": "동작",
+            "items": [
+              "더티 라인을 메모리로 기록한 뒤 D 비트만 해제, 데이터는 캐시에 유지"
+            ]
+          },
+          {
+            "title": "결과",
+            "items": [
+              "캐시와 메모리 값이 일치"
+            ]
+          },
+          {
+            "title": "활용",
+            "items": [
+              "DMA 송신 전 CPU가 만든 데이터를 메모리에 확정"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "캐시 플러시",
+        "subsections": [
+          {
+            "title": "동작",
+            "items": [
+              "라인의 V 비트를 해제해 캐시 데이터를 무효화"
+            ]
+          },
+          {
+            "title": "결과",
+            "items": [
+              "다음 접근 시 메모리의 최신 값을 다시 적재"
+            ]
+          },
+          {
+            "title": "활용",
+            "items": [
+              "DMA 수신 후 장치가 쓴 데이터를 CPU가 읽기 전, 코드 변경 후 명령 캐시 갱신"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "클린 및 플러시 비교",
+        "subsections": [
+          {
+            "title": "상태 비트",
+            "items": [
+              "클린(D 비트 해제)",
+              "플러시(V 비트 해제)"
+            ]
+          },
+          {
+            "title": "메모리 쓰기",
+            "items": [
+              "클린(더티 데이터 기록)",
+              "플러시(기록 없이 폐기, 필요 시 클린과 결합)"
+            ]
+          },
+          {
+            "title": "대상 데이터",
+            "items": [
+              "클린(장치와 공유할 데이터)",
+              "플러시(캐시에서만 쓰는 일회성 또는 낡은 데이터)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      148,
+      149
+    ],
+    "outline": [
+      "캐시 클린",
+      "- 동작",
+      "- 결과",
+      "- 활용",
+      "캐시 플러시",
+      "- 동작",
+      "- 결과",
+      "- 활용",
+      "클린 및 플러시 비교",
+      "- 상태 비트",
+      "- 메모리 쓰기",
+      "- 대상 데이터"
+    ],
+    "name": "캐시 플러시 및 캐시 클린(Cache Flush, Cache Clean)",
+    "en": "Cache Flush, Cache Clean",
+    "keywords_must": [
+      "더티 비트(D-bit)",
+      "유효 비트(V-bit)",
+      "클린(Clean = 되쓰기 후 D 비트 해제)",
+      "플러시·무효화(Flush·Invalidate = V 비트 해제)",
+      "명령 캐시·데이터 캐시 선택 수행",
+      "DMA 버퍼 일관성",
+      "클린 앤 인밸리데이트(Clean & Invalidate)"
+    ],
+    "keywords_ref": [
+      "ARM DC CVAC·DC IVAC·DC CIVAC 명령",
+      "x86 CLFLUSH·WBINVD",
+      "자기 수정 코드 후 I-Cache 무효화",
+      "영속 메모리 쓰기 보장(CLWB)",
+      "용어 혼용 주의(x86 flush는 되쓰기 포함)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "더티 비트(D-bit)",
+      "유효 비트(V-bit)",
+      "클린(Clean = 되쓰기 후 D 비트 해제)",
+      "플러시·무효화(Flush·Invalidate = V 비트 해제)",
+      "명령 캐시·데이터 캐시 선택 수행",
+      "DMA 버퍼 일관성",
+      "클린 앤 인밸리데이트(Clean & Invalidate)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "CLWB": "Cache Line Write Back"
+    }
+  },
+  {
+    "id": "CA_081",
+    "code": "CA_081",
+    "title": "캐시 교체 알고리즘(Cache Replacement Algorithm)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 캐시",
+    "definition": "캐시의 모든 라인(또는 해당 집합)이 차 있을 때 새 블록을 넣기 위해 내보낼 희생 라인을 고르는 알고리즘으로, 적중률과 하드웨어 구현 비용 사이의 균형이 선택 기준임",
+    "keywords": [
+      "핵심: 희생 라인(Victim Line) · LRU(Least Recently Used) · LFU(Least Frequently Used) · FIFO(First In First Out)",
+      "필수: 랜덤(Random) · 라운드 로빈(Round Robin) · 벨라디 최적(Belady's OPT) · 의사 LRU(Pseudo-LRU: 트리·비트)",
+      "참고: MRU·LIFO · TLRU(사용 시간 TTU 반영) · LRU 비트로 라인 나이 관리 · 직접 사상은 교체 선택 불필요 · ARC·2Q(스토리지 캐시)"
+    ],
+    "sections": [
+      {
+        "title": "기본 교체 정책",
+        "subsections": [
+          {
+            "title": "랜덤",
+            "items": [
+              "집합 안에서 임의로 희생 라인 선택, 구현 최소"
+            ]
+          },
+          {
+            "title": "FIFO",
+            "items": [
+              "가장 먼저 들어온 라인 교체, 큐로 구현"
+            ]
+          },
+          {
+            "title": "LRU",
+            "items": [
+              "가장 오랫동안 쓰이지 않은 라인 교체, 웨이가 늘수록 비용 급증"
+            ]
+          },
+          {
+            "title": "LFU",
+            "items": [
+              "참조 횟수가 가장 적은 라인 교체"
+            ]
+          },
+          {
+            "title": "벨라디 최적",
+            "items": [
+              "앞으로 가장 늦게 쓰일 라인 교체, 미래 참조를 알아야 해 비교 기준으로만 사용"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "변형 정책",
+        "subsections": [
+          {
+            "title": "라운드 로빈",
+            "items": [
+              "희생 카운터가 가리키는 다음 라인을 차례로 교체"
+            ]
+          },
+          {
+            "title": "MRU·LIFO",
+            "items": [
+              "최근 사용 라인을 먼저 교체, 순환 스캔 패턴에 유리"
+            ]
+          },
+          {
+            "title": "TLRU",
+            "items": [
+              "데이터 수명(TTU)이 짧은 항목 우선 교체"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "의사 LRU 구현",
+        "subsections": [
+          {
+            "title": "트리 PLRU",
+            "items": [
+              "이진 트리 노드 비트를 따라가며 희생 라인 선택, 접근 시 경로 비트 반전"
+            ]
+          },
+          {
+            "title": "비트 PLRU",
+            "items": [
+              "라인별 1비트를 두고 모두 1이 되면 초기화, 0인 최저 인덱스 라인 교체"
+            ]
+          },
+          {
+            "title": "채택 이유",
+            "items": [
+              "완전 LRU보다 적은 비트로 비슷한 적중률"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      150,
+      151
+    ],
+    "outline": [
+      "기본 교체 정책",
+      "- 랜덤",
+      "- FIFO",
+      "- LRU",
+      "- LFU",
+      "- 벨라디 최적",
+      "변형 정책",
+      "- 라운드 로빈",
+      "- MRU·LIFO",
+      "- TLRU",
+      "의사 LRU 구현",
+      "- 트리 PLRU",
+      "- 비트 PLRU",
+      "- 채택 이유"
+    ],
+    "name": "캐시 교체 알고리즘(Cache Replacement Algorithm)",
+    "en": "Cache Replacement Algorithm",
+    "keywords_must": [
+      "희생 라인(Victim Line)",
+      "LRU(Least Recently Used)",
+      "LFU(Least Frequently Used)",
+      "FIFO(First In First Out)",
+      "랜덤(Random)",
+      "라운드 로빈(Round Robin)",
+      "벨라디 최적(Belady's OPT)",
+      "의사 LRU(Pseudo-LRU: 트리·비트)"
+    ],
+    "keywords_ref": [
+      "MRU·LIFO",
+      "TLRU(사용 시간 TTU 반영)",
+      "LRU 비트로 라인 나이 관리",
+      "직접 사상은 교체 선택 불필요",
+      "ARC·2Q(스토리지 캐시)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "희생 라인(Victim Line)",
+      "LRU(Least Recently Used)",
+      "LFU(Least Frequently Used)",
+      "FIFO(First In First Out)",
+      "랜덤(Random)",
+      "라운드 로빈(Round Robin)",
+      "벨라디 최적(Belady's OPT)",
+      "의사 LRU(Pseudo-LRU: 트리·비트)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "TTU": "Time To Use",
+      "TLRU": "Time-aware Least Recently Used"
+    }
+  },
+  {
+    "id": "CA_082_0",
+    "code": "CA_082_0",
+    "title": "내용 주소화 메모리(CAM, Content-Addressable Memory)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 특수 메모리",
+    "definition": "주소 대신 저장된 내용의 일부를 검색 키로 주어 모든 워드를 동시에 비교하고 일치하는 위치를 찾아내는 연관 기억장치로, 한 사이클 검색이 필요한 캐시 태그·TLB·네트워크 테이블에 쓰임",
+    "keywords": [
+      "핵심: 연관 기억장치(Associative Memory) · 인수 레지스터(Argument Register) · 키 레지스터(Key Register, 마스크) · 일치 레지스터(Match Register)",
+      "필수: 병렬 비교 회로 · 단일 사이클 검색 · 높은 하드웨어 비용·전력",
+      "참고: RAM 대비 입출력 방향 반대(데이터 입력 → 주소 출력) · 이진 CAM(BCAM)·삼진 CAM(TCAM) · 완전 연관 캐시·TLB 태그 · MAC 주소 테이블"
+    ],
+    "sections": [
+      {
+        "title": "CAM 구조",
+        "subsections": [
+          {
+            "title": "인수 레지스터",
+            "items": [
+              "찾으려는 검색 데이터 보관"
+            ]
+          },
+          {
+            "title": "키 레지스터",
+            "items": [
+              "비교에 사용할 비트 위치를 1로 지정해 마스킹"
+            ]
+          },
+          {
+            "title": "일치 레지스터",
+            "items": [
+              "워드별 비교 결과를 비트로 표시"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "검색 절차",
+        "subsections": [
+          {
+            "title": "비트 결정",
+            "items": [
+              "인수 레지스터 중 검색에 쓸 비트를 키 레지스터로 선택"
+            ]
+          },
+          {
+            "title": "병렬 비교",
+            "items": [
+              "키가 1인 비트를 모든 워드와 동시에 비교"
+            ]
+          },
+          {
+            "title": "결과 사용",
+            "items": [
+              "일치한 워드를 찾아 읽기·쓰기 수행"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "RAM 대비 비교",
+        "subsections": [
+          {
+            "title": "입력·출력",
+            "items": [
+              "RAM(주소 입력 → 데이터 출력)",
+              "CAM(데이터 입력 → 일치 주소 출력)"
+            ]
+          },
+          {
+            "title": "검색 속도",
+            "items": [
+              "RAM(순차 탐색 시 다수 사이클)",
+              "CAM(전체 동시 비교 1사이클)"
+            ]
+          },
+          {
+            "title": "비용",
+            "items": [
+              "RAM(셀 단순, 대용량)",
+              "CAM(셀마다 비교기 내장, 소용량·고전력)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      152,
+      153
+    ],
+    "outline": [
+      "CAM 구조",
+      "- 인수 레지스터",
+      "- 키 레지스터",
+      "- 일치 레지스터",
+      "검색 절차",
+      "- 비트 결정",
+      "- 병렬 비교",
+      "- 결과 사용",
+      "RAM 대비 비교",
+      "- 입력·출력",
+      "- 검색 속도",
+      "- 비용"
+    ],
+    "name": "내용 주소화 메모리(CAM, Content-Addressable Memory)",
+    "en": "Content-Addressable Memory",
+    "keywords_must": [
+      "연관 기억장치(Associative Memory)",
+      "인수 레지스터(Argument Register)",
+      "키 레지스터(Key Register, 마스크)",
+      "일치 레지스터(Match Register)",
+      "병렬 비교 회로",
+      "단일 사이클 검색",
+      "높은 하드웨어 비용·전력"
+    ],
+    "keywords_ref": [
+      "RAM 대비 입출력 방향 반대(데이터 입력 → 주소 출력)",
+      "이진 CAM(BCAM)·삼진 CAM(TCAM)",
+      "완전 연관 캐시·TLB 태그",
+      "MAC 주소 테이블"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "연관 기억장치(Associative Memory)",
+      "인수 레지스터(Argument Register)",
+      "키 레지스터(Key Register, 마스크)",
+      "일치 레지스터(Match Register)",
+      "병렬 비교 회로",
+      "단일 사이클 검색",
+      "높은 하드웨어 비용·전력"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "BCAM": "Binary Content-Addressable Memory"
+    }
+  },
+  {
+    "id": "CA_082_1",
+    "code": "CA_082_1",
+    "title": "삼진 내용 주소화 메모리(TCAM, Ternary CAM)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 > 특수 메모리",
+    "definition": "각 비트에 0과 1 외에 무관(Don't Care, X) 상태를 저장할 수 있어 부분 일치 검색이 가능한 CAM으로, 라우터의 최장 접두사 일치(LPM)·ACL·QoS 분류를 한 클록에 처리하는 데 쓰임",
+    "keywords": [
+      "핵심: 삼진 상태(0·1·X Don't Care) · 부분 일치 검색 · 최장 접두사 일치(LPM, Longest Prefix Match) · 단일 클록 전체 검색",
+      "필수: 우선순위 인코더(Priority Encoder) · 라우팅·ACL·QoS 테이블 · 고전력·고비용",
+      "참고: 셀당 SRAM 2개(값·마스크)와 비교 회로 · 엔트리 순서로 우선순위 결정 · 침입 탐지 패턴 매칭 · SDN 플로 테이블 · 알고리즘 방식(SRAM 해시·트라이) 대체 연구"
+    ],
+    "sections": [
+      {
+        "title": "TCAM 원리",
+        "subsections": [
+          {
+            "title": "무관 비트",
+            "items": [
+              "마스크된 비트는 어떤 입력과도 일치로 처리"
+            ]
+          },
+          {
+            "title": "다중 일치",
+            "items": [
+              "여러 엔트리가 맞으면 우선순위 인코더가 가장 앞선 주소 출력"
+            ]
+          },
+          {
+            "title": "접두사 저장",
+            "items": [
+              "IP 접두사 길이 순으로 배치해 최장 일치를 자동 선택"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "적용 분야별 활용",
+        "subsections": [
+          {
+            "title": "라우팅",
+            "items": [
+              "목적지 IP의 다음 홉을 한 사이클에 결정"
+            ]
+          },
+          {
+            "title": "보안·QoS",
+            "items": [
+              "패킷 헤더 필드 조합으로 ACL 허용·차단과 트래픽 등급 분류"
+            ]
+          },
+          {
+            "title": "패턴 탐지",
+            "items": [
+              "대량 트래픽에서 특정 시그니처를 고속 검색"
+            ]
+          },
+          {
+            "title": "소규모 네트워크",
+            "items": [
+              "IoT·엣지 장비용 소용량 TCAM으로 처리 지연 감소"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "CAM 대비 비교",
+        "subsections": [
+          {
+            "title": "저장 상태",
+            "items": [
+              "CAM(0·1 정확 일치)",
+              "TCAM(0·1·X 부분 일치)"
+            ]
+          },
+          {
+            "title": "셀 구성",
+            "items": [
+              "CAM(값 비트)",
+              "TCAM(값 비트 + 마스크 비트)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      154,
+      155
+    ],
+    "outline": [
+      "TCAM 원리",
+      "- 무관 비트",
+      "- 다중 일치",
+      "- 접두사 저장",
+      "적용 분야별 활용",
+      "- 라우팅",
+      "- 보안·QoS",
+      "- 패턴 탐지",
+      "- 소규모 네트워크",
+      "CAM 대비 비교",
+      "- 저장 상태",
+      "- 셀 구성"
+    ],
+    "name": "삼진 내용 주소화 메모리(TCAM, Ternary CAM)",
+    "en": "Ternary Content-Addressable Memory",
+    "keywords_must": [
+      "삼진 상태(0·1·X Don't Care)",
+      "부분 일치 검색",
+      "최장 접두사 일치(LPM, Longest Prefix Match)",
+      "단일 클록 전체 검색",
+      "우선순위 인코더(Priority Encoder)",
+      "라우팅·ACL·QoS 테이블",
+      "고전력·고비용"
+    ],
+    "keywords_ref": [
+      "셀당 SRAM 2개(값·마스크)와 비교 회로",
+      "엔트리 순서로 우선순위 결정",
+      "침입 탐지 패턴 매칭",
+      "SDN 플로 테이블",
+      "알고리즘 방식(SRAM 해시·트라이) 대체 연구"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "삼진 상태(0·1·X Don't Care)",
+      "부분 일치 검색",
+      "최장 접두사 일치(LPM, Longest Prefix Match)",
+      "단일 클록 전체 검색",
+      "우선순위 인코더(Priority Encoder)",
+      "라우팅·ACL·QoS 테이블",
+      "고전력·고비용"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "LPM": "Longest Prefix Match",
+      "ACL": "Access Control List"
+    }
+  },
+  {
+    "id": "CA_083",
+    "code": "CA_083",
+    "title": "하드 디스크 드라이브(HDD, Hard Disk Drive)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 보조기억장치 > 디스크",
+    "definition": "자성체를 입힌 원판(플래터)을 고속 회전시키고 액추에이터 암 끝의 헤드로 트랙·섹터에 자기 기록하는 비휘발성 직접 접근 보조기억장치로, 비트당 가격이 낮아 대용량 저장에 쓰임",
+    "keywords": [
+      "핵심: 플래터(Platter)·스핀들(Spindle) · 읽기·쓰기 헤드(Head) · 액추에이터 암(Actuator Arm) · 트랙·섹터·실린더(Track·Sector·Cylinder)",
+      "필수: 탐색 시간(Seek Time) · 회전 지연(Rotational Latency) · 전송 시간(Transfer Time) · 직접 접근 저장장치(DASD)",
+      "참고: 접근 시간 = 탐색 + 회전 지연 + 전송 · 5400·7200·15000 RPM · 수직 자기 기록(PMR)·CMR·SMR · HAMR·MAMR 열·마이크로파 보조 기록 · 디스크 스케줄링(SSTF·SCAN)"
+    ],
+    "sections": [
+      {
+        "title": "하드디스크 구조",
+        "subsections": [
+          {
+            "title": "플래터·스핀들",
+            "items": [
+              "자성 원판을 수천 RPM으로 회전"
+            ]
+          },
+          {
+            "title": "헤드·암",
+            "items": [
+              "플래터 위 나노미터 높이로 떠서 자화 방향 기록·판독"
+            ]
+          },
+          {
+            "title": "기록 단위",
+            "items": [
+              "동심원 트랙을 섹터로 나누고 같은 반경 트랙 묶음이 실린더"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "접근 시간 구성",
+        "subsections": [
+          {
+            "title": "탐색 시간",
+            "items": [
+              "헤드를 목표 트랙으로 이동"
+            ]
+          },
+          {
+            "title": "회전 지연",
+            "items": [
+              "목표 섹터가 헤드 아래로 올 때까지 대기, 평균 반 바퀴"
+            ]
+          },
+          {
+            "title": "전송 시간",
+            "items": [
+              "섹터 데이터를 읽어 인터페이스로 전달"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "SSD 대비 비교",
+        "subsections": [
+          {
+            "title": "성능",
+            "items": [
+              "HDD(기계적 지연 수 ms)",
+              "SSD(전자적 접근 수십~수백 μs)"
+            ]
+          },
+          {
+            "title": "비용·용량",
+            "items": [
+              "HDD(비트당 저가, 대용량 아카이브)",
+              "SSD(고가, 고성능 계층)"
+            ]
+          },
+          {
+            "title": "내구성",
+            "items": [
+              "HDD(충격·진동 취약)",
+              "SSD(쓰기 수명 제한)"
+            ]
+          },
+          {
+            "title": "역할 분담",
+            "items": [
+              "클라우드·빅데이터는 SSD 성능 계층과 HDD 용량 계층을 함께 운용"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      156,
+      157
+    ],
+    "outline": [
+      "하드디스크 구조",
+      "- 플래터·스핀들",
+      "- 헤드·암",
+      "- 기록 단위",
+      "접근 시간 구성",
+      "- 탐색 시간",
+      "- 회전 지연",
+      "- 전송 시간",
+      "SSD 대비 비교",
+      "- 성능",
+      "- 비용·용량",
+      "- 내구성",
+      "- 역할 분담"
+    ],
+    "name": "하드 디스크 드라이브(HDD, Hard Disk Drive)",
+    "en": "Hard Disk Drive",
+    "keywords_must": [
+      "플래터(Platter)·스핀들(Spindle)",
+      "읽기·쓰기 헤드(Head)",
+      "액추에이터 암(Actuator Arm)",
+      "트랙·섹터·실린더(Track·Sector·Cylinder)",
+      "탐색 시간(Seek Time)",
+      "회전 지연(Rotational Latency)",
+      "전송 시간(Transfer Time)",
+      "직접 접근 저장장치(DASD)"
+    ],
+    "keywords_ref": [
+      "접근 시간 = 탐색 + 회전 지연 + 전송",
+      "5400·7200·15000 RPM",
+      "수직 자기 기록(PMR)·CMR·SMR",
+      "HAMR·MAMR 열·마이크로파 보조 기록",
+      "디스크 스케줄링(SSTF·SCAN)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "플래터(Platter)·스핀들(Spindle)",
+      "읽기·쓰기 헤드(Head)",
+      "액추에이터 암(Actuator Arm)",
+      "트랙·섹터·실린더(Track·Sector·Cylinder)",
+      "탐색 시간(Seek Time)",
+      "회전 지연(Rotational Latency)",
+      "전송 시간(Transfer Time)",
+      "직접 접근 저장장치(DASD)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "DASD": "Direct Access Storage Device",
+      "SMR": "Shingled Magnetic Recording",
+      "CMR": "Conventional Magnetic Recording",
+      "HAMR": "Heat-Assisted Magnetic Recording",
+      "MAMR": "Microwave-Assisted Magnetic Recording",
+      "PMR": "Perpendicular Magnetic Recording"
+    }
+  },
+  {
+    "id": "CA_085",
+    "code": "CA_085",
+    "title": "가상 메모리 주소 변환 기법(Address Translation)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 관리 > 가상 메모리",
+    "definition": "가상 주소를 물리 주소로 바꾸는 주소 사상 방식으로, 주기억장치의 페이지 사상 테이블(PMT)만 쓰는 직접 사상, 연관 기억장치에 사상표를 두는 연관 사상, 최근 참조 항목만 연관 기억장치에 두는 직접·연관 혼합 사상으로 구분됨",
+    "keywords": [
+      "핵심: 가상 주소 v = (p, d) · 페이지 번호(p)·변위(d) · 페이지 사상 테이블(PMT) · 페이지 테이블 기준 레지스터(PTBR)",
+      "필수: 직접 사상(Direct Mapping) · 연관 사상(Associative Mapping) · 직접·연관 혼합 사상 · 연관 사상 테이블(AMT·TLB)",
+      "참고: 물리 주소 = 프레임 번호 + 변위 · 직접 사상 시 주기억장치 2회 접근 · 지역성에 따른 최근 항목 재사용 · 다단계·해시·역 페이지 테이블 · 세그먼트 테이블 기준·한계 레지스터"
+    ],
+    "sections": [
+      {
+        "title": "직접 사상",
+        "subsections": [
+          {
+            "title": "동작 절차",
+            "items": [
+              "논리 주소 참조 → PTBR + p로 PMT 항목 조회 → 프레임 번호와 d 결합 → 물리 주소 접근"
+            ]
+          },
+          {
+            "title": "구현 특성",
+            "items": [
+              "모든 페이지 항목이 주기억장치 PMT에 있어 구현이 단순"
+            ]
+          },
+          {
+            "title": "문제점",
+            "items": [
+              "데이터 하나에 주기억장치를 두 번 접근해 변환 지연 발생"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "연관 사상",
+        "subsections": [
+          {
+            "title": "동작",
+            "items": [
+              "연관 기억장치에 사상표 전체를 두고 페이지 번호를 병렬 검색"
+            ]
+          },
+          {
+            "title": "속도 특성",
+            "items": [
+              "변환이 매우 빠르나 연관 기억장치 비용이 높아 대용량에 부적합"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "직접 및 연관 혼합 사상",
+        "subsections": [
+          {
+            "title": "동작",
+            "items": [
+              "최근 참조 페이지는 연관 사상 테이블, 나머지는 PMT에 분산 보관"
+            ]
+          },
+          {
+            "title": "처리 순서",
+            "items": [
+              "연관 테이블 적중 시 즉시 변환, 실패 시 PMT 조회 후 연관 테이블 갱신"
+            ]
+          },
+          {
+            "title": "근거",
+            "items": [
+              "참조 지역성 덕분에 소수 항목만으로 높은 적중률 확보"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      162,
+      165
+    ],
+    "outline": [
+      "직접 사상",
+      "- 동작 절차",
+      "- 구현 특성",
+      "- 문제점",
+      "연관 사상",
+      "- 동작",
+      "- 속도 특성",
+      "직접 및 연관 혼합 사상",
+      "- 동작",
+      "- 처리 순서",
+      "- 근거"
+    ],
+    "name": "가상 메모리 주소 변환 기법(Address Translation)",
+    "en": "Virtual Memory Address Translation",
+    "keywords_must": [
+      "가상 주소 v = (p, d)",
+      "페이지 번호(p)·변위(d)",
+      "페이지 사상 테이블(PMT)",
+      "페이지 테이블 기준 레지스터(PTBR)",
+      "직접 사상(Direct Mapping)",
+      "연관 사상(Associative Mapping)",
+      "직접·연관 혼합 사상",
+      "연관 사상 테이블(AMT·TLB)"
+    ],
+    "keywords_ref": [
+      "물리 주소 = 프레임 번호 + 변위",
+      "직접 사상 시 주기억장치 2회 접근",
+      "지역성에 따른 최근 항목 재사용",
+      "다단계·해시·역 페이지 테이블",
+      "세그먼트 테이블 기준·한계 레지스터"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "가상 주소 v = (p, d)",
+      "페이지 번호(p)·변위(d)",
+      "페이지 사상 테이블(PMT)",
+      "페이지 테이블 기준 레지스터(PTBR)",
+      "직접 사상(Direct Mapping)",
+      "연관 사상(Associative Mapping)",
+      "직접·연관 혼합 사상",
+      "연관 사상 테이블(AMT·TLB)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "PMT": "Page Map Table",
+      "PTBR": "Page Table Base Register",
+      "AMT": "Associative Map Table"
+    }
+  },
+  {
+    "id": "CA_086",
+    "code": "CA_086",
+    "title": "페이징 및 세그먼테이션(Paging, Segmentation)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 관리 > 가상 메모리",
+    "definition": "가상 기억 공간을 같은 크기의 페이지로 나누는 고정 분할 방식인 페이징과, 코드·데이터·스택 같은 논리 단위의 가변 크기 세그먼트로 나누는 가변 분할 방식인 세그먼테이션, 그리고 둘을 결합한 페이지화 세그먼테이션 기법",
+    "keywords": [
+      "핵심: 고정 분할(페이지·프레임) · 가변 분할(세그먼트) · 페이지 테이블(페이지 번호→프레임 번호) · 세그먼트 테이블(기준 주소·한계)",
+      "필수: 내부 단편화(페이징) · 외부 단편화(세그먼테이션) · 페이지화 세그먼테이션(Paged Segmentation) · 접근 권한·공유 단위",
+      "참고: 페이지 크기와 단편화·테이블 크기 상충 · 세그먼트 한계 초과 시 트랩 · x86 세그먼트 + 페이징 구조 · 메모리 압축(Compaction) · 외부 단편화 해소용 통합"
+    ],
+    "sections": [
+      {
+        "title": "페이징 기법",
+        "subsections": [
+          {
+            "title": "분할 방식",
+            "items": [
+              "가상 공간은 페이지, 실제 공간은 같은 크기의 프레임으로 분할"
+            ]
+          },
+          {
+            "title": "매핑 정보",
+            "items": [
+              "페이지 번호와 프레임 번호 쌍을 페이지 테이블에 유지"
+            ]
+          },
+          {
+            "title": "성질",
+            "items": [
+              "외부 단편화가 없고 할당이 단순하나 마지막 페이지에 내부 단편화 발생"
+            ]
+          },
+          {
+            "title": "크기 선택",
+            "items": [
+              "페이지가 크면 테이블이 작아지나 단편화 증가"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "세그먼테이션 기법",
+        "subsections": [
+          {
+            "title": "분할 방식",
+            "items": [
+              "프로그램을 의미 단위의 서로 다른 크기 세그먼트로 분할"
+            ]
+          },
+          {
+            "title": "매핑 정보",
+            "items": [
+              "세그먼트 번호별 시작 주소와 길이를 세그먼트 테이블에 유지"
+            ]
+          },
+          {
+            "title": "성질",
+            "items": [
+              "논리 단위별 공유·보호가 쉬우나 적재·해제 반복으로 외부 단편화 발생"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "페이지화 세그먼테이션",
+        "subsections": [
+          {
+            "title": "결합 원리",
+            "items": [
+              "세그먼트를 다시 페이지로 나눠 파일·논리 관리는 세그먼트, 메모리 적재는 페이지 단위"
+            ]
+          },
+          {
+            "title": "주소 검색",
+            "items": [
+              "세그먼트 테이블 → 해당 세그먼트의 페이지 테이블 → 프레임 순으로 변환"
+            ]
+          },
+          {
+            "title": "결합 효과",
+            "items": [
+              "외부 단편화를 없애면서 세그먼트 단위 보호·공유 유지, 대신 테이블 접근 횟수 증가"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      166,
+      168
+    ],
+    "outline": [
+      "페이징 기법",
+      "- 분할 방식",
+      "- 매핑 정보",
+      "- 성질",
+      "- 크기 선택",
+      "세그먼테이션 기법",
+      "- 분할 방식",
+      "- 매핑 정보",
+      "- 성질",
+      "페이지화 세그먼테이션",
+      "- 결합 원리",
+      "- 주소 검색",
+      "- 결합 효과"
+    ],
+    "name": "페이징 및 세그먼테이션(Paging, Segmentation)",
+    "en": "Paging and Segmentation",
+    "keywords_must": [
+      "고정 분할(페이지·프레임)",
+      "가변 분할(세그먼트)",
+      "페이지 테이블(페이지 번호→프레임 번호)",
+      "세그먼트 테이블(기준 주소·한계)",
+      "내부 단편화(페이징)",
+      "외부 단편화(세그먼테이션)",
+      "페이지화 세그먼테이션(Paged Segmentation)",
+      "접근 권한·공유 단위"
+    ],
+    "keywords_ref": [
+      "페이지 크기와 단편화·테이블 크기 상충",
+      "세그먼트 한계 초과 시 트랩",
+      "x86 세그먼트 + 페이징 구조",
+      "메모리 압축(Compaction)",
+      "외부 단편화 해소용 통합"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "고정 분할(페이지·프레임)",
+      "가변 분할(세그먼트)",
+      "페이지 테이블(페이지 번호→프레임 번호)",
+      "세그먼트 테이블(기준 주소·한계)",
+      "내부 단편화(페이징)",
+      "외부 단편화(세그먼테이션)",
+      "페이지화 세그먼테이션(Paged Segmentation)",
+      "접근 권한·공유 단위"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_089",
+    "code": "CA_089",
+    "title": "벨라디의 모순(Belady's Anomaly)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 관리 > 가상 메모리",
+    "definition": "페이지 교체에 FIFO 알고리즘을 쓸 때, 프로세스에 할당하는 페이지 프레임 수를 늘렸는데도 오히려 페이지 부재 횟수가 증가하는 비정상 현상",
+    "keywords": [
+      "핵심: FIFO 교체 알고리즘 · 프레임 수 증가 시 부재 증가 · 페이지 부재(Page Fault) · 참조 문자열(Reference String)",
+      "필수: 스택 알고리즘(Stack Algorithm) · 포함 속성(Inclusion Property) · LRU·OPT는 발생하지 않음",
+      "참고: 라즐로 벨라디(Laszlo Belady, 1969) · 예) 참조열 1,2,3,4,1,2,5,1,2,3,4,5 → 3프레임 9회, 4프레임 10회 · 2차 기회·시계 알고리즘도 발생 가능 · 랜덤 교체도 발생 가능"
+    ],
+    "sections": [
+      {
+        "title": "발생 원리",
+        "subsections": [
+          {
+            "title": "FIFO 특성",
+            "items": [
+              "적재 순서만 보고 교체해 앞으로 쓸 페이지를 먼저 내보낼 수 있음"
+            ]
+          },
+          {
+            "title": "포함 속성 위배",
+            "items": [
+              "n개 프레임에 있던 페이지 집합이 n+1개 프레임의 집합에 포함되지 않음"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "발생 예시",
+        "subsections": [
+          {
+            "title": "참조 문자열",
+            "items": [
+              "1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5"
+            ]
+          },
+          {
+            "title": "프레임 3개",
+            "items": [
+              "페이지 부재 9회"
+            ]
+          },
+          {
+            "title": "프레임 4개",
+            "items": [
+              "페이지 부재 10회로 오히려 증가"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "회피 방안",
+        "subsections": [
+          {
+            "title": "스택 알고리즘 사용",
+            "items": [
+              "LRU·OPT는 프레임이 늘면 부재가 같거나 줄어듦을 보장"
+            ]
+          },
+          {
+            "title": "실무 대응",
+            "items": [
+              "근사 LRU(참조 비트 기반) 알고리즘 채택"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      172,
+      174
+    ],
+    "outline": [
+      "발생 원리",
+      "- FIFO 특성",
+      "- 포함 속성 위배",
+      "발생 예시",
+      "- 참조 문자열",
+      "- 프레임 3개",
+      "- 프레임 4개",
+      "회피 방안",
+      "- 스택 알고리즘 사용",
+      "- 실무 대응"
+    ],
+    "name": "벨라디의 모순(Belady's Anomaly)",
+    "en": "Belady's Anomaly",
+    "keywords_must": [
+      "FIFO 교체 알고리즘",
+      "프레임 수 증가 시 부재 증가",
+      "페이지 부재(Page Fault)",
+      "참조 문자열(Reference String)",
+      "스택 알고리즘(Stack Algorithm)",
+      "포함 속성(Inclusion Property)",
+      "LRU·OPT는 발생하지 않음"
+    ],
+    "keywords_ref": [
+      "라즐로 벨라디(Laszlo Belady, 1969)",
+      "예) 참조열 1,2,3,4,1,2,5,1,2,3,4,5 → 3프레임 9회, 4프레임 10회",
+      "2차 기회·시계 알고리즘도 발생 가능",
+      "랜덤 교체도 발생 가능"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "FIFO 교체 알고리즘",
+      "프레임 수 증가 시 부재 증가",
+      "페이지 부재(Page Fault)",
+      "참조 문자열(Reference String)",
+      "스택 알고리즘(Stack Algorithm)",
+      "포함 속성(Inclusion Property)",
+      "LRU·OPT는 발생하지 않음"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_090",
+    "code": "CA_090",
+    "title": "요구 페이징(Demand Paging)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 관리 > 가상 메모리",
+    "definition": "프로세스 전체를 미리 적재하지 않고 실행 중 실제로 참조되는 페이지만 그때 보조기억장치에서 주기억장치로 가져오는 페이지 호출 기법으로, 게으른 스와퍼(Lazy Swapper) 개념에 기반함",
+    "keywords": [
+      "핵심: 게으른 스와퍼(Lazy Swapper) · 페이저(Pager) · 유효·무효 비트(Valid-Invalid Bit) · 페이지 부재 트랩(Page-Fault Trap)",
+      "필수: 명령 재실행 · 스래싱(Thrashing) · 작업 집합(Working Set) · 페이지 부재 빈도(PFF)",
+      "참고: 순수 요구 페이징(첫 명령부터 부재) · 예상 페이징(Prepaging) 비교 · 유효 접근 시간 = (1−p)×메모리 접근 + p×부재 처리 시간 · 쓰기 시 복사(Copy-on-Write) · 지역성에 의한 성능 확보"
+    ],
+    "sections": [
+      {
+        "title": "요구 페이징 특징",
+        "subsections": [
+          {
+            "title": "메모리 효율",
+            "items": [
+              "필요한 페이지만 올려 여유 메모리와 다중 프로그래밍 정도 증가"
+            ]
+          },
+          {
+            "title": "시작 시간 단축",
+            "items": [
+              "전체를 스왑하지 않아 초기 적재 시간 감소"
+            ]
+          },
+          {
+            "title": "성능 위험",
+            "items": [
+              "부재가 잦으면 디스크 입출력이 몰려 스래싱 발생"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "처리 절차",
+        "subsections": [
+          {
+            "title": "1단계 참조",
+            "items": [
+              "프로세스가 아직 적재되지 않은 주소 참조"
+            ]
+          },
+          {
+            "title": "2단계 트랩",
+            "items": [
+              "MMU가 무효 비트를 발견하고 운영체제에 페이지 부재 트랩 발생"
+            ]
+          },
+          {
+            "title": "3단계 탐색",
+            "items": [
+              "운영체제가 보조기억장치에서 페이지 위치 확인"
+            ]
+          },
+          {
+            "title": "4단계 적재",
+            "items": [
+              "페이저가 빈 프레임(없으면 교체 후)에 페이지 적재"
+            ]
+          },
+          {
+            "title": "5단계 갱신",
+            "items": [
+              "페이지 테이블을 유효로 갱신"
+            ]
+          },
+          {
+            "title": "6단계 재실행",
+            "items": [
+              "중단된 명령을 다시 실행"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "스래싱 해결 방안",
+        "subsections": [
+          {
+            "title": "작업 집합 모델",
+            "items": [
+              "일정 시간 창에서 자주 참조한 페이지 집합만큼 프레임 보장"
+            ]
+          },
+          {
+            "title": "페이지 부재 빈도",
+            "items": [
+              "부재율 상한·하한을 두고 프레임을 늘리거나 회수"
+            ]
+          },
+          {
+            "title": "다중 프로그래밍 조절",
+            "items": [
+              "부하가 크면 일부 프로세스를 일시 중단(스왑 아웃)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      175,
+      176
+    ],
+    "outline": [
+      "요구 페이징 특징",
+      "- 메모리 효율",
+      "- 시작 시간 단축",
+      "- 성능 위험",
+      "처리 절차",
+      "- 1단계 참조",
+      "- 2단계 트랩",
+      "- 3단계 탐색",
+      "- 4단계 적재",
+      "- 5단계 갱신",
+      "- 6단계 재실행",
+      "스래싱 해결 방안",
+      "- 작업 집합 모델",
+      "- 페이지 부재 빈도",
+      "- 다중 프로그래밍 조절"
+    ],
+    "name": "요구 페이징(Demand Paging)",
+    "en": "Demand Paging",
+    "keywords_must": [
+      "게으른 스와퍼(Lazy Swapper)",
+      "페이저(Pager)",
+      "유효·무효 비트(Valid-Invalid Bit)",
+      "페이지 부재 트랩(Page-Fault Trap)",
+      "명령 재실행",
+      "스래싱(Thrashing)",
+      "작업 집합(Working Set)",
+      "페이지 부재 빈도(PFF)"
+    ],
+    "keywords_ref": [
+      "순수 요구 페이징(첫 명령부터 부재)",
+      "예상 페이징(Prepaging) 비교",
+      "유효 접근 시간 = (1−p)×메모리 접근 + p×부재 처리 시간",
+      "쓰기 시 복사(Copy-on-Write)",
+      "지역성에 의한 성능 확보"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "게으른 스와퍼(Lazy Swapper)",
+      "페이저(Pager)",
+      "유효·무효 비트(Valid-Invalid Bit)",
+      "페이지 부재 트랩(Page-Fault Trap)",
+      "명령 재실행",
+      "스래싱(Thrashing)",
+      "작업 집합(Working Set)",
+      "페이지 부재 빈도(PFF)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "PFF": "Page Fault Frequency"
+    }
+  },
+  {
+    "id": "CA_091",
+    "code": "CA_091",
+    "title": "변환 색인 버퍼(TLB, Translation Lookaside Buffer)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 관리 > 가상 메모리",
+    "definition": "최근 사용한 가상 페이지 번호와 물리 프레임 번호의 변환 결과를 저장해, 매번 주기억장치의 페이지 테이블을 조회하지 않고 바로 물리 주소를 얻도록 MMU 안에 둔 연관 방식 고속 캐시",
+    "keywords": [
+      "핵심: 연관 사상(Associative Mapping) · TLB 적중(Hit) · TLB 미스(Miss) · 페이지 부재(Page Fault)",
+      "필수: 페이지 테이블 엔트리 캐싱 · 병렬 탐색(CAM) · 주소 공간 식별자(ASID) · TLB 도달 범위(TLB Reach)",
+      "참고: 문맥 교환 시 TLB 플러시 또는 ASID 구분 · 명령·데이터 TLB 분리와 L2 TLB · 하드웨어·소프트웨어 미스 처리 · 거대 페이지(Huge Page) · TLB 슈트다운(Shootdown)"
+    ],
+    "sections": [
+      {
+        "title": "TLB 동작 상태",
+        "subsections": [
+          {
+            "title": "TLB 적중",
+            "items": [
+              "페이지 번호가 TLB에 있어 즉시 물리 주소 생성"
+            ]
+          },
+          {
+            "title": "TLB 미스",
+            "items": [
+              "주기억장치 페이지 테이블을 조회해 변환하고 TLB 갱신"
+            ]
+          },
+          {
+            "title": "페이지 부재",
+            "items": [
+              "TLB와 페이지 테이블 모두에 없어 디스크에서 반입 후 두 곳 갱신"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "직접 사상 대비 비교",
+        "subsections": [
+          {
+            "title": "테이블 위치",
+            "items": [
+              "직접 사상(주기억장치)",
+              "TLB(MMU 내부 고속 캐시)"
+            ]
+          },
+          {
+            "title": "탐색 방식",
+            "items": [
+              "직접 사상(인덱스로 1회 조회, 메모리 2회 접근)",
+              "TLB(전 항목 병렬 비교)"
+            ]
+          },
+          {
+            "title": "비용",
+            "items": [
+              "직접 사상(저렴)",
+              "TLB(고가로 항목 수 제한)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "TLB 성능 향상 방법",
+        "subsections": [
+          {
+            "title": "페이지 크기 확대",
+            "items": [
+              "항목 하나가 덮는 범위가 늘지만 내부 단편화 증가"
+            ]
+          },
+          {
+            "title": "다중 페이지 크기 지원",
+            "items": [
+              "일반 페이지와 거대 페이지를 함께 써 단편화와 도달 범위 절충"
+            ]
+          },
+          {
+            "title": "ASID 사용",
+            "items": [
+              "문맥 교환 때 전체 무효화를 피해 재적중률 유지"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      177,
+      178
+    ],
+    "outline": [
+      "TLB 동작 상태",
+      "- TLB 적중",
+      "- TLB 미스",
+      "- 페이지 부재",
+      "직접 사상 대비 비교",
+      "- 테이블 위치",
+      "- 탐색 방식",
+      "- 비용",
+      "TLB 성능 향상 방법",
+      "- 페이지 크기 확대",
+      "- 다중 페이지 크기 지원",
+      "- ASID 사용"
+    ],
+    "name": "변환 색인 버퍼(TLB, Translation Lookaside Buffer)",
+    "en": "Translation Lookaside Buffer",
+    "keywords_must": [
+      "연관 사상(Associative Mapping)",
+      "TLB 적중(Hit)",
+      "TLB 미스(Miss)",
+      "페이지 부재(Page Fault)",
+      "페이지 테이블 엔트리 캐싱",
+      "병렬 탐색(CAM)",
+      "주소 공간 식별자(ASID)",
+      "TLB 도달 범위(TLB Reach)"
+    ],
+    "keywords_ref": [
+      "문맥 교환 시 TLB 플러시 또는 ASID 구분",
+      "명령·데이터 TLB 분리와 L2 TLB",
+      "하드웨어·소프트웨어 미스 처리",
+      "거대 페이지(Huge Page)",
+      "TLB 슈트다운(Shootdown)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "연관 사상(Associative Mapping)",
+      "TLB 적중(Hit)",
+      "TLB 미스(Miss)",
+      "페이지 부재(Page Fault)",
+      "페이지 테이블 엔트리 캐싱",
+      "병렬 탐색(CAM)",
+      "주소 공간 식별자(ASID)",
+      "TLB 도달 범위(TLB Reach)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "ASID": "Address Space Identifier"
+    }
+  },
+  {
+    "id": "CA_092",
+    "code": "CA_092",
+    "title": "역 페이지 테이블(Inverted Page Table)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 메모리 관리 > 가상 메모리",
+    "definition": "프로세스마다 페이지 테이블을 두는 대신 물리 메모리 프레임마다 한 항목씩만 두어 시스템 전체에 하나의 테이블을 유지하는 주소 사상 방식으로, 테이블 공간은 크게 줄지만 검색 시간이 늘어남",
+    "keywords": [
+      "핵심: 시스템 단일 테이블 · 물리 프레임당 한 항목 · 프로세스 ID(PID) · 페이지 번호(Page Number)",
+      "필수: 가상 주소 <pid, p, d> · 항목 순번 i = 프레임 번호 · 해시 테이블 검색 · 공유 페이지 구현 어려움",
+      "참고: 64비트 대용량 주소 공간에서 테이블 크기 절감 · IBM PowerPC·UltraSPARC 사례 · 해시 충돌 체인 · TLB와 결합 필수 · 일치 항목 없으면 잘못된 접근 처리"
+    ],
+    "sections": [
+      {
+        "title": "구성",
+        "subsections": [
+          {
+            "title": "항목 내용",
+            "items": [
+              "해당 프레임에 적재된 페이지 번호와 소유 프로세스 ID"
+            ]
+          },
+          {
+            "title": "테이블 크기",
+            "items": [
+              "물리 메모리 프레임 수에 비례해 가상 공간 크기와 무관"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "변환 절차",
+        "subsections": [
+          {
+            "title": "1단계",
+            "items": [
+              "가상 주소를 <pid, 페이지 번호, 변위> 세 항목으로 구성"
+            ]
+          },
+          {
+            "title": "2단계",
+            "items": [
+              "역 페이지 테이블에서 <pid, 페이지 번호> 쌍과 일치하는 항목 검색"
+            ]
+          },
+          {
+            "title": "3단계",
+            "items": [
+              "i번째 항목에서 일치하면 물리 주소는 <i, 변위>"
+            ]
+          },
+          {
+            "title": "4단계",
+            "items": [
+              "일치 항목이 없으면 불법 메모리 접근으로 처리"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "장단점",
+        "subsections": [
+          {
+            "title": "장점",
+            "items": [
+              "프로세스 수가 많고 주소 공간이 커도 테이블 공간이 작음"
+            ]
+          },
+          {
+            "title": "단점",
+            "items": [
+              "순차 검색 시 변환이 느려 해시 테이블·TLB 보완 필요"
+            ]
+          },
+          {
+            "title": "공유 제약",
+            "items": [
+              "프레임당 한 페이지만 기록해 여러 프로세스의 페이지 공유가 어려움"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      179,
+      179
+    ],
+    "outline": [
+      "구성",
+      "- 항목 내용",
+      "- 테이블 크기",
+      "변환 절차",
+      "- 1단계",
+      "- 2단계",
+      "- 3단계",
+      "- 4단계",
+      "장단점",
+      "- 장점",
+      "- 단점",
+      "- 공유 제약"
+    ],
+    "name": "역 페이지 테이블(Inverted Page Table)",
+    "en": "Inverted Page Table",
+    "keywords_must": [
+      "시스템 단일 테이블",
+      "물리 프레임당 한 항목",
+      "프로세스 ID(PID)",
+      "페이지 번호(Page Number)",
+      "가상 주소 <pid, p, d>",
+      "항목 순번 i = 프레임 번호",
+      "해시 테이블 검색",
+      "공유 페이지 구현 어려움"
+    ],
+    "keywords_ref": [
+      "64비트 대용량 주소 공간에서 테이블 크기 절감",
+      "IBM PowerPC·UltraSPARC 사례",
+      "해시 충돌 체인",
+      "TLB와 결합 필수",
+      "일치 항목 없으면 잘못된 접근 처리"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "시스템 단일 테이블",
+      "물리 프레임당 한 항목",
+      "프로세스 ID(PID)",
+      "페이지 번호(Page Number)",
+      "가상 주소 <pid, p, d>",
+      "항목 순번 i = 프레임 번호",
+      "해시 테이블 검색",
+      "공유 페이지 구현 어려움"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_098",
+    "code": "CA_098",
+    "title": "병렬 처리(Parallel Processing)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 병렬 처리 > 개념",
+    "definition": "서로 의존성이 없는 여러 작업이나 한 프로그램의 분할된 부분을 다수의 처리기가 나누어 동시에 수행해 처리 시간을 줄이는 기술로, 분할·스케줄링·동기화·캐시 관리 문제를 함께 해결해야 효율이 확보됨",
+    "keywords": [
+      "핵심: 병행 처리(Concurrency) 대비 병렬 처리(Parallelism) · 병렬 처리 단위(작업·태스크·프로세스·변수·비트) · 분할(Partitioning) · 스케줄링(정적·동적)",
+      "필수: 동기화(상호 배제·세마포어·모니터) · 캐시 일관성 관리 · 부하 균형(Load Balancing) · 통신 오버헤드",
+      "참고: 명령어 수준(ILP)·스레드 수준(TLP)·데이터 수준(DLP) 병렬성 · 암달·구스타프슨 법칙 · Flynn 분류 · 공유·분산 기억장치 구조 · 그레인 크기 선택"
+    ],
+    "sections": [
+      {
+        "title": "병행 및 병렬 비교",
+        "subsections": [
+          {
+            "title": "병행 처리",
+            "items": [
+              "관련된 여러 프로세스가 시분할로 동시에 진행되는 것처럼 실행"
+            ]
+          },
+          {
+            "title": "병렬 처리",
+            "items": [
+              "상관관계가 없는 명령·프로세스를 여러 처리기가 물리적으로 동시에 실행"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "병렬 처리 단위",
+        "subsections": [
+          {
+            "title": "작업 단위",
+            "items": [
+              "독립된 작업 프로그램끼리 병렬 수행, 단위가 가장 큼"
+            ]
+          },
+          {
+            "title": "태스크 단위",
+            "items": [
+              "한 작업을 기능별 태스크로 나눠 병렬 수행"
+            ]
+          },
+          {
+            "title": "프로세스 단위",
+            "items": [
+              "태스크를 다시 쪼갠 프로세스 수준 병렬 수행"
+            ]
+          },
+          {
+            "title": "변수 단위",
+            "items": [
+              "독립 연산으로 계산되는 변수끼리 병렬 수행"
+            ]
+          },
+          {
+            "title": "비트 단위",
+            "items": [
+              "데이터 워드의 비트별 연산을 병렬 수행, 단위가 가장 작음"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "구성 시 문제점과 대책",
+        "subsections": [
+          {
+            "title": "분할",
+            "items": [
+              "단위가 크면 동기화는 쉬우나 병렬도가 낮음, 그레인 크기를 문제 특성에 맞게 선택"
+            ]
+          },
+          {
+            "title": "스케줄링",
+            "items": [
+              "태스크를 처리기에 배정, 정적 배정 또는 실행 중 동적 배정으로 부하 균형"
+            ]
+          },
+          {
+            "title": "동기화",
+            "items": [
+              "공유 데이터 동시 변경 방지, 상호 배제·세마포어·모니터 적용"
+            ]
+          },
+          {
+            "title": "캐시 관리",
+            "items": [
+              "공유 버스의 캐시 불일치, 사상·교체·쓰기 정책과 일관성 프로토콜로 해결"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      180,
+      205
+    ],
+    "outline": [
+      "병행 및 병렬 비교",
+      "- 병행 처리",
+      "- 병렬 처리",
+      "병렬 처리 단위",
+      "- 작업 단위",
+      "- 태스크 단위",
+      "- 프로세스 단위",
+      "- 변수 단위",
+      "- 비트 단위",
+      "구성 시 문제점과 대책",
+      "- 분할",
+      "- 스케줄링",
+      "- 동기화",
+      "- 캐시 관리"
+    ],
+    "name": "병렬 처리(Parallel Processing)",
+    "en": "Parallel Processing",
+    "keywords_must": [
+      "병행 처리(Concurrency) 대비 병렬 처리(Parallelism)",
+      "병렬 처리 단위(작업·태스크·프로세스·변수·비트)",
+      "분할(Partitioning)",
+      "스케줄링(정적·동적)",
+      "동기화(상호 배제·세마포어·모니터)",
+      "캐시 일관성 관리",
+      "부하 균형(Load Balancing)",
+      "통신 오버헤드"
+    ],
+    "keywords_ref": [
+      "명령어 수준(ILP)·스레드 수준(TLP)·데이터 수준(DLP) 병렬성",
+      "암달·구스타프슨 법칙",
+      "Flynn 분류",
+      "공유·분산 기억장치 구조",
+      "그레인 크기 선택"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "병행 처리(Concurrency) 대비 병렬 처리(Parallelism)",
+      "병렬 처리 단위(작업·태스크·프로세스·변수·비트)",
+      "분할(Partitioning)",
+      "스케줄링(정적·동적)",
+      "동기화(상호 배제·세마포어·모니터)",
+      "캐시 일관성 관리",
+      "부하 균형(Load Balancing)",
+      "통신 오버헤드"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": "분스동캐(분할·스케줄링·동기화·캐시 메모리 관리)",
+    "gloss": {
+      "DLP": "Data-Level Parallelism",
+      "TLP": "Thread-Level Parallelism"
+    }
+  },
+  {
+    "id": "CA_099",
+    "code": "CA_099",
+    "title": "파이프라인(Pipeline)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 병렬 처리 > 명령어 수준 병렬성",
+    "definition": "명령어 처리 과정을 인출·해독·실행·기록 등 여러 단계로 나누고 각 단계를 별도 하드웨어가 맡아, 서로 다른 명령어의 단계들을 겹쳐 수행함으로써 처리율을 높이는 명령어 수준 병렬 기법",
+    "keywords": [
+      "핵심: 명령어 수준 병렬성(ILP) · 명령어 4단계(FI·DI·EI·WB) · 단계 중첩 실행(Overlapping) · 처리율(Throughput) 향상",
+      "필수: 파이프라인 해저드(Hazard) · 슈퍼 파이프라인(Super Pipeline) · 슈퍼스칼라(Superscalar) · VLIW",
+      "참고: 고전적 5단계(IF·ID·EX·MEM·WB) · 단계 간 래치(파이프라인 레지스터) · 이상적 CPI 1 · 슈퍼 파이프라인드 슈퍼스칼라 · 분기 예측으로 흐름 유지"
+    ],
+    "sections": [
+      {
+        "title": "파이프라인 원리",
+        "subsections": [
+          {
+            "title": "단계 분할",
+            "items": [
+              "명령어 사이클을 독립 단계로 쪼개 단계별 전용 회로 배치"
+            ]
+          },
+          {
+            "title": "중첩 실행",
+            "items": [
+              "앞 명령이 해독될 때 다음 명령을 인출하는 식으로 단계를 겹침"
+            ]
+          },
+          {
+            "title": "성능 이점",
+            "items": [
+              "한 명령의 지연은 같지만 단위 시간당 완료 명령 수 증가"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "명령어 병렬화 기법 분류",
+        "subsections": [
+          {
+            "title": "기본 파이프라인",
+            "items": [
+              "명령어 사이클 각 단계를 한 클럭씩 중첩"
+            ]
+          },
+          {
+            "title": "슈퍼 파이프라인",
+            "items": [
+              "단계를 더 잘게 쪼개 클럭 주기를 줄이고 엇갈려 중첩"
+            ]
+          },
+          {
+            "title": "슈퍼스칼라",
+            "items": [
+              "파이프라인을 여러 개 두어 한 클럭에 여러 명령 동시 발행"
+            ]
+          },
+          {
+            "title": "슈퍼 파이프라인드 슈퍼스칼라",
+            "items": [
+              "세분화와 다중 발행을 함께 적용"
+            ]
+          },
+          {
+            "title": "VLIW",
+            "items": [
+              "컴파일러가 동시 실행 가능한 명령을 하나의 긴 명령어로 묶음"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "성능 저해 요인",
+        "subsections": [
+          {
+            "title": "해저드",
+            "items": [
+              "자원 충돌·데이터 의존·분기로 파이프라인 정지(스톨)"
+            ]
+          },
+          {
+            "title": "단계 불균형",
+            "items": [
+              "가장 느린 단계가 클럭 주기를 결정"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      186,
+      187
+    ],
+    "outline": [
+      "파이프라인 원리",
+      "- 단계 분할",
+      "- 중첩 실행",
+      "- 성능 이점",
+      "명령어 병렬화 기법 분류",
+      "- 기본 파이프라인",
+      "- 슈퍼 파이프라인",
+      "- 슈퍼스칼라",
+      "- 슈퍼 파이프라인드 슈퍼스칼라",
+      "- VLIW",
+      "성능 저해 요인",
+      "- 해저드",
+      "- 단계 불균형"
+    ],
+    "name": "파이프라인(Pipeline)",
+    "en": "Instruction Pipeline",
+    "keywords_must": [
+      "명령어 수준 병렬성(ILP)",
+      "명령어 4단계(FI·DI·EI·WB)",
+      "단계 중첩 실행(Overlapping)",
+      "처리율(Throughput) 향상",
+      "파이프라인 해저드(Hazard)",
+      "슈퍼 파이프라인(Super Pipeline)",
+      "슈퍼스칼라(Superscalar)",
+      "VLIW"
+    ],
+    "keywords_ref": [
+      "고전적 5단계(IF·ID·EX·MEM·WB)",
+      "단계 간 래치(파이프라인 레지스터)",
+      "이상적 CPI 1",
+      "슈퍼 파이프라인드 슈퍼스칼라",
+      "분기 예측으로 흐름 유지"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "명령어 수준 병렬성(ILP)",
+      "명령어 4단계(FI·DI·EI·WB)",
+      "단계 중첩 실행(Overlapping)",
+      "처리율(Throughput) 향상",
+      "파이프라인 해저드(Hazard)",
+      "슈퍼 파이프라인(Super Pipeline)",
+      "슈퍼스칼라(Superscalar)",
+      "VLIW"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "FI": "Fetch Instruction",
+      "DI": "Decode Instruction",
+      "EI": "Execute Instruction",
+      "WB": "Write Back"
+    }
+  },
+  {
+    "id": "CA_100",
+    "code": "CA_100",
+    "title": "슈퍼스칼라(Superscalar)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 병렬 처리 > 명령어 수준 병렬성",
+    "definition": "정수·부동소수점·분기·메모리 연산용 파이프라인 기능 유닛을 여러 개 두고, 하드웨어가 실행 시점에 의존성 없는 명령어를 골라 한 클럭에 여러 개를 동시에 발행·실행하는 프로세서 구조",
+    "keywords": [
+      "핵심: 다중 명령어 발행(Multiple Issue) · 다중 기능 유닛(정수·실수·분기·로드/스토어) · 동적 스케줄링(Dynamic Scheduling) · 비순차 실행(Out-of-Order Execution)",
+      "필수: 분기 예측(Branch Prediction) · 추측 실행(Speculative Execution) · 레지스터 리네이밍(Register Renaming) · 데이터 의존성 제약",
+      "참고: 재정렬 버퍼(ROB) · 예약 스테이션(토마술로 알고리즘) · 발행 폭(2·4·8-wide) · IPC 1 초과 · 스펙터(Spectre) 등 추측 실행 취약점"
+    ],
+    "sections": [
+      {
+        "title": "슈퍼스칼라 구조",
+        "subsections": [
+          {
+            "title": "발행 단계",
+            "items": [
+              "인출한 여러 명령 중 의존성 없는 명령을 동시에 기능 유닛으로 보냄"
+            ]
+          },
+          {
+            "title": "실행 조건",
+            "items": [
+              "두 명령 사이에 데이터 의존성이나 자원 충돌이 없어야 함"
+            ]
+          },
+          {
+            "title": "예시",
+            "items": [
+              "한 클럭에 정수 연산 2개와 부동소수점 연산 1개를 함께 처리"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "성능 확보 기법",
+        "subsections": [
+          {
+            "title": "분기 예측",
+            "items": [
+              "분기 방향을 예측해 파이프라인을 멈추지 않고 계속 인출"
+            ]
+          },
+          {
+            "title": "추측 실행",
+            "items": [
+              "예측 경로의 명령을 미리 실행하고 틀리면 결과 폐기"
+            ]
+          },
+          {
+            "title": "다중 명령 스케줄링",
+            "items": [
+              "예약 스테이션으로 피연산자가 준비된 순서대로 실행해 충돌 회피"
+            ]
+          },
+          {
+            "title": "리네이밍",
+            "items": [
+              "가짜 의존성(WAR·WAW)을 물리 레지스터 재배정으로 제거"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "슈퍼 파이프라인드 슈퍼스칼라",
+        "subsections": [
+          {
+            "title": "결합 방식",
+            "items": [
+              "다중 발행에 단계 세분화를 더해 클럭과 병렬도를 함께 높임"
+            ]
+          },
+          {
+            "title": "적용",
+            "items": [
+              "현대 고성능 x86·ARM 코어의 기본 구조"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      188,
+      188
+    ],
+    "outline": [
+      "슈퍼스칼라 구조",
+      "- 발행 단계",
+      "- 실행 조건",
+      "- 예시",
+      "성능 확보 기법",
+      "- 분기 예측",
+      "- 추측 실행",
+      "- 다중 명령 스케줄링",
+      "- 리네이밍",
+      "슈퍼 파이프라인드 슈퍼스칼라",
+      "- 결합 방식",
+      "- 적용"
+    ],
+    "name": "슈퍼스칼라(Superscalar)",
+    "en": "Superscalar",
+    "keywords_must": [
+      "다중 명령어 발행(Multiple Issue)",
+      "다중 기능 유닛(정수·실수·분기·로드/스토어)",
+      "동적 스케줄링(Dynamic Scheduling)",
+      "비순차 실행(Out-of-Order Execution)",
+      "분기 예측(Branch Prediction)",
+      "추측 실행(Speculative Execution)",
+      "레지스터 리네이밍(Register Renaming)",
+      "데이터 의존성 제약"
+    ],
+    "keywords_ref": [
+      "재정렬 버퍼(ROB)",
+      "예약 스테이션(토마술로 알고리즘)",
+      "발행 폭(2·4·8-wide)",
+      "IPC 1 초과",
+      "스펙터(Spectre) 등 추측 실행 취약점"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "다중 명령어 발행(Multiple Issue)",
+      "다중 기능 유닛(정수·실수·분기·로드/스토어)",
+      "동적 스케줄링(Dynamic Scheduling)",
+      "비순차 실행(Out-of-Order Execution)",
+      "분기 예측(Branch Prediction)",
+      "추측 실행(Speculative Execution)",
+      "레지스터 리네이밍(Register Renaming)",
+      "데이터 의존성 제약"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "ROB": "Reorder Buffer",
+      "IPC": "Instructions Per Cycle"
+    }
+  },
+  {
+    "id": "CA_101",
+    "code": "CA_101",
+    "title": "슈퍼 파이프라이닝(Super Pipelining)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 병렬 처리 > 명령어 수준 병렬성",
+    "definition": "파이프라인의 각 단계를 두 개 이상으로 더 세분화해 단계당 처리 시간을 줄이고, 클럭 주기를 절반 이하로 짧게 만들어 명령어를 엇갈리게 중첩 실행함으로써 처리 속도를 높이는 기법",
+    "keywords": [
+      "핵심: 단계 세분화(Deep Pipeline) · 클럭 주기 단축 · 엇갈린 중첩 실행 · 클럭 주파수 향상",
+      "필수: 단계 증가에 따른 해저드 손실 증가 · 분기 예측 실패 비용 증가 · 파이프라인 레지스터 오버헤드",
+      "참고: MIPS R4000(8단계) 사례 · 인텔 넷버스트 31단계 이후 전력·발열 한계로 축소 · 폴락의 법칙과 연계 · 단계 수와 성능의 최적점 존재"
+    ],
+    "sections": [
+      {
+        "title": "슈퍼 파이프라이닝 원리",
+        "subsections": [
+          {
+            "title": "세분화",
+            "items": [
+              "인출·해독·실행 단계를 각각 반 단계 이상으로 나눔"
+            ]
+          },
+          {
+            "title": "속도 향상",
+            "items": [
+              "단계 시간이 짧아져 같은 시간에 더 많은 명령이 단계에 진입"
+            ]
+          },
+          {
+            "title": "비교 기준",
+            "items": [
+              "슈퍼스칼라는 공간적(유닛 복제), 슈퍼 파이프라이닝은 시간적(단계 세분) 병렬화"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "한계 요인",
+        "subsections": [
+          {
+            "title": "해저드 증가",
+            "items": [
+              "단계가 많을수록 분기 예측 실패 시 버려지는 명령이 늘어남"
+            ]
+          },
+          {
+            "title": "오버헤드",
+            "items": [
+              "단계 간 래치 지연과 클럭 분배 부담이 상대적으로 커짐"
+            ]
+          },
+          {
+            "title": "전력·발열",
+            "items": [
+              "고클럭 운영으로 소비 전력 급증"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "설계 동향",
+        "subsections": [
+          {
+            "title": "적정 깊이",
+            "items": [
+              "현대 코어는 15~20단계 수준으로 단계 수와 효율을 절충"
+            ]
+          },
+          {
+            "title": "보완 기술",
+            "items": [
+              "정교한 분기 예측기와 마이크로 연산 캐시로 손실 완화"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      189,
+      190
+    ],
+    "outline": [
+      "슈퍼 파이프라이닝 원리",
+      "- 세분화",
+      "- 속도 향상",
+      "- 비교 기준",
+      "한계 요인",
+      "- 해저드 증가",
+      "- 오버헤드",
+      "- 전력·발열",
+      "설계 동향",
+      "- 적정 깊이",
+      "- 보완 기술"
+    ],
+    "name": "슈퍼 파이프라이닝(Super Pipelining)",
+    "en": "Super Pipelining",
+    "keywords_must": [
+      "단계 세분화(Deep Pipeline)",
+      "클럭 주기 단축",
+      "엇갈린 중첩 실행",
+      "클럭 주파수 향상",
+      "단계 증가에 따른 해저드 손실 증가",
+      "분기 예측 실패 비용 증가",
+      "파이프라인 레지스터 오버헤드"
+    ],
+    "keywords_ref": [
+      "MIPS R4000(8단계) 사례",
+      "인텔 넷버스트 31단계 이후 전력·발열 한계로 축소",
+      "폴락의 법칙과 연계",
+      "단계 수와 성능의 최적점 존재"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "단계 세분화(Deep Pipeline)",
+      "클럭 주기 단축",
+      "엇갈린 중첩 실행",
+      "클럭 주파수 향상",
+      "단계 증가에 따른 해저드 손실 증가",
+      "분기 예측 실패 비용 증가",
+      "파이프라인 레지스터 오버헤드"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_102",
+    "code": "CA_102",
+    "title": "파이프라이닝 속도 향상(Pipeline Speedup)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 병렬 처리 > 명령어 수준 병렬성",
+    "definition": "k단계 파이프라인에서 N개의 명령어를 처리할 때 비파이프라인 방식은 k·N 클럭이 걸리지만 파이프라인 방식은 k+(N−1) 클럭이면 되므로, 명령어 수가 많을수록 속도 향상이 단계 수 k에 근접함",
+    "keywords": [
+      "핵심: 비파이프라인 처리 시간 T = k·N·t · 파이프라인 처리 시간 T = (k + N − 1)·t · 속도 향상 S = k·N / (k + N − 1) · 최대 속도 향상 = 단계 수 k",
+      "필수: 단계 수(k) · 명령어 수(N) · 단계 처리 시간(t)",
+      "참고: 예) k=4, N=4, t=1ms → 16ms 대비 7ms(약 2.3배) · 효율 = S / k · 처리율 = N / ((k+N−1)·t) · 해저드·스톨로 실제 향상 감소"
+    ],
+    "sections": [
+      {
+        "title": "비파이프라인 처리",
+        "subsections": [
+          {
+            "title": "동작 방식",
+            "items": [
+              "한 명령의 4단계(IF·ID·EX·WB)가 모두 끝난 뒤 다음 명령 시작"
+            ]
+          },
+          {
+            "title": "처리 시간",
+            "items": [
+              "k=4, N=4, t=1ms이면 4×4×1 = 16ms"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "파이프라인 처리",
+        "subsections": [
+          {
+            "title": "동작 방식",
+            "items": [
+              "첫 명령의 첫 단계가 끝나면 다음 명령의 첫 단계를 바로 시작"
+            ]
+          },
+          {
+            "title": "처리 시간",
+            "items": [
+              "첫 명령 k·t 후 매 t마다 하나씩 완료되어 (4+3)×1 = 7ms"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "속도 향상 해석",
+        "subsections": [
+          {
+            "title": "계산",
+            "items": [
+              "S = 16 / 7 ≈ 2.3배"
+            ]
+          },
+          {
+            "title": "극한",
+            "items": [
+              "N이 매우 크면 S는 k에 수렴"
+            ]
+          },
+          {
+            "title": "현실 제약",
+            "items": [
+              "해저드로 인한 스톨과 단계 불균형으로 이론치보다 낮음"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      191,
+      192
+    ],
+    "outline": [
+      "비파이프라인 처리",
+      "- 동작 방식",
+      "- 처리 시간",
+      "파이프라인 처리",
+      "- 동작 방식",
+      "- 처리 시간",
+      "속도 향상 해석",
+      "- 계산",
+      "- 극한",
+      "- 현실 제약"
+    ],
+    "name": "파이프라이닝 속도 향상(Pipeline Speedup)",
+    "en": "Pipeline Speedup",
+    "keywords_must": [
+      "비파이프라인 처리 시간 T = k·N·t",
+      "파이프라인 처리 시간 T = (k + N − 1)·t",
+      "속도 향상 S = k·N / (k + N − 1)",
+      "최대 속도 향상 = 단계 수 k",
+      "단계 수(k)",
+      "명령어 수(N)",
+      "단계 처리 시간(t)"
+    ],
+    "keywords_ref": [
+      "예) k=4, N=4, t=1ms → 16ms 대비 7ms(약 2.3배)",
+      "효율 = S / k",
+      "처리율 = N / ((k+N−1)·t)",
+      "해저드·스톨로 실제 향상 감소"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "비파이프라인 처리 시간 T = k·N·t",
+      "파이프라인 처리 시간 T = (k + N − 1)·t",
+      "속도 향상 S = k·N / (k + N − 1)",
+      "최대 속도 향상 = 단계 수 k",
+      "단계 수(k)",
+      "명령어 수(N)",
+      "단계 처리 시간(t)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_104",
+    "code": "CA_104",
+    "title": "매우 긴 명령어 워드(VLIW, Very Long Instruction Word)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 병렬 처리 > 명령어 수준 병렬성",
+    "definition": "동시에 실행 가능한 여러 연산을 하드웨어가 아닌 컴파일러가 미리 찾아내 하나의 긴 명령어 워드로 묶고, 프로세서는 워드 안의 연산들을 여러 기능 유닛에서 그대로 병렬 실행하는 정적 스케줄링 방식",
+    "keywords": [
+      "핵심: 컴파일러 정적 스케줄링(Static Scheduling) · 긴 명령어 워드(복수 연산 슬롯) · 다중 기능 유닛 · 하드웨어 단순화",
+      "필수: NOP 삽입으로 코드 팽창 · 바이너리 호환성 결여 · 명령어 수준 병렬성(ILP)",
+      "참고: DSP(TI C6000)·GPU 초기 구조·멀티미디어 가속기 · 트레이스 스케줄링·소프트웨어 파이프라이닝 · EPIC(IA-64)으로 발전 · 트랜스메타 크루소"
+    ],
+    "sections": [
+      {
+        "title": "VLIW 동작 구조",
+        "subsections": [
+          {
+            "title": "인출·해독",
+            "items": [
+              "긴 명령어 하나를 한 회로가 통째로 인출·해독"
+            ]
+          },
+          {
+            "title": "실행",
+            "items": [
+              "워드 안의 각 연산 슬롯이 해당 기능 유닛에서 동시에 실행"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "VLIW 특징",
+        "subsections": [
+          {
+            "title": "하드웨어 단순",
+            "items": [
+              "의존성 검사·동적 스케줄링 회로가 없어 칩이 작고 클럭이 높음"
+            ]
+          },
+          {
+            "title": "호환성 문제",
+            "items": [
+              "기능 유닛 수가 바뀌면 다시 컴파일해야 함"
+            ]
+          },
+          {
+            "title": "코드 크기",
+            "items": [
+              "채울 연산이 없는 슬롯은 NOP로 채워 프로그램이 커짐"
+            ]
+          },
+          {
+            "title": "적합 분야",
+            "items": [
+              "실행 흐름 예측이 쉬운 과학 계산·3D 그래픽·멀티미디어 반복 처리"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "슈퍼스칼라 대비 비교",
+        "subsections": [
+          {
+            "title": "병렬성 추출",
+            "items": [
+              "VLIW(컴파일 시 소프트웨어)",
+              "슈퍼스칼라(실행 시 하드웨어)"
+            ]
+          },
+          {
+            "title": "하드웨어 복잡도",
+            "items": [
+              "VLIW(낮음)",
+              "슈퍼스칼라(높음)"
+            ]
+          },
+          {
+            "title": "동적 상황 대응",
+            "items": [
+              "VLIW(캐시 미스 등 예측 불가 지연에 취약)",
+              "슈퍼스칼라(실행 중 재정렬로 대응)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      193,
+      195
+    ],
+    "outline": [
+      "VLIW 동작 구조",
+      "- 인출·해독",
+      "- 실행",
+      "VLIW 특징",
+      "- 하드웨어 단순",
+      "- 호환성 문제",
+      "- 코드 크기",
+      "- 적합 분야",
+      "슈퍼스칼라 대비 비교",
+      "- 병렬성 추출",
+      "- 하드웨어 복잡도",
+      "- 동적 상황 대응"
+    ],
+    "name": "매우 긴 명령어 워드(VLIW, Very Long Instruction Word)",
+    "en": "Very Long Instruction Word",
+    "keywords_must": [
+      "컴파일러 정적 스케줄링(Static Scheduling)",
+      "긴 명령어 워드(복수 연산 슬롯)",
+      "다중 기능 유닛",
+      "하드웨어 단순화",
+      "NOP 삽입으로 코드 팽창",
+      "바이너리 호환성 결여",
+      "명령어 수준 병렬성(ILP)"
+    ],
+    "keywords_ref": [
+      "DSP(TI C6000)·GPU 초기 구조·멀티미디어 가속기",
+      "트레이스 스케줄링·소프트웨어 파이프라이닝",
+      "EPIC(IA-64)으로 발전",
+      "트랜스메타 크루소"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "컴파일러 정적 스케줄링(Static Scheduling)",
+      "긴 명령어 워드(복수 연산 슬롯)",
+      "다중 기능 유닛",
+      "하드웨어 단순화",
+      "NOP 삽입으로 코드 팽창",
+      "바이너리 호환성 결여",
+      "명령어 수준 병렬성(ILP)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_105",
+    "code": "CA_105",
+    "title": "명시적 병렬 명령어 컴퓨팅(EPIC, Explicitly Parallel Instruction Computing)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 병렬 처리 > 명령어 수준 병렬성",
+    "definition": "1997년 HP와 인텔이 제시한 VLIW 계열 아키텍처 개념으로, 컴파일러가 병렬 실행 가능한 명령을 명시적으로 표시한 명령어 번들과 템플릿을 생성해 하드웨어 복잡도를 줄이면서 VLIW의 호환성 문제를 완화함",
+    "keywords": [
+      "핵심: 명령어 수준 병렬성(ILP) · 컴파일러 명시적 병렬성 · 128비트 번들(Bundle) · 5비트 템플릿(Template)",
+      "필수: 41비트 명령어 3개 · 술어 실행(Predication) · 추측 적재(Speculative Load) · IA-64·아이테니엄(Itanium)",
+      "참고: 템플릿 32종으로 실행 유닛 조합 표시(예: 메모리+메모리+정수) · NOP 최소화로 코드 감소 · 대규모 레지스터 파일(정수 128개) · 레지스터 회전 · 아이테니엄 단종(2021)"
+    ],
+    "sections": [
+      {
+        "title": "등장 배경",
+        "subsections": [
+          {
+            "title": "하드웨어 부담",
+            "items": [
+              "슈퍼스칼라의 동적 스케줄링 회로 복잡도를 컴파일러로 이전"
+            ]
+          },
+          {
+            "title": "호환성 개선",
+            "items": [
+              "고정 폭 VLIW의 바이너리 비호환 문제를 템플릿으로 완화"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "명령어 번들 구조",
+        "subsections": [
+          {
+            "title": "번들 구성",
+            "items": [
+              "128비트 = 5비트 템플릿 + 41비트 명령어 슬롯 3개"
+            ]
+          },
+          {
+            "title": "템플릿 역할",
+            "items": [
+              "각 슬롯이 어떤 유닛에서 실행될지와 병렬 경계(Stop) 표시"
+            ]
+          },
+          {
+            "title": "코드 효율",
+            "items": [
+              "템플릿으로 NOP 삽입을 줄여 코드 크기 감소"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "핵심 실행 기법",
+        "subsections": [
+          {
+            "title": "술어 실행",
+            "items": [
+              "분기 양쪽 명령을 모두 실행하고 조건 결과로 하나만 반영해 분기 제거"
+            ]
+          },
+          {
+            "title": "추측 적재",
+            "items": [
+              "메모리 적재를 분기 앞으로 끌어올려 지연 은닉"
+            ]
+          },
+          {
+            "title": "병렬 실행",
+            "items": [
+              "인출·해독은 번들 단위로, 실행은 각 기능 유닛에서 동시 수행"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "명령어 구조 비교",
+        "subsections": [
+          {
+            "title": "CISC",
+            "items": [
+              "복잡한 가변 길이 명령, 하드웨어 마이크로코드 해석"
+            ]
+          },
+          {
+            "title": "RISC",
+            "items": [
+              "단순 고정 길이 명령, 파이프라인 친화"
+            ]
+          },
+          {
+            "title": "EPIC",
+            "items": [
+              "컴파일러가 병렬성을 표시한 번들, 클럭당 여러 명령 실행"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      196,
+      197
+    ],
+    "outline": [
+      "등장 배경",
+      "- 하드웨어 부담",
+      "- 호환성 개선",
+      "명령어 번들 구조",
+      "- 번들 구성",
+      "- 템플릿 역할",
+      "- 코드 효율",
+      "핵심 실행 기법",
+      "- 술어 실행",
+      "- 추측 적재",
+      "- 병렬 실행",
+      "명령어 구조 비교",
+      "- CISC",
+      "- RISC",
+      "- EPIC"
+    ],
+    "name": "명시적 병렬 명령어 컴퓨팅(EPIC, Explicitly Parallel Instruction Computing)",
+    "en": "Explicitly Parallel Instruction Computing",
+    "keywords_must": [
+      "명령어 수준 병렬성(ILP)",
+      "컴파일러 명시적 병렬성",
+      "128비트 번들(Bundle)",
+      "5비트 템플릿(Template)",
+      "41비트 명령어 3개",
+      "술어 실행(Predication)",
+      "추측 적재(Speculative Load)",
+      "IA-64·아이테니엄(Itanium)"
+    ],
+    "keywords_ref": [
+      "템플릿 32종으로 실행 유닛 조합 표시(예: 메모리+메모리+정수)",
+      "NOP 최소화로 코드 감소",
+      "대규모 레지스터 파일(정수 128개)",
+      "레지스터 회전",
+      "아이테니엄 단종(2021)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "명령어 수준 병렬성(ILP)",
+      "컴파일러 명시적 병렬성",
+      "128비트 번들(Bundle)",
+      "5비트 템플릿(Template)",
+      "41비트 명령어 3개",
+      "술어 실행(Predication)",
+      "추측 적재(Speculative Load)",
+      "IA-64·아이테니엄(Itanium)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_106",
+    "code": "CA_106",
+    "title": "하이퍼스레딩(Hyper-Threading)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 병렬 처리 > 스레드 수준 병렬성",
+    "definition": "하나의 물리 코어 안에 레지스터·프로그램 카운터 등 아키텍처 상태만 복제해 운영체제에 두 개의 논리 프로세서로 보이게 하고, 두 스레드의 명령을 같은 실행 유닛에 섞어 넣어 유휴 자원을 줄이는 인텔의 동시 멀티스레딩(SMT) 기술",
+    "keywords": [
+      "핵심: 동시 멀티스레딩(SMT, Simultaneous Multi-Threading) · 논리 프로세서(Logical Processor) · 아키텍처 상태 복제(레지스터 파일·PC) · 실행 유닛·캐시 공유",
+      "필수: 스레드 수준 병렬성(TLP) · 유휴 실행 슬롯 감소 · 처리량(Throughput) 향상",
+      "참고: 2002년 펜티엄4 제온 최초 적용 · 성능 향상 약 15~30%(작업 의존) · 캐시·실행 자원 경합 · 사이드 채널 취약점(MDS)으로 비활성 권고 사례 · AMD SMT·IBM POWER SMT8"
+    ],
+    "sections": [
+      {
+        "title": "구조",
+        "subsections": [
+          {
+            "title": "복제 자원",
+            "items": [
+              "레지스터 파일, 프로그램 카운터, 인터럽트 제어기 등 스레드 상태"
+            ]
+          },
+          {
+            "title": "공유 자원",
+            "items": [
+              "실행 유닛, L1·L2 캐시, 분기 예측기, 버스 인터페이스"
+            ]
+          },
+          {
+            "title": "OS 인식",
+            "items": [
+              "물리 코어 하나가 논리 프로세서 두 개로 보여 SMP처럼 스케줄링"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "실행 메커니즘",
+        "subsections": [
+          {
+            "title": "기존 방식",
+            "items": [
+              "한 코어가 한 스레드만 실행해 의존성·캐시 미스 시 실행 슬롯이 비어 있음"
+            ]
+          },
+          {
+            "title": "SMT 방식",
+            "items": [
+              "한 클럭에 두 스레드의 명령을 함께 발행해 빈 슬롯을 채움"
+            ]
+          },
+          {
+            "title": "결과",
+            "items": [
+              "같은 하드웨어에서 최대 대역폭에 가깝게 실행 유닛 활용"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "효과와 한계",
+        "subsections": [
+          {
+            "title": "성능 이점",
+            "items": [
+              "서버·멀티태스킹 환경에서 처리량 증가, 칩 면적 증가는 5% 내외"
+            ]
+          },
+          {
+            "title": "경합 문제",
+            "items": [
+              "두 스레드가 같은 자원을 다투면 개별 스레드 성능 저하"
+            ]
+          },
+          {
+            "title": "보안 이슈",
+            "items": [
+              "같은 코어 공유로 사이드 채널 공격 위험"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      198,
+      199
+    ],
+    "outline": [
+      "구조",
+      "- 복제 자원",
+      "- 공유 자원",
+      "- OS 인식",
+      "실행 메커니즘",
+      "- 기존 방식",
+      "- SMT 방식",
+      "- 결과",
+      "효과와 한계",
+      "- 성능 이점",
+      "- 경합 문제",
+      "- 보안 이슈"
+    ],
+    "name": "하이퍼스레딩(Hyper-Threading)",
+    "en": "Hyper-Threading Technology",
+    "keywords_must": [
+      "동시 멀티스레딩(SMT, Simultaneous Multi-Threading)",
+      "논리 프로세서(Logical Processor)",
+      "아키텍처 상태 복제(레지스터 파일·PC)",
+      "실행 유닛·캐시 공유",
+      "스레드 수준 병렬성(TLP)",
+      "유휴 실행 슬롯 감소",
+      "처리량(Throughput) 향상"
+    ],
+    "keywords_ref": [
+      "2002년 펜티엄4 제온 최초 적용",
+      "성능 향상 약 15~30%(작업 의존)",
+      "캐시·실행 자원 경합",
+      "사이드 채널 취약점(MDS)으로 비활성 권고 사례",
+      "AMD SMT·IBM POWER SMT8"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "동시 멀티스레딩(SMT, Simultaneous Multi-Threading)",
+      "논리 프로세서(Logical Processor)",
+      "아키텍처 상태 복제(레지스터 파일·PC)",
+      "실행 유닛·캐시 공유",
+      "스레드 수준 병렬성(TLP)",
+      "유휴 실행 슬롯 감소",
+      "처리량(Throughput) 향상"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "TLP": "Thread-Level Parallelism",
+      "SMT": "Simultaneous Multi-Threading",
+      "MDS": "Microarchitectural Data Sampling"
     }
   },
   {

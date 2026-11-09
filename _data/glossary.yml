@@ -1237,3 +1237,76 @@ UASP: USB Attached SCSI Protocol
 UEFI: Unified Extensible Firmware Interface
 UPI: Ultra Path Interconnect
 VPU: [Video Processing Unit, Vision Processing Unit]
+ALU: Arithmetic Logic Unit
+ATA: Advanced Technology Attachment
+BCD: Binary-Coded Decimal
+BEDO: Burst Extended Data Out
+CAS: Column Address Strobe
+CISC: Complex Instruction Set Computer
+CKE: Clock Enable
+CMOS: Complementary Metal-Oxide-Semiconductor
+CPI: Cycles Per Instruction
+CTF: Charge Trap Flash
+CVD: Chemical Vapor Deposition
+DDC: Display Data Channel
+DVI: Digital Visual Interface
+EDID: Extended Display Identification Data
+EDO: Extended Data Out
+EPIC: Explicitly Parallel Instruction Computing
+FMD: Flash Module Drive
+FPM: Fast Page Mode
+FTS: Fault Tolerant System
+FeRAM: Ferroelectric Random Access Memory
+GPU: Graphics Processing Unit
+HDD: Hard Disk Drive
+HDMI: High-Definition Multimedia Interface
+I2C: Inter-Integrated Circuit
+I3C: Improved Inter-Integrated Circuit
+ILP: Instruction-Level Parallelism
+JFFS2: Journalling Flash File System version 2
+LCRC: Link Cyclic Redundancy Check
+LFS: Log-structured File System
+LIFO: Last In First Out
+LLD: Low Level Driver
+MESI: Modified Exclusive Shared Invalid
+MRAM: Magnetoresistive Random Access Memory
+MRU: Most Recently Used
+MTJ: Magnetic Tunnel Junction
+NAND: Not AND
+NOR: Not OR
+NOP: No Operation
+NUMA: Non-Uniform Memory Access
+NVM: Non-Volatile Memory
+ONO: Oxide-Nitride-Oxide
+OPT: Optimal page replacement
+PATA: Parallel Advanced Technology Attachment
+PCI: Peripheral Component Interconnect
+PLRU: Pseudo Least Recently Used
+PRAM: Phase-change Random Access Memory
+PVD: Physical Vapor Deposition
+RAID: Redundant Array of Independent Disks
+RAS: Row Address Strobe
+ReRAM: Resistive Random Access Memory
+RISC: Reduced Instruction Set Computer
+RoCE: RDMA over Converged Ethernet
+SAS: Serial Attached SCSI
+SCL: Serial Clock Line
+SCSI: Small Computer System Interface
+SDA: Serial Data Line
+SDRAM: Synchronous Dynamic Random Access Memory
+SoC: System on Chip
+SRP: SCSI RDMA Protocol
+SSD: Solid State Drive
+STT: Spin-Transfer Torque
+TCAM: Ternary Content-Addressable Memory
+TLP: [Thread-Level Parallelism, Transaction Layer Packet]
+TWI: Two Wire Interface
+UART: Universal Asynchronous Receiver/Transmitter
+UBIFS: Unsorted Block Image File System
+VGA: Video Graphics Array
+VLIW: Very Long Instruction Word
+WAR: Write After Read
+WAW: Write After Write
+RAW: Read After Write
+XIP: eXecute In Place
+YAFFS2: Yet Another Flash File System 2
