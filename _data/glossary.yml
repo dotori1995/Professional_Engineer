@@ -375,7 +375,7 @@ IOPS: Isolated E-UTRAN Operation for Public Safety
 IoT: Internet of Things
 IoV: Internet of Vehicles
 IP: Internet Protocol
-IPS: Indoor Positioning System
+IPS: [Indoor Positioning System, Intrusion Prevention System]
 IPsec: IP Security
 IPSO: IP for Smart Objects
 IPTV: Internet Protocol Television
@@ -785,7 +785,7 @@ SOM: [Serviceable Obtainable Market, Self-Organizing Map]
 SON: Self-Organizing Network
 SONET: Synchronous Optical Network
 SoW: Statement of Work
-SPF: Shortest Path First
+SPF: [Shortest Path First, Sender Policy Framework]
 SPIN: Sensor Protocols for Information via Negotiation
 SPOF: Single Point of Failure
 SPT: Shortest Path Tree
@@ -918,7 +918,7 @@ WRAN: Wireless Regional Area Network
 WRED: Weighted Random Early Detection
 WSMP: WAVE Short Message Protocol
 WSN: Wireless Sensor Network
-XDR: External Data Representation
+XDR: [External Data Representation, Extended Detection and Response]
 XEP: XMPP Extension Protocol
 XML: eXtensible Markup Language
 XMPP: eXtensible Messaging and Presence Protocol
@@ -1310,3 +1310,103 @@ WAW: Write After Write
 RAW: Read After Write
 XIP: eXecute In Place
 YAFFS2: Yet Another Flash File System 2
+DoS: Denial of Service
+EDR: Endpoint Detection and Response
+APT: Advanced Persistent Threat
+"C&C": Command and Control
+ASLR: Address Space Layout Randomization
+DEP: Data Execution Prevention
+KISA: "Korea Internet & Security Agency"
+RUDY: R-U-Dead-Yet
+OWASP: Open Worldwide Application Security Project
+ISMS: Information Security Management System
+ISMS-P: "Personal Information & Information Security Management System"
+ARIA: "Academy, Research Institute, Agency"
+PQC: Post-Quantum Cryptography
+ML-DSA: Module-Lattice-Based Digital Signature Algorithm
+ML-KEM: Module-Lattice-Based Key-Encapsulation Mechanism
+SLH-DSA: Stateless Hash-Based Digital Signature Algorithm
+FN-DSA: FFT over NTRU-Lattice-Based Digital Signature Algorithm
+CWE: Common Weakness Enumeration
+ROP: Return-Oriented Programming
+DRDoS: Distributed Reflection Denial of Service
+CFG: Control Flow Graph
+CSRF: Cross-Site Request Forgery
+XSS: Cross-Site Scripting
+RDP: Remote Desktop Protocol
+SMB: Server Message Block
+MFA: Multi-Factor Authentication
+LFSR: Linear Feedback Shift Register
+LEA: Lightweight Encryption Algorithm
+GCM: Galois/Counter Mode
+CBC: Cipher Block Chaining
+SPN: Substitution-Permutation Network
+ECB: Electronic Codebook
+CTR: Counter Mode
+OFB: Output Feedback
+CFB: Cipher Feedback
+CBC-MAC: Cipher Block Chaining Message Authentication Code
+CRHF: Collision-Resistant Hash Function
+OWHF: One-Way Hash Function
+MDC: Modification Detection Code
+PBKDF2: Password-Based Key Derivation Function 2
+PRF: Pseudo-Random Function
+ECDHE: Elliptic Curve Diffie-Hellman Ephemeral
+DHE: Diffie-Hellman Ephemeral
+PFS: Perfect Forward Secrecy
+QRNG: Quantum Random Number Generator
+QKD: Quantum Key Distribution
+QBER: Quantum Bit Error Rate
+HNDL: "Harvest Now, Decrypt Later"
+LWE: Learning With Errors
+SIDH: Supersingular Isogeny Diffie-Hellman
+UOV: Unbalanced Oil and Vinegar
+HQC: Hamming Quasi-Cyclic
+KpqC: Korean Post-Quantum Cryptography
+NISQ: Noisy Intermediate-Scale Quantum
+PIMD: Payment Information Message Digest
+POMD: Payment Order Message Digest
+OIMD: Order Information Message Digest
+RSA-PSS: RSA Probabilistic Signature Scheme
+KCDSA: Korean Certificate-based Digital Signature Algorithm
+EdDSA: Edwards-curve Digital Signature Algorithm
+IND-CPA: Indistinguishability under Chosen-Plaintext Attack
+IND-CCA: Indistinguishability under Chosen-Ciphertext Attack
+IND-CCA2: Indistinguishability under Adaptive Chosen-Ciphertext Attack
+COA: Ciphertext-Only Attack
+KPA: Known-Plaintext Attack
+CPA: Chosen-Plaintext Attack
+CCA: Chosen-Ciphertext Attack
+PGP: Pretty Good Privacy
+GOT: Global Offset Table
+NX: No-eXecute
+RTBH: Remotely Triggered Black Hole
+PDoS: Permanent Denial of Service
+EoP: Elevation of Privilege
+RCE: Remote Code Execution
+CVE: Common Vulnerabilities and Exposures
+CVSS: Common Vulnerability Scoring System
+BOF: Buffer Overflow
+RaaS: Ransomware as a Service
+OSINT: Open Source Intelligence
+DKIM: DomainKeys Identified Mail
+DMARC: "Domain-based Message Authentication, Reporting and Conformance"
+RBI: Remote Browser Isolation
+CRLF: Carriage Return Line Feed
+MLS: Multi-Level Security
+TCSEC: Trusted Computer System Evaluation Criteria
+LAPS: Local Administrator Password Solution
+ICS: Industrial Control System
+APK: Android Package
+AMSI: Antimalware Scan Interface
+WMI: Windows Management Instrumentation
+LotL: Living off the Land
+LOLBins: Living off the Land Binaries
+CDR: Content Disarm and Reconstruction
+YARA: Yet Another Recursive Acronym
+ORM: Object-Relational Mapping
+CSP: Content Security Policy
+IACS: Industrial Automation and Control Systems
+SOAR: "Security Orchestration, Automation and Response"
+MDR: Managed Detection and Response
+EPP: Endpoint Protection Platform

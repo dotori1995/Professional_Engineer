@@ -1,0 +1,6596 @@
+{
+ "SE_001": {
+  "title": "보안(Security)",
+  "category": "SE > 암호화 > 보안 (Security)",
+  "definition": "정보 자산을 비인가 접근·변경·파괴·유출로부터 보호하여 기밀성·무결성·가용성을 유지하고, 인증·부인방지·책임추적성 등 보안 서비스를 제공하는 관리적·기술적·물리적 활동",
+  "keywords": [
+   "기본 목표: 기밀성(Confidentiality) · 무결성(Integrity) · 가용성(Availability)",
+   "보안 서비스: 인증(Authentication) · 부인방지(Non-repudiation) · 접근통제(Access Control)",
+   "3A: 인증 · 권한부여(Authorization) · 책임추적성(Accountability)",
+   "인증 요소: 지식 기반(Something You Know) · 소유 기반(Something You Have) · 생체 기반(Something You Are)"
+  ],
+  "sections": [
+   {
+    "title": "기본 특성",
+    "subsections": [
+     {
+      "title": "CIA 3요소",
+      "items": [
+       "기밀성: 인가자만 열람",
+       "무결성: 인가된 방법으로만 변경",
+       "가용성: 필요 시 서비스 제공"
+      ]
+     },
+     {
+      "title": "보안 서비스",
+      "items": [
+       "인증: 신원 확인",
+       "부인방지: 송수신 사실 부인 차단",
+       "접근통제: 권한별 자원 사용 제한"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "사용자 인증과 3A",
+    "subsections": [
+     {
+      "title": "인증 요소",
+      "items": [
+       "지식(패스워드)",
+       "소유(토큰·스마트카드)",
+       "생체(지문·홍채)",
+       "둘 이상 결합 시 MFA"
+      ]
+     },
+     {
+      "title": "3A",
+      "items": [
+       "인증 → 권한부여 → 책임추적(로그·감사)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "영역별 대책",
+    "subsections": [
+     {
+      "title": "네트워크",
+      "items": [
+       "위협: 가로막기(가용성)·가로채기(기밀성)·변조(무결성)·위조(인증)",
+       "대책: 방화벽·IDS·VPN"
+      ]
+     },
+     {
+      "title": "시스템·DB",
+      "items": [
+       "서버 보안, 백신, 보안관제",
+       "DB 암호화·접근통제"
+      ]
+     },
+     {
+      "title": "개인정보",
+      "items": [
+       "가명처리·총계처리·삭제·범주화·마스킹",
+       "k-익명성·l-다양성·t-근접성"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "기본 특성",
+   "- CIA 3요소",
+   "- 보안 서비스",
+   "사용자 인증과 3A",
+   "- 인증 요소",
+   "- 3A",
+   "영역별 대책",
+   "- 네트워크",
+   "- 시스템·DB",
+   "- 개인정보"
+  ],
+  "name": "보안(Security)",
+  "en": "Information Security",
+  "keywords_must": [
+   "기밀성(Confidentiality)",
+   "무결성(Integrity)",
+   "가용성(Availability)",
+   "인증(Authentication)",
+   "부인방지(Non-repudiation)",
+   "접근통제(Access Control)",
+   "인증",
+   "권한부여(Authorization)",
+   "책임추적성(Accountability)",
+   "지식 기반(Something You Know)",
+   "소유 기반(Something You Have)",
+   "생체 기반(Something You Are)"
+  ],
+  "keywords_ref": [
+   "가로막기·가로채기·변조·위조",
+   "관리적·기술적·물리적 대책",
+   "다중 요소 인증(MFA)",
+   "정보보호 vs 보안",
+   "ISO/IEC 27001",
+   "심층 방어"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "기밀성(Confidentiality)",
+   "무결성(Integrity)",
+   "가용성(Availability)",
+   "인증(Authentication)",
+   "부인방지(Non-repudiation)",
+   "접근통제(Access Control)",
+   "인증",
+   "권한부여(Authorization)",
+   "책임추적성(Accountability)",
+   "지식 기반(Something You Know)",
+   "소유 기반(Something You Have)",
+   "생체 기반(Something You Are)"
+  ]
+ },
+ "SE_002": {
+  "title": "암호화(Encryption)",
+  "category": "SE > 암호화 > 암호화(Encryption)",
+  "definition": "평문(Plaintext)을 키와 알고리즘으로 제3자가 해독할 수 없는 암호문(Ciphertext)으로 변환하는 기술로, 기밀성을 기본으로 인증·무결성·부인방지를 함께 제공한다",
+  "keywords": [
+   "목표: 기밀성 · 무결성(해시) · 인증(인증서) · 부인방지(전자서명)",
+   "키 방식: 대칭키(비밀키) · 비대칭키(공개키) · 키 분배 문제",
+   "처리 단위: 블록 암호(Block Cipher) · 스트림 암호(Stream Cipher)",
+   "원리: 치환(Substitution) · 전치(Transposition) · 혼돈·확산(Confusion·Diffusion)"
+  ],
+  "sections": [
+   {
+    "title": "제공 보안 서비스",
+    "subsections": [
+     {
+      "title": "기밀성·무결성",
+      "items": [
+       "암호화로 내용 은닉",
+       "해시로 위변조 탐지"
+      ]
+     },
+     {
+      "title": "인증·부인방지",
+      "items": [
+       "PKI 인증서로 신원 확인",
+       "전자서명으로 송신 사실 부인 차단"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분류",
+    "subsections": [
+     {
+      "title": "처리 단위",
+      "items": [
+       "블록: 고정 길이 블록, DES·AES·SEED",
+       "스트림: 키스트림과 비트 단위 XOR, LFSR 기반, 빠르고 오류 전파 없음"
+      ]
+     },
+     {
+      "title": "수학적 기반",
+      "items": [
+       "소인수분해: RSA",
+       "이산대수: DSA·ECC",
+       "격자: 양자내성 암호"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대칭키와 공개키 비교",
+    "subsections": [
+     {
+      "title": "키 관계",
+      "items": [
+       "대칭키: 암호키 = 복호키(Secret Key)",
+       "공개키: 공개키·개인키 쌍"
+      ]
+     },
+     {
+      "title": "성능·관리",
+      "items": [
+       "대칭키: 빠름, n(n−1)/2개 키 관리 부담",
+       "공개키: 느림, 2n개 키, 키 분배 용이"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "대칭키: 대용량 데이터",
+       "공개키: 키 교환·전자서명"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "제공 보안 서비스",
+   "- 기밀성·무결성",
+   "- 인증·부인방지",
+   "분류",
+   "- 처리 단위",
+   "- 수학적 기반",
+   "대칭키와 공개키 비교",
+   "- 키 관계",
+   "- 성능·관리",
+   "- 활용"
+  ],
+  "name": "암호화(Encryption)",
+  "en": "Encryption",
+  "keywords_must": [
+   "기밀성",
+   "무결성(해시)",
+   "인증(인증서)",
+   "부인방지(전자서명)",
+   "대칭키(비밀키)",
+   "비대칭키(공개키)",
+   "키 분배 문제",
+   "블록 암호(Block Cipher)",
+   "스트림 암호(Stream Cipher)",
+   "치환(Substitution)",
+   "전치(Transposition)",
+   "혼돈·확산(Confusion·Diffusion)"
+  ],
+  "keywords_ref": [
+   "DES·AES·SEED·ARIA",
+   "RSA(소인수분해)",
+   "ECC·DSA(이산대수)",
+   "격자(Lattice) 기반",
+   "하이브리드 암호(전자봉투)",
+   "케르크호프스 원리"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "기밀성",
+   "무결성(해시)",
+   "인증(인증서)",
+   "부인방지(전자서명)",
+   "대칭키(비밀키)",
+   "비대칭키(공개키)",
+   "키 분배 문제",
+   "블록 암호(Block Cipher)",
+   "스트림 암호(Stream Cipher)",
+   "치환(Substitution)",
+   "전치(Transposition)",
+   "혼돈·확산(Confusion·Diffusion)"
+  ]
+ },
+ "SE_004": {
+  "title": "블록 암호화(Block Cipher)",
+  "category": "SE > 암호화 > 블록 암호화",
+  "definition": "평문을 고정 길이 블록(예: 128비트)으로 나누고 라운드 함수로 치환과 전치를 반복해 같은 길이의 암호문 블록을 만드는 대칭키 암호 방식",
+  "keywords": [
+   "운영 모드: ECB(Electronic Codebook) · CBC(Cipher Block Chaining) · CFB(Cipher Feedback) · OFB(Output Feedback) · CTR(Counter)",
+   "구조: 라운드 함수 · 파이스텔(Feistel) 구조 · SPN(Substitution-Permutation Network) 구조",
+   "구성 요소: 초기화 벡터(IV) · 패딩(Padding)"
+  ],
+  "sections": [
+   {
+    "title": "동작 원리와 장단점",
+    "subsections": [
+     {
+      "title": "원리",
+      "items": [
+       "치환·전치를 여러 라운드 반복",
+       "평문·암호문으로 키 추정 곤란"
+      ]
+     },
+     {
+      "title": "장단점",
+      "items": [
+       "SW 구현 용이, 대용량 저장·전송에 적합",
+       "스트림 암호보다 느리고 오류 전파 가능"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "운영 모드",
+    "subsections": [
+     {
+      "title": "독립형",
+      "items": [
+       "ECB: 블록별 독립 암호화, 같은 평문 → 같은 암호문(패턴 노출)",
+       "CTR: 카운터 암호화 후 XOR, 병렬 처리"
+      ]
+     },
+     {
+      "title": "연쇄형",
+      "items": [
+       "CBC: 이전 암호문과 XOR, IV·패딩 필요, 암호화 순차",
+       "CFB: 자기 동기 스트림화, 복호화 병렬",
+       "OFB: 동기식 스트림화, 오류 전파 없음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구조와 알고리즘",
+    "subsections": [
+     {
+      "title": "파이스텔",
+      "items": [
+       "좌우 분할·라운드 반복",
+       "암복호 구조 동일",
+       "DES·SEED"
+      ]
+     },
+     {
+      "title": "SPN",
+      "items": [
+       "치환층·전치층 반복",
+       "병렬성 높음",
+       "AES·ARIA"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "동작 원리와 장단점",
+   "- 원리",
+   "- 장단점",
+   "운영 모드",
+   "- 독립형",
+   "- 연쇄형",
+   "구조와 알고리즘",
+   "- 파이스텔",
+   "- SPN"
+  ],
+  "name": "블록 암호화(Block Cipher)",
+  "en": "Block Cipher",
+  "keywords_must": [
+   "ECB(Electronic Codebook)",
+   "CBC(Cipher Block Chaining)",
+   "CFB(Cipher Feedback)",
+   "OFB(Output Feedback)",
+   "CTR(Counter)",
+   "라운드 함수",
+   "파이스텔(Feistel) 구조",
+   "SPN(Substitution-Permutation Network) 구조",
+   "초기화 벡터(IV)",
+   "패딩(Padding)"
+  ],
+  "keywords_ref": [
+   "DES",
+   "AES",
+   "SEED",
+   "ARIA",
+   "LEA",
+   "GCM(인증 암호)",
+   "오류 전파"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "ECB(Electronic Codebook)",
+   "CBC(Cipher Block Chaining)",
+   "CFB(Cipher Feedback)",
+   "OFB(Output Feedback)",
+   "CTR(Counter)",
+   "라운드 함수",
+   "파이스텔(Feistel) 구조",
+   "SPN(Substitution-Permutation Network) 구조",
+   "초기화 벡터(IV)",
+   "패딩(Padding)"
+  ],
+  "dueum": "이씨씨오씨"
+ },
+ "SE_007": {
+  "title": "암호학적 해시 함수(Cryptographic Hash Function)",
+  "category": "SE > 암호화 > 암호학적 해시함수",
+  "definition": "임의 길이 메시지를 고정 길이 다이제스트로 압축하는 일방향 함수로, 역상·제2역상·충돌 저항성을 갖추어 무결성 검증과 전자서명에 사용된다",
+  "keywords": [
+   "안전성 조건: 역상 저항성(Pre-image Resistance) · 제2 역상 저항성(Second Pre-image Resistance) · 충돌 저항성(Collision Resistance)",
+   "분류: MAC(Message Authentication Code) · MDC(Modification Detection Code)",
+   "알고리즘: SHA-2 · SHA-3 · MD5·SHA-1(취약)",
+   "활용: 전자서명 · 디지털 포렌식 증거 무결성 · 패스워드 저장"
+  ],
+  "sections": [
+   {
+    "title": "안전성 조건",
+    "subsections": [
+     {
+      "title": "역상 저항성",
+      "items": [
+       "y = H(x)가 주어져도 x를 찾기 어려움"
+      ]
+     },
+     {
+      "title": "제2 역상 저항성",
+      "items": [
+       "x가 주어질 때 H(x) = H(w)인 다른 w를 찾기 어려움"
+      ]
+     },
+     {
+      "title": "충돌 저항성",
+      "items": [
+       "H(x) = H(w)인 임의의 x, w 쌍을 찾기 어려움",
+       "생일 공격으로 2^(n/2) 수준"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": "키 사용",
+      "items": [
+       "MAC: 비밀키 사용, 출처 인증+무결성 (HMAC·CBC-MAC)",
+       "MDC: 키 없이 무결성만"
+      ]
+     },
+     {
+      "title": "저항성 기준",
+      "items": [
+       "일방향(OWHF): 역상 저항",
+       "충돌 회피(CRHF): 충돌 저항"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "알고리즘과 활용",
+    "subsections": [
+     {
+      "title": "알고리즘",
+      "items": [
+       "SHA-256/384/512",
+       "SHA-3(Keccak)",
+       "국산 LSH",
+       "MD5·SHA-1은 충돌 발견으로 사용 중지"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "서명 전 다이제스트 생성",
+       "디스크 이미지 해시값으로 증거 무결성 입증",
+       "솔트와 함께 패스워드 저장"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "안전성 조건",
+   "- 역상 저항성",
+   "- 제2 역상 저항성",
+   "- 충돌 저항성",
+   "유형",
+   "- 키 사용",
+   "- 저항성 기준",
+   "알고리즘과 활용",
+   "- 알고리즘",
+   "- 활용"
+  ],
+  "name": "암호학적 해시 함수(Cryptographic Hash Function)",
+  "en": "Cryptographic Hash Function",
+  "keywords_must": [
+   "역상 저항성(Pre-image Resistance)",
+   "제2 역상 저항성(Second Pre-image Resistance)",
+   "충돌 저항성(Collision Resistance)",
+   "MAC(Message Authentication Code)",
+   "MDC(Modification Detection Code)",
+   "SHA-2",
+   "SHA-3",
+   "MD5·SHA-1(취약)",
+   "전자서명",
+   "디지털 포렌식 증거 무결성",
+   "패스워드 저장"
+  ],
+  "keywords_ref": [
+   "LSH·HAS-160(국산)",
+   "일방향 해시 함수(OWHF)",
+   "충돌 회피 해시 함수(CRHF)",
+   "눈사태 효과(Avalanche Effect)",
+   "생일 공격(Birthday Attack)",
+   "HMAC",
+   "메시지 다이제스트"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "역상 저항성(Pre-image Resistance)",
+   "제2 역상 저항성(Second Pre-image Resistance)",
+   "충돌 저항성(Collision Resistance)",
+   "MAC(Message Authentication Code)",
+   "MDC(Modification Detection Code)",
+   "SHA-2",
+   "SHA-3",
+   "MD5·SHA-1(취약)",
+   "전자서명",
+   "디지털 포렌식 증거 무결성",
+   "패스워드 저장"
+  ]
+ },
+ "SE_008_01": {
+  "title": "해시 솔트·페퍼와 키 스트레칭(Hash Salt, Pepper and Key Stretching)",
+  "category": "SE > 단방향 해시함수",
+  "definition": "빠른 단방향 해시의 약점을 보완하는 패스워드 저장 기법으로, 솔트는 사용자별 난수를 섞고, 페퍼는 DB 밖에 둔 비밀 값을 섞으며, 키 스트레칭은 해시를 반복해 계산 비용을 키운다",
+  "keywords": [
+   "위협: 무차별 대입 공격(Brute Force) · 레인보우 테이블(Rainbow Table) · 사전 공격",
+   "솔트(Salt): 사용자별 고유 난수 · DB에 해시와 함께 저장",
+   "페퍼(Pepper): DB 미저장 · 설정 파일·HSM 보관",
+   "키 스트레칭: 반복 횟수(Iteration Count) · PBKDF2 · bcrypt · scrypt · Argon2"
+  ],
+  "sections": [
+   {
+    "title": "단방향 해시의 한계",
+    "subsections": [
+     {
+      "title": "원인",
+      "items": [
+       "해시 계산이 빨라 대량 대입 가능",
+       "같은 패스워드 → 같은 해시"
+      ]
+     },
+     {
+      "title": "공격",
+      "items": [
+       "무차별 대입",
+       "사전 공격",
+       "미리 계산한 레인보우 테이블 조회"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기법별 메커니즘",
+    "subsections": [
+     {
+      "title": "솔트",
+      "items": [
+       "생성: 난수 솔트+패스워드 해시, DB에 해시·솔트 저장",
+       "검증: 저장 솔트로 재계산 비교"
+      ]
+     },
+     {
+      "title": "페퍼",
+      "items": [
+       "서버 공통 비밀 값 결합",
+       "DB 유출 시에도 해시 대입 불가"
+      ]
+     },
+     {
+      "title": "키 스트레칭",
+      "items": [
+       "다이제스트를 N회 반복 해시",
+       "검증도 같은 횟수 수행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "솔트와 페퍼 비교, 적용 함수",
+    "subsections": [
+     {
+      "title": "비교",
+      "items": [
+       "솔트: DB 저장, 동일 원문의 해시 다양화",
+       "페퍼: 외부 보관, 유출 시 보호"
+      ]
+     },
+     {
+      "title": "적용 함수",
+      "items": [
+       "PBKDF2(PRF, Password, Salt, c, dkLen)",
+       "bcrypt(cost)",
+       "scrypt·Argon2(메모리 하드)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "단방향 해시의 한계",
+   "- 원인",
+   "- 공격",
+   "기법별 메커니즘",
+   "- 솔트",
+   "- 페퍼",
+   "- 키 스트레칭",
+   "솔트와 페퍼 비교, 적용 함수",
+   "- 비교",
+   "- 적용 함수"
+  ],
+  "name": "해시 솔트·페퍼와 키 스트레칭(Hash Salt, Pepper and Key Stretching)",
+  "en": "Hash Salt, Pepper and Key Stretching",
+  "keywords_must": [
+   "무차별 대입 공격(Brute Force)",
+   "레인보우 테이블(Rainbow Table)",
+   "사전 공격",
+   "사용자별 고유 난수",
+   "DB에 해시와 함께 저장",
+   "DB 미저장",
+   "설정 파일·HSM 보관",
+   "반복 횟수(Iteration Count)",
+   "PBKDF2",
+   "bcrypt",
+   "scrypt",
+   "Argon2"
+  ],
+  "keywords_ref": [
+   "HMAC 기반 PRF",
+   "메모리 하드 함수",
+   "해시 검증 절차",
+   "GPU 병렬 공격",
+   "NIST SP 800-63B"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "무차별 대입 공격(Brute Force)",
+   "레인보우 테이블(Rainbow Table)",
+   "사전 공격",
+   "사용자별 고유 난수",
+   "DB에 해시와 함께 저장",
+   "DB 미저장",
+   "설정 파일·HSM 보관",
+   "반복 횟수(Iteration Count)",
+   "PBKDF2",
+   "bcrypt",
+   "scrypt",
+   "Argon2"
+  ]
+ },
+ "SE_012": {
+  "title": "디피-헬만 키 교환(Diffie-Hellman Key Exchange)",
+  "category": "SE > 암호화 > Diffie-Hellman 키 교환",
+  "definition": "공개 채널에서 큰 소수 p와 원시근 g를 공유하고 각자의 비밀 값으로 계산한 공개 값을 교환해, 이산대수 문제의 어려움에 기반한 공통 대칭키를 만드는 키 합의 프로토콜",
+  "keywords": [
+   "공개 파라미터: 큰 소수(p) · 원시근(Primitive Root, g)",
+   "절차: 비밀 값 a·b 선택 · 공개 값 A = g^a mod p 교환 · 공유키 K = g^ab mod p",
+   "안전성: 이산대수 문제(DLP) · 중간자 공격(MITM) 취약 · 인증 부재"
+  ],
+  "sections": [
+   {
+    "title": "키 합의 원리",
+    "subsections": [
+     {
+      "title": "키 합의",
+      "items": [
+       "키를 전송하지 않고 양측이 같은 키 계산"
+      ]
+     },
+     {
+      "title": "기반",
+      "items": [
+       "이산대수 문제",
+       "최초의 공개키 개념(1976)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "교환 절차",
+    "subsections": [
+     {
+      "title": "파라미터 공유",
+      "items": [
+       "소수 p, 원시근 g 공개"
+      ]
+     },
+     {
+      "title": "공개 값 교환",
+      "items": [
+       "A가 g^a mod p, B가 g^b mod p 전송"
+      ]
+     },
+     {
+      "title": "공유키 계산",
+      "items": [
+       "A: B^a mod p",
+       "B: A^b mod p → g^ab mod p"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "취약점과 대응",
+    "subsections": [
+     {
+      "title": "중간자 공격",
+      "items": [
+       "공격자가 양쪽과 각각 키 합의",
+       "상대 인증 수단 없음"
+      ]
+     },
+     {
+      "title": "대응",
+      "items": [
+       "공개 값 전자서명·인증서 결합(STS)",
+       "임시키 ECDHE로 전방향 안전성 확보"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "키 합의 원리",
+   "- 키 합의",
+   "- 기반",
+   "교환 절차",
+   "- 파라미터 공유",
+   "- 공개 값 교환",
+   "- 공유키 계산",
+   "취약점과 대응",
+   "- 중간자 공격",
+   "- 대응"
+  ],
+  "name": "디피-헬만 키 교환(Diffie-Hellman Key Exchange)",
+  "en": "Diffie-Hellman Key Exchange",
+  "keywords_must": [
+   "큰 소수(p)",
+   "원시근(Primitive Root, g)",
+   "비밀 값 a·b 선택",
+   "공개 값 A = g^a mod p 교환",
+   "공유키 K = g^ab mod p",
+   "이산대수 문제(DLP)",
+   "중간자 공격(MITM) 취약",
+   "인증 부재"
+  ],
+  "keywords_ref": [
+   "ECDH(타원곡선 DH)",
+   "DHE·ECDHE 전방향 안전성(PFS)",
+   "1976 Diffie·Hellman",
+   "재전송 공격",
+   "전자서명 결합(STS)",
+   "TLS 1.3 키 교환"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "큰 소수(p)",
+   "원시근(Primitive Root, g)",
+   "비밀 값 a·b 선택",
+   "공개 값 A = g^a mod p 교환",
+   "공유키 K = g^ab mod p",
+   "이산대수 문제(DLP)",
+   "중간자 공격(MITM) 취약",
+   "인증 부재"
+  ]
+ },
+ "SE_015": {
+  "title": "양자 암호 통신(Quantum Cryptography Communication)",
+  "category": "SE > 디지털 보안 > 암호화 > 양자암호기술",
+  "definition": "양자의 중첩·비복제성·측정 시 상태 붕괴 성질을 이용한 양자키분배(QKD)로 도청 불가능한 비밀키를 공유하고, 이 키로 데이터를 암호화해 전송하는 통신 기술",
+  "keywords": [
+   "양자 특성: 중첩(Superposition) · 얽힘(Entanglement) · 복제 불가 정리(No-Cloning Theorem) · 측정 시 상태 붕괴",
+   "구성: QKD(Quantum Key Distribution) · 양자 채널 · 공개 채널(고전 채널) · 암호 장비",
+   "프로토콜: BB84 · E91 · 일회용 패드(OTP)"
+  ],
+  "sections": [
+   {
+    "title": "양자 특성과 보안 원리",
+    "subsections": [
+     {
+      "title": "비복제성",
+      "items": [
+       "미지의 양자 상태는 복사 불가 → 도청 시 흔적"
+      ]
+     },
+     {
+      "title": "측정 붕괴",
+      "items": [
+       "도청자가 측정하면 상태가 바뀌어 오류율 상승",
+       "송수신자가 탐지"
+      ]
+     },
+     {
+      "title": "얽힘·중첩",
+      "items": [
+       "얽힘 기반 E91",
+       "중첩 상태로 0·1 부호화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성과 BB84 동작",
+    "subsections": [
+     {
+      "title": "구성",
+      "items": [
+       "QKD 장치로 키 분배",
+       "암호 장비가 키로 데이터 암복호화",
+       "공개 채널로 기저 비교"
+      ]
+     },
+     {
+      "title": "BB84",
+      "items": [
+       "송신자가 무작위 기저(직교·대각)로 광자 편광 전송",
+       "수신자 무작위 기저 측정",
+       "공개 채널로 기저 일치분만 키로 채택",
+       "일부 비교로 도청 확인"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용",
+    "subsections": [
+     {
+      "title": "VPN 연계",
+      "items": [
+       "IPSec ESP 암호키를 QKD 키로 갱신",
+       "TLS 세션키 대체"
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "전송 거리·속도 한계",
+       "고가 장비",
+       "신뢰 노드 보안, PQC와 병행"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "양자 특성과 보안 원리",
+   "- 비복제성",
+   "- 측정 붕괴",
+   "- 얽힘·중첩",
+   "구성과 BB84 동작",
+   "- 구성",
+   "- BB84",
+   "적용",
+   "- VPN 연계",
+   "- 과제"
+  ],
+  "name": "양자 암호 통신(Quantum Cryptography Communication)",
+  "en": "Quantum Cryptography Communication",
+  "keywords_must": [
+   "중첩(Superposition)",
+   "얽힘(Entanglement)",
+   "복제 불가 정리(No-Cloning Theorem)",
+   "측정 시 상태 붕괴",
+   "QKD(Quantum Key Distribution)",
+   "양자 채널",
+   "공개 채널(고전 채널)",
+   "암호 장비",
+   "BB84",
+   "E91",
+   "일회용 패드(OTP)"
+  ],
+  "keywords_ref": [
+   "편광·위상 부호화",
+   "1984 Bennett·Brassard",
+   "도청 탐지(오류율 QBER)",
+   "신뢰 노드 중계",
+   "양자 난수 발생기(QRNG)",
+   "IPSec·TLS 키 대체",
+   "거리 제한(~100km급)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "중첩(Superposition)",
+   "얽힘(Entanglement)",
+   "복제 불가 정리(No-Cloning Theorem)",
+   "측정 시 상태 붕괴",
+   "QKD(Quantum Key Distribution)",
+   "양자 채널",
+   "공개 채널(고전 채널)",
+   "암호 장비",
+   "BB84",
+   "E91",
+   "일회용 패드(OTP)"
+  ],
+  "gloss": {
+   "OTP": "One-Time Password"
+  }
+ },
+ "SE_016_00": {
+  "title": "양자내성암호(PQC, Post-Quantum Cryptography)",
+  "category": "SE > 보안 > 암호화 > 양자내성암호화",
+  "definition": "쇼어 알고리즘을 실행하는 양자 컴퓨터로도 풀기 어려운 수학 난제에 기반해, 기존 고전 컴퓨터 환경에서 동작하도록 설계한 차세대 공개키 암호",
+  "keywords": [
+   "유형: 격자 기반(Lattice) · 코드 기반(Code) · 다변수 기반(Multivariate) · 해시 기반 서명(Hash-based) · 아이소제니 기반(Isogeny)",
+   "양자 위협: 쇼어(Shor) 알고리즘 · 그로버(Grover) 알고리즘",
+   "NIST 표준: ML-KEM(FIPS 203, Kyber) · ML-DSA(FIPS 204, Dilithium) · SLH-DSA(FIPS 205, SPHINCS+)"
+  ],
+  "sections": [
+   {
+    "title": "양자 알고리즘의 영향",
+    "subsections": [
+     {
+      "title": "쇼어",
+      "items": [
+       "소인수분해·이산대수 다항 시간 해결 → RSA·ECC·DH 붕괴"
+      ]
+     },
+     {
+      "title": "그로버",
+      "items": [
+       "전수조사 제곱근 가속 → 대칭키·해시 길이 2배로 대응(AES-256)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형과 알고리즘",
+    "subsections": [
+     {
+      "title": "격자",
+      "items": [
+       "LWE·NTRU 난제",
+       "키·속도 균형, 동형암호 응용",
+       "Kyber·Dilithium·Falcon"
+      ]
+     },
+     {
+      "title": "코드",
+      "items": [
+       "오류 정정 부호 복호 난제",
+       "빠름, 큰 공개키",
+       "Classic McEliece·HQC"
+      ]
+     },
+     {
+      "title": "다변수·해시·아이소제니",
+      "items": [
+       "다변수 이차 방정식(UOV)",
+       "해시 충돌 저항(SPHINCS+, 큰 서명)",
+       "타원곡선 동종사상(작은 키, 느림, SIDH 해독)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "표준화와 전환",
+    "subsections": [
+     {
+      "title": "NIST",
+      "items": [
+       "2024 FIPS 203·204·205 제정",
+       "2025 HQC 추가"
+      ]
+     },
+     {
+      "title": "국내",
+      "items": [
+       "KpqC 공모전 최종 4종 선정",
+       "국가 PQC 전환 로드맵"
+      ]
+     },
+     {
+      "title": "전환 전략",
+      "items": [
+       "하이브리드(고전+PQC) 키 교환",
+       "암호 자산 목록화, 암호 민첩성 확보"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "양자 알고리즘의 영향",
+   "- 쇼어",
+   "- 그로버",
+   "유형과 알고리즘",
+   "- 격자",
+   "- 코드",
+   "- 다변수·해시·아이소제니",
+   "표준화와 전환",
+   "- NIST",
+   "- 국내",
+   "- 전환 전략"
+  ],
+  "name": "양자내성암호(PQC, Post-Quantum Cryptography)",
+  "en": "Post-Quantum Cryptography",
+  "keywords_must": [
+   "격자 기반(Lattice)",
+   "코드 기반(Code)",
+   "다변수 기반(Multivariate)",
+   "해시 기반 서명(Hash-based)",
+   "아이소제니 기반(Isogeny)",
+   "쇼어(Shor) 알고리즘",
+   "그로버(Grover) 알고리즘",
+   "ML-KEM(FIPS 203, Kyber)",
+   "ML-DSA(FIPS 204, Dilithium)",
+   "SLH-DSA(FIPS 205, SPHINCS+)"
+  ],
+  "keywords_ref": [
+   "FN-DSA(Falcon)",
+   "HQC(2025 추가 선정)",
+   "LWE(Learning With Errors)",
+   "McEliece",
+   "SIDH·Rainbow 해독(2022)",
+   "KpqC(HAETAE·AIMer·SMAUG-T·NTRU+)",
+   "암호 민첩성(Crypto Agility)",
+   "HNDL 공격"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "격자 기반(Lattice)",
+   "코드 기반(Code)",
+   "다변수 기반(Multivariate)",
+   "해시 기반 서명(Hash-based)",
+   "아이소제니 기반(Isogeny)",
+   "쇼어(Shor) 알고리즘",
+   "그로버(Grover) 알고리즘",
+   "ML-KEM(FIPS 203, Kyber)",
+   "ML-DSA(FIPS 204, Dilithium)",
+   "SLH-DSA(FIPS 205, SPHINCS+)"
+  ],
+  "dueum": "다코격아해"
+ },
+ "SE_016_01": {
+  "title": "큐비트(Qubit)",
+  "category": "SE > 양자암호",
+  "definition": "0과 1의 두 기저 상태를 중첩한 상태로 존재할 수 있는 양자 정보의 최소 단위로, 측정 전까지 확률 진폭으로 표현되고 측정 시 하나의 값으로 확정된다",
+  "keywords": [
+   "상태 표현: ∣ψ⟩ = α∣0⟩ + β∣1⟩ · 확률 진폭 정규화(∣α∣² + ∣β∣² = 1) · 블로흐 구(Bloch Sphere)",
+   "특성: 중첩(Superposition) · 얽힘(Entanglement) · 측정 시 붕괴 · 결어긋남(Decoherence)",
+   "병렬성: n큐비트 = 2^n 상태 동시 표현 · 양자 병렬성"
+  ],
+  "sections": [
+   {
+    "title": "상태 표현",
+    "subsections": [
+     {
+      "title": "디랙 표기",
+      "items": [
+       "α, β는 복소 확률 진폭",
+       "측정 시 |α|² 확률로 0, |β|² 확률로 1"
+      ]
+     },
+     {
+      "title": "블로흐 구",
+      "items": [
+       "북극 |0⟩, 남극 |1⟩",
+       "극각 θ·방위각 φ로 한 점 표현"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "중첩과 얽힘",
+    "subsections": [
+     {
+      "title": "중첩",
+      "items": [
+       "2큐비트는 |00⟩·|01⟩·|10⟩·|11⟩ 동시 표현"
+      ]
+     },
+     {
+      "title": "얽힘",
+      "items": [
+       "한 큐비트 측정 결과가 거리와 무관하게 다른 큐비트 상태 결정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "고전 비트와 비교",
+    "subsections": [
+     {
+      "title": "상태",
+      "items": [
+       "비트: 0 또는 1",
+       "큐비트: 0·1 중첩, 측정 시 확정"
+      ]
+     },
+     {
+      "title": "연산·구현",
+      "items": [
+       "비트: 순차 논리 연산, 전기 회로",
+       "큐비트: 유니터리 게이트 병렬 연산, 초전도·이온 트랩"
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "결어긋남·잡음으로 오류율 높음",
+       "극저온·무진동 환경"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "상태 표현",
+   "- 디랙 표기",
+   "- 블로흐 구",
+   "중첩과 얽힘",
+   "- 중첩",
+   "- 얽힘",
+   "고전 비트와 비교",
+   "- 상태",
+   "- 연산·구현",
+   "- 과제"
+  ],
+  "name": "큐비트(Qubit)",
+  "en": "Quantum Bit",
+  "keywords_must": [
+   "∣ψ⟩ = α∣0⟩ + β∣1⟩",
+   "확률 진폭 정규화(∣α∣² + ∣β∣² = 1)",
+   "블로흐 구(Bloch Sphere)",
+   "중첩(Superposition)",
+   "얽힘(Entanglement)",
+   "측정 시 붕괴",
+   "결어긋남(Decoherence)",
+   "n큐비트 = 2^n 상태 동시 표현",
+   "양자 병렬성"
+  ],
+  "keywords_ref": [
+   "브라-켓(Bra-ket) 표기",
+   "바닥·들뜬 상태",
+   "초전도 큐비트",
+   "이온 트랩",
+   "논리 큐비트 vs 물리 큐비트",
+   "양자 오류 정정",
+   "극저온 환경"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "∣ψ⟩ = α∣0⟩ + β∣1⟩",
+   "확률 진폭 정규화(∣α∣² + ∣β∣² = 1)",
+   "블로흐 구(Bloch Sphere)",
+   "중첩(Superposition)",
+   "얽힘(Entanglement)",
+   "측정 시 붕괴",
+   "결어긋남(Decoherence)",
+   "n큐비트 = 2^n 상태 동시 표현",
+   "양자 병렬성"
+  ]
+ },
+ "SE_016_02": {
+  "title": "양자 컴퓨터(Quantum Computer)",
+  "category": "SE > SM > 양자암호",
+  "definition": "큐비트의 중첩·얽힘·간섭을 이용해 여러 상태를 동시에 연산하는 컴퓨터로, 소인수분해·최적화·양자 시뮬레이션 등에서 고전 컴퓨터보다 지수적 속도 향상을 기대한다",
+  "keywords": [
+   "핵심 원리: 큐비트(Qubit) · 중첩·얽힘·간섭 · 양자 게이트(Quantum Gate)",
+   "구현 방식: 초전도(Superconducting) · 이온 트랩(Ion Trap) · 광자(Photonic) · 중성 원자",
+   "핵심 개념: 양자 우월성(Quantum Supremacy) · 결어긋남(Decoherence) · NISQ(Noisy Intermediate-Scale Quantum)"
+  ],
+  "sections": [
+   {
+    "title": "고전 컴퓨터와 비교",
+    "subsections": [
+     {
+      "title": "정보 표현",
+      "items": [
+       "비트(0 또는 1) vs 큐비트(0·1 중첩)"
+      ]
+     },
+     {
+      "title": "연산",
+      "items": [
+       "순차 논리 연산 vs 행렬(유니터리) 연산으로 2^n 상태 동시 처리"
+      ]
+     },
+     {
+      "title": "오류",
+      "items": [
+       "고전은 오류 정정 용이",
+       "양자는 잡음에 취약, 정정 어려움"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "양자 우월성과 결어긋남",
+    "subsections": [
+     {
+      "title": "양자 우월성",
+      "items": [
+       "2019 구글 시커모어(53큐비트)가 무작위 회로 샘플링을 200초에 수행했다고 발표",
+       "IBM은 고전 2.5일 반박"
+      ]
+     },
+     {
+      "title": "결어긋남",
+      "items": [
+       "외부 환경과 상호작용해 중첩 상태 소실",
+       "결맞음 시간 확보가 핵심"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구현과 보안 영향",
+    "subsections": [
+     {
+      "title": "구현",
+      "items": [
+       "초전도(IBM·구글)",
+       "이온 트랩(IonQ)",
+       "극저온 환경 요구"
+      ]
+     },
+     {
+      "title": "보안 영향",
+      "items": [
+       "쇼어로 공개키 암호 위협 → PQC 전환",
+       "그로버로 대칭키 길이 확대"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "고전 컴퓨터와 비교",
+   "- 정보 표현",
+   "- 연산",
+   "- 오류",
+   "양자 우월성과 결어긋남",
+   "- 양자 우월성",
+   "- 결어긋남",
+   "구현과 보안 영향",
+   "- 구현",
+   "- 보안 영향"
+  ],
+  "name": "양자 컴퓨터(Quantum Computer)",
+  "en": "Quantum Computer",
+  "keywords_must": [
+   "큐비트(Qubit)",
+   "중첩·얽힘·간섭",
+   "양자 게이트(Quantum Gate)",
+   "초전도(Superconducting)",
+   "이온 트랩(Ion Trap)",
+   "광자(Photonic)",
+   "중성 원자",
+   "양자 우월성(Quantum Supremacy)",
+   "결어긋남(Decoherence)",
+   "NISQ(Noisy Intermediate-Scale Quantum)"
+  ],
+  "keywords_ref": [
+   "구글 시커모어 53큐비트(2019)",
+   "구글 윌로우(2024)",
+   "쇼어·그로버 알고리즘",
+   "양자 오류 정정",
+   "블로흐 구",
+   "무어의 법칙 한계"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "큐비트(Qubit)",
+   "중첩·얽힘·간섭",
+   "양자 게이트(Quantum Gate)",
+   "초전도(Superconducting)",
+   "이온 트랩(Ion Trap)",
+   "광자(Photonic)",
+   "중성 원자",
+   "양자 우월성(Quantum Supremacy)",
+   "결어긋남(Decoherence)",
+   "NISQ(Noisy Intermediate-Scale Quantum)"
+  ]
+ },
+ "SE_016_03": {
+  "title": "양자 센서(Quantum Sensor)",
+  "category": "SE > 정보보안",
+  "definition": "원자·광자 등의 양자 상태가 외부 물리량에 따라 미세하게 변하는 현상(위상 변화)을 측정해 고전 센서의 한계를 넘는 초고감도·초고분해능 측정을 구현하는 센서",
+  "keywords": [
+   "측정 단계: 초기화(Initialization) · 상호작용(Interaction) · 측정(Measurement) · 추정(Estimation)",
+   "센서 유형: 양자 중력 센서 · 양자 항법 센서 · 양자 시간 센서(원자시계) · 양자 전기장 센서 · 양자 자기장 센서 · 양자 광학 센서"
+  ],
+  "sections": [
+   {
+    "title": "측정 원리",
+    "subsections": [
+     {
+      "title": "위상 변화",
+      "items": [
+       "대상과 상호작용으로 생긴 양자 위상 변화 측정"
+      ]
+     },
+     {
+      "title": "원자 단위",
+      "items": [
+       "개별 원자·광자 상태로 정밀 측정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "측정 단계와 센서 유형",
+    "subsections": [
+     {
+      "title": "단계",
+      "items": [
+       "양자계 초기 상태 준비 → 대상과 상호작용 → 상태 변화 측정 → 추정자로 실제 값 추정"
+      ]
+     },
+     {
+      "title": "유형·적용",
+      "items": [
+       "중력: 지하 구조·자원 탐사",
+       "항법: GPS 없는 관성항법",
+       "시간: 칩 원자시계",
+       "전기장: 리드버그 원자, 6G·THz",
+       "자기장: 뇌·세포 이미징",
+       "광학: 양자 라이다"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "산업 적용",
+    "subsections": [
+     {
+      "title": "제조",
+      "items": [
+       "자기장 센서로 2차전지 불량 검출",
+       "원거리 가스 누출 감지"
+      ]
+     },
+     {
+      "title": "국방·의료",
+      "items": [
+       "잠수함 탐지·정밀 항법",
+       "나노 MRI"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "측정 원리",
+   "- 위상 변화",
+   "- 원자 단위",
+   "측정 단계와 센서 유형",
+   "- 단계",
+   "- 유형·적용",
+   "산업 적용",
+   "- 제조",
+   "- 국방·의료"
+  ],
+  "name": "양자 센서(Quantum Sensor)",
+  "en": "Quantum Sensor",
+  "keywords_must": [
+   "초기화(Initialization)",
+   "상호작용(Interaction)",
+   "측정(Measurement)",
+   "추정(Estimation)",
+   "양자 중력 센서",
+   "양자 항법 센서",
+   "양자 시간 센서(원자시계)",
+   "양자 전기장 센서",
+   "양자 자기장 센서",
+   "양자 광학 센서"
+  ],
+  "keywords_ref": [
+   "단광자·광자 수 분해·호모다인 검출",
+   "리드버그 원자",
+   "다이아몬드 NV 센터",
+   "원자 간섭계",
+   "양자 라이다·레이더",
+   "표준 양자 한계(SQL)",
+   "GPS 대체 항법"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "초기화(Initialization)",
+   "상호작용(Interaction)",
+   "측정(Measurement)",
+   "추정(Estimation)",
+   "양자 중력 센서",
+   "양자 항법 센서",
+   "양자 시간 센서(원자시계)",
+   "양자 전기장 센서",
+   "양자 자기장 센서",
+   "양자 광학 센서"
+  ]
+ },
+ "SE_018": {
+  "title": "암호화 원리(Principles of Encryption)",
+  "category": "SE > 암호화 > 암호화 원리",
+  "definition": "평문을 암호 알고리즘과 키로 암호문으로 바꾸기 위해 사용하는 기본 변환 방식으로, 대체·전치·블록화·압축·확장과 섀넌의 혼돈·확산 원리로 평문·키와 암호문의 관계를 숨긴다",
+  "keywords": [
+   "변환 기법: 대체(Substitution) · 전치(Transposition) · 블록화(Blocking) · 압축(Compaction) · 확장(Expansion)",
+   "섀넌 원리: 혼돈(Confusion) · 확산(Diffusion)",
+   "구성 요소: 평문 · 암호문 · 키 · 암호 알고리즘"
+  ],
+  "sections": [
+   {
+    "title": "변환 기법",
+    "subsections": [
+     {
+      "title": "대체·전치",
+      "items": [
+       "대체: 문자를 다른 문자로 바꿈(시저 암호)",
+       "전치: 문자 위치를 재배열"
+      ]
+     },
+     {
+      "title": "블록화·압축·확장",
+      "items": [
+       "행렬로 재배치해 블록 구성",
+       "일부 문자 삭제로 분리",
+       "무의미 문자 삽입"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "혼돈과 확산",
+    "subsections": [
+     {
+      "title": "혼돈",
+      "items": [
+       "키와 암호문의 관계를 복잡하게 함",
+       "S-box(치환)"
+      ]
+     },
+     {
+      "title": "확산",
+      "items": [
+       "평문 한 비트 변화가 암호문 전체로 퍼짐",
+       "P-box(순열)"
+      ]
+     },
+     {
+      "title": "곱 암호",
+      "items": [
+       "혼돈·확산 라운드 반복",
+       "DES·AES 설계 기반"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성과 안전성 전제",
+    "subsections": [
+     {
+      "title": "구성",
+      "items": [
+       "평문 → 암호화(키) → 암호문 → 복호화(키) → 평문"
+      ]
+     },
+     {
+      "title": "케르크호프스 원리",
+      "items": [
+       "알고리즘은 공개, 안전성은 키 비밀에만 의존"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "변환 기법",
+   "- 대체·전치",
+   "- 블록화·압축·확장",
+   "혼돈과 확산",
+   "- 혼돈",
+   "- 확산",
+   "- 곱 암호",
+   "구성과 안전성 전제",
+   "- 구성",
+   "- 케르크호프스 원리"
+  ],
+  "name": "암호화 원리(Principles of Encryption)",
+  "en": "Principles of Encryption",
+  "keywords_must": [
+   "대체(Substitution)",
+   "전치(Transposition)",
+   "블록화(Blocking)",
+   "압축(Compaction)",
+   "확장(Expansion)",
+   "혼돈(Confusion)",
+   "확산(Diffusion)",
+   "평문",
+   "암호문",
+   "키",
+   "암호 알고리즘"
+  ],
+  "keywords_ref": [
+   "암호 시스템(Cryptosystem)",
+   "곱 암호(Product Cipher)",
+   "S-box·P-box",
+   "케르크호프스 원리",
+   "시저 암호",
+   "눈사태 효과"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "대체(Substitution)",
+   "전치(Transposition)",
+   "블록화(Blocking)",
+   "압축(Compaction)",
+   "확장(Expansion)",
+   "혼돈(Confusion)",
+   "확산(Diffusion)",
+   "평문",
+   "암호문",
+   "키",
+   "암호 알고리즘"
+  ]
+ },
+ "SE_020": {
+  "title": "이중 서명(Dual Signature)",
+  "category": "SE > 암호화 > 이중서명(Dual Signature)",
+  "definition": "SET(Secure Electronic Transaction)에서 주문 정보(OI)와 지불 정보(PI)를 각각 해시한 뒤 연결해 다시 해시하고 고객 개인키로 서명하여, 상점은 결제 정보를, 지불 게이트웨이는 구매 내역을 보지 못한 채 두 정보의 연관성을 검증하게 하는 서명 기법",
+  "keywords": [
+   "대상 정보: 주문 정보(OI, Order Information) · 지불 정보(PI, Payment Information)",
+   "생성: 해시 H(OI)·H(PI) · 연결 해시 H(H(OI)∥H(PI)) · 고객 개인키 서명",
+   "검증 주체: 상점(Merchant) · 지불 게이트웨이(Payment Gateway)",
+   "연계 기술: 전자봉투(Digital Envelope) · PKI 인증서"
+  ],
+  "sections": [
+   {
+    "title": "필요성과 특징",
+    "subsections": [
+     {
+      "title": "정보 분리",
+      "items": [
+       "상점에 카드 정보 비공개",
+       "은행에 구매 내역 비공개"
+      ]
+     },
+     {
+      "title": "연결 검증",
+      "items": [
+       "결제 보안과 프라이버시 동시 확보",
+       "두 정보가 같은 거래임을 연결"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "생성 절차",
+    "subsections": [
+     {
+      "title": "다이제스트",
+      "items": [
+       "OI·PI를 각각 해시해 OIMD·PIMD 생성"
+      ]
+     },
+     {
+      "title": "서명 생성",
+      "items": [
+       "OIMD∥PIMD를 해시한 POMD를 고객 개인키로 암호화"
+      ]
+     },
+     {
+      "title": "전송",
+      "items": [
+       "상점에 OI+PIMD+DS",
+       "PI는 전자봉투로 감싸 지불 게이트웨이용으로 전달"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "검증 절차",
+    "subsections": [
+     {
+      "title": "상점",
+      "items": [
+       "H(OI)와 받은 PIMD로 POMD 재계산",
+       "고객 공개키로 DS 복호값과 비교"
+      ]
+     },
+     {
+      "title": "지불 게이트웨이",
+      "items": [
+       "전자봉투 개봉 → PI 복호",
+       "H(PI)와 OIMD로 POMD 재계산 후 비교"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "필요성과 특징",
+   "- 정보 분리",
+   "- 연결 검증",
+   "생성 절차",
+   "- 다이제스트",
+   "- 서명 생성",
+   "- 전송",
+   "검증 절차",
+   "- 상점",
+   "- 지불 게이트웨이"
+  ],
+  "name": "이중 서명(Dual Signature)",
+  "en": "Dual Signature",
+  "keywords_must": [
+   "주문 정보(OI, Order Information)",
+   "지불 정보(PI, Payment Information)",
+   "해시 H(OI)·H(PI)",
+   "연결 해시 H(H(OI)∥H(PI))",
+   "고객 개인키 서명",
+   "상점(Merchant)",
+   "지불 게이트웨이(Payment Gateway)",
+   "전자봉투(Digital Envelope)",
+   "PKI 인증서"
+  ],
+  "keywords_ref": [
+   "PIMD·OIMD",
+   "SHA 해시",
+   "RSA 서명",
+   "대칭 세션키",
+   "프라이버시 보호",
+   "SET 1997 VISA·MasterCard"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "주문 정보(OI, Order Information)",
+   "지불 정보(PI, Payment Information)",
+   "해시 H(OI)·H(PI)",
+   "연결 해시 H(H(OI)∥H(PI))",
+   "고객 개인키 서명",
+   "상점(Merchant)",
+   "지불 게이트웨이(Payment Gateway)",
+   "전자봉투(Digital Envelope)",
+   "PKI 인증서"
+  ]
+ },
+ "SE_021": {
+  "title": "전자서명(Digital Signature)",
+  "category": "SE > 암호화 > 전자서명 / 디지털 서명",
+  "definition": "전자문서의 해시값을 서명자 개인키로 암호화해 문서에 결합한 정보로, 서명자 공개키로 검증하여 작성자 신원과 문서 무결성을 증명하고 서명 사실의 부인을 막는다",
+  "keywords": [
+   "요건: 위조 불가(Unforgeable) · 서명자 인증(Authentication) · 부인방지(Non-repudiation) · 변경 불가(Unalterable) · 재사용 불가(Not Reusable)",
+   "생성·검증: 메시지 다이제스트 · 송신자 개인키 서명 · 송신자 공개키 검증",
+   "알고리즘: RSA-PSS · DSA · ECDSA"
+  ],
+  "sections": [
+   {
+    "title": "요건",
+    "subsections": [
+     {
+      "title": "핵심 요건",
+      "items": [
+       "위조 불가",
+       "누구나 서명자 확인",
+       "서명 사실 부인 불가"
+      ]
+     },
+     {
+      "title": "부가 요건",
+      "items": [
+       "서명 후 문서 변경 불가",
+       "다른 문서에 서명 재사용 불가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "생성과 검증",
+    "subsections": [
+     {
+      "title": "생성",
+      "items": [
+       "원문 해시 → 개인키로 다이제스트 암호화 → 원문과 함께 전송"
+      ]
+     },
+     {
+      "title": "검증",
+      "items": [
+       "공개키로 서명 복호 → 수신 원문 해시와 비교, 일치하면 유효"
+      ]
+     },
+     {
+      "title": "전자봉투 결합",
+      "items": [
+       "원문·서명을 세션키로 암호화",
+       "세션키는 수신자 공개키로 암호화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": "PKI·TLS",
+      "items": [
+       "인증기관이 서버 공개키에 서명한 인증서로 서버 검증"
+      ]
+     },
+     {
+      "title": "임베디드",
+      "items": [
+       "부트로더·커널 이미지 서명 후 부팅 시 검증(Secure Boot)"
+      ]
+     },
+     {
+      "title": "법제도",
+      "items": [
+       "전자서명법 개정으로 다양한 민간 인증서 효력 인정"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "요건",
+   "- 핵심 요건",
+   "- 부가 요건",
+   "생성과 검증",
+   "- 생성",
+   "- 검증",
+   "- 전자봉투 결합",
+   "활용",
+   "- PKI·TLS",
+   "- 임베디드",
+   "- 법제도"
+  ],
+  "name": "전자서명(Digital Signature)",
+  "en": "Digital Signature",
+  "keywords_must": [
+   "위조 불가(Unforgeable)",
+   "서명자 인증(Authentication)",
+   "부인방지(Non-repudiation)",
+   "변경 불가(Unalterable)",
+   "재사용 불가(Not Reusable)",
+   "메시지 다이제스트",
+   "송신자 개인키 서명",
+   "송신자 공개키 검증",
+   "RSA-PSS",
+   "DSA",
+   "ECDSA"
+  ],
+  "keywords_ref": [
+   "EdDSA·KCDSA",
+   "전자봉투",
+   "PKI 인증서",
+   "전자서명법(2020 공인인증서 폐지)",
+   "코드 서명",
+   "보안 부팅(Secure Boot)",
+   "ML-DSA(양자내성)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "위조 불가(Unforgeable)",
+   "서명자 인증(Authentication)",
+   "부인방지(Non-repudiation)",
+   "변경 불가(Unalterable)",
+   "재사용 불가(Not Reusable)",
+   "메시지 다이제스트",
+   "송신자 개인키 서명",
+   "송신자 공개키 검증",
+   "RSA-PSS",
+   "DSA",
+   "ECDSA"
+  ]
+ },
+ "SE_023_01": {
+  "title": "암호 해독 공격 기법(Cryptanalytic Attacks)",
+  "category": "SE > SM > 신토픽",
+  "definition": "공격자가 얻을 수 있는 정보(암호문, 평문-암호문 쌍, 선택한 평문이나 암호문)에 따라 키나 평문을 찾아내는 암호 분석 공격 모델로, 케르크호프스 원리를 전제로 한다",
+  "keywords": [
+   "전제: 케르크호프스 원리(Kerckhoffs's Principle) · 알고리즘 공개·키만 비밀",
+   "수동적 공격: 암호문 단독 공격(COA, Ciphertext-Only Attack) · 알려진 평문 공격(KPA, Known-Plaintext Attack)",
+   "능동적 공격: 선택 평문 공격(CPA, Chosen-Plaintext Attack) · 선택 암호문 공격(CCA, Chosen-Ciphertext Attack)",
+   "분석 기법: 빈도 분석 · 차분 분석(Differential) · 선형 분석(Linear) · 무차별 대입(Brute Force)"
+  ],
+  "sections": [
+   {
+    "title": "케르크호프스 원리",
+    "subsections": [
+     {
+      "title": "내용",
+      "items": [
+       "키를 제외한 모든 것이 공개돼도 안전해야 함"
+      ]
+     },
+     {
+      "title": "의의",
+      "items": [
+       "안전성의 중심이 알고리즘 은닉에서 키 관리로 이동"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "수동적 공격",
+    "subsections": [
+     {
+      "title": "암호문 단독",
+      "items": [
+       "암호문만 보유",
+       "빈도 분석·전수 조사",
+       "공격자에게 가장 어려움"
+      ]
+     },
+     {
+      "title": "알려진 평문",
+      "items": [
+       "일부 평문(크립)과 대응 암호문 보유",
+       "선형 분석"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "능동적 공격",
+    "subsections": [
+     {
+      "title": "선택 평문",
+      "items": [
+       "공격자가 고른 평문의 암호문 획득",
+       "차분 분석",
+       "공개키 암호는 기본 노출"
+      ]
+     },
+     {
+      "title": "선택 암호문",
+      "items": [
+       "고른 암호문의 복호 결과 획득",
+       "패딩 오라클",
+       "IND-CCA2 안전성 요구"
+      ]
+     },
+     {
+      "title": "공격 강도 순서",
+      "items": [
+       "COA < KPA < CPA < CCA"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "케르크호프스 원리",
+   "- 내용",
+   "- 의의",
+   "수동적 공격",
+   "- 암호문 단독",
+   "- 알려진 평문",
+   "능동적 공격",
+   "- 선택 평문",
+   "- 선택 암호문",
+   "- 공격 강도 순서"
+  ],
+  "name": "암호 해독 공격 기법(Cryptanalytic Attacks)",
+  "en": "Cryptanalytic Attack Models",
+  "keywords_must": [
+   "케르크호프스 원리(Kerckhoffs's Principle)",
+   "알고리즘 공개·키만 비밀",
+   "암호문 단독 공격(COA, Ciphertext-Only Attack)",
+   "알려진 평문 공격(KPA, Known-Plaintext Attack)",
+   "선택 평문 공격(CPA, Chosen-Plaintext Attack)",
+   "선택 암호문 공격(CCA, Chosen-Ciphertext Attack)",
+   "빈도 분석",
+   "차분 분석(Differential)",
+   "선형 분석(Linear)",
+   "무차별 대입(Brute Force)"
+  ],
+  "keywords_ref": [
+   "크립(Crib)",
+   "적응적 선택 암호문(CCA2)",
+   "IND-CPA·IND-CCA 안전성",
+   "부채널 공격",
+   "패딩 오라클 공격"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "케르크호프스 원리(Kerckhoffs's Principle)",
+   "알고리즘 공개·키만 비밀",
+   "암호문 단독 공격(COA, Ciphertext-Only Attack)",
+   "알려진 평문 공격(KPA, Known-Plaintext Attack)",
+   "선택 평문 공격(CPA, Chosen-Plaintext Attack)",
+   "선택 암호문 공격(CCA, Chosen-Ciphertext Attack)",
+   "빈도 분석",
+   "차분 분석(Differential)",
+   "선형 분석(Linear)",
+   "무차별 대입(Brute Force)"
+  ]
+ },
+ "SE_024": {
+  "title": "스니핑(Sniffing)",
+  "category": "SE > Hacking(해킹) > Sniffing",
+  "definition": "네트워크를 지나는 다른 호스트의 패킷을 NIC 무차별 모드 등으로 몰래 수집해 계정·데이터를 엿보는 수동적 도청 공격",
+  "keywords": [
+   "허브 환경: 무차별 모드(Promiscuous Mode) · 정상 모드(Normal Mode)",
+   "스위치 환경 기법: 스위치 재밍(Switch Jamming, MAC Flooding) · ARP 리다이렉트(ARP Redirect) · ICMP 리다이렉트(ICMP Redirect) · ICMP 라우터 광고(Router Advertisement)",
+   "취약 프로토콜: Telnet·rlogin · HTTP · FTP · SNMPv1·v2c",
+   "대응: TLS·SSH 암호화 · 포트 보안·Dynamic ARP Inspection"
+  ],
+  "sections": [
+   {
+    "title": "원리",
+    "subsections": [
+     {
+      "title": "도청 대상",
+      "items": [
+       "자신이 목적지가 아닌 패킷까지 수집하는 도청"
+      ]
+     },
+     {
+      "title": "무차별 모드",
+      "items": [
+       "목적지 MAC과 무관하게 모든 프레임 수신"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "환경별 공격",
+    "subsections": [
+     {
+      "title": "허브",
+      "items": [
+       "모든 포트로 전달되어 무차별 모드만으로 도청"
+      ]
+     },
+     {
+      "title": "스위치",
+      "items": [
+       "스위치 재밍: 가짜 MAC으로 CAM 테이블을 채워 허브처럼 동작",
+       "ARP 리다이렉트: 게이트웨이로 위장한 ARP Reply",
+       "ICMP 리다이렉트·라우터 광고: 공격자를 경유 라우터로 인식시킴"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "취약 프로토콜과 대응",
+    "subsections": [
+     {
+      "title": "취약",
+      "items": [
+       "평문 인증(Telnet·rlogin·FTP)",
+       "HTTP Basic 인증",
+       "SNMPv1·v2c 커뮤니티 문자열"
+      ]
+     },
+     {
+      "title": "대응",
+      "items": [
+       "HTTPS·SSH·VPN 암호화",
+       "메일 PGP·S/MIME",
+       "포트 보안·DAI·정적 ARP",
+       "무차별 모드 NIC 탐지"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "원리",
+   "- 도청 대상",
+   "- 무차별 모드",
+   "환경별 공격",
+   "- 허브",
+   "- 스위치",
+   "취약 프로토콜과 대응",
+   "- 취약",
+   "- 대응"
+  ],
+  "name": "스니핑(Sniffing)",
+  "en": "Network Sniffing",
+  "keywords_must": [
+   "무차별 모드(Promiscuous Mode)",
+   "정상 모드(Normal Mode)",
+   "스위치 재밍(Switch Jamming, MAC Flooding)",
+   "ARP 리다이렉트(ARP Redirect)",
+   "ICMP 리다이렉트(ICMP Redirect)",
+   "ICMP 라우터 광고(Router Advertisement)",
+   "Telnet·rlogin",
+   "HTTP",
+   "FTP",
+   "SNMPv1·v2c",
+   "TLS·SSH 암호화",
+   "포트 보안·Dynamic ARP Inspection"
+  ],
+  "keywords_ref": [
+   "tcpdump·Wireshark",
+   "스니퍼 탐지(ARP ping·DNS 역질의)",
+   "SPAN 포트 미러링",
+   "PGP·S/MIME",
+   "VPN",
+   "정적 ARP 테이블"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "무차별 모드(Promiscuous Mode)",
+   "정상 모드(Normal Mode)",
+   "스위치 재밍(Switch Jamming, MAC Flooding)",
+   "ARP 리다이렉트(ARP Redirect)",
+   "ICMP 리다이렉트(ICMP Redirect)",
+   "ICMP 라우터 광고(Router Advertisement)",
+   "Telnet·rlogin",
+   "HTTP",
+   "FTP",
+   "SNMPv1·v2c",
+   "TLS·SSH 암호화",
+   "포트 보안·Dynamic ARP Inspection"
+  ]
+ },
+ "SE_026": {
+  "title": "IP 스푸핑(IP Spoofing)",
+  "category": "SE > 보안 > 해킹 > IP Spoofing",
+  "definition": "IP 헤더의 출발지 주소를 신뢰 호스트 주소로 위조해 IP 기반 인증을 우회하거나 출처를 숨기는 공격으로, DoS·세션 하이재킹의 기반이 된다",
+  "keywords": [
+   "원격 공격: 출발지 IP 위조 SYN · 신뢰 호스트 DoS로 RST 차단 · 순서 번호 예측(Blind Spoofing)",
+   "로컬 공격: ARP 캐시 포이즈닝 연계 · 응답 가로채기",
+   "취약 서비스: rsh·rlogin(.rhosts 트러스트) · IP 기반 접근 제어",
+   "대응: 진입 필터링(Ingress Filtering, BCP 38) · 출구 필터링(Egress Filtering) · uRPF(Unicast Reverse Path Forwarding)"
+  ],
+  "sections": [
+   {
+    "title": "원리",
+    "subsections": [
+     {
+      "title": "취약점",
+      "items": [
+       "IP는 출발지 주소를 검증하지 않음",
+       "주소 기반 신뢰 관계 악용"
+      ]
+     },
+     {
+      "title": "결과",
+      "items": [
+       "트러스트 우회",
+       "DDoS 출처 은닉·반사 공격"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 절차",
+    "subsections": [
+     {
+      "title": "원격(블라인드)",
+      "items": [
+       "신뢰 클라이언트를 DoS로 마비 → 위조 IP로 SYN → 서버 SYN/ACK는 공격자에게 안 옴 → 순서 번호 예측해 ACK 전송"
+      ]
+     },
+     {
+      "title": "로컬",
+      "items": [
+       "ARP 포이즈닝으로 응답을 공격자 쪽으로 유도 → 세션 성립"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "방지 대책",
+    "subsections": [
+     {
+      "title": "필터링",
+      "items": [
+       "외부 유입 패킷 중 내부 출발지 주소 차단",
+       "내부에서 나가는 위조 주소 차단",
+       "uRPF"
+      ]
+     },
+     {
+      "title": "서비스",
+      "items": [
+       "rsh·rlogin 제거, SSH·TCP Wrapper 사용",
+       "ISN 무작위화",
+       "지속 점검"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "원리",
+   "- 취약점",
+   "- 결과",
+   "공격 절차",
+   "- 원격(블라인드)",
+   "- 로컬",
+   "방지 대책",
+   "- 필터링",
+   "- 서비스"
+  ],
+  "name": "IP 스푸핑(IP Spoofing)",
+  "en": "IP Spoofing",
+  "keywords_must": [
+   "출발지 IP 위조 SYN",
+   "신뢰 호스트 DoS로 RST 차단",
+   "순서 번호 예측(Blind Spoofing)",
+   "ARP 캐시 포이즈닝 연계",
+   "응답 가로채기",
+   "rsh·rlogin(.rhosts 트러스트)",
+   "IP 기반 접근 제어",
+   "진입 필터링(Ingress Filtering, BCP 38)",
+   "출구 필터링(Egress Filtering)",
+   "uRPF(Unicast Reverse Path Forwarding)"
+  ],
+  "keywords_ref": [
+   "케빈 미트닉 공격(1994)",
+   "초기 순서 번호(ISN) 무작위화",
+   "TCP Wrapper",
+   "SSH 대체",
+   "반사·증폭 DDoS",
+   "세션 하이재킹"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "출발지 IP 위조 SYN",
+   "신뢰 호스트 DoS로 RST 차단",
+   "순서 번호 예측(Blind Spoofing)",
+   "ARP 캐시 포이즈닝 연계",
+   "응답 가로채기",
+   "rsh·rlogin(.rhosts 트러스트)",
+   "IP 기반 접근 제어",
+   "진입 필터링(Ingress Filtering, BCP 38)",
+   "출구 필터링(Egress Filtering)",
+   "uRPF(Unicast Reverse Path Forwarding)"
+  ]
+ },
+ "SE_027": {
+  "title": "ARP 스푸핑(ARP Spoofing)",
+  "category": "SE > 보안 > Hacking(해킹) > ARP 스푸핑 공격",
+  "definition": "인증 없는 ARP의 특성을 악용해 위조한 ARP Reply로 피해 호스트의 ARP 캐시에 게이트웨이 등 타 IP의 MAC 주소를 공격자 MAC으로 등록시켜 트래픽을 가로채는 2계층 중간자 공격",
+  "keywords": [
+   "공격 수단: 위조 ARP Reply · ARP 캐시 갱신 · 주기적 재전송",
+   "공격 유형: 서버 존 · 클라이언트 존",
+   "증상: ARP 패킷 급증 · MAC 주소 중복 · 응답 지연",
+   "대응: 정적 ARP(arp -s) · DAI(Dynamic ARP Inspection) · DHCP 스누핑"
+  ],
+  "sections": [
+   {
+    "title": "원리",
+    "subsections": [
+     {
+      "title": "취약점",
+      "items": [
+       "ARP Reply를 요청 없이도 수신·캐시",
+       "인증 없음"
+      ]
+     },
+     {
+      "title": "유형",
+      "items": [
+       "서버 존: 취약 서버 감염, 접속 사용자 전체 노출",
+       "클라이언트 존: 같은 LAN 내 PC 감염 확산"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 과정",
+    "subsections": [
+     {
+      "title": "정찰",
+      "items": [
+       "ARP Request 브로드캐스트로 IP-MAC 매핑 파악"
+      ]
+     },
+     {
+      "title": "위조",
+      "items": [
+       "피해자·게이트웨이에 공격자 MAC을 담은 ARP Reply 전송",
+       "캐시 만료 전 반복"
+      ]
+     },
+     {
+      "title": "중계",
+      "items": [
+       "IP 포워딩으로 패킷을 원래 목적지로 넘겨 탐지 회피",
+       "캡처·변조"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "탐지와 대응",
+    "subsections": [
+     {
+      "title": "탐지",
+      "items": [
+       "arp -a로 게이트웨이 MAC 중복 확인",
+       "tcpdump arp로 과다 Reply 관찰",
+       "ARPwatch"
+      ]
+     },
+     {
+      "title": "대응",
+      "items": [
+       "중요 서버·게이트웨이 정적 ARP",
+       "스위치 DAI·DHCP 스누핑",
+       "통신 암호화"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "원리",
+   "- 취약점",
+   "- 유형",
+   "공격 과정",
+   "- 정찰",
+   "- 위조",
+   "- 중계",
+   "탐지와 대응",
+   "- 탐지",
+   "- 대응"
+  ],
+  "name": "ARP 스푸핑(ARP Spoofing)",
+  "en": "ARP Spoofing",
+  "keywords_must": [
+   "위조 ARP Reply",
+   "ARP 캐시 갱신",
+   "주기적 재전송",
+   "서버 존",
+   "클라이언트 존",
+   "ARP 패킷 급증",
+   "MAC 주소 중복",
+   "응답 지연",
+   "정적 ARP(arp -s)",
+   "DAI(Dynamic ARP Inspection)",
+   "DHCP 스누핑"
+  ],
+  "keywords_ref": [
+   "arp -a 조회",
+   "arpspoof·Ettercap",
+   "ARPwatch",
+   "802.1X",
+   "패킷 포워딩(IP Forward)",
+   "중간자 공격(MITM)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "위조 ARP Reply",
+   "ARP 캐시 갱신",
+   "주기적 재전송",
+   "서버 존",
+   "클라이언트 존",
+   "ARP 패킷 급증",
+   "MAC 주소 중복",
+   "응답 지연",
+   "정적 ARP(arp -s)",
+   "DAI(Dynamic ARP Inspection)",
+   "DHCP 스누핑"
+  ],
+  "gloss": {
+   "PC": "Personal Computer"
+  }
+ },
+ "SE_028": {
+  "title": "역순 주소 결정 프로토콜(RARP, Reverse Address Resolution Protocol)",
+  "category": "SE > hacking > RARP(Reverse Address Resolution Protocol)",
+  "definition": "자신의 MAC 주소만 알고 IP 주소를 모르는 디스크 없는 호스트가 브로드캐스트로 RARP 서버에 IP 주소를 요청해 할당받는 데이터링크 계층 프로토콜(RFC 903)",
+  "keywords": [
+   "동작: RARP Request(브로드캐스트) · RARP Reply(유니캐스트) · RARP 서버 매핑 테이블",
+   "대상: 디스크 없는 워크스테이션 · X 터미널 · 네트워크 부팅",
+   "비교: ARP(IP → MAC) · RARP(MAC → IP)",
+   "한계: 라우터 미통과 · 서브넷마스크·게이트웨이 미제공"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경과 역할",
+    "subsections": [
+     {
+      "title": "배경",
+      "items": [
+       "파일 시스템이 없어 IP를 저장할 수 없는 장치",
+       "NIC에서 MAC은 읽을 수 있음"
+      ]
+     },
+     {
+      "title": "역할",
+      "items": [
+       "MAC으로 자신의 IP 주소 조회"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작 절차",
+    "subsections": [
+     {
+      "title": "요청",
+      "items": [
+       "자기 MAC을 담아 브로드캐스트 Request"
+      ]
+     },
+     {
+      "title": "응답",
+      "items": [
+       "RARP 서버가 MAC-IP 테이블에서 찾아 Reply"
+      ]
+     },
+     {
+      "title": "ARP 비교",
+      "items": [
+       "ARP는 상대 IP로 MAC 조회, RARP는 자기 MAC으로 IP 조회"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한계와 보안",
+    "subsections": [
+     {
+      "title": "구조적 제약",
+      "items": [
+       "같은 브로드캐스트 도메인에만 서버 필요",
+       "IP 외 설정 정보 없음 → BOOTP·DHCP로 대체"
+      ]
+     },
+     {
+      "title": "보안",
+      "items": [
+       "인증이 없어 위조 RARP 서버가 잘못된 IP 할당 가능",
+       "DHCP 스누핑 방식으로 서버 제한"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경과 역할",
+   "- 배경",
+   "- 역할",
+   "동작 절차",
+   "- 요청",
+   "- 응답",
+   "- ARP 비교",
+   "한계와 보안",
+   "- 구조적 제약",
+   "- 보안"
+  ],
+  "name": "역순 주소 결정 프로토콜(RARP, Reverse Address Resolution Protocol)",
+  "en": "Reverse Address Resolution Protocol",
+  "keywords_must": [
+   "RARP Request(브로드캐스트)",
+   "RARP Reply(유니캐스트)",
+   "RARP 서버 매핑 테이블",
+   "디스크 없는 워크스테이션",
+   "X 터미널",
+   "네트워크 부팅",
+   "ARP(IP → MAC)",
+   "RARP(MAC → IP)",
+   "라우터 미통과",
+   "서브넷마스크·게이트웨이 미제공"
+  ],
+  "keywords_ref": [
+   "RFC 903(1984)",
+   "BOOTP",
+   "DHCP로 대체",
+   "이더타입 0x8035",
+   "Inverse ARP(프레임 릴레이)",
+   "위조 RARP 서버"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "RARP Request(브로드캐스트)",
+   "RARP Reply(유니캐스트)",
+   "RARP 서버 매핑 테이블",
+   "디스크 없는 워크스테이션",
+   "X 터미널",
+   "네트워크 부팅",
+   "ARP(IP → MAC)",
+   "RARP(MAC → IP)",
+   "라우터 미통과",
+   "서브넷마스크·게이트웨이 미제공"
+  ]
+ },
+ "SE_029": {
+  "title": "ARP 캐시 포이즈닝(ARP Cache Poisoning)",
+  "category": "SE > 해킹 > ARP Poisoning",
+  "definition": "ARP가 요청 여부와 관계없이 수신한 Reply로 캐시를 갱신하는 점을 악용해, 위조 ARP Reply·Gratuitous ARP로 피해자 캐시의 IP-MAC 매핑을 공격자 MAC으로 오염시키는 공격",
+  "keywords": [
+   "원리: 무인증 ARP Reply · 비요청 캐시 갱신 · Gratuitous ARP",
+   "위험: 스위치 환경 스니핑 · 중간자 공격(MITM) · 세션 하이재킹",
+   "탐지: 서로 다른 IP에 동일 MAC · 게이트웨이 MAC 변경 · 주기적 ARP 다량 수신",
+   "대응: 정적 ARP 엔트리 · DAI(Dynamic ARP Inspection) · ARP 감시 도구(ARPwatch)"
+  ],
+  "sections": [
+   {
+    "title": "원리",
+    "subsections": [
+     {
+      "title": "정상 흐름",
+      "items": [
+       "캐시 확인 → ARP Request 브로드캐스트 → 대상의 ARP Reply → 캐시 갱신"
+      ]
+     },
+     {
+      "title": "오염",
+      "items": [
+       "공격자가 대상보다 먼저·반복해서 자기 MAC을 담은 Reply 전송 → 캐시에 잘못된 매핑 유지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "위험성",
+    "subsections": [
+     {
+      "title": "도청·변조",
+      "items": [
+       "스위치를 넘어 LAN 트래픽 수집",
+       "피싱·파밍 연계로 금융정보 유출"
+      ]
+     },
+     {
+      "title": "장애",
+      "items": [
+       "존재하지 않는 MAC 주입 시 통신 단절(간접 DoS)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "탐지와 대응",
+    "subsections": [
+     {
+      "title": "증상",
+      "items": [
+       "피해 시스템 속도 저하·ARP 수신 증가",
+       "공격 시스템 ARP 송신 증가"
+      ]
+     },
+     {
+      "title": "탐지",
+      "items": [
+       "arp -a로 MAC 중복 확인",
+       "패킷 분석",
+       "ARPwatch 변경 경보"
+      ]
+     },
+     {
+      "title": "대응",
+      "items": [
+       "정적 ARP",
+       "스위치 DAI·DHCP 스누핑",
+       "암호화 통신"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "원리",
+   "- 정상 흐름",
+   "- 오염",
+   "위험성",
+   "- 도청·변조",
+   "- 장애",
+   "탐지와 대응",
+   "- 증상",
+   "- 탐지",
+   "- 대응"
+  ],
+  "name": "ARP 캐시 포이즈닝(ARP Cache Poisoning)",
+  "en": "ARP Cache Poisoning",
+  "keywords_must": [
+   "무인증 ARP Reply",
+   "비요청 캐시 갱신",
+   "Gratuitous ARP",
+   "스위치 환경 스니핑",
+   "중간자 공격(MITM)",
+   "세션 하이재킹",
+   "서로 다른 IP에 동일 MAC",
+   "게이트웨이 MAC 변경",
+   "주기적 ARP 다량 수신",
+   "정적 ARP 엔트리",
+   "DAI(Dynamic ARP Inspection)",
+   "ARP 감시 도구(ARPwatch)"
+  ],
+  "keywords_ref": [
+   "파밍 연계",
+   "간접 DoS",
+   "arp -a",
+   "tcpdump arp",
+   "DHCP 스누핑 바인딩 테이블",
+   "포트 보안",
+   "IPv6 NDP 스푸핑(SEND)",
+   "캐시 타임아웃"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "무인증 ARP Reply",
+   "비요청 캐시 갱신",
+   "Gratuitous ARP",
+   "스위치 환경 스니핑",
+   "중간자 공격(MITM)",
+   "세션 하이재킹",
+   "서로 다른 IP에 동일 MAC",
+   "게이트웨이 MAC 변경",
+   "주기적 ARP 다량 수신",
+   "정적 ARP 엔트리",
+   "DAI(Dynamic ARP Inspection)",
+   "ARP 감시 도구(ARPwatch)"
+  ]
+ },
+ "SE_030": {
+  "title": "ARP 리다이렉트(ARP Redirect)",
+  "category": "SE > 보안 > Hacking(해킹)",
+  "definition": "공격자가 자신이 게이트웨이(라우터)라는 위조 ARP Reply를 LAN 전체에 주기적으로 보내 모든 호스트의 외부행 트래픽이 공격자를 거치게 만드는 ARP 스푸핑의 한 형태",
+  "keywords": [
+   "대상: 게이트웨이 IP 위장 · LAN 전체 호스트",
+   "동작: 위조 ARP Reply 브로드캐스트 · IP 포워딩(Fragrouter) · 스니핑 후 실제 게이트웨이로 전달",
+   "비교: ARP 스푸핑(호스트 1:1) · ICMP 리다이렉트(3계층 경로 변경)",
+   "대응: 게이트웨이 정적 ARP · DAI(Dynamic ARP Inspection) · MAC 중복 탐지"
+  ],
+  "sections": [
+   {
+    "title": "원리",
+    "subsections": [
+     {
+      "title": "위장 대상",
+      "items": [
+       "개별 호스트가 아닌 게이트웨이",
+       "외부로 나가는 모든 패킷 확보"
+      ]
+     },
+     {
+      "title": "지속",
+      "items": [
+       "캐시 만료 전 위조 Reply 반복 전송"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 절차",
+    "subsections": [
+     {
+      "title": "위조 전파",
+      "items": [
+       "게이트웨이 IP와 공격자 MAC을 담은 Reply를 LAN에 전송"
+      ]
+     },
+     {
+      "title": "중계",
+      "items": [
+       "공격자는 IP 포워딩으로 실제 게이트웨이에 재전송해 통신 단절 없이 도청"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "비교와 대응",
+    "subsections": [
+     {
+      "title": "ARP 스푸핑",
+      "items": [
+       "특정 두 호스트 사이 MITM",
+       "리다이렉트: 게이트웨이 위장으로 전체 트래픽 확보"
+      ]
+     },
+     {
+      "title": "ICMP 리다이렉트",
+      "items": [
+       "3계층 라우팅 테이블 변경 요청",
+       "ARP 리다이렉트: 2계층 캐시 오염"
+      ]
+     },
+     {
+      "title": "대응",
+      "items": [
+       "게이트웨이 정적 ARP",
+       "스위치 DAI",
+       "ARP 감시",
+       "TLS·VPN"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "원리",
+   "- 위장 대상",
+   "- 지속",
+   "공격 절차",
+   "- 위조 전파",
+   "- 중계",
+   "비교와 대응",
+   "- ARP 스푸핑",
+   "- ICMP 리다이렉트",
+   "- 대응"
+  ],
+  "name": "ARP 리다이렉트(ARP Redirect)",
+  "en": "ARP Redirect",
+  "keywords_must": [
+   "게이트웨이 IP 위장",
+   "LAN 전체 호스트",
+   "위조 ARP Reply 브로드캐스트",
+   "IP 포워딩(Fragrouter)",
+   "스니핑 후 실제 게이트웨이로 전달",
+   "ARP 스푸핑(호스트 1:1)",
+   "ICMP 리다이렉트(3계층 경로 변경)",
+   "게이트웨이 정적 ARP",
+   "DAI(Dynamic ARP Inspection)",
+   "MAC 중복 탐지"
+  ],
+  "keywords_ref": [
+   "arpspoof -t",
+   "스위치 환경 스니핑",
+   "중간자 공격",
+   "게이트웨이 MAC 변경 경보",
+   "암호화 통신"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "게이트웨이 IP 위장",
+   "LAN 전체 호스트",
+   "위조 ARP Reply 브로드캐스트",
+   "IP 포워딩(Fragrouter)",
+   "스니핑 후 실제 게이트웨이로 전달",
+   "ARP 스푸핑(호스트 1:1)",
+   "ICMP 리다이렉트(3계층 경로 변경)",
+   "게이트웨이 정적 ARP",
+   "DAI(Dynamic ARP Inspection)",
+   "MAC 중복 탐지"
+  ]
+ },
+ "SE_031": {
+  "title": "TCP SYN 플러딩(TCP SYN Flooding)",
+  "category": "SE > 보안 > Hacking(해킹)",
+  "definition": "출발지를 위조한 SYN을 대량으로 보내 서버가 SYN/ACK 후 ACK를 기다리는 반개방(Half-Open) 연결로 백로그 큐를 가득 채워 정상 연결을 받지 못하게 하는 서비스 거부 공격",
+  "keywords": [
+   "악용 원리: 3-웨이 핸드셰이크(3-Way Handshake) · 반개방 연결(Half-Open) · 백로그 큐(Backlog Queue) 고갈",
+   "공격 요소: 출발지 IP 위조 · SYN_RECEIVED 상태 누적 · 연결 대기 타임아웃",
+   "대응: SYN 쿠키(SYN Cookie) · 백로그 큐 확대 · SYN 수신 대기 시간 단축 · 방화벽 PPS 임계치"
+  ],
+  "sections": [
+   {
+    "title": "악용 원리",
+    "subsections": [
+     {
+      "title": "정상",
+      "items": [
+       "SYN → SYN/ACK → ACK로 연결 수립"
+      ]
+     },
+     {
+      "title": "악용",
+      "items": [
+       "위조 IP로 SYN만 보내 ACK가 오지 않음",
+       "서버는 연결 정보를 큐에 유지하며 대기"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 절차",
+    "subsections": [
+     {
+      "title": "대량 SYN",
+      "items": [
+       "존재하지 않거나 위조된 출발지로 수천 건 전송"
+      ]
+     },
+     {
+      "title": "자원 고갈",
+      "items": [
+       "SYN_RECEIVED 연결이 백로그 큐 점유",
+       "신규 정상 요청 거부"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응 방안",
+    "subsections": [
+     {
+      "title": "SYN 쿠키",
+      "items": [
+       "연결 정보를 저장하지 않고 ISN에 암호학적 쿠키를 넣어 ACK로 검증"
+      ]
+     },
+     {
+      "title": "커널 설정",
+      "items": [
+       "백로그 확대(임시방편)",
+       "SYN/ACK 재전송·대기 시간 단축"
+      ]
+     },
+     {
+      "title": "네트워크",
+      "items": [
+       "방화벽 IP당 SYN PPS 임계치",
+       "First SYN Drop",
+       "SYN 프록시·DDoS 대응 장비"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "악용 원리",
+   "- 정상",
+   "- 악용",
+   "공격 절차",
+   "- 대량 SYN",
+   "- 자원 고갈",
+   "대응 방안",
+   "- SYN 쿠키",
+   "- 커널 설정",
+   "- 네트워크"
+  ],
+  "name": "TCP SYN 플러딩(TCP SYN Flooding)",
+  "en": "TCP SYN Flooding",
+  "keywords_must": [
+   "3-웨이 핸드셰이크(3-Way Handshake)",
+   "반개방 연결(Half-Open)",
+   "백로그 큐(Backlog Queue) 고갈",
+   "출발지 IP 위조",
+   "SYN_RECEIVED 상태 누적",
+   "연결 대기 타임아웃",
+   "SYN 쿠키(SYN Cookie)",
+   "백로그 큐 확대",
+   "SYN 수신 대기 시간 단축",
+   "방화벽 PPS 임계치"
+  ],
+  "keywords_ref": [
+   "tcp_max_syn_backlog",
+   "tcp_syncookies=1",
+   "First SYN Drop",
+   "TCP 인터셉트(Cisco)",
+   "SYN 프록시",
+   "Anti-DDoS 장비"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "3-웨이 핸드셰이크(3-Way Handshake)",
+   "반개방 연결(Half-Open)",
+   "백로그 큐(Backlog Queue) 고갈",
+   "출발지 IP 위조",
+   "SYN_RECEIVED 상태 누적",
+   "연결 대기 타임아웃",
+   "SYN 쿠키(SYN Cookie)",
+   "백로그 큐 확대",
+   "SYN 수신 대기 시간 단축",
+   "방화벽 PPS 임계치"
+  ]
+ },
+ "SE_032": {
+  "title": "포맷 스트링 공격(Format String Attack)",
+  "category": "SE > 보안 > Hacking(해킹) > 포맷 스트링 공격 (Format String Attack)",
+  "definition": "printf류 함수에 사용자 입력을 포맷 문자열로 그대로 넘기는 결함을 악용해 %x로 스택 메모리를 읽고 %n으로 임의 주소에 값을 써서 반환 주소를 조작, 셸코드를 실행하는 공격",
+  "keywords": [
+   "지시자: %x(스택 읽기) · %s(메모리 문자열 읽기) · %n(출력 바이트 수 쓰기) · %hn(2바이트 쓰기)",
+   "공격 흐름: 메모리 구조 파악 · 반환 주소(RET) 위치 추정 · %n으로 주소 덮어쓰기 · 셸코드 실행",
+   "취약 함수: printf(buf) · fprintf · sprintf · vprintf·vsprintf"
+  ],
+  "sections": [
+   {
+    "title": "취약 원리",
+    "subsections": [
+     {
+      "title": "원인",
+      "items": [
+       "printf(\"%s\", buf) 대신 printf(buf) 사용",
+       "입력이 포맷 지시자로 해석"
+      ]
+     },
+     {
+      "title": "결과",
+      "items": [
+       "인자 없이 스택 값을 차례로 해석해 정보 노출·메모리 쓰기"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 수행",
+    "subsections": [
+     {
+      "title": "정보 노출",
+      "items": [
+       "%x 반복으로 스택 덤프, 주소 탐색"
+      ]
+     },
+     {
+      "title": "메모리 쓰기",
+      "items": [
+       "목표 주소를 입력에 넣고 %n·%hn으로 RET·GOT 값 변경"
+      ]
+     },
+     {
+      "title": "권한 획득",
+      "items": [
+       "덮어쓴 주소를 셸코드(에그 셸)로 지정 → setuid 프로그램이면 root 셸"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "코딩",
+      "items": [
+       "포맷 문자열을 상수로 고정, 사용자 입력은 %s 인자로만 전달"
+      ]
+     },
+     {
+      "title": "도구",
+      "items": [
+       "컴파일러 -Wformat-security 경고",
+       "FORTIFY_SOURCE",
+       "정적 분석으로 CWE-134 탐지"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "취약 원리",
+   "- 원인",
+   "- 결과",
+   "공격 수행",
+   "- 정보 노출",
+   "- 메모리 쓰기",
+   "- 권한 획득",
+   "대응",
+   "- 코딩",
+   "- 도구"
+  ],
+  "name": "포맷 스트링 공격(Format String Attack)",
+  "en": "Format String Attack",
+  "keywords_must": [
+   "%x(스택 읽기)",
+   "%s(메모리 문자열 읽기)",
+   "%n(출력 바이트 수 쓰기)",
+   "%hn(2바이트 쓰기)",
+   "메모리 구조 파악",
+   "반환 주소(RET) 위치 추정",
+   "%n으로 주소 덮어쓰기",
+   "셸코드 실행",
+   "printf(buf)",
+   "fprintf",
+   "sprintf",
+   "vprintf·vsprintf"
+  ],
+  "keywords_ref": [
+   "포맷 인자 누락",
+   "에그 셸(Egg Shell)",
+   "GOT 덮어쓰기",
+   "컴파일러 경고(-Wformat-security)",
+   "FORTIFY_SOURCE",
+   "CWE-134"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "%x(스택 읽기)",
+   "%s(메모리 문자열 읽기)",
+   "%n(출력 바이트 수 쓰기)",
+   "%hn(2바이트 쓰기)",
+   "메모리 구조 파악",
+   "반환 주소(RET) 위치 추정",
+   "%n으로 주소 덮어쓰기",
+   "셸코드 실행",
+   "printf(buf)",
+   "fprintf",
+   "sprintf",
+   "vprintf·vsprintf"
+  ]
+ },
+ "SE_033": {
+  "title": "스머핑(Smurfing)",
+  "category": "SE > 보안 > Hacking(해킹) > Smurfing(스머핑)",
+  "definition": "출발지 주소를 피해자 IP로 위조한 ICMP Echo Request를 증폭 네트워크의 브로드캐스트 주소로 보내, 다수 호스트의 Echo Reply가 피해자에게 몰리게 하는 반사·증폭형 서비스 거부 공격",
+  "keywords": [
+   "구성: 공격자 · 증폭 네트워크(Amplifier) · 피해자",
+   "요소: ICMP Echo Request · 출발지 IP 위조 · 지정 브로드캐스트(Directed Broadcast)",
+   "대응: Directed Broadcast 차단(no ip directed-broadcast) · 진입·출구 필터링 · ICMP 응답 제한"
+  ],
+  "sections": [
+   {
+    "title": "원리",
+    "subsections": [
+     {
+      "title": "반사",
+      "items": [
+       "위조 출발지로 응답이 피해자에게 감"
+      ]
+     },
+     {
+      "title": "증폭",
+      "items": [
+       "브로드캐스트 한 번에 네트워크 내 전 호스트가 응답"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 절차",
+    "subsections": [
+     {
+      "title": "위조 요청",
+      "items": [
+       "피해자 IP로 위조한 Echo Request를 증폭 네트워크 브로드캐스트로 전송"
+      ]
+     },
+     {
+      "title": "응답 폭주",
+      "items": [
+       "각 호스트가 Echo Reply를 피해자에게 보내 대역폭·처리 자원 고갈"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "증폭 네트워크",
+      "items": [
+       "라우터에서 지정 브로드캐스트 차단",
+       "호스트는 브로드캐스트 Echo 무응답"
+      ]
+     },
+     {
+      "title": "피해 측·전체",
+      "items": [
+       "진입·출구 필터링으로 위조 주소 차단",
+       "ICMP 속도 제한"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "원리",
+   "- 반사",
+   "- 증폭",
+   "공격 절차",
+   "- 위조 요청",
+   "- 응답 폭주",
+   "대응",
+   "- 증폭 네트워크",
+   "- 피해 측·전체"
+  ],
+  "name": "스머핑(Smurfing)",
+  "en": "Smurf Attack",
+  "keywords_must": [
+   "공격자",
+   "증폭 네트워크(Amplifier)",
+   "피해자",
+   "ICMP Echo Request",
+   "출발지 IP 위조",
+   "지정 브로드캐스트(Directed Broadcast)",
+   "Directed Broadcast 차단(no ip directed-broadcast)",
+   "진입·출구 필터링",
+   "ICMP 응답 제한"
+  ],
+  "keywords_ref": [
+   "Fraggle(UDP 변형)",
+   "증폭률",
+   "RFC 2644",
+   "반사 공격",
+   "Rate Limiting",
+   "대역폭 고갈"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "공격자",
+   "증폭 네트워크(Amplifier)",
+   "피해자",
+   "ICMP Echo Request",
+   "출발지 IP 위조",
+   "지정 브로드캐스트(Directed Broadcast)",
+   "Directed Broadcast 차단(no ip directed-broadcast)",
+   "진입·출구 필터링",
+   "ICMP 응답 제한"
+  ]
+ },
+ "SE_034": {
+  "title": "버퍼 오버플로 공격(Buffer Overflow Attack)",
+  "category": "SE > 보안 > Hacking(해킹) > Buffer Overflow 공격",
+  "definition": "경계 검사 없는 입력으로 할당된 버퍼를 넘치게 해 인접 메모리의 반환 주소·함수 포인터 등을 덮어쓰고, 프로그램 실행 흐름을 공격자 코드로 바꾸는 메모리 오류 공격",
+  "keywords": [
+   "유형: 스택 오버플로(Stack Overflow) · 힙 오버플로(Heap Overflow)",
+   "취약 함수: strcpy·strcat · gets · sprintf",
+   "안전 함수: strncpy·strncat · fgets · snprintf",
+   "메모리 보호: 스택 카나리(Stack Canary) · ASLR(Address Space Layout Randomization) · DEP·NX(No-eXecute)"
+  ],
+  "sections": [
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": "스택",
+      "items": [
+       "지역 버퍼 넘침으로 RET 변조 → 셸코드 실행"
+      ]
+     },
+     {
+      "title": "힙",
+      "items": [
+       "동적 할당 영역 메타데이터·함수 포인터 변조"
+      ]
+     },
+     {
+      "title": "포맷 스트링 연계",
+      "items": [
+       "형식 지시자 오용으로 임의 메모리 쓰기"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "취약 함수와 대체",
+    "subsections": [
+     {
+      "title": "문자열 복사·연결",
+      "items": [
+       "strcpy·strcat → strncpy·strncat(길이 지정)"
+      ]
+     },
+     {
+      "title": "입력·출력",
+      "items": [
+       "gets → fgets",
+       "sprintf → snprintf",
+       "scanf는 최대 길이 명시"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "코딩",
+      "items": [
+       "배열 경계 검사, 입력 길이 검증",
+       "안전 함수 사용"
+      ]
+     },
+     {
+      "title": "컴파일·OS",
+      "items": [
+       "스택 카나리",
+       "ASLR",
+       "DEP·NX로 데이터 영역 실행 금지"
+      ]
+     },
+     {
+      "title": "우회 기법 인식",
+      "items": [
+       "ROP로 NX 우회",
+       "정보 유출로 ASLR 우회 → 다중 방어"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "유형",
+   "- 스택",
+   "- 힙",
+   "- 포맷 스트링 연계",
+   "취약 함수와 대체",
+   "- 문자열 복사·연결",
+   "- 입력·출력",
+   "대응",
+   "- 코딩",
+   "- 컴파일·OS",
+   "- 우회 기법 인식"
+  ],
+  "name": "버퍼 오버플로 공격(Buffer Overflow Attack)",
+  "en": "Buffer Overflow Attack",
+  "keywords_must": [
+   "스택 오버플로(Stack Overflow)",
+   "힙 오버플로(Heap Overflow)",
+   "strcpy·strcat",
+   "gets",
+   "sprintf",
+   "strncpy·strncat",
+   "fgets",
+   "snprintf",
+   "스택 카나리(Stack Canary)",
+   "ASLR(Address Space Layout Randomization)",
+   "DEP·NX(No-eXecute)"
+  ],
+  "keywords_ref": [
+   "정수 오버플로 연계",
+   "scanf 길이 미지정",
+   "반환 주소(RET) 덮어쓰기",
+   "NOP 슬레드",
+   "ROP(Return-Oriented Programming)",
+   "경계 검사",
+   "시큐어 코딩",
+   "CWE-120·121"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "스택 오버플로(Stack Overflow)",
+   "힙 오버플로(Heap Overflow)",
+   "strcpy·strcat",
+   "gets",
+   "sprintf",
+   "strncpy·strncat",
+   "fgets",
+   "snprintf",
+   "스택 카나리(Stack Canary)",
+   "ASLR(Address Space Layout Randomization)",
+   "DEP·NX(No-eXecute)"
+  ]
+ },
+ "SE_035": {
+  "title": "서비스 거부 공격(DoS·DDoS, Denial of Service·Distributed DoS)",
+  "category": "SE > 보안 > Hacking(해킹) > Dos, DDos",
+  "definition": "대량의 요청이나 비정상 패킷으로 대상 시스템의 네트워크 대역폭·세션·CPU 자원을 고갈시켜 정상 사용자의 서비스 이용을 방해하는 공격으로, 다수의 좀비 PC·봇넷을 동원하면 DDoS가 된다",
+  "keywords": [
+   "공격 유형: 대역폭 공격(UDP·ICMP Flooding) · 자원 고갈 공격(SYN Flooding) · 웹·애플리케이션 공격(HTTP GET Flooding·Slowloris)",
+   "반사·증폭: DRDoS(Distributed Reflection DoS) · DNS·NTP 증폭",
+   "DDoS 구성: 공격자 · C&C(Command and Control) 서버 · 좀비·봇넷(Botnet)",
+   "대응: 스크러빙 센터(Scrubbing Center) · CDN·Anycast 분산 · 임계치 기반 차단"
+  ],
+  "sections": [
+   {
+    "title": "공격 분류",
+    "subsections": [
+     {
+      "title": "대역폭 소진",
+      "items": [
+       "UDP·ICMP 대량 전송으로 회선 포화"
+      ]
+     },
+     {
+      "title": "자원 소진",
+      "items": [
+       "SYN Flooding으로 세션 테이블 고갈",
+       "HashDoS로 해시 충돌 유발 CPU 고갈"
+      ]
+     },
+     {
+      "title": "애플리케이션",
+      "items": [
+       "HTTP GET Flooding·CC Attack",
+       "Slowloris·RUDY 같은 저대역 연결 점유"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분산·반사 공격 구조",
+    "subsections": [
+     {
+      "title": "DDoS",
+      "items": [
+       "공격자가 C&C로 봇넷에 명령 → 다수 좀비가 동시 공격",
+       "Trinoo·TFN 계열 도구"
+      ]
+     },
+     {
+      "title": "DRDoS",
+      "items": [
+       "출발지를 피해자로 위조해 정상 서버(DNS·NTP)에 요청 → 증폭된 응답이 피해자에 집중",
+       "출처 추적 어려움"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응 체계",
+    "subsections": [
+     {
+      "title": "사전",
+      "items": [
+       "대역폭·서버 여유 확보",
+       "CDN·Anycast 분산",
+       "진입 필터링(BCP 38)"
+      ]
+     },
+     {
+      "title": "탐지·차단",
+      "items": [
+       "임계치·패턴 기반 DDoS 장비",
+       "스크러빙 센터 우회",
+       "ISP 블랙홀 라우팅"
+      ]
+     },
+     {
+      "title": "사후",
+      "items": [
+       "사이버대피소 연계",
+       "로그 분석·봇넷 C&C 차단"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 분류",
+   "- 대역폭 소진",
+   "- 자원 소진",
+   "- 애플리케이션",
+   "분산·반사 공격 구조",
+   "- DDoS",
+   "- DRDoS",
+   "대응 체계",
+   "- 사전",
+   "- 탐지·차단",
+   "- 사후"
+  ],
+  "name": "서비스 거부 공격(DoS·DDoS, Denial of Service·Distributed DoS)",
+  "en": "Denial of Service and Distributed Denial of Service",
+  "keywords_must": [
+   "대역폭 공격(UDP·ICMP Flooding)",
+   "자원 고갈 공격(SYN Flooding)",
+   "웹·애플리케이션 공격(HTTP GET Flooding·Slowloris)",
+   "DRDoS(Distributed Reflection DoS)",
+   "DNS·NTP 증폭",
+   "공격자",
+   "C&C(Command and Control) 서버",
+   "좀비·봇넷(Botnet)",
+   "스크러빙 센터(Scrubbing Center)",
+   "CDN·Anycast 분산",
+   "임계치 기반 차단"
+  ],
+  "keywords_ref": [
+   "Smurf",
+   "Memcached 증폭",
+   "Trinoo·TFN·Stacheldraht",
+   "HashDoS",
+   "HTTP 헤더 옵션 스푸핑",
+   "Land 공격",
+   "7.7 DDoS(2009)",
+   "KISA 사이버대피소",
+   "블랙홀 라우팅(RTBH)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "대역폭 공격(UDP·ICMP Flooding)",
+   "자원 고갈 공격(SYN Flooding)",
+   "웹·애플리케이션 공격(HTTP GET Flooding·Slowloris)",
+   "DRDoS(Distributed Reflection DoS)",
+   "DNS·NTP 증폭",
+   "공격자",
+   "C&C(Command and Control) 서버",
+   "좀비·봇넷(Botnet)",
+   "스크러빙 센터(Scrubbing Center)",
+   "CDN·Anycast 분산",
+   "임계치 기반 차단"
+  ],
+  "gloss": {
+   "ISP": "Internet Service Provider",
+   "PC": "Personal Computer"
+  }
+ },
+ "SE_036": {
+  "title": "영구적 서비스 거부 공격(PDoS, Permanent Denial of Service)",
+  "category": "SE > 보안 > Hacking(해킹) > PDoS (Permanent Denial of Service)",
+  "definition": "위조 펌웨어 업데이트 등으로 기기의 펌웨어를 악성코드로 교체하거나 손상시켜 재설치·교체 전까지 기기를 영구적으로 사용할 수 없게 만드는 공격(플래싱 공격)",
+  "keywords": [
+   "공격 경로: 위조 펌웨어 업데이트 · 원격 관리 인터페이스 · 기본 계정 악용",
+   "대상: IoT 기기 · 공유기·라우터 · 산업 제어기기",
+   "특징: 하드웨어 기능 파괴(Bricking) · 복구 곤란",
+   "대응: 펌웨어 코드 서명 · 보안 부팅(Secure Boot) · 업데이트 서버 인증"
+  ],
+  "sections": [
+   {
+    "title": "공격 성격",
+    "subsections": [
+     {
+      "title": "목표",
+      "items": [
+       "서비스 마비를 넘어 기기 자체 무력화"
+      ]
+     },
+     {
+      "title": "차이",
+      "items": [
+       "대량 트래픽 불필요",
+       "일반 DDoS 탐지 체계로 대응 곤란"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 절차와 DRDoS 비교",
+    "subsections": [
+     {
+      "title": "절차",
+      "items": [
+       "무료 업데이트·스파이웨어로 사용자 유도 → 악성 펌웨어 설치 → 정보 탈취·기기 불능화"
+      ]
+     },
+     {
+      "title": "DRDoS 비교",
+      "items": [
+       "DRDoS: 정상 서버 반사, 일시적 사이트 마비",
+       "PDoS: 펌웨어 파괴, 영구 장애·기반시설 공격"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "무결성",
+      "items": [
+       "펌웨어 서명 검증",
+       "보안 부팅",
+       "버전 롤백 방지"
+      ]
+     },
+     {
+      "title": "운영",
+      "items": [
+       "신뢰 업데이트 서버만 사용",
+       "기본 계정·원격 관리 포트 차단",
+       "IoT 보안 인증"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 성격",
+   "- 목표",
+   "- 차이",
+   "공격 절차와 DRDoS 비교",
+   "- 절차",
+   "- DRDoS 비교",
+   "대응",
+   "- 무결성",
+   "- 운영"
+  ],
+  "name": "영구적 서비스 거부 공격(PDoS, Permanent Denial of Service)",
+  "en": "Permanent Denial of Service",
+  "keywords_must": [
+   "위조 펌웨어 업데이트",
+   "원격 관리 인터페이스",
+   "기본 계정 악용",
+   "IoT 기기",
+   "공유기·라우터",
+   "산업 제어기기",
+   "하드웨어 기능 파괴(Bricking)",
+   "복구 곤란",
+   "펌웨어 코드 서명",
+   "보안 부팅(Secure Boot)",
+   "업데이트 서버 인증"
+  ],
+  "keywords_ref": [
+   "플래싱(Phlashing)",
+   "BrickerBot(2017)",
+   "DRDoS 비교",
+   "기본 패스워드 변경",
+   "롤백 방지",
+   "사이버전 기반시설 파괴"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "위조 펌웨어 업데이트",
+   "원격 관리 인터페이스",
+   "기본 계정 악용",
+   "IoT 기기",
+   "공유기·라우터",
+   "산업 제어기기",
+   "하드웨어 기능 파괴(Bricking)",
+   "복구 곤란",
+   "펌웨어 코드 서명",
+   "보안 부팅(Secure Boot)",
+   "업데이트 서버 인증"
+  ]
+ },
+ "SE_037": {
+  "title": "RUDY 공격(R-U-Dead-Yet Attack)",
+  "category": "SE > 보안 > Hacking(해킹) > RUDY",
+  "definition": "HTTP POST 요청의 Content-Length를 매우 크게 지정한 뒤 본문을 아주 작은 단위로 천천히 보내 웹 서버 연결을 오래 점유하고 동시 접속 자원을 고갈시키는 저속 DoS 공격",
+  "keywords": [
+   "악용 요소: HTTP POST · Content-Length 대형 지정 · 본문 저속 전송 · 연결 대기",
+   "분류: 저대역 공격(Low and Slow) · 애플리케이션 계층 DoS",
+   "대응: Request·Body 타임아웃 · Content-Length 임계치 · 동시 연결 수 제한"
+  ],
+  "sections": [
+   {
+    "title": "공격 원리",
+    "subsections": [
+     {
+      "title": "근거",
+      "items": [
+       "서버는 Content-Length만큼 본문이 올 때까지 연결 유지"
+      ]
+     },
+     {
+      "title": "수법",
+      "items": [
+       "큰 Content-Length 선언 → 1바이트씩 긴 간격으로 전송 → 연결 장시간 점유"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "탐지가 어려운 이유",
+    "subsections": [
+     {
+      "title": "적은 트래픽",
+      "items": [
+       "소수 클라이언트로도 서버 동시 연결 한도 소진"
+      ]
+     },
+     {
+      "title": "탐지 곤란",
+      "items": [
+       "정상 HTTP 요청 형태",
+       "느린 네트워크 사용자와 구분 어려움"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "저속 공격 대응 비교",
+    "subsections": [
+     {
+      "title": "Slowloris 대응",
+      "items": [
+       "헤더 끝 CRLF가 한 번뿐인 요청 차단",
+       "헤더 수신 타임아웃"
+      ]
+     },
+     {
+      "title": "RUDY 대응",
+      "items": [
+       "Content-Length 임계치",
+       "본문 수신 타임아웃"
+      ]
+     },
+     {
+      "title": "공통",
+      "items": [
+       "IP당 동시 연결 제한",
+       "공격 도구 User-Agent 차단",
+       "웹 서버 패치·리버스 프록시"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 원리",
+   "- 근거",
+   "- 수법",
+   "탐지가 어려운 이유",
+   "- 적은 트래픽",
+   "- 탐지 곤란",
+   "저속 공격 대응 비교",
+   "- Slowloris 대응",
+   "- RUDY 대응",
+   "- 공통"
+  ],
+  "name": "RUDY 공격(R-U-Dead-Yet Attack)",
+  "en": "R-U-Dead-Yet Attack",
+  "keywords_must": [
+   "HTTP POST",
+   "Content-Length 대형 지정",
+   "본문 저속 전송",
+   "연결 대기",
+   "저대역 공격(Low and Slow)",
+   "애플리케이션 계층 DoS",
+   "Request·Body 타임아웃",
+   "Content-Length 임계치",
+   "동시 연결 수 제한"
+  ],
+  "keywords_ref": [
+   "Slowloris(헤더 저속)",
+   "Slow Read(수신 창 축소)",
+   "User-Agent 패턴 차단",
+   "mod_reqtimeout",
+   "리버스 프록시 버퍼링",
+   "웹 방화벽"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "HTTP POST",
+   "Content-Length 대형 지정",
+   "본문 저속 전송",
+   "연결 대기",
+   "저대역 공격(Low and Slow)",
+   "애플리케이션 계층 DoS",
+   "Request·Body 타임아웃",
+   "Content-Length 임계치",
+   "동시 연결 수 제한"
+  ]
+ },
+ "SE_038": {
+  "title": "지능형 지속 위협(APT, Advanced Persistent Threat)",
+  "category": "SE > 보안 > Hacking(해킹) > APT(Advanced Persistent Threat)",
+  "definition": "특정 목적을 가진 조직이 국가 기반시설·기업 등 명확한 표적을 정해 제로데이·스피어피싱 등 다양한 기법으로 장기간 은밀히 침투·잠복하며 정보를 수집하고 유출·파괴하는 공격",
+  "keywords": [
+   "특징: 명확한 표적 · 지능화(Advanced) · 지속성(Persistent)",
+   "공격 단계: 침투(Infiltration) · 탐색(Exploration) · 수집(Collection) · 유출(Exfiltration)",
+   "침투 기법: 스피어피싱(Spear Phishing) · 워터링 홀(Watering Hole) · 제로데이 익스플로잇",
+   "대응: 샌드박스 · EDR(Endpoint Detection and Response)"
+  ],
+  "sections": [
+   {
+    "title": "위협 성격",
+    "subsections": [
+     {
+      "title": "표적·지속",
+      "items": [
+       "불특정 다수가 아닌 특정 조직",
+       "수개월~수년 잠복"
+      ]
+     },
+     {
+      "title": "지능·우회",
+      "items": [
+       "제로데이, 맞춤형 악성코드",
+       "내부 직원 단말을 통한 우회 침투"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 단계와 기법",
+    "subsections": [
+     {
+      "title": "침투",
+      "items": [
+       "스피어피싱 메일·워터링 홀로 초기 감염"
+      ]
+     },
+     {
+      "title": "탐색·수집",
+      "items": [
+       "내부망 정찰, 권한 상승, 레터럴 무브먼트로 중요 서버 접근"
+      ]
+     },
+     {
+      "title": "유출",
+      "items": [
+       "암호화 채널로 외부 C&C에 데이터 전송 또는 시스템 파괴"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "관리적",
+      "items": [
+       "보안 인식 교육",
+       "망분리·최소 권한",
+       "침해 대응 훈련"
+      ]
+     },
+     {
+      "title": "기술적",
+      "items": [
+       "샌드박스로 미지 악성코드 분석",
+       "EDR·NDR로 이상 행위 탐지",
+       "SIEM 상관 분석·위협 헌팅"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "위협 성격",
+   "- 표적·지속",
+   "- 지능·우회",
+   "공격 단계와 기법",
+   "- 침투",
+   "- 탐색·수집",
+   "- 유출",
+   "대응",
+   "- 관리적",
+   "- 기술적"
+  ],
+  "name": "지능형 지속 위협(APT, Advanced Persistent Threat)",
+  "en": "Advanced Persistent Threat",
+  "keywords_must": [
+   "명확한 표적",
+   "지능화(Advanced)",
+   "지속성(Persistent)",
+   "침투(Infiltration)",
+   "탐색(Exploration)",
+   "수집(Collection)",
+   "유출(Exfiltration)",
+   "스피어피싱(Spear Phishing)",
+   "워터링 홀(Watering Hole)",
+   "제로데이 익스플로잇",
+   "샌드박스",
+   "EDR(Endpoint Detection and Response)"
+  ],
+  "keywords_ref": [
+   "공급망 공격",
+   "망분리",
+   "사이버 킬체인(Cyber Kill Chain)",
+   "MITRE ATT&CK",
+   "레터럴 무브먼트",
+   "C&C 통신 탐지",
+   "위협 헌팅",
+   "스턱스넷·3.20 전산망 마비",
+   "빅데이터 보안 분석"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "명확한 표적",
+   "지능화(Advanced)",
+   "지속성(Persistent)",
+   "침투(Infiltration)",
+   "탐색(Exploration)",
+   "수집(Collection)",
+   "유출(Exfiltration)",
+   "스피어피싱(Spear Phishing)",
+   "워터링 홀(Watering Hole)",
+   "제로데이 익스플로잇",
+   "샌드박스",
+   "EDR(Endpoint Detection and Response)"
+  ],
+  "dueum": "침탐수유"
+ },
+ "SE_039": {
+  "title": "드라이브 바이 다운로드(Drive-by Download)",
+  "category": "SE > 보안 > Hacking(해킹) > 드라이브 바이 다운로드(Drive by Download)",
+  "definition": "사용자가 악성 스크립트가 삽입된 웹 페이지에 접속하기만 해도 브라우저·플러그인 취약점이 공격되어 사용자 동의 없이 악성코드가 내려받아 실행되는 웹 기반 감염 기법",
+  "keywords": [
+   "공격 기술: 브라우저·플러그인 취약점 · 숨은 iframe 삽입 · 익스플로잇 킷(Exploit Kit)",
+   "유포 경로: 워터링 홀(Watering Hole) · 멀버타이징(Malvertising) · 침해된 정상 사이트",
+   "감염 결과: 봇넷 편입 · 정보 탈취",
+   "대응: 클라이언트 허니팟(Client Honeypot) · 브라우저·플러그인 패치 · 웹 필터링"
+  ],
+  "sections": [
+   {
+    "title": "공격 기술",
+    "subsections": [
+     {
+      "title": "취약점 공격",
+      "items": [
+       "브라우저·플러그인 메모리 취약점에 셸코드 로드"
+      ]
+     },
+     {
+      "title": "API 오류",
+      "items": [
+       "URL 검증 없는 플러그인 API로 원격 실행 파일 다운로드"
+      ]
+     },
+     {
+      "title": "은닉",
+      "items": [
+       "크기 0인 iframe, 난독화 스크립트로 악성 페이지 연결"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 절차",
+    "subsections": [
+     {
+      "title": "삽입",
+      "items": [
+       "취약한 웹 서버에 SQL 삽입·XSS로 악성 스크립트 주입"
+      ]
+     },
+     {
+      "title": "감염",
+      "items": [
+       "방문자 브라우저 취약점 공격 → 악성코드 다운로드·실행"
+      ]
+     },
+     {
+      "title": "악용",
+      "items": [
+       "봇넷 구축, 개인정보 탈취"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "서버",
+      "items": [
+       "시큐어 코딩·웹 취약점 점검",
+       "페이지 위변조 일일 점검",
+       "클라이언트 허니팟으로 악성 사이트 조기 탐지(저상호작용: 정적 분석, 고상호작용: 실제 방문 후 변화 관찰)"
+      ]
+     },
+     {
+      "title": "클라이언트",
+      "items": [
+       "최신 패치",
+       "웹 필터링",
+       "스크립트·자바 비활성화",
+       "관리자 권한 미사용"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 기술",
+   "- 취약점 공격",
+   "- API 오류",
+   "- 은닉",
+   "공격 절차",
+   "- 삽입",
+   "- 감염",
+   "- 악용",
+   "대응",
+   "- 서버",
+   "- 클라이언트"
+  ],
+  "name": "드라이브 바이 다운로드(Drive-by Download)",
+  "en": "Drive-by Download",
+  "keywords_must": [
+   "브라우저·플러그인 취약점",
+   "숨은 iframe 삽입",
+   "익스플로잇 킷(Exploit Kit)",
+   "워터링 홀(Watering Hole)",
+   "멀버타이징(Malvertising)",
+   "침해된 정상 사이트",
+   "봇넷 편입",
+   "정보 탈취",
+   "클라이언트 허니팟(Client Honeypot)",
+   "브라우저·플러그인 패치",
+   "웹 필터링"
+  ],
+  "keywords_ref": [
+   "API 오류 악용",
+   "랜섬웨어 유포",
+   "저상호작용·고상호작용 허니팟",
+   "난독화 자바스크립트",
+   "힙 스프레이",
+   "NoScript",
+   "관리자 권한 사용 금지",
+   "웹 페이지 위변조 탐지"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "브라우저·플러그인 취약점",
+   "숨은 iframe 삽입",
+   "익스플로잇 킷(Exploit Kit)",
+   "워터링 홀(Watering Hole)",
+   "멀버타이징(Malvertising)",
+   "침해된 정상 사이트",
+   "봇넷 편입",
+   "정보 탈취",
+   "클라이언트 허니팟(Client Honeypot)",
+   "브라우저·플러그인 패치",
+   "웹 필터링"
+  ]
+ },
+ "SE_040": {
+  "title": "익스플로잇(Exploit)",
+  "category": "SE > 보안 > Hacking(해킹) > Exploit",
+  "definition": "소프트웨어·하드웨어의 버그나 설계 취약점을 이용해 공격자가 의도한 코드 실행·권한 상승 등을 일으키도록 만든 공격 코드 또는 그 공격 행위",
+  "keywords": [
+   "취약점 유형: 버퍼 오버플로(BOF, Buffer Overflow) · 메모리 손상(Use-After-Free) · XSS·CSRF",
+   "실행 위치: 로컬 익스플로잇 · 원격 익스플로잇",
+   "결과: 권한 상승(EoP, Elevation of Privilege) · 원격 코드 실행(RCE, Remote Code Execution)",
+   "유포: 익스플로잇 킷(Exploit Kit) · 제로데이 공격",
+   "대응: 보안 패치 자동화 · 안티 익스플로잇(Anti-Exploit)"
+  ],
+  "sections": [
+   {
+    "title": "공격 범위와 시점",
+    "subsections": [
+     {
+      "title": "범위",
+      "items": [
+       "특정 표적과 불특정 다수 모두 공격"
+      ]
+     },
+     {
+      "title": "시점",
+      "items": [
+       "패치 전 제로데이",
+       "패치 후에도 미적용 시스템 대상 1-day"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 방식과 유형",
+    "subsections": [
+     {
+      "title": "공격 방식",
+      "items": [
+       "스팸 메일·악성 사이트로 익스플로잇 킷 유입 → 취약점 탐색 → 악성코드 설치, 봇 활용"
+      ]
+     },
+     {
+      "title": "유형",
+      "items": [
+       "취약점별(BOF·XSS·CSRF)",
+       "실행 위치별(로컬·원격)",
+       "결과별(EoP·RCE·DoS·스푸핑)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "사용자",
+      "items": [
+       "패치 자동 업데이트",
+       "미사용 플러그인 제거",
+       "최소 권한"
+      ]
+     },
+     {
+      "title": "시스템",
+      "items": [
+       "안티 익스플로잇(메모리 보호 DEP·ASLR·CFG 강제)",
+       "IPS·WAF 가상 패치",
+       "취약점 관리(CVE 추적)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 범위와 시점",
+   "- 범위",
+   "- 시점",
+   "공격 방식과 유형",
+   "- 공격 방식",
+   "- 유형",
+   "대응",
+   "- 사용자",
+   "- 시스템"
+  ],
+  "name": "익스플로잇(Exploit)",
+  "en": "Exploit",
+  "keywords_must": [
+   "버퍼 오버플로(BOF, Buffer Overflow)",
+   "메모리 손상(Use-After-Free)",
+   "XSS·CSRF",
+   "로컬 익스플로잇",
+   "원격 익스플로잇",
+   "권한 상승(EoP, Elevation of Privilege)",
+   "원격 코드 실행(RCE, Remote Code Execution)",
+   "익스플로잇 킷(Exploit Kit)",
+   "제로데이 공격",
+   "보안 패치 자동화",
+   "안티 익스플로잇(Anti-Exploit)"
+  ],
+  "keywords_ref": [
+   "스팸 메일 유포",
+   "서비스 거부·스푸핑",
+   "CVE·CVSS",
+   "1-day 익스플로잇",
+   "Metasploit",
+   "DEP·ASLR·CFG",
+   "가상 패치(WAF·IPS)",
+   "버그 바운티"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "버퍼 오버플로(BOF, Buffer Overflow)",
+   "메모리 손상(Use-After-Free)",
+   "XSS·CSRF",
+   "로컬 익스플로잇",
+   "원격 익스플로잇",
+   "권한 상승(EoP, Elevation of Privilege)",
+   "원격 코드 실행(RCE, Remote Code Execution)",
+   "익스플로잇 킷(Exploit Kit)",
+   "제로데이 공격",
+   "보안 패치 자동화",
+   "안티 익스플로잇(Anti-Exploit)"
+  ],
+  "gloss": {
+   "IPS": "Intrusion Prevention System"
+  }
+ },
+ "SE_041": {
+  "title": "랜섬웨어(Ransomware)",
+  "category": "SE > 해킹 > 랜섬웨어(Ransomware)",
+  "definition": "시스템을 잠그거나 파일을 암호화해 사용할 수 없게 만든 뒤 복구 대가로 암호화폐 등 금전을 요구하는 악성코드로, 최근에는 데이터 유출 협박을 더한 이중 갈취 형태로 진화했다",
+  "keywords": [
+   "유형: 암호화형(Crypto Ransomware) · 화면 잠금형(Locker Ransomware)",
+   "암호 방식: 대칭키(AES) 파일 암호화 · 공개키(RSA)로 대칭키 보호",
+   "유포: 멀버타이징(Malvertising) · 피싱 메일 · 원격 데스크톱(RDP) 취약점",
+   "진화: 서비스형 랜섬웨어(RaaS, Ransomware as a Service) · 이중 갈취(Double Extortion)",
+   "대응: 3-2-1 오프라인 백업"
+  ],
+  "sections": [
+   {
+    "title": "공격 특성",
+    "subsections": [
+     {
+      "title": "비표적·대량",
+      "items": [
+       "불특정 다수 대상 유포에서 기업·기반시설 표적 공격으로 확대"
+      ]
+     },
+     {
+      "title": "자기 노출",
+      "items": [
+       "감염 사실을 스스로 알리고 제한 시간 내 지불 압박"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 과정과 유형",
+    "subsections": [
+     {
+      "title": "과정",
+      "items": [
+       "유입(메일·멀버타이징·RDP) → 실행·권한 상승 → 백업·섀도 복사본 삭제 → 파일 암호화 → 몸값 요구"
+      ]
+     },
+     {
+      "title": "암호화형",
+      "items": [
+       "파일마다 AES 키 생성, 그 키를 공격자 RSA 공개키로 암호화",
+       "CryptoLocker·WannaCry"
+      ]
+     },
+     {
+      "title": "잠금형",
+      "items": [
+       "화면·부팅 잠금 후 해제 대가 요구",
+       "Reveton"
+      ]
+     },
+     {
+      "title": "이중 갈취",
+      "items": [
+       "암호화 전 데이터 탈취 후 공개 협박",
+       "RaaS로 제휴 공격자 확산"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "예방",
+      "items": [
+       "3-2-1 백업(사본 3개, 매체 2종, 오프라인·외부 1개)",
+       "패치·RDP 차단",
+       "매크로 실행 제한"
+      ]
+     },
+     {
+      "title": "탐지",
+      "items": [
+       "EDR 대량 암호화 행위 탐지",
+       "미끼 파일 감시"
+      ]
+     },
+     {
+      "title": "복구",
+      "items": [
+       "감염 단말 네트워크 격리",
+       "복호화 도구 확인",
+       "몸값 지불 지양·신고"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 특성",
+   "- 비표적·대량",
+   "- 자기 노출",
+   "공격 과정과 유형",
+   "- 과정",
+   "- 암호화형",
+   "- 잠금형",
+   "- 이중 갈취",
+   "대응",
+   "- 예방",
+   "- 탐지",
+   "- 복구"
+  ],
+  "name": "랜섬웨어(Ransomware)",
+  "en": "Ransomware",
+  "keywords_must": [
+   "암호화형(Crypto Ransomware)",
+   "화면 잠금형(Locker Ransomware)",
+   "대칭키(AES) 파일 암호화",
+   "공개키(RSA)로 대칭키 보호",
+   "멀버타이징(Malvertising)",
+   "피싱 메일",
+   "원격 데스크톱(RDP) 취약점",
+   "서비스형 랜섬웨어(RaaS, Ransomware as a Service)",
+   "이중 갈취(Double Extortion)",
+   "3-2-1 오프라인 백업"
+  ],
+  "keywords_ref": [
+   "CryptoLocker(2013)",
+   "WannaCry(2017, SMB 취약점)",
+   "Reveton(잠금형)",
+   "스케어웨어",
+   "볼륨 섀도 복사본 삭제",
+   "노모어랜섬(No More Ransom)",
+   "EDR 행위 탐지",
+   "미끼 파일(Canary File)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "암호화형(Crypto Ransomware)",
+   "화면 잠금형(Locker Ransomware)",
+   "대칭키(AES) 파일 암호화",
+   "공개키(RSA)로 대칭키 보호",
+   "멀버타이징(Malvertising)",
+   "피싱 메일",
+   "원격 데스크톱(RDP) 취약점",
+   "서비스형 랜섬웨어(RaaS, Ransomware as a Service)",
+   "이중 갈취(Double Extortion)",
+   "3-2-1 오프라인 백업"
+  ]
+ },
+ "SE_043": {
+  "title": "스피어피싱(Spear Phishing)",
+  "category": "SE > Hacking(해킹) > 스피어피싱(Spear Phishing)",
+  "definition": "불특정 다수가 아닌 특정 개인·조직을 표적으로 사전 수집한 정보를 이용해 신뢰할 만한 발신자로 위장한 메일을 보내 악성 첨부파일 실행이나 위조 사이트 접속을 유도하는 맞춤형 피싱",
+  "keywords": [
+   "특징: 특정 표적 · 사전 정보 수집 · 신뢰 발신자 위장 · 소량 맞춤 제작",
+   "유사 공격: 웨일링(Whaling) · BEC(Business Email Compromise)",
+   "대응: 메일 발신자 인증(SPF·DKIM·DMARC) · 첨부파일 샌드박스 · 모의 훈련"
+  ],
+  "sections": [
+   {
+    "title": "공격 성격",
+    "subsections": [
+     {
+      "title": "친숙함 악용",
+      "items": [
+       "이름·직책·업무 맥락을 담아 의심을 낮춤"
+      ]
+     },
+     {
+      "title": "탐지 회피",
+      "items": [
+       "소량 맞춤 제작으로 시그니처 기반 필터 우회"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 과정",
+    "subsections": [
+     {
+      "title": "정찰",
+      "items": [
+       "SNS·회사 홈페이지로 표적 정보 수집"
+      ]
+     },
+     {
+      "title": "위장 메일",
+      "items": [
+       "거래처·상사 등으로 위장한 첨부파일·링크 발송"
+      ]
+     },
+     {
+      "title": "감염·탈취",
+      "items": [
+       "악성코드 설치 또는 계정 입력 유도 → APT 거점 확보"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "일반 피싱 비교와 예방",
+    "subsections": [
+     {
+      "title": "비교",
+      "items": [
+       "일반 피싱: 불특정 다수, 대량 발송",
+       "스피어피싱: 특정 표적, 맞춤 소량, 성공률 높음"
+      ]
+     },
+     {
+      "title": "기술",
+      "items": [
+       "SPF·DKIM·DMARC 발신 도메인 검증",
+       "첨부파일 샌드박스 분석",
+       "패치 최신화"
+      ]
+     },
+     {
+      "title": "관리",
+      "items": [
+       "공개 개인정보 최소화",
+       "모의 피싱 훈련",
+       "송금 요청 이중 확인"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 성격",
+   "- 친숙함 악용",
+   "- 탐지 회피",
+   "공격 과정",
+   "- 정찰",
+   "- 위장 메일",
+   "- 감염·탈취",
+   "일반 피싱 비교와 예방",
+   "- 비교",
+   "- 기술",
+   "- 관리"
+  ],
+  "name": "스피어피싱(Spear Phishing)",
+  "en": "Spear Phishing",
+  "keywords_must": [
+   "특정 표적",
+   "사전 정보 수집",
+   "신뢰 발신자 위장",
+   "소량 맞춤 제작",
+   "웨일링(Whaling)",
+   "BEC(Business Email Compromise)",
+   "메일 발신자 인증(SPF·DKIM·DMARC)",
+   "첨부파일 샌드박스",
+   "모의 훈련"
+  ],
+  "keywords_ref": [
+   "소셜 미디어 정보 수집(OSINT)",
+   "APT 초기 침투",
+   "악성 매크로 문서",
+   "온라인 개인정보 노출 최소화",
+   "최신 보안 패치",
+   "URL 재작성"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "특정 표적",
+   "사전 정보 수집",
+   "신뢰 발신자 위장",
+   "소량 맞춤 제작",
+   "웨일링(Whaling)",
+   "BEC(Business Email Compromise)",
+   "메일 발신자 인증(SPF·DKIM·DMARC)",
+   "첨부파일 샌드박스",
+   "모의 훈련"
+  ],
+  "gloss": {
+   "SPF": "Sender Policy Framework"
+  }
+ },
+ "SE_044": {
+  "title": "워터링 홀 공격(Watering Hole Attack)",
+  "category": "SE > Hacking(해킹) > 워터링 홀 공격 (Watering-Hole Attack)",
+  "definition": "표적 집단이 자주 방문하는 정상 웹사이트를 미리 감염시켜 두고, 사자가 물웅덩이에서 먹잇감을 기다리듯 방문자에게 드라이브 바이 다운로드로 악성코드를 유포하는 표적 공격",
+  "keywords": [
+   "공격 단계: 정보 수집 · 공격 시스템 구축 · 방문자 감염 · 지역 내부 침해",
+   "기법: 드라이브 바이 다운로드 · 제로데이 공격 · 특정 IP 대역 선별 감염",
+   "특징: 표적 공격 · 정상 사이트 악용",
+   "대응: 안티 익스플로잇(Anti-Exploit) · 웹 사이트 위변조 탐지"
+  ],
+  "sections": [
+   {
+    "title": "공격 성격",
+    "subsections": [
+     {
+      "title": "표적성",
+      "items": [
+       "특정 업계·기관 직원이 신뢰하는 사이트를 경유"
+      ]
+     },
+     {
+      "title": "방어 곤란",
+      "items": [
+       "정상 사이트이므로 평판 기반 차단 우회",
+       "표적 IP에만 악성코드를 보내 분석 회피"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 절차",
+    "subsections": [
+     {
+      "title": "1 정보 수집",
+      "items": [
+       "표적 선정, 표적이 자주 찾는 신뢰 사이트 파악"
+      ]
+     },
+     {
+      "title": "2 공격 시스템 구축",
+      "items": [
+       "원격 제어형 악성코드 제작, 해당 사이트 변조·스크립트 삽입"
+      ]
+     },
+     {
+      "title": "3 방문자 감염",
+      "items": [
+       "표적 IP 방문 시에만 브라우저 취약점 공격 → 감염 후 C&C 통신"
+      ]
+     },
+     {
+      "title": "4 지역 내부 침해",
+      "items": [
+       "내부 이동으로 주요 시스템 접근, 정보 유출"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "사이트 운영자",
+      "items": [
+       "웹 서버 취약점 점검",
+       "페이지 위변조 탐지"
+      ]
+     },
+     {
+      "title": "방문자 조직",
+      "items": [
+       "브라우저·플러그인 패치",
+       "안티 익스플로잇",
+       "웹 격리",
+       "C&C 통신 탐지"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 성격",
+   "- 표적성",
+   "- 방어 곤란",
+   "공격 절차",
+   "- 1 정보 수집",
+   "- 2 공격 시스템 구축",
+   "- 3 방문자 감염",
+   "- 4 지역 내부 침해",
+   "대응",
+   "- 사이트 운영자",
+   "- 방문자 조직"
+  ],
+  "name": "워터링 홀 공격(Watering Hole Attack)",
+  "en": "Watering Hole Attack",
+  "keywords_must": [
+   "정보 수집",
+   "공격 시스템 구축",
+   "방문자 감염",
+   "지역 내부 침해",
+   "드라이브 바이 다운로드",
+   "제로데이 공격",
+   "특정 IP 대역 선별 감염",
+   "표적 공격",
+   "정상 사이트 악용",
+   "안티 익스플로잇(Anti-Exploit)",
+   "웹 사이트 위변조 탐지"
+  ],
+  "keywords_ref": [
+   "스피어피싱 비교",
+   "APT 초기 침투",
+   "레터럴 무브먼트",
+   "브라우저·자바 취약점",
+   "웹 격리(RBI)",
+   "패치 관리"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "정보 수집",
+   "공격 시스템 구축",
+   "방문자 감염",
+   "지역 내부 침해",
+   "드라이브 바이 다운로드",
+   "제로데이 공격",
+   "특정 IP 대역 선별 감염",
+   "표적 공격",
+   "정상 사이트 악용",
+   "안티 익스플로잇(Anti-Exploit)",
+   "웹 사이트 위변조 탐지"
+  ]
+ },
+ "SE_046": {
+  "title": "슬로로리스(Slowloris)",
+  "category": "SE > Hacking(해킹) > Slowloris",
+  "definition": "웹 서버와 다수의 연결을 맺은 뒤 끝나지 않는 HTTP 헤더를 조금씩 계속 보내 연결을 열어 둔 채 유지시켜 서버의 동시 연결 자원을 고갈시키는 저대역폭 애플리케이션 계층 DoS 공격",
+  "keywords": [
+   "원리: 미완성 HTTP 헤더 · 헤더 끝 CRLF 1회만 전송 · 연결 유지(Keep Open)",
+   "취약 대상: 스레드 기반 웹 서버(Apache)",
+   "분류: 저속 공격(Low and Slow) · 애플리케이션 계층 DoS",
+   "대응: 헤더 수신 타임아웃 · IP당 동시 연결 제한 · 리버스 프록시·L7 장비"
+  ],
+  "sections": [
+   {
+    "title": "공격 원리",
+    "subsections": [
+     {
+      "title": "정상 요청",
+      "items": [
+       "헤더가 CRLF 두 번(0d0a0d0a)으로 끝나야 완료"
+      ]
+     },
+     {
+      "title": "공격 요청",
+      "items": [
+       "CRLF를 한 번만 보내고 수 초마다 임의 헤더 줄을 추가 → 서버는 요청 완료를 무한 대기"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 절차와 영향",
+    "subsections": [
+     {
+      "title": "절차",
+      "items": [
+       "다수 연결 수립 → 미완성 GET 헤더 전송 → 주기적 헤더 추가로 연결 유지"
+      ]
+     },
+     {
+      "title": "영향",
+      "items": [
+       "연결당 스레드 점유로 최대 동시 연결 소진",
+       "적은 트래픽이라 대역폭 기반 탐지 회피"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "저속 공격 비교와 대응",
+    "subsections": [
+     {
+      "title": "비교",
+      "items": [
+       "Slowloris: 헤더 저속",
+       "RUDY: POST 본문 저속",
+       "Slow Read: 수신 창을 작게 해 응답 저속 수신"
+      ]
+     },
+     {
+      "title": "대응",
+      "items": [
+       "헤더 수신 타임아웃(mod_reqtimeout)",
+       "iptables connlimit 등 IP당 연결 제한",
+       "L7 장비·리버스 프록시에서 완전한 요청만 전달"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 원리",
+   "- 정상 요청",
+   "- 공격 요청",
+   "공격 절차와 영향",
+   "- 절차",
+   "- 영향",
+   "저속 공격 비교와 대응",
+   "- 비교",
+   "- 대응"
+  ],
+  "name": "슬로로리스(Slowloris)",
+  "en": "Slowloris",
+  "keywords_must": [
+   "미완성 HTTP 헤더",
+   "헤더 끝 CRLF 1회만 전송",
+   "연결 유지(Keep Open)",
+   "스레드 기반 웹 서버(Apache)",
+   "저속 공격(Low and Slow)",
+   "애플리케이션 계층 DoS",
+   "헤더 수신 타임아웃",
+   "IP당 동시 연결 제한",
+   "리버스 프록시·L7 장비"
+  ],
+  "keywords_ref": [
+   "정상 헤더 끝 0d0a0d0a",
+   "iptables connlimit",
+   "mod_reqtimeout",
+   "RUDY",
+   "Slow Read",
+   "이벤트 기반 서버(Nginx) 내성"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "미완성 HTTP 헤더",
+   "헤더 끝 CRLF 1회만 전송",
+   "연결 유지(Keep Open)",
+   "스레드 기반 웹 서버(Apache)",
+   "저속 공격(Low and Slow)",
+   "애플리케이션 계층 DoS",
+   "헤더 수신 타임아웃",
+   "IP당 동시 연결 제한",
+   "리버스 프록시·L7 장비"
+  ]
+ },
+ "SE_047": {
+  "title": "은닉 채널(Covert Channel)",
+  "category": "SE > Hacking(해킹) > 은닉채널",
+  "definition": "시스템 설계상 통신 용도로 의도되지 않은 자원이나 프로토콜 필드를 이용해 보안 정책을 우회하며 정보를 몰래 전달하는 통신 경로로, 악성코드의 데이터 유출·C&C 통신에 악용된다",
+  "keywords": [
+   "유형: 저장 채널(Storage Channel) · 타이밍 채널(Timing Channel)",
+   "네트워크 기법: 미사용·예약 헤더 비트 · 확장 헤더·패딩 · ICMP 페이로드",
+   "DNS 은닉 채널: DNS 터널링 · 서브도메인 인코딩",
+   "대응: 트래픽 정규화(Normalization) · 이상 탐지 · 공유 자원 제거·최소화"
+  ],
+  "sections": [
+   {
+    "title": "개념과 유형",
+    "subsections": [
+     {
+      "title": "공개 채널 대비",
+      "items": [
+       "정상 통신에 기생해 송수신자만 아는 신호로 정보 전달"
+      ]
+     },
+     {
+      "title": "저장 채널",
+      "items": [
+       "파일 속성·헤더 필드 등 공유 저장 위치 값을 바꿔 전달"
+      ]
+     },
+     {
+      "title": "타이밍 채널",
+      "items": [
+       "패킷 간격·자원 사용 시점 변화로 비트 전달"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "네트워크 형성 기법",
+    "subsections": [
+     {
+      "title": "헤더 비트",
+      "items": [
+       "미사용·예약 필드, IP ID·TCP 순서 번호에 데이터 삽입"
+      ]
+     },
+     {
+      "title": "확장·패딩",
+      "items": [
+       "확장 헤더·패딩 영역 악용"
+      ]
+     },
+     {
+      "title": "DNS 악용",
+      "items": [
+       "데이터를 서브도메인 질의에 인코딩, TXT 응답으로 명령 수신",
+       "대부분 방화벽이 DNS를 허용해 우회 용이"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "정규화",
+      "items": [
+       "예약 필드 초기화, 패딩 제거",
+       "타이밍 지터 삽입"
+      ]
+     },
+     {
+      "title": "탐지",
+      "items": [
+       "DNS 질의 길이·엔트로피·빈도 이상 분석",
+       "내부 DNS 서버 강제"
+      ]
+     },
+     {
+      "title": "설계",
+      "items": [
+       "다중 수준 보안 시스템의 은닉 채널 분석(TCSEC B2 이상)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "개념과 유형",
+   "- 공개 채널 대비",
+   "- 저장 채널",
+   "- 타이밍 채널",
+   "네트워크 형성 기법",
+   "- 헤더 비트",
+   "- 확장·패딩",
+   "- DNS 악용",
+   "대응",
+   "- 정규화",
+   "- 탐지",
+   "- 설계"
+  ],
+  "name": "은닉 채널(Covert Channel)",
+  "en": "Covert Channel",
+  "keywords_must": [
+   "저장 채널(Storage Channel)",
+   "타이밍 채널(Timing Channel)",
+   "미사용·예약 헤더 비트",
+   "확장 헤더·패딩",
+   "ICMP 페이로드",
+   "DNS 터널링",
+   "서브도메인 인코딩",
+   "트래픽 정규화(Normalization)",
+   "이상 탐지",
+   "공유 자원 제거·최소화"
+  ],
+  "keywords_ref": [
+   "공개 채널(Overt Channel)",
+   "스테가노그래피",
+   "서브리미널 채널",
+   "다중 수준 보안(MLS)",
+   "TCSEC B2 이상 은닉 채널 분석",
+   "DNS 쿼리 길이·엔트로피 분석",
+   "iodine"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "저장 채널(Storage Channel)",
+   "타이밍 채널(Timing Channel)",
+   "미사용·예약 헤더 비트",
+   "확장 헤더·패딩",
+   "ICMP 페이로드",
+   "DNS 터널링",
+   "서브도메인 인코딩",
+   "트래픽 정규화(Normalization)",
+   "이상 탐지",
+   "공유 자원 제거·최소화"
+  ]
+ },
+ "SE_049_00": {
+  "title": "레터럴 무브먼트(Lateral Movement)",
+  "category": "SE > 보안 > Hacking(해킹) > 레터럴 무브먼트(Lateral Movement)",
+  "definition": "APT 공격자가 최초 침투한 단말에서 탈취한 인증정보로 내부망의 다른 서버·단말로 수평 이동하며 최종 표적을 찾아가는 내부 확산 기법",
+  "keywords": [
+   "단계: 내부망 침투 · 인증정보 탈취 · 내부 이동 · 데이터 유출·시스템 파괴",
+   "기법: 패스 더 해시(Pass-the-Hash) · 미미카츠(Mimikatz) · 원격 실행 도구(PsExec·PowerShell·RDP)",
+   "대응: 계정 권한 관리 · 네트워크 세분화 · 허니 계정·허니팟"
+  ],
+  "sections": [
+   {
+    "title": "공격 성격",
+    "subsections": [
+     {
+      "title": "수평 이동",
+      "items": [
+       "서버→서버, 단말→단말로 같은 수준 시스템 사이를 이동"
+      ]
+     },
+     {
+      "title": "탐지 곤란",
+      "items": [
+       "정상 관리 도구와 정상 계정 사용",
+       "로그 부족·흔적 삭제"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 단계",
+    "subsections": [
+     {
+      "title": "1 침투",
+      "items": [
+       "스피어피싱·워터링 홀·익스플로잇으로 거점 확보"
+      ]
+     },
+     {
+      "title": "2 인증정보 탈취",
+      "items": [
+       "미미카츠로 메모리의 해시·티켓 덤프"
+      ]
+     },
+     {
+      "title": "3 내부 이동",
+      "items": [
+       "패스 더 해시, PsExec·PowerShell·RDP로 원격 접근, 권한 상승 반복"
+      ]
+     },
+     {
+      "title": "4 목표 달성",
+      "items": [
+       "기밀정보 유출, 랜섬웨어 배포·시스템 파괴"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "사전",
+      "items": [
+       "관리자 계정 분리·최소 권한",
+       "로컬 관리자 암호 개별화(LAPS)",
+       "Credential Guard",
+       "중요 시스템 망 분리·미사용 공유 차단"
+      ]
+     },
+     {
+      "title": "탐지",
+      "items": [
+       "허니 계정 접근 감시",
+       "비정상 인증·원격 실행 로그 상관 분석(SIEM·EDR)"
+      ]
+     },
+     {
+      "title": "사후",
+      "items": [
+       "침해 계정 일괄 재설정",
+       "포렌식으로 이동 경로 복원"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 성격",
+   "- 수평 이동",
+   "- 탐지 곤란",
+   "공격 단계",
+   "- 1 침투",
+   "- 2 인증정보 탈취",
+   "- 3 내부 이동",
+   "- 4 목표 달성",
+   "대응",
+   "- 사전",
+   "- 탐지",
+   "- 사후"
+  ],
+  "name": "레터럴 무브먼트(Lateral Movement)",
+  "en": "Lateral Movement",
+  "keywords_must": [
+   "내부망 침투",
+   "인증정보 탈취",
+   "내부 이동",
+   "데이터 유출·시스템 파괴",
+   "패스 더 해시(Pass-the-Hash)",
+   "미미카츠(Mimikatz)",
+   "원격 실행 도구(PsExec·PowerShell·RDP)",
+   "계정 권한 관리",
+   "네트워크 세분화",
+   "허니 계정·허니팟"
+  ],
+  "keywords_ref": [
+   "패스 더 티켓(Pass-the-Ticket)",
+   "골든 티켓",
+   "Active Directory",
+   "LAPS",
+   "Credential Guard",
+   "마이크로 세그멘테이션",
+   "제로 트러스트",
+   "로그 상관 분석"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "내부망 침투",
+   "인증정보 탈취",
+   "내부 이동",
+   "데이터 유출·시스템 파괴",
+   "패스 더 해시(Pass-the-Hash)",
+   "미미카츠(Mimikatz)",
+   "원격 실행 도구(PsExec·PowerShell·RDP)",
+   "계정 권한 관리",
+   "네트워크 세분화",
+   "허니 계정·허니팟"
+  ]
+ },
+ "SE_051": {
+  "title": "스턱스넷(Stuxnet)",
+  "category": "SE > 악성프로그램(Malware, 악성코드)",
+  "definition": "2010년 발견된 산업 제어 시스템 표적 웜으로, 지멘스 Step7 소프트웨어와 PLC를 감염시켜 이란 핵시설 원심분리기의 회전 속도를 조작해 물리적으로 파괴한 최초의 사이버 무기급 악성코드",
+  "keywords": [
+   "표적: SCADA(Supervisory Control and Data Acquisition) · 지멘스 Step7 · PLC(Programmable Logic Controller)",
+   "감염 경로: USB 이동식 매체 · 윈도우 제로데이 4종 · 네트워크 공유",
+   "특징: 폐쇄망 침투 · 루트킷 은닉 · 탈취한 디지털 인증서 서명",
+   "대응: 망분리 운영 관리"
+  ],
+  "sections": [
+   {
+    "title": "공격 성격",
+    "subsections": [
+     {
+      "title": "표적 명확",
+      "items": [
+       "특정 PLC 모델과 Step7 설치 환경에서만 페이로드 동작"
+      ]
+     },
+     {
+      "title": "폐쇄망 침투",
+      "items": [
+       "인터넷과 분리된 시설에 USB로 유입"
+      ]
+     },
+     {
+      "title": "은닉",
+      "items": [
+       "윈도우·PLC 루트킷, 탈취한 정상 인증서로 서명된 드라이버"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "감염과 공격 단계",
+    "subsections": [
+     {
+      "title": "1 유입",
+      "items": [
+       "USB LNK 취약점으로 자동 실행"
+      ]
+     },
+     {
+      "title": "2 확산",
+      "items": [
+       "프린트 스풀러·SMB 취약점, 네트워크 공유로 전파",
+       "제로데이 4종 중 2종 복제, 2종 권한 상승"
+      ]
+     },
+     {
+      "title": "3 PLC 감염",
+      "items": [
+       "Step7 통신 DLL 대체, PLC 코드 변조"
+      ]
+     },
+     {
+      "title": "4 물리 파괴",
+      "items": [
+       "원심분리기 속도를 비정상 변동시키며 감시 화면에는 정상값 재생"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "구조",
+      "items": [
+       "퍼듀 모델 기반 OT·IT 망분리",
+       "단방향 게이트웨이"
+      ]
+     },
+     {
+      "title": "운영",
+      "items": [
+       "USB 등 이동식 매체 통제",
+       "화이트리스트 실행",
+       "PLC 코드 무결성 검증"
+      ]
+     },
+     {
+      "title": "탐지",
+      "items": [
+       "ICS 전용 이상 행위 탐지",
+       "공급망·인증서 검증"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 성격",
+   "- 표적 명확",
+   "- 폐쇄망 침투",
+   "- 은닉",
+   "감염과 공격 단계",
+   "- 1 유입",
+   "- 2 확산",
+   "- 3 PLC 감염",
+   "- 4 물리 파괴",
+   "대응",
+   "- 구조",
+   "- 운영",
+   "- 탐지"
+  ],
+  "name": "스턱스넷(Stuxnet)",
+  "en": "Stuxnet",
+  "keywords_must": [
+   "SCADA(Supervisory Control and Data Acquisition)",
+   "지멘스 Step7",
+   "PLC(Programmable Logic Controller)",
+   "USB 이동식 매체",
+   "윈도우 제로데이 4종",
+   "네트워크 공유",
+   "폐쇄망 침투",
+   "루트킷 은닉",
+   "탈취한 디지털 인증서 서명",
+   "망분리 운영 관리"
+  ],
+  "keywords_ref": [
+   "원심분리기 주파수 조작",
+   "LNK 자동 실행 취약점",
+   "프린트 스풀러 취약점",
+   "듀큐(Duqu)·플레임(Flame)",
+   "ICS 보안",
+   "퍼듀 모델(Purdue Model)",
+   "USB 통제"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "SCADA(Supervisory Control and Data Acquisition)",
+   "지멘스 Step7",
+   "PLC(Programmable Logic Controller)",
+   "USB 이동식 매체",
+   "윈도우 제로데이 4종",
+   "네트워크 공유",
+   "폐쇄망 침투",
+   "루트킷 은닉",
+   "탈취한 디지털 인증서 서명",
+   "망분리 운영 관리"
+  ]
+ },
+ "SE_062": {
+  "title": "큐싱(Qshing)",
+  "category": "SE > 악성프로그램(Malware, 악성코드) > 큐싱(Qshing)",
+  "definition": "QR코드와 피싱의 합성어로, 악성 URL을 담은 QR코드를 스캔하도록 유도해 위조 사이트 접속이나 악성 앱 설치로 개인·금융정보를 탈취하는 공격",
+  "keywords": [
+   "취약 요인: 손쉬운 QR코드 생성 · 육안 식별 불가 · URL 미리보기 생략",
+   "공격 방식: 위조 사이트 유도 · 악성 앱(APK) 설치 · 2차 인증 사칭",
+   "유포 경로: 전단·주차 스티커 · 이메일 첨부 QR · 메신저",
+   "대응: 스캔 전 URL 확인 · 출처 불명 앱 설치 차단 · 118 신고(KISA)"
+  ],
+  "sections": [
+   {
+    "title": "위협 요인",
+    "subsections": [
+     {
+      "title": "생성 용이",
+      "items": [
+       "누구나 무료로 QR코드 제작"
+      ]
+     },
+     {
+      "title": "식별 곤란",
+      "items": [
+       "정상·악성 QR을 눈으로 구분 불가",
+       "이미지형이라 메일 보안 필터 우회"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 절차",
+    "subsections": [
+     {
+      "title": "1 유포",
+      "items": [
+       "공공장소 QR 위에 악성 QR 부착, 메일·문자로 발송"
+      ]
+     },
+     {
+      "title": "2 유도",
+      "items": [
+       "스캔 시 위조 금융 사이트 또는 악성 APK 다운로드"
+      ]
+     },
+     {
+      "title": "3 탈취",
+      "items": [
+       "보안카드·OTP 입력 유도, 소액결제·계좌 이체"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응과 유사 공격",
+    "subsections": [
+     {
+      "title": "사용자",
+      "items": [
+       "스캔 후 표시 URL 확인",
+       "QR로 인증·앱 설치 요구 시 거부",
+       "출처 불명 앱 설치 허용 해제"
+      ]
+     },
+     {
+      "title": "기관",
+      "items": [
+       "정상 QR 위변조 점검",
+       "악성 앱 발견 시 118 신고"
+      ]
+     },
+     {
+      "title": "티비싱",
+      "items": [
+       "스마트 TV에 악성코드를 심어 가짜 홈쇼핑·결제 화면으로 금융정보 탈취"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "위협 요인",
+   "- 생성 용이",
+   "- 식별 곤란",
+   "공격 절차",
+   "- 1 유포",
+   "- 2 유도",
+   "- 3 탈취",
+   "대응과 유사 공격",
+   "- 사용자",
+   "- 기관",
+   "- 티비싱"
+  ],
+  "name": "큐싱(Qshing)",
+  "en": "QR Code Phishing",
+  "keywords_must": [
+   "손쉬운 QR코드 생성",
+   "육안 식별 불가",
+   "URL 미리보기 생략",
+   "위조 사이트 유도",
+   "악성 앱(APK) 설치",
+   "2차 인증 사칭",
+   "전단·주차 스티커",
+   "이메일 첨부 QR",
+   "메신저",
+   "스캔 전 URL 확인",
+   "출처 불명 앱 설치 차단",
+   "118 신고(KISA)"
+  ],
+  "keywords_ref": [
+   "QR코드 덮어 붙이기",
+   "이메일 필터 우회(이미지형 링크)",
+   "백신·브라우저 최신화",
+   "티비싱(Tvishing)",
+   "스미싱",
+   "보호나라"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "손쉬운 QR코드 생성",
+   "육안 식별 불가",
+   "URL 미리보기 생략",
+   "위조 사이트 유도",
+   "악성 앱(APK) 설치",
+   "2차 인증 사칭",
+   "전단·주차 스티커",
+   "이메일 첨부 QR",
+   "메신저",
+   "스캔 전 URL 확인",
+   "출처 불명 앱 설치 차단",
+   "118 신고(KISA)"
+  ],
+  "gloss": {
+   "OTP": "One-Time Password"
+  }
+ },
+ "SE_066": {
+  "title": "셸코드(Shellcode)",
+  "category": "SE > 악성프로그램",
+  "definition": "취약점 공격(Exploitation)에 성공한 뒤 대상 시스템에서 실행되는 작은 기계어 페이로드로, 명령 셸 실행에서 이름이 유래했으며 원격 제어 연결이나 추가 악성코드 다운로드를 수행한다",
+  "keywords": [
+   "대상별: 로컬 셸코드(Local) · 원격 셸코드(Remote)",
+   "연결 방식: 리버스 셸(Reverse·Connect-Back) · 바인드 셸(Bind)",
+   "기능별: 다운로드 후 실행(Download & Execute) · 단계형(Staged)",
+   "제작 기법: NULL 바이트 제거 · NOP 슬레드 · 인코딩·다형성"
+  ],
+  "sections": [
+   {
+    "title": "동작 위치와 역할",
+    "subsections": [
+     {
+      "title": "위치",
+      "items": [
+       "익스플로잇이 실행 흐름을 탈취한 뒤 실행할 페이로드"
+      ]
+     },
+     {
+      "title": "수행 기능",
+      "items": [
+       "권한 상승, 원격 제어, 악성코드 설치, 봇 편입"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "종류",
+    "subsections": [
+     {
+      "title": "로컬",
+      "items": [
+       "이미 일부 접근 권한이 있을 때 높은 권한 프로세스를 공격해 권한 상승"
+      ]
+     },
+     {
+      "title": "리버스",
+      "items": [
+       "피해 시스템이 공격자에게 접속 → 인바운드 방화벽 우회"
+      ]
+     },
+     {
+      "title": "바인드",
+      "items": [
+       "피해 시스템 포트를 열고 공격자가 접속 → 방화벽에 차단되기 쉬움"
+      ]
+     },
+     {
+      "title": "다운로드 후 실행·단계형",
+      "items": [
+       "작은 1단계 코드가 본 페이로드를 내려받아 실행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "제작 기법과 방어",
+    "subsections": [
+     {
+      "title": "제작",
+      "items": [
+       "문자열 함수 종료를 피하려 NULL 바이트 제거",
+       "NOP 슬레드로 착지 범위 확대",
+       "인코딩으로 탐지 회피"
+      ]
+     },
+     {
+      "title": "방어",
+      "items": [
+       "DEP로 스택·힙 실행 차단",
+       "ASLR로 주소 예측 방지",
+       "아웃바운드 연결 통제·EDR"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "동작 위치와 역할",
+   "- 위치",
+   "- 수행 기능",
+   "종류",
+   "- 로컬",
+   "- 리버스",
+   "- 바인드",
+   "- 다운로드 후 실행·단계형",
+   "제작 기법과 방어",
+   "- 제작",
+   "- 방어"
+  ],
+  "name": "셸코드(Shellcode)",
+  "en": "Shellcode",
+  "keywords_must": [
+   "로컬 셸코드(Local)",
+   "원격 셸코드(Remote)",
+   "리버스 셸(Reverse·Connect-Back)",
+   "바인드 셸(Bind)",
+   "다운로드 후 실행(Download & Execute)",
+   "단계형(Staged)",
+   "NULL 바이트 제거",
+   "NOP 슬레드",
+   "인코딩·다형성"
+  ],
+  "keywords_ref": [
+   "버퍼 오버플로 연계",
+   "에그 헌터(Egg Hunter)",
+   "Metasploit msfvenom",
+   "DEP·ASLR 방어",
+   "ROP 우회",
+   "방화벽 아웃바운드 통제"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "로컬 셸코드(Local)",
+   "원격 셸코드(Remote)",
+   "리버스 셸(Reverse·Connect-Back)",
+   "바인드 셸(Bind)",
+   "다운로드 후 실행(Download & Execute)",
+   "단계형(Staged)",
+   "NULL 바이트 제거",
+   "NOP 슬레드",
+   "인코딩·다형성"
+  ]
+ },
+ "SE_067": {
+  "title": "파일리스 악성코드(Fileless Malware)",
+  "category": "SE > 악성프로그램(Malware, 악성코드) > 파일리스 악성코드(Fileless Malware)",
+  "definition": "디스크에 실행 파일을 남기지 않고 메모리, 레지스트리, PowerShell·WMI 같은 정상 시스템 도구를 이용해 동작해 파일 기반 백신 탐지를 회피하는 악성코드",
+  "keywords": [
+   "기법: 메모리 상주 · PowerShell·WMI 악용 · 레지스트리 지속성 · 정상 프로세스 인젝션",
+   "개념: LotL(Living off the Land) · LOLBins",
+   "대응: EDR 행위 탐지 · AMSI(Antimalware Scan Interface) · PowerShell 로깅·제약 모드"
+  ],
+  "sections": [
+   {
+    "title": "특성",
+    "subsections": [
+     {
+      "title": "무파일",
+      "items": [
+       "실행 파일 미저장 → 시그니처 백신 우회"
+      ]
+     },
+     {
+      "title": "정상 도구 악용",
+      "items": [
+       "PowerShell·WMI 등 OS 내장 도구로 위장",
+       "재부팅 후에도 레지스트리·WMI 구독으로 지속"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 절차",
+    "subsections": [
+     {
+      "title": "1 유입",
+      "items": [
+       "스팸 링크·악성 매크로 문서"
+      ]
+     },
+     {
+      "title": "2 취약점 공격",
+      "items": [
+       "브라우저·문서 프로그램이 PowerShell 실행"
+      ]
+     },
+     {
+      "title": "3 메모리 실행",
+      "items": [
+       "C&C에서 스크립트를 받아 메모리에서 바로 실행, 정상 프로세스에 인젝션"
+      ]
+     },
+     {
+      "title": "4 목적 수행",
+      "items": [
+       "데이터 위치 탐색 후 외부 전송"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "탐지",
+      "items": [
+       "EDR 프로세스 행위·명령줄 분석",
+       "AMSI 스크립트 검사",
+       "메모리 포렌식"
+      ]
+     },
+     {
+      "title": "통제",
+      "items": [
+       "PowerShell 스크립트 블록 로깅·제약 언어 모드",
+       "매크로 차단",
+       "화이트리스트로 LOLBins 실행 제한"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "특성",
+   "- 무파일",
+   "- 정상 도구 악용",
+   "공격 절차",
+   "- 1 유입",
+   "- 2 취약점 공격",
+   "- 3 메모리 실행",
+   "- 4 목적 수행",
+   "대응",
+   "- 탐지",
+   "- 통제"
+  ],
+  "name": "파일리스 악성코드(Fileless Malware)",
+  "en": "Fileless Malware",
+  "keywords_must": [
+   "메모리 상주",
+   "PowerShell·WMI 악용",
+   "레지스트리 지속성",
+   "정상 프로세스 인젝션",
+   "LotL(Living off the Land)",
+   "LOLBins",
+   "EDR 행위 탐지",
+   "AMSI(Antimalware Scan Interface)",
+   "PowerShell 로깅·제약 모드"
+  ],
+  "keywords_ref": [
+   "매크로 문서 유입",
+   "반사형 DLL 인젝션",
+   "mshta·rundll32",
+   "메모리 포렌식",
+   "애플리케이션 화이트리스트",
+   "샤문(Shamoon)·에퀴팩스 사례"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "메모리 상주",
+   "PowerShell·WMI 악용",
+   "레지스트리 지속성",
+   "정상 프로세스 인젝션",
+   "LotL(Living off the Land)",
+   "LOLBins",
+   "EDR 행위 탐지",
+   "AMSI(Antimalware Scan Interface)",
+   "PowerShell 로깅·제약 모드"
+  ]
+ },
+ "SE_070_01": {
+  "title": "샌드박스(Sandbox)",
+  "category": "SE > 악성코드 분석방법",
+  "definition": "외부에서 받은 파일·코드를 실제 시스템과 격리된 가상 환경에서 먼저 실행해 행위를 관찰하고, 악성 여부를 판단해 시그니처로 막지 못하는 제로데이·APT 악성코드를 사전 차단하는 기술",
+  "keywords": [
+   "분석 기술: 동적 분석(행위 모니터링) · 하이브리드 코드 분석 · 가상화 테스트베드",
+   "탐지 대상: 제로데이 악성코드 · APT 변종",
+   "회피 기법: 가상 환경 탐지 · 지연 실행(Sleep) · 사용자 상호작용 대기",
+   "대응: 베어메탈 분석 · 시간 가속"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "시그니처 한계",
+      "items": [
+       "하루 수십만 건 변종으로 패턴 매칭 방식 무력화"
+      ]
+     },
+     {
+      "title": "사전 예방",
+      "items": [
+       "실행 결과를 보고 판단하므로 미지 악성코드 탐지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분석 기술 구성",
+    "subsections": [
+     {
+      "title": "동적 분석",
+      "items": [
+       "실행 중 네트워크·레지스트리·파일 변화 모니터링"
+      ]
+     },
+     {
+      "title": "하이브리드 코드 분석",
+      "items": [
+       "메모리 내 비정상 코드 실행, 메모리 보호 우회 탐지"
+      ]
+     },
+     {
+      "title": "가상화 테스트베드",
+      "items": [
+       "운영 환경과 같은 이미지에서 반복 실행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한계와 보완",
+    "subsections": [
+     {
+      "title": "회피",
+      "items": [
+       "가상 머신 흔적 탐지, 장시간 대기, 마우스 입력 대기 후 동작"
+      ]
+     },
+     {
+      "title": "보완",
+      "items": [
+       "베어메탈·에뮬레이션 혼합",
+       "시간 가속·사용자 행위 모사",
+       "CDR로 문서 무해화 병행"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 시그니처 한계",
+   "- 사전 예방",
+   "분석 기술 구성",
+   "- 동적 분석",
+   "- 하이브리드 코드 분석",
+   "- 가상화 테스트베드",
+   "한계와 보완",
+   "- 회피",
+   "- 보완"
+  ],
+  "name": "샌드박스(Sandbox)",
+  "en": "Sandbox",
+  "keywords_must": [
+   "동적 분석(행위 모니터링)",
+   "하이브리드 코드 분석",
+   "가상화 테스트베드",
+   "제로데이 악성코드",
+   "APT 변종",
+   "가상 환경 탐지",
+   "지연 실행(Sleep)",
+   "사용자 상호작용 대기",
+   "베어메탈 분석",
+   "시간 가속"
+  ],
+  "keywords_ref": [
+   "엔드포인트 보안 연계",
+   "레지스트리·파일 시스템 변조 탐지",
+   "네트워크 행위 분석",
+   "메일 첨부 검사",
+   "CDR(Content Disarm and Reconstruction)",
+   "브라우저 샌드박스"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "동적 분석(행위 모니터링)",
+   "하이브리드 코드 분석",
+   "가상화 테스트베드",
+   "제로데이 악성코드",
+   "APT 변종",
+   "가상 환경 탐지",
+   "지연 실행(Sleep)",
+   "사용자 상호작용 대기",
+   "베어메탈 분석",
+   "시간 가속"
+  ]
+ },
+ "SE_071": {
+  "title": "시그니처 기반 탐지(Signature-based Detection)",
+  "category": "SE > 악성코드 탐지기술 > 시그니처 탐지기법",
+  "definition": "이미 알려진 악성코드에서 추출한 고유 패턴(시그니처)을 DB로 구축하고 검사 대상과 비교해 일치하면 악성으로 판정하는 탐지 기법으로, 오탐은 적지만 변종·신종에 취약하다",
+  "keywords": [
+   "시그니처 유형: 스트링 시그니처 · 명령어 빈도수 · CFG(Control Flow Graph) 시그니처 · 바이트 시퀀스(N-gram)",
+   "비교 기법: 휴리스틱 탐지 · 행위 기반 탐지",
+   "장단점: 낮은 오탐 · 신종·변종 미탐",
+   "위협 요소: 패킹(Packing) · 다형성·변성(Polymorphic·Metamorphic)"
+  ],
+  "sections": [
+   {
+    "title": "악성코드 탐지 유형",
+    "subsections": [
+     {
+      "title": "시그니처",
+      "items": [
+       "알려진 패턴 일치 여부"
+      ]
+     },
+     {
+      "title": "휴리스틱",
+      "items": [
+       "의심 명령·구조 점수화"
+      ]
+     },
+     {
+      "title": "행위",
+      "items": [
+       "실행 중 동작 관찰"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "시그니처 유형",
+    "subsections": [
+     {
+      "title": "스트링",
+      "items": [
+       "파일 내 ASCII·유니코드 문자열(DLL·API 이름 등)"
+      ]
+     },
+     {
+      "title": "명령어 빈도수",
+      "items": [
+       "악성코드군에서 추출한 명령어 출현 빈도"
+      ]
+     },
+     {
+      "title": "CFG",
+      "items": [
+       "코드 실행 흐름 그래프 구조 비교"
+      ]
+     },
+     {
+      "title": "바이트 시퀀스",
+      "items": [
+       "N-gram 바이트 패턴 비교"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "위협과 대응",
+    "subsections": [
+     {
+      "title": "위협",
+      "items": [
+       "패킹·암호화로 본문 은폐",
+       "다형성·변성 코드로 매 감염 패턴 변경"
+      ]
+     },
+     {
+      "title": "대응",
+      "items": [
+       "언패킹 후 검사",
+       "퍼지 해시·YARA로 유사도 탐지",
+       "휴리스틱·행위·머신러닝 탐지 병행"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "악성코드 탐지 유형",
+   "- 시그니처",
+   "- 휴리스틱",
+   "- 행위",
+   "시그니처 유형",
+   "- 스트링",
+   "- 명령어 빈도수",
+   "- CFG",
+   "- 바이트 시퀀스",
+   "위협과 대응",
+   "- 위협",
+   "- 대응"
+  ],
+  "name": "시그니처 기반 탐지(Signature-based Detection)",
+  "en": "Signature-based Detection",
+  "keywords_must": [
+   "스트링 시그니처",
+   "명령어 빈도수",
+   "CFG(Control Flow Graph) 시그니처",
+   "바이트 시퀀스(N-gram)",
+   "휴리스틱 탐지",
+   "행위 기반 탐지",
+   "낮은 오탐",
+   "신종·변종 미탐",
+   "패킹(Packing)",
+   "다형성·변성(Polymorphic·Metamorphic)"
+  ],
+  "keywords_ref": [
+   "해시 시그니처",
+   "YARA 규칙",
+   "시그니처 DB 갱신",
+   "퍼지 해시(ssdeep)",
+   "머신러닝 탐지",
+   "난독화"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "스트링 시그니처",
+   "명령어 빈도수",
+   "CFG(Control Flow Graph) 시그니처",
+   "바이트 시퀀스(N-gram)",
+   "휴리스틱 탐지",
+   "행위 기반 탐지",
+   "낮은 오탐",
+   "신종·변종 미탐",
+   "패킹(Packing)",
+   "다형성·변성(Polymorphic·Metamorphic)"
+  ]
+ },
+ "SE_074": {
+  "title": "SQL 삽입(SQL Injection)",
+  "category": "SE > OWASP Top 10(2018) > SQL Injection",
+  "definition": "웹 애플리케이션이 사용자 입력값을 검증 없이 SQL 쿼리에 이어 붙이는 취약점을 이용해 조작된 SQL 구문을 삽입함으로써 인증 우회, 데이터 열람·변조, 시스템 명령 실행을 일으키는 공격",
+  "keywords": [
+   "공격 유형: 인증 우회('OR 1=1) · 에러 기반 · UNION 기반 · 블라인드(Boolean·Time)",
+   "피해: 데이터 유출·변조 · 권한 상승(xp_cmdshell)",
+   "대응: 매개변수화 쿼리(Prepared Statement) · 입력값 검증 · 최소 권한 DB 계정 · 웹 방화벽(WAF)"
+  ],
+  "sections": [
+   {
+    "title": "공격 원리",
+    "subsections": [
+     {
+      "title": "원인",
+      "items": [
+       "문자열 연결로 쿼리를 동적 생성"
+      ]
+     },
+     {
+      "title": "예",
+      "items": [
+       "로그인 입력 ' OR '1'='1 → WHERE 조건이 항상 참이 되어 인증 우회"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 유형",
+    "subsections": [
+     {
+      "title": "에러 기반",
+      "items": [
+       "DB 오류 메시지로 구조 정보 수집"
+      ]
+     },
+     {
+      "title": "UNION 기반",
+      "items": [
+       "UNION SELECT로 다른 테이블 조회 결과를 결합"
+      ]
+     },
+     {
+      "title": "블라인드",
+      "items": [
+       "참·거짓 응답 차이(Boolean)나 지연(Time)으로 한 비트씩 추출"
+      ]
+     },
+     {
+      "title": "권한 상승",
+      "items": [
+       "xp_cmdshell 등 확장 프로시저로 OS 명령 실행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "코드",
+      "items": [
+       "Prepared Statement 바인딩",
+       "화이트리스트 입력 검증",
+       "상세 에러 메시지 숨김"
+      ]
+     },
+     {
+      "title": "DB",
+      "items": [
+       "애플리케이션 계정 최소 권한",
+       "위험 확장 프로시저 비활성화"
+      ]
+     },
+     {
+      "title": "운영",
+      "items": [
+       "WAF 탐지",
+       "웹 로그 모니터링",
+       "정기 취약점 점검"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 원리",
+   "- 원인",
+   "- 예",
+   "공격 유형",
+   "- 에러 기반",
+   "- UNION 기반",
+   "- 블라인드",
+   "- 권한 상승",
+   "대응",
+   "- 코드",
+   "- DB",
+   "- 운영"
+  ],
+  "name": "SQL 삽입(SQL Injection)",
+  "en": "SQL Injection",
+  "keywords_must": [
+   "인증 우회('OR 1=1)",
+   "에러 기반",
+   "UNION 기반",
+   "블라인드(Boolean·Time)",
+   "데이터 유출·변조",
+   "권한 상승(xp_cmdshell)",
+   "매개변수화 쿼리(Prepared Statement)",
+   "입력값 검증",
+   "최소 권한 DB 계정",
+   "웹 방화벽(WAF)"
+  ],
+  "keywords_ref": [
+   "저장 프로시저",
+   "2차 SQL 삽입",
+   "스택 쿼리",
+   "ORM 사용",
+   "에러 메시지 노출 금지",
+   "sqlmap",
+   "OWASP Top 10 A03 Injection",
+   "서블릿 필터"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "인증 우회('OR 1=1)",
+   "에러 기반",
+   "UNION 기반",
+   "블라인드(Boolean·Time)",
+   "데이터 유출·변조",
+   "권한 상승(xp_cmdshell)",
+   "매개변수화 쿼리(Prepared Statement)",
+   "입력값 검증",
+   "최소 권한 DB 계정",
+   "웹 방화벽(WAF)"
+  ]
+ },
+ "SE_075": {
+  "title": "크로스 사이트 스크립팅(XSS, Cross-Site Scripting)",
+  "category": "SE > OWASP Top 10(2017) > XSS",
+  "definition": "웹 애플리케이션이 사용자 입력을 검증·인코딩 없이 페이지에 출력하는 취약점을 이용해 악성 스크립트를 삽입하고, 다른 사용자의 브라우저에서 실행시켜 세션 쿠키 탈취·피싱 등을 일으키는 공격",
+  "keywords": [
+   "유형: 저장형(Stored XSS) · 반사형(Reflected XSS) · DOM 기반(DOM-based XSS)",
+   "피해: 세션 하이재킹 · 피싱 페이지 유도 · 악성코드 유포",
+   "대응: 출력 인코딩(HTML Entity) · 입력값 검증 · CSP(Content Security Policy) · HttpOnly 쿠키"
+  ],
+  "sections": [
+   {
+    "title": "공격 원리",
+    "subsections": [
+     {
+      "title": "원인",
+      "items": [
+       "사용자 입력을 그대로 HTML·스크립트 문맥에 출력"
+      ]
+     },
+     {
+      "title": "대상",
+      "items": [
+       "서버가 아닌 해당 사이트를 방문한 다른 사용자 브라우저"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": "저장형",
+      "items": [
+       "게시판 등 서버 DB에 스크립트 저장 → 열람자마다 실행"
+      ]
+     },
+     {
+      "title": "반사형",
+      "items": [
+       "URL 파라미터의 스크립트가 응답에 즉시 반사",
+       "링크 클릭 유도"
+      ]
+     },
+     {
+      "title": "DOM 기반",
+      "items": [
+       "서버 응답과 무관하게 클라이언트 자바스크립트가 location 등 입력을 DOM에 삽입"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "출력",
+      "items": [
+       "문맥별 인코딩(HTML·속성·JS·URL)",
+       "템플릿 자동 이스케이프"
+      ]
+     },
+     {
+      "title": "입력",
+      "items": [
+       "화이트리스트 필터",
+       "HTML 허용 시 DOMPurify 등 정화"
+      ]
+     },
+     {
+      "title": "브라우저",
+      "items": [
+       "CSP로 인라인·외부 스크립트 제한",
+       "HttpOnly·SameSite 쿠키"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 원리",
+   "- 원인",
+   "- 대상",
+   "유형",
+   "- 저장형",
+   "- 반사형",
+   "- DOM 기반",
+   "대응",
+   "- 출력",
+   "- 입력",
+   "- 브라우저"
+  ],
+  "name": "크로스 사이트 스크립팅(XSS, Cross-Site Scripting)",
+  "en": "Cross-Site Scripting",
+  "keywords_must": [
+   "저장형(Stored XSS)",
+   "반사형(Reflected XSS)",
+   "DOM 기반(DOM-based XSS)",
+   "세션 하이재킹",
+   "피싱 페이지 유도",
+   "악성코드 유포",
+   "출력 인코딩(HTML Entity)",
+   "입력값 검증",
+   "CSP(Content Security Policy)",
+   "HttpOnly 쿠키"
+  ],
+  "keywords_ref": [
+   "크로스 사이트 요청 위조(CSRF) 비교",
+   "블라인드 XSS",
+   "DOMPurify",
+   "OWASP Top 10 A03 Injection",
+   "lucy-xss-filter",
+   "X-XSS-Protection(폐지)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "저장형(Stored XSS)",
+   "반사형(Reflected XSS)",
+   "DOM 기반(DOM-based XSS)",
+   "세션 하이재킹",
+   "피싱 페이지 유도",
+   "악성코드 유포",
+   "출력 인코딩(HTML Entity)",
+   "입력값 검증",
+   "CSP(Content Security Policy)",
+   "HttpOnly 쿠키"
+  ]
+ },
+ "SE_078_01": {
+  "title": "LLM 애플리케이션 OWASP 10대 위험(OWASP Top 10 for LLM Applications 2025)",
+  "category": "SE",
+  "definition": "OWASP가 대규모 언어 모델(LLM)·생성형 AI 애플리케이션의 설계·개발·운영 단계에서 우선 대응해야 할 보안 위험 10가지를 정리한 지침으로, 2025년판은 시스템 프롬프트 유출과 벡터·임베딩 약점을 새로 포함했다",
+  "keywords": [
+   "10대 위험: LLM01 프롬프트 삽입 · LLM02 민감정보 노출 · LLM03 공급망 · LLM04 데이터·모델 오염 · LLM05 부적절한 출력 처리 · LLM06 과도한 에이전시 · LLM07 시스템 프롬프트 유출 · LLM08 벡터·임베딩 약점 · LLM09 허위정보 · LLM10 무제한 소비"
+  ],
+  "sections": [
+   {
+    "title": "10대 위험 목록",
+    "subsections": [
+     {
+      "title": "입력·데이터",
+      "items": [
+       "LLM01 프롬프트 삽입",
+       "LLM02 민감정보 노출",
+       "LLM03 공급망",
+       "LLM04 데이터·모델 오염"
+      ]
+     },
+     {
+      "title": "출력·권한",
+      "items": [
+       "LLM05 부적절한 출력 처리",
+       "LLM06 과도한 에이전시",
+       "LLM07 시스템 프롬프트 유출"
+      ]
+     },
+     {
+      "title": "RAG·운영",
+      "items": [
+       "LLM08 벡터·임베딩 약점",
+       "LLM09 허위정보",
+       "LLM10 무제한 소비"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 위험 내용",
+    "subsections": [
+     {
+      "title": "프롬프트 삽입",
+      "items": [
+       "사용자 입력이나 외부 문서(간접)에 숨긴 지시로 모델 동작 변경"
+      ]
+     },
+     {
+      "title": "과도한 에이전시",
+      "items": [
+       "플러그인·도구에 과도한 기능·권한·자율성을 주어 의도치 않은 행동 실행"
+      ]
+     },
+     {
+      "title": "벡터·임베딩 약점",
+      "items": [
+       "RAG 저장소 접근 통제 미흡, 임베딩 역추출, 오염 문서 주입"
+      ]
+     },
+     {
+      "title": "무제한 소비",
+      "items": [
+       "대량 질의로 비용·자원 고갈, 모델 추출"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응 방향",
+    "subsections": [
+     {
+      "title": "입력·출력",
+      "items": [
+       "입력 검증·가드레일",
+       "출력을 신뢰하지 않고 인코딩·검증 후 사용"
+      ]
+     },
+     {
+      "title": "권한",
+      "items": [
+       "도구 최소 권한",
+       "고위험 작업 사람 승인",
+       "시스템 프롬프트에 비밀 미포함"
+      ]
+     },
+     {
+      "title": "데이터·운영",
+      "items": [
+       "학습·RAG 데이터 출처 검증",
+       "모델·라이브러리 SBOM 관리",
+       "속도 제한·쿼터",
+       "정기 레드티밍"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "10대 위험 목록",
+   "- 입력·데이터",
+   "- 출력·권한",
+   "- RAG·운영",
+   "주요 위험 내용",
+   "- 프롬프트 삽입",
+   "- 과도한 에이전시",
+   "- 벡터·임베딩 약점",
+   "- 무제한 소비",
+   "대응 방향",
+   "- 입력·출력",
+   "- 권한",
+   "- 데이터·운영"
+  ],
+  "name": "LLM 애플리케이션 OWASP 10대 위험(OWASP Top 10 for LLM Applications 2025)",
+  "en": "OWASP Top 10 for Large Language Model Applications 2025",
+  "keywords_must": [
+   "LLM01 프롬프트 삽입",
+   "LLM02 민감정보 노출",
+   "LLM03 공급망",
+   "LLM04 데이터·모델 오염",
+   "LLM05 부적절한 출력 처리",
+   "LLM06 과도한 에이전시",
+   "LLM07 시스템 프롬프트 유출",
+   "LLM08 벡터·임베딩 약점",
+   "LLM09 허위정보",
+   "LLM10 무제한 소비"
+  ],
+  "keywords_ref": [
+   "직접·간접 프롬프트 삽입",
+   "탈옥(Jailbreak)",
+   "RAG(Retrieval-Augmented Generation) 접근 통제",
+   "가드레일",
+   "레드티밍",
+   "최소 권한 도구 연동",
+   "사람 승인(Human-in-the-Loop)",
+   "SBOM·모델 카드",
+   "속도 제한"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "LLM01 프롬프트 삽입",
+   "LLM02 민감정보 노출",
+   "LLM03 공급망",
+   "LLM04 데이터·모델 오염",
+   "LLM05 부적절한 출력 처리",
+   "LLM06 과도한 에이전시",
+   "LLM07 시스템 프롬프트 유출",
+   "LLM08 벡터·임베딩 약점",
+   "LLM09 허위정보",
+   "LLM10 무제한 소비"
+  ],
+  "gloss": {
+   "RAG": "Retrieval-Augmented Generation"
+  }
+ },
+ "SE_080_081": {
+  "title": "정보보호 관리체계 국제 표준(ISO/IEC 27001·27002)",
+  "category": "SE > 보안표준(정책) 및 관리적 보안 > ISO 27001",
+  "definition": "ISO/IEC 27001은 정보보호 관리체계(ISMS, Information Security Management System)의 수립·운영·개선 요구사항을 규정한 인증 표준이고, 27002는 그 부속서 A 통제의 구현 지침을 제공하는 실무 가이드이다",
+  "keywords": [
+   "관리 모델: PDCA(Plan-Do-Check-Act) · 위험 평가·처리 · 적용성 보고서(SoA)",
+   "27001 구성: 본문 4~10조항 · 부속서 A(Annex A) 93개 통제",
+   "2022 개정 통제 주제: 조직(37) · 인적(8) · 물리적(14) · 기술적(34)",
+   "보호 목표: 기밀성·무결성·가용성(CIA)"
+  ],
+  "sections": [
+   {
+    "title": "표준 관계",
+    "subsections": [
+     {
+      "title": "27001",
+      "items": [
+       "인증 심사 기준이 되는 요구사항(shall)"
+      ]
+     },
+     {
+      "title": "27002",
+      "items": [
+       "각 통제의 목적·구현 지침(should), 인증 대상 아님"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "관리 프로세스",
+    "subsections": [
+     {
+      "title": "Plan",
+      "items": [
+       "범위·정책 수립, 위험 평가, 통제 선정과 적용성 보고서 작성"
+      ]
+     },
+     {
+      "title": "Do",
+      "items": [
+       "위험 처리 계획과 통제 구현·운영"
+      ]
+     },
+     {
+      "title": "Check",
+      "items": [
+       "모니터링, 내부 감사, 경영 검토"
+      ]
+     },
+     {
+      "title": "Act",
+      "items": [
+       "부적합 시정 조치, 지속적 개선"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "2022 개정 통제 체계",
+    "subsections": [
+     {
+      "title": "본문 조항",
+      "items": [
+       "4 조직 상황",
+       "5 리더십",
+       "6 기획",
+       "7 지원",
+       "8 운영",
+       "9 성과 평가",
+       "10 개선"
+      ]
+     },
+     {
+      "title": "부속서 A",
+      "items": [
+       "2013판 14개 영역 114개 → 2022판 4개 주제 93개(조직 37, 인적 8, 물리적 14, 기술적 34)"
+      ]
+     },
+     {
+      "title": "신규 통제",
+      "items": [
+       "위협 인텔리전스",
+       "클라우드 서비스 보안",
+       "데이터 유출 방지",
+       "시큐어 코딩 등 11개"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "표준 관계",
+   "- 27001",
+   "- 27002",
+   "관리 프로세스",
+   "- Plan",
+   "- Do",
+   "- Check",
+   "- Act",
+   "2022 개정 통제 체계",
+   "- 본문 조항",
+   "- 부속서 A",
+   "- 신규 통제"
+  ],
+  "name": "정보보호 관리체계 국제 표준(ISO/IEC 27001·27002)",
+  "en": "ISO/IEC 27001 and 27002",
+  "keywords_must": [
+   "PDCA(Plan-Do-Check-Act)",
+   "위험 평가·처리",
+   "적용성 보고서(SoA)",
+   "본문 4~10조항",
+   "부속서 A(Annex A) 93개 통제",
+   "조직(37)",
+   "인적(8)",
+   "물리적(14)",
+   "기술적(34)",
+   "기밀성·무결성·가용성(CIA)"
+  ],
+  "keywords_ref": [
+   "27001 인증·27002 지침 구분",
+   "3년 인증 주기·사후 심사",
+   "2013판 114개 통제·14개 영역",
+   "위협 인텔리전스·클라우드 보안 신규 통제",
+   "27000 패밀리",
+   "내부 감사·경영 검토"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "PDCA(Plan-Do-Check-Act)",
+   "위험 평가·처리",
+   "적용성 보고서(SoA)",
+   "본문 4~10조항",
+   "부속서 A(Annex A) 93개 통제",
+   "조직(37)",
+   "인적(8)",
+   "물리적(14)",
+   "기술적(34)",
+   "기밀성·무결성·가용성(CIA)"
+  ],
+  "gloss": {
+   "SoA": "Statement of Applicability"
+  }
+ },
+ "SE_082_0": {
+  "title": "사이버보안 국제 표준(ISO/IEC 27100 계열)",
+  "category": "SE > 출제예상 > 보안 > ISO 27100",
+  "definition": "ISO/IEC 27000 시리즈를 바탕으로 네트워크에 연결된 조직·사용자 자산 보호에 초점을 맞춰 사이버보안 개념, 프레임워크 개발, 사이버 보험, 기존 표준 활용 방법을 규정한 국제 표준군",
+  "keywords": [
+   "표준 구성: 27100 사이버보안 개념 · 27101 프레임워크 개발 · 27102 사이버 보험 · 27103 표준 활용 지침 · 27032 인터넷 보안 지침",
+   "프레임워크 단계: 식별(Identify) · 보호(Protect) · 탐지(Detect) · 대응(Respond) · 복구(Recover)"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "범위 차이",
+      "items": [
+       "정보보안은 모든 형태의 정보",
+       "사이버보안은 사이버 공간에 연결된 자산·서비스"
+      ]
+     },
+     {
+      "title": "요구",
+      "items": [
+       "국가별 사이버보안 프레임워크를 국제적으로 정렬"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "표준 구성",
+    "subsections": [
+     {
+      "title": "27100",
+      "items": [
+       "사이버보안 개념·용어 개요"
+      ]
+     },
+     {
+      "title": "27101",
+      "items": [
+       "조직 사이버보안 프레임워크 개발 지침, 식별·보호·탐지·대응·복구 단계별 활동"
+      ]
+     },
+     {
+      "title": "27102",
+      "items": [
+       "사이버 사고 영향 관리를 위한 사이버 보험 도입 지침"
+      ]
+     },
+     {
+      "title": "27103",
+      "items": [
+       "기존 ISO·IEC 표준을 사이버보안 프레임워크에 활용하는 지침"
+      ]
+     },
+     {
+      "title": "27032",
+      "items": [
+       "인터넷 보안과 이해관계자 간 협력 지침"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": "조직",
+      "items": [
+       "27001 관리체계 위에 사이버 위협 대응 활동 추가"
+      ]
+     },
+     {
+      "title": "연계",
+      "items": [
+       "NIST CSF 기능 구조와 정렬해 국가·업계 프레임워크 호환"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 범위 차이",
+   "- 요구",
+   "표준 구성",
+   "- 27100",
+   "- 27101",
+   "- 27102",
+   "- 27103",
+   "- 27032",
+   "활용",
+   "- 조직",
+   "- 연계"
+  ],
+  "name": "사이버보안 국제 표준(ISO/IEC 27100 계열)",
+  "en": "ISO/IEC 27100 Series Cybersecurity Standards",
+  "keywords_must": [
+   "27100 사이버보안 개념",
+   "27101 프레임워크 개발",
+   "27102 사이버 보험",
+   "27103 표준 활용 지침",
+   "27032 인터넷 보안 지침",
+   "식별(Identify)",
+   "보호(Protect)",
+   "탐지(Detect)",
+   "대응(Respond)",
+   "복구(Recover)"
+  ],
+  "keywords_ref": [
+   "ISMS(27001)와 관계",
+   "NIST CSF 연계",
+   "사이버 보험 위험 평가",
+   "정보보안과 사이버보안 범위 차이"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "27100 사이버보안 개념",
+   "27101 프레임워크 개발",
+   "27102 사이버 보험",
+   "27103 표준 활용 지침",
+   "27032 인터넷 보안 지침",
+   "식별(Identify)",
+   "보호(Protect)",
+   "탐지(Detect)",
+   "대응(Respond)",
+   "복구(Recover)"
+  ],
+  "dueum": "개구보관문"
+ },
+ "SE_082_1": {
+  "title": "산업 제어 시스템 보안 표준(ISA/IEC 62443)",
+  "category": "SE > 정보보안",
+  "definition": "산업 자동화·제어 시스템(IACS, Industrial Automation and Control Systems)의 자산 소유자, 시스템 통합자, 제품 공급자별 보안 요구사항을 일반, 정책·절차, 시스템, 컴포넌트 4개 파트로 규정한 국제 표준",
+  "keywords": [
+   "구성: Part 1 일반 · Part 2 정책·절차 · Part 3 시스템 · Part 4 컴포넌트",
+   "핵심 개념: 영역·도관(Zone·Conduit) · 보안 수준(SL 0~4) · 심층 방어",
+   "기본 요구사항: FR1~FR7"
+  ],
+  "sections": [
+   {
+    "title": "이해관계자별 구성",
+    "subsections": [
+     {
+      "title": "Part 1 일반",
+      "items": [
+       "용어·개념·모델, 보안 적합성 지표"
+      ]
+     },
+     {
+      "title": "Part 2 정책·절차",
+      "items": [
+       "자산 소유자의 보안 프로그램, 패치 관리"
+      ]
+     },
+     {
+      "title": "Part 3 시스템",
+      "items": [
+       "시스템 통합자용 보안 위험 평가·영역 설계(3-2), 시스템 보안 요구사항과 SL(3-3)"
+      ]
+     },
+     {
+      "title": "Part 4 컴포넌트",
+      "items": [
+       "제품 공급자용 보안 개발 수명주기(4-1), 컴포넌트 기술 요구사항(4-2)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "7개 기본 요구사항",
+    "subsections": [
+     {
+      "title": "접근",
+      "items": [
+       "FR1 식별·인증",
+       "FR2 사용 통제"
+      ]
+     },
+     {
+      "title": "무결성·기밀성",
+      "items": [
+       "FR3 시스템 무결성",
+       "FR4 데이터 기밀성",
+       "FR5 데이터 흐름 제한"
+      ]
+     },
+     {
+      "title": "대응·가용성",
+      "items": [
+       "FR6 사고 적시 대응",
+       "FR7 자원 가용성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 수준과 영역 설계",
+    "subsections": [
+     {
+      "title": "SL 0~4",
+      "items": [
+       "0 보호 없음",
+       "1 우발적 위반",
+       "2 낮은 자원의 의도적 공격",
+       "3 중간 자원·IACS 지식 공격",
+       "4 높은 자원의 국가급 공격"
+      ]
+     },
+     {
+      "title": "영역·도관",
+      "items": [
+       "보안 요구가 같은 자산을 영역으로 묶고, 영역 간 통신 경로(도관)를 통제"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "이해관계자별 구성",
+   "- Part 1 일반",
+   "- Part 2 정책·절차",
+   "- Part 3 시스템",
+   "- Part 4 컴포넌트",
+   "7개 기본 요구사항",
+   "- 접근",
+   "- 무결성·기밀성",
+   "- 대응·가용성",
+   "보안 수준과 영역 설계",
+   "- SL 0~4",
+   "- 영역·도관"
+  ],
+  "name": "산업 제어 시스템 보안 표준(ISA/IEC 62443)",
+  "en": "ISA/IEC 62443 Industrial Automation and Control Systems Security",
+  "keywords_must": [
+   "Part 1 일반",
+   "Part 2 정책·절차",
+   "Part 3 시스템",
+   "Part 4 컴포넌트",
+   "영역·도관(Zone·Conduit)",
+   "보안 수준(SL 0~4)",
+   "심층 방어",
+   "FR1~FR7"
+  ],
+  "keywords_ref": [
+   "FR1 식별·인증",
+   "FR2 사용 통제",
+   "FR3 시스템 무결성",
+   "FR4 데이터 기밀성",
+   "FR5 데이터 흐름 제한",
+   "FR6 사고 적시 대응",
+   "FR7 자원 가용성",
+   "62443-4-1 보안 개발 수명주기",
+   "퍼듀 모델",
+   "ISASecure 인증"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "Part 1 일반",
+   "Part 2 정책·절차",
+   "Part 3 시스템",
+   "Part 4 컴포넌트",
+   "영역·도관(Zone·Conduit)",
+   "보안 수준(SL 0~4)",
+   "심층 방어",
+   "FR1~FR7"
+  ],
+  "gloss": {
+   "SL": "Security Level",
+   "FR": "Foundational Requirement"
+  }
+ },
+ "SE_084": {
+  "title": "정보보호 및 개인정보보호 관리체계 인증(ISMS-P, Personal Information & Information Security Management System)",
+  "category": "SE > 보안 > 보안표준(정책)및 관리적 보안 > ISMS-P",
+  "definition": "정보보호 관리체계(ISMS)와 개인정보보호 관리체계(PIMS)를 통합해 한국인터넷진흥원(KISA)과 지정 인증기관이 정보통신망법·개인정보보호법에 근거해 심사하는 국내 통합 인증 제도",
+  "keywords": [
+   "인증 영역: 관리체계 수립 및 운영(16) · 보호대책 요구사항(64) · 개인정보 처리 단계별 요구사항(21)",
+   "관리체계 4분야: 기반 마련 · 위험 관리 · 운영 · 점검 및 개선",
+   "개인정보 5분야: 수집 시 · 보유·이용 시 · 제공 시 · 파기 시 · 정보주체 권리보호"
+  ],
+  "sections": [
+   {
+    "title": "인증 체계",
+    "subsections": [
+     {
+      "title": "정책기관",
+      "items": [
+       "과학기술정보통신부·개인정보보호위원회"
+      ]
+     },
+     {
+      "title": "인증기관",
+      "items": [
+       "KISA, 지정 인증기관(금융보안원 등)",
+       "심사원 심사 → 인증위원회 의결"
+      ]
+     },
+     {
+      "title": "선택",
+      "items": [
+       "ISMS(80개 기준) 또는 ISMS-P(101개 기준)",
+       "유효기간 3년, 매년 사후 심사"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "인증 기준 구성",
+    "subsections": [
+     {
+      "title": "관리체계 수립 및 운영 16개",
+      "items": [
+       "기반 마련 → 위험 관리 → 운영 → 점검 및 개선"
+      ]
+     },
+     {
+      "title": "보호대책 요구사항 64개",
+      "items": [
+       "정책·조직·자산",
+       "인적 보안",
+       "외부자 보안",
+       "물리 보안",
+       "인증·권한",
+       "접근통제",
+       "암호화",
+       "정보시스템 도입·개발",
+       "시스템·서비스 운영",
+       "보안 관리",
+       "사고 예방·대응",
+       "재해 복구"
+      ]
+     },
+     {
+      "title": "개인정보 처리 단계별 21개",
+      "items": [
+       "수집 시 → 보유·이용 시 → 제공 시 → 파기 시 → 정보주체 권리보호"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "의무 대상과 개정",
+    "subsections": [
+     {
+      "title": "ISMS 의무",
+      "items": [
+       "전기통신사업자(ISP), 집적정보통신시설(IDC), 매출액·이용자 수 기준 해당 사업자"
+      ]
+     },
+     {
+      "title": "2023 개정",
+      "items": [
+       "개인정보보호법 개정 반영해 개인정보 처리 단계 22→21개, 전체 102→101개"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "인증 체계",
+   "- 정책기관",
+   "- 인증기관",
+   "- 선택",
+   "인증 기준 구성",
+   "- 관리체계 수립 및 운영 16개",
+   "- 보호대책 요구사항 64개",
+   "- 개인정보 처리 단계별 21개",
+   "의무 대상과 개정",
+   "- ISMS 의무",
+   "- 2023 개정"
+  ],
+  "name": "정보보호 및 개인정보보호 관리체계 인증(ISMS-P, Personal Information & Information Security Management System)",
+  "en": "Personal Information and Information Security Management System",
+  "keywords_must": [
+   "관리체계 수립 및 운영(16)",
+   "보호대책 요구사항(64)",
+   "개인정보 처리 단계별 요구사항(21)",
+   "기반 마련",
+   "위험 관리",
+   "운영",
+   "점검 및 개선",
+   "수집 시",
+   "보유·이용 시",
+   "제공 시",
+   "파기 시",
+   "정보주체 권리보호"
+  ],
+  "keywords_ref": [
+   "2023 고시 개정 102→101개",
+   "ISMS 단독 인증 80개",
+   "보호대책 12분야",
+   "의무 대상(ISP·IDC·매출액·이용자 수 기준)",
+   "인증 유효기간 3년·매년 사후 심사",
+   "인증위원회"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "관리체계 수립 및 운영(16)",
+   "보호대책 요구사항(64)",
+   "개인정보 처리 단계별 요구사항(21)",
+   "기반 마련",
+   "위험 관리",
+   "운영",
+   "점검 및 개선",
+   "수집 시",
+   "보유·이용 시",
+   "제공 시",
+   "파기 시",
+   "정보주체 권리보호"
+  ],
+  "dueum": "관보개 ; 관리체계 기위운점 ; 개인정보 수보제파정",
+  "gloss": {
+   "PIMS": "Personal Information Management System",
+   "ISP": "Internet Service Provider",
+   "IDC": "Internet Data Center"
+  }
+ },
+ "SE_094": {
+  "title": "엔드포인트 탐지 및 대응(EDR, Endpoint Detection and Response)",
+  "category": "SE > 보안표준(정책)및 관리적 보안 > EDR",
+  "definition": "PC·서버·모바일 등 단말의 프로세스·파일·네트워크 행위를 지속 수집해 악성 행위를 실시간 탐지하고, 격리·차단·복구와 사후 분석까지 수행해 피해 확산을 막는 단말 보안 솔루션",
+  "keywords": [
+   "기능: 지속 행위 모니터링 · 위협 탐지(행위·IoC 기반) · 대응(격리·프로세스 종료) · 포렌식·위협 헌팅",
+   "구성: 에이전트 · 중앙 관리 서버 · 위협 인텔리전스 연계",
+   "비교: EPP(Endpoint Protection Platform) · XDR(Extended Detection and Response)"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "시그니처 한계",
+      "items": [
+       "파일리스·제로데이·APT는 EPP 사전 차단만으로 대응 불가"
+      ]
+     },
+     {
+      "title": "사후 가시성",
+      "items": [
+       "침해 후 무엇이 일어났는지 단말 단위 기록 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성과 기능",
+    "subsections": [
+     {
+      "title": "에이전트",
+      "items": [
+       "프로세스 생성, 레지스트리·파일 변경, 네트워크 연결 이벤트 수집"
+      ]
+     },
+     {
+      "title": "중앙 서버",
+      "items": [
+       "행위 분석·상관 분석, 정책 관리, 관제"
+      ]
+     },
+     {
+      "title": "대응",
+      "items": [
+       "단말 네트워크 격리, 프로세스 종료, 파일 격리, 랜섬웨어 행위 시 백업 복원"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "EPP·XDR 비교",
+    "subsections": [
+     {
+      "title": "EPP",
+      "items": [
+       "백신 중심 사전 차단(Prevention)"
+      ]
+     },
+     {
+      "title": "EDR",
+      "items": [
+       "침해 가정 후 탐지·조사·대응(Detection & Response)"
+      ]
+     },
+     {
+      "title": "XDR",
+      "items": [
+       "단말·네트워크·메일·클라우드 텔레메트리를 통합 분석"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 시그니처 한계",
+   "- 사후 가시성",
+   "구성과 기능",
+   "- 에이전트",
+   "- 중앙 서버",
+   "- 대응",
+   "EPP·XDR 비교",
+   "- EPP",
+   "- EDR",
+   "- XDR"
+  ],
+  "name": "엔드포인트 탐지 및 대응(EDR, Endpoint Detection and Response)",
+  "en": "Endpoint Detection and Response",
+  "keywords_must": [
+   "지속 행위 모니터링",
+   "위협 탐지(행위·IoC 기반)",
+   "대응(격리·프로세스 종료)",
+   "포렌식·위협 헌팅",
+   "에이전트",
+   "중앙 관리 서버",
+   "위협 인텔리전스 연계",
+   "EPP(Endpoint Protection Platform)",
+   "XDR(Extended Detection and Response)"
+  ],
+  "keywords_ref": [
+   "화이트리스트·블랙리스트 SW 인증",
+   "랜섬웨어 순간 백업·복원",
+   "MITRE ATT&CK 매핑",
+   "MDR(Managed Detection and Response)",
+   "SOAR 연동",
+   "공격 타임라인 재구성"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "지속 행위 모니터링",
+   "위협 탐지(행위·IoC 기반)",
+   "대응(격리·프로세스 종료)",
+   "포렌식·위협 헌팅",
+   "에이전트",
+   "중앙 관리 서버",
+   "위협 인텔리전스 연계",
+   "EPP(Endpoint Protection Platform)",
+   "XDR(Extended Detection and Response)"
+  ],
+  "gloss": {
+   "PC": "Personal Computer",
+   "XDR": "Extended Detection and Response"
+  }
+ }
+}
