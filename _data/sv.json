@@ -28997,61 +28997,94 @@
    419,
    424
   ],
-  "en": "Digital Blackout",
+  "en": "Digital Blackout and Digital Safety Acts",
   "dueum": null,
-  "name": "디지털 블랙아웃(Digital Blackout) 디지털 안전3법",
-  "title": "디지털 블랙아웃(Digital Blackout) 디지털 안전3법",
-  "definition": "디지털 기술의 발전에 따라 네트워크, 데이터 센터, 부가 통신 서비스가디지털 생활의 핵심 인프라로서 그 중요성 지속적 증가",
+  "name": "디지털 블랙아웃(Digital Blackout)과 디지털 안전 3법",
+  "title": "디지털 블랙아웃(Digital Blackout)과 디지털 안전 3법",
+  "definition": "통신 기간망·데이터센터·부가통신 서비스 장애로 결제·의료·치안 등 디지털 기반 생활이 한꺼번에 마비되는 디지털 대정전 상태로, 국내는 이를 막기 위해 방송통신발전기본법·정보통신망법·전기통신사업법을 개정해 데이터센터와 대형 부가통신사업자를 재난관리 의무 대상에 포함함",
   "keywords_must": [
-   "방송통신발전 기본법(방송통신발전법) 시행령",
-   "디지털 블랙아웃(Digital Blackout)의 개념",
-   "디지털 블랙아웃(Digital Blackout)의 원인과 영향",
-   "디지털 블랙아웃 아키텍처",
-   "블랙아웃(Digital Blackout)",
-   "기본법(방송통신발전법)",
-   "법률(정보통신망법)"
+   "디지털 대정전",
+   "통신 기간망 두절",
+   "데이터센터 이중화",
+   "부가통신사업자 재난관리",
+   "방송통신발전기본법",
+   "정보통신망법 데이터센터 보호조치",
+   "전기통신사업법 서비스 안정성",
+   "주요 방송통신사업자 지정",
+   "업무 연속성 계획(BCP)",
+   "재해 복구(DR)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "KT 아현 화재(2018)",
+   "판교 데이터센터 화재(2022)",
+   "국가정보자원관리원 화재(2025)",
+   "크라우드스트라이크 장애(2024)",
+   "무정전 전원 장치(UPS) 배터리 화재"
+  ],
   "keywords": [
-   "핵심: 방송통신발전 기본법(방송통신발전법) 시행령 · 디지털 블랙아웃(Digital Blackout)의 개념 · 디지털 블랙아웃(Digital Blackout)의 원인과 영향",
-   "기술: 디지털 블랙아웃 아키텍처 · 블랙아웃(Digital Blackout) · 기본법(방송통신발전법)",
-   "운영: 법률(정보통신망법)"
+   "원인: 전력 설비 노후·단일 급전 · 라우터 등 설정 오류 · 모니터링·BCP 부재 · 화재·재해",
+   "영향: 사회 안전망(경찰·소방·병원) · 금융(은행·ATM) · 생활(카드 단말·POS·전자상거래)",
+   "3법 기준: 부가통신(일평균 이용자 1,000만 명 또는 트래픽 2% 이상) · 데이터센터(바닥 22,500㎡ 또는 수전 40MW 이상·매출 100억 원 이상) · 보호조치(전산실 500㎡ 이상)"
   ],
   "outline": [
-   "기간·부가통신 서비스 장애로 인한 일상 생활의 마비의 대응",
-   "- 디지털 블랙아웃 요점",
-   "통신은 항상 연결되어야 한다. 디지털 블랙아웃(Digital Blackout)",
-   "- 디지털 블랙아웃(Digital Blackout)의 개념",
-   "- 디지털 블랙아웃(Digital Blackout)의 원인과 영향",
-   "디지털 블랙아웃(Digital Blackout) 예방하기 위한 디지털 안전 3법",
-   "- 디지털 안전 3법의 개요",
-   "디지털 안전 3법 개정을 통한 기대 효과",
-   "- 디지털 블랙아웃 요점"
+   "개념과 원인",
+   "- 개념: 디지털 대정전",
+   "- 원인: 설비·설정",
+   "사회적 영향",
+   "- 안전망: 긴급 연락 단절",
+   "- 경제: 결제 마비",
+   "디지털 안전 3법",
+   "- 방송통신발전기본법",
+   "- 정보통신망법·전기통신사업법"
   ],
   "sections": [
    {
-    "title": "디지털 블랙아웃 핵심",
+    "title": "개념과 원인",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 디지털 대정전",
       "items": [
-       "방송통신발전 기본법(방송통신발전법) 시행령: 디지털 블랙아웃에서 방송통신발전 기본법(방송통신발전법) 시행령을 다루는 핵심 암기 포인트",
-       "디지털 블랙아웃(Digital Blackout)의 개념: 디지털 블랙아웃에서 디지털 블랙아웃(Digital Blackout)의 개념을 다루는 핵심 암기 포인트",
-       "디지털 블랙아웃(Digital Blackout)의 원인과 영향: 디지털 블랙아웃에서 디지털 블랙아웃(Digital Blackout)의 원인과 영향을 다루는 핵심 암기 포인트",
-       "디지털 블랙아웃 아키텍처: 디지털 블랙아웃의 계층·모듈 배치와 상호작용 구조"
+       "전기가 나가듯 네트워크가 끊겨 디지털 기기와 서비스가 일제히 멈추는 상태, 판교 데이터센터 화재(2022)로 메신저·결제가 장시간 중단"
+      ]
+     },
+     {
+      "title": "원인: 설비·설정",
+      "items": [
+       "전력 설비 노후·단일 급전 구조, 라우터 설정 오류, 장비 현황 모니터링과 업무 연속성 계획(BCP) 부재"
       ]
      }
     ]
    },
    {
-    "title": "디지털 블랙아웃 구성·기술",
+    "title": "사회적 영향",
     "subsections": [
      {
-      "title": null,
+      "title": "안전망: 긴급 연락 단절",
       "items": [
-       "블랙아웃(Digital Blackout): 디지털 블랙아웃에서 블랙아웃(Digital Blackout)을 다루는 핵심 암기 포인트",
-       "기본법(방송통신발전법): 디지털 블랙아웃에서 기본법(방송통신발전법)을 다루는 핵심 암기 포인트",
-       "법률(정보통신망법): 디지털 블랙아웃에서 법률(정보통신망법)을 다루는 핵심 암기 포인트"
+       "통신 기간망 두절로 경찰·소방 연락망과 병원 전산이 멈춰 치안·진료 차질"
+      ]
+     },
+     {
+      "title": "경제: 결제 마비",
+      "items": [
+       "은행·ATM 중단, 카드 단말·POS 오류로 소상공인 영업 중단, 정부 전산 장애 시 행정 서비스 정지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "디지털 안전 3법",
+    "subsections": [
+     {
+      "title": "방송통신발전기본법",
+      "items": [
+       "부가통신사업자 재난관리: 대형 부가통신·데이터센터 사업자를 주요 방송통신사업자로 지정해 재난관리계획·이중화 의무 부과"
+      ]
+     },
+     {
+      "title": "정보통신망법·전기통신사업법",
+      "items": [
+       "정보통신망법 데이터센터 보호조치와 장애 보고 대상을 임차 사업자로 확대, 전기통신사업법 서비스 안정성 자료 제출과 해외 사업자 국내 대리인 의무 추가"
       ]
      }
     ]
@@ -29060,20 +29093,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "방송통신발전 기본법(방송통신발전법) 시행령",
-   "디지털 블랙아웃(Digital Blackout)의 개념",
-   "디지털 블랙아웃(Digital Blackout)의 원인과 영향",
-   "디지털 블랙아웃 아키텍처",
-   "블랙아웃(Digital Blackout)",
-   "기본법(방송통신발전법)",
-   "법률(정보통신망법)"
+   "디지털 대정전",
+   "통신 기간망 두절",
+   "데이터센터 이중화",
+   "부가통신사업자 재난관리",
+   "방송통신발전기본법",
+   "정보통신망법 데이터센터 보호조치",
+   "전기통신사업법 서비스 안정성",
+   "주요 방송통신사업자 지정",
+   "업무 연속성 계획(BCP)",
+   "재해 복구(DR)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_345",
@@ -29084,79 +29121,94 @@
    425,
    430
   ],
-  "en": "ISO 26262",
+  "en": "ISO 26262 Road Vehicles Functional Safety",
   "dueum": null,
   "name": "자동차 기능안전(ISO 26262)",
   "title": "자동차 기능안전(ISO 26262)",
-  "definition": "자동차에 탑재되는 소프트웨어 오류로 인한 사고를 미연에 방지하기 위해, 차량용 부품을 설계하거나 제조할 때 기능안전성을 반영해야 한다는 개념이 도입된 새로운 기능안전(functional safety)규격",
+  "definition": "양산 도로 차량의 전기·전자 시스템 오작동으로 인한 위험을 줄이기 위해 IEC 61508을 자동차 특성에 맞게 재구성하여 개념 단계부터 생산·운영·폐기까지 ASIL 기반 안전 활동과 증적을 요구하는 자동차 기능안전 국제 표준",
   "keywords_must": [
-   "기능안전",
-   "AUTOSA",
-   "ASIL",
-   "ISO 61508",
-   "V model",
-   "TRL",
-   "소프트웨어의 기능안전 국제규격",
-   "ISO 26262의 개념",
-   "ISO 26262 표준 구조도",
-   "AUTOSA(AUTomotive Open System Architecture)"
+   "안전 생명주기(Safety Lifecycle)",
+   "아이템 정의(Item Definition)",
+   "위험원 분석·위험 평가(HARA)",
+   "자동차 안전 무결성 등급(ASIL)",
+   "안전 목표(Safety Goal)",
+   "V 모델 개발",
+   "기능안전 관리(FSM)",
+   "안전 사례(Safety Case)",
+   "확인 조치(Confirmation Measures)",
+   "ASIL 분해(Decomposition)"
   ],
   "keywords_ref": [
-   "ECU",
-   "ISO"
+   "IEC 61508",
+   "오토모티브 스파이스(ASPICE)",
+   "ISO 21448(SOTIF)",
+   "ISO/SAE 21434",
+   "오토사(AUTOSAR)"
   ],
   "keywords": [
-   "핵심: 기능안전 · AUTOSA · ASIL",
-   "기술: ISO 61508 · V model · TRL",
-   "운영: 소프트웨어의 기능안전 국제규격 · ISO 26262의 개념 · ISO 26262 표준 구조도",
-   "참고: ECU · ISO"
+   "판본: 2011 1판(10파트, 승용차 3.5t 이하) → 2018 2판(12파트, 트럭·버스 포함, 11부 반도체 · 12부 이륜차)",
+   "파트: 1 용어 · 2 기능안전 관리 · 3 개념 · 4 시스템 · 5 HW · 6 SW · 7 생산·운영 · 8 지원 · 9 ASIL·안전 분석 · 10 지침",
+   "연계: 프로세스 성숙도(ASPICE) · 성능 한계(SOTIF) · 사이버보안(ISO/SAE 21434) · SW 플랫폼(AUTOSAR)"
   ],
   "outline": [
-   "자동차 SW 의 오류를 막기 위한 기능안전 국제규격, ISO 26262의 개요",
-   "- ISO 26262의 개념",
-   "- ISO 26262 등장 배경",
-   "ISO 26262 표준 구조도 및 설명(2판)",
-   "- ISO 26262 표준 구조도",
-   "ISO 26262의 차량안전성보전등급, ASIL",
-   "- ASIL(Automotive Software Integrity Lev…"
+   "등장 배경과 특징",
+   "- 배경: ECU 증가",
+   "- 특징: 위험 기반",
+   "구성과 판본",
+   "- 판본: 2011·2018",
+   "- 개발: V 모델",
+   "안전 관리와 연계 표준",
+   "- 관리: 증적",
+   "- 연계: 보완 표준"
   ],
   "sections": [
    {
-    "title": "자동차 기능안전 핵심",
+    "title": "등장 배경과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: ECU 증가",
       "items": [
-       "기능안전: 자동차 기능안전에서 기능안전을 다루는 핵심 암기 포인트",
-       "AUTOSA: AUTOSA를 자동차 기능안전 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ASIL: ASIL를 자동차 기능안전 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ISO 61508: 자동차 기능안전에서 ISO 61508를 다루는 핵심 암기 포인트"
+       "차량당 ECU 수와 네트워크 복잡도가 급증하고 다수 공급사가 분담 개발하며, IEC 61508은 양산 차량 특성을 반영하지 못함"
+      ]
+     },
+     {
+      "title": "특징: 위험 기반",
+      "items": [
+       "위험원 분석·위험 평가(HARA)로 체계적 고장 회피와 무작위 하드웨어 고장 감지·제어 수단을 정의"
       ]
      }
     ]
    },
    {
-    "title": "자동차 기능안전 구성·기술",
+    "title": "구성과 판본",
     "subsections": [
      {
-      "title": null,
+      "title": "판본: 2011·2018",
       "items": [
-       "V model: 자동차 기능안전에서 V model를 다루는 핵심 암기 포인트",
-       "TRL: TRL를 자동차 기능안전 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "소프트웨어의 기능안전 국제규격: 자동차 기능안전에서 소프트웨어의 기능안전 국제규격을 다루는 핵심 암기 포인트",
-       "ISO 26262의 개념: 자동차 기능안전에서 ISO 26262의 개념을 다루는 핵심 암기 포인트"
+       "2011년 10파트로 제정, 2018년 2판에서 트럭·버스로 확대하고 반도체 지침(11부)·이륜차(12부)를 추가해 12파트"
+      ]
+     },
+     {
+      "title": "개발: V 모델",
+      "items": [
+       "3부 개념 → 4부 시스템 → 5·6부 HW·SW를 V 모델 개발로 진행하고 단계별 검증·통합 시험 수행"
       ]
      }
     ]
    },
    {
-    "title": "자동차 기능안전 운영",
+    "title": "안전 관리와 연계 표준",
     "subsections": [
      {
-      "title": null,
+      "title": "관리: 증적",
       "items": [
-       "ISO 26262 표준 구조도: 자동차 기능안전 상호운용·품질을 맞추는 규격·기준",
-       "AUTOSA(AUTomotive Open System Architecture): AUTOSA를 자동차 기능안전 설계·구현·운영에 쓰는 핵심 기술 요소 (자동차 기능안전/4b6b)"
+       "기능안전 관리(FSM)와 확인 조치(Confirmation Measures)로 독립 검토·감사·평가, 결과를 안전 사례(Safety Case)로 정리"
+      ]
+     },
+     {
+      "title": "연계: 보완 표준",
+      "items": [
+       "공정 성숙도는 ASPICE, 고장 없는 성능 한계는 ISO 21448(SOTIF), 해킹 위협은 ISO/SAE 21434로 보완"
       ]
      }
     ]
@@ -29165,23 +29217,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "기능안전",
-   "AUTOSA",
-   "ASIL",
-   "ISO 61508",
-   "V model",
-   "TRL",
-   "소프트웨어의 기능안전 국제규격",
-   "ISO 26262의 개념",
-   "ISO 26262 표준 구조도",
-   "AUTOSA(AUTomotive Open System Architecture)"
+   "안전 생명주기(Safety Lifecycle)",
+   "아이템 정의(Item Definition)",
+   "위험원 분석·위험 평가(HARA)",
+   "자동차 안전 무결성 등급(ASIL)",
+   "안전 목표(Safety Goal)",
+   "V 모델 개발",
+   "기능안전 관리(FSM)",
+   "안전 사례(Safety Case)",
+   "확인 조치(Confirmation Measures)",
+   "ASIL 분해(Decomposition)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_346",
@@ -29192,77 +29245,94 @@
    431,
    432
   ],
-  "en": "ASIL",
+  "en": "Automotive Safety Integrity Level",
   "dueum": null,
-  "name": "디지털서비스(ASIL)",
-  "title": "디지털서비스(ASIL)",
-  "definition": "전기전자 장치안전 표준(IEC 61508)의 안전성 보전등급(SIL)을 자동차에 맞게 개선 적용한 차랑안전성등급",
+  "name": "자동차 안전 무결성 등급(ASIL, Automotive Safety Integrity Level)",
+  "title": "자동차 안전 무결성 등급(ASIL, Automotive Safety Integrity Level)",
+  "definition": "ISO 26262에서 위험 사건의 심각도(S)·노출 가능성(E)·제어 가능성(C)을 조합해 안전 목표별로 할당하는 차량 안전성 등급으로, QM과 ASIL A~D로 구분되며 등급이 높을수록 엄격한 개발 조치와 하드웨어 지표를 요구함",
   "keywords_must": [
-   "IEC61508",
-   "차량안전성",
-   "잠재적 심각도",
-   "노출 가능성",
-   "통제 가능성",
-   "ISO26262",
-   "E0",
-   "E4",
-   "S0",
-   "S3"
+   "심각도(Severity, S0~S3)",
+   "노출 가능성(Exposure, E0~E4)",
+   "제어 가능성(Controllability, C0~C3)",
+   "QM(Quality Managed)",
+   "ASIL A~D",
+   "안전 목표 할당",
+   "ASIL 분해(Decomposition)",
+   "단일점 고장 지표(SPFM)",
+   "잠재 고장 지표(LFM)",
+   "무작위 HW 고장 확률 지표(PMHF)"
   ],
   "keywords_ref": [
-   "C0",
-   "C3"
+   "위험원 분석·위험 평가(HARA)",
+   "안전 무결성 수준(SIL)",
+   "진단 커버리지",
+   "FIT(Failures In Time)",
+   "독립성 요구"
   ],
   "keywords": [
-   "핵심: IEC61508 · 차량안전성 · 잠재적 심각도",
-   "기술: 노출 가능성 · 통제 가능성 · ISO26262",
-   "운영: E0 · E4 · S0",
-   "참고: C0 · C3"
+   "결정: S·E·C 조합 → S3·E4·C3 = ASIL D, 낮은 조합은 QM (S0·E0·C0 중 하나면 등급 미부여)",
+   "HW 지표: SPFM D ≥99% · C ≥97% · B ≥90% / LFM D ≥90% · C ≥80% · B ≥60% / PMHF D <10 FIT · C·B <100 FIT",
+   "분해: ASIL D → C(D)+A(D) 또는 B(D)+B(D), 독립성·공통 원인 고장 분석 필수"
   ],
   "outline": [
-   "ISO 2626의 차량안전성 보전등급, ASIL 의 개요",
-   "- 디지털서비스 요점",
-   "ASIL 의 등급 분류 및 세부 구성",
-   "- ASIL(Automotive Software Integrity Lev…",
-   "- ASIL(Automotive Software Integrity Lev…"
+   "개념과 결정 요소",
+   "- 개념: 자동차형 SIL",
+   "- 요소: S·E·C",
+   "등급과 요구 수준",
+   "- 등급: QM~D",
+   "- 지표: 하드웨어 목표",
+   "할당과 분해",
+   "- 할당: 안전 목표 단위",
+   "- 분해: 중복 구현"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "개념과 결정 요소",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 자동차형 SIL",
       "items": [
-       "IEC61508: IEC61508를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "차량안전성: 디지털서비스에서 차량안전성을 다루는 핵심 암기 포인트",
-       "잠재적 심각도: 디지털서비스에서 잠재적 심각도를 다루는 핵심 암기 포인트",
-       "노출 가능성: 디지털서비스에서 노출 가능성을 다루는 핵심 암기 포인트"
+       "IEC 61508의 안전 무결성 수준(SIL)을 차량 운행 상황과 운전자 제어 개념을 넣어 개선한 등급"
+      ]
+     },
+     {
+      "title": "요소: S·E·C",
+      "items": [
+       "심각도(Severity, S0~S3)는 상해 정도, 노출 가능성(Exposure, E0~E4)은 운행 상황 빈도, 제어 가능성(Controllability, C0~C3)은 운전자 회피 가능성"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "등급과 요구 수준",
     "subsections": [
      {
-      "title": null,
+      "title": "등급: QM~D",
       "items": [
-       "통제 가능성: 디지털서비스에서 통제 가능성을 다루는 핵심 암기 포인트",
-       "ISO26262: ISO26262를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "E0: E0를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "E4: E4를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "QM(Quality Managed)은 일반 품질 관리로 충분, ASIL A~D로 갈수록 정형 검증·커버리지·독립성 요구 강화"
+      ]
+     },
+     {
+      "title": "지표: 하드웨어 목표",
+      "items": [
+       "단일점 고장 지표(SPFM)·잠재 고장 지표(LFM)·무작위 HW 고장 확률 지표(PMHF)를 ASIL별 목표값 이상으로 충족"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "할당과 분해",
     "subsections": [
      {
-      "title": null,
+      "title": "할당: 안전 목표 단위",
       "items": [
-       "S0: S0를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "S3: S3를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "HARA로 도출한 안전 목표마다 최고 ASIL을 부여하고 하위 기능·기술 요구사항에 상속"
+      ]
+     },
+     {
+      "title": "분해: 중복 구현",
+      "items": [
+       "ASIL 분해(Decomposition): 독립된 중복 요소에 낮은 등급을 나눠 배정해 비용 절감, 공통 원인 고장 분석으로 독립성 입증"
       ]
      }
     ]
@@ -29271,23 +29341,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "IEC61508",
-   "차량안전성",
-   "잠재적 심각도",
-   "노출 가능성",
-   "통제 가능성",
-   "ISO26262",
-   "E0",
-   "E4",
-   "S0",
-   "S3"
+   "심각도(Severity, S0~S3)",
+   "노출 가능성(Exposure, E0~E4)",
+   "제어 가능성(Controllability, C0~C3)",
+   "QM(Quality Managed)",
+   "ASIL A~D",
+   "안전 목표 할당",
+   "ASIL 분해(Decomposition)",
+   "단일점 고장 지표(SPFM)",
+   "잠재 고장 지표(LFM)",
+   "무작위 HW 고장 확률 지표(PMHF)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_347",
@@ -29298,61 +29369,101 @@
    433,
    436
   ],
-  "en": "AR AUTOSAR AUTOSAR",
+  "en": "AUTomotive Open System ARchitecture",
   "dueum": null,
-  "name": "디지털서비스(AR AUTOSAR AUTOSAR)",
-  "title": "디지털서비스(AR AUTOSAR AUTOSAR)",
-  "definition": "AR(AUTOSAR) — 커넥티드·자율주행·차량 SW 안전 관련 개념",
+  "name": "오토사(AUTOSAR, AUTomotive Open System ARchitecture)",
+  "title": "오토사(AUTOSAR, AUTomotive Open System ARchitecture)",
+  "definition": "완성차·부품사·SW 업체가 공동 제정한 차량 ECU 소프트웨어 표준 아키텍처로, 응용 SW를 하드웨어와 분리하는 계층 구조·표준 인터페이스·설정 방법론을 정의해 재사용과 공급사 간 호환을 높임",
   "keywords_must": [
-   "자동차 전장용 임베디드 SW",
-   "ECU",
-   "ISO26262",
-   "디지털서비스의 핵심 요소",
-   "디지털서비스의 구조",
-   "AR(AUTOSAR)",
-   "Sentiment"
+   "클래식 플랫폼(Classic Platform)",
+   "어댑티브 플랫폼(Adaptive Platform)",
+   "소프트웨어 컴포넌트(SWC)",
+   "런타임 환경(RTE)",
+   "기본 소프트웨어(BSW)",
+   "마이크로컨트롤러 추상화 계층(MCAL)",
+   "가상 기능 버스(VFB)",
+   "ARXML 설정 방법론",
+   "서비스 지향 통신(SOME/IP)",
+   "복합 드라이버(CDD)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "OSEK/VDX OS",
+   "POSIX",
+   "ISO 26262",
+   "소프트웨어 정의 차량(SDV)",
+   "ara::com"
+  ],
   "keywords": [
-   "핵심: 자동차 전장용 임베디드 SW · ECU · ISO26262",
-   "기술: 디지털서비스의 핵심 요소 · 디지털서비스의 구조 · AR(AUTOSAR)",
-   "운영: Sentiment"
+   "클래식 3계층: 애플리케이션(SWC) → RTE(VFB 구현) → BSW(서비스·ECU 추상화·MCAL + 복합 드라이버)",
+   "어댑티브(2017~): POSIX OS · C++ · SOME/IP 서비스 지향 · 동적 배포·OTA · 자율주행·고성능 컴퓨터",
+   "방법론: 시스템 구성 → ECU 추출 → ECU 구성 → 코드 생성, 산출물은 ARXML"
   ],
   "outline": [
-   "디지털서비스의 개요",
-   "- 디지털서비스의 정의",
-   "- 디지털서비스의 등장 배경",
-   "디지털서비스의 구성과 핵심 요소",
-   "- 디지털서비스의 핵심 요소",
-   "- 디지털서비스의 구조",
-   "디지털서비스의 적용과 사례",
-   "- 디지털서비스의 적용",
-   "- 디지털서비스의 과제"
+   "개념과 목적",
+   "- 결성: 2003년 컨소시엄",
+   "- 목적: HW 독립",
+   "클래식 플랫폼 구조",
+   "- 응용·RTE",
+   "- BSW: 3단 추상화",
+   "- 방법론: ARXML",
+   "어댑티브 플랫폼",
+   "- 구조: 서비스 지향",
+   "- 활용: SDV 기반"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "개념과 목적",
     "subsections": [
      {
-      "title": null,
+      "title": "결성: 2003년 컨소시엄",
       "items": [
-       "자동차 전장용 임베디드 SW: 디지털서비스에서 자동차 전장용 임베디드 SW를 다루는 핵심 암기 포인트",
-       "ECU: ECU를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ISO26262: ISO26262를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소 (디지털서비스/1bdd)",
-       "디지털서비스의 핵심 요소: 디지털서비스에서 디지털서비스의 핵심 요소를 다루는 핵심 암기 포인트 (디지털서비스/0fc9)"
+       "완성차·1차 협력사·반도체·툴 업체가 참여해 ECU SW를 표준화, 공급사가 바뀌어도 SW 재사용"
+      ]
+     },
+     {
+      "title": "목적: HW 독립",
+      "items": [
+       "소프트웨어 컴포넌트(SWC)를 하드웨어와 분리해 이식성·확장성 확보, ISO 26262 안전 요구 대응 쉬움"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "클래식 플랫폼 구조",
     "subsections": [
      {
-      "title": null,
+      "title": "응용·RTE",
       "items": [
-       "디지털서비스의 구조: 디지털서비스에서 디지털서비스의 구조를 다루는 핵심 암기 포인트",
-       "AR(AUTOSAR): AR를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Sentiment: 텍스트의 긍정·부정 등 감성 극성을 분류 (디지털서비스/e851)"
+       "소프트웨어 컴포넌트(SWC)는 가상 기능 버스(VFB)로 통신하고 런타임 환경(RTE)이 ECU 내부·외부 통신으로 매핑"
+      ]
+     },
+     {
+      "title": "BSW: 3단 추상화",
+      "items": [
+       "기본 소프트웨어(BSW)는 서비스·ECU 추상화·마이크로컨트롤러 추상화 계층(MCAL)으로 구성, 비표준 장치는 복합 드라이버(CDD)"
+      ]
+     },
+     {
+      "title": "방법론: ARXML",
+      "items": [
+       "ARXML 설정 방법론: 시스템·ECU 구성을 XML로 기술하고 도구가 RTE·BSW 코드를 생성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "어댑티브 플랫폼",
+    "subsections": [
+     {
+      "title": "구조: 서비스 지향",
+      "items": [
+       "어댑티브 플랫폼(Adaptive Platform): POSIX OS 위 C++ 응용이 서비스 지향 통신(SOME/IP)으로 동적 연결"
+      ]
+     },
+     {
+      "title": "활용: SDV 기반",
+      "items": [
+       "자율주행·통합 제어기 같은 고성능 컴퓨터와 OTA 갱신에 적합, 실시간 제어 ECU는 클래식과 혼용"
       ]
      }
     ]
@@ -29361,20 +29472,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "자동차 전장용 임베디드 SW",
-   "ECU",
-   "ISO26262",
-   "디지털서비스의 핵심 요소",
-   "디지털서비스의 구조",
-   "AR(AUTOSAR)",
-   "Sentiment"
+   "클래식 플랫폼(Classic Platform)",
+   "어댑티브 플랫폼(Adaptive Platform)",
+   "소프트웨어 컴포넌트(SWC)",
+   "런타임 환경(RTE)",
+   "기본 소프트웨어(BSW)",
+   "마이크로컨트롤러 추상화 계층(MCAL)",
+   "가상 기능 버스(VFB)",
+   "ARXML 설정 방법론",
+   "서비스 지향 통신(SOME/IP)",
+   "복합 드라이버(CDD)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_348",
