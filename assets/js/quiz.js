@@ -5,7 +5,7 @@
   const STORE = 'pe-write-v1';
 
   let all = [], domain = '', topicOnly = params.get('topic') || '';
-  let mode = params.get('mode') === 'mc' ? 'mc' : 'write';
+  let mode = 'write';
   let pool = [], idx = 0, t = null;
   let phase = 'prompt'; // prompt | reveal | result
   let secs = 0, timerId = 0;
@@ -185,76 +185,14 @@
     openTopic(idx + 1);
   });
 
-  // ===== 객관식(보조) =====
-  function startMc() {
-    mode = 'mc';
-    document.body.classList.add('mode-mc');
-    $('writeActions').hidden = false;
-    // reuse minimal MC using existing bank for this topic if any
-    location.href = PE.url('/quiz/') + '?mode=mc&d=' + encodeURIComponent(domain) + (topicOnly ? '&topic=' + encodeURIComponent(topicOnly) : '');
-  }
-  $('mcLink').addEventListener('click', e => { e.preventDefault(); startMc(); });
-
-  // MC mode: keep a compact legacy quiz so 객관식 link still works
-  if (mode === 'mc') {
-    $('mcLink').textContent = '서술 연습으로';
-    $('mcLink').onclick = e => { e.preventDefault(); location.href = PE.url('/quiz/') + '?d=' + encodeURIComponent(PE.cur || 'NW') + (topicOnly ? '&topic=' + encodeURIComponent(topicOnly) : ''); };
-    // load light MC below after data
-  }
-
-  function runMc(bank) {
-    const quiz = $('quiz');
-    quiz.classList.remove('write');
-    let score = { ok: 0, n: 0 }, q = null, queue = [];
-    const byId = id => all.find(x => x.id === id);
-    const pickBank = () => {
-      if (!queue.length) {
-        const filt = bank.filter(b => {
-          const tt = byId(b.topic); return tt && tt.domain === domain && (!topicOnly || b.topic === topicOnly);
-        });
-        queue = shuffled(filt);
-      }
-      return queue.shift();
-    };
-    function make() {
-      const b = pickBank();
-      if (!b) { quiz.innerHTML = '<div class="empty">객관식 문제은행이 비어 있어요.</div>'; $('quizPrimary').disabled = true; return; }
-      const topic = byId(b.topic);
-      const order = shuffled([0, 1, 2, 3]);
-      q = { t: topic, opts: order.map(i => b.options[i]), answer: order.indexOf(b.answer), explain: b.explain, question: b.question, answered: -1 };
-      draw();
-    }
-    function draw() {
-      const done = q.answered >= 0, ok = done && q.answered === q.answer;
-      quiz.innerHTML = `<div class="qscore">점수 ${score.ok}/${score.n} · <b>객관식(보조)</b></div>
-        <div class="qtype">${PE.esc(PE.name(q.t))}</div>
-        <div class="qtext">${PE.gl(q.question)}</div>
-        <div class="qopts">${q.opts.map((o, i) => {
-          let cls = 'qopt'; if (done) { if (i === q.answer) cls += ' right'; else if (i === q.answered) cls += ' wrong'; }
-          return `<button type="button" class="${cls}" data-i="${i}" ${done ? 'disabled' : ''}><span class="qn">${'ABCD'[i]}</span><span>${PE.gl(o)}</span></button>`;
-        }).join('')}</div>
-        ${done ? `<div class="qfb ${ok ? 'ok' : 'ng'}">${ok ? '⭕' : '❌'} ${PE.gl(q.explain || '')}</div>` : ''}`;
-      quiz.querySelectorAll('.qopt').forEach(b => b.addEventListener('click', () => {
-        if (q.answered >= 0) return; q.answered = +b.dataset.i; score.n++; if (q.answered === q.answer) score.ok++;
-        $('quizPrimary').disabled = false; draw();
-      }));
-      $('quizPrimary').textContent = '다음 문제'; $('quizPrimary').disabled = !done;
-      $('quizSkip').hidden = true;
-      PE.fit(quiz);
-    }
-    $('quizPrimary').onclick = () => make();
-    make();
-  }
-
   addEventListener('resize', () => PE.fit($('quiz')));
-  Promise.all([PE.load(), PE.loadQuiz()]).then(([data, qb]) => {
+  PE.load().then(data => {
     all = data;
     const tt = topicOnly && all.find(x => x.id === topicOnly);
     if (tt && tt.domain !== PE.cur) PE.setDomain(tt.domain);
     domain = PE.cur;
     // drawer label
     document.querySelectorAll('.dr-links a[href*="/quiz/"]').forEach(a => { a.textContent = '서술'; });
-    if (mode === 'mc') { runMc(qb || []); return; }
     pool = buildPool();
     openTopic(0);
   }).catch(() => { $('quiz').innerHTML = '<div class="empty">데이터를 불러오지 못했어요.</div>'; });
