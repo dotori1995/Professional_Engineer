@@ -84,7 +84,6 @@
   PE.reviewFixed = () => false; // 수정·출처 표기는 화면에 노출하지 않음(CONTENT_RULES.md)
   // 표시용 토픽명: 항상 '한글(English)' 형태(name 필드), 없으면 title
   PE.name = t => (t && (t.name || t.title)) || '';
-  PE.loadQuiz = () => fetch(PE.base + '/quiz.json').then(r => r.json()).catch(() => []);
   // 테마 토글: 시스템 → 다크 → 라이트
   const btn = document.getElementById('themeBtn');
   if (btn) btn.addEventListener('click', () => {

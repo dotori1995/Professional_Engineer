@@ -9,7 +9,6 @@
 - 페이지: 목록(`/`), 토픽(`/topic/?id=`), 카드(`/cards/`, `?topic=`), 문제(`/quiz/`, `?topic=`는 그 토픽만 출제)
 - **목록**: 제목·키워드·정의 통합 검색(공백 무시), 현재 도메인 토픽만 표시
 - **토픽 상세**: 정의, 키워드, 두음(통용되는 것만), 목차(I/II/III), 자세히(접힘), 한 화면 자동 맞춤
-- **객관식**: 검수한 문제은행 + 키워드 찾기/아닌 것 찾기/정의→토픽/토픽→키워드 자동 문제
 - 콘텐츠 작성 규칙은 **[CONTENT_RULES.md](CONTENT_RULES.md)** 참고
 - **카드(/cards/)**: 앞면 = 토픽명, 뒷면 = 정의·키워드·두음·목차 / 탭해서 뒤집기 / 좌우 스와이프·◀▶ 이동 / 🔀 섞기 / 한 화면 자동 맞춤
 - **문제(/quiz/)**: 점수·다음 문제만 있는 단순한 화면
@@ -36,8 +35,7 @@ bundle exec jekyll serve      # http://localhost:4000/Professional_Engineer/
 ## 데이터 구조
 ```
 _data/nw.json             # 네트워크(NW) 토픽 127개 (파서 출력물)
-_data/overrides/nw.json   # 수동 보정(name/en 표시 제목, 검수한 정의·키워드·목차·자세히, quiz_terms)
-_data/quiz/nw.json        # 객관식 문제은행 (빌드 시 /quiz.json)
+_data/overrides/nw.json   # 수동 보정(name/en 표시 제목, 검수한 정의·키워드·목차·자세히)
 _data/glossary.yml        # 약어 → 풀네임
 _config.yml → domains     # 사이트에 노출할 도메인 목록
 data.json                 # 빌드 시 모든 도메인을 합쳐 /data.json 으로 출력 (JS가 읽음)
