@@ -23,6 +23,7 @@ ADF: Augmented Dickey-Fuller
 ADN: Application Delivery Network
 ADPCM: Adaptive Differential Pulse Code Modulation
 ADR: [Adaptive Data Rate, Architecture Decision Record, Active Design Review]
+ADT: Abstract Data Type
 AECD: Automatic Emergency Call Device
 AES: Advanced Encryption Standard
 AFI: Address Family Identifier
@@ -68,12 +69,14 @@ ASCII: American Standard Code for Information Interchange
 ASIC: Application-Specific Integrated Circuit
 ASK: Amplitude Shift Keying
 ASN.1: Abstract Syntax Notation One
+AST: Abstract Syntax Tree
 ATAM: Architecture Tradeoff Analysis Method
 ATIS: Alliance for Telecommunications Industry Solutions
 ATM: Asynchronous Transfer Mode
 ATSSS: Access Traffic Steering, Switching and Splitting
 AUC: Area Under the Curve
 AV: Audio/Video
+AVL: Adelson-Velsky and Landis
 AXFR: Full Zone Transfer
 BAC: Budget at Completion
 BAM: Business Activity Monitoring
@@ -94,6 +97,7 @@ BECN: Backward Explicit Congestion Notification
 BEMS: Building Energy Management System
 BEPS: Base Erosion and Profit Shifting
 BER: Bit Error Rate
+BFS: Breadth-First Search
 BGP: Border Gateway Protocol
 BIA: Business Impact Analysis
 BIC: Bayesian Information Criterion
@@ -115,6 +119,7 @@ BSC: Balanced Scorecard
 BSM: Basic Safety Message
 BSON: Binary JSON
 BSS: [Basic Service Set, Business Support System]
+BST: Binary Search Tree
 BVI: Business Value of Information
 BWS: Broadcast Website
 C-V2X: Cellular Vehicle-to-Everything
@@ -142,6 +147,7 @@ CDMA: Code Division Multiple Access
 CDN: Content Delivery Network
 CF: Cash Flow
 CFD: Cumulative Flow Diagram
+CFS: Completely Fair Scheduler
 CIDR: Classless Inter-Domain Routing
 CIFS: Common Internet File System
 CIR: Committed Information Rate
@@ -292,6 +298,7 @@ EAC: Estimate at Completion
 EAI: Enterprise Application Integration
 EAP: Extensible Authentication Protocol
 EBCDIC: Extended Binary Coded Decimal Interchange Code
+EBP: Extended Base Pointer
 EBS: Excess Burst Size
 eCall: Emergency Call
 ECC: [Elliptic Curve Cryptography, Error-Correcting Code]
@@ -397,6 +404,7 @@ GFS: Google File System
 GFSK: Gaussian Frequency Shift Keying
 GIF: Graphics Interchange Format
 GIS: Geographic Information System
+GiST: Generalized Search Tree
 GloBE: Global Anti-Base Erosion
 GLONASS: Global Navigation Satellite System (Russia)
 GNSS: Global Navigation Satellite System
@@ -561,6 +569,7 @@ LoRa: Long Range
 LOS: Line of Sight
 LPF: Low-Pass Filter
 LPI: Low Probability of Intercept
+LPM: Longest Prefix Match
 LPN: Low Power Node
 LPWA: Low Power Wide Area
 LPWAN: Low-Power Wide-Area Network
@@ -748,6 +757,7 @@ OPNFV: Open Platform for NFV
 OQL: Object Query Language
 OQPSK: Offset Quadrature Phase Shift Keying
 ORDBMS: Object-Relational Database Management System
+OS: Operating System
 OSGi: Open Services Gateway initiative
 OSI: Open Systems Interconnection
 OSPF: Open Shortest Path First
@@ -871,6 +881,7 @@ RFID: Radio Frequency Identification
 RFP: Request for Proposal
 RIB: Routing Information Base
 RIC: RAN Intelligent Controller
+RID: Record Identifier
 RIF: Rule Interchange Format
 RIP: Routing Information Protocol
 RIPng: RIP next generation
