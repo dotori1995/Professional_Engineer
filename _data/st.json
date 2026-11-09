@@ -35,7 +35,7 @@
   ],
   "outline": [
    "통계학의 개념",
-   "- 정의",
+   "- 모집단 특성 추론 학문",
    "- 모집단·표본·모수·통계량",
    "통계학의 분류",
    "- 기술통계",
@@ -124,7 +124,6 @@
    "연계: 표본추출 → 기술통계 → 추리통계"
   ],
   "keywords_must": [
-   "모집단(Population)",
    "모수(Parameter)",
    "유한 모집단(Finite Population)",
    "무한 모집단(Infinite Population)",
@@ -142,7 +141,7 @@
   ],
   "outline": [
    "모집단의 개념",
-   "- 정의",
+   "- 관측값 전체 집합",
    "- 모수",
    "모집단의 유형과 조사",
    "- 유한·무한 모집단",
@@ -199,7 +198,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "모집단(Population)",
    "모수(Parameter)",
    "유한 모집단(Finite Population)",
    "무한 모집단(Infinite Population)",
@@ -229,7 +227,6 @@
    "비확률 추출: 판단 · 편의 · 할당 · 유의(포커스 그룹) · 눈덩이"
   ],
   "keywords_must": [
-   "표본(Sample)",
    "표본오차(Sampling Error)",
    "통계적 추론(Statistical Inference)",
    "확률 추출(Probability Sampling)",
@@ -249,7 +246,7 @@
   ],
   "outline": [
    "표본의 개념",
-   "- 정의",
+   "- 모집단 일부의 관측 결과",
    "- 표본오차",
    "- 통계적 추론",
    "확률 추출 방법",
@@ -313,7 +310,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "표본(Sample)",
    "표본오차(Sampling Error)",
    "통계적 추론(Statistical Inference)",
    "확률 추출(Probability Sampling)",
@@ -362,7 +358,7 @@
   ],
   "outline": [
    "자료의 개념",
-   "- 정의",
+   "- 범주형·수치형 자료",
    "- 질적·양적 자료",
    "측정 척도",
    "- 명목·서열",
@@ -684,10 +680,10 @@
   ],
   "outline": [
    "타당도",
-   "- 정의",
+   "- 측정 정확성",
    "- 내용·기준·구성 타당도",
    "신뢰도",
-   "- 정의",
+   "- 측정 일관성",
    "- 재검사·동형·반분·내적 일관성",
    "타당도와 신뢰도의 관계",
    "- 필요조건 관계",
@@ -893,7 +889,7 @@
   ],
   "outline": [
    "확률의 개념",
-   "- 정의",
+   "- 고전적·경험적·주관적·공리적 확률",
    "- 확률의 해석",
    "확률의 기본 법칙",
    "- 공리·덧셈정리",
@@ -1084,7 +1080,6 @@
    "활용: 나이브 베이즈 · 스팸 필터 · 진단 · 베이지안 추론"
   ],
   "keywords_must": [
-   "베이즈 정리(Bayes' Theorem)",
    "사전확률(Prior Probability)",
    "사후확률(Posterior Probability)",
    "우도(Likelihood)",
@@ -1102,7 +1097,7 @@
   ],
   "outline": [
    "베이즈 정리의 개요",
-   "- 정의",
+   "- 사후확률 갱신",
    "- 확률과 우도",
    "베이즈 정리의 수식과 사례",
    "- 전확률 정리",
@@ -1161,7 +1156,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "베이즈 정리(Bayes' Theorem)",
    "사전확률(Prior Probability)",
    "사후확률(Posterior Probability)",
    "우도(Likelihood)",
@@ -1191,7 +1185,6 @@
    "추정: 최대우도추정(MLE) · 우도비 검정"
   ],
   "keywords_must": [
-   "우도(Likelihood)",
    "가능도 함수(Likelihood Function)",
    "확률(Probability)",
    "모수(Parameter)",
@@ -1209,7 +1202,7 @@
   ],
   "outline": [
    "우도의 개념",
-   "- 정의",
+   "- 모수의 그럴듯함 L(θ|x)",
    "- 확률과 우도의 비교",
    "우도 함수 계산",
    "- 연속사건의 우도",
@@ -1262,7 +1255,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "우도(Likelihood)",
    "가능도 함수(Likelihood Function)",
    "확률(Probability)",
    "모수(Parameter)",
@@ -1308,7 +1300,7 @@
   ],
   "outline": [
    "확률변수의 개념",
-   "- 정의",
+   "- 표본공간 → 실수 함수",
    "- 이산형·연속형",
    "확률밀도함수",
    "- 정의와 성질",
@@ -1390,7 +1382,6 @@
    "표현: 확률질량함수 · 확률밀도함수 · 누적분포함수(CDF) · 기댓값 · 분산"
   ],
   "keywords_must": [
-   "확률분포(Probability Distribution)",
    "이산확률분포(Discrete Distribution)",
    "연속확률분포(Continuous Distribution)",
    "이항분포(Binomial Distribution)",
@@ -1410,7 +1401,7 @@
   ],
   "outline": [
    "확률분포의 개념",
-   "- 정의",
+   "- 값과 확률의 대응",
    "- 이산·연속",
    "이산확률분포",
    "- 베르누이·이항·포아송·기하",
@@ -1461,7 +1452,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "확률분포(Probability Distribution)",
    "이산확률분포(Discrete Distribution)",
    "연속확률분포(Continuous Distribution)",
    "이항분포(Binomial Distribution)",
@@ -1492,7 +1482,6 @@
    "표준화: Z = (X−μ)/σ → N(0,1)"
   ],
   "keywords_must": [
-   "정규분포(Normal Distribution)",
    "가우스 분포(Gaussian Distribution)",
    "평균(μ)",
    "표준편차(σ)",
@@ -1563,7 +1552,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "정규분포(Normal Distribution)",
    "가우스 분포(Gaussian Distribution)",
    "평균(μ)",
    "표준편차(σ)",
@@ -1797,7 +1785,6 @@
    "구분: 큰 수의 법칙(x̄ → μ 수렴)과 다름"
   ],
   "keywords_must": [
-   "중심극한정리(CLT, Central Limit Theorem)",
    "표본평균(Sample Mean)",
    "표본분포(Sampling Distribution)",
    "정규분포 근사(Normal Approximation)",
@@ -1817,7 +1804,7 @@
   "outline": [
    "중심극한정리의 개념",
    "- 추론 통계의 기반",
-   "- 정의",
+   "- 표본평균 분포의 정규 근사",
    "중심극한정리의 내용",
    "- 표본평균의 분포",
    "- 성립 조건",
@@ -1868,7 +1855,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "중심극한정리(CLT, Central Limit Theorem)",
    "표본평균(Sample Mean)",
    "표본분포(Sampling Distribution)",
    "정규분포 근사(Normal Approximation)",
@@ -1999,7 +1985,6 @@
    "비모수적: 윌콕슨 · 맨-휘트니 · 크러스컬-월리스 · 프리드먼"
   ],
   "keywords_must": [
-   "추리통계(Inferential Statistics)",
    "기술통계(Descriptive Statistics)",
    "모집단 추정(Population Inference)",
    "모수(Parameter)",
@@ -2018,8 +2003,8 @@
   ],
   "outline": [
    "추리통계의 개요",
-   "- 정의",
-   "- 필요성",
+   "- 표본 → 모집단 일반화",
+   "- 모수 특성 파악·표본통계 한계·일반화",
    "추리통계의 방법",
    "- 추정·가설검정",
    "- 모수적·비모수적 방법",
@@ -2071,7 +2056,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "추리통계(Inferential Statistics)",
    "기술통계(Descriptive Statistics)",
    "모집단 추정(Population Inference)",
    "모수(Parameter)",
@@ -2101,7 +2085,6 @@
    "평가: 평균제곱오차 MSE = 분산 + 편향²"
   ],
   "keywords_must": [
-   "점추정(Point Estimation)",
    "추정량(Estimator)",
    "추정치(Estimate)",
    "불편성(Unbiasedness)",
@@ -2120,7 +2103,7 @@
   ],
   "outline": [
    "점추정의 개요",
-   "- 정의",
+   "- 하나의 값으로 모수 추정",
    "- 추정량과 추정치",
    "점추정량의 성질",
    "- 불편성·효율성",
@@ -2174,7 +2157,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "점추정(Point Estimation)",
    "추정량(Estimator)",
    "추정치(Estimate)",
    "불편성(Unbiasedness)",
@@ -2204,7 +2186,6 @@
    "영향: 신뢰수준↑ → 구간↑ · n↑ → 구간↓"
   ],
   "keywords_must": [
-   "구간추정(Interval Estimation)",
    "신뢰구간(Confidence Interval)",
    "신뢰수준(Confidence Level, 1−α)",
    "오차한계(Margin of Error)",
@@ -2274,7 +2255,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "구간추정(Interval Estimation)",
    "신뢰구간(Confidence Interval)",
    "신뢰수준(Confidence Level, 1−α)",
    "오차한계(Margin of Error)",
@@ -2304,7 +2284,6 @@
    "분포: 모분산 기지 → Z분포 · 미지 → t분포"
   ],
   "keywords_must": [
-   "추정이론(Estimation Theory)",
    "모수(Parameter)",
    "통계량(Statistic)",
    "추정량(Estimator)",
@@ -2324,7 +2303,7 @@
   ],
   "outline": [
    "추정이론의 개요",
-   "- 정의",
+   "- 표본 기반 모수 추정 이론",
    "- 점추정·구간추정",
    "추정량의 조건",
    "- 불편성·효율성·일치성·충분성",
@@ -2376,7 +2355,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "추정이론(Estimation Theory)",
    "모수(Parameter)",
    "통계량(Statistic)",
    "추정량(Estimator)",
@@ -2506,7 +2484,6 @@
    "활용: 신뢰구간 · 검정통계량 · 오차한계"
   ],
   "keywords_must": [
-   "표준오차(Standard Error)",
    "표본평균(Sample Mean)",
    "표본분포(Sampling Distribution)",
    "표준편차(Standard Deviation)",
@@ -2524,7 +2501,7 @@
   ],
   "outline": [
    "표준오차의 개념",
-   "- 정의",
+   "- 표본평균의 표준편차 σ/√n",
    "- 표준편차와의 차이",
    "분산·표준편차·표준오차의 관계",
    "- 모집단·표본·표본분포",
@@ -2577,7 +2554,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "표준오차(Standard Error)",
    "표본평균(Sample Mean)",
    "표본분포(Sampling Distribution)",
    "표준편차(Standard Deviation)",
@@ -2813,7 +2789,6 @@
    "ASA 6원칙: 효과 크기 아님 · 단독 결론 금지 · 투명한 보고"
   ],
   "keywords_must": [
-   "유의확률(p-value)",
    "귀무가설(Null Hypothesis)",
    "검정통계량(Test Statistic)",
    "극단값(More Extreme Result)",
@@ -2832,7 +2807,7 @@
   ],
   "outline": [
    "p-value의 개요",
-   "- 정의",
+   "- 귀무가설 하 극단값 확률",
    "- 판정 기준",
    "p-value 해석 원칙",
    "- ASA 6원칙",
@@ -2886,7 +2861,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "유의확률(p-value)",
    "귀무가설(Null Hypothesis)",
    "검정통계량(Test Statistic)",
    "극단값(More Extreme Result)",
@@ -2916,7 +2890,6 @@
    "유형: 일원배치 · 이원배치 · 반복측정 · MANOVA"
   ],
   "keywords_must": [
-   "분산분석(ANOVA, Analysis of Variance)",
    "F 통계량(F-statistic)",
    "집단 간 변동(Between-group Variation)",
    "집단 내 변동(Within-group Variation)",
@@ -3004,7 +2977,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "분산분석(ANOVA, Analysis of Variance)",
    "F 통계량(F-statistic)",
    "집단 간 변동(Between-group Variation)",
    "집단 내 변동(Within-group Variation)",
@@ -3035,7 +3007,6 @@
    "선택 기준: 변수 척도(명목·서열·등간·비율)"
   ],
   "keywords_must": [
-   "관계검정(Test of Relationship)",
    "교차분석(Cross-tabulation Analysis)",
    "카이제곱 독립성 검정(Chi-square Test of Independence)",
    "기대빈도(Expected Frequency)",
@@ -3055,7 +3026,7 @@
    "관계검정의 개요",
    "- 종류와 선택 기준",
    "교차분석",
-   "- 정의",
+   "- 교차·상관·회귀분석",
    "- 카이제곱 통계량",
    "상관분석과 회귀분석",
    "- 상관계수",
@@ -3105,7 +3076,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "관계검정(Test of Relationship)",
    "교차분석(Cross-tabulation Analysis)",
    "카이제곱 독립성 검정(Chi-square Test of Independence)",
    "기대빈도(Expected Frequency)",
@@ -3237,7 +3207,6 @@
    "평가: 결정계수 R² · F 검정 · t 검정 · RMSE"
   ],
   "keywords_must": [
-   "회귀분석(Regression Analysis)",
    "독립변수(Independent Variable)",
    "종속변수(Dependent Variable)",
    "회귀계수(Regression Coefficient)",
@@ -3257,7 +3226,7 @@
   ],
   "outline": [
    "회귀분석의 개념",
-   "- 정의",
+   "- 독립·종속변수 함수 관계",
    "- 유형",
    "선형회귀분석",
    "- 모형의 가정",
@@ -3311,7 +3280,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "회귀분석(Regression Analysis)",
    "독립변수(Independent Variable)",
    "종속변수(Dependent Variable)",
    "회귀계수(Regression Coefficient)",
@@ -3447,7 +3415,6 @@
    "확장: SARIMA(계절) · ARIMAX(외생변수)"
   ],
   "keywords_must": [
-   "ARIMA(Autoregressive Integrated Moving Average)",
    "자기회귀(AR, Autoregressive)",
    "이동평균(MA, Moving Average Model)",
    "차분(Differencing)",
@@ -3520,7 +3487,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "ARIMA(Autoregressive Integrated Moving Average)",
    "자기회귀(AR, Autoregressive)",
    "이동평균(MA, Moving Average Model)",
    "차분(Differencing)",
@@ -3656,7 +3622,6 @@
    "변수 선택: 전진 · 후진 · 단계적 선택"
   ],
   "keywords_must": [
-   "다중공선성(Multicollinearity)",
    "독립변수 간 상관(Inter-correlation)",
    "분산팽창계수(VIF, Variance Inflation Factor)",
    "공차(Tolerance)",
@@ -3675,7 +3640,7 @@
   ],
   "outline": [
    "다중공선성의 개요",
-   "- 정의",
+   "- 독립변수 간 강한 상관",
    "- 특징·증상",
    "다중공선성 진단",
    "- VIF·공차",
@@ -3728,7 +3693,6 @@
   "pages": [],
   "warnings": [],
   "quiz_terms": [
-   "다중공선성(Multicollinearity)",
    "독립변수 간 상관(Inter-correlation)",
    "분산팽창계수(VIF, Variance Inflation Factor)",
    "공차(Tolerance)",
