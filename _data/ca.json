@@ -15000,6 +15000,1745 @@
     }
   },
   {
+    "id": "CA_139",
+    "code": "CA_139",
+    "title": "논리 게이트(Logic Gate)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 기본 소자",
+    "definition": "2진 입력에 대해 부울 대수로 정의된 논리 연산을 수행해 0 또는 1을 출력하는 디지털 회로의 기본 소자로, 동작은 부울식으로, 입출력 관계는 진리표로 표현함",
+    "keywords": [
+      "핵심: AND·OR·NOT · NAND·NOR(범용 게이트, Universal Gate) · XOR·XNOR(배타적 논리) · 버퍼(Buffer)",
+      "필수: 부울 대수(Boolean Algebra) · 진리표(Truth Table) · 드모르간 법칙(De Morgan's Law) · 팬아웃(Fan-out)",
+      "참고: NAND만으로 모든 논리 구현 가능 · XOR은 가산기·패리티·비교기에 활용 · CMOS 게이트 구현(NAND 4 트랜지스터) · 전파 지연(Propagation Delay) · 잡음 여유(Noise Margin)"
+    ],
+    "sections": [
+      {
+        "title": "기본 게이트",
+        "subsections": [
+          {
+            "title": "AND",
+            "items": [
+              "모든 입력이 1일 때만 1, F = A·B"
+            ]
+          },
+          {
+            "title": "OR",
+            "items": [
+              "입력 중 하나라도 1이면 1, F = A + B"
+            ]
+          },
+          {
+            "title": "NOT",
+            "items": [
+              "입력을 반전, F = A'"
+            ]
+          },
+          {
+            "title": "버퍼",
+            "items": [
+              "입력을 그대로 출력하며 구동 능력 보강"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "조합 게이트",
+        "subsections": [
+          {
+            "title": "NAND",
+            "items": [
+              "AND의 부정, 가장 많이 쓰는 범용 게이트"
+            ]
+          },
+          {
+            "title": "NOR",
+            "items": [
+              "OR의 부정, NAND와 함께 범용 게이트"
+            ]
+          },
+          {
+            "title": "XOR",
+            "items": [
+              "두 입력이 다를 때 1, F = A'B + AB'"
+            ]
+          },
+          {
+            "title": "XNOR",
+            "items": [
+              "두 입력이 같을 때 1, 일치 검출에 활용"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "부울 대수 기본 법칙",
+        "subsections": [
+          {
+            "title": "드모르간",
+            "items": [
+              "(A·B)' = A' + B', (A+B)' = A'·B'"
+            ]
+          },
+          {
+            "title": "흡수·분배",
+            "items": [
+              "A + AB = A, A(B + C) = AB + AC"
+            ]
+          },
+          {
+            "title": "활용",
+            "items": [
+              "회로 간소화로 게이트 수와 지연 감소"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      277,
+      277
+    ],
+    "outline": [
+      "기본 게이트",
+      "- AND",
+      "- OR",
+      "- NOT",
+      "- 버퍼",
+      "조합 게이트",
+      "- NAND",
+      "- NOR",
+      "- XOR",
+      "- XNOR",
+      "부울 대수 기본 법칙",
+      "- 드모르간",
+      "- 흡수·분배",
+      "- 활용"
+    ],
+    "name": "논리 게이트(Logic Gate)",
+    "en": "Logic Gate",
+    "keywords_must": [
+      "AND·OR·NOT",
+      "NAND·NOR(범용 게이트, Universal Gate)",
+      "XOR·XNOR(배타적 논리)",
+      "버퍼(Buffer)",
+      "부울 대수(Boolean Algebra)",
+      "진리표(Truth Table)",
+      "드모르간 법칙(De Morgan's Law)",
+      "팬아웃(Fan-out)"
+    ],
+    "keywords_ref": [
+      "NAND만으로 모든 논리 구현 가능",
+      "XOR은 가산기·패리티·비교기에 활용",
+      "CMOS 게이트 구현(NAND 4 트랜지스터)",
+      "전파 지연(Propagation Delay)",
+      "잡음 여유(Noise Margin)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "AND·OR·NOT",
+      "NAND·NOR(범용 게이트, Universal Gate)",
+      "XOR·XNOR(배타적 논리)",
+      "버퍼(Buffer)",
+      "부울 대수(Boolean Algebra)",
+      "진리표(Truth Table)",
+      "드모르간 법칙(De Morgan's Law)",
+      "팬아웃(Fan-out)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_140",
+    "code": "CA_140",
+    "title": "전가산기(Full Adder)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 조합 회로",
+    "definition": "두 개의 1비트 입력과 아랫자리에서 올라온 자리올림(Carry-in)까지 세 비트를 더해 합(Sum)과 윗자리 자리올림(Carry-out)을 출력하는 조합 논리회로로, 반가산기 두 개와 OR 게이트로 구성할 수 있음",
+    "keywords": [
+      "핵심: 반가산기(Half Adder) · 입력 A·B·Cin · 합 S = A ⊕ B ⊕ Cin · 자리올림 Cout = AB + Cin(A ⊕ B)",
+      "필수: 반가산기 2개 + OR 1개 · 리플 캐리 가산기(Ripple Carry Adder) · 캐리 예측 가산기(Carry Look-ahead Adder)",
+      "참고: 반가산기 S = A ⊕ B, C = AB · n비트 리플 가산기 지연 ∝ n · 생성(G = AB)·전파(P = A ⊕ B) 신호 · 2의 보수로 감산기 겸용 · ALU 산술부 핵심"
+    ],
+    "sections": [
+      {
+        "title": "반가산기",
+        "subsections": [
+          {
+            "title": "기능",
+            "items": [
+              "두 비트를 더해 합과 자리올림만 출력, 아랫자리 자리올림은 처리 못함"
+            ]
+          },
+          {
+            "title": "논리식",
+            "items": [
+              "S = A ⊕ B, C = A·B"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "세 비트 가산 구성",
+        "subsections": [
+          {
+            "title": "진리표",
+            "items": [
+              "입력 8가지 조합 중 1의 개수가 홀수면 S=1, 두 개 이상이면 Cout=1"
+            ]
+          },
+          {
+            "title": "회로",
+            "items": [
+              "첫 반가산기로 A+B, 둘째 반가산기로 Cin을 더하고 두 자리올림을 OR로 결합"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "다비트 가산기",
+        "subsections": [
+          {
+            "title": "리플 캐리",
+            "items": [
+              "전가산기를 직렬 연결, 자리올림이 차례로 전파되어 지연이 비트 수에 비례"
+            ]
+          },
+          {
+            "title": "캐리 예측",
+            "items": [
+              "생성·전파 신호로 각 자리 자리올림을 동시에 계산해 고속화"
+            ]
+          },
+          {
+            "title": "감산 활용",
+            "items": [
+              "한 입력을 보수로 바꾸고 Cin=1을 주면 뺄셈 수행"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      278,
+      280
+    ],
+    "outline": [
+      "반가산기",
+      "- 기능",
+      "- 논리식",
+      "세 비트 가산 구성",
+      "- 진리표",
+      "- 회로",
+      "다비트 가산기",
+      "- 리플 캐리",
+      "- 캐리 예측",
+      "- 감산 활용"
+    ],
+    "name": "전가산기(Full Adder)",
+    "en": "Full Adder",
+    "keywords_must": [
+      "반가산기(Half Adder)",
+      "입력 A·B·Cin",
+      "합 S = A ⊕ B ⊕ Cin",
+      "자리올림 Cout = AB + Cin(A ⊕ B)",
+      "반가산기 2개 + OR 1개",
+      "리플 캐리 가산기(Ripple Carry Adder)",
+      "캐리 예측 가산기(Carry Look-ahead Adder)"
+    ],
+    "keywords_ref": [
+      "반가산기 S = A ⊕ B, C = AB",
+      "n비트 리플 가산기 지연 ∝ n",
+      "생성(G = AB)·전파(P = A ⊕ B) 신호",
+      "2의 보수로 감산기 겸용",
+      "ALU 산술부 핵심"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "반가산기(Half Adder)",
+      "입력 A·B·Cin",
+      "합 S = A ⊕ B ⊕ Cin",
+      "자리올림 Cout = AB + Cin(A ⊕ B)",
+      "반가산기 2개 + OR 1개",
+      "리플 캐리 가산기(Ripple Carry Adder)",
+      "캐리 예측 가산기(Carry Look-ahead Adder)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_141",
+    "code": "CA_141",
+    "title": "팬아웃(Fan-out)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 기본 소자",
+    "definition": "하나의 논리 게이트 출력이 정상적인 논리 레벨을 유지하면서 구동할 수 있는 같은 계열 게이트 입력의 최대 개수로, 출력 전류 공급 능력과 입력 부하 전류의 비로 결정됨",
+    "keywords": [
+      "핵심: 최대 구동 게이트 수 · 출력 전류(IOH·IOL) · 입력 전류(IIH·IIL) · 팬아웃 = min(IOH/IIH, IOL/IIL)",
+      "필수: 팬인(Fan-in) · 부하 용량에 따른 지연 증가 · 버퍼 삽입",
+      "참고: TTL 표준 팬아웃 10 · CMOS는 정적 팬아웃이 크나 커패시턴스로 속도 저하 · 클럭 트리 버퍼링 · 논리 계열(TTL·CMOS·ECL) 비교 지표"
+    ],
+    "sections": [
+      {
+        "title": "결정 요인",
+        "subsections": [
+          {
+            "title": "High 상태",
+            "items": [
+              "출력이 공급하는 전류를 입력이 소모하는 전류로 나눈 값"
+            ]
+          },
+          {
+            "title": "Low 상태",
+            "items": [
+              "출력이 흡수할 수 있는 전류를 입력이 내보내는 전류로 나눈 값"
+            ]
+          },
+          {
+            "title": "최종 값",
+            "items": [
+              "두 상태 중 작은 값을 팬아웃으로 채택"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "초과 시 문제",
+        "subsections": [
+          {
+            "title": "논리 레벨 저하",
+            "items": [
+              "출력 전압이 문턱을 벗어나 오동작"
+            ]
+          },
+          {
+            "title": "속도 저하",
+            "items": [
+              "부하 커패시턴스 증가로 상승·하강 시간이 길어짐"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "대응 방법",
+        "subsections": [
+          {
+            "title": "버퍼 삽입",
+            "items": [
+              "구동 능력이 큰 버퍼로 부하를 나눔"
+            ]
+          },
+          {
+            "title": "트리 분배",
+            "items": [
+              "클럭·리셋처럼 많은 입력을 구동하는 신호는 단계적 분기 구조 사용"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      281,
+      282
+    ],
+    "outline": [
+      "결정 요인",
+      "- High 상태",
+      "- Low 상태",
+      "- 최종 값",
+      "초과 시 문제",
+      "- 논리 레벨 저하",
+      "- 속도 저하",
+      "대응 방법",
+      "- 버퍼 삽입",
+      "- 트리 분배"
+    ],
+    "name": "팬아웃(Fan-out)",
+    "en": "Fan-out",
+    "keywords_must": [
+      "최대 구동 게이트 수",
+      "출력 전류(IOH·IOL)",
+      "입력 전류(IIH·IIL)",
+      "팬아웃 = min(IOH/IIH, IOL/IIL)",
+      "팬인(Fan-in)",
+      "부하 용량에 따른 지연 증가",
+      "버퍼 삽입"
+    ],
+    "keywords_ref": [
+      "TTL 표준 팬아웃 10",
+      "CMOS는 정적 팬아웃이 크나 커패시턴스로 속도 저하",
+      "클럭 트리 버퍼링",
+      "논리 계열(TTL·CMOS·ECL) 비교 지표"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "최대 구동 게이트 수",
+      "출력 전류(IOH·IOL)",
+      "입력 전류(IIH·IIL)",
+      "팬아웃 = min(IOH/IIH, IOL/IIL)",
+      "팬인(Fan-in)",
+      "부하 용량에 따른 지연 증가",
+      "버퍼 삽입"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "IOH": "High-level Output Current",
+      "IOL": "Low-level Output Current",
+      "IIH": "High-level Input Current",
+      "IIL": "Low-level Input Current",
+      "TTL": "Transistor-Transistor Logic",
+      "ECL": "Emitter-Coupled Logic"
+    }
+  },
+  {
+    "id": "CA_142",
+    "code": "CA_142",
+    "title": "조합 논리회로(Combinational Logic Circuit)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 조합 회로",
+    "definition": "기억 소자 없이 논리 게이트만으로 구성되어 특정 시점의 출력이 그 시점의 입력 조합만으로 결정되는 회로로, 가산기·디코더·멀티플렉서 등이 대표적임",
+    "keywords": [
+      "핵심: 현재 입력만으로 출력 결정 · 기억 소자 없음 · 진리표·부울식 · 반가산기·전가산기",
+      "필수: 디코더(Decoder)·인코더(Encoder) · 멀티플렉서(MUX)·디멀티플렉서(DEMUX) · 비교기(Comparator) · 회로 간소화",
+      "참고: n개 입력 → 2^n 조합 · 해석 절차(변수 결정 → 부울식 → 간소화 → 동작 분석) · 카르노 맵·퀸-맥클러스키 · 해저드·글리치 · HDL 설계의 기본 단위"
+    ],
+    "sections": [
+      {
+        "title": "논리회로 중요성",
+        "subsections": [
+          {
+            "title": "디지털화",
+            "items": [
+              "현대 시스템 대부분이 2진 논리로 동작"
+            ]
+          },
+          {
+            "title": "설계 기본",
+            "items": [
+              "HDL로 설계해도 최종 구현 단위는 게이트 회로"
+            ]
+          },
+          {
+            "title": "비용 절감",
+            "items": [
+              "같은 출력을 내는 회로를 간소화하면 면적·전력 감소"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "해석 절차",
+        "subsections": [
+          {
+            "title": "1단계",
+            "items": [
+              "입출력 변수 수와 이름 결정"
+            ]
+          },
+          {
+            "title": "2단계",
+            "items": [
+              "2^n개 입력 조합에 대한 출력 부울 함수 도출"
+            ]
+          },
+          {
+            "title": "3단계",
+            "items": [
+              "진리표로 출력 함수 간소화"
+            ]
+          },
+          {
+            "title": "4단계",
+            "items": [
+              "부울식과 진리표로 동작 해석"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "대표 회로",
+        "subsections": [
+          {
+            "title": "기본 논리",
+            "items": [
+              "OR·AND·NOT·NAND·NOR·XOR·버퍼"
+            ]
+          },
+          {
+            "title": "산술 회로",
+            "items": [
+              "반가산기·전가산기·감산기"
+            ]
+          },
+          {
+            "title": "데이터 선택",
+            "items": [
+              "멀티플렉서는 여러 입력 중 하나 선택, 디멀티플렉서는 하나를 여러 출력으로 분배"
+            ]
+          },
+          {
+            "title": "코드 변환",
+            "items": [
+              "디코더는 n비트를 2^n개 출력 중 하나로, 인코더는 그 반대"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      283,
+      284
+    ],
+    "outline": [
+      "논리회로 중요성",
+      "- 디지털화",
+      "- 설계 기본",
+      "- 비용 절감",
+      "해석 절차",
+      "- 1단계",
+      "- 2단계",
+      "- 3단계",
+      "- 4단계",
+      "대표 회로",
+      "- 기본 논리",
+      "- 산술 회로",
+      "- 데이터 선택",
+      "- 코드 변환"
+    ],
+    "name": "조합 논리회로(Combinational Logic Circuit)",
+    "en": "Combinational Logic Circuit",
+    "keywords_must": [
+      "현재 입력만으로 출력 결정",
+      "기억 소자 없음",
+      "진리표·부울식",
+      "반가산기·전가산기",
+      "디코더(Decoder)·인코더(Encoder)",
+      "멀티플렉서(MUX)·디멀티플렉서(DEMUX)",
+      "비교기(Comparator)",
+      "회로 간소화"
+    ],
+    "keywords_ref": [
+      "n개 입력 → 2^n 조합",
+      "해석 절차(변수 결정 → 부울식 → 간소화 → 동작 분석)",
+      "카르노 맵·퀸-맥클러스키",
+      "해저드·글리치",
+      "HDL 설계의 기본 단위"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "현재 입력만으로 출력 결정",
+      "기억 소자 없음",
+      "진리표·부울식",
+      "반가산기·전가산기",
+      "디코더(Decoder)·인코더(Encoder)",
+      "멀티플렉서(MUX)·디멀티플렉서(DEMUX)",
+      "비교기(Comparator)",
+      "회로 간소화"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "MUX": "Multiplexer",
+      "DEMUX": "Demultiplexer"
+    }
+  },
+  {
+    "id": "CA_143",
+    "code": "CA_143",
+    "title": "순차 논리회로(Sequential Logic Circuit)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 순차 회로",
+    "definition": "조합 논리회로에 기억 소자를 더해 현재 상태를 저장하고, 현재 입력과 저장된 이전 상태를 함께 반영해 출력과 다음 상태를 결정하는 회로",
+    "keywords": [
+      "핵심: 기억 소자(Memory Element) · 상태(State) · 현재 상태·다음 상태 · 궤환(Feedback)",
+      "필수: 래치(Latch) · 플립플롭(Flip-Flop) · 동기식(클럭)·비동기식 · 상태도·상태표",
+      "참고: 무어 머신(출력=상태)·밀리 머신(출력=상태+입력) · 레지스터·카운터·시프트 레지스터 · 유한 상태 기계(FSM) · 상태 부호화(그레이 코드)"
+    ],
+    "sections": [
+      {
+        "title": "구성 및 동작",
+        "subsections": [
+          {
+            "title": "구성",
+            "items": [
+              "입력 → 조합 논리 → 출력, 기억 소자 출력이 다시 조합 논리로 궤환"
+            ]
+          },
+          {
+            "title": "상태",
+            "items": [
+              "어느 시점에 기억 소자에 저장된 2진 정보"
+            ]
+          },
+          {
+            "title": "동작",
+            "items": [
+              "상태값이 입력으로 되돌아가 다음 상태와 출력을 함께 결정"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "기억 소자 유형",
+        "subsections": [
+          {
+            "title": "래치",
+            "items": [
+              "기본 게이트로 구성, 활성 신호 레벨 동안 입력 변화가 출력에 반영"
+            ]
+          },
+          {
+            "title": "플립플롭",
+            "items": [
+              "래치에 클럭 제어를 더해 클럭 에지에서만 상태 변경"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "동기 방식 분류",
+        "subsections": [
+          {
+            "title": "동기식",
+            "items": [
+              "공통 클럭에 맞춰 상태가 바뀌어 설계·검증이 쉬움"
+            ]
+          },
+          {
+            "title": "비동기식",
+            "items": [
+              "입력 변화가 즉시 상태를 바꿔 빠르지만 경쟁 상태 위험"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "조합 회로 대비 비교",
+        "subsections": [
+          {
+            "title": "기억 여부",
+            "items": [
+              "조합(기억 없음)",
+              "순차(이전 상태 기억)"
+            ]
+          },
+          {
+            "title": "출력 결정",
+            "items": [
+              "조합(현재 입력)",
+              "순차(현재 입력 + 현재 상태)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      285,
+      286
+    ],
+    "outline": [
+      "구성 및 동작",
+      "- 구성",
+      "- 상태",
+      "- 동작",
+      "기억 소자 유형",
+      "- 래치",
+      "- 플립플롭",
+      "동기 방식 분류",
+      "- 동기식",
+      "- 비동기식",
+      "조합 회로 대비 비교",
+      "- 기억 여부",
+      "- 출력 결정"
+    ],
+    "name": "순차 논리회로(Sequential Logic Circuit)",
+    "en": "Sequential Logic Circuit",
+    "keywords_must": [
+      "기억 소자(Memory Element)",
+      "상태(State)",
+      "현재 상태·다음 상태",
+      "궤환(Feedback)",
+      "래치(Latch)",
+      "플립플롭(Flip-Flop)",
+      "동기식(클럭)·비동기식",
+      "상태도·상태표"
+    ],
+    "keywords_ref": [
+      "무어 머신(출력=상태)·밀리 머신(출력=상태+입력)",
+      "레지스터·카운터·시프트 레지스터",
+      "유한 상태 기계(FSM)",
+      "상태 부호화(그레이 코드)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "기억 소자(Memory Element)",
+      "상태(State)",
+      "현재 상태·다음 상태",
+      "궤환(Feedback)",
+      "래치(Latch)",
+      "플립플롭(Flip-Flop)",
+      "동기식(클럭)·비동기식",
+      "상태도·상태표"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "FSM": "Finite State Machine"
+    }
+  },
+  {
+    "id": "CA_144",
+    "code": "CA_144",
+    "title": "플립플롭(Flip-Flop)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 순차 회로",
+    "definition": "출력을 입력으로 되먹이는 궤환 구조로 1비트를 기억하는 순차 회로의 기본 소자로, 클럭의 상승 또는 하강 에지에 동기되어서만 상태가 바뀌어 레지스터·카운터·SRAM 셀 등을 구성함",
+    "keywords": [
+      "핵심: 1비트 기억 소자 · 클럭 에지 동기(Edge-triggered) · SR형(S=R=1 불확정) · JK형(J=K=1 토글)",
+      "필수: D형(입력 전달·지연) · T형(T=1 토글) · 특성 방정식(Characteristic Equation) · 마스터-슬레이브(Master-Slave)",
+      "참고: JK: Q(t+1) = JQ' + K'Q · D: Q(t+1) = D · T: Q(t+1) = T ⊕ Q · 설정·유지 시간(Setup·Hold Time) · 준안정 상태(Metastability) · 휘발성"
+    ],
+    "sections": [
+      {
+        "title": "등장 배경",
+        "subsections": [
+          {
+            "title": "래치 문제",
+            "items": [
+              "활성 신호가 High인 동안 입력이 바뀌면 출력도 계속 바뀌어 불안정"
+            ]
+          },
+          {
+            "title": "해결",
+            "items": [
+              "클럭이 0→1 또는 1→0으로 바뀌는 순간에만 상태를 갱신"
+            ]
+          },
+          {
+            "title": "트리거 방식",
+            "items": [
+              "펄스 트리거(마스터-슬레이브 구조)",
+              "에지 트리거(한쪽 에지만 반응)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "종류별 동작",
+        "subsections": [
+          {
+            "title": "SR형",
+            "items": [
+              "S=1 세트, R=1 리셋, S=R=1이면 다음 상태 불확정"
+            ]
+          },
+          {
+            "title": "D형",
+            "items": [
+              "SR 입력을 항상 보수로 묶어 금지 입력 제거, 클럭 시점의 D를 그대로 출력"
+            ]
+          },
+          {
+            "title": "JK형",
+            "items": [
+              "SR의 금지 입력을 토글 동작으로 바꿔 모든 입력 조합 사용 가능"
+            ]
+          },
+          {
+            "title": "T형",
+            "items": [
+              "JK의 J와 K를 하나로 묶어 T=0이면 유지, T=1이면 반전"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "실무 설계 고려사항",
+        "subsections": [
+          {
+            "title": "부울식 간소화",
+            "items": [
+              "카르노 맵 등으로 게이트 수 최소화"
+            ]
+          },
+          {
+            "title": "소자 선정",
+            "items": [
+              "같은 회로라도 플립플롭 종류에 따라 복잡도가 달라짐, 카운터는 JK·T가 유리"
+            ]
+          },
+          {
+            "title": "상태 부호화",
+            "items": [
+              "유한 상태 기계의 상태를 2진값으로 배정, 그레이 코드로 천이 오류 감소"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      287,
+      294
+    ],
+    "outline": [
+      "등장 배경",
+      "- 래치 문제",
+      "- 해결",
+      "- 트리거 방식",
+      "종류별 동작",
+      "- SR형",
+      "- D형",
+      "- JK형",
+      "- T형",
+      "실무 설계 고려사항",
+      "- 부울식 간소화",
+      "- 소자 선정",
+      "- 상태 부호화"
+    ],
+    "name": "플립플롭(Flip-Flop)",
+    "en": "Flip-Flop",
+    "keywords_must": [
+      "1비트 기억 소자",
+      "클럭 에지 동기(Edge-triggered)",
+      "SR형(S=R=1 불확정)",
+      "JK형(J=K=1 토글)",
+      "D형(입력 전달·지연)",
+      "T형(T=1 토글)",
+      "특성 방정식(Characteristic Equation)",
+      "마스터-슬레이브(Master-Slave)"
+    ],
+    "keywords_ref": [
+      "JK: Q(t+1) = JQ' + K'Q",
+      "D: Q(t+1) = D",
+      "T: Q(t+1) = T ⊕ Q",
+      "설정·유지 시간(Setup·Hold Time)",
+      "준안정 상태(Metastability)",
+      "휘발성"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "1비트 기억 소자",
+      "클럭 에지 동기(Edge-triggered)",
+      "SR형(S=R=1 불확정)",
+      "JK형(J=K=1 토글)",
+      "D형(입력 전달·지연)",
+      "T형(T=1 토글)",
+      "특성 방정식(Characteristic Equation)",
+      "마스터-슬레이브(Master-Slave)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_149",
+    "code": "CA_149",
+    "title": "래치(Latch)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 순차 회로",
+    "definition": "클럭 없이 입력 레벨에 따라 상태가 바뀌는 비동기식 기억 소자로, 교차 결합한 NOR 또는 NAND 게이트로 구성되며 활성(Enable) 신호를 추가한 게이티드 래치는 신호가 유지되는 동안 입력을 그대로 통과시킴",
+    "keywords": [
+      "핵심: 레벨 감지(Level Sensitive) · 비동기식 동작 · SR 래치(NOR·NAND 교차 결합) · 게이티드 래치(Gated Latch, Enable)",
+      "필수: D 래치(투명 래치, Transparent Latch) · 플립플롭은 에지 감지(Edge Sensitive) · 금지 입력 상태",
+      "참고: NOR형은 S=R=1, NAND형은 S'=R'=0이 금지 · 래치 두 개 직렬로 마스터-슬레이브 플립플롭 구성 · 타이밍 제어를 위해 클럭 펄스(CP) 인가 · 래치 기반 설계의 시간 빌림(Time Borrowing)"
+    ],
+    "sections": [
+      {
+        "title": "순차 회로 내 위치",
+        "subsections": [
+          {
+            "title": "역할",
+            "items": [
+              "신호의 유지·저장·전달을 담당하는 가장 기본적인 기억 소자"
+            ]
+          },
+          {
+            "title": "동기 회로 구성",
+            "items": [
+              "타이밍 제어를 위해 클럭을 인가한 게이티드 래치나 플립플롭 사용"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "레벨 감지 기억 구조",
+        "subsections": [
+          {
+            "title": "교차 결합",
+            "items": [
+              "두 게이트 출력을 서로의 입력에 연결해 상태 유지"
+            ]
+          },
+          {
+            "title": "Enable 제어형",
+            "items": [
+              "Enable이 1인 동안만 입력 반영, 0이면 이전 값 유지"
+            ]
+          },
+          {
+            "title": "데이터 입력 단일형",
+            "items": [
+              "입력을 하나로 묶어 금지 상태 제거, Enable 동안 출력이 입력을 그대로 따라감"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "플립플롭 대비 비교",
+        "subsections": [
+          {
+            "title": "처리 방식",
+            "items": [
+              "래치(비동기식)",
+              "플립플롭(동기식)"
+            ]
+          },
+          {
+            "title": "클럭 사용",
+            "items": [
+              "래치(사용 안 함 또는 레벨 활성)",
+              "플립플롭(에지에서만 반응)"
+            ]
+          },
+          {
+            "title": "감지 방식",
+            "items": [
+              "래치(레벨 감지)",
+              "플립플롭(에지 감지)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      295,
+      297
+    ],
+    "outline": [
+      "순차 회로 내 위치",
+      "- 역할",
+      "- 동기 회로 구성",
+      "레벨 감지 기억 구조",
+      "- 교차 결합",
+      "- Enable 제어형",
+      "- 데이터 입력 단일형",
+      "플립플롭 대비 비교",
+      "- 처리 방식",
+      "- 클럭 사용",
+      "- 감지 방식"
+    ],
+    "name": "래치(Latch)",
+    "en": "Latch",
+    "keywords_must": [
+      "레벨 감지(Level Sensitive)",
+      "비동기식 동작",
+      "SR 래치(NOR·NAND 교차 결합)",
+      "게이티드 래치(Gated Latch, Enable)",
+      "D 래치(투명 래치, Transparent Latch)",
+      "플립플롭은 에지 감지(Edge Sensitive)",
+      "금지 입력 상태"
+    ],
+    "keywords_ref": [
+      "NOR형은 S=R=1, NAND형은 S'=R'=0이 금지",
+      "래치 두 개 직렬로 마스터-슬레이브 플립플롭 구성",
+      "타이밍 제어를 위해 클럭 펄스(CP) 인가",
+      "래치 기반 설계의 시간 빌림(Time Borrowing)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "레벨 감지(Level Sensitive)",
+      "비동기식 동작",
+      "SR 래치(NOR·NAND 교차 결합)",
+      "게이티드 래치(Gated Latch, Enable)",
+      "D 래치(투명 래치, Transparent Latch)",
+      "플립플롭은 에지 감지(Edge Sensitive)",
+      "금지 입력 상태"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_150",
+    "code": "CA_150",
+    "title": "특성표(Characteristic Table)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 순차 회로",
+    "definition": "플립플롭의 현재 상태 Q(t)와 입력이 주어졌을 때 다음 상태 Q(t+1)가 어떻게 되는지를 정리한 표로, 순차 회로 해석에 쓰이며 이를 부울식으로 나타낸 것이 특성 방정식임",
+    "keywords": [
+      "핵심: 현재 상태 Q(t) · 다음 상태 Q(t+1) · 입력 조건 → 다음 상태 · 특성 방정식(Characteristic Equation)",
+      "필수: 회로 해석(Analysis)용 · 유지·세트·리셋·토글",
+      "참고: SR: Q(t+1) = S + R'Q (SR = 0 조건) · JK: Q(t+1) = JQ' + K'Q · D: Q(t+1) = D · T: Q(t+1) = TQ' + T'Q · 여기표와 역관계"
+    ],
+    "sections": [
+      {
+        "title": "SR형 특성",
+        "subsections": [
+          {
+            "title": "S=0, R=0",
+            "items": [
+              "유지 Q(t)"
+            ]
+          },
+          {
+            "title": "S=0, R=1",
+            "items": [
+              "리셋 0"
+            ]
+          },
+          {
+            "title": "S=1, R=0",
+            "items": [
+              "세트 1"
+            ]
+          },
+          {
+            "title": "S=1, R=1",
+            "items": [
+              "불확정(사용 금지)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "JK형 특성",
+        "subsections": [
+          {
+            "title": "J=0, K=0",
+            "items": [
+              "유지"
+            ]
+          },
+          {
+            "title": "J=0, K=1",
+            "items": [
+              "Q를 0으로 초기화"
+            ]
+          },
+          {
+            "title": "J=1, K=0",
+            "items": [
+              "Q를 1로 설정"
+            ]
+          },
+          {
+            "title": "J=1, K=1",
+            "items": [
+              "토글 Q(t)'"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "D형·T형 특성",
+        "subsections": [
+          {
+            "title": "D형",
+            "items": [
+              "D=0이면 0, D=1이면 1로 입력이 그대로 다음 상태"
+            ]
+          },
+          {
+            "title": "T형",
+            "items": [
+              "T=0이면 유지, T=1이면 현재 상태 반전"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      298,
+      300
+    ],
+    "outline": [
+      "SR형 특성",
+      "- S=0, R=0",
+      "- S=0, R=1",
+      "- S=1, R=0",
+      "- S=1, R=1",
+      "JK형 특성",
+      "- J=0, K=0",
+      "- J=0, K=1",
+      "- J=1, K=0",
+      "- J=1, K=1",
+      "D형·T형 특성",
+      "- D형",
+      "- T형"
+    ],
+    "name": "특성표(Characteristic Table)",
+    "en": "Characteristic Table",
+    "keywords_must": [
+      "현재 상태 Q(t)",
+      "다음 상태 Q(t+1)",
+      "입력 조건 → 다음 상태",
+      "특성 방정식(Characteristic Equation)",
+      "회로 해석(Analysis)용",
+      "유지·세트·리셋·토글"
+    ],
+    "keywords_ref": [
+      "SR: Q(t+1) = S + R'Q (SR = 0 조건)",
+      "JK: Q(t+1) = JQ' + K'Q",
+      "D: Q(t+1) = D",
+      "T: Q(t+1) = TQ' + T'Q",
+      "여기표와 역관계"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "현재 상태 Q(t)",
+      "다음 상태 Q(t+1)",
+      "입력 조건 → 다음 상태",
+      "특성 방정식(Characteristic Equation)",
+      "회로 해석(Analysis)용",
+      "유지·세트·리셋·토글"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_151",
+    "code": "CA_151",
+    "title": "여기표(Excitation Table)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 순차 회로",
+    "definition": "플립플롭을 현재 상태에서 원하는 다음 상태로 바꾸려면 어떤 입력을 주어야 하는지를 정리한 표로, 특성표를 역으로 본 것이며 카운터 등 순차 회로 설계 시 입력식을 구하는 데 사용함",
+    "keywords": [
+      "핵심: 상태 천이(Q(t) → Q(t+1)) · 필요한 입력 조건 · 무관 조건(X, Don't Care) · 순차 회로 설계(Synthesis)용",
+      "필수: 특성표의 역 · 카운터·상태 기계 입력식 도출",
+      "참고: 설계 절차: 상태도 → 상태표 → 여기표 → 카르노 맵 → 입력식 · JK 여기표는 무관 조건이 많아 간소화 유리 · D 여기표는 다음 상태 = 입력"
+    ],
+    "sections": [
+      {
+        "title": "SR형 여기",
+        "subsections": [
+          {
+            "title": "0→0",
+            "items": [
+              "S=0, R=X"
+            ]
+          },
+          {
+            "title": "0→1",
+            "items": [
+              "S=1, R=0"
+            ]
+          },
+          {
+            "title": "1→0",
+            "items": [
+              "S=0, R=1"
+            ]
+          },
+          {
+            "title": "1→1",
+            "items": [
+              "S=X, R=0"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "JK형 여기",
+        "subsections": [
+          {
+            "title": "0→0",
+            "items": [
+              "J=0, K=X"
+            ]
+          },
+          {
+            "title": "0→1",
+            "items": [
+              "J=1, K=X"
+            ]
+          },
+          {
+            "title": "1→0",
+            "items": [
+              "J=X, K=1"
+            ]
+          },
+          {
+            "title": "1→1",
+            "items": [
+              "J=X, K=0"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "D형·T형 여기",
+        "subsections": [
+          {
+            "title": "D형",
+            "items": [
+              "원하는 다음 상태 값을 그대로 D에 입력"
+            ]
+          },
+          {
+            "title": "T형",
+            "items": [
+              "상태가 바뀌면 T=1, 그대로면 T=0"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      301,
+      302
+    ],
+    "outline": [
+      "SR형 여기",
+      "- 0→0",
+      "- 0→1",
+      "- 1→0",
+      "- 1→1",
+      "JK형 여기",
+      "- 0→0",
+      "- 0→1",
+      "- 1→0",
+      "- 1→1",
+      "D형·T형 여기",
+      "- D형",
+      "- T형"
+    ],
+    "name": "여기표(Excitation Table)",
+    "en": "Excitation Table",
+    "keywords_must": [
+      "상태 천이(Q(t) → Q(t+1))",
+      "필요한 입력 조건",
+      "무관 조건(X, Don't Care)",
+      "순차 회로 설계(Synthesis)용",
+      "특성표의 역",
+      "카운터·상태 기계 입력식 도출"
+    ],
+    "keywords_ref": [
+      "설계 절차: 상태도 → 상태표 → 여기표 → 카르노 맵 → 입력식",
+      "JK 여기표는 무관 조건이 많아 간소화 유리",
+      "D 여기표는 다음 상태 = 입력"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "상태 천이(Q(t) → Q(t+1))",
+      "필요한 입력 조건",
+      "무관 조건(X, Don't Care)",
+      "순차 회로 설계(Synthesis)용",
+      "특성표의 역",
+      "카운터·상태 기계 입력식 도출"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_152",
+    "code": "CA_152",
+    "title": "카르노 맵(Karnaugh Map)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 회로 간소화",
+    "definition": "논리 함수의 진리표 값을 인접 칸끼리 한 변수만 다르도록(그레이 코드 순) 배치한 격자에 옮기고, 이웃한 1(또는 0)을 2의 거듭제곱 크기로 묶어 부울식을 시각적으로 간소화하는 도표",
+    "keywords": [
+      "핵심: 최소항(Minterm, Σ)·곱의 합(SOP) · 최대항(Maxterm, Π)·합의 곱(POS) · 그레이 코드 배열 · 인접 칸 묶음(1·2·4·8개)",
+      "필수: 내포항(Implicant) · 주 내포항(Prime Implicant) · 필수 주 내포항(Essential Prime Implicant) · 무관 조건(Don't Care)",
+      "참고: 모리스 카르노(Maurice Karnaugh, 1953) · 맵의 양 끝은 서로 인접(순환) · 5변수 이상은 퀸-맥클러스키 방식 · 예) f = Π(0,3,4,7) → 0을 묶어 POS 도출"
+    ],
+    "sections": [
+      {
+        "title": "작성 절차",
+        "subsections": [
+          {
+            "title": "1단계",
+            "items": [
+              "함수의 진리표 작성"
+            ]
+          },
+          {
+            "title": "2단계",
+            "items": [
+              "변수 수에 맞는 맵 테이블 작성 후 값 기입"
+            ]
+          },
+          {
+            "title": "3단계",
+            "items": [
+              "다른 묶음에 포함되지 않는 1을 가진 필수 주 내포항 도출"
+            ]
+          },
+          {
+            "title": "4단계",
+            "items": [
+              "남은 1을 덮는 최소한의 주 내포항 추가"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "묶음 용어",
+        "subsections": [
+          {
+            "title": "내포항",
+            "items": [
+              "2의 거듭제곱 개 연속된 1의 묶음"
+            ]
+          },
+          {
+            "title": "주 내포항",
+            "items": [
+              "더 큰 묶음에 포함되지 않는 최대 묶음"
+            ]
+          },
+          {
+            "title": "필수 주 내포항",
+            "items": [
+              "다른 주 내포항으로는 덮이지 않는 1을 반드시 포함하는 묶음"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "표현 방식 선택",
+        "subsections": [
+          {
+            "title": "SOP",
+            "items": [
+              "1을 묶어 곱 항들의 합으로 표현, AND-OR(NAND-NAND) 회로"
+            ]
+          },
+          {
+            "title": "POS",
+            "items": [
+              "0을 묶어 합 항들의 곱으로 표현, OR-AND(NOR-NOR) 회로"
+            ]
+          },
+          {
+            "title": "무관 조건",
+            "items": [
+              "출력이 상관없는 칸은 묶음을 키우는 데만 활용"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      303,
+      304
+    ],
+    "outline": [
+      "작성 절차",
+      "- 1단계",
+      "- 2단계",
+      "- 3단계",
+      "- 4단계",
+      "묶음 용어",
+      "- 내포항",
+      "- 주 내포항",
+      "- 필수 주 내포항",
+      "표현 방식 선택",
+      "- SOP",
+      "- POS",
+      "- 무관 조건"
+    ],
+    "name": "카르노 맵(Karnaugh Map)",
+    "en": "Karnaugh Map",
+    "keywords_must": [
+      "최소항(Minterm, Σ)·곱의 합(SOP)",
+      "최대항(Maxterm, Π)·합의 곱(POS)",
+      "그레이 코드 배열",
+      "인접 칸 묶음(1·2·4·8개)",
+      "내포항(Implicant)",
+      "주 내포항(Prime Implicant)",
+      "필수 주 내포항(Essential Prime Implicant)",
+      "무관 조건(Don't Care)"
+    ],
+    "keywords_ref": [
+      "모리스 카르노(Maurice Karnaugh, 1953)",
+      "맵의 양 끝은 서로 인접(순환)",
+      "5변수 이상은 퀸-맥클러스키 방식",
+      "예) f = Π(0,3,4,7) → 0을 묶어 POS 도출"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "최소항(Minterm, Σ)·곱의 합(SOP)",
+      "최대항(Maxterm, Π)·합의 곱(POS)",
+      "그레이 코드 배열",
+      "인접 칸 묶음(1·2·4·8개)",
+      "내포항(Implicant)",
+      "주 내포항(Prime Implicant)",
+      "필수 주 내포항(Essential Prime Implicant)",
+      "무관 조건(Don't Care)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_153",
+    "code": "CA_153",
+    "title": "집적회로(IC, Integrated Circuit)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 반도체 소자",
+    "definition": "실리콘 기판 위에 트랜지스터·저항·커패시터와 배선을 미세 공정으로 한꺼번에 만들어 넣은 전자 회로 부품으로, 집적된 소자 수에 따라 SSI부터 ULSI·GSI까지 분류함",
+    "keywords": [
+      "핵심: 경량화·소형화 · 저전력 소모 · 높은 신뢰성(연결 감소) · SSI(소규모)",
+      "필수: MSI(중규모) · LSI(대규모) · VLSI(초대규모) · ULSI·GSI(극초대규모)",
+      "참고: 잭 킬비·로버트 노이스(1958~1959) · 무어의 법칙에 따른 집적도 증가 · 용도별 분류(범용 IC·ASIC·ASSP) · 아날로그·디지털·혼성 신호 IC · 수십억 트랜지스터 SoC"
+    ],
+    "sections": [
+      {
+        "title": "집적도 분류",
+        "subsections": [
+          {
+            "title": "SSI",
+            "items": [
+              "트랜지스터 수십 개 수준, 기본 논리 게이트 칩"
+            ]
+          },
+          {
+            "title": "MSI",
+            "items": [
+              "수백 개 수준, 카운터·디코더·시프트 레지스터"
+            ]
+          },
+          {
+            "title": "LSI",
+            "items": [
+              "수천~수만 개 수준, 8비트 마이크로프로세서·소용량 메모리"
+            ]
+          },
+          {
+            "title": "VLSI",
+            "items": [
+              "수십만 개 이상, 16·32비트 프로세서와 대용량 메모리"
+            ]
+          },
+          {
+            "title": "ULSI·GSI",
+            "items": [
+              "수백만~수십억 개, 현대 CPU·GPU·SoC"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "장점",
+        "subsections": [
+          {
+            "title": "소형·경량",
+            "items": [
+              "개별 부품 회로를 하나의 칩으로 대체"
+            ]
+          },
+          {
+            "title": "저전력·고속",
+            "items": [
+              "배선이 짧아 지연과 소비 전력 감소"
+            ]
+          },
+          {
+            "title": "신뢰성·원가",
+            "items": [
+              "납땜 연결이 줄어 고장률이 낮고 대량 생산으로 단가 하락"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "용도별 분류",
+        "subsections": [
+          {
+            "title": "범용 칩",
+            "items": [
+              "메모리·표준 논리처럼 여러 제품에 공통 사용"
+            ]
+          },
+          {
+            "title": "주문형 칩",
+            "items": [
+              "특정 제품·고객 요구에 맞춰 설계한 ASIC"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      305,
+      306
+    ],
+    "outline": [
+      "집적도 분류",
+      "- SSI",
+      "- MSI",
+      "- LSI",
+      "- VLSI",
+      "- ULSI·GSI",
+      "장점",
+      "- 소형·경량",
+      "- 저전력·고속",
+      "- 신뢰성·원가",
+      "용도별 분류",
+      "- 범용 칩",
+      "- 주문형 칩"
+    ],
+    "name": "집적회로(IC, Integrated Circuit)",
+    "en": "Integrated Circuit",
+    "keywords_must": [
+      "경량화·소형화",
+      "저전력 소모",
+      "높은 신뢰성(연결 감소)",
+      "SSI(소규모)",
+      "MSI(중규모)",
+      "LSI(대규모)",
+      "VLSI(초대규모)",
+      "ULSI·GSI(극초대규모)"
+    ],
+    "keywords_ref": [
+      "잭 킬비·로버트 노이스(1958~1959)",
+      "무어의 법칙에 따른 집적도 증가",
+      "용도별 분류(범용 IC·ASIC·ASSP)",
+      "아날로그·디지털·혼성 신호 IC",
+      "수십억 트랜지스터 SoC"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "경량화·소형화",
+      "저전력 소모",
+      "높은 신뢰성(연결 감소)",
+      "SSI(소규모)",
+      "MSI(중규모)",
+      "LSI(대규모)",
+      "VLSI(초대규모)",
+      "ULSI·GSI(극초대규모)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "SSI": "Small Scale Integration",
+      "MSI": "Medium Scale Integration",
+      "LSI": "Large Scale Integration",
+      "VLSI": "Very Large Scale Integration",
+      "ULSI": "Ultra Large Scale Integration",
+      "GSI": "Giga Scale Integration",
+      "ASSP": "Application Specific Standard Product"
+    }
+  },
+  {
+    "id": "CA_154",
+    "code": "CA_154",
+    "title": "동기식 순차 회로 설계(Synchronous Sequential Circuit Design)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 회로 설계",
+    "definition": "요구 동작을 상태도로 표현하고 상태표·여기표·카르노 맵을 거쳐 플립플롭 입력식과 출력식을 도출한 뒤 회로로 구현하는 절차로, 동기식 카운터와 다중화 결함 허용 회로(TMR) 설계가 대표 예임",
+    "keywords": [
+      "핵심: 상태도(State Diagram) · 상태표(State Table) · 상태 부호화(State Assignment) · 여기표 활용 입력식",
+      "필수: 카르노 맵 간소화 · 동기식 카운터(D·JK 플립플롭) · 삼중 모듈 중복(TMR, Triple Modular Redundancy) · 다수결 투표기(Majority Voter)",
+      "참고: 투표기 식 Y = AB + BC + CA · 오류 검출 회로로 고장 모듈 식별 · 타이밍도로 동작 검증 · 계층형 TMR(H-TMR) · 우주·항공용 FPGA 방사선 대책"
+    ],
+    "sections": [
+      {
+        "title": "설계 절차",
+        "subsections": [
+          {
+            "title": "1단계",
+            "items": [
+              "문제 분석 후 상태도 작성"
+            ]
+          },
+          {
+            "title": "2단계",
+            "items": [
+              "상태 수에 맞춰 플립플롭 개수 결정, 상태에 2진 코드 배정"
+            ]
+          },
+          {
+            "title": "3단계",
+            "items": [
+              "현재 상태·다음 상태 표 작성 후 여기표로 플립플롭 입력 도출"
+            ]
+          },
+          {
+            "title": "4단계",
+            "items": [
+              "카르노 맵으로 입력식·출력식 간소화"
+            ]
+          },
+          {
+            "title": "5단계",
+            "items": [
+              "회로도 작성과 타이밍도 검증"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "카운터 설계 예",
+        "subsections": [
+          {
+            "title": "상태 구성",
+            "items": [
+              "3개 D 플립플롭으로 정해진 순서의 상태를 순환"
+            ]
+          },
+          {
+            "title": "입력식 도출",
+            "items": [
+              "다음 상태 값이 곧 D 입력이므로 상태표에서 바로 카르노 맵 작성"
+            ]
+          },
+          {
+            "title": "검증",
+            "items": [
+              "클럭마다 출력 A·B·C가 설계 순서대로 바뀌는지 타이밍도로 확인"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "다수결 결함 허용 설계",
+        "subsections": [
+          {
+            "title": "원리",
+            "items": [
+              "같은 모듈 3개의 출력을 투표기로 비교해 2개 이상 일치하는 값 출력"
+            ]
+          },
+          {
+            "title": "투표기 회로",
+            "items": [
+              "Y = AB + BC + CA를 AND 3개와 OR 1개로 구현"
+            ]
+          },
+          {
+            "title": "오류 검출",
+            "items": [
+              "출력이 다른 모듈을 찾아내는 비교 회로를 더해 고장 위치 표시"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      307,
+      312
+    ],
+    "outline": [
+      "설계 절차",
+      "- 1단계",
+      "- 2단계",
+      "- 3단계",
+      "- 4단계",
+      "- 5단계",
+      "카운터 설계 예",
+      "- 상태 구성",
+      "- 입력식 도출",
+      "- 검증",
+      "다수결 결함 허용 설계",
+      "- 원리",
+      "- 투표기 회로",
+      "- 오류 검출"
+    ],
+    "name": "동기식 순차 회로 설계(Synchronous Sequential Circuit Design)",
+    "en": "Synchronous Sequential Circuit Design",
+    "keywords_must": [
+      "상태도(State Diagram)",
+      "상태표(State Table)",
+      "상태 부호화(State Assignment)",
+      "여기표 활용 입력식",
+      "카르노 맵 간소화",
+      "동기식 카운터(D·JK 플립플롭)",
+      "삼중 모듈 중복(TMR, Triple Modular Redundancy)",
+      "다수결 투표기(Majority Voter)"
+    ],
+    "keywords_ref": [
+      "투표기 식 Y = AB + BC + CA",
+      "오류 검출 회로로 고장 모듈 식별",
+      "타이밍도로 동작 검증",
+      "계층형 TMR(H-TMR)",
+      "우주·항공용 FPGA 방사선 대책"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "상태도(State Diagram)",
+      "상태표(State Table)",
+      "상태 부호화(State Assignment)",
+      "여기표 활용 입력식",
+      "카르노 맵 간소화",
+      "동기식 카운터(D·JK 플립플롭)",
+      "삼중 모듈 중복(TMR, Triple Modular Redundancy)",
+      "다수결 투표기(Majority Voter)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
     "id": "CA_061",
     "code": "CA_061",
     "title": "읽기 전용 메모리(ROM, Read Only Memory) 종류",
