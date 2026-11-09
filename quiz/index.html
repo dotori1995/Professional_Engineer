@@ -1,15 +1,16 @@
 ---
 layout: default
 page_id: quiz
-title: 문제
+title: 서술
 permalink: /quiz/
 script: /assets/js/quiz.js
 ---
 <div class="stage">
-  <section class="quiz fitbox" id="quiz" aria-live="polite"><p class="meta">불러오는 중…</p></section>
+  <section class="quiz fitbox write" id="quiz" aria-live="polite"><p class="meta">불러오는 중…</p></section>
 </div>
 
-<div class="card-actions">
-  <button type="button" class="btn ghost" id="quizReset">↺ 점수 초기화</button>
-  <button type="button" class="btn know" id="quizNext" disabled>다음 문제 ▶</button>
+<div class="card-actions" id="writeActions">
+  <button type="button" class="btn ghost" id="quizSkip" hidden>건너뛰기</button>
+  <button type="button" class="btn know" id="quizPrimary" disabled>시작</button>
 </div>
+<p class="hint write-hint"><a href="#" id="mcLink">객관식(보조)</a></p>

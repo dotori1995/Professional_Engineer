@@ -2,127 +2,279 @@
   const PE = window.PE;
   const $ = id => document.getElementById(id);
   const params = PE.params();
-  let all = [];
-  let domain = '';
+  const STORE = 'pe-write-v1';
+  const TIMES = { '10': 10 * 60, '25': 25 * 60, '3': 3 * 60 };
+  const TIME_LABEL = { '10': '1교시 10분', '25': '2~4교시 25분', '3': '키워드 3분' };
+
+  let all = [], domain = '', topicOnly = params.get('topic') || '';
+  let mode = params.get('mode') === 'mc' ? 'mc' : 'write';
+  let pool = [], idx = 0, t = null;
+  let phase = 'prompt'; // prompt | reveal | result
+  let secs = 0, timerId = 0, timeKey = localStorage.getItem('pe-write-time') || '3';
+  let checked = new Set(), notes = '';
+
+  const loadStore = () => { try { return JSON.parse(localStorage.getItem(STORE) || '{}'); } catch (e) { return {}; } };
+  const saveStore = s => { try { localStorage.setItem(STORE, JSON.stringify(s)); } catch (e) {} };
+  const resultOf = id => (loadStore()[id] || null);
+
   function shuffled(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
-  // ===== 객관식 =====
-  // 문제 유형: bank(검수한 문제은행 _data/quiz) · kwOf(토픽의 키워드 찾기) · notKwOf(키워드가 아닌 것) · def(정의→토픽) · kw(토픽→키워드)
-  const quiz = $('quiz');
-  let score = { ok: 0, n: 0 }, q = null, bank = [], bankQueue = [], topicOnly = params.get('topic') || '', topicSeq = 0;
-  const pick = (arr, k) => shuffled(arr).slice(0, k);
-  const kwSet = t => (t.keywords || []).slice(0, 3).join(' · ');
-  const norm = s => String(s || '').replace(/\s|\(.*?\)/g, '').toLowerCase();
-  const byId = id => all.find(t => t.id === id);
-  const inDomain = t => t.domain === domain;
-  const topicText = t => norm([t.title, t.name, t.definition, (t.keywords || []).join(' '), JSON.stringify(t.sections || [])].join(' '));
-  // 다른 토픽 키워드가 이 토픽에도 해당될 수 있으면 오답 보기로 쓰지 않음(quiz_avoid 양방향 + 본문 포함 여부 검사)
-  function foreignTerms(t) {
-    const txt = topicText(t), own = new Set((t.quiz_terms || []).map(norm));
-    const out = [];
-    all.filter(o => o.id !== t.id && (o.quiz_terms || []).length && inDomain(o)
-      && !(t.quiz_avoid || []).includes(o.id) && !(o.quiz_avoid || []).includes(t.id)
-      && !(t.quiz_groups || []).some(g => (o.quiz_groups || []).includes(g)))
-      .forEach(o => o.quiz_terms.forEach(x => { const k = norm(x); if (k && !own.has(k) && !txt.includes(k)) out.push({ term: x, from: o }); }));
-    return out;
-  }
-  const mk = (type, t, label, stem, ask, opts, answer, extra) => {
-    const order = shuffled([0, 1, 2, 3]);
-    return Object.assign({ type, t, label, stem, ask, opts: order.map(i => opts[i]), answer: order.indexOf(answer), answered: -1 }, extra || {});
-  };
-  function qBank(b) {
-    const t = byId(b.topic);
-    return mk('bank', t, `${PE.name(t)} · 키워드 문제`, `<div class="qtext">${PE.gl(b.question)}</div>`, '', b.options.map(PE.gl), b.answer, { explain: b.explain });
-  }
-  function qKwOf(t, neg) {
-    const own = shuffled(t.quiz_terms || []), foreign = shuffled(foreignTerms(t));
-    if (neg ? own.length < 3 || foreign.length < 1 : own.length < 1 || foreign.length < 3) return null;
-    const opts = neg ? own.slice(0, 3).concat([foreign[0].term]) : [own[0]].concat(foreign.slice(0, 3).map(f => f.term));
-    const extra = neg ? { raw: true, explain: `${foreign[0].term} → ${PE.name(foreign[0].from)}의 키워드예요.` } : { raw: true, explain: '나머지는 ' + foreign.slice(0, 3).map(f => `${f.term} → ${PE.name(f.from)}`).join(', ') };
-    return mk(neg ? 'notKwOf' : 'kwOf', t, neg ? '토픽의 키워드 아닌 것 찾기' : '토픽의 키워드 찾기',
-      `<div class="qtitle">${PE.esc(PE.name(t))}</div>`, neg ? '이 토픽의 키워드가 <b>아닌</b> 것은?' : '이 토픽의 키워드는?', opts.map(PE.gl), neg ? 3 : 0, extra);
-  }
-  function qAuto(type) {
-    const pool = all.filter(inDomain);
-    const src = type === 'def' ? pool.filter(t => (t.definition || '').length > 15) : pool.filter(t => (t.keywords || []).length >= 2);
-    if (src.length < 4) return null;
-    const ans = src[Math.floor(Math.random() * src.length)];
-    const label = type === 'def' ? PE.name : kwSet;
-    const used = new Set([norm(ans.title), norm(label(ans))]);
-    const others = shuffled(src.filter(t => t.id !== ans.id)).filter(t => {
-      const k1 = norm(t.title), k2 = norm(label(t));
-      if (used.has(k1) || used.has(k2)) return false; used.add(k1); used.add(k2); return true;
-    }).slice(0, 3);
-    const opts = [ans].concat(others).map(t => type === 'def' ? PE.esc(PE.name(t)) : PE.gl(kwSet(t)));
-    return type === 'def'
-      ? mk('def', ans, '정의 → 토픽', `<div class="qtext">${mask(ans)}</div>`, '이 정의에 해당하는 토픽은?', opts, 0)
-      : mk('kw', ans, '토픽 → 키워드', `<div class="qtitle">${PE.esc(PE.name(ans))}</div>`, '이 토픽의 키워드는?', opts, 0);
-  }
-  function nextBank(filter) {
-    if (!bankQueue.length) bankQueue = shuffled(bank.filter(filter));
-    return bankQueue.length ? qBank(bankQueue.shift()) : null;
-  }
-  function makeQuestion() {
+
+  function buildPool() {
+    const curated = all.filter(x => x.domain === domain && (x.keywords_must || []).length);
+    let list = curated.length ? curated : all.filter(x => x.domain === domain && (x.keywords || []).length);
     if (topicOnly) {
-      const t = byId(topicOnly); if (!t) { topicOnly = ''; return makeQuestion(); }
-      topicSeq++;
-      // 문제은행 문제 3개마다 키워드 찾기/아닌 것 찾기 1개
-      if (topicSeq % 4 === 0) { const r = qKwOf(t, topicSeq % 8 === 0); if (r) return r; }
-      return nextBank(b => b.topic === topicOnly) || qKwOf(t, false) || qAuto('def');
+      const one = all.find(x => x.id === topicOnly);
+      if (one) list = [one];
     }
-    const curated = all.filter(t => inDomain(t) && (t.quiz_terms || []).length);
-    const r = Math.random();
-    let out = null;
-    if (r < 0.5) out = nextBank(b => { const t = byId(b.topic); return t && inDomain(t); });
-    else if (r < 0.65 && curated.length) out = qKwOf(curated[Math.floor(Math.random() * curated.length)], false);
-    else if (r < 0.75 && curated.length) out = qKwOf(curated[Math.floor(Math.random() * curated.length)], true);
-    else if (r < 0.9) out = qAuto('def');
-    else out = qAuto('kw');
-    return out || qAuto('def') || qAuto('kw');
-  }
-  // 정의 문제에서 정답 토픽명이 그대로 보이지 않게 가림
-  function mask(t) {
-    const terms = new Set();
-    [t.title, t.subtitle, t.name, t.en].filter(Boolean).forEach(x => {
-      terms.add(x.trim());
-      x.split(/[()\[\]_,/·:&]+/).map(y => y.trim()).filter(y => y.length >= 2).forEach(y => terms.add(y));
+    // missed 필수 first
+    const st = loadStore();
+    list = list.slice().sort((a, b) => {
+      const ra = st[a.id], rb = st[b.id];
+      const ma = ra && ra.missed && ra.missed.length ? 0 : 1;
+      const mb = rb && rb.missed && rb.missed.length ? 0 : 1;
+      if (ma !== mb) return ma - mb;
+      return (ra && ra.at || 0) - (rb && rb.at || 0);
     });
-    let html = PE.esc(t.definition || '');
-    [...terms].sort((a, b) => b.length - a.length).forEach(w => {
-      const e = PE.esc(w).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      html = html.replace(new RegExp(e, 'gi'), '<span class="mask">○○</span>');
-    });
-    return html;
+    // preview: prefer NW_185
+    const pref = list.find(x => x.id === 'NW_185');
+    if (pref && !topicOnly) list = [pref].concat(list.filter(x => x.id !== 'NW_185'));
+    return list;
   }
-  function renderQuiz() {
-    if (!q) { quiz.innerHTML = '<div class="empty">문제를 만들 데이터가 부족해요</div>'; return; }
-    const done = q.answered >= 0, ok = done && q.answered === q.answer;
-    const tag = topicOnly ? ` · ${PE.esc(PE.name(byId(topicOnly)))} 집중 <a href="${PE.url('/quiz/')}?d=${encodeURIComponent(domain)}">전체 문제로</a>` : '';
-    quiz.innerHTML = `<div class="qscore">점수 ${score.ok} / ${score.n}${tag}</div>
-      <div class="qtype">${PE.esc(q.label)}</div>${q.stem}${q.ask ? `<div class="qask">${q.ask}</div>` : ''}
-      <div class="qopts">${q.opts.map((o, i) => {
-        let cls = 'qopt'; if (done) { if (i === q.answer) cls += ' right'; else if (i === q.answered) cls += ' wrong'; }
-        return `<button type="button" class="${cls}" data-i="${i}" ${done ? 'disabled' : ''}><span class="qn">${'ABCD'[i]}</span><span>${o}</span></button>`;
-      }).join('')}</div>
-      ${done ? `<div class="qfb ${ok ? 'ok' : 'ng'}">${ok ? '⭕ 정답!' : '❌ 오답'} <b>${PE.esc(PE.name(q.t))}</b>
-        <div class="qdef">${q.raw ? PE.esc(q.explain) : PE.gl(q.explain || q.t.definition || '')}</div>
-        <a href="${PE.topicUrl(q.t.id)}">자세히 →</a></div>` : ''}`;
-    quiz.querySelectorAll('.qopt').forEach(b => b.addEventListener('click', () => {
-      if (q.answered >= 0) return; q.answered = +b.dataset.i; score.n++; if (q.answered === q.answer) score.ok++;
-      $('quizNext').disabled = false; renderQuiz();
-    }));
-    $('quizNext').disabled = !done;
+
+  function stopTimer() { if (timerId) { clearInterval(timerId); timerId = 0; } }
+  function startTimer() {
+    stopTimer();
+    secs = TIMES[timeKey] || TIMES['3'];
+    timerId = setInterval(() => {
+      secs -= 1;
+      const el = document.getElementById('wTimer');
+      if (el) {
+        el.textContent = fmt(secs);
+        el.classList.toggle('warn', secs <= 30);
+        el.classList.toggle('over', secs < 0);
+      }
+      if (secs === 0) { /* keep counting negative as overtime */ }
+    }, 1000);
+  }
+  function fmt(s) {
+    const neg = s < 0; s = Math.abs(s);
+    const m = Math.floor(s / 60), r = s % 60;
+    return (neg ? '+' : '') + String(m).padStart(2, '0') + ':' + String(r).padStart(2, '0');
+  }
+
+  function mustList(topic) {
+    if ((topic.keywords_must || []).length) return topic.keywords_must;
+    // fallback: quiz_terms or flat keywords
+    if ((topic.quiz_terms || []).length) return topic.quiz_terms;
+    return (topic.keywords || []).slice(0, 8);
+  }
+  function refList(topic) {
+    if ((topic.keywords_ref || []).length) return topic.keywords_ref;
+    return [];
+  }
+
+  function render() {
+    const quiz = $('quiz');
+    const primary = $('quizPrimary');
+    const skip = $('quizSkip');
+    if (!t) {
+      quiz.innerHTML = '<div class="empty">서술 연습할 토픽이 없어요.<br>필수 키워드가 있는 토픽부터 열어 주세요.</div>';
+      primary.disabled = true; skip.hidden = true;
+      return;
+    }
+    const name = PE.esc(PE.name(t));
+    const prev = resultOf(t.id);
+    const prevHtml = prev ? `<div class="wmeta">이전 ${prev.score}/${prev.total} · 놓친 ${prev.missed.length}개</div>` : '';
+
+    if (phase === 'prompt') {
+      quiz.innerHTML = `
+        <div class="wbar"><span class="wtype">서술 연습</span><span class="wtimer" id="wTimer">${fmt(secs)}</span></div>
+        <div class="wprompt">
+          <div class="wlabel">토픽</div>
+          <h2 class="wtitle">${name}</h2>
+          <p class="whint">정의 · 목차 · 키워드를 떠올려 쏟아내 보세요</p>
+        </div>
+        <textarea class="wdump" id="wDump" rows="6" placeholder="떠오르는 키워드를 여기에 적어도 됩니다 (선택)">${PE.esc(notes)}</textarea>
+        <div class="wtimes" id="wTimes">
+          ${Object.keys(TIMES).map(k => `<button type="button" class="chip${k === timeKey ? ' on' : ''}" data-t="${k}">${TIME_LABEL[k]}</button>`).join('')}
+        </div>
+        ${prevHtml}`;
+      primary.textContent = '답안 보기'; primary.disabled = false;
+      skip.hidden = false; skip.textContent = '다른 토픽';
+      // timer chips only change for next round if already running; allow change before reveal
+      $('wTimes').addEventListener('click', e => {
+        const b = e.target.closest('[data-t]'); if (!b) return;
+        timeKey = b.dataset.t; localStorage.setItem('pe-write-time', timeKey);
+        secs = TIMES[timeKey]; startTimer();
+        render();
+      });
+      const dump = $('wDump');
+      dump && dump.addEventListener('input', () => { notes = dump.value; });
+      PE.fit(quiz);
+      return;
+    }
+
+    if (phase === 'reveal') {
+      const must = mustList(t), ref = refList(t);
+      const mustHtml = must.map((k, i) => kwChip('m', i, k)).join('');
+      const refHtml = ref.map((k, i) => kwChip('r', i, k)).join('');
+      const got = must.filter((_, i) => checked.has('m' + i)).length;
+      quiz.innerHTML = `
+        <div class="wbar"><span class="wtype">답안</span><span class="wscore" id="wScore">${got}/${must.length} 필수</span></div>
+        <div class="wtitle-sm">${name}</div>
+        <div class="lbl">개념·정의</div>
+        <div class="wdef">${PE.gl(t.definition || '')}</div>
+        <div class="lbl">목차</div>
+        ${PE.outlineHtml(t.outline, true)}
+        <div class="lbl">필수 키워드 <span class="wnote">비슷한 표현이면 체크</span></div>
+        <div class="wkws" id="wMust">${mustHtml || '<span class="meta">없음</span>'}</div>
+        ${ref.length ? `<div class="lbl">참고 키워드</div><div class="wkws" id="wRef">${refHtml}</div>` : ''}
+        ${notes.trim() ? `<div class="lbl">내가 적은 것</div><div class="wnotes">${PE.esc(notes)}</div>` : ''}`;
+      quiz.querySelectorAll('.wkw').forEach(b => b.addEventListener('click', () => {
+        const id = b.dataset.id;
+        if (checked.has(id)) checked.delete(id); else checked.add(id);
+        b.classList.toggle('on', checked.has(id));
+        const got2 = must.filter((_, i) => checked.has('m' + i)).length;
+        const el = $('wScore'); if (el) el.textContent = got2 + '/' + must.length + ' 필수';
+      }));
+      primary.textContent = '결과 저장'; primary.disabled = false;
+      skip.hidden = false; skip.textContent = '다시';
+      PE.fit(quiz);
+      return;
+    }
+
+    // result
+    const must = mustList(t);
+    const got = must.filter((_, i) => checked.has('m' + i));
+    const missed = must.filter((_, i) => !checked.has('m' + i));
+    quiz.innerHTML = `
+      <div class="wbar"><span class="wtype">결과</span></div>
+      <div class="wresult">
+        <div class="wbig">${got.length}<span>/${must.length}</span></div>
+        <div class="wbig-l">필수 키워드</div>
+        <div class="wtitle-sm">${name}</div>
+      </div>
+      ${missed.length ? `<div class="lbl">놓친 필수</div><ul class="wmiss">${missed.map(k => `<li>${PE.gl(k)}</li>`).join('')}</ul>` : `<div class="wok">필수 키워드를 모두 떠올렸습니다</div>`}
+      ${got.length ? `<div class="lbl">맞힌 필수</div><ul class="whit">${got.map(k => `<li>${PE.gl(k)}</li>`).join('')}</ul>` : ''}`;
+    primary.textContent = '다음 토픽'; primary.disabled = false;
+    skip.hidden = false; skip.textContent = '같은 토픽 다시';
     PE.fit(quiz);
   }
-  function nextQuestion() { q = makeQuestion(); renderQuiz(); }
-  $('quizNext').addEventListener('click', nextQuestion);
-  $('quizReset').addEventListener('click', () => { score = { ok: 0, n: 0 }; nextQuestion(); });
-  PE.quizNext = nextQuestion;
-  PE.quizState = () => q && { type: q.type, topic: q.t.id, answer: q.answer, opts: q.opts };
-  addEventListener('resize', () => PE.fit(quiz));
+
+  function kwChip(prefix, i, text) {
+    const id = prefix + i;
+    return `<button type="button" class="wkw${checked.has(id) ? ' on' : ''}" data-id="${id}">${PE.gl(text)}</button>`;
+  }
+
+  function saveResult() {
+    const must = mustList(t);
+    const got = must.filter((_, i) => checked.has('m' + i));
+    const missed = must.filter((_, i) => !checked.has('m' + i));
+    const st = loadStore();
+    st[t.id] = { score: got.length, total: must.length, missed, at: Date.now(), notes: notes.slice(0, 500) };
+    saveStore(st);
+  }
+
+  function openTopic(i) {
+    stopTimer();
+    idx = ((i % pool.length) + pool.length) % pool.length;
+    t = pool[idx];
+    phase = 'prompt';
+    checked = new Set();
+    notes = '';
+    secs = TIMES[timeKey] || TIMES['3'];
+    startTimer();
+    render();
+  }
+
+  $('quizPrimary').addEventListener('click', () => {
+    if (!t) return;
+    if (phase === 'prompt') {
+      const dump = $('wDump'); if (dump) notes = dump.value;
+      phase = 'reveal'; render();
+    } else if (phase === 'reveal') {
+      saveResult(); phase = 'result'; render();
+    } else {
+      openTopic(idx + 1);
+    }
+  });
+  $('quizSkip').addEventListener('click', () => {
+    if (phase === 'reveal') { phase = 'prompt'; checked = new Set(); startTimer(); render(); return; }
+    if (phase === 'result') { openTopic(idx); return; }
+    openTopic(idx + 1);
+  });
+
+  // ===== 객관식(보조) =====
+  function startMc() {
+    mode = 'mc';
+    document.body.classList.add('mode-mc');
+    $('writeActions').hidden = false;
+    // reuse minimal MC using existing bank for this topic if any
+    location.href = PE.url('/quiz/') + '?mode=mc&d=' + encodeURIComponent(domain) + (topicOnly ? '&topic=' + encodeURIComponent(topicOnly) : '');
+  }
+  $('mcLink').addEventListener('click', e => { e.preventDefault(); startMc(); });
+
+  // MC mode: keep a compact legacy quiz so 객관식 link still works
+  if (mode === 'mc') {
+    $('mcLink').textContent = '서술 연습으로';
+    $('mcLink').onclick = e => { e.preventDefault(); location.href = PE.url('/quiz/') + '?d=' + encodeURIComponent(PE.cur || 'NW') + (topicOnly ? '&topic=' + encodeURIComponent(topicOnly) : ''); };
+    // load light MC below after data
+  }
+
+  function runMc(bank) {
+    const quiz = $('quiz');
+    quiz.classList.remove('write');
+    let score = { ok: 0, n: 0 }, q = null, queue = [];
+    const byId = id => all.find(x => x.id === id);
+    const pickBank = () => {
+      if (!queue.length) {
+        const filt = bank.filter(b => {
+          const tt = byId(b.topic); return tt && tt.domain === domain && (!topicOnly || b.topic === topicOnly);
+        });
+        queue = shuffled(filt);
+      }
+      return queue.shift();
+    };
+    function make() {
+      const b = pickBank();
+      if (!b) { quiz.innerHTML = '<div class="empty">객관식 문제은행이 비어 있어요.</div>'; $('quizPrimary').disabled = true; return; }
+      const topic = byId(b.topic);
+      const order = shuffled([0, 1, 2, 3]);
+      q = { t: topic, opts: order.map(i => b.options[i]), answer: order.indexOf(b.answer), explain: b.explain, question: b.question, answered: -1 };
+      draw();
+    }
+    function draw() {
+      const done = q.answered >= 0, ok = done && q.answered === q.answer;
+      quiz.innerHTML = `<div class="qscore">점수 ${score.ok}/${score.n} · <b>객관식(보조)</b></div>
+        <div class="qtype">${PE.esc(PE.name(q.t))}</div>
+        <div class="qtext">${PE.gl(q.question)}</div>
+        <div class="qopts">${q.opts.map((o, i) => {
+          let cls = 'qopt'; if (done) { if (i === q.answer) cls += ' right'; else if (i === q.answered) cls += ' wrong'; }
+          return `<button type="button" class="${cls}" data-i="${i}" ${done ? 'disabled' : ''}><span class="qn">${'ABCD'[i]}</span><span>${PE.gl(o)}</span></button>`;
+        }).join('')}</div>
+        ${done ? `<div class="qfb ${ok ? 'ok' : 'ng'}">${ok ? '⭕' : '❌'} ${PE.gl(q.explain || '')}</div>` : ''}`;
+      quiz.querySelectorAll('.qopt').forEach(b => b.addEventListener('click', () => {
+        if (q.answered >= 0) return; q.answered = +b.dataset.i; score.n++; if (q.answered === q.answer) score.ok++;
+        $('quizPrimary').disabled = false; draw();
+      }));
+      $('quizPrimary').textContent = '다음 문제'; $('quizPrimary').disabled = !done;
+      $('quizSkip').hidden = true;
+      PE.fit(quiz);
+    }
+    $('quizPrimary').onclick = () => make();
+    make();
+  }
+
+  addEventListener('resize', () => PE.fit($('quiz')));
   Promise.all([PE.load(), PE.loadQuiz()]).then(([data, qb]) => {
-    all = data; bank = (qb || []).filter(b => byId(b.topic));
-    const tt = topicOnly && byId(topicOnly); if (tt && tt.domain !== PE.cur) PE.setDomain(tt.domain);
+    all = data;
+    const tt = topicOnly && all.find(x => x.id === topicOnly);
+    if (tt && tt.domain !== PE.cur) PE.setDomain(tt.domain);
     domain = PE.cur;
-    nextQuestion();
-  }).catch(() => { quiz.innerHTML = '<div class="empty">데이터를 불러오지 못했어요.</div>'; });
+    // drawer label
+    document.querySelectorAll('.dr-links a[href*="/quiz/"]').forEach(a => { a.textContent = '서술'; });
+    if (mode === 'mc') { runMc(qb || []); return; }
+    pool = buildPool();
+    openTopic(0);
+  }).catch(() => { $('quiz').innerHTML = '<div class="empty">데이터를 불러오지 못했어요.</div>'; });
 })();

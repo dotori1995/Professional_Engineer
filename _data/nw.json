@@ -3661,7 +3661,30 @@
   "quiz_groups": [
    "vehicle"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "keywords_must": [
+   "임베디드(Embedded)",
+   "테더드(Tethered)",
+   "통합형(Integrated)",
+   "V2V(Vehicle-to-Vehicle)",
+   "V2I(Vehicle-to-Infrastructure)",
+   "V2N(Vehicle-to-Network)",
+   "V2P(Vehicle-to-Pedestrian)",
+   "C-V2X(Cellular V2X)",
+   "WAVE(IEEE 802.11p)",
+   "OTA(Over-The-Air)",
+   "eCall(Emergency Call)",
+   "UN R155(CSMS)"
+  ],
+  "keywords_ref": [
+   "텔레매틱스(Telematics)",
+   "인포테인먼트(Infotainment)",
+   "LTE-V2X → NR-V2X",
+   "UN R156(SUMS)",
+   "ISO/SAE 21434",
+   "SDV(Software Defined Vehicle)",
+   "RSU(Road Side Unit)"
+  ]
  },
  {
   "id": "NW_082",
@@ -7337,20 +7360,17 @@
  {
   "id": "NW_185",
   "code": "NW_185",
-  "title": "5G(IMT-2020)주요기술",
+  "title": "5G 주요 기술(5G, IMT-2020)",
   "subtitle": "5G(IMT-2020)",
   "domain": "NW",
   "category": "NW > 5G(IMT-2020) > 5G(IMT-2020)",
-  "definition": "4G 대비 10배 이상 향상된 초고속·초고용량·초저지연·초연결 네트워크 기술로, 다양한 디지털 디바이스를 수용하는 차세대 네트워크의 핵심 인프라이자 기술.",
+  "definition": "ITU-R IMT-2020 요구사항을 만족하는 5세대 이동통신. 4G 대비 약 10배 이상 향상된 초고속·초고용량·초저지연·초연결을 목표로, eMBB·URLLC·mMTC 세 가지 서비스 시나리오를 지원한다.",
   "keywords": [
-   "최고 전송속도 20Gbps",
-   "체감 100~1,000Mbps",
-   "주파수 효율 3배",
-   "이동성 500km/h",
-   "지연 1ms",
-   "연결 10^6개/km²",
-   "에너지 효율 100배",
-   "면적당 10Mbps/m²"
+   "서비스: eMBB · URLLC · mMTC",
+   "핵심: 네트워크 슬라이싱(Network Slicing) · Massive MIMO · NOMA",
+   "무선: 빔포밍(Beamforming) · 밀리미터파(mmWave) · Full Duplex",
+   "성능: 최고 20Gbps · 지연 1ms · 연결 10^6/km²",
+   "구조: NSA/SA · MEC · D2D"
   ],
   "sections": [
    {
@@ -7425,20 +7445,60 @@
    273,
    277
   ],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문 성능 비교표(두음 '전체주고지연에면')에서 발췌",
+  "keywords_note": null,
   "name": "5G 주요 기술(5G, IMT-2020)",
   "en": "5G, IMT-2020",
   "reviewed": true,
   "outline": [
-   "초연결시대, IMT-2020/5G의 개요",
-   "- IMT-2020/5G의 개념",
-   "- 4G(IMT-Advanced)와 5G(IMT-2020) 핵심 성능 비교(전체주고지연에면)",
-   "5G 네트워크의 기술적 특징",
-   "- 5G 네트워크의 기술적 특징 개요",
-   "- 5G 네트워크의 기술적 특징 상세설명",
-   "IMT-2020/5G 기술요소",
-   "5G 네트워크의 국내외 추진동향 및 시사점",
-   "- 5G 네트워크의 국내외 추진동향"
+   "5G(IMT-2020)의 개념",
+   "- 정의·목표(초고속·초저지연·초연결)",
+   "- 4G(IMT-Advanced) 대비 성능",
+   "서비스 시나리오와 핵심 기술",
+   "- eMBB · URLLC · mMTC",
+   "- 네트워크 슬라이싱 · Massive MIMO · NOMA",
+   "- 빔포밍 · mmWave · Full Duplex",
+   "구조·동향 및 시사점",
+   "- NSA/SA · MEC",
+   "- 국내외 추진동향"
+  ],
+  "keywords_must": [
+   "eMBB(enhanced Mobile Broadband)",
+   "URLLC(Ultra-Reliable Low-Latency Communications)",
+   "mMTC(massive Machine-Type Communications)",
+   "네트워크 슬라이싱(Network Slicing)",
+   "Massive MIMO",
+   "NOMA(Non-Orthogonal Multiple Access)",
+   "빔포밍(Beamforming)",
+   "밀리미터파(mmWave)",
+   "초저지연 1ms",
+   "최고속도 20Gbps"
+  ],
+  "keywords_ref": [
+   "Full Duplex(전이중)",
+   "Self-contained Subframe",
+   "D2D(Device-to-Device)",
+   "MEC(Multi-access Edge Computing)",
+   "NSA/SA(Non-Standalone/Standalone)",
+   "연결밀도 10^6개/km²",
+   "체감속도 100~1,000Mbps",
+   "주파수 효율 3배 · 에너지 효율 100배"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "eMBB(enhanced Mobile Broadband)",
+   "URLLC(Ultra-Reliable Low-Latency Communications)",
+   "mMTC(massive Machine-Type Communications)",
+   "네트워크 슬라이싱(Network Slicing)",
+   "Massive MIMO",
+   "NOMA(Non-Orthogonal Multiple Access)",
+   "빔포밍(Beamforming)",
+   "밀리미터파(mmWave)",
+   "MEC(Multi-access Edge Computing)",
+   "NSA/SA(Non-Standalone/Standalone)"
+  ],
+  "quiz_groups": [
+   "5g",
+   "mobile"
   ]
  },
  {
