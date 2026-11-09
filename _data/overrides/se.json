@@ -21475,5 +21475,763 @@
    "RMF": "Risk Management Framework",
    "SaaS": "Software as a Service"
   }
+ },
+ "SE_290": {
+  "title": "디바이스 DNA(Device DNA)",
+  "category": "SE > IoT보안",
+  "definition": "사람의 생체 정보처럼 IoT 기기마다 고유한 하드웨어·동작 특성을 자동 추출·저장해 기기를 식별·인증하는 기술로, 보안 연산이 어려운 저사양 기기에 PUF와 같은 하드웨어 신뢰 원천을 제공한다",
+  "keywords": [
+   "6대 고려 요소: 보편성 · 유일성 · 영구성 · 측정성 · 성능성 · 우회성(복제 난이도)",
+   "구현 기술: DRAM-PUF · SRAM-PUF · 시리얼 번호(비교 기준)",
+   "목적: 저사양 IoT 기기 인증 강화 · 기기 복제·위장 방지"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "저사양 기기",
+      "items": [
+       "연산·메모리가 작아 고강도 암호 인증 적용 곤란"
+      ]
+     },
+     {
+      "title": "위장 위협",
+      "items": [
+       "기기 ID·키 복제로 정상 기기 사칭"
+      ]
+     },
+     {
+      "title": "해법",
+      "items": [
+       "제조 공정 편차로 생기는 고유 특성을 신뢰 원천으로 사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "고려 요소",
+    "subsections": [
+     {
+      "title": "보편성",
+      "items": [
+       "모든 대상 기기가 해당 특성을 가짐"
+      ]
+     },
+     {
+      "title": "유일성",
+      "items": [
+       "기기마다 값이 달라야 함"
+      ]
+     },
+     {
+      "title": "영구성",
+      "items": [
+       "시간이 지나도 값 변화가 적어야 함"
+      ]
+     },
+     {
+      "title": "측정성",
+      "items": [
+       "간단히 획득·측정 가능"
+      ]
+     },
+     {
+      "title": "성능성",
+      "items": [
+       "정확도·속도·견고성"
+      ]
+     },
+     {
+      "title": "우회성",
+      "items": [
+       "복제·위조가 어려운 정도"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구현 기술 비교",
+    "subsections": [
+     {
+      "title": "DRAM-PUF",
+      "items": [
+       "보편성·유일성·성능·우회성 높음, 영구성은 중간"
+      ]
+     },
+     {
+      "title": "SRAM-PUF",
+      "items": [
+       "전원 인가 시 셀 초기값 편차 이용, 영구성까지 높음"
+      ]
+     },
+     {
+      "title": "시리얼 번호",
+      "items": [
+       "측정은 쉽지만 복제가 쉬워 우회성 낮음"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 저사양 기기",
+   "- 위장 위협",
+   "- 해법",
+   "고려 요소",
+   "- 보편성",
+   "- 유일성",
+   "- 영구성",
+   "- 측정성",
+   "- 성능성",
+   "- 우회성",
+   "구현 기술 비교",
+   "- DRAM-PUF",
+   "- SRAM-PUF",
+   "- 시리얼 번호"
+  ],
+  "name": "디바이스 DNA(Device DNA)",
+  "en": "Device DNA",
+  "keywords_must": [
+   "보편성",
+   "유일성",
+   "영구성",
+   "측정성",
+   "성능성",
+   "우회성(복제 난이도)",
+   "DRAM-PUF",
+   "SRAM-PUF",
+   "시리얼 번호(비교 기준)",
+   "저사양 IoT 기기 인증 강화",
+   "기기 복제·위장 방지"
+  ],
+  "keywords_ref": [
+   "물리적 복제 방지 함수(PUF)",
+   "생체인식 평가 요소와 동일 구조",
+   "SRAM 초기 전원 값 편차",
+   "DRAM 셀 감쇠 특성",
+   "시리얼 번호는 우회성 낮음(복제 쉬움)",
+   "챌린지-응답 인증"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "보편성",
+   "유일성",
+   "영구성",
+   "측정성",
+   "성능성",
+   "우회성(복제 난이도)",
+   "DRAM-PUF",
+   "SRAM-PUF",
+   "시리얼 번호(비교 기준)",
+   "저사양 IoT 기기 인증 강화",
+   "기기 복제·위장 방지"
+  ],
+  "gloss": {
+   "PUF": "Physical Unclonable Function",
+   "DRAM": "Dynamic Random Access Memory",
+   "SRAM": "Static Random Access Memory"
+  }
+ },
+ "SE_291": {
+  "title": "침해 지표(IoC)·공격 지표(IoA)",
+  "category": "SE > 기타/시사 > IoC, IoA",
+  "definition": "침해 지표(IoC)는 악성 파일 해시·IP·도메인처럼 공격이 이미 발생했음을 보여 주는 사후적 흔적이고, 공격 지표(IoA)는 코드 실행·지속성 확보·횡적 이동처럼 진행 중인 공격 의도와 행위를 실시간으로 보여 주는 사전적 지표다",
+  "keywords": [
+   "IoC 지표: 악성 코드 해시 · 악성 IP·도메인·URL · 시그니처 · 레지스트리 변경",
+   "IoA 지표: 코드 실행 · 지속성(Persistence) · 명령 제어(C&C) 통신 · 횡적 이동(Lateral Movement)",
+   "관점: 사후적(Reactive)·정적 · 사전적(Proactive)·동적",
+   "대응 도구: 백신·IPS·SIEM(IoC) · EDR·SOAR·머신러닝(IoA)"
+  ],
+  "sections": [
+   {
+    "title": "비교",
+    "subsections": [
+     {
+      "title": "대상",
+      "items": [
+       "IoC는 침해 결과",
+       "IoA는 공격 의도와 행위"
+      ]
+     },
+     {
+      "title": "시점",
+      "items": [
+       "IoC는 사후 탐지·정적",
+       "IoA는 실시간·동적"
+      ]
+     },
+     {
+      "title": "분석",
+      "items": [
+       "IoC는 단일 시스템 지표",
+       "IoA는 다수 시스템 연계 행위 분석"
+      ]
+     },
+     {
+      "title": "대응 범위",
+      "items": [
+       "IoC는 반복 공격 차단",
+       "IoA는 제로데이·신종 공격 대응"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "지표 활용",
+    "subsections": [
+     {
+      "title": "흔적 지표 활용",
+      "items": [
+       "위협 인텔리전스 피드로 차단 목록·시그니처 갱신, 침해 범위 조사"
+      ]
+     },
+     {
+      "title": "행위 지표 활용",
+      "items": [
+       "공격 기법 단위 행위 규칙으로 실행 중 공격 차단"
+      ]
+     },
+     {
+      "title": "우선순위",
+      "items": [
+       "해시·IP는 쉽게 바뀌고 TTP는 바꾸기 어려움(고통의 피라미드)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "통합 운영",
+    "subsections": [
+     {
+      "title": "SIEM",
+      "items": [
+       "IoC 매칭과 로그 상관 분석"
+      ]
+     },
+     {
+      "title": "EDR",
+      "items": [
+       "단말 행위 기반 IoA 탐지"
+      ]
+     },
+     {
+      "title": "SOAR",
+      "items": [
+       "지표 기반 자동 대응으로 인력 개입 감소"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "비교",
+   "- 대상",
+   "- 시점",
+   "- 분석",
+   "- 대응 범위",
+   "지표 활용",
+   "- 흔적 지표 활용",
+   "- 행위 지표 활용",
+   "- 우선순위",
+   "통합 운영",
+   "- SIEM",
+   "- EDR",
+   "- SOAR"
+  ],
+  "name": "침해 지표(IoC)·공격 지표(IoA)",
+  "en": "Indicators of Compromise / Indicators of Attack",
+  "keywords_must": [
+   "악성 코드 해시",
+   "악성 IP·도메인·URL",
+   "시그니처",
+   "레지스트리 변경",
+   "코드 실행",
+   "지속성(Persistence)",
+   "명령 제어(C&C) 통신",
+   "횡적 이동(Lateral Movement)",
+   "사후적(Reactive)·정적",
+   "사전적(Proactive)·동적",
+   "백신·IPS·SIEM(IoC)",
+   "EDR·SOAR·머신러닝(IoA)"
+  ],
+  "keywords_ref": [
+   "고통의 피라미드(Pyramid of Pain)",
+   "STIX·TAXII 위협 정보 공유",
+   "C-TAS",
+   "MITRE ATT&CK 기법 매핑",
+   "위협 헌팅",
+   "제로데이·APT는 IoA가 유리"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "악성 코드 해시",
+   "악성 IP·도메인·URL",
+   "시그니처",
+   "레지스트리 변경",
+   "코드 실행",
+   "지속성(Persistence)",
+   "명령 제어(C&C) 통신",
+   "횡적 이동(Lateral Movement)",
+   "사후적(Reactive)·정적",
+   "사전적(Proactive)·동적",
+   "백신·IPS·SIEM(IoC)",
+   "EDR·SOAR·머신러닝(IoA)"
+  ],
+  "gloss": {
+   "IoC": "Indicators of Compromise",
+   "IoA": "Indicators of Attack",
+   "STIX": "Structured Threat Information Expression",
+   "TAXII": "Trusted Automated Exchange of Intelligence Information",
+   "C&C": "Command and Control",
+   "IPS": "Intrusion Prevention System"
+  }
+ },
+ "SE_292": {
+  "title": "다크버트(DarkBERT)",
+  "category": "SE > 정보보안",
+  "definition": "다크웹 텍스트로 사전 학습해 다크웹 특유의 은어와 범죄 문맥을 이해하도록 만든 언어 모델로, 랜섬웨어 유출 사이트 탐지와 위협 활동 분류 등 사이버 위협 인텔리전스에 활용된다(KAIST·S2W, 2023)",
+  "keywords": [
+   "기반 모델: RoBERTa · 트랜스포머(Transformer)",
+   "학습 절차: 데이터 수집 · 데이터 필터링 · 텍스트 전처리(민감 정보 마스킹) · 사전 학습 · 평가",
+   "활용: 랜섬웨어 유출 사이트 탐지 · 위협 활동 분류 · 위협 키워드 모니터링"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "다크웹 언어",
+      "items": [
+       "은어·코드명·비정형 문장이 많아 일반 언어 모델 성능 저하"
+      ]
+     },
+     {
+      "title": "필요",
+      "items": [
+       "접근이 어려운 다크웹 위협을 사전에 파악"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "학습 절차",
+    "subsections": [
+     {
+      "title": "1 수집",
+      "items": [
+       "토르 네트워크 다크웹 페이지 크롤링"
+      ]
+     },
+     {
+      "title": "2 필터링",
+      "items": [
+       "정보 밀도 낮은 페이지 제거, 범주 균형, 중복 제거"
+      ]
+     },
+     {
+      "title": "3 전처리",
+      "items": [
+       "이메일·IP·암호화폐 주소 등 민감 정보 마스킹"
+      ]
+     },
+     {
+      "title": "4 사전 학습",
+      "items": [
+       "RoBERTa 구조로 다크웹 말뭉치 학습"
+      ]
+     },
+     {
+      "title": "5 평가",
+      "items": [
+       "DUTA·CoDA 데이터셋으로 분류 성능 검증"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "위협 인텔리전스 적용",
+    "subsections": [
+     {
+      "title": "유출 사이트 탐지",
+      "items": [
+       "랜섬웨어 그룹의 데이터 유출 게시 사이트 식별"
+      ]
+     },
+     {
+      "title": "위협 활동 분류",
+      "items": [
+       "해킹 포럼 게시글의 주요 위협 여부 판단"
+      ]
+     },
+     {
+      "title": "키워드 모니터링",
+      "items": [
+       "마약·해킹 도구 등 위협 관련 용어 추출"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 다크웹 언어",
+   "- 필요",
+   "학습 절차",
+   "- 1 수집",
+   "- 2 필터링",
+   "- 3 전처리",
+   "- 4 사전 학습",
+   "- 5 평가",
+   "위협 인텔리전스 적용",
+   "- 유출 사이트 탐지",
+   "- 위협 활동 분류",
+   "- 키워드 모니터링"
+  ],
+  "name": "다크버트(DarkBERT)",
+  "en": "DarkBERT",
+  "keywords_must": [
+   "RoBERTa",
+   "트랜스포머(Transformer)",
+   "데이터 수집",
+   "데이터 필터링",
+   "텍스트 전처리(민감 정보 마스킹)",
+   "사전 학습",
+   "평가",
+   "랜섬웨어 유출 사이트 탐지",
+   "위협 활동 분류",
+   "위협 키워드 모니터링"
+  ],
+  "keywords_ref": [
+   "토르 다크웹 약 600만 페이지",
+   "평가 데이터셋 DUTA·CoDA",
+   "일반 BERT 대비 다크웹 언어 이해 우수",
+   "연구 목적 제한 공개",
+   "악용 방지 위해 민감 정보 제거",
+   "위협 인텔리전스 자동화"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "RoBERTa",
+   "트랜스포머(Transformer)",
+   "데이터 수집",
+   "데이터 필터링",
+   "텍스트 전처리(민감 정보 마스킹)",
+   "사전 학습",
+   "평가",
+   "랜섬웨어 유출 사이트 탐지",
+   "위협 활동 분류",
+   "위협 키워드 모니터링"
+  ],
+  "gloss": {
+   "BERT": "Bidirectional Encoder Representations from Transformers",
+   "RoBERTa": "Robustly Optimized BERT Pretraining Approach"
+  }
+ },
+ "SE_293": {
+  "title": "취약 드라이버 반입 공격(BYOVD, Bring Your Own Vulnerable Driver)",
+  "category": "SE > 보안",
+  "definition": "공격자가 정상 서명은 있지만 취약점이 알려진 하드웨어 공급사 커널 드라이버를 대상 윈도우 시스템에 직접 설치한 뒤, 그 취약점으로 커널 권한을 얻어 보안 제품을 무력화하는 공격 기법",
+  "keywords": [
+   "특징: 합법적 서명 드라이버 악용 · 커널 권한 획득 · 보안 솔루션(EDR) 무력화",
+   "공격 절차: 초기 접근 · 권한 상승 · 취약 드라이버 설치 · 커널 구조 변조 · 보안 통제 무력화",
+   "대응: 취약 드라이버 차단 목록 · 하이퍼바이저 기반 코드 무결성(HVCI) · 애플리케이션 제어(WDAC)"
+  ],
+  "sections": [
+   {
+    "title": "공격 원리",
+    "subsections": [
+     {
+      "title": "서명 신뢰",
+      "items": [
+       "윈도우는 유효 서명 드라이버를 로드하므로 취약 정상 드라이버는 차단되지 않음"
+      ]
+     },
+     {
+      "title": "커널 접근",
+      "items": [
+       "드라이버의 임의 메모리 읽기·쓰기 취약점으로 커널 데이터 조작"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 절차",
+    "subsections": [
+     {
+      "title": "1 초기 접근",
+      "items": [
+       "피싱·탈취 계정·원격 데스크톱 취약점으로 침투"
+      ]
+     },
+     {
+      "title": "2 권한 상승",
+      "items": [
+       "드라이버 설치에 필요한 관리자 권한 확보"
+      ]
+     },
+     {
+      "title": "3 드라이버 설치",
+      "items": [
+       "취약한 정상 서명 드라이버 반입·로드"
+      ]
+     },
+     {
+      "title": "4 커널 변조",
+      "items": [
+       "커널 콜백·보호 구조 수정"
+      ]
+     },
+     {
+      "title": "5 보안 무력화",
+      "items": [
+       "EDR·백신 프로세스 종료, 이후 랜섬웨어·정보 탈취"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "차단",
+      "items": [
+       "마이크로소프트 취약 드라이버 차단 목록 적용, 관련 IoC 차단"
+      ]
+     },
+     {
+      "title": "무결성",
+      "items": [
+       "HVCI·WDAC로 허용 드라이버만 로드, 드라이버 최신 버전 유지"
+      ]
+     },
+     {
+      "title": "탐지",
+      "items": [
+       "드라이버 신규 설치·서비스 생성 모니터링, 관리자 권한 최소화"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 원리",
+   "- 서명 신뢰",
+   "- 커널 접근",
+   "공격 절차",
+   "- 1 초기 접근",
+   "- 2 권한 상승",
+   "- 3 드라이버 설치",
+   "- 4 커널 변조",
+   "- 5 보안 무력화",
+   "대응",
+   "- 차단",
+   "- 무결성",
+   "- 탐지"
+  ],
+  "name": "취약 드라이버 반입 공격(BYOVD, Bring Your Own Vulnerable Driver)",
+  "en": "Bring Your Own Vulnerable Driver",
+  "keywords_must": [
+   "합법적 서명 드라이버 악용",
+   "커널 권한 획득",
+   "보안 솔루션(EDR) 무력화",
+   "초기 접근",
+   "권한 상승",
+   "취약 드라이버 설치",
+   "커널 구조 변조",
+   "보안 통제 무력화",
+   "취약 드라이버 차단 목록",
+   "하이퍼바이저 기반 코드 무결성(HVCI)",
+   "애플리케이션 제어(WDAC)"
+  ],
+  "keywords_ref": [
+   "라자루스 그룹 델 드라이버 악용(CVE-2021-21551)",
+   "랜섬웨어 EDR 킬러",
+   "드라이버 서명 강제(DSE) 우회",
+   "루트킷",
+   "관리자 권한 필요",
+   "워터링 홀 초기 침투",
+   "LOLDrivers 목록"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "합법적 서명 드라이버 악용",
+   "커널 권한 획득",
+   "보안 솔루션(EDR) 무력화",
+   "초기 접근",
+   "권한 상승",
+   "취약 드라이버 설치",
+   "커널 구조 변조",
+   "보안 통제 무력화",
+   "취약 드라이버 차단 목록",
+   "하이퍼바이저 기반 코드 무결성(HVCI)",
+   "애플리케이션 제어(WDAC)"
+  ],
+  "gloss": {
+   "HVCI": "Hypervisor-protected Code Integrity",
+   "WDAC": "Windows Defender Application Control",
+   "DSE": "Driver Signature Enforcement",
+   "EDR": "Endpoint Detection and Response"
+  }
+ },
+ "SE_294": {
+  "title": "디렉터리 탐색 공격(Directory Traversal)",
+  "category": "SE > 보안",
+  "definition": "공격자가 URL이나 파라미터의 파일 경로에 ../ 같은 상위 디렉터리 이동 문자열을 넣어 웹 애플리케이션이 의도한 디렉터리 밖의 시스템 파일·설정 파일에 접근하는 공격(경로 조작)",
+  "keywords": [
+   "공격 유형: ../ 경로 조작 · URL·이중 URL 인코딩(%2e%2e%2f) · 널 바이트(%00) 종료 · 절대 경로 지정",
+   "연계 공격: 로컬 파일 포함(LFI) · 원격 파일 포함(RFI)",
+   "피해: /etc/passwd 등 민감 파일 노출 · 소스 코드·설정 유출 · 권한 상승 발판",
+   "대응: 입력 경로 정규화·검증 · 화이트리스트 파일 지정 · 최소 권한·chroot 격리"
+  ],
+  "sections": [
+   {
+    "title": "공격 절차",
+    "subsections": [
+     {
+      "title": "1 탐색",
+      "items": [
+       "파일명을 파라미터로 받는 다운로드·조회 기능 식별"
+      ]
+     },
+     {
+      "title": "2 조작",
+      "items": [
+       "../ 반복 또는 인코딩 변형으로 상위 경로 지정"
+      ]
+     },
+     {
+      "title": "3 우회",
+      "items": [
+       "필터를 인코딩·널 바이트·절대 경로로 회피"
+      ]
+     },
+     {
+      "title": "4 접근",
+      "items": [
+       "계정·설정·소스 파일 획득 후 추가 공격"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 유형",
+    "subsections": [
+     {
+      "title": "상대 경로",
+      "items": [
+       "file=../../../../etc/passwd"
+      ]
+     },
+     {
+      "title": "인코딩",
+      "items": [
+       "%2e%2e%2f, 이중 인코딩으로 검증 우회"
+      ]
+     },
+     {
+      "title": "널 바이트",
+      "items": [
+       "확장자 검사 뒤 %00으로 문자열 종료"
+      ]
+     },
+     {
+      "title": "절대 경로",
+      "items": [
+       "file=/etc/passwd 직접 지정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "검증",
+      "items": [
+       "경로를 정규화한 뒤 허용 디렉터리 내부인지 확인, ../·인코딩 문자 차단"
+      ]
+     },
+     {
+      "title": "설계",
+      "items": [
+       "파일명 대신 ID를 받아 서버에서 매핑, 허용 파일 화이트리스트"
+      ]
+     },
+     {
+      "title": "운영",
+      "items": [
+       "웹 서버 최소 권한, chroot·컨테이너 격리, 웹 방화벽 규칙"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 절차",
+   "- 1 탐색",
+   "- 2 조작",
+   "- 3 우회",
+   "- 4 접근",
+   "공격 유형",
+   "- 상대 경로",
+   "- 인코딩",
+   "- 널 바이트",
+   "- 절대 경로",
+   "대응",
+   "- 검증",
+   "- 설계",
+   "- 운영"
+  ],
+  "name": "디렉터리 탐색 공격(Directory Traversal)",
+  "en": "Directory Traversal (Path Traversal)",
+  "keywords_must": [
+   "../ 경로 조작",
+   "URL·이중 URL 인코딩(%2e%2e%2f)",
+   "널 바이트(%00) 종료",
+   "절대 경로 지정",
+   "로컬 파일 포함(LFI)",
+   "원격 파일 포함(RFI)",
+   "/etc/passwd 등 민감 파일 노출",
+   "소스 코드·설정 유출",
+   "권한 상승 발판",
+   "입력 경로 정규화·검증",
+   "화이트리스트 파일 지정",
+   "최소 권한·chroot 격리"
+  ],
+  "keywords_ref": [
+   "CWE-22",
+   "OWASP 접근 통제 실패(A01)",
+   "파일 다운로드 기능 취약",
+   "웹 방화벽 패턴 차단",
+   "파일 ID 매핑 방식",
+   "시큐어 코딩 경로 조작 항목"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "../ 경로 조작",
+   "URL·이중 URL 인코딩(%2e%2e%2f)",
+   "널 바이트(%00) 종료",
+   "절대 경로 지정",
+   "로컬 파일 포함(LFI)",
+   "원격 파일 포함(RFI)",
+   "/etc/passwd 등 민감 파일 노출",
+   "소스 코드·설정 유출",
+   "권한 상승 발판",
+   "입력 경로 정규화·검증",
+   "화이트리스트 파일 지정",
+   "최소 권한·chroot 격리"
+  ],
+  "gloss": {
+   "LFI": "Local File Inclusion",
+   "RFI": "Remote File Inclusion",
+   "CWE": "Common Weakness Enumeration"
+  }
  }
 }
