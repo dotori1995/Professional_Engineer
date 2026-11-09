@@ -12996,77 +12996,64 @@
   "subtitle": "SDN(Software Defined Networking)",
   "domain": "NW",
   "category": "NW> SDx > SDN",
-  "definition": "개방형 API인 OpenFlow를 통해 네트워크의 트래픽 전달 동작을 프로그래밍하듯 SW기반으로 컨트롤러에서 제어하는 네트워크 인프라",
+  "definition": "네트워크 장비의 제어 기능(Control Plane)과 데이터 전달 기능(Data Plane)을 분리하고, 중앙의 SDN 제어기가 개방형 인터페이스(OpenFlow 등)로 트래픽 전달 동작을 소프트웨어처럼 프로그래밍해 제어하는 네트워크 구조",
   "keywords": [
-   "Control Plane / Data Plane 분리",
-   "OpenFlow",
-   "SDN 제어기",
-   "Network OS",
-   "NFV",
-   "SDx, SDS"
+   "제어 평면 · 데이터 평면 분리(Control/Data Plane Separation)",
+   "중앙 집중 SDN 제어기(Network OS: ONOS · OpenDaylight)",
+   "남향 API: OpenFlow · NETCONF · P4Runtime / 북향 API: REST",
+   "3계층: 응용 · 제어 · 인프라(데이터) 계층",
+   "프로그래밍 가능성 · 자동화 · 벤더 중립",
+   "연계: NFV · SD-WAN · SDx"
   ],
   "sections": [
    {
-    "title": "네트워크의 추상화를 통한 효율적 네트워크 트래픽 관리, SDN의 개요",
+    "title": "SDN의 개념",
     "subsections": [
      {
-      "title": "SDN(Software Defined Network)의 정의",
+      "title": "정의",
       "items": [
-       "기존 네트워크 장비의 SW영역과 HW 영역을 분리하여 OpenFlow를 사용하여 SW기반 컨트롤러에서 제어",
-       "네트워크 제어기능(Control Plane)과 데이터 전송기능(Data Plane)을 분리하고 개방형 프로토콜을 이용하여 SW기반의 다양한 네트워크 구성 및 제어를 수행하는 네트워크 기술"
+       "ONF가 표준화를 주도한 소프트웨어 정의 네트워킹, 망 전체를 중앙 소프트웨어로 제어"
+      ]
+     },
+     {
+      "title": "등장 배경",
+      "items": [
+       "장비마다 제어·전달 기능이 묶인 폐쇄형 구조 → 벤더 종속, 설정 변경·신기술 도입 느림",
+       "클라우드·데이터센터의 동적 트래픽에 빠르게 대응할 필요"
       ]
      }
     ]
    },
    {
-    "title": "SDN 개념도 및 구성요소",
+    "title": "SDN 구조 및 구성 요소",
     "subsections": [
      {
-      "title": "SDN 개념도",
+      "title": "3계층 구조",
       "items": [
-       "전달/제어 기능이 결합한 기존의 전송 장치에서 제어기능을 분리하여 중앙집중화시키고, OpenFlow와같은 개방형 API를 통해 네트워크의 트래픽 전달동작을 S/W기반 컨트롤러에서 제어하는 네트워크 기술"
+       "응용 계층: 부하 분산·방화벽·트래픽 엔지니어링 등 네트워크 응용",
+       "제어 계층: SDN 제어기(네트워크 OS) — 토폴로지 인식, 경로 계산, 정책 관리 (ONOS, OpenDaylight)",
+       "인프라 계층: 제어기 지시대로 패킷만 전달하는 스위치(플로 테이블)"
       ]
      },
      {
-      "title": "SDN LAYER 구성도",
-      "items": []
-     },
-     {
-      "title": "SDN의 구성 요소",
+      "title": "인터페이스",
       "items": [
-       "Openflow만을 지원하는 스위치 또는 기존 Layer2(스위칭), Layer3(라우팅) 기능을 지원하는 스위치에 Openflow 기능을",
-       "Forward Engine"
+       "남향 API(Southbound): 제어기 ↔ 장비 — OpenFlow, NETCONF, P4Runtime",
+       "북향 API(Northbound): 응용 ↔ 제어기 — REST API",
+       "동서향 API(East-West): 제어기 간 연동·이중화"
       ]
      }
     ]
    },
    {
-    "title": "SDN 주요 기술 요소",
-    "subsections": [
-     {
-      "title": "주요 요소기술",
-      "items": []
-     },
-     {
-      "title": "주요 요소기술 상세",
-      "items": [
-       "ONF 오픈플로우 기반 컨트롤러",
-       "HP VAN SDN Controller",
-       "Cisco Nexus1000v",
-       "Cisco ACI(Application Centric Infrastructure)"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "SDN과 기존 네트워크 비교",
+    "title": "장점 및 과제",
     "subsections": [
      {
       "title": null,
       "items": [
-       "기존 구성에 변경 영향도 전반적으",
-       "중앙 Controller에서 Flexible하게 소프트웨어로 프로그래밍 하듯 변경 가능",
-       "최악의 경우, 신규 구축필요네트워크 장비 설정 및 제어 정책에 중앙 관제 장비에서 통합 네트워크 제어부에대한 관리가 어려움 대한 통합 관리로 관리 효율성 증대"
+       "장점: 중앙 가시성·일관된 정책, 프로그래밍으로 자동화·빠른 서비스 구성, 범용 장비(화이트박스) 사용으로 비용 절감, 벤더 중립",
+       "과제: 제어기 단일 장애점·확장성 → 분산·클러스터 제어기, 제어기 대상 공격 등 보안, 기존 망과 연동",
+       "활용: 데이터센터 네트워크, SD-WAN, 5G 전달망·네트워크 슬라이싱, NFV와 결합"
       ]
      }
     ]
@@ -13079,19 +13066,47 @@
   ],
   "name": "SDN(Software Defined Networking)",
   "en": "Software Defined Networking",
-  "reviewed": true,
   "outline": [
-   "네트워크의 추상화를 통한 효율적 네트워크 트래픽 관리, SDN의 개요",
-   "- SDN(Software Defined Network)의 정의",
-   "SDN 개념도 및 구성요소",
-   "- SDN 개념도",
-   "- SDN LAYER 구성도",
-   "- SDN의 구성 요소",
-   "SDN 주요 기술 요소",
-   "- 주요 요소기술",
-   "- 주요 요소기술 상세",
-   "SDN과 기존 네트워크 비교"
-  ]
+   "SDN의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "SDN 구조 및 구성 요소",
+   "- 3계층 구조",
+   "- 인터페이스",
+   "장점 및 과제"
+  ],
+  "keywords_must": [
+   "SDN(Software Defined Networking)",
+   "제어 평면(Control Plane)",
+   "데이터 평면(Data Plane)",
+   "평면 분리(Plane Separation)",
+   "SDN 제어기(SDN Controller)",
+   "네트워크 OS(Network Operating System)",
+   "남향 API(Southbound API)",
+   "북향 API(Northbound API)",
+   "OpenFlow",
+   "프로그래밍 가능성(Programmability)"
+  ],
+  "keywords_ref": [
+   "ONF(Open Networking Foundation)",
+   "ONOS·OpenDaylight",
+   "NETCONF·P4Runtime",
+   "NFV(Network Functions Virtualization)",
+   "SDx(Software Defined Everything)",
+   "제어기 단일 장애점(Controller SPOF)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "제어 평면 분리(Control Plane Separation)",
+   "SDN 제어기(SDN Controller)",
+   "남향 API(Southbound API)",
+   "북향 API(Northbound API)"
+  ],
+  "quiz_groups": [
+   "sdn"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_234",
@@ -13100,61 +13115,69 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > SDx > OpenFlow",
-  "definition": "이기종의 스위치와 라우터의 플로우 테이블을 개방형 프로토콜에 따라서 패킷전달과 제어기능을 SW적으로분리 구현한 SDN을 위한 인터페이스 표준 기술",
+  "definition": "SDN 제어기가 서로 다른 제조사의 스위치·라우터 플로 테이블을 개방형 프로토콜로 직접 프로그래밍해, 패킷 전달과 제어 기능을 소프트웨어적으로 분리 구현하게 하는 SDN 남향 인터페이스 표준 (ONF)",
   "keywords": [
-   "Flow Table",
-   "Header",
-   "Action",
-   "Counter(HAC)"
+   "플로 테이블(Flow Table) 엔트리: 매치 필드(헤더) · 액션(명령) · 카운터",
+   "추가 필드: 우선순위 · 타임아웃 · 쿠키",
+   "OpenFlow 1.0: 단일 테이블 · 12개 매치 필드 → 1.1+: 다중 테이블 파이프라인 · 그룹 테이블 → 1.3: 미터 테이블 · IPv6",
+   "메시지: Packet-In · Packet-Out · Flow-Mod",
+   "OpenFlow 채널: TCP 6653 · TLS",
+   "테이블 미스(Table-miss) → 제어기 질의"
   ],
   "sections": [
    {
-    "title": "관심사의 분리를 통한 네트워크 가상화 기술, OpenFlow의 개요",
+    "title": "OpenFlow의 개념",
     "subsections": [
      {
-      "title": "OpenFlow의 정의",
-      "items": []
+      "title": "정의",
+      "items": [
+       "2008년 스탠퍼드대에서 제안, ONF가 표준화한 제어기-스위치 간 프로토콜"
+      ]
      },
      {
-      "title": "OpenFlow의 특징",
+      "title": "특징",
       "items": [
-       "물리적 네트워크를 서비스에 따른 논리적 네트워크로 구성 가능",
-       "소프트웨어 중심의 네트워크",
-       "벤더에 독립적인 네트워크 구성",
-       "메인 컨트롤러에 의한 중앙 집중식 제어 시스템 구현"
+       "스위치의 전달 규칙(플로 엔트리)을 외부 제어기가 추가·수정·삭제",
+       "제조사와 무관한 공통 인터페이스로 이기종 장비 통합 제어"
       ]
      }
     ]
    },
    {
-    "title": "OpenFlow 시스템 구성도 및 구성요소",
+    "title": "OpenFlow 구성 요소",
     "subsections": [
      {
-      "title": "OpenFlow 시스템 구성도",
-      "items": []
+      "title": "플로 테이블",
+      "items": [
+       "매치 필드(Header): 입력 포트, MAC·IP 주소, VLAN, 포트 번호 등",
+       "액션(Action)/명령어(Instruction): 지정 포트 전달, 폐기, 헤더 수정, 제어기로 전송, 다음 테이블로",
+       "카운터(Counter): 패킷·바이트 수 통계 (헤더·액션·카운터 → HAC)",
+       "우선순위, 유휴·고정 타임아웃, 쿠키"
+      ]
      },
      {
-      "title": "OpenFlow 시스템 구성요소",
+      "title": "OpenFlow 채널과 메시지",
       "items": [
-       "OpenFlow 프로토콜에 의해 스위치 내부의 플로우 테이블 작성",
-       "새로운 플로우를 등록하거나 삭제하는 기능 포함(SW로 구현)",
-       "망 상태에 대한 글로벌 뷰를 기반으로 포워딩 제어, 토폴로지 및 상태 관리, 라우팅제어 등의 중앙집중형 망 제어 기능 제공",
-       "상위 응용이나 정책 요구에 따라 차별화된 포워딩 및 패킷 처리 룰을결정하여 하위의 스위치 박스에 Rule을 전달함"
+       "제어기와 스위치 간 TCP 6653(TLS 권장) 연결",
+       "Packet-In: 매칭 실패 패킷을 제어기로 전달",
+       "Flow-Mod: 제어기가 플로 엔트리 설치·수정·삭제",
+       "Packet-Out: 제어기가 특정 패킷을 스위치 포트로 내보냄",
+       "기타: Hello, Echo, Features, Port-Status, Barrier"
       ]
      }
     ]
    },
    {
-    "title": "OpenFlow 동작절차 개념도와 동작상세",
+    "title": "버전별 발전 및 동작 절차",
     "subsections": [
      {
-      "title": "OpenFlow 동작절차 개념도",
+      "title": null,
       "items": [
-       "OpenFlow Device와 Controller 간의 Session 연결",
-       "Controller는 OpenFlow Device에 초기 Flow Table 정보 전송",
-       "OpenFlow Device가 패킷 수신 시 Flow Table에서 Match 정보를",
-       "Controller에서 해당 패킷을 확인해서 최적화 된 Flow Table 전송",
-       "Flow matching을 통해 정의된 Action 수행예) Action-Forward/Drop/Modify/Enqueue"
+       "1.0(2009): 단일 플로 테이블, 12개 매치 필드",
+       "1.1: 다중 테이블 파이프라인, 그룹 테이블(멀티캐스트·빠른 장애 전환), MPLS 필드",
+       "1.2: 확장 가능 매치(OXM), IPv6",
+       "1.3(장기 지원판): 미터 테이블(QoS), 40개 이상 매치 필드 → 1.5.1까지 발전",
+       "동작: ① 패킷 수신 → ② 플로 테이블 매칭 → ③ 일치 시 액션 수행 / 불일치(테이블 미스) 시 Packet-In → ④ 제어기가 Flow-Mod로 규칙 설치 → ⑤ 이후 패킷은 스위치가 바로 처리"
       ]
      }
     ]
@@ -13167,17 +13190,48 @@
   ],
   "name": "오픈플로(OpenFlow)",
   "en": "OpenFlow",
-  "reviewed": true,
   "outline": [
-   "관심사의 분리를 통한 네트워크 가상화 기술, OpenFlow의 개요",
-   "- OpenFlow의 정의",
-   "- OpenFlow의 특징",
-   "OpenFlow 시스템 구성도 및 구성요소",
-   "- OpenFlow 시스템 구성도",
-   "- OpenFlow 시스템 구성요소",
-   "OpenFlow 동작절차 개념도와 동작상세",
-   "- OpenFlow 동작절차 개념도"
-  ]
+   "OpenFlow의 개념",
+   "- 정의",
+   "- 특징",
+   "OpenFlow 구성 요소",
+   "- 플로 테이블",
+   "- OpenFlow 채널과 메시지",
+   "버전별 발전 및 동작 절차"
+  ],
+  "keywords_must": [
+   "OpenFlow",
+   "ONF(Open Networking Foundation)",
+   "남향 인터페이스(Southbound Interface)",
+   "플로 테이블(Flow Table)",
+   "매치 필드(Match Fields, Header)",
+   "액션·명령어(Actions/Instructions)",
+   "카운터(Counters)",
+   "Packet-In 메시지",
+   "Flow-Mod 메시지",
+   "OpenFlow 채널(OpenFlow Channel)"
+  ],
+  "keywords_ref": [
+   "다중 테이블 파이프라인(Multi-table Pipeline, 1.1+)",
+   "그룹 테이블(Group Table)",
+   "미터 테이블(Meter Table, 1.3)",
+   "TCP 6653·TLS",
+   "테이블 미스(Table-miss)",
+   "Packet-Out 메시지"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "플로 테이블(Flow Table)",
+   "Packet-In 메시지(Packet-In Message)",
+   "Flow-Mod 메시지(Flow-Mod Message)",
+   "매치 필드(Match Fields)",
+   "그룹 테이블(Group Table)"
+  ],
+  "quiz_groups": [
+   "sdn"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_235",
@@ -13186,42 +13240,67 @@
   "subtitle": "SD-WAN(Software-Defined Wide-Area Networking)",
   "domain": "NW",
   "category": "NW > SDx > SD-WAN",
-  "definition": "네트워킹(SDN)을 통신망 사업자와 서비스 제공자 등의 WAN(Wide Area Network)로 확장하여 적용하는네트워크 기술",
+  "definition": "SDN 개념을 기업 지사·데이터센터·클라우드를 잇는 광역망(WAN)으로 확장해, MPLS·인터넷·LTE/5G 등 여러 회선을 중앙 제어기로 묶고 응용별로 최적 경로를 자동 선택하는 소프트웨어 정의 WAN",
   "keywords": [
-   "SDN",
-   "SD-Core",
-   "SD-Edge"
+   "오버레이 구조: MPLS · 인터넷 · LTE/5G 하이브리드 회선",
+   "중앙 오케스트레이터·제어기 + 지사 엣지 장비(SD-Edge)",
+   "응용 인식 경로 선택(Application-aware Routing) · 동적 경로 전환",
+   "제로 터치 프로비저닝(ZTP) · 중앙 정책",
+   "보안: IPsec 터널 · SASE 연계",
+   "통신사 관점: SD-Core · SD-Edge / 표준: MEF 70"
   ],
   "sections": [
    {
-    "title": "종단간 SDN 프로덕션 서비스를 위한 SDN-WAN의 개요",
+    "title": "SD-WAN의 개념",
     "subsections": [
      {
-      "title": "SD-WAN(Software-Defined Wide-Area Networking)의 정의",
-      "items": []
+      "title": "정의",
+      "items": [
+       "물리 회선 위에 가상 오버레이를 구성하고 중앙 소프트웨어로 WAN을 관리하는 기술"
+      ]
      },
      {
-      "title": "SD-WAN 등장 배경 및 목적",
+      "title": "등장 배경",
       "items": [
-       "사물인터넷, 멀티미디어, 모바일 데이터의 폭발적인 증가로 지능화된 네트워크의 필요성 및 SDN의 WAN로확장 요구"
+       "SaaS·클라우드 이용 증가로 본사 경유 트래픽(백홀) 비효율",
+       "고가의 MPLS 전용선 의존, 지사마다 수동 설정"
       ]
      }
     ]
    },
    {
-    "title": "SD-WAN의 개념도와 기술 요소",
+    "title": "SD-WAN 구성 및 핵심 기술",
     "subsections": [
      {
-      "title": "SD-WAN의 개념도",
-      "items": []
+      "title": "구성 요소",
+      "items": [
+       "오케스트레이터: 정책·설정 중앙 관리 포털",
+       "제어기: 오버레이 경로·키 배포 제어",
+       "엣지 장비(SD-Edge, uCPE): 지사·데이터센터에 설치, 회선 묶음·암호화",
+       "게이트웨이: 클라우드·기존 MPLS망 연결",
+       "통신사 관점: SD-Core(백본 제어) + SD-Edge(가입자 엣지)"
+      ]
      },
      {
-      "title": "SD-WAN의 구성 및 기술 요소",
+      "title": "핵심 기술",
       "items": [
-       "사용자 네트워크와 직접 연계되는 SDN기반 네트워크",
-       "분산된 SD-Edge들을 상호 연동 할 수 있는 가상화된 네트워크",
-       "논리적으로 중앙 집중화된 WAN 경로 제어와 결함 극복",
-       "링크 트래픽 부하 분산 및 조절, 운영 관리 자동화, 망 유연성 제공"
+       "응용 인식 라우팅: 응용 식별(DPI) 후 지연·손실 상태에 따라 회선 선택",
+       "동적 경로 전환·패킷 복제·FEC로 품질 보장",
+       "ZTP: 장비를 연결만 하면 중앙에서 설정 자동 배포",
+       "IPsec 오버레이 암호화, 방화벽 통합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기존 WAN과 비교 및 동향",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "기존 WAN: 전용선 중심, 장비별 수동 설정, 변경 느림 / SD-WAN: 다중 회선, 중앙 정책, 자동화",
+       "효과: 회선 비용 절감, 신규 지사 구축 신속, 클라우드 성능 향상",
+       "동향: 보안 기능과 결합한 SASE, 5G 무선 회선 활용, MEF 70 서비스 표준, AI 기반 운영"
       ]
      }
     ]
@@ -13234,15 +13313,46 @@
   ],
   "name": "SD-WAN(Software-Defined WAN)",
   "en": "Software-Defined WAN",
-  "reviewed": true,
   "outline": [
-   "종단간 SDN 프로덕션 서비스를 위한 SDN-WAN의 개요",
-   "- SD-WAN(Software-Defined Wide-Area Networking)의 정의",
-   "- SD-WAN 등장 배경 및 목적",
-   "SD-WAN의 개념도와 기술 요소",
-   "- SD-WAN의 개념도",
-   "- SD-WAN의 구성 및 기술 요소"
-  ]
+   "SD-WAN의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "SD-WAN 구성 및 핵심 기술",
+   "- 구성 요소",
+   "- 핵심 기술",
+   "기존 WAN과 비교 및 동향"
+  ],
+  "keywords_must": [
+   "SD-WAN(Software-Defined WAN)",
+   "광역망(WAN, Wide Area Network)",
+   "오버레이 네트워크(Overlay Network)",
+   "하이브리드 회선(Hybrid WAN: MPLS·인터넷·LTE)",
+   "중앙 오케스트레이터(Orchestrator)",
+   "SD-WAN 제어기(Controller)",
+   "엣지 장비(SD-Edge)",
+   "응용 인식 라우팅(Application-aware Routing)",
+   "제로 터치 프로비저닝(ZTP)",
+   "IPsec 암호화 터널"
+  ],
+  "keywords_ref": [
+   "SD-Core",
+   "SASE(Secure Access Service Edge)",
+   "MEF 70 표준",
+   "클라우드 직접 접속(Cloud On-ramp)",
+   "회선 비용 절감(MPLS Cost Reduction)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "응용 인식 라우팅(Application-aware Routing)",
+   "제로 터치 프로비저닝(ZTP, Zero-Touch Provisioning)",
+   "SASE(Secure Access Service Edge)",
+   "오버레이 네트워크(Overlay Network)"
+  ],
+  "quiz_groups": [
+   "sdn"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_236",
@@ -13251,44 +13361,59 @@
   "subtitle": "SDE(Software Defined Everything)",
   "domain": "NW",
   "category": "NW > SDx >SDE",
-  "definition": "최소한의 하드웨어와 최대한의 소프트웨어를 구성해 최적화된 IT 인프라를 생성하고 구현시키는 기술",
+  "definition": "하드웨어는 최소한의 범용 장비로 두고 컴퓨팅·네트워크·스토리지·보안 등 IT 인프라 전 영역을 소프트웨어로 정의·가상화해 자동으로 구성·관리하는 기술 개념",
   "keywords": [
-   "SDN",
-   "SDS",
-   "SDDC",
-   "VDC",
-   "IS",
-   "Open Stack",
-   "Fabric Based Computing",
-   "Flex Fabric",
-   "NW Convergence",
-   "Prototyping Engine",
-   "App. Programming I/F SW"
+   "SDx 구성: SDN · SDS(스토리지) · SDC(컴퓨팅) · SDDC · SD-Security",
+   "기반: 가상화 · 개방형 API · 오케스트레이션",
+   "오픈소스: OpenStack · Kubernetes",
+   "패브릭 기반 컴퓨팅(Fabric-based Computing) · 네트워크 융합",
+   "효과: 민첩성 · 비용 절감 · 벤더 독립",
+   "과제: 운영 복잡도 · 보안 · 인력"
   ],
   "sections": [
    {
-    "title": "기관 인프라의 미래, SDE의 개요",
+    "title": "SDE의 개념",
     "subsections": [
      {
-      "title": "SDE(Software Defined Everything)의 정의",
-      "items": []
+      "title": "정의",
+      "items": [
+       "SDN에서 시작된 '소프트웨어 정의' 개념을 IT 인프라 전체로 확장한 SDx 개념"
+      ]
      },
      {
-      "title": "SDE의 특징",
+      "title": "등장 배경",
       "items": [
-       "전체 IT 성능 속도와 효율성 증대(SDE는 최소의 하드웨어 구성으로 최적화된 인프라와 데이터 센터, 컴퓨팅을 제공함. 이로 인해 전체 IT 성능 속도와 효율성 증대)",
-       "소프트웨어 구성요소를 극대화시키면 많은 기관들이 고객들에게 전달하는 소프트웨어 서비스의 속도와 효율성으로 수익을 낼 수 있게 됨"
+       "클라우드·빅데이터로 인프라 수요가 빠르게 변함 → 하드웨어 교체 중심 구축은 느리고 비쌈",
+       "장비별 전용 하드웨어·벤더 종속 해소 필요"
       ]
      }
     ]
    },
    {
-    "title": "SDE의 구성도와 혁신 내용",
+    "title": "SDE 구성 요소",
     "subsections": [
      {
-      "title": "SDE의 구성도",
+      "title": null,
       "items": [
-       "SDE의 혁명은 SDN의 확장 버전임. 기업들이 비즈니스 요구에 따라 구현 시나리오의 유연성을 잘라낼 수있도록 SDN물리 계층을 애플리케이션 계층으로부터 분리시킴"
+       "SDN: 네트워크 제어 소프트웨어화",
+       "SDS: 스토리지 자원 풀링·정책 기반 할당 (Ceph 등)",
+       "SDC: 서버 가상화·컨테이너로 컴퓨팅 자원 할당",
+       "SD-Security: 보안 정책을 소프트웨어로 배치(마이크로 세분화)",
+       "SDDC: 위 요소를 묶은 소프트웨어 정의 데이터센터",
+       "SD-WAN·SD-Access 등 영역별 확장"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "핵심 기술 및 효과",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "핵심 기술: 가상화(하이퍼바이저·컨테이너), 개방형 API, 오케스트레이션·자동화(OpenStack, Kubernetes), 패브릭 기반 컴퓨팅(자원을 고속 패브릭으로 풀링), IaC",
+       "효과: 서비스 구성 시간 단축, 범용 하드웨어로 비용 절감, 자원 이용률 향상, 벤더 독립",
+       "과제: 통합 운영 복잡도, 소프트웨어 계층 보안, 전문 인력 확보"
       ]
      }
     ]
@@ -13301,14 +13426,43 @@
   ],
   "name": "SDE(Software Defined Everything)",
   "en": "Software Defined Everything",
-  "reviewed": true,
   "outline": [
-   "기관 인프라의 미래, SDE의 개요",
-   "- SDE(Software Defined Everything)의 정의",
-   "- SDE의 특징",
-   "SDE의 구성도와 혁신 내용",
-   "- SDE의 구성도"
-  ]
+   "SDE의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "SDE 구성 요소",
+   "핵심 기술 및 효과"
+  ],
+  "keywords_must": [
+   "SDE(Software Defined Everything)",
+   "SDx",
+   "SDN(Software Defined Networking)",
+   "SDS(Software Defined Storage)",
+   "SDC(Software Defined Compute)",
+   "SDDC(Software Defined Data Center)",
+   "가상화(Virtualization)",
+   "개방형 API(Open API)",
+   "오케스트레이션(Orchestration)",
+   "하드웨어 최소화(Commodity Hardware)"
+  ],
+  "keywords_ref": [
+   "SD-Security(소프트웨어 정의 보안)",
+   "OpenStack",
+   "패브릭 기반 컴퓨팅(Fabric-based Computing)",
+   "네트워크 융합(Network Convergence)",
+   "IaC(Infrastructure as Code)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "SDS(Software Defined Storage)",
+   "SDx(Software Defined Everything)",
+   "오케스트레이션(Orchestration)"
+  ],
+  "quiz_groups": [
+   "sdn"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_237",
@@ -13317,62 +13471,66 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > SDx > NFV",
-  "definition": "기존 Hardware Appliances들로 구현된 Route, NAT, Firewall, IDS, IPS, DNS, Caching등의 다양한 기능을 Software 형태의 Virtual Appliances 로 구현하여 운용하는 가상화 기술.",
+  "definition": "라우터·NAT·방화벽·IDS/IPS·DNS·캐시 등 전용 하드웨어 장비로 구현되던 네트워크 기능을 범용 서버 위의 소프트웨어(VNF)로 가상화해 제공하는 기술 (ETSI ISG NFV, 2012)",
   "keywords": [
-   "OSS",
-   "BSS",
-   "VNF",
-   "NFVI(스토리지, 네트워크)"
+   "VNF(가상 네트워크 기능) · EM(요소 관리)",
+   "NFVI: 컴퓨팅 · 스토리지 · 네트워크 자원 + 가상화 계층",
+   "NFV MANO: NFVO · VNFM · VIM",
+   "OSS/BSS 연동 · 참조점(Os-Ma · Or-Vnfm · Vi-Vnfm · Or-Vi · Nf-Vi)",
+   "SDN과 상호 보완 · CNF(클라우드 네이티브)로 진화",
+   "효과: CAPEX/OPEX 절감 · 신속한 서비스 배치 · 탄력적 확장"
   ],
   "sections": [
    {
-    "title": "네트워크 기능 가상화, NFV의 개요",
+    "title": "NFV의 개념",
     "subsections": [
      {
-      "title": "NFV(Network Function Virtualization )의 정의",
-      "items": []
+      "title": "정의",
+      "items": [
+       "2012년 통신사들이 ETSI에 ISG NFV를 만들어 표준화, 네트워크 기능을 하드웨어에서 분리"
+      ]
      },
      {
-      "title": "NFV 목적",
+      "title": "등장 배경",
       "items": [
-       "표준 IT 가상화 기술을 활용하여 기존의 단일 Appliance로 동작하던 장비들을 Software형식으로 Virtual Appliance로 구현",
-       "Virtual Appliance로 구현된 S/W는 표준 대용량 서버/스위치/스토리지를 활용하여 하나의 서비스 자원으로운용",
-       "기능적인 구현을 Virtual Appliance에서 구현함으로써, 표준화된 대용량 장비 개발 장려",
-       "서비스 기능 구현을 위해 보다 민첩한 소프트웨어 기반 프레임워크를 사용하여 서비스 유연성을 향상"
+       "기능마다 전용 장비 → 구축비·공간·전력 증가, 신규 서비스 도입 수개월",
+       "범용 서버(COTS)·클라우드 기술 발전"
       ]
      }
     ]
    },
    {
-    "title": "NFV의 프레임워크 및 구성요소",
+    "title": "NFV 참조 구조",
     "subsections": [
      {
-      "title": "NFV 프레임워크",
+      "title": "VNF와 NFVI",
       "items": [
-       "NFV 프레임워크는 3개의 기능그룹인 VNFs그룹, NFV 인프라, 그리고 관리 및 전달(Management and Orchestration)으로 구성"
+       "VNF: 소프트웨어로 구현한 네트워크 기능(vRouter, vFirewall, vEPC 등), EM이 관리",
+       "NFVI: 물리 컴퓨팅·스토리지·네트워크 자원과 가상화 계층(하이퍼바이저) — VNF 실행 기반"
       ]
      },
      {
-      "title": "NFV의 구성요소",
+      "title": "NFV MANO",
       "items": [
-       "기본적인 자원, 즉 컴퓨팅과 스토리지 및 네트워킹을 통해 하이퍼 바이저 및 SDN(Software Defined Networking) 기능에 대한 액세스를 제공 한다.",
-       "NFVI를 관리하고 가상 환경에서 실행 중인 응용 프로그램을 배포하는 데 필요한관리 기능을 제공하고, 이러한 응용 프로그램을 일반적으로 VNFs(가상 네트워크 기능)라고 한다.",
-       "물리적인 하드웨어에 대한 가상 네트워크 인터페이스를 제공 ① 다른 목적을 위한 인프라 자원의 공유 ② 다른 목적을 위한 자원의 재할당, ③ 병렬적으로 소프트웨어와 하드웨어를 사용하는 환경 제공, ④ 다양한 벤더로부터의 소프트웨어 및 하드웨어 구성요소 활성화를 목표"
+       "NFVO: 네트워크 서비스 수명 주기·자원 전체 오케스트레이션",
+       "VNFM: VNF 생성·확장·종료 등 수명 주기 관리",
+       "VIM: NFVI 자원 관리(OpenStack 등)",
+       "OSS/BSS: 사업자 운영·과금 시스템과 연동(Os-Ma)",
+       "참조점: Or-Vnfm, Vi-Vnfm, Or-Vi, Nf-Vi, Ve-Vnfm, Vn-Nf"
       ]
      }
     ]
    },
    {
-    "title": "NFV와 SDN의 비교",
+    "title": "SDN과 비교 및 동향",
     "subsections": [
      {
       "title": null,
       "items": [
-       "NFV은 SDN과의 보완을 통해서 상호 이익을 가져갈 수 있지만, 서로 비종속 구현",
-       "SDN은 네트워크를 보다 쉽게 설정/관리할 수 있게 해주며, NFV 네트워크를 보다 쉽게 배치(Deploy)하고 확장가능 SDN NFV",
-       "Control Plane과 Data Plane을 분리 - 네트워크 기능 이동",
-       "중앙집중식제어와 Network의 프로그램화 - 독립 Appliance → 일반서버 Campus / Datacenter / Cloud Service Provider Network 범용 서버와 스위치 범용 서버와 스위치 Cloud orchestration and networking - Routers, Firewalls, Gateways, CDN",
-       "WAN Accelerators, SLA Assurance"
+       "NFV: 기능(무엇을)을 가상화 / SDN: 제어(어떻게 전달)를 분리 → 상호 독립이지만 결합 시 효과 큼",
+       "효과: 장비 비용·운영비 절감, 서비스 배치 시간 단축, 수요에 따른 탄력 확장",
+       "과제: 범용 서버 성능(데이터 평면 가속 DPDK·SR-IOV), 다중 벤더 통합, 가용성",
+       "동향: 컨테이너 기반 CNF, 5G 코어 클라우드 네이티브화, Anuket 등 오픈소스 참조 구현"
       ]
      }
     ]
@@ -13385,16 +13543,48 @@
   ],
   "name": "NFV(Network Functions Virtualization)",
   "en": "Network Functions Virtualization",
-  "reviewed": true,
   "outline": [
-   "네트워크 기능 가상화, NFV의 개요",
-   "- NFV(Network Function Virtualization )의 정의",
-   "- NFV 목적",
-   "NFV의 프레임워크 및 구성요소",
-   "- NFV 프레임워크",
-   "- NFV의 구성요소",
-   "NFV와 SDN의 비교"
-  ]
+   "NFV의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "NFV 참조 구조",
+   "- VNF와 NFVI",
+   "- NFV MANO",
+   "SDN과 비교 및 동향"
+  ],
+  "keywords_must": [
+   "NFV(Network Functions Virtualization)",
+   "ETSI ISG NFV",
+   "VNF(Virtualized Network Function)",
+   "NFVI(NFV Infrastructure)",
+   "가상화 계층(Virtualization Layer, Hypervisor)",
+   "NFV MANO(Management and Orchestration)",
+   "NFVO(NFV Orchestrator)",
+   "VNFM(VNF Manager)",
+   "VIM(Virtualized Infrastructure Manager)",
+   "OSS/BSS(Operations/Business Support System)"
+  ],
+  "keywords_ref": [
+   "EM(Element Manager)",
+   "참조점 Os-Ma·Or-Vnfm·Vi-Vnfm·Or-Vi·Nf-Vi",
+   "CNF(Cloud-native Network Function)",
+   "SDN 상호 보완",
+   "범용 서버(COTS)",
+   "서비스 기능 체이닝(SFC)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "VNF(Virtualized Network Function)",
+   "NFVI(NFV Infrastructure)",
+   "VNFM(VNF Manager)",
+   "VIM(Virtualized Infrastructure Manager)",
+   "NFVO(NFV Orchestrator)"
+  ],
+  "quiz_groups": [
+   "sdn"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_238",
@@ -13403,54 +13593,66 @@
   "subtitle": "OPNFV(Open Platform for Network Functions Virtualization)",
   "domain": "NW",
   "category": "NW > SDx > OPNFV",
-  "definition": "NFV(Network Functions Virtualization)를 위한 오픈소스 소프트웨어 플랫폼",
+  "definition": "리눅스 재단이 주도한 NFV용 오픈소스 참조 플랫폼 프로젝트로, ETSI NFV 구조의 NFVI·VIM 영역을 OpenStack·OpenDaylight 등 오픈소스로 통합·시험했으며 2021년 Anuket으로 통합됨",
   "keywords": [
-   "NFV용 오픈소스 플랫폼",
-   "Vl-Ha 인터페이스",
-   "Vn-Nf 인터페이스",
-   "Nf-Vi 인터페이스",
-   "Or-Vi, Vi-Vnfm 인터페이스"
+   "리눅스 재단 2014년 출범 · NFV 오픈소스 통합·시험 플랫폼",
+   "대상 영역: NFVI + VIM (ETSI NFV 참조 구조)",
+   "통합 구성: OpenStack · OpenDaylight · ONOS · KVM · DPDK",
+   "참조점: Vl-Ha · Vn-Nf · Nf-Vi · Or-Vi · Vi-Vnfm",
+   "CI/CD 통합 시험 · 업스트림 기여",
+   "2021년 CNTT와 합쳐 Anuket으로 통합"
   ],
   "sections": [
    {
-    "title": "NFV를 위한 오픈소스 소프트웨어 플랫폼, OPNFV의 개요",
+    "title": "OPNFV의 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "정의",
       "items": [
-       "NFV 기반 장비/애플리케이션 개발자와 솔루션 제공 업체의 커뮤니티 기여를 토대로, NFV 솔루션을 배포하기위한 오픈소스 소프트웨어 플랫폼을 제공하고자 하는 새로운 프로젝트",
-       "표준 IT 가상화 및 클라우드 기술을 활용하여, 표준 서버 플랫폼에서 실행되는 물리적 어플라이언스(전용하드웨어 기반 솔루션)의 필요성을 가상화된 환경으로 대체"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "OPNFV의 주요 개발 범위 및 구조",
-    "subsections": [
-     {
-      "title": "OPNFV의 개발 범위 개념도",
-      "items": [
-       "OPNFV 프로젝트는 초기에 NFV인프라스트럭처 계층(Infrastructure Layer)에 집중하는 것으로 정의"
+       "2014년 리눅스 재단이 통신사·장비사와 함께 시작한 NFV 오픈소스 통합 프로젝트"
       ]
      },
      {
-      "title": "OPNFV의 기술구조",
+      "title": "등장 배경",
       "items": [
-       "물리적인 하드웨어에 대한 가상 네트워크 인터페이스를 제공",
-       "하드웨어 플랫폼 사이의 공통 인터페이스를 생성하여 하드웨어와 소프트웨어의",
-       "응용 애플리케이션이 가상 인프라를 실행하기위한 Vn-Nf 인터페이스"
+       "ETSI NFV는 구조·인터페이스만 정의 → 실제 구현은 여러 오픈소스를 조합해야 함",
+       "오픈소스 간 통합·호환성 검증과 공통 참조 플랫폼 필요"
       ]
      }
     ]
    },
    {
-    "title": "OPNFV의 기술동향",
+    "title": "OPNFV 구조",
+    "subsections": [
+     {
+      "title": "대상 영역",
+      "items": [
+       "NFVI(컴퓨팅·스토리지·네트워크 + 가상화)와 VIM에 집중",
+       "구성: OpenStack(VIM), OpenDaylight·ONOS(SDN 제어기), KVM(하이퍼바이저), Open vSwitch·DPDK(가속), Ceph(스토리지)",
+       "CI/CD 파이프라인으로 통합 설치·기능·성능 시험, 결과를 업스트림에 기여"
+      ]
+     },
+     {
+      "title": "주요 참조점",
+      "items": [
+       "Vl-Ha: 가상화 계층 ↔ 하드웨어 자원",
+       "Vn-Nf: VNF ↔ NFVI(실행 환경)",
+       "Nf-Vi: NFVI ↔ VIM(자원 관리)",
+       "Or-Vi: NFVO ↔ VIM(자원 요청)",
+       "Vi-Vnfm: VIM ↔ VNFM(VNF 자원 할당)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "발전 및 의의",
     "subsections": [
      {
       "title": null,
       "items": [
-       "NFV표준화를 주도하던 유럽통신표준기구(ETSI) 산하 NFV 산업표준그룹(ISG)과 긴밀히 협력해 개방형 일관된 NFV레퍼런스플랫폼 표준을 구현 진행",
-       "소프트웨어정의네트워킹(SDN) 표준 프레임워크를 개발중인 '오픈데이라이트'와 클라우드 솔루션을 개발하는 '오픈스택' 그리고 오픈v스위치와 리눅스 커널 등 기존 오픈소스 프로젝트의 결과물과 연계 예정"
+       "2019년 통신 클라우드 참조 사양 작업(CNTT)과 협력 → 2021년 Anuket 프로젝트로 통합",
+       "Anuket: 통신사 클라우드 인프라 참조 모델·구현·인증 시험 제공",
+       "의의: NFV 상용화 가속, 벤더 종속 감소, 오픈소스 기반 통신 클라우드 생태계 형성"
       ]
      }
     ]
@@ -13463,14 +13665,46 @@
   ],
   "name": "OPNFV(Open Platform for NFV)",
   "en": "Open Platform for NFV",
-  "reviewed": true,
   "outline": [
-   "NFV를 위한 오픈소스 소프트웨어 플랫폼, OPNFV의 개요",
-   "OPNFV의 주요 개발 범위 및 구조",
-   "- OPNFV의 개발 범위 개념도",
-   "- OPNFV의 기술구조",
-   "OPNFV의 기술동향"
-  ]
+   "OPNFV의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "OPNFV 구조",
+   "- 대상 영역",
+   "- 주요 참조점",
+   "발전 및 의의"
+  ],
+  "keywords_must": [
+   "OPNFV(Open Platform for NFV)",
+   "리눅스 재단(Linux Foundation)",
+   "NFV 오픈소스 플랫폼(Open-source NFV Platform)",
+   "NFVI(NFV Infrastructure)",
+   "VIM(Virtualized Infrastructure Manager)",
+   "OpenStack",
+   "OpenDaylight",
+   "통합 시험(Integration Testing)",
+   "Anuket(2021 통합)"
+  ],
+  "keywords_ref": [
+   "Vl-Ha 참조점(Virtualization Layer–Hardware)",
+   "Vn-Nf 참조점(VNF–NFVI)",
+   "Nf-Vi 참조점(NFVI–VIM)",
+   "Or-Vi·Vi-Vnfm 참조점",
+   "CNTT(Cloud iNfrastructure Telco Taskforce)",
+   "DPDK(Data Plane Development Kit)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "OPNFV(Open Platform for NFV)",
+   "Anuket",
+   "Vn-Nf 참조점(VNF–NFVI Reference Point)",
+   "Nf-Vi 참조점(NFVI–VIM Reference Point)"
+  ],
+  "quiz_groups": [
+   "sdn"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_239",
@@ -13479,36 +13713,61 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > SDx > SDDC",
-  "definition": "서버, 스토리지, 네트워킹, 보안, 관리 솔루션 등 데이터센터의 모든 구성요소를 가상화하고, 이러한 가상화 환경의인프라를 소프트웨어로 자동 통제 및 관리하는 개념의 데이터센터",
+  "definition": "서버·스토리지·네트워크·보안·관리 등 데이터센터의 모든 구성 요소를 가상화하고, 그 인프라를 소프트웨어로 자동 프로비저닝·오케스트레이션·관리하는 데이터센터 구조",
   "keywords": [
-   "Compute(CPU, Memory)",
-   "Storage",
-   "Network",
-   "Facility",
-   "가상화: SDN, SDS",
-   "프로비저닝",
-   "오케스트레이션",
-   "오토스케일링"
+   "가상화 3요소: 컴퓨팅(CPU · 메모리) · 스토리지(SDS) · 네트워크(SDN)",
+   "설비(Facility): 전력 · 냉각 관리",
+   "관리·자동화: 프로비저닝 · 오케스트레이션 · 오토스케일링",
+   "HCI(하이퍼 컨버지드 인프라) · IaC",
+   "효과: 민첩성 · 자원 이용률 · 운영비 절감",
+   "프라이빗·하이브리드 클라우드 기반"
   ],
   "sections": [
    {
-    "title": "SDDC 의 구성도 및 구성요소",
+    "title": "SDDC의 개념",
     "subsections": [
      {
-      "title": "SDDC 의 구성도",
+      "title": "정의",
       "items": [
-       "데이터센터를 구성하는 플랫폼, 공통영역 및 관리시스템 전 영역을 소프트웨어 정의로 구현"
+       "2012년 VMware가 제시한 개념, 데이터센터 전체를 소프트웨어로 정의·제어"
+      ]
+     },
+     {
+      "title": "등장 배경",
+      "items": [
+       "서버만 가상화되고 네트워크·스토리지는 수동 → 서비스 준비에 수일~수주",
+       "클라우드 수준의 빠른 자원 제공 요구"
       ]
      }
     ]
    },
    {
-    "title": "SDDC 의 주요 기술요소",
+    "title": "SDDC 구성 요소",
     "subsections": [
      {
       "title": null,
       "items": [
-       "데이터센터를 구성하는 주요 서버, 스토리지, 네트워크 등의 장비들을 SW 기반으로 구현, 제어"
+       "컴퓨팅: 하이퍼바이저·컨테이너로 CPU·메모리 풀링",
+       "스토리지(SDS): 분산 스토리지를 정책 기반으로 할당",
+       "네트워크(SDN): 가상 네트워크·마이크로 세분화 보안",
+       "설비(Facility): 전력·냉각·공간을 DCIM으로 감시·최적화",
+       "관리 계층: 위 자원을 하나의 관리 플랫폼으로 통합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "관리 기술 및 효과",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "프로비저닝: 요청 시 VM·스토리지·네트워크를 자동 생성",
+       "오케스트레이션: 여러 자원 작업을 워크플로로 자동 연결",
+       "오토스케일링: 부하에 따라 자원 자동 증감",
+       "HCI: 컴퓨팅·스토리지·네트워크를 한 노드에 통합한 구축 형태, IaC로 코드 기반 관리",
+       "효과: 서비스 제공 시간 단축, 자원 이용률·가용성 향상, 운영비 절감, 하이브리드 클라우드 연계",
+       "과제: 초기 전환 비용, 통합 관리 복잡도, 가상화 계층 보안"
       ]
      }
     ]
@@ -13521,12 +13780,42 @@
   ],
   "name": "SDDC(Software Defined Data Center)",
   "en": "Software Defined Data Center",
-  "reviewed": true,
   "outline": [
-   "SDDC 의 구성도 및 구성요소",
-   "- SDDC 의 구성도",
-   "SDDC 의 주요 기술요소"
-  ]
+   "SDDC의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "SDDC 구성 요소",
+   "관리 기술 및 효과"
+  ],
+  "keywords_must": [
+   "SDDC(Software Defined Data Center)",
+   "컴퓨팅 가상화(Compute Virtualization)",
+   "SDS(Software Defined Storage)",
+   "SDN(Software Defined Networking)",
+   "설비 관리(Facility Management)",
+   "프로비저닝(Provisioning)",
+   "오케스트레이션(Orchestration)",
+   "오토스케일링(Auto-scaling)",
+   "자원 풀링(Resource Pooling)"
+  ],
+  "keywords_ref": [
+   "HCI(Hyper-Converged Infrastructure)",
+   "IaC(Infrastructure as Code)",
+   "셀프 서비스 포털(Self-service Portal)",
+   "하이브리드 클라우드(Hybrid Cloud)",
+   "VMware 제시 개념"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "오토스케일링(Auto-scaling)",
+   "HCI(Hyper-Converged Infrastructure)",
+   "프로비저닝(Provisioning)"
+  ],
+  "quiz_groups": [
+   "sdn"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_240",
@@ -13535,44 +13824,72 @@
   "subtitle": "O-RAN (Open Radio Access Network)",
   "domain": "NW",
   "category": "네트워크 > SDx > 출제예상 > O-RAN",
-  "definition": "네트워크 장비 운용에 필요한 RAN(Radio Access Network) 구간에 가상화 기술을 적용하여 Hardware와 Software를 분리하기 위한 Apache 2.0 License의 개방형 아키텍처",
+  "definition": "기지국(RAN)을 O-RU·O-DU·O-CU로 기능 분리하고 표준화된 개방형 인터페이스와 가상화·지능형 제어기(RIC)를 적용해, 서로 다른 제조사 장비를 섞어 쓸 수 있게 한 개방형 무선 접속망 (O-RAN Alliance)",
   "keywords": [
-   "가상화",
-   "O-RU",
-   "O-DU",
-   "O-CU"
+   "기능 분리: O-RU(RF · Low-PHY) · O-DU(High-PHY · MAC · RLC) · O-CU(PDCP · RRC · SDAP)",
+   "개방형 프런트홀(Open Fronthaul, Split 7.2x)",
+   "RIC: Near-RT RIC(10ms~1s, xApp) · Non-RT RIC(1s 이상, rApp)",
+   "인터페이스: E2 · A1 · O1 · O2",
+   "SMO(서비스 관리·오케스트레이션) · O-Cloud(가상화)",
+   "효과: 멀티 벤더 · 비용 절감 / 과제: 통합 시험 · 보안"
   ],
   "sections": [
    {
-    "title": "O-RAN(Open Radio Access Network) Architecture와 구성 요소",
+    "title": "O-RAN의 개념",
     "subsections": [
      {
-      "title": "O-RAN(Open Radio Access Network) Architecture",
+      "title": "정의",
       "items": [
-       "O-RAN은 크게 중앙 제어를 하는 O-CU, 분배 역할을 하는 O-DU, 무선 송수신을 하는 O-RU로 구분"
+       "2018년 AT&T·차이나모바일·도이치텔레콤·NTT도코모·오렌지가 설립한 O-RAN Alliance의 개방형·지능형 RAN 구조"
       ]
      },
      {
-      "title": "O-RAN(Open Radio Access Network) 구성 요소",
+      "title": "등장 배경",
       "items": [
-       "RIC near-RT(Realtime) - 데이터 수집과 분석을 기반으로 RAN 요소",
-       "RIC non-RT(Realtime) (element)와 자원을 제어하고 최적화를 수행",
-       "RRC (Radio Resource Control) - RRC 및 PDCP 계층을 실행하는 중앙 집중식 장"
+       "기존 기지국은 하드웨어·소프트웨어·인터페이스가 한 제조사에 종속",
+       "5G 기지국 수 증가로 구축비 부담 → 범용 하드웨어·가상화·경쟁 필요"
       ]
      }
     ]
    },
    {
-    "title": "기존 RAN과 O-RAN의 비교",
+    "title": "O-RAN 구조",
+    "subsections": [
+     {
+      "title": "기능 분리",
+      "items": [
+       "O-RU: 안테나·RF, 하위 물리 계층(Low-PHY) 처리",
+       "O-DU: 상위 물리 계층(High-PHY), MAC, RLC — 실시간 스케줄링",
+       "O-CU: PDCP, RRC(CU-CP), SDAP(CU-UP) — 비실시간 상위 계층",
+       "O-RU와 O-DU 사이 개방형 프런트홀(Split 7.2x)"
+      ]
+     },
+     {
+      "title": "RIC와 SMO",
+      "items": [
+       "Near-RT RIC: 10ms~1s 주기 제어, xApp으로 간섭·이동성·자원 최적화 (E2 인터페이스)",
+       "Non-RT RIC: 1초 이상 주기, rApp으로 AI 모델 학습·정책 생성 (A1 인터페이스로 Near-RT RIC에 전달), SMO 안에 위치",
+       "SMO: 운영·관리(O1)와 클라우드 자원 관리(O2)"
+      ]
+     },
+     {
+      "title": "개방형 인터페이스",
+      "items": [
+       "Open Fronthaul(O-RU↔O-DU), E2(RIC↔O-DU/O-CU), A1(Non-RT↔Near-RT RIC), O1(SMO↔망 요소), O2(SMO↔O-Cloud)",
+       "O-Cloud: 범용 서버 기반 가상화(vRAN) 플랫폼"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "효과 및 과제",
     "subsections": [
      {
       "title": null,
       "items": [
-       "단일 벤더(Single Vendor) - 다중 벤더(Multiple Vendors)",
-       "공급 업체에 종속되어 시장 출시 기간 - Software Defined",
-       "개방형 White-Box 하드웨어",
-       "제어(Control)와 데이터 및 고유 - 제어(Control)와 데이터 및 Open API 가 모두 분리",
-       "사전에 프로그래밍 된 고정된 제어 로 - 실제 네트워크 조건에 따라 프로그래직과 고정된 네트워크 리소스 밍 가능"
+       "효과: 멀티 벤더 경쟁으로 비용 절감, AI 기반 지능형 최적화, 신규 기능 빠른 도입, 중소 장비사 참여",
+       "과제: 다중 벤더 통합 시험·책임 소재, 프런트홀 대역·지연, 공격 표면 증가(xApp·인터페이스 보안), 전용 장비 대비 성능·전력",
+       "동향: 국내외 통신사 상용망 시험, 5G 특화망·6G AI-RAN과 결합"
       ]
      }
     ]
@@ -13585,13 +13902,51 @@
   ],
   "name": "O-RAN(Open Radio Access Network)",
   "en": "Open Radio Access Network",
-  "reviewed": true,
   "outline": [
-   "O-RAN(Open Radio Access Network) Architecture와 구성 요소",
-   "- O-RAN(Open Radio Access Network) Architecture",
-   "- O-RAN(Open Radio Access Network) 구성 요소",
-   "기존 RAN과 O-RAN의 비교"
-  ]
+   "O-RAN의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "O-RAN 구조",
+   "- 기능 분리",
+   "- RIC와 SMO",
+   "- 개방형 인터페이스",
+   "효과 및 과제"
+  ],
+  "keywords_must": [
+   "O-RAN(Open Radio Access Network)",
+   "O-RAN Alliance",
+   "기능 분리(Functional Split)",
+   "O-RU(O-RAN Radio Unit)",
+   "O-DU(O-RAN Distributed Unit)",
+   "O-CU(O-RAN Central Unit)",
+   "개방형 프런트홀(Open Fronthaul)",
+   "RIC(RAN Intelligent Controller)",
+   "Near-RT RIC",
+   "Non-RT RIC",
+   "RAN 가상화(vRAN)"
+  ],
+  "keywords_ref": [
+   "Split 7.2x",
+   "xApp·rApp",
+   "E2·A1·O1·O2 인터페이스",
+   "SMO(Service Management and Orchestration)",
+   "O-Cloud",
+   "멀티 벤더 통합 시험(Multi-vendor Interoperability)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "O-DU(O-RAN Distributed Unit)",
+   "Near-RT RIC(Near-Real-Time RAN Intelligent Controller)",
+   "개방형 프런트홀(Open Fronthaul)",
+   "SMO(Service Management and Orchestration)",
+   "xApp"
+  ],
+  "quiz_groups": [
+   "sdn",
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_244",
@@ -13600,25 +13955,68 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > 오류제어(2계층) > FEC",
-  "definition": "송신측이 전송할 문자나 프레임에 부가적 정보(Redundancy)를 첨가해 전송하고, 수신측이 에러를 발견하면 이 부가 정보로 에러 검출과 에러 정정을 하는 방식. 재전송 요구 없이 오류 수정이 가능해 실시간 처리에 유리.",
+  "definition": "송신측이 데이터에 잉여 비트(Redundancy)를 덧붙여 보내고, 수신측이 재전송 요청 없이 그 정보로 오류를 검출하고 직접 정정하는 오류 제어 방식 (전진 오류 수정)",
   "keywords": [
-   "Forward Error Correction(전진오류수정)",
-   "무선에서 많이 사용",
-   "Block: Hamming, RS",
-   "Non-Block: Convolutional(길쌈), Turbo",
-   "오류검출+오류정정"
+   "재전송 없음 · 역채널 불필요 → 무선 · 방송 · 위성 · 실시간",
+   "블록 부호: 해밍 · BCH · 리드-솔로몬(RS) · LDPC",
+   "비블록(트리) 부호: 길쌈 부호(비터비 복호) · 터보 부호",
+   "5G: 데이터 LDPC · 제어 Polar",
+   "부호율 k/n · 부호화 이득 · 인터리빙(집단 오류 분산)",
+   "HARQ: FEC + ARQ 결합"
   ],
   "sections": [
    {
-    "title": "FEC의 주요 용도",
+    "title": "FEC의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "수신측 단독으로 오류를 정정하는 순방향 오류 정정, 오류 검출 + 오류 정정 기능"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "역채널·재전송이 필요 없어 지연이 일정 → 단방향·장거리·실시간 통신에 적합",
+       "잉여 비트만큼 전송 효율 저하(부호율 k/n), 복호 복잡도 존재",
+       "부호화 이득으로 같은 오류율을 더 낮은 SNR에서 달성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "FEC 부호 유형",
+    "subsections": [
+     {
+      "title": "블록 부호",
+      "items": [
+       "데이터를 k비트 블록으로 나눠 n비트 부호어 생성(n−k 패리티)",
+       "해밍 코드: 단일 비트 오류 정정",
+       "BCH: 다중 비트 오류 정정",
+       "리드-솔로몬: 심볼 단위, 집단 오류에 강함 (CD·DVD·QR 코드·위성)",
+       "LDPC: 희소 패리티 검사 행렬, 샤논 한계 근접 (Wi-Fi, DVB-S2, 5G 데이터)"
+      ]
+     },
+     {
+      "title": "비블록 부호",
+      "items": [
+       "길쌈 부호(Convolutional): 이전 입력까지 메모리로 부호화, 비터비 알고리즘으로 복호",
+       "터보 부호: 두 길쌈 부호 + 인터리버, 반복 복호 (3G·4G 데이터)",
+       "Polar 부호: 채널 분극 이용, 5G 제어 채널"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "BEC와 비교 및 활용",
     "subsections": [
      {
       "title": null,
       "items": [
-       "송신측이 한 곳이고 수신측이 여러 곳",
-       "재전송·피드백이 어려운 곳",
-       "채널 환경이 열악한 곳",
-       "높은 신뢰성이 요구되는 곳"
+       "FEC: 재전송 없음, 일정 지연, 오버헤드 상시 / BEC(ARQ): 오류 시만 재전송, 역채널 필요, 오류율 높으면 지연 증가",
+       "인터리빙: 비트 순서를 섞어 집단 오류를 랜덤 오류로 분산",
+       "HARQ: FEC로 정정하고 실패 시 재전송·결합(LTE·5G)",
+       "활용: 이동통신, 위성·방송, 광통신, 저장 매체, 심우주 통신"
       ]
      }
     ]
@@ -13629,13 +14027,51 @@
    405,
    406
   ],
-  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
   "name": "FEC(Forward Error Correction, 전진 오류 수정)",
   "en": "Forward Error Correction",
-  "reviewed": true,
   "outline": [
-   "FEC의 주요 용도"
-  ]
+   "FEC의 개념",
+   "- 정의",
+   "- 특징",
+   "FEC 부호 유형",
+   "- 블록 부호",
+   "- 비블록 부호",
+   "BEC와 비교 및 활용"
+  ],
+  "keywords_must": [
+   "FEC(Forward Error Correction)",
+   "전진 오류 수정",
+   "잉여 비트(Redundancy)",
+   "재전송 불필요(No Retransmission)",
+   "블록 부호(Block Code)",
+   "해밍 코드(Hamming Code)",
+   "리드-솔로몬 부호(Reed–Solomon Code)",
+   "길쌈 부호(Convolutional Code)",
+   "터보 부호(Turbo Code)",
+   "LDPC 부호(Low-Density Parity-Check)",
+   "부호율(Code Rate)"
+  ],
+  "keywords_ref": [
+   "BCH 부호(Bose–Chaudhuri–Hocquenghem)",
+   "비터비 복호(Viterbi Decoding)",
+   "Polar 부호(5G 제어 채널)",
+   "인터리빙(Interleaving)",
+   "HARQ(Hybrid ARQ)",
+   "BEC 비교(Backward Error Correction)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "리드-솔로몬 부호(Reed–Solomon Code)",
+   "길쌈 부호(Convolutional Code)",
+   "터보 부호(Turbo Code)",
+   "부호율(Code Rate)",
+   "인터리빙(Interleaving)"
+  ],
+  "quiz_groups": [
+   "err"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_245",
@@ -13644,74 +14080,60 @@
   "subtitle": "BEC(Backward Error Correction)",
   "domain": "NW",
   "category": "디지털 네트워크 > 오류제어(2계층) > BEC(Backward Error Correction)",
-  "definition": "데이터링크 계층의 오류제어 방법중 하나로, 수신 측에서 오류 검출 기법을 통해 오류 발견시, 재전송을요구하는 방식.",
+  "definition": "수신측이 오류 검출 기법(패리티·체크섬·CRC)으로 오류를 발견하면 송신측에 재전송을 요구해 오류를 복구하는 데이터 링크 계층의 오류 제어 방식 (후진 오류 수정)",
   "keywords": [
-   "Backward Error Correction",
-   "후진오류수정",
-   "검출-패러티",
-   "CRC",
-   "재전송"
+   "오류 검출 + 재전송 요구(ARQ)",
+   "검출 기법: 패리티 검사 · 체크섬 · CRC",
+   "역채널(Feedback Channel) 필요 · ACK/NAK",
+   "ARQ 방식: 정지-대기 · Go-Back-N · 선택적 재전송",
+   "잉여 비트 적음 · 오류율 낮은 유선망에 효율적",
+   "FEC와 비교 · HARQ로 결합"
   ],
   "sections": [
    {
-    "title": "패리티 비트 종류",
+    "title": "BEC의 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "정의",
       "items": [
-       "짝수 패리티 (Even Parity): 1의 전체 개수가 짝수 개가 되게 함",
-       "홀수 패리티 (Odd Parity): 1의 전체 개수가 홀수 개가 되게 함"
+       "수신측은 오류 '검출'만 하고 정정은 재전송으로 해결하는 역방향 오류 정정"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "검출용 잉여 비트만 필요 → 전송 효율 높음",
+       "재전송을 위한 역채널·버퍼·타이머 필요",
+       "오류율이 높거나 지연이 큰 링크에서는 재전송 반복으로 효율 저하"
       ]
      }
     ]
    },
    {
-    "title": "동작 과정",
+    "title": "BEC 오류 검출 기법",
     "subsections": [
      {
       "title": null,
       "items": [
-       "송신측 : 1. 짝수 또는 홀수 패리티의 협의에 따라 패리티 비트 생성 2. ASCII문자(7bit) + 패리티 비트(1bit) 전송",
-       "수신측 : 1의 개수를 세어 오류 유무 판단(짝수 또는 홀수)",
-       "> 틀리면 오류로 판단 재전송 요청"
+       "패리티 검사: 짝수·홀수 패리티 비트 1개, 홀수 개 비트 오류만 검출 / 2차원 패리티로 검출력 향상",
+       "체크섬: 워드 단위 합의 1의 보수 (IP·TCP·UDP)",
+       "CRC: 생성 다항식 나눗셈 나머지, 집단 오류 검출력 우수 (이더넷 FCS)"
       ]
      }
     ]
    },
    {
-    "title": "예시",
+    "title": "재전송 방식(ARQ) 및 FEC와 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "전송하고자 하는 데이터 : 1101001",
-       "1의 개수를 홀수로 하기 위해 패리티 비트를 1로 지정",
-       "패리티 비트 추가한 최종 전송 데이터 : 11101001",
-       "수신 측은 패리티 비트를 포함한 데이터 내의 1의 개수를 세어 홀수인지 판단, 홀수가 아니면 재전송요청"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "단점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "짝수개의 오류는 검출 불가"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "동작 과정",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "데이터를 일정크기의 블록으로 묶음",
-       "각 블록을 배열의 열로 보고 패리티 비트를 계산하여 추가",
-       "각 블록의 행에 대한 패리티 비트를 계산하여 추가한 후 전송"
+       "정지-대기: 프레임 하나 보내고 ACK 대기",
+       "Go-Back-N: 오류 프레임부터 이후 프레임 모두 재전송",
+       "선택적 재전송: 오류 프레임만 재전송",
+       "적응적 ARQ: 채널 상태에 따라 프레임 길이 조정",
+       "FEC 비교: BEC는 역채널 필요·가변 지연·효율 높음 / FEC는 역채널 불필요·일정 지연·잉여 비트 많음",
+       "결합: HARQ(LTE·5G)"
       ]
      }
     ]
@@ -13724,14 +14146,43 @@
   ],
   "name": "BEC(Backward Error Correction, 후진 오류 수정)",
   "en": "Backward Error Correction",
-  "reviewed": true,
   "outline": [
-   "패리티 비트 종류",
-   "동작 과정",
-   "예시",
-   "단점",
-   "동작 과정"
-  ]
+   "BEC의 개념",
+   "- 정의",
+   "- 특징",
+   "BEC 오류 검출 기법",
+   "재전송 방식(ARQ) 및 FEC와 비교"
+  ],
+  "keywords_must": [
+   "BEC(Backward Error Correction)",
+   "후진 오류 수정",
+   "오류 검출(Error Detection)",
+   "재전송 요구(Retransmission Request)",
+   "ARQ(Automatic Repeat reQuest)",
+   "패리티 검사(Parity Check)",
+   "CRC(Cyclic Redundancy Check)",
+   "체크섬(Checksum)",
+   "역채널(Feedback Channel)",
+   "ACK/NAK"
+  ],
+  "keywords_ref": [
+   "정지-대기 ARQ(Stop-and-Wait)",
+   "Go-Back-N ARQ",
+   "선택적 재전송(Selective Repeat)",
+   "FEC 비교(Forward Error Correction)",
+   "HARQ(Hybrid ARQ)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "후진 오류 수정(Backward Error Correction)",
+   "역채널(Feedback Channel)",
+   "패리티 검사(Parity Check)"
+  ],
+  "quiz_groups": [
+   "err"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_246",
@@ -13740,30 +14191,71 @@
   "subtitle": "순환중복검사 (CRC : Cyclic Redundancy Check)",
   "domain": "NW",
   "category": "NW > 오류제어(2계층) > 순환중복검사(CRC)",
-  "definition": "이진 나눗셈 연산을 기반으로 오류를 검출하는 방식으로 성능이 우수하며, 여러 비트에서 발생하는 집단오류(burst error)도 검출 가능한 오류검출 방식",
+  "definition": "데이터를 생성 다항식으로 모듈로-2(XOR) 이진 나눗셈한 나머지를 덧붙여 보내고, 수신측이 같은 나눗셈의 나머지가 0인지로 오류를 검출하는 방식으로, 집단 오류(Burst Error) 검출 능력이 우수함",
   "keywords": [
-   "이진 나눗셈(Modulo-2)",
-   "데이터워드",
-   "divisor(생성다항식)",
-   "XOR 기반 연산",
-   "집단오류(burst error) 검출"
+   "생성 다항식(Generator Polynomial) · 제수(Divisor)",
+   "모듈로-2 나눗셈(XOR 연산) · 데이터워드 + CRC(나머지) = 부호어",
+   "수신측: 나머지 0이면 오류 없음",
+   "검출력: 단일·2비트 오류 · 홀수 개 오류 · 길이 n 이하 집단 오류",
+   "CRC-32(이더넷 FCS) · CRC-16-CCITT(HDLC · 블루투스) · CRC-8",
+   "하드웨어 시프트 레지스터(LFSR) 구현 · 암호학적 무결성 아님"
   ],
   "sections": [
    {
-    "title": "CRC의 개념도 및 송수신 계산방법",
+    "title": "CRC의 개념",
     "subsections": [
      {
-      "title": "CRC의 개념도",
+      "title": "정의",
       "items": [
-       "Modulo-2의 연산의 덧셈과 뺄셈은 XOR 연산과 같음."
+       "다항식 코드라고도 하며, 데이터 비트열을 다항식으로 보고 생성 다항식으로 나눈 나머지를 검사 비트로 사용"
       ]
      },
      {
-      "title": "CRC의 송수신측 계산방법",
+      "title": "특징",
       "items": [
-       "전송하고자 하는 데이터 뒤에 n개의 0을 삽입",
-       "사전에 약속 된 n+1 비트의 수로 이진나눗셈을 수행, 나머지를 구함",
-       "전송 받은 데이터에 이진 나눗셈 적용"
+       "XOR·시프트만으로 하드웨어 고속 구현",
+       "체크섬·패리티보다 검출력이 훨씬 우수, 오류 정정은 불가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "CRC 동작 원리",
+    "subsections": [
+     {
+      "title": "송신측",
+      "items": [
+       "① 생성 다항식 차수가 n이면 데이터워드 뒤에 0을 n개 붙임",
+       "② 생성 다항식으로 모듈로-2 나눗셈(빌림·올림 없는 XOR)",
+       "③ 나머지(n비트)를 데이터 뒤에 붙여 부호어 전송"
+      ]
+     },
+     {
+      "title": "수신측",
+      "items": [
+       "받은 부호어 전체를 같은 생성 다항식으로 나눔",
+       "나머지가 0이면 정상, 0이 아니면 오류 → 폐기·재전송 요청(ARQ)"
+      ]
+     },
+     {
+      "title": "계산 예",
+      "items": [
+       "데이터 1001, 생성 다항식 1011(x³+x+1) → 1001000 ÷ 1011의 나머지 110 → 전송 부호어 1001110"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "CRC 검출 능력 및 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "모든 단일 비트·2비트 오류 검출(적절한 다항식)",
+       "x+1을 인수로 가지면 모든 홀수 개 오류 검출",
+       "길이 n 이하 집단 오류 모두 검출, 더 긴 집단 오류도 높은 확률로 검출",
+       "활용: 이더넷·Wi-Fi FCS(CRC-32), HDLC·블루투스(CRC-16-CCITT), USB·CAN, 저장 장치·ZIP",
+       "주의: 고의적 변조는 막지 못함 → 무결성은 메시지 인증 코드(Message Authentication Code)·전자 서명 필요"
       ]
      }
     ]
@@ -13776,12 +14268,48 @@
   ],
   "name": "순환 중복 검사(CRC, Cyclic Redundancy Check)",
   "en": "CRC, Cyclic Redundancy Check",
-  "reviewed": true,
   "outline": [
-   "CRC의 개념도 및 송수신 계산방법",
-   "- CRC의 개념도",
-   "- CRC의 송수신측 계산방법"
-  ]
+   "CRC의 개념",
+   "- 정의",
+   "- 특징",
+   "CRC 동작 원리",
+   "- 송신측",
+   "- 수신측",
+   "- 계산 예",
+   "CRC 검출 능력 및 활용"
+  ],
+  "keywords_must": [
+   "CRC(Cyclic Redundancy Check)",
+   "순환 중복 검사",
+   "생성 다항식(Generator Polynomial)",
+   "모듈로-2 나눗셈(Modulo-2 Division)",
+   "XOR 연산(XOR Operation)",
+   "데이터워드(Dataword)",
+   "나머지(Remainder, CRC 값)",
+   "부호어(Codeword)",
+   "집단 오류 검출(Burst Error Detection)",
+   "FCS(Frame Check Sequence)"
+  ],
+  "keywords_ref": [
+   "CRC-32(Ethernet)",
+   "CRC-16-CCITT",
+   "CRC-8",
+   "LFSR(Linear Feedback Shift Register)",
+   "체크섬 비교(Checksum)",
+   "무결성 보장 아님(Not Cryptographic)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "생성 다항식(Generator Polynomial)",
+   "모듈로-2 나눗셈(Modulo-2 Division)",
+   "집단 오류(Burst Error)",
+   "CRC-32"
+  ],
+  "quiz_groups": [
+   "err"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_247",
@@ -13790,68 +14318,68 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > 오류제어(2 계층) > 자동재전송요구",
-  "definition": "데이터링크 계층에서 데이터 교환 중 오류가 검출되면 부정응답(NAK)이 되돌아오고 오류난 프레임의 재전송을 반복하는 오류제어 방식(오류제어 = 오류검출 + 재전송).",
+  "definition": "데이터 교환 중 오류가 검출되면 수신측의 부정 응답(NAK)이나 확인 응답(ACK) 미수신(타임아웃)을 계기로 오류 프레임을 자동으로 재전송하는 오류 제어 방식 (오류 제어 = 오류 검출 + 재전송)",
   "keywords": [
-   "ARQ(Automatic Repeat reQuest)",
-   "Stop and Wait",
-   "Go-Back-N",
-   "Selective Repeat",
-   "H-ARQ"
+   "구성: 오류 검출 · ACK/NAK · 타이머 · 순서 번호",
+   "정지-대기(Stop-and-Wait) ARQ",
+   "연속 ARQ: Go-Back-N(윈도 ≤ 2^m − 1) · 선택적 재전송(윈도 ≤ 2^(m−1))",
+   "적응적 ARQ: 채널 상태에 따라 프레임 길이 조정",
+   "HARQ: FEC + ARQ, 체이스 결합 · 증분 중복(IR)",
+   "적용: HDLC · Wi-Fi · LTE/5G(HARQ+RLC ARQ)"
   ],
   "sections": [
    {
-    "title": "데이터 링크 계층의 오류제어 개요",
+    "title": "ARQ의 개념",
     "subsections": [
      {
-      "title": "오류제어의 개념",
+      "title": "정의",
       "items": [
-       "오류제어 = 오류검출 + 재전송"
+       "오류를 검출해 재전송으로 복구하는 BEC(후진 오류 수정)의 대표 방식"
       ]
      },
      {
-      "title": "오류의 발생원인",
+      "title": "구성 요소",
       "items": [
-       "통신회선의 순간 절단 현상에 의한 오류",
-       "통신 회선의 잡음, 감쇠, 혼선, 군 지연, 찌그러짐, 펄스성 잡음, 에코 현상에 의한 오류",
-       "장치의 기계적, 구조적 원인에 의한 오류"
+       "오류 검출 코드(CRC 등), 확인 응답(ACK)·부정 응답(NAK), 재전송 타이머, 프레임 순서 번호, 송신 버퍼"
       ]
      }
     ]
    },
    {
-    "title": "ARQ(Automatic Repeat Request)의 개념 및 방식",
+    "title": "ARQ 방식",
     "subsections": [
      {
-      "title": "ARQ 의 개념",
+      "title": "정지-대기 ARQ",
       "items": [
-       "데이터링크계층에서 데이터 교환 중 오류가 검출되면 부정응답이 되돌아오고 오류난 프레임의재전송을 반복하는 과정"
+       "프레임 하나 전송 후 ACK를 기다림, 순서 번호 0/1",
+       "구현 단순, 전파 지연이 길면 효율 매우 낮음"
       ]
      },
      {
-      "title": "ARQ 에 의한 재전송이 발생하는 경우",
+      "title": "연속 ARQ",
       "items": [
-       "손상된 프레임 : 수신측에서 수신하였으나 데이터를 인식하지 못함",
-       "손실된 프레임 : 수신측에 프레임이 도착하지 않은 경우",
-       "손실된 확인응답 : 수신측에서 정상, 손상, 손실된 데이터에 대한 응답이 송신측에 도착하지 않은 경우"
+       "Go-Back-N: 윈도 크기만큼 연속 전송, 오류 시 그 프레임부터 이후 모두 재전송, 수신 버퍼 1개, 송신 윈도 ≤ 2^m − 1",
+       "선택적 재전송(Selective Repeat): 오류 프레임만 재전송, 수신측 재정렬 버퍼 필요, 윈도 ≤ 2^(m−1)"
+      ]
+     },
+     {
+      "title": "적응적 ARQ",
+      "items": [
+       "채널 오류율에 따라 프레임 길이를 동적으로 바꿔 효율 최적화"
       ]
      }
     ]
    },
    {
-    "title": "ARQ 처리 과정의 문제 설명",
+    "title": "HARQ와 FEC 비교",
     "subsections": [
      {
-      "title": "Go-back-n ARQ",
+      "title": null,
       "items": [
-       "Frame 6 는 오류 또는 손실 Data 로 폐기되고 Frame6 이후의 모든 Data 는 Frame6 가 오기 전까지는계속해서 폐기 된다",
-       "손실된 확인 응답의 경우 Timer 에 의하여 재전송 되고 수신측에서 다시 ACK 를 보내며 중복된데이터는 폐기한다"
-      ]
-     },
-     {
-      "title": "Selective-reject ARQ",
-      "items": [
-       "수신기는 오류가 수정되기를 기다리는 동안에도 새로운 프레임을 계속 받는다.",
-       "최종 ACK 는 지정된 특정 프레임뿐만 아니라 이전의 모든 프레임이 성공적으로 수신되었음을 나타내기때문에, 오류 프레임 이후로 수신된 프레임들은 정정된 프레임을 받은 후에 확인 응답된다"
+       "HARQ(Hybrid ARQ): FEC로 먼저 정정하고 실패 시 재전송, 이전 수신 신호와 결합",
+       "Type I: 매번 같은 부호어 재전송 / 체이스 결합: 같은 신호를 합쳐 SNR 향상 / 증분 중복(IR): 추가 패리티만 전송",
+       "LTE·5G: MAC 계층 HARQ(빠른 재전송) + RLC 계층 ARQ(잔여 오류)",
+       "FEC 대비: ARQ는 역채널 필요·지연 가변·효율 높음"
       ]
      }
     ]
@@ -13864,18 +14392,50 @@
   ],
   "name": "자동 재전송 요구(ARQ, Automatic Repeat reQuest)",
   "en": "ARQ, Automatic Repeat reQuest",
-  "reviewed": true,
   "outline": [
-   "데이터 링크 계층의 오류제어 개요",
-   "- 오류제어의 개념",
-   "- 오류의 발생원인",
-   "ARQ(Automatic Repeat Request)의 개념 및 방식",
-   "- ARQ 의 개념",
-   "- ARQ 에 의한 재전송이 발생하는 경우",
-   "ARQ 처리 과정의 문제 설명",
-   "- Go-back-n ARQ",
-   "- Selective-reject ARQ"
-  ]
+   "ARQ의 개념",
+   "- 정의",
+   "- 구성 요소",
+   "ARQ 방식",
+   "- 정지-대기 ARQ",
+   "- 연속 ARQ",
+   "- 적응적 ARQ",
+   "HARQ와 FEC 비교"
+  ],
+  "keywords_must": [
+   "ARQ(Automatic Repeat reQuest)",
+   "자동 재전송 요구",
+   "오류 검출(Error Detection)",
+   "ACK(Acknowledgment)",
+   "NAK(Negative Acknowledgment)",
+   "타임아웃(Timeout)",
+   "순서 번호(Sequence Number)",
+   "정지-대기 ARQ(Stop-and-Wait)",
+   "Go-Back-N ARQ",
+   "선택적 재전송 ARQ(Selective Repeat)",
+   "HARQ(Hybrid ARQ)"
+  ],
+  "keywords_ref": [
+   "적응적 ARQ(Adaptive ARQ)",
+   "슬라이딩 윈도(Sliding Window)",
+   "GBN 윈도 ≤ 2^m − 1",
+   "SR 윈도 ≤ 2^(m−1)",
+   "체이스 결합(Chase Combining)",
+   "증분 중복(Incremental Redundancy)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "정지-대기 ARQ(Stop-and-Wait ARQ)",
+   "선택적 재전송(Selective Repeat)",
+   "HARQ(Hybrid ARQ)",
+   "증분 중복(Incremental Redundancy)"
+  ],
+  "quiz_groups": [
+   "err",
+   "mac"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_248",
@@ -13884,28 +14444,66 @@
   "subtitle": "58. Check sum",
   "domain": "NW",
   "category": "SW > 네트워크 > 오류제어",
-  "definition": "데이터 통신에서 송신측이 전송할 모든 데이터를 16비트 워드 단위로 구분해 순차적으로 합한 결과의 1의 보수를 데이터에 추가해 전송하고, 수신측이 동일한 연산을 수행해 오류 여부를 판단하는 기법(도구).",
+  "definition": "송신측이 데이터를 16비트 워드로 나눠 1의 보수 덧셈으로 합한 값의 1의 보수를 덧붙여 보내고, 수신측이 같은 연산 결과가 0(모두 1의 보수)이면 정상으로 판단하는 오류 검출 방식 (인터넷 체크섬, RFC 1071)",
   "keywords": [
-   "16비트 워드 단위",
-   "1의 보수",
-   "덧셈 결과가 0이면 오류 없음",
-   "워드 순서 변경 오류 검출 불가",
-   "IPv4 헤더, TCP/UDP 헤더 체크섬",
-   "데이터링크 계층은 CRC로 대체 추세"
+   "16비트 워드 단위 1의 보수 합 → 결과의 1의 보수",
+   "수신측: 전체 합의 보수가 0이면 오류 없음",
+   "사용: IPv4 헤더 · TCP · UDP · ICMP (IPv6 헤더에는 없음)",
+   "약점: 워드 순서 바뀜 · 상쇄 오류 검출 불가",
+   "데이터 링크는 CRC 사용 · 체크섬은 소프트웨어 계산 용이",
+   "증분 갱신(RFC 1624) · Fletcher · Adler-32"
   ],
   "sections": [
    {
-    "title": "검사합 처리 절차(16비트 기준)",
+    "title": "체크섬의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "데이터 워드의 합을 검사 값으로 쓰는 단순한 오류 검출 코드, 인터넷 프로토콜의 표준 방식"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "덧셈만으로 소프트웨어에서 빠르게 계산",
+       "라우터가 TTL 변경 시 증분 갱신으로 재계산 부담 감소(RFC 1624)",
+       "CRC보다 검출력이 약함"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "체크섬 계산 절차",
+    "subsections": [
+     {
+      "title": "송신측",
+      "items": [
+       "① 체크섬 필드를 0으로 두고 데이터를 16비트 워드로 나눔",
+       "② 1의 보수 덧셈(자리 올림을 맨 아래 비트에 다시 더함)으로 모두 합산",
+       "③ 합의 1의 보수를 체크섬 필드에 넣어 전송"
+      ]
+     },
+     {
+      "title": "수신측",
+      "items": [
+       "체크섬을 포함해 모든 워드를 같은 방식으로 합산",
+       "결과가 모두 1(보수를 취하면 0)이면 정상, 아니면 오류 → 폐기"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 분야 및 한계",
     "subsections": [
      {
       "title": null,
       "items": [
-       "① 전송 데이터를 워드 단위로 구분",
-       "② 블록 단위 + 연산 결과 E 도출",
-       "③ E의 1의 보수 E' 도출",
-       "④ 전송 데이터 끝에 E'를 추가하여 전송",
-       "⑤ 수신측이 A+B+C+D+E' = F 연산",
-       "⑥ F의 1의 보수 F'가 0이면 오류 없음"
+       "IPv4: 헤더만 검사, 홉마다 재계산",
+       "TCP·UDP: 의사 헤더(IP 주소·프로토콜·길이) + 헤더 + 데이터 검사 (IPv6에서는 UDP 체크섬 필수)",
+       "ICMP: 메시지 전체 검사",
+       "IPv6 헤더: 하위(CRC)·상위 계층 검사를 믿고 체크섬 제거 → 라우터 처리 단순화",
+       "한계: 16비트 워드 순서가 바뀌거나 서로 상쇄되는 오류는 검출 불가, 집단 오류에 약함 → 데이터 링크는 CRC 사용"
       ]
      }
     ]
@@ -13916,14 +14514,47 @@
    422,
    423
   ],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
   "name": "체크섬(Checksum)",
   "en": "Checksum",
-  "reviewed": true,
   "outline": [
-   "검사합 처리 절차(16비트 기준)"
-  ]
+   "체크섬의 개념",
+   "- 정의",
+   "- 특징",
+   "체크섬 계산 절차",
+   "- 송신측",
+   "- 수신측",
+   "적용 분야 및 한계"
+  ],
+  "keywords_must": [
+   "체크섬(Checksum)",
+   "인터넷 체크섬(Internet Checksum, RFC 1071)",
+   "16비트 워드(16-bit Word)",
+   "1의 보수 합(One's Complement Sum)",
+   "1의 보수(One's Complement)",
+   "수신측 검증 결과 0(Zero Check)",
+   "IPv4 헤더 체크섬(IPv4 Header Checksum)",
+   "TCP·UDP 체크섬(TCP/UDP Checksum)",
+   "워드 순서 오류 검출 불가(Reordering Undetected)"
+  ],
+  "keywords_ref": [
+   "의사 헤더(Pseudo-header)",
+   "IPv6 헤더 체크섬 없음(No Header Checksum)",
+   "CRC 비교(Cyclic Redundancy Check)",
+   "증분 갱신(Incremental Update, RFC 1624)",
+   "Fletcher·Adler-32"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "1의 보수 합(One's Complement Sum)",
+   "인터넷 체크섬(Internet Checksum)",
+   "의사 헤더(Pseudo-header)"
+  ],
+  "quiz_groups": [
+   "err",
+   "transport"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_249",
@@ -13932,29 +14563,65 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > 오류제어(2 계층) > 해밍코드",
-  "definition": "코드 전송 시 발생하는 오류를 Parity bit로 검출(Detection)할 뿐 아니라 오류 정정(Correction)까지 가능한 코드.",
+  "definition": "데이터 비트 사이 2의 거듭제곱 위치에 패리티 비트를 넣어, 오류를 검출할 뿐 아니라 오류 비트의 위치를 찾아 단일 비트 오류를 정정하는 오류 정정 코드 (R. Hamming, 1950)",
   "keywords": [
-   "2^p ≥ d+p+1 (d: 데이터 비트 수, p: 패리티 비트 수)",
-   "패리티 위치: 1, 2, 4, 8번째 비트",
-   "짝수 패리티",
-   "검사 결과 0이면 정상, 아니면 그 2진값 위치 오류 정정",
-   "데이터 4비트→패리티 3개, 7비트→4개"
+   "패리티 비트 수: 2^p ≥ d + p + 1 (d: 데이터 비트 수)",
+   "패리티 위치: 1 · 2 · 4 · 8 …번째 비트 (짝수 패리티)",
+   "신드롬(Syndrome): 검사 결과 0이면 정상, 아니면 그 2진값 위치 오류 → 비트 반전",
+   "해밍(7,4): 데이터 4비트 + 패리티 3비트 · 데이터 7비트 → 패리티 4비트",
+   "최소 해밍 거리 3 → 단일 오류 정정 · 확장 해밍(8,4) SECDED",
+   "적용: ECC 메모리 · 위성 · FEC"
   ],
   "sections": [
    {
-    "title": "해밍 코드 설명",
+    "title": "해밍 코드의 개념",
     "subsections": [
      {
-      "title": "해밍 코드(Hamming code)",
-      "items": []
+      "title": "정의",
+      "items": [
+       "벨 연구소 리처드 해밍이 1950년 고안한 선형 블록 오류 정정 부호"
+      ]
      },
      {
-      "title": "해밍 코드 전송 방법",
+      "title": "특징",
       "items": [
-       "전송할 데이터: 88(이진수: 1011000)",
-       "even parity: 패리티를 포함한「1」인 비트의 수가 항상 짝수가 되도록 하는 것",
-       "'1'이 있는 위치 확인 -> 7 (0111), 9 (1001), 11(1011)",
-       "XOR 연산 수행 -> 결과 (0101) 3) 생성"
+       "재전송 없이 수신측에서 단일 비트 오류 정정 → FEC 방식",
+       "최소 해밍 거리 3: 1비트 정정 또는 2비트 검출"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "해밍 코드 구성 및 정정 원리",
+    "subsections": [
+     {
+      "title": "패리티 비트 수와 위치",
+      "items": [
+       "패리티 비트 수 p는 2^p ≥ d + p + 1을 만족하는 최소값 (데이터 4비트 → 3개, 7비트 → 4개, 11비트 → 4개)",
+       "패리티 비트는 1, 2, 4, 8 …(2의 거듭제곱) 위치, 나머지 위치에 데이터",
+       "각 패리티 비트는 자기 위치 비트가 1인 위치들을 짝수 패리티로 검사(P1: 1·3·5·7 …, P2: 2·3·6·7 …, P4: 4·5·6·7 …)"
+      ]
+     },
+     {
+      "title": "오류 검출·정정 절차",
+      "items": [
+       "① 수신측이 각 패리티 그룹을 다시 검사",
+       "② 검사 결과를 이진수로 모은 신드롬 계산(P4 P2 P1 순)",
+       "③ 신드롬이 0이면 정상, 아니면 그 값이 오류 비트 위치 → 해당 비트 반전",
+       "예: 해밍(7,4)에서 신드롬 101 → 5번째 비트 오류"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "확장 해밍 코드와 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "확장 해밍(8,4): 전체 패리티 1비트 추가 → 최소 거리 4, 단일 오류 정정·이중 오류 검출(SECDED)",
+       "활용: 서버 ECC 메모리(SECDED), 위성·우주 통신, 저장 장치, 교육용 FEC 예제",
+       "한계: 2비트 이상 오류 정정 불가 → 다중 오류는 BCH·리드-솔로몬·LDPC 사용"
       ]
      }
     ]
@@ -13967,12 +14634,46 @@
   ],
   "name": "해밍 코드(Hamming Code)",
   "en": "Hamming Code",
-  "reviewed": true,
   "outline": [
-   "해밍 코드 설명",
-   "- 해밍 코드(Hamming code)",
-   "- 해밍 코드 전송 방법"
-  ]
+   "해밍 코드의 개념",
+   "- 정의",
+   "- 특징",
+   "해밍 코드 구성 및 정정 원리",
+   "- 패리티 비트 수와 위치",
+   "- 오류 검출·정정 절차",
+   "확장 해밍 코드와 활용"
+  ],
+  "keywords_must": [
+   "해밍 코드(Hamming Code)",
+   "오류 정정 코드(Error Correcting Code)",
+   "패리티 비트(Parity Bit)",
+   "2^p ≥ d + p + 1",
+   "2의 거듭제곱 위치(Positions 1·2·4·8)",
+   "짝수 패리티(Even Parity)",
+   "신드롬(Syndrome)",
+   "단일 비트 오류 정정(Single-bit Error Correction)",
+   "해밍 거리(Hamming Distance)",
+   "해밍(7,4) 부호"
+  ],
+  "keywords_ref": [
+   "최소 해밍 거리 3(Minimum Distance 3)",
+   "확장 해밍 코드 SECDED(Single Error Correction, Double Error Detection)",
+   "ECC 메모리(Error-Correcting Code Memory)",
+   "FEC(Forward Error Correction)",
+   "R. Hamming(1950)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "신드롬(Syndrome)",
+   "해밍 거리(Hamming Distance)",
+   "해밍(7,4) 부호(Hamming(7,4) Code)",
+   "SECDED(Single Error Correction, Double Error Detection)"
+  ],
+  "quiz_groups": [
+   "err"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_271",
@@ -13981,25 +14682,72 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > 2019 출제 예상 토픽 > 대역확산(Spread Spectrum)",
-  "definition": "무선채널에서 여러 신호가 경쟁하면서 공유할 때 외부의 전파잡음에 강하도록 넓은 주파수대역으로 분산시키는 일종의 변조방식.",
+  "definition": "전송 신호를 원래 필요한 대역폭보다 훨씬 넓은 주파수 대역으로 확산시켜 보내, 잡음·재밍·도청·페이딩에 강하고 같은 대역을 여러 사용자가 공유(CDMA)할 수 있게 하는 변조 기술",
   "keywords": [
-   "Jamming 방지",
-   "도청 방지",
-   "페이딩(Fading)에 강함",
-   "DSSS(Direct Sequence Spread Spectrum)",
-   "FHSS(Frequency Hopping Spread Spectrum)",
-   "확산(Spreading)/역확산(Despreading)"
+   "확산(Spreading) → 역확산(Despreading) · 처리 이득(Processing Gain)",
+   "DSSS(직접 확산): PN 코드 · 칩(Chip) — IEEE 802.11b · GPS · CDMA",
+   "FHSS(주파수 도약): 도약 패턴 — 블루투스 · 군 통신",
+   "THSS(시간 도약) · CSS(처프 확산, LoRa)",
+   "장점: 재밍 방지 · 도청 방지(LPI) · 다중 경로 페이딩에 강함",
+   "다중 접속: CDMA(코드 분할)"
   ],
   "sections": [
    {
-    "title": "DSSS 동작",
+    "title": "대역 확산의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "군 통신의 재밍 대응 기술에서 출발, 송신측은 확산 코드로 대역을 넓히고 수신측은 같은 코드로 원래 신호를 복원"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "처리 이득 = 확산 대역폭 / 원신호 대역폭 → 클수록 간섭·잡음 억제",
+       "신호 전력 밀도가 잡음 수준까지 낮아져 탐지가 어려움",
+       "확산 코드를 모르면 복조 불가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대역 확산 방식",
+    "subsections": [
+     {
+      "title": "DSSS",
+      "items": [
+       "데이터 비트에 훨씬 빠른 PN(의사 잡음) 코드(칩)를 곱해 확산",
+       "수신측이 같은 코드로 역확산하면 원신호는 모이고 협대역 간섭은 퍼져 약해짐",
+       "사용: IEEE 802.11b(11칩 바커 코드), GPS, CDMA·WCDMA"
+      ]
+     },
+     {
+      "title": "FHSS",
+      "items": [
+       "반송파 주파수를 도약 패턴에 따라 빠르게 바꿈",
+       "특정 주파수 간섭은 일부 시간에만 영향",
+       "사용: 블루투스(79/40채널 도약, 적응형 도약), 군 무전기"
+      ]
+     },
+     {
+      "title": "기타 방식",
+      "items": [
+       "THSS(시간 도약): 펄스 전송 시점을 코드로 변경 (UWB 임펄스)",
+       "CSS(처프 확산): 주파수가 연속 변하는 처프 신호 (LoRa, IEEE 802.15.4a)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "장점 및 활용",
     "subsections": [
      {
       "title": null,
       "items": [
-       "송신부 확산: 미리 동일한 확산코드를 공유하고 송신데이터에 확산코드를 곱하여 송신",
-       "수신부 역확산: 동일한 확산코드와 수신된 확산신호로 송신데이터를 복원",
-       "간섭신호가 함께 수신되면 역확산 과정에서 원래 신호는 복원되고 간섭신호는 확산되어 줄어듦"
+       "장점: 재밍·간섭 방지, 도청·탐지 방지(LPI), 다중 경로 페이딩에 강함(레이크 수신기로 다중 경로 결합), 코드로 다중 접속(CDMA), 정밀 거리 측정(GPS)",
+       "단점: 넓은 대역 필요, 코드 동기화 복잡, CDMA는 근거리-원거리 문제로 전력 제어 필요",
+       "활용: 무선랜(802.11b), 블루투스, GPS·GNSS, 3G 이동통신, LoRa IoT, 군 통신"
       ]
      }
     ]
@@ -14010,14 +14758,53 @@
    427,
    428
   ],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
   "name": "대역 확산(Spread Spectrum)",
   "en": "Spread Spectrum",
-  "reviewed": true,
   "outline": [
-   "DSSS 동작"
-  ]
+   "대역 확산의 개념",
+   "- 정의",
+   "- 특징",
+   "대역 확산 방식",
+   "- DSSS",
+   "- FHSS",
+   "- 기타 방식",
+   "장점 및 활용"
+  ],
+  "keywords_must": [
+   "대역 확산(Spread Spectrum)",
+   "확산·역확산(Spreading/Despreading)",
+   "처리 이득(Processing Gain)",
+   "DSSS(Direct Sequence Spread Spectrum)",
+   "PN 코드(Pseudo-Noise Code)",
+   "칩(Chip)",
+   "FHSS(Frequency Hopping Spread Spectrum)",
+   "재밍 방지(Anti-Jamming)",
+   "도청 방지(Anti-Interception, LPI)",
+   "페이딩 강인성(Fading Resistance)",
+   "CDMA(Code Division Multiple Access)"
+  ],
+  "keywords_ref": [
+   "THSS(Time Hopping Spread Spectrum)",
+   "CSS(Chirp Spread Spectrum, LoRa)",
+   "IEEE 802.11b",
+   "블루투스 주파수 도약(Bluetooth Hopping)",
+   "GPS C/A 코드",
+   "레이크 수신기(Rake Receiver)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "처리 이득(Processing Gain)",
+   "PN 코드(Pseudo-Noise Code)",
+   "DSSS(Direct Sequence Spread Spectrum)",
+   "FHSS(Frequency Hopping Spread Spectrum)",
+   "칩(Chip)"
+  ],
+  "quiz_groups": [
+   "mod",
+   "mux"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_273",
@@ -14026,54 +14813,63 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW>출제예상>P2P",
-  "definition": "컴퓨터와 다른 디바이스 간에 서버 없이 직접적인 교환을 통한 분산 자원의 공유를 목적으로 동등한자격을 가진 자율적 Peer 로 디지털 자원을 함께 공유하는 기술",
+  "definition": "중앙 서버 없이 동등한 자격을 가진 자율적 노드(Peer)들이 서로 직접 연결해, 각자 클라이언트이자 서버로서 디지털 자원(파일·대역폭·연산)을 공유하는 분산 네트워크 기술",
   "keywords": [
-   "수퍼노드",
-   "오버레이 구조",
-   "하이브리드 P2P vs 퓨어 P2P"
+   "피어 = 클라이언트 + 서버(Servent) · 오버레이 네트워크",
+   "유형: 퓨어 P2P(Gnutella) · 하이브리드 P2P(Napster 중앙 색인) · 슈퍼노드 구조",
+   "비구조형(플러딩 검색) vs 구조형(DHT: Chord · Kademlia)",
+   "BitTorrent: 트래커 · 시더/리처 · 조각 교환 · 팃포탯",
+   "활용: 파일 공유 · 블록체인 · IPFS · WebRTC",
+   "과제: NAT 통과 · 무임승차 · 저작권 · 보안(시빌 · 오염)"
   ],
   "sections": [
    {
-    "title": "분권화 된 시스템의 핵심 기술, P2P 네트워크의 기술 개요",
+    "title": "P2P의 개념",
     "subsections": [
      {
-      "title": "P2P 네트워크의 개념",
+      "title": "정의",
       "items": [
-       "Peer-to-Peer'라는 뜻으로 중앙 서버없이 각 단말들이 서로 동등한 입장에서 통신을 하는 네트워크"
+       "노드들이 대등한 관계로 자원을 직접 주고받는 분산 시스템, 물리망 위에 논리적 오버레이망 구성"
       ]
      },
      {
-      "title": "P2P 네트워크 사용 필요성",
+      "title": "클라이언트-서버와 비교",
       "items": [
-       "비용 절감, 쉬운 인프라 확장 등 P2P 를 활용함으로써 다양한 장점을 활용할 수 있음.",
-       "최근 중앙화에서 분권화 된 서비스 및 공유 경제의 개념으로 P2P 의 기술에 대한 관심이 다시늘어나고 있어 해당 기술에 대한 이해가 필요함"
+       "클라이언트-서버: 서버에 부하 집중, 단일 장애점, 관리 쉬움",
+       "P2P: 참여자가 늘수록 자원도 늘어 확장성 높음, 장애에 강함, 관리·보안 어려움"
       ]
      }
     ]
    },
    {
-    "title": "P2P 네트워크의 요소 기술 및 세부유형",
+    "title": "P2P 구조 유형",
     "subsections": [
      {
-      "title": "P2P 네트워크의 요소 기술",
-      "items": []
+      "title": "중앙 의존도에 따른 분류",
+      "items": [
+       "하이브리드 P2P: 중앙 서버가 색인·검색만, 파일은 피어끼리 (Napster)",
+       "퓨어 P2P: 서버 없이 검색까지 피어가 처리 (Gnutella 초기)",
+       "슈퍼노드 구조: 성능 좋은 피어가 색인·중계 담당 (KaZaA, 초기 Skype)"
+      ]
      },
      {
-      "title": "P2P 네트워크의 세부유형",
+      "title": "오버레이 구조에 따른 분류",
       "items": [
-       "P2P 네트워크는 비용절감, 유지보수 용이성, 높은 확장성 등을 가지고 있는 장점이 있지만, 공유에따른 보안 문제, 저작권 문제 등의 단점이 있음.",
-       "이에 따라 구현 또는 도입 시 여러 가지 사항들에 대한 고려가 필요함."
+       "비구조형: 임의 연결, 플러딩·랜덤 워크로 검색 → 단순하나 트래픽 많고 검색 보장 없음",
+       "구조형: DHT로 키-노드 매핑 규칙화(Chord, Kademlia, Pastry, CAN) → O(log N) 검색 보장"
       ]
      }
     ]
    },
    {
-    "title": "P2P 네트워크 구현 시 고려사항",
+    "title": "P2P 활용 및 과제",
     "subsections": [
      {
       "title": null,
       "items": [
-       "P2P 기술은 아주 오래전부터 사용되어 지고 있는 기술이나 불법 파일 공유로 인해 인식이 좋지 못하지만, 비용 등의 이유로 인해 장점도 많은 기술임, 향후 다가오는 미래 사회에서는 P2P 에 대한 중요도가 높아지고있으므로 장점에 대해서는 선도자가 될 수 있는 사업화 방안, 단점은 전문가들의 Control Tower 의 집단지성활용하여 빠른 개선이 필요함."
+       "BitTorrent: 파일을 조각으로 나눠 여러 피어와 동시 교환, 트래커·DHT로 피어 탐색, 팃포탯으로 기여 유도",
+       "블록체인: P2P 망으로 거래·블록 전파, IPFS 분산 저장, WebRTC P2P 통신, 소프트웨어·게임 업데이트 배포",
+       "과제: NAT 통과(STUN·홀 펀칭), 무임승차, 저작권 침해, 악성 코드 유포, 시빌·오염(Poisoning) 공격, ISP 트래픽 부담"
       ]
      }
     ]
@@ -14086,16 +14882,48 @@
   ],
   "name": "P2P(Peer-to-Peer)",
   "en": "Peer-to-Peer",
-  "reviewed": true,
   "outline": [
-   "분권화 된 시스템의 핵심 기술, P2P 네트워크의 기술 개요",
-   "- P2P 네트워크의 개념",
-   "- P2P 네트워크 사용 필요성",
-   "P2P 네트워크의 요소 기술 및 세부유형",
-   "- P2P 네트워크의 요소 기술",
-   "- P2P 네트워크의 세부유형",
-   "P2P 네트워크 구현 시 고려사항"
-  ]
+   "P2P의 개념",
+   "- 정의",
+   "- 클라이언트-서버와 비교",
+   "P2P 구조 유형",
+   "- 중앙 의존도에 따른 분류",
+   "- 오버레이 구조에 따른 분류",
+   "P2P 활용 및 과제"
+  ],
+  "keywords_must": [
+   "P2P(Peer-to-Peer)",
+   "피어(Peer)",
+   "서버 없는 분산 구조(Serverless Distributed)",
+   "오버레이 네트워크(Overlay Network)",
+   "퓨어 P2P(Pure P2P)",
+   "하이브리드 P2P(Hybrid P2P)",
+   "슈퍼노드(Super Node)",
+   "비구조형 P2P(Unstructured P2P)",
+   "구조형 P2P(Structured P2P)",
+   "DHT(Distributed Hash Table)"
+  ],
+  "keywords_ref": [
+   "Gnutella·Napster",
+   "Chord·Kademlia",
+   "BitTorrent(트래커·시더·리처)",
+   "팃포탯(Tit-for-Tat)",
+   "NAT 통과(NAT Traversal)",
+   "무임승차(Free Riding)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "DHT(Distributed Hash Table)",
+   "슈퍼노드(Super Node)",
+   "구조형 P2P(Structured P2P)",
+   "팃포탯(Tit-for-Tat)",
+   "하이브리드 P2P(Hybrid P2P)"
+  ],
+  "quiz_groups": [
+   "app"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_275",
@@ -14104,81 +14932,58 @@
   "subtitle": "위성-상공-지상 통합 무선 네트워크(Satellite-Aerial-Terrestrial Integrated Network, SATIN)",
   "domain": "NW",
   "category": "NW",
-  "definition": "위성망의 역할을 상공망과 지상망이 협력하여 보완적인 커버리지를 제공해 효율적인 방송 및 멀티캐스팅서비스를 가능케하는 프로젝트",
+  "definition": "위성망(Satellite RAN)·상공망(Aerial RAN: HAPS·드론)·지상망(Terrestrial RAN)을 하나로 통합해 서로 커버리지를 보완하고, 음영 지역 없는 통신과 효율적인 방송·멀티캐스트 서비스를 제공하는 3차원 통합 네트워크",
   "keywords": [
-   "Satellite RANs",
-   "Aerial RANs",
-   "Terrestrial RANs",
-   "스마트 농업"
+   "3계층: 위성 RAN(GEO · MEO · LEO) · 상공 RAN(HAPS · UAV) · 지상 RAN",
+   "3GPP NTN(Rel-17) · 6G 3차원 네트워크",
+   "효율적 방송·멀티캐스트 · 트래픽 분산",
+   "서비스: 스마트 농업 · 재난 · 해상 · 항공 · 오지 IoT",
+   "기술: 통합 이동성 관리 · 도플러·지연 보상 · 스펙트럼 공유",
+   "예: 위성 직접 연결(Direct-to-Cell)"
   ],
   "sections": [
    {
-    "title": "SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 개념 및 네트워크 특징",
+    "title": "SATIN의 개념",
     "subsections": [
      {
-      "title": "SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 개념",
-      "items": []
+      "title": "정의",
+      "items": [
+       "위성·상공·지상 무선 접속망이 협력하는 통합 네트워크, 6G의 3차원(3D) 커버리지 비전"
+      ]
      },
      {
-      "title": "SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 특징",
+      "title": "필요성",
       "items": [
-       "SATIN 시스템에서는 네트워크 커버리지가 늘어나면서 동시에망에 접속하는 유저의 수가 기하급수적으로 늘어남",
-       "현재 저주파 대역의 스펙트럼 자원은 매우 제한적이고 6G의요구사항을 만족하기에는 부족한 상황이기 때문에 고주파 대역의 주파수 자원을 활용하는 것은 앞으로 필수적",
-       "지상, 상공, 위성 RAN의 고유한 특성으로 인해 각 세그먼트의특성을 고려한 SATIN 공동 자원 스케줄링은 단일 RAN보다 훨씬 정교하게 수행",
-       "SATIN 구조에서는 지상국에서 UAV로, 지상국에서 위성으로 등의 다양한 종류의 핸드오버가 많이 발생"
+       "지상망은 해상·산간·사막·항공 등 지구 표면 상당 부분을 커버하지 못함",
+       "재난 시 지상 기지국 붕괴 대비, 광역 방송·IoT의 효율적 전달"
       ]
      }
     ]
    },
    {
-    "title": "SATIN의 재난대비 활용방법",
-    "subsections": [
-     {
-      "title": "재난대비, UAV 활용, 낙후지역 서비스 구성도",
-      "items": []
-     },
-     {
-      "title": "SATIN의 재난대비 활용방법 시나리오",
-      "items": [
-       "한 지역에서 대규모의 재난이 발생하면 통신 인프라가 심각하게 손상되어 제 기능을 하지 못하는 문제가 빈번히 발생",
-       "재난 환 경에서 발생하는 수많은 네트워크 트래픽을 처리하기 위한 기술 들이 부족",
-       "기지국 기능을 제공함과 동시에 상공 RAN의 자원을 활용하",
-       "재난 감지 정확도를 향상시켜 재난에 신속하고 시기 적절하게 대응"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "SATIN의 UAV 활용 및 낙후지역 네트워크 활용방법",
-    "subsections": [
-     {
-      "title": "SATIN의 UAV(Unmanned Aerial Vehicle) 활용 시나리오",
-      "items": [
-       "SATIN 구조에서는 상공 및 위성 영역에서의 이동 객체가 미리 정의된 경로를 따라 이동하며 사용자에게 주어진 기간 동안 네트워킹 서비스를 제공할 수 있는 시나리오가 가능",
-       "빅데이터, 머신러닝 및 UAV와 같은 최신 정보 통신 기술을 농업운영에 통합",
-       "농부들은 농작물의 비료 살포 뿐만 아니라 농작물 모니터링 및 질병 감지를 포함한 많은 기능을 UAV를 활용하여 수행"
-      ]
-     },
-     {
-      "title": "SATIN의 낙후지역 네트워크 서비스 활용 시나리오",
-      "items": [
-       "SATIN 구조는 낙후된 지역에 네트워크 서비스를 전달 할 수 있는 중요한 기술 중 하나"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "SATIN 표준화 및 산업동향",
+    "title": "SATIN 구성",
     "subsections": [
      {
       "title": null,
       "items": [
-       "유즈케이스 및 요구사항에 대한 연구를 시작",
-       "지상, 상공, 위성 RAN의 통합을 위한 잠재적 솔루션을 조사 및 R16의 일부로 상공 RAN을 5G망에 통합하려는 연구가 진행중",
-       "2018년 말까지 위성과 고궤도 플랫폼 (HAP) 스테이션을 5G로 통합하기 위한 잠재적 아키텍처를 완성",
-       "위성 멀티캐스트를 통해 5G용 에지 콘텐츠 전송 작업을 하고 있으며,",
-       "기지국 기능을 제공함과 동시에 상공 RAN의 자원을 활용하여 안정적인 통신 링크를 제공",
-       "ITU(International Telecommunication Union)는 위성 기술을 차세대 액세스 시스템 통합 진행 예정이며, IMT- 2020 네트워크에서 NTN 통합에 대한 권장 사항을 작업 중"
+       "위성 RAN: GEO(광역·고지연), MEO, LEO(저지연·저궤도 군집, Starlink 등) → 광역 커버리지·방송",
+       "상공 RAN: 성층권 HAPS(약 20km), 드론·UAV 기지국 → 지역 단위 신속 배치",
+       "지상 RAN: 5G/6G 기지국 → 고용량·저지연",
+       "통합 코어: 계층 간 트래픽 분산·경로 선택, 위성·HAPS는 지상망 백홀로도 활용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "핵심 기술 및 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "3GPP NTN(Rel-17): 위성·HAPS를 NR·NB-IoT 접속망으로 표준화, Rel-18·19에서 고도화",
+       "기술: 큰 전파 지연·도플러 보상, 계층 간 핸드오버·이동성 관리, 위성-지상 주파수 공유·간섭 관리, AI 기반 자원 배분",
+       "활용: 스마트 농업(광역 센서), 재난 통신, 해상·항공 인터넷, 오지 IoT, 광역 방송·멀티캐스트, 위성 직접 연결 스마트폰",
+       "과제: 단말 안테나·전력, 위성 발사·운영 비용, 우주 쓰레기·궤도 규제"
       ]
      }
     ]
@@ -14191,19 +14996,45 @@
   ],
   "name": "위성-상공-지상 통합 네트워크(SATIN, Satellite-Aerial-Terrestrial Integrated Network)",
   "en": "SATIN, Satellite-Aerial-Terrestrial Integrated Network",
-  "reviewed": true,
   "outline": [
-   "SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 개념 및 네트워크 특징",
-   "- SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 개념",
-   "- SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 특징",
-   "SATIN의 재난대비 활용방법",
-   "- 재난대비, UAV 활용, 낙후지역 서비스 구성도",
-   "- SATIN의 재난대비 활용방법 시나리오",
-   "SATIN의 UAV 활용 및 낙후지역 네트워크 활용방법",
-   "- SATIN의 UAV(Unmanned Aerial Vehicle) 활용 시나리오",
-   "- SATIN의 낙후지역 네트워크 서비스 활용 시나리오",
-   "SATIN 표준화 및 산업동향"
-  ]
+   "SATIN의 개념",
+   "- 정의",
+   "- 필요성",
+   "SATIN 구성",
+   "핵심 기술 및 활용"
+  ],
+  "keywords_must": [
+   "SATIN(Satellite-Aerial-Terrestrial Integrated Network)",
+   "위성 RAN(Satellite RAN)",
+   "상공 RAN(Aerial RAN)",
+   "지상 RAN(Terrestrial RAN)",
+   "저궤도 위성(LEO, Low Earth Orbit)",
+   "HAPS(High Altitude Platform Station)",
+   "무인 비행체(UAV)",
+   "커버리지 보완(Complementary Coverage)",
+   "방송·멀티캐스트(Broadcast/Multicast)",
+   "NTN(Non-Terrestrial Network, 3GPP Rel-17)"
+  ],
+  "keywords_ref": [
+   "GEO·MEO 위성",
+   "도플러·전파 지연 보상(Doppler/Delay Compensation)",
+   "통합 이동성 관리(Unified Mobility)",
+   "스마트 농업(Smart Agriculture)",
+   "위성 직접 연결(Direct-to-Cell)",
+   "6G 3차원 네트워크(3D Network)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "HAPS(High Altitude Platform Station)",
+   "LEO 위성(Low Earth Orbit Satellite)",
+   "NTN(Non-Terrestrial Network)",
+   "위성 직접 연결(Direct-to-Cell)"
+  ],
+  "quiz_groups": [
+   "mobile"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_276",
@@ -14212,44 +15043,65 @@
   "subtitle": "",
   "domain": "NW",
   "category": "네트워크",
-  "definition": "네트워크 관리자의 의도(Intent)를 인공지능 기술로 파악하여 인터넷을 구성하는 유선망과 무선망 설정을 자동으로 수행하는 네트워크 기술",
+  "definition": "관리자가 '어떻게'가 아니라 '무엇을' 원하는지(의도, Intent)만 표현하면, 시스템이 AI로 이를 해석해 유무선 네트워크 설정을 자동으로 수행하고 지속적으로 검증·보정하는 네트워크 기술 (IRTF NMRG RFC 9315)",
   "keywords": [
-   "Closed-Loop Intent Control",
-   "Intent Validation/Feedback",
-   "LLM"
+   "의도(Intent): 원하는 결과 · 선언적 표현(What, not How)",
+   "수명 주기: 의도 입력 → 변환 → 검증 → 배포(자동화) → 모니터링·보증",
+   "폐루프 의도 제어(Closed-Loop Intent Control)",
+   "의도 검증 · 피드백(Intent Validation/Feedback)",
+   "LLM: 자연어 의도 해석 · 정책 생성",
+   "기반: SDN · 텔레메트리 · AI/ML · 디지털 트윈"
   ],
   "sections": [
    {
-    "title": "의도 기반 네트워킹(Intent-Based Networking)의 개념",
+    "title": "IBN의 개념",
     "subsections": [
      {
-      "title": "의도 기반 네트워킹의 정의",
-      "items": []
+      "title": "정의",
+      "items": [
+       "IRTF NMRG가 RFC 9315(2022)로 개념·용어 정리, 의도 기반으로 망을 자율 운영하는 체계"
+      ]
      },
      {
-      "title": "의도 기반 네트워킹의 등장 배경",
+      "title": "등장 배경",
       "items": [
-       "다양한 형태의 IoT 기기 등장으로 인한 디바이스 수 기하급수적 증가",
-       "복잡한 NW의 수동적인 관리의 복잡성, 어려움, 오동작의 위험성 증가",
-       "IETF NMRG(Network Management Research Group)에서 정립한 RFC 9315 기반 기술"
+       "장비별 명령어 수동 설정 → 오류·장애의 주된 원인, 대규모·다계층 망 관리 한계",
+       "SDN·AI 발전으로 정책 수준 자동화 가능"
       ]
      }
     ]
    },
    {
-    "title": "의도 기반 네트워킹의 매커니즘 및 기술요소",
+    "title": "IBN 구성 및 동작",
     "subsections": [
      {
-      "title": "의도 기반 네트워킹의 매커니즘",
-      "items": []
+      "title": "의도 수명 주기",
+      "items": [
+       "① 의도 입력: '영상회의는 지연 50ms 이하 보장'처럼 목표를 자연어·정책으로 입력",
+       "② 변환(Translation): 의도를 장비별 설정·정책으로 변환",
+       "③ 검증(Validation): 디지털 트윈 등으로 충돌·실현 가능성 사전 확인",
+       "④ 배포(Activation): SDN 제어기·자동화 도구로 설정 적용",
+       "⑤ 보증(Assurance): 텔레메트리로 의도 달성 여부 지속 감시"
+      ]
      },
      {
-      "title": "의도 기반 네트워킹의 기술요소",
+      "title": "폐루프 제어",
       "items": [
-       "네트워크 관리 시스템(Network Monitoring System)",
-       "NMS, User - 네트워크 관리자(Admin, Client)",
-       "원하는 서비스의 목적 위한 선언적인 명령",
-       "Translation - High-level Policy"
+       "의도와 실제 상태의 차이를 감지하면 자동으로 재설정·최적화",
+       "결과를 관리자에게 피드백, 의도 수정 반영"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "LLM 활용 및 과제",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "LLM 활용: 자연어 의도 해석, 설정 코드 생성, 장애 원인 설명, 운영자 대화형 인터페이스",
+       "과제: 의도의 모호성·충돌 해결, AI 결정의 신뢰성·설명 가능성, LLM 환각에 대비한 검증 단계, 멀티 벤더 표준 인터페이스",
+       "관련: ETSI ZSM(무인 자동화 관리), 디지털 트윈 네트워크"
       ]
      }
     ]
@@ -14262,15 +15114,46 @@
   ],
   "name": "IBN(Intent-Based Networking, 의도 기반 네트워킹)",
   "en": "Intent-Based Networking",
-  "reviewed": true,
   "outline": [
-   "의도 기반 네트워킹(Intent-Based Networking)의 개념",
-   "- 의도 기반 네트워킹의 정의",
-   "- 의도 기반 네트워킹의 등장 배경",
-   "의도 기반 네트워킹의 매커니즘 및 기술요소",
-   "- 의도 기반 네트워킹의 매커니즘",
-   "- 의도 기반 네트워킹의 기술요소"
-  ]
+   "IBN의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "IBN 구성 및 동작",
+   "- 의도 수명 주기",
+   "- 폐루프 제어",
+   "LLM 활용 및 과제"
+  ],
+  "keywords_must": [
+   "IBN(Intent-Based Networking)",
+   "의도(Intent)",
+   "선언적 표현(Declarative, What not How)",
+   "의도 변환(Intent Translation)",
+   "의도 검증(Intent Validation)",
+   "자동화 배포(Automated Activation)",
+   "보증·모니터링(Assurance)",
+   "폐루프 제어(Closed-Loop Control)",
+   "피드백(Feedback)",
+   "LLM 기반 의도 해석(LLM Intent Parsing)"
+  ],
+  "keywords_ref": [
+   "RFC 9315(IRTF NMRG)",
+   "SDN 제어기(SDN Controller)",
+   "네트워크 텔레메트리(Network Telemetry)",
+   "디지털 트윈 검증(Digital Twin)",
+   "ZSM(Zero-touch Service Management)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "의도 변환(Intent Translation)",
+   "의도 보증(Intent Assurance)",
+   "폐루프 의도 제어(Closed-Loop Intent Control)",
+   "RFC 9315"
+  ],
+  "quiz_groups": [
+   "sdn"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_277",
@@ -14279,47 +15162,66 @@
   "subtitle": "",
   "domain": "NW",
   "category": "네트워크",
-  "definition": "모든 운영 프로세스와 작업이 이상적으로는 100 % 자동화로 자동 실행되도록 하는 차세대 관리 시스템",
+  "definition": "네트워크와 서비스의 모든 운영 프로세스와 작업을 사람의 개입 없이 이상적으로는 100% 자동 실행하도록 하는 종단 간 차세대 관리 체계 (ETSI ISG ZSM, 2017)",
   "keywords": [
-   "네트워크",
-   "인공지능",
-   "자동화",
-   "E2E 서비스 도메인",
-   "관리 도메인",
-   "공통 데이터 서비스",
-   "통합 패브릭"
+   "목표: 무인(Zero-touch) 100% 자동화 · 자율 운영",
+   "구조: 종단 간(E2E) 서비스 관리 도메인 · 관리 도메인 · 통합 패브릭 · 공통 데이터 서비스",
+   "폐루프 자동화(Closed-Loop Automation) · AI/ML",
+   "의도 기반 인터페이스 · 서비스 기반 구조(SBA)",
+   "자기 구성 · 자기 치유 · 자기 최적화",
+   "적용: 5G 네트워크 슬라이싱 · 다중 도메인 관리"
   ],
   "sections": [
    {
-    "title": "ZSM(Zero-touch network and Service Management)의 구성도 및 구성요소",
+    "title": "ZSM의 개념",
     "subsections": [
      {
-      "title": "ZSM(Zero-touch network and Service Management)의 구성도",
+      "title": "정의",
       "items": [
-       "ZSM 은 인간 개입 없이 네트워크 인프라가 아닌 서비스의 자동화된 관리가 목적"
+       "ETSI ISG ZSM이 2017년 시작한 무인 네트워크·서비스 관리 표준 프레임워크"
       ]
      },
      {
-      "title": "ZSM 의 구성요소",
+      "title": "등장 배경",
       "items": [
-       "네트워크 및 서비스의 전체 생애 주기를 관리하는 영역 - 서비스 라이프사이클 관",
-       "종단간 고객 대면 서비스를 관리하는 도메인 - QoS",
-       "네트워크 및 IT 시스템의 다양한 측면을 제어하고 최적 - 오케스트레이션"
+       "5G 네트워크 슬라이싱·NFV로 관리 대상과 도메인(RAN·전달·코어·클라우드)이 폭증",
+       "수동 운영으로는 서비스 개통·장애 대응 속도와 비용 한계"
       ]
      }
     ]
    },
    {
-    "title": "ZSM 에서 AI 기술사용 시 제약사항",
+    "title": "ZSM 참조 구조",
+    "subsections": [
+     {
+      "title": "구성 요소",
+      "items": [
+       "관리 도메인(Management Domain): RAN·전달망·코어 등 도메인별 자원·서비스 관리와 폐루프",
+       "E2E 서비스 관리 도메인: 여러 도메인을 묶어 종단 간 서비스(슬라이스) 오케스트레이션",
+       "통합 패브릭(Integration Fabric): 관리 서비스 간 등록·발견·통신 지원",
+       "공통 데이터 서비스: 도메인 간 데이터 공유·저장으로 AI 분석 지원"
+      ]
+     },
+     {
+      "title": "설계 원칙",
+      "items": [
+       "서비스 기반 관리 구조(마이크로서비스)",
+       "의도 기반 인터페이스",
+       "폐루프 자동화: 감시 → 분석 → 결정 → 실행",
+       "AI/ML 기반 예측·최적화, 도메인 분리와 관심사 분리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기대 효과 및 과제",
     "subsections": [
      {
       "title": null,
       "items": [
-       "ML 모델의 검증 및 정확성은 고품질 데이터 세트의",
-       "내린 결정과 그러한 결정을 유발한 입력 데이터 사 - 모델 해석성과 정확성은",
-       "네트워크는 동적이며 데이터 패턴이 변화해 예측 정 - 추론 정확도를 유지하면서 훈",
-       "정확도 향상은 계산, 메모리 및 에너지 자원에 대해 - 모델을 최적화하고 효율적인솔루션 개발 필요",
-       "IBN(Intent-Based Networking)과 연계하여 네트워크 구성을 자동화할 때 서비스 제공과 관리의 자동화를 ZSM 으로 상호보완"
+       "효과: 서비스 개통·변경 시간 단축, 자기 구성·치유·최적화로 장애 감소, 운영비 절감",
+       "과제: 다중 벤더·도메인 간 표준 연동, AI 신뢰성·설명 가능성, 자동화 오작동 위험 관리, 보안",
+       "관련: IBN, MANO, O-RAN SMO, TM Forum 자율 네트워크(Autonomous Networks)"
       ]
      }
     ]
@@ -14332,13 +15234,46 @@
   ],
   "name": "ZSM(Zero-touch network and Service Management)",
   "en": "Zero-touch network and Service Management",
-  "reviewed": true,
   "outline": [
-   "ZSM(Zero-touch network and Service Management)의 구성도 및 구성요소",
-   "- ZSM(Zero-touch network and Service Management)의 구성도",
-   "- ZSM 의 구성요소",
-   "ZSM 에서 AI 기술사용 시 제약사항"
-  ]
+   "ZSM의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "ZSM 참조 구조",
+   "- 구성 요소",
+   "- 설계 원칙",
+   "기대 효과 및 과제"
+  ],
+  "keywords_must": [
+   "ZSM(Zero-touch network and Service Management)",
+   "ETSI ISG ZSM",
+   "무인 자동화(Zero-touch Automation)",
+   "종단 간 서비스 관리 도메인(E2E Service Management Domain)",
+   "관리 도메인(Management Domain)",
+   "통합 패브릭(Integration Fabric)",
+   "공통 데이터 서비스(Data Services)",
+   "폐루프 자동화(Closed-Loop Automation)",
+   "인공지능(AI/ML)",
+   "네트워크 슬라이싱 관리(Slice Management)"
+  ],
+  "keywords_ref": [
+   "의도 기반 인터페이스(Intent-based Interface)",
+   "서비스 기반 관리 구조(Service-based Management Architecture)",
+   "자기 치유(Self-healing)",
+   "IBN(Intent-Based Networking)",
+   "MANO 연계"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "폐루프 자동화(Closed-Loop Automation)",
+   "관리 도메인(Management Domain)",
+   "통합 패브릭(Integration Fabric)",
+   "E2E 서비스 관리 도메인(End-to-End Service Management Domain)"
+  ],
+  "quiz_groups": [
+   "sdn"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  },
  {
   "id": "NW_278",
@@ -14347,57 +15282,66 @@
   "subtitle": "",
   "domain": "NW",
   "category": "NW > 통신 프로토콜",
-  "definition": "SCADA 시스템에서 RTU·PLC 간 제어 및 상태 정보 통신을 위해 시리얼과 TCP에서 구현 가능한 산업용 통신 응용 계층 메시징 프로토콜(1979년 Modicon 개발).",
+  "definition": "SCADA 등 산업 제어 시스템에서 PLC·RTU 간 제어·상태 정보를 주고받기 위해 시리얼 통신과 TCP/IP 위에서 구현되는 마스터-슬레이브(클라이언트-서버) 방식의 응용 계층 메시징 프로토콜 (1979년 Modicon)",
   "keywords": [
-   "Master-Slave",
-   "RS232",
-   "RS422",
-   "RS485",
-   "TCP/IP"
+   "마스터-슬레이브(클라이언트-서버) 요청-응답",
+   "시리얼: Modbus RTU(이진 · CRC-16) · Modbus ASCII(LRC) — RS-232 · RS-422 · RS-485",
+   "Modbus TCP: TCP 502 · MBAP 헤더",
+   "데이터 모델: 코일 · 이산 입력 · 입력 레지스터 · 홀딩 레지스터",
+   "기능 코드: 01 코일 읽기 · 03 홀딩 레지스터 읽기 · 06/16 쓰기",
+   "보안 취약: 인증·암호화 없음 → Modbus/TCP Security(TLS, 802)"
   ],
   "sections": [
    {
-    "title": "산업용 직렬 방식 통신 프로토콜, Modbus 의 개요",
+    "title": "모드버스의 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "정의",
       "items": [
-       "Master 는 요청을 보내고 Slave 는 응답",
-       "RS232, RS422, RS485, TCP/IP",
-       "프로토콜 Specification 이 모두 공개, 로열티 없음",
-       "raw 비트나 워드 단위 데이터 접근으로 유연한 처리",
-       "1979 년 자동화 디바이스간 통신을 위해 Modicon(Schneider Electric)에서 개발한 시리얼 통신 프로토콜. (2004 년 Modbus Organization 에 권한 양도되어 관리되고 있음)"
+       "1979년 Modicon(현 슈나이더 일렉트릭)이 PLC용으로 개발, 현재 Modbus Organization이 관리하는 개방형 산업 통신 프로토콜"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "단순·개방·무료로 산업 현장의 사실상 표준",
+       "마스터(클라이언트)가 요청하고 슬레이브(서버)가 응답, 슬레이브끼리 직접 통신 없음",
+       "시리얼 망에서 슬레이브 주소 1~247"
       ]
      }
     ]
    },
    {
-    "title": "Modbus 프로토콜 유형 및 프레임 구조",
+    "title": "모드버스 구성",
     "subsections": [
      {
-      "title": "Modbus 프로토콜 유형",
+      "title": "통신 방식",
       "items": [
-       "바이너리 형식으로 데이터를 표현(속도 빠름) - RS-232(1:1)",
-       "ASCII 문자로 데이터 표현(RTU 보다 느림) - RS-232(1:1)",
-       "Modbus 프로토콜의 TCP/IP 용 버전(502 port)",
-       "RUT 와 같이 페이로드에 체크섬이 포함된",
-       "데이터 모델 및 함수 코드는 동일하고 캡슐화만 다름.(Modbus +, Pemex Modbus, Enron Modbus 벤더에서 확장한프로토콜이기 때문에 데이터 모델과 함수 코드 다름)"
+       "Modbus RTU: 이진 전송, CRC-16 오류 검사, 효율 높음 (RS-485 다중 접속 주로 사용)",
+       "Modbus ASCII: 문자 전송, LRC 검사, 디버깅 쉬움",
+       "물리층: RS-232(점대점), RS-422, RS-485(다중 노드·장거리)",
+       "Modbus TCP: 이더넷·TCP 502, MBAP 헤더(트랜잭션 ID·유닛 ID), 체크섬은 TCP/IP에 위임"
+      ]
+     },
+     {
+      "title": "데이터 모델과 기능 코드",
+      "items": [
+       "코일(Coil, 1비트 읽기/쓰기), 이산 입력(1비트 읽기), 입력 레지스터(16비트 읽기), 홀딩 레지스터(16비트 읽기/쓰기)",
+       "기능 코드: 01 코일 읽기, 02 이산 입력 읽기, 03 홀딩 레지스터 읽기, 04 입력 레지스터 읽기, 05·06 단일 쓰기, 15·16 다중 쓰기",
+       "오류 시 예외 응답(기능 코드 + 0x80)"
       ]
      }
     ]
    },
    {
-    "title": "Modbus 프로토콜 활용 사례",
+    "title": "보안 취약점 및 대응",
     "subsections": [
      {
       "title": null,
       "items": [
-       "공장 자동화에서 PLC ↔ SCADA 간 센서 데이터(온 - 실시간 설비 모니터링 및 제어 효율성 향상도·압력·유량) 교환",
-       "발전소·변전소의 계측기, 보호계전기 데이터를 EMS에 - 전력 계통 안정성 확보, 에너지 최적화전송",
-       "HVAC·조명·출입 통제 시스템",
-       "건물 관리 비용 절감, 에너지 효율 개선",
-       "IoT 게이트웨이에서 센서 데이터를 Modbus TCP로 클라 - 스마트팩토리·예지보전 서비스 구현우드 전송",
-       "신호제어기, 하수처리장, 환경 모니터링 센서 데이터 - 공공 인프라 운영 효율화, 안전성 강화수집"
+       "취약점: 인증·암호화·무결성 없음 → 도청, 명령 위조·재전송, 임의 쓰기로 설비 오작동 (산업 제어 시스템 공격 대상)",
+       "대응: Modbus/TCP Security(TLS + 인증서, 포트 802), 망 분리·산업용 방화벽(DPI로 기능 코드 필터링), ICS 전용 IDS, 화이트리스트 기반 접근 제어",
+       "IEC 62443 등 산업 제어 보안 표준 준수"
       ]
      }
     ]
@@ -14410,12 +15354,47 @@
   ],
   "name": "모드버스 프로토콜(Modbus Protocol)",
   "en": "Modbus Protocol",
-  "reviewed": true,
   "outline": [
-   "산업용 직렬 방식 통신 프로토콜, Modbus 의 개요",
-   "Modbus 프로토콜 유형 및 프레임 구조",
-   "- Modbus 프로토콜 유형",
-   "Modbus 프로토콜 활용 사례"
-  ]
+   "모드버스의 개념",
+   "- 정의",
+   "- 특징",
+   "모드버스 구성",
+   "- 통신 방식",
+   "- 데이터 모델과 기능 코드",
+   "보안 취약점 및 대응"
+  ],
+  "keywords_must": [
+   "모드버스(Modbus)",
+   "SCADA(Supervisory Control And Data Acquisition)",
+   "PLC(Programmable Logic Controller)",
+   "RTU(Remote Terminal Unit)",
+   "마스터-슬레이브(Master–Slave)",
+   "Modbus RTU",
+   "Modbus TCP(포트 502)",
+   "RS-485",
+   "기능 코드(Function Code)",
+   "레지스터·코일 데이터 모델(Register/Coil)"
+  ],
+  "keywords_ref": [
+   "Modbus ASCII(LRC)",
+   "RS-232·RS-422",
+   "MBAP 헤더(Modbus Application Protocol Header)",
+   "CRC-16",
+   "Modbus/TCP Security(TLS, 포트 802)",
+   "최대 247개 슬레이브"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "Modbus RTU",
+   "Modbus TCP",
+   "홀딩 레지스터(Holding Register)",
+   "기능 코드(Function Code)",
+   "MBAP 헤더(Modbus Application Protocol Header)"
+  ],
+  "quiz_groups": [
+   "iot"
+  ],
+  "quiz_avoid": [],
+  "reviewed": true
  }
 ]

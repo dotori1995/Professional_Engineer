@@ -28,6 +28,7 @@ ASBR: Autonomous System Boundary Router
 ASK: Amplitude Shift Keying
 AXFR: Full Zone Transfer
 BBR: Bottleneck Bandwidth and Round-trip propagation time
+BCH: Bose–Chaudhuri–Hocquenghem
 BDR: Backup Designated Router
 BEC: Backward Error Correction
 BEPS: Base Erosion and Profit Shifting
@@ -50,6 +51,7 @@ CIDR: Classless Inter-Domain Routing
 CIR: Committed Information Rate
 CLAT: Customer-side Translator
 CNAME: Canonical Name
+CNF: Cloud-native Network Function
 CoAP: Constrained Application Protocol
 CoDel: Controlled Delay
 CoRE: Constrained RESTful Environments
@@ -60,6 +62,7 @@ CSMA: Carrier Sense Multiple Access
 CSMA/CA: Carrier Sense Multiple Access with Collision Avoidance
 CSMA/CD: Carrier Sense Multiple Access with Collision Detection
 CSMS: Cyber Security Management System
+CSS: Chirp Spread Spectrum
 CTS: Clear To Send
 CU: Central Unit
 CWDM: Coarse Wavelength Division Multiplexing
@@ -69,6 +72,7 @@ DCF: Distributed Coordination Function
 DENM: Decentralized Environmental Notification Message
 DF: Don't Fragment
 DHCP: Dynamic Host Configuration Protocol
+DHT: Distributed Hash Table
 DiffServ: Differentiated Services
 DIFS: DCF Inter-Frame Space
 DLNA: Digital Living Network Alliance
@@ -126,8 +130,10 @@ GPS: Global Positioning System
 GSLB: Global Server Load Balancing
 GSM: Global System for Mobile Communications
 GWCN: Gateway Core Network
+HAPS: High Altitude Platform Station
 HARQ: Hybrid Automatic Repeat reQuest
 HCE: Host Card Emulation
+HCI: Hyper-Converged Infrastructure
 HDLC: High-level Data Link Control
 HOL: Head-of-Line
 HSRP: Hot Standby Router Protocol
@@ -191,6 +197,7 @@ M2M: Machine-to-Machine
 MAC: Medium Access Control
 MANET: Mobile Ad hoc Network
 MANO: Management and Orchestration
+MBAP: Modbus Application Protocol
 MCPTT: Mission Critical Push-To-Talk
 MCU: Multipoint Control Unit
 MEC: Multi-access Edge Computing
@@ -224,9 +231,11 @@ NAV: Network Allocation Vector
 NB-IoT: Narrowband IoT
 NDEF: NFC Data Exchange Format
 NDP: Neighbor Discovery Protocol
+NETCONF: Network Configuration Protocol
 NFC: Near Field Communication
 NFV: Network Functions Virtualization
 NFVI: NFV Infrastructure
+NFVO: NFV Orchestrator
 NMRG: Network Management Research Group
 NOMA: Non-Orthogonal Multiple Access
 NPN: Non-Public Network
@@ -240,6 +249,9 @@ NSSAI: Network Slice Selection Assistance Information
 NSSF: Network Slice Selection Function
 NTN: Non-Terrestrial Network
 NTRIP: Networked Transport of RTCM via Internet Protocol
+O-CU: O-RAN Central Unit
+O-DU: O-RAN Distributed Unit
+O-RU: O-RAN Radio Unit
 OBU: On-Board Unit
 OCF: Open Connectivity Foundation
 OECD: Organisation for Economic Co-operation and Development
@@ -247,6 +259,8 @@ OFDM: Orthogonal Frequency Division Multiplexing
 OFDMA: Orthogonal Frequency Division Multiple Access
 OLSR: Optimized Link State Routing
 OMA: Orthogonal Multiple Access
+ONF: Open Networking Foundation
+ONOS: Open Network Operating System
 OPNFV: Open Platform for NFV
 OSPF: Open Shortest Path First
 OSS: Operations Support System
@@ -286,6 +300,7 @@ RED: Random Early Detection
 REST: Representational State Transfer
 RF: Radio Frequency
 RFC: Request for Comments
+RIC: RAN Intelligent Controller
 RIP: Routing Information Protocol
 RIPng: RIP next generation
 RIS: Reconfigurable Intelligent Surface
@@ -302,13 +317,16 @@ RTO: Retransmission TimeOut
 RTS: Request To Send
 RTT: Round Trip Time
 RTTVAR: Round-Trip Time Variation
+RTU: Remote Terminal Unit
 RU: Radio Unit
 SA: Standalone
 SACK: Selective Acknowledgment
 SAM: Slot Availability Mask
+SASE: Secure Access Service Edge
 SASL: Simple Authentication and Security Layer
 SATIN: Satellite-Aerial-Terrestrial Integrated Network
 SBA: Service-Based Architecture
+SCADA: Supervisory Control And Data Acquisition
 SCell: Secondary Cell
 SCMA: Sparse Code Multiple Access
 SCTP: Stream Control Transmission Protocol
@@ -322,6 +340,7 @@ SDP: Session Description Protocol
 SDR: Software-Defined Radio
 SDS: Software-Defined Storage
 SDV: Software Defined Vehicle
+SECDED: Single Error Correction, Double Error Detection
 SecOC: Secure Onboard Communication
 SFU: Selective Forwarding Unit
 SIC: Successive Interference Cancellation
@@ -331,6 +350,7 @@ SLA: Service Level Agreement
 SLAAC: Stateless Address Autoconfiguration
 SLD: Second-Level Domain
 SMF: Session Management Function
+SMO: Service Management and Orchestration
 SNPN: Standalone Non-Public Network
 SPF: Shortest Path First
 SPIN: Sensor Protocols for Information via Negotiation
@@ -373,10 +393,12 @@ V2P: Vehicle-to-Pedestrian
 V2V: Vehicle-to-Vehicle
 V2X: Vehicle-to-Everything
 VANET: Vehicular Ad-hoc Network
+VIM: Virtualized Infrastructure Manager
 VIP: Virtual IP
 VLSM: Variable Length Subnet Mask
 VMAF: Video Multimethod Assessment Fusion
 VNF: Virtualized Network Function
+VNFM: VNF Manager
 VPN: Virtual Private Network
 VRRP: Virtual Router Redundancy Protocol
 VRS: Virtual Reference Station
@@ -395,3 +417,4 @@ XMPP: eXtensible Messaging and Presence Protocol
 XOR: Exclusive OR
 ZRP: Zone Routing Protocol
 ZSM: Zero-touch network and Service Management
+ZTP: Zero-Touch Provisioning
