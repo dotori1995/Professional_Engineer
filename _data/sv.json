@@ -21007,67 +21007,100 @@
    293,
    298
   ],
-  "en": "u-health",
+  "en": "Ubiquitous Healthcare",
   "dueum": null,
-  "name": "헬스(u-health)",
-  "title": "헬스(u-health)",
-  "definition": "Ubiquitous와 Healthcare의 약어로서, 정보통신기술과 의료기술을 접목하여 언제 어디서나 예방, 진단, 진료를받을 수 있는 의료서비스",
+  "name": "유비쿼터스 헬스케어(u-Healthcare)",
+  "title": "유비쿼터스 헬스케어(u-Healthcare)",
+  "definition": "웨어러블·환경 센서로 측정한 생체 정보를 유무선 네트워크로 의료진·건강관리 서버에 전송·분석해 언제 어디서나 예방·진단·치료·사후관리를 받을 수 있게 하는 ICT 융합 의료 서비스",
   "keywords_must": [
-   "센싱",
-   "취합",
-   "전송",
-   "분석",
-   "피드백",
-   "U-Healthcare의 개념",
-   "U-Healthcare의 기술요소",
-   "U-Health의 서비스 흐름 구성도"
+   "생체 신호 센싱(혈당·심전도·산소포화도)",
+   "웨어러블 센서",
+   "환경 센서(무자각 측정)",
+   "게이트웨이 취합",
+   "체내외 통신망(WBAN, IEEE 802.15.6)",
+   "건강 기저선 분석",
+   "경고·조언 피드백",
+   "원격 모니터링",
+   "의료기기 인증"
   ],
   "keywords_ref": [
-   "BCN"
+   "스마트 헬스케어",
+   "개인건강기록(PHR)",
+   "비대면 진료",
+   "디지털 치료제",
+   "의료 데이터 개인정보 보호"
   ],
   "keywords": [
-   "핵심: 센싱 · 취합 · 전송",
-   "기술: 분석 · 피드백 · U-Healthcare의 개념",
-   "운영: U-Healthcare의 기술요소 · U-Health의 서비스 흐름 구성도",
-   "참고: BCN"
+   "서비스 흐름: 센싱 → 취합·전송 → 분석 → 피드백",
+   "기술: 측정 센서(웨어러블·환경) · 전송(외부망 직접·게이트웨이·WBAN) · 측정 기기(심전계·뇌파계·혈당계)",
+   "배경: 고령화 · 만성질환 증가 · 건강관리 수요 · IT·BT·NT 융합"
   ],
   "outline": [
-   "IT 와 BT 의 결합을 통한 의료서비스, U-Healthcare",
-   "- U-Healthcare 의 개념",
-   "- U-Healthcare 의 필요성",
-   "U-Health 의 구성도 및 구성요소",
-   "- U-Health 의 서비스 흐름 구성도",
-   "- U-Healthcare 서비스 구성요소",
-   "U-Healthcare 의 기술상세",
-   "- U-Healthcare 의 기술요소",
-   "U-Healthcare 의 시장동향",
-   "- 헬스 요점"
+   "개념과 등장 배경",
+   "- 개념: 병원 밖 의료",
+   "- 배경: 고령화·만성질환",
+   "서비스 흐름",
+   "- 수집: 센싱·전송",
+   "- 활용: 분석·피드백",
+   "핵심 기술과 과제",
+   "- 센서: 착용·환경",
+   "- 통신: WBAN",
+   "- 과제: 인증·보호"
   ],
   "sections": [
    {
-    "title": "헬스 핵심",
+    "title": "개념과 등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 병원 밖 의료",
       "items": [
-       "센싱: 헬스에서 센싱을 다루는 핵심 암기 포인트",
-       "취합: 헬스에서 취합을 다루는 핵심 암기 포인트",
-       "전송: 헬스에서 전송을 다루는 핵심 암기 포인트",
-       "분석: 헬스에서 분석을 다루는 핵심 암기 포인트"
+       "치료 중심 병원 의료에서 일상 공간의 예방·관리 중심으로 확장, 원격 모니터링으로 만성질환 관리"
+      ]
+     },
+     {
+      "title": "배경: 고령화·만성질환",
+      "items": [
+       "고령화·저출산과 만성질환 증가로 의료비 부담 확대, 센서·통신 발전과 의료 산업화 수요"
       ]
      }
     ]
    },
    {
-    "title": "헬스 구성·기술",
+    "title": "서비스 흐름",
     "subsections": [
      {
-      "title": null,
+      "title": "수집: 센싱·전송",
       "items": [
-       "피드백: 헬스에서 피드백을 다루는 핵심 암기 포인트",
-       "U-Healthcare의 개념: 헬스에서 U-Healthcare의 개념을 다루는 핵심 암기 포인트",
-       "U-Healthcare의 기술요소: 헬스에서 U-Healthcare의 기술요소를 다루는 핵심 암기 포인트",
-       "U-Health의 서비스 흐름 구성도: 헬스의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램"
+       "생체 신호 센싱(혈당·심전도·산소포화도) 후 게이트웨이 취합 또는 외부망 직접 연결로 원격지 전송"
+      ]
+     },
+     {
+      "title": "활용: 분석·피드백",
+      "items": [
+       "건강 기저선 분석: 개인 추세에서 기저선 이탈 여부 판단, 경고·조언 피드백을 앱 푸시·알림으로 전달"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "핵심 기술과 과제",
+    "subsections": [
+     {
+      "title": "센서: 착용·환경",
+      "items": [
+       "웨어러블 센서는 정확도·착용감·내구성이 과제, 환경 센서(무자각 측정)는 의식 없이 측정하나 비정형 데이터로 정확도 저하"
+      ]
+     },
+     {
+      "title": "통신: WBAN",
+      "items": [
+       "체내외 통신망(WBAN, IEEE 802.15.6): 인체 주변·체내 기기를 저전력 연결, 의료용 우선 전송 지원"
+      ]
+     },
+     {
+      "title": "과제: 인증·보호",
+      "items": [
+       "의료기기 인증과 측정 신뢰성, 민감 건강정보 보호, 원격 진료 관련 의료법 제도 정비"
       ]
      }
     ]
@@ -21076,21 +21109,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "센싱",
-   "취합",
-   "전송",
-   "분석",
-   "피드백",
-   "U-Healthcare의 개념",
-   "U-Healthcare의 기술요소",
-   "U-Health의 서비스 흐름 구성도"
+   "생체 신호 센싱(혈당·심전도·산소포화도)",
+   "웨어러블 센서",
+   "환경 센서(무자각 측정)",
+   "게이트웨이 취합",
+   "체내외 통신망(WBAN, IEEE 802.15.6)",
+   "건강 기저선 분석",
+   "경고·조언 피드백",
+   "원격 모니터링",
+   "의료기기 인증"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_250",
@@ -21101,81 +21136,93 @@
    265,
    269
   ],
-  "en": "Healthcare Information Standards",
+  "en": "PACS, PHR, EMR, DICOM, OCS",
   "dueum": null,
   "name": "의료정보 표준(PACS·PHR·EMR·DICOM·OCS)",
   "title": "의료정보 표준(PACS·PHR·EMR·DICOM·OCS)",
-  "definition": "의료 환경에서 발생한 의학영상(CT,MRI)등을 데이터베이스에 저장하는 가용성, 접근성 향상시스템",
+  "definition": "병원 안팎의 의료 정보를 디지털화·교환하기 위한 시스템과 표준의 묶음으로, OCS·EMR·PACS가 병원 내 처방·기록·영상을 관리하고 DICOM·HL7이 영상과 임상 정보 교환 형식을 정하며 PHR이 환자 중심 건강기록을 통합함",
   "keywords_must": [
-   "EMR",
-   "HER",
+   "처방전달시스템(OCS, Order Communication System)",
+   "전자의무기록(EMR, Electronic Medical Record)",
+   "전자건강기록(EHR, Electronic Health Record)",
+   "개인건강기록(PHR, Personal Health Record)",
+   "의료영상저장전송시스템(PACS)",
+   "DICOM(Digital Imaging and Communications in Medicine)",
+   "C-FIND·C-MOVE·C-STORE",
    "HL7",
-   "DICOM",
-   "PHR",
-   "OCS",
-   "PACS",
-   "EMR/HER",
-   "MRI"
+   "IHE 통합 프로파일"
   ],
   "keywords_ref": [
-   "ACR",
-   "NEMA",
-   "DBMS",
-   "BCP",
-   "DRS"
+   "병원정보시스템(HIS)",
+   "마이 헬스웨이(건강정보 고속도로)",
+   "진료정보교류",
+   "손실·무손실 압축",
+   "필름리스(Filmless) 병원"
   ],
   "keywords": [
-   "핵심: EMR · HER · HL7",
-   "기술: DICOM · PHR · OCS",
-   "운영: PACS · EMR/HER · MRI",
-   "참고: ACR · NEMA · DBMS"
+   "병원 내부: OCS(처방) → EMR(진료 기록) → PACS(영상)",
+   "범위 확장: EMR(한 기관) → EHR(기관 간) → PHR(환자 주도)",
+   "표준: DICOM(영상) · HL7(임상 메시지) · IHE(통합 프로파일)"
   ],
   "outline": [
-   "의료영상 획득 및 전송시스템 PACS 개요",
-   "- PACS(Picture Archiving & Communication…",
-   "- PACS 도입의 필요성",
-   "PACS 의 구성도 및 표준기술",
-   "- PACS 의 구성도",
-   "- PACS 의 구성요소",
-   "PACS 의 표준기술",
-   "- DICOM(Digital Imaging and Communicatio…"
+   "병원 정보 시스템",
+   "- 병원 업무: 처방 전달·진료 기록",
+   "- 기록 범위: 기관 간·환자 주도",
+   "의료영상 저장·전송",
+   "- 구성: 획득·저장·조회",
+   "- 효과: 필름리스",
+   "교환 표준",
+   "- 영상: 파일·통신 서비스",
+   "- 통합: HL7·IHE"
   ],
   "sections": [
    {
-    "title": "의료정보 표준 핵심",
+    "title": "병원 정보 시스템",
     "subsections": [
      {
-      "title": null,
+      "title": "병원 업무: 처방 전달·진료 기록",
       "items": [
-       "EMR: EMR를 의료정보 표준 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HER: HER를 의료정보 표준 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HL7: HL7를 의료정보 표준 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "DICOM: DICOM를 의료정보 표준 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "처방전달시스템(OCS, Order Communication System)은 처방을 검사·약제·원무로 전달, 전자의무기록(EMR)은 진료 기록 전체 전산화"
+      ]
+     },
+     {
+      "title": "기록 범위: 기관 간·환자 주도",
+      "items": [
+       "전자건강기록(EHR)은 기관 간 공유되는 평생 기록, 개인건강기록(PHR)은 환자가 의료·라이프로그 데이터를 직접 관리"
       ]
      }
     ]
    },
    {
-    "title": "의료정보 표준 구성·기술",
+    "title": "의료영상 저장·전송",
     "subsections": [
      {
-      "title": null,
+      "title": "구성: 획득·저장·조회",
       "items": [
-       "PHR: PHR를 의료정보 표준 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OCS: OCS를 의료정보 표준 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "PACS: PACS를 의료정보 표준 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "EMR/HER: EMR/HER를 의료정보 표준 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "영상획득부는 CT·MRI를 DICOM으로 수집, 영상저장부는 단기 무손실·장기 손실 압축 저장, 영상조회부가 판독·조회"
+      ]
+     },
+     {
+      "title": "효과: 필름리스",
+      "items": [
+       "필름 보관·검색 업무 제거, 원격 판독과 3차원 영상 활용, 대용량 저장·고속 네트워크 필요"
       ]
      }
     ]
    },
    {
-    "title": "의료정보 표준 운영",
+    "title": "교환 표준",
     "subsections": [
      {
-      "title": null,
+      "title": "영상: 파일·통신 서비스",
       "items": [
-       "MRI: MRI를 의료정보 표준 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "DICOM(Digital Imaging and Communications in Medicine): 영상 파일과 통신 표준, C-STORE로 저장·C-FIND로 조회·C-MOVE로 전송"
+      ]
+     },
+     {
+      "title": "통합: HL7·IHE",
+      "items": [
+       "HL7은 임상 정보 메시지 표준, IHE 통합 프로파일은 DICOM·HL7 조합 방식을 업무 시나리오별로 규정"
       ]
      }
     ]
@@ -21184,22 +21231,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "EMR",
-   "HER",
+   "처방전달시스템(OCS, Order Communication System)",
+   "전자의무기록(EMR, Electronic Medical Record)",
+   "전자건강기록(EHR, Electronic Health Record)",
+   "개인건강기록(PHR, Personal Health Record)",
+   "의료영상저장전송시스템(PACS)",
+   "DICOM(Digital Imaging and Communications in Medicine)",
+   "C-FIND·C-MOVE·C-STORE",
    "HL7",
-   "DICOM",
-   "PHR",
-   "OCS",
-   "PACS",
-   "EMR/HER",
-   "MRI"
+   "IHE 통합 프로파일"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_255",
@@ -21210,63 +21258,100 @@
    299,
    300
   ],
-  "en": "Health Level 7",
+  "en": "Health Level Seven",
   "dueum": null,
-  "name": "HL7(Health Level 7)",
-  "title": "HL7(Health Level 7)",
-  "definition": "이기종 시스템 간 환자의 자료 및 검사에 대한 상세정보 교류 및 전송 데이터 전산처리로 인한 의료정보 활용성 증가",
+  "name": "HL7(Health Level Seven)",
+  "title": "HL7(Health Level Seven)",
+  "definition": "이기종 의료정보시스템 간 환자·처방·검사 결과 등 임상 정보를 교환하기 위해 HL7 International이 제정한 표준 체계로, OSI 7계층의 응용 계층(7)을 의미하며 v2 메시지·v3 RIM·CDA를 거쳐 웹 API 기반 FHIR로 발전함",
   "keywords_must": [
    "상호운용성(Interoperability)",
-   "통합프레임워크 표준",
-   "V2 Messge",
-   "FHIR(Fast healthcare interoperability Resoruces)",
-   "MLLP",
-   "HL7 메시지 구조",
-   "https"
+   "HL7 v2 메시지(세그먼트·필드·구분자)",
+   "트리거 이벤트(ADT·ORM·ORU)",
+   "MLLP(Minimal Lower Layer Protocol)",
+   "HL7 v3 RIM(참조 정보 모델)",
+   "임상 문서 구조(CDA)",
+   "FHIR(Fast Healthcare Interoperability Resources)",
+   "RESTful API·리소스",
+   "SMART on FHIR"
   ],
   "keywords_ref": [
-   "V2",
-   "FHIR"
+   "DICOM",
+   "IHE",
+   "LOINC·SNOMED CT",
+   "진료정보교류 표준",
+   "전자건강기록(EHR)"
   ],
   "keywords": [
-   "핵심: 상호운용성(Interoperability) · 통합프레임워크 표준 · V2 Messge",
-   "기술: FHIR(Fast healthcare interoperability Resoruces) · MLLP · HL7 메시지 구조",
-   "운영: https",
-   "참고: V2 · FHIR"
+   "발전: v2(파이프 구분 메시지) → v3(RIM·XML) → CDA(임상 문서) → FHIR(REST·JSON 리소스)",
+   "v2 구조: 메시지 → 세그먼트(MSH·PID·OBR) → 필드 → 컴포넌트 / 전송: MLLP",
+   "효과: 기관 간 정보 공유 · 인터페이스 개발 용이 · 유지보수 용이"
   ],
   "outline": [
-   "이기종 의료정보 시스템간 정보호환을 가능하도록 제정된 표준, HL7의 개요",
-   "- HL7 요점",
-   "MLLP 및 HL7 메시지 구조",
-   "- MLLP(Minimal Lower Layer Protocol)",
-   "- HL7 메시지 구조",
-   "HL7 표준 도입 효과",
-   "- HL7 요점"
+   "개념과 명칭",
+   "- 명칭: 응용 계층",
+   "- 대상: 임상 메시지",
+   "버전별 구조",
+   "- v2: 파이프 메시지",
+   "- v3·CDA: 모델 기반",
+   "- FHIR: 웹 API",
+   "도입 효과와 과제",
+   "- 효과: 공유·개발",
+   "- 과제: 용어·보안"
   ],
   "sections": [
    {
-    "title": "HL7 핵심",
+    "title": "개념과 명칭",
     "subsections": [
      {
-      "title": null,
+      "title": "명칭: 응용 계층",
       "items": [
-       "상호운용성(Interoperability): HL7에서 상호운용성(Interoperability)을 다루는 핵심 암기 포인트",
-       "통합프레임워크 표준: HL7 상호운용·품질을 맞추는 규격·기준",
-       "V2 Messge: HL7에서 V2 Messge를 다루는 핵심 암기 포인트",
-       "FHIR(Fast healthcare interoperability Resoruces): FHIR를 HL7 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "'Level Seven'은 OSI 7계층의 응용 계층을 뜻하며 통신이 아닌 의료 응용 데이터 의미를 표준화"
+      ]
+     },
+     {
+      "title": "대상: 임상 메시지",
+      "items": [
+       "트리거 이벤트(ADT·ORM·ORU): 입퇴원·처방·결과 같은 업무 사건이 메시지를 발생시키는 규칙"
       ]
      }
     ]
    },
    {
-    "title": "HL7 구성·기술",
+    "title": "버전별 구조",
     "subsections": [
      {
-      "title": null,
+      "title": "v2: 파이프 메시지",
       "items": [
-       "MLLP: MLLP를 HL7 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HL7 메시지 구조: HL7에서 HL7 메시지 구조를 다루는 핵심 암기 포인트",
-       "https: https를 HL7 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "HL7 v2 메시지(세그먼트·필드·구분자): MSH·PID 등 세그먼트를 '|'로 구분, MLLP로 TCP 위에서 블록 단위 전송"
+      ]
+     },
+     {
+      "title": "v3·CDA: 모델 기반",
+      "items": [
+       "HL7 v3 RIM(참조 정보 모델)으로 의미를 엄격히 정의, 임상 문서 구조(CDA)는 진료 요약 등 XML 문서 표준"
+      ]
+     },
+     {
+      "title": "FHIR: 웹 API",
+      "items": [
+       "FHIR(Fast Healthcare Interoperability Resources): Patient·Observation 등 리소스를 RESTful API·JSON으로 교환, 모바일 앱 연동 용이"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "도입 효과와 과제",
+    "subsections": [
+     {
+      "title": "효과: 공유·개발",
+      "items": [
+       "의료기관 간 진료 정보 교류, 표준 코드로 인터페이스 개발·유지보수 비용 절감"
+      ]
+     },
+     {
+      "title": "과제: 용어·보안",
+      "items": [
+       "LOINC·SNOMED CT 등 용어 표준 병행 필요, SMART on FHIR의 OAuth 인증으로 앱 접근 통제"
       ]
      }
     ]
@@ -21276,19 +21361,22 @@
   "reviewed": true,
   "quiz_terms": [
    "상호운용성(Interoperability)",
-   "통합프레임워크 표준",
-   "V2 Messge",
-   "FHIR(Fast healthcare interoperability Resoruces)",
-   "MLLP",
-   "HL7 메시지 구조",
-   "https"
+   "HL7 v2 메시지(세그먼트·필드·구분자)",
+   "트리거 이벤트(ADT·ORM·ORU)",
+   "MLLP(Minimal Lower Layer Protocol)",
+   "HL7 v3 RIM(참조 정보 모델)",
+   "임상 문서 구조(CDA)",
+   "FHIR(Fast Healthcare Interoperability Resources)",
+   "RESTful API·리소스",
+   "SMART on FHIR"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_260",
