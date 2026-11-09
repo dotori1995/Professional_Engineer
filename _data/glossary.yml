@@ -2,13 +2,18 @@
 # 뜻이 여러 개라 헷갈리는 약어(CA, CD, CP, SP, IS, MC, AM, EU 등)는 넣지 않음.
 5GC: 5G Core
 6rd: IPv6 Rapid Deployment
+ABP: Activation By Personalization
 ABR: Area Border Router
 ACF: Autocorrelation Function
 ACK: Acknowledgment
+ACL: Access Control List
 ADAS: Advanced Driver Assistance System
+ADC: Application Delivery Controller
 ADF: Augmented Dickey-Fuller
 ADN: Application Delivery Network
 ADPCM: Adaptive Differential Pulse Code Modulation
+ADR: Adaptive Data Rate
+AECD: Automatic Emergency Call Device
 AES: Advanced Encryption Standard
 AH: Authentication Header
 AI: Artificial Intelligence
@@ -16,12 +21,14 @@ AIC: Akaike Information Criterion
 AIFS: Arbitration Inter-Frame Space
 AIMD: Additive Increase Multiplicative Decrease
 AIoE: Ambient Internet of Everything
+ALB: Application Load Balancer
 ALG: Application Level Gateway
 ALM: Application Lifecycle Management
 AMC: Adaptive Modulation and Coding
 AMF: Access and Mobility Management Function
 AMI: Advanced Metering Infrastructure
 AMPS: Advanced Mobile Phone System
+AMR: Automatic Meter Reading
 ANOVA: Analysis of Variance
 ANR: Automatic Neighbor Relation
 ANSI: American National Standards Institute
@@ -42,10 +49,12 @@ ARQ: Automatic Repeat reQuest
 AS: Autonomous System
 ASBR: Autonomous System Boundary Router
 ASCII: American Standard Code for Information Interchange
+ASIC: Application-Specific Integrated Circuit
 ASK: Amplitude Shift Keying
 ASN.1: Abstract Syntax Notation One
 ATAM: Architecture Tradeoff Analysis Method
 ATM: Asynchronous Transfer Mode
+ATSSS: Access Traffic Steering, Switching and Splitting
 AUC: Area Under the Curve
 AXFR: Full Zone Transfer
 BAC: Budget at Completion
@@ -61,6 +70,7 @@ BDP: Bandwidth-Delay Product
 BDR: Backup Designated Router
 BEC: Backward Error Correction
 BECN: Backward Explicit Congestion Notification
+BEMS: Building Energy Management System
 BEPS: Base Erosion and Profit Shifting
 BER: Bit Error Rate
 BGP: Border Gateway Protocol
@@ -70,6 +80,7 @@ BLE: Bluetooth Low Energy
 BLSR: Bidirectional Line-Switched Ring
 BML: Build-Measure-Learn
 BOOTP: Bootstrap Protocol
+BOSH: Bidirectional-streams Over Synchronous HTTP
 BPDU: Bridge Protocol Data Unit
 BPF: Band-Pass Filter
 BPM: Business Process Management
@@ -80,6 +91,7 @@ BSM: Basic Safety Message
 BSS: Business Support System
 BWS: Broadcast Website
 C-V2X: Cellular Vehicle-to-Everything
+CALM: Communications Access for Land Mobiles
 CAM: Cooperative Awareness Message
 CAN: Controller Area Network
 CAPEX: Capital Expenditure
@@ -89,7 +101,10 @@ CBRS: Citizens Broadband Radio Service
 CBS: Committed Burst Size
 CBWFQ: Class-Based Weighted Fair Queuing
 CCB: Change Control Board
+CCC: Car Connectivity Consortium
+CCH: Control Channel
 CCM: Critical Chain Method
+CCMP: Counter Mode CBC-MAC Protocol
 CCTV: Closed-Circuit Television
 CDF: Cumulative Distribution Function
 CDM: Code Division Multiplexing
@@ -104,6 +119,7 @@ CLT: Central Limit Theorem
 CMMI: Capability Maturity Model Integration
 CNAME: Canonical Name
 CNF: Cloud-native Network Function
+CNSA: Commercial National Security Algorithm Suite
 CoAP: Constrained Application Protocol
 COBIT: Control Objectives for Information and Related Technology
 COCOMO: Constructive Cost Model
@@ -112,15 +128,18 @@ CoE: Center of Excellence
 CoMP: Coordinated Multi-Point
 COQ: Cost of Quality
 CoRE: Constrained RESTful Environments
+CORS: Continuously Operating Reference Station
 CPE: Customer Premises Equipment
 CPM: Critical Path Method
 CPU: Central Processing Unit
+CQ: Custom Queuing
 CQI: Channel Quality Indicator
 CRC: Cyclic Redundancy Check
 CRISP-DM: Cross-Industry Standard Process for Data Mining
 CRM: Customer Relationship Management
 CSA: Connectivity Standards Alliance
 CSCF: Call Session Control Function
+CSE: Common Services Entity
 CSI: Channel State Information
 CSMA: Carrier Sense Multiple Access
 CSMA/CA: Carrier Sense Multiple Access with Collision Avoidance
@@ -133,6 +152,7 @@ CU: Central Unit
 CUBIC: CUBIC TCP Congestion Control
 CWDM: Coarse Wavelength Division Multiplexing
 D2D: Device-to-Device
+DAC: Device Attestation Certificate
 DAI: Dynamic ARP Inspection
 DASH: Dynamic Adaptive Streaming over HTTP
 DCE: Data Circuit-terminating Equipment
@@ -144,7 +164,9 @@ DER: Distinguished Encoding Rules
 DevRel: Developer Relations
 DF: Don't Fragment
 DFT: Discrete Fourier Transform
+DGPS: Differential GPS
 DHCP: Dynamic Host Configuration Protocol
+DHCPv6: Dynamic Host Configuration Protocol for IPv6
 DHT: Distributed Hash Table
 DiffServ: Differentiated Services
 DIFS: DCF Inter-Frame Space
@@ -163,16 +185,21 @@ DoH: DNS over HTTPS
 DoQ: DNS over QUIC
 DoT: DNS over TLS
 DPCM: Differential Pulse Code Modulation
+DPI: Deep Packet Inspection
 DPP: Device Provisioning Protocol
 DPSK: Differential Phase Shift Keying
+DPWS: Devices Profile for Web Services
 DQDB: Distributed Queue Dual Bus
 DRaaS: Disaster Recovery as a Service
 DRP: Disaster Recovery Plan
+DRR: Deficit Round Robin
 DRS: Disaster Recovery System
 DS-Lite: Dual-Stack Lite
 DSA: Dynamic Spectrum Access
 DSCP: Differentiated Services Code Point
 DSDV: Destination-Sequenced Distance Vector
+DSN: Data Sequence Number
+DSO: Dynamic Subchannel Operation
 DSP: Demand-Side Platform
 DSR: Dynamic Source Routing
 DSRC: Dedicated Short-Range Communications
@@ -191,10 +218,13 @@ E2E: End-to-End
 EA: Enterprise Architecture
 EAC: Estimate at Completion
 EAI: Enterprise Application Integration
+EAP: Extensible Authentication Protocol
 EBCDIC: Extended Binary Coded Decimal Interchange Code
 EBS: Excess Burst Size
 eCall: Emergency Call
 ECC: Elliptic Curve Cryptography
+ECDH: Elliptic Curve Diffie-Hellman
+ECDSA: Elliptic Curve Digital Signature Algorithm
 ECG: Electrocardiogram
 ECN: Explicit Congestion Notification
 ECU: Electronic Control Unit
@@ -202,9 +232,11 @@ EDA: Event-Driven Architecture
 EDCA: Enhanced Distributed Channel Access
 EDFA: Erbium-Doped Fiber Amplifier
 EDNS0: Extension Mechanisms for DNS version 0
+EEBL: Emergency Electronic Brake Light
 EEF: Enterprise Environmental Factors
 EF: Expedited Forwarding
 EGP: Exterior Gateway Protocol
+EHT: Extremely High Throughput
 EIF: External Interface File
 EIFS: Extended Inter-Frame Space
 EIGRP: Enhanced Interior Gateway Routing Protocol
@@ -217,26 +249,33 @@ EPMO: Enterprise Project Management Office
 ERP: Enterprise Resource Planning
 ERPS: Ethernet Ring Protection Switching
 ESG: Environment Social Governance
+ESM: Enterprise Security Management
 ESP: Encapsulating Security Payload
 ESS: Extended Service Set
 ETC: Estimate to Complete
 ETL: Extract Transform Load
+EVC: Ethernet Virtual Connection
 EVM: Earned Value Management
 FANET: Flying Ad-hoc Network
+FCC: Federal Communications Commission
 FCS: Frame Check Sequence
+FCW: Forward Collision Warning
 FDDI: Fiber Distributed Data Interface
 FDM: Frequency Division Multiplexing
 FDMA: Frequency Division Multiple Access
 FEC: Forward Error Correction
 FECN: Forward Explicit Congestion Notification
+FEMS: Factory Energy Management System
 FFP: Firm Fixed Price
 FHSS: Frequency Hopping Spread Spectrum
+FIB: Forwarding Information Base
 FIFO: First In, First Out
 FIN: Finish
 FKP: Flächenkorrekturparameter
 FMC: Fixed Mobile Convergence
 FMEA: Failure Mode and Effects Analysis
 FMS: Fixed Mobile Substitution
+FOTA: Firmware Over-The-Air
 FP: Function Point
 FPC: Finite Population Correction
 FPR: False Positive Rate
@@ -249,13 +288,17 @@ FTM: Fine Timing Measurement
 FTP: File Transfer Protocol
 FTPS: FTP Secure
 FWA: Fixed Wireless Access
+FWLB: Firewall Load Balancing
 GAF: Geographic Adaptive Fidelity
 GARP: Gratuitous ARP
+GCF: Global Closest First
+GCMP: Galois/Counter Mode Protocol
 GCSE: Group Communication System Enablers
 GEAR: Geographical and Energy Aware Routing
 GFP: Generic Framing Procedure
 GIF: Graphics Interchange Format
 GloBE: Global Anti-Base Erosion
+GLONASS: Global Navigation Satellite System (Russia)
 GNSS: Global Navigation Satellite System
 GPS: Global Positioning System
 GPSR: Greedy Perimeter Stateless Routing
@@ -272,6 +315,8 @@ HBC: Human Body Communication
 HCE: Host Card Emulation
 HCI: Hyper-Converged Infrastructure
 HDLC: High-level Data Link Control
+HEMS: Home Energy Management System
+HMAC: Hash-based Message Authentication Code
 HOL: Head-of-Line
 HOLAP: Hybrid OLAP
 HPACK: HTTP/2 Header Compression
@@ -282,10 +327,15 @@ HTTP: HyperText Transfer Protocol
 HTTPS: HTTP Secure
 IASB: International Accounting Standards Board
 IBN: Intent-Based Networking
+IBSS: Independent Basic Service Set
 ICE: Interactive Connectivity Establishment
 ICMP: Internet Control Message Protocol
 ICMPv6: Internet Control Message Protocol for IPv6
+IDS: Intrusion Detection System
+IEC: International Electrotechnical Commission
 IEEE: Institute of Electrical and Electronics Engineers
+IEMA: Itinerary Energy Minimum Algorithm
+IEMF: Itinerary Energy Minimum First
 IETF: Internet Engineering Task Force
 IFPUG: International Function Point Users Group
 IFRS: International Financial Reporting Standards
@@ -296,6 +346,7 @@ IGRP: Interior Gateway Routing Protocol
 IIR: Income Inclusion Rule
 ILF: Internal Logical File
 ILM: Information Lifecycle Management
+IMA: Intersection Movement Assist
 IMAP: Internet Message Access Protocol
 IMS: IP Multimedia Subsystem
 IMT-2020: International Mobile Telecommunications-2020
@@ -308,7 +359,9 @@ IOPS: Isolated E-UTRAN Operation for Public Safety
 IoT: Internet of Things
 IoV: Internet of Vehicles
 IP: Internet Protocol
+IPS: Indoor Positioning System
 IPsec: IP Security
+IPSO: IP for Smart Objects
 IPTV: Internet Protocol Television
 IPv4: Internet Protocol version 4
 IPv6: Internet Protocol version 6
@@ -324,7 +377,10 @@ ISP: Internet Service Provider
 ITIL: Information Technology Infrastructure Library
 ITS: Intelligent Transport Systems
 ITSM: IT Service Management
+ITU: International Telecommunication Union
+IVI: In-Vehicle Infotainment
 IVN: In-Vehicle Network
+IVS: In-Vehicle System
 IX: Internet eXchange
 IXFR: Incremental Zone Transfer
 IXP: Internet Exchange Point
@@ -333,10 +389,18 @@ JIT: Just In Time
 JPEG: Joint Photographic Experts Group
 JSEP: JavaScript Session Establishment Protocol
 KL: Kullback-Leibler
+KRACK: Key Reinstallation Attack
 KSK: Key Signing Key
+L2TP: Layer 2 Tunneling Protocol
+L3VPN: Layer 3 Virtual Private Network
+LACP: Link Aggregation Control Protocol
 LAN: Local Area Network
 LAPF: Link Access Procedure for Frame Mode Bearer Services
+LBS: Location-Based Service
+LBT: Listen Before Talk
+LC3: Low Complexity Communication Codec
 LCAS: Link Capacity Adjustment Scheme
+LCF: Local Closest First
 LCP: Link Control Protocol
 LDP: Label Distribution Protocol
 LDPC: Low-Density Parity-Check
@@ -344,7 +408,9 @@ LEACH: Low-Energy Adaptive Clustering Hierarchy
 LER: Label Edge Router
 LFIB: Label Forwarding Information Base
 Li-Fi: Light Fidelity
+LIA: Linked Increases Algorithm
 LIB: Label Information Base
+LIN: Local Interconnect Network
 LLC: Logical Link Control
 LLM: Large Language Model
 LLQ: Low Latency Queuing
@@ -353,6 +419,7 @@ LOF: Local Outlier Factor
 LoRa: Long Range
 LOS: Line of Sight
 LPF: Low-Pass Filter
+LPN: Low Power Node
 LPWA: Low Power Wide Area
 LPWAN: Low-Power Wide-Area Network
 LSA: Link State Advertisement
@@ -365,14 +432,17 @@ LTE: Long Term Evolution
 LTE-R: LTE-Railway
 LTE-V2X: LTE Vehicle-to-Everything
 LwM2M: Lightweight Machine-to-Machine
+LWT: Last Will and Testament
 LZW: Lempel-Ziv-Welch
 M2M: Machine-to-Machine
 MAC: Medium Access Control
+MADD: Mobile Agent-based Directed Diffusion
 MAN: Metropolitan Area Network
 MANET: Mobile Ad hoc Network
 MANO: Management and Orchestration
 MANOVA: Multivariate Analysis of Variance
 MBAP: Modbus Application Protocol
+MCL: Maximum Coupling Loss
 MCPTT: Mission Critical Push-To-Talk
 MCU: Multipoint Control Unit
 MDA: Model-Driven Architecture
@@ -399,6 +469,7 @@ MoS: Mean Opinion Score
 MOS: Mean Opinion Score
 MOSPF: Multicast Open Shortest Path First
 MOT: Management of Technology
+MPDU: MAC Protocol Data Unit
 MPEG: Moving Picture Experts Group
 MPLS: Multi-Protocol Label Switching
 MPLS-TP: MPLS Transport Profile
@@ -413,6 +484,7 @@ MSL: Maximum Segment Lifetime
 MSP: Managed Service Provider
 MSS: Maximum Segment Size
 MSTP: Multiple Spanning Tree Protocol
+MTC: Machine-Type Communication
 MTU: Maximum Transmission Unit
 MU-MIMO: Multi-User MIMO
 MUX: Multiplexer
@@ -438,10 +510,15 @@ NFVI: NFV Infrastructure
 NFVO: NFV Orchestrator
 NGAP: NG Application Protocol
 NGT: Nominal Group Technique
+NGV: Next Generation V2X
 NIC: Network Interface Card
+NLB: Network Load Balancer
+NLOS: Non-Line-of-Sight
 NMRG: Network Management Research Group
 NMS: Network Management System
 NOMA: Non-Orthogonal Multiple Access
+NP: Network Performance
+NPCA: Non-Primary Channel Access
 NPN: Non-Public Network
 NPV: Net Present Value
 NR: New Radio
@@ -458,6 +535,7 @@ NSSF: Network Slice Selection Function
 NTN: Non-Terrestrial Network
 NTP: Network Time Protocol
 NTRIP: Networked Transport of RTCM via Internet Protocol
+NTS: Network Time Security
 NVR: Network Video Recorder
 O-CU: O-RAN Central Unit
 O-DU: O-RAN Distributed Unit
@@ -465,8 +543,12 @@ O-RU: O-RAN Radio Unit
 O2O: Online to Offline
 O4O: Online for Offline
 OAM: Operations, Administration and Maintenance
+OASIS: Organization for the Advancement of Structured Information Standards
+OBE: On-Board Equipment
 OBS: Organizational Breakdown Structure
+OBSS: Overlapping Basic Service Set
 OBU: On-Board Unit
+OCB: Outside the Context of a BSS
 OCF: Open Connectivity Foundation
 OCL: Object Constraint Language
 OECD: Organisation for Economic Co-operation and Development
@@ -474,9 +556,11 @@ OFDM: Orthogonal Frequency Division Multiplexing
 OFDMA: Orthogonal Frequency Division Multiple Access
 OKR: Objectives and Key Results
 OLAP: Online Analytical Processing
+OLIA: Opportunistic Linked Increases Algorithm
 OLS: Ordinary Least Squares
 OLSR: Optimized Link State Routing
 OMA: Orthogonal Multiple Access
+OMG: Object Management Group
 ONF: Open Networking Foundation
 ONOS: Open Network Operating System
 ONVIF: Open Network Video Interface Forum
@@ -490,12 +574,17 @@ OSI: Open Systems Interconnection
 OSPF: Open Shortest Path First
 OSS: Operations Support System
 OTA: Over-The-Air
+OTAA: Over-The-Air Activation
+OTDOA: Observed Time Difference of Arrival
 OTN: Optical Transport Network
 OWE: Opportunistic Wireless Encryption
 P2P: Peer-to-Peer
 PACF: Partial Autocorrelation Function
 PAM: Pulse Amplitude Modulation
 PAT: Port Address Translation
+PAwR: Periodic Advertising with Responses
+PBB: Provider Backbone Bridge
+PC5: ProSe Communication 5 (Sidelink Interface)
 PCA: Principal Component Analysis
 PCell: Primary Cell
 PCF: Point Coordination Function
@@ -506,9 +595,11 @@ PERT: Program Evaluation and Review Technique
 PESQ: Perceptual Evaluation of Speech Quality
 PHB: Per-Hop Behavior
 PHP: Penultimate Hop Popping
+PHY: Physical Layer
 PIE: Proportional Integral controller Enhanced
 PIFS: PCF Inter-Frame Space
 PIM: Protocol Independent Multicast
+PKI: Public Key Infrastructure
 PLAT: Provider-side Translator
 PLC: Programmable Logic Controller
 PLM: Product Lifecycle Management
@@ -527,6 +618,8 @@ POP: Point of Presence
 POP3: Post Office Protocol version 3
 POTN: Packet Optical Transport Network
 PPP: Point-to-Point Protocol
+PQ: Priority Queuing
+PRB: Physical Resource Block
 PRM: Partner Relationship Management
 ProSe: Proximity Services
 PS-LTE: Public Safety LTE
@@ -547,16 +640,19 @@ QPSK: Quadrature Phase Shift Keying
 QUIC: Quick UDP Internet Connections
 RACI: Responsible Accountable Consulted Informed
 RAD: Rapid Application Development
+RADIUS: Remote Authentication Dial-In User Service
 RAM: Responsibility Assignment Matrix
 RAN: Radio Access Network
 RARP: Reverse Address Resolution Protocol
 RED: Random Early Detection
 RegTech: Regulatory Technology
+REJ: Reject
 REST: Representational State Transfer
 RF: Radio Frequency
 RFC: Request for Comments
 RFID: Radio Frequency Identification
 RFP: Request for Proposal
+RIB: Routing Information Base
 RIC: RAN Intelligent Controller
 RIP: Routing Information Protocol
 RIPng: RIP next generation
@@ -565,6 +661,7 @@ RIS: Reconfigurable Intelligent Surface
 RLE: Run-Length Encoding
 RMSE: Root Mean Squared Error
 RNN: Recurrent Neural Network
+RNR: Receive Not Ready
 ROADM: Reconfigurable Optical Add-Drop Multiplexer
 ROAS: Return on Ad Spend
 ROC: Receiver Operating Characteristic
@@ -577,6 +674,7 @@ RREP: Route Reply
 RREQ: Route Request
 RRL: Response Rate Limiting
 RRSIG: Resource Record Signature
+RSE: Road Side Equipment
 RSMA: Rate-Splitting Multiple Access
 RSSI: Received Signal Strength Indicator
 RST: Reset
@@ -584,6 +682,7 @@ RSTP: Rapid Spanning Tree Protocol
 RSU: Road Side Unit
 RSVP: Resource Reservation Protocol
 RTB: Real-Time Bidding
+RTCM: Radio Technical Commission for Maritime Services
 RTCP: RTP Control Protocol
 RTE: Real-Time Enterprise
 RTK: Real-Time Kinematic
@@ -598,7 +697,9 @@ RU: Radio Unit
 RZ: Return to Zero
 S1AP: S1 Application Protocol
 SA: Standalone
+SABM: Set Asynchronous Balanced Mode
 SACK: Selective Acknowledgment
+SAE: Society of Automotive Engineers
 SAM: Slot Availability Mask
 SAP: Service Access Point
 SAR: Specific Absorption Rate
@@ -610,8 +711,10 @@ SBA: Service-Based Architecture
 SBOM: Software Bill of Materials
 SCADA: Supervisory Control And Data Acquisition
 SCell: Secondary Cell
+SCH: Service Channel
 SCM: Supply Chain Management
 SCMA: Sparse Code Multiple Access
+SCMS: Security Credential Management System
 SCTP: Stream Control Transmission Protocol
 SD-WAN: Software-Defined Wide Area Network
 SDDC: Software-Defined Data Center
@@ -627,6 +730,7 @@ SDU: Service Data Unit
 SDV: Software Defined Vehicle
 SECDED: Single Error Correction, Double Error Detection
 SecOC: Secure Onboard Communication
+SEND: Secure Neighbor Discovery
 SEP: Standard-Essential Patent
 SFTP: SSH File Transfer Protocol
 SFU: Selective Forwarding Unit
@@ -634,16 +738,21 @@ SIC: Successive Interference Cancellation
 SIFS: Short Inter-Frame Space
 SIGTRAN: Signaling Transport
 SIIT: Stateless IP/ICMP Translation
+SIM: Subscriber Identity Module
+SINR: Signal-to-Interference-plus-Noise Ratio
 SLA: Service Level Agreement
 SLAAC: Stateless Address Autoconfiguration
+SLB: Server Load Balancing
 SLD: Second-Level Domain
 SLM: Service Level Management
 SMDS: Switched Multimegabit Data Service
 SMF: Session Management Function
 SMO: Service Management and Orchestration
+SNAT: Source Network Address Translation
 SNMP: Simple Network Management Protocol
 SNPN: Standalone Non-Public Network
 SNR: Signal-to-Noise Ratio
+SNS: Social Networking Service
 SOA: Service-Oriented Architecture
 SOM: Serviceable Obtainable Market
 SON: Self-Organizing Network
@@ -651,9 +760,11 @@ SONET: Synchronous Optical Network
 SoW: Statement of Work
 SPF: Shortest Path First
 SPIN: Sensor Protocols for Information via Negotiation
+SPOF: Single Point of Failure
 SPT: Shortest Path Tree
 SQNR: Signal-to-Quantization-Noise Ratio
 SRE: Site Reliability Engineering
+SREJ: Selective Reject
 SRS: Software Requirements Specification
 SRTP: Secure Real-time Transport Protocol
 SRTT: Smoothed Round-Trip Time
@@ -674,44 +785,57 @@ STUN: Session Traversal Utilities for NAT
 SUMS: Software Update Management System
 SupTech: Supervisory Technology
 SVC: Switched Virtual Circuit
+SVI: Switch Virtual Interface
 SVM: Support Vector Machine
 SWEBOK: Software Engineering Body of Knowledge
 SYN: Synchronize
 T&M: Time and Materials
 TAM: Total Addressable Market
+TBID: Tree-Based Itinerary Design
+TCA: Traffic Conditioning Agreement
 TCO: Total Cost of Ownership
 TCP: Transmission Control Protocol
 TCPI: To-Complete Performance Index
+TCU: Telematics Control Unit
 TDD: Test-Driven Development
 TDM: Time Division Multiplexing
 TDMA: Time Division Multiple Access
 TDoA: Time Difference of Arrival
 TEEN: Threshold-sensitive Energy Efficient sensor Network
 THz: Terahertz
+TKIP: Temporal Key Integrity Protocol
 TLD: Top-Level Domain
 TLS: Transport Layer Security
 TMMi: Test Maturity Model integration
 ToA: Time of Arrival
 TOC: Theory of Constraints
 TOS: Type of Service
+TPID: Tag Protocol Identifier
 TPR: True Positive Rate
 TPS: Toyota Production System
 TSN: Time-Sensitive Networking
 TTL: Time To Live
 TURN: Traversal Using Relays around NAT
 TVWS: TV White Space
+TWR: Two-Way Ranging
+TWT: Target Wake Time
 UAV: Unmanned Aerial Vehicle
 UDP: User Datagram Protocol
 UHR: Ultra High Reliability
 ULA: Unique Local Address
 ULCL: Uplink Classifier
 UMA: Unlicensed Mobile Access
+UNB: Ultra Narrow Band
+UNECE: United Nations Economic Commission for Europe
+UNI: User-Network Interface
 UPF: User Plane Function
 UPnP: Universal Plug and Play
 UPS: Uninterruptible Power Supply
 UPSR: Unidirectional Path-Switched Ring
 URG: Urgent
+URI: Uniform Resource Identifier
 URL: Uniform Resource Locator
+UTC: Coordinated Universal Time
 UTP: Unshielded Twisted Pair
 UTPR: Undertaxed Profits Rule
 UWB: Ultra-Wideband
@@ -725,19 +849,29 @@ VANET: Vehicular Ad-hoc Network
 VCAT: Virtual Concatenation
 VIF: Variance Inflation Factor
 VIM: Virtualized Infrastructure Manager
+VIN: Vehicle Identification Number
 VIP: Virtual IP
 VLAN: Virtual LAN
 VLC: Visible Light Communication
 VLSM: Variable Length Subnet Mask
+VMAC: Virtual MAC Address
 VMAF: Video Multimethod Assessment Fusion
 VMS: Video Management System
 VNF: Virtualized Network Function
 VNFM: VNF Manager
+VNI: VXLAN Network Identifier
 VoWiFi: Voice over Wi-Fi
+VPLS: Virtual Private LAN Service
 VPN: Virtual Private Network
+VPP: Virtual Power Plant
+VPWS: Virtual Private Wire Service
+VRF: Virtual Routing and Forwarding
+VRID: Virtual Router Identifier
 VRM: Vendor Relationship Management
 VRRP: Virtual Router Redundancy Protocol
 VRS: Virtual Reference Station
+VXLAN: Virtual Extensible LAN
+W3C: World Wide Web Consortium
 WAN: Wide Area Network
 WAVE: Wireless Access in Vehicular Environments
 WBAN: Wireless Body Area Network
@@ -748,12 +882,16 @@ WEP: Wired Equivalent Privacy
 WFQ: Weighted Fair Queuing
 WIP: Work In Progress
 WLAN: Wireless Local Area Network
+WLC: Wireless LAN Controller
 WoT: Web of Things
+WPA2: Wi-Fi Protected Access 2
 WPA3: Wi-Fi Protected Access 3
 WRAN: Wireless Regional Area Network
 WRED: Weighted Random Early Detection
+WSMP: WAVE Short Message Protocol
 WSN: Wireless Sensor Network
 XDR: External Data Representation
+XEP: XMPP Extension Protocol
 XML: eXtensible Markup Language
 XMPP: eXtensible Messaging and Presence Protocol
 XOR: Exclusive OR
