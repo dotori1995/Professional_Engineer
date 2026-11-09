@@ -5,6 +5,14 @@ title: 서술
 permalink: /quiz/
 script: /assets/js/quiz.js
 ---
+<section class="card-tools">
+  <div class="chips" role="group" aria-label="서술 옵션">
+    <button type="button" class="chip toggle" id="shuffleBtn" aria-pressed="false">섞기</button>
+  </div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+  <p class="meta prow"><span id="progress">불러오는 중…</span><span>스와이프: 이동</span></p>
+</section>
+
 <div class="stage">
   <section class="quiz fitbox write" id="quiz" aria-live="polite"><p class="meta">불러오는 중…</p></section>
 </div>

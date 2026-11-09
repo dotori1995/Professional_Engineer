@@ -5,11 +5,11 @@
   const STORE = 'pe-write-v1';
 
   let all = [], domain = '', topicOnly = params.get('topic') || '';
-  let mode = 'write';
   let pool = [], idx = 0, t = null;
   let phase = 'prompt'; // prompt | reveal | result
   let secs = 0, timerId = 0;
   let checked = new Set(), notes = '';
+  let shuffle = params.get('shuffle') === '1' || localStorage.getItem('pe-quiz-shuffle') === '1';
 
   const loadStore = () => { try { return JSON.parse(localStorage.getItem(STORE) || '{}'); } catch (e) { return {}; } };
   const saveStore = s => { try { localStorage.setItem(STORE, JSON.stringify(s)); } catch (e) {} };
@@ -17,26 +17,31 @@
 
   function shuffled(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
-  function buildPool() {
+  function baseList() {
     const curated = all.filter(x => x.domain === domain && (x.keywords_must || []).length);
     let list = curated.length ? curated : all.filter(x => x.domain === domain && (x.keywords || []).length);
     if (topicOnly) {
       const one = all.find(x => x.id === topicOnly);
       if (one) list = [one];
     }
-    // missed 필수 first
-    const st = loadStore();
-    list = list.slice().sort((a, b) => {
-      const ra = st[a.id], rb = st[b.id];
-      const ma = ra && ra.missed && ra.missed.length ? 0 : 1;
-      const mb = rb && rb.missed && rb.missed.length ? 0 : 1;
-      if (ma !== mb) return ma - mb;
-      return (ra && ra.at || 0) - (rb && rb.at || 0);
-    });
-    // preview: prefer NW_185
-    const pref = list.find(x => x.id === 'NW_185');
-    if (pref && !topicOnly) list = [pref].concat(list.filter(x => x.id !== 'NW_185'));
     return list;
+  }
+
+  function buildPool(keepId) {
+    let list = baseList();
+    pool = shuffle ? shuffled(list) : list.slice();
+    idx = keepId ? Math.max(0, pool.findIndex(x => x.id === keepId)) : 0;
+    if (keepId && idx < 0) idx = 0;
+    const btn = $('shuffleBtn');
+    if (btn) btn.setAttribute('aria-pressed', String(shuffle));
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const n = pool.length;
+    const bar = $('bar'), prog = $('progress');
+    if (bar) bar.style.width = (n ? Math.round((idx + 1) / n * 100) : 0) + '%';
+    if (prog) prog.textContent = n ? `${idx + 1} / ${n}` : '0 / 0';
   }
 
   function stopTimer() { if (timerId) { clearInterval(timerId); timerId = 0; } }
@@ -56,7 +61,6 @@
 
   function mustList(topic) {
     if ((topic.keywords_must || []).length) return topic.keywords_must;
-    // fallback: quiz_terms or flat keywords
     if ((topic.quiz_terms || []).length) return topic.quiz_terms;
     return (topic.keywords || []).slice(0, 8);
   }
@@ -69,6 +73,7 @@
     const quiz = $('quiz');
     const primary = $('quizPrimary');
     const skip = $('quizSkip');
+    updateProgress();
     if (!t) {
       quiz.innerHTML = '<div class="empty">서술 연습할 토픽이 없어요.<br>필수 키워드가 있는 토픽부터 열어 주세요.</div>';
       primary.disabled = true; skip.hidden = true;
@@ -158,6 +163,10 @@
   }
 
   function openTopic(i) {
+    if (!pool.length) {
+      t = null; phase = 'prompt'; checked = new Set(); notes = '';
+      stopTimer(); render(); return;
+    }
     stopTimer();
     idx = ((i % pool.length) + pool.length) % pool.length;
     t = pool[idx];
@@ -168,6 +177,24 @@
     render();
   }
 
+  function go(d) {
+    if (!pool.length) return;
+    let n = idx + d;
+    if (n < 0) n = pool.length - 1;
+    if (n >= pool.length) { n = 0; if (shuffle) pool = shuffled(pool); }
+    openTopic(n);
+  }
+
+  function typingOrSelecting() {
+    const a = document.activeElement;
+    if (!a) return false;
+    const tag = (a.tagName || '').toLowerCase();
+    if (tag === 'textarea' || tag === 'input') return true;
+    const sel = window.getSelection && window.getSelection();
+    if (sel && !sel.isCollapsed && String(sel).length) return true;
+    return false;
+  }
+
   $('quizPrimary').addEventListener('click', () => {
     if (!t) return;
     if (phase === 'prompt') {
@@ -176,13 +203,40 @@
     } else if (phase === 'reveal') {
       saveResult(); phase = 'result'; render();
     } else {
-      openTopic(idx + 1);
+      go(1);
     }
   });
   $('quizSkip').addEventListener('click', () => {
     if (phase === 'reveal') { phase = 'prompt'; checked = new Set(); startTimer(); render(); return; }
     if (phase === 'result') { openTopic(idx); return; }
-    openTopic(idx + 1);
+    go(1);
+  });
+  $('shuffleBtn').addEventListener('click', () => {
+    shuffle = !shuffle;
+    localStorage.setItem('pe-quiz-shuffle', shuffle ? '1' : '0');
+    const keep = t && t.id;
+    buildPool(keep);
+    openTopic(idx);
+  });
+
+  // 스와이프 (textarea 입력·텍스트 선택 중에는 무시)
+  const stage = document.querySelector('.page-quiz .stage') || $('quiz');
+  let sx = 0, sy = 0, moved = false;
+  stage.addEventListener('touchstart', e => {
+    if (typingOrSelecting()) { sx = 0; return; }
+    sx = e.touches[0].clientX; sy = e.touches[0].clientY; moved = false;
+  }, { passive: true });
+  stage.addEventListener('touchend', e => {
+    if (!sx) return;
+    if (typingOrSelecting()) { sx = 0; return; }
+    const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    sx = 0;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) { moved = true; go(dx < 0 ? 1 : -1); }
+  });
+  document.addEventListener('keydown', e => {
+    if (typingOrSelecting()) return;
+    if (e.key === 'ArrowRight') go(1);
+    if (e.key === 'ArrowLeft') go(-1);
   });
 
   addEventListener('resize', () => PE.fit($('quiz')));
@@ -191,9 +245,11 @@
     const tt = topicOnly && all.find(x => x.id === topicOnly);
     if (tt && tt.domain !== PE.cur) PE.setDomain(tt.domain);
     domain = PE.cur;
-    // drawer label
     document.querySelectorAll('.dr-links a[href*="/quiz/"]').forEach(a => { a.textContent = '서술'; });
-    pool = buildPool();
-    openTopic(0);
-  }).catch(() => { $('quiz').innerHTML = '<div class="empty">데이터를 불러오지 못했어요.</div>'; });
+    buildPool(topicOnly || null);
+    openTopic(idx);
+  }).catch(() => {
+    $('quiz').innerHTML = '<div class="empty">데이터를 불러오지 못했어요.</div>';
+    if ($('progress')) $('progress').textContent = '오류';
+  });
 })();
