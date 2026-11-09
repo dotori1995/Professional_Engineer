@@ -3,2181 +3,2064 @@
   "name": "메타버스(Metaverse)",
   "en": "Metaverse",
   "title": "메타버스(Metaverse)",
-  "definition": "현실과 가상이 융합된 지속적 가상공유 공간. 경제·사회 활동이 이루어지는 디지털 세계",
+  "definition": "현실과 가상이 융합된 지속적 3D 가상공유 공간. 아바타로 소통·거래하며 현실과 공존하는 디지털 세계(닐 스티븐슨, 1992).",
+  "keywords": [
+   "핵심: 메타버스 · AR · 라이프로깅",
+   "범주: 미러월드 · 가상세계 · 아바타",
+   "참고: NFT · 디지털 트윈 · Web3"
+  ],
+  "keywords_must": [
+   "메타버스(Metaverse)",
+   "증강현실(AR)",
+   "라이프로깅(Life Logging)",
+   "미러월드(Mirror World)",
+   "가상세계(Virtual World)",
+   "아바타(Avatar)",
+   "XR",
+   "상호운용성(Interoperability)"
+  ],
+  "keywords_ref": [
+   "NFT",
+   "디지털 트윈",
+   "Web3",
+   "세컨드 라이프"
+  ],
   "outline": [
    "메타버스의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "메타버스",
-   "가상세계",
-   "아바타",
-   "상호운용",
-   "디지털 트윈",
-   "경제(NFT 등)",
-   "XR",
-   "지속성"
-  ],
-  "keywords_ref": [
-   "Web3",
-   "공간컴퓨팅",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
-  ],
-  "keywords": [
-   "핵심: 메타버스 · 가상세계 · 아바타",
-   "구성: 상호운용 · 디지털 트윈 · 경제(NFT 등)",
-   "현실과 가상이 융합된 지속적 가상공유 공간. 경제·사회 활동이 이루어지는"
+   "- 등장 배경",
+   "메타버스 4가지 범주",
+   "- AR·라이프로깅",
+   "- 미러월드·가상세계",
+   "서비스 유형과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "메타버스의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "현실과 가상이 융합된 지속적 가상공유 공간. 경제·사회 활동이 이루어지는 디지털 세계"
+       "다감각 3D 환경에서 아바타로 소통·거래하는 지속적 가상세계",
+       "현실과 비현실이 공존·연동되는 디지털 사회·경제 공간"
       ]
      },
      {
-      "title": "목적",
+      "title": "등장 배경",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "XR·5G·클라우드·블록체인 성숙과 원격 협업·가상경제 수요"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "메타버스 4가지 범주",
     "subsections": [
      {
-      "title": null,
+      "title": "증강현실·라이프로깅",
       "items": [
-       "메타버스",
-       "가상세계",
-       "아바타",
-       "상호운용",
-       "디지털 트윈",
-       "경제(NFT 등)"
+       "AR: 현실에 가상 데이터 중첩(예: 포켓몬 GO)",
+       "라이프로깅: 일상·생체 정보를 데이터화해 저장·묘사"
+      ]
+     },
+     {
+      "title": "미러월드·가상세계",
+      "items": [
+       "미러월드: 현실을 정보적으로 확장(예: Google Earth)",
+       "가상세계: 독자 3D 사회·경제(예: 세컨드 라이프)"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "서비스 유형과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "서비스",
       "items": [
-       "XR",
-       "지속성",
-       "표준·비교·한계를 함께 기술"
+       "가상 홈·오피스, 포털, E-헬스, E-러닝, 전자상거래, 커뮤니티"
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "상호운용·신원·자산 표준, 개인정보·중독·범죄 대응"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "메타버스",
-   "가상세계",
-   "아바타",
-   "상호운용",
-   "디지털 트윈",
-   "경제(NFT 등)",
-   "XR",
-   "지속성"
+   "가상세계(Virtual World)",
+   "증강현실(AR)",
+   "라이프로깅(Life Logging)",
+   "미러월드(Mirror World)",
+   "SF",
+   "AR"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_009": {
   "name": "웹 크롤링(Web Crawling)",
   "en": "Web Crawling",
   "title": "웹 크롤링(Web Crawling)",
-  "definition": "링크를 따라 웹을 탐색·수집하는 검색엔진·데이터 수집의 기반 기술",
-  "outline": [
-   "웹 크롤링의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "인터넷 웹사이트의 URL 주소를 통해 HTML 페이지를 웹크롤러 이용 접속해서 HTML/CSS 파싱하고 Web Data를 자동으로 수집하는 데이터 수집 기술",
+  "keywords": [
+   "핵심: Web Data · HTML · Master/Slave/Monitor",
+   "기술: URL Filter · Open API · Python",
+   "운영: Selenium · SNS",
+   "참고: Selenium · SNS"
   ],
   "keywords_must": [
-   "웹 크롤링",
-   "크롤러",
-   "인덱싱",
-   "robots.txt",
-   "폴라이트니스",
-   "중복 제거",
-   "시드 URL",
-   "스케줄링"
+   "Web Data",
+   "HTML",
+   "Master/Slave/Monitor",
+   "URL Filter",
+   "Open API",
+   "Python",
+   "Selenium",
+   "SNS"
   ],
   "keywords_ref": [
-   "스크래핑",
-   "검색엔진",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "Selenium",
+   "SNS"
   ],
-  "keywords": [
-   "핵심: 웹 크롤링 · 크롤러 · 인덱싱",
-   "구성: robots.txt · 폴라이트니스 · 중복 제거",
-   "링크를 따라 웹을 탐색·수집하는 검색엔진·데이터 수집의 기반 기술"
+  "outline": [
+   "웹크롤링의 아키텍처 및 기술요소",
+   "- 웹크롤링의 아키텍처",
+   "- 웹크롤링의 기술요소",
+   "웹크롤링 검색 알고리즘",
+   "- 기본 웹크롤링 검색 알고리즘",
+   "웹크롤링과 웹스크래핑 비교"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "웹크롤링의 아키텍처 및 기술요소",
     "subsections": [
      {
-      "title": "정의",
+      "title": "웹크롤링의 아키텍처",
       "items": [
-       "링크를 따라 웹을 탐색·수집하는 검색엔진·데이터 수집의 기반 기술"
+       "Frontier와 Agent가 핵심 요소로 구성되며 Meta data 저장 및 하위 Link 재접속 수행"
       ]
      },
      {
-      "title": "목적",
+      "title": "웹크롤링의 기술요소",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "URL Filtering - URL 패턴, 중복, 국가 코드, 외부 필터 수행, 함정피하기",
+       "HTTP Module - Resource URL, Extracted URL, 그룹 Seed 지정",
+       "Tracking Mode - 특정 Main/Sub URL 대상 지정 크롤링"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "웹크롤링 검색 알고리즘",
     "subsections": [
      {
-      "title": null,
+      "title": "기본 웹크롤링 검색 알고리즘",
       "items": [
-       "웹 크롤링",
-       "크롤러",
-       "인덱싱",
-       "robots.txt",
-       "폴라이트니스",
-       "중복 제거"
+       "깊이 우선 탐색 - 전체 웹을 포괄하는 크롤링 검색 알고리즘",
+       "동일 레벨 수준 - SNS 친구의 친구 찾기에 활용",
+       "트리의 가지가 넓을 경우 검색 시간 소요 단점 존재",
+       "특정 URL의 토픽에 대해 탐색시 사용",
+       "고정된 깊이로만 탐색하는 단점 존재"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "웹크롤링과 웹스크래핑 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "시드 URL",
-       "스케줄링",
-       "표준·비교·한계를 함께 기술"
+       "웹크롤링 구현시 데이터 베이스권 침해, 불공정경쟁행위, 저작권 위배 등 이슈사항 고려 필요"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "웹 크롤링",
-   "크롤러",
-   "인덱싱",
-   "robots.txt",
-   "폴라이트니스",
-   "중복 제거",
-   "시드 URL",
-   "스케줄링"
+   "Web Data",
+   "HTML",
+   "Master/Slave/Monitor",
+   "URL Filter",
+   "Open API",
+   "Python",
+   "Selenium",
+   "SNS"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_010": {
   "name": "오픈 API(Open API)",
   "en": "Open API",
   "title": "오픈 API(Open API)",
-  "definition": "외부 개발자가 기능을 호출할 수 있도록 공개한 응용 프로그래밍 인터페이스",
-  "outline": [
-   "오픈 API의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "소프트웨어가 서로 의사 소통하는 규약 일반적으로는 운영체제, 어플리케이션, 라이브러리등 다양한 수준의 인터페이스를 총칭",
+  "keywords": [
+   "핵심: API · KEY · OA",
+   "기술: 오픈 API(Open API) · 오픈 API 아키텍처 · 오픈 API 프로토콜"
   ],
   "keywords_must": [
-   "오픈 API",
-   "REST/HTTP",
-   "인증·인가",
-   "쿼터",
-   "문서화",
-   "생태계",
-   "보안",
-   "버전 관리"
+   "API",
+   "KEY",
+   "OA",
+   "오픈 API(Open API)",
+   "오픈 API 아키텍처",
+   "오픈 API 프로토콜"
   ],
-  "keywords_ref": [
-   "OpenAPI Spec",
-   "API GW",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
-  ],
-  "keywords": [
-   "핵심: 오픈 API · REST/HTTP · 인증·인가",
-   "구성: 쿼터 · 문서화 · 생태계",
-   "외부 개발자가 기능을 호출할 수 있도록 공개한 응용 프로그래밍 인터페이스"
+  "keywords_ref": [],
+  "outline": [
+   "플랫폼의 기능을 외부에서 쓸수 있도록 개방한 API, Open API",
+   "Open API 개념도 및 유형",
+   "- Open API 핵심기술"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "플랫폼의 기능을 외부에서 쓸수 있도록 개방한 API, Open API",
     "subsections": [
      {
-      "title": "정의",
+      "title": "Open API (Open Application Programming Interface)의 개념",
       "items": [
-       "외부 개발자가 기능을 호출할 수 있도록 공개한 응용 프로그래밍 인터페이스"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "누구나 쓸 수 있도록 플랫폼의 기능을 외부에 개방한 API"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "Open API 개념도 및 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "Open API 핵심기술",
       "items": [
-       "오픈 API",
-       "REST/HTTP",
-       "인증·인가",
-       "쿼터",
-       "문서화",
-       "생태계"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "보안",
-       "버전 관리",
-       "표준·비교·한계를 함께 기술"
+       "API 호출시 허가된 거래인지 확인",
+       "API KEY 발급, OAuth 인증",
+       "API 허용량 만큼 쓰도록 제어",
+       "사용량 통계 ->사용량 과금, 어뷰징 감지"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "오픈 API",
-   "REST/HTTP",
-   "인증·인가",
-   "쿼터",
-   "문서화",
-   "생태계",
-   "보안",
-   "버전 관리"
+   "API",
+   "KEY",
+   "OA",
+   "오픈 API(Open API)",
+   "오픈 API 아키텍처",
+   "오픈 API 프로토콜"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_012": {
   "name": "API 게이트웨이(API Gateway)",
   "en": "API Gateway",
   "title": "API 게이트웨이(API Gateway)",
-  "definition": "클라이언트 요청의 단일 진입점으로 라우팅·인증·제한·모니터링을 수행하는 계층",
-  "outline": [
-   "API 게이트웨이의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "클라이언트가 요청한 API 서비스를 내부에서 처리 가능한 API 형태로 변환, 전달하는 Gateway",
+  "keywords": [
+   "핵심: API · GW · SSL",
+   "기술: API 게이트웨이(API Gateway) · API 게이트웨이 아키텍처 · API 게이트웨이 프로토콜"
   ],
   "keywords_must": [
-   "API Gateway",
-   "단일 진입점",
-   "라우팅",
-   "인증/인가",
-   "Rate Limit",
-   "로깅",
-   "BFF",
-   "MSA"
+   "API",
+   "GW",
+   "SSL",
+   "API 게이트웨이(API Gateway)",
+   "API 게이트웨이 아키텍처",
+   "API 게이트웨이 프로토콜"
   ],
-  "keywords_ref": [
-   "서비스메시",
-   "APIM",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
-  ],
-  "keywords": [
-   "핵심: API Gateway · 단일 진입점 · 라우팅",
-   "구성: 인증/인가 · Rate Limit · 로깅",
-   "클라이언트 요청의 단일 진입점으로 라우팅·인증·제한·모니터링을 수행하는 "
+  "keywords_ref": [],
+  "outline": [
+   "Endpoint와 Backend 서비스 간 Proxy, API GW 개요",
+   "- API GW 정의",
+   "- API GW 역할 및 특징",
+   "API GW 구성도 및 주요기능",
+   "- API GW 구성도",
+   "- API GW 주요 기능",
+   "API GW 적용 시 고려사항",
+   "API GW 적용 사례"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "Endpoint와 Backend 서비스 간 Proxy, API GW 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "API GW 정의",
       "items": [
-       "클라이언트 요청의 단일 진입점으로 라우팅·인증·제한·모니터링을 수행하는 계층"
+       "사용자가 설정한 라우팅에 따라 Endpoint에서 요청한 서비스를 Backend에서 처리하도록 지시, 처리 결과를 다시 Endpoint로 전달하는 프록시 GW"
       ]
      },
      {
-      "title": "목적",
+      "title": "API GW 역할 및 특징",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "보안성 : 접근통제, 내부 데이터보호, 모니터링 - 메시지 경량화"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "API GW 구성도 및 주요기능",
     "subsections": [
      {
-      "title": null,
+      "title": "API GW 구성도",
       "items": [
-       "API Gateway",
-       "단일 진입점",
-       "라우팅",
-       "인증/인가",
-       "Rate Limit",
-       "로깅"
+       "API 인증, 인가, API 생성, 배포, 호출 관리"
+      ]
+     },
+     {
+      "title": "API GW 주요 기능",
+      "items": [
+       "Token 이용한 인증 및 검증데이터 보호 위한 SSL 암호화 통신로그 패턴 분석 통한 장애 관리다수 엔드포인트와 마이크로서비스간 서비스 매치백엔드 서버 로드밸런싱, 메시지/헤더 기반 라우팅"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "API GW 적용 시 고려사항",
     "subsections": [
      {
       "title": null,
       "items": [
-       "BFF",
-       "MSA",
-       "표준·비교·한계를 함께 기술"
+       "오버헤드 처리 등 부하 증가시 어플리케이션 성능 저하",
+       "서비스 증가 시 복잡도 문제 발생",
+       "단일 접점 처리로 API GW 장애 발생 시 전체 서비스 중단"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "API GW 적용 사례",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "신규 버전 어플리케이션으로 프로덕션 트래픽 일부 분산 - API Gateway 라우팅을 통한 테스팅 환경 구축",
+       "시청자에게 안정적인 스트리밍 제공을 위한 서비스 구축 - 온프레미스 환경과 클라우드 환경 간 연동"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "API Gateway",
-   "단일 진입점",
-   "라우팅",
-   "인증/인가",
-   "Rate Limit",
-   "로깅",
-   "BFF",
-   "MSA"
+   "API",
+   "GW",
+   "SSL",
+   "API 게이트웨이(API Gateway)",
+   "API 게이트웨이 아키텍처",
+   "API 게이트웨이 프로토콜"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_013": {
   "name": "API 관리(APIM, API Management)",
   "en": "API Management",
   "title": "API 관리(APIM, API Management)",
-  "definition": "API의 설계·게시·보안·분석·수명주기를 통합 관리하는 체계·플랫폼",
-  "outline": [
-   "API 관리의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "기업 및 클라우드 전반에서 어플리케이션과 데이터를 연결하는 API 를 배포, 제어, 분석하고 중앙집중식으로관리하는 시스템",
+  "keywords": [
+   "핵심: API Gateway · API Portal · API 서버",
+   "기술: API Repository · 보안 · 부하분산",
+   "운영: 문서화 · 커뮤니티 · APIM",
+   "참고: 문서화 · 커뮤니티 · APIM"
   ],
   "keywords_must": [
+   "API Gateway",
+   "API Portal",
+   "API 서버",
+   "API Repository",
+   "보안",
+   "부하분산",
+   "문서화",
+   "커뮤니티",
    "APIM",
-   "포털",
-   "키·구독",
-   "정책",
-   "분석",
-   "수명주기",
-   "개발자 경험",
-   "거버넌스"
+   "API"
   ],
   "keywords_ref": [
-   "API GW",
-   "OpenAPI",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "문서화",
+   "커뮤니티",
+   "APIM"
   ],
-  "keywords": [
-   "핵심: APIM · 포털 · 키·구독",
-   "구성: 정책 · 분석 · 수명주기",
-   "API의 설계·게시·보안·분석·수명주기를 통합 관리하는 체계·플랫폼"
+  "outline": [
+   "APIM 의 구성도 및 구성요소",
+   "- APIM 구성도",
+   "- APIM 의 구성요소",
+   "APIM 의 확장, API 플랫폼"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "APIM 의 구성도 및 구성요소",
     "subsections": [
      {
-      "title": "정의",
+      "title": "APIM 구성도",
       "items": [
-       "API의 설계·게시·보안·분석·수명주기를 통합 관리하는 체계·플랫폼"
+       "APIM 은 크게 API 게이트웨이와 API 포털로 구성되며, API 서비스 및 관리 기능을 제공"
       ]
      },
      {
-      "title": "목적",
+      "title": "APIM 의 구성요소",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "API 요청, 응답을 조정 및 수정",
+       "API 호출제어, API 전송데이터 위변조 방지, API 사용 인증 등",
+       "백엔드의 복수의 API 서버에 트랜잭션의 분산처리"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "APIM 의 확장, API 플랫폼",
     "subsections": [
      {
       "title": null,
       "items": [
-       "APIM",
-       "포털",
-       "키·구독",
-       "정책",
-       "분석",
-       "수명주기"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "개발자 경험",
-       "거버넌스",
-       "표준·비교·한계를 함께 기술"
+       "APIM 은 플랫폼 형태로 발전하여 이해관계자들간의 소통 및 새로운 서비스 창출할 것으로 예상."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
+   "API Gateway",
+   "API Portal",
+   "API 서버",
+   "API Repository",
+   "보안",
+   "부하분산",
+   "문서화",
+   "커뮤니티",
    "APIM",
-   "포털",
-   "키·구독",
-   "정책",
-   "분석",
-   "수명주기",
-   "개발자 경험",
-   "거버넌스"
+   "API"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_014_0": {
   "name": "서비스 메시(Service Mesh)",
   "en": "Service Mesh",
   "title": "서비스 메시(Service Mesh)",
-  "definition": "서비스 간 통신을 사이드카 프록시로 제어하는 MSA 인프라 계층",
-  "outline": [
-   "서비스 메시의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "서비스 앞 단에 경량화된 프록시를 배치하여 서비스 간의 통신을 제어하는 아키텍처 패턴",
+  "keywords": [
+   "핵심: Microservice · Sidecar proxy · Circuit breaker",
+   "기술: Service discovery · API Gateway · MSA",
+   "운영: API",
+   "참고: API"
   ],
   "keywords_must": [
-   "서비스 메시",
-   "사이드카",
-   "mTLS",
-   "트래픽 관리",
-   "관측성",
-   "Istio/Linkerd",
-   "정책",
-   "데이터플레인·컨트롤플레인"
+   "Microservice",
+   "Sidecar proxy",
+   "Circuit breaker",
+   "Service discovery",
+   "API Gateway",
+   "MSA",
+   "API"
   ],
   "keywords_ref": [
-   "API GW",
-   "MSA",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "API"
   ],
-  "keywords": [
-   "핵심: 서비스 메시 · 사이드카 · mTLS",
-   "구성: 트래픽 관리 · 관측성 · Istio/Linkerd",
-   "서비스 간 통신을 사이드카 프록시로 제어하는 MSA 인프라 계층"
+  "outline": [
+   "효과적인 MSA 배치 구성환경, Service Mesh 개요",
+   "- Service Mesh 정의",
+   "Service Mesh 구성도 및 구성요소",
+   "- Service Mesh 구성도",
+   "- Service Mesh 구성요소",
+   "Service Mesh와 API Gateway 비교"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "효과적인 MSA 배치 구성환경, Service Mesh 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "Service Mesh 정의",
       "items": [
-       "서비스 간 통신을 사이드카 프록시로 제어하는 MSA 인프라 계층"
+       "서비스를 탐색하고 연결하는 과정을 자동화하는 어플리케이션 계층의 네트워킹 기술"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Service Mesh 구성도 및 구성요소",
+    "subsections": [
+     {
+      "title": "Service Mesh 구성도",
+      "items": [
+       "서비스 간 네트워킹 관련 모든 로직을 마이크로서비스에서 추출하여 사이드카로 주입",
+       "서비스와 사이드카를 병렬로 배치하고 서비스 간 호출은 프록시를 경유"
       ]
      },
      {
-      "title": "목적",
+      "title": "Service Mesh 구성요소",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "중앙집중화된 컨트롤러에서 프록시 설정정보 통제",
+       "컴포넌트의 관리 및 모니터링 수행"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "Service Mesh와 API Gateway 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "서비스 메시",
-       "사이드카",
-       "mTLS",
-       "트래픽 관리",
-       "관측성",
-       "Istio/Linkerd"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "정책",
-       "데이터플레인·컨트롤플레인",
-       "표준·비교·한계를 함께 기술"
+       "분산형 아키텍처 - 중앙집중형 아키텍처",
+       "개별서비스 통신제어 - 내부 서비스 제어 및 보호",
+       "독립적인 API Gateway 구성 (External)",
+       "서비스 내 Sidecar 구성 (Internal)",
+       "요청 서비스 - 요청 서버",
+       "Sidecar Proxy Pattern 사용 - Gateway Proxy pattern 사용"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "서비스 메시",
-   "사이드카",
-   "mTLS",
-   "트래픽 관리",
-   "관측성",
-   "Istio/Linkerd",
-   "정책",
-   "데이터플레인·컨트롤플레인"
+   "Microservice",
+   "Sidecar proxy",
+   "Circuit breaker",
+   "Service discovery",
+   "API Gateway",
+   "MSA",
+   "API"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_017": {
   "name": "웹 3.0(Web 3.0)",
   "en": "Web 3.0",
   "title": "웹 3.0(Web 3.0)",
-  "definition": "탈중앙·소유권·토큰 경제를 강조하는 차세대 웹 개념 (의미웹과 구분되어 쓰이기도 함)",
-  "outline": [
-   "웹 3.0의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "2006 년 뉴욕 타임즈 기자 존 마코프가 처음 사용한 개념으로 “웹 3.0 은 사용자가 원하는 정보를 즉직관적인 경험을 제공하는 시멘틱 웹(Sementic Web) 기반의 지능형 웹”",
+  "keywords": [
+   "핵심: Semantic Web · 검색서비스 구조 · 지능형 Agent",
+   "기술: 상황인식 컴퓨팅 소통 · 융합 · 개인화 (web 2.0- 참여, 공유,개방)"
   ],
   "keywords_must": [
-   "Web 3.0",
-   "탈중앙화",
-   "블록체인",
-   "지갑",
-   "토큰",
-   "의미웹(고전적)",
-   "사용자 소유 데이터",
-   "DApp"
+   "Semantic Web",
+   "검색서비스 구조",
+   "지능형 Agent",
+   "상황인식 컴퓨팅 소통",
+   "융합",
+   "개인화 (web 2.0- 참여, 공유,개방)"
   ],
-  "keywords_ref": [
-   "Web2",
-   "DID",
-   "NFT",
-   "관련 표준",
-   "적용 시 주의점"
-  ],
-  "keywords": [
-   "핵심: Web 3.0 · 탈중앙화 · 블록체인",
-   "구성: 지갑 · 토큰 · 의미웹(고전적)",
-   "탈중앙·소유권·토큰 경제를 강조하는 차세대 웹 개념 (의미웹과 구분되어 "
+  "keywords_ref": [],
+  "outline": [
+   "지능형 웹, Web 3.0 의 개요",
+   "- Web 3.0 의 정의",
+   "- Web 3.0 의 특징",
+   "Web 3.0 개념도 및 대표적인 기반기술",
+   "- Web 3.0 대표적인 기반기술"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "지능형 웹, Web 3.0 의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "Web 3.0 의 정의",
       "items": [
-       "탈중앙·소유권·토큰 경제를 강조하는 차세대 웹 개념 (의미웹과 구분되어 쓰이기도 함)"
+       "도처에 설치된 컴퓨터를 Seamless 네트워킹으로 연결하여 인간 중심의 정보 서비스를 제공 가능한 개인맞춤형 서비스 플랫폼"
       ]
      },
      {
-      "title": "목적",
+      "title": "Web 3.0 의 특징",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "대용량으로 쌓인 웹 사이트의 정보들을 원활하게 소통할 수 있는 웹",
+       "웹에 참여한 다수의 개인 또는 서비스 제공자와 이용자간의 다방향 의사소통을 지원하는 웹",
+       "이용자들이 정보를 공유한 정보를 정당하게 융합하여 새로운 가치를 지닌 정보로 재 생산하는 시스템의 웹"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "Web 3.0 개념도 및 대표적인 기반기술",
     "subsections": [
      {
-      "title": null,
+      "title": "Web 3.0 대표적인 기반기술",
       "items": [
-       "Web 3.0",
-       "탈중앙화",
-       "블록체인",
-       "지갑",
-       "토큰",
-       "의미웹(고전적)"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "사용자 소유 데이터",
-       "DApp",
-       "표준·비교·한계를 함께 기술"
+       "정보의 의미와 관계를 메타 데이터를 통해 기술하고, 그러한 메타 데이터를 질의할 수있는 질의 언어를 통해 정보를 추려내고 찾아내는 웹기술",
+       "인간이 사용하는 정보체계를 기계가 인식하고, 기계와 인간이 같이 웹 정보를 동일하게 인식하기 위한 표준의 정의 및 용어 활용 기술",
+       "정보를 제공하고 찾아 판단하는 지능을 만들어 웹 뿐만 아니라 개인화된 사람과 동일한 정보의 입력/수정이 지속적으로 이루어지게 되는 환경",
+       "인간 사이 Context가 종합적으로 교감, 전달되는 것처럼 개인에 대한 지속적인 수정과 갱신으로 일종의 지능행위를 통해 개인화된 지능 서비스를 제공할 수 있는 기술"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "Web 3.0",
-   "탈중앙화",
-   "블록체인",
-   "지갑",
-   "토큰",
-   "의미웹(고전적)",
-   "사용자 소유 데이터",
-   "DApp"
+   "Semantic Web",
+   "검색서비스 구조",
+   "지능형 Agent",
+   "상황인식 컴퓨팅 소통",
+   "융합",
+   "개인화 (web 2.0- 참여, 공유,개방)"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_018": {
   "name": "웹 4.0(Web 4.0)",
   "en": "Web 4.0",
   "title": "웹 4.0(Web 4.0)",
-  "definition": "AI·공간·공생적 상호작용을 강조하는 미래 웹 논의 개념",
-  "outline": [
-   "웹 4.0의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "웹이 사람의 말을 이해하고 웹과 사람이 항상 연결되어 상호작용이 될수 있는 차세대 웹.",
+  "keywords": [
+   "핵심: 인간과 기계의 공생 · Symbiotic · RFID",
+   "기술: 웹 4.0(Web 4.0) · 웹 4.0 아키텍처 · 웹 4.0 프로토콜"
   ],
   "keywords_must": [
-   "Web 4.0",
-   "AI 에이전트",
-   "공간 웹",
-   "공생",
-   "개인화",
-   "몰입",
-   "자동화",
-   "진화 단계"
+   "인간과 기계의 공생",
+   "Symbiotic",
+   "RFID",
+   "웹 4.0(Web 4.0)",
+   "웹 4.0 아키텍처",
+   "웹 4.0 프로토콜"
   ],
-  "keywords_ref": [
-   "Web3",
-   "메타버스",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
-  ],
-  "keywords": [
-   "핵심: Web 4.0 · AI 에이전트 · 공간 웹",
-   "구성: 공생 · 개인화 · 몰입",
-   "AI·공간·공생적 상호작용을 강조하는 미래 웹 논의 개념"
+  "keywords_ref": [],
+  "outline": [
+   "컴퓨터가 사람이 되는 시대 Web 4.0 의 개요",
+   "- 스마트워크의 특징",
+   "인터넷의 미래"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "컴퓨터가 사람이 되는 시대 Web 4.0 의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "스마트워크의 특징",
       "items": [
-       "AI·공간·공생적 상호작용을 강조하는 미래 웹 논의 개념"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "모바일 웹, All Device 가상, 현실 세계 연결.",
+       "인간과 기계(machine)이 공생하는(symbiotic/심비어틱)는 웹",
+       "웹에서 사람이 만날수 있음"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "인터넷의 미래",
     "subsections": [
      {
       "title": null,
       "items": [
-       "Web 4.0",
-       "AI 에이전트",
-       "공간 웹",
-       "공생",
-       "개인화",
-       "몰입"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "자동화",
-       "진화 단계",
-       "표준·비교·한계를 함께 기술"
+       "Web 4.0 은 비즈니스 및 의료 분야를 모두 바꿀 것으로 예상. RFID 태그는 제품에 추가되어 고객 경험을향상.",
+       "웹 4.0 은 소비자에 의해 제어되며 소비자에게 완전한 제어권을 제공.",
+       "공생 웹은 '지능형 건물'의 개발을 지원. 건물과 기계 간의 연결은 사용자의 요구를 충족시킬 수 있음.",
+       "의료 분야가 크게 바뀔 것으로 예상. 의학은 결국 사람과 기계 사이의 연결을 가능하게하여 환자들에게공생 시스템을 사용하여 치유 할 수있는 능력을 부여."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": "symbiotic/심비어틱 웹, 가상/현실 연결, 속도와 안정성, RFID",
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "Web 4.0",
-   "AI 에이전트",
-   "공간 웹",
-   "공생",
-   "개인화",
-   "몰입",
-   "자동화",
-   "진화 단계"
+   "인간과 기계의 공생",
+   "Symbiotic",
+   "RFID",
+   "웹 4.0(Web 4.0)",
+   "웹 4.0 아키텍처",
+   "웹 4.0 프로토콜"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_019_00": {
   "name": "웹 접근성(WA, Web Accessibility)",
   "en": "Web Accessibility",
   "title": "웹 접근성(WA, Web Accessibility)",
-  "definition": "장애·환경과 무관하게 웹을 이용할 수 있게 하는 품질·규범",
-  "outline": [
-   "웹 접근성의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "웹페이지 또는 웹 애플리케이션에 있는 정보 텍스트, 이미지, 소리 정보와 같은 자연적인 정보",
+  "keywords": [
+   "핵심: 암기 · SW · WCAG2",
+   "기술: 웹 접근성(WA, Web Accessibility) · 웹 접근성 아키텍처 · 웹 접근성 프로토콜"
   ],
   "keywords_must": [
-   "웹 접근성",
-   "WCAG",
-   "대체 텍스트",
-   "키보드 접근",
-   "명도 대비",
-   "한국형 WA",
-   "인증",
-   "법적 의무"
+   "암기",
+   "SW",
+   "WCAG2",
+   "웹 접근성(WA, Web Accessibility)",
+   "웹 접근성 아키텍처",
+   "웹 접근성 프로토콜"
   ],
-  "keywords_ref": [
-   "전자정부",
-   "UX",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
-  ],
-  "keywords": [
-   "핵심: 웹 접근성 · WCAG · 대체 텍스트",
-   "구성: 키보드 접근 · 명도 대비 · 한국형 WA",
-   "장애·환경과 무관하게 웹을 이용할 수 있게 하는 품질·규범"
+  "keywords_ref": [],
+  "outline": [
+   "웹 접근성의 구성요소 및 가이드 라인",
+   "WCAG2.0",
+   "- 특징",
+   "- WCAG2.0 등장배경",
+   "웹 표준화",
+   "접근성 정책 등의 적용 범위 제한",
+   "총괄부서와 민관협력체제 부재"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "웹 접근성의 구성요소 및 가이드 라인",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "웹 브라우저, 미디어 플레이어 등의 사용자 도구",
+       "웹 상 컨텐츠를 사용자들이 이용할 수 있도록 도와주는 도구",
+       "화면낭독 프로그램(Screen reader), 대체 키보드, 스캐닝 SW, 화면확대프로그램",
+       "웹을 이용하는 사람(장애인, 노인 등 포함)",
+       "디자이너, 코더(Coder), 저작자 등",
+       "웹 사이트를 제작할 수 있는 소프트웨어"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "WCAG2.0",
+    "subsections": [
+     {
+      "title": "특징",
+      "items": [
+       "웹 설계/개발자들이 웹 컨텐츠 접근성 준수하여 쉽게 제작할 수 있는 지침 제공",
+       "WCAG2.0은 1.0과 비해 장애인의 실제적인 사용성에 초점을 맞춤",
+       "웹에 접근하는 수준에서 인터넷을 직접 활용할 수 있도록 하는데 초점을 둠"
+      ]
+     },
+     {
+      "title": "WCAG2.0 등장배경",
+      "items": [
+       "인터넷 기술 발전/웹 사용성 증대 방안"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "웹 표준화",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "장애·환경과 무관하게 웹을 이용할 수 있게 하는 품질·규범"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "웹의 상호호환성(Cross Browsing)을 확보하고 개방성이 우수한 환경으로 만들어 다양한 접근환경, 다양한사용자에게 일관된 형식의 사용자 인터페이스 제공"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "접근성 정책 등의 적용 범위 제한",
     "subsections": [
      {
       "title": null,
       "items": [
-       "웹 접근성",
-       "WCAG",
-       "대체 텍스트",
-       "키보드 접근",
-       "명도 대비",
-       "한국형 WA"
+       "키오스크, 가전제품 등 IoT 기기에 제외되어 있음"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "총괄부서와 민관협력체제 부재",
     "subsections": [
      {
       "title": null,
       "items": [
-       "인증",
-       "법적 의무",
-       "표준·비교·한계를 함께 기술"
+       "장애인차별금지 및 권리구제 등에 관한 법률(장차법) : 보건복지부(복지부)",
+       "공공기관의 웹 접근성 확보 : 행정안전부(행안부)",
+       "민관기관의 웹 접근성 확보 : 과학기술정보통신부(정통부)",
+       "접근성 관련 장애인 차별 시정 기구 : 인권위"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "웹 접근성",
-   "WCAG",
-   "대체 텍스트",
-   "키보드 접근",
-   "명도 대비",
-   "한국형 WA",
-   "인증",
-   "법적 의무"
+   "암기",
+   "SW",
+   "WCAG2",
+   "웹 접근성(WA, Web Accessibility)",
+   "웹 접근성 아키텍처",
+   "웹 접근성 프로토콜"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_020_1": {
   "name": "슈퍼 앱(Super App)",
   "en": "Super App",
   "title": "슈퍼 앱(Super App)",
-  "definition": "하나의 앱에서 결제·메시징·생활서비스를 통합 제공하는 플랫폼형 앱",
-  "outline": [
-   "슈퍼 앱의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "하나의 앱 안에서 별도의 다른 앱을 설치하지 않아도 수많은 서비스를 이용할 수 있는 앱",
+  "keywords": [
+   "핵심: 하나의 앱에서 모든 서비스 이용 · OTT · 슈퍼 앱(Super App)",
+   "기술: 슈퍼 앱 아키텍처 · 슈퍼 앱 프로토콜 · 슈퍼 앱 보안"
   ],
   "keywords_must": [
-   "슈퍼 앱",
-   "미니앱/미니프로그램",
-   "슈퍼플랫폼",
-   "락인",
-   "결제",
-   "신원",
-   "생태계",
-   "규제"
+   "하나의 앱에서 모든 서비스 이용",
+   "OTT",
+   "슈퍼 앱(Super App)",
+   "슈퍼 앱 아키텍처",
+   "슈퍼 앱 프로토콜",
+   "슈퍼 앱 보안"
   ],
-  "keywords_ref": [
-   "슈퍼앱 전략",
-   "플랫폼",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
-  ],
-  "keywords": [
-   "핵심: 슈퍼 앱 · 미니앱/미니프로그램 · 슈퍼플랫폼",
-   "구성: 락인 · 결제 · 신원",
-   "하나의 앱에서 결제·메시징·생활서비스를 통합 제공하는 플랫폼형 앱"
+  "keywords_ref": [],
+  "outline": [
+   "슈퍼앱의 개념도 및 구성요소",
+   "- 슈퍼앱의 개념도",
+   "- 슈퍼앱의 기술요소 및 서비스 설명",
+   "슈퍼앱 활용 예시"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "슈퍼앱의 개념도 및 구성요소",
     "subsections": [
      {
-      "title": "정의",
+      "title": "슈퍼앱의 개념도",
       "items": [
-       "하나의 앱에서 결제·메시징·생활서비스를 통합 제공하는 플랫폼형 앱"
+       "서비스, 특성, 기능을 하나의 유저 인터페이스로 모으는 종합 애플리케이션이나 포털 이상의 것을 제공"
       ]
      },
      {
-      "title": "목적",
+      "title": "슈퍼앱의 기술요소 및 서비스 설명",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "실시간 정보, 상품, 지역, 추천 서비스 제공",
+       "입금, 출금, 송금, 대출, 증권 등의 서비스를 간편 인증을 통해 제공",
+       "가전, 음식, 생필품 등 다양한 상품에 대한 실시간 주문 가능"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "슈퍼앱 활용 예시",
     "subsections": [
      {
       "title": null,
       "items": [
-       "슈퍼 앱",
-       "미니앱/미니프로그램",
-       "슈퍼플랫폼",
-       "락인",
-       "결제",
-       "신원"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "생태계",
-       "규제",
-       "표준·비교·한계를 함께 기술"
+       "검색 중심으로 서비스 확장(검색, 온라인 쇼핑, 금융, 주문, 장보기)",
+       "카카오톡 기반으로 서비스 확장(메신저, 금융, 주문, 가전렌탈, 상품 구독)",
+       "숙박앱에서 여행분야로 확대(숙박, 레저, 예매, 식당예약)",
+       "빅데이터 적극 활용(쇼핑, 음식배달, 영상 OTT)",
+       "배달앱 기반의 서비스 확대 (배달음식 주문, 배달대행, 장보기)",
+       "코로나 환경과 더불어 앱 기반 소비가 늘어남에 따라 슈퍼앱을 기반으로 비즈니스 모델 확대"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "슈퍼 앱",
-   "미니앱/미니프로그램",
-   "슈퍼플랫폼",
-   "락인",
-   "결제",
-   "신원",
-   "생태계",
-   "규제"
+   "하나의 앱에서 모든 서비스 이용",
+   "OTT",
+   "슈퍼 앱(Super App)",
+   "슈퍼 앱 아키텍처",
+   "슈퍼 앱 프로토콜",
+   "슈퍼 앱 보안"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_020_2": {
   "name": "프로그레시브 웹앱(PWA)",
   "en": "Progressive Web App",
   "title": "프로그레시브 웹앱(PWA)",
-  "definition": "웹 기술로 설치·오프라인·푸시 등 네이티브에 가까운 경험을 제공하는 앱",
-  "outline": [
-   "프로그레시브 웹앱의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "모바일 기기에서 서비스워커, 웹 캐싱 등의 웹 기술을 적용하여 네이티브 앱과 유사한 사용자 경험을 제공하는웹 어플리케이션",
+  "keywords": [
+   "핵심: 네이티브 앱 · 서비스 워커 · Manifest",
+   "기술: HTTPS · 푸시 알림 · 오프라인 캐싱",
+   "운영: 백그라운드 동기화 · PWA · HW",
+   "참고: 백그라운드 동기화 · PWA · HW"
   ],
   "keywords_must": [
-   "PWA",
-   "Service Worker",
-   "매니페스트",
-   "오프라인",
-   "푸시",
+   "네이티브 앱",
+   "서비스 워커",
+   "Manifest",
    "HTTPS",
-   "설치 가능",
-   "크로스플랫폼"
+   "푸시 알림",
+   "오프라인 캐싱",
+   "백그라운드 동기화",
+   "PWA",
+   "HW",
+   "SW"
   ],
   "keywords_ref": [
-   "SPA",
-   "네이티브",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "백그라운드 동기화",
+   "PWA",
+   "HW"
   ],
-  "keywords": [
-   "핵심: PWA · Service Worker · 매니페스트",
-   "구성: 오프라인 · 푸시 · HTTPS",
-   "웹 기술로 설치·오프라인·푸시 등 네이티브에 가까운 경험을 제공하는 앱"
+  "outline": [
+   "네이티브 앱 수준의 모바일 웹, PWA의 개요",
+   "- PWA의 특징",
+   "PWA의 개념도와 기술요소",
+   "- PWA의 개념도",
+   "- PWA 의 기술요소",
+   "PWA와 Native App의 비교"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "네이티브 앱 수준의 모바일 웹, PWA의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "PWA의 특징",
       "items": [
-       "웹 기술로 설치·오프라인·푸시 등 네이티브에 가까운 경험을 제공하는 앱"
+       "웹의 한계를 벗어나, 네이티브 앱처럼 푸시 알림 등의 HW/SW 기능 활용",
+       "앱스토어 다운로드 불필요, 웹 검색엔진을 통해 접근 가능",
+       "Android나 iOS 플랫폼에 종속되지 않고, 용량을 크게 차지 안함",
+       "일반적인 모바일 웹 앱과 달리 오프라인 동작 및 기본 HW/SW 기능에 접근 가능"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "PWA의 개념도와 기술요소",
+    "subsections": [
+     {
+      "title": "PWA의 개념도",
+      "items": [
+       "단일 웹 개발 환경으로 여러 플랫폼(Android, iOS 등)에 빌드 가능, 크로스 플랫폼 지원"
       ]
      },
      {
-      "title": "목적",
+      "title": "PWA 의 기술요소",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "웹 브라우저와 별개로 동작하며, 웹 페이지 또는 사용자 상호",
+       "서비스 워커작용이 필요하지 않는 백그라운드로 실행되는 스크립트",
+       "JSON 형식으로 PWA의 표시 및 기능 방식에 대한 정보를 포"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "PWA와 Native App의 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "PWA",
-       "Service Worker",
-       "매니페스트",
-       "오프라인",
-       "푸시",
-       "HTTPS"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "설치 가능",
-       "크로스플랫폼",
-       "표준·비교·한계를 함께 기술"
+       "PWA 지원에 폐쇄적 이였던 Apple iOS 플랫폼에서도 최근 HW/SW 접근 가능한 API 제공"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "PWA",
-   "Service Worker",
-   "매니페스트",
-   "오프라인",
-   "푸시",
+   "네이티브 앱",
+   "서비스 워커",
+   "Manifest",
    "HTTPS",
-   "설치 가능",
-   "크로스플랫폼"
+   "푸시 알림",
+   "오프라인 캐싱",
+   "백그라운드 동기화",
+   "PWA",
+   "HW",
+   "SW"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_021": {
   "name": "단일 페이지 애플리케이션(SPA)",
   "en": "Single Page Application",
   "title": "단일 페이지 애플리케이션(SPA)",
-  "definition": "페이지 새로고침 없이 뷰를 갱신하는 웹 애플리케이션 구조",
+  "definition": "전통적인 새로고침 방식의 웹과는 달리 브라우저에서 페이지 간 이동 없이 자바스크립트를 이용하여 동적으로 페이지를 변경할 수 있는 웹 애플리케이션",
+  "keywords": [
+   "핵심: 자바스크립트 · Ajax · 비동기(Asynchronous)",
+   "기술: UX향상 · 동적 페이지 변경 · SEO 문제",
+   "운영: UX · SEO",
+   "참고: UX · SEO"
+  ],
+  "keywords_must": [
+   "자바스크립트",
+   "Ajax",
+   "비동기(Asynchronous)",
+   "UX향상",
+   "동적 페이지 변경",
+   "SEO 문제",
+   "UX",
+   "SEO"
+  ],
+  "keywords_ref": [
+   "UX",
+   "SEO"
+  ],
   "outline": [
    "단일 페이지 애플리케이션의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "SPA",
-   "CSR",
-   "라우팅",
-   "API 통신",
-   "초기 로딩",
-   "SEO 이슈",
-   "상태 관리",
-   "프레임워크"
-  ],
-  "keywords_ref": [
-   "SSR",
-   "PWA",
-   "MPA",
-   "관련 표준",
-   "적용 시 주의점"
-  ],
-  "keywords": [
-   "핵심: SPA · CSR · 라우팅",
-   "구성: API 통신 · 초기 로딩 · SEO 이슈",
-   "페이지 새로고침 없이 뷰를 갱신하는 웹 애플리케이션 구조"
+   "- 필요성",
+   "단일 페이지 애플리케이션의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "단일 페이지 애플리케이션의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "단일 페이지 애플리케이션의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "페이지 새로고침 없이 뷰를 갱신하는 웹 애플리케이션 구조"
+       "전통적인 새로고침 방식의 웹과는 달리 브라우저에서 페이지 간 이동 없이 자바스크립트를 이용하여 동적으로 페이지를 변경할 수 있는 웹 애플리케이션"
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "단일 페이지 애플리케이션는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "단일 페이지 애플리케이션의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "SPA",
-       "CSR",
-       "라우팅",
-       "API 통신",
-       "초기 로딩",
-       "SEO 이슈"
+       "자바스크립트",
+       "Ajax",
+       "비동기(Asynchronous)",
+       "UX향상"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "동적 페이지 변경",
+       "SEO 문제"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "단일 페이지 애플리케이션의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "상태 관리",
-       "프레임워크",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 단일 페이지 애플리케이션를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "SPA",
-   "CSR",
-   "라우팅",
-   "API 통신",
-   "초기 로딩",
-   "SEO 이슈",
-   "상태 관리",
-   "프레임워크"
+   "자바스크립트",
+   "Ajax",
+   "비동기(Asynchronous)",
+   "UX향상",
+   "동적 페이지 변경",
+   "SEO 문제",
+   "UX",
+   "SEO"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_022": {
   "name": "딥링크(Deep Link)",
   "en": "Deep Link",
   "title": "딥링크(Deep Link)",
-  "definition": "앱·웹의 특정 콘텐츠로 바로 이동하는 링크. 모바일 앱 유도에 활용",
-  "outline": [
-   "딥링크의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "딥링크란 상세콘텐츠로 사용자를 랜딩시키키는 링크, 대부분의 웹링크가 딥링크에 속함.",
+  "keywords": [
+   "핵심: SNS · IT · 딥링크(Deep Link)",
+   "기술: 딥링크 아키텍처 · 딥링크 프로토콜 · 딥링크 보안"
   ],
   "keywords_must": [
-   "딥링크",
-   "URI 스킴",
-   "App Links/Universal Links",
-   "폴백",
-   "归因",
-   "온보딩",
-   "보안",
-   "플랫폼 차이"
+   "SNS",
+   "IT",
+   "딥링크(Deep Link)",
+   "딥링크 아키텍처",
+   "딥링크 프로토콜",
+   "딥링크 보안"
   ],
-  "keywords_ref": [
-   "디퍼드 딥링크",
-   "푸시",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
-  ],
-  "keywords": [
-   "핵심: 딥링크 · URI 스킴 · App Links/Universal Links",
-   "구성: 폴백 · 归因 · 온보딩",
-   "앱·웹의 특정 콘텐츠로 바로 이동하는 링크. 모바일 앱 유도에 활용"
+  "keywords_ref": [],
+  "outline": [
+   "딥링크 (Deep Link) 개요",
+   "- 딥링크 (Deep Link) 정의",
+   "딥링크 동작 및 주목 이유",
+   "- 딥링크 동작",
+   "- 딥링크 주목 이유",
+   "딥링크 나아가야할 방안"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "딥링크 (Deep Link) 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "딥링크 (Deep Link) 정의",
       "items": [
-       "앱·웹의 특정 콘텐츠로 바로 이동하는 링크. 모바일 앱 유도에 활용"
+       "모바일 딥링크는 스마트폰 에서 특정 SNS에서 자동 URL Link을 클릭하면 앱이 기동되어 이동되는기능",
+       "상세 콘텐츠 까지 이동하지 않으면, 딥링크의 속성이 할당되지 않은것이며, 상세 스토어 까지 이동하면 딥링크의 속성을 사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "딥링크 동작 및 주목 이유",
+    "subsections": [
+     {
+      "title": "딥링크 동작",
+      "items": [
+       "포탈사이트의 뮤직앱을 클릭하면 멜론이 실행된다. (별도 앱기동 불필요)"
       ]
      },
      {
-      "title": "목적",
+      "title": "딥링크 주목 이유",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "데이터가 곧 생명인 검색 엔진과 IT 회사들에게 '모바일 컨텐츠 = 트래픽 = 수익'의 등식이 성립하기 때문.",
+       "기존에 검색 및 인덱싱이 가능했던 웹 컨텐츠'의 생산량보다 '검색 및 인덱싱이 불가능한 모바일 컨텐츠' 생산량이 많아 지기 시작하면서 위기의식 인지.",
+       "실제로 관련 업계 전문가들도 '모바일 컨텐츠 역전 현상에 대비하지 않으면 언젠간 구글과 같은 회사도 도태될 수 있다 판단"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "딥링크 나아가야할 방안",
     "subsections": [
      {
       "title": null,
       "items": [
-       "딥링크",
-       "URI 스킴",
-       "App Links/Universal Links",
-       "폴백",
-       "归因",
-       "온보딩"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "보안",
-       "플랫폼 차이",
-       "표준·비교·한계를 함께 기술"
+       "모바일 딥링크가 공개되어 있지 않다는점",
+       "디바이스 종류/ 앱 설치 여부 별 딥링크에 대한 단일화된 End Point 미존재 2가지 문제가 해결되어야 딥링크 분야가 활성화 될 것으로 기대."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "딥링크",
-   "URI 스킴",
-   "App Links/Universal Links",
-   "폴백",
-   "归因",
-   "온보딩",
-   "보안",
-   "플랫폼 차이"
+   "SNS",
+   "IT",
+   "딥링크(Deep Link)",
+   "딥링크 아키텍처",
+   "딥링크 프로토콜",
+   "딥링크 보안"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_023": {
   "name": "웹서비스(WSDL·SOAP·UDDI)",
   "en": "Web Services WSDL SOAP UDDI",
   "title": "웹서비스(WSDL·SOAP·UDDI)",
-  "definition": "SOAP 기반 웹서비스와 기술 스택(WSDL 기술, UDDI 발견)의 고전적 SOA 구성요소",
-  "outline": [
-   "웹서비스·WSDL·SOAP·UDDI의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "SOAP, WSDL, UDDI 등의 표준 기술을 이용하여 네트워크에 연결된 다른 컴퓨터간의 상호작용을 하기 위한",
+  "keywords": [
+   "핵심: 기술요소 - UDDI · SOPA · XML",
+   "기술: REST · WSDL · JSON",
+   "운영: SOAP · UDDI",
+   "참고: SOAP · UDDI"
   ],
   "keywords_must": [
-   "웹서비스",
-   "SOAP",
-   "WSDL",
-   "UDDI",
-   "상호운용",
+   "기술요소 - UDDI",
+   "SOPA",
    "XML",
-   "SOA",
-   "계약"
+   "REST",
+   "WSDL",
+   "JSON",
+   "SOAP",
+   "UDDI"
   ],
   "keywords_ref": [
-   "REST",
-   "OpenAPI",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "SOAP",
+   "UDDI"
   ],
-  "keywords": [
-   "핵심: 웹서비스 · SOAP · WSDL",
-   "구성: UDDI · 상호운용 · XML",
-   "SOAP 기반 웹서비스와 기술 스택(WSDL 기술, UDDI 발견)의 고"
+  "outline": [
+   "표준 메시지를 통한 개방형 분산 컴퓨팅 아키텍쳐, 웹 서비스(Web Service)…",
+   "- 웹 서비스(Web Service)의 정의",
+   "웹 서비스(Web Service)의 구성 및 역할",
+   "- 웹 서비스의 구성도",
+   "웹 서비스(Web Service)의 주요 기술 요소의 스택과 상세 설명",
+   "- 웹 서비스의 주요 기술 요소 상세 설명"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "표준 메시지를 통한 개방형 분산 컴퓨팅 아키텍쳐, 웹 서비스(Web Service)의 개념",
     "subsections": [
      {
-      "title": "정의",
+      "title": "웹 서비스(Web Service)의 정의",
       "items": [
-       "SOAP 기반 웹서비스와 기술 스택(WSDL 기술, UDDI 발견)의 고전적 SOA 구성요소"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "표준 방식으로 분산 저장되어 있는 자원들을 공유하고 호환가능하게 하는 인터넷 서비스",
+       "표준 기술을 이용하여 네트워크에 연결된 다른 컴퓨터간의 분산컴퓨팅을 지원하는 소프트웨어",
+       "표준화된 XML 메시지를 통하여 네트워크에 접근가능한 오퍼레이션을 기술하는 인터페이스",
+       "표준 방식으로 분산 저장되어 있는 자원들을 공유하고 호환가능하게 하는 인터넷 서비스"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "웹 서비스(Web Service)의 구성 및 역할",
     "subsections": [
      {
-      "title": null,
+      "title": "웹 서비스의 구성도",
       "items": [
-       "웹서비스",
-       "SOAP",
-       "WSDL",
-       "UDDI",
-       "상호운용",
-       "XML"
+       "웹 서비스(Web Services)는 3가지 역할(Service Provider, Service Broker, Service Consumer)에 따른 아키텍처 모델에 따라 구현된 기술",
+       "과정 : 고객이 SOAP 통신언어를 통해 UDDI내의 XML 웹서비스 업체 조회 -> WSDL 또는 XML 웹서비스 위치확인 -> XML웹 서비스의 정의 조회 -> 고객이 필요한 정의를 입력 또는 산출 -> XML 웹서비스 업체를 호출 -> XML웹서비스 사용"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "웹 서비스(Web Service)의 주요 기술 요소의 스택과 상세 설명",
     "subsections": [
      {
-      "title": null,
+      "title": "웹 서비스의 주요 기술 요소 상세 설명",
       "items": [
-       "SOA",
-       "계약",
-       "표준·비교·한계를 함께 기술"
+       "Universal Description, Discover and Integration",
+       "필요한 서비스를 찾을 수 있는 웹 서비스 레지스트리 (서비스 등록, 검색)",
+       "웹 서비스와 비즈니스를 발행(publish)/검색(Find)하기 위한 기술적인 스펙",
+       "UDDI데이터 범주 White 페이지: 회사에 대한 일반적인 정보 (비즈니스 이름, 세부내용, 주소) Yellow 페이지: 회사나 서비스가 제공하는 분류된 데이터 (표준 분류법을 토대로 산업별, 제품별, 지리적 코드별로 나뉜 데이터) Green 페이지: 웹 서비스에 대한 기술적인 정보. (외부 스펙을 가리키거나 웹 서비스 호출에 대한 주소)"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "웹서비스",
-   "SOAP",
-   "WSDL",
-   "UDDI",
-   "상호운용",
+   "기술요소 - UDDI",
+   "SOPA",
    "XML",
-   "SOA",
-   "계약"
+   "REST",
+   "WSDL",
+   "JSON",
+   "SOAP",
+   "UDDI"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_027_01": {
-  "name": "웹기반 서비스 성능관리(SV 027 01)",
-  "en": "SV 027 01",
-  "title": "웹기반 서비스 성능관리(SV 027 01)",
+  "name": "웹기반 서비스 성능관리(Web Performance Management)",
+  "en": "Web Performance Management",
+  "title": "웹기반 서비스 성능관리(Web Performance Management)",
   "definition": "전환율은 원하는 사이트에서 고객이 취하는 확률이며 반송률은 한 페이만 보고 고객이 떠나는 확률",
-  "outline": [
-   "웹기반 서비스 성능관리의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 페이지의 무게 · 네트워크 상태 · 호스팅 위치",
+   "기술: HTTP 요청을 최소화 · 헤더에 만료기간 추가 · CSS Expression 지양",
+   "운영: Gzip 컴포넌트 활용 · 자바스크립트 최소화 및 중복 제거 · CSS",
+   "참고: Gzip 컴포넌트 활용 · 자바스크립트 최소화 및 중복 제거 · CSS"
   ],
   "keywords_must": [
-   "웹기반 서비스 성능관리",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "페이지의 무게",
+   "네트워크 상태",
+   "호스팅 위치",
+   "HTTP 요청을 최소화",
+   "헤더에 만료기간 추가",
+   "CSS Expression 지양",
+   "Gzip 컴포넌트 활용",
+   "자바스크립트 최소화 및 중복 제거",
+   "CSS"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "Gzip 컴포넌트 활용",
+   "자바스크립트 최소화 및 중복 제거",
+   "CSS"
   ],
-  "keywords": [
-   "핵심: 웹기반 서비스 성능관리 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "전환율은 원하는 사이트에서 고객이 취하는 확률이며 반송률은 한 페이만 보"
+  "outline": [
+   "웹기반 서비스의 성능관리가 중요한 이유",
+   "웹 성능저하 요인",
+   "- 시스템 구간에 따른 병목 구간 점검",
+   "- 구간 별 웹 성능 저하 요인",
+   "프론트-엔드 관점에서의 웹 최적화 방안 6가지 설명",
+   "프론트 앤드 웹 성능 최적화 개선 성공 사례"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "웹기반 서비스의 성능관리가 중요한 이유",
     "subsections": [
      {
-      "title": "정의",
+      "title": null,
       "items": [
-       "전환율은 원하는 사이트에서 고객이 취하는 확률이며 반송률은 한 페이만 보고 고객이 떠나는 확률"
+       "웹 성능 저하의 원인은 데이터베이스, 네트워크, 웹 서버 등 여러 단계에서 발생"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "웹 성능저하 요인",
+    "subsections": [
+     {
+      "title": "시스템 구간에 따른 병목 구간 점검",
+      "items": [
+       "시스템 구간 중 가장 많은 병목 요소로 클라이언트와 네트워크, 서버로 나눌 수 있음",
+       "클라이언트 부분은 웹 페이지와 무게, 네트워크는 연결 상태, 서버는 호스트의 위치로 세분화 할 수 있음"
       ]
      },
      {
-      "title": "목적",
+      "title": "구간 별 웹 성능 저하 요인",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "큰 JavaScript 파일, 비디오 콘텐츠, 무거운 CSS 파일, 고화질 이미지 등은",
+       "개발자들은 과거와 달리 웹 페이지에 다양한 기능을 추가할 수 있으며 결과적으로 평균적인 전체 페이지 무게는 증가"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "프론트-엔드 관점에서의 웹 최적화 방안 6가지 설명",
     "subsections": [
      {
       "title": null,
       "items": [
-       "웹기반 서비스 성능관리",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "이미지 맵 이용 시 평균 50%의 속도 절감, CSS Sprite 활용",
+       "스크립트와 스타일시트 결합",
+       "사이트에 처음 방문한 사용자일 경우 여러 번의 HTTP 요청을 하게 될지도 모르지만 헤더 만료 기한을 이용함으로써 그 구성요소를 캐시에 저장",
+       "CSS Expression은 CSS 속성을 동적으로 설정하는 강력하면서 위험한 기능으로",
+       "Gizp은 HTML문서, 스크립트와 스타일시트를 압축",
+       "불필요한 문제를 줄여서 파일 크기 축소로 로딩 시간 개선"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "프론트 앤드 웹 성능 최적화 개선 성공 사례",
     "subsections": [
      {
       "title": null,
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "홈페이지 로드 시간을 100밀리초 줄였더니 세션 기반 전환이 1.11% 상향",
+       "페이지 로드 시간을 반으로 줄이고 나서 매출이 12-13% 증가",
+       "페이지 로드 시간을 1초 개선함으로써 전환이 2% 증가",
+       "Pinterest는 긴 로딩 시간으로 인해 사용자가 페이지를 나가는 비율이 높았는데, 최적화를 통해 사용자 이탈률을줄이고 매출은 40%로 증가",
+       "이처럼 매출 실적과 연결될 정도로 웹 애플리케이션의 성능 최적화는 매우 중요"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "웹기반 서비스 성능관리",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "페이지의 무게",
+   "네트워크 상태",
+   "호스팅 위치",
+   "HTTP 요청을 최소화",
+   "헤더에 만료기간 추가",
+   "CSS Expression 지양",
+   "Gzip 컴포넌트 활용",
+   "자바스크립트 최소화 및 중복 제거",
+   "CSS"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_033": {
   "name": "퍼블릭 클라우드 서비스 분류(Public Cloud)",
   "en": "Public Cloud Service Models",
   "title": "퍼블릭 클라우드 서비스 분류(Public Cloud)",
-  "definition": "IaaS·PaaS·SaaS 등 퍼블릭 클라우드 서비스 모델 분류",
-  "outline": [
-   "퍼블릭 클라우드 서비스 분류의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "누구나 인터넷/네트워크에 접속하여 결제만으로 서비스에 접근할 수 있고 사용한 만큼 지불(Pay as you Go)하는구조를 갖는 공중 인프라",
+  "keywords": [
+   "핵심: XaaS 기반 · IT 자원 Host(HW, SW, NW) · On Demand(원하는 즉시)",
+   "기술: Virtualization(HW, Storage, NW) · CSB(Cloud Service Broker) · Open Stack",
+   "운영: 참여 · 공유 · 개방",
+   "참고: 참여 · 공유 · 개방"
   ],
   "keywords_must": [
-   "퍼블릭 클라우드",
-   "IaaS",
-   "PaaS",
-   "SaaS",
-   "공유 인프라",
-   "탄력성",
-   "종량제",
-   "책임공유"
+   "XaaS 기반",
+   "IT 자원 Host(HW, SW, NW)",
+   "On Demand(원하는 즉시)",
+   "Virtualization(HW, Storage, NW)",
+   "CSB(Cloud Service Broker)",
+   "Open Stack",
+   "참여",
+   "공유",
+   "개방"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "참여",
+   "공유",
+   "개방"
   ],
-  "keywords": [
-   "핵심: 퍼블릭 클라우드 · IaaS · PaaS",
-   "구성: SaaS · 공유 인프라 · 탄력성",
-   "IaaS·PaaS·SaaS 등 퍼블릭 클라우드 서비스 모델 분류"
+  "outline": [
+   "Public Cloud 의 개요",
+   "- Public Cloud 의 정의",
+   "Cloud Computing 의 분류 및 비교",
+   "- 서비스 대상에 따른 클라우드컴퓨팅의 비교.",
+   "Public Cloud 서비스의 구축단계 및 사례",
+   "- Public Cloud 서비스의 구축단계"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "Public Cloud 의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "Public Cloud 의 정의",
       "items": [
-       "IaaS·PaaS·SaaS 등 퍼블릭 클라우드 서비스 모델 분류"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "초기 투자비용이 없기 때문에 경제적이나 서비스 제공자에 대한 의존도가 큼",
+       "일반 사용자에게 공개되어 대규모로 제공되는 클라우드 서비스(External Cloud 라고도 함)",
+       "기업들의 데이터를 인터넷 상의 서버에 저장하고, 데스크탑/노트북, 스마트폰 등 클라이언트 기기에서 운영체제와 시공간의 제약없이 언제든 열러볼 수 있는 서비스 형태"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "Cloud Computing 의 분류 및 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "서비스 대상에 따른 클라우드컴퓨팅의 비교.",
       "items": [
-       "퍼블릭 클라우드",
-       "IaaS",
-       "PaaS",
-       "SaaS",
-       "공유 인프라",
-       "탄력성"
+       "제 3자에 의해 운영 - 어플리케이션의 종류 선택/실행 권한을 고객소유",
+       "활용도 증가 - 특정 업무 중심의 어플리케이션 구성",
+       "최소의 투자로 최대의 효과 - 보안 및 신뢰성 제공",
+       "이용한만큼 지불 - 네트워크 대역폭 제약 없음"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "Public Cloud 서비스의 구축단계 및 사례",
     "subsections": [
      {
-      "title": null,
+      "title": "Public Cloud 서비스의 구축단계",
       "items": [
-       "종량제",
-       "책임공유",
-       "표준·비교·한계를 함께 기술"
+       "Infrastructure as a Service",
+       "네트워크와 서버 등 물리적인 장비들이 서비스로서 인프라 구축",
+       "Platform as a Servcie",
+       "IaaS 기반으로 각종 가상화 솔루션 등을 유연하게 적용시키기 위해 서비스로의 플랫폼 형성",
+       "Software as a Service"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "퍼블릭 클라우드",
-   "IaaS",
-   "PaaS",
-   "SaaS",
-   "공유 인프라",
-   "탄력성",
-   "종량제",
-   "책임공유"
+   "XaaS 기반",
+   "IT 자원 Host(HW, SW, NW)",
+   "On Demand(원하는 즉시)",
+   "Virtualization(HW, Storage, NW)",
+   "CSB(Cloud Service Broker)",
+   "Open Stack",
+   "참여",
+   "공유",
+   "개방"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_034": {
   "name": "프라이빗 클라우드(Private Cloud)",
   "en": "Private Cloud",
   "title": "프라이빗 클라우드(Private Cloud)",
-  "definition": "특정 조직 전용으로 구축·운영되는 클라우드",
-  "outline": [
-   "프라이빗 클라우드의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "기업 내부와 같이 폐쇄된 환경에서 특정 사용자만 사용하는 클라우드 서비스(Internal Cloud라고도 함)",
+  "keywords": [
+   "핵심: Service Catalogue · Management & Monitoring · Virtual Servers",
+   "기술: Virtual Storage · Virtual Networks · DataBases",
+   "운영: Firewall · DMZ · IDC",
+   "참고: Firewall · DMZ · IDC"
   ],
   "keywords_must": [
-   "프라이빗 클라우드",
-   "전용",
-   "온프레미스/호스팅",
-   "통제",
-   "보안",
-   "비용",
-   "가상화",
-   "하이브리드 연계"
+   "Service Catalogue",
+   "Management & Monitoring",
+   "Virtual Servers",
+   "Virtual Storage",
+   "Virtual Networks",
+   "DataBases",
+   "Firewall",
+   "DMZ",
+   "IDC"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "Firewall",
+   "DMZ",
+   "IDC"
   ],
-  "keywords": [
-   "핵심: 프라이빗 클라우드 · 전용 · 온프레미스/호스팅",
-   "구성: 통제 · 보안 · 비용",
-   "특정 조직 전용으로 구축·운영되는 클라우드"
+  "outline": [
+   "기업 자체 운영 IDC, Private Cloud 의 개요",
+   "- Private Cloud 의 정의",
+   "Private Cloud 구축 고려사항 및 적용 전략"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "기업 자체 운영 IDC, Private Cloud 의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "Private Cloud 의 정의",
       "items": [
-       "특정 조직 전용으로 구축·운영되는 클라우드"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "기업 내부의 클라우드 데이터 센터를 중심으로 클라우드 컴퓨팅 환경을 구성해서 내부 고객에게 서비스를 제공하는 방식",
+       "보안 기능이 강화된 방화벽 내에서만 배타적으로 이용이 가능한 서비스로 주로 대기업에서 데이터 소유권을 확보하고 프라이버시를 보장받고자 할 때 구축되는 방식"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "Private Cloud 구축 고려사항 및 적용 전략",
     "subsections": [
      {
       "title": null,
       "items": [
-       "프라이빗 클라우드",
-       "전용",
-       "온프레미스/호스팅",
-       "통제",
-       "보안",
-       "비용"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "가상화",
-       "하이브리드 연계",
-       "표준·비교·한계를 함께 기술"
+       "신규 시스템과 비교적 중요도가 떨어지는 시스템을 대상으로 우선 추진 대상 시스템의 성격과 보안성 등을 고려해 Public Cloud도 동시 추진이 필요함"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "프라이빗 클라우드",
-   "전용",
-   "온프레미스/호스팅",
-   "통제",
-   "보안",
-   "비용",
-   "가상화",
-   "하이브리드 연계"
+   "Service Catalogue",
+   "Management & Monitoring",
+   "Virtual Servers",
+   "Virtual Storage",
+   "Virtual Networks",
+   "DataBases",
+   "Firewall",
+   "DMZ",
+   "IDC"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_035": {
   "name": "하이브리드 클라우드(Hybrid Cloud)",
   "en": "Hybrid Cloud",
   "title": "하이브리드 클라우드(Hybrid Cloud)",
-  "definition": "퍼블릭과 프라이빗을 연계해 쓰는 클라우드 운영 모델",
+  "definition": "on-premise 컴퓨팅, 프라이빗 클라우드, 퍼블릭 클라우드 모두를 효과적으로 혼용하는 컴퓨팅 플랫폼",
+  "keywords": [
+   "핵심: 하이브리드 클라우드(Hybrid Cloud) · 하이브리드 클라우드 아키텍처 · 하이브리드 클라우드 프로토콜",
+   "기술: 하이브리드 클라우드 보안 · 하이브리드 클라우드 표준 · 하이브리드 클라우드 유형"
+  ],
+  "keywords_must": [
+   "하이브리드 클라우드(Hybrid Cloud)",
+   "하이브리드 클라우드 아키텍처",
+   "하이브리드 클라우드 프로토콜",
+   "하이브리드 클라우드 보안",
+   "하이브리드 클라우드 표준",
+   "하이브리드 클라우드 유형"
+  ],
+  "keywords_ref": [],
   "outline": [
    "하이브리드 클라우드의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "하이브리드 클라우드",
-   "워크로드 배치",
-   "연결성",
-   "이식성",
-   "버스팅",
-   "거버넌스",
-   "데이터 주권",
-   "운영 복잡도"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 하이브리드 클라우드 · 워크로드 배치 · 연결성",
-   "구성: 이식성 · 버스팅 · 거버넌스",
-   "퍼블릭과 프라이빗을 연계해 쓰는 클라우드 운영 모델"
+   "- 필요성",
+   "하이브리드 클라우드의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "하이브리드 클라우드의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "하이브리드 클라우드의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "퍼블릭과 프라이빗을 연계해 쓰는 클라우드 운영 모델"
+       "on-premise 컴퓨팅, 프라이빗 클라우드, 퍼블릭 클라우드 모두를 효과적으로 혼용하는 컴퓨팅 플랫폼"
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "하이브리드 클라우드는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "하이브리드 클라우드의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "하이브리드 클라우드",
-       "워크로드 배치",
-       "연결성",
-       "이식성",
-       "버스팅",
-       "거버넌스"
+       "하이브리드 클라우드(Hybrid Cloud)",
+       "하이브리드 클라우드 아키텍처",
+       "하이브리드 클라우드 프로토콜",
+       "하이브리드 클라우드 보안"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "하이브리드 클라우드 표준",
+       "하이브리드 클라우드 유형"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "하이브리드 클라우드의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "데이터 주권",
-       "운영 복잡도",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 하이브리드 클라우드를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "하이브리드 클라우드",
-   "워크로드 배치",
-   "연결성",
-   "이식성",
-   "버스팅",
-   "거버넌스",
-   "데이터 주권",
-   "운영 복잡도"
+   "하이브리드 클라우드(Hybrid Cloud)",
+   "하이브리드 클라우드 아키텍처",
+   "하이브리드 클라우드 프로토콜",
+   "하이브리드 클라우드 보안",
+   "하이브리드 클라우드 표준",
+   "하이브리드 클라우드 유형"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_036_1": {
   "name": "클라우드(CSP(Cloud Service Provider))",
   "en": "CSP Cloud Service Provider",
   "title": "클라우드(CSP(Cloud Service Provider))",
   "definition": "권한이 있는 사용자가 클라우드를 통해 서비스를 이용할 수 있고, 사용량에 따라 컴퓨터 자원을 유동적으로제공하는 클라우드 서비스 제공자",
-  "outline": [
-   "클라우드의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: CSP · SW · MFA",
+   "기술: 클라우드(CSP(Cloud Service Provider)) · 클라우드 아키텍처 · 클라우드 프로토콜"
   ],
   "keywords_must": [
-   "클라우드",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "CSP",
+   "SW",
+   "MFA",
+   "클라우드(CSP(Cloud Service Provider))",
+   "클라우드 아키텍처",
+   "클라우드 프로토콜"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 클라우드 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "권한이 있는 사용자가 클라우드를 통해 서비스를 이용할 수 있고, 사용량에"
+  "keywords_ref": [],
+  "outline": [
+   "클라우드 아웃소싱에 대한 요구사항",
+   "클라우드 리스크 관리시 고려사항",
+   "클라우드 리스크 대응방안"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "클라우드 아웃소싱에 대한 요구사항",
     "subsections": [
      {
-      "title": "정의",
+      "title": null,
       "items": [
-       "권한이 있는 사용자가 클라우드를 통해 서비스를 이용할 수 있고, 사용량에 따라 컴퓨터 자원을 유동적으로제공하는 클라우드 서비스 제공자"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "계약 관련 세부 정보 포함하여 아웃소싱 레지스터 등록",
+       "CSP에 대한 평판 분석 등 적합성 평가 실시",
+       "데이터 처리 및 저장 위치 등을 포함한 서면 계약 요건",
+       "클라우드 아웃소싱 계약의 종료 가능 여부 평가",
+       "서브 아웃소싱 허용여부를 고려한 아웃소싱 계약 체결",
+       "관할 당국에 클라우드 아웃소싱 계획 보고"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "클라우드 리스크 관리시 고려사항",
     "subsections": [
      {
       "title": null,
       "items": [
-       "클라우드",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
+       "클라우드 환경의 특수성을 고려한 업무지속성 확보방안 및 재해복구계획을 수립하고 해당 계획의 실효성 제고한 다양한 모의훈련 실시",
+       "클라우드를 통해 처리되는 정보 및 업무의 중요성 등을 감안하여",
+       "CSP와의 이용계약 체결시 클라우드 전산센터의 전산사고 발생에 따른피해보상대책의 적정성을 검토",
+       "CSP에 대한 업무 집중 리스크를 정기적으로 분석하고 다중 공급업체전략 적용(멀티 클라우드 등) 필요성 등을 검토",
+       "전산사고 등으로부터 데이터를 안전하게 보존하고, 업무연속성 확보를위해 주 전산센터 및 재해복구센터 역할을 하는 클라우드 전산센터를일정거리 이상 원격지에 분산 구축",
+       "Cloud 서비스를 이용하는 기업에서는 재해 및 재난 등을 대비해 안정적인 시스템 운영을 위해 특정 CSP에대한 집중 리스크를 고려할 필요 있음"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "클라우드 리스크 대응방안",
     "subsections": [
      {
       "title": null,
       "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "제3자 계약의 중요성을 평가하여 중요 아웃소싱을 식별하고의존 위험과 집중 위험 등을 주기적으로 평가",
+       "SW취약점으로 인한 영향 전파나 재해복구시스템에 대한 복수기업",
+       "의존위험을 해소하기 위해 기업의 혁신과 복원력 사이의 균형을따져 다중 공급업체 전략을 적용하는 등 조치를 검토",
+       "비례성 원칙에 따라 중요 아웃소싱인 경우 보안조치 등을 강화하고규모 및 복잡성이 적은 기업은 완화된 조치를 적용",
+       "암호화, 해싱, 디지털 서명, 중복 모니터링 등 강화",
+       "주기적 백업 및 백신관리, MFA 인증 관리"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "CSP",
+   "SW",
+   "MFA",
+   "클라우드(CSP(Cloud Service Provider))",
+   "클라우드 아키텍처",
+   "클라우드 프로토콜"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_036_2": {
-  "name": "클라우드 관리 플랫폼(SV 036 2)",
-  "en": "SV 036 2",
-  "title": "클라우드 관리 플랫폼(SV 036 2)",
+  "name": "클라우드 관리 플랫폼(CMP, Cloud Management Platform)",
+  "en": "Cloud Management Platform",
+  "title": "클라우드 관리 플랫폼(CMP, Cloud Management Platform)",
   "definition": "기업이 클라우드 컴퓨팅 리소스를 모니터링하고 제어하는 데 사용할 수 있는 통합소프트웨어 도구 모음을 제공하는 플랫폼(Platform)",
-  "outline": [
-   "클라우드 관리 플랫폼의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 자원 모니터링 및 리소스 관리 · 동적 사용량 미터링/과금 · 거버넌스",
+   "기술: 워크 플로우 자동화 · CAPEX · OPEX",
+   "운영: IT",
+   "참고: IT"
   ],
   "keywords_must": [
-   "클라우드 관리 플랫폼",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "자원 모니터링 및 리소스 관리",
+   "동적 사용량 미터링/과금",
+   "거버넌스",
+   "워크 플로우 자동화",
+   "CAPEX",
+   "OPEX",
+   "IT"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "IT"
   ],
-  "keywords": [
-   "핵심: 클라우드 관리 플랫폼 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "기업이 클라우드 컴퓨팅 리소스를 모니터링하고 제어하는 데 사용할 수 있는"
+  "outline": [
+   "구축보다 중요한 클라우드 관리. 클라우드 관리 플랫폼(Cloud Management…",
+   "클라우드 관리 플랫폼(Cloud Management Platform)의 필수 기능",
+   "클라우드 관리 플랫폼(Cloud Management Platform)의 선정 기준",
+   "클라우드 관리 플랫폼(Cloud Management Platform)의 기대효과"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "구축보다 중요한 클라우드 관리. 클라우드 관리 플랫폼(Cloud Management Platform)의 정의 및 필요성",
     "subsections": [
      {
-      "title": "정의",
+      "title": "클라우드 관리 플랫폼(Cloud Management Platform)의 필요성",
       "items": [
-       "기업이 클라우드 컴퓨팅 리소스를 모니터링하고 제어하는 데 사용할 수 있는 통합소프트웨어 도구 모음을 제공하는 플랫폼(Platform)"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "클라우드 수요 증가 - 시간과 장소의 구애 없이 효율적인 비용으로 제공된다는 장점으로 기업들의 클라우드 수요가 매년 꾸준히 상승",
+       "클라우드 전환의 가속 - 코로나19로 인해 예상보다 디지털 중심의 서비스 확산이 가속화화",
+       "클라우드 도입 확산에 - 클라우드 도입 확산에 매니지드 서비스 수요 증대에 기업들의관심이 쏠리면서 이에 참여하는 기업 또한 함께 증가요 증대",
+       "멀티 클라우드를 위한 - 멀티 클라우드 환경으로 전환 됨에 따라 클라우드 인프라의 통합 관리, 애플리케이션 자동 통합 등의 요구를 충족 시켜줄 수있는 '멀티 클라우드 관리 플랫폼'의 중요성이 부각"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "클라우드 관리 플랫폼(Cloud Management Platform)의 필수 기능",
     "subsections": [
      {
-      "title": null,
+      "title": "운영자 관점의 클라우드 관리 플랫폼(Cloud Management Platform)의 필수 기능",
       "items": [
-       "클라우드 관리 플랫폼",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
+       "다수의 클라우드, 하드웨어, 소프트웨어 등을 아우르는 전반적인 가시성 확보",
+       "자본지출 대비 운영지출율(CAPEX/OPEX)을 고려해 최소의 인프라 비용으로 최적의 비즈니스 자원을 제공할 수 있는 방안을 운영자에게 제시",
+       "인적자원이 투입된 반복적인 작업들을 정책 설정과 자동화를 통해 효과적으로운영",
+       "클라우드 자원의 라이프사이클 관리와 유지보수 기능을 제공",
+       "클라우드 서비스와 자원의 생성/변경/회수 작업 표준화 등을 Infrastructure & configuration as Code(IaC)를 이용해 라이프사이클 관리를 자동화"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "클라우드 관리 플랫폼(Cloud Management Platform)의 선정 기준",
     "subsections": [
      {
       "title": null,
       "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "인터페이스 구조 - 기존 클라우드와 통합을 위해 어떤 클라우드 플랫폼을대상으로 개발되었는가?",
+       "지원 도구(Utilization - 어떤 기능에 강한 기능을 보유하고 해당 기능이 기업내에서 필수 기능인지의 유무",
+       "클라우드 자원 라이프사이 - 모든 클라우드 자원의 서비스 카탈로그를 IaC형으로 제공하여 자원 최적화의 용이성 제공",
+       "클라우드 자원 라이프사이 - 클라우드 자원의 라이프사이클 관리가 자동화클 관리, 자원 최적화",
+       "클라우드 자원 라이프사이 - 로깅/모니터링 기능의 편의성, 성능, 확장성이 충분한지의 여부확보",
+       "동적 사용량 미터링/과금 - 미터링 및 과금을 자동으로 처리하고 안정성 제공"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "클라우드 관리 플랫폼(Cloud Management Platform)의 기대효과",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "클라우드(cloud) 인프라의 자동화, 효율화를 통해 서비스(service)의 배포를가속화하고 오류 발생 가능성을 감소시켜 IT 서비스를 향상",
+       "복잡하고 처리하기 곤란한 비즈니스 로직(logic)을 자동화 및 단순화하여발생 문제를 해결",
+       "전체 클라우드 기능들의 통합과 관리, 워크로드 자동화를 통해 전체 시스템의 효율성 향상",
+       "단위 비즈니스간 커뮤니케이션 강화",
+       "전체 클라우드 리소스에 대한 가시성 확보를 통해 IT 환경에 대한 제어 확보",
+       "동적 사용량 미터링과 사용 과금에 대한 가시성 확보로 비용 절감"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드 관리 플랫폼",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "자원 모니터링 및 리소스 관리",
+   "동적 사용량 미터링/과금",
+   "거버넌스",
+   "워크 플로우 자동화",
+   "CAPEX",
+   "OPEX",
+   "IT"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_043": {
   "name": "디지털서비스(ISOIEC27017)",
   "en": "ISOIEC27017",
   "title": "디지털서비스(ISOIEC27017)",
   "definition": "불확실한 클라우드 가시성 ISO/IEC ① 클라우드 신뢰성 확보 클라우드 정보 유출 사고 ② 클라우드 보안사고 방지",
-  "outline": [
-   "디지털서비스의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 클라우드 보안 인증제도 · ISO · IEC",
+   "기술: 디지털서비스(ISOIEC27017) · 디지털서비스 아키텍처 · 디지털서비스 프로토콜"
   ],
   "keywords_must": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "클라우드 보안 인증제도",
+   "ISO",
+   "IEC",
+   "디지털서비스(ISOIEC27017)",
+   "디지털서비스 아키텍처",
+   "디지털서비스 프로토콜"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 디지털서비스 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "불확실한 클라우드 가시성 ISO/IEC ① 클라우드 신뢰성 확보 클라우드"
+  "keywords_ref": [],
+  "outline": [
+   "클라우드 서비스 보안 국제 표준, ISO/IEC 27017 의 필요성",
+   "클라우드 서비스 보안 국제 표준, ISO/IEC 27017 의 개념",
+   "- ISO/IEC 27017 의 정의",
+   "- ISO/IEC 27017 의 표준구성",
+   "ISO/IEC 27017 의 통제항목(정조인자 접암물운 통개공사연법)",
+   "클라우드 보안 표준 비교"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "클라우드 서비스 보안 국제 표준, ISO/IEC 27017 의 필요성",
     "subsections": [
      {
-      "title": "정의",
+      "title": null,
       "items": [
-       "불확실한 클라우드 가시성 ISO/IEC ① 클라우드 신뢰성 확보 클라우드 정보 유출 사고 ② 클라우드 보안사고 방지"
+       "클라우드 운영 이슈 27017 ③ 법적 Compliance 대응클라우드 보안 국제 표준 기대효과",
+       "기업이 클라우드 도입시에 주저하는 가장 큰 이유는 클라우드 보안의 문제이며 해결을 위한 장치로보안 인증이 필요하며 국제 표준으로 ISO/IEC 27017 의 도입 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "클라우드 서비스 보안 국제 표준, ISO/IEC 27017 의 개념",
+    "subsections": [
+     {
+      "title": "ISO/IEC 27017 의 정의",
+      "items": [
+       "안전한 클라우드 환경과 보안 위협의 최소화를 위해 ISO/IEC 27002 표준에 기반한 클라우드 서비스제공자와 사용자에게 적용 가능한 클라우드 서비스 정보보호 통제 국제 표준"
       ]
      },
      {
-      "title": "목적",
+      "title": "ISO/IEC 27017 의 표준구성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "ISO/IEC 27001, 27002, 29100 기반으로 클라우드 서비스의 보안 표준을 정의"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "ISO/IEC 27017 의 통제항목(정조인자 접암물운 통개공사연법)",
     "subsections": [
      {
       "title": null,
       "items": [
-       "디지털서비스",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "클라우드 정보보호 목적 및 프레임워크 제공, 정보보호 관리책임 문서화",
+       "클라우드 서비스 제공자와 사용자의 역할, 정보보호 내부 조직",
+       "클라우드 서비스 관리자 교육 및 인적 자원 고용전/후 보안지침",
+       "클라우드 자산 식별, 클라우드 서비스 종료시 고객 데이터 삭제",
+       "클라우드 사용자별 접근 통제, 클라우드 인증 절차",
+       "멀티 테넌트 환경에서 클라우드 서비스 사용자가 사용하는 리소스의 분리"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "클라우드 보안 표준 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "클라우드 서비스 제공자 - 클라우드 서비스 개인정보 - 클라우드 서비스 (IaaS, SaaS)",
+       "ISO/IEC 국제기구 - ISO/IEC 국제기구",
+       "한국인터넷진흥원(평가/인증)",
+       "14 개 도메인, 37 개 통제 항목 - 11 개 도메인, 28 개 통제 항목 - 14 개 도메인, 33 개 통제 항목",
+       "3 년 재인증(1 년 갱신) - 3 년 재인증(1 년 갱신) - 5 년 재인증(1 년 갱신)",
+       "공공기관의 민간 클라우드 서비스 도입 위해 클라우드 보안 인증제 도입('16 년 7 월)"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "클라우드 보안 인증제도",
+   "ISO",
+   "IEC",
+   "디지털서비스(ISOIEC27017)",
+   "디지털서비스 아키텍처",
+   "디지털서비스 프로토콜"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_044": {
   "name": "디지털서비스(XaaS(Everything))",
   "en": "XaaS Everything",
   "title": "디지털서비스(XaaS(Everything))",
   "definition": "서비스 형태로 제공될 수 있는 모든 IT 요소를 총칭함. Everything as a Service",
+  "keywords": [
+   "핵심: AaaS(Architecture as a Service) · BaaS(Business as a Service) · Paas(Platform as a Service)",
+   "기술: DCaaS(Data-Center as a Service) · SaaS(Software as a Service) · FaaS(Framework as a Service)",
+   "운영: HaaS(Hardware as a Service) · CaaS(Communications as a Service) · IT",
+   "참고: HaaS(Hardware as a Service) · CaaS(Communications as a Service) · IT"
+  ],
+  "keywords_must": [
+   "AaaS(Architecture as a Service)",
+   "BaaS(Business as a Service)",
+   "Paas(Platform as a Service)",
+   "DCaaS(Data-Center as a Service)",
+   "SaaS(Software as a Service)",
+   "FaaS(Framework as a Service)",
+   "HaaS(Hardware as a Service)",
+   "CaaS(Communications as a Service)",
+   "IT",
+   "DC"
+  ],
+  "keywords_ref": [
+   "HaaS(Hardware as a Service)",
+   "CaaS(Communications as a Service)",
+   "IT"
+  ],
   "outline": [
    "디지털서비스의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "디지털서비스",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 디지털서비스 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "서비스 형태로 제공될 수 있는 모든 IT 요소를 총칭함. Everythi"
+   "- 필요성",
+   "디지털서비스의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "디지털서비스의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "디지털서비스의 개념",
     "subsections": [
      {
       "title": "정의",
@@ -2186,304 +2069,324 @@
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "디지털서비스는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "디지털서비스의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "디지털서비스",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
+       "AaaS(Architecture as a Service)",
+       "BaaS(Business as a Service)",
+       "Paas(Platform as a Service)",
+       "DCaaS(Data-Center as a Service)"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "SaaS(Software as a Service)",
+       "FaaS(Framework as a Service)",
+       "HaaS(Hardware as a Service)",
+       "CaaS(Communications as a Service)"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "디지털서비스의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 디지털서비스를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "디지털서비스",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "AaaS(Architecture as a Service)",
+   "BaaS(Business as a Service)",
+   "Paas(Platform as a Service)",
+   "DCaaS(Data-Center as a Service)",
+   "SaaS(Software as a Service)",
+   "FaaS(Framework as a Service)",
+   "HaaS(Hardware as a Service)",
+   "CaaS(Communications as a Service)",
+   "IT",
+   "DC"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_046": {
   "name": "백엔드 서비스(BaaS)",
   "en": "Backend as a Service",
   "title": "백엔드 서비스(BaaS)",
-  "definition": "인증·DB·푸시 등 백엔드 기능을 서비스로 제공하는 모델",
+  "definition": "모바일 어플리케이션 백엔드로 연결하는 데이터, 접속제어 기능들을 API로 연결 제공하는 서비스",
+  "keywords": [
+   "핵심: 모바일앱 · API 연결 · 데이터 저장소",
+   "기술: Push 사용자 · 관리 · 소셜 인증",
+   "운영: Location · Billing · API",
+   "참고: Location · Billing · API"
+  ],
+  "keywords_must": [
+   "모바일앱",
+   "API 연결",
+   "데이터 저장소",
+   "Push 사용자",
+   "관리",
+   "소셜 인증",
+   "Location",
+   "Billing",
+   "API"
+  ],
+  "keywords_ref": [
+   "Location",
+   "Billing",
+   "API"
+  ],
   "outline": [
    "백엔드 서비스의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "BaaS",
-   "인증",
-   "데이터베이스",
-   "푸시",
-   "서버리스",
-   "모바일 백엔드",
-   "API",
-   "종속성"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: BaaS · 인증 · 데이터베이스",
-   "구성: 푸시 · 서버리스 · 모바일 백엔드",
-   "인증·DB·푸시 등 백엔드 기능을 서비스로 제공하는 모델"
+   "- 필요성",
+   "백엔드 서비스의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "백엔드 서비스의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "백엔드 서비스의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "인증·DB·푸시 등 백엔드 기능을 서비스로 제공하는 모델"
+       "모바일 어플리케이션 백엔드로 연결하는 데이터, 접속제어 기능들을 API로 연결 제공하는 서비스"
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "백엔드 서비스는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "백엔드 서비스의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "BaaS",
-       "인증",
-       "데이터베이스",
-       "푸시",
-       "서버리스",
-       "모바일 백엔드"
+       "모바일앱",
+       "API 연결",
+       "데이터 저장소",
+       "Push 사용자"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "관리",
+       "소셜 인증",
+       "Location",
+       "Billing"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "백엔드 서비스의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "API",
-       "종속성",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 백엔드 서비스를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "BaaS",
-   "인증",
-   "데이터베이스",
-   "푸시",
-   "서버리스",
-   "모바일 백엔드",
-   "API",
-   "종속성"
+   "모바일앱",
+   "API 연결",
+   "데이터 저장소",
+   "Push 사용자",
+   "관리",
+   "소셜 인증",
+   "Location",
+   "Billing",
+   "API"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_050_1": {
   "name": "디지털서비스(NaaS(Network as a Service))",
   "en": "NaaS Network as a Service",
   "title": "디지털서비스(NaaS(Network as a Service))",
   "definition": "구독 기반 또는 유연한 소비 모델에서 사용되는 네트워크 인프라 하드웨어, 소프트웨어, 서비스, 관리 및 라이선스 구성 요소",
-  "outline": [
-   "디지털서비스의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: On-Promise · Cloud · Hybrid",
+   "기술: VPN · MPLS · WAN"
   ],
   "keywords_must": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "On-Promise",
+   "Cloud",
+   "Hybrid",
+   "VPN",
+   "MPLS",
+   "WAN"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 디지털서비스 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "구독 기반 또는 유연한 소비 모델에서 사용되는 네트워크 인프라 하드웨어,"
+  "keywords_ref": [],
+  "outline": [
+   "서비스형 네트워크, NaaS 개념",
+   "- NaaS 정점",
+   "NaaS 유형 및 제공 서비스",
+   "- NaaS 유형",
+   "- NaaS 제공 서비스",
+   "NaaS의 향후 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "서비스형 네트워크, NaaS 개념",
     "subsections": [
      {
-      "title": "정의",
+      "title": "NaaS 정점",
       "items": [
-       "구독 기반 또는 유연한 소비 모델에서 사용되는 네트워크 인프라 하드웨어, 소프트웨어, 서비스, 관리 및 라이선스 구성 요소"
+       "쉬운 확장성을 통해 회사의 필요에 맞게 용도를 변경할 수 있고, 사용한 만큼만 지불하기때문에 비용효율적",
+       "온 사이트 접근 방식보다 네트워크 구입 비용이 훨씬 저렴하며 최신 버전의 프로그램으로업데이트 하는 데도 훨씬 적은 비용이 소요",
+       "다중차용, 즉 멀티테넌시(Multi-tenancy)는 또한 보안, 속도, 개인정보 등을 손상시키지 않고 더 광범위한 사용자 그룹에게 더 폭넓은 자원을 제공",
+       "가상 사설망(VPN), 다중 프로토콜 레이블 스위칭(MPLS) 연결, 기타 레거시 네트워크 구성을 대체"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "NaaS 유형 및 제공 서비스",
+    "subsections": [
+     {
+      "title": "NaaS 유형",
+      "items": [
+       "네트워크 인프라에 대한 제어 유지를 내부 조직이 수행",
+       "외부 전문 크라우드 업체에서 네트워크 가상 인프라 제공",
+       "일부 자원은 내부에서 일부는 외부 클라우드 업체에서 관리"
       ]
      },
      {
-      "title": "목적",
+      "title": "NaaS 제공 서비스",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "애플리케이션에 안전하게 연결할 수 있게 지원하는 가상 WAN 아키텍처"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "NaaS의 향후 과제",
     "subsections": [
      {
       "title": null,
       "items": [
-       "디지털서비스",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "NaaS 벤더의 인프라는 구형 하드웨어, 온프레미스 기반 애플리케이션 등 아직도사용되고 있는 레거시 시스템과 호환되지 않을 수 있음",
+       "많은 기업에서 중요한 애플리케이션과 프로세스는 여전히 클라우드가 아닌 온프레미스 데이터 센터에서 실행. 따라서 NaaS 모델로의 마이그레이션이 약간 더 어려워짐",
+       "클라우드 서비스로 이동하면 기업이 특정 서비스 공급자에 너무 의존하게 될 위험이 항상 발생",
+       "NaaS의 광범위한 채택은 향후 5~10년에 걸쳐 천천히 이뤄질 것으로 예상"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "On-Promise",
+   "Cloud",
+   "Hybrid",
+   "VPN",
+   "MPLS",
+   "WAN"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_053_00": {
-  "name": "멀티클라우드(SV 053 00)",
-  "en": "SV 053 00",
-  "title": "멀티클라우드(SV 053 00)",
+  "name": "멀티클라우드(Multi-Cloud)",
+  "en": "Multi-Cloud",
+  "title": "멀티클라우드(Multi-Cloud)",
   "definition": "2 개 이상의 CSP(Cloud Service Provider)가 제공하는 Public or Private 구성된 클라우드 운영 방식",
+  "keywords": [
+   "핵심: 상이한 인증 · 상이한 정책 · 상이한 보안기술",
+   "기술: 복잡성 증대 ISO 27000 시리즈(ISO 27017, IS0 27018) · CASB · CSP(Cloud Service Provider)",
+   "운영: ISO · IS0 · API",
+   "참고: ISO · IS0 · API"
+  ],
+  "keywords_must": [
+   "상이한 인증",
+   "상이한 정책",
+   "상이한 보안기술",
+   "복잡성 증대 ISO 27000 시리즈(ISO 27017, IS0 27018)",
+   "CASB",
+   "CSP(Cloud Service Provider)",
+   "ISO",
+   "IS0",
+   "API"
+  ],
+  "keywords_ref": [
+   "ISO",
+   "IS0",
+   "API"
+  ],
   "outline": [
    "멀티클라우드의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "멀티클라우드",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 멀티클라우드 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "2 개 이상의 CSP(Cloud Service Provider)가 제공하"
+   "- 필요성",
+   "멀티클라우드의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "멀티클라우드의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "멀티클라우드의 개념",
     "subsections": [
      {
       "title": "정의",
@@ -2492,62 +2395,72 @@
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "멀티클라우드는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "멀티클라우드의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "멀티클라우드",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
+       "상이한 인증",
+       "상이한 정책",
+       "상이한 보안기술",
+       "복잡성 증대 ISO 27000 시리즈(ISO 27017, IS0 27018)"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "CASB",
+       "API"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "멀티클라우드의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 멀티클라우드를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "멀티클라우드",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "상이한 인증",
+   "상이한 정책",
+   "상이한 보안기술",
+   "복잡성 증대 ISO 27000 시리즈(ISO 27017, IS0 27018)",
+   "CASB",
+   "CSP(Cloud Service Provider)",
+   "ISO",
+   "IS0",
+   "API"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_057": {
   "name": "사용자경험(LXC(Linux Contatiner))",
@@ -15915,1059 +15828,1002 @@
   "name": "다크 웹(Dark Web)",
   "en": "Dark Web",
   "title": "다크 웹(Dark Web)",
-  "definition": "일반 검색·브라우저로 접근하기 어렵고 특수 소프트웨어로 접속하는 익명성 중심의 웹 영역",
-  "outline": [
-   "다크 웹의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "암호화 네트워크에 존재하며 일반 검색·브라우저로는 접근할 수 없는 익명성 중심 웹사이트 집합(다크웹). Tor 등 특수 소프트웨어로만 접속한다.",
+  "keywords": [
+   "핵심: 다크웹(Dark Web) · 토르(Tor) · 어니언 라우팅",
+   "기술: 익명성 · 딥웹 · 접속 허가",
+   "참고: Surface Web · Hidden Service"
   ],
   "keywords_must": [
-   "다크 웹",
+   "다크웹(Dark Web)",
    "토르(Tor)",
-   "익명성",
-   "불법 거래 위험",
-   "딥웹과 구분",
-   "접근 통제",
-   "수사·모니터링",
-   "보안"
+   "어니언 라우팅(Onion Routing)",
+   "익명성(Anonymity)",
+   "딥웹(Deep Web)",
+   "접속 허가",
+   "VPN",
+   "수사·모니터링"
   ],
   "keywords_ref": [
-   "Deep Web",
    "Surface Web",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "Hidden Service",
+   "비트코인 거래"
   ],
-  "keywords": [
-   "핵심: 다크 웹 · 토르(Tor) · 익명성",
-   "구성: 불법 거래 위험 · 딥웹과 구분 · 접근 통제",
-   "일반 검색·브라우저로 접근하기 어렵고 특수 소프트웨어로 접속하는 익명성 "
+  "outline": [
+   "폐쇄적 검은망 Dark Web 의 개요",
+   "- Dark Web 의 정의",
+   "- Dark Web 의 특징",
+   "Dark Web 구성도 및 설명",
+   "- 구성도",
+   "- Dark Web 의 상세설명",
+   "Dark Web 의 순기능과 역기능"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "폐쇄적 검은망 Dark Web 의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "Dark Web 의 정의",
       "items": [
-       "일반 검색·브라우저로 접근하기 어렵고 특수 소프트웨어로 접속하는 익명성 중심의 웹 영역"
+       "폐쇄적인 접속허가, 익명성 또는 잘 알려지지 않은 Root 접속으로 다른사람의 눈을 피해 목적을 실행할수 있는 외부에 노출되지 않도록 만들어진 네트워크.",
+       "참여, 광고를 해서 이름을 알리는 보통의 가게가 표면웹이라면, 광고를 하지 않아 아는 사람들만 갈 수있는 가게가 딥 웹이다. 그리고, 다크 웹 가게 중에는 일반 손님은 받지 않고 회원만 들어갈 수 있는 더욱 폐쇄적인 가게도 있을 수 있다. 이런 가게에는 VPN을 통한 인트라넷을 운용하는 가게, 검색이 안 되는 회원제 네이버 카페 같은 가게, 그리고 토르 브라우저로만 들어갈 수 있는 어니언 네"
       ]
      },
      {
-      "title": "목적",
+      "title": "Dark Web 의 특징",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "Onion Network, 다중우회 브라우저, 익명성, 겹층암호화, 불법사이트, 범죄에 주로사용, 바이러스 배포, 랜섬웨어 본거지"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "Dark Web 구성도 및 설명",
     "subsections": [
      {
-      "title": null,
+      "title": "구성도",
       "items": [
-       "다크 웹",
-       "토르(Tor)",
-       "익명성",
-       "불법 거래 위험",
-       "딥웹과 구분",
-       "접근 통제"
+       "F2F(Friend to Friend)방식과 사설 네트워크 방식이 존재"
+      ]
+     },
+     {
+      "title": "Dark Web 의 상세설명",
+      "items": [
+       "라우팅 진행시마다 암호화/복호화 수행하여 익명성 보장"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "Dark Web 의 순기능과 역기능",
     "subsections": [
      {
       "title": null,
       "items": [
-       "수사·모니터링",
-       "보안",
-       "표준·비교·한계를 함께 기술"
+       "일부 순기능이 존재하나 대부분 범죄에 악용되는 경우가 많으며, 운영 안전성이 상대적으로 떨어지기 때문에지속적으로 이용하기 어려움 존재"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "다크 웹",
-   "토르(Tor)",
-   "익명성",
-   "불법 거래 위험",
-   "딥웹과 구분",
-   "접근 통제",
-   "수사·모니터링",
-   "보안"
+   "범죄",
+   "딥웹",
+   "Tor NW",
+   "Onion router",
+   "접속허가",
+   "VPN",
+   "F2F(Friend to Friend)"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_003": {
   "name": "딥 웹(Deep Web)",
   "en": "Deep Web",
   "title": "딥 웹(Deep Web)",
-  "definition": "검색엔진에 노출되지 않는 웹 콘텐츠 영역(로그인·DB 등). 다크웹의 상위 개념",
-  "outline": [
-   "딥 웹의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "검색엔진이 찾지 못하는 웹페이지를 말하며, 딥웹은 다크웹을 포함 데이터 베이스, 웹메일 페이지, 등록이 필요한 웹양식, 유료결제를 통과해야 하는 페이지 포함",
+  "keywords": [
+   "핵심: 딥 웹(Deep Web) · 딥 웹 아키텍처 · 딥 웹 프로토콜",
+   "기술: 딥 웹 보안 · 딥 웹 표준 · 딥 웹 유형"
   ],
   "keywords_must": [
-   "딥 웹",
-   "비가시 웹",
-   "검색 미인덱싱",
-   "로그인 콘텐츠",
-   "데이터베이스",
-   "Surface Web 대비",
-   "다크웹 포함관계",
-   "정보 접근"
+   "딥 웹(Deep Web)",
+   "딥 웹 아키텍처",
+   "딥 웹 프로토콜",
+   "딥 웹 보안",
+   "딥 웹 표준",
+   "딥 웹 유형"
   ],
-  "keywords_ref": [
-   "Dark Web",
-   "크롤링 한계",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
-  ],
-  "keywords": [
-   "핵심: 딥 웹 · 비가시 웹 · 검색 미인덱싱",
-   "구성: 로그인 콘텐츠 · 데이터베이스 · Surface Web 대비",
-   "검색엔진에 노출되지 않는 웹 콘텐츠 영역(로그인·DB 등). 다크웹의 상"
+  "keywords_ref": [],
+  "outline": [
+   "웹의 유형 비교 및 설명",
+   "- 웹의 3가지 유형 비교",
+   "Dark Web 의 순기능과 역기능"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "웹의 유형 비교 및 설명",
     "subsections": [
      {
-      "title": "정의",
+      "title": "웹의 3가지 유형 비교",
       "items": [
-       "검색엔진에 노출되지 않는 웹 콘텐츠 영역(로그인·DB 등). 다크웹의 상위 개념"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "라우팅 진행시마다 암호화/복호화 수행하여 익명성 보장"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "Dark Web 의 순기능과 역기능",
     "subsections": [
      {
       "title": null,
       "items": [
-       "딥 웹",
-       "비가시 웹",
-       "검색 미인덱싱",
-       "로그인 콘텐츠",
-       "데이터베이스",
-       "Surface Web 대비"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "다크웹 포함관계",
-       "정보 접근",
-       "표준·비교·한계를 함께 기술"
+       "일부 순기능이 존재하나 대부분 범죄에 악용되는 경우가 많으며, 운영 안전성이 상대적으로 떨어지기 때문에지속적으로 이용하기 어려움 존재"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "딥 웹",
-   "비가시 웹",
-   "검색 미인덱싱",
-   "로그인 콘텐츠",
-   "데이터베이스",
-   "Surface Web 대비",
-   "다크웹 포함관계",
-   "정보 접근"
+   "딥 웹(Deep Web)",
+   "딥 웹 아키텍처",
+   "딥 웹 프로토콜",
+   "딥 웹 보안",
+   "딥 웹 표준",
+   "딥 웹 유형"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_004": {
   "name": "쿠키(Cookie)",
   "en": "HTTP Cookie",
   "title": "쿠키(Cookie)",
-  "definition": "웹 서버가 브라우저에 저장하는 작은 데이터. 세션·추적·개인화에 사용",
+  "definition": "HTTP Protocol의 비상태성(Stateless)을 해결하기 위해 Client의 이전 트랜잭션 정보를 텍스트 파일로 저장하는 방법",
+  "keywords": [
+   "핵심: Client/Server Side · 영구쿠키 · 세션 쿠키",
+   "기술: Set-cookie · 쿠키(Cookie) · 쿠키 아키텍처"
+  ],
+  "keywords_must": [
+   "Client/Server Side",
+   "영구쿠키",
+   "세션 쿠키",
+   "Set-cookie",
+   "쿠키(Cookie)",
+   "쿠키 아키텍처"
+  ],
+  "keywords_ref": [],
   "outline": [
    "쿠키의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "쿠키",
-   "세션 쿠키",
-   "영속 쿠키",
-   "HttpOnly",
-   "Secure",
-   "SameSite",
-   "추적",
-   "개인정보"
-  ],
-  "keywords_ref": [
-   "로컬스토리지",
-   "GDPR",
-   "동의",
-   "관련 표준",
-   "적용 시 주의점"
-  ],
-  "keywords": [
-   "핵심: 쿠키 · 세션 쿠키 · 영속 쿠키",
-   "구성: HttpOnly · Secure · SameSite",
-   "웹 서버가 브라우저에 저장하는 작은 데이터. 세션·추적·개인화에 사용"
+   "- 필요성",
+   "쿠키의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "쿠키의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "쿠키의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "웹 서버가 브라우저에 저장하는 작은 데이터. 세션·추적·개인화에 사용"
+       "HTTP Protocol의 비상태성(Stateless)을 해결하기 위해 Client의 이전 트랜잭션 정보를 텍스트 파일로 저장하는 방법"
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "쿠키는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "쿠키의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "쿠키",
+       "Client/Server Side",
+       "영구쿠키",
        "세션 쿠키",
-       "영속 쿠키",
-       "HttpOnly",
-       "Secure",
-       "SameSite"
+       "Set-cookie"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "쿠키(Cookie)",
+       "쿠키 아키텍처"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "쿠키의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "추적",
-       "개인정보",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 쿠키를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "쿠키",
+   "Client/Server Side",
+   "영구쿠키",
    "세션 쿠키",
-   "영속 쿠키",
-   "HttpOnly",
-   "Secure",
-   "SameSite",
-   "추적",
-   "개인정보"
+   "Set-cookie",
+   "쿠키(Cookie)",
+   "쿠키 아키텍처"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_005": {
   "name": "세컨드 라이프(Second Life)",
   "en": "Second Life",
   "title": "세컨드 라이프(Second Life)",
-  "definition": "가상 세계에서 아바타로 사회·경제 활동을 하는 초기 메타버스형 서비스",
+  "definition": "Linden Lab(린든랩)에서 개발, 온라인 3D 환경 아래에서 자신을 대표하는 아바타를 통해 타인과 상호소통",
+  "keywords": [
+   "핵심: 3D 가상세계 · 아바타(Avatar) · 가상 상거래",
+   "기술: VR · AR · MR"
+  ],
+  "keywords_must": [
+   "3D 가상세계",
+   "아바타(Avatar)",
+   "가상 상거래",
+   "VR",
+   "AR",
+   "MR"
+  ],
+  "keywords_ref": [],
   "outline": [
    "세컨드 라이프의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "세컨드 라이프",
-   "가상세계",
-   "아바타",
-   "가상경제",
-   "사용자 생성 콘텐츠",
-   "소셜",
-   "메타버스 선례",
-   "몰입"
-  ],
-  "keywords_ref": [
-   "메타버스",
-   "VR",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
-  ],
-  "keywords": [
-   "핵심: 세컨드 라이프 · 가상세계 · 아바타",
-   "구성: 가상경제 · 사용자 생성 콘텐츠 · 소셜",
-   "가상 세계에서 아바타로 사회·경제 활동을 하는 초기 메타버스형 서비스"
+   "- 필요성",
+   "세컨드 라이프의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "세컨드 라이프의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "세컨드 라이프의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "가상 세계에서 아바타로 사회·경제 활동을 하는 초기 메타버스형 서비스"
+       "Linden Lab(린든랩)에서 개발, 온라인 3D 환경 아래에서 자신을 대표하는 아바타를 통해 타인과 상호소통"
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "세컨드 라이프는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "세컨드 라이프의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "세컨드 라이프",
-       "가상세계",
-       "아바타",
-       "가상경제",
-       "사용자 생성 콘텐츠",
-       "소셜"
+       "3D 가상세계",
+       "아바타(Avatar)",
+       "가상 상거래",
+       "VR"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "AR",
+       "MR"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "세컨드 라이프의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "메타버스 선례",
-       "몰입",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 세컨드 라이프를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "세컨드 라이프",
-   "가상세계",
-   "아바타",
-   "가상경제",
-   "사용자 생성 콘텐츠",
-   "소셜",
-   "메타버스 선례",
-   "몰입"
+   "3D 가상세계",
+   "아바타(Avatar)",
+   "가상 상거래",
+   "VR",
+   "AR",
+   "MR"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_006": {
   "name": "소셜 네트워크 서비스(SNS)",
   "en": "Social Network Service",
   "title": "소셜 네트워크 서비스(SNS)",
-  "definition": "온라인에서 인맥을 형성·유지하고 콘텐츠를 공유하는 서비스",
-  "outline": [
-   "소셜 네트워크 서비스의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "특정 주체를 중심으로 콘텐츠를 유통하며, 상호간의 관심사를 공유하는 SNS 서비스",
+  "keywords": [
+   "핵심: SNS · SNS(Vertical SNS) · 소셜 네트워크 서비스(SNS)",
+   "기술: 소셜 네트워크 서비스 아키텍처 · 소셜 네트워크 서비스 프로토콜 · 소셜 네트워크 서비스 보안"
   ],
   "keywords_must": [
    "SNS",
-   "프로필",
-   "관계(그래프)",
-   "콘텐츠 공유",
-   "네트워크 효과",
-   "프라이버시",
-   "알고리즘 피드",
-   "커뮤니티"
+   "SNS(Vertical SNS)",
+   "소셜 네트워크 서비스(SNS)",
+   "소셜 네트워크 서비스 아키텍처",
+   "소셜 네트워크 서비스 프로토콜",
+   "소셜 네트워크 서비스 보안"
   ],
-  "keywords_ref": [
-   "UGC",
-   "필터버블",
-   "플랫폼",
-   "관련 표준",
-   "적용 시 주의점"
-  ],
-  "keywords": [
-   "핵심: SNS · 프로필 · 관계(그래프)",
-   "구성: 콘텐츠 공유 · 네트워크 효과 · 프라이버시",
-   "온라인에서 인맥을 형성·유지하고 콘텐츠를 공유하는 서비스"
+  "keywords_ref": [],
+  "outline": [
+   "소셜 네트워크 서비스의 개념",
+   "- 정의",
+   "- 필요성",
+   "소셜 네트워크 서비스의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "소셜 네트워크 서비스의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "소셜 네트워크 서비스의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "온라인에서 인맥을 형성·유지하고 콘텐츠를 공유하는 서비스"
+       "특정 주체를 중심으로 콘텐츠를 유통하며, 상호간의 관심사를 공유하는 SNS 서비스"
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "소셜 네트워크 서비스는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "소셜 네트워크 서비스의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
+       "SNS(Vertical SNS)",
        "SNS",
-       "프로필",
-       "관계(그래프)",
-       "콘텐츠 공유",
-       "네트워크 효과",
-       "프라이버시"
+       "소셜 네트워크 서비스(SNS)",
+       "소셜 네트워크 서비스 아키텍처"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "소셜 네트워크 서비스 프로토콜",
+       "소셜 네트워크 서비스 보안"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "소셜 네트워크 서비스의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "알고리즘 피드",
-       "커뮤니티",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 소셜 네트워크 서비스를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
    "SNS",
-   "프로필",
-   "관계(그래프)",
-   "콘텐츠 공유",
-   "네트워크 효과",
-   "프라이버시",
-   "알고리즘 피드",
-   "커뮤니티"
+   "SNS(Vertical SNS)",
+   "소셜 네트워크 서비스(SNS)",
+   "소셜 네트워크 서비스 아키텍처",
+   "소셜 네트워크 서비스 프로토콜",
+   "소셜 네트워크 서비스 보안"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_008": {
   "name": "웹 스크래핑(Web Scraping)",
   "en": "Web Scraping",
   "title": "웹 스크래핑(Web Scraping)",
-  "definition": "웹 페이지에서 데이터를 자동 추출하는 기법. 크롤링과 함께 쓰이나 추출에 초점",
+  "definition": "고객의 인증정보를 기반으로, 다양한 금융 및 공공기관, 기타 사이트의 데이터를 추출해 가공하거나 분석한 뒤정제된 결과를 제공하는 기술",
+  "keywords": [
+   "핵심: 인증정보 · 중계서버 · 추출",
+   "기술: PC · 웹 스크래핑(Web Scraping) · 웹 스크래핑 아키텍처"
+  ],
+  "keywords_must": [
+   "인증정보",
+   "중계서버",
+   "추출",
+   "PC",
+   "웹 스크래핑(Web Scraping)",
+   "웹 스크래핑 아키텍처"
+  ],
+  "keywords_ref": [],
   "outline": [
    "웹 스크래핑의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "웹 스크래핑",
-   "데이터 추출",
-   "HTML 파싱",
-   "자동화",
-   "이용약관·법적 이슈",
-   "봇 차단",
-   "API 대안",
-   "정제"
-  ],
-  "keywords_ref": [
-   "웹크롤링",
-   "로봇배제",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
-  ],
-  "keywords": [
-   "핵심: 웹 스크래핑 · 데이터 추출 · HTML 파싱",
-   "구성: 자동화 · 이용약관·법적 이슈 · 봇 차단",
-   "웹 페이지에서 데이터를 자동 추출하는 기법. 크롤링과 함께 쓰이나 추출에"
+   "- 필요성",
+   "웹 스크래핑의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "웹 스크래핑의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "웹 스크래핑의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "웹 페이지에서 데이터를 자동 추출하는 기법. 크롤링과 함께 쓰이나 추출에 초점"
+       "고객의 인증정보를 기반으로, 다양한 금융 및 공공기관, 기타 사이트의 데이터를 추출해 가공하거나 분석한 뒤정제된 결과를 제공하는 기술"
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "웹 스크래핑는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "웹 스크래핑의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "웹 스크래핑",
-       "데이터 추출",
-       "HTML 파싱",
-       "자동화",
-       "이용약관·법적 이슈",
-       "봇 차단"
+       "인증정보",
+       "중계서버",
+       "추출",
+       "PC"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "웹 스크래핑(Web Scraping)",
+       "웹 스크래핑 아키텍처"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "웹 스크래핑의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "API 대안",
-       "정제",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 웹 스크래핑를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "웹 스크래핑",
-   "데이터 추출",
-   "HTML 파싱",
-   "자동화",
-   "이용약관·법적 이슈",
-   "봇 차단",
-   "API 대안",
-   "정제"
+   "인증정보",
+   "중계서버",
+   "추출",
+   "PC",
+   "웹 스크래핑(Web Scraping)",
+   "웹 스크래핑 아키텍처"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_011": {
   "name": "오픈API 명세(OpenAPI Specification)",
   "en": "OpenAPI Specification",
   "title": "오픈API 명세(OpenAPI Specification)",
-  "definition": "HTTP API를 기계·사람이 읽을 수 있게 기술하는 표준 명세 (구 Swagger)",
-  "outline": [
-   "오픈API 명세의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "OPEN API 사양 표준, 언어에 구애받지 않는 인터페이스를 정의하여 사람과 컴퓨터가 소스 코드, 문서에 액세스하거나 네트워크 트래픽 검사를 통해 서비스의 기능을 검색하고 이해할 수 있는 명세서",
+  "keywords": [
+   "핵심: REST API 사양 표준 · 엔드포인트 · 메타정보",
+   "기술: json · yaml · Info",
+   "운영: OAuth2.0 · OPEN · API",
+   "참고: OAuth2.0 · OPEN · API"
   ],
   "keywords_must": [
-   "OpenAPI Specification",
-   "Swagger",
-   "경로·스키마",
-   "코드 생성",
-   "문서 자동화",
-   "계약 우선",
-   "버전",
-   "도구"
+   "REST API 사양 표준",
+   "엔드포인트",
+   "메타정보",
+   "json",
+   "yaml",
+   "Info",
+   "OAuth2.0",
+   "OPEN",
+   "API",
+   "OAS(Open API Specification)"
   ],
   "keywords_ref": [
-   "API 설계",
-   "REST",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "OAuth2.0",
+   "OPEN",
+   "API"
   ],
-  "keywords": [
-   "핵심: OpenAPI Specification · Swagger · 경로·스키마",
-   "구성: 코드 생성 · 문서 자동화 · 계약 우선",
-   "HTTP API를 기계·사람이 읽을 수 있게 기술하는 표준 명세 (구 S"
+  "outline": [
+   "협업 설계를 위한 OPEN API 표준, OAS(Open API Specificat…",
+   "- OAS의 이점",
+   "OAS(OpenAPI Specification)의 구성도 및 구성요소",
+   "- OAS(OpenAPI Specification)의 구성도",
+   "- OAS(OpenAPI Specification)의 구성요소",
+   "OAS(OpenAPI Specification)의 주요 인증방법"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "협업 설계를 위한 OPEN API 표준, OAS(Open API Specification)의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "OAS의 이점",
       "items": [
-       "HTTP API를 기계·사람이 읽을 수 있게 기술하는 표준 명세 (구 Swagger)"
+       "정확한 문서 생성 및 API 개발을 위한 스텁 코드 생성",
+       "인터페이스 프로토타입을 위한 모의서버 구축",
+       "API 요청 및 응답이 의도한 계약과 일치하는지 테스트"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "OAS(OpenAPI Specification)의 구성도 및 구성요소",
+    "subsections": [
+     {
+      "title": "OAS(OpenAPI Specification)의 구성도",
+      "items": [
+       "2018년 발표된 OAS 3.0.2 버전에서는 여러 URL을 정의 할 수 있음."
       ]
      },
      {
-      "title": "목적",
+      "title": "OAS(OpenAPI Specification)의 구성요소",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "Open API는 Swagger사양을 대체하기 위한 개방형 형식으로 생성되었기 때문에 인증과 보안강화 필요"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "OAS(OpenAPI Specification)의 주요 인증방법",
     "subsections": [
      {
       "title": null,
       "items": [
-       "OpenAPI Specification",
-       "Swagger",
-       "경로·스키마",
-       "코드 생성",
-       "문서 자동화",
-       "계약 우선"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "버전",
-       "도구",
-       "표준·비교·한계를 함께 기술"
+       "OAS 인증 방식과 암호화된 통신 프로토콜 사용을 통하여, API의 보안 강화 필요 “끝”"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "OpenAPI Specification",
-   "Swagger",
-   "경로·스키마",
-   "코드 생성",
-   "문서 자동화",
-   "계약 우선",
-   "버전",
-   "도구"
+   "REST API 사양 표준",
+   "엔드포인트",
+   "메타정보",
+   "json",
+   "yaml",
+   "Info",
+   "OAuth2.0",
+   "OPEN",
+   "API",
+   "OAS(Open API Specification)"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_019_01": {
-  "name": "전자정부 웹사이트 품질관리 지침(SV 019 01)",
-  "en": "SV 019 01",
-  "title": "전자정부 웹사이트 품질관리 지침(SV 019 01)",
+  "name": "전자정부 웹사이트 품질관리 지침(e-Government Website Quality Guideline)",
+  "en": "e-Government Website Quality Guideline",
+  "title": "전자정부 웹사이트 품질관리 지침(e-Government Website Quality Guideline)",
   "definition": "전자정부법 제16조, 제19조, 제23조 및 제50조와 전자정부법 시행령 제19조 및 제59조에 따른 전자정부 웹사이트의 품질관리에 관한 사항을 규정하는 것을 목적으로 지침",
-  "outline": [
-   "전자정부 웹사이트 품질관리 지침의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 웹사이트 호환성 · 접근성 · 개방성",
+   "기술: 접속성 · 편의성 · 효율성",
+   "운영: 신뢰성",
+   "참고: 신뢰성"
   ],
   "keywords_must": [
-   "전자정부 웹사이트 품질관리 지침",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "웹사이트 호환성",
+   "접근성",
+   "개방성",
+   "접속성",
+   "편의성",
+   "효율성",
+   "신뢰성"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "신뢰성"
   ],
-  "keywords": [
-   "핵심: 전자정부 웹사이트 품질관리 지침 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "전자정부법 제16조, 제19조, 제23조 및 제50조와 전자정부법 시행령"
+  "outline": [
+   "전자정부 웹사이트 품질관리 지침의 개요",
+   "전자정부 웹사이트 품질관리 원칙",
+   "전자정부 웹사이트 품질진단 기준",
+   "- 웹사이트 호환성, 접근성, 개방성, 접속성 측면 품질진단 기준",
+   "- 웹사이트 편의성, 효율성, 신뢰성 측면 진단 기준"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "전자정부 웹사이트 품질관리 지침의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": null,
       "items": [
-       "전자정부법 제16조, 제19조, 제23조 및 제50조와 전자정부법 시행령 제19조 및 제59조에 따른 전자정부 웹사이트의 품질관리에 관한 사항을 규정하는 것을 목적으로 지침"
+       "기존 행정‧공공기관의 웹사이트 관리기준*은 웹표준 준수, 비표준 제거 및 웹호환성 확보등 다양한 웹브라우저 이용 지원에만 집중",
+       "전자정부서비스 이용 시 국민 불편을 해소하고 편리성을 높일 수 있도록 웹사이트 품질관리원칙 및 종합적인 품질관리 기준 마련",
+       "웹표준, 호환성, 접근성, 개방성, 접속성, 편의성, 신뢰성, 유사중복방지등 웹사이트 품질관리 원칙을 명시",
+       "장애인 웹접근성, 빠른 접근을 위한 접속성, 사용자 경험을 중시한 편의성 제고 등",
+       "행정기관등은 웹사이트 품질관리자 지정 및 계획 수립",
+       "실효성 있는 웹사이트 품질관리를 위해 기존 행안부 중심의 서비스 수준진단을 개별기관 품질관리체계로 전환"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "전자정부 웹사이트 품질관리 원칙",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "웹사이트의 개발, 개선, 유지보수 및 운영에 웹표준 기술을 사용하고 다양한 웹브라우저에서도 동등한 서비스를 제공하여 호환성을 확보",
+       "이용자가 신체적 또는 인지적 제약 등으로 인한 불편함 없이 웹사이트에서 제공하는정보와 위치식별 등 기능에 쉽게 접근할 수 있도록 보장하여 접근성을 확보",
+       "이용자가 특정 검색엔진을 통해 웹사이트에 공개된 정보를 아무런 제약 없이 이용할수 있도록 보장하여 개방성을 확보",
+       "웹사이트가 웹브라우저에 표시되기까지의 응답시간, 속도, 용량, 링크 연결 등을 최적의 상태로 제공하여 접속성을 확보",
+       "웹사이트의 디자인, 스타일, 기능 등을 이용자 중심으로 구현하여 편의성을 확보",
+       "웹사이트가 서로 유사하거나 중복되는 경우 또는 이용 활성화 수준 및 운영 가치가낮은 경우에는 통합 또는 폐기하여 효율성을 확보"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "전자정부 웹사이트 품질진단 기준",
+    "subsections": [
+     {
+      "title": "웹사이트 호환성, 접근성, 개방성, 접속성 측면 품질진단 기준",
+      "items": [
+       "웹표준 기술사용, 다양한 웹브라우저 지원, 누구나 접근 가능하고 검색을 통하여 이용할 수 있는 원칙 제공"
       ]
      },
      {
-      "title": "목적",
+      "title": "웹사이트 편의성, 효율성, 신뢰성 측면 진단 기준",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "구성·유형",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "전자정부 웹사이트 품질관리 지침",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "행정기관등의 장은 웹사이트 품질관리 원칙을 준수하여 품질관리를 수행하여야 함.",
+       "행정안전부장관은 「훈령·예규 등의 발령 및 관리에 관한 규정」에 따라 매 3년이 되는 시점마다 그 타당성을 검토하여 개선 등의 조치를 하여야 함"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "전자정부 웹사이트 품질관리 지침",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "웹사이트 호환성",
+   "접근성",
+   "개방성",
+   "접속성",
+   "편의성",
+   "효율성",
+   "신뢰성"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_020_0": {
   "name": "반응형 웹(Responsive Web)",
   "en": "Responsive Web Design",
   "title": "반응형 웹(Responsive Web)",
-  "definition": "화면 크기에 따라 레이아웃이 적응하는 웹 디자인 기법",
-  "outline": [
-   "반응형 웹의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "사용자의 다양한 디바이스 환경에 따라 해상도나 화면이 최적화된 환경으로 자동 변환되는 기술",
+  "keywords": [
+   "핵심: CSS 3의 미디어 쿼리 · 유동형 그리드 · 유동형 이미지",
+   "기술: 뷰포트 · UI · CSS",
+   "운영: OSMU(One Source Multi Use) · CSS2 · CSS3",
+   "참고: OSMU(One Source Multi Use) · CSS2 · CSS3"
   ],
   "keywords_must": [
-   "반응형 웹",
-   "미디어 쿼리",
-   "유동 그리드",
+   "CSS 3의 미디어 쿼리",
+   "유동형 그리드",
+   "유동형 이미지",
    "뷰포트",
-   "모바일 우선",
-   "하나의 URL",
-   "반응형 이미지",
-   "크로스 디바이스"
+   "UI",
+   "CSS",
+   "OSMU(One Source Multi Use)",
+   "CSS2",
+   "CSS3"
   ],
   "keywords_ref": [
-   "적응형",
-   "PWA",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "OSMU(One Source Multi Use)",
+   "CSS2",
+   "CSS3"
   ],
-  "keywords": [
-   "핵심: 반응형 웹 · 미디어 쿼리 · 유동 그리드",
-   "구성: 뷰포트 · 모바일 우선 · 하나의 URL",
-   "화면 크기에 따라 레이아웃이 적응하는 웹 디자인 기법"
+  "outline": [
+   "N_Screen 환경에 최적화된 UI 구현, 반응형 웹의 개요",
+   "- 반응형 웹(Responsive Web)의 정의",
+   "- 반응형 웹의 부각 이유",
+   "디바이스의 특성 정보에 따라 최적화된 화면 스타일을 구성하여 제공"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "N_Screen 환경에 최적화된 UI 구현, 반응형 웹의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "반응형 웹(Responsive Web)의 정의",
       "items": [
-       "화면 크기에 따라 레이아웃이 적응하는 웹 디자인 기법"
+       "소스 코드 상에서 화면폭을 감지해 적절한 레이아웃이 나오도록 CSS를 교체하는 기법"
       ]
      },
      {
-      "title": "목적",
+      "title": "반응형 웹의 부각 이유",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "웹 표준 준수를 통한 오픈 웹 지향",
+       "OSMU(One Source Multi Use)를 통한 서비스 구축 및 유지보수 비용 절감"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "디바이스의 특성 정보에 따라 최적화된 화면 스타일을 구성하여 제공",
     "subsections": [
      {
       "title": null,
       "items": [
-       "반응형 웹",
-       "미디어 쿼리",
-       "유동 그리드",
-       "뷰포트",
-       "모바일 우선",
-       "하나의 URL"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "반응형 이미지",
-       "크로스 디바이스",
-       "표준·비교·한계를 함께 기술"
+       "기존 CSS2에서도 간단한 형식의 미디어 쿼리는 사용. CSS2의 미디어 쿼리는 'screen'이나 'print' 처럼 미디어타입(media types)에 따라서 특화된 스타일을 사용함.",
+       "CSS3에서의 미디어 쿼리의 질의 내용은 max-width, device-width 등의 미디어 상태(media feature)에 따라서 최적화된 화면스타일을 제공함"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "반응형 웹",
-   "미디어 쿼리",
-   "유동 그리드",
+   "CSS 3의 미디어 쿼리",
+   "유동형 그리드",
+   "유동형 이미지",
    "뷰포트",
-   "모바일 우선",
-   "하나의 URL",
-   "반응형 이미지",
-   "크로스 디바이스"
+   "UI",
+   "CSS",
+   "OSMU(One Source Multi Use)",
+   "CSS2",
+   "CSS3"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_020_3": {
   "name": "웹어셈블리(WebAssembly)",
   "en": "WebAssembly",
   "title": "웹어셈블리(WebAssembly)",
-  "definition": "브라우저에서 고성능 바이너리에 가까운 실행을 가능하게 하는 포맷",
-  "outline": [
-   "웹어셈블리의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "웹 클라이언트 환경에서 하드웨어 리소스 활용도를 극대화하기 위해 네이티브 언어와 유사한 수준의 성능을 제공할 수 있도록 컴팩트한 바이너리 포맷을 기반으로 웹 브라우저에서 실행 가능한 어셈블리 코드",
+  "keywords": [
+   "핵심: 웹 환경 어셈블리 코드 · 바이너리 포맷 · WASM Runtime",
+   "기술: WASI · WASM Module · WASM",
+   "운영: VM · API · OS",
+   "참고: VM · API · OS"
   ],
   "keywords_must": [
-   "WebAssembly",
-   "wasm",
-   "고성능",
-   "샌드박스",
-   "언어 이식",
-   "브라우저",
-   "플러그인 대체",
-   "보안"
+   "웹 환경 어셈블리 코드",
+   "바이너리 포맷",
+   "WASM Runtime",
+   "WASI",
+   "WASM Module",
+   "WASM",
+   "VM",
+   "API",
+   "OS",
+   "AI"
   ],
   "keywords_ref": [
-   "asm.js",
-   "네이티브",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "VM",
+   "API",
+   "OS"
   ],
-  "keywords": [
-   "핵심: WebAssembly · wasm · 고성능",
-   "구성: 샌드박스 · 언어 이식 · 브라우저",
-   "브라우저에서 고성능 바이너리에 가까운 실행을 가능하게 하는 포맷"
+  "outline": [
+   "웹 환경 로우 레벨 어셈블리 언어, 웹 어셈블리(Web Assembly; WASM)…",
+   "- 웹 어셈블리 특징",
+   "웹 어셈블리 구성도, 구성요소",
+   "- 웹 어셈블리 구성도",
+   "- 웹 어셈블리 구성요소",
+   "웹 어셈블리 활용 방안"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "웹 환경 로우 레벨 어셈블리 언어, 웹 어셈블리(Web Assembly; WASM) 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "웹 어셈블리 특징",
       "items": [
-       "브라우저에서 고성능 바이너리에 가까운 실행을 가능하게 하는 포맷"
+       "바이트코드 기반 - 브라우저 가상머신(VM)이 이해할 수 있는 중간 단계로 컴파일한 코드 기반 동작",
+       "네이티브 수준 성능 - C, C++ 언어로 컴파일한 네이티브 코드 동작 성능과 유사한 수준의 성능 제공",
+       "자바스크립트 보완 - wasm모듈을 임포트하여 Javascript API 와 함께 상호 보완적으로 활용 가능, 용이",
+       "지능형 서비스의 컴퓨팅 리소스 확보 및 클라이언트 연산 성능 개선 위애 웹 어셈블리(WASM) 연구 진행중"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "웹 어셈블리 구성도, 구성요소",
+    "subsections": [
+     {
+      "title": "웹 어셈블리 구성도",
+      "items": [
+       "어플리케이션 코드를 작성하여 WASM 컴파일러로 컴파일 후, 엣지 디바이스의 자원을 활용, 서비스 제공"
       ]
      },
      {
-      "title": "목적",
+      "title": "웹 어셈블리 구성요소",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "WASM Runtime - 웹 어셈블리 바이너리를 실행하기 위해 특화된 런타임 엔진",
+       "WASI(WebAssembly - 웹 어셈블리 모듈이 브라우저 외부의 OS 기능과 상호작용할수 있도록 표준화된 시스템 호출 AI를 제공하여 동작 실행",
+       "웹 어셈블리 기본 실행 및 프로그램 구성 기본 단위"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "웹 어셈블리 활용 방안",
     "subsections": [
      {
       "title": null,
       "items": [
-       "WebAssembly",
-       "wasm",
-       "고성능",
-       "샌드박스",
-       "언어 이식",
-       "브라우저"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "플러그인 대체",
-       "보안",
-       "표준·비교·한계를 함께 기술"
+       "Tensorflow.js 가속 - 브라우저 레벨 인공신경망 기반 지능형 서비스 성능 확보",
+       "로컬 AI 구축 이용 - 엣지 디바이스 단 자체 학습 및 파인 튜닝 LLM 서비스 제공",
+       "AR/VR 렌더링처리 - 가상 융합 공간 3D 모델링 및 고해상도 디스플레이 UX 제공",
+       "WebRTC 성능 확보 - 실시간 스트리밍 기반 저지연 데이터 송수신 서비스 개발",
+       "UE(User Equipment) 레벨의 하드웨어 리소스 활용을 최적화하여 실시간 상황, 환경 인식 통해 서비스 제공"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "WebAssembly",
-   "wasm",
-   "고성능",
-   "샌드박스",
-   "언어 이식",
-   "브라우저",
-   "플러그인 대체",
-   "보안"
+   "웹 환경 어셈블리 코드",
+   "바이너리 포맷",
+   "WASM Runtime",
+   "WASI",
+   "WASM Module",
+   "WASM",
+   "VM",
+   "API",
+   "OS",
+   "AI"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_028": {
   "name": "디지털서비스(Push Technology)",
   "en": "Push Technology",
   "title": "디지털서비스(Push Technology)",
   "definition": "기업이 기술 중심으로 전략을 세워 제품을 만들어 시장에 일방적으로 공급하는 기술 중심 전략",
+  "keywords": [
+   "핵심: 기업 기술 중심 · 디지털서비스(Push Technology) · 디지털서비스 아키텍처",
+   "기술: 디지털서비스 프로토콜 · 디지털서비스 보안 · 디지털서비스 표준"
+  ],
+  "keywords_must": [
+   "기업 기술 중심",
+   "디지털서비스(Push Technology)",
+   "디지털서비스 아키텍처",
+   "디지털서비스 프로토콜",
+   "디지털서비스 보안",
+   "디지털서비스 표준"
+  ],
+  "keywords_ref": [],
   "outline": [
    "디지털서비스의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 디지털서비스 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "기업이 기술 중심으로 전략을 세워 제품을 만들어 시장에 일방적으로 공급하"
+   "- 필요성",
+   "디지털서비스의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "디지털서비스의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "디지털서비스의 개념",
     "subsections": [
      {
       "title": "정의",
@@ -16976,100 +16832,100 @@
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "디지털서비스는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "디지털서비스의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "디지털서비스",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "기업 기술 중심",
+       "디지털서비스(Push Technology)",
+       "디지털서비스 아키텍처",
+       "디지털서비스 프로토콜"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "디지털서비스 보안",
+       "디지털서비스 표준"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "디지털서비스의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 디지털서비스를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "기업 기술 중심",
+   "디지털서비스(Push Technology)",
+   "디지털서비스 아키텍처",
+   "디지털서비스 프로토콜",
+   "디지털서비스 보안",
+   "디지털서비스 표준"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_029": {
   "name": "웹(Web Casting)",
   "en": "Web Casting",
   "title": "웹(Web Casting)",
   "definition": "여러 명의 인터넷 사용자들에게 동시에 비디오나 오디오 생중계를 보내는 프로그램 방식",
+  "keywords": [
+   "핵심: 웹방송 · 푸시 · WWW",
+   "기술: 웹(Web Casting) · 웹 아키텍처 · 웹 프로토콜"
+  ],
+  "keywords_must": [
+   "웹방송",
+   "푸시",
+   "WWW",
+   "웹(Web Casting)",
+   "웹 아키텍처",
+   "웹 프로토콜"
+  ],
+  "keywords_ref": [],
   "outline": [
    "웹의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "웹",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 웹 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "여러 명의 인터넷 사용자들에게 동시에 비디오나 오디오 생중계를 보내는 프"
+   "- 필요성",
+   "웹의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "웹의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "웹의 개념",
     "subsections": [
      {
       "title": "정의",
@@ -17078,406 +16934,350 @@
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "웹는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "웹의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "웹",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
-      ]
-     }
-    ]
-   }
-  ],
-  "dueum": null,
-  "curated": true,
-  "keywords_note": null,
-  "note": null,
-  "review": null,
-  "quiz_terms": [
-   "웹",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
-  ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
- },
- "SV_030": {
-  "name": "웹 신디케이션(SV 030)",
-  "en": "SV 030",
-  "title": "웹 신디케이션(SV 030)",
-  "definition": "웹사이트의 컨텐츠를 XML 파일 형태로 외부에 제공하는 기술 웹사이트의 내용을 다른 사이트나 사용자가 받아 볼 수 있도록 피드(내용의 요약정보나 링크)를 만드는 기술",
-  "outline": [
-   "웹 신디케이션의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "웹 신디케이션",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 웹 신디케이션 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "웹사이트의 컨텐츠를 XML 파일 형태로 외부에 제공하는 기술 웹사이트의 "
-  ],
-  "sections": [
-   {
-    "title": "개념",
-    "subsections": [
-     {
-      "title": "정의",
-      "items": [
-       "웹사이트의 컨텐츠를 XML 파일 형태로 외부에 제공하는 기술 웹사이트의 내용을 다른 사이트나 사용자가 받아 볼 수 있도록 피드(내용의 요약정보나 링크)를 만드는 기술"
+       "웹방송",
+       "푸시",
+       "WWW",
+       "웹(Web Casting)"
       ]
      },
      {
-      "title": "목적",
+      "title": "유형·동작",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "웹 아키텍처",
+       "웹 프로토콜"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "웹의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "웹 신디케이션",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "공공·민간 서비스에 웹를 적용한다."
       ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
+     },
      {
-      "title": null,
+      "title": "과제",
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": "NA",
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "웹 신디케이션",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "웹방송",
+   "푸시",
+   "WWW",
+   "웹(Web Casting)",
+   "웹 아키텍처",
+   "웹 프로토콜"
   ],
-  "quiz_groups": [
-   "sv"
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
+ },
+ "SV_030": {
+  "name": "웹 신디케이션(Web Syndication)",
+  "en": "Web Syndication",
+  "title": "웹 신디케이션(Web Syndication)",
+  "definition": "웹사이트의 컨텐츠를 XML 파일 형태로 외부에 제공하는 기술 웹사이트의 내용을 다른 사이트나 사용자가 받아 볼 수 있도록 피드(내용의 요약정보나 링크)를 만드는 기술",
+  "keywords": [
+   "핵심: 개방 · 피드 · RSS(Reader, Aggregator, Podcastion)",
+   "기술: OPML · ATOM(Atom Syndication Format, Atom Publishing Protocol) · RSS",
+   "운영: XML · ATOM",
+   "참고: XML · ATOM"
   ],
-  "quiz_avoid": []
+  "keywords_must": [
+   "개방",
+   "피드",
+   "RSS(Reader, Aggregator, Podcastion)",
+   "OPML",
+   "ATOM(Atom Syndication Format, Atom Publishing Protocol)",
+   "RSS",
+   "XML",
+   "ATOM"
+  ],
+  "keywords_ref": [
+   "XML",
+   "ATOM"
+  ],
+  "outline": [
+   "Web Syndication 개념도 및 구현 기술",
+   "- Web syndication 개념도",
+   "- Web syndication 구현 기술",
+   "Web Syndication 기술 비교"
+  ],
+  "sections": [
+   {
+    "title": "Web Syndication 개념도 및 구현 기술",
+    "subsections": [
+     {
+      "title": "Web syndication 개념도",
+      "items": [
+       "서비스 제공자는 RSS 수집기로 최신 정보 수집 후 사용자의 Reader 로 게시"
+      ]
+     },
+     {
+      "title": "Web syndication 구현 기술",
+      "items": [
+       "뉴스나 블로그와 같이 컨텐츠 업데이트가 자주 일어나는 웹사이트에서, 업데이트된 정보를쉽게 사용자들에게 제공하기 위해 XML 을 기초로 만들어진 데이터 형식블로그 또는 사이트 정보를 항목별로 정리하여 담은 XML 문서 RSS Reader 문서를 수집하여 구독자에게 게시 RSS 수집기 통상적으로 RSS Reader 와 같은 의미로 사용, rss 수집 을 중앙서버에서 (Aggregator) 관리하",
+       "다른 운영체제와 환경상에서 돌아가는 어플리케이션",
+       "사이에 구조화된 개요(Outline-structured)정보의 교환을 허용하는 xml 기반의 포멧"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Web Syndication 기술 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "RSS 는 3 개 이상의 다른 버전이 호환을 이루지 못한 채 사용되고 있어 표준화 미흡함",
+       "ATOM 은 이러한 문제를 해결하기 위한 일환으로 표준화되고 안정된 개방형 형식으로 제안 \"끝\"."
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "dueum": "NA",
+  "keywords_note": null,
+  "note": null,
+  "review": null,
+  "quiz_terms": [
+   "개방",
+   "피드",
+   "RSS(Reader, Aggregator, Podcastion)",
+   "OPML",
+   "ATOM(Atom Syndication Format, Atom Publishing Protocol)",
+   "RSS",
+   "XML",
+   "ATOM"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_031": {
   "name": "자원 대상전략(IT)",
   "en": "IT",
   "title": "자원 대상전략(IT)",
   "definition": "빠른 기술 변화, 시장 요구사항 변화 대응 위해 기업 IT 자원 중 클라우드화 효과 높은 자원 선정하고 클라우드로 전환하는 디지털 트랜스포메이션 활동",
-  "outline": [
-   "자원 대상전략의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 환경분석 · 수요분석 · 현황분석",
+   "기술: 전략계획 · IT"
   ],
   "keywords_must": [
-   "자원 대상전략",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "환경분석",
+   "수요분석",
+   "현황분석",
+   "전략계획",
+   "IT"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 자원 대상전략 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "빠른 기술 변화, 시장 요구사항 변화 대응 위해 기업 IT 자원 중 클라"
+  "keywords_ref": [],
+  "outline": [
+   "IT 경영전략 성공 위한 클라우드 전환 개요",
+   "- 클라우드 전환 필요성",
+   "클라우드 마이그레이션 전략 설명",
+   "- 클라우드 마이그레이션 전략 단계",
+   "- 클라우드 마이그레이션 전략 상세 설명"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "IT 경영전략 성공 위한 클라우드 전환 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "클라우드 전환 필요성",
       "items": [
-       "빠른 기술 변화, 시장 요구사항 변화 대응 위해 기업 IT 자원 중 클라우드화 효과 높은 자원 선정하고 클라우드로 전환하는 디지털 트랜스포메이션 활동"
+       "업무 효율성/운영 편리성 증대"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "클라우드 마이그레이션 전략 설명",
+    "subsections": [
+     {
+      "title": "클라우드 마이그레이션 전략 단계",
+      "items": [
+       "국내외 후보 클라우드 유형 식별하여 기업 경영전략 목표 달성 위해 최적 후보유형 선정하여 심층분석",
+       "내/외부 여건에 따른 성공적인 마이그레이션의 장/단기 전환 로드맵을 수립"
       ]
      },
      {
-      "title": "목적",
+      "title": "클라우드 마이그레이션 전략 상세 설명",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "구성·유형",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "자원 대상전략",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "국내외 후보 클라우드 - 클라우드 서비스/제품, 제품, 얼리어답터 사례 분석",
+       "클라우드 기술/산업/시장의 최신 동향 조사 연구"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": "[환수현전]",
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "자원 대상전략",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "환경분석",
+   "수요분석",
+   "현황분석",
+   "전략계획",
+   "IT"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_032": {
   "name": "디지털서비스(Utility Computing)",
   "en": "Utility Computing",
   "title": "디지털서비스(Utility Computing)",
-  "definition": "서버, 스토리지, 네트워크, H/W, S/W 등의 IT 자원을 하나의 서비스 개념으로 보고 구입 또는 자체 개발을하지 않고, 서비스 공급자와의 계약을 통하여 실제로 사용한 양만큼(pay-as-you-use, Payper-Use)요금을지불하는 컴퓨팅 패러다임",
-  "outline": [
-   "디지털서비스의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "서버, 스토리지, 네트워크, H/W, S/W 등의 IT 자원을 하나의 서비스 개념으로 보고 구입 또는 자체 개발을하지 않고, 서비스 공급자와의 계약을 통하여 실제로 사용한 양만큼(pay-as-you-use, Payper-Use)요금을지불하는 컴퓨팅 패러다임 (디지털서비스(Utility Computing) 관점)",
+  "keywords": [
+   "핵심: Pay Per Use의 개념 이해 -> 아웃소싱까지 확대 · 자율컴퓨팅 · SON(자가 조직 N/W)",
+   "기술: IT · ROI(투자수익률: Return of Investment) · TCO(소유총비용: Total Cost of Ownership)",
+   "운영: OS",
+   "참고: OS"
   ],
   "keywords_must": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Pay Per Use의 개념 이해 -> 아웃소싱까지 확대",
+   "자율컴퓨팅",
+   "SON(자가 조직 N/W)",
+   "IT",
+   "ROI(투자수익률: Return of Investment)",
+   "TCO(소유총비용: Total Cost of Ownership)",
+   "OS"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "OS"
   ],
-  "keywords": [
-   "핵심: 디지털서비스 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "서버, 스토리지, 네트워크, H/W, S/W 등의 IT 자원을 하나의 서"
+  "outline": [
+   "IT 자원, 서비스를 사용한 만큼 비용을 지불하는 개념의 컴퓨팅 패러다임, 유틸리티…",
+   "- 유틸리티 컴퓨팅의 등장배경",
+   "유틸리티 컴퓨팅의 구성요소 및 기반기술",
+   "- 유틸리티 컴퓨팅의 구성요소",
+   "컴퓨팅 패러다임간 비교"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "IT 자원, 서비스를 사용한 만큼 비용을 지불하는 개념의 컴퓨팅 패러다임, 유틸리티 컴퓨팅의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "유틸리티 컴퓨팅의 등장배경",
       "items": [
-       "서버, 스토리지, 네트워크, H/W, S/W 등의 IT 자원을 하나의 서비스 개념으로 보고 구입 또는 자체 개발을하지 않고, 서비스 공급자와의 계약을 통하여 실제로 사용한 양만큼(pay-as-you-use, Payper-Use)요금을지불하는 컴퓨팅 패러다임"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "IT 투자에 대한 ROI(투자수익률: Return of Investment) 측정이 불확실 - TCO(소유총비용: Total Cost of Ownership)등 IT 투자의 효율적 관리가 주요 관심사로 등장"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "유틸리티 컴퓨팅의 구성요소 및 기반기술",
     "subsections": [
      {
-      "title": null,
+      "title": "유틸리티 컴퓨팅의 구성요소",
       "items": [
-       "디지털서비스",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "제공된 서비스를 관리하기 위한 기술 - Billing, 모니터링, 보안 기술 등",
+       "서비스 자원을 최적화 하고 관리하기 위한 기술, Utility Computing 의핵심요소 - Grid, 가상화 기술, 자동화, 최적화, 분할 기술 등",
+       "서비스를 제공하기 위한 물리적 컴퓨팅 자원 - 서버, 네트워크, 스토리지, OS, 미들웨어, 각종 Application 등"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "컴퓨팅 패러다임간 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "공통점: 전체 IT 자원의 활용도를 높여 총투자비용 절감함으로 자원의 효율적 관리 “끝”"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Pay Per Use의 개념 이해 -> 아웃소싱까지 확대",
+   "자율컴퓨팅",
+   "SON(자가 조직 N/W)",
+   "IT",
+   "ROI(투자수익률: Return of Investment)",
+   "TCO(소유총비용: Total Cost of Ownership)",
+   "OS"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_036_0": {
   "name": "디지털서비스(CSB)",
   "en": "CSB",
   "title": "디지털서비스(CSB)",
   "definition": "클라우드 서비스 제공자와 클라우드 서비스 사용자 사이에서 서비스를 중개하여 사용자에게 서비스 제공자가등록한 서비스를 기반으로 서비스를 연결해주는 서비스",
+  "keywords": [
+   "핵심: 중계 · 결합 · 차익거래",
+   "기술: 클라우드 컴퓨팅법 · CSC · CSP",
+   "운영: CSB · 이종 멀티 클라우드",
+   "참고: CSB · 이종 멀티 클라우드"
+  ],
+  "keywords_must": [
+   "중계",
+   "결합",
+   "차익거래",
+   "클라우드 컴퓨팅법",
+   "CSC",
+   "CSP",
+   "CSB",
+   "이종 멀티 클라우드"
+  ],
+  "keywords_ref": [
+   "CSB",
+   "이종 멀티 클라우드"
+  ],
   "outline": [
    "디지털서비스의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
-  ],
-  "keywords_must": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
-  ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 디지털서비스 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "클라우드 서비스 제공자와 클라우드 서비스 사용자 사이에서 서비스를 중개하"
+   "- 필요성",
+   "디지털서비스의 구성과 기술",
+   "- 핵심 요소",
+   "- 유형·동작",
+   "디지털서비스의 활용과 과제"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "디지털서비스의 개념",
     "subsections": [
      {
       "title": "정의",
@@ -17486,980 +17286,878 @@
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "디지털서비스는 디지털 전환·서비스 고도화에 따라 핵심 검토 대상이 되었다."
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "디지털서비스의 구성과 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "핵심 요소",
       "items": [
-       "디지털서비스",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "중계",
+       "결합",
+       "차익거래",
+       "클라우드 컴퓨팅법"
+      ]
+     },
+     {
+      "title": "유형·동작",
+      "items": [
+       "CSC",
+       "CSP",
+       "CSB",
+       "이종 멀티 클라우드"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "디지털서비스의 활용과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "공공·민간 서비스에 디지털서비스를 적용한다."
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "표준화, 보안, 상호운용성, 운영 품질 관리가 관건이다."
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "중계",
+   "결합",
+   "차익거래",
+   "클라우드 컴퓨팅법",
+   "CSC",
+   "CSP",
+   "CSB",
+   "이종 멀티 클라우드"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_037": {
   "name": "클라우드(PersonalCloud)",
   "en": "PersonalCloud",
   "title": "클라우드(PersonalCloud)",
-  "definition": "개인 컨텐츠를 클라우드 환경에 저장/통합/관리하여, 언제 어디서나 단말 독립적으로 접근할 수 있게 함은 물론, 콘텐츠의 분석 및 가공을 통해 고부가가치 개인화 서비스를 제공해 주는 사용자 중심형 클라우드서비스",
-  "outline": [
-   "클라우드의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "웹 기반 온라인 저장소·애플리케이션·웹톱으로 개인화 콘텐츠와 동기화를 제공하는 클라우드형 개인 서비스 환경.",
+  "keywords": [
+   "핵심: 웹톱(Webtop) · 온라인 저장소(Online Storage) · 웹 애플리케이션",
+   "기술: 개인화 콘텐츠 · 동기화(Sync) · 개인화 컨텐츠서비스",
+   "참고: 클라우드 스토리지 · SaaS"
   ],
   "keywords_must": [
-   "클라우드",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "웹톱(Webtop)",
+   "온라인 저장소(Online Storage)",
+   "웹 애플리케이션",
+   "개인화 콘텐츠",
+   "동기화(Sync)",
+   "개인화 컨텐츠서비스",
+   "프라이버시 서비스",
+   "IT",
+   "클라우드(PersonalCloud)",
+   "클라우드 아키텍처"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "클라우드 스토리지",
+   "SaaS"
   ],
-  "keywords": [
-   "핵심: 클라우드 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "개인 컨텐츠를 클라우드 환경에 저장/통합/관리하여, 언제 어디서나 단말 "
+  "outline": [
+   "웹톱·온라인 저장소의 개념",
+   "- 정의",
+   "- 서비스 범위",
+   "핵심 기능",
+   "- 저장·동기화·웹앱",
+   "개인화와 보안"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "웹톱·온라인 저장소의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "개인 컨텐츠를 클라우드 환경에 저장/통합/관리하여, 언제 어디서나 단말 독립적으로 접근할 수 있게 함은 물론, 콘텐츠의 분석 및 가공을 통해 고부가가치 개인화 서비스를 제공해 주는 사용자 중심형 클라우드서비스"
+       "브라우저에서 데스크톱처럼 파일을 다루고 웹앱을 실행하는 개인 클라우드 환경"
       ]
      },
      {
-      "title": "목적",
+      "title": "서비스 범위",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "온라인 저장소, 웹 애플리케이션, 웹톱(Webtop)"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "핵심 기능",
     "subsections": [
      {
-      "title": null,
+      "title": "저장·동기화",
       "items": [
-       "클라우드",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
+       "파일 업로드·공유, 단말 간 동기화, 버전관리"
+      ]
+     },
+     {
+      "title": "웹앱",
+      "items": [
+       "문서·메일 등 브라우저 기반 애플리케이션"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "개인화와 보안",
     "subsections": [
      {
-      "title": null,
+      "title": "개인화",
       "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "사용자별 콘텐츠·레이아웃"
+      ]
+     },
+     {
+      "title": "보안",
+      "items": [
+       "접근제어, 암호화, 계정 보호"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "핵심 기술(온라인 저장소, 웹기반 어플리케이션, 웹톱)",
+   "개인화 컨텐츠서비스",
+   "프라이버시 서비스",
+   "IT",
+   "클라우드(PersonalCloud)",
+   "클라우드 아키텍처"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_038": {
-  "name": "오픈 스택 프로젝트(SV 038)",
-  "en": "SV 038",
-  "title": "오픈 스택 프로젝트(SV 038)",
+  "name": "오픈스택(OpenStack)",
+  "en": "OpenStack",
+  "title": "오픈스택(OpenStack)",
   "definition": "퍼블릭 및 프라이빗 클라우드 컴퓨팅 플랫폼을 구축하는데 필요한 모든 소프트웨어 블록을 개발하는 오픈소스 프로젝트",
-  "outline": [
-   "오픈 스택 프로젝트의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: Nova: Compute 인스턴스 제어 · 운영하는 SW · API 글랜스: 가상 디스크 이미지들을 저장",
+   "기술: 관리 · 쿠베네테스 · KVM",
+   "운영: My-SQL · VMW · ESX",
+   "참고: My-SQL · VMW · ESX"
   ],
   "keywords_must": [
-   "오픈 스택 프로젝트",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Nova: Compute 인스턴스 제어",
+   "운영하는 SW",
+   "API 글랜스: 가상 디스크 이미지들을 저장",
+   "관리",
+   "쿠베네테스",
+   "KVM",
+   "My-SQL",
+   "VMW",
+   "ESX"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "My-SQL",
+   "VMW",
+   "ESX"
   ],
-  "keywords": [
-   "핵심: 오픈 스택 프로젝트 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "퍼블릭 및 프라이빗 클라우드 컴퓨팅 플랫폼을 구축하는데 필요한 모든 소프"
+  "outline": [
+   "IaaS 형태의 클라우드 컴퓨팅 오픈소스 프로젝트, 오픈스택의 개요",
+   "- 오픈 스택(Open Stack) 목적",
+   "오픈스택 개념 및 유형",
+   "- 오픈스택 유형별 구성요소",
+   "오픈 스택(Open Stack) 구성도 및 주요 프로젝트",
+   "- 오픈 스택 구성도",
+   "- 주요 오픈 소스 클라우드 플랫폼"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "IaaS 형태의 클라우드 컴퓨팅 오픈소스 프로젝트, 오픈스택의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "오픈 스택(Open Stack) 목적",
       "items": [
-       "퍼블릭 및 프라이빗 클라우드 컴퓨팅 플랫폼을 구축하는데 필요한 모든 소프트웨어 블록을 개발하는 오픈소스 프로젝트"
+       "기업의 데이터와 애플리케이션을 하나의 클라우드에서 다른 클라우드로 더 쉽게 이전할 수 있도록 하는것을 목표",
+       "구현 기술에 독립적인 클라우드 컴퓨팅 플랫폼 산업 표준 수립",
+       "신규 기술의 신속한 적용을 통해 클라우드 컴퓨팅 기술 발전"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "오픈스택 개념 및 유형",
+    "subsections": [
+     {
+      "title": "오픈스택 유형별 구성요소",
+      "items": [
+       "수백, 수천의 가상머신을 사용자의 요청에 따라 생산하고 관리하기 위한 소프트웨어",
+       "하이퍼바이저를 이용해 가상 머신을 제어하고 네트워크 관리, 사용자 인증 및 권한 관리, 보안, 사용자의 요청을 받기 위한 인터페이스까지 모두 포함",
+       "외부에 노출된 웹 서버 게이트웨이 인터페이스로 사용자의 요청을 받는역할로 모든 동작의 시작점이라 클라우드 컨트롤러라 불림",
+       "요청 받은 자원을 어떤 물리 서버가 제공할지 결정하는 데몬"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "오픈 스택(Open Stack) 구성도 및 주요 프로젝트",
+    "subsections": [
+     {
+      "title": "오픈 스택 구성도",
+      "items": [
+       "Compute, Networking, Storage 를 제어하는 목적의 하위 프로젝트와 이러한 하위 프로젝트를 제어하는 대쉬보드로 이루어짐."
       ]
      },
      {
-      "title": "목적",
+      "title": "주요 오픈 소스 클라우드 플랫폼",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "구성·유형",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "오픈 스택 프로젝트",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "클라우드 플랫폼에서 가장 많이 사용하는 하이퍼바이저 : KVM, Xen, VMWare, ESX"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "오픈 스택 프로젝트",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Nova: Compute 인스턴스 제어",
+   "운영하는 SW",
+   "API 글랜스: 가상 디스크 이미지들을 저장",
+   "관리",
+   "쿠베네테스",
+   "KVM",
+   "My-SQL",
+   "VMW",
+   "ESX"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_041": {
-  "name": "클라우드 스토리지 가상화(SV 041)",
-  "en": "SV 041",
-  "title": "클라우드 스토리지 가상화(SV 041)",
+  "name": "클라우드 스토리지 가상화(Cloud Storage Virtualization)",
+  "en": "Cloud Storage Virtualization",
+  "title": "클라우드 스토리지 가상화(Cloud Storage Virtualization)",
   "definition": "인터넷 상의 '어딘가'에 위치하는 저장 공간에 내 정보를 보관해 두고, 이것을 내가 필요할 때 내가 가지고있는 각종 단말기를 통해서 불러올 수 있는 기술",
-  "outline": [
-   "클라우드 스토리지 가상화의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: DAS · NAS · SAN",
+   "기술: SCSI · LAN · MS",
+   "운영: CAS(Content Addressed Storage) · MPS · TCO",
+   "참고: CAS(Content Addressed Storage) · MPS · TCO"
   ],
   "keywords_must": [
-   "클라우드 스토리지 가상화",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "DAS",
+   "NAS",
+   "SAN",
+   "SCSI",
+   "LAN",
+   "MS",
+   "CAS(Content Addressed Storage)",
+   "MPS",
+   "TCO"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "CAS(Content Addressed Storage)",
+   "MPS",
+   "TCO"
   ],
-  "keywords": [
-   "핵심: 클라우드 스토리지 가상화 · 클라우드 모델 · 탄력성",
-   "구성: 종량제/공유 · 보안·거버넌스 · 상호운용",
-   "인터넷 상의 '어딘가'에 위치하는 저장 공간에 내 정보를 보관해 두고, "
+  "outline": [
+   "클라우드 스토리지(Cloud Storage)의 개요",
+   "- 클라우드 스토리지(Cloud Storage)의 정의",
+   "- 클라우드 스토리지(Cloud Storage)의 발전배경",
+   "클라우드 스토리지 기능 및 플랫폼, 핵심기술",
+   "- 클라우드 스토리지 기능",
+   "적용 사례"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "클라우드 스토리지(Cloud Storage)의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "클라우드 스토리지(Cloud Storage)의 정의",
       "items": [
-       "인터넷 상의 '어딘가'에 위치하는 저장 공간에 내 정보를 보관해 두고, 이것을 내가 필요할 때 내가 가지고있는 각종 단말기를 통해서 불러올 수 있는 기술"
+       "사용자가 로컬 하드 드라이브를 사용하지 않고 인터넷 또는 전용 인트라넷을 통해 원격지에 있는 파일을이용하는 것"
       ]
      },
      {
-      "title": "목적",
+      "title": "클라우드 스토리지(Cloud Storage)의 발전배경",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "퍼블릭 클라우드 솔루션 급증 및 네트워크를 통한 파일 전송기술 발달",
+       "모바일을 통한 데이터 접근 수용 증가 및 이를 통한 정형/비정형 대량 데이터 생성",
+       "빅데이터 서비스에 따른 데이터 중요성 증가"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "클라우드 스토리지 기능 및 플랫폼, 핵심기술",
     "subsections": [
      {
-      "title": null,
+      "title": "클라우드 스토리지 기능",
       "items": [
-       "클라우드 스토리지 가상화",
-       "클라우드 모델",
-       "탄력성",
-       "종량제/공유",
-       "보안·거버넌스",
-       "상호운용"
+       "서버와 외장형 스토리지 사이를 전용케이블(SCSI, Fiber Channel)로 직접 연결",
+       "다른 서버에 할당된 저장장치여역에는 접근금지, 파일공유 불가",
+       "통합저장장치에 연결되는 서버수 한계",
+       "적은용량, 데이터 공유 불필요 시 사용장점: 성능보장, 안정성 뛰어나며 전용라인사용단점: 파일시스템공유,Locking/Consistency 기술 없음",
+       "서버가 LAN 을 통해 Storage 와 접속"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "적용 사례와 효과",
     "subsections": [
      {
       "title": null,
       "items": [
-       "책임공유",
-       "비용최적화",
-       "표준·비교·한계를 함께 기술"
+       "국내 : N드라이브, T 클라우드, U클라우드 등",
+       "국외 : 구글 드라이브 ,아이클라우드, 드롭박스, MS 스카이 드라이브 [별첨] CAS(Content Addressed Storage),멀티 프로토콜 스토리지(MPS),하이브리드 클라우드정의 구성도 특징사용자의 시청권한 . 컨텐츠 스크램블링 및 암호화 . 채널 감시 및 가입자 정보 . 수신내역 로그관리종이문서 생성에서 .문서보안 . TCO 절감 . 품질개선 Life Cycle Manageme"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드 스토리지 가상화",
-   "클라우드 모델",
-   "탄력성",
-   "종량제/공유",
-   "보안·거버넌스",
-   "상호운용",
-   "책임공유",
-   "비용최적화"
+   "DAS",
+   "NAS",
+   "SAN",
+   "SCSI",
+   "LAN",
+   "MS",
+   "CAS(Content Addressed Storage)",
+   "MPS",
+   "TCO"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_045": {
   "name": "플랫폼 서비스(PaaS)",
   "en": "Platform as a Service",
   "title": "플랫폼 서비스(PaaS)",
-  "definition": "앱 실행·미들웨어 플랫폼을 서비스로 제공하는 클라우드 모델",
-  "outline": [
-   "플랫폼 서비스의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "definition": "클라우드에서 고객의 어플리케이션을 개발, 테스트, 구축할 수 있는 통합된 플랫폼 모델",
+  "keywords": [
+   "핵심: 클라우드 · 과금 · 개발플랫폼",
+   "기술: PaaS-TA · 개발관점 · HW",
+   "운영: SW · IT",
+   "참고: SW · IT"
   ],
   "keywords_must": [
-   "PaaS",
-   "런타임",
-   "미들웨어",
-   "개발 생산성",
-   "벤더종속",
-   "확장",
-   "배포",
-   "관리 책임"
+   "클라우드",
+   "과금",
+   "개발플랫폼",
+   "PaaS-TA",
+   "개발관점",
+   "HW",
+   "SW",
+   "IT"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "SW",
+   "IT"
   ],
-  "keywords": [
-   "핵심: PaaS · 런타임 · 미들웨어",
-   "구성: 개발 생산성 · 벤더종속 · 확장",
-   "앱 실행·미들웨어 플랫폼을 서비스로 제공하는 클라우드 모델"
+  "outline": [
+   "PaaS 의 개요",
+   "PaaS기반 프로젝트 Open Cloud Foundry와 OpenShift 비교"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "PaaS 의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": null,
       "items": [
-       "앱 실행·미들웨어 플랫폼을 서비스로 제공하는 클라우드 모델"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "앱의 개발 및 시작과 관련된 인프라를 만들고 유지보수 하는 복잡함 없이 애플리케이션을 개발, 실행, 관리할수 있는 클라우드 모델",
+       "HW, SW 자원의 공동 활용 및 설치, 구성 자동화를 통해 IT 비용 절감 극대화와, 개발생산 극대화 가능"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "PaaS기반 프로젝트 Open Cloud Foundry와 OpenShift 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "PaaS",
-       "런타임",
-       "미들웨어",
-       "개발 생산성",
-       "벤더종속",
-       "확장"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "배포",
-       "관리 책임",
-       "표준·비교·한계를 함께 기술"
+       "정부 주도하에 오픈소스 클라우드 플랫폼이 주목받고 있음, 국내에서는 피포탈 진영의 Open CloudFoundry 가우세함.",
+       "플랫폼 종속성 문제로 오픈 소스 클라우드 플랫폼인 클라우드 파운드리, 오픈시프트가 급부상"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "PaaS",
-   "런타임",
-   "미들웨어",
-   "개발 생산성",
-   "벤더종속",
-   "확장",
-   "배포",
-   "관리 책임"
+   "클라우드",
+   "과금",
+   "개발플랫폼",
+   "PaaS-TA",
+   "개발관점",
+   "HW",
+   "SW",
+   "IT"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_047": {
   "name": "데이터(DaaS(Data center as a Service))",
   "en": "DaaS Data center as a Service",
   "title": "데이터(DaaS(Data center as a Service))",
   "definition": "클라우드 서비스 공급자가 물리적 데이터 센터 시설 및 인프라를 사용자에게 아웃소싱 형태로 전달하는 서비스",
-  "outline": [
-   "데이터의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: Managed Services · Automation · Build",
+   "기술: Depoly · Integrate & Migrate Advisory & Assessment · DC",
+   "운영: KT · ICC · HP",
+   "참고: KT · ICC · HP"
   ],
   "keywords_must": [
-   "데이터",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Managed Services",
+   "Automation",
+   "Build",
+   "Depoly",
+   "Integrate & Migrate Advisory & Assessment",
+   "DC",
+   "KT",
+   "ICC",
+   "HP",
+   "IBM"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "KT",
+   "ICC",
+   "HP"
   ],
-  "keywords": [
-   "핵심: 데이터 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "클라우드 서비스 공급자가 물리적 데이터 센터 시설 및 인프라를 사용자에게"
+  "outline": [
+   "데이터센터 아웃소싱, DCaaS의 개요",
+   "DCaaS 대표사례"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "데이터센터 아웃소싱, DCaaS의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": null,
       "items": [
-       "클라우드 서비스 공급자가 물리적 데이터 센터 시설 및 인프라를 사용자에게 아웃소싱 형태로 전달하는 서비스"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "특징 : 대용량 저장기능, 높은 보안성, 비즈니스 연속성, 지속적 모니터링, 속도와 신뢰성, 데이터 보호, 빠른확장성, 주문형 셀프 서비스"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "DCaaS 대표사례",
     "subsections": [
      {
       "title": null,
       "items": [
-       "데이터",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "KT의 유틸리티컴퓨팅 서비스로서 다운로드, 캐시, 스트리밍, 웹컴퓨팅 등을제공하는 서비스",
+       "이미 3000 여개 기업에 ICC를이용하여 서비스를 제공",
+       "HP 및 IBM이 추진중인 DCaaS"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "데이터",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Managed Services",
+   "Automation",
+   "Build",
+   "Depoly",
+   "Integrate & Migrate Advisory & Assessment",
+   "DC",
+   "KT",
+   "ICC",
+   "HP",
+   "IBM"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_048": {
   "name": "디지털서비스(DaaS(Desktop as a Service))",
   "en": "DaaS Desktop as a Service",
   "title": "디지털서비스(DaaS(Desktop as a Service))",
   "definition": "데스크탑 가상화(VDI, Virtual Desktop Infrastructure)를 클라우드 기술로 구현, 서비스 공급자가 아웃소싱 형태로 제공하는서비스 1. 필요 자원의 공급 유연화, 확장성 증대 2. 긴급 상황에 대비한 접근성 확보 3. VDI 편의측면 문제점 해결, ROI효율 확대",
-  "outline": [
-   "디지털서비스의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 데스크탑 가상화 · VDI · SaaS",
+   "기술: PaaS · 데스크톱 클라이언트 · 가상 데스크톱 에이전트",
+   "운영: 가상 머신 풀 · 데스크톱 연결 브로커 접근 게이트웨이 · 인증 서버",
+   "참고: 가상 머신 풀 · 데스크톱 연결 브로커 접근 게이트웨이 · 인증 서버"
   ],
   "keywords_must": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "데스크탑 가상화",
+   "VDI",
+   "SaaS",
+   "PaaS",
+   "데스크톱 클라이언트",
+   "가상 데스크톱 에이전트",
+   "가상 머신 풀",
+   "데스크톱 연결 브로커 접근 게이트웨이",
+   "인증 서버",
+   "GUI"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "가상 머신 풀",
+   "데스크톱 연결 브로커 접근 게이트웨이",
+   "인증 서버"
   ],
-  "keywords": [
-   "핵심: 디지털서비스 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "데스크탑 가상화(VDI, Virtual Desktop Infrastruc"
+  "outline": [
+   "클라우드 기반 데스크톱 가상화 기술, DaaS 의 개념",
+   "DaaS 의 구성도 및 구성요소",
+   "- DaaS 의 구성도",
+   "- DaaS 의 구성요소",
+   "DaaS 활용분야"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "클라우드 기반 데스크톱 가상화 기술, DaaS 의 개념",
     "subsections": [
      {
-      "title": "정의",
+      "title": null,
       "items": [
-       "데스크탑 가상화(VDI, Virtual Desktop Infrastructure)를 클라우드 기술로 구현, 서비스 공급자가 아웃소싱 형태로 제공하는서비스 1. 필요 자원의 공급 유연화, 확장성 증대 2. 긴급 상황에 대비한 접근성 확보 3. VDI 편의측면 문제점 해결, ROI효율 확대"
+       "녹생성장, 스마트워크실현, 기업보안강화, 업무접근성확보 등을 관련 시장 확대로 인한 서비스 도입 확산 추세",
+       "논리적 망분리 의무화(공공기관 100 만, 미출 100 억원 이상 기업체)에 따른 가상화 기술 적용 범위 확산"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "DaaS 의 구성도 및 구성요소",
+    "subsections": [
+     {
+      "title": "DaaS 의 구성도",
+      "items": [
+       "가상 데스크탑을 제공하는 서버 및 가상 데스크탑의 상태를 실시간 모니터링 하고 관리자에게 GUI 를 제공하며 구동제어 기능 제공"
       ]
      },
      {
-      "title": "목적",
+      "title": "DaaS 의 구성요소",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "NW Protocol - 네트워크 객체간 규격/순서 등을 정의한 통신 규약 - OSI 7 Layer",
+       "I/O Event Manager - IRP생성 및 관련 드라이버 제어 정보 관리 - Device 연계",
+       "Protocol Interpreter - 커넥션 생성 및 커맨드/응답 생성 및 송수신 - FTP"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "DaaS 활용분야",
     "subsections": [
      {
       "title": null,
       "items": [
-       "디지털서비스",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "다수 환경 제공 - 초기구성상태유지, 자료 중앙저장, 목적에 따른 환경설정",
+       "업무망 분리 - 중앙화된 패치 및 업그레이드, 통합 정책 표준화",
+       "근무지 외 접근 - 장소/시간 제약 해결, 원격근무, 재택근무, 비상대응",
+       "공공, 기업 뿐만 아니라 교육, 헬스케어, 제조, 개인고객 시장으로 DaaS서비스 확대"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "데스크탑 가상화",
+   "VDI",
+   "SaaS",
+   "PaaS",
+   "데스크톱 클라이언트",
+   "가상 데스크톱 에이전트",
+   "가상 머신 풀",
+   "데스크톱 연결 브로커 접근 게이트웨이",
+   "인증 서버",
+   "GUI"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_049": {
   "name": "디지털서비스(SecaaS)",
   "en": "SecaaS",
   "title": "디지털서비스(SecaaS)",
   "definition": "보안기능을 크라우드 서비스 형태로 제공하는 것으로 클라우드 인프라를 통해 전문화된 보안 서비스를제공하는 클라우드 보안 서비스",
-  "outline": [
-   "디지털서비스의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 클라우드기반 · 보안관리 · 보안솔루션",
+   "기술: 데이터보안 · 접근제어 · CASB",
+   "운영: DLP",
+   "참고: DLP"
   ],
   "keywords_must": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "클라우드기반",
+   "보안관리",
+   "보안솔루션",
+   "데이터보안",
+   "접근제어",
+   "CASB",
+   "DLP"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "DLP"
   ],
-  "keywords": [
-   "핵심: 디지털서비스 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "보안기능을 크라우드 서비스 형태로 제공하는 것으로 클라우드 인프라를 통해"
+  "outline": [
+   "클라우드 기반의 보안 서비스 (SecaaS: Security As A Service)",
+   "- SecaaS(Security As A Service)의 개념",
+   "- 가트너에서 제시한 클라우드 환경의 보안이슈",
+   "SecaaS 아키텍처와 보안서비스요소",
+   "- SecaaS 아키텍처",
+   "SecaaS와 CASB 비교"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "클라우드 기반의 보안 서비스 (SecaaS: Security As A Service)",
     "subsections": [
      {
-      "title": "정의",
+      "title": "SecaaS(Security As A Service)의 개념",
       "items": [
-       "보안기능을 크라우드 서비스 형태로 제공하는 것으로 클라우드 인프라를 통해 전문화된 보안 서비스를제공하는 클라우드 보안 서비스"
+       "기존의 보안 솔루션을 클라우드 기반 서비스 형태로 제공하는 모델"
       ]
      },
      {
-      "title": "목적",
+      "title": "가트너에서 제시한 클라우드 환경의 보안이슈",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "클라우드 환경에서 Secaas는 하드웨어와 소프트웨어 구축운영비용이 들지 않아 저렴하고 관리가 편리함",
+       "최신 사이버 공격 정보가 실시간 업데이트되기 때문에 지능형 공격 차단에 효과적임"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "SecaaS 아키텍처와 보안서비스요소",
     "subsections": [
      {
-      "title": null,
+      "title": "SecaaS 아키텍처",
       "items": [
-       "디지털서비스",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
+       "클라우드사용자에게 클라우드 보안서비스 또는 클라우드를 통한 보안서비스를 온 프라미스 대상에 제공함"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "SecaaS와 CASB 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "기존의 보안 솔루션을 클라우드 기반 서비스 형태로 -클라우드 서비스에서 각 목적 특징에 맞춰 접근통제, 내부정보 유출방지, 이상탐지, 감사등의 보안기능을",
+       "클라우드를 위한 또는 클라우드 형태로 온 프레미스에 지원하는 클라우드 보안 중개인 *CASB 역할검색, 위험평가: 사용중인 모든 클라우드 검사클라우드 데이터 암호화장치, 위치, 컨텍스트 기반 클라우드접근제어데이터 손실방지: 내부정보유출방지 사용중 DLP와 연계이미 발생한 위험에 대한 증거 확보이상탐지: 행위 정보 수집, 학습, 이상행위 탐지"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "디지털서비스",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "클라우드기반",
+   "보안관리",
+   "보안솔루션",
+   "데이터보안",
+   "접근제어",
+   "CASB",
+   "DLP"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_051": {
   "name": "클라우드(Intercloud)",
   "en": "Intercloud",
   "title": "클라우드(Intercloud)",
   "definition": "둘 이상의 클라우드 서비스 제공자 간의 인터페이스, NW 프로토콜, 상호호환성 연동을 가능하게 하는 기술",
-  "outline": [
-   "클라우드의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: 대등 · 연합 · 중계",
+   "기술: 유사 클라우드(하이브리드, 멀티, 메타) · 클라우드(Intercloud) · 클라우드 아키텍처"
   ],
   "keywords_must": [
-   "클라우드",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "대등",
+   "연합",
+   "중계",
+   "유사 클라우드(하이브리드, 멀티, 메타)",
+   "클라우드(Intercloud)",
+   "클라우드 아키텍처"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 클라우드 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "둘 이상의 클라우드 서비스 제공자 간의 인터페이스, NW 프로토콜, 상호"
+  "keywords_ref": [],
+  "outline": [
+   "인터클라우드 구성도 및 유형",
+   "- 인터클라우드 구성도",
+   "인터클라우드와 유사 클라우드 비교"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "인터클라우드 구성도 및 유형",
     "subsections": [
      {
-      "title": "정의",
+      "title": "인터클라우드 구성도",
       "items": [
-       "둘 이상의 클라우드 서비스 제공자 간의 인터페이스, NW 프로토콜, 상호호환성 연동을 가능하게 하는 기술"
-      ]
-     },
-     {
-      "title": "목적",
-      "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "이기종 클라우드 인프라를 하나처럼 연결"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "인터클라우드와 유사 클라우드 비교",
     "subsections": [
      {
       "title": null,
       "items": [
-       "클라우드",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "[참고] 시스코 인터클라우드 2017년 3월 31일 서비스 종료"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "대등",
+   "연합",
+   "중계",
+   "유사 클라우드(하이브리드, 멀티, 메타)",
+   "클라우드(Intercloud)",
+   "클라우드 아키텍처"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_052": {
   "name": "클라우드(Metacloud)",
   "en": "Metacloud",
   "title": "클라우드(Metacloud)",
   "definition": "클라우드 서비스를 사용자(개발자)에 맞게 개발, 실행환경, 환경설정 등을 개발자의 요구에 맞게, 자유롭게 구성할 수 있도록 제시하는 통합 클라우드 시스템 모델",
-  "outline": [
-   "클라우드의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+  "keywords": [
+   "핵심: Lock-in 문제 완화 · 클라우드 시스템 모델 · API",
+   "기술: 클라우드(Metacloud) · 클라우드 아키텍처 · 클라우드 프로토콜"
   ],
   "keywords_must": [
-   "클라우드",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Lock-in 문제 완화",
+   "클라우드 시스템 모델",
+   "API",
+   "클라우드(Metacloud)",
+   "클라우드 아키텍처",
+   "클라우드 프로토콜"
   ],
-  "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
-  ],
-  "keywords": [
-   "핵심: 클라우드 · 개념·정의 · 구성 요소",
-   "구성: 핵심 기술 · 활용 사례 · 관련 표준",
-   "클라우드 서비스를 사용자(개발자)에 맞게 개발, 실행환경, 환경설정 등을"
+  "keywords_ref": [],
+  "outline": [
+   "통합 클라우드 시스템 모델을 통한 Lock-in 문제해결, Metacloud의 개요",
+   "- Metacloud 등장배경",
+   "Metacloud의 개념도 및 기술요소",
+   "- Metacloud 개념도",
+   "- Metacloud 기술요소"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "통합 클라우드 시스템 모델을 통한 Lock-in 문제해결, Metacloud의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "Metacloud 등장배경",
       "items": [
-       "클라우드 서비스를 사용자(개발자)에 맞게 개발, 실행환경, 환경설정 등을 개발자의 요구에 맞게, 자유롭게 구성할 수 있도록 제시하는 통합 클라우드 시스템 모델"
+       "특정 환경 및 특정 시스템에 종속적인 Lock-in effect 현상 해결",
+       "실행환경, 환경설정 등을 개발자의 요구에 맞게, 자유롭게 구성할 수 있도록 제시하는통합 클라우드 시스템 모델"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Metacloud의 개념도 및 기술요소",
+    "subsections": [
+     {
+      "title": "Metacloud 개념도",
+      "items": [
+       "클라우드 제공자(Provider)가 개발측면에서 특정 응용 프로그램에 대해, 클라우드 서비스의 최적의 조합을 할 수 있도록, API제공"
       ]
      },
      {
-      "title": "목적",
+      "title": "Metacloud 기술요소",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "구성·유형",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "클라우드",
-       "개념·정의",
-       "구성 요소",
-       "핵심 기술",
-       "활용 사례",
-       "관련 표준"
-      ]
-     }
-    ]
-   },
-   {
-    "title": "활용·시사점",
-    "subsections": [
-     {
-      "title": null,
-      "items": [
-       "효과",
-       "한계·이슈",
-       "표준·비교·한계를 함께 기술"
+       "표준화된 클라우드 프로그래밍 API를 통해 응용 프로그램을 만들수있도록 지원",
+       "클라우드 서비스의 모든 자원의 유형을 지원",
+       "인스턴스와 자원들을 응용프로그램에 프로비저닝"
       ]
      }
     ]
    }
   ],
-  "dueum": null,
   "curated": true,
+  "dueum": null,
   "keywords_note": null,
   "note": null,
   "review": null,
   "quiz_terms": [
-   "클라우드",
-   "개념·정의",
-   "구성 요소",
-   "핵심 기술",
-   "활용 사례",
-   "관련 표준",
-   "효과",
-   "한계·이슈"
+   "Lock-in 문제 완화",
+   "클라우드 시스템 모델",
+   "API",
+   "클라우드(Metacloud)",
+   "클라우드 아키텍처",
+   "클라우드 프로토콜"
   ],
-  "quiz_groups": [
-   "sv"
-  ],
-  "quiz_avoid": []
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "reviewed": true,
+  "warnings": []
  },
  "SV_055": {
   "name": "민간 클라우드 이용(SV 055)",
@@ -29986,5 +29684,6 @@
    "sv"
   ],
   "quiz_avoid": []
- }
+ },
+ "_comment": "SV curated from PDF + topic-specific enrichment"
 }
