@@ -8800,7 +8800,7 @@
   "category": "SW > UML > Stereotype",
   "definition": "UML의 기본 요소에 새로운 의미를 부여해 모델링 어휘를 확장하는 메커니즘으로, 길러멧(« ») 안에 이름을 표기한다",
   "keywords": [
-   "확장 메커니즘: 스테레오타입(Stereotype) · 태그 값(Tagged Value) · 제약 조건(Constraint)",
+   "확장 메커니즘: 태그 값(Tagged Value) · 제약 조건(Constraint)",
    "표기: 길러멧(« ») · 아이콘 표기 · 프로파일(Profile)",
    "예시: «interface» · «include»·«extend» · «entity»·«boundary»·«control»"
   ],
@@ -8887,7 +8887,6 @@
   "name": "스테레오타입(Stereotype)",
   "en": "UML Stereotype",
   "keywords_must": [
-   "스테레오타입(Stereotype)",
    "태그 값(Tagged Value)",
    "제약 조건(Constraint)",
    "길러멧(« »)",
@@ -8906,7 +8905,6 @@
   ],
   "curated": true,
   "quiz_terms": [
-   "스테레오타입(Stereotype)",
    "태그 값(Tagged Value)",
    "제약 조건(Constraint)",
    "길러멧(« »)",
@@ -11254,59 +11252,78 @@
  {
   "id": "SW_090",
   "code": "SW_090",
-  "title": "소프트웨어 Design Pattern(Design Pattern)",
+  "title": "디자인 패턴(Design Pattern)",
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Design Pattern",
-  "definition": "SW개발 시 반복적으로 나타나는 설계문제에 대해 유형별로 적합한 설계를 제시하는 패턴 방안",
+  "definition": "소프트웨어 설계 시 반복적으로 나타나는 문제에 대해 검증된 해법을 유형별로 정리해 재사용할 수 있게 한 설계 패턴으로, GoF가 생성·구조·행위 23개 패턴으로 분류했다",
   "keywords": [
-   "핵심: 디자인 패턴 · Design Pattern · 문제·해결·결과",
-   "구성: 구조 · 참여자 · 결과(장단점)",
-   "SW개발 시 반복적으로 나타나는 설계문제에 대해 유형별로 적합한 설계를 "
+   "형식: 패턴 이름(Pattern Name) · 문제(Problem) · 해법(Solution) · 결과(Consequence)",
+   "GoF 분류: 생성 패턴(Creational) · 구조 패턴(Structural) · 행위 패턴(Behavioral) · 23개 패턴",
+   "특징: 인터페이스 기반 · 위임(Delegation) · 느슨한 결합(Loose Coupling)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "디자인 패턴의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "정의와 목적",
       "items": [
-       "SW개발 시 반복적으로 나타나는 설계문제에 대해 유형별로 적합한 설계를 제시하는 패턴 방안"
+       "반복되는 설계 문제의 유형별 해법",
+       "전문가 설계 노하우 공유로 확장성·재사용성·유지보수성 향상"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "구현 클래스가 아닌 인터페이스 활용",
+       "상속과 위임 사용, 낮은 결합도 추구"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "GoF 디자인 패턴의 형식과 분류",
     "subsections": [
      {
-      "title": null,
+      "title": "패턴 형식",
       "items": [
-       "디자인 패턴",
-       "Design Pattern",
-       "문제·해결·결과",
-       "구조",
-       "참여자",
-       "결과(장단점)"
+       "이름: 설계 의도·의사소통",
+       "문제: 적용 시점·배경",
+       "해법: 구성요소·역할·관계",
+       "결과: 효과·장단점"
+      ]
+     },
+     {
+      "title": "3가지 분류",
+      "items": [
+       "생성: 객체 생성 방식 캡슐화",
+       "구조: 클래스·객체 조합 구조",
+       "행위: 객체 간 책임·알고리즘 분배"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "생성·구조·행위 패턴의 종류",
     "subsections": [
      {
-      "title": null,
+      "title": "생성 패턴(5)",
       "items": [
-       "적용 상황",
-       "관련 패턴",
-       "표준·비교·한계를 함께 기술"
+       "추상 팩토리, 빌더, 팩토리 메서드, 프로토타입, 싱글톤"
+      ]
+     },
+     {
+      "title": "구조 패턴(7)",
+      "items": [
+       "어댑터, 브리지, 컴포지트, 데코레이터, 퍼사드, 플라이웨이트, 프록시"
+      ]
+     },
+     {
+      "title": "행위 패턴(11)",
+      "items": [
+       "책임 연쇄, 커맨드, 인터프리터, 이터레이터, 중재자, 메멘토",
+       "옵저버, 상태, 전략, 템플릿 메서드, 비지터"
       ]
      }
     ]
@@ -11318,46 +11335,56 @@
    121
   ],
   "outline": [
-   "소프트웨어 Design Pattern의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "디자인 패턴의 개요",
+   "- 정의와 목적",
+   "- 특징",
+   "GoF 디자인 패턴의 형식과 분류",
+   "- 패턴 형식",
+   "- 3가지 분류",
+   "생성·구조·행위 패턴의 종류",
+   "- 생성 패턴(5)",
+   "- 구조 패턴(7)",
+   "- 행위 패턴(11)"
   ],
-  "name": "소프트웨어 Design Pattern(Design Pattern)",
+  "name": "디자인 패턴(Design Pattern)",
   "en": "Design Pattern",
   "keywords_must": [
-   "디자인 패턴",
-   "Design Pattern",
-   "문제·해결·결과",
-   "구조",
-   "참여자",
-   "결과(장단점)",
-   "적용 상황",
-   "관련 패턴"
+   "패턴 이름(Pattern Name)",
+   "문제(Problem)",
+   "해법(Solution)",
+   "결과(Consequence)",
+   "생성 패턴(Creational)",
+   "구조 패턴(Structural)",
+   "행위 패턴(Behavioral)",
+   "23개 패턴",
+   "인터페이스 기반",
+   "위임(Delegation)",
+   "느슨한 결합(Loose Coupling)"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "GoF(Gang of Four)",
+   "클래스 범위·객체 범위",
+   "화이트박스 재사용",
+   "블랙박스 재사용",
+   "확장성·재사용성·유지보수성"
   ],
   "curated": true,
   "quiz_terms": [
-   "디자인 패턴",
-   "Design Pattern",
-   "문제·해결·결과",
-   "구조",
-   "참여자",
-   "결과(장단점)",
-   "적용 상황",
-   "관련 패턴"
+   "패턴 이름(Pattern Name)",
+   "문제(Problem)",
+   "해법(Solution)",
+   "결과(Consequence)",
+   "생성 패턴(Creational)",
+   "구조 패턴(Structural)",
+   "행위 패턴(Behavioral)",
+   "23개 패턴",
+   "인터페이스 기반",
+   "위임(Delegation)",
+   "느슨한 결합(Loose Coupling)"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -11367,55 +11394,67 @@
   "subtitle": "hollywood principle",
   "domain": "SW",
   "category": "SW > 디자인 패턴> hollywood principle",
-  "definition": "상위클래스에서 모든 것을 관리하고 필요한 하위클래스를 불러서 쓰는 원칙 “먼저 연락하지 마세요. 저희가 연락 드리겠습니다” 라는 개념으로 상위클래스가 하위클래스의 사용여부를결정할 수 있지만 하위클래스에서 상위클래스를 호출할 수는 없음",
+  "definition": "상위(고수준) 구성요소가 흐름을 관리하며 필요할 때 하위(저수준) 구성요소를 호출하고, 하위 구성요소는 상위를 직접 호출하지 않도록 하는 설계 원칙 (\"Don't call us, we'll call you\")",
   "keywords": [
-   "핵심: 헐리우드 원칙 · 개념·정의 · 목적",
-   "구성: 핵심 구성 요소 · 절차/유형 · 관련 표준·기법",
-   "상위클래스에서 모든 것을 관리하고 필요한 하위클래스를 불러서 쓰는 원칙 "
+   "원리: 고수준 구성요소 · 저수준 구성요소 · 의존성 부패 방지 · 제어의 역전(IoC)",
+   "활용 패턴: 템플릿 메서드 패턴 · 전략 패턴 · 팩토리 메서드 패턴",
+   "비교: 의존성 역전 원칙(DIP)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "헐리우드 원칙의 개요",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "상위클래스에서 모든 것을 관리하고 필요한 하위클래스를 불러서 쓰는 원칙 “먼저 연락하지 마세요. 저희가 연락 드리겠습니다” 라는 개념으로 상위클래스가 하위클래스의 사용여부를결정할 수 있지만 하위클래스에서 상위클래스를 호출할 수는 없음"
+       "상위 클래스가 하위 클래스 사용 여부·시점 결정",
+       "하위 클래스는 호출될 때까지 상위를 호출하지 않음"
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "위아래로 서로 호출하며 얽히는 의존성 부패 방지"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "헐리우드 원칙의 개념과 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "고수준 구성요소",
       "items": [
-       "헐리우드 원칙",
-       "개념·정의",
-       "목적",
-       "핵심 구성 요소",
-       "절차/유형",
-       "관련 표준·기법"
+       "추상 클래스(예: Unit)가 전체 흐름 관리",
+       "특별한 로직이 필요할 때만 서브클래스 메서드 호출"
+      ]
+     },
+     {
+      "title": "저수준 구성요소",
+      "items": [
+       "구현 클래스(예: Marine, Firebat)",
+       "호출당하기 전에는 고수준 구성요소를 직접 호출하지 않음"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "활용 패턴과 DIP 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "활용 패턴",
       "items": [
-       "적용 효과",
-       "한계·주의점",
-       "표준·비교·한계를 함께 기술"
+       "템플릿 메서드: 알고리즘 일부 단계를 서브클래스가 구현",
+       "전략: 행동 캡슐화",
+       "팩토리 메서드: 생성 객체를 서브클래스가 결정"
+      ]
+     },
+     {
+      "title": "DIP와 비교",
+      "items": [
+       "공통: 객체 분리 목표",
+       "헐리우드: 하위를 다양하게 쓰되 상위 의존 최소화",
+       "DIP: 구상 클래스 대신 추상화에 의존, 의존성 회피가 더 강함"
       ]
      }
     ]
@@ -11427,104 +11466,119 @@
    199
   ],
   "outline": [
-   "헐리우드 원칙의 개념",
+   "헐리우드 원칙의 개요",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 필요성",
+   "헐리우드 원칙의 개념과 구성",
+   "- 고수준 구성요소",
+   "- 저수준 구성요소",
+   "활용 패턴과 DIP 비교",
+   "- 활용 패턴",
+   "- DIP와 비교"
   ],
   "name": "헐리우드 원칙(Hollywood Principle)",
   "en": "Hollywood Principle",
   "keywords_must": [
-   "헐리우드 원칙",
-   "개념·정의",
-   "목적",
-   "핵심 구성 요소",
-   "절차/유형",
-   "관련 표준·기법",
-   "적용 효과",
-   "한계·주의점"
+   "고수준 구성요소",
+   "저수준 구성요소",
+   "의존성 부패 방지",
+   "제어의 역전(IoC)",
+   "템플릿 메서드 패턴",
+   "전략 패턴",
+   "팩토리 메서드 패턴",
+   "의존성 역전 원칙(DIP)"
   ],
   "keywords_ref": [
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념",
-   "기출 연계",
-   "한계·트레이드오프"
+   "추상 클래스",
+   "서브클래스",
+   "프레임워크 콜백",
+   "순환 의존",
+   "상위 클래스 호출 제어"
   ],
   "curated": true,
   "quiz_terms": [
-   "헐리우드 원칙",
-   "개념·정의",
-   "목적",
-   "핵심 구성 요소",
-   "절차/유형",
-   "관련 표준·기법",
-   "적용 효과",
-   "한계·주의점"
+   "고수준 구성요소",
+   "저수준 구성요소",
+   "의존성 부패 방지",
+   "제어의 역전(IoC)",
+   "템플릿 메서드 패턴",
+   "전략 패턴",
+   "팩토리 메서드 패턴",
+   "의존성 역전 원칙(DIP)"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
   "id": "SW_092",
   "code": "SW_092",
-  "title": "추상 팩토리(Abstract Factory)",
+  "title": "추상 팩토리 패턴(Abstract Factory Pattern)",
   "subtitle": "Abstract Factory Pattern(추상 팩토리 패턴)",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Abstract Factory Pattern",
-  "definition": "구체 클래스를 지정하지 않고 관련 객체 군을 생성하는 생성 패턴",
+  "definition": "구체적인 클래스를 지정하지 않고 서로 관련되거나 의존적인 객체들의 집합(제품군)을 생성할 수 있는 인터페이스를 제공하는 생성 패턴",
   "keywords": [
-   "핵심: Abstract Factory · 제품군(Product Family) · 추상 제품",
-   "구성: 구체 팩토리 · 결합도 감소 · 교체 용이",
-   "구체 클래스를 지정하지 않고 관련 객체 군을 생성하는 생성 패턴"
+   "구성: AbstractFactory · ConcreteFactory · AbstractProduct · ConcreteProduct · Client",
+   "특징: 제품군(Product Family) 생성 · 팩토리의 추상화 · 인터페이스 분리",
+   "비교: 팩토리 메서드 패턴 · 팩토리 그룹핑·캡슐화"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "추상 팩토리 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "구체 클래스를 지정하지 않고 관련 객체 군을 생성하는 생성 패턴"
+       "관련 객체 집합을 생성하는 인터페이스 제공",
+       "1개 객체보다 여러 객체를 제품군으로 묶어 생성할 때 적용"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "클라이언트는 어떤 구체 제품이 생성되는지 알 필요 없음",
+       "구체 팩토리 추가는 간단"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "추상 팩토리 패턴의 개념도",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "Abstract Factory",
-       "제품군(Product Family)",
-       "추상 제품",
-       "구체 팩토리",
-       "결합도 감소",
-       "교체 용이"
+       "AbstractFactory: 제품 생성 인터페이스",
+       "ConcreteFactory: 제품군 생성 구현",
+       "AbstractProduct·ConcreteProduct: 제품 인터페이스와 구현"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "클라이언트는 추상 팩토리·추상 제품 인터페이스만 사용",
+       "팩토리 교체로 제품군 전체 교체"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "팩토리 메서드 패턴과 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "차이점",
       "items": [
-       "생성 패턴",
-       "일관성",
-       "관련 표준·한계를 함께 기술"
+       "팩토리 메서드: 상속으로 단일 객체 생성을 서브클래스에 위임",
+       "추상 팩토리: 팩토리들을 그룹핑·캡슐화해 객체군 생성"
+      ]
+     },
+     {
+      "title": "장단점",
+      "items": [
+       "제품군 일관성 보장",
+       "새 제품 종류 추가 시 모든 팩토리 수정 필요"
       ]
      }
     ]
@@ -11536,46 +11590,53 @@
    205
   ],
   "outline": [
-   "추상 팩토리의 개념",
+   "추상 팩토리 패턴의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "추상 팩토리 패턴의 개념도",
+   "- 구성요소",
+   "- 동작",
+   "팩토리 메서드 패턴과 비교",
+   "- 차이점",
+   "- 장단점"
   ],
-  "name": "추상 팩토리(Abstract Factory)",
-  "en": "Abstract Factory",
+  "name": "추상 팩토리 패턴(Abstract Factory Pattern)",
+  "en": "Abstract Factory Pattern",
   "keywords_must": [
-   "Abstract Factory",
-   "제품군(Product Family)",
-   "추상 제품",
-   "구체 팩토리",
-   "결합도 감소",
-   "교체 용이",
-   "생성 패턴",
-   "일관성"
+   "AbstractFactory",
+   "ConcreteFactory",
+   "AbstractProduct",
+   "ConcreteProduct",
+   "Client",
+   "제품군(Product Family) 생성",
+   "팩토리의 추상화",
+   "인터페이스 분리",
+   "팩토리 메서드 패턴",
+   "팩토리 그룹핑·캡슐화"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "생성 패턴",
+   "구체 팩토리 추가 용이",
+   "새 제품 종류 추가 어려움",
+   "일관성 보장",
+   "GUI 테마"
   ],
   "curated": true,
   "quiz_terms": [
-   "Abstract Factory",
-   "제품군(Product Family)",
-   "추상 제품",
-   "구체 팩토리",
-   "결합도 감소",
-   "교체 용이",
-   "생성 패턴",
-   "일관성"
+   "AbstractFactory",
+   "ConcreteFactory",
+   "AbstractProduct",
+   "ConcreteProduct",
+   "Client",
+   "제품군(Product Family) 생성",
+   "팩토리의 추상화",
+   "인터페이스 분리",
+   "팩토리 메서드 패턴",
+   "팩토리 그룹핑·캡슐화"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -11585,55 +11646,67 @@
   "subtitle": "Builder Pattern(빌더 패턴)",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > 생성 패턴 > Builder Pattern",
-  "definition": "복잡한 객체의 생성 과정을 단계적으로 분리해 동일 절차로 다른 표현을 만드는 생성 패턴",
+  "definition": "복잡한 객체를 여러 단계로 나누어 생성하도록 생성 단계를 캡슐화하여, 동일한 생성 절차로 서로 다른 표현의 객체를 만들 수 있게 하는 생성 패턴",
   "keywords": [
-   "핵심: Builder · Director · 단계적 생성",
-   "구성: 표현 분리 · 불변 객체 · 플루언트 API",
-   "복잡한 객체의 생성 과정을 단계적으로 분리해 동일 절차로 다른 표현을 만드는"
+   "구성: Builder · ConcreteBuilder · Director · Product",
+   "특징: 생성 단계 캡슐화 · 객체 생성 일관성 · 생성 과정 분리",
+   "활용: 복합 객체 생성 · 메서드 체이닝 · 불변 객체"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "빌더 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "복잡한 객체의 생성 과정을 단계적으로 분리해 동일 절차로 다른 표현을 만드는 생성 패턴"
+       "제품 생산 단계를 캡슐화해 단계별 생성",
+       "복합 객체 생성 과정 캡슐화"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "단계를 캡슐화, 객체 생성 일관성 부여",
+       "한꺼번에 생성하지 않고 작게 분리해 생성"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "빌더 패턴의 개념도",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "Builder",
-       "Director",
-       "단계적 생성",
-       "표현 분리",
-       "불변 객체",
-       "플루언트 API"
+       "Builder: 생성 단계 인터페이스(makeTitle 등)",
+       "ConcreteBuilder: 단계 구현·결과 반환",
+       "Director: 생성 순서 제어",
+       "Product: 결과 객체"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "Director가 Builder 단계를 순서대로 호출 → ConcreteBuilder 교체로 다른 표현(Text·HTML) 생성"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "빌더 패턴 예시와 활용",
     "subsections": [
      {
-      "title": null,
+      "title": "예시",
       "items": [
-       "생성 패턴",
-       "가독성",
-       "관련 표준·한계를 함께 기술"
+       "Director가 제목·문자열·항목 단계로 문서 구성",
+       "TextBuilder와 HTMLBuilder가 각각 다른 결과 생성"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "매개변수가 많은 객체 생성",
+       "메서드 체이닝으로 불변 객체 생성"
       ]
      }
     ]
@@ -11647,44 +11720,51 @@
   "outline": [
    "빌더 패턴의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "빌더 패턴의 개념도",
+   "- 구성요소",
+   "- 동작",
+   "빌더 패턴 예시와 활용",
+   "- 예시",
+   "- 활용"
   ],
   "name": "빌더 패턴(Builder Pattern)",
   "en": "Builder Pattern",
   "keywords_must": [
    "Builder",
+   "ConcreteBuilder",
    "Director",
-   "단계적 생성",
-   "표현 분리",
-   "불변 객체",
-   "플루언트 API",
-   "생성 패턴",
-   "가독성"
+   "Product",
+   "생성 단계 캡슐화",
+   "객체 생성 일관성",
+   "생성 과정 분리",
+   "복합 객체 생성",
+   "메서드 체이닝",
+   "불변 객체"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "생성 패턴",
+   "점층적 생성자 문제",
+   "StringBuilder",
+   "Lombok @Builder",
+   "추상 팩토리 비교"
   ],
   "curated": true,
   "quiz_terms": [
    "Builder",
+   "ConcreteBuilder",
    "Director",
-   "단계적 생성",
-   "표현 분리",
-   "불변 객체",
-   "플루언트 API",
-   "생성 패턴",
-   "가독성"
+   "Product",
+   "생성 단계 캡슐화",
+   "객체 생성 일관성",
+   "생성 과정 분리",
+   "복합 객체 생성",
+   "메서드 체이닝",
+   "불변 객체"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -11694,55 +11774,66 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Prototype Pattern",
-  "definition": "기존 객체를 복제(clone)해 새 인스턴스를 만드는 생성 패턴",
+  "definition": "원형(Prototype) 인스턴스를 복제(clone)하여 새로운 객체를 생성하는 방식을 제공해 객체 생성 비용을 줄이는 생성 패턴",
   "keywords": [
-   "핵심: Prototype · Clone · 얕은/깊은 복사",
-   "구성: 생성 비용 절감 · 레지스트리 · 생성 패턴",
-   "기존 객체를 복제(clone)해 새 인스턴스를 만드는 생성 패턴"
+   "구성: Prototype · ConcretePrototype · Client · Manager(Registry)",
+   "핵심: clone() 메서드 · 복사해서 인스턴스 생성 · 객체 생성·복사 캡슐화",
+   "복사 방식: 얕은 복사(Shallow Copy) · 깊은 복사(Deep Copy)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "프로토타입 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "기존 객체를 복제(clone)해 새 인스턴스를 만드는 생성 패턴"
+       "원형 객체를 복사해 새 객체 생성",
+       "객체 생성과 내용 복사 과정을 한꺼번에 캡슐화"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "생성에 시간·자원이 많이 드는 경우 자원·시간 절약",
+       "자바 clone()으로 복사 기능 제공"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "프로토타입 패턴의 개념도",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "Prototype",
-       "Clone",
-       "얕은/깊은 복사",
-       "생성 비용 절감",
-       "레지스트리",
-       "생성 패턴"
+       "Prototype: 복제 인터페이스(createClone)",
+       "ConcretePrototype: 자신을 복제하는 구현",
+       "Client: 복제 요청"
+      ]
+     },
+     {
+      "title": "Manager 활용",
+      "items": [
+       "원형 객체를 이름으로 등록(register)",
+       "create(name) 호출 시 복제본 반환"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "프로토타입 패턴 예시와 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "예시",
       "items": [
-       "복사 생성",
-       "프로토타입 오염",
-       "관련 표준·한계를 함께 기술"
+       "MessageBox, UnderlinePen 원형을 Manager에 등록 후 복제해 사용"
+      ]
+     },
+     {
+      "title": "고려사항",
+      "items": [
+       "얕은 복사 시 참조 공유 문제 → 필요 시 깊은 복사",
+       "순환 참조 객체 복제 주의"
       ]
      }
     ]
@@ -11756,44 +11847,49 @@
   "outline": [
    "프로토타입 패턴의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "프로토타입 패턴의 개념도",
+   "- 구성요소",
+   "- Manager 활용",
+   "프로토타입 패턴 예시와 고려사항",
+   "- 예시",
+   "- 고려사항"
   ],
   "name": "프로토타입 패턴(Prototype Pattern)",
   "en": "Prototype Pattern",
   "keywords_must": [
    "Prototype",
-   "Clone",
-   "얕은/깊은 복사",
-   "생성 비용 절감",
-   "레지스트리",
-   "생성 패턴",
-   "복사 생성",
-   "프로토타입 오염"
+   "ConcretePrototype",
+   "Client",
+   "Manager(Registry)",
+   "clone() 메서드",
+   "복사해서 인스턴스 생성",
+   "객체 생성·복사 캡슐화",
+   "얕은 복사(Shallow Copy)",
+   "깊은 복사(Deep Copy)"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "Cloneable 인터페이스",
+   "생성 오버헤드 감소",
+   "프로토타입 레지스트리",
+   "생성 패턴",
+   "동적 객체 종류 등록"
   ],
   "curated": true,
   "quiz_terms": [
    "Prototype",
-   "Clone",
-   "얕은/깊은 복사",
-   "생성 비용 절감",
-   "레지스트리",
-   "생성 패턴",
-   "복사 생성",
-   "프로토타입 오염"
+   "ConcretePrototype",
+   "Client",
+   "Manager(Registry)",
+   "clone() 메서드",
+   "복사해서 인스턴스 생성",
+   "객체 생성·복사 캡슐화",
+   "얕은 복사(Shallow Copy)",
+   "깊은 복사(Deep Copy)"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -11803,55 +11899,67 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Singleton Pattern",
-  "definition": "인스턴스를 하나만 두고 전역 접근점을 제공하는 생성 패턴",
+  "definition": "클래스의 인스턴스가 오직 하나만 생성되도록 보장하고 그 인스턴스에 대한 전역 접근점을 제공하는 생성 패턴",
   "keywords": [
-   "핵심: Singleton · 단일 인스턴스 · 전역 접근점",
-   "구성: 지연 초기화 · 스레드 안전 · 생성 패턴",
-   "인스턴스를 하나만 두고 전역 접근점을 제공하는 생성 패턴"
+   "구현: private 생성자 · static 인스턴스 변수 · getInstance() 정적 메서드",
+   "초기화: 이른 초기화(Eager) · 지연 초기화(Lazy) · DCL(Double-Checked Locking) · Holder 방식",
+   "활용: 설정 관리 · 커넥션 풀 · 로깅"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "싱글톤 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "인스턴스를 하나만 두고 전역 접근점을 제공하는 생성 패턴"
+       "인스턴스 하나만 생성 보장, 전역 접근 제공",
+       "단 하나의 인스턴스를 공유"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "하나의 인스턴스 생성 보장",
+       "static 메서드 명명 규칙은 getInstance()"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "싱글톤 패턴의 개념도",
     "subsections": [
      {
-      "title": null,
+      "title": "구조",
       "items": [
-       "Singleton",
-       "단일 인스턴스",
-       "전역 접근점",
-       "지연 초기화",
-       "스레드 안전",
-       "생성 패턴"
+       "-instance: static 필드(private)",
+       "-Singleton(): private 생성자",
+       "+getInstance(): public static 메서드"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "getInstance()가 항상 같은 객체 반환",
+       "obj1 == obj2 확인"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "구현 방식과 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "초기화 방식",
       "items": [
-       "남용 주의",
-       "테스트 어려움",
-       "관련 표준·한계를 함께 기술"
+       "이른 초기화(클래스 로딩 시)",
+       "지연 초기화 + synchronized·DCL, Holder 방식, enum"
+      ]
+     },
+     {
+      "title": "고려사항",
+      "items": [
+       "멀티스레드 환경에서 중복 생성 방지",
+       "전역 상태로 결합도·테스트 어려움 증가"
       ]
      }
     ]
@@ -11865,102 +11973,120 @@
   "outline": [
    "싱글톤 패턴의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "싱글톤 패턴의 개념도",
+   "- 구조",
+   "- 동작",
+   "구현 방식과 고려사항",
+   "- 초기화 방식",
+   "- 고려사항"
   ],
   "name": "싱글톤 패턴(Singleton Pattern)",
   "en": "Singleton Pattern",
   "keywords_must": [
-   "Singleton",
-   "단일 인스턴스",
-   "전역 접근점",
-   "지연 초기화",
-   "스레드 안전",
-   "생성 패턴",
-   "남용 주의",
-   "테스트 어려움"
+   "private 생성자",
+   "static 인스턴스 변수",
+   "getInstance() 정적 메서드",
+   "이른 초기화(Eager)",
+   "지연 초기화(Lazy)",
+   "DCL(Double-Checked Locking)",
+   "Holder 방식",
+   "설정 관리",
+   "커넥션 풀",
+   "로깅"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "스레드 안전성(Thread Safety)",
+   "enum 싱글톤",
+   "전역 상태",
+   "테스트 어려움",
+   "Spring 빈 스코프"
   ],
   "curated": true,
   "quiz_terms": [
-   "Singleton",
-   "단일 인스턴스",
-   "전역 접근점",
-   "지연 초기화",
-   "스레드 안전",
-   "생성 패턴",
-   "남용 주의",
-   "테스트 어려움"
+   "private 생성자",
+   "static 인스턴스 변수",
+   "getInstance() 정적 메서드",
+   "이른 초기화(Eager)",
+   "지연 초기화(Lazy)",
+   "DCL(Double-Checked Locking)",
+   "Holder 방식",
+   "설정 관리",
+   "커넥션 풀",
+   "로깅"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
   "id": "SW_096",
   "code": "SW_096",
-  "title": "팩토리 메서드 패턴(Factory Method)",
+  "title": "팩토리 메서드 패턴(Factory Method Pattern)",
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Factory Method Pattern",
-  "definition": "객체 생성 책임을 하위 클래스로 위임하는 생성 패턴",
+  "definition": "객체를 생성하는 인터페이스는 상위 클래스에서 정의하고, 어떤 클래스의 인스턴스를 만들지는 서브클래스가 결정하도록 하는 생성 패턴",
   "keywords": [
-   "핵심: Factory Method · Creator · Product",
-   "구성: 생성 위임 · 개방-폐쇄 · 생성 패턴",
-   "객체 생성 책임을 하위 클래스로 위임하는 생성 패턴"
+   "구성: Creator · ConcreteCreator · Product · ConcreteProduct",
+   "특징: 인스턴스 생성을 서브클래스에 위임 · 생성 처리 캡슐화 · 객체 생성 유연성",
+   "관련: 템플릿 메서드 패턴 · 헐리우드 원칙"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "팩토리 메서드 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "객체 생성 책임을 하위 클래스로 위임하는 생성 패턴"
+       "인스턴스 생성 결정을 서브클래스가 담당",
+       "생성 방법은 상위가, 구체 클래스 이름은 하위가 결정"
       ]
      },
      {
-      "title": "목적",
+      "title": "장단점",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "객체 생성 처리를 서브클래스로 분리·캡슐화",
+       "중첩되면 클래스 계층이 복잡해짐"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "팩토리 메서드 패턴의 개념도",
     "subsections": [
      {
-      "title": null,
+      "title": "Creator와 ConcreteCreator",
       "items": [
-       "Factory Method",
-       "Creator",
-       "Product",
-       "생성 위임",
-       "개방-폐쇄",
-       "생성 패턴"
+       "Creator: 추상 팩토리 메서드 정의",
+       "ConcreteCreator: factoryMethod() 구현해 구상 객체 생성"
+      ]
+     },
+     {
+      "title": "Product와 ConcreteProduct",
+      "items": [
+       "Product: 생성될 객체의 인터페이스",
+       "ConcreteProduct: 인터페이스 구현(예: Shape → Circle)"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "팩토리 메서드 패턴 예시",
     "subsections": [
      {
-      "title": null,
+      "title": "예시",
       "items": [
-       "템플릿과 연계",
-       "느슨한 결합",
-       "관련 표준·한계를 함께 기술"
+       "Factory·Product 프레임워크와 IDCardFactory·IDCard 구현",
+       "create()에서 createProduct()·registerProduct() 호출"
+      ]
+     },
+     {
+      "title": "효과",
+      "items": [
+       "클라이언트가 구체 클래스에 의존하지 않음",
+       "새 제품 추가 시 Creator 서브클래스만 추가"
       ]
      }
     ]
@@ -11974,44 +12100,49 @@
   "outline": [
    "팩토리 메서드 패턴의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 장단점",
+   "팩토리 메서드 패턴의 개념도",
+   "- Creator와 ConcreteCreator",
+   "- Product와 ConcreteProduct",
+   "팩토리 메서드 패턴 예시",
+   "- 예시",
+   "- 효과"
   ],
-  "name": "팩토리 메서드 패턴(Factory Method)",
+  "name": "팩토리 메서드 패턴(Factory Method Pattern)",
   "en": "Factory Method Pattern",
   "keywords_must": [
-   "Factory Method",
    "Creator",
+   "ConcreteCreator",
    "Product",
-   "생성 위임",
-   "개방-폐쇄",
-   "생성 패턴",
-   "템플릿과 연계",
-   "느슨한 결합"
+   "ConcreteProduct",
+   "인스턴스 생성을 서브클래스에 위임",
+   "생성 처리 캡슐화",
+   "객체 생성 유연성",
+   "템플릿 메서드 패턴",
+   "헐리우드 원칙"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "생성 패턴",
+   "추상 팩토리 비교",
+   "클래스 계층 증가",
+   "결합도 감소",
+   "가상 생성자"
   ],
   "curated": true,
   "quiz_terms": [
-   "Factory Method",
    "Creator",
+   "ConcreteCreator",
    "Product",
-   "생성 위임",
-   "개방-폐쇄",
-   "생성 패턴",
-   "템플릿과 연계",
-   "느슨한 결합"
+   "ConcreteProduct",
+   "인스턴스 생성을 서브클래스에 위임",
+   "생성 처리 캡슐화",
+   "객체 생성 유연성",
+   "템플릿 메서드 패턴",
+   "헐리우드 원칙"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -12021,55 +12152,66 @@
   "subtitle": "Adaptor패턴",
   "domain": "SW",
   "category": "SW관리 > 디자인패턴 > Adaptor",
-  "definition": "호환되지 않는 인터페이스를 변환해 함께 동작하게 하는 구조 패턴",
+  "definition": "호환되지 않는 인터페이스를 가진 기존 클래스를 직접 수정하지 않고 중간 변환 장치(어댑터)를 두어 클라이언트가 원하는 인터페이스로 사용할 수 있게 하는 구조 패턴",
   "keywords": [
-   "핵심: Adapter · Target · Adaptee",
-   "구성: 인터페이스 변환 · 래퍼 · 구조 패턴",
-   "호환되지 않는 인터페이스를 변환해 함께 동작하게 하는 구조 패턴"
+   "구성: Client · Target · Adaptee · Adapter",
+   "유형: 클래스 어댑터(Class Adapter) · 객체 어댑터(Object Adapter)",
+   "방식: 다중 상속 · 객체 합성(Composition) · 인터페이스 변환"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "어댑터 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "호환되지 않는 인터페이스를 변환해 함께 동작하게 하는 구조 패턴"
+       "기존 프로그램을 수정하지 않고 중간 장치로 변형해 사용",
+       "클래스 간 호환성 확보"
       ]
      },
      {
       "title": "목적",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "호환성 없는 인터페이스 때문에 함께 쓸 수 없는 클래스를 함께 동작하게 함"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "어댑터 패턴 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "Adapter",
-       "Target",
-       "Adaptee",
-       "인터페이스 변환",
-       "래퍼",
-       "구조 패턴"
+       "Client: 행위가 필요한 객체(12V 노트북)",
+       "Target: 필요한 메서드 제공(12V)",
+       "Adaptee: 기존 메서드(100V 전원)",
+       "Adapter: Adaptee로 Target 메서드 구현(변환기)"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "Client → Target 인터페이스 호출 → Adapter가 Adaptee 메서드로 변환·위임"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "클래스 어댑터와 객체 어댑터 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "클래스 어댑터",
       "items": [
-       "객체/클래스 어댑터",
-       "레거시 연동",
-       "관련 표준·한계를 함께 기술"
+       "다중 상속으로 연계",
+       "Adaptee 동작을 Override 가능하나 Adaptee 서브클래스는 사용 불가"
+      ]
+     },
+     {
+      "title": "객체 어댑터",
+      "items": [
+       "객체 합성으로 연계",
+       "Adaptee 서브클래스도 모두 사용 가능하나 Adaptee 동작 변경은 불가"
       ]
      }
     ]
@@ -12084,43 +12226,48 @@
    "어댑터 패턴의 개념",
    "- 정의",
    "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "어댑터 패턴 구성요소",
+   "- 구성요소",
+   "- 동작",
+   "클래스 어댑터와 객체 어댑터 비교",
+   "- 클래스 어댑터",
+   "- 객체 어댑터"
   ],
   "name": "어댑터 패턴(Adapter Pattern)",
   "en": "Adapter Pattern",
   "keywords_must": [
-   "Adapter",
+   "Client",
    "Target",
    "Adaptee",
-   "인터페이스 변환",
-   "래퍼",
-   "구조 패턴",
-   "객체/클래스 어댑터",
-   "레거시 연동"
+   "Adapter",
+   "클래스 어댑터(Class Adapter)",
+   "객체 어댑터(Object Adapter)",
+   "다중 상속",
+   "객체 합성(Composition)",
+   "인터페이스 변환"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "Wrapper",
+   "레거시 연동",
+   "호환성 확보",
+   "구조 패턴",
+   "100V→12V 어댑터 비유"
   ],
   "curated": true,
   "quiz_terms": [
-   "Adapter",
+   "Client",
    "Target",
    "Adaptee",
-   "인터페이스 변환",
-   "래퍼",
-   "구조 패턴",
-   "객체/클래스 어댑터",
-   "레거시 연동"
+   "Adapter",
+   "클래스 어댑터(Class Adapter)",
+   "객체 어댑터(Object Adapter)",
+   "다중 상속",
+   "객체 합성(Composition)",
+   "인터페이스 변환"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -12130,55 +12277,66 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Bridge Pattern",
-  "definition": "추상과 구현을 분리해 독립적으로 확장하는 구조 패턴",
+  "definition": "기능 클래스 계층과 구현 클래스 계층을 분리하고 둘을 연결(브리지)하여 각각을 독립적으로 확장·변경할 수 있게 하는 구조 패턴",
   "keywords": [
-   "핵심: Bridge · Abstraction · Implementor",
-   "구성: 분리 · 독립 확장 · 구조 패턴",
-   "추상과 구현을 분리해 독립적으로 확장하는 구조 패턴"
+   "구성: Abstraction · RefinedAbstraction · Implementor · ConcreteImplementor",
+   "핵심: 기능 계층과 구현 계층 분리 · 위임(Delegation) · 독립적 확장",
+   "효과: 클래스 폭발 방지 · 런타임 구현 교체"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "브리지 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "추상과 구현을 분리해 독립적으로 확장하는 구조 패턴"
+       "기능 계층과 구현 계층을 분리해 독립적으로 변경",
+       "다양한 구현 지원"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "두 계층이 브리지(참조 필드)로 연결",
+       "상속 조합으로 인한 클래스 수 폭증 방지"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "브리지 패턴의 개념도",
     "subsections": [
      {
-      "title": null,
+      "title": "기능 계층",
       "items": [
-       "Bridge",
-       "Abstraction",
-       "Implementor",
-       "분리",
-       "독립 확장",
-       "구조 패턴"
+       "Abstraction: 구현 객체 참조 보유(Display)",
+       "RefinedAbstraction: 기능 확장(CountDisplay)"
+      ]
+     },
+     {
+      "title": "구현 계층",
+      "items": [
+       "Implementor: 구현 인터페이스(DisplayImpl)",
+       "ConcreteImplementor: 실제 구현(StringDisplayImpl)"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "브리지 패턴 예시와 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "예시",
       "items": [
-       "조합",
-       "플랫폼 독립",
-       "관련 표준·한계를 함께 기술"
+       "Display의 open·print·close를 DisplayImpl의 rawOpen·rawPrint·rawClose에 위임",
+       "CountDisplay로 기능 추가"
+      ]
+     },
+     {
+      "title": "어댑터와 비교",
+      "items": [
+       "어댑터: 기존 클래스 간 호환(사후)",
+       "브리지: 설계 단계에서 추상과 구현 분리(사전)"
       ]
      }
     ]
@@ -12192,44 +12350,49 @@
   "outline": [
    "브리지 패턴의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "브리지 패턴의 개념도",
+   "- 기능 계층",
+   "- 구현 계층",
+   "브리지 패턴 예시와 비교",
+   "- 예시",
+   "- 어댑터와 비교"
   ],
   "name": "브리지 패턴(Bridge Pattern)",
   "en": "Bridge Pattern",
   "keywords_must": [
-   "Bridge",
    "Abstraction",
+   "RefinedAbstraction",
    "Implementor",
-   "분리",
-   "독립 확장",
-   "구조 패턴",
-   "조합",
-   "플랫폼 독립"
+   "ConcreteImplementor",
+   "기능 계층과 구현 계층 분리",
+   "위임(Delegation)",
+   "독립적 확장",
+   "클래스 폭발 방지",
+   "런타임 구현 교체"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "구조 패턴",
+   "상속 대신 합성",
+   "플랫폼 독립",
+   "어댑터 패턴 비교",
+   "드라이버 구조"
   ],
   "curated": true,
   "quiz_terms": [
-   "Bridge",
    "Abstraction",
+   "RefinedAbstraction",
    "Implementor",
-   "분리",
-   "독립 확장",
-   "구조 패턴",
-   "조합",
-   "플랫폼 독립"
+   "ConcreteImplementor",
+   "기능 계층과 구현 계층 분리",
+   "위임(Delegation)",
+   "독립적 확장",
+   "클래스 폭발 방지",
+   "런타임 구현 교체"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -12239,55 +12402,66 @@
   "subtitle": "Composite Pattern(컴포지트 패턴)",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > 구조 패턴 > Composite Pattern",
-  "definition": "부분-전체 계층을 트리로 만들어 단일 객체처럼 다루게 하는 구조 패턴",
+  "definition": "객체들을 부분-전체 계층의 트리 구조로 구성하고 클라이언트가 개별 객체와 복합 객체를 동일한 방식으로 다룰 수 있게 하는 구조 패턴",
   "keywords": [
-   "핵심: Composite · Leaf · Component",
-   "구성: 트리 구조 · 투명성 · 구조 패턴",
-   "부분-전체 계층을 트리로 만들어 단일 객체처럼 다루게 하는 구조 패턴"
+   "구성: Component · Leaf · Composite · Client",
+   "특징: 트리 구조 · 부분-전체 계층(Part-Whole) · 재귀적 구조 · 단일·복합 객체 동일 처리",
+   "예시: 파일과 디렉터리 · 메뉴 트리"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "컴포지트 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "부분-전체 계층을 트리로 만들어 단일 객체처럼 다루게 하는 구조 패턴"
+       "계층적 복합 객체를 트리 구조로 구성",
+       "각 요소를 동일한 방식으로 사용"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "부분-전체 상속 구조",
+       "재귀적 구조(디렉터리 안에 파일과 디렉터리)"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "컴포지트 패턴의 개념도",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "Composite",
-       "Leaf",
-       "Component",
-       "트리 구조",
-       "투명성",
-       "구조 패턴"
+       "Component: 공통 인터페이스(Entry)",
+       "Leaf: 자식이 없는 개별 객체(File)",
+       "Composite: 자식을 가지는 복합 객체(Directory)"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "Composite가 자식 Component 목록을 보관",
+       "연산을 자식에게 재귀적으로 위임(getSize, printList)"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "컴포지트 패턴 예시와 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "예시",
       "items": [
-       "재귀",
-       "UI/파일시스템",
-       "관련 표준·한계를 함께 기술"
+       "Entry·File·Directory로 파일 시스템 표현",
+       "add()는 Leaf에서 예외 처리"
+      ]
+     },
+     {
+      "title": "고려사항",
+      "items": [
+       "공통 인터페이스에 자식 관리 연산 포함 시 투명성↑ 안전성↓"
       ]
      }
     ]
@@ -12301,44 +12475,51 @@
   "outline": [
    "컴포지트 패턴의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "컴포지트 패턴의 개념도",
+   "- 구성요소",
+   "- 동작",
+   "컴포지트 패턴 예시와 고려사항",
+   "- 예시",
+   "- 고려사항"
   ],
   "name": "컴포지트 패턴(Composite Pattern)",
   "en": "Composite Pattern",
   "keywords_must": [
-   "Composite",
-   "Leaf",
    "Component",
+   "Leaf",
+   "Composite",
+   "Client",
    "트리 구조",
-   "투명성",
-   "구조 패턴",
-   "재귀",
-   "UI/파일시스템"
+   "부분-전체 계층(Part-Whole)",
+   "재귀적 구조",
+   "단일·복합 객체 동일 처리",
+   "파일과 디렉터리",
+   "메뉴 트리"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "구조 패턴",
+   "재귀 호출",
+   "투명성과 안전성 트레이드오프",
+   "이터레이터 패턴",
+   "비지터 패턴"
   ],
   "curated": true,
   "quiz_terms": [
-   "Composite",
-   "Leaf",
    "Component",
+   "Leaf",
+   "Composite",
+   "Client",
    "트리 구조",
-   "투명성",
-   "구조 패턴",
-   "재귀",
-   "UI/파일시스템"
+   "부분-전체 계층(Part-Whole)",
+   "재귀적 구조",
+   "단일·복합 객체 동일 처리",
+   "파일과 디렉터리",
+   "메뉴 트리"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -12348,55 +12529,67 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > 구조 패턴 > Decorator Pattern",
-  "definition": "객체에 책임을 동적 추가하는 구조 패턴. 상속 대신 구성",
+  "definition": "같은 클래스의 다른 객체에 영향을 주지 않고 개별 객체에 동적으로 책임(기능)을 추가할 수 있게 장식 객체로 감싸는 구조 패턴",
   "keywords": [
-   "핵심: Decorator · Component · 동적 확장",
-   "구성: 구성(Composition) · 단일 책임 · 구조 패턴",
-   "객체에 책임을 동적 추가하는 구조 패턴. 상속 대신 구성"
+   "구성: Component · ConcreteComponent · Decorator · ConcreteDecorator",
+   "특징: 동적 기능 확장 · OCP(개방-폐쇄 원칙) 적용 · 상속 대신 합성 · 래핑(Wrapping)",
+   "예시: 빵에 토핑 추가 · Java I/O 스트림"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "데코레이터 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "객체에 책임을 동적 추가하는 구조 패턴. 상속 대신 구성"
+       "객체에 동적으로 책임 추가",
+       "다른 객체에 영향 없이 기능 확장"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "기존 클래스(둥근 빵)에 필요한 기능(초콜릿·치즈·생크림)을 덧붙임",
+       "OCP 적용"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "데코레이터 패턴의 개념도",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "Decorator",
-       "Component",
-       "동적 확장",
-       "구성(Composition)",
-       "단일 책임",
-       "구조 패턴"
+       "Component: 공통 인터페이스(Display)",
+       "ConcreteComponent: 기본 객체(StringDisplay)",
+       "Decorator: Component 참조를 가진 추상 장식(Border)",
+       "ConcreteDecorator: 기능 추가(SideBorder, FullBorder)"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "장식 객체가 내부 객체에 위임 후 기능 추가",
+       "여러 장식을 겹쳐 적용"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "데코레이터 패턴 예시와 활용",
     "subsections": [
      {
-      "title": null,
+      "title": "예시",
       "items": [
-       "래핑",
-       "개방-폐쇄",
-       "관련 표준·한계를 함께 기술"
+       "문자열에 SideBorder·FullBorder를 겹쳐 테두리 추가"
+      ]
+     },
+     {
+      "title": "활용과 주의",
+      "items": [
+       "Java I/O(BufferedInputStream 등)",
+       "작은 객체가 많아져 디버깅 복잡"
       ]
      }
     ]
@@ -12410,44 +12603,51 @@
   "outline": [
    "데코레이터 패턴의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "데코레이터 패턴의 개념도",
+   "- 구성요소",
+   "- 동작",
+   "데코레이터 패턴 예시와 활용",
+   "- 예시",
+   "- 활용과 주의"
   ],
   "name": "데코레이터 패턴(Decorator Pattern)",
   "en": "Decorator Pattern",
   "keywords_must": [
-   "Decorator",
    "Component",
-   "동적 확장",
-   "구성(Composition)",
-   "단일 책임",
-   "구조 패턴",
-   "래핑",
-   "개방-폐쇄"
+   "ConcreteComponent",
+   "Decorator",
+   "ConcreteDecorator",
+   "동적 기능 확장",
+   "OCP(개방-폐쇄 원칙) 적용",
+   "상속 대신 합성",
+   "래핑(Wrapping)",
+   "빵에 토핑 추가",
+   "Java I/O 스트림"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "구조 패턴",
+   "BufferedReader",
+   "서브클래스 폭증 방지",
+   "장식 순서",
+   "프록시 비교"
   ],
   "curated": true,
   "quiz_terms": [
-   "Decorator",
    "Component",
-   "동적 확장",
-   "구성(Composition)",
-   "단일 책임",
-   "구조 패턴",
-   "래핑",
-   "개방-폐쇄"
+   "ConcreteComponent",
+   "Decorator",
+   "ConcreteDecorator",
+   "동적 기능 확장",
+   "OCP(개방-폐쇄 원칙) 적용",
+   "상속 대신 합성",
+   "래핑(Wrapping)",
+   "빵에 토핑 추가",
+   "Java I/O 스트림"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -12457,55 +12657,64 @@
   "subtitle": "Facade Pattern(퍼사드 패턴)",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Facade Pattern",
-  "definition": "복잡한 서브시스템에 단순한 통합 인터페이스를 제공하는 구조 패턴",
+  "definition": "복잡한 서브시스템의 인터페이스 집합에 대해 하나의 단순화된 통합 인터페이스(창구)를 제공해 서브시스템을 쉽게 사용하게 하는 구조 패턴",
   "keywords": [
-   "핵심: Facade · 서브시스템 · 단순 인터페이스",
-   "구성: 결합도 감소 · 구조 패턴 · 진입점",
-   "복잡한 서브시스템에 단순한 통합 인터페이스를 제공하는 구조 패턴"
+   "구성: Facade · Subsystem Classes · Client",
+   "특징: 인터페이스 단순화 · 통합 창구 · 서브시스템 결합도 감소 · 최소 지식 원칙",
+   "예시: PageMaker · API 게이트웨이"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "퍼사드 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "복잡한 서브시스템에 단순한 통합 인터페이스를 제공하는 구조 패턴"
+       "서브시스템에 높은 수준의 통합 인터페이스 정의",
+       "간단한 창구 제공"
       ]
      },
      {
       "title": "목적",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "클라이언트가 알아야 할 인터페이스(API) 최소화"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "퍼사드 패턴의 개념도",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "Facade",
-       "서브시스템",
-       "단순 인터페이스",
-       "결합도 감소",
-       "구조 패턴",
-       "진입점"
+       "Facade: 서브시스템 기능을 조합한 단순 인터페이스",
+       "Subsystem: 실제 기능 클래스",
+       "Client: Facade만 호출"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "클라이언트 요청 → Facade가 여러 서브시스템 호출 순서 조정"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "퍼사드 패턴 예시와 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "예시",
       "items": [
-       "계층화",
-       "클라이언트 단순화",
-       "관련 표준·한계를 함께 기술"
+       "PageMaker가 Database·HtmlWriter를 조합해 makeWelcomePage() 제공"
+      ]
+     },
+     {
+      "title": "중재자와 비교",
+      "items": [
+       "퍼사드: 서브시스템 방향 단방향 메시지",
+       "중재자: 동료 객체 간 양방향 조정"
       ]
      }
     ]
@@ -12520,43 +12729,48 @@
    "퍼사드 패턴의 개념",
    "- 정의",
    "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "퍼사드 패턴의 개념도",
+   "- 구성요소",
+   "- 동작",
+   "퍼사드 패턴 예시와 비교",
+   "- 예시",
+   "- 중재자와 비교"
   ],
   "name": "퍼사드 패턴(Facade Pattern)",
   "en": "Facade Pattern",
   "keywords_must": [
    "Facade",
-   "서브시스템",
-   "단순 인터페이스",
-   "결합도 감소",
-   "구조 패턴",
-   "진입점",
-   "계층화",
-   "클라이언트 단순화"
+   "Subsystem Classes",
+   "Client",
+   "인터페이스 단순화",
+   "통합 창구",
+   "서브시스템 결합도 감소",
+   "최소 지식 원칙",
+   "PageMaker",
+   "API 게이트웨이"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "구조 패턴",
+   "디미터 법칙",
+   "계층화",
+   "중재자 패턴 비교",
+   "단방향 메시지"
   ],
   "curated": true,
   "quiz_terms": [
    "Facade",
-   "서브시스템",
-   "단순 인터페이스",
-   "결합도 감소",
-   "구조 패턴",
-   "진입점",
-   "계층화",
-   "클라이언트 단순화"
+   "Subsystem Classes",
+   "Client",
+   "인터페이스 단순화",
+   "통합 창구",
+   "서브시스템 결합도 감소",
+   "최소 지식 원칙",
+   "PageMaker",
+   "API 게이트웨이"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -12566,55 +12780,66 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Flyweight Pattern",
-  "definition": "공유로 대량 객체의 메모리 사용을 줄이는 구조 패턴",
+  "definition": "다수의 작은 객체를 효율적으로 사용하기 위해 동일한 객체를 공유(Pool)하여 인스턴스 생성을 줄이고 메모리 낭비를 막는 구조 패턴",
   "keywords": [
-   "핵심: Flyweight · 공유(Intrinsic) · 비공유(Extrinsic)",
-   "구성: 팩토리 · 메모리 절감 · 구조 패턴",
-   "공유로 대량 객체의 메모리 사용을 줄이는 구조 패턴"
+   "구성: Flyweight · ConcreteFlyweight · FlyweightFactory · Client",
+   "핵심: 객체 공유 · 객체 풀(Pool) · 내재 상태(Intrinsic) · 외재 상태(Extrinsic)",
+   "효과: 메모리 절감 · new 연산 최소화"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "플라이웨이트 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "공유로 대량 객체의 메모리 사용을 줄이는 구조 패턴"
+       "작은 객체를 공유해 객체 수 폭증 방지",
+       "불필요한 new 생성 억제"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "유사 객체가 많고 저장 비용이 클 때",
+       "상태 대부분을 외재화 가능할 때 적용"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "플라이웨이트 패턴의 개념도",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "Flyweight",
-       "공유(Intrinsic)",
-       "비공유(Extrinsic)",
-       "팩토리",
-       "메모리 절감",
-       "구조 패턴"
+       "Flyweight: 공유 객체 인터페이스",
+       "ConcreteFlyweight: 내재 상태를 가진 공유 객체(BigChar)",
+       "FlyweightFactory: 풀에서 객체 반환·생성(BigCharFactory)"
+      ]
+     },
+     {
+      "title": "상태 구분",
+      "items": [
+       "내재 상태: 공유 가능, 객체 내부 저장",
+       "외재 상태: 상황별로 클라이언트가 전달"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "플라이웨이트 패턴 예시와 활용",
     "subsections": [
      {
-      "title": null,
+      "title": "예시",
       "items": [
-       "캐시",
-       "불변",
-       "관련 표준·한계를 함께 기술"
+       "큰 문자(BigChar)를 팩토리 풀에서 공유해 문자열 출력"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "JDBC 커넥션 풀, 자바 String Pool, 게임 객체",
+       "공유 객체는 불변으로 설계"
       ]
      }
     ]
@@ -12628,44 +12853,51 @@
   "outline": [
    "플라이웨이트 패턴의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "플라이웨이트 패턴의 개념도",
+   "- 구성요소",
+   "- 상태 구분",
+   "플라이웨이트 패턴 예시와 활용",
+   "- 예시",
+   "- 활용"
   ],
   "name": "플라이웨이트 패턴(Flyweight Pattern)",
   "en": "Flyweight Pattern",
   "keywords_must": [
    "Flyweight",
-   "공유(Intrinsic)",
-   "비공유(Extrinsic)",
-   "팩토리",
+   "ConcreteFlyweight",
+   "FlyweightFactory",
+   "Client",
+   "객체 공유",
+   "객체 풀(Pool)",
+   "내재 상태(Intrinsic)",
+   "외재 상태(Extrinsic)",
    "메모리 절감",
-   "구조 패턴",
-   "캐시",
-   "불변"
+   "new 연산 최소화"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "구조 패턴",
+   "JDBC 커넥션 풀",
+   "String Pool",
+   "불변 객체",
+   "캐싱"
   ],
   "curated": true,
   "quiz_terms": [
    "Flyweight",
-   "공유(Intrinsic)",
-   "비공유(Extrinsic)",
-   "팩토리",
+   "ConcreteFlyweight",
+   "FlyweightFactory",
+   "Client",
+   "객체 공유",
+   "객체 풀(Pool)",
+   "내재 상태(Intrinsic)",
+   "외재 상태(Extrinsic)",
    "메모리 절감",
-   "구조 패턴",
-   "캐시",
-   "불변"
+   "new 연산 최소화"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -12675,55 +12907,69 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > 구조 > Proxy Pattern",
-  "definition": "다른 객체 접근을 통제하는 대리자를 두는 구조 패턴",
+  "definition": "실제 객체와 동일한 인터페이스를 가진 대리(중개) 객체를 두어 실제 객체로의 접근을 제어하고 생성 지연·부가 기능을 지원하는 구조 패턴",
   "keywords": [
-   "핵심: Proxy · Subject · 접근 제어",
-   "구성: 지연 로딩 · 로깅·캐시 · 구조 패턴",
-   "다른 객체 접근을 통제하는 대리자를 두는 구조 패턴"
+   "구성: Subject · RealSubject · Proxy · Client",
+   "유형: 가상 프록시(Virtual Proxy) · 보호 프록시(Protection Proxy) · 원격 프록시(Remote Proxy) · 스마트 참조",
+   "특징: 대리인 · 지연 생성(Lazy Initialization) · 접근 제어"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "프록시 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "다른 객체 접근을 통제하는 대리자를 두는 구조 패턴"
+       "동일 인터페이스의 중개 객체로 접근 통제",
+       "다른 객체의 대리자 제공"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "무거운 작업(인스턴스 생성) 지연",
+       "필요할 때 생성"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "프록시 패턴의 개념도",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "Proxy",
-       "Subject",
-       "접근 제어",
-       "지연 로딩",
-       "로깅·캐시",
-       "구조 패턴"
+       "Subject: 공통 인터페이스(Printable)",
+       "RealSubject: 실제 객체(Printer)",
+       "Proxy: 실제 객체 참조·대리(PrinterProxy)"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "간단한 요청은 Proxy가 처리",
+       "실제 작업 필요 시 RealSubject 생성 후 위임"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "프록시 유형과 활용",
     "subsections": [
      {
-      "title": null,
+      "title": "유형",
       "items": [
-       "원격 프록시",
-       "보호 프록시",
-       "관련 표준·한계를 함께 기술"
+       "가상: 생성 지연",
+       "보호: 접근 권한 제어",
+       "원격: 원격 객체 대리(RMI)",
+       "스마트 참조: 참조 카운트·로깅"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "Spring AOP 동적 프록시, 지연 로딩(JPA)",
+       "데코레이터와 구조는 같으나 목적은 접근 제어"
       ]
      }
     ]
@@ -12737,102 +12983,121 @@
   "outline": [
    "프록시 패턴의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "프록시 패턴의 개념도",
+   "- 구성요소",
+   "- 동작",
+   "프록시 유형과 활용",
+   "- 유형",
+   "- 활용"
   ],
   "name": "프록시 패턴(Proxy Pattern)",
   "en": "Proxy Pattern",
   "keywords_must": [
-   "Proxy",
    "Subject",
-   "접근 제어",
-   "지연 로딩",
-   "로깅·캐시",
-   "구조 패턴",
-   "원격 프록시",
-   "보호 프록시"
+   "RealSubject",
+   "Proxy",
+   "Client",
+   "가상 프록시(Virtual Proxy)",
+   "보호 프록시(Protection Proxy)",
+   "원격 프록시(Remote Proxy)",
+   "스마트 참조",
+   "대리인",
+   "지연 생성(Lazy Initialization)",
+   "접근 제어"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "구조 패턴",
+   "Spring AOP 프록시",
+   "캐싱 프록시",
+   "데코레이터 비교",
+   "동일 인터페이스"
   ],
   "curated": true,
   "quiz_terms": [
-   "Proxy",
    "Subject",
-   "접근 제어",
-   "지연 로딩",
-   "로깅·캐시",
-   "구조 패턴",
-   "원격 프록시",
-   "보호 프록시"
+   "RealSubject",
+   "Proxy",
+   "Client",
+   "가상 프록시(Virtual Proxy)",
+   "보호 프록시(Protection Proxy)",
+   "원격 프록시(Remote Proxy)",
+   "스마트 참조",
+   "대리인",
+   "지연 생성(Lazy Initialization)",
+   "접근 제어"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
   "id": "SW_104",
   "code": "SW_104",
-  "title": "책임 연쇄 패턴(Chain of Responsibility)",
+  "title": "책임 연쇄 패턴(Chain of Responsibility Pattern)",
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Chain of Responsibility Pattern",
-  "definition": "요청을 처리할 수 있는 핸들러 체인으로 전달하는 행동 패턴",
+  "definition": "요청을 처리할 수 있는 객체들을 사슬로 연결하고, 요청을 처리할 수 있는 객체를 만날 때까지 차례로 전달해 요청 송신자와 수신자의 결합을 제거하는 행위 패턴",
   "keywords": [
-   "핵심: Chain of Responsibility · Handler · 요청 전달",
-   "구성: 느슨한 결합 · 행동 패턴 · 파이프라인",
-   "요청을 처리할 수 있는 핸들러 체인으로 전달하는 행동 패턴"
+   "구성: Handler · ConcreteHandler · Client",
+   "특징: 느슨한 결합(Loose Coupling) · 객체 고리(Chain) · 후속 처리자(Successor) · 자신의 일에 집중",
+   "활용: 이벤트 처리 · 서블릿 필터 · 예외 처리 체인"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "책임 연쇄 패턴의 개요",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "요청을 처리할 수 있는 핸들러 체인으로 전달하는 행동 패턴"
+       "요청을 가장 잘 처리할 수 있는 객체까지 전달해 처리",
+       "송신자-수신자 분리"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "결합도 제거, 객체 고리",
+       "각 처리자는 자신의 일에 집중"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "책임 연쇄 패턴의 구성도와 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "구성도",
       "items": [
-       "Chain of Responsibility",
-       "Handler",
-       "요청 전달",
-       "느슨한 결합",
-       "행동 패턴",
-       "파이프라인"
+       "Handler가 체인을 만들어 ConcreteHandler를 순서대로 확인"
+      ]
+     },
+     {
+      "title": "구성요소",
+      "items": [
+       "Handler: 처리 인터페이스, 후속 처리자 연결",
+       "ConcreteHandler: 담당 요청은 처리, 아니면 후속에 전달",
+       "Client: 요청 송신"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "책임 연쇄 패턴 예제와 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "예제",
       "items": [
-       "순서",
-       "미처리",
-       "관련 표준·한계를 함께 기술"
+       "문제 번호별 지원 객체(NoSupport, LimitSupport, OddSupport)를 사슬로 연결"
+      ]
+     },
+     {
+      "title": "고려사항",
+      "items": [
+       "체인 끝까지 처리되지 않을 수 있음",
+       "체인이 길면 성능 저하·디버깅 어려움"
       ]
      }
     ]
@@ -12844,46 +13109,53 @@
    251
   ],
   "outline": [
-   "책임 연쇄 패턴의 개념",
+   "책임 연쇄 패턴의 개요",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "책임 연쇄 패턴의 구성도와 구성요소",
+   "- 구성도",
+   "- 구성요소",
+   "책임 연쇄 패턴 예제와 고려사항",
+   "- 예제",
+   "- 고려사항"
   ],
-  "name": "책임 연쇄 패턴(Chain of Responsibility)",
-  "en": "Chain of Responsibility",
+  "name": "책임 연쇄 패턴(Chain of Responsibility Pattern)",
+  "en": "Chain of Responsibility Pattern",
   "keywords_must": [
-   "Chain of Responsibility",
    "Handler",
-   "요청 전달",
-   "느슨한 결합",
-   "행동 패턴",
-   "파이프라인",
-   "순서",
-   "미처리"
+   "ConcreteHandler",
+   "Client",
+   "느슨한 결합(Loose Coupling)",
+   "객체 고리(Chain)",
+   "후속 처리자(Successor)",
+   "자신의 일에 집중",
+   "이벤트 처리",
+   "서블릿 필터",
+   "예외 처리 체인"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "행위 패턴",
+   "처리 보장 안 됨",
+   "동적 체인 구성",
+   "Spring Security FilterChain",
+   "결재 라인"
   ],
   "curated": true,
   "quiz_terms": [
-   "Chain of Responsibility",
    "Handler",
-   "요청 전달",
-   "느슨한 결합",
-   "행동 패턴",
-   "파이프라인",
-   "순서",
-   "미처리"
+   "ConcreteHandler",
+   "Client",
+   "느슨한 결합(Loose Coupling)",
+   "객체 고리(Chain)",
+   "후속 처리자(Successor)",
+   "자신의 일에 집중",
+   "이벤트 처리",
+   "서블릿 필터",
+   "예외 처리 체인"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -12893,55 +13165,70 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Command Pattern",
-  "definition": "요청을 객체로 캡슐화해 실행·취소·큐잉을 가능하게 하는 행동 패턴",
+  "definition": "요청(수행할 행위) 자체를 객체로 캡슐화해 파라미터로 전달함으로써 호출하는 객체와 수행하는 객체를 분리하고 요청 저장·취소·재실행을 가능하게 하는 행위 패턴",
   "keywords": [
-   "핵심: Command · Invoker · Receiver",
-   "구성: Undo/Redo · 큐 · 매크로",
-   "요청을 객체로 캡슐화해 실행·취소·큐잉을 가능하게 하는 행동 패턴"
+   "구성: Command · ConcreteCommand · Client · Invoker · Receiver",
+   "활용: 행위의 파라미터화 · 요청 저장·지연 실행 · 실행 취소(Undo) · 트랜잭션 모델링",
+   "특징: 호출자·수행자 분리 · 매크로 커맨드(컴포지트 결합) · 새 명령 추가 용이"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "커맨드 패턴의 개요",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "요청을 객체로 캡슐화해 실행·취소·큐잉을 가능하게 하는 행동 패턴"
+       "요청을 객체화해 호출 객체와 수행 객체 분리",
+       "절차적 프로그래밍의 콜백 함수와 유사"
       ]
      },
      {
-      "title": "목적",
+      "title": "활용 방안",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "행위를 객체로 파라미터화",
+       "요청을 다른 시간에 명시·저장·수행",
+       "실행 취소 상태 저장",
+       "트랜잭션 모델링"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "커맨드 패턴의 클래스 다이어그램과 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "Command",
-       "Invoker",
-       "Receiver",
-       "Undo/Redo",
-       "큐",
-       "매크로"
+       "Command: 실행 인터페이스",
+       "ConcreteCommand: Receiver와 행위 바인딩, execute() 구현",
+       "Client: 커맨드 생성·receiver 설정",
+       "Invoker: 명령 실행 요청",
+       "Receiver: 실제 작업 수행"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "커맨드도 클래스로 확장 가능",
+       "컴포지트로 명령 조합, 새 명령은 클래스만 추가"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "커맨드 패턴 활용 예시",
     "subsections": [
      {
-      "title": null,
+      "title": "리모컨 예시",
       "items": [
-       "행동 패턴",
-       "콜백 객체화",
-       "관련 표준·한계를 함께 기술"
+       "버튼(Invoker)에 전등 켜기·끄기 커맨드 설정",
+       "undo 버튼으로 직전 명령 취소"
+      ]
+     },
+     {
+      "title": "활용 분야",
+      "items": [
+       "GUI 메뉴·버튼, 작업 큐, 트랜잭션 로그"
       ]
      }
     ]
@@ -12953,46 +13240,57 @@
    254
   ],
   "outline": [
-   "커맨드 패턴의 개념",
+   "커맨드 패턴의 개요",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 활용 방안",
+   "커맨드 패턴의 클래스 다이어그램과 구성",
+   "- 구성요소",
+   "- 특징",
+   "커맨드 패턴 활용 예시",
+   "- 리모컨 예시",
+   "- 활용 분야"
   ],
   "name": "커맨드 패턴(Command Pattern)",
   "en": "Command Pattern",
   "keywords_must": [
    "Command",
+   "ConcreteCommand",
+   "Client",
    "Invoker",
    "Receiver",
-   "Undo/Redo",
-   "큐",
-   "매크로",
-   "행동 패턴",
-   "콜백 객체화"
+   "행위의 파라미터화",
+   "요청 저장·지연 실행",
+   "실행 취소(Undo)",
+   "트랜잭션 모델링",
+   "호출자·수행자 분리",
+   "매크로 커맨드(컴포지트 결합)",
+   "새 명령 추가 용이"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "행위 패턴",
+   "콜백(Callback) 대체",
+   "큐잉·로깅",
+   "리모컨 예시",
+   "execute()"
   ],
   "curated": true,
   "quiz_terms": [
    "Command",
+   "ConcreteCommand",
+   "Client",
    "Invoker",
    "Receiver",
-   "Undo/Redo",
-   "큐",
-   "매크로",
-   "행동 패턴",
-   "콜백 객체화"
+   "행위의 파라미터화",
+   "요청 저장·지연 실행",
+   "실행 취소(Undo)",
+   "트랜잭션 모델링",
+   "호출자·수행자 분리",
+   "매크로 커맨드(컴포지트 결합)",
+   "새 명령 추가 용이"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -13002,55 +13300,74 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Mediator Pattern",
-  "definition": "객체 간 상호작용을 중재자에 모아 결합도를 낮추는 행동 패턴",
+  "definition": "객체들 간의 복잡한 상호작용을 중재자 객체에 캡슐화하여 객체들이 서로 직접 참조하지 않고 중재자를 통해 협력하도록 하는 행위 패턴",
   "keywords": [
-   "핵심: Mediator · Colleague · 중앙 중재",
-   "구성: 결합도 감소 · 행동 패턴 · 대화상자",
-   "객체 간 상호작용을 중재자에 모아 결합도를 낮추는 행동 패턴"
+   "구성: Mediator · ConcreteMediator · Colleague · ConcreteColleague",
+   "효과: 동료 간 종속성 감소 · 프로토콜 단순화 · 통제의 집중화 · 협력 방법 추상화",
+   "단점: 중재자 비대화 · 유지보수 어려움"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "중재자 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "객체 간 상호작용을 중재자에 모아 결합도를 낮추는 행동 패턴"
+       "객체 간 상호작용을 분리·캡슐화해 유연한 변경 지원",
+       "카운슬러처럼 보고를 받아 지시"
       ]
      },
      {
       "title": "목적",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "관련 객체 간 복잡한 통신·제어를 한 곳에 집중",
+       "EAI의 주요 기능이 미디에이터"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "중재자 패턴 다이어그램과 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "Mediator",
-       "Colleague",
-       "중앙 중재",
-       "결합도 감소",
-       "행동 패턴",
-       "대화상자"
+       "Mediator: Colleague와 교류 인터페이스",
+       "ConcreteMediator: 객체 파악·연결 조정",
+       "Colleague: 협력 행위 정의",
+       "ConcreteColleague: 기능 구현"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "동료 객체는 변화 발생 시 중재자에 통보 → 중재자가 다른 동료에 지시"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "중재자 패턴 활용과 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "이벤트 버스",
-       "복잡도 이동",
-       "관련 표준·한계를 함께 기술"
+       "객체 간 의존성이 복잡해 이해하기 어려울 때",
+       "연결 관계로 재사용이 방해받을 때"
+      ]
+     },
+     {
+      "title": "장단점",
+      "items": [
+       "종속성 감소, 통제 집중",
+       "중재자 클래스 자체의 유지보수 어려움"
+      ]
+     },
+     {
+      "title": "퍼사드 비교",
+      "items": [
+       "퍼사드: 서브시스템 방향 단방향",
+       "중재자: 양방향 상호작용 조정"
       ]
      }
     ]
@@ -13065,43 +13382,51 @@
    "중재자 패턴의 개념",
    "- 정의",
    "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "중재자 패턴 다이어그램과 구성요소",
+   "- 구성요소",
+   "- 동작",
+   "중재자 패턴 활용과 고려사항",
+   "- 활용",
+   "- 장단점",
+   "- 퍼사드 비교"
   ],
   "name": "중재자 패턴(Mediator Pattern)",
   "en": "Mediator Pattern",
   "keywords_must": [
    "Mediator",
+   "ConcreteMediator",
    "Colleague",
-   "중앙 중재",
-   "결합도 감소",
-   "행동 패턴",
-   "대화상자",
-   "이벤트 버스",
-   "복잡도 이동"
+   "ConcreteColleague",
+   "동료 간 종속성 감소",
+   "프로토콜 단순화",
+   "통제의 집중화",
+   "협력 방법 추상화",
+   "중재자 비대화",
+   "유지보수 어려움"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "행위 패턴",
+   "EAI 미디에이터",
+   "관제탑 비유",
+   "퍼사드 비교",
+   "옵저버 결합"
   ],
   "curated": true,
   "quiz_terms": [
    "Mediator",
+   "ConcreteMediator",
    "Colleague",
-   "중앙 중재",
-   "결합도 감소",
-   "행동 패턴",
-   "대화상자",
-   "이벤트 버스",
-   "복잡도 이동"
+   "ConcreteColleague",
+   "동료 간 종속성 감소",
+   "프로토콜 단순화",
+   "통제의 집중화",
+   "협력 방법 추상화",
+   "중재자 비대화",
+   "유지보수 어려움"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -13111,55 +13436,65 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Memento Pattern",
-  "definition": "캡슐화를 깨지 않고 객체 상태를 저장·복원하는 행동 패턴",
+  "definition": "캡슐화를 위배하지 않고 객체의 내부 상태를 별도 객체로 저장해 두었다가 이후 그 상태로 복구할 수 있게 하는 행위 패턴",
   "keywords": [
-   "핵심: Memento · Originator · Caretaker",
-   "구성: 상태 스냅샷 · Undo · 행동 패턴",
-   "캡슐화를 깨지 않고 객체 상태를 저장·복원하는 행동 패턴"
+   "구성: Memento · Originator · Caretaker",
+   "기능: 상태 저장(Snapshot) · 상태 복구(Restore) · 캡슐화 유지",
+   "활용: 실행 취소(Undo) · 체크포인트 · 게임 저장"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "메멘토 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "캡슐화를 깨지 않고 객체 상태를 저장·복원하는 행동 패턴"
+       "객체 내부 상태를 객체화해 저장·복구",
+       "캡슐화를 깨지 않는 복구 준비 패턴"
       ]
      },
      {
       "title": "목적",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "Undo, 롤백 등 이전 상태 복원"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "메멘토 구성도와 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "Memento",
-       "Originator",
-       "Caretaker",
-       "상태 스냅샷",
-       "Undo",
-       "행동 패턴"
+       "Memento: Originator 내부 상태를 필요한 만큼 저장",
+       "Originator: 메멘토 생성·상태 복구",
+       "Caretaker: 메멘토 보관 책임, 내부 인터페이스는 보지 못함"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "Originator.createMemento() → Caretaker 보관 → restoreMemento()로 복구"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "장단점",
     "subsections": [
      {
-      "title": null,
+      "title": "장점",
       "items": [
-       "캡슐화 유지",
-       "이력",
-       "관련 표준·한계를 함께 기술"
+       "특별한 코드 없이 상태 유지·복구",
+       "캡슐화 유지"
+      ]
+     },
+     {
+      "title": "단점",
+      "items": [
+       "상태 정보만 가지는 클래스를 별도 관리",
+       "저장 상태가 많으면 메모리 부담"
       ]
      }
     ]
@@ -13174,8 +13509,12 @@
    "메멘토 패턴의 개념",
    "- 정의",
    "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "메멘토 구성도와 구성요소",
+   "- 구성요소",
+   "- 동작",
+   "장단점",
+   "- 장점",
+   "- 단점"
   ],
   "name": "메멘토 패턴(Memento Pattern)",
   "en": "Memento Pattern",
@@ -13183,34 +13522,35 @@
    "Memento",
    "Originator",
    "Caretaker",
-   "상태 스냅샷",
-   "Undo",
-   "행동 패턴",
+   "상태 저장(Snapshot)",
+   "상태 복구(Restore)",
    "캡슐화 유지",
-   "이력"
+   "실행 취소(Undo)",
+   "체크포인트",
+   "게임 저장"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "행위 패턴",
+   "넓은 인터페이스·좁은 인터페이스",
+   "커맨드 패턴 결합",
+   "메모리 비용",
+   "직렬화"
   ],
   "curated": true,
   "quiz_terms": [
    "Memento",
    "Originator",
    "Caretaker",
-   "상태 스냅샷",
-   "Undo",
-   "행동 패턴",
+   "상태 저장(Snapshot)",
+   "상태 복구(Restore)",
    "캡슐화 유지",
-   "이력"
+   "실행 취소(Undo)",
+   "체크포인트",
+   "게임 저장"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -13220,55 +13560,65 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Interpreter Pattern",
-  "definition": "문법 표현을 해석하는 행동 패턴. 간단 DSL에 적합",
+  "definition": "간단한 언어의 문법 규칙을 클래스로 표현하고, 그 언어로 작성된 문장을 추상 구문 트리로 구성해 해석하는 방법을 제시하는 행위 패턴",
   "keywords": [
-   "핵심: Interpreter · Abstract Expression · Terminal/Nonterminal",
-   "구성: 문법 트리 · 행동 패턴 · DSL",
-   "문법 표현을 해석하는 행동 패턴. 간단 DSL에 적합"
+   "구성: AbstractExpression · TerminalExpression · NonterminalExpression · Context · Client",
+   "핵심: 문법 규칙 클래스화 · 추상 구문 트리(AST) · interpret() 재귀 호출 · BNF",
+   "장단점: 문법 변경·확장 용이 · 복잡한 문법 관리 어려움"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "인터프리터 패턴의 개요",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "문법 표현을 해석하는 행동 패턴. 간단 DSL에 적합"
+       "문법 표현 정의와 문장 해석 방법 제시",
+       "언어에 따라 문법 표현을 정의하는 행위 패턴"
       ]
      },
      {
-      "title": "목적",
+      "title": "장단점",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "문법 변경·확장과 구현 용이, 해석 방법 추가 가능",
+       "복잡한 문법은 클래스가 많아 관리 어려움"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "인터프리터 패턴의 구조와 참여 객체",
     "subsections": [
      {
-      "title": null,
+      "title": "AbstractExpression·TerminalExpression",
       "items": [
-       "Interpreter",
-       "Abstract Expression",
-       "Terminal/Nonterminal",
-       "문법 트리",
-       "행동 패턴",
-       "DSL"
+       "공통 interpret() 추상 연산",
+       "더 이상 전개되지 않는 터미널 기호 해석(go, right, left)"
+      ]
+     },
+     {
+      "title": "NonterminalExpression·Context",
+      "items": [
+       "R ::= R1 R2 … Rn 규칙마다 클래스, 하위 interpret() 재귀 호출",
+       "Context: 해석에 필요한 전역 정보 제공"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "인터프리터 패턴의 활용",
     "subsections": [
      {
-      "title": null,
+      "title": "활용 조건",
       "items": [
-       "파서",
-       "복잡도",
-       "관련 표준·한계를 함께 기술"
+       "해석할 언어를 AST로 표현할 때",
+       "문법이 간단하고 효율성이 크게 중요하지 않을 때"
+      ]
+     },
+     {
+      "title": "사례",
+      "items": [
+       "미니 언어(로봇 명령), 정규식·SQL 해석, 규칙 엔진"
       ]
      }
     ]
@@ -13280,46 +13630,55 @@
    265
   ],
   "outline": [
-   "인터프리터 패턴의 개념",
+   "인터프리터 패턴의 개요",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 장단점",
+   "인터프리터 패턴의 구조와 참여 객체",
+   "- AbstractExpression·TerminalExpression",
+   "- NonterminalExpression·Context",
+   "인터프리터 패턴의 활용",
+   "- 활용 조건",
+   "- 사례"
   ],
   "name": "인터프리터 패턴(Interpreter Pattern)",
   "en": "Interpreter Pattern",
   "keywords_must": [
-   "Interpreter",
-   "Abstract Expression",
-   "Terminal/Nonterminal",
-   "문법 트리",
-   "행동 패턴",
-   "DSL",
-   "파서",
-   "복잡도"
+   "AbstractExpression",
+   "TerminalExpression",
+   "NonterminalExpression",
+   "Context",
+   "Client",
+   "문법 규칙 클래스화",
+   "추상 구문 트리(AST)",
+   "interpret() 재귀 호출",
+   "BNF",
+   "문법 변경·확장 용이",
+   "복잡한 문법 관리 어려움"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "행위 패턴",
+   "정규 표현식",
+   "SQL 파서",
+   "컴포지트 패턴",
+   "미니 언어"
   ],
   "curated": true,
   "quiz_terms": [
-   "Interpreter",
-   "Abstract Expression",
-   "Terminal/Nonterminal",
-   "문법 트리",
-   "행동 패턴",
-   "DSL",
-   "파서",
-   "복잡도"
+   "AbstractExpression",
+   "TerminalExpression",
+   "NonterminalExpression",
+   "Context",
+   "Client",
+   "문법 규칙 클래스화",
+   "추상 구문 트리(AST)",
+   "interpret() 재귀 호출",
+   "BNF",
+   "문법 변경·확장 용이",
+   "복잡한 문법 관리 어려움"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -13329,55 +13688,67 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Iterator Pattern",
-  "definition": "내부 표현을 노출하지 않고 집합 요소를 순회하는 행동 패턴",
+  "definition": "집합체의 내부 구조를 노출하지 않으면서 그 안의 모든 요소에 순차적으로 접근할 수 있는 방법을 제공하는 행위 패턴",
   "keywords": [
-   "핵심: Iterator · Aggregate · 순회",
-   "구성: 캡슐화 · 행동 패턴 · hasNext/next",
-   "내부 표현을 노출하지 않고 집합 요소를 순회하는 행동 패턴"
+   "구성: Iterator · ConcreteIterator · Aggregate · ConcreteAggregate",
+   "특징: 내부 구조 은닉 · 일관된 인터페이스 · 순회와 집합 분리",
+   "메서드: hasNext() · next() · iterator()"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "이터레이터 패턴의 개요",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "내부 표현을 노출하지 않고 집합 요소를 순회하는 행동 패턴"
+       "자료구조를 바꾸거나 노출하지 않고 모든 항목에 접근",
+       "반복·순차·열거"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "컴포지트 객체 탐색 시 데이터 리스트 전달 방법 정의",
+       "내부 타입을 몰라도 검색 기능 제공",
+       "일관된 I/F"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "이터레이터 패턴의 구성도와 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "Iterator와 ConcreteIterator",
       "items": [
-       "Iterator",
-       "Aggregate",
-       "순회",
-       "캡슐화",
-       "행동 패턴",
-       "hasNext/next"
+       "요소 접근·순회 인터페이스",
+       "구현 클래스로 현재 위치 기억"
+      ]
+     },
+     {
+      "title": "Aggregate와 ConcreteAggregate",
+      "items": [
+       "Iterator 생성 인터페이스 정의",
+       "해당 ConcreteIterator 인스턴스 반환"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "활용과 효과",
     "subsections": [
      {
-      "title": null,
+      "title": "효과",
       "items": [
-       "컬렉션",
-       "동시성 주의",
-       "관련 표준·한계를 함께 기술"
+       "집합체 구현과 순회 로직 분리",
+       "하나의 집합체에 여러 순회 방식 동시 적용"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "Java Collection의 Iterator·for-each",
+       "데이터베이스 커서"
       ]
      }
     ]
@@ -13389,46 +13760,53 @@
    267
   ],
   "outline": [
-   "이터레이터 패턴의 개념",
+   "이터레이터 패턴의 개요",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "이터레이터 패턴의 구성도와 구성요소",
+   "- Iterator와 ConcreteIterator",
+   "- Aggregate와 ConcreteAggregate",
+   "활용과 효과",
+   "- 효과",
+   "- 활용"
   ],
   "name": "이터레이터 패턴(Iterator Pattern)",
   "en": "Iterator Pattern",
   "keywords_must": [
    "Iterator",
+   "ConcreteIterator",
    "Aggregate",
-   "순회",
-   "캡슐화",
-   "행동 패턴",
-   "hasNext/next",
-   "컬렉션",
-   "동시성 주의"
+   "ConcreteAggregate",
+   "내부 구조 은닉",
+   "일관된 인터페이스",
+   "순회와 집합 분리",
+   "hasNext()",
+   "next()",
+   "iterator()"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "행위 패턴",
+   "Java Iterable",
+   "컴포지트 패턴 탐색",
+   "외부·내부 반복자",
+   "다중 순회"
   ],
   "curated": true,
   "quiz_terms": [
    "Iterator",
+   "ConcreteIterator",
    "Aggregate",
-   "순회",
-   "캡슐화",
-   "행동 패턴",
-   "hasNext/next",
-   "컬렉션",
-   "동시성 주의"
+   "ConcreteAggregate",
+   "내부 구조 은닉",
+   "일관된 인터페이스",
+   "순회와 집합 분리",
+   "hasNext()",
+   "next()",
+   "iterator()"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -13438,55 +13816,66 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > State Pattern",
-  "definition": "상태에 따라 행동을 바꾸는 행동 패턴. 상태 객체를 교체",
+  "definition": "객체의 상태를 별도 클래스로 캡슐화하고 객체가 상태에 따라 행위를 해당 상태 객체에 위임하게 하여 상태별로 다른 동작을 처리하는 행위 패턴",
   "keywords": [
-   "핵심: State · Context · 상태 전이",
-   "구성: 행동 변경 · 행동 패턴 · 상태 머신",
-   "상태에 따라 행동을 바꾸는 행동 패턴. 상태 객체를 교체"
+   "구성: Context · State · ConcreteState · State.handle()",
+   "특징: 상태 캡슐화 · 조건문 제거 · 상태 추가 시 수정 최소화",
+   "비교: 전략 패턴 · 상태 전이 주체"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "상태 패턴의 개요",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "상태에 따라 행동을 바꾸는 행동 패턴. 상태 객체를 교체"
+       "상태마다 별도 행위를 지정하는 객체를 조직화",
+       "상태를 클래스(state 인터페이스)로 캡슐화"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "동일 동작을 상태에 따라 다르게 처리",
+       "신규 상태 추가 시 원시 코드 수정 최소화"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "상태 패턴 구조도와 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "State",
-       "Context",
-       "상태 전이",
-       "행동 변경",
-       "행동 패턴",
-       "상태 머신"
+       "Context: 현재 상태 보유",
+       "State: 구상 상태의 공통 인터페이스",
+       "ConcreteState: 상태별 요청 처리"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "Context.request() 호출 시 현재 상태 객체의 handle()에 위임",
+       "상태 객체가 다음 상태로 전이"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "상태 패턴과 전략 패턴 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "공통점",
       "items": [
-       "조건문 제거",
-       "확장",
-       "관련 표준·한계를 함께 기술"
+       "구조(위임) 동일, 조건문 제거"
+      ]
+     },
+     {
+      "title": "차이점",
+      "items": [
+       "상태: 상태 변화에 따라 행위가 바뀌고 상태 객체가 전이 주도",
+       "전략: 클라이언트가 알고리즘을 선택·교체"
       ]
      }
     ]
@@ -13498,46 +13887,51 @@
    270
   ],
   "outline": [
-   "상태 패턴의 개념",
+   "상태 패턴의 개요",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "상태 패턴 구조도와 구성요소",
+   "- 구성요소",
+   "- 동작",
+   "상태 패턴과 전략 패턴 비교",
+   "- 공통점",
+   "- 차이점"
   ],
   "name": "상태 패턴(State Pattern)",
   "en": "State Pattern",
   "keywords_must": [
-   "State",
    "Context",
-   "상태 전이",
-   "행동 변경",
-   "행동 패턴",
-   "상태 머신",
+   "State",
+   "ConcreteState",
+   "State.handle()",
+   "상태 캡슐화",
    "조건문 제거",
-   "확장"
+   "상태 추가 시 수정 최소화",
+   "전략 패턴",
+   "상태 전이 주체"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "행위 패턴",
+   "유한 상태 기계(FSM)",
+   "상태 머신 다이어그램",
+   "금고(주간·야간) 예시",
+   "OCP"
   ],
   "curated": true,
   "quiz_terms": [
-   "State",
    "Context",
-   "상태 전이",
-   "행동 변경",
-   "행동 패턴",
-   "상태 머신",
+   "State",
+   "ConcreteState",
+   "State.handle()",
+   "상태 캡슐화",
    "조건문 제거",
-   "확장"
+   "상태 추가 시 수정 최소화",
+   "전략 패턴",
+   "상태 전이 주체"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -13547,55 +13941,72 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Strategy Pattern",
-  "definition": "알고리즘 군을 정의하고 교체 가능하게 만드는 행동 패턴",
+  "definition": "비슷한 문제를 해결하는 알고리즘군을 각각 캡슐화하여 교환 가능하게 만들고, 알고리즘을 사용하는 클라이언트와 독립적으로 동적으로 교체할 수 있게 하는 행위 패턴",
   "keywords": [
-   "핵심: Strategy · Context · 알고리즘 교체",
-   "구성: 개방-폐쇄 · 행동 패턴 · 정책",
-   "알고리즘 군을 정의하고 교체 가능하게 만드는 행동 패턴"
+   "구성: Strategy · ConcreteStrategy · Client(Context)",
+   "특징: 알고리즘 캡슐화 · 동적 교체 · 클라이언트 독립성 · 조건문 제거",
+   "원칙: OCP · 상속보다 합성 · 위임"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "전략 패턴의 개요",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "알고리즘 군을 정의하고 교체 가능하게 만드는 행동 패턴"
+       "알고리즘을 클래스로 캡슐화해 대체 가능",
+       "사용하는 곳과 제공하는 곳 분리"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "알고리즘에 클라이언트 독립성 부여",
+       "알고리즘이 쓰는 데이터·구조 은닉"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "전략 패턴의 다이어그램과 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "Strategy",
       "items": [
-       "Strategy",
-       "Context",
-       "알고리즘 교체",
-       "개방-폐쇄",
-       "행동 패턴",
-       "정책"
+       "전략 인터페이스, 어떤 전략이 쓰일지는 모름"
+      ]
+     },
+     {
+      "title": "ConcreteStrategy",
+      "items": [
+       "Strategy 구현, 구체 알고리즘",
+       "여러 개 존재 가능"
+      ]
+     },
+     {
+      "title": "Client",
+      "items": [
+       "ConcreteStrategy를 인스턴스로 보유",
+       "필요에 따라 교체 사용"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "활용과 효과",
     "subsections": [
      {
-      "title": null,
+      "title": "효과",
       "items": [
-       "의존성 주입",
-       "런타임 선택",
-       "관련 표준·한계를 함께 기술"
+       "새 알고리즘 추가 시 기존 코드 수정 불필요(OCP)",
+       "if-else 분기 제거"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "정렬·압축 알고리즘 교체, 결제·할인 정책",
+       "주의: 전략 클래스 수 증가"
       ]
      }
     ]
@@ -13607,46 +14018,54 @@
    274
   ],
   "outline": [
-   "전략 패턴의 개념",
+   "전략 패턴의 개요",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "전략 패턴의 다이어그램과 구성요소",
+   "- Strategy",
+   "- ConcreteStrategy",
+   "- Client",
+   "활용과 효과",
+   "- 효과",
+   "- 활용"
   ],
   "name": "전략 패턴(Strategy Pattern)",
   "en": "Strategy Pattern",
   "keywords_must": [
    "Strategy",
-   "Context",
-   "알고리즘 교체",
-   "개방-폐쇄",
-   "행동 패턴",
-   "정책",
-   "의존성 주입",
-   "런타임 선택"
+   "ConcreteStrategy",
+   "Client(Context)",
+   "알고리즘 캡슐화",
+   "동적 교체",
+   "클라이언트 독립성",
+   "조건문 제거",
+   "OCP",
+   "상속보다 합성",
+   "위임"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "행위 패턴",
+   "정렬·할인 정책 예시",
+   "의존성 주입",
+   "상태 패턴 비교",
+   "람다"
   ],
   "curated": true,
   "quiz_terms": [
    "Strategy",
-   "Context",
-   "알고리즘 교체",
-   "개방-폐쇄",
-   "행동 패턴",
-   "정책",
-   "의존성 주입",
-   "런타임 선택"
+   "ConcreteStrategy",
+   "Client(Context)",
+   "알고리즘 캡슐화",
+   "동적 교체",
+   "클라이언트 독립성",
+   "조건문 제거",
+   "OCP",
+   "상속보다 합성",
+   "위임"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -13656,55 +14075,71 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Observer Pattern",
-  "definition": "상태 변화를 의존 객체에 통지하는 행동 패턴. Pub/Sub",
+  "definition": "한 객체(Subject)의 상태가 바뀌면 그 객체에 등록된 의존 객체(Observer)들에게 자동으로 통지되고 갱신되는 일대다(One-to-Many) 의존 관계를 정의하는 행위 패턴",
   "keywords": [
-   "핵심: Observer · Subject · 구독",
-   "구성: 통지 · 행동 패턴 · 이벤트",
-   "상태 변화를 의존 객체에 통지하는 행동 패턴. Pub/Sub"
+   "구성: Subject · ConcreteSubject · Observer · ConcreteObserver",
+   "알림 방식: 푸시 모델(Push Model) · 풀 모델(Pull Model)",
+   "특징: 일대다 의존성 · 느슨한 결합 · 브로드캐스팅 · update()"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "옵저버 패턴의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "상태 변화를 의존 객체에 통지하는 행동 패턴. Pub/Sub"
+       "상태 변화 시 등록된 옵저버에 자동 통지·갱신",
+       "일대다 방식"
       ]
      },
      {
-      "title": "목적",
+      "title": "예시",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "신문 구독 메커니즘, 일방적 통지(브로드캐스팅)"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "구성도와 기술요소",
     "subsections": [
      {
-      "title": null,
+      "title": "Subject",
       "items": [
-       "Observer",
-       "Subject",
-       "구독",
-       "통지",
-       "행동 패턴",
-       "이벤트"
+       "옵저버 등록·제거, 전체 통지 메서드 제공"
+      ]
+     },
+     {
+      "title": "Observer와 ConcreteObserver",
+      "items": [
+       "Observer 인터페이스에 update()만 존재",
+       "구현 클래스(ViewOne, ViewTwo)가 주제에 등록해 통지 수신"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "옵저버 패턴의 알림 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "푸시 모델",
       "items": [
-       "느슨한 결합",
-       "메모리 누수 주의",
-       "관련 표준·한계를 함께 기술"
+       "Subject가 변경 시 데이터를 옵저버에 전달",
+       "별도 요청 불필요하나 불필요한 데이터까지 수신"
+      ]
+     },
+     {
+      "title": "풀 모델",
+      "items": [
+       "옵저버가 필요할 때 Getter로 데이터 조회",
+       "필요한 데이터만 가져오나 Getter 다회 호출"
+      ]
+     },
+     {
+      "title": "주의점",
+      "items": [
+       "통지 순서에 의존하지 말 것",
+       "옵저버 내 무한 루프 주의"
       ]
      }
     ]
@@ -13718,102 +14153,119 @@
   "outline": [
    "옵저버 패턴의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 예시",
+   "구성도와 기술요소",
+   "- Subject",
+   "- Observer와 ConcreteObserver",
+   "옵저버 패턴의 알림 방식",
+   "- 푸시 모델",
+   "- 풀 모델",
+   "- 주의점"
   ],
   "name": "옵저버 패턴(Observer Pattern)",
   "en": "Observer Pattern",
   "keywords_must": [
-   "Observer",
    "Subject",
-   "구독",
-   "통지",
-   "행동 패턴",
-   "이벤트",
+   "ConcreteSubject",
+   "Observer",
+   "ConcreteObserver",
+   "푸시 모델(Push Model)",
+   "풀 모델(Pull Model)",
+   "일대다 의존성",
    "느슨한 결합",
-   "메모리 누수 주의"
+   "브로드캐스팅",
+   "update()"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "행위 패턴",
+   "발행-구독(Pub/Sub)",
+   "MVC 모델-뷰 연동",
+   "리액티브 프로그래밍",
+   "신문 구독 예시"
   ],
   "curated": true,
   "quiz_terms": [
-   "Observer",
    "Subject",
-   "구독",
-   "통지",
-   "행동 패턴",
-   "이벤트",
+   "ConcreteSubject",
+   "Observer",
+   "ConcreteObserver",
+   "푸시 모델(Push Model)",
+   "풀 모델(Pull Model)",
+   "일대다 의존성",
    "느슨한 결합",
-   "메모리 누수 주의"
+   "브로드캐스팅",
+   "update()"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
   "id": "SW_113",
   "code": "SW_113",
-  "title": "템플릿 메서드 패턴(Template Method)",
+  "title": "템플릿 메서드 패턴(Template Method Pattern)",
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Template Method Pattern",
-  "definition": "알고리즘 골격을 상위가 고정하고 단계는 하위가 구현하는 행동 패턴",
+  "definition": "상위 클래스에서 알고리즘의 전체 처리 흐름(골격)을 템플릿 메서드로 정의하고, 세부 처리 단계는 서브클래스에서 재정의하도록 하는 행위 패턴",
   "keywords": [
-   "핵심: Template Method · 훅 메서드 · 골격",
-   "구성: 상속 · 행동 패턴 · 할리우드 원칙",
-   "알고리즘 골격을 상위가 고정하고 단계는 하위가 구현하는 행동 패턴"
+   "구성: AbstractClass · ConcreteClass · 템플릿 메서드(final) · 기본 연산(Primitive Operation)",
+   "특징: 알고리즘 골격 정의 · 상속 기반 코드 재사용 · 헐리우드 원칙 · 훅 메서드(Hook)",
+   "효과: 중복 코드 감소 · 유지보수 용이"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "템플릿 메서드 패턴의 개요",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "알고리즘 골격을 상위가 고정하고 단계는 하위가 구현하는 행동 패턴"
+       "공통 처리 흐름은 상위 클래스가 규정, 세부 처리는 서브클래스가 정의"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "알고리즘 골격을 바꾸지 않고 단계만 재정의",
+       "유사한 서브클래스가 있을 때 유용"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "구조와 참여 객체",
     "subsections": [
      {
-      "title": null,
+      "title": "AbstractClass",
       "items": [
-       "Template Method",
-       "훅 메서드",
-       "골격",
-       "상속",
-       "행동 패턴",
-       "할리우드 원칙"
+       "템플릿 메서드와 서브클래스가 구현할 기본 연산 정의",
+       "런타임에 재정의된 연산 호출"
+      ]
+     },
+     {
+      "title": "ConcreteClass",
+      "items": [
+       "기본 연산을 서브클래스마다 다르게 구현"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "샘플 코드와 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "구현",
       "items": [
-       "재사용",
-       "유연성",
-       "관련 표준·한계를 함께 기술"
+       "상위 abstract 클래스의 final display()가 open·print·close 호출",
+       "하위 클래스가 단계 구현"
+      ]
+     },
+     {
+      "title": "헐리우드 제어 구조",
+      "items": [
+       "상위 클래스가 서브클래스 연산을 호출, 역은 불가",
+       "코드 재사용의 기본 기술"
       ]
      }
     ]
@@ -13825,46 +14277,53 @@
    279
   ],
   "outline": [
-   "템플릿 메서드 패턴의 개념",
+   "템플릿 메서드 패턴의 개요",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "구조와 참여 객체",
+   "- AbstractClass",
+   "- ConcreteClass",
+   "샘플 코드와 특징",
+   "- 구현",
+   "- 헐리우드 제어 구조"
   ],
-  "name": "템플릿 메서드 패턴(Template Method)",
+  "name": "템플릿 메서드 패턴(Template Method Pattern)",
   "en": "Template Method Pattern",
   "keywords_must": [
-   "Template Method",
-   "훅 메서드",
-   "골격",
-   "상속",
-   "행동 패턴",
-   "할리우드 원칙",
-   "재사용",
-   "유연성"
+   "AbstractClass",
+   "ConcreteClass",
+   "템플릿 메서드(final)",
+   "기본 연산(Primitive Operation)",
+   "알고리즘 골격 정의",
+   "상속 기반 코드 재사용",
+   "헐리우드 원칙",
+   "훅 메서드(Hook)",
+   "중복 코드 감소",
+   "유지보수 용이"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "행위 패턴",
+   "추상 메서드",
+   "팩토리 메서드 관계",
+   "전략 패턴 비교",
+   "프레임워크 확장점"
   ],
   "curated": true,
   "quiz_terms": [
-   "Template Method",
-   "훅 메서드",
-   "골격",
-   "상속",
-   "행동 패턴",
-   "할리우드 원칙",
-   "재사용",
-   "유연성"
+   "AbstractClass",
+   "ConcreteClass",
+   "템플릿 메서드(final)",
+   "기본 연산(Primitive Operation)",
+   "알고리즘 골격 정의",
+   "상속 기반 코드 재사용",
+   "헐리우드 원칙",
+   "훅 메서드(Hook)",
+   "중복 코드 감소",
+   "유지보수 용이"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -13874,55 +14333,71 @@
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Visitor Pattern",
-  "definition": "객체 구조를 바꾸지 않고 새 연산을 추가하는 행동 패턴",
+  "definition": "데이터 구조(요소)와 그 구조에 수행할 처리(기능)를 분리하여, 요소 클래스를 변경하지 않고도 새로운 연산을 방문자 클래스로 추가할 수 있게 하는 행위 패턴",
   "keywords": [
-   "핵심: Visitor · Accept/Visit · 이중 디스패치",
-   "구성: 연산 추가 · 행동 패턴 · 구조 안정",
-   "객체 구조를 바꾸지 않고 새 연산을 추가하는 행동 패턴"
+   "구성: Visitor · ConcreteVisitor · Element · ConcreteElement · ObjectStructure",
+   "핵심: 데이터 구조와 기능 분리 · accept()·visit() · 더블 디스패치(Double Dispatch)",
+   "원칙: 개방-폐쇄 원칙(OCP) · 캡슐화 약화"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "비지터 패턴의 개요",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "객체 구조를 바꾸지 않고 새 연산을 추가하는 행동 패턴"
+       "데이터 구조와 기능 처리를 분리",
+       "방문자 클래스에 처리를 맡김(렌더링, 이벤트 처리, 탐색)"
       ]
      },
      {
       "title": "목적",
       "items": [
-       "시험 답안의 핵심 키워드·구조를 명확히 제시"
+       "요소 클래스 변경 없이 새 오퍼레이션 정의",
+       "객체 구조 요소에 수행될 연산을 객체화"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "비지터 패턴 구성도와 참여 객체",
     "subsections": [
      {
-      "title": null,
+      "title": "Visitor와 ConcreteVisitor",
       "items": [
-       "Visitor",
-       "Accept/Visit",
-       "이중 디스패치",
-       "연산 추가",
-       "행동 패턴",
-       "구조 안정"
+       "각 ConcreteElement별 visit() 선언",
+       "구현 클래스에 실제 알고리즘"
+      ]
+     },
+     {
+      "title": "Element와 ConcreteElement",
+      "items": [
+       "Visitor를 인자로 받는 accept() 정의·구현"
+      ]
+     },
+     {
+      "title": "ObjectStructure",
+      "items": [
+       "요소 나열·방문자 접근 인터페이스",
+       "컴포지트 또는 컬렉션"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "방문 순서와 장단점",
     "subsections": [
      {
-      "title": null,
+      "title": "방문 순서",
       "items": [
-       "개방-폐쇄",
-       "순환 의존",
-       "관련 표준·한계를 함께 기술"
+       "ObjectStructure 순회 → element.accept(visitor) → visitor.visit(element) 더블 디스패치"
+      ]
+     },
+     {
+      "title": "장단점",
+      "items": [
+       "연산 추가 용이(OCP)",
+       "요소 클래스 추가 시 모든 Visitor 수정, 캡슐화 약화"
       ]
      }
     ]
@@ -13934,104 +14409,124 @@
    281
   ],
   "outline": [
-   "비지터 패턴의 개념",
+   "비지터 패턴의 개요",
    "- 정의",
    "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "비지터 패턴 구성도와 참여 객체",
+   "- Visitor와 ConcreteVisitor",
+   "- Element와 ConcreteElement",
+   "- ObjectStructure",
+   "방문 순서와 장단점",
+   "- 방문 순서",
+   "- 장단점"
   ],
   "name": "비지터 패턴(Visitor Pattern)",
   "en": "Visitor Pattern",
   "keywords_must": [
    "Visitor",
-   "Accept/Visit",
-   "이중 디스패치",
-   "연산 추가",
-   "행동 패턴",
-   "구조 안정",
-   "개방-폐쇄",
-   "순환 의존"
+   "ConcreteVisitor",
+   "Element",
+   "ConcreteElement",
+   "ObjectStructure",
+   "데이터 구조와 기능 분리",
+   "accept()·visit()",
+   "더블 디스패치(Double Dispatch)",
+   "개방-폐쇄 원칙(OCP)",
+   "캡슐화 약화"
   ],
   "keywords_ref": [
-   "GoF",
-   "생성/구조/행동 분류",
-   "SOLID",
-   "리팩토링",
-   "한계"
+   "행위 패턴",
+   "컴포지트 패턴 순회",
+   "컴파일러 AST 처리",
+   "요소 추가 어려움",
+   "렌더링·탐색"
   ],
   "curated": true,
   "quiz_terms": [
    "Visitor",
-   "Accept/Visit",
-   "이중 디스패치",
-   "연산 추가",
-   "행동 패턴",
-   "구조 안정",
-   "개방-폐쇄",
-   "순환 의존"
+   "ConcreteVisitor",
+   "Element",
+   "ConcreteElement",
+   "ObjectStructure",
+   "데이터 구조와 기능 분리",
+   "accept()·visit()",
+   "더블 디스패치(Double Dispatch)",
+   "개방-폐쇄 원칙(OCP)",
+   "캡슐화 약화"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
   "id": "SW_115",
   "code": "SW_115",
-  "title": "MVC 패턴(Model-View-Controller)",
+  "title": "MVC 패턴(Model-View-Controller Pattern)",
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > MVC Pattern",
-  "definition": "모델·뷰·컨트롤러로 UI 관심사를 분리하는 패턴",
+  "definition": "사용자 화면(View), 데이터 처리(Model), 이들 사이의 흐름 제어(Controller)를 분리하여 상호 영향 없이 모듈을 재사용·확장할 수 있게 하는 아키텍처 패턴",
   "keywords": [
-   "핵심: Model · View · Controller",
-   "구성: 관심사 분리 · 유지보수 · 테스트",
-   "모델·뷰·컨트롤러로 UI 관심사를 분리하는 패턴"
+   "구성: 모델(Model) · 뷰(View) · 컨트롤러(Controller)",
+   "특징: 결합도 최소화 · 관심사 분리 · 재사용·확장성 · 유지보수 용이",
+   "파생 패턴: MVP(Model-View-Presenter) · MVVM(Model-View-ViewModel) · MVI(Model-View-Intent)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "MVC 패턴의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "기본 개념",
       "items": [
-       "모델·뷰·컨트롤러로 UI 관심사를 분리하는 패턴"
+       "View·Model·Controller 비즈니스 로직 분리",
+       "응용 프레임워크 기반 구조 패턴"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "View와 Model 직접 간섭 방지로 결합도 최소화",
+       "Controller를 통한 의사소통, 역할 명확"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "MVC 구성요소와 처리 흐름",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "Model",
-       "View",
-       "Controller",
-       "관심사 분리",
-       "유지보수",
-       "테스트"
+       "모델: 데이터 상태와 로직(EJB, VO)",
+       "뷰: 데이터 화면 표현(JSP, JSF)",
+       "컨트롤러: 입력 처리·상태 변경 요청(Servlet)"
+      ]
+     },
+     {
+      "title": "처리 흐름",
+      "items": [
+       "사용자 이벤트 요청 → 컨트롤러가 모델·뷰에 상태 변경 요청 → 모델 변경 후 뷰에 통지 → 뷰가 모델 데이터 조회"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "적용 시 유의사항과 파생 패턴",
     "subsections": [
      {
-      "title": null,
+      "title": "유의사항",
       "items": [
-       "웹 MVC",
-       "데이터 흐름",
-       "표준·비교·한계를 함께 기술"
+       "개발자·디자이너 작업 분리로 사전 교육·인터페이스 명세 필요",
+       "컴포넌트 단위 구조 설계로 복잡화 방지"
+      ]
+     },
+     {
+      "title": "파생 패턴",
+      "items": [
+       "MVP: View-Presenter 1:1로 의존성 큼",
+       "MVVM: 데이터 바인딩으로 View-ViewModel 분리",
+       "MVI: 단방향 데이터 흐름"
       ]
      }
     ]
@@ -14043,104 +14538,123 @@
    124
   ],
   "outline": [
-   "MVC 패턴의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "MVC 패턴의 개요",
+   "- 기본 개념",
+   "- 특징",
+   "MVC 구성요소와 처리 흐름",
+   "- 구성요소",
+   "- 처리 흐름",
+   "적용 시 유의사항과 파생 패턴",
+   "- 유의사항",
+   "- 파생 패턴"
   ],
-  "name": "MVC 패턴(Model-View-Controller)",
-  "en": "MVC",
+  "name": "MVC 패턴(Model-View-Controller Pattern)",
+  "en": "MVC Pattern",
   "keywords_must": [
-   "Model",
-   "View",
-   "Controller",
+   "모델(Model)",
+   "뷰(View)",
+   "컨트롤러(Controller)",
+   "결합도 최소화",
    "관심사 분리",
-   "유지보수",
-   "테스트",
-   "웹 MVC",
-   "데이터 흐름"
+   "재사용·확장성",
+   "유지보수 용이",
+   "MVP(Model-View-Presenter)",
+   "MVVM(Model-View-ViewModel)",
+   "MVI(Model-View-Intent)"
   ],
   "keywords_ref": [
-   "MVVM",
-   "MVP",
-   "프론트컨트롤러",
-   "관련 표준",
-   "적용 시 주의점"
+   "서블릿·JSP",
+   "Spring MVC",
+   "옵저버 패턴",
+   "프런트 컨트롤러",
+   "Struts"
   ],
   "curated": true,
   "quiz_terms": [
-   "Model",
-   "View",
-   "Controller",
+   "모델(Model)",
+   "뷰(View)",
+   "컨트롤러(Controller)",
+   "결합도 최소화",
    "관심사 분리",
-   "유지보수",
-   "테스트",
-   "웹 MVC",
-   "데이터 흐름"
+   "재사용·확장성",
+   "유지보수 용이",
+   "MVP(Model-View-Presenter)",
+   "MVVM(Model-View-ViewModel)",
+   "MVI(Model-View-Intent)"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
   "id": "SW_116",
   "code": "SW_116",
-  "title": "MVVM 패턴(Model-View-ViewModel)",
+  "title": "MVVM 패턴(Model-View-ViewModel Pattern)",
   "subtitle": "",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > MVVM Pattern",
-  "definition": "ViewModel과 데이터 바인딩으로 뷰-모델을 연결하는 UI 패턴",
+  "definition": "뷰(View)와 모델(Model) 사이에 뷰모델(ViewModel)을 두고 데이터 바인딩으로 화면과 데이터를 동기화해 뷰와 로직을 독립적으로 개발·테스트할 수 있게 하는 아키텍처 패턴",
   "keywords": [
-   "핵심: MVVM · ViewModel · 데이터 바인딩",
-   "구성: 커맨드 · 테스트 용이 · 상태",
-   "ViewModel과 데이터 바인딩으로 뷰-모델을 연결하는 UI 패턴"
+   "구성: 뷰(View) · 뷰모델(ViewModel) · 모델(Model) · 데이터 바인더(Binder)",
+   "핵심: 데이터 바인딩(Data Binding) · 커맨드(Command) · 상태 변화 알림 · 역할 분리",
+   "효과: 뷰-로직 독립성 · 테스트 용이성 · 중복 코드 감소"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "MVVM 패턴의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "기본 개념",
       "items": [
-       "ViewModel과 데이터 바인딩으로 뷰-모델을 연결하는 UI 패턴"
+       "View, Model, ViewModel 로직을 분리한 구조 패턴",
+       "상호 영향 없이 재사용·확장"
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "역할 분리로 각자 개발에 집중",
+       "유지보수성·확장성 향상, 중복 코딩 해결"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "MVVM 구성요소와 처리 흐름",
     "subsections": [
      {
-      "title": null,
+      "title": "구성요소",
       "items": [
-       "MVVM",
-       "ViewModel",
-       "데이터 바인딩",
-       "커맨드",
-       "테스트 용이",
-       "상태"
+       "뷰: 화면 구조·배치",
+       "뷰모델: 뷰가 쓸 메서드·필드, 모델 데이터 가공",
+       "모델: 데이터와 비즈니스 로직",
+       "바인더: 화면 객체와 데이터 동기화"
+      ]
+     },
+     {
+      "title": "처리 흐름",
+      "items": [
+       "사용자 액션 → 바인더가 뷰모델 액션 실행 → 모델에 데이터 요청·응답 → 뷰모델 가공 후 변경 통지 → 바인더가 UI 갱신"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "적용 시 유의사항과 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "유의사항",
       "items": [
-       "플랫폼 UI",
-       "관심사 분리",
-       "표준·비교·한계를 함께 기술"
+       "단순 UI에는 부하 증가",
+       "뷰모델 복잡화 방지, 설계 난이도"
+      ]
+     },
+     {
+      "title": "MVP와 비교",
+      "items": [
+       "MVP: View와 Presenter 1:1 의존",
+       "MVVM: 뷰모델은 뷰를 모르고 바인딩으로 연결"
       ]
      }
     ]
@@ -14152,104 +14666,130 @@
    127
   ],
   "outline": [
-   "MVVM 패턴의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "MVVM 패턴의 개요",
+   "- 기본 개념",
+   "- 필요성",
+   "MVVM 구성요소와 처리 흐름",
+   "- 구성요소",
+   "- 처리 흐름",
+   "적용 시 유의사항과 비교",
+   "- 유의사항",
+   "- MVP와 비교"
   ],
-  "name": "MVVM 패턴(Model-View-ViewModel)",
-  "en": "MVVM",
+  "name": "MVVM 패턴(Model-View-ViewModel Pattern)",
+  "en": "MVVM Pattern",
   "keywords_must": [
-   "MVVM",
-   "ViewModel",
-   "데이터 바인딩",
-   "커맨드",
-   "테스트 용이",
-   "상태",
-   "플랫폼 UI",
-   "관심사 분리"
+   "뷰(View)",
+   "뷰모델(ViewModel)",
+   "모델(Model)",
+   "데이터 바인더(Binder)",
+   "데이터 바인딩(Data Binding)",
+   "커맨드(Command)",
+   "상태 변화 알림",
+   "역할 분리",
+   "뷰-로직 독립성",
+   "테스트 용이성",
+   "중복 코드 감소"
   ],
   "keywords_ref": [
-   "MVC",
-   "데이터바인딩",
-   "모바일",
-   "관련 표준",
-   "적용 시 주의점"
+   "WPF",
+   "Android Jetpack ViewModel",
+   "Vue.js",
+   "MVC·MVP 비교",
+   "양방향 바인딩"
   ],
   "curated": true,
   "quiz_terms": [
-   "MVVM",
-   "ViewModel",
-   "데이터 바인딩",
-   "커맨드",
-   "테스트 용이",
-   "상태",
-   "플랫폼 UI",
-   "관심사 분리"
+   "뷰(View)",
+   "뷰모델(ViewModel)",
+   "모델(Model)",
+   "데이터 바인더(Binder)",
+   "데이터 바인딩(Data Binding)",
+   "커맨드(Command)",
+   "상태 변화 알림",
+   "역할 분리",
+   "뷰-로직 독립성",
+   "테스트 용이성",
+   "중복 코드 감소"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
   "id": "SW_117",
   "code": "SW_117",
-  "title": "서킷 브레이커 패턴(Circuit Breaker)",
+  "title": "서킷 브레이커 패턴(Circuit Breaker Pattern)",
   "subtitle": "Circuit Breaker",
   "domain": "SW",
   "category": "SW > 디자인 패턴 > Circuit Breaker",
-  "definition": "반복 실패 시 호출을 차단해 장애 전파를 막는 안정성 패턴",
+  "definition": "전기 회로 차단기처럼 원격 서비스 호출이 일정 임계치 이상 실패하면 호출을 차단(Open)해 장애 전파와 자원 점유를 막고, 일정 시간 후 일부 요청으로 복구 여부를 확인하는 장애 내성 패턴",
   "keywords": [
-   "핵심: 서킷 브레이커 · Closed/Open/Half-Open · 타임아웃",
-   "구성: 폴백 · 장애 격리 · MSA",
-   "반복 실패 시 호출을 차단해 장애 전파를 막는 안정성 패턴"
+   "상태: 닫힘(Closed) · 열림(Open) · 반열림(Half-Open)",
+   "요소: 실패 임계치(Threshold) · 타임아웃 · 폴백(Fallback) · 복구 대기 시간",
+   "구현: Netflix Hystrix · Resilience4j · Spring Cloud Circuit Breaker"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "서킷 브레이커의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "반복 실패 시 호출을 차단해 장애 전파를 막는 안정성 패턴"
+       "평소 정상 동작하다 오류 시 호출을 차단하는 장애 내성 패턴",
+       "문제 기능의 리소스 점유 금지"
       ]
      },
      {
-      "title": "목적",
+      "title": "배경",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "MSA에서 일부 서비스 오류가 전체 장애로 확산되는 연결 고리 차단"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "서킷 브레이커의 상태 전이",
     "subsections": [
      {
-      "title": null,
+      "title": "Closed",
       "items": [
-       "서킷 브레이커",
-       "Closed/Open/Half-Open",
-       "타임아웃",
-       "폴백",
-       "장애 격리",
-       "MSA"
+       "정상 상태, 요청 통과",
+       "실패율 모니터링"
+      ]
+     },
+     {
+      "title": "Open",
+      "items": [
+       "임계치 초과 시 기능 제한",
+       "즉시 실패·폴백 응답"
+      ]
+     },
+     {
+      "title": "Half-Open",
+      "items": [
+       "대기 시간 후 일부 요청 실행해 상태 확인",
+       "성공 시 Closed, 실패 시 Open"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "활용과 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "활용",
       "items": [
-       "Resilience",
-       "모니터링",
-       "표준·비교·한계를 함께 기술"
+       "MSA 서비스 간 호출 보호",
+       "폴백으로 기본값·캐시 응답"
+      ]
+     },
+     {
+      "title": "고려사항",
+      "items": [
+       "Hystrix는 커맨드 작성으로 복잡도 증가(현재 유지보수 중단) → Resilience4j",
+       "임계치·타임아웃 튜닝"
       ]
      }
     ]
@@ -14261,104 +14801,130 @@
    130
   ],
   "outline": [
-   "서킷 브레이커 패턴의 개념",
+   "서킷 브레이커의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 배경",
+   "서킷 브레이커의 상태 전이",
+   "- Closed",
+   "- Open",
+   "- Half-Open",
+   "활용과 고려사항",
+   "- 활용",
+   "- 고려사항"
   ],
-  "name": "서킷 브레이커 패턴(Circuit Breaker)",
-  "en": "Circuit Breaker",
+  "name": "서킷 브레이커 패턴(Circuit Breaker Pattern)",
+  "en": "Circuit Breaker Pattern",
   "keywords_must": [
-   "서킷 브레이커",
-   "Closed/Open/Half-Open",
+   "닫힘(Closed)",
+   "열림(Open)",
+   "반열림(Half-Open)",
+   "실패 임계치(Threshold)",
    "타임아웃",
-   "폴백",
-   "장애 격리",
-   "MSA",
-   "Resilience",
-   "모니터링"
+   "폴백(Fallback)",
+   "복구 대기 시간",
+   "Netflix Hystrix",
+   "Resilience4j",
+   "Spring Cloud Circuit Breaker"
   ],
   "keywords_ref": [
-   "벌크헤드",
-   "재시도",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "MSA 장애 격리",
+   "연쇄 장애(Cascading Failure)",
+   "벌크헤드 패턴",
+   "재시도(Retry)",
+   "서비스 메시"
   ],
   "curated": true,
   "quiz_terms": [
-   "서킷 브레이커",
-   "Closed/Open/Half-Open",
+   "닫힘(Closed)",
+   "열림(Open)",
+   "반열림(Half-Open)",
+   "실패 임계치(Threshold)",
    "타임아웃",
-   "폴백",
-   "장애 격리",
-   "MSA",
-   "Resilience",
-   "모니터링"
+   "폴백(Fallback)",
+   "복구 대기 시간",
+   "Netflix Hystrix",
+   "Resilience4j",
+   "Spring Cloud Circuit Breaker"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
   "id": "SW_118",
   "code": "SW_118",
-  "title": "테스트 주도 개발(TDD)",
+  "title": "테스트 주도 개발(TDD, Test Driven Development)",
   "subtitle": "TDD(TEST Driven Development)",
   "domain": "SW",
   "category": "SW> TDD / DevOps > TDD",
-  "definition": "실패 테스트→구현→리팩토링 순환의 개발 실천",
+  "definition": "실패하는 테스트 케이스를 먼저 작성하고 이를 통과하는 최소한의 코드를 구현한 뒤 리팩토링하는 짧은 주기를 반복하여 동작하는 깨끗한 코드를 만드는 애자일 개발 기법",
   "keywords": [
-   "핵심: TDD · Red-Green-Refactor · 단위 테스트",
-   "구성: 설계 피드백 · 회귀 방지 · 자동화",
-   "실패 테스트→구현→리팩토링 순환의 개발 실천"
+   "주기: 레드(Red) · 그린(Green) · 리팩터(Refactor)",
+   "절차: 테스트 작성 · 실패 확인 · 구현 코드 작성 · 테스트 통과 확인 · 리팩토링",
+   "도구: xUnit(JUnit) · 테스트 더블(Stub·Mock) · 단위 테스트 자동화"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "TDD의 개요",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "실패 테스트→구현→리팩토링 순환의 개발 실천"
+       "테스트 케이스를 먼저 개발하고 통과하는 코드를 나중에 개발",
+       "Simple Code 추구"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "자동화된 테스트가 실패할 때만 새 코드 작성",
+       "중복 제거"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "TDD의 개념도와 절차",
     "subsections": [
      {
-      "title": null,
+      "title": "5단계 절차",
       "items": [
-       "TDD",
-       "Red-Green-Refactor",
-       "단위 테스트",
-       "설계 피드백",
-       "회귀 방지",
-       "자동화"
+       "테스트 코드 작성 → 테스트 실패 확인 → 구현 코드 작성 → 테스트 통과 확인 → 리팩토링"
+      ]
+     },
+     {
+      "title": "Red-Green-Refactor",
+      "items": [
+       "Red: 실패하는 테스트",
+       "Green: 통과할 작은 코드",
+       "Refactor: 중복·긴 메서드·큰 클래스 개선"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "TDD 적용 시 고려사항과 장단점",
     "subsections": [
      {
-      "title": null,
+      "title": "실무 고려사항",
       "items": [
-       "테스트 우선",
-       "커버리지",
-       "표준·비교·한계를 함께 기술"
+       "일부 팀·단위 모듈에 선적용 후 단계적 확대",
+       "가짜 Driver·Stub 잔재 방지, 페어 프로그래밍 병행"
+      ]
+     },
+     {
+      "title": "장점",
+      "items": [
+       "진척 가시화, 간결한 코드",
+       "자동화된 단위 테스트 보유, 설계 개선"
+      ]
+     },
+     {
+      "title": "한계",
+      "items": [
+       "초기 개발 시간 증가",
+       "UI·DB 등 테스트 어려운 영역"
       ]
      }
     ]
@@ -14370,46 +14936,56 @@
    285
   ],
   "outline": [
-   "테스트 주도 개발의 개념",
+   "TDD의 개요",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "TDD의 개념도와 절차",
+   "- 5단계 절차",
+   "- Red-Green-Refactor",
+   "TDD 적용 시 고려사항과 장단점",
+   "- 실무 고려사항",
+   "- 장점",
+   "- 한계"
   ],
-  "name": "테스트 주도 개발(TDD)",
-  "en": "Test-Driven Development",
+  "name": "테스트 주도 개발(TDD, Test Driven Development)",
+  "en": "Test Driven Development",
   "keywords_must": [
-   "TDD",
-   "Red-Green-Refactor",
-   "단위 테스트",
-   "설계 피드백",
-   "회귀 방지",
-   "자동화",
-   "테스트 우선",
-   "커버리지"
+   "레드(Red)",
+   "그린(Green)",
+   "리팩터(Refactor)",
+   "테스트 작성",
+   "실패 확인",
+   "구현 코드 작성",
+   "테스트 통과 확인",
+   "리팩토링",
+   "xUnit(JUnit)",
+   "테스트 더블(Stub·Mock)",
+   "단위 테스트 자동화"
   ],
   "keywords_ref": [
-   "BDD",
-   "ATDD",
-   "CI",
-   "관련 표준",
-   "적용 시 주의점"
+   "Kent Beck",
+   "XP 실천 사항",
+   "페어 프로그래밍",
+   "회귀 테스트",
+   "BDD(Behavior Driven Development)"
   ],
   "curated": true,
   "quiz_terms": [
-   "TDD",
-   "Red-Green-Refactor",
-   "단위 테스트",
-   "설계 피드백",
-   "회귀 방지",
-   "자동화",
-   "테스트 우선",
-   "커버리지"
+   "레드(Red)",
+   "그린(Green)",
+   "리팩터(Refactor)",
+   "테스트 작성",
+   "실패 확인",
+   "구현 코드 작성",
+   "테스트 통과 확인",
+   "리팩토링",
+   "xUnit(JUnit)",
+   "테스트 더블(Stub·Mock)",
+   "단위 테스트 자동화"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -14419,55 +14995,78 @@
   "subtitle": "코드 스멜(Code Smell)",
   "domain": "SW",
   "category": "SW > TDD/DevOps > Code Smell",
-  "definition": "리팩토링이 필요함을 알리는 코드 구조의 경고 징후",
+  "definition": "프로그램을 이해·수정·확장하기 어렵게 만들어 리팩토링이 필요함을 알려 주는 코드상의 징후로, Kent Beck이 처음 제시했다",
   "keywords": [
-   "핵심: 코드 스멜 · 장황한 메서드 · 거대 클래스",
-   "구성: 중복 코드 · 부적절한 이름 · 리팩토링",
-   "리팩토링이 필요함을 알리는 코드 구조의 경고 징후"
+   "유형: 중복 코드(Duplicated Code) · 긴 메서드(Long Method) · 큰 클래스(Large Class) · 긴 매개변수 목록(Long Parameter List)",
+   "결합 스멜: 산탄총 수술(Shotgun Surgery) · 기능 편애(Feature Envy) · 데이터 뭉치(Data Clumps) · 기본 타입 집착(Primitive Obsession)",
+   "해결: 리팩토링(Refactoring) · 메서드 추출 · 클래스 추출"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "코드 스멜의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "리팩토링이 필요함을 알리는 코드 구조의 경고 징후"
+       "이해·수정·확장이 어려운 코드",
+       "프로그래머의 육감으로 찾아 리팩토링이 필요한 코드"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "객관적이지 않음",
+       "개발 환경·팀 가치·언어에 따라 판단이 다름"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "코드 스멜의 유형과 리팩토링 방법",
     "subsections": [
      {
-      "title": null,
+      "title": "크기 관련",
       "items": [
-       "코드 스멜",
-       "장황한 메서드",
-       "거대 클래스",
-       "중복 코드",
-       "부적절한 이름",
-       "리팩토링"
+       "중복 코드 → 중복 제거",
+       "긴 메서드 → 메서드 분할",
+       "큰 클래스 → 클래스 분리",
+       "긴 파라미터 → 파라미터 객체"
+      ]
+     },
+     {
+      "title": "변경 관련",
+      "items": [
+       "확산적 변경(SRP 위반) → 책임 분리",
+       "산탄총 수술 → 흩어진 기능 통합",
+       "기능 편애 → 메서드 이동"
+      ]
+     },
+     {
+      "title": "데이터 관련",
+      "items": [
+       "데이터 뭉치 → 독립 클래스",
+       "기본 타입 집착 → 값 객체",
+       "주석 → 간결한 코드로 대체"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "해결 예제와 코딩 오류 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "해결 예제",
       "items": [
-       "기술부채",
-       "정적분석",
-       "표준·비교·한계를 함께 기술"
+       "Rename(이름 변경)",
+       "Encapsulation(필드 캡슐화)",
+       "Pull Up(상위 클래스로 올리기)"
+      ]
+     },
+     {
+      "title": "코딩 오류와 비교",
+      "items": [
+       "코딩 오류: 명세 누락·잘못된 구현으로 기능 결함",
+       "코드 스멜: 동작은 하나 가독성·유지보수성 저하"
       ]
      }
     ]
@@ -14481,44 +15080,54 @@
   "outline": [
    "코드 스멜의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "코드 스멜의 유형과 리팩토링 방법",
+   "- 크기 관련",
+   "- 변경 관련",
+   "- 데이터 관련",
+   "해결 예제와 코딩 오류 비교",
+   "- 해결 예제",
+   "- 코딩 오류와 비교"
   ],
   "name": "코드 스멜(Code Smell)",
   "en": "Code Smell",
   "keywords_must": [
-   "코드 스멜",
-   "장황한 메서드",
-   "거대 클래스",
-   "중복 코드",
-   "부적절한 이름",
-   "리팩토링",
-   "기술부채",
-   "정적분석"
+   "중복 코드(Duplicated Code)",
+   "긴 메서드(Long Method)",
+   "큰 클래스(Large Class)",
+   "긴 매개변수 목록(Long Parameter List)",
+   "산탄총 수술(Shotgun Surgery)",
+   "기능 편애(Feature Envy)",
+   "데이터 뭉치(Data Clumps)",
+   "기본 타입 집착(Primitive Obsession)",
+   "리팩토링(Refactoring)",
+   "메서드 추출",
+   "클래스 추출"
   ],
   "keywords_ref": [
-   "클린코드",
-   "복잡도",
-   "리뷰",
-   "관련 표준",
-   "적용 시 주의점"
+   "Kent Beck",
+   "Martin Fowler",
+   "확산적 변경(Divergent Change)",
+   "과도한 주석",
+   "정적 분석 도구"
   ],
   "curated": true,
   "quiz_terms": [
-   "코드 스멜",
-   "장황한 메서드",
-   "거대 클래스",
-   "중복 코드",
-   "부적절한 이름",
-   "리팩토링",
-   "기술부채",
-   "정적분석"
+   "중복 코드(Duplicated Code)",
+   "긴 메서드(Long Method)",
+   "큰 클래스(Large Class)",
+   "긴 매개변수 목록(Long Parameter List)",
+   "산탄총 수술(Shotgun Surgery)",
+   "기능 편애(Feature Envy)",
+   "데이터 뭉치(Data Clumps)",
+   "기본 타입 집착(Primitive Obsession)",
+   "리팩토링(Refactoring)",
+   "메서드 추출",
+   "클래스 추출"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -14528,55 +15137,73 @@
   "subtitle": "클린코드(Clean Code)",
   "domain": "SW",
   "category": "SW > TDD/DevOps > Clean code",
-  "definition": "가독·단순·테스트 용이한 코드 작성 원칙",
+  "definition": "의도와 목적이 명확하고 중복이 없으며 가독성이 좋아 다른 사람이 쉽게 변경할 수 있고 한 가지 작업만 수행하는 코드",
   "keywords": [
-   "핵심: 클린 코드 · 의미 있는 이름 · 작은 함수",
-   "구성: DRY · 오류 처리 · 테스트",
-   "가독·단순·테스트 용이한 코드 작성 원칙"
+   "목적: 유지보수성 향상 · 유연한 시스템 · 품질 향상",
+   "작성 원칙: 의미 있는 이름(Naming) · 작은 함수(Function) · 한 가지 기능 · 최소 인수",
+   "기타 원칙: 주석 최소화(Comment) · 형식 맞추기 · 오류 처리(Error Handling) · 중복 제거(DRY)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "클린 코드의 개요",
     "subsections": [
      {
-      "title": "정의",
+      "title": "개념",
       "items": [
-       "가독·단순·테스트 용이한 코드 작성 원칙"
+       "의도 명확, 중복 없음, 가독성 높은 코드",
+       "한 가지 작업만 수행"
       ]
      },
      {
       "title": "목적",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "유지보수성 향상(가독성)",
+       "요구 변경에 유연, 오류 발견 용이로 품질 향상"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "클린 코드 작성 방법",
     "subsections": [
      {
-      "title": null,
+      "title": "이름",
       "items": [
-       "클린 코드",
-       "의미 있는 이름",
-       "작은 함수",
-       "DRY",
-       "오류 처리",
-       "테스트"
+       "분명한 의도, 그릇된 정보·연속 숫자 회피",
+       "클래스는 명사, 함수는 동사"
+      ]
+     },
+     {
+      "title": "함수",
+      "items": [
+       "작게, 한 가지 기능, 동일 추상화 수준",
+       "인수는 0~1개 이상적, 3개 이상은 객체로"
+      ]
+     },
+     {
+      "title": "주석과 형식",
+      "items": [
+       "코드로 의도 표현, 불필요 주석·주석 처리 코드 삭제",
+       "신문 기사처럼 위에서 아래로, 팀 규칙 일관성"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "클린 코드 실천 방안",
     "subsections": [
      {
-      "title": null,
+      "title": "오류 처리",
       "items": [
-       "보이스카우트",
-       "가독성",
-       "표준·비교·한계를 함께 기술"
+       "오류 코드 대신 예외 사용",
+       "null 반환·전달 회피"
+      ]
+     },
+     {
+      "title": "실천 방안",
+      "items": [
+       "코드 리뷰·정적 분석",
+       "TDD와 리팩토링 병행, 보이스카우트 규칙"
       ]
      }
     ]
@@ -14588,104 +15215,122 @@
    292
   ],
   "outline": [
-   "클린 코드의 개념",
-   "- 정의",
+   "클린 코드의 개요",
+   "- 개념",
    "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "클린 코드 작성 방법",
+   "- 이름",
+   "- 함수",
+   "- 주석과 형식",
+   "클린 코드 실천 방안",
+   "- 오류 처리",
+   "- 실천 방안"
   ],
   "name": "클린 코드(Clean Code)",
   "en": "Clean Code",
   "keywords_must": [
-   "클린 코드",
-   "의미 있는 이름",
-   "작은 함수",
-   "DRY",
-   "오류 처리",
-   "테스트",
-   "보이스카우트",
-   "가독성"
+   "유지보수성 향상",
+   "유연한 시스템",
+   "품질 향상",
+   "의미 있는 이름(Naming)",
+   "작은 함수(Function)",
+   "한 가지 기능",
+   "최소 인수",
+   "주석 최소화(Comment)",
+   "형식 맞추기",
+   "오류 처리(Error Handling)",
+   "중복 제거(DRY)"
   ],
   "keywords_ref": [
-   "코드스멜",
-   "리팩토링",
-   "리뷰",
-   "관련 표준",
-   "적용 시 주의점"
+   "Robert C. Martin",
+   "보이스카우트 규칙",
+   "신문 기사 형식",
+   "단위 테스트",
+   "코드 스멜"
   ],
   "curated": true,
   "quiz_terms": [
-   "클린 코드",
-   "의미 있는 이름",
-   "작은 함수",
-   "DRY",
-   "오류 처리",
-   "테스트",
-   "보이스카우트",
-   "가독성"
+   "유지보수성 향상",
+   "유연한 시스템",
+   "품질 향상",
+   "의미 있는 이름(Naming)",
+   "작은 함수(Function)",
+   "한 가지 기능",
+   "최소 인수",
+   "주석 최소화(Comment)",
+   "형식 맞추기",
+   "오류 처리(Error Handling)",
+   "중복 제거(DRY)"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
   "id": "SW_121",
   "code": "SW_121",
-  "title": "코드 유형(Code Types)",
+  "title": "레드·그린·클린 코드(Red, Green and Clean Code)",
   "subtitle": "",
   "domain": "SW",
   "category": "SW> TDD / DevOps > Code 유형",
-  "definition": "레거시·스파게티·클린·생성 코드 등 코드 성격 분류",
+  "definition": "TDD 주기에서 단계별로 만들어지는 코드 유형으로, 실패하는 테스트 코드(Red), 테스트를 통과하는 단순 코드(Green), 리팩토링을 거친 최종 코드(Clean)를 말한다",
   "keywords": [
-   "핵심: 레거시 코드 · 스파게티 코드 · 클린 코드",
-   "구성: 생성 코드 · 테스트 코드 · 기술부채",
-   "레거시·스파게티·클린·생성 코드 등 코드 성격 분류"
+   "유형: 레드 코드(Red Code) · 그린 코드(Green Code) · 클린 코드(Clean Code)",
+   "흐름: 실패하는 테스트 · 신속한 통과 · 리팩토링(Refactoring)",
+   "목적: 기존 코드 검증 · 신속 테스트 · 최종 품질 확보"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "코드 유형의 정의",
     "subsections": [
      {
-      "title": "정의",
+      "title": "레드 코드",
       "items": [
-       "레거시·스파게티·클린·생성 코드 등 코드 성격 분류"
+       "구현 전 작성해 실패하는 테스트 코드",
+       "모듈 내부 검증 목적"
       ]
      },
      {
-      "title": "목적",
+      "title": "그린 코드와 클린 코드",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "그린: 테스트를 통과하도록 신속히 작성한 단순 코드",
+       "클린: 의도 명확·중복 없음·가독성 높은 최종 코드"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "코드 유형의 흐름",
     "subsections": [
      {
-      "title": null,
+      "title": "단계 흐름",
       "items": [
-       "레거시 코드",
-       "스파게티 코드",
-       "클린 코드",
-       "생성 코드",
-       "테스트 코드",
-       "기술부채"
+       "Red(기존 코드 검증) → Green(신속 테스트 통과) → Clean(최종 목적)"
+      ]
+     },
+     {
+      "title": "단계별 활동",
+      "items": [
+       "테스트 작성 → 최소 구현 → 리팩토링 후 재테스트"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "활용",
     "subsections": [
      {
-      "title": null,
+      "title": "TDD 연계",
       "items": [
-       "유지보수성",
-       "품질",
-       "표준·비교·한계를 함께 기술"
+       "짧은 주기 반복으로 품질 내재화"
+      ]
+     },
+     {
+      "title": "효과",
+      "items": [
+       "회귀 테스트 자산 축적",
+       "설계 개선과 가독성 향상"
       ]
      }
     ]
@@ -14697,46 +15342,51 @@
    293
   ],
   "outline": [
-   "코드 유형의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "코드 유형의 정의",
+   "- 레드 코드",
+   "- 그린 코드와 클린 코드",
+   "코드 유형의 흐름",
+   "- 단계 흐름",
+   "- 단계별 활동",
+   "활용",
+   "- TDD 연계",
+   "- 효과"
   ],
-  "name": "코드 유형(Code Types)",
-  "en": "Code Types",
+  "name": "레드·그린·클린 코드(Red, Green and Clean Code)",
+  "en": "Red Code, Green Code, Clean Code",
   "keywords_must": [
-   "레거시 코드",
-   "스파게티 코드",
-   "클린 코드",
-   "생성 코드",
-   "테스트 코드",
-   "기술부채",
-   "유지보수성",
-   "품질"
+   "레드 코드(Red Code)",
+   "그린 코드(Green Code)",
+   "클린 코드(Clean Code)",
+   "실패하는 테스트",
+   "신속한 통과",
+   "리팩토링(Refactoring)",
+   "기존 코드 검증",
+   "신속 테스트",
+   "최종 품질 확보"
   ],
   "keywords_ref": [
-   "리팩토링",
-   "현대화",
-   "문서화",
-   "관련 표준",
-   "적용 시 주의점"
+   "TDD",
+   "Red-Green-Refactor",
+   "단순 코드(Simple Code)",
+   "중복 제거",
+   "가독성"
   ],
   "curated": true,
   "quiz_terms": [
-   "레거시 코드",
-   "스파게티 코드",
-   "클린 코드",
-   "생성 코드",
-   "테스트 코드",
-   "기술부채",
-   "유지보수성",
-   "품질"
+   "레드 코드(Red Code)",
+   "그린 코드(Green Code)",
+   "클린 코드(Clean Code)",
+   "실패하는 테스트",
+   "신속한 통과",
+   "리팩토링(Refactoring)",
+   "기존 코드 검증",
+   "신속 테스트",
+   "최종 품질 확보"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -14746,55 +15396,73 @@
   "subtitle": "",
   "domain": "SW",
   "category": "Software공학> TDD> DevOps",
-  "definition": "개발·운영을 통합해 빠른 안정 전달을 추구하는 문화·실천",
+  "definition": "개발(Development)과 운영(Operations) 조직 간의 소통·협업·통합과 자동화를 강조하여 소프트웨어를 적시에 안정적으로 출시하도록 하는 개발 문화이자 방법론",
   "keywords": [
-   "핵심: DevOps · CI/CD · 자동화",
-   "구성: 협업 · 관측성 · IaC",
-   "개발·운영을 통합해 빠른 안정 전달을 추구하는 문화·실천"
+   "프로세스: 지속적 통합(CI, Continuous Integration) · 지속적 출시(CD, Continuous Delivery) · 릴리스와 배포의 분리 · 사이클 타임 축소",
+   "품질: 시나리오 기반 품질 기준 · 테스트 자동화 · 완료 시점 확장(운영 정상 동작)",
+   "도구: Git·Jenkins · 릴리스 자동화 · 프로비저닝(Puppet·Chef)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "데브옵스의 개요",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "개발·운영을 통합해 빠른 안정 전달을 추구하는 문화·실천"
+       "개발자와 운영 전문가 간 소통·협업·통합·자동화 강조",
+       "적시 출시를 위한 상호 의존 대응"
       ]
      },
      {
-      "title": "목적",
+      "title": "등장 배경",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "개발-운영 사일로로 배포 지연·장애",
+       "클라우드·애자일 확산"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "데브옵스 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "품질 측면",
       "items": [
-       "DevOps",
-       "CI/CD",
-       "자동화",
-       "협업",
-       "관측성",
-       "IaC"
+       "시나리오 기반 품질 속성",
+       "xUnit 단위 테스트 자동화"
+      ]
+     },
+     {
+      "title": "프로세스 측면",
+      "items": [
+       "지속적 출시(운영 반영 자동화)",
+       "릴리스와 배포 분리(기능 토글, 다크 런칭, 블루-그린)"
+      ]
+     },
+     {
+      "title": "도구 측면",
+      "items": [
+       "CI(Git+Jenkins로 변경마다 빌드·테스트)",
+       "릴리스 자동화, 프로비저닝(Puppet, Chef)"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "애자일과 데브옵스 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "적용 범위",
       "items": [
-       "피드백",
-       "CALMS",
-       "표준·비교·한계를 함께 기술"
+       "애자일: 개발팀 대상 SW 개발 방법론",
+       "데브옵스: 개발과 운영을 통합하는 포괄적 방법론"
+      ]
+     },
+     {
+      "title": "관계",
+      "items": [
+       "애자일의 빠른 개발을 운영까지 확장",
+       "조직 관점 비교 필요"
       ]
      }
     ]
@@ -14806,104 +15474,131 @@
    133
   ],
   "outline": [
-   "데브옵스의 개념",
+   "데브옵스의 개요",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 등장 배경",
+   "데브옵스 구성요소",
+   "- 품질 측면",
+   "- 프로세스 측면",
+   "- 도구 측면",
+   "애자일과 데브옵스 비교",
+   "- 적용 범위",
+   "- 관계"
   ],
   "name": "데브옵스(DevOps)",
   "en": "DevOps",
   "keywords_must": [
-   "DevOps",
-   "CI/CD",
-   "자동화",
-   "협업",
-   "관측성",
-   "IaC",
-   "피드백",
-   "CALMS"
+   "지속적 통합(CI, Continuous Integration)",
+   "지속적 출시(CD, Continuous Delivery)",
+   "릴리스와 배포의 분리",
+   "사이클 타임 축소",
+   "시나리오 기반 품질 기준",
+   "테스트 자동화",
+   "완료 시점 확장(운영 정상 동작)",
+   "Git·Jenkins",
+   "릴리스 자동화",
+   "프로비저닝(Puppet·Chef)"
   ],
   "keywords_ref": [
-   "SRE",
-   "플랫폼엔지니어링",
-   "애자일",
-   "관련 표준",
-   "적용 시 주의점"
+   "기능 토글(Feature Toggle)",
+   "다크 런칭",
+   "블루-그린 배포",
+   "IaC(Infrastructure as Code)",
+   "CALMS"
   ],
   "curated": true,
   "quiz_terms": [
-   "DevOps",
-   "CI/CD",
-   "자동화",
-   "협업",
-   "관측성",
-   "IaC",
-   "피드백",
-   "CALMS"
+   "지속적 통합(CI, Continuous Integration)",
+   "지속적 출시(CD, Continuous Delivery)",
+   "릴리스와 배포의 분리",
+   "사이클 타임 축소",
+   "시나리오 기반 품질 기준",
+   "테스트 자동화",
+   "완료 시점 확장(운영 정상 동작)",
+   "Git·Jenkins",
+   "릴리스 자동화",
+   "프로비저닝(Puppet·Chef)"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
   "id": "SW_123",
   "code": "SW_123",
-  "title": "사이트 신뢰성 공학(SRE)",
+  "title": "사이트 신뢰성 공학(SRE, Site Reliability Engineering)",
   "subtitle": "",
   "domain": "SW",
   "category": "출제예상 > IT 경영전략 > SRE(Site Reliability Engineering)",
-  "definition": "SW 공학으로 운영 신뢰성을 확보하는 실천",
+  "definition": "소프트웨어 엔지니어링 방식으로 운영 문제를 해결해 시스템과 서비스가 적절한 수준의 안정성(가용성)을 달성하도록 지원하는 엔지니어링 분야 (Google)",
   "keywords": [
-   "핵심: SRE · SLI/SLO/SLA · 오류 예산",
-   "구성: 토일 감소 · 자동화 · 관측성",
-   "SW 공학으로 운영 신뢰성을 확보하는 실천"
+   "원칙: 가용성 정의 · 목표 가용성 설정 · 장애 계획 · 오류 예산(Error Budget)",
+   "지표: SLI(Service Level Indicator) · SLO(Service Level Objective) · SLA(Service Level Agreement)",
+   "구성 요소: 모니터링(Metric & Monitoring) · 용량 계획(Capacity Planning) · 변경 관리(Change Management) · 긴급 대응(Emergency Response) · 문화(Culture)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "SRE의 정의와 원칙",
     "subsections": [
      {
-      "title": "정의",
+      "title": "정의와 배경",
       "items": [
-       "SW 공학으로 운영 신뢰성을 확보하는 실천"
+       "적절한 수준의 안정성 달성을 지원하는 엔지니어링",
+       "DevOps 철학에서 운영자의 새로운 역할 필요"
       ]
      },
      {
-      "title": "목적",
+      "title": "원칙",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "가용성의 명확한 정의와 목표 설정",
+       "장애 발생 계획",
+       "납득 가능한 가용성과 개발 속도 균형(오류 예산)"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "SRE의 구성 요소",
     "subsections": [
      {
-      "title": null,
+      "title": "모니터링과 용량 계획",
       "items": [
-       "SRE",
-       "SLI/SLO/SLA",
-       "오류 예산",
-       "토일 감소",
-       "자동화",
-       "관측성"
+       "SLO·대시보드·분석 지표 기반 모니터링",
+       "수요 예측 기반 HW 자원 확보"
+      ]
+     },
+     {
+      "title": "변경 관리와 긴급 대응",
+      "items": [
+       "릴리스 프로세스·자동화(장애 70%는 변경 원인)",
+       "온콜·장애 분석·포스트모템, 복구 자동화"
+      ]
+     },
+     {
+      "title": "문화",
+      "items": [
+       "토일 관리, 비난 없는 문화",
+       "데이터 기반 의사결정"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "SRE의 수행 방법과 DevOps 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "수행 방법",
       "items": [
-       "인시던트",
-       "신뢰성",
-       "표준·비교·한계를 함께 기술"
+       "조직 사일로 축소(공동 소유)",
+       "실패를 정상으로 수용, 점진적 변경, 도구·자동화, 측정"
+      ]
+     },
+     {
+      "title": "DevOps와 비교",
+      "items": [
+       "DevOps: 철학·문화",
+       "SRE: DevOps를 구현하는 구체적 실천(\"class SRE implements DevOps\")"
       ]
      }
     ]
@@ -14915,46 +15610,58 @@
    135
   ],
   "outline": [
-   "사이트 신뢰성 공학의 개념",
-   "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "SRE의 정의와 원칙",
+   "- 정의와 배경",
+   "- 원칙",
+   "SRE의 구성 요소",
+   "- 모니터링과 용량 계획",
+   "- 변경 관리와 긴급 대응",
+   "- 문화",
+   "SRE의 수행 방법과 DevOps 비교",
+   "- 수행 방법",
+   "- DevOps와 비교"
   ],
-  "name": "사이트 신뢰성 공학(SRE)",
+  "name": "사이트 신뢰성 공학(SRE, Site Reliability Engineering)",
   "en": "Site Reliability Engineering",
   "keywords_must": [
-   "SRE",
-   "SLI/SLO/SLA",
-   "오류 예산",
-   "토일 감소",
-   "자동화",
-   "관측성",
-   "인시던트",
-   "신뢰성"
+   "가용성 정의",
+   "목표 가용성 설정",
+   "장애 계획",
+   "오류 예산(Error Budget)",
+   "SLI(Service Level Indicator)",
+   "SLO(Service Level Objective)",
+   "SLA(Service Level Agreement)",
+   "모니터링(Metric & Monitoring)",
+   "용량 계획(Capacity Planning)",
+   "변경 관리(Change Management)",
+   "긴급 대응(Emergency Response)",
+   "문화(Culture)"
   ],
   "keywords_ref": [
-   "DevOps",
-   "온콜",
-   "포스트모템",
-   "관련 표준",
-   "적용 시 주의점"
+   "토일(Toil) 감소",
+   "포스트모템(Postmortem)",
+   "비난 없는 문화(Blamelessness)",
+   "MTTR",
+   "온콜(On-call)"
   ],
   "curated": true,
   "quiz_terms": [
-   "SRE",
-   "SLI/SLO/SLA",
-   "오류 예산",
-   "토일 감소",
-   "자동화",
-   "관측성",
-   "인시던트",
-   "신뢰성"
+   "가용성 정의",
+   "목표 가용성 설정",
+   "장애 계획",
+   "오류 예산(Error Budget)",
+   "SLI(Service Level Indicator)",
+   "SLO(Service Level Objective)",
+   "SLA(Service Level Agreement)",
+   "모니터링(Metric & Monitoring)",
+   "용량 계획(Capacity Planning)",
+   "변경 관리(Change Management)",
+   "긴급 대응(Emergency Response)",
+   "문화(Culture)"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -14964,55 +15671,74 @@
   "subtitle": "무중단 배포 기법의 종류",
   "domain": "SW",
   "category": "SW > TDD / DevOps > 무중단 배포 기법의 종류",
-  "definition": "서비스 중단 없이 버전을 교체하는 배포 기법",
+  "definition": "운영 환경에 새 버전을 배포할 때 서비스를 중단하지 않고 비즈니스 연속성과 안정성을 보장하도록 코드를 배포하는 기법",
   "keywords": [
-   "핵심: 무중단 배포 · 블루-그린 · 롤링",
-   "구성: 카나리 · 피처 토글 · 헬스체크",
-   "서비스 중단 없이 버전을 교체하는 배포 기법"
+   "기법: 롤링 업데이트(Rolling Update) · 블루-그린 배포(Blue/Green Deployment) · 카나리 릴리스(Canary Release)",
+   "요소: 트래픽 스위칭(Switching) · 로드 밸런서 · 롤백(Rollback) · 프로비저닝",
+   "조합: 블루-그린 + 카나리"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "무중단 배포 기법의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "서비스 중단 없이 버전을 교체하는 배포 기법"
+       "운영 배포 시 서비스 중단 없이 코드 배포",
+       "비즈니스 연속성·안정성 보장"
       ]
      },
      {
-      "title": "목적",
+      "title": "필요성",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "24×7 서비스, 잦은 배포",
+       "배포 실패 시 빠른 복구"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "무중단 배포 기법의 종류",
     "subsections": [
      {
-      "title": null,
+      "title": "롤링 업데이트",
       "items": [
-       "무중단 배포",
-       "블루-그린",
-       "롤링",
-       "카나리",
-       "피처 토글",
-       "헬스체크"
+       "인스턴스를 1개씩 점진적으로 교체",
+       "장점: 관리·롤백 용이",
+       "단점: 교체 중 처리 용량 사전 고려"
+      ]
+     },
+     {
+      "title": "블루-그린 배포",
+      "items": [
+       "구버전(Blue)과 신버전(Green) 환경을 두고 트래픽을 한 번에 전환",
+       "장점: 실환경 신버전 테스트, 롤백 쉬움",
+       "단점: 자원 2배"
+      ]
+     },
+     {
+      "title": "카나리 릴리스",
+      "items": [
+       "일부 사용자만 신버전으로 접속시켜 모니터링 후 전체 교체",
+       "장점: 위험 조기 감지, A/B 테스트 활용",
+       "단점: 트래픽 제어 부담"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "블루-그린과 카나리 결합 도입",
     "subsections": [
      {
-      "title": null,
+      "title": "절차",
       "items": [
-       "롤백",
-       "트래픽 전환",
-       "표준·비교·한계를 함께 기술"
+       "구 서버와 같은 스펙으로 신 서버 프로비저닝 → 일부 트래픽 연결 → 집중 모니터링 후 트래픽 증가 → 안정 시 구 서버 종료"
+      ]
+     },
+     {
+      "title": "효과",
+      "items": [
+       "롤백 용이성과 점진적 검증을 동시에 확보"
       ]
      }
     ]
@@ -15026,102 +15752,116 @@
   "outline": [
    "무중단 배포 기법의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 필요성",
+   "무중단 배포 기법의 종류",
+   "- 롤링 업데이트",
+   "- 블루-그린 배포",
+   "- 카나리 릴리스",
+   "블루-그린과 카나리 결합 도입",
+   "- 절차",
+   "- 효과"
   ],
   "name": "무중단 배포 기법(Zero-Downtime Deployment)",
   "en": "Zero-Downtime Deployment",
   "keywords_must": [
-   "무중단 배포",
-   "블루-그린",
-   "롤링",
-   "카나리",
-   "피처 토글",
-   "헬스체크",
-   "롤백",
-   "트래픽 전환"
+   "롤링 업데이트(Rolling Update)",
+   "블루-그린 배포(Blue/Green Deployment)",
+   "카나리 릴리스(Canary Release)",
+   "트래픽 스위칭(Switching)",
+   "로드 밸런서",
+   "롤백(Rollback)",
+   "프로비저닝",
+   "블루-그린 + 카나리"
   ],
   "keywords_ref": [
-   "쿠버네티스",
-   "CI/CD",
-   "관련 표준",
-   "적용 시 주의점",
-   "유사 개념"
+   "Ramped·Incremental 배포",
+   "Red-Black 배포",
+   "A/B 테스트",
+   "쿠버네티스 배포 전략",
+   "헬스 체크"
   ],
   "curated": true,
   "quiz_terms": [
-   "무중단 배포",
-   "블루-그린",
-   "롤링",
-   "카나리",
-   "피처 토글",
-   "헬스체크",
-   "롤백",
-   "트래픽 전환"
+   "롤링 업데이트(Rolling Update)",
+   "블루-그린 배포(Blue/Green Deployment)",
+   "카나리 릴리스(Canary Release)",
+   "트래픽 스위칭(Switching)",
+   "로드 밸런서",
+   "롤백(Rollback)",
+   "프로비저닝",
+   "블루-그린 + 카나리"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
   "id": "SW_124_1",
   "code": "SW_124_1",
-  "title": "카나리 배포(Canary Release)",
+  "title": "카나리 테스트(Canary Test)",
   "subtitle": "",
   "domain": "SW",
   "category": "소프트웨어공학",
-  "definition": "소수 트래픽으로 신버전을 검증하는 점진 배포",
+  "definition": "새로운 소프트웨어나 기능을 소수의 사용자에게 먼저 출시해 문제를 조기에 식별하고 위험을 줄인 뒤 전체로 확대하는 테스트·배포 방법",
   "keywords": [
-   "핵심: 카나리 · 점진 트래픽 · 모니터링",
-   "구성: 자동 롤백 · 위험 감소 · 관측성",
-   "소수 트래픽으로 신버전을 검증하는 점진 배포"
+   "특징: 일부분 테스트 · 초기 결함 식별 · 미완성 테스트 · 카나리아 경고 비유",
+   "절차: 사용자 선택 · 일부분 배포 · 문제 식별(모니터링) · 전체 배포",
+   "이점: 사용자 경험 보호 · 준비된 롤백 전략 · 기능 플래그(Feature Flag)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "카나리 테스트의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "소수 트래픽으로 신버전을 검증하는 점진 배포"
+       "소수 사용자에게 출시해 유효성 검사",
+       "광부가 카나리아로 위험을 감지한 데서 유래"
       ]
      },
      {
-      "title": "목적",
+      "title": "특징",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "특정 모듈·기능 대상 일부분 테스트",
+       "초기 결함 식별, 전체 미완성 상태에서도 수행"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "카나리 테스트 절차",
     "subsections": [
      {
-      "title": null,
+      "title": "사용자 선택과 일부 배포",
       "items": [
-       "카나리",
-       "점진 트래픽",
-       "모니터링",
-       "자동 롤백",
-       "위험 감소",
-       "관측성"
+       "소수 사용자 또는 특정 세그먼트 선택",
+       "해당 그룹에 신기능 배포"
+      ]
+     },
+     {
+      "title": "문제 식별과 전체 배포",
+      "items": [
+       "피드백·분석·오류 로그 모니터링",
+       "문제 없으면 전체 출시, 있으면 해결 후 배포"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "카나리 테스트의 이점",
     "subsections": [
      {
-      "title": null,
+      "title": "사용자 경험",
       "items": [
-       "게이트",
-       "A/B 구분",
-       "표준·비교·한계를 함께 기술"
+       "대다수 고객은 버그를 경험하지 않음"
+      ]
+     },
+     {
+      "title": "롤백과 효율",
+      "items": [
+       "기능 플래그로 언제든 켜고 끔",
+       "수 분 내 실행돼 작고 잦은 업데이트에 효과적"
       ]
      }
     ]
@@ -15133,46 +15873,55 @@
    140
   ],
   "outline": [
-   "카나리 배포의 개념",
+   "카나리 테스트의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 특징",
+   "카나리 테스트 절차",
+   "- 사용자 선택과 일부 배포",
+   "- 문제 식별과 전체 배포",
+   "카나리 테스트의 이점",
+   "- 사용자 경험",
+   "- 롤백과 효율"
   ],
-  "name": "카나리 배포(Canary Release)",
-  "en": "Canary Release",
+  "name": "카나리 테스트(Canary Test)",
+  "en": "Canary Test",
   "keywords_must": [
-   "카나리",
-   "점진 트래픽",
-   "모니터링",
-   "자동 롤백",
-   "위험 감소",
-   "관측성",
-   "게이트",
-   "A/B 구분"
+   "일부분 테스트",
+   "초기 결함 식별",
+   "미완성 테스트",
+   "카나리아 경고 비유",
+   "사용자 선택",
+   "일부분 배포",
+   "문제 식별(모니터링)",
+   "전체 배포",
+   "사용자 경험 보호",
+   "준비된 롤백 전략",
+   "기능 플래그(Feature Flag)"
   ],
   "keywords_ref": [
-   "블루그린",
-   "피처플래그",
-   "SRE",
-   "관련 표준",
-   "적용 시 주의점"
+   "카나리 릴리스",
+   "트래픽 분할",
+   "A/B 테스트",
+   "무중단 배포",
+   "오류 로그 분석"
   ],
   "curated": true,
   "quiz_terms": [
-   "카나리",
-   "점진 트래픽",
-   "모니터링",
-   "자동 롤백",
-   "위험 감소",
-   "관측성",
-   "게이트",
-   "A/B 구분"
+   "일부분 테스트",
+   "초기 결함 식별",
+   "미완성 테스트",
+   "카나리아 경고 비유",
+   "사용자 선택",
+   "일부분 배포",
+   "문제 식별(모니터링)",
+   "전체 배포",
+   "사용자 경험 보호",
+   "준비된 롤백 전략",
+   "기능 플래그(Feature Flag)"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
@@ -15182,55 +15931,68 @@
   "subtitle": "",
   "domain": "SW",
   "category": "디지털서비스",
-  "definition": "내부 개발자 플랫폼으로 셀프서비스와 가드레일을 제공",
+  "definition": "여러 애플리케이션과 서비스의 수명 주기를 지원하는 셀프서비스형 내부 소프트웨어 플랫폼을 설계·구축해 개발자 등 내부 사용자에게 제공하는 엔지니어링 분야",
   "keywords": [
-   "핵심: 플랫폼 엔지니어링 · IDP · 골든 패스",
-   "구성: 셀프서비스 · DX · 가드레일",
-   "내부 개발자 플랫폼으로 셀프서비스와 가드레일을 제공"
+   "등장 배경: SW 다양성·복잡성 증가 · 개발 생산성 향상 · 일관되고 자동화된 워크로드",
+   "역할: 인프라 자동화(IaC) · 분산 시스템 설계 · 확장성·성능 최적화 · 모니터링·로깅 · 보안",
+   "구성: 내부 개발자 플랫폼(IDP, Internal Developer Platform) · 교차 기능 팀(Cross Functional Team) · 골든 패스(Golden Path)"
   ],
   "sections": [
    {
-    "title": "개념",
+    "title": "플랫폼 엔지니어링의 개념",
     "subsections": [
      {
       "title": "정의",
       "items": [
-       "내부 개발자 플랫폼으로 셀프서비스와 가드레일을 제공"
+       "애플리케이션 수명 주기 관리를 위한 플랫폼을 설계·구축해 내부 사용자에 제공",
+       "DevOps의 진화"
       ]
      },
      {
-      "title": "목적",
+      "title": "등장 배경",
       "items": [
-       "핵심 키워드를 답안 구조로 정리"
+       "SW 복잡성 증가로 마찰 감소 필요",
+       "최소 오버헤드로 개발 생산성 향상",
+       "CI/CD 일관성 유지"
       ]
      }
     ]
    },
    {
-    "title": "구성·유형",
+    "title": "플랫폼 엔지니어링의 구성과 역할",
     "subsections": [
      {
-      "title": null,
+      "title": "구성",
       "items": [
-       "플랫폼 엔지니어링",
-       "IDP",
-       "골든 패스",
-       "셀프서비스",
-       "DX",
-       "가드레일"
+       "교차 기능 팀이 각 계층 간 조정자 역할",
+       "내부 개발자 플랫폼(IDP) 제공"
+      ]
+     },
+     {
+      "title": "역할",
+      "items": [
+       "IaC(Terraform, Ansible)로 인프라 자동화",
+       "MSA·분산 시스템 설계",
+       "캐싱·로드밸런싱·샤딩 최적화",
+       "모니터링·로깅·경고, 보안"
       ]
      }
     ]
    },
    {
-    "title": "활용·시사점",
+    "title": "DevOps, SRE와의 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "DevOps",
       "items": [
-       "표준화",
-       "생산성",
-       "표준·비교·한계를 함께 기술"
+       "개발·운영 통합, 피드백 주기 단축"
+      ]
+     },
+     {
+      "title": "SRE와 플랫폼 엔지니어링",
+      "items": [
+       "SRE: 신뢰성·가용성 목표 관리",
+       "플랫폼 엔지니어링: 개발자 생산성과 셀프서비스 플랫폼 제공"
       ]
      }
     ]
@@ -15244,44 +16006,53 @@
   "outline": [
    "플랫폼 엔지니어링의 개념",
    "- 정의",
-   "- 목적",
-   "구성·유형",
-   "활용·시사점"
+   "- 등장 배경",
+   "플랫폼 엔지니어링의 구성과 역할",
+   "- 구성",
+   "- 역할",
+   "DevOps, SRE와의 비교",
+   "- DevOps",
+   "- SRE와 플랫폼 엔지니어링"
   ],
   "name": "플랫폼 엔지니어링(Platform Engineering)",
   "en": "Platform Engineering",
   "keywords_must": [
-   "플랫폼 엔지니어링",
-   "IDP",
-   "골든 패스",
-   "셀프서비스",
-   "DX",
-   "가드레일",
-   "표준화",
-   "생산성"
+   "SW 다양성·복잡성 증가",
+   "개발 생산성 향상",
+   "일관되고 자동화된 워크로드",
+   "인프라 자동화(IaC)",
+   "분산 시스템 설계",
+   "확장성·성능 최적화",
+   "모니터링·로깅",
+   "보안",
+   "내부 개발자 플랫폼(IDP, Internal Developer Platform)",
+   "교차 기능 팀(Cross Functional Team)",
+   "골든 패스(Golden Path)"
   ],
   "keywords_ref": [
-   "DevOps",
-   "SRE",
-   "포털",
-   "관련 표준",
-   "적용 시 주의점"
+   "Terraform·Ansible",
+   "CI/CD 파이프라인",
+   "개발자 경험(DevEx)",
+   "DevOps·SRE 비교",
+   "셀프서비스"
   ],
   "curated": true,
   "quiz_terms": [
-   "플랫폼 엔지니어링",
-   "IDP",
-   "골든 패스",
-   "셀프서비스",
-   "DX",
-   "가드레일",
-   "표준화",
-   "생산성"
+   "SW 다양성·복잡성 증가",
+   "개발 생산성 향상",
+   "일관되고 자동화된 워크로드",
+   "인프라 자동화(IaC)",
+   "분산 시스템 설계",
+   "확장성·성능 최적화",
+   "모니터링·로깅",
+   "보안",
+   "내부 개발자 플랫폼(IDP, Internal Developer Platform)",
+   "교차 기능 팀(Cross Functional Team)",
+   "골든 패스(Golden Path)"
   ],
   "quiz_groups": [
    "sw"
   ],
-  "quiz_avoid": [],
   "reviewed": true
  },
  {
