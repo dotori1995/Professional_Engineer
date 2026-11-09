@@ -18518,7 +18518,7 @@
     "definition": "파이버 채널로 구성하던 SAN을 IP 네트워크 기술과 접목해 원거리·저비용으로 확장하는 스토리지 네트워크 기술로, FC 프레임을 IP로 터널링하는 FCIP, FC 장비를 IP망에 직접 붙이는 iFCP, SCSI 명령을 IP로 보내는 iSCSI로 나뉨",
     "keywords": [
       "핵심: FCIP(FC over IP, 터널링) · iFCP(Internet FC Protocol, 게이트웨이) · iSCSI(Internet SCSI) · 캡슐화 통신",
-      "필수: 원거리 구축 · 저비용(기존 이더넷 활용) · IPSec 보안 · 이니시에이터·타깃(Initiator·Target)",
+      "필수: 원거리 구축 · 저비용(기존 이더넷 활용) · IPsec 보안 · 이니시에이터·타깃(Initiator·Target)",
       "참고: FCIP 요소 ISL·E_Port · iFCP 요소 iSNS·SCN·F/FL_Port · FCoE(FC over Ethernet) · 원격 복제·재해 복구 센터 연결 · 무손실 이더넷(DCB) 필요성"
     ],
     "sections": [
@@ -18620,7 +18620,7 @@
       "캡슐화 통신",
       "원거리 구축",
       "저비용(기존 이더넷 활용)",
-      "IPSec 보안",
+      "IPsec 보안",
       "이니시에이터·타깃(Initiator·Target)"
     ],
     "keywords_ref": [
@@ -18638,7 +18638,7 @@
       "캡슐화 통신",
       "원거리 구축",
       "저비용(기존 이더넷 활용)",
-      "IPSec 보안",
+      "IPsec 보안",
       "이니시에이터·타깃(Initiator·Target)"
     ],
     "quiz_groups": [
