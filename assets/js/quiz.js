@@ -69,6 +69,18 @@
     return [];
   }
 
+  // 내가 적은 것과 키워드 자동 비교: 한글/영문/약어 중 하나라도 적었으면 체크
+  const norm = x => String(x || '').toLowerCase().replace(/[\s\-\u2010-\u2015_.·]/g, '');
+  function kwTokens(k) {
+    return String(k).split(/[()（）,，/·;]/).map(norm).filter(x => x.length >= 2);
+  }
+  function autoCheck(list, prefix) {
+    const n = norm(notes);
+    if (!n) return;
+    list.forEach((k, i) => { if (kwTokens(k).some(tok => n.includes(tok))) { checked.add(prefix + i); autoIds.add(prefix + i); } });
+  }
+  let autoIds = new Set();
+
   function render() {
     const quiz = $('quiz');
     const primary = $('quizPrimary');
@@ -108,6 +120,7 @@
       const got = must.filter((_, i) => checked.has('m' + i)).length;
       quiz.innerHTML = `
         <div class="wbar"><span class="wtype">답안</span><span class="wscore" id="wScore">${got}/${must.length} 필수</span></div>
+        ${notes.trim() ? `<div class="lbl">내가 적은 것 <span class="wnote">${autoIds.size ? '적은 키워드는 자동 체크됨' : '자동 일치 없음'}</span></div><div class="wnotes">${PE.esc(notes)}</div>` : ''}
         <div class="wtitle-sm">${name}</div>
         <div class="lbl">개념·정의</div>
         <div class="wdef">${PE.gl(t.definition || '')}</div>
@@ -115,8 +128,7 @@
         ${PE.outlineHtml(t.outline, true)}
         <div class="lbl must-lbl">★ 필수 키워드 <span class="wnote">비슷한 표현이면 체크</span></div>
         <div class="wkws" id="wMust">${mustHtml || '<span class="meta">없음</span>'}</div>
-        ${ref.length ? `<div class="lbl">참고 키워드</div><div class="wkws" id="wRef">${refHtml}</div>` : ''}
-        ${notes.trim() ? `<div class="lbl">내가 적은 것</div><div class="wnotes">${PE.esc(notes)}</div>` : ''}`;
+        ${ref.length ? `<div class="lbl">참고 키워드</div><div class="wkws" id="wRef">${refHtml}</div>` : ''}`;
       quiz.querySelectorAll('.wkw').forEach(b => b.addEventListener('click', () => {
         const id = b.dataset.id;
         if (checked.has(id)) checked.delete(id); else checked.add(id);
@@ -150,7 +162,7 @@
 
   function kwChip(prefix, i, text) {
     const id = prefix + i;
-    return `<button type="button" class="wkw${checked.has(id) ? ' on' : ''}" data-id="${id}">${PE.gl(text)}</button>`;
+    return `<button type="button" class="wkw${checked.has(id) ? ' on' : ''}${autoIds.has(id) ? ' auto' : ''}" data-id="${id}">${PE.gl(text)}</button>`;
   }
 
   function saveResult() {
@@ -199,6 +211,8 @@
     if (!t) return;
     if (phase === 'prompt') {
       const dump = $('wDump'); if (dump) notes = dump.value;
+      autoIds = new Set();
+      autoCheck(mustList(t), 'm'); autoCheck(refList(t), 'r');
       phase = 'reveal'; render();
     } else if (phase === 'reveal') {
       saveResult(); phase = 'result'; render();
@@ -207,7 +221,7 @@
     }
   });
   $('quizSkip').addEventListener('click', () => {
-    if (phase === 'reveal') { phase = 'prompt'; checked = new Set(); startTimer(); render(); return; }
+    if (phase === 'reveal') { phase = 'prompt'; checked = new Set(); autoIds = new Set(); startTimer(); render(); return; }
     if (phase === 'result') { openTopic(idx); return; }
     go(1);
   });
