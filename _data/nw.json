@@ -94,6 +94,9 @@
    1,
    4
   ],
+  "name": "정보이론(Information Theory)",
+  "en": "Information Theory",
+  "reviewed": true,
   "outline": [
    "의미 있는 정보 전달을 위한 정보이론(Information Theory)의 개념",
    "샤논의 제1정리 및 제2정리 설명",
@@ -166,6 +169,8 @@
    6
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "맨체스터 코딩(Manchester Coding)",
+  "en": "Manchester Coding",
   "reviewed": true,
   "outline": [
    "맨체스터 코딩 (Manchester Coding)의 개요",
@@ -244,6 +249,8 @@
    7,
    8
   ],
+  "name": "차등 맨체스터 코딩(Differential Manchester Coding)",
+  "en": "Differential Manchester Coding",
   "reviewed": true,
   "outline": [
    "차등적 맨체스터 부호화(Differential Manchester Encoding) 의 개념",
@@ -307,6 +314,8 @@
    10
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "QAM(Quadrature Amplitude Modulation, 직교 진폭 변조)",
+  "en": "Quadrature Amplitude Modulation",
   "reviewed": true,
   "outline": [
    "직교 진폭 변조, QAM(Quadrature Amplitude Modulation)의 개요",
@@ -361,6 +370,8 @@
    14
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "CSMA/CD(Carrier Sense Multiple Access with Collision Detection)",
+  "en": "Carrier Sense Multiple Access with Collision Detection",
   "reviewed": true,
   "outline": [
    "반송파 감지 다중 접속 및 충돌탐지, CSMA/CD의 개념",
@@ -436,6 +447,9 @@
    15,
    17
   ],
+  "name": "CSMA/CA(Carrier Sense Multiple Access with Collision Avoidance)",
+  "en": "Carrier Sense Multiple Access with Collision Avoidance",
+  "reviewed": true,
   "outline": [
    "IEEE 802.11 Protocol 의 무선랜 MAC (Media Access Control) 기법, CSMA/CA의 개요",
    "- CSMA/CA (Carrier Sense Multiple Access/Collision Avoidance) 의 정의",
@@ -525,6 +539,8 @@
    18,
    23
   ],
+  "name": "애드혹 네트워크(Ad hoc Network)",
+  "en": "Ad hoc Network",
   "reviewed": true,
   "outline": [
    "기지국과 유선망이 필요 없는, Ad-hoc Network의 개요",
@@ -542,48 +558,87 @@
   "id": "NW_026",
   "code": "NW_026",
   "title": "DNS",
-  "subtitle": "DNS(Domain Name Server)",
+  "subtitle": "DNS(Domain Name System)",
   "domain": "NW",
   "category": "NW > 유/무선 네트워크 형태 > DNS",
-  "definition": "네트워크에서 도메인이나 호스트 이름을 숫자로 된 IP 주소로 해석해주는 TCP/IP 네트워크 서비스",
+  "definition": "도메인 이름을 IP 주소로(정방향), IP 주소를 도메인 이름으로(역방향) 변환해 주는 계층적·분산형 이름 해석 시스템 (RFC 1034/1035)",
   "keywords": [
-   "구성요소: Domain Name Space",
-   "Name Server",
-   "Resolver",
-   "RR 구성: Name, Type, Class, TTL, RD Length, RD(Resource Data)"
+   "구성요소: 도메인 네임 스페이스(Domain Name Space) · 네임 서버(Name Server) · 리졸버(Resolver)",
+   "계층: 루트(Root) → TLD → SLD",
+   "네임 서버: 권한(Authoritative) · 캐시(Caching/Recursive)",
+   "질의: 재귀적(Recursive) · 반복적(Iterative)",
+   "RR(레코드): A · AAAA · CNAME · MX · PTR · SOA(Start of Authority)",
+   "전송: UDP/TCP 53 · 영역 전송(Zone Transfer) AXFR/IXFR",
+   "보안: DNSSEC · DoT · DoH",
+   "위협: 캐시 포이즈닝(Cache Poisoning) · DNS 증폭(Amplification) 공격"
   ],
   "sections": [
    {
-    "title": "네트워크 관리를 위한 DNS(Domain Name Server) 개요",
+    "title": "DNS(Domain Name System)의 개념",
     "subsections": [
      {
-      "title": "DNS(Domain Name Server)의 정의",
+      "title": "정의",
       "items": [
-       "인터넷 사용에 있어 인터넷 IP 주소 대신 문자로 구성된 이름을 사용할 수 있도록 하는 명칭 체계",
-       "인터넷 정보를 담고 있는 호스트 이름과 IP주소를 매핑해 주는 거대 분산 시스템"
+       "사람이 기억하기 쉬운 도메인 이름(www.example.com)과 IP 주소를 서로 변환하는 인터넷 이름 해석 시스템",
+       "전 세계 네임 서버가 계층적으로 나눠 관리하는 분산 데이터베이스 (RFC 1034/1035)"
       ]
      },
      {
-      "title": "네트워크 관리를 위한 DNS 역할",
+      "title": "필요성",
       "items": [
-       "DNS가 적용되지 않은 환경에서는 인터넷의 네트워크 주소를 직접 사용하여야 원하는 호스트와 통신가능",
-       "초기 인터넷 환경에서는 호스트 파일을 이용하여 도메인 이름과 IP를 매칭하여 사용함"
+       "초기 인터넷은 hosts 파일 하나로 이름–IP를 매핑 → 호스트 증가 시 갱신·배포 불가",
+       "이름을 계층(도메인)으로 나눠 위임(Delegation)하면 각 조직이 자기 영역만 관리 가능"
       ]
      }
     ]
    },
    {
-    "title": "DNS 구성도, 구성요소 및 동작절차",
+    "title": "DNS 구성요소 및 동작 절차",
     "subsections": [
      {
-      "title": "DNS 구성도, 구성요소",
-      "items": []
+      "title": "구성요소",
+      "items": [
+       "도메인 네임 스페이스(Domain Name Space): 루트(.) → TLD(.com, .kr) → SLD(example.com)로 이어지는 트리 구조 이름 공간",
+       "네임 서버(Name Server): 권한(Authoritative) 서버는 존(Zone)의 원본 레코드 보유, 캐시(Recursive) 서버는 대신 찾아 주고 결과를 TTL 동안 캐시",
+       "리졸버(Resolver): 응용 프로그램의 요청을 받아 질의를 만들고 응답을 해석하는 클라이언트 측 구성요소(스텁 리졸버)"
+      ]
      },
      {
-      "title": "DNS의 구성 요소",
+      "title": "재귀적·반복적 질의",
       "items": [
-       "도메인 네임의 데이터 조회 기능을 수행하는 소프트웨어 라이브러리 형태의 루틴",
-       "응용 어플리케이션으로부터 도메인 네임과 조회 대상이 되는 레코드 타입을 입력 받아인터넷 상에서 해당 도메인이 설정되어 있는 네임서버를 자동으로 추적 탐색하여 원하는데이터를 반환하는 기능 수행"
+       "재귀적(Recursive): 클라이언트 → 캐시 DNS 서버, 서버가 끝까지 찾아 최종 응답만 반환",
+       "반복적(Iterative): 캐시 DNS 서버 → 루트 → TLD → 권한 서버 순으로, 각 서버는 다음 서버 정보(Referral)를 반환",
+       "기본 UDP 53, 응답이 크거나(TC 비트) 영역 전송(AXFR/IXFR) 시 TCP 53"
+      ]
+     },
+     {
+      "title": "주요 레코드(RR)",
+      "items": [
+       "A: 이름 → IPv4 / AAAA: 이름 → IPv6",
+       "CNAME: 별칭(Canonical Name) / MX: 메일 서버 / NS: 위임할 네임 서버",
+       "PTR: IP → 이름(역방향) / SOA: 존 시작·주 서버·시리얼·갱신 주기",
+       "RR 형식: NAME · TYPE · CLASS · TTL · RDLENGTH · RDATA"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "DNS 보안 위협 및 대응",
+    "subsections": [
+     {
+      "title": "위협",
+      "items": [
+       "캐시 포이즈닝(Cache Poisoning): 위조 응답을 캐시 서버에 주입해 사용자를 가짜 사이트로 유도",
+       "DNS 증폭(Amplification) 공격: 출발지 IP를 피해자로 위조해 작은 질의로 큰 응답을 유발하는 DDoS",
+       "도청·변조: 평문 UDP 질의는 내용 노출"
+      ]
+     },
+     {
+      "title": "대응 기술",
+      "items": [
+       "DNSSEC: 전자서명(RRSIG·DNSKEY·DS)으로 응답의 출처·무결성 검증 (기밀성은 제공 안 함)",
+       "DoT(DNS over TLS, TCP 853) · DoH(DNS over HTTPS, 443) · DoQ(DNS over QUIC): 질의 암호화",
+       "소스 포트·트랜잭션 ID 무작위화, 개방형 재귀 서버 차단, 응답 속도 제한(RRL)"
       ]
      }
     ]
@@ -594,58 +649,112 @@
    24,
    30
   ],
-  "reviewed": true,
   "outline": [
-   "네트워크 관리를 위한 DNS(Domain Name Server) 개요",
-   "- DNS(Domain Name Server)의 정의",
-   "- 네트워크 관리를 위한 DNS 역할",
-   "DNS 구성도, 구성요소 및 동작절차",
-   "- DNS 구성도, 구성요소",
-   "- DNS의 구성 요소"
-  ]
+   "DNS(Domain Name System)의 개념",
+   "- 정의",
+   "- 필요성(hosts 파일의 한계)",
+   "DNS 구성요소 및 동작 절차",
+   "- 구성요소",
+   "- 재귀적·반복적 질의",
+   "- 주요 레코드(RR)",
+   "DNS 보안 위협 및 대응",
+   "- 위협",
+   "- 대응 기술"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "리졸버(Resolver)",
+   "재귀적 질의(Recursive Query)",
+   "반복적 질의(Iterative Query)",
+   "TLD(Top-Level Domain)",
+   "CNAME(Canonical Name) 레코드",
+   "PTR(Pointer) 레코드",
+   "SOA(Start of Authority) 레코드",
+   "영역 전송(Zone Transfer, AXFR/IXFR)",
+   "DNSSEC(DNS Security Extensions)",
+   "캐시 포이즈닝(Cache Poisoning)"
+  ],
+  "quiz_avoid": [
+   "NW_069",
+   "NW_071"
+  ],
+  "name": "DNS(Domain Name System)",
+  "en": "Domain Name System",
+  "reviewed": true
  },
  {
   "id": "NW_031_01",
   "code": "NW_031_01",
-  "title": "다중화(multiplexing)과 다원접속(multi access)",
+  "title": "다중화(Multiplexing)와 다원접속(Multiple Access)",
   "subtitle": "",
   "domain": "NW",
   "category": "NW > 다중화/다중접속",
-  "definition": "다중화(Multiplexing)는 하나의 전송로를 분할해 여러 신호를 동시에 송수신하도록 다수 채널로 결합하는 기술이고, 다원접속(Multiple Access)은 한정된 전송 자원(시간·공간·코드·주파수)을 다수 노드가 효율적·공평하게 공유하는 기술.",
+  "definition": "다중화(Multiplexing)는 한 송신 지점에서 여러 신호를 하나의 전송로에 묶어 보내는 기술, 다원접속(Multiple Access)은 여러 단말이 주파수·시간·코드·공간 자원을 나눠 하나의 매체를 공유하는 기술",
   "keywords": [
-   "다중화: FDM, TDM, SDM, CDM, WDM",
-   "다원접속: FDMA, TDMA, SDMA, CDMA",
-   "동적할당: ALOHA, CSMA/CD, 토큰, 폴링",
-   "송신 지점 1곳 vs 여러 곳"
+   "다중화: FDM · TDM(동기식/통계적) · CDM · WDM · SDM · OFDM",
+   "다원접속: FDMA · TDMA · CDMA · OFDMA · SDMA",
+   "랜덤 접속(Random Access): ALOHA · CSMA/CD · CSMA/CA",
+   "제어 접속(Controlled Access): 폴링(Polling) · 토큰 패싱(Token Passing)",
+   "구분: 송신 지점 1곳(주로 하향, Downlink) vs 여러 곳(주로 상향, Uplink)"
   ],
   "sections": [
    {
-    "title": "네트워크 모델에서 다중화와 다원접속 설명",
+    "title": "다중화와 다원접속의 개념",
     "subsections": [
      {
-      "title": "전송방식의 다중화(Multiplexing)",
+      "title": "정의",
       "items": [
-       "Frequency Division Multiplexing",
-       "전송경로 상의 공통 채널을 더욱 효율적으로 이용하기 위한 주파수 분할에 의한 다중화 방식",
-       "Time Division Multiplexing",
-       "시간 분할된 여러 사용자 타임슬롯을 하나로 결합시키는 다중화방식",
-       "Spatial Division Multiplexing"
+       "다중화(Multiplexing): 한 지점의 다중화기(MUX)가 여러 신호를 하나의 전송로에 결합해 전송 효율을 높이는 기술",
+       "다원접속(Multiple Access): 독립적으로 송신하는 여러 단말이 한정된 무선·유선 자원을 나눠 공유하는 기술"
+      ]
+     },
+     {
+      "title": "비교",
+      "items": [
+       "송신 지점: 다중화 1곳(동일 지점) / 다원접속 여러 곳(각 단말)",
+       "링크 관점: 다중화는 주로 하향(Downlink, 기지국→단말), 다원접속은 주로 상향(Uplink, 단말→기지국)",
+       "방식: FDM·TDM·CDM·WDM·SDM ↔ FDMA·TDMA·CDMA·OFDMA·SDMA"
       ]
      }
     ]
    },
    {
-    "title": "다중화와 다중접속의 기술적 차이점",
+    "title": "다중화 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "주파수·시간·코드·파장·공간 분할",
       "items": [
-       "전송매체의 효율적 이용 - 한정된 자원의 공동 이용",
-       "통신비용 절감 - 사용자의 구분",
-       "데이터 송신 지점이 한 곳, 동일 지점에 - 데이터 송신 지점이 여러 곳, 독립된 각터미널에서 송출",
-       "단일 송신국에서 신호가 다중화되어 발 - 여러 단말기 신호가 다중화되어 발신신",
-       "FDM, TDM, CDM, WDM, SDM - FDMA, TDMA, CDMA, WDMA",
-       "하향 Down-LINK - 상향 UP-LINK"
+       "FDM: 대역을 부채널로 나누고 보호대역(Guard Band)으로 간섭 방지",
+       "TDM: 시간 슬롯으로 분할, 동기식(Synchronous)은 슬롯 고정 할당(빈 슬롯 낭비), 통계적(Statistical)은 데이터 있는 채널에만 동적 할당(주소 정보 필요)",
+       "CDM: 서로 직교하는 확산 코드로 같은 시간·주파수에서 신호 구분",
+       "WDM: 하나의 광섬유에 서로 다른 파장(λ)을 실어 전송 (CWDM·DWDM)",
+       "SDM: 여러 물리 전송로나 다중 안테나(MIMO)로 공간을 분리해 동시 전송",
+       "OFDM: 서로 직교하는 다수 부반송파가 겹쳐도 간섭 없이 전송, 다중경로 페이딩에 강함"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "다원접속 방식",
+    "subsections": [
+     {
+      "title": "채널 분할 방식",
+      "items": [
+       "FDMA: 사용자별 주파수 채널 할당 (1G 아날로그, AMPS)",
+       "TDMA: 같은 주파수를 시간 슬롯으로 나눠 할당 (2G GSM)",
+       "CDMA: 사용자별 고유 코드로 확산 (2G IS-95, 3G WCDMA)",
+       "OFDMA: 부반송파 묶음(Resource Block)을 사용자별 할당 (LTE 하향, 5G NR, Wi-Fi 6)",
+       "SDMA: 빔포밍·MU-MIMO로 공간적으로 떨어진 사용자에게 같은 자원 재사용"
+      ]
+     },
+     {
+      "title": "랜덤 접속·제어 접속",
+      "items": [
+       "ALOHA: 감지 없이 전송, 충돌 시 임의 시간 후 재전송 (Pure·Slotted)",
+       "CSMA/CD: 반송파 감지 후 전송, 충돌 감지 시 Jam 신호·백오프 (유선 이더넷, IEEE 802.3)",
+       "CSMA/CA: IFS·랜덤 백오프·RTS/CTS로 충돌 회피 (무선랜, IEEE 802.11)",
+       "폴링(Polling): 주국이 각 단말에 차례로 송신 여부를 물음",
+       "토큰 패싱(Token Passing): 토큰을 가진 노드만 송신 (Token Ring, FDDI)"
       ]
      }
     ]
@@ -656,13 +765,36 @@
    31,
    33
   ],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "reviewed": true,
   "outline": [
-   "네트워크 모델에서 다중화와 다원접속 설명",
-   "- 전송방식의 다중화(Multiplexing)",
-   "다중화와 다중접속의 기술적 차이점"
-  ]
+   "다중화와 다원접속의 개념",
+   "- 정의",
+   "- 비교",
+   "다중화 방식",
+   "- 주파수·시간·코드·파장·공간 분할",
+   "다원접속 방식",
+   "- 채널 분할 방식",
+   "- 랜덤 접속·제어 접속"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "FDM(Frequency Division Multiplexing)",
+   "TDM(Time Division Multiplexing)",
+   "WDM(Wavelength Division Multiplexing)",
+   "OFDMA(Orthogonal Frequency Division Multiple Access)",
+   "SDMA(Space Division Multiple Access)",
+   "CDMA(Code Division Multiple Access)",
+   "알로하(ALOHA)",
+   "CSMA/CD(Carrier Sense Multiple Access with Collision Detection)",
+   "토큰 패싱(Token Passing)",
+   "폴링(Polling)"
+  ],
+  "quiz_avoid": [
+   "NW_080",
+   "NW_071"
+  ],
+  "name": "다중화와 다원접속(Multiplexing & Multiple Access)",
+  "en": "Multiplexing & Multiple Access",
+  "reviewed": true
  },
  {
   "id": "NW_031_02",
@@ -737,6 +869,9 @@
    34,
    35
   ],
+  "name": "비직교 다중접속(NOMA, Non-Orthogonal Multiple Access)",
+  "en": "NOMA, Non-Orthogonal Multiple Access",
+  "reviewed": true,
   "outline": [
    "5G 주파수 효율 향상 기술, NOMA (Non-Orthogonal Multiple Access)의 개요",
    "- NOMA (Non-Orthogonal Multiple Access)의 정의",
@@ -838,6 +973,8 @@
    36,
    44
   ],
+  "name": "멀티캐스트(Multicast)",
+  "en": "Multicast",
   "reviewed": true,
   "outline": [
    "데이터 중복전송 최소화한 1:N 전송기술, Multicast의 개요",
@@ -954,6 +1091,8 @@
    45,
    54
   ],
+  "name": "전송 계층(Transport Layer, L4)",
+  "en": "Transport Layer, L4",
   "reviewed": true,
   "outline": [
    "세그먼트 단위 데이터 전송 보장 계층, Transport Layer의 개요",
@@ -1028,6 +1167,9 @@
    55,
    57
   ],
+  "name": "네트워크 계층(Network Layer, L3)",
+  "en": "Network Layer, L3",
+  "reviewed": true,
   "outline": [
    "Data 전송을 통신 경로 선택, Network Layer의 개요",
    "- Network Layer의 정의",
@@ -1066,6 +1208,9 @@
    58,
    59
   ],
+  "name": "데이터 링크 계층(Data Link Layer, L2)",
+  "en": "Data Link Layer, L2",
+  "reviewed": true,
   "outline": [
    "Data Link Layer의 개요",
    "Data Link Layer에서의 오류제어 유형 및 기법설명"
@@ -1114,6 +1259,9 @@
    60,
    64
   ],
+  "name": "TCP(Transmission Control Protocol)",
+  "en": "Transmission Control Protocol",
+  "reviewed": true,
   "outline": [
    "TCP 데이터 전송절차 및 Handshake설명",
    "- TCP 데이터 전송절차",
@@ -1190,6 +1338,8 @@
    65,
    67
   ],
+  "name": "TCP 오류 제어(TCP Error Control)",
+  "en": "TCP Error Control",
   "reviewed": true,
   "outline": [
    "신뢰성 있는 통신, TCP/IP 오류제어의 개요",
@@ -1281,6 +1431,8 @@
    70
   ],
   "keywords_note": "원문 키워드 칸에 다른 토픽(Harbor) 키워드가 잘못 들어가 있어 본문에서 발췌",
+  "name": "어리석은 윈도우 신드롬(Silly Window Syndrome)",
+  "en": "Silly Window Syndrome",
   "reviewed": true,
   "outline": [
    "비효율적 네트워크 흐름제어 현상, 어리석은 윈도우 신드롬(Silly Window Syndrome) 설명",
@@ -1312,6 +1464,9 @@
    71,
    73
   ],
+  "name": "서브네팅(Subnetting)",
+  "en": "Subnetting",
+  "reviewed": true,
   "outline": []
  },
  {
@@ -1349,6 +1504,9 @@
    74,
    75
   ],
+  "name": "슈퍼네팅(Supernetting)",
+  "en": "Supernetting",
+  "reviewed": true,
   "outline": [
    "라우팅 관리에 유용한 Supernetting 의 개념도",
    "Supernetting의 계산방법"
@@ -1375,6 +1533,8 @@
    76,
    77
   ],
+  "name": "CIDR(Classless Inter-Domain Routing)",
+  "en": "Classless Inter-Domain Routing",
   "reviewed": true,
   "outline": []
  },
@@ -1443,6 +1603,8 @@
    78,
    79
   ],
+  "name": "VLSM(Variable Length Subnet Mask)",
+  "en": "Variable Length Subnet Mask",
   "reviewed": true,
   "outline": [
    "서브네트의 서브넷팅, VLSM 개요",
@@ -1503,6 +1665,9 @@
    80,
    81
   ],
+  "name": "패킷 단편화(Packet Fragmentation)",
+  "en": "Packet Fragmentation",
+  "reviewed": true,
   "outline": [
    "IP 패킷 단편화의 개념과 특징",
    "Ipv4와 Ipv6에서의 처리방식",
@@ -1569,6 +1734,8 @@
    82,
    84
   ],
+  "name": "IGMP(Internet Group Management Protocol)",
+  "en": "Internet Group Management Protocol",
   "reviewed": true,
   "outline": [
    "멀티캐스트의 기본 요소 및 IGMP",
@@ -1618,6 +1785,9 @@
    85,
    87
   ],
+  "name": "SCTP(Stream Control Transmission Protocol)",
+  "en": "Stream Control Transmission Protocol",
+  "reviewed": true,
   "outline": [
    "SCTP 프로토콜 계층구조 및 기술요소",
    "- SCTP 프로토콜 계층구조"
@@ -1672,6 +1842,9 @@
    88,
    92
   ],
+  "name": "ARP(Address Resolution Protocol)",
+  "en": "Address Resolution Protocol",
+  "reviewed": true,
   "outline": [
    "네트워크 주소변환, ARP(Address Resolution Protocol) 개요",
    "- ARP 정의",
@@ -1725,6 +1898,9 @@
    93,
    94
   ],
+  "name": "RARP(Reverse Address Resolution Protocol)",
+  "en": "Reverse Address Resolution Protocol",
+  "reviewed": true,
   "outline": [
    "RARP(Reverse Address Resolution Protocol) 개요",
    "- RARP 의 정의",
@@ -1736,83 +1912,109 @@
   "id": "NW_069",
   "code": "NW_069",
   "title": "DHCP",
-  "subtitle": "",
+  "subtitle": "DHCP(Dynamic Host Configuration Protocol)",
   "domain": "NW",
   "category": "NW > 기타 > DHCP",
-  "definition": "한정된 IP주소를 정적/동적 할당 방식을 통해 일정기간 임대를 제공하는 프로토콜 (RFC 1541 규정)",
+  "definition": "클라이언트에 IP 주소·서브넷 마스크·기본 게이트웨이·DNS 서버 등 네트워크 설정을 임대(Lease) 방식으로 자동 할당하는 프로토콜 (RFC 2131, UDP 67/68)",
   "keywords": [
-   "초기화: DORA",
-   "갱신: RA",
-   "종료: R"
+   "할당 절차(DORA): Discover → Offer → Request → ACK",
+   "임대 갱신: T1(50%) Renewing · T2(87.5%) Rebinding",
+   "기타 메시지: NAK · Decline · Release · Inform",
+   "할당 방식: 자동(Automatic) · 동적(Dynamic) · 수동(Manual)",
+   "포트: UDP 67(서버) / 68(클라이언트) · BOOTP 계승",
+   "릴레이 에이전트(Relay Agent): 다른 서브넷 서버로 중계",
+   "보안: DHCP 스타베이션(Starvation) · 위장 서버(Rogue DHCP) → DHCP 스누핑(Snooping)"
   ],
   "sections": [
    {
-    "title": "IP 주소 및 세부정보의 동적 호스트 구성 프로토콜, DHCP의 개념",
+    "title": "DHCP(Dynamic Host Configuration Protocol)의 개념",
     "subsections": [
      {
-      "title": "DHCP(Dynamic Host Configuration Protocol)의 정의",
-      "items": []
+      "title": "정의",
+      "items": [
+       "IP 주소와 네트워크 설정값을 서버가 일정 기간 임대해 주는 클라이언트–서버 프로토콜 (RFC 2131, 옵션은 RFC 2132)",
+       "BOOTP를 계승해 같은 메시지 형식·포트(서버 UDP 67, 클라이언트 UDP 68) 사용, IPv6는 DHCPv6(RFC 8415)"
+      ]
      },
      {
-      "title": "DHCP의 특징",
+      "title": "할당 방식",
       "items": [
-       "IP 주소, 서브넷 마스크, 게이트웨이, DNS 등 IP 매개변수의 자동설정",
-       "2개의 구성요소 즉, DHCP 클라이언트(내 노트북) 및 DHCP 서버로 정의",
-       "IP 부족 해결을 위해 NAT(Network Address Translation)와 같이 사용됨"
+       "자동(Automatic): 영구적으로 할당",
+       "동적(Dynamic): 임대 기간 동안만 할당하고 만료되면 회수·재사용",
+       "수동(Manual): 관리자가 MAC 주소별로 지정(예약)한 주소를 전달"
       ]
      }
     ]
    },
    {
-    "title": "DHCP의 개념도 및 동작원리",
+    "title": "DHCP 동작 절차",
     "subsections": [
      {
-      "title": "DHCP의 개념도",
+      "title": "최초 할당(DORA)",
       "items": [
-       "관리자는 DHCP 서버를 통하여, IP Pool로부터 클라이언트에게 IP주소들을 동적으로 할당할 수 있으며, 더이상 사용되지 않는 경우 회수함."
+       "Discover: 클라이언트가 브로드캐스트로 서버 탐색",
+       "Offer: 서버가 임대 가능한 IP·임대 기간 등 제안",
+       "Request: 여러 제안 중 하나를 골라 요청(브로드캐스트로 다른 서버에도 선택 결과 통지)",
+       "ACK: 서버가 할당 확정 → 클라이언트는 ARP로 중복 확인 후 사용, 중복이면 Decline"
       ]
      },
      {
-      "title": "DHCP의 동작 원리",
+      "title": "임대 갱신·반납",
       "items": [
-       "초기화에는 Discover, Offer, Request, Ack, 갱신시는: Request, Ack 종료시에는: Release사용"
+       "T1(임대 시간 50%): Renewing, 할당한 서버에 유니캐스트 Request → ACK",
+       "T2(87.5%): Rebinding, 아무 서버에나 브로드캐스트 Request",
+       "NAK: 서버가 요청을 거부(다른 서브넷으로 이동 등) → 처음부터 다시 Discover",
+       "Release: 사용 종료 시 주소 반납 / Inform: IP는 이미 있고 다른 설정만 요청",
+       "릴레이 에이전트(Relay Agent): 라우터가 브로드캐스트를 다른 서브넷의 서버로 유니캐스트 중계"
       ]
      }
     ]
    },
    {
-    "title": "DHCP의 장단점",
+    "title": "DHCP 보안 위협 및 대응",
     "subsections": [
      {
       "title": null,
       "items": [
-       "안전하고 신뢰할 수 있는 구성 - 브로드캐스트 트래픽 유발, 네트워크 성능 저하",
-       "구성 관리 작업 간소화 - 실제 인터넷을 사용하지 않아도 IP 주소가 할당",
-       "뛰어난 확장성 - DHCP 서버에 전적으로 의존",
-       "네트워크를 통한 BOOTP의 지원",
-       "DHCP 데이터베이스의 관리",
-       "BOOTP : 서버와 클라이언트 간의 초기 적재 통신 규약"
+       "DHCP 스타베이션(Starvation): 위조 MAC으로 Discover를 대량 전송해 주소 풀 고갈",
+       "위장 서버(Rogue DHCP): 가짜 서버가 잘못된 게이트웨이·DNS를 배포해 트래픽 가로채기",
+       "대응: DHCP 스누핑(Snooping)으로 신뢰 포트(Trusted Port)에서 온 서버 메시지만 허용, 포트 보안(Port Security)으로 MAC 수 제한"
       ]
      }
     ]
    }
   ],
   "warnings": [],
-  "dueum": "DORA(도라)-RA-R(라)",
+  "dueum": "DORA: Discover → Offer → Request → ACK",
   "pages": [
    95,
    97
   ],
-  "reviewed": true,
   "outline": [
-   "IP 주소 및 세부정보의 동적 호스트 구성 프로토콜, DHCP의 개념",
-   "- DHCP(Dynamic Host Configuration Protocol)의 정의",
-   "- DHCP의 특징",
-   "DHCP의 개념도 및 동작원리",
-   "- DHCP의 개념도",
-   "- DHCP의 동작 원리",
-   "DHCP의 장단점"
-  ]
+   "DHCP(Dynamic Host Configuration Protocol)의 개념",
+   "- 정의",
+   "- 할당 방식",
+   "DHCP 동작 절차",
+   "- 최초 할당(DORA)",
+   "- 임대 갱신·반납",
+   "DHCP 보안 위협 및 대응"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "DORA(Discover·Offer·Request·ACK)",
+   "임대(Lease) 갱신 T1·T2",
+   "DHCP 릴레이 에이전트(Relay Agent)",
+   "DHCP 스누핑(Snooping)",
+   "DHCP 스타베이션(Starvation)",
+   "위장 DHCP 서버(Rogue DHCP Server)",
+   "BOOTP(Bootstrap Protocol)"
+  ],
+  "quiz_avoid": [
+   "NW_026"
+  ],
+  "name": "DHCP(Dynamic Host Configuration Protocol)",
+  "en": "Dynamic Host Configuration Protocol",
+  "reviewed": true
  },
  {
   "id": "NW_070",
@@ -1891,6 +2093,9 @@
    98,
    100
   ],
+  "name": "WebRTC(Web Real-Time Communication)",
+  "en": "Web Real-Time Communication",
+  "reviewed": true,
   "outline": [
    "브라우저 기반 음성/화상 통신, WebRTC의 개념",
    "WebRTC의 구성도 및 구성요소",
@@ -1903,56 +2108,78 @@
   "id": "NW_071",
   "code": "NW_071",
   "title": "QUIC",
-  "subtitle": "QUIC(Quick UDP Internet Connections)",
+  "subtitle": "QUIC (RFC 9000, HTTP/3의 전송 계층)",
   "domain": "NW",
   "category": "NW > 2019 출제 예상 토픽 > QUIC",
-  "definition": "서버와 사용자 기기 간 연결 및 전송 지연을 최소화 하기 위해, TCP+TLS 조합 대신 UDP+TLS 조합을이용하는 전송단(Transport Layer) 프로토콜",
+  "definition": "UDP 위에서 TLS 1.3 암호화·스트림 다중화·혼잡 제어를 통합 제공해 연결 지연(1-RTT/0-RTT)과 HOL 블로킹을 줄인 IETF 표준 전송 프로토콜 (RFC 9000)",
   "keywords": [
-   "UDP",
-   "DTLS",
-   "RTT(Round Trip Time) 최소화"
+   "기반: UDP + TLS 1.3 내장 (RFC 9000 · 9001 · 9002)",
+   "핸드셰이크: 1-RTT(신규) · 0-RTT(재연결, 재전송 공격 주의)",
+   "스트림 다중화(Stream Multiplexing) → HOL 블로킹(Head-of-Line Blocking) 해소",
+   "연결 ID(Connection ID) → 연결 이전(Connection Migration)",
+   "신뢰성: 단조 증가 패킷 번호(Packet Number) · 손실 감지·혼잡 제어",
+   "HTTP/3(RFC 9114) · QPACK 헤더 압축",
+   "사용자 공간(User Space) 구현 → 빠른 개선·배포"
   ],
   "sections": [
    {
-    "title": "RTT 최소화 위한, QUIC 의 개요",
+    "title": "QUIC의 개념",
     "subsections": [
      {
-      "title": "QUIC(Quick UDP Internet Connections)의 개념",
+      "title": "정의",
       "items": [
-       "서버와 사용자 기기 간 네트워크 반응 속도를 높이기 위해 2013 년 6 월 구글에서 공개한 프로토콜",
-       "기기와 서버가 보안 통신할 때 주고 받는 신호를 완료하기 까지 걸리는 RTT를 줄여 인터넷 속도를 향상"
+       "UDP 위에 신뢰성·혼잡 제어·TLS 1.3 보안·다중화를 한 계층으로 통합한 전송 프로토콜",
+       "Google이 개발(gQUIC, 2013 공개)한 뒤 IETF가 표준화: RFC 9000(전송), 9001(TLS 적용), 9002(손실 감지·혼잡 제어), 2021"
       ]
      },
      {
-      "title": "QUIC의 특징",
+      "title": "등장 배경(TCP+TLS의 한계)",
       "items": [
-       "TCP 대신 UDP Multiplexed Connection 사용",
-       "TLS 와 결합하여 보안 서비스 제공"
+       "TCP 3-way 핸드셰이크 + TLS 핸드셰이크로 연결 지연 누적",
+       "TCP는 바이트 스트림 하나 → 패킷 하나 손실 시 모든 HTTP/2 스트림이 대기(HOL 블로킹)",
+       "TCP는 OS 커널·중간 장비에 고정돼 개선이 느림(Ossification)"
       ]
      }
     ]
    },
    {
-    "title": "QUIC 의 연결 수립과정 (기존 방식과 효율성 측면 비교)",
+    "title": "QUIC의 핵심 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "연결 수립(1-RTT·0-RTT)",
       "items": [
-       "보안웹 브라우징을 위한 표준 방식은 TCP+TLS 연결이며 이는 브라우저가 웹 페이지를 활성화하기 전보안연결을 위해 2~3 회의 신호 왕복을 요구-",
-       "반면QUIC 은 전에 서버와 통신했던 클라이언트라면 왕복 없이 데이터를 받아 페이지 로드를 더 빠르게 수행"
+       "전송·암호 핸드셰이크를 합쳐 신규 연결 1-RTT",
+       "재연결 시 이전 세션 정보로 첫 패킷부터 데이터 전송(0-RTT) → 재전송 공격(Replay Attack)에 취약해 멱등 요청에만 사용 권장"
+      ]
+     },
+     {
+      "title": "스트림 다중화·연결 이전",
+      "items": [
+       "한 연결 안에 독립적인 스트림 여러 개 → 한 스트림의 손실이 다른 스트림을 막지 않음",
+       "IP·포트 대신 연결 ID(Connection ID)로 연결 식별 → Wi-Fi↔LTE 전환 시에도 연결 유지(Connection Migration)"
+      ]
+     },
+     {
+      "title": "신뢰성·혼잡 제어",
+      "items": [
+       "패킷 번호는 재전송 때도 새로 부여(단조 증가) → 재전송 모호성 제거, RTT 정확히 측정",
+       "ACK 기반 손실 감지·재전송, 혼잡 제어(RFC 9002: NewReno 기반, CUBIC·BBR 등 적용 가능), 스트림·연결 단위 흐름 제어",
+       "헤더 대부분과 페이로드를 암호화 → 중간 장비의 간섭 감소",
+       "사용자 공간(User Space) 라이브러리로 구현 → OS 업데이트 없이 빠르게 개선"
       ]
      }
     ]
    },
    {
-    "title": "QUIC 최신 동향",
+    "title": "TCP+TLS 대비 비교 및 동향",
     "subsections": [
      {
       "title": null,
       "items": [
-       "현재크롬과 구글 서버 간 요청의 절반 이상이 QUIC 을 통해 수행 중",
-       "최근 구글 IO 2016 에 소개된 알로 메신저의 핵심기술로서 WebRTC 와 더불어 사용",
-       "향후 QUIC을 더 개선한 뒤 IETF 에 인터넷 표준으로 제안할 계획 [참고: HTTP/2 over QUIC 적용 예시]"
+       "연결 지연: TCP+TLS 1.2 약 3-RTT, TCP+TLS 1.3 2-RTT, QUIC 1-RTT(재연결 0-RTT)",
+       "HOL 블로킹: TCP 연결 단위 발생 / QUIC 스트림 단위로 격리",
+       "HTTP/3(RFC 9114)이 QUIC 위에서 동작, 헤더 압축은 HPACK 대신 QPACK(RFC 9204)",
+       "주요 브라우저·CDN이 HTTP/3 지원, DNS over QUIC(RFC 9250) 등으로 확장"
       ]
      }
     ]
@@ -1964,12 +2191,32 @@
    102
   ],
   "outline": [
-   "RTT 최소화 위한, QUIC 의 개요",
-   "- QUIC(Quick UDP Internet Connections)의 개념",
-   "- QUIC의 특징",
-   "QUIC 의 연결 수립과정 (기존 방식과 효율성 측면 비교)",
-   "QUIC 최신 동향"
-  ]
+   "QUIC의 개념",
+   "- 정의",
+   "- 등장 배경(TCP+TLS의 한계)",
+   "QUIC의 핵심 기술",
+   "- 연결 수립(1-RTT·0-RTT)",
+   "- 스트림 다중화·연결 이전",
+   "- 신뢰성·혼잡 제어",
+   "TCP+TLS 대비 비교 및 동향"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "0-RTT(Zero Round-Trip Time) 재연결",
+   "연결 ID(Connection ID)",
+   "연결 이전(Connection Migration)",
+   "HOL 블로킹(Head-of-Line Blocking) 해소 구조",
+   "HTTP/3(HyperText Transfer Protocol 3)",
+   "QPACK(HTTP/3 헤더 압축)",
+   "스트림 다중화(Stream Multiplexing)"
+  ],
+  "quiz_avoid": [
+   "NW_026",
+   "NW_031_01"
+  ],
+  "name": "QUIC(Quick UDP Internet Connections)",
+  "en": "Quick UDP Internet Connections",
+  "reviewed": true
  },
  {
   "id": "NW_072",
@@ -2020,6 +2267,9 @@
    103,
    104
   ],
+  "name": "VRRP(Virtual Router Redundancy Protocol)",
+  "en": "Virtual Router Redundancy Protocol",
+  "reviewed": true,
   "outline": [
    "VRRP의 구성도 및 구성 요소",
    "- VRRP의 구성도",
@@ -2099,6 +2349,9 @@
    105,
    106
   ],
+  "name": "MPTCP(Multipath TCP, 다중 경로 TCP)",
+  "en": "Multipath TCP",
+  "reviewed": true,
   "outline": [
    "MPCTP 의 개요",
    "- MPTCP 의 개념",
@@ -2174,6 +2427,8 @@
    107,
    111
   ],
+  "name": "L4 스위치(Layer 4 Switch)",
+  "en": "Layer 4 Switch",
   "reviewed": true,
   "outline": [
    "L4 스위치의 개요",
@@ -2235,6 +2490,9 @@
    112,
    113
   ],
+  "name": "로드밸런서(Load Balancer)",
+  "en": "Load Balancer",
+  "reviewed": true,
   "outline": [
    "로드밸런서의 유형과 기술요소",
    "- 로드밸런서의 유형",
@@ -2313,6 +2571,9 @@
    114,
    115
   ],
+  "name": "V2V(Vehicle-to-Vehicle, 차량 간 통신)",
+  "en": "Vehicle-to-Vehicle",
+  "reviewed": true,
   "outline": [
    "교통 효율성 증대 통신기술, V2V의 개요",
    "- V2V(Vehicle to Vehicle)의 정의",
@@ -2326,44 +2587,86 @@
  {
   "id": "NW_080",
   "code": "NW_080",
-  "title": "Connected Car",
+  "title": "커넥티드 카(Connected Car)",
   "subtitle": "",
   "domain": "NW",
   "category": "NW > V2V > Connected Car",
-  "definition": "통신망을 연결해 차량 자체를 정보기술(IT) 기기처럼 활용할 수 있는 자동차 차량 연결성(connectivity)을 강조하는 개념으로 자동차에 네트워크 기능을 탑재함으로써 실시간 네비게이션, 원격 차량제어 및 관리 서비스뿐만 아니라 이메일, 멀티미디어 스트리밍, SNS등 엔터테인먼트 서비스를 지원",
+  "definition": "차량에 통신 기능을 탑재해 다른 차량·인프라·클라우드·보행자와 실시간으로 연결하고, 텔레매틱스·인포테인먼트·원격 제어·OTA 업데이트 등 서비스를 제공하는 지능형 자동차",
   "keywords": [
-   "차량 연결성",
-   "개인화",
-   "양방향",
-   "실시간",
-   "LTE",
-   "WiFi",
-   "V2V",
-   "V2I"
+   "연결방식: 임베디드(Embedded) · 테더드(Tethered) · 통합형(Integrated)",
+   "V2X: V2V · V2I · V2N · V2P",
+   "통신 기술: C-V2X(LTE-V2X → NR-V2X) · WAVE(IEEE 802.11p)",
+   "서비스: 텔레매틱스(Telematics) · 인포테인먼트(Infotainment) · OTA · eCall",
+   "보안: UN R155(CSMS) · UN R156(SUMS) · ISO/SAE 21434(차량 사이버보안 엔지니어링)"
   ],
   "sections": [
    {
-    "title": "커넥티드 카의 개념도 및 구성요소",
+    "title": "커넥티드 카의 개념",
     "subsections": [
      {
-      "title": "커넥티드 카의 개념도",
+      "title": "정의",
       "items": [
-       "자동차를 3G/LTE등 네트워크와 연결해 실시간으로 맞춤형 양방향서비스를 가능하게 함으로써 자동차를 스마트 디바이스(smart device) 화"
+       "통신으로 외부와 상시 연결되어 차량 자체가 하나의 IT 기기처럼 동작하는 자동차",
+       "자율주행·SDV(Software Defined Vehicle)의 기반 기술"
+      ]
+     },
+     {
+      "title": "연결방식에 따른 분류",
+      "items": [
+       "임베디드(Embedded): 통신 모듈과 앱·서비스가 모두 차량에 내장 → 끊김 없는 서비스, 초기 비용 높음",
+       "테더드(Tethered): 앱·서비스는 차량에 있고, 통신만 스마트폰을 빌려 씀(테더링)",
+       "통합형(Integrated): 앱과 통신 모두 스마트폰이 담당, 차량은 디스플레이·입력만 (Apple CarPlay, Android Auto)"
       ]
      }
     ]
    },
    {
-    "title": "연결방식에 따른 분류 및 서비스 종류",
+    "title": "커넥티드 카의 핵심 기술",
     "subsections": [
      {
-      "title": "연결방식에 따른 분류",
+      "title": "V2X 통신 유형",
       "items": [
-       "정보처리와 통신 접속 기능을모두 차량에 설치한 방식",
-       "초기하드웨어와 솔루션 비용이높지만, 끊김 없는(Seamless) 사용자 경험을 제공",
-       "정보처리 기능을 갖춘자동차로 휴대전화 테더링을통해 네트워크에 접속하는방식",
-       "끊김 없는 서비스 제공에한계가 있을 수 있으나, 서비스요금 부과가 용이함",
-       "자동차에 스마트폰을도킹(Docking)해 통신 접속과정보처리 기능을 스마트폰에의존하는 방식"
+       "V2V(Vehicle-to-Vehicle): 차량 간 직접 통신 → 충돌 경고, 군집 주행",
+       "V2I(Vehicle-to-Infrastructure): 신호등·노변 기지국(RSU) 등 도로 인프라와 통신",
+       "V2N(Vehicle-to-Network): 이동통신망을 거쳐 클라우드·서버와 통신",
+       "V2P(Vehicle-to-Pedestrian): 보행자 단말과 통신해 사고 예방"
+      ]
+     },
+     {
+      "title": "통신 기술(C-V2X·WAVE)",
+      "items": [
+       "C-V2X(Cellular V2X): 3GPP 이동통신 기반, LTE-V2X(Rel-14) → NR-V2X(Rel-16, 5G)",
+       "WAVE(Wireless Access in Vehicular Environments): IEEE 802.11p + IEEE 1609, DSRC 계열 무선랜 기반",
+       "국내 C-ITS 통신방식은 2023년 LTE-V2X 단일 방식으로 결정"
+      ]
+     },
+     {
+      "title": "주요 서비스",
+      "items": [
+       "텔레매틱스(Telematics): 통신(Telecommunication)+정보과학(Informatics), 위치 기반 차량 정보·원격 제어",
+       "인포테인먼트(Infotainment): 정보(Information)+오락(Entertainment), 내비게이션·음악·영상",
+       "OTA(Over-The-Air): 무선으로 차량 소프트웨어·펌웨어 업데이트",
+       "eCall: 사고 시 차량이 자동으로 긴급구조센터에 신고 (EU 신차 의무화)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "커넥티드 카 보안 위협 및 대응",
+    "subsections": [
+     {
+      "title": "위협",
+      "items": [
+       "원격 해킹으로 조향·제동 장악 (2015년 지프 체로키 원격 해킹 → 약 140만 대 리콜)",
+       "차량 내부망(CAN)의 인증·암호화 부재, OTA 업데이트 위변조"
+      ]
+     },
+     {
+      "title": "국제 규정·표준",
+      "items": [
+       "UN R155: 사이버보안 관리체계(CSMS, Cyber Security Management System) 인증 요구",
+       "UN R156: 소프트웨어 업데이트 관리체계(SUMS, Software Update Management System) 요구",
+       "ISO/SAE 21434: 차량 사이버보안 엔지니어링 국제 표준 (ISO 26262는 기능 안전 표준)"
       ]
      }
     ]
@@ -2375,11 +2678,37 @@
    120
   ],
   "outline": [
-   "커넥티드 카의 개념도 및 구성요소",
-   "- 커넥티드 카의 개념도",
-   "연결방식에 따른 분류 및 서비스 종류",
-   "- 연결방식에 따른 분류"
-  ]
+   "커넥티드 카의 개념",
+   "- 정의",
+   "- 연결방식에 따른 분류",
+   "커넥티드 카의 핵심 기술",
+   "- V2X 통신 유형",
+   "- 통신 기술(C-V2X·WAVE)",
+   "- 주요 서비스",
+   "커넥티드 카 보안 위협 및 대응",
+   "- 위협",
+   "- 국제 규정·표준"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "임베디드(Embedded)",
+   "테더드(Tethered)",
+   "통합형(Integrated)",
+   "V2V(Vehicle-to-Vehicle)",
+   "V2P(Vehicle-to-Pedestrian)",
+   "C-V2X(Cellular Vehicle-to-Everything)",
+   "WAVE(Wireless Access in Vehicular Environments)",
+   "OTA(Over-The-Air)",
+   "eCall(Emergency Call, 긴급구난체계)",
+   "UN R155(사이버보안 관리체계, CSMS)",
+   "ISO/SAE 21434(차량 사이버보안 표준)"
+  ],
+  "quiz_avoid": [
+   "NW_031_01"
+  ],
+  "name": "커넥티드 카(Connected Car)",
+  "en": "Connected Car",
+  "reviewed": true
  },
  {
   "id": "NW_082",
@@ -2481,6 +2810,8 @@
    121,
    125
   ],
+  "name": "V2X(Vehicle-to-Everything, 차량-사물 통신)",
+  "en": "Vehicle-to-Everything",
   "reviewed": true,
   "outline": [
    "지능형 교통시스템의 핵심 기술, V2X(Vehicle to Everything) 의 개요",
@@ -2555,6 +2886,9 @@
    126,
    130
   ],
+  "name": "DSRC(Dedicated Short Range Communications, 단거리 전용 통신)",
+  "en": "Dedicated Short Range Communications",
+  "reviewed": true,
   "outline": [
    "노변 기지국 통신을 위한 근거리 통신 DSRC의 개요",
    "- DSRC(Dedicated Short Range Communication)의 정의",
@@ -2611,6 +2945,8 @@
    131,
    134
   ],
+  "name": "WAVE(Wireless Access in Vehicular Environments)",
+  "en": "Wireless Access in Vehicular Environments",
   "reviewed": true,
   "outline": [
    "자율주행차의 V2X를 위한 근거리 통신 표준기술, WAVE의 개요",
@@ -2672,6 +3008,9 @@
    135,
    137
   ],
+  "name": "차량 긴급구난체계(eCall, Emergency Call)",
+  "en": "eCall, Emergency Call",
+  "reviewed": true,
   "outline": [
    "e-Call의 개념도 및 기술요소",
    "- e-Call 개념도",
@@ -2750,6 +3089,9 @@
    138,
    139
   ],
+  "name": "6G-V2X(6G Vehicle-to-Everything)",
+  "en": "6G Vehicle-to-Everything",
+  "reviewed": true,
   "outline": [
    "완전 자율주행 핵심 기술, 6G-V2X의 개요",
    "- 6G-V2X의 정의",
@@ -2822,6 +3164,9 @@
    140,
    141
   ],
+  "name": "CAN(Controller Area Network)",
+  "en": "Controller Area Network",
+  "reviewed": true,
   "outline": [
    "ISO 11898, CAN(Controller Area Network)의 개요",
    "- CAN(Controller Area Network)의 정의",
@@ -2914,6 +3259,8 @@
    142,
    151
   ],
+  "name": "무선랜(Wireless LAN)",
+  "en": "Wireless LAN",
   "reviewed": true,
   "outline": [
    "무선랜 Topology 및 구성 요소",
@@ -2974,6 +3321,9 @@
    152,
    153
   ],
+  "name": "와이파이 8(Wi-Fi 8, IEEE 802.11bn)",
+  "en": "Wi-Fi 8, IEEE 802.11bn",
+  "reviewed": true,
   "outline": [
    "차세대 Wi-Fi 8 표준인 IEEE 802.11bn의 정의",
    "Wi-Fi 버전별 비교"
@@ -3045,6 +3395,9 @@
    154,
    156
   ],
+  "name": "단말 위치 설정(Localization/Positioning)",
+  "en": "Localization/Positioning",
+  "reviewed": true,
   "outline": [
    "위치 정보 측위 기술의 유형",
    "무선랜 기반 측위 기술",
@@ -3115,6 +3468,9 @@
    157,
    160
   ],
+  "name": "WPA3(Wi-Fi Protected Access 3)",
+  "en": "Wi-Fi Protected Access 3",
+  "reviewed": true,
   "outline": [
    "차세대 무선랜 암호화 프토토콜, WPA3 의 개요",
    "- WPA3(Wi-Fi Protected Access 3) 의 정의",
@@ -3206,6 +3562,8 @@
    172
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "실내외 위치 측위 기술(Indoor/Outdoor Positioning)",
+  "en": "Indoor/Outdoor Positioning",
   "reviewed": true,
   "outline": [
    "실내 위치 측위 기술 및 측위 방식",
@@ -3276,6 +3634,9 @@
    173,
    174
   ],
+  "name": "네트워크 실시간 측위(NRTK, Network Real-Time Kinematic)",
+  "en": "NRTK, Network Real-Time Kinematic",
+  "reviewed": true,
   "outline": [
    "네트워크 실시간 측위(NRTK, Network RealTime Kinematic)의 개념",
    "- 네트워크 실시간 측위(NRTK, Network RealTime Kinematic)의 정의",
@@ -3390,6 +3751,8 @@
    175,
    180
   ],
+  "name": "사물인터넷(IoT, Internet of Things)",
+  "en": "IoT, Internet of Things",
   "reviewed": true,
   "outline": [
    "능동적 사물과 인간의 소통, IoT의 개요",
@@ -3471,6 +3834,8 @@
    181,
    182
   ],
+  "name": "CoAP(Constrained Application Protocol)",
+  "en": "Constrained Application Protocol",
   "reviewed": true,
   "outline": [
    "낮은사양: 적은 메모리, 낮은 성능의 프로세서 사용",
@@ -3544,6 +3909,9 @@
    183,
    185
   ],
+  "name": "MQTT(MQ Telemetry Transport)",
+  "en": "MQ Telemetry Transport",
+  "reviewed": true,
   "outline": [
    "IoT 환경의 Publish/Subscribe 기반 경량화 프로토콜, MQTT의 개요",
    "- MQTT(Message Queue Telemetry Transport)의 정의",
@@ -3604,6 +3972,9 @@
    186,
    188
   ],
+  "name": "XMPP(Extensible Messaging and Presence Protocol)",
+  "en": "Extensible Messaging and Presence Protocol",
+  "reviewed": true,
   "outline": [
    "XML기반 실시간 메시지 교환 프로토콜, XMPP의 개요",
    "- XMPP(eXtensible Messaging and Presence Protocol)의 정의",
@@ -3691,6 +4062,8 @@
    189,
    194
   ],
+  "name": "V2X(Vehicle-to-Everything, 차량-사물 통신)",
+  "en": "Vehicle-to-Everything",
   "reviewed": true,
   "outline": [
    "유무선 통신망을 활용한 차량 통신기술인 V2X(Vehicle to Everything)의 개요",
@@ -3745,6 +4118,8 @@
    197
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "에너지 사물인터넷(e-IoT, Energy IoT)",
+  "en": "e-IoT, Energy IoT",
   "reviewed": true,
   "outline": [
    "전력 에너지와 IoT 의 융합,e-IoT(Energy IoT)의 개요",
@@ -3819,6 +4194,8 @@
    201
   ],
   "note": "원문 키워드에는 'REACH'로 적혀 있으나 본문 표기는 LEACH",
+  "name": "센서 네트워크 라우팅(Sensor Network Routing)",
+  "en": "Sensor Network Routing",
   "reviewed": true,
   "outline": [
    "센서 라우팅의 정의",
@@ -3932,6 +4309,8 @@
    202,
    205
   ],
+  "name": "매터 표준과 스레드 프로토콜(Matter & Thread)",
+  "en": "Matter & Thread",
   "reviewed": true,
   "outline": [
    "스마트홈(Smart Home)의 개요",
@@ -4012,6 +4391,8 @@
    205,
    209
   ],
+  "name": "IPv6 기반 All-IP(IPv6 All-IP Network)",
+  "en": "IPv6 All-IP Network",
   "reviewed": true,
   "outline": [
    "IPv6 헤더정보 및 전환방법",
@@ -4056,6 +4437,8 @@
    210,
    210
   ],
+  "name": "듀얼 스택(Dual Stack)",
+  "en": "Dual Stack",
   "reviewed": true,
   "outline": [
    "IPv4/IPv6 Dual stack 방식의 개념"
@@ -4106,6 +4489,9 @@
    211,
    211
   ],
+  "name": "터널링(Tunneling)",
+  "en": "Tunneling",
+  "reviewed": true,
   "outline": [
    "전송 데이터의 캡슐화를 통한 보안기능, 터널링의 개요",
    "- 터널링 ( Tunneling)의 정의",
@@ -4196,6 +4582,8 @@
    215
   ],
   "note": "원문 키워드에는 'IPv4 특징 : 128 bit'로 적혀 있으나 128bit는 IPv6 특징",
+  "name": "IPv6 전환: 변환 방식(IPv4/IPv6 Translation)",
+  "en": "IPv4/IPv6 Translation",
   "reviewed": true,
   "outline": [
    "IPv6 전환 필요성",
@@ -4282,6 +4670,8 @@
    216,
    217
   ],
+  "name": "큐 관리(Queue Management)",
+  "en": "Queue Management",
   "reviewed": true,
   "outline": [
    "네트워크 서비스 품질 향상을 위한 기술, QoS의 개요",
@@ -4345,6 +4735,9 @@
    218,
    219
   ],
+  "name": "WFQ(Weighted Fair Queuing, 가중 공정 큐잉)",
+  "en": "Weighted Fair Queuing",
+  "reviewed": true,
   "outline": [
    "가중치를 통한 QoS 의 공정성 확보, WFQ 의 개요",
    "- WFQ(Weighted Fair Queuing)의 정의",
@@ -4393,6 +4786,8 @@
    221
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "트래픽 폴리싱(Traffic Policing)",
+  "en": "Traffic Policing",
   "reviewed": true,
   "outline": [
    "트래픽 대역폭 제어기술, 트래픽 감시 개념",
@@ -4433,6 +4828,8 @@
    222,
    222
   ],
+  "name": "트래픽 셰이핑(Traffic Shaping)",
+  "en": "Traffic Shaping",
   "reviewed": true,
   "outline": [
    "Traffic Shaping 기법",
@@ -4473,6 +4870,9 @@
    223,
    224
   ],
+  "name": "사전 패킷 폐기(Proactive Packet Discard)",
+  "en": "Proactive Packet Discard",
+  "reviewed": true,
   "outline": [
    "사전패킷 폐기(Proactive Packet Discard)",
    "- RED, WRED 설명"
@@ -4512,6 +4912,8 @@
    225,
    227
   ],
+  "name": "혼잡 제어(Congestion Control)",
+  "en": "Congestion Control",
   "reviewed": true,
   "outline": [
    "호스트 중심의 혼잡제어(종단간 혼잡제어)"
@@ -4583,6 +4985,9 @@
    228,
    229
   ],
+  "name": "IntServ(Integrated Services, 통합 서비스)",
+  "en": "Integrated Services",
+  "reviewed": true,
   "outline": [
    "QoS 보장기술인 IntServ모델의 개요",
    "- IntServ(Integrated Services)의 정의",
@@ -4633,6 +5038,8 @@
    230,
    231
   ],
+  "name": "DiffServ(Differentiated Services, 차등 서비스)",
+  "en": "Differentiated Services",
   "reviewed": true,
   "outline": [
    "DiffServ 구현방식 및 구성요소",
@@ -4739,6 +5146,9 @@
    232,
    235
   ],
+  "name": "MPLS(Multi-Protocol Label Switching)",
+  "en": "Multi-Protocol Label Switching",
+  "reviewed": true,
   "outline": [
    "고속 패킷 전달을 통한 QoS 구현기술 MPLS의 개념",
    "- MPLS",
@@ -4772,6 +5182,8 @@
    238
   ],
   "note": "원문 본문 대부분이 이미지라 텍스트로 확인된 내용만 정리",
+  "name": "IP-MPLS와 캐리어 이더넷(IP-MPLS & Carrier Ethernet)",
+  "en": "IP-MPLS & Carrier Ethernet",
   "reviewed": true,
   "outline": []
  },
@@ -4823,6 +5235,8 @@
    239,
    241
   ],
+  "name": "QoE(Quality of Experience, 체감 품질)",
+  "en": "Quality of Experience",
   "reviewed": true,
   "outline": [
    "QoE의 개념도 및 QoE를 위한 주요 품질지표",
@@ -4893,6 +5307,8 @@
    242,
    243
   ],
+  "name": "NP(Network Performance, 네트워크 성능)",
+  "en": "Network Performance",
   "reviewed": true,
   "outline": [
    "NP(Network Performance)의 개요",
@@ -5011,6 +5427,9 @@
    244,
    250
   ],
+  "name": "블루투스 5.0(Bluetooth 5.0)",
+  "en": "Bluetooth 5.0",
+  "reviewed": true,
   "outline": [
    "IoT를 위한 차세대 저전력 프로토콜, 블루투스5의 개요",
    "- 블루투스5(Bluetooth5)의 정의",
@@ -5095,6 +5514,8 @@
    251,
    255
   ],
+  "name": "NFC(Near Field Communication, 근거리 무선통신)",
+  "en": "Near Field Communication",
   "reviewed": true,
   "outline": [
    "10cm이내에서 양방향 통신하는 비접촉 근거리 무선 통신 기술, NFC의 개요",
@@ -5128,6 +5549,9 @@
    256,
    258
   ],
+  "name": "인지 무선(Cognitive Radio)",
+  "en": "Cognitive Radio",
+  "reviewed": true,
   "outline": []
  },
  {
@@ -5172,6 +5596,8 @@
    259,
    260
   ],
+  "name": "멀티캐리어(Multi-Carrier)",
+  "en": "Multi-Carrier",
   "reviewed": true,
   "outline": [
    "데이터 트래픽을 분산시키는 기술, 멀티캐리어(Multi Carrier)의 개요",
@@ -5239,6 +5665,8 @@
    261,
    263
   ],
+  "name": "주파수 집성(Carrier Aggregation)",
+  "en": "Carrier Aggregation",
   "reviewed": true,
   "outline": [
    "LTE 의 차세대 진화 시스템 핵심기술, Carrier Aggregation 개요",
@@ -5292,6 +5720,8 @@
    265
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "해상 재난망(LTE-M, LTE-Maritime)",
+  "en": "LTE-M, LTE-Maritime",
   "reviewed": true,
   "outline": [
    "해상재난망의 구성",
@@ -5379,6 +5809,8 @@
    266,
    269
   ],
+  "name": "국가재난안전통신망(PS-LTE, Public Safety LTE)",
+  "en": "PS-LTE, Public Safety LTE",
   "reviewed": true,
   "outline": [
    "LTE 기술을 기반 공공안전 통신망, PS-LTE (Public Safety - Long Term Evolution)의 정의",
@@ -5463,6 +5895,9 @@
    270,
    272
   ],
+  "name": "RAN 공유(RAN Sharing)",
+  "en": "RAN Sharing",
+  "reviewed": true,
   "outline": [
    "RAN-Sharing의 개념 및 목적",
    "- RAN-Sharing의 개념",
@@ -5565,6 +6000,8 @@
    277
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문 성능 비교표(두음 '전체주고지연에면')에서 발췌",
+  "name": "5G 주요 기술(5G, IMT-2020)",
+  "en": "5G, IMT-2020",
   "reviewed": true,
   "outline": [
    "초연결시대, IMT-2020/5G의 개요",
@@ -5650,6 +6087,8 @@
    278,
    280
   ],
+  "name": "네트워크 슬라이싱(Network Slicing)",
+  "en": "Network Slicing",
   "reviewed": true,
   "outline": [
    "5G의 핵심기술, Network Slicing의 개요",
@@ -5760,6 +6199,9 @@
    281,
    285
   ],
+  "name": "NR과 NR-MIMO(New Radio & NR MIMO)",
+  "en": "New Radio & NR MIMO",
+  "reviewed": true,
   "outline": [
    "5G NR(new Radio) 개요",
    "- NR(New Radio) 의 정의",
@@ -5820,6 +6262,9 @@
    286,
    287
   ],
+  "name": "5G NSA/SA(Non-Standalone/Standalone)",
+  "en": "Non-Standalone/Standalone",
+  "reviewed": true,
   "outline": [
    "5G NSA와 SA의 비교",
    "5G 표준화 및 사용화 일정"
@@ -5891,6 +6336,8 @@
    290
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "멀티액세스 엣지 컴퓨팅(MEC, Multi-access Edge Computing)",
+  "en": "MEC, Multi-access Edge Computing",
   "reviewed": true,
   "outline": [
    "최저지연을 위한 모바일 엣지 컴퓨팅(MEC)의 개요",
@@ -5983,6 +6430,9 @@
    291,
    293
   ],
+  "name": "엣지 컴퓨팅 스케줄링(Edge Computing Scheduling)",
+  "en": "Edge Computing Scheduling",
+  "reviewed": true,
   "outline": [
    "대규모 데이터의 빠른 연산 처리, 엣지 컴퓨팅 개요",
    "- 엣지 컴퓨팅의 스케쥴러",
@@ -6062,6 +6512,9 @@
    294,
    296
   ],
+  "name": "컴퓨팅 컨티뉴엄(Computing Continuum)",
+  "en": "Computing Continuum",
+  "reviewed": true,
   "outline": [
    "사이버-물리 시스템 실현을 위한 컴퓨팅 컨티뉴엄 (Computing Continuum)",
    "- 컴퓨팅 컨티뉴엄 (Computing Continuum) 정의",
@@ -6145,6 +6598,8 @@
    297,
    300
   ],
+  "name": "6G(6세대 이동통신, IMT-2030)",
+  "en": "IMT-2030",
   "reviewed": true,
   "outline": [
    "만물지능인터넷, 6G 개요",
@@ -6229,6 +6684,9 @@
    301,
    303
   ],
+  "name": "5G 특화망(Private 5G)",
+  "en": "Private 5G",
+  "reviewed": true,
   "outline": [
    "특정 산업만을 위한 전용망, 5G 특화망(지역 5G)의 개요",
    "- 5G 특화망(지역 5G)의 정의",
@@ -6329,6 +6787,9 @@
    304,
    306
   ],
+  "name": "이음 5G(e-Um 5G, Korea Private 5G)",
+  "en": "e-Um 5G, Korea Private 5G",
+  "reviewed": true,
   "outline": [
    "민간기업의 디지털전환 가속화, 이음5G의 개념",
    "- 이음5G의 정의",
@@ -6421,6 +6882,9 @@
    307,
    308
   ],
+  "name": "디지털 트윈 네트워크(DTN, Digital Twin Network)",
+  "en": "DTN, Digital Twin Network",
+  "reviewed": true,
   "outline": [
    "디지털 트윈과 네트워크의 결합, 6G의 DTN(Digital Twin Network) 개요",
    "- 6G의 DTN(Digital Twin Network) 정의",
@@ -6504,6 +6968,8 @@
    310
   ],
   "keywords_note": "원문 키워드 칸에 다른 토픽(데이터거버넌스) 키워드가 들어가 있어 본문에서 발췌",
+  "name": "MOCN(Multi-Operator Core Network)",
+  "en": "Multi-Operator Core Network",
   "reviewed": true,
   "outline": [
    "네트워크 쉐어링 기술, MOCN(Multi-Operator Core Network)의 개요",
@@ -6606,6 +7072,8 @@
    311,
    315
   ],
+  "name": "망 중립성(Network Neutrality)",
+  "en": "Network Neutrality",
   "reviewed": true,
   "outline": [
    "미래 인터넷을 위한 망중립성(Network Neutrality)의 개요",
@@ -6685,6 +7153,9 @@
    316,
    317
   ],
+  "name": "넷플릭스법(Netflix Act)",
+  "en": "Netflix Act",
+  "reviewed": true,
   "outline": [
    "통신서비스 품질유지의무, 넷플릭스(Netflix)법 개요",
    "넷플릭스법 규제대상 및 부과의무",
@@ -6762,6 +7233,8 @@
    318,
    322
   ],
+  "name": "디지털세(Digital Tax)",
+  "en": "Digital Tax",
   "reviewed": true,
   "outline": [
    "돈 번 나라에 세금 내는, 디지털세의 개념",
@@ -6846,6 +7319,9 @@
    323,
    327
   ],
+  "name": "CDN(Content Delivery Network)",
+  "en": "Content Delivery Network",
+  "reviewed": true,
   "outline": [
    "Middle Mile 최소화를 통한 콘텐츠 유통 기술 혁명, CDN 개요",
    "- CDN (Contents Delivery Network) 정의",
@@ -6941,6 +7417,9 @@
    328,
    340
   ],
+  "name": "라우팅 프로토콜(Routing Protocol)",
+  "en": "Routing Protocol",
+  "reviewed": true,
   "outline": [
    "라우팅 프로토콜",
    "- Routing과 Routing Protocol의 개념",
@@ -6989,6 +7468,8 @@
    341,
    342
   ],
+  "name": "정적·동적 라우팅(Static/Dynamic Routing)",
+  "en": "Static/Dynamic Routing",
   "reviewed": true,
   "outline": [
    "라우팅 프로토콜의 개요",
@@ -7031,6 +7512,8 @@
    343,
    344
   ],
+  "name": "내부·외부 라우팅(IGP/EGP)",
+  "en": "IGP/EGP",
   "reviewed": true,
   "outline": [
    "내/외부 관점 라우팅 IGP, EGP 개념과 특성",
@@ -7138,6 +7621,9 @@
    345,
    349
   ],
+  "name": "RIP(Routing Information Protocol)",
+  "en": "Routing Information Protocol",
+  "reviewed": true,
   "outline": [
    "간단하고 가장 널리 사용되는 TCP/IP 내부 라우팅 프로토콜, RIP 개요",
    "- RIP(Routing Information Protocol) 정의",
@@ -7190,6 +7676,8 @@
    351
   ],
   "note": "원문 '정의' 칸은 SPF로 적혀 있으나 이는 Link State 설명이라, 원문 특징·개념도 설명으로 정의를 정리함",
+  "name": "거리 벡터 알고리즘(Distance Vector Algorithm)",
+  "en": "Distance Vector Algorithm",
   "reviewed": true,
   "outline": [
    "거리중심의 프로토콜 Distance Vector Algorithm의 개요",
@@ -7236,6 +7724,8 @@
    352,
    353
   ],
+  "name": "링크 상태 알고리즘(Link State Algorithm)",
+  "en": "Link State Algorithm",
   "reviewed": true,
   "outline": [
    "라우팅 테이블 관리 Link State Algorithm 개요",
@@ -7313,6 +7803,8 @@
    354,
    355
   ],
+  "name": "RIP(Routing Information Protocol)",
+  "en": "Routing Information Protocol",
   "reviewed": true,
   "outline": [
    "RIP (Routing Information Protocol)",
@@ -7394,6 +7886,9 @@
    356,
    359
   ],
+  "name": "OSPF(Open Shortest Path First)",
+  "en": "Open Shortest Path First",
+  "reviewed": true,
   "outline": [
    "OSPF(Open Shortest Path First)",
    "- OSPF 의 정의",
@@ -7478,6 +7973,8 @@
    360,
    361
   ],
+  "name": "라우팅 프로토콜 메트릭(Routing Protocol Metric)",
+  "en": "Routing Protocol Metric",
   "reviewed": true,
   "outline": [
    "라우팅의 최적 경로 선정 기준, 라우팅 프로토콜 메트릭의 개요",
@@ -7560,6 +8057,9 @@
    362,
    363
   ],
+  "name": "STP(Spanning Tree Protocol, 스패닝 트리 프로토콜)",
+  "en": "Spanning Tree Protocol",
+  "reviewed": true,
   "outline": [
    "스위치 이중화 구조 문제해결, STP의 개요",
    "- STP(Spinning Tree Protocol)의 정의",
@@ -7664,6 +8164,8 @@
    368
   ],
   "note": "NW_222 스마트 홈과 거의 같은 내용",
+  "name": "홈 네트워킹(Home Networking)",
+  "en": "Home Networking",
   "reviewed": true,
   "outline": [
    "스마트홈(Smart Home)의 개요",
@@ -7774,6 +8276,8 @@
    374
   ],
   "note": "NW_213 Home Networking과 거의 같은 내용",
+  "name": "스마트 홈(Smart Home)",
+  "en": "Smart Home",
   "reviewed": true,
   "outline": [
    "스마트홈(Smart Home)의 개요",
@@ -7878,6 +8382,8 @@
    375,
    378
   ],
+  "name": "SDN(Software Defined Networking)",
+  "en": "Software Defined Networking",
   "reviewed": true,
   "outline": [
    "네트워크의 추상화를 통한 효율적 네트워크 트래픽 관리, SDN의 개요",
@@ -7964,6 +8470,9 @@
    379,
    384
   ],
+  "name": "오픈플로(OpenFlow)",
+  "en": "OpenFlow",
+  "reviewed": true,
   "outline": [
    "관심사의 분리를 통한 네트워크 가상화 기술, OpenFlow의 개요",
    "- OpenFlow의 정의",
@@ -8028,6 +8537,9 @@
    385,
    387
   ],
+  "name": "SD-WAN(Software-Defined WAN)",
+  "en": "Software-Defined WAN",
+  "reviewed": true,
   "outline": [
    "종단간 SDN 프로덕션 서비스를 위한 SDN-WAN의 개요",
    "- SD-WAN(Software-Defined Wide-Area Networking)의 정의",
@@ -8092,6 +8604,9 @@
    388,
    391
   ],
+  "name": "SDE(Software Defined Everything)",
+  "en": "Software Defined Everything",
+  "reviewed": true,
   "outline": [
    "기관 인프라의 미래, SDE의 개요",
    "- SDE(Software Defined Everything)의 정의",
@@ -8173,6 +8688,9 @@
    392,
    395
   ],
+  "name": "NFV(Network Functions Virtualization)",
+  "en": "Network Functions Virtualization",
+  "reviewed": true,
   "outline": [
    "네트워크 기능 가상화, NFV의 개요",
    "- NFV(Network Function Virtualization )의 정의",
@@ -8248,6 +8766,8 @@
    395,
    398
   ],
+  "name": "OPNFV(Open Platform for NFV)",
+  "en": "Open Platform for NFV",
   "reviewed": true,
   "outline": [
    "NFV를 위한 오픈소스 소프트웨어 플랫폼, OPNFV의 개요",
@@ -8304,6 +8824,8 @@
    399,
    402
   ],
+  "name": "SDDC(Software Defined Data Center)",
+  "en": "Software Defined Data Center",
   "reviewed": true,
   "outline": [
    "SDDC 의 구성도 및 구성요소",
@@ -8366,6 +8888,9 @@
    403,
    404
   ],
+  "name": "O-RAN(Open Radio Access Network)",
+  "en": "Open Radio Access Network",
+  "reviewed": true,
   "outline": [
    "O-RAN(Open Radio Access Network) Architecture와 구성 요소",
    "- O-RAN(Open Radio Access Network) Architecture",
@@ -8410,6 +8935,8 @@
    406
   ],
   "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
+  "name": "FEC(Forward Error Correction, 전진 오류 수정)",
+  "en": "Forward Error Correction",
   "reviewed": true,
   "outline": [
    "FEC의 주요 용도"
@@ -8500,6 +9027,9 @@
    407,
    412
   ],
+  "name": "BEC(Backward Error Correction, 후진 오류 수정)",
+  "en": "Backward Error Correction",
+  "reviewed": true,
   "outline": [
    "패리티 비트 종류",
    "동작 과정",
@@ -8549,6 +9079,8 @@
    413,
    415
   ],
+  "name": "순환 중복 검사(CRC, Cyclic Redundancy Check)",
+  "en": "CRC, Cyclic Redundancy Check",
   "reviewed": true,
   "outline": [
    "CRC의 개념도 및 송수신 계산방법",
@@ -8635,6 +9167,8 @@
    416,
    421
   ],
+  "name": "자동 재전송 요구(ARQ, Automatic Repeat reQuest)",
+  "en": "ARQ, Automatic Repeat reQuest",
   "reviewed": true,
   "outline": [
    "데이터 링크 계층의 오류제어 개요",
@@ -8689,6 +9223,8 @@
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
   "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
+  "name": "체크섬(Checksum)",
+  "en": "Checksum",
   "reviewed": true,
   "outline": [
    "검사합 처리 절차(16비트 기준)"
@@ -8734,6 +9270,8 @@
    424,
    426
   ],
+  "name": "해밍 코드(Hamming Code)",
+  "en": "Hamming Code",
   "reviewed": true,
   "outline": [
    "해밍 코드 설명",
@@ -8779,6 +9317,8 @@
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
   "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
+  "name": "대역 확산(Spread Spectrum)",
+  "en": "Spread Spectrum",
   "reviewed": true,
   "outline": [
    "DSSS 동작"
@@ -8849,6 +9389,8 @@
    429,
    434
   ],
+  "name": "P2P(Peer-to-Peer)",
+  "en": "Peer-to-Peer",
   "reviewed": true,
   "outline": [
    "분권화 된 시스템의 핵심 기술, P2P 네트워크의 기술 개요",
@@ -8952,6 +9494,9 @@
    435,
    437
   ],
+  "name": "위성-상공-지상 통합 네트워크(SATIN, Satellite-Aerial-Terrestrial Integrated Network)",
+  "en": "SATIN, Satellite-Aerial-Terrestrial Integrated Network",
+  "reviewed": true,
   "outline": [
    "SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 개념 및 네트워크 특징",
    "- SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 개념",
@@ -9020,6 +9565,9 @@
    438,
    439
   ],
+  "name": "IBN(Intent-Based Networking, 의도 기반 네트워킹)",
+  "en": "Intent-Based Networking",
+  "reviewed": true,
   "outline": [
    "의도 기반 네트워킹(Intent-Based Networking)의 개념",
    "- 의도 기반 네트워킹의 정의",
@@ -9087,6 +9635,9 @@
    440,
    441
   ],
+  "name": "ZSM(Zero-touch network and Service Management)",
+  "en": "Zero-touch network and Service Management",
+  "reviewed": true,
   "outline": [
    "ZSM(Zero-touch network and Service Management)의 구성도 및 구성요소",
    "- ZSM(Zero-touch network and Service Management)의 구성도",
@@ -9162,6 +9713,8 @@
    442,
    444
   ],
+  "name": "모드버스 프로토콜(Modbus Protocol)",
+  "en": "Modbus Protocol",
   "reviewed": true,
   "outline": [
    "산업용 직렬 방식 통신 프로토콜, Modbus 의 개요",

@@ -201,3 +201,11 @@ small.gl{font-size:.78em;color:var(--muted);font-weight:400;margin-left:1px;lett
 .mask{color:var(--accent);font-weight:700}
 .fitbox.tight .outline small.gl{display:none}
 .fitbox.tight2 small.gl{display:none}
+/* v4: 하단 버튼 4개(◀ 카드 문제 ▶) 수용, 객관식은 약어 풀네임 항상 표시 */
+.tfoot .pos{min-width:44px;font-size:12px}
+.tfoot .btn{padding-left:8px;padding-right:8px}
+.tfoot .btn.nav{flex:0 0 44px}
+.quiz.fitbox.tight2 small.gl{display:inline}
+.qopt small.gl,.qtext small.gl{color:var(--muted)}
+.face.back.fitbox{font-size:calc(16px * var(--s))}
+.qfb .qdef{-webkit-line-clamp:5}

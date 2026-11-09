@@ -18,7 +18,7 @@
     const rows = all.filter(t => {
       if (domain !== 'ALL' && t.domain !== domain) return false;
       if (!q) return true;
-      return norm([t.id, t.title, t.subtitle, (t.keywords || []).join(' '), t.definition, t.dueum].join(' ')).includes(q);
+      return norm([t.id, t.title, t.name, t.en, t.subtitle, (t.keywords || []).join(' '), t.definition, t.dueum].join(' ')).includes(q);
     });
     $count.textContent = `${rows.length}개 토픽` + (q ? ` · "${$q.value.trim()}" 검색` : '');
     if (!rows.length) { $list.innerHTML = '<li class="empty">검색 결과가 없어요.</li>'; return; }
@@ -27,7 +27,7 @@
       const desc = kwHit && !norm(t.definition).includes(q) ? '🔑 ' + hl(kwHit, q) : hl(t.definition || (t.keywords || []).join(', '), q);
       return `<li class="item"><a href="${PE.topicUrl(t.id)}">
         <div class="top"><span class="badge code">${PE.esc(t.id)}</span>${t.dueum ? '<span class="badge dueum">두음</span>' : ''}${PE.reviewFixed(t) ? '<span class="badge fix">검토 수정</span>' : ''}</div>
-        <h3>${hl(t.title, q)}</h3><p>${desc}</p></a></li>`;
+        <h3>${hl(PE.name(t), q)}</h3><p>${desc}</p></a></li>`;
     }).join('');
   }
   PE.load().then(data => {

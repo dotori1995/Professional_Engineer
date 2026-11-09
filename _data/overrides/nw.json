@@ -2,226 +2,1470 @@
  "_comment": "수동 보정 파일. parse_topics.py 실행 시 같은 id 항목의 필드를 덮어씀. 원문(PDF)에 있는 내용만 정리하고 새 내용은 만들지 않음. null 값은 해당 필드 삭제.",
  "NW_004_00": {
   "definition": "수신측 동기화가 쉽도록 비트 중간에 극성 변화(전압 전이)가 있게 한 선로부호 방식. 물리 계층에서 신호를 전송할 때 쓰는 디지털 인코딩의 한 형태.",
-  "keywords": ["비트 중앙 전압 전이", "동기화 용이", "NRZ ⊕ 클록(XOR)", "대역폭 2배", "10Mbps Ethernet"],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+  "keywords": [
+   "비트 중앙 전압 전이",
+   "동기화 용이",
+   "NRZ ⊕ 클록(XOR)",
+   "대역폭 2배",
+   "10Mbps Ethernet"
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "맨체스터 코딩(Manchester Coding)",
+  "en": "Manchester Coding"
  },
  "NW_004_01": {
-  "definition": "각 비트 구간 중앙에서 반드시 신호 전이를 발생시켜 클록을 동기화하고, 비트 시작점의 전이 유무로 0과 1을 구분하는 차등 방식의 자기동기식 디지털 부호화 기법."
+  "definition": "각 비트 구간 중앙에서 반드시 신호 전이를 발생시켜 클록을 동기화하고, 비트 시작점의 전이 유무로 0과 1을 구분하는 차등 방식의 자기동기식 디지털 부호화 기법.",
+  "name": "차등 맨체스터 코딩(Differential Manchester Coding)",
+  "en": "Differential Manchester Coding"
  },
  "NW_010": {
-  "keywords": ["진폭+위상 동시 변조", "PSK + ASK", "성상도(Constellation)", "16/64/256/1024 QAM", "계층적 변조(DVB-T)"],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+  "keywords": [
+   "진폭+위상 동시 변조",
+   "PSK + ASK",
+   "성상도(Constellation)",
+   "16/64/256/1024 QAM",
+   "계층적 변조(DVB-T)"
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "QAM(Quadrature Amplitude Modulation, 직교 진폭 변조)",
+  "en": "Quadrature Amplitude Modulation"
  },
  "NW_011": {
-  "keywords": ["반송파 감지", "충돌 탐지(Collision Detection)", "지속성 전략 3가지", "유선 Ethernet", "CSMA/CA와 비교(탐지 vs 회피)"],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+  "keywords": [
+   "반송파 감지",
+   "충돌 탐지(Collision Detection)",
+   "지속성 전략 3가지",
+   "유선 Ethernet",
+   "CSMA/CA와 비교(탐지 vs 회피)"
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "CSMA/CD(Carrier Sense Multiple Access with Collision Detection)",
+  "en": "Carrier Sense Multiple Access with Collision Detection"
  },
  "NW_023_00": {
-  "keywords": ["Proactive(DSDV, 주기적 라우팅 정보 갱신)", "Reactive(AODV, 필요 시 경로 탐색)", "Hybrid", "Self-organizing", "인프라 없음"]
+  "keywords": [
+   "Proactive(DSDV, 주기적 라우팅 정보 갱신)",
+   "Reactive(AODV, 필요 시 경로 탐색)",
+   "Hybrid",
+   "Self-organizing",
+   "인프라 없음"
+  ],
+  "name": "애드혹 네트워크(Ad hoc Network)",
+  "en": "Ad hoc Network"
  },
  "NW_026": {
-  "keywords": ["구성요소: Domain Name Space", "Name Server", "Resolver", "RR 구성: Name, Type, Class, TTL, RD Length, RD(Resource Data)"]
+  "title": "DNS",
+  "subtitle": "DNS(Domain Name System)",
+  "definition": "도메인 이름을 IP 주소로(정방향), IP 주소를 도메인 이름으로(역방향) 변환해 주는 계층적·분산형 이름 해석 시스템 (RFC 1034/1035)",
+  "keywords": [
+   "구성요소: 도메인 네임 스페이스(Domain Name Space) · 네임 서버(Name Server) · 리졸버(Resolver)",
+   "계층: 루트(Root) → TLD → SLD",
+   "네임 서버: 권한(Authoritative) · 캐시(Caching/Recursive)",
+   "질의: 재귀적(Recursive) · 반복적(Iterative)",
+   "RR(레코드): A · AAAA · CNAME · MX · PTR · SOA(Start of Authority)",
+   "전송: UDP/TCP 53 · 영역 전송(Zone Transfer) AXFR/IXFR",
+   "보안: DNSSEC · DoT · DoH",
+   "위협: 캐시 포이즈닝(Cache Poisoning) · DNS 증폭(Amplification) 공격"
+  ],
+  "outline": [
+   "DNS(Domain Name System)의 개념",
+   "- 정의",
+   "- 필요성(hosts 파일의 한계)",
+   "DNS 구성요소 및 동작 절차",
+   "- 구성요소",
+   "- 재귀적·반복적 질의",
+   "- 주요 레코드(RR)",
+   "DNS 보안 위협 및 대응",
+   "- 위협",
+   "- 대응 기술"
+  ],
+  "sections": [
+   {
+    "title": "DNS(Domain Name System)의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "사람이 기억하기 쉬운 도메인 이름(www.example.com)과 IP 주소를 서로 변환하는 인터넷 이름 해석 시스템",
+       "전 세계 네임 서버가 계층적으로 나눠 관리하는 분산 데이터베이스 (RFC 1034/1035)"
+      ]
+     },
+     {
+      "title": "필요성",
+      "items": [
+       "초기 인터넷은 hosts 파일 하나로 이름–IP를 매핑 → 호스트 증가 시 갱신·배포 불가",
+       "이름을 계층(도메인)으로 나눠 위임(Delegation)하면 각 조직이 자기 영역만 관리 가능"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "DNS 구성요소 및 동작 절차",
+    "subsections": [
+     {
+      "title": "구성요소",
+      "items": [
+       "도메인 네임 스페이스(Domain Name Space): 루트(.) → TLD(.com, .kr) → SLD(example.com)로 이어지는 트리 구조 이름 공간",
+       "네임 서버(Name Server): 권한(Authoritative) 서버는 존(Zone)의 원본 레코드 보유, 캐시(Recursive) 서버는 대신 찾아 주고 결과를 TTL 동안 캐시",
+       "리졸버(Resolver): 응용 프로그램의 요청을 받아 질의를 만들고 응답을 해석하는 클라이언트 측 구성요소(스텁 리졸버)"
+      ]
+     },
+     {
+      "title": "재귀적·반복적 질의",
+      "items": [
+       "재귀적(Recursive): 클라이언트 → 캐시 DNS 서버, 서버가 끝까지 찾아 최종 응답만 반환",
+       "반복적(Iterative): 캐시 DNS 서버 → 루트 → TLD → 권한 서버 순으로, 각 서버는 다음 서버 정보(Referral)를 반환",
+       "기본 UDP 53, 응답이 크거나(TC 비트) 영역 전송(AXFR/IXFR) 시 TCP 53"
+      ]
+     },
+     {
+      "title": "주요 레코드(RR)",
+      "items": [
+       "A: 이름 → IPv4 / AAAA: 이름 → IPv6",
+       "CNAME: 별칭(Canonical Name) / MX: 메일 서버 / NS: 위임할 네임 서버",
+       "PTR: IP → 이름(역방향) / SOA: 존 시작·주 서버·시리얼·갱신 주기",
+       "RR 형식: NAME · TYPE · CLASS · TTL · RDLENGTH · RDATA"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "DNS 보안 위협 및 대응",
+    "subsections": [
+     {
+      "title": "위협",
+      "items": [
+       "캐시 포이즈닝(Cache Poisoning): 위조 응답을 캐시 서버에 주입해 사용자를 가짜 사이트로 유도",
+       "DNS 증폭(Amplification) 공격: 출발지 IP를 피해자로 위조해 작은 질의로 큰 응답을 유발하는 DDoS",
+       "도청·변조: 평문 UDP 질의는 내용 노출"
+      ]
+     },
+     {
+      "title": "대응 기술",
+      "items": [
+       "DNSSEC: 전자서명(RRSIG·DNSKEY·DS)으로 응답의 출처·무결성 검증 (기밀성은 제공 안 함)",
+       "DoT(DNS over TLS, TCP 853) · DoH(DNS over HTTPS, 443) · DoQ(DNS over QUIC): 질의 암호화",
+       "소스 포트·트랜잭션 ID 무작위화, 개방형 재귀 서버 차단, 응답 속도 제한(RRL)"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "리졸버(Resolver)",
+   "재귀적 질의(Recursive Query)",
+   "반복적 질의(Iterative Query)",
+   "TLD(Top-Level Domain)",
+   "CNAME(Canonical Name) 레코드",
+   "PTR(Pointer) 레코드",
+   "SOA(Start of Authority) 레코드",
+   "영역 전송(Zone Transfer, AXFR/IXFR)",
+   "DNSSEC(DNS Security Extensions)",
+   "캐시 포이즈닝(Cache Poisoning)"
+  ],
+  "quiz_avoid": [
+   "NW_069",
+   "NW_071"
+  ],
+  "keywords_note": null,
+  "note": null,
+  "review": null,
+  "dueum": null,
+  "name": "DNS(Domain Name System)",
+  "en": "Domain Name System"
  },
  "NW_031_01": {
-  "definition": "다중화(Multiplexing)는 하나의 전송로를 분할해 여러 신호를 동시에 송수신하도록 다수 채널로 결합하는 기술이고, 다원접속(Multiple Access)은 한정된 전송 자원(시간·공간·코드·주파수)을 다수 노드가 효율적·공평하게 공유하는 기술.",
-  "keywords": ["다중화: FDM, TDM, SDM, CDM, WDM", "다원접속: FDMA, TDMA, SDMA, CDMA", "동적할당: ALOHA, CSMA/CD, 토큰, 폴링", "송신 지점 1곳 vs 여러 곳"],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+  "title": "다중화(Multiplexing)와 다원접속(Multiple Access)",
+  "subtitle": "",
+  "definition": "다중화(Multiplexing)는 한 송신 지점에서 여러 신호를 하나의 전송로에 묶어 보내는 기술, 다원접속(Multiple Access)은 여러 단말이 주파수·시간·코드·공간 자원을 나눠 하나의 매체를 공유하는 기술",
+  "keywords": [
+   "다중화: FDM · TDM(동기식/통계적) · CDM · WDM · SDM · OFDM",
+   "다원접속: FDMA · TDMA · CDMA · OFDMA · SDMA",
+   "랜덤 접속(Random Access): ALOHA · CSMA/CD · CSMA/CA",
+   "제어 접속(Controlled Access): 폴링(Polling) · 토큰 패싱(Token Passing)",
+   "구분: 송신 지점 1곳(주로 하향, Downlink) vs 여러 곳(주로 상향, Uplink)"
+  ],
+  "outline": [
+   "다중화와 다원접속의 개념",
+   "- 정의",
+   "- 비교",
+   "다중화 방식",
+   "- 주파수·시간·코드·파장·공간 분할",
+   "다원접속 방식",
+   "- 채널 분할 방식",
+   "- 랜덤 접속·제어 접속"
+  ],
+  "sections": [
+   {
+    "title": "다중화와 다원접속의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "다중화(Multiplexing): 한 지점의 다중화기(MUX)가 여러 신호를 하나의 전송로에 결합해 전송 효율을 높이는 기술",
+       "다원접속(Multiple Access): 독립적으로 송신하는 여러 단말이 한정된 무선·유선 자원을 나눠 공유하는 기술"
+      ]
+     },
+     {
+      "title": "비교",
+      "items": [
+       "송신 지점: 다중화 1곳(동일 지점) / 다원접속 여러 곳(각 단말)",
+       "링크 관점: 다중화는 주로 하향(Downlink, 기지국→단말), 다원접속은 주로 상향(Uplink, 단말→기지국)",
+       "방식: FDM·TDM·CDM·WDM·SDM ↔ FDMA·TDMA·CDMA·OFDMA·SDMA"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "다중화 방식",
+    "subsections": [
+     {
+      "title": "주파수·시간·코드·파장·공간 분할",
+      "items": [
+       "FDM: 대역을 부채널로 나누고 보호대역(Guard Band)으로 간섭 방지",
+       "TDM: 시간 슬롯으로 분할, 동기식(Synchronous)은 슬롯 고정 할당(빈 슬롯 낭비), 통계적(Statistical)은 데이터 있는 채널에만 동적 할당(주소 정보 필요)",
+       "CDM: 서로 직교하는 확산 코드로 같은 시간·주파수에서 신호 구분",
+       "WDM: 하나의 광섬유에 서로 다른 파장(λ)을 실어 전송 (CWDM·DWDM)",
+       "SDM: 여러 물리 전송로나 다중 안테나(MIMO)로 공간을 분리해 동시 전송",
+       "OFDM: 서로 직교하는 다수 부반송파가 겹쳐도 간섭 없이 전송, 다중경로 페이딩에 강함"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "다원접속 방식",
+    "subsections": [
+     {
+      "title": "채널 분할 방식",
+      "items": [
+       "FDMA: 사용자별 주파수 채널 할당 (1G 아날로그, AMPS)",
+       "TDMA: 같은 주파수를 시간 슬롯으로 나눠 할당 (2G GSM)",
+       "CDMA: 사용자별 고유 코드로 확산 (2G IS-95, 3G WCDMA)",
+       "OFDMA: 부반송파 묶음(Resource Block)을 사용자별 할당 (LTE 하향, 5G NR, Wi-Fi 6)",
+       "SDMA: 빔포밍·MU-MIMO로 공간적으로 떨어진 사용자에게 같은 자원 재사용"
+      ]
+     },
+     {
+      "title": "랜덤 접속·제어 접속",
+      "items": [
+       "ALOHA: 감지 없이 전송, 충돌 시 임의 시간 후 재전송 (Pure·Slotted)",
+       "CSMA/CD: 반송파 감지 후 전송, 충돌 감지 시 Jam 신호·백오프 (유선 이더넷, IEEE 802.3)",
+       "CSMA/CA: IFS·랜덤 백오프·RTS/CTS로 충돌 회피 (무선랜, IEEE 802.11)",
+       "폴링(Polling): 주국이 각 단말에 차례로 송신 여부를 물음",
+       "토큰 패싱(Token Passing): 토큰을 가진 노드만 송신 (Token Ring, FDDI)"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "FDM(Frequency Division Multiplexing)",
+   "TDM(Time Division Multiplexing)",
+   "WDM(Wavelength Division Multiplexing)",
+   "OFDMA(Orthogonal Frequency Division Multiple Access)",
+   "SDMA(Space Division Multiple Access)",
+   "CDMA(Code Division Multiple Access)",
+   "알로하(ALOHA)",
+   "CSMA/CD(Carrier Sense Multiple Access with Collision Detection)",
+   "토큰 패싱(Token Passing)",
+   "폴링(Polling)"
+  ],
+  "quiz_avoid": [
+   "NW_080",
+   "NW_071"
+  ],
+  "keywords_note": null,
+  "note": null,
+  "review": null,
+  "dueum": null,
+  "name": "다중화와 다원접속(Multiplexing & Multiple Access)",
+  "en": "Multiplexing & Multiple Access"
  },
  "NW_032": {
-  "keywords": ["1:특정다수 통신(목적지 주소 = 수신자 집합)", "IGMP", "224.x(예약)", "225~239: 라우팅"]
+  "keywords": [
+   "1:특정다수 통신(목적지 주소 = 수신자 집합)",
+   "IGMP",
+   "224.x(예약)",
+   "225~239: 라우팅"
+  ],
+  "name": "멀티캐스트(Multicast)",
+  "en": "Multicast"
  },
  "NW_041": {
-  "keywords": ["데이터 송수신·QoS·4계층", "전송단위: Segment", "장비: L4 스위치", "흐름제어: Sliding Window", "혼잡제어: TCP 혼잡제어", "오류제어: Sequence Number", "주요 프로토콜: TCP, UDP"]
+  "keywords": [
+   "데이터 송수신·QoS·4계층",
+   "전송단위: Segment",
+   "장비: L4 스위치",
+   "흐름제어: Sliding Window",
+   "혼잡제어: TCP 혼잡제어",
+   "오류제어: Sequence Number",
+   "주요 프로토콜: TCP, UDP"
+  ],
+  "name": "전송 계층(Transport Layer, L4)",
+  "en": "Transport Layer, L4"
  },
  "NW_049": {
-  "definition": "신뢰성 있는 데이터 전송을 위해 세그먼트의 손상(checksum), 손실(sequence/ack number), 시간초과(Time-Over)를 처리하는 TCP의 오류제어 기능."
+  "definition": "신뢰성 있는 데이터 전송을 위해 세그먼트의 손상(checksum), 손실(sequence/ack number), 시간초과(Time-Over)를 처리하는 TCP의 오류제어 기능.",
+  "name": "TCP 오류 제어(TCP Error Control)",
+  "en": "TCP Error Control"
  },
  "NW_050_1": {
   "definition": "송·수신측 응용 프로그램의 낮은 데이터 생성·소비 속도 때문에 전송 데이터보다 Header·Trailer가 더 커져 비효율성이 증가하는 흐름제어 현상.",
-  "keywords": ["1byte 전송 오버헤드(헤더 40byte)", "송신측 해결: Nagle's Algorithm", "수신측 해결: Clark's Solution", "MSS", "Window Size 0"],
-  "keywords_note": "원문 키워드 칸에 다른 토픽(Harbor) 키워드가 잘못 들어가 있어 본문에서 발췌"
+  "keywords": [
+   "1byte 전송 오버헤드(헤더 40byte)",
+   "송신측 해결: Nagle's Algorithm",
+   "수신측 해결: Clark's Solution",
+   "MSS",
+   "Window Size 0"
+  ],
+  "keywords_note": "원문 키워드 칸에 다른 토픽(Harbor) 키워드가 잘못 들어가 있어 본문에서 발췌",
+  "name": "어리석은 윈도우 신드롬(Silly Window Syndrome)",
+  "en": "Silly Window Syndrome"
  },
  "NW_055": {
-  "keywords": ["슈퍼네팅(병합) 적용", "IP 주소 할당 방법", "8비트 단위로 네트워크부/호스트부를 구획하지 않음", "Prefix 표기(/24)"]
+  "keywords": [
+   "슈퍼네팅(병합) 적용",
+   "IP 주소 할당 방법",
+   "8비트 단위로 네트워크부/호스트부를 구획하지 않음",
+   "Prefix 표기(/24)"
+  ],
+  "name": "CIDR(Classless Inter-Domain Routing)",
+  "en": "Classless Inter-Domain Routing"
  },
  "NW_056": {
-  "keywords": ["서브넷의 서브넷", "다른 크기 서브넷(/25, /26 분배)", "RFC 1878", "RIPv2, OSPF, BGP 지원"]
+  "keywords": [
+   "서브넷의 서브넷",
+   "다른 크기 서브넷(/25, /26 분배)",
+   "RFC 1878",
+   "RIPv2, OSPF, BGP 지원"
+  ],
+  "name": "VLSM(Variable Length Subnet Mask)",
+  "en": "Variable Length Subnet Mask"
  },
  "NW_062": {
   "definition": "다수 호스트를 논리적 단위 하나로 관리하기 위해 호스트와 라우터 사이에 그룹 멤버 정보를 교환하여, 그룹 생성·제거와 호스트의 가입·탈퇴 등 멀티캐스트 그룹 소속원을 관리하는 프로토콜.",
-  "keywords": ["그룹 가입", "멤버십 감시", "멤버십 응답", "멤버십 탈퇴", "IPv6에서는 MLD(ICMPv6의 일부)"]
+  "keywords": [
+   "그룹 가입",
+   "멤버십 감시",
+   "멤버십 응답",
+   "멤버십 탈퇴",
+   "IPv6에서는 MLD(ICMPv6의 일부)"
+  ],
+  "name": "IGMP(Internet Group Management Protocol)",
+  "en": "Internet Group Management Protocol"
  },
  "NW_069": {
-  "keywords": ["초기화: DORA", "갱신: RA", "종료: R"]
+  "title": "DHCP",
+  "subtitle": "DHCP(Dynamic Host Configuration Protocol)",
+  "definition": "클라이언트에 IP 주소·서브넷 마스크·기본 게이트웨이·DNS 서버 등 네트워크 설정을 임대(Lease) 방식으로 자동 할당하는 프로토콜 (RFC 2131, UDP 67/68)",
+  "dueum": "DORA: Discover → Offer → Request → ACK",
+  "keywords": [
+   "할당 절차(DORA): Discover → Offer → Request → ACK",
+   "임대 갱신: T1(50%) Renewing · T2(87.5%) Rebinding",
+   "기타 메시지: NAK · Decline · Release · Inform",
+   "할당 방식: 자동(Automatic) · 동적(Dynamic) · 수동(Manual)",
+   "포트: UDP 67(서버) / 68(클라이언트) · BOOTP 계승",
+   "릴레이 에이전트(Relay Agent): 다른 서브넷 서버로 중계",
+   "보안: DHCP 스타베이션(Starvation) · 위장 서버(Rogue DHCP) → DHCP 스누핑(Snooping)"
+  ],
+  "outline": [
+   "DHCP(Dynamic Host Configuration Protocol)의 개념",
+   "- 정의",
+   "- 할당 방식",
+   "DHCP 동작 절차",
+   "- 최초 할당(DORA)",
+   "- 임대 갱신·반납",
+   "DHCP 보안 위협 및 대응"
+  ],
+  "sections": [
+   {
+    "title": "DHCP(Dynamic Host Configuration Protocol)의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "IP 주소와 네트워크 설정값을 서버가 일정 기간 임대해 주는 클라이언트–서버 프로토콜 (RFC 2131, 옵션은 RFC 2132)",
+       "BOOTP를 계승해 같은 메시지 형식·포트(서버 UDP 67, 클라이언트 UDP 68) 사용, IPv6는 DHCPv6(RFC 8415)"
+      ]
+     },
+     {
+      "title": "할당 방식",
+      "items": [
+       "자동(Automatic): 영구적으로 할당",
+       "동적(Dynamic): 임대 기간 동안만 할당하고 만료되면 회수·재사용",
+       "수동(Manual): 관리자가 MAC 주소별로 지정(예약)한 주소를 전달"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "DHCP 동작 절차",
+    "subsections": [
+     {
+      "title": "최초 할당(DORA)",
+      "items": [
+       "Discover: 클라이언트가 브로드캐스트로 서버 탐색",
+       "Offer: 서버가 임대 가능한 IP·임대 기간 등 제안",
+       "Request: 여러 제안 중 하나를 골라 요청(브로드캐스트로 다른 서버에도 선택 결과 통지)",
+       "ACK: 서버가 할당 확정 → 클라이언트는 ARP로 중복 확인 후 사용, 중복이면 Decline"
+      ]
+     },
+     {
+      "title": "임대 갱신·반납",
+      "items": [
+       "T1(임대 시간 50%): Renewing, 할당한 서버에 유니캐스트 Request → ACK",
+       "T2(87.5%): Rebinding, 아무 서버에나 브로드캐스트 Request",
+       "NAK: 서버가 요청을 거부(다른 서브넷으로 이동 등) → 처음부터 다시 Discover",
+       "Release: 사용 종료 시 주소 반납 / Inform: IP는 이미 있고 다른 설정만 요청",
+       "릴레이 에이전트(Relay Agent): 라우터가 브로드캐스트를 다른 서브넷의 서버로 유니캐스트 중계"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "DHCP 보안 위협 및 대응",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "DHCP 스타베이션(Starvation): 위조 MAC으로 Discover를 대량 전송해 주소 풀 고갈",
+       "위장 서버(Rogue DHCP): 가짜 서버가 잘못된 게이트웨이·DNS를 배포해 트래픽 가로채기",
+       "대응: DHCP 스누핑(Snooping)으로 신뢰 포트(Trusted Port)에서 온 서버 메시지만 허용, 포트 보안(Port Security)으로 MAC 수 제한"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "DORA(Discover·Offer·Request·ACK)",
+   "임대(Lease) 갱신 T1·T2",
+   "DHCP 릴레이 에이전트(Relay Agent)",
+   "DHCP 스누핑(Snooping)",
+   "DHCP 스타베이션(Starvation)",
+   "위장 DHCP 서버(Rogue DHCP Server)",
+   "BOOTP(Bootstrap Protocol)"
+  ],
+  "quiz_avoid": [
+   "NW_026"
+  ],
+  "keywords_note": null,
+  "note": null,
+  "review": null,
+  "name": "DHCP(Dynamic Host Configuration Protocol)",
+  "en": "Dynamic Host Configuration Protocol"
  },
  "NW_075": {
-  "keywords": ["TCP/UDP 포트 기반 스위칭", "VIP", "부하분산 알고리즘: Round Robin, Least Connection, Response time, Hash", "서버 감시: ICMP, TCP Connection, HTTP Request", "Fail Over"]
+  "keywords": [
+   "TCP/UDP 포트 기반 스위칭",
+   "VIP",
+   "부하분산 알고리즘: Round Robin, Least Connection, Response time, Hash",
+   "서버 감시: ICMP, TCP Connection, HTTP Request",
+   "Fail Over"
+  ],
+  "name": "L4 스위치(Layer 4 Switch)",
+  "en": "Layer 4 Switch"
  },
  "NW_082": {
-  "keywords": ["V2V", "V2I", "V2N", "V2P(Pedestrian, 보행자)", "IVN", "VANET", "WAVE", "C-ITS"]
+  "keywords": [
+   "V2V",
+   "V2I",
+   "V2N",
+   "V2P(Pedestrian, 보행자)",
+   "IVN",
+   "VANET",
+   "WAVE",
+   "C-ITS"
+  ],
+  "name": "V2X(Vehicle-to-Everything, 차량-사물 통신)",
+  "en": "Vehicle-to-Everything"
  },
  "NW_084": {
-  "keywords": ["IEEE 802.11p / IEEE 1609.1~4", "5.9GHz 대역, 75MHz 대역폭", "최대 1km 커버리지", "최대 200km/h 이동", "100ms 이내 지연", "V2V·V2I"]
+  "keywords": [
+   "IEEE 802.11p / IEEE 1609.1~4",
+   "5.9GHz 대역, 75MHz 대역폭",
+   "최대 1km 커버리지",
+   "최대 200km/h 이동",
+   "100ms 이내 지연",
+   "V2V·V2I"
+  ],
+  "name": "WAVE(Wireless Access in Vehicular Environments)",
+  "en": "Wireless Access in Vehicular Environments"
  },
  "NW_088": {
-  "keywords": ["IEEE 802.11", "SSID", "WEP", "AP 간 로밍(Roaming)"]
+  "keywords": [
+   "IEEE 802.11",
+   "SSID",
+   "WEP",
+   "AP 간 로밍(Roaming)"
+  ],
+  "name": "무선랜(Wireless LAN)",
+  "en": "Wireless LAN"
  },
  "NW_102_0": {
   "definition": "실내외 위치 측위는 한 가지 기술이 아니라 GPS+센서+WiFi 등 여러 기술을 복합적으로 활용해 정확한 위치 정보를 파악하는 기술.",
-  "keywords": ["CCTV", "WiFi(RF fingerprinting, RSSI)", "Bluetooth/비콘(iBeacon)", "센서 기반", "GPS"],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+  "keywords": [
+   "CCTV",
+   "WiFi(RF fingerprinting, RSSI)",
+   "Bluetooth/비콘(iBeacon)",
+   "센서 기반",
+   "GPS"
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "실내외 위치 측위 기술(Indoor/Outdoor Positioning)",
+  "en": "Indoor/Outdoor Positioning"
  },
  "NW_104": {
-  "keywords": ["M2M", "IoT 표준: CoAP, MQTT, XMPP, LwM2M", "WoT", "IoE", "LPWA: LoRa, SigFox, LTE-M, NB-IoT", "IoV", "D2D", "소물인터넷", "IoST"]
+  "keywords": [
+   "M2M",
+   "IoT 표준: CoAP, MQTT, XMPP, LwM2M",
+   "WoT",
+   "IoE",
+   "LPWA: LoRa, SigFox, LTE-M, NB-IoT",
+   "IoV",
+   "D2D",
+   "소물인터넷",
+   "IoST"
+  ],
+  "name": "사물인터넷(IoT, Internet of Things)",
+  "en": "IoT, Internet of Things"
  },
  "NW_106": {
-  "keywords": ["IETF CoRE WG", "UDP 기반 REST", "DTLS", "6LoWPAN / IEEE 802.15.4", "Sensor, Client, Server, Proxy", "CoAP Transactions"]
+  "keywords": [
+   "IETF CoRE WG",
+   "UDP 기반 REST",
+   "DTLS",
+   "6LoWPAN / IEEE 802.15.4",
+   "Sensor, Client, Server, Proxy",
+   "CoAP Transactions"
+  ],
+  "name": "CoAP(Constrained Application Protocol)",
+  "en": "Constrained Application Protocol"
  },
  "NW_119": {
-  "definition": "차량이 유무선망을 통해 다른 차량 및 도로 등 인프라가 구축된 사물과 정보를 교환하는 기술로, C-ITS의 'Connected/Networked Vehicle'을 구현하는 핵심기술. LTE 진화 기술과 NR을 활용한 두 종류의 eV2X 기술로 구성."
+  "definition": "차량이 유무선망을 통해 다른 차량 및 도로 등 인프라가 구축된 사물과 정보를 교환하는 기술로, C-ITS의 'Connected/Networked Vehicle'을 구현하는 핵심기술. LTE 진화 기술과 NR을 활용한 두 종류의 eV2X 기술로 구성.",
+  "name": "V2X(Vehicle-to-Everything, 차량-사물 통신)",
+  "en": "Vehicle-to-Everything"
  },
  "NW_121": {
-  "keywords": ["전력 인프라 + IoT", "LwM2M/CoAP 기반 표준(한전)", "디바이스-게이트웨이-플랫폼", "AMI", "DLMS/COSEM 변환"],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+  "keywords": [
+   "전력 인프라 + IoT",
+   "LwM2M/CoAP 기반 표준(한전)",
+   "디바이스-게이트웨이-플랫폼",
+   "AMI",
+   "DLMS/COSEM 변환"
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "에너지 사물인터넷(e-IoT, Energy IoT)",
+  "en": "e-IoT, Energy IoT"
  },
  "NW_123": {
   "definition": "센서 노드가 임의로 배치되는 무선 센서네트워크에서 자가 구성(Self-Organizing)과 노드 간 협력으로 동작하며, 에너지 소비를 네트워크 전체에 분산시켜 시스템 수명을 늘리도록 설계된 라우팅.",
-  "keywords": ["평면(Flat): DD, SPIN, SAR", "계층(Hierarchical): LEACH, TEEN, APTEEN", "위치기반: GAF, GEAR", "다중경로", "질의기반"],
-  "note": "원문 키워드에는 'REACH'로 적혀 있으나 본문 표기는 LEACH"
+  "keywords": [
+   "평면(Flat): DD, SPIN, SAR",
+   "계층(Hierarchical): LEACH, TEEN, APTEEN",
+   "위치기반: GAF, GEAR",
+   "다중경로",
+   "질의기반"
+  ],
+  "note": "원문 키워드에는 'REACH'로 적혀 있으나 본문 표기는 LEACH",
+  "name": "센서 네트워크 라우팅(Sensor Network Routing)",
+  "en": "Sensor Network Routing"
  },
  "NW_124_01": {
-  "definition": "매터(Matter)는 스마트홈의 상호 연동성·신뢰성·안전성을 위해 IP, 와이파이, 쓰레드 등을 기반으로 한 개방형 스마트홈 기기 연동 표준이고, 쓰레드(Thread)는 TCP·UDP/IP, IEEE 802.15.4, 메쉬 네트워크 기반의 저전력 무선 통신 기술."
+  "definition": "매터(Matter)는 스마트홈의 상호 연동성·신뢰성·안전성을 위해 IP, 와이파이, 쓰레드 등을 기반으로 한 개방형 스마트홈 기기 연동 표준이고, 쓰레드(Thread)는 TCP·UDP/IP, IEEE 802.15.4, 메쉬 네트워크 기반의 저전력 무선 통신 기술.",
+  "name": "매터 표준과 스레드 프로토콜(Matter & Thread)",
+  "en": "Matter & Thread"
  },
  "NW_125": {
-  "keywords": ["128bit 주소체계", "전환 유형", "보안 이슈", "예) 2001:0DB8:0000:0000:0000:0000:1428:57ab"]
+  "keywords": [
+   "128bit 주소체계",
+   "전환 유형",
+   "보안 이슈",
+   "예) 2001:0DB8:0000:0000:0000:0000:1428:57ab"
+  ],
+  "name": "IPv6 기반 All-IP(IPv6 All-IP Network)",
+  "en": "IPv6 All-IP Network"
  },
  "NW_126": {
-  "definition": "IPv4와 IPv6를 같은 장치와 네트워크상에서 상호 공존시키는 방법(IPv4/IPv6 라우터에 장착)."
+  "definition": "IPv4와 IPv6를 같은 장치와 네트워크상에서 상호 공존시키는 방법(IPv4/IPv6 라우터에 장착).",
+  "name": "듀얼 스택(Dual Stack)",
+  "en": "Dual Stack"
  },
  "NW_128": {
   "definition": "IPv4에서 IPv6로 전환하기 위한 방안 관점의 토픽. IPv6 보안취약성, 서비스 모델 부재, 전환 성공사례 미흡으로 민간·공공 부문 전환이 지연되고 있어 전환 기술과 정책이 필요.",
-  "keywords": ["IPv6 특징: 128bit 주소체계, Plug&Play, 이동성, ad-hoc, 보안", "전환 기술: 듀얼스택, 터널링, 주소변환", "전환 정책: 인프라 확충, 서비스 개발, 중소기업 지원, IPv6 의무화"],
-  "note": "원문 키워드에는 'IPv4 특징 : 128 bit'로 적혀 있으나 128bit는 IPv6 특징"
+  "keywords": [
+   "IPv6 특징: 128bit 주소체계, Plug&Play, 이동성, ad-hoc, 보안",
+   "전환 기술: 듀얼스택, 터널링, 주소변환",
+   "전환 정책: 인프라 확충, 서비스 개발, 중소기업 지원, IPv6 의무화"
+  ],
+  "note": "원문 키워드에는 'IPv4 특징 : 128 bit'로 적혀 있으나 128bit는 IPv6 특징",
+  "name": "IPv6 전환: 변환 방식(IPv4/IPv6 Translation)",
+  "en": "IPv4/IPv6 Translation"
  },
  "NW_132": {
-  "definition": "QoS: 다양한 통신 서비스에 대한 서비스 품질과 성능을 일정 수준으로 보장하여 사용자 요구를 충족시키는 네트워크 기술."
+  "definition": "QoS: 다양한 통신 서비스에 대한 서비스 품질과 성능을 일정 수준으로 보장하여 사용자 요구를 충족시키는 네트워크 기술.",
+  "name": "큐 관리(Queue Management)",
+  "en": "Queue Management"
  },
  "NW_134": {
-  "keywords": ["초과 트래픽 폐기(Drop)", "미터(meter)·마커(marker)", "SLA 대역폭 제어", "Token Bucket", "Traffic Shaping과 비교"],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+  "keywords": [
+   "초과 트래픽 폐기(Drop)",
+   "미터(meter)·마커(marker)",
+   "SLA 대역폭 제어",
+   "Token Bucket",
+   "Traffic Shaping과 비교"
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "트래픽 폴리싱(Traffic Policing)",
+  "en": "Traffic Policing"
  },
  "NW_135": {
-  "keywords": ["DiffServ Conditioner", "패킷 지연(버퍼링)", "Leaky Bucket", "Token Bucket"]
+  "keywords": [
+   "DiffServ Conditioner",
+   "패킷 지연(버퍼링)",
+   "Leaky Bucket",
+   "Token Bucket"
+  ],
+  "name": "트래픽 셰이핑(Traffic Shaping)",
+  "en": "Traffic Shaping"
  },
  "NW_137": {
-  "keywords": ["송신자 전송률 제한", "혼잡 감지", "Slow Start", "Congestion Avoidance", "라우터 중심: Tail Drop, RED, WRED", "호스트 중심: TCP 혼잡제어"]
+  "keywords": [
+   "송신자 전송률 제한",
+   "혼잡 감지",
+   "Slow Start",
+   "Congestion Avoidance",
+   "라우터 중심: Tail Drop, RED, WRED",
+   "호스트 중심: TCP 혼잡제어"
+  ],
+  "name": "혼잡 제어(Congestion Control)",
+  "en": "Congestion Control"
  },
  "NW_139": {
-  "keywords": ["IntServ 보완", "클래스별 가중치", "DSCP(6비트, IP 헤더)", "ISP에서 할당"]
+  "keywords": [
+   "IntServ 보완",
+   "클래스별 가중치",
+   "DSCP(6비트, IP 헤더)",
+   "ISP에서 할당"
+  ],
+  "name": "DiffServ(Differentiated Services, 차등 서비스)",
+  "en": "Differentiated Services"
  },
  "NW_141": {
   "definition": "캐리어 이더넷: 이더넷에 표준 서비스·확장성·신뢰도·QoS·서비스 관리를 정의한 캐리어급 서비스로, 기존 LAN 영역의 이더넷 기술을 전달망(캐리어) 수준으로 향상시킨 기술/망.",
-  "keywords": ["IP/MPLS", "MPLS-TP", "Control Plane", "캐리어 이더넷 5대 속성: 표준화된 서비스, 확장성, 신뢰성/생존성, 서비스품질, 서비스관리"],
-  "note": "원문 본문 대부분이 이미지라 텍스트로 확인된 내용만 정리"
+  "keywords": [
+   "IP/MPLS",
+   "MPLS-TP",
+   "Control Plane",
+   "캐리어 이더넷 5대 속성: 표준화된 서비스, 확장성, 신뢰성/생존성, 서비스품질, 서비스관리"
+  ],
+  "note": "원문 본문 대부분이 이미지라 텍스트로 확인된 내용만 정리",
+  "name": "IP-MPLS와 캐리어 이더넷(IP-MPLS & Carrier Ethernet)",
+  "en": "IP-MPLS & Carrier Ethernet"
  },
  "NW_142": {
-  "definition": "고객이 서비스에 대해 총체적으로 경험하고 인지하는 품질로, 사용자가 요금을 지불한 서비스에 기대하는 기대값을 근거로 규정하는 품질 척도."
+  "definition": "고객이 서비스에 대해 총체적으로 경험하고 인지하는 품질로, 사용자가 요금을 지불한 서비스에 기대하는 기대값을 근거로 규정하는 품질 척도.",
+  "name": "QoE(Quality of Experience, 체감 품질)",
+  "en": "Quality of Experience"
  },
  "NW_143": {
-  "definition": "통신망이 서비스품질(QoS)에 이바지하는 능력으로, 망 설계 특성에 의존하는 망의 개별 요소 성능. 통신망 사업자에게 유용한 품질 척도."
+  "definition": "통신망이 서비스품질(QoS)에 이바지하는 능력으로, 망 설계 특성에 의존하는 망의 개별 요소 성능. 통신망 사업자에게 유용한 품질 척도.",
+  "name": "NP(Network Performance, 네트워크 성능)",
+  "en": "Network Performance"
  },
  "NW_150": {
-  "definition": "13.56MHz 주파수로 양방향 통신(최대 424Kbps)이 가능하고 RFID와 스마트 기능을 통합한 근거리 무선통신 기술. 기존 스마트카드의 Tag 역할에 더해 양방향 통신과 Read/Write 기능을 수행."
+  "definition": "13.56MHz 주파수로 양방향 통신(최대 424Kbps)이 가능하고 RFID와 스마트 기능을 통합한 근거리 무선통신 기술. 기존 스마트카드의 Tag 역할에 더해 양방향 통신과 Read/Write 기능을 수행.",
+  "name": "NFC(Near Field Communication, 근거리 무선통신)",
+  "en": "Near Field Communication"
  },
- "NW_166": {"dueum": null, "keywords": ["MC: 여러 주파수 중 하나 선택", "로드밸런싱", "트래픽 혼잡 분산"]},
- "NW_167": {"dueum": null, "keywords": ["CA: 여러 주파수 대역 결합", "대역폭 확장(최대 5개 묶음)", "속도 향상", "분류: 대역내 연속 / 대역내 불연속 / 대역간 비연속 통합"]},
+ "NW_166": {
+  "dueum": null,
+  "keywords": [
+   "MC: 여러 주파수 중 하나 선택",
+   "로드밸런싱",
+   "트래픽 혼잡 분산"
+  ],
+  "name": "멀티캐리어(Multi-Carrier)",
+  "en": "Multi-Carrier"
+ },
+ "NW_167": {
+  "dueum": null,
+  "keywords": [
+   "CA: 여러 주파수 대역 결합",
+   "대역폭 확장(최대 5개 묶음)",
+   "속도 향상",
+   "분류: 대역내 연속 / 대역내 불연속 / 대역간 비연속 통합"
+  ],
+  "name": "주파수 집성(Carrier Aggregation)",
+  "en": "Carrier Aggregation"
+ },
  "NW_178": {
-  "keywords": ["700MHz", "LTE-Maritime", "100km 해상 커버리지", "EPC, EMS, e-Navigation", "DU/RU", "PS-LTE·LTE-R 간섭"],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+  "keywords": [
+   "700MHz",
+   "LTE-Maritime",
+   "100km 해상 커버리지",
+   "EPC, EMS, e-Navigation",
+   "DU/RU",
+   "PS-LTE·LTE-R 간섭"
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "해상 재난망(LTE-M, LTE-Maritime)",
+  "en": "LTE-M, LTE-Maritime"
  },
  "NW_181": {
-  "definition": "화재·홍수·지진 등 재난 발생 시 국가 차원의 신속하고 효율적인 재난 관리를 위해, 4세대 이동통신 표준 LTE에 재난대응 무선 교신기술을 적용한 재난 관련 기관용 무선 통신망."
+  "definition": "화재·홍수·지진 등 재난 발생 시 국가 차원의 신속하고 효율적인 재난 관리를 위해, 4세대 이동통신 표준 LTE에 재난대응 무선 교신기술을 적용한 재난 관련 기관용 무선 통신망.",
+  "name": "국가재난안전통신망(PS-LTE, Public Safety LTE)",
+  "en": "PS-LTE, Public Safety LTE"
  },
  "NW_185": {
   "definition": "4G 대비 10배 이상 향상된 초고속·초고용량·초저지연·초연결 네트워크 기술로, 다양한 디지털 디바이스를 수용하는 차세대 네트워크의 핵심 인프라이자 기술.",
-  "keywords": ["최고 전송속도 20Gbps", "체감 100~1,000Mbps", "주파수 효율 3배", "이동성 500km/h", "지연 1ms", "연결 10^6개/km²", "에너지 효율 100배", "면적당 10Mbps/m²"],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문 성능 비교표(두음 '전체주고지연에면')에서 발췌"
+  "keywords": [
+   "최고 전송속도 20Gbps",
+   "체감 100~1,000Mbps",
+   "주파수 효율 3배",
+   "이동성 500km/h",
+   "지연 1ms",
+   "연결 10^6개/km²",
+   "에너지 효율 100배",
+   "면적당 10Mbps/m²"
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문 성능 비교표(두음 '전체주고지연에면')에서 발췌",
+  "name": "5G 주요 기술(5G, IMT-2020)",
+  "en": "5G, IMT-2020"
  },
  "NW_186": {
-  "definition": "물리적으로 하나의 네트워크에서 Device·Access·Transport·Core를 포함해 End-to-End로 논리적으로 분리된 네트워크를 만들어, 서로 다른 특성의 서비스마다 특화된 전용 네트워크를 제공하는 5G 핵심기술."
+  "definition": "물리적으로 하나의 네트워크에서 Device·Access·Transport·Core를 포함해 End-to-End로 논리적으로 분리된 네트워크를 만들어, 서로 다른 특성의 서비스마다 특화된 전용 네트워크를 제공하는 5G 핵심기술.",
+  "name": "네트워크 슬라이싱(Network Slicing)",
+  "en": "Network Slicing"
  },
  "NW_189": {
-  "keywords": ["근접성(Proximity)", "다양한 지리적 분포", "저지연(Low Latency)", "위치인식(Location Awareness)", "MEC Server(기지국 위치)"],
-  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌"
+  "keywords": [
+   "근접성(Proximity)",
+   "다양한 지리적 분포",
+   "저지연(Low Latency)",
+   "위치인식(Location Awareness)",
+   "MEC Server(기지국 위치)"
+  ],
+  "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
+  "name": "멀티액세스 엣지 컴퓨팅(MEC, Multi-access Edge Computing)",
+  "en": "MEC, Multi-access Edge Computing"
  },
  "NW_191": {
-  "keywords": ["최대 1Tbps", "AIoE(Ambient Internet of Everything)", "6대 성능 비전: 초성능, 초대역, 초경험, 초지능, 초정밀, 초공간", "테라헤르츠(THz) 대역"]
+  "keywords": [
+   "최대 1Tbps",
+   "AIoE(Ambient Internet of Everything)",
+   "6대 성능 비전: 초성능, 초대역, 초경험, 초지능, 초정밀, 초공간",
+   "테라헤르츠(THz) 대역"
+  ],
+  "name": "6G(6세대 이동통신, IMT-2030)",
+  "en": "IMT-2030"
  },
  "NW_194": {
-  "keywords": ["RAN Sharing", "코어망은 통신사별 소유", "기지국(eNB/gNB)·주파수 공유", "MORAN·GWCN과 비교"],
-  "keywords_note": "원문 키워드 칸에 다른 토픽(데이터거버넌스) 키워드가 들어가 있어 본문에서 발췌"
+  "keywords": [
+   "RAN Sharing",
+   "코어망은 통신사별 소유",
+   "기지국(eNB/gNB)·주파수 공유",
+   "MORAN·GWCN과 비교"
+  ],
+  "keywords_note": "원문 키워드 칸에 다른 토픽(데이터거버넌스) 키워드가 들어가 있어 본문에서 발췌",
+  "name": "MOCN(Multi-Operator Core Network)",
+  "en": "Multi-Operator Core Network"
  },
- "NW_197": {"keywords": ["no discrimination(차별금지)", "모든 콘텐츠 동등 취급", "미국 망 중립성 폐지"]},
+ "NW_197": {
+  "keywords": [
+   "no discrimination(차별금지)",
+   "모든 콘텐츠 동등 취급",
+   "미국 망 중립성 폐지"
+  ],
+  "name": "망 중립성(Network Neutrality)",
+  "en": "Network Neutrality"
+ },
  "NW_199": {
-  "definition": "사업장의 물리적 위치와 관계없이 매출이 발생하는 국가에서 세금을 부과하여 조세 회피를 방지하는 새로운 세금 제도."
+  "definition": "사업장의 물리적 위치와 관계없이 매출이 발생하는 국가에서 세금을 부과하여 조세 회피를 방지하는 새로운 세금 제도.",
+  "name": "디지털세(Digital Tax)",
+  "en": "Digital Tax"
  },
  "NW_205": {
   "definition": "라우팅 테이블을 생성·유지·업데이트·전달하는 프로토콜이 라우팅 프로토콜이며, 경로 고정 여부에 따라 관리자가 경로를 직접 입력하는 Static과 라우터가 스스로 최적 경로를 찾는 Dynamic으로 분류.",
-  "keywords": ["Static Routing: 수동 입력, 라우터 부하 경감", "Dynamic Routing: RIP, IGRP, OSPF, EIGRP"]
+  "keywords": [
+   "Static Routing: 수동 입력, 라우터 부하 경감",
+   "Dynamic Routing: RIP, IGRP, OSPF, EIGRP"
+  ],
+  "name": "정적·동적 라우팅(Static/Dynamic Routing)",
+  "en": "Static/Dynamic Routing"
  },
  "NW_206": {
   "definition": "AS(자율 시스템) 내부·외부 연결에 따라 AS 내부 라우팅을 담당하는 IGP와 서로 다른 AS 사이에서 사용하는 EGP로 구분하는 라우팅 분류.",
-  "keywords": ["IGP: RIP, IGRP, OSPF, EIGRP, IS-IS (Multicast)", "EGP: BGP, EGP (Unicast)", "AS(Autonomous System)"]
+  "keywords": [
+   "IGP: RIP, IGRP, OSPF, EIGRP, IS-IS (Multicast)",
+   "EGP: BGP, EGP (Unicast)",
+   "AS(Autonomous System)"
+  ],
+  "name": "내부·외부 라우팅(IGP/EGP)",
+  "en": "IGP/EGP"
  },
  "NW_208": {
   "definition": "각 노드가 직접 연결된 이웃이 보내는 정보로 목적지까지의 거리(Hop)와 방향을 계산하고 그 결과를 다시 이웃에게 알리는(분산적·반복적·비동기적) 라우팅 방식.",
-  "keywords": ["RIP", "IGRP", "분산적·반복적·비동기적", "Hop Count", "이웃 라우터와 테이블 교환"],
-  "note": "원문 '정의' 칸은 SPF로 적혀 있으나 이는 Link State 설명이라, 원문 특징·개념도 설명으로 정의를 정리함"
+  "keywords": [
+   "RIP",
+   "IGRP",
+   "분산적·반복적·비동기적",
+   "Hop Count",
+   "이웃 라우터와 테이블 교환"
+  ],
+  "note": "원문 '정의' 칸은 SPF로 적혀 있으나 이는 Link State 설명이라, 원문 특징·개념도 설명으로 정의를 정리함",
+  "name": "거리 벡터 알고리즘(Distance Vector Algorithm)",
+  "en": "Distance Vector Algorithm"
  },
  "NW_209": {
-  "definition": "라우터가 네트워크 전반의 링크 상태 정보를 유지하고, 자신을 루트로 최단 경로 알고리즘(다익스트라)을 계산해 모든 목적지까지의 경로를 라우팅 테이블에 기록하는 방식(대표: OSPF)."
+  "definition": "라우터가 네트워크 전반의 링크 상태 정보를 유지하고, 자신을 루트로 최단 경로 알고리즘(다익스트라)을 계산해 모든 목적지까지의 경로를 라우팅 테이블에 기록하는 방식(대표: OSPF).",
+  "name": "링크 상태 알고리즘(Link State Algorithm)",
+  "en": "Link State Algorithm"
  },
- "NW_210": {"keywords": ["Hop 수(최대 15)", "거리벡터(DVA)", "라우팅 테이블", "UDP 520"]},
- "NW_212_00": {"definition": "라우터가 목적지까지의 여러 경로 중 최적 경로를 선택하기 위한 기준 변수."},
- "NW_213": {"note": "NW_222 스마트 홈과 거의 같은 내용"},
+ "NW_210": {
+  "keywords": [
+   "Hop 수(최대 15)",
+   "거리벡터(DVA)",
+   "라우팅 테이블",
+   "UDP 520"
+  ],
+  "name": "RIP(Routing Information Protocol)",
+  "en": "Routing Information Protocol"
+ },
+ "NW_212_00": {
+  "definition": "라우터가 목적지까지의 여러 경로 중 최적 경로를 선택하기 위한 기준 변수.",
+  "name": "라우팅 프로토콜 메트릭(Routing Protocol Metric)",
+  "en": "Routing Protocol Metric"
+ },
+ "NW_213": {
+  "note": "NW_222 스마트 홈과 거의 같은 내용",
+  "name": "홈 네트워킹(Home Networking)",
+  "en": "Home Networking"
+ },
  "NW_222": {
   "definition": "가전제품, 에너지 소비장치(수도·전기·냉난방), 보안기기(도어록·감시카메라) 등 다양한 분야의 모든 것을 통신망으로 제어할 수 있는 기술. 주거환경에 IT를 융합한 인간 중심의 스마트 라이프 환경.",
-  "keywords": ["Smart Tag", "PLC", "Smart Meter"],
-  "note": "NW_213 Home Networking과 거의 같은 내용"
+  "keywords": [
+   "Smart Tag",
+   "PLC",
+   "Smart Meter"
+  ],
+  "note": "NW_213 Home Networking과 거의 같은 내용",
+  "name": "스마트 홈(Smart Home)",
+  "en": "Smart Home"
  },
- "NW_233": {"keywords": ["Control Plane / Data Plane 분리", "OpenFlow", "SDN 제어기", "Network OS", "NFV", "SDx, SDS"]},
- "NW_238": {"keywords": ["NFV용 오픈소스 플랫폼", "Vl-Ha 인터페이스", "Vn-Nf 인터페이스", "Nf-Vi 인터페이스", "Or-Vi, Vi-Vnfm 인터페이스"]},
- "NW_239": {"keywords": ["Compute(CPU, Memory)", "Storage", "Network", "Facility", "가상화: SDN, SDS", "프로비저닝", "오케스트레이션", "오토스케일링"]},
+ "NW_233": {
+  "keywords": [
+   "Control Plane / Data Plane 분리",
+   "OpenFlow",
+   "SDN 제어기",
+   "Network OS",
+   "NFV",
+   "SDx, SDS"
+  ],
+  "name": "SDN(Software Defined Networking)",
+  "en": "Software Defined Networking"
+ },
+ "NW_238": {
+  "keywords": [
+   "NFV용 오픈소스 플랫폼",
+   "Vl-Ha 인터페이스",
+   "Vn-Nf 인터페이스",
+   "Nf-Vi 인터페이스",
+   "Or-Vi, Vi-Vnfm 인터페이스"
+  ],
+  "name": "OPNFV(Open Platform for NFV)",
+  "en": "Open Platform for NFV"
+ },
+ "NW_239": {
+  "keywords": [
+   "Compute(CPU, Memory)",
+   "Storage",
+   "Network",
+   "Facility",
+   "가상화: SDN, SDS",
+   "프로비저닝",
+   "오케스트레이션",
+   "오토스케일링"
+  ],
+  "name": "SDDC(Software Defined Data Center)",
+  "en": "Software Defined Data Center"
+ },
  "NW_244": {
   "definition": "송신측이 전송할 문자나 프레임에 부가적 정보(Redundancy)를 첨가해 전송하고, 수신측이 에러를 발견하면 이 부가 정보로 에러 검출과 에러 정정을 하는 방식. 재전송 요구 없이 오류 수정이 가능해 실시간 처리에 유리.",
-  "keywords": ["Forward Error Correction(전진오류수정)", "무선에서 많이 사용", "Block: Hamming, RS", "Non-Block: Convolutional(길쌈), Turbo", "오류검출+오류정정"],
-  "sections": [{"title": "FEC의 주요 용도", "bullets": ["송신측이 한 곳이고 수신측이 여러 곳", "재전송·피드백이 어려운 곳", "채널 환경이 열악한 곳", "높은 신뢰성이 요구되는 곳"]}],
-  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리"
+  "keywords": [
+   "Forward Error Correction(전진오류수정)",
+   "무선에서 많이 사용",
+   "Block: Hamming, RS",
+   "Non-Block: Convolutional(길쌈), Turbo",
+   "오류검출+오류정정"
+  ],
+  "sections": [
+   {
+    "title": "FEC의 주요 용도",
+    "bullets": [
+     "송신측이 한 곳이고 수신측이 여러 곳",
+     "재전송·피드백이 어려운 곳",
+     "채널 환경이 열악한 곳",
+     "높은 신뢰성이 요구되는 곳"
+    ]
+   }
+  ],
+  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
+  "name": "FEC(Forward Error Correction, 전진 오류 수정)",
+  "en": "Forward Error Correction"
  },
- "NW_246": {"keywords": ["이진 나눗셈(Modulo-2)", "데이터워드", "divisor(생성다항식)", "XOR 기반 연산", "집단오류(burst error) 검출"]},
+ "NW_246": {
+  "keywords": [
+   "이진 나눗셈(Modulo-2)",
+   "데이터워드",
+   "divisor(생성다항식)",
+   "XOR 기반 연산",
+   "집단오류(burst error) 검출"
+  ],
+  "name": "순환 중복 검사(CRC, Cyclic Redundancy Check)",
+  "en": "CRC, Cyclic Redundancy Check"
+ },
  "NW_247": {
-  "definition": "데이터링크 계층에서 데이터 교환 중 오류가 검출되면 부정응답(NAK)이 되돌아오고 오류난 프레임의 재전송을 반복하는 오류제어 방식(오류제어 = 오류검출 + 재전송)."
+  "definition": "데이터링크 계층에서 데이터 교환 중 오류가 검출되면 부정응답(NAK)이 되돌아오고 오류난 프레임의 재전송을 반복하는 오류제어 방식(오류제어 = 오류검출 + 재전송).",
+  "name": "자동 재전송 요구(ARQ, Automatic Repeat reQuest)",
+  "en": "ARQ, Automatic Repeat reQuest"
  },
  "NW_248": {
   "definition": "데이터 통신에서 송신측이 전송할 모든 데이터를 16비트 워드 단위로 구분해 순차적으로 합한 결과의 1의 보수를 데이터에 추가해 전송하고, 수신측이 동일한 연산을 수행해 오류 여부를 판단하는 기법(도구).",
-  "keywords": ["16비트 워드 단위", "1의 보수", "덧셈 결과가 0이면 오류 없음", "워드 순서 변경 오류 검출 불가", "IPv4 헤더, TCP/UDP 헤더 체크섬", "데이터링크 계층은 CRC로 대체 추세"],
-  "sections": [{"title": "검사합 처리 절차(16비트 기준)", "bullets": ["① 전송 데이터를 워드 단위로 구분", "② 블록 단위 + 연산 결과 E 도출", "③ E의 1의 보수 E' 도출", "④ 전송 데이터 끝에 E'를 추가하여 전송", "⑤ 수신측이 A+B+C+D+E' = F 연산", "⑥ F의 1의 보수 F'가 0이면 오류 없음"]}],
+  "keywords": [
+   "16비트 워드 단위",
+   "1의 보수",
+   "덧셈 결과가 0이면 오류 없음",
+   "워드 순서 변경 오류 검출 불가",
+   "IPv4 헤더, TCP/UDP 헤더 체크섬",
+   "데이터링크 계층은 CRC로 대체 추세"
+  ],
+  "sections": [
+   {
+    "title": "검사합 처리 절차(16비트 기준)",
+    "bullets": [
+     "① 전송 데이터를 워드 단위로 구분",
+     "② 블록 단위 + 연산 결과 E 도출",
+     "③ E의 1의 보수 E' 도출",
+     "④ 전송 데이터 끝에 E'를 추가하여 전송",
+     "⑤ 수신측이 A+B+C+D+E' = F 연산",
+     "⑥ F의 1의 보수 F'가 0이면 오류 없음"
+    ]
+   }
+  ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리"
+  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
+  "name": "체크섬(Checksum)",
+  "en": "Checksum"
  },
  "NW_249": {
   "definition": "코드 전송 시 발생하는 오류를 Parity bit로 검출(Detection)할 뿐 아니라 오류 정정(Correction)까지 가능한 코드.",
-  "keywords": ["2^p ≥ d+p+1 (d: 데이터 비트 수, p: 패리티 비트 수)", "패리티 위치: 1, 2, 4, 8번째 비트", "짝수 패리티", "검사 결과 0이면 정상, 아니면 그 2진값 위치 오류 정정", "데이터 4비트→패리티 3개, 7비트→4개"]
+  "keywords": [
+   "2^p ≥ d+p+1 (d: 데이터 비트 수, p: 패리티 비트 수)",
+   "패리티 위치: 1, 2, 4, 8번째 비트",
+   "짝수 패리티",
+   "검사 결과 0이면 정상, 아니면 그 2진값 위치 오류 정정",
+   "데이터 4비트→패리티 3개, 7비트→4개"
+  ],
+  "name": "해밍 코드(Hamming Code)",
+  "en": "Hamming Code"
  },
  "NW_271": {
   "definition": "무선채널에서 여러 신호가 경쟁하면서 공유할 때 외부의 전파잡음에 강하도록 넓은 주파수대역으로 분산시키는 일종의 변조방식.",
-  "keywords": ["Jamming 방지", "도청 방지", "페이딩(Fading)에 강함", "DSSS(Direct Sequence Spread Spectrum)", "FHSS(Frequency Hopping Spread Spectrum)", "확산(Spreading)/역확산(Despreading)"],
-  "sections": [{"title": "DSSS 동작", "bullets": ["송신부 확산: 미리 동일한 확산코드를 공유하고 송신데이터에 확산코드를 곱하여 송신", "수신부 역확산: 동일한 확산코드와 수신된 확산신호로 송신데이터를 복원", "간섭신호가 함께 수신되면 역확산 과정에서 원래 신호는 복원되고 간섭신호는 확산되어 줄어듦"]}],
+  "keywords": [
+   "Jamming 방지",
+   "도청 방지",
+   "페이딩(Fading)에 강함",
+   "DSSS(Direct Sequence Spread Spectrum)",
+   "FHSS(Frequency Hopping Spread Spectrum)",
+   "확산(Spreading)/역확산(Despreading)"
+  ],
+  "sections": [
+   {
+    "title": "DSSS 동작",
+    "bullets": [
+     "송신부 확산: 미리 동일한 확산코드를 공유하고 송신데이터에 확산코드를 곱하여 송신",
+     "수신부 역확산: 동일한 확산코드와 수신된 확산신호로 송신데이터를 복원",
+     "간섭신호가 함께 수신되면 역확산 과정에서 원래 신호는 복원되고 간섭신호는 확산되어 줄어듦"
+    ]
+   }
+  ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리"
+  "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
+  "name": "대역 확산(Spread Spectrum)",
+  "en": "Spread Spectrum"
  },
- "NW_273": {"keywords": ["수퍼노드", "오버레이 구조", "하이브리드 P2P vs 퓨어 P2P"]},
+ "NW_273": {
+  "keywords": [
+   "수퍼노드",
+   "오버레이 구조",
+   "하이브리드 P2P vs 퓨어 P2P"
+  ],
+  "name": "P2P(Peer-to-Peer)",
+  "en": "Peer-to-Peer"
+ },
  "NW_278": {
-  "definition": "SCADA 시스템에서 RTU·PLC 간 제어 및 상태 정보 통신을 위해 시리얼과 TCP에서 구현 가능한 산업용 통신 응용 계층 메시징 프로토콜(1979년 Modicon 개발)."
+  "definition": "SCADA 시스템에서 RTU·PLC 간 제어 및 상태 정보 통신을 위해 시리얼과 TCP에서 구현 가능한 산업용 통신 응용 계층 메시징 프로토콜(1979년 Modicon 개발).",
+  "name": "모드버스 프로토콜(Modbus Protocol)",
+  "en": "Modbus Protocol"
+ },
+ "NW_071": {
+  "title": "QUIC",
+  "subtitle": "QUIC (RFC 9000, HTTP/3의 전송 계층)",
+  "definition": "UDP 위에서 TLS 1.3 암호화·스트림 다중화·혼잡 제어를 통합 제공해 연결 지연(1-RTT/0-RTT)과 HOL 블로킹을 줄인 IETF 표준 전송 프로토콜 (RFC 9000)",
+  "keywords": [
+   "기반: UDP + TLS 1.3 내장 (RFC 9000 · 9001 · 9002)",
+   "핸드셰이크: 1-RTT(신규) · 0-RTT(재연결, 재전송 공격 주의)",
+   "스트림 다중화(Stream Multiplexing) → HOL 블로킹(Head-of-Line Blocking) 해소",
+   "연결 ID(Connection ID) → 연결 이전(Connection Migration)",
+   "신뢰성: 단조 증가 패킷 번호(Packet Number) · 손실 감지·혼잡 제어",
+   "HTTP/3(RFC 9114) · QPACK 헤더 압축",
+   "사용자 공간(User Space) 구현 → 빠른 개선·배포"
+  ],
+  "outline": [
+   "QUIC의 개념",
+   "- 정의",
+   "- 등장 배경(TCP+TLS의 한계)",
+   "QUIC의 핵심 기술",
+   "- 연결 수립(1-RTT·0-RTT)",
+   "- 스트림 다중화·연결 이전",
+   "- 신뢰성·혼잡 제어",
+   "TCP+TLS 대비 비교 및 동향"
+  ],
+  "sections": [
+   {
+    "title": "QUIC의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "UDP 위에 신뢰성·혼잡 제어·TLS 1.3 보안·다중화를 한 계층으로 통합한 전송 프로토콜",
+       "Google이 개발(gQUIC, 2013 공개)한 뒤 IETF가 표준화: RFC 9000(전송), 9001(TLS 적용), 9002(손실 감지·혼잡 제어), 2021"
+      ]
+     },
+     {
+      "title": "등장 배경(TCP+TLS의 한계)",
+      "items": [
+       "TCP 3-way 핸드셰이크 + TLS 핸드셰이크로 연결 지연 누적",
+       "TCP는 바이트 스트림 하나 → 패킷 하나 손실 시 모든 HTTP/2 스트림이 대기(HOL 블로킹)",
+       "TCP는 OS 커널·중간 장비에 고정돼 개선이 느림(Ossification)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "QUIC의 핵심 기술",
+    "subsections": [
+     {
+      "title": "연결 수립(1-RTT·0-RTT)",
+      "items": [
+       "전송·암호 핸드셰이크를 합쳐 신규 연결 1-RTT",
+       "재연결 시 이전 세션 정보로 첫 패킷부터 데이터 전송(0-RTT) → 재전송 공격(Replay Attack)에 취약해 멱등 요청에만 사용 권장"
+      ]
+     },
+     {
+      "title": "스트림 다중화·연결 이전",
+      "items": [
+       "한 연결 안에 독립적인 스트림 여러 개 → 한 스트림의 손실이 다른 스트림을 막지 않음",
+       "IP·포트 대신 연결 ID(Connection ID)로 연결 식별 → Wi-Fi↔LTE 전환 시에도 연결 유지(Connection Migration)"
+      ]
+     },
+     {
+      "title": "신뢰성·혼잡 제어",
+      "items": [
+       "패킷 번호는 재전송 때도 새로 부여(단조 증가) → 재전송 모호성 제거, RTT 정확히 측정",
+       "ACK 기반 손실 감지·재전송, 혼잡 제어(RFC 9002: NewReno 기반, CUBIC·BBR 등 적용 가능), 스트림·연결 단위 흐름 제어",
+       "헤더 대부분과 페이로드를 암호화 → 중간 장비의 간섭 감소",
+       "사용자 공간(User Space) 라이브러리로 구현 → OS 업데이트 없이 빠르게 개선"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "TCP+TLS 대비 비교 및 동향",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "연결 지연: TCP+TLS 1.2 약 3-RTT, TCP+TLS 1.3 2-RTT, QUIC 1-RTT(재연결 0-RTT)",
+       "HOL 블로킹: TCP 연결 단위 발생 / QUIC 스트림 단위로 격리",
+       "HTTP/3(RFC 9114)이 QUIC 위에서 동작, 헤더 압축은 HPACK 대신 QPACK(RFC 9204)",
+       "주요 브라우저·CDN이 HTTP/3 지원, DNS over QUIC(RFC 9250) 등으로 확장"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "0-RTT(Zero Round-Trip Time) 재연결",
+   "연결 ID(Connection ID)",
+   "연결 이전(Connection Migration)",
+   "HOL 블로킹(Head-of-Line Blocking) 해소 구조",
+   "HTTP/3(HyperText Transfer Protocol 3)",
+   "QPACK(HTTP/3 헤더 압축)",
+   "스트림 다중화(Stream Multiplexing)"
+  ],
+  "quiz_avoid": [
+   "NW_026",
+   "NW_031_01"
+  ],
+  "keywords_note": null,
+  "note": null,
+  "review": null,
+  "dueum": null,
+  "name": "QUIC(Quick UDP Internet Connections)",
+  "en": "Quick UDP Internet Connections"
+ },
+ "NW_080": {
+  "title": "커넥티드 카(Connected Car)",
+  "subtitle": "",
+  "definition": "차량에 통신 기능을 탑재해 다른 차량·인프라·클라우드·보행자와 실시간으로 연결하고, 텔레매틱스·인포테인먼트·원격 제어·OTA 업데이트 등 서비스를 제공하는 지능형 자동차",
+  "keywords": [
+   "연결방식: 임베디드(Embedded) · 테더드(Tethered) · 통합형(Integrated)",
+   "V2X: V2V · V2I · V2N · V2P",
+   "통신 기술: C-V2X(LTE-V2X → NR-V2X) · WAVE(IEEE 802.11p)",
+   "서비스: 텔레매틱스(Telematics) · 인포테인먼트(Infotainment) · OTA · eCall",
+   "보안: UN R155(CSMS) · UN R156(SUMS) · ISO/SAE 21434(차량 사이버보안 엔지니어링)"
+  ],
+  "outline": [
+   "커넥티드 카의 개념",
+   "- 정의",
+   "- 연결방식에 따른 분류",
+   "커넥티드 카의 핵심 기술",
+   "- V2X 통신 유형",
+   "- 통신 기술(C-V2X·WAVE)",
+   "- 주요 서비스",
+   "커넥티드 카 보안 위협 및 대응",
+   "- 위협",
+   "- 국제 규정·표준"
+  ],
+  "sections": [
+   {
+    "title": "커넥티드 카의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "통신으로 외부와 상시 연결되어 차량 자체가 하나의 IT 기기처럼 동작하는 자동차",
+       "자율주행·SDV(Software Defined Vehicle)의 기반 기술"
+      ]
+     },
+     {
+      "title": "연결방식에 따른 분류",
+      "items": [
+       "임베디드(Embedded): 통신 모듈과 앱·서비스가 모두 차량에 내장 → 끊김 없는 서비스, 초기 비용 높음",
+       "테더드(Tethered): 앱·서비스는 차량에 있고, 통신만 스마트폰을 빌려 씀(테더링)",
+       "통합형(Integrated): 앱과 통신 모두 스마트폰이 담당, 차량은 디스플레이·입력만 (Apple CarPlay, Android Auto)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "커넥티드 카의 핵심 기술",
+    "subsections": [
+     {
+      "title": "V2X 통신 유형",
+      "items": [
+       "V2V(Vehicle-to-Vehicle): 차량 간 직접 통신 → 충돌 경고, 군집 주행",
+       "V2I(Vehicle-to-Infrastructure): 신호등·노변 기지국(RSU) 등 도로 인프라와 통신",
+       "V2N(Vehicle-to-Network): 이동통신망을 거쳐 클라우드·서버와 통신",
+       "V2P(Vehicle-to-Pedestrian): 보행자 단말과 통신해 사고 예방"
+      ]
+     },
+     {
+      "title": "통신 기술(C-V2X·WAVE)",
+      "items": [
+       "C-V2X(Cellular V2X): 3GPP 이동통신 기반, LTE-V2X(Rel-14) → NR-V2X(Rel-16, 5G)",
+       "WAVE(Wireless Access in Vehicular Environments): IEEE 802.11p + IEEE 1609, DSRC 계열 무선랜 기반",
+       "국내 C-ITS 통신방식은 2023년 LTE-V2X 단일 방식으로 결정"
+      ]
+     },
+     {
+      "title": "주요 서비스",
+      "items": [
+       "텔레매틱스(Telematics): 통신(Telecommunication)+정보과학(Informatics), 위치 기반 차량 정보·원격 제어",
+       "인포테인먼트(Infotainment): 정보(Information)+오락(Entertainment), 내비게이션·음악·영상",
+       "OTA(Over-The-Air): 무선으로 차량 소프트웨어·펌웨어 업데이트",
+       "eCall: 사고 시 차량이 자동으로 긴급구조센터에 신고 (EU 신차 의무화)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "커넥티드 카 보안 위협 및 대응",
+    "subsections": [
+     {
+      "title": "위협",
+      "items": [
+       "원격 해킹으로 조향·제동 장악 (2015년 지프 체로키 원격 해킹 → 약 140만 대 리콜)",
+       "차량 내부망(CAN)의 인증·암호화 부재, OTA 업데이트 위변조"
+      ]
+     },
+     {
+      "title": "국제 규정·표준",
+      "items": [
+       "UN R155: 사이버보안 관리체계(CSMS, Cyber Security Management System) 인증 요구",
+       "UN R156: 소프트웨어 업데이트 관리체계(SUMS, Software Update Management System) 요구",
+       "ISO/SAE 21434: 차량 사이버보안 엔지니어링 국제 표준 (ISO 26262는 기능 안전 표준)"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "임베디드(Embedded)",
+   "테더드(Tethered)",
+   "통합형(Integrated)",
+   "V2V(Vehicle-to-Vehicle)",
+   "V2P(Vehicle-to-Pedestrian)",
+   "C-V2X(Cellular Vehicle-to-Everything)",
+   "WAVE(Wireless Access in Vehicular Environments)",
+   "OTA(Over-The-Air)",
+   "eCall(Emergency Call, 긴급구난체계)",
+   "UN R155(사이버보안 관리체계, CSMS)",
+   "ISO/SAE 21434(차량 사이버보안 표준)"
+  ],
+  "quiz_avoid": [
+   "NW_031_01"
+  ],
+  "keywords_note": null,
+  "note": null,
+  "review": null,
+  "dueum": null,
+  "name": "커넥티드 카(Connected Car)",
+  "en": "Connected Car"
+ },
+ "NW_001": {
+  "name": "정보이론(Information Theory)",
+  "en": "Information Theory"
+ },
+ "NW_012": {
+  "name": "CSMA/CA(Carrier Sense Multiple Access with Collision Avoidance)",
+  "en": "Carrier Sense Multiple Access with Collision Avoidance"
+ },
+ "NW_031_02": {
+  "name": "비직교 다중접속(NOMA, Non-Orthogonal Multiple Access)",
+  "en": "NOMA, Non-Orthogonal Multiple Access"
+ },
+ "NW_042": {
+  "name": "네트워크 계층(Network Layer, L3)",
+  "en": "Network Layer, L3"
+ },
+ "NW_043": {
+  "name": "데이터 링크 계층(Data Link Layer, L2)",
+  "en": "Data Link Layer, L2"
+ },
+ "NW_046": {
+  "name": "TCP(Transmission Control Protocol)",
+  "en": "Transmission Control Protocol"
+ },
+ "NW_053": {
+  "name": "서브네팅(Subnetting)",
+  "en": "Subnetting"
+ },
+ "NW_054": {
+  "name": "슈퍼네팅(Supernetting)",
+  "en": "Supernetting"
+ },
+ "NW_059": {
+  "name": "패킷 단편화(Packet Fragmentation)",
+  "en": "Packet Fragmentation"
+ },
+ "NW_064": {
+  "name": "SCTP(Stream Control Transmission Protocol)",
+  "en": "Stream Control Transmission Protocol"
+ },
+ "NW_065": {
+  "name": "ARP(Address Resolution Protocol)",
+  "en": "Address Resolution Protocol"
+ },
+ "NW_066": {
+  "name": "RARP(Reverse Address Resolution Protocol)",
+  "en": "Reverse Address Resolution Protocol"
+ },
+ "NW_070": {
+  "name": "WebRTC(Web Real-Time Communication)",
+  "en": "Web Real-Time Communication"
+ },
+ "NW_072": {
+  "name": "VRRP(Virtual Router Redundancy Protocol)",
+  "en": "Virtual Router Redundancy Protocol"
+ },
+ "NW_073": {
+  "name": "MPTCP(Multipath TCP, 다중 경로 TCP)",
+  "en": "Multipath TCP"
+ },
+ "NW_078": {
+  "name": "로드밸런서(Load Balancer)",
+  "en": "Load Balancer"
+ },
+ "NW_079": {
+  "name": "V2V(Vehicle-to-Vehicle, 차량 간 통신)",
+  "en": "Vehicle-to-Vehicle"
+ },
+ "NW_083": {
+  "name": "DSRC(Dedicated Short Range Communications, 단거리 전용 통신)",
+  "en": "Dedicated Short Range Communications"
+ },
+ "NW_085_00": {
+  "name": "차량 긴급구난체계(eCall, Emergency Call)",
+  "en": "eCall, Emergency Call"
+ },
+ "NW_085_01": {
+  "name": "6G-V2X(6G Vehicle-to-Everything)",
+  "en": "6G Vehicle-to-Everything"
+ },
+ "NW_085_02": {
+  "name": "CAN(Controller Area Network)",
+  "en": "Controller Area Network"
+ },
+ "NW_099": {
+  "name": "와이파이 8(Wi-Fi 8, IEEE 802.11bn)",
+  "en": "Wi-Fi 8, IEEE 802.11bn"
+ },
+ "NW_100": {
+  "name": "단말 위치 설정(Localization/Positioning)",
+  "en": "Localization/Positioning"
+ },
+ "NW_101": {
+  "name": "WPA3(Wi-Fi Protected Access 3)",
+  "en": "Wi-Fi Protected Access 3"
+ },
+ "NW_102_1": {
+  "name": "네트워크 실시간 측위(NRTK, Network Real-Time Kinematic)",
+  "en": "NRTK, Network Real-Time Kinematic"
+ },
+ "NW_107": {
+  "name": "MQTT(MQ Telemetry Transport)",
+  "en": "MQ Telemetry Transport"
+ },
+ "NW_108": {
+  "name": "XMPP(Extensible Messaging and Presence Protocol)",
+  "en": "Extensible Messaging and Presence Protocol"
+ },
+ "NW_127": {
+  "name": "터널링(Tunneling)",
+  "en": "Tunneling"
+ },
+ "NW_133": {
+  "name": "WFQ(Weighted Fair Queuing, 가중 공정 큐잉)",
+  "en": "Weighted Fair Queuing"
+ },
+ "NW_136": {
+  "name": "사전 패킷 폐기(Proactive Packet Discard)",
+  "en": "Proactive Packet Discard"
+ },
+ "NW_138": {
+  "name": "IntServ(Integrated Services, 통합 서비스)",
+  "en": "Integrated Services"
+ },
+ "NW_140": {
+  "name": "MPLS(Multi-Protocol Label Switching)",
+  "en": "Multi-Protocol Label Switching"
+ },
+ "NW_147": {
+  "name": "블루투스 5.0(Bluetooth 5.0)",
+  "en": "Bluetooth 5.0"
+ },
+ "NW_160": {
+  "name": "인지 무선(Cognitive Radio)",
+  "en": "Cognitive Radio"
+ },
+ "NW_184": {
+  "name": "RAN 공유(RAN Sharing)",
+  "en": "RAN Sharing"
+ },
+ "NW_187": {
+  "name": "NR과 NR-MIMO(New Radio & NR MIMO)",
+  "en": "New Radio & NR MIMO"
+ },
+ "NW_188": {
+  "name": "5G NSA/SA(Non-Standalone/Standalone)",
+  "en": "Non-Standalone/Standalone"
+ },
+ "NW_190_00": {
+  "name": "엣지 컴퓨팅 스케줄링(Edge Computing Scheduling)",
+  "en": "Edge Computing Scheduling"
+ },
+ "NW_190_01": {
+  "name": "컴퓨팅 컨티뉴엄(Computing Continuum)",
+  "en": "Computing Continuum"
+ },
+ "NW_192_0": {
+  "name": "5G 특화망(Private 5G)",
+  "en": "Private 5G"
+ },
+ "NW_192_1": {
+  "name": "이음 5G(e-Um 5G, Korea Private 5G)",
+  "en": "e-Um 5G, Korea Private 5G"
+ },
+ "NW_193_02": {
+  "name": "디지털 트윈 네트워크(DTN, Digital Twin Network)",
+  "en": "DTN, Digital Twin Network"
+ },
+ "NW_198": {
+  "name": "넷플릭스법(Netflix Act)",
+  "en": "Netflix Act"
+ },
+ "NW_201": {
+  "name": "CDN(Content Delivery Network)",
+  "en": "Content Delivery Network"
+ },
+ "NW_203": {
+  "name": "라우팅 프로토콜(Routing Protocol)",
+  "en": "Routing Protocol"
+ },
+ "NW_207": {
+  "name": "RIP(Routing Information Protocol)",
+  "en": "Routing Information Protocol"
+ },
+ "NW_211": {
+  "name": "OSPF(Open Shortest Path First)",
+  "en": "Open Shortest Path First"
+ },
+ "NW_212_01": {
+  "name": "STP(Spanning Tree Protocol, 스패닝 트리 프로토콜)",
+  "en": "Spanning Tree Protocol"
+ },
+ "NW_234": {
+  "name": "오픈플로(OpenFlow)",
+  "en": "OpenFlow"
+ },
+ "NW_235": {
+  "name": "SD-WAN(Software-Defined WAN)",
+  "en": "Software-Defined WAN"
+ },
+ "NW_236": {
+  "name": "SDE(Software Defined Everything)",
+  "en": "Software Defined Everything"
+ },
+ "NW_237": {
+  "name": "NFV(Network Functions Virtualization)",
+  "en": "Network Functions Virtualization"
+ },
+ "NW_240": {
+  "name": "O-RAN(Open Radio Access Network)",
+  "en": "Open Radio Access Network"
+ },
+ "NW_245": {
+  "name": "BEC(Backward Error Correction, 후진 오류 수정)",
+  "en": "Backward Error Correction"
+ },
+ "NW_275": {
+  "name": "위성-상공-지상 통합 네트워크(SATIN, Satellite-Aerial-Terrestrial Integrated Network)",
+  "en": "SATIN, Satellite-Aerial-Terrestrial Integrated Network"
+ },
+ "NW_276": {
+  "name": "IBN(Intent-Based Networking, 의도 기반 네트워킹)",
+  "en": "Intent-Based Networking"
+ },
+ "NW_277": {
+  "name": "ZSM(Zero-touch network and Service Management)",
+  "en": "Zero-touch network and Service Management"
  }
 }

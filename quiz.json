@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /quiz.json
+---
+[{% assign first = true %}{% for d in site.domains %}{% assign arr = site.data.quiz[d.key] %}{% for q in arr %}{% unless first %},
+{% endunless %}{{ q | jsonify }}{% assign first = false %}{% endfor %}{% endfor %}]

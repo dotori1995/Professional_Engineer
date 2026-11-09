@@ -18,7 +18,11 @@
       const after = raw.slice(off + m.length).trimStart();
       const full = GL[k];
       out += PE.esc(raw.slice(last, off + m.length)); last = off + m.length;
-      if (!seen.has(k) && !after.startsWith('(') && !raw.toLowerCase().includes(String(full).toLowerCase())) { out += `<small class="gl">(${PE.esc(full)})</small>`; seen.add(k); }
+      // 바로 뒤 괄호가 이미 풀네임(같은 첫 글자로 시작하는 단어 포함)이면 생략, ISO/SAE처럼 '/'로 붙은 복합 표기는 생략
+      const paren = after.startsWith('(') ? (after.match(/^\(([^)]*)\)/) || [, ''])[1] : null;
+      const expanded = paren != null && new RegExp('(^|[^A-Za-z])' + k[0] + '[a-z]', 'i').test(paren);
+      const slash = !k.includes('/') && (raw[off - 1] === '/' || raw[off + m.length] === '/');
+      if (!seen.has(k) && !expanded && !slash && !raw.toLowerCase().includes(String(full).toLowerCase())) { out += `<small class="gl">(${PE.esc(full)})</small>`; seen.add(k); }
       return m;
     });
     return out + PE.esc(raw.slice(last));
@@ -56,7 +60,10 @@
     if (!top.length) return '';
     return '<ol class="outline">' + top.map((o, i) => `<li><span class="rn">${ROM[i] || i + 1}.</span> ${PE.gl(o.t)}${full && o.subs.length ? `<span class="subs">${o.subs.map(PE.gl).join(' · ')}</span>` : ''}</li>`).join('') + '</ol>';
   };
-  PE.reviewFixed = t => (t.review || []).some(r => /^\[[ABD]\]/.test(r));
+  PE.reviewFixed = () => false; // 수정·출처 표기는 화면에 노출하지 않음(CONTENT_RULES.md)
+  // 표시용 토픽명: 항상 '한글(English)' 형태(name 필드), 없으면 title
+  PE.name = t => (t && (t.name || t.title)) || '';
+  PE.loadQuiz = () => fetch(PE.base + '/quiz.json').then(r => r.json()).catch(() => []);
   // 테마 토글: 시스템 → 다크 → 라이트
   const btn = document.getElementById('themeBtn');
   if (btn) btn.addEventListener('click', () => {

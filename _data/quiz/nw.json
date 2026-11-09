@@ -1,0 +1,1192 @@
+[
+ {
+  "id": "NW_026-01",
+  "topic": "NW_026",
+  "keyword": "도메인 네임 스페이스",
+  "question": "루트(.)부터 TLD·SLD로 이어지는 트리 구조의 전체 도메인 이름 공간을 뜻하는 DNS 구성요소는?",
+  "options": [
+   "도메인 네임 스페이스(Domain Name Space)",
+   "네임 서버(Name Server)",
+   "리졸버(Resolver)",
+   "캐시(Cache)"
+  ],
+  "answer": 0,
+  "explain": "도메인 네임 스페이스는 계층적 트리 구조의 이름 공간이에요."
+ },
+ {
+  "id": "NW_026-02",
+  "topic": "NW_026",
+  "keyword": "리졸버",
+  "question": "응용 프로그램의 요청을 받아 DNS 질의를 만들고 응답을 해석해 돌려주는 클라이언트 측 구성요소는?",
+  "options": [
+   "권한 네임 서버(Authoritative Name Server)",
+   "리졸버(Resolver)",
+   "루트 서버(Root Server)",
+   "존 파일(Zone File)"
+  ],
+  "answer": 1,
+  "explain": "리졸버(스텁 리졸버)는 클라이언트 쪽에서 질의를 만들고 응답을 해석해요."
+ },
+ {
+  "id": "NW_026-03",
+  "topic": "NW_026",
+  "keyword": "권한 네임 서버",
+  "question": "특정 존(Zone)의 원본 레코드를 직접 보유하고 그 존에 대해 최종 응답을 주는 서버는?",
+  "options": [
+   "캐시 DNS 서버(Caching DNS Server)",
+   "스텁 리졸버(Stub Resolver)",
+   "권한 네임 서버(Authoritative Name Server)",
+   "포워더(Forwarder)"
+  ],
+  "answer": 2,
+  "explain": "권한 서버만 존의 원본 데이터를 가져요. 캐시 서버는 받아 온 결과를 TTL 동안 보관할 뿐이에요."
+ },
+ {
+  "id": "NW_026-04",
+  "topic": "NW_026",
+  "keyword": "TLD",
+  "question": "도메인 계층에서 .com, .org, .kr처럼 루트 바로 아래에 있는 도메인은?",
+  "options": [
+   "SLD(Second-Level Domain)",
+   "TLD(Top-Level Domain)",
+   "FQDN(Fully Qualified Domain Name)",
+   "서브도메인(Subdomain)"
+  ],
+  "answer": 1,
+  "explain": "루트 바로 아래 단계가 최상위 도메인(TLD)이에요."
+ },
+ {
+  "id": "NW_026-05",
+  "topic": "NW_026",
+  "keyword": "재귀적 질의",
+  "question": "질의를 받은 DNS 서버가 루트→TLD→권한 서버를 대신 찾아가 최종 결과만 돌려주는 질의 방식은?",
+  "options": [
+   "반복적 질의(Iterative Query)",
+   "역방향 조회(Reverse Lookup)",
+   "영역 전송(Zone Transfer)",
+   "재귀적 질의(Recursive Query)"
+  ],
+  "answer": 3,
+  "explain": "클라이언트→캐시 DNS 서버 구간이 보통 재귀적 질의예요."
+ },
+ {
+  "id": "NW_026-06",
+  "topic": "NW_026",
+  "keyword": "반복적 질의",
+  "question": "질의받은 서버가 답을 모르면 다음에 물어볼 서버 정보(Referral)만 알려 주고, 요청한 쪽이 차례로 다시 묻는 방식은?",
+  "options": [
+   "재귀적 질의(Recursive Query)",
+   "반복적 질의(Iterative Query)",
+   "멀티캐스트 DNS(mDNS, Multicast DNS)",
+   "동적 DNS(DDNS, Dynamic DNS)"
+  ],
+  "answer": 1,
+  "explain": "캐시 DNS 서버→루트·TLD·권한 서버 구간이 반복적 질의예요."
+ },
+ {
+  "id": "NW_026-07",
+  "topic": "NW_026",
+  "keyword": "AAAA 레코드",
+  "question": "도메인 이름을 IPv6 주소로 매핑하는 레코드는?",
+  "options": [
+   "A(Address record)",
+   "AAAA(Quad-A record)",
+   "PTR(Pointer)",
+   "MX(Mail Exchanger)"
+  ],
+  "answer": 1,
+  "explain": "A는 IPv4, AAAA는 IPv6 주소 레코드예요."
+ },
+ {
+  "id": "NW_026-08",
+  "topic": "NW_026",
+  "keyword": "CNAME",
+  "question": "한 도메인 이름을 다른 정식 이름의 별칭으로 지정하는 레코드는?",
+  "options": [
+   "CNAME(Canonical Name)",
+   "NS(Name Server)",
+   "SOA(Start of Authority)",
+   "TXT(Text)"
+  ],
+  "answer": 0,
+  "explain": "CNAME은 별칭 → 정식 이름(Canonical Name)으로 연결해요."
+ },
+ {
+  "id": "NW_026-09",
+  "topic": "NW_026",
+  "keyword": "MX",
+  "question": "해당 도메인의 메일을 받을 메일 서버를 지정하는 레코드는?",
+  "options": [
+   "PTR(Pointer)",
+   "A(Address record)",
+   "MX(Mail Exchanger)",
+   "CNAME(Canonical Name)"
+  ],
+  "answer": 2,
+  "explain": "MX 레코드는 메일 서버와 우선순위를 지정해요."
+ },
+ {
+  "id": "NW_026-10",
+  "topic": "NW_026",
+  "keyword": "PTR",
+  "question": "IP 주소로 도메인 이름을 찾는 역방향 조회에 쓰는 레코드는?",
+  "options": [
+   "A(Address record)",
+   "PTR(Pointer)",
+   "SOA(Start of Authority)",
+   "MX(Mail Exchanger)"
+  ],
+  "answer": 1,
+  "explain": "역방향 조회는 in-addr.arpa / ip6.arpa 아래의 PTR 레코드를 사용해요."
+ },
+ {
+  "id": "NW_026-11",
+  "topic": "NW_026",
+  "keyword": "SOA",
+  "question": "존의 시작을 알리며 주 네임 서버, 관리자, 시리얼 번호, 갱신 주기 등을 담는 레코드는?",
+  "options": [
+   "NS(Name Server)",
+   "SOA(Start of Authority)",
+   "TXT(Text)",
+   "AAAA(Quad-A record)"
+  ],
+  "answer": 1,
+  "explain": "SOA는 존마다 하나 있고, 보조 서버는 시리얼 번호로 갱신 여부를 판단해요."
+ },
+ {
+  "id": "NW_026-12",
+  "topic": "NW_026",
+  "keyword": "영역 전송",
+  "question": "주 네임 서버의 존 데이터 중 변경된 부분만 보조 네임 서버로 복제하는 방식은?",
+  "options": [
+   "AXFR(Full Zone Transfer)",
+   "IXFR(Incremental Zone Transfer)",
+   "EDNS(Extension Mechanisms for DNS)",
+   "DNSSEC(DNS Security Extensions)"
+  ],
+  "answer": 1,
+  "explain": "AXFR은 전체, IXFR은 변경분만 전송해요."
+ },
+ {
+  "id": "NW_026-13",
+  "topic": "NW_026",
+  "keyword": "TCP 53",
+  "question": "DNS 영역 전송(AXFR)이나, UDP 응답이 잘려(TC 비트) 다시 질의할 때 사용하는 전송 방식과 포트는?",
+  "options": [
+   "UDP(User Datagram Protocol) 53",
+   "TCP(Transmission Control Protocol) 53",
+   "UDP(User Datagram Protocol) 67",
+   "UDP(User Datagram Protocol) 123"
+  ],
+  "answer": 1,
+  "explain": "일반 질의는 UDP 53, 영역 전송과 큰 응답은 TCP 53을 써요."
+ },
+ {
+  "id": "NW_026-14",
+  "topic": "NW_026",
+  "keyword": "DNSSEC",
+  "question": "전자서명(RRSIG·DNSKEY)으로 DNS 응답의 출처와 무결성을 검증하는 보안 확장은?",
+  "options": [
+   "DoH(DNS over HTTPS)",
+   "DoT(DNS over TLS)",
+   "DNSSEC(DNS Security Extensions)",
+   "EDNS(Extension Mechanisms for DNS)"
+  ],
+  "answer": 2,
+  "explain": "DNSSEC은 위변조를 막지만 질의 내용을 암호화(기밀성)하지는 않아요."
+ },
+ {
+  "id": "NW_026-15",
+  "topic": "NW_026",
+  "keyword": "DoT",
+  "question": "DNS 질의를 TLS로 암호화해 TCP 853 포트로 전송하는 방식은?",
+  "options": [
+   "DoT(DNS over TLS)",
+   "DoH(DNS over HTTPS)",
+   "DNSSEC(DNS Security Extensions)",
+   "DoQ(DNS over QUIC)"
+  ],
+  "answer": 0,
+  "explain": "DoT는 TCP 853, DoH는 HTTPS 443, DoQ는 UDP 853(QUIC)을 써요."
+ },
+ {
+  "id": "NW_026-16",
+  "topic": "NW_026",
+  "keyword": "DoH",
+  "question": "DNS 질의를 HTTPS(443)로 암호화해 일반 웹 트래픽과 구분하기 어렵게 만드는 방식은?",
+  "options": [
+   "DoT(DNS over TLS)",
+   "DNSSEC(DNS Security Extensions)",
+   "DoH(DNS over HTTPS)",
+   "TSIG(Transaction Signature)"
+  ],
+  "answer": 2,
+  "explain": "DoH(RFC 8484)는 HTTPS 위에서 DNS 메시지를 주고받아요."
+ },
+ {
+  "id": "NW_026-17",
+  "topic": "NW_026",
+  "keyword": "캐시 포이즈닝",
+  "question": "위조된 응답을 캐시 DNS 서버에 주입해 사용자를 가짜 사이트로 유도하는 공격은?",
+  "options": [
+   "DNS 증폭(DNS Amplification)",
+   "캐시 포이즈닝(Cache Poisoning)",
+   "SYN 플러딩(SYN Flooding)",
+   "DHCP 스타베이션(DHCP Starvation)"
+  ],
+  "answer": 1,
+  "explain": "대응으로 DNSSEC, 소스 포트·트랜잭션 ID 무작위화를 써요."
+ },
+ {
+  "id": "NW_026-18",
+  "topic": "NW_026",
+  "keyword": "DNS 증폭 공격",
+  "question": "출발지 IP를 피해자로 위조하고 작은 질의로 큰 응답을 유발해 피해자에게 트래픽을 집중시키는 공격은?",
+  "options": [
+   "캐시 포이즈닝(Cache Poisoning)",
+   "DNS 터널링(DNS Tunneling)",
+   "DNS 증폭(DNS Amplification)",
+   "도메인 하이재킹(Domain Hijacking)"
+  ],
+  "answer": 2,
+  "explain": "개방형 재귀 서버 차단과 응답 속도 제한(RRL)으로 대응해요."
+ },
+ {
+  "id": "NW_031_01-01",
+  "topic": "NW_031_01",
+  "keyword": "다원접속",
+  "question": "여러 단말이 각자 독립적으로 송신하면서 한정된 전송 자원을 나눠 공유하는 기술은?",
+  "options": [
+   "다중화(Multiplexing)",
+   "다원접속(Multiple Access)",
+   "변조(Modulation)",
+   "교환(Switching)"
+  ],
+  "answer": 1,
+  "explain": "송신 지점이 여러 곳이면 다원접속, 한 곳에서 묶으면 다중화예요."
+ },
+ {
+  "id": "NW_031_01-02",
+  "topic": "NW_031_01",
+  "keyword": "FDM",
+  "question": "전송로의 주파수 대역을 여러 부채널로 나누고 보호대역(Guard Band)으로 간섭을 막는 다중화 방식은?",
+  "options": [
+   "TDM(Time Division Multiplexing)",
+   "FDM(Frequency Division Multiplexing)",
+   "CDM(Code Division Multiplexing)",
+   "SDM(Space Division Multiplexing)"
+  ],
+  "answer": 1,
+  "explain": "FDM은 주파수로 채널을 나눠요."
+ },
+ {
+  "id": "NW_031_01-03",
+  "topic": "NW_031_01",
+  "keyword": "동기식 TDM",
+  "question": "채널마다 시간 슬롯을 고정 할당해서 보낼 데이터가 없어도 슬롯이 낭비되는 방식은?",
+  "options": [
+   "통계적 TDM(Statistical TDM)",
+   "동기식 TDM(Synchronous TDM)",
+   "FDM(Frequency Division Multiplexing)",
+   "CDM(Code Division Multiplexing)"
+  ],
+  "answer": 1,
+  "explain": "동기식 TDM은 고정 슬롯이라 빈 슬롯이 생겨요."
+ },
+ {
+  "id": "NW_031_01-04",
+  "topic": "NW_031_01",
+  "keyword": "통계적 TDM",
+  "question": "데이터가 있는 채널에만 시간 슬롯을 동적으로 할당하고, 그래서 슬롯마다 주소 정보가 필요한 방식은?",
+  "options": [
+   "동기식 TDM(Synchronous TDM)",
+   "WDM(Wavelength Division Multiplexing)",
+   "통계적 TDM(Statistical TDM)",
+   "FDM(Frequency Division Multiplexing)"
+  ],
+  "answer": 2,
+  "explain": "통계적(비동기식) TDM은 효율이 높지만 주소 오버헤드가 있어요."
+ },
+ {
+  "id": "NW_031_01-05",
+  "topic": "NW_031_01",
+  "keyword": "CDM",
+  "question": "서로 직교하는 확산 코드를 써서 같은 시간·같은 주파수에서 여러 신호를 구분하는 다중화 방식은?",
+  "options": [
+   "CDM(Code Division Multiplexing)",
+   "TDM(Time Division Multiplexing)",
+   "FDM(Frequency Division Multiplexing)",
+   "WDM(Wavelength Division Multiplexing)"
+  ],
+  "answer": 0,
+  "explain": "CDM은 코드로 신호를 구분해요."
+ },
+ {
+  "id": "NW_031_01-06",
+  "topic": "NW_031_01",
+  "keyword": "WDM",
+  "question": "하나의 광섬유에 서로 다른 파장(λ)의 빛을 실어 여러 신호를 동시에 보내는 방식은?",
+  "options": [
+   "TDM(Time Division Multiplexing)",
+   "CDM(Code Division Multiplexing)",
+   "WDM(Wavelength Division Multiplexing)",
+   "SDM(Space Division Multiplexing)"
+  ],
+  "answer": 2,
+  "explain": "WDM은 광통신용이고 CWDM·DWDM으로 나뉘어요."
+ },
+ {
+  "id": "NW_031_01-07",
+  "topic": "NW_031_01",
+  "keyword": "SDM",
+  "question": "여러 물리 전송로나 다중 안테나(MIMO)로 공간을 분리해 동시에 전송하는 다중화 방식은?",
+  "options": [
+   "FDM(Frequency Division Multiplexing)",
+   "SDM(Space Division Multiplexing)",
+   "TDM(Time Division Multiplexing)",
+   "WDM(Wavelength Division Multiplexing)"
+  ],
+  "answer": 1,
+  "explain": "SDM은 공간(경로·안테나)으로 신호를 나눠요."
+ },
+ {
+  "id": "NW_031_01-08",
+  "topic": "NW_031_01",
+  "keyword": "OFDM",
+  "question": "서로 직교하는 다수의 부반송파가 겹쳐도 간섭 없이 데이터를 나눠 싣고, 다중경로 페이딩에 강한 방식은?",
+  "options": [
+   "FDM(Frequency Division Multiplexing)",
+   "TDM(Time Division Multiplexing)",
+   "OFDM(Orthogonal Frequency Division Multiplexing)",
+   "CDM(Code Division Multiplexing)"
+  ],
+  "answer": 2,
+  "explain": "OFDM은 직교성 덕분에 보호대역 없이 부반송파를 겹쳐 써요."
+ },
+ {
+  "id": "NW_031_01-09",
+  "topic": "NW_031_01",
+  "keyword": "FDMA",
+  "question": "1세대 아날로그 이동통신(AMPS)에서 사용자마다 별도 주파수 채널을 할당한 다원접속 방식은?",
+  "options": [
+   "FDMA(Frequency Division Multiple Access)",
+   "TDMA(Time Division Multiple Access)",
+   "CDMA(Code Division Multiple Access)",
+   "OFDMA(Orthogonal Frequency Division Multiple Access)"
+  ],
+  "answer": 0,
+  "explain": "1G는 FDMA예요."
+ },
+ {
+  "id": "NW_031_01-10",
+  "topic": "NW_031_01",
+  "keyword": "TDMA",
+  "question": "2세대 GSM처럼 하나의 주파수 채널을 시간 슬롯으로 나눠 여러 사용자에게 할당하는 다원접속 방식은?",
+  "options": [
+   "FDMA(Frequency Division Multiple Access)",
+   "TDMA(Time Division Multiple Access)",
+   "CDMA(Code Division Multiple Access)",
+   "SDMA(Space Division Multiple Access)"
+  ],
+  "answer": 1,
+  "explain": "GSM은 한 주파수 채널을 8개 타임슬롯으로 나눠요."
+ },
+ {
+  "id": "NW_031_01-11",
+  "topic": "NW_031_01",
+  "keyword": "CDMA",
+  "question": "IS-95, WCDMA처럼 사용자마다 고유 코드로 신호를 확산해 같은 주파수를 함께 쓰는 다원접속 방식은?",
+  "options": [
+   "TDMA(Time Division Multiple Access)",
+   "OFDMA(Orthogonal Frequency Division Multiple Access)",
+   "CDMA(Code Division Multiple Access)",
+   "FDMA(Frequency Division Multiple Access)"
+  ],
+  "answer": 2,
+  "explain": "CDMA는 2G(IS-95)와 3G(WCDMA)의 다원접속 방식이에요."
+ },
+ {
+  "id": "NW_031_01-12",
+  "topic": "NW_031_01",
+  "keyword": "OFDMA",
+  "question": "LTE 하향링크, 5G NR, Wi-Fi 6에서 부반송파 묶음(Resource Block)을 사용자별로 할당하는 다원접속 방식은?",
+  "options": [
+   "CDMA(Code Division Multiple Access)",
+   "OFDMA(Orthogonal Frequency Division Multiple Access)",
+   "TDMA(Time Division Multiple Access)",
+   "FDMA(Frequency Division Multiple Access)"
+  ],
+  "answer": 1,
+  "explain": "OFDMA는 4G·5G·Wi-Fi 6의 핵심 다원접속이에요."
+ },
+ {
+  "id": "NW_031_01-13",
+  "topic": "NW_031_01",
+  "keyword": "SDMA",
+  "question": "빔포밍·MU-MIMO로 공간적으로 떨어진 사용자에게 같은 주파수·시간 자원을 재사용하는 다원접속 방식은?",
+  "options": [
+   "SDMA(Space Division Multiple Access)",
+   "FDMA(Frequency Division Multiple Access)",
+   "TDMA(Time Division Multiple Access)",
+   "CDMA(Code Division Multiple Access)"
+  ],
+  "answer": 0,
+  "explain": "SDMA는 공간(빔)으로 사용자를 구분해요."
+ },
+ {
+  "id": "NW_031_01-14",
+  "topic": "NW_031_01",
+  "keyword": "ALOHA",
+  "question": "채널을 감지하지 않고 바로 전송하고, 충돌하면 임의 시간 후 재전송하는 하와이대학 개발 방식은?",
+  "options": [
+   "CSMA/CD(Carrier Sense Multiple Access with Collision Detection)",
+   "CSMA/CA(Carrier Sense Multiple Access with Collision Avoidance)",
+   "알로하(ALOHA)",
+   "토큰 패싱(Token Passing)"
+  ],
+  "answer": 2,
+  "explain": "ALOHA는 Pure ALOHA와 Slotted ALOHA가 있어요."
+ },
+ {
+  "id": "NW_031_01-15",
+  "topic": "NW_031_01",
+  "keyword": "CSMA/CD",
+  "question": "전송 전 반송파를 감지하고, 전송 중 충돌을 감지하면 Jam 신호를 보낸 뒤 백오프하는 유선 이더넷(IEEE 802.3) 방식은?",
+  "options": [
+   "CSMA/CA(Carrier Sense Multiple Access with Collision Avoidance)",
+   "CSMA/CD(Carrier Sense Multiple Access with Collision Detection)",
+   "알로하(ALOHA)",
+   "폴링(Polling)"
+  ],
+  "answer": 1,
+  "explain": "CD = Collision Detection(충돌 감지)이에요."
+ },
+ {
+  "id": "NW_031_01-16",
+  "topic": "NW_031_01",
+  "keyword": "CSMA/CA",
+  "question": "무선에서는 충돌 감지가 어려워 IFS·랜덤 백오프·RTS/CTS로 충돌을 미리 피하는 IEEE 802.11 방식은?",
+  "options": [
+   "CSMA/CD(Carrier Sense Multiple Access with Collision Detection)",
+   "알로하(ALOHA)",
+   "토큰 패싱(Token Passing)",
+   "CSMA/CA(Carrier Sense Multiple Access with Collision Avoidance)"
+  ],
+  "answer": 3,
+  "explain": "CA = Collision Avoidance(충돌 회피)예요."
+ },
+ {
+  "id": "NW_031_01-17",
+  "topic": "NW_031_01",
+  "keyword": "폴링",
+  "question": "주국(Primary)이 각 단말에 차례로 보낼 데이터가 있는지 물어보고 허락한 단말만 송신하는 제어 접속 방식은?",
+  "options": [
+   "폴링(Polling)",
+   "토큰 패싱(Token Passing)",
+   "알로하(ALOHA)",
+   "CSMA/CD(Carrier Sense Multiple Access with Collision Detection)"
+  ],
+  "answer": 0,
+  "explain": "폴링은 중앙 제어, 토큰 패싱은 분산 제어예요."
+ },
+ {
+  "id": "NW_031_01-18",
+  "topic": "NW_031_01",
+  "keyword": "토큰 패싱",
+  "question": "송신 권한을 나타내는 특수 프레임을 노드끼리 차례로 넘기고, 그것을 가진 노드만 송신하는 방식은?",
+  "options": [
+   "폴링(Polling)",
+   "CSMA/CA(Carrier Sense Multiple Access with Collision Avoidance)",
+   "토큰 패싱(Token Passing)",
+   "알로하(ALOHA)"
+  ],
+  "answer": 2,
+  "explain": "Token Ring(IEEE 802.5), FDDI가 토큰 패싱을 써요."
+ },
+ {
+  "id": "NW_069-01",
+  "topic": "NW_069",
+  "keyword": "Discover",
+  "question": "DHCP 클라이언트가 IP를 받기 위해 서버를 찾으려고 처음 브로드캐스트하는 메시지는?",
+  "options": [
+   "DHCPDISCOVER(탐색, Discover)",
+   "DHCPOFFER(제안, Offer)",
+   "DHCPREQUEST(요청, Request)",
+   "DHCPACK(확인, Acknowledgment)"
+  ],
+  "answer": 0,
+  "explain": "DORA의 D, Discover예요."
+ },
+ {
+  "id": "NW_069-02",
+  "topic": "NW_069",
+  "keyword": "Offer",
+  "question": "DHCP 서버가 임대 가능한 IP 주소와 임대 기간 등을 클라이언트에 제안하는 메시지는?",
+  "options": [
+   "DHCPDISCOVER(탐색, Discover)",
+   "DHCPOFFER(제안, Offer)",
+   "DHCPINFORM(정보 요청, Inform)",
+   "DHCPRELEASE(반납, Release)"
+  ],
+  "answer": 1,
+  "explain": "DORA의 O, Offer예요."
+ },
+ {
+  "id": "NW_069-03",
+  "topic": "NW_069",
+  "keyword": "Request",
+  "question": "여러 서버의 제안 중 하나를 골라 그 주소를 달라고 요청하는 메시지는?",
+  "options": [
+   "DHCPOFFER(제안, Offer)",
+   "DHCPACK(확인, Acknowledgment)",
+   "DHCPREQUEST(요청, Request)",
+   "DHCPDECLINE(거절, Decline)"
+  ],
+  "answer": 2,
+  "explain": "Request를 브로드캐스트해 선택받지 못한 서버도 결과를 알게 돼요."
+ },
+ {
+  "id": "NW_069-04",
+  "topic": "NW_069",
+  "keyword": "ACK",
+  "question": "DHCP 서버가 주소 할당을 최종 확정하는 메시지는?",
+  "options": [
+   "DHCPNAK(거부, Negative Acknowledgment)",
+   "DHCPOFFER(제안, Offer)",
+   "DHCPINFORM(정보 요청, Inform)",
+   "DHCPACK(확인, Acknowledgment)"
+  ],
+  "answer": 3,
+  "explain": "ACK를 받아야 클라이언트가 주소를 사용해요."
+ },
+ {
+  "id": "NW_069-05",
+  "topic": "NW_069",
+  "keyword": "Renewing(T1)",
+  "question": "임대 시간의 50%(T1)가 지나면 클라이언트가 할당해 준 서버에 유니캐스트로 갱신을 요청하는 상태는?",
+  "options": [
+   "갱신(Renewing)",
+   "재바인딩(Rebinding)",
+   "선택(Selecting)",
+   "초기화(Init)"
+  ],
+  "answer": 0,
+  "explain": "T1 = 50%, Renewing이에요."
+ },
+ {
+  "id": "NW_069-06",
+  "topic": "NW_069",
+  "keyword": "Rebinding(T2)",
+  "question": "임대 시간의 87.5%(T2)까지 갱신되지 않으면 아무 서버에나 브로드캐스트로 갱신을 요청하는 상태는?",
+  "options": [
+   "갱신(Renewing)",
+   "재바인딩(Rebinding)",
+   "요청(Requesting)",
+   "바인딩(Bound)"
+  ],
+  "answer": 1,
+  "explain": "T2 = 87.5%, Rebinding이에요."
+ },
+ {
+  "id": "NW_069-07",
+  "topic": "NW_069",
+  "keyword": "NAK",
+  "question": "클라이언트가 다른 서브넷으로 옮겨 요청한 주소를 줄 수 없을 때 서버가 보내는 거부 메시지는?",
+  "options": [
+   "DHCPDECLINE(거절, Decline)",
+   "DHCPRELEASE(반납, Release)",
+   "DHCPNAK(거부, Negative Acknowledgment)",
+   "DHCPACK(확인, Acknowledgment)"
+  ],
+  "answer": 2,
+  "explain": "NAK을 받으면 클라이언트는 Discover부터 다시 시작해요."
+ },
+ {
+  "id": "NW_069-08",
+  "topic": "NW_069",
+  "keyword": "Decline",
+  "question": "받은 주소가 이미 다른 호스트에서 쓰이고 있음을 ARP로 확인한 클라이언트가 서버에 알리는 메시지는?",
+  "options": [
+   "DHCPNAK(거부, Negative Acknowledgment)",
+   "DHCPDECLINE(거절, Decline)",
+   "DHCPRELEASE(반납, Release)",
+   "DHCPINFORM(정보 요청, Inform)"
+  ],
+  "answer": 1,
+  "explain": "Decline은 클라이언트가, NAK은 서버가 보내요."
+ },
+ {
+  "id": "NW_069-09",
+  "topic": "NW_069",
+  "keyword": "Release",
+  "question": "클라이언트가 더 이상 쓰지 않는 IP 주소를 서버에 반납하는 메시지는?",
+  "options": [
+   "DHCPRELEASE(반납, Release)",
+   "DHCPDECLINE(거절, Decline)",
+   "DHCPNAK(거부, Negative Acknowledgment)",
+   "DHCPOFFER(제안, Offer)"
+  ],
+  "answer": 0,
+  "explain": "Release로 임대가 끝나기 전에 주소를 반납해요."
+ },
+ {
+  "id": "NW_069-10",
+  "topic": "NW_069",
+  "keyword": "Inform",
+  "question": "IP 주소는 이미 수동으로 설정돼 있고 DNS 서버 같은 다른 설정만 받으려 할 때 쓰는 메시지는?",
+  "options": [
+   "DHCPREQUEST(요청, Request)",
+   "DHCPDISCOVER(탐색, Discover)",
+   "DHCPINFORM(정보 요청, Inform)",
+   "DHCPACK(확인, Acknowledgment)"
+  ],
+  "answer": 2,
+  "explain": "Inform은 주소 할당 없이 설정값만 요청해요."
+ },
+ {
+  "id": "NW_069-11",
+  "topic": "NW_069",
+  "keyword": "자동 할당",
+  "question": "RFC 2131의 할당 방식 중 서버가 클라이언트에 IP 주소를 영구적으로 할당하는 방식은?",
+  "options": [
+   "동적 할당(Dynamic Allocation)",
+   "수동 할당(Manual Allocation)",
+   "자동 할당(Automatic Allocation)",
+   "SLAAC(Stateless Address Autoconfiguration)"
+  ],
+  "answer": 2,
+  "explain": "자동은 영구, 동적은 임대 기간 동안, 수동은 관리자 지정이에요."
+ },
+ {
+  "id": "NW_069-12",
+  "topic": "NW_069",
+  "keyword": "동적 할당",
+  "question": "임대 기간 동안만 주소를 할당하고 만료되면 회수해 다른 클라이언트에 재사용하는 방식은?",
+  "options": [
+   "동적 할당(Dynamic Allocation)",
+   "자동 할당(Automatic Allocation)",
+   "수동 할당(Manual Allocation)",
+   "정적 NAT(Static NAT)"
+  ],
+  "answer": 0,
+  "explain": "가장 일반적인 방식이 동적 할당이에요."
+ },
+ {
+  "id": "NW_069-13",
+  "topic": "NW_069",
+  "keyword": "수동 할당",
+  "question": "관리자가 MAC 주소별로 특정 IP를 지정(예약)해 두고 DHCP로 전달하는 방식은?",
+  "options": [
+   "자동 할당(Automatic Allocation)",
+   "수동 할당(Manual Allocation)",
+   "동적 할당(Dynamic Allocation)",
+   "APIPA(Automatic Private IP Addressing)"
+  ],
+  "answer": 1,
+  "explain": "수동 할당은 프린터·서버처럼 고정 주소가 필요한 장비에 써요."
+ },
+ {
+  "id": "NW_069-14",
+  "topic": "NW_069",
+  "keyword": "UDP 67/68",
+  "question": "DHCP 서버가 메시지를 받는 포트는?",
+  "options": [
+   "UDP(User Datagram Protocol) 68",
+   "UDP(User Datagram Protocol) 67",
+   "UDP(User Datagram Protocol) 53",
+   "TCP(Transmission Control Protocol) 67"
+  ],
+  "answer": 1,
+  "explain": "서버는 UDP 67, 클라이언트는 UDP 68이에요."
+ },
+ {
+  "id": "NW_069-15",
+  "topic": "NW_069",
+  "keyword": "BOOTP",
+  "question": "DHCP가 계승한 이전 프로토콜로, 같은 메시지 형식과 UDP 67/68 포트를 쓰지만 임대 개념이 없는 것은?",
+  "options": [
+   "RARP(Reverse ARP)",
+   "BOOTP(Bootstrap Protocol)",
+   "ICMP(Internet Control Message Protocol)",
+   "ARP(Address Resolution Protocol)"
+  ],
+  "answer": 1,
+  "explain": "BOOTP는 MAC–IP 고정 매핑을 제공했어요."
+ },
+ {
+  "id": "NW_069-16",
+  "topic": "NW_069",
+  "keyword": "릴레이 에이전트",
+  "question": "클라이언트의 브로드캐스트 DHCP 메시지를 다른 서브넷의 DHCP 서버로 유니캐스트 중계하는 것은?",
+  "options": [
+   "DNS 포워더(DNS Forwarder)",
+   "NAT(Network Address Translation)",
+   "DHCP 릴레이 에이전트(Relay Agent)",
+   "프록시 ARP(Proxy ARP)"
+  ],
+  "answer": 2,
+  "explain": "라우터의 ip helper-address 설정이 릴레이 에이전트 역할을 해요."
+ },
+ {
+  "id": "NW_069-17",
+  "topic": "NW_069",
+  "keyword": "DHCP 스타베이션",
+  "question": "위조한 MAC 주소로 Discover를 대량으로 보내 DHCP 주소 풀을 고갈시키는 공격은?",
+  "options": [
+   "위장 DHCP 서버(Rogue DHCP)",
+   "DHCP 스타베이션(DHCP Starvation)",
+   "ARP 스푸핑(ARP Spoofing)",
+   "DNS 증폭(DNS Amplification)"
+  ],
+  "answer": 1,
+  "explain": "포트 보안(Port Security)으로 포트당 MAC 수를 제한해 막아요."
+ },
+ {
+  "id": "NW_069-18",
+  "topic": "NW_069",
+  "keyword": "Rogue DHCP",
+  "question": "공격자가 가짜 DHCP 서버를 띄워 잘못된 게이트웨이·DNS 주소를 배포하는 공격은?",
+  "options": [
+   "DHCP 스타베이션(DHCP Starvation)",
+   "MAC 플러딩(MAC Flooding)",
+   "위장 DHCP 서버(Rogue DHCP)",
+   "VLAN 호핑(VLAN Hopping)"
+  ],
+  "answer": 2,
+  "explain": "가짜 게이트웨이로 트래픽을 가로채는 중간자 공격으로 이어져요."
+ },
+ {
+  "id": "NW_069-19",
+  "topic": "NW_069",
+  "keyword": "DHCP 스누핑",
+  "question": "스위치에서 신뢰 포트(Trusted Port)로 들어온 DHCP 서버 메시지(Offer·ACK)만 허용하는 보안 기능은?",
+  "options": [
+   "DHCP 스누핑(DHCP Snooping)",
+   "DAI(Dynamic ARP Inspection)",
+   "IEEE 802.1X(포트 기반 접근 제어, Port-based Network Access Control)",
+   "포트 미러링(Port Mirroring)"
+  ],
+  "answer": 0,
+  "explain": "DHCP 스누핑은 위장 DHCP 서버를 차단해요."
+ },
+ {
+  "id": "NW_071-01",
+  "topic": "NW_071",
+  "keyword": "UDP",
+  "question": "QUIC이 하부 전송으로 사용하는 프로토콜은?",
+  "options": [
+   "TCP(Transmission Control Protocol)",
+   "UDP(User Datagram Protocol)",
+   "SCTP(Stream Control Transmission Protocol)",
+   "DCCP(Datagram Congestion Control Protocol)"
+  ],
+  "answer": 1,
+  "explain": "QUIC은 UDP 위에서 신뢰성·혼잡 제어를 직접 구현해요."
+ },
+ {
+  "id": "NW_071-02",
+  "topic": "NW_071",
+  "keyword": "TLS 1.3",
+  "question": "QUIC에 내장된 보안 프로토콜은?",
+  "options": [
+   "DTLS 1.2(Datagram TLS)",
+   "IPsec(IP Security)",
+   "TLS 1.3(Transport Layer Security)",
+   "SSL 3.0(Secure Sockets Layer)"
+  ],
+  "answer": 2,
+  "explain": "QUIC은 DTLS가 아니라 TLS 1.3 핸드셰이크를 사용해요(RFC 9001)."
+ },
+ {
+  "id": "NW_071-03",
+  "topic": "NW_071",
+  "keyword": "IETF",
+  "question": "QUIC을 RFC 9000으로 표준화한 기관은?",
+  "options": [
+   "IETF(Internet Engineering Task Force)",
+   "IEEE(Institute of Electrical and Electronics Engineers)",
+   "3GPP(3rd Generation Partnership Project)",
+   "ITU-T(International Telecommunication Union – Telecommunication Standardization Sector)"
+  ],
+  "answer": 0,
+  "explain": "Google이 개발한 gQUIC을 IETF가 표준화했어요(RFC 9000·9001·9002, 2021)."
+ },
+ {
+  "id": "NW_071-04",
+  "topic": "NW_071",
+  "keyword": "1-RTT",
+  "question": "처음 접속하는 서버와 QUIC 연결을 맺을 때, 데이터를 보내기 전까지 필요한 왕복 횟수는?",
+  "options": [
+   "0-RTT(Zero Round-Trip Time)",
+   "1-RTT(1 Round-Trip Time)",
+   "2-RTT(2 Round-Trip Times)",
+   "3-RTT(3 Round-Trip Times)"
+  ],
+  "answer": 1,
+  "explain": "전송·암호 핸드셰이크를 합쳐 1-RTT예요. TCP+TLS 1.3은 2-RTT예요."
+ },
+ {
+  "id": "NW_071-05",
+  "topic": "NW_071",
+  "keyword": "0-RTT",
+  "question": "QUIC에서 이전에 접속했던 서버에 다시 연결할 때, 저장된 세션 정보로 첫 패킷부터 암호화된 애플리케이션 데이터를 보내는 기능은?",
+  "options": [
+   "0-RTT(Zero Round-Trip Time)",
+   "1-RTT(1 Round-Trip Time)",
+   "연결 이전(Connection Migration)",
+   "3-way 핸드셰이크(3-Way Handshake)"
+  ],
+  "answer": 0,
+  "explain": "QUIC의 0-RTT 재연결이에요."
+ },
+ {
+  "id": "NW_071-06",
+  "topic": "NW_071",
+  "keyword": "0-RTT 재전송 공격",
+  "question": "QUIC 0-RTT 데이터가 가지는 대표적인 보안 약점은?",
+  "options": [
+   "재전송 공격(Replay Attack)",
+   "SYN 플러딩(SYN Flooding)",
+   "DNS 캐시 포이즈닝(DNS Cache Poisoning)",
+   "ARP 스푸핑(ARP Spoofing)"
+  ],
+  "answer": 0,
+  "explain": "그래서 0-RTT는 멱등(idempotent) 요청에만 쓰도록 권장해요."
+ },
+ {
+  "id": "NW_071-07",
+  "topic": "NW_071",
+  "keyword": "HOL 블로킹",
+  "question": "앞선 패킷 하나가 손실되면 뒤따르는 다른 스트림의 데이터까지 전달이 지연되는 현상은?",
+  "options": [
+   "혼잡 붕괴(Congestion Collapse)",
+   "HOL 블로킹(Head-of-Line Blocking)",
+   "실리 윈도 신드롬(Silly Window Syndrome)",
+   "버퍼블로트(Bufferbloat)"
+  ],
+  "answer": 1,
+  "explain": "TCP에서는 바이트 스트림이 하나라 HOL 블로킹이 생겨요."
+ },
+ {
+  "id": "NW_071-08",
+  "topic": "NW_071",
+  "keyword": "스트림 다중화",
+  "question": "TCP의 HOL 블로킹을 QUIC이 해결하는 핵심 기술은?",
+  "options": [
+   "연결 이전(Connection Migration)",
+   "0-RTT(Zero Round-Trip Time)",
+   "독립 스트림 다중화(Stream Multiplexing)",
+   "Nagle 알고리즘(Nagle's Algorithm)"
+  ],
+  "answer": 2,
+  "explain": "스트림마다 독립적으로 순서를 관리해 한 스트림 손실이 다른 스트림을 막지 않아요."
+ },
+ {
+  "id": "NW_071-09",
+  "topic": "NW_071",
+  "keyword": "연결 이전",
+  "question": "스마트폰이 Wi-Fi에서 LTE로 바뀌어 IP 주소가 달라져도 QUIC 연결이 끊기지 않고 유지되는 기능은?",
+  "options": [
+   "연결 이전(Connection Migration)",
+   "0-RTT(Zero Round-Trip Time)",
+   "스트림 다중화(Stream Multiplexing)",
+   "킵얼라이브(Keep-Alive)"
+  ],
+  "answer": 0,
+  "explain": "연결 ID로 연결을 식별하기 때문에 가능해요."
+ },
+ {
+  "id": "NW_071-10",
+  "topic": "NW_071",
+  "keyword": "연결 ID",
+  "question": "QUIC이 IP·포트 조합(4-tuple) 대신 연결을 식별하는 데 쓰는 값은?",
+  "options": [
+   "스트림 ID(Stream ID)",
+   "연결 ID(Connection ID)",
+   "세션 티켓(Session Ticket)",
+   "TTL(Time To Live)"
+  ],
+  "answer": 1,
+  "explain": "연결 ID 덕분에 주소가 바뀌어도 같은 연결로 인식해요."
+ },
+ {
+  "id": "NW_071-11",
+  "topic": "NW_071",
+  "keyword": "패킷 번호",
+  "question": "QUIC이 재전송 패킷에도 새 번호를 붙여 TCP의 재전송 모호성을 없애는 데 쓰는 것은?",
+  "options": [
+   "스트림 ID(Stream ID)",
+   "연결 ID(Connection ID)",
+   "단조 증가 패킷 번호(Packet Number)",
+   "TTL(Time To Live)"
+  ],
+  "answer": 2,
+  "explain": "번호가 항상 증가해서 어떤 전송에 대한 ACK인지 명확하고 RTT를 정확히 재요."
+ },
+ {
+  "id": "NW_071-12",
+  "topic": "NW_071",
+  "keyword": "HTTP/3",
+  "question": "QUIC 위에서 동작하는 HTTP 버전은?",
+  "options": [
+   "HTTP/1.1(HyperText Transfer Protocol 1.1)",
+   "HTTP/2(HyperText Transfer Protocol 2)",
+   "HTTP/3(HyperText Transfer Protocol 3)",
+   "SPDY(스피디, Google 실험 프로토콜)"
+  ],
+  "answer": 2,
+  "explain": "HTTP/3은 RFC 9114예요."
+ },
+ {
+  "id": "NW_071-13",
+  "topic": "NW_071",
+  "keyword": "QPACK",
+  "question": "HTTP/3에서 사용하는 헤더 압축 방식은?",
+  "options": [
+   "HPACK(헤더 압축 방식)",
+   "QPACK(헤더 압축 방식)",
+   "gzip(GNU zip 압축)",
+   "브로틀리(Brotli) 압축"
+  ],
+  "answer": 1,
+  "explain": "HPACK은 HTTP/2용, QPACK(RFC 9204)은 HTTP/3용이에요."
+ },
+ {
+  "id": "NW_071-14",
+  "topic": "NW_071",
+  "keyword": "사용자 공간 구현",
+  "question": "QUIC을 OS 커널이 아닌 사용자 공간(User Space)에서 구현해 얻는 대표적인 이점은?",
+  "options": [
+   "OS(Operating System) 업데이트 없이 빠르게 개선·배포 가능",
+   "하드웨어 오프로드(Hardware Offload) 효율 극대화",
+   "암호화(Encryption)가 필요 없음",
+   "패킷 손실(Packet Loss)이 발생하지 않음"
+  ],
+  "answer": 0,
+  "explain": "앱·브라우저 업데이트만으로 프로토콜을 개선할 수 있어요."
+ },
+ {
+  "id": "NW_080-01",
+  "topic": "NW_080",
+  "keyword": "임베디드",
+  "question": "통신 모듈과 앱·서비스가 모두 차량 안에 있는 커넥티드 카 연결방식은?",
+  "options": [
+   "임베디드(Embedded)",
+   "테더드(Tethered)",
+   "통합형(Integrated)",
+   "미러링(Mirroring)"
+  ],
+  "answer": 0,
+  "explain": "임베디드는 끊김 없는 서비스가 장점이지만 초기 비용이 높아요."
+ },
+ {
+  "id": "NW_080-02",
+  "topic": "NW_080",
+  "keyword": "테더드",
+  "question": "앱·서비스는 차량에 있고, 통신만 스마트폰을 빌려 쓰는 연결방식은?",
+  "options": [
+   "임베디드(Embedded)",
+   "테더드(Tethered)",
+   "통합형(Integrated)",
+   "V2N(Vehicle-to-Network)"
+  ],
+  "answer": 1,
+  "explain": "테더드는 스마트폰 테더링으로 통신만 빌려 써요."
+ },
+ {
+  "id": "NW_080-03",
+  "topic": "NW_080",
+  "keyword": "통합형",
+  "question": "앱과 통신을 모두 스마트폰이 담당하고 차량은 화면과 입력만 하는 연결방식은?",
+  "options": [
+   "임베디드(Embedded)",
+   "테더드(Tethered)",
+   "통합형(Integrated)",
+   "eCall(Emergency Call, 긴급구난체계)"
+  ],
+  "answer": 2,
+  "explain": "Apple CarPlay, Android Auto가 통합형이에요."
+ },
+ {
+  "id": "NW_080-04",
+  "topic": "NW_080",
+  "keyword": "V2V",
+  "question": "차량과 차량이 직접 통신하는 V2X 유형은?",
+  "options": [
+   "V2V(Vehicle-to-Vehicle)",
+   "V2I(Vehicle-to-Infrastructure)",
+   "V2N(Vehicle-to-Network)",
+   "V2P(Vehicle-to-Pedestrian)"
+  ],
+  "answer": 0,
+  "explain": "V2V는 충돌 경고, 군집 주행에 쓰여요."
+ },
+ {
+  "id": "NW_080-05",
+  "topic": "NW_080",
+  "keyword": "V2I",
+  "question": "차량이 신호등, 노변 기지국(RSU) 같은 도로 인프라와 통신하는 V2X 유형은?",
+  "options": [
+   "V2V(Vehicle-to-Vehicle)",
+   "V2I(Vehicle-to-Infrastructure)",
+   "V2N(Vehicle-to-Network)",
+   "V2P(Vehicle-to-Pedestrian)"
+  ],
+  "answer": 1,
+  "explain": "RSU = Road Side Unit이에요."
+ },
+ {
+  "id": "NW_080-06",
+  "topic": "NW_080",
+  "keyword": "V2N",
+  "question": "차량이 이동통신망을 거쳐 클라우드 서버와 통신하는 V2X 유형은?",
+  "options": [
+   "V2V(Vehicle-to-Vehicle)",
+   "V2I(Vehicle-to-Infrastructure)",
+   "V2N(Vehicle-to-Network)",
+   "V2P(Vehicle-to-Pedestrian)"
+  ],
+  "answer": 2,
+  "explain": "V2N은 교통정보·원격 서비스에 쓰여요."
+ },
+ {
+  "id": "NW_080-07",
+  "topic": "NW_080",
+  "keyword": "V2P",
+  "question": "차량이 보행자의 단말과 통신해 사고를 예방하는 V2X 유형은?",
+  "options": [
+   "V2V(Vehicle-to-Vehicle)",
+   "V2I(Vehicle-to-Infrastructure)",
+   "V2N(Vehicle-to-Network)",
+   "V2P(Vehicle-to-Pedestrian)"
+  ],
+  "answer": 3,
+  "explain": "P = Pedestrian(보행자)이에요."
+ },
+ {
+  "id": "NW_080-08",
+  "topic": "NW_080",
+  "keyword": "C-V2X",
+  "question": "이동통신(LTE, 5G)을 기반으로 하는 V2X 기술은?",
+  "options": [
+   "WAVE(Wireless Access in Vehicular Environments)",
+   "C-V2X(Cellular V2X)",
+   "DSRC(Dedicated Short Range Communications)",
+   "와이파이 다이렉트(Wi-Fi Direct)"
+  ],
+  "answer": 1,
+  "explain": "C-V2X는 LTE-V2X(3GPP Rel-14)에서 NR-V2X(Rel-16)로 발전했어요."
+ },
+ {
+  "id": "NW_080-09",
+  "topic": "NW_080",
+  "keyword": "WAVE",
+  "question": "IEEE 802.11p 기반의 차량 무선통신 기술은?",
+  "options": [
+   "C-V2X(Cellular V2X)",
+   "NR-V2X(New Radio V2X)",
+   "WAVE(Wireless Access in Vehicular Environments)",
+   "LTE-V2X(LTE Vehicle-to-Everything)"
+  ],
+  "answer": 2,
+  "explain": "WAVE는 IEEE 802.11p + IEEE 1609로 구성된 DSRC 계열 기술이에요."
+ },
+ {
+  "id": "NW_080-10",
+  "topic": "NW_080",
+  "keyword": "텔레매틱스",
+  "question": "통신(Telecommunication)과 정보과학(Informatics)을 합친 말로, 위치 기반 차량 정보를 원격으로 제공하는 서비스는?",
+  "options": [
+   "인포테인먼트(Infotainment)",
+   "텔레매틱스(Telematics)",
+   "OTA(Over-The-Air)",
+   "eCall(Emergency Call, 긴급구난체계)"
+  ],
+  "answer": 1,
+  "explain": "텔레매틱스 = Telecommunication + Informatics예요."
+ },
+ {
+  "id": "NW_080-11",
+  "topic": "NW_080",
+  "keyword": "인포테인먼트",
+  "question": "정보(Information)와 오락(Entertainment)을 합쳐 내비게이션·음악·영상 등을 제공하는 차량 시스템은?",
+  "options": [
+   "텔레매틱스(Telematics)",
+   "OTA(Over-The-Air)",
+   "인포테인먼트(Infotainment)",
+   "ADAS(Advanced Driver Assistance System)"
+  ],
+  "answer": 2,
+  "explain": "인포테인먼트 = Information + Entertainment예요."
+ },
+ {
+  "id": "NW_080-12",
+  "topic": "NW_080",
+  "keyword": "OTA",
+  "question": "정비소에 가지 않고 무선으로 차량 소프트웨어를 업데이트하는 기술은?",
+  "options": [
+   "eCall(Emergency Call, 긴급구난체계)",
+   "OTA(Over-The-Air)",
+   "CAN(Controller Area Network)",
+   "V2P(Vehicle-to-Pedestrian)"
+  ],
+  "answer": 1,
+  "explain": "OTA 업데이트 관리체계는 UN R156(SUMS)이 요구해요."
+ },
+ {
+  "id": "NW_080-13",
+  "topic": "NW_080",
+  "keyword": "eCall",
+  "question": "사고가 나면 차량이 자동으로 긴급구조센터에 신고하는 서비스는?",
+  "options": [
+   "eCall(Emergency Call, 긴급구난체계)",
+   "OTA(Over-The-Air)",
+   "인포테인먼트(Infotainment)",
+   "V2I(Vehicle-to-Infrastructure)"
+  ],
+  "answer": 0,
+  "explain": "EU는 2018년부터 신규 형식 승인 차량에 eCall을 의무화했어요."
+ },
+ {
+  "id": "NW_080-14",
+  "topic": "NW_080",
+  "keyword": "UN R155",
+  "question": "UN R155 규정이 자동차 제조사에 요구하는 것은?",
+  "options": [
+   "사이버보안 관리체계(CSMS, Cyber Security Management System)",
+   "소프트웨어 업데이트 관리체계(SUMS, Software Update Management System)",
+   "기능 안전(Functional Safety) 관리",
+   "V2X(Vehicle-to-Everything) 통신 장치 탑재"
+  ],
+  "answer": 0,
+  "explain": "UN R155 = CSMS, UN R156 = SUMS예요."
+ },
+ {
+  "id": "NW_080-15",
+  "topic": "NW_080",
+  "keyword": "UN R156",
+  "question": "UN R156 규정이 자동차 제조사에 요구하는 것은?",
+  "options": [
+   "사이버보안 관리체계(CSMS, Cyber Security Management System)",
+   "소프트웨어 업데이트 관리체계(SUMS, Software Update Management System)",
+   "기능 안전(Functional Safety) 관리",
+   "eCall(Emergency Call, 긴급구난체계) 탑재"
+  ],
+  "answer": 1,
+  "explain": "UN R156은 OTA 등 소프트웨어 업데이트를 관리하는 체계를 요구해요."
+ },
+ {
+  "id": "NW_080-16",
+  "topic": "NW_080",
+  "keyword": "ISO/SAE 21434",
+  "question": "국제 표준 ISO/SAE 21434가 다루는 분야는?",
+  "options": [
+   "차량 사이버보안 엔지니어링(Road Vehicles – Cybersecurity Engineering)",
+   "차량 기능 안전(Functional Safety, ISO 26262의 분야)",
+   "차량 무선통신(Vehicular Wireless Access, IEEE 802.11p의 분야)",
+   "자율주행 단계 분류(Levels of Driving Automation, SAE J3016의 분야)"
+  ],
+  "answer": 0,
+  "explain": "ISO/SAE 21434는 사이버보안, ISO 26262는 기능 안전 표준이에요."
+ }
+]

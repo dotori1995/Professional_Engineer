@@ -14,6 +14,8 @@ domains:
 markdown: kramdown
 exclude:
   - README.md
+  - REVIEW.md
+  - CONTENT_RULES.md
   - scripts/
   - Gemfile
   - Gemfile.lock

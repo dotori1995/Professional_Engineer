@@ -6,7 +6,7 @@ permalink: /sw.js
 const VERSION = 'pe-{{ site.time | date: "%Y%m%d%H%M%S" }}';
 const BASE = '{{ site.baseurl }}';
 const PRECACHE = [
-  BASE + '/', BASE + '/cards/', BASE + '/topic/', BASE + '/data.json', BASE + '/glossary.json',
+  BASE + '/', BASE + '/cards/', BASE + '/topic/', BASE + '/data.json', BASE + '/glossary.json', BASE + '/quiz.json',
   BASE + '/assets/css/style.css', BASE + '/assets/js/app.js', BASE + '/assets/js/list.js',
   BASE + '/assets/js/cards.js', BASE + '/assets/js/topic.js',
   BASE + '/assets/icons/icon-192.png', BASE + '/manifest.webmanifest'
@@ -21,7 +21,7 @@ self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET' || new URL(req.url).origin !== location.origin) return;
   const url = new URL(req.url);
-  const networkFirst = req.mode === 'navigate' || (url.pathname.endsWith('/data.json') || url.pathname.endsWith('/glossary.json'));
+  const networkFirst = req.mode === 'navigate' || (url.pathname.endsWith('/data.json') || url.pathname.endsWith('/glossary.json') || url.pathname.endsWith('/quiz.json'));
   if (networkFirst) {
     e.respondWith(fetch(req).then(res => {
       const copy = res.clone(); caches.open(VERSION).then(c => c.put(req, copy)); return res;
