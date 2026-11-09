@@ -41,6 +41,7 @@ AMC: Adaptive Modulation and Coding
 AMF: Access and Mobility Management Function
 AMI: Advanced Metering Infrastructure
 AMPS: Advanced Mobile Phone System
+AMQP: Advanced Message Queuing Protocol
 AMR: Automatic Meter Reading
 ANOVA: Analysis of Variance
 ANR: Automatic Neighbor Relation
@@ -91,6 +92,7 @@ BCP: Business Continuity Plan
 BCR: Benefit-Cost Ratio
 BDP: Bandwidth-Delay Product
 BDR: Backup Designated Router
+BDRA: Big Data Reference Architecture
 BDUF: Big Design Up Front
 BEC: Backward Error Correction
 BECN: Backward Explicit Congestion Notification
@@ -107,6 +109,7 @@ BLE: Bluetooth Low Energy
 BLOB: Binary Large Object
 BLSR: Bidirectional Line-Switched Ring
 BML: Build-Measure-Learn
+BMT: Benchmark Test
 BOOTP: Bootstrap Protocol
 BOSH: Bidirectional-streams Over Synchronous HTTP
 BPDU: Bridge Protocol Data Unit
@@ -184,6 +187,8 @@ CPS: Cyber-Physical System
 CPU: Central Processing Unit
 CQ: Custom Queuing
 CQI: Channel Quality Indicator
+CQL: Continuous Query Language
+CRAN: Comprehensive R Archive Network
 CRC: Cyclic Redundancy Check
 CRISP-DM: Cross-Industry Standard Process for Data Mining
 CRM: Customer Relationship Management
@@ -211,6 +216,7 @@ D2D: Device-to-Device
 DAC: Device Attestation Certificate
 DAG: Directed Acyclic Graph
 DAI: Dynamic ARP Inspection
+DAM: Database Activity Monitoring
 DASH: Dynamic Adaptive Streaming over HTTP
 DAWEX: Data Exchange
 DBA: Database Administrator
@@ -263,6 +269,7 @@ DPI: Deep Packet Inspection
 DPP: Device Provisioning Protocol
 DPSK: Differential Phase Shift Keying
 DPWS: Devices Profile for Web Services
+DQC: Database Quality Certification
 DQDB: Distributed Queue Dual Bus
 DQM3: Data Quality Management Maturity Model
 DRaaS: Disaster Recovery as a Service
@@ -329,6 +336,7 @@ EN-DC: E-UTRA NR Dual Connectivity
 EO: External Output
 EPC: Evolved Packet Core
 EPMO: Enterprise Project Management Office
+EPN: Event Processing Network
 EQ: External inQuiry
 ERD: Entity Relationship Diagram
 ERG: Existence, Relatedness, Growth
@@ -391,6 +399,7 @@ FWA: Fixed Wireless Access
 FWLB: Firewall Load Balancing
 G20: Group of Twenty
 GAF: Geographic Adaptive Fidelity
+GAN: Generative Adversarial Network
 GARP: Gratuitous ARP
 GBN: Go-Back-N
 GCF: Global Closest First
@@ -451,6 +460,7 @@ ICIC: Inter-Cell Interference Coordination
 ICMP: Internet Control Message Protocol
 ICMPv6: Internet Control Message Protocol for IPv6
 ICN: Information-Centric Networking
+ID3: Iterative Dichotomiser 3
 IDS: Intrusion Detection System
 IEC: International Electrotechnical Commission
 IEEE: Institute of Electrical and Electronics Engineers
@@ -520,6 +530,9 @@ JAR: Java Archive
 JDBC: Java Database Connectivity
 JID: Jabber ID
 JIT: Just In Time
+JMS: Java Message Service
+JMX: Java Management Extensions
+JNI: Java Native Interface
 JPA: Java Persistence API
 JPEG: Joint Photographic Experts Group
 JSEP: JavaScript Session Establishment Protocol
@@ -629,6 +642,7 @@ MMF: Multi-Mode Fiber
 MNO: Mobile Network Operator
 MOCN: Multi-Operator Core Network
 MOF: Meta-Object Facility
+MOM: Message Oriented Middleware
 MORAN: Multi-Operator Radio Access Network
 MoS: Mean Opinion Score
 MOS: Mean Opinion Score
@@ -816,6 +830,7 @@ PN: Pseudo-Noise
 PNG: Portable Network Graphics
 PO: Product Owner
 PoE: Power over Ethernet
+POJO: Plain Old Java Object
 POLQA: Perceptual Objective Listening Quality Analysis
 POP: [Point of Presence, Point of Purchase, Point of Production]
 POP3: Post Office Protocol version 3
@@ -865,6 +880,7 @@ RADIUS: Remote Authentication Dial-In User Service
 RAM: [Random Access Memory, Responsibility Assignment Matrix, Regional Air Mobility]
 RAN: Radio Access Network
 RARP: Reverse Address Resolution Protocol
+RBAC: Role-Based Access Control
 RCA: Root Cause Analysis
 RCSI: Read Committed Snapshot Isolation
 RDBMS: Relational Database Management System
@@ -1009,6 +1025,7 @@ SONiC: Software for Open Networking in the Cloud
 SoW: Statement of Work
 SOW: Statement of Work
 SPARQL: SPARQL Protocol and RDF Query Language
+SPEC: Standard Performance Evaluation Corporation
 SPF: [Shortest Path First, Sender Policy Framework]
 SPIN: Sensor Protocols for Information via Negotiation
 SPOF: Single Point of Failure
@@ -1057,6 +1074,7 @@ TCP: Transmission Control Protocol
 TCPI: To-Complete Performance Index
 TCU: Telematics Control Unit
 TDD: [Test-Driven Development, Time Division Duplex]
+TDE: Transparent Data Encryption
 TDM: Time Division Multiplexing
 TDMA: Time Division Multiple Access
 TDoA: Time Difference of Arrival
@@ -1071,7 +1089,9 @@ TMMi: Test Maturity Model integration
 ToA: Time of Arrival
 TOC: Theory of Constraints
 TOS: Type of Service
+TPC: Transaction Processing Performance Council
 TPID: Tag Protocol Identifier
+tpmC: Transactions per Minute (TPC-C)
 TPR: True Positive Rate
 TPS: [Toyota Production System, Transactions Per Second]
 TRC: Tuple Relational Calculus

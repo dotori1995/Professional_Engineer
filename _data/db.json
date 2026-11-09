@@ -10236,6 +10236,232 @@
   }
  },
  {
+  "id": "DB_102",
+  "code": "DB_102",
+  "domain": "DB",
+  "category": "DB > 빅데이터",
+  "title": "복합 이벤트 처리(CEP, Complex Event Processing)",
+  "subtitle": "",
+  "name": "복합 이벤트 처리(CEP, Complex Event Processing)",
+  "en": "Complex Event Processing",
+  "definition": "여러 이벤트 소스에서 실시간으로 발생하는 스트림 이벤트를 저장하지 않고 연속 질의로 분석해 이벤트 간 관계와 의미 있는 패턴을 추출하고 대응 액션을 수행하는 실시간 이벤트 처리 기술.",
+  "keywords": [
+   "스트림 데이터: 대량·지속 입력, 시간 순서가 중요한 끝없는 데이터",
+   "구성요소: CCL(SQL 유사 스트림 언어) · CEP Engine · Adapters · SDKs · CEP Studio",
+   "특징: Event Rule · Non-Transaction(저장 없이 저지연) · 대용량 메시지 처리 · 풍부한 Adapter · 유지보수 비용 감소",
+   "CQL 기능: 필터링 · 집합(시간·개수 윈도) · 패턴 매칭(PATTERN)",
+   "Application Flow: Adaptor → Channel → Processor(CQL) → Beans(POJO), 전체 = EPN"
+  ],
+  "keywords_must": [
+   "스트림 데이터(Stream Data)",
+   "연속 질의(Continuous Query)",
+   "CEP 엔진(CEP Engine)",
+   "CCL(Continuous Computation Language)",
+   "이벤트 룰(Event Rule)",
+   "저지연(Low Latency)",
+   "어댑터(Adapter)",
+   "패턴 매칭(Pattern Matching)",
+   "EPN(Event Processing Network)"
+  ],
+  "keywords_ref": [
+   "CQL(Continuous Query Language)",
+   "슬라이딩 윈도(Sliding Window)",
+   "POJO(Plain Old Java Object)",
+   "Esper·Apache Flink CEP"
+  ],
+  "outline": [
+   "실시간 이벤트 처리 기술",
+   "- 스트림 데이터 대상 연속 질의",
+   "- 구성요소와 특징",
+   "Application Flow · 기술요소",
+   "- Adaptor·Channel·Processor·Beans",
+   "운용상 장점"
+  ],
+  "sections": [
+   {
+    "title": "실시간 이벤트 처리 기술",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "CCL: SQL과 유사한 스트림 처리 언어, CEP Engine: 유입 스트림에 지속적으로 질의 실행",
+       "Adapters: 외부 데이터를 CEP 스트림으로 상호 변환, SDKs·CEP Studio: 개발 키트와 GUI 도구",
+       "Non-Transaction: DB에 저장하지 않고 저지연 실시간 분석",
+       "CQL 기능: 필터링(Where), 시간·개수 단위 집합, PATTERN(X+Y+) 매칭"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Application Flow · 기술요소",
+    "subsections": [
+     {
+      "title": "Application Flow와 기술요소",
+      "items": [
+       "Adaptor: 이벤트 소스 스트림 수신, 내부 이벤트 타입으로 변환",
+       "Channel: 어댑터 이벤트를 Processor로 전달",
+       "Processor: CQL로 필터링·집합·패턴 매칭·조인(스트림·DB·캐시) 수행",
+       "Beans(POJO): 걸러진 데이터를 외부 서비스와 연동하는 비즈니스 로직",
+       "EPN: Adaptor·Channel·Processor·Beans의 집합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "운용상 장점",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "시스템 성능: 복합 실시간 이벤트 분석에도 시스템 전반 부하 최소화",
+       "지능적 시스템: 복잡한 데이터를 인지해 장애를 미리 감지·예측",
+       "유지보수: 코드가 아닌 CEP 엔진의 룰로 정의해 조건 변경 시 애플리케이션 수정 불필요"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "스트림 데이터(Stream Data)",
+   "연속 질의(Continuous Query)",
+   "CEP 엔진(CEP Engine)",
+   "CCL(Continuous Computation Language)",
+   "이벤트 룰(Event Rule)",
+   "저지연(Low Latency)",
+   "어댑터(Adapter)",
+   "패턴 매칭(Pattern Matching)",
+   "EPN(Event Processing Network)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "CCL": "Continuous Computation Language"
+  }
+ },
+ {
+  "id": "DB_103",
+  "code": "DB_103",
+  "domain": "DB",
+  "category": "DB > 빅데이터 분석",
+  "title": "분석 모델 평가 방법(Model Evaluation Methods)",
+  "subtitle": "",
+  "name": "분석 모델 평가 방법(Model Evaluation Methods)",
+  "en": "Analytical Model Evaluation Methods",
+  "definition": "데이터마이닝으로 생성한 모델의 오류율을 예측해 타당성을 평가하는 검증 방법으로, 데이터 분할 기반 정확도 기법과 교차 검증·부트스트랩 같은 재샘플링 기법이 있다.",
+  "keywords": [
+   "정확도 기법: Train-Validation(훈련·검증·테스트 집합 분할)",
+   "재샘플링 기법: Cross Validation · Bootstrap",
+   "데이터 분할 비율: Training 60~70% · Validation 15~20% · Test 15~20%",
+   "교차 검증: 학습용과 검증용을 교차하며 반복 측정, 과적합 방지",
+   "부트스트랩: 중복 허용 복원 추출, 데이터 부족·모집단 분포 미상 시 활용"
+  ],
+  "keywords_must": [
+   "홀드아웃(Train-Validation)",
+   "훈련 집합(Training Set)",
+   "검증 집합(Validation Set)",
+   "테스트 집합(Test Set)",
+   "교차 검증(Cross Validation)",
+   "K-Fold 교차 검증",
+   "부트스트랩(Bootstrap)",
+   "복원 추출(Sampling with Replacement)",
+   "과적합(Overfitting)"
+  ],
+  "keywords_ref": [
+   "LOOCV(Leave-One-Out Cross-Validation)",
+   "OOB(Out-of-Bag)",
+   "혼동 행렬(Confusion Matrix)",
+   "ROC·AUC"
+  ],
+  "outline": [
+   "모델 오류율 예측 검증",
+   "- 정확도 기법과 재샘플링 기법",
+   "Train-Validation",
+   "- Training·Validation·Test 집합",
+   "교차 검증",
+   "부트스트랩"
+  ],
+  "sections": [
+   {
+    "title": "모델 오류율 예측 검증",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "정확도 기법: 훈련·검증·테스트 집합으로 정확도 검증",
+       "재샘플링 기법: 교차 검증(학습·검증 교차 반복), 부트스트랩(무작위 복원 추출)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Train-Validation",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Training Set: 모델 학습용, 전체의 60~70%",
+       "Validation Set: 학습 중 중간 검증·모델 선택, Overfit 방지·Stop-condition, 15~20%",
+       "Test Set: 학습 완료 모델의 성능 지표 산출, 15~20%",
+       "Overfit: 훈련 오차는 작고 테스트 오차가 커지는 과학습 상태"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "교차 검증",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "방법: 데이터를 K개로 나눠 하나씩 검증용, 나머지 학습용으로 K회 반복 후 평균",
+       "사용 이유: 전체를 학습에 쓰면 성능을 객관적으로 측정할 수 없고 과적합",
+       "주의: 훈련 집합에 테스트 집합이 섞이지 않도록 분리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "부트스트랩",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "방법: N개 훈련 표본에서 중복을 허용해 B개 부트스트랩 표본 추출",
+       "원리: 추출 표본을 가상 모집단으로 보고 반복 재추출",
+       "활용: 데이터가 적거나 모집단 분포(모수)를 모를 때, 미추출 약 36.8%는 OOB 검증"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "홀드아웃(Train-Validation)",
+   "훈련 집합(Training Set)",
+   "검증 집합(Validation Set)",
+   "테스트 집합(Test Set)",
+   "교차 검증(Cross Validation)",
+   "K-Fold 교차 검증",
+   "부트스트랩(Bootstrap)",
+   "복원 추출(Sampling with Replacement)",
+   "과적합(Overfitting)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "OOB": "Out-of-Bag"
+  }
+ },
+ {
   "id": "DB_104",
   "code": "DB_104",
   "domain": "DB",
@@ -10751,6 +10977,102 @@
    "가중 보팅(Weighted Voting)",
    "이질적 분류기 결합",
    "predict_proba"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_106_03",
+  "code": "DB_106_03",
+  "domain": "DB",
+  "category": "DB > 빅데이터 분석",
+  "title": "지니 지수(Gini Index)와 엔트로피 지수(Entropy Index)",
+  "subtitle": "",
+  "name": "지니 지수(Gini Index)와 엔트로피 지수(Entropy Index)",
+  "en": "Gini Index and Entropy Index",
+  "definition": "의사결정나무가 노드를 분할할 때 각 노드에 섞인 클래스의 불순도를 수치화하는 지표로, 분할 후 불순도가 가장 크게 감소하는(정보 획득량이 큰) 기준을 선택한다.",
+  "keywords": [
+   "의사결정나무: 트리 구조 추론으로 분류·예측, 랜덤 포레스트의 기본 알고리즘",
+   "지니 지수: Gini = 1 − Σ pᵢ², 0이면 순수, 높을수록 분산(불순)",
+   "엔트로피 지수: Entropy = −Σ pᵢ log₂ pᵢ, 0이면 순수, 이진 분류 최대 1",
+   "정보 획득량: 부모 엔트로피 − 자식 가중 평균 엔트로피",
+   "학습 방향: 순도 증가·불순도 감소 방향으로 분할"
+  ],
+  "keywords_must": [
+   "의사결정나무(Decision Tree)",
+   "불순도(Impurity)",
+   "엔트로피(Entropy)",
+   "정보 획득량(Information Gain)",
+   "순도(Purity)",
+   "분할 기준(Split Criterion)",
+   "가지치기(Pruning)"
+  ],
+  "keywords_ref": [
+   "CART(Classification And Regression Tree)",
+   "ID3·C4.5",
+   "카이제곱 통계량(CHAID)",
+   "랜덤 포레스트(Random Forest)"
+  ],
+  "outline": [
+   "분류·예측의 기반 의사결정나무",
+   "1 − Σp²",
+   "엔트로피 지수",
+   "- −Σp log₂p · 정보 획득량"
+  ],
+  "sections": [
+   {
+    "title": "분류·예측의 기반 의사결정나무",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "의사결정나무: 트리 구조 추론으로 분류·예측하는 분석 방법, 랜덤 포레스트 앙상블의 기본",
+       "분할 원리: 각 노드의 불순도를 낮추는 방향으로 분기"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "1 − Σp²",
+    "subsections": [
+     {
+      "title": "지니 지수",
+      "items": [
+       "정의: 데이터의 통계적 분산 정도를 정량화한 불순도 지표",
+       "계산: Gini = 1 − Σ pᵢ² (pᵢ는 클래스 i 비율)",
+       "해석: 높을수록 데이터가 섞여 있음, 0이면 한 클래스만 존재(CART에서 사용)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "엔트로피 지수",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "정의: 로그로 정규화해 무질서 정도를 수치화한 불순도 지표",
+       "계산: Entropy = −Σ pᵢ log₂ pᵢ",
+       "해석: 0이면 개체 속성이 모두 동일, 1에 가까울수록 불순도 높음",
+       "정보 획득량: 분할 전후 엔트로피 감소량으로 분할 속성 선택(ID3·C4.5)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "의사결정나무(Decision Tree)",
+   "불순도(Impurity)",
+   "엔트로피(Entropy)",
+   "정보 획득량(Information Gain)",
+   "순도(Purity)",
+   "분할 기준(Split Criterion)",
+   "가지치기(Pruning)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -11278,6 +11600,106 @@
   "quiz_avoid": []
  },
  {
+  "id": "DB_111",
+  "code": "DB_111",
+  "domain": "DB",
+  "category": "DB > 빅데이터",
+  "title": "ISO/IEC 20547(빅데이터 참조 아키텍처)",
+  "subtitle": "",
+  "name": "ISO/IEC 20547(빅데이터 참조 아키텍처)",
+  "en": "ISO/IEC 20547 Big Data Reference Architecture",
+  "definition": "빅데이터 시스템 간 상호운용성과 이식성을 보장하고 데이터 레벨의 원활한 유통을 위해 프레임워크·유스케이스·참조 아키텍처·보안·표준 로드맵을 정의한 빅데이터 참조 아키텍처 국제표준.",
+  "keywords": [
+   "제정 요구: 상호운용성·이식성 · 유통 규격·공통 기능",
+   "Part 1: 프레임워크 및 응용 프로세스",
+   "Part 2: 유스케이스 및 기술적 고려사항",
+   "Part 3: 참조 아키텍처(사용자 뷰 · 기능 뷰 · 크로스커팅 이슈)",
+   "Part 4: 보안 및 개인정보 보호",
+   "Part 5: 표준 로드맵",
+   "동향: 우리나라(TTA) 제안 Part 1·3 표준 승인(2019.10), ITU-T Y.3600"
+  ],
+  "keywords_must": [
+   "상호운용성(Interoperability)",
+   "이식성(Portability)",
+   "Part 1~5 구성",
+   "사용자 뷰(User View)",
+   "기능 뷰(Functional View)",
+   "크로스커팅 이슈(Cross-cutting Issues)",
+   "표준 로드맵(Standards Roadmap)"
+  ],
+  "keywords_ref": [
+   "ISO/IEC 20546(빅데이터 개요 및 용어)",
+   "ITU-T Y.3600",
+   "TTA(Telecommunications Technology Association)",
+   "NIST Big Data Reference Architecture"
+  ],
+  "outline": [
+   "국제표준",
+   "- 상호운용성·이식성·유통 규격",
+   "표준 구성 체계와 Part 기준 내용",
+   "- Part 1~5",
+   "표준화 동향"
+  ],
+  "sections": [
+   {
+    "title": "국제표준",
+    "subsections": [
+     {
+      "title": "빅데이터 참조 아키텍처 국제표준",
+      "items": [
+       "제정 요구: 시스템 간 상호운용성·이식성, 유통 규격과 공통 기능 정의",
+       "핵심 구성: 프레임워크·유스케이스, 참조 구조·보안·로드맵"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "표준 구성 체계와 Part 기준 내용",
+    "subsections": [
+     {
+      "title": "표준 구성 체계와 Part별 내용",
+      "items": [
+       "Part 1 프레임워크 및 응용 프로세스: 참조 아키텍처 문서 구조와 적용 절차",
+       "Part 2 유스케이스 및 기술적 고려사항: 유스케이스와 관련 기술 고려사항 모음",
+       "Part 3 참조 아키텍처: 사용자 뷰·기능 뷰·크로스커팅 이슈의 공통 구조",
+       "Part 4 보안 및 개인정보 보호: 빅데이터 보안 아키텍처",
+       "Part 5 표준 로드맵: 관련 기존 표준 현황 모음",
+       "관계: Part 2가 Part 3에 반영, Part 4가 Part 3 지원, 표준화 활동이 Part 5에 추가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "표준화 동향",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "국제: 제4차 국제표준회의(2019.10)에서 우리나라(TTA) 제안 Part 1·3 승인, ITU-T Y.3600 클라우드 기반 빅데이터 요구사항",
+       "국내: ISO/IEC 20546 빅데이터 개요 및 용어 표준 대응"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "상호운용성(Interoperability)",
+   "이식성(Portability)",
+   "Part 1~5 구성",
+   "사용자 뷰(User View)",
+   "기능 뷰(Functional View)",
+   "크로스커팅 이슈(Cross-cutting Issues)",
+   "표준 로드맵(Standards Roadmap)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
   "id": "DB_112",
   "code": "DB_112",
   "domain": "DB",
@@ -11375,6 +11797,344 @@
    "MapReduce·Spark",
    "Spark Streaming·Storm",
    "HBase·Druid"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_113",
+  "code": "DB_113",
+  "domain": "DB",
+  "category": "DB > 빅데이터",
+  "title": "카파 아키텍처(Kappa Architecture)",
+  "subtitle": "",
+  "name": "카파 아키텍처(Kappa Architecture)",
+  "en": "Kappa Architecture",
+  "definition": "제이 크렙스(Jay Kreps)가 람다 아키텍처의 배치 레이어를 제거하고 모든 데이터를 스피드 레이어에서 스트림으로 처리하도록 제안한 스피드·서빙 2레이어 빅데이터 처리 구조.",
+  "keywords": [
+   "제안: Jay Kreps(LinkedIn), 람다의 배치·스피드 코드 이중 관리 문제 해결",
+   "레이어 구조: 스피드 레이어 + 서빙 레이어(2레이어)",
+   "처리 패러다임: 스트림 전용(실시간)",
+   "재처리: 코드 변경 시에만 새 스트림 작업(버전 n+1)으로 로그 재처리",
+   "특징: 레이어 간 코드 공유 복잡성 제거 · 증분 처리로 자원 소비 적음 · 일관된 스트림으로 신뢰성 높음"
+  ],
+  "keywords_must": [
+   "스피드 레이어(Speed Layer)",
+   "서빙 레이어(Serving Layer)",
+   "스트림 처리(Stream Processing)",
+   "재처리(Reprocessing)",
+   "작업 버전 n·n+1",
+   "결과 테이블 전환",
+   "단일 프레임워크 활용",
+   "람다 아키텍처(Lambda Architecture)"
+  ],
+  "keywords_ref": [
+   "Apache Kafka(로그 보관)",
+   "Apache Flink·Spark Streaming",
+   "Jay Kreps",
+   "배치 레이어(Batch Layer) 제거"
+  ],
+  "outline": [
+   "스트림 처리 최적화 2레이어 구조",
+   "- 배치 레이어 제거와 스트림 전용 처리",
+   "구성도와 구성요소",
+   "- 스피드 레이어와 서빙 레이어",
+   "람다 아키텍처와 비교"
+  ],
+  "sections": [
+   {
+    "title": "스트림 처리 최적화 2레이어 구조",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "레이어 구조: 스피드 레이어와 서빙 레이어 2개",
+       "목적: 배치·스피드 레이어 간 코드 공유 복잡성 제거",
+       "재작업: 프로그램 변경 시에만 수행, 자원 소비 적고(증분 처리) 신뢰성 높음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성도와 구성요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "스피드 레이어: 코드 변경 시 수집된 전체 데이터로 새 스트림 프로세스(작업 n+1) 생성해 재처리 → 단일 프레임워크",
+       "서빙 레이어: 처리 결과를 별도 테이블(n+1)에 저장, 완료 시 새 테이블로 조회 전환 후 이전 작업 종료 → 운영·디버깅 단순화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "람다 아키텍처와 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "레이어: 람다 배치·스피드·서빙 3개 · 카파 스피드·서빙 2개",
+       "처리: 람다 배치 + 스트림 · 카파 스트림 전용",
+       "코드 관리: 람다 두 처리 로직 이중 유지 · 카파 단일 코드베이스",
+       "재처리: 람다 배치 레이어 재계산 · 카파 로그 재생으로 스트림 재처리"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "스피드 레이어(Speed Layer)",
+   "서빙 레이어(Serving Layer)",
+   "스트림 처리(Stream Processing)",
+   "재처리(Reprocessing)",
+   "작업 버전 n·n+1",
+   "결과 테이블 전환",
+   "단일 프레임워크 활용",
+   "람다 아키텍처(Lambda Architecture)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_114",
+  "code": "DB_114",
+  "domain": "DB",
+  "category": "DB > 빅데이터",
+  "title": "아파치 카프카(Apache Kafka)",
+  "subtitle": "",
+  "name": "아파치 카프카(Apache Kafka)",
+  "en": "Apache Kafka",
+  "definition": "웹사이트·애플리케이션·센서의 대규모 데이터 스트림을 디스크에 버퍼링하며 목적지 시스템으로 안정적으로 전달하는 발행-구독(Pub/Sub) 기반 고성능 분산 메시징 시스템으로, 링크드인이 개발해 2011년 공개했다.",
+  "keywords": [
+   "특징: 프로듀서·컨슈머 분리 · 멀티 프로듀서·멀티 컨슈머 · 디스크 저장(연속성) · 확장성 · 분산성 · 높은 성능",
+   "구성요소: Topic · Producer · Consumer · Broker (+ Partition · Zookeeper)",
+   "동작: 프로듀서 전송 → 토픽 저장 → 컨슈머가 접속해 가져감(서로 독립)",
+   "순서 보장: 파티션 단위",
+   "클라우드 비교: 카프카(DIY) · Kinesis(AWS) · Pub/Sub(Google)"
+  ],
+  "keywords_must": [
+   "발행-구독 모델(Publish-Subscribe)",
+   "MOM(Message Oriented Middleware)",
+   "토픽(Topic)",
+   "프로듀서(Producer)",
+   "컨슈머(Consumer)",
+   "브로커(Broker)",
+   "파티션(Partition)",
+   "디스크 순차 저장",
+   "Scale-out"
+  ],
+  "keywords_ref": [
+   "주키퍼(Zookeeper)",
+   "컨슈머 그룹(Consumer Group)",
+   "오프셋(Offset)",
+   "Amazon Kinesis·Google Pub/Sub"
+  ],
+  "outline": [
+   "고성능 분산 메시징 시스템",
+   "- 대규모 스트림 버퍼링과 안정 전송",
+   "- 분리·확장·분산·고성능 특징",
+   "구성요소와 역할",
+   "- Topic·Producer·Consumer·Broker",
+   "동작 방식",
+   "클라우드 메시징 서비스와 비교"
+  ],
+  "sections": [
+   {
+    "title": "고성능 분산 메시징 시스템",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "프로듀서·컨슈머 분리: 보내는 쪽과 받는 쪽이 완전히 분리된 Pub/Sub",
+       "멀티 프로듀서·컨슈머: 하나의 토픽에 여러 프로듀서·컨슈머 접근",
+       "연속성: 메시지를 디스크에 저장·유지",
+       "확장성: 무중단으로 브로커 3대에서 수십 대로 확장",
+       "높은 성능: 분산·배치 처리로 초당 수백 MB 처리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성요소와 역할",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Topic: 발행된 메시지의 카테고리, 메시지를 구분하는 이름",
+       "Producer: 특정 토픽 메시지를 생성해 Broker에 전달",
+       "Consumer: 구독한 토픽의 메시지를 가져와 처리",
+       "Broker: 메시지를 토픽별로 분류·관리하는 클러스터 서버"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작 방식",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① 프로듀서가 새 메시지를 카프카로 전송 ② 메시지가 토픽에 저장",
+       "③ 컨슈머가 카프카에 접속해 새 메시지를 가져감",
+       "④ 프로듀서와 컨슈머는 서로 독립적으로 동작 ⑤ 메시지는 토픽 식별자 단위로 저장"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "클라우드 메시징 서비스와 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "사용 형태: 카프카 DIY · Kinesis·Pub/Sub 클라우드 서비스",
+       "리플리케이션 팩터: 카프카 조정 가능 · 클라우드 조정 불가",
+       "저장 기간: 카프카 조정 가능 · 클라우드 최대 7일",
+       "메시지 순서: 카프카 파티션 · Kinesis 샤드 · Pub/Sub 토픽 단위",
+       "운영: 카프카 운영 인원·장비 비용 · 클라우드 서비스 사용료"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "발행-구독 모델(Publish-Subscribe)",
+   "MOM(Message Oriented Middleware)",
+   "토픽(Topic)",
+   "프로듀서(Producer)",
+   "컨슈머(Consumer)",
+   "브로커(Broker)",
+   "파티션(Partition)",
+   "디스크 순차 저장",
+   "Scale-out"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_115",
+  "code": "DB_115",
+  "domain": "DB",
+  "category": "DB > 빅데이터",
+  "title": "메시지 큐잉(Message Queuing)",
+  "subtitle": "",
+  "name": "메시지 큐잉(Message Queuing)",
+  "en": "Message Queuing",
+  "definition": "프로세스·프로그램 간 비동기 메시지 송수신을 위해 메시지 지향 미들웨어(MOM)를 구현한 시스템으로, 대표 제품으로 RabbitMQ·ActiveMQ·Kafka가 있다.",
+  "keywords": [
+   "필요성: 확장성(기능별 모듈화) · 데이터 영속성(디스크 저장) · 고가용성 · 장애 복원력(단일 장애점 해소)",
+   "RabbitMQ: AMQP 구현 브로커, Producer → Exchange → Binding → Queue → Consumer",
+   "Exchange 유형: fanout · direct · topic · header",
+   "RabbitMQ 기능: 메시지 분배 · Fair dispatch(prefetchCount) · ACK",
+   "ActiveMQ: 자바 기반 JMS 준수 MOM, 다양한 프로토콜·언어 API",
+   "Kafka: 디스크 순차 저장 · 파티션 분산 처리 · Pub/Sub · Scale-out"
+  ],
+  "keywords_must": [
+   "MOM(Message Oriented Middleware)",
+   "비동기 메시징(Asynchronous Messaging)",
+   "RabbitMQ",
+   "AMQP(Advanced Message Queuing Protocol)",
+   "익스체인지(Exchange)",
+   "바인딩(Binding)",
+   "ActiveMQ",
+   "JMS(Java Message Service)",
+   "Kafka"
+  ],
+  "keywords_ref": [
+   "Fair Dispatch·prefetchCount",
+   "ACK(Acknowledgment)",
+   "STOMP(Simple Text Oriented Messaging Protocol)",
+   "단일 장애점(SPOF)"
+  ],
+  "outline": [
+   "비동기 메시지 송수신 미들웨어",
+   "- 확장성·영속성·고가용성·장애 복원력",
+   "종류와 기능",
+   "- RabbitMQ",
+   "- ActiveMQ",
+   "- Kafka",
+   "RabbitMQ·ActiveMQ·Kafka 비교"
+  ],
+  "sections": [
+   {
+    "title": "비동기 메시지 송수신 미들웨어",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "확장성: 기능별 모듈화로 확장 용이",
+       "데이터 영속성: 디스크에 메시지 저장",
+       "고가용성·장애 복원력: 단일 장애점 해소, 일부 장애가 전체에 영향 없음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "종류와 기능",
+    "subsections": [
+     {
+      "title": "RabbitMQ",
+      "items": [
+       "구성: Producer는 항상 Exchange 경유, Queue에 보관, Consumer가 Queue에서 수신",
+       "Exchange·Binding: 라우팅 규칙으로 큐 결정(fanout·direct·topic·header)",
+       "기능: 균등 분배, Fair dispatch(prefetchCount), ACK로 전달 보장"
+      ]
+     },
+     {
+      "title": "ActiveMQ",
+      "items": [
+       "구성: 자바 EE 기반 JMS로 비동기·느슨한 결합 통신, 다른 MOM과 직접 통신 불가",
+       "기능: HTTP/S·STOMP·TCP 등 다양한 연결, 다언어 API, 브로커 클러스터링, JMX 관리"
+      ]
+     },
+     {
+      "title": "Kafka",
+      "items": [
+       "구성: Broker·Message(Key·Value)·Producer·Consumer·Topic",
+       "기능: Pub/Sub 느슨한 결합, 디스크 순차 저장, 파티션 분산 처리, Scale-out"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "RabbitMQ·ActiveMQ·Kafka 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "RabbitMQ: AMQP 지원, 모니터링·관리 쉬움·클러스터링 · Windows에서 Erlang 설치 필요",
+       "ActiveMQ: 자바 브로커, 다양한 언어·STOMP, JDBC Persistence · 모니터링 도구 없음",
+       "Kafka: 대용량 실시간 로그 특화, 배치 전송·파일 영속성 · 컨슈머 장애 시 손실·중복 가능"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "MOM(Message Oriented Middleware)",
+   "비동기 메시징(Asynchronous Messaging)",
+   "RabbitMQ",
+   "AMQP(Advanced Message Queuing Protocol)",
+   "익스체인지(Exchange)",
+   "바인딩(Binding)",
+   "ActiveMQ",
+   "JMS(Java Message Service)",
+   "Kafka"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -11908,6 +12668,425 @@
   }
  },
  {
+  "id": "DB_119",
+  "code": "DB_119",
+  "domain": "DB",
+  "category": "DB > 빅데이터",
+  "title": "하둡 분산 파일 시스템(HDFS, Hadoop Distributed File System)",
+  "subtitle": "",
+  "name": "하둡 분산 파일 시스템(HDFS, Hadoop Distributed File System)",
+  "en": "Hadoop Distributed File System",
+  "definition": "저비용 노드 수백~수천 대의 클러스터에서 기가·테라바이트급 대용량 파일을 블록 단위로 나눠 여러 데이터노드에 복제 저장하는 마스터/슬레이브 구조의 분산 파일 시스템.",
+  "keywords": [
+   "특징: Fault-Tolerant · Data Block 분산 저장 · Replication(기본 3개) · Rack Awareness",
+   "구조: Master/Slave(NameNode·DataNode), TCP/IP·RPC 통신",
+   "블록 크기: 64MB(1.x)·128MB(2.x 이후)",
+   "NameNode 역할: Namespace · 블록 매핑 · 메타데이터 · 복제 결정(Heartbeat·Blockreport 수신)",
+   "DataNode 역할: 클라이언트 R/W 처리 · NameNode 지시에 따른 블록 생성·삭제·복제"
+  ],
+  "keywords_must": [
+   "네임노드(NameNode)",
+   "데이터노드(DataNode)",
+   "블록(Block, 128MB)",
+   "복제(Replication, 기본 3)",
+   "랙 인식(Rack Awareness)",
+   "하트비트(Heartbeat)",
+   "블록 리포트(Blockreport)",
+   "네임스페이스(Namespace)",
+   "마스터/슬레이브(Master/Slave)"
+  ],
+  "keywords_ref": [
+   "Secondary NameNode",
+   "HDFS HA(Active·Standby NameNode)",
+   "Write-Once-Read-Many",
+   "RPC(Remote Procedure Call)"
+  ],
+  "outline": [
+   "하둡의 분산 파일 저장 기술",
+   "- 장애 허용·블록·복제·랙 인식",
+   "구조와 구성요소",
+   "- Master/Slave · 운영 구조",
+   "네임노드와 데이터노드 역할"
+  ],
+  "sections": [
+   {
+    "title": "하둡의 분산 파일 저장 기술",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Fault-Tolerant: 디스크 장애에도 복제로 높은 가용성",
+       "Data Block: 파일을 블록으로 나눠 여러 DataNode에 분산, 위치 정보는 NameNode가 관리",
+       "Replication: 블록마다 보통 3개 복제본 유지",
+       "Rack Awareness: 복제본이 한 랙에 몰리지 않게 배치해 랙 장애 대비"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구조와 구성요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Name Node: DataNode 메타정보와 블록 정보 관리(Master)",
+       "Data Node: 데이터를 하나 이상의 블록으로 저장(Slave)",
+       "Replication: DataNode 간 복제·분산 저장으로 HA 구현",
+       "TCP/IP·Name Space: 모든 통신은 TCP/IP·RPC, 전통적 계층 파일 구조 지원"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "네임노드와 데이터노드 역할",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "네임노드: 파일·디렉터리 열기·닫기·이름 변경, 블록 매핑, 메타데이터 저장소",
+       "네임노드 복제 결정: DataNode의 Heartbeat·Blockreport를 받아 복제 판단",
+       "데이터노드: 클라이언트 읽기·쓰기 처리, 지시에 따른 블록 생성·삭제·복제"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "네임노드(NameNode)",
+   "데이터노드(DataNode)",
+   "블록(Block, 128MB)",
+   "복제(Replication, 기본 3)",
+   "랙 인식(Rack Awareness)",
+   "하트비트(Heartbeat)",
+   "블록 리포트(Blockreport)",
+   "네임스페이스(Namespace)",
+   "마스터/슬레이브(Master/Slave)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_120",
+  "code": "DB_120",
+  "domain": "DB",
+  "category": "DB > 빅데이터",
+  "title": "맵리듀스(MapReduce)",
+  "subtitle": "",
+  "name": "맵리듀스(MapReduce)",
+  "en": "MapReduce",
+  "definition": "신뢰할 수 없는 컴퓨터로 구성된 클러스터에서 페타바이트급 데이터를 병렬 처리하기 위해 함수형 프로그래밍의 Map과 Reduce 함수를 기반으로 작업을 분산 수행하는 프레임워크.",
+  "keywords": [
+   "특징: HDFS 연동 · 스케줄러(FIFO 기본, Fair·Capacity) · 작업을 n개 Task로 분리 · Java 기반 다양한 언어",
+   "아키텍처(1.x): Job Tracker(master, 작업 할당) · Task Tracker(slave, Map·Reduce 수행)",
+   "처리 단계: Input Split → Map → Shuffle·Sort → Reduce → Output",
+   "Map: 흩어진 데이터를 Key·Value로 묶음 · Reduce: 같은 Key를 집계해 원하는 결과 추출",
+   "대표 예: Word Count"
+  ],
+  "keywords_must": [
+   "맵(Map) 함수",
+   "리듀스(Reduce) 함수",
+   "Key-Value 쌍",
+   "셔플(Shuffle)",
+   "정렬(Sort)",
+   "잡 트래커(Job Tracker)",
+   "태스크 트래커(Task Tracker)",
+   "데이터 지역성(Data Locality)",
+   "Word Count"
+  ],
+  "keywords_ref": [
+   "컴바이너(Combiner)",
+   "파티셔너(Partitioner)",
+   "FIFO·Fair·Capacity 스케줄러",
+   "YARN(Hadoop 2.0)"
+  ],
+  "outline": [
+   "대용량 병렬 처리 프레임워크",
+   "- HDFS 연동·스케줄러·Task 분리",
+   "아키텍처",
+   "- Job Tracker · Task Tracker",
+   "병렬 처리 흐름",
+   "- Map·Shuffle·Reduce"
+  ],
+  "sections": [
+   {
+    "title": "대용량 병렬 처리 프레임워크",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "HDFS 연동: 입출력 파일 저장소로 HDFS 사용",
+       "Scheduler: 기본 FIFO, 추가로 Fair·Capacity 스케줄러",
+       "작업 단위: 하나의 Job을 n개 Map·Reduce Task로 나눠 각 노드에서 분산 처리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "아키텍처",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Job Tracker: 분산 환경 작업 스케줄링, Task Tracker에 작업 할당(master)",
+       "Task Tracker: DataNode에서 할당받은 Map·Reduce 작업 수행(slave)",
+       "한계: Job Tracker 병목·단일 장애점 → Hadoop 2.0 YARN으로 분리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "병렬 처리 흐름",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Map: 입력 분할(Split)별로 독립 병렬 실행, Key·Value로 분류",
+       "Shuffle·Sort: 같은 Key를 같은 Reducer로 모으고 정렬",
+       "Reduce: 중복 제거·집계로 원하는 데이터 추출",
+       "Word Count: 단어별 (word, 1) 생성 → 같은 단어 합산"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "맵(Map) 함수",
+   "리듀스(Reduce) 함수",
+   "Key-Value 쌍",
+   "셔플(Shuffle)",
+   "정렬(Sort)",
+   "잡 트래커(Job Tracker)",
+   "태스크 트래커(Task Tracker)",
+   "데이터 지역성(Data Locality)",
+   "Word Count"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_121",
+  "code": "DB_121",
+  "domain": "DB",
+  "category": "DB > 빅데이터",
+  "title": "하둡 2.0(Hadoop 2.0)",
+  "subtitle": "",
+  "name": "하둡 2.0(Hadoop 2.0)",
+  "en": "Hadoop 2.0",
+  "definition": "하둡 1.0의 Job Tracker 병목과 단일 장애점(SPOF) 문제를 해결하기 위해 YARN으로 자원 관리와 작업 스케줄링을 분리해 MapReduce 외 다양한 분산 처리 환경을 지원하는 차세대 하둡 플랫폼.",
+  "keywords": [
+   "등장 배경: 하둡 1.0 Job Tracker의 스케줄링·모니터링·자원관리 집중 → 병목·SPOF",
+   "핵심: YARN(Yet Another Resource Negotiator) 도입",
+   "구성요소: Resource Manager · Application Master · Node Manager · Container",
+   "특징: MapReduce 2.0(YARN)으로 HDFS에서 다양한 처리 엔진 실행(Multiple Search) · Windows 지원",
+   "HDFS 개선: NameNode HA(Active·Standby) · HDFS Federation"
+  ],
+  "keywords_must": [
+   "YARN(Yet Another Resource Negotiator)",
+   "리소스 매니저(Resource Manager)",
+   "애플리케이션 마스터(Application Master)",
+   "노드 매니저(Node Manager)",
+   "컨테이너(Container)",
+   "SPOF(Single Point of Failure) 해소",
+   "자원 관리와 작업 관리 분리",
+   "NameNode HA"
+  ],
+  "keywords_ref": [
+   "HDFS Federation",
+   "MapReduce 2.0",
+   "Job Tracker 병목",
+   "Spark·Tez on YARN"
+  ],
+  "outline": [
+   "차세대 하둡 플랫폼",
+   "- Job Tracker 병목·SPOF 해결",
+   "- YARN 기반 다양한 처리 환경",
+   "개념도와 주요 구성요소",
+   "- RM·AM·NM·Container",
+   "하둡 1.0과 비교"
+  ],
+  "sections": [
+   {
+    "title": "차세대 하둡 플랫폼",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "개념: 하둡 기반 스케줄링·자원 관리, 다양한 분산 환경 지원",
+       "특징: YARN으로 HDFS 위에서 Multiple Search 가능, Windows 기반 기업 적용성 향상"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "개념도와 주요 구성요소",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "분리 원리: Job Tracker의 스케줄링·모니터링·자원 관리를 Resource Manager와 Application Master로 분리",
+       "Resource Manager: 클러스터 컴퓨팅 자원 할당·중재, 분산 애플리케이션 관리",
+       "Application Master: 애플리케이션(MapReduce 잡) 수행, Node Manager에 태스크 실행 요청",
+       "Node Manager: 노드별 컨테이너 자원 관리, 허용 범위 내 태스크 실행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "하둡 1.0과 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "자원 관리: 1.0 Job Tracker 집중 · 2.0 Resource Manager",
+       "작업 관리: 1.0 Job Tracker · 2.0 애플리케이션별 Application Master",
+       "처리 모델: 1.0 MapReduce 전용 · 2.0 MapReduce·Spark 등 다양한 엔진",
+       "가용성: 1.0 NameNode SPOF · 2.0 NameNode HA"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "YARN(Yet Another Resource Negotiator)",
+   "리소스 매니저(Resource Manager)",
+   "애플리케이션 마스터(Application Master)",
+   "노드 매니저(Node Manager)",
+   "컨테이너(Container)",
+   "SPOF(Single Point of Failure) 해소",
+   "자원 관리와 작업 관리 분리",
+   "NameNode HA"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_122",
+  "code": "DB_122",
+  "domain": "DB",
+  "category": "DB > 빅데이터 분석",
+  "title": "R(통계 분석 언어)",
+  "subtitle": "",
+  "name": "R(통계 분석 언어)",
+  "en": "R Programming Language",
+  "definition": "다양한 통계 기법과 수치 해석을 지원하는 데이터 통계 분석·시각화용 오픈소스 언어 및 개발 환경으로, 기본 통계부터 모델링·데이터마이닝까지 패키지로 구현할 수 있다.",
+  "keywords": [
+   "특징: In-Memory Computing · 객체 지향 · Package · Visualization · 멀티 플랫폼 · 다양한 언어 연동 · 오픈소스(GNU GPL)",
+   "역사: 1993년 오클랜드 대학 Ross Ihaka·Robert Gentleman, Bell Lab S 언어에 뿌리",
+   "구성요소: R Core · R GUI · R Studio · R Package(CRAN) · 시각화 도구",
+   "장점: 통계 전문성 · 무료 · 플랫폼 다양성",
+   "단점: Single Thread(속도) · 전체 데이터 메모리 로딩 · 보안 기능 미내장",
+   "대응: snow·multicore·parallel·bigmemory 패키지, 빅데이터 처리 후 데이터 마트 분석에 적합"
+  ],
+  "keywords_must": [
+   "통계 분석(Statistical Analysis)",
+   "시각화(Visualization)",
+   "인메모리 컴퓨팅(In-Memory Computing)",
+   "패키지(Package)",
+   "CRAN(Comprehensive R Archive Network)",
+   "R Studio",
+   "S 언어(S Language)",
+   "Single Thread 한계",
+   "메모리 관리 한계"
+  ],
+  "keywords_ref": [
+   "ggplot2",
+   "bigmemory·parallel 패키지",
+   "GNU GPL",
+   "데이터 마트(Data Mart)"
+  ],
+  "outline": [
+   "통계 분석·시각화 언어",
+   "- 인메모리·객체 지향·패키지",
+   "- S 언어 기반 역사",
+   "구성요소와 장단점",
+   "- Core·GUI·Studio·Package",
+   "- 속도·메모리·보안 한계와 대응",
+   "CRAN"
+  ],
+  "sections": [
+   {
+    "title": "통계 분석·시각화 언어",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "In-Memory Computing: 빠른 처리, 하드웨어 메모리 크기에 영향",
+       "객체 지향: 데이터·함수가 객체, 클래스·메소드",
+       "Package·Visualization: 최신 알고리즘 패키지, Chart·Plot·Map 바로 사용",
+       "역사: 1993년 Ross Ihaka·Robert Gentleman 개발, 1976년 Bell Lab S 언어 계승"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성요소와 장단점",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "구성요소: R Core · R GUI · R Studio · R Package(CRAN) · 시각화 도구"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "CRAN",
+    "subsections": [
+     {
+      "title": "구성요소와 장단점",
+      "items": [
+       "R Core: 핵심 실행 엔진, R GUI·R Studio: 기본 GUI와 통합 개발 환경",
+       "R Package: CRAN 등록 패키지, 벤더가 아닌 커뮤니티가 갱신",
+       "장점: 통계 전문성, 무료·커뮤니티 생태계, 플랫폼 다양성",
+       "단점: 멀티코어 중 1코어만 사용, 전체 데이터를 메모리에 로딩, 보안 기능 없음",
+       "대응: snow·multicore·parallel·bigmemory 패키지, 빅데이터 처리 후 데이터 마트 분석에 적합"
+      ]
+     },
+     {
+      "title": null,
+      "items": [
+       "정의: R 소스·문서 최신 버전을 전 세계에 동일하게 유지하는 FTP·웹 서버 네트워크",
+       "제공: R Sources·Binaries·Packages, Manuals·FAQ·Contributed 문서"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "통계 분석(Statistical Analysis)",
+   "시각화(Visualization)",
+   "인메모리 컴퓨팅(In-Memory Computing)",
+   "패키지(Package)",
+   "CRAN(Comprehensive R Archive Network)",
+   "R Studio",
+   "S 언어(S Language)",
+   "Single Thread 한계",
+   "메모리 관리 한계"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
   "id": "DB_123",
   "code": "DB_123",
   "domain": "DB",
@@ -12126,6 +13305,201 @@
    "토폴로지(Topology)",
    "장애 허용(Fault Tolerance)",
    "Clojure"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_125_0",
+  "code": "DB_125_0",
+  "domain": "DB",
+  "category": "DB > 빅데이터",
+  "title": "하둡 3.0(Hadoop 3.0)",
+  "subtitle": "",
+  "name": "하둡 3.0(Hadoop 3.0)",
+  "en": "Hadoop 3.0",
+  "definition": "이레이저 코딩으로 HDFS 저장 효율을 높이고 YARN 타임라인 서비스 v.2, 다중 Standby NameNode, Java 8 기반 개발 환경을 도입한 하둡의 3번째 주요 버전.",
+  "keywords": [
+   "버전별 발전: 1.0 기본 아키텍처 → 2.0 YARN 도입(Job Tracker 병목 개선) → 3.0 이레이저 코딩(저장 효율)",
+   "운영 효율: 이레이저 코딩(Reed-Solomon) · YARN Timeline Service v.2(HBase 분산) · MapReduce Task-level Native 최적화(JNI, 약 30% 개선)",
+   "개발 효율: JDK 8 · Shell Script 재작성 · 2개 이상 NameNode 지원(Active 1 + Standby 다수)",
+   "추가: Ozone 오브젝트 저장소",
+   "활용: 데이터 댐 공간 하둡 · 하둡+GPU 아키텍처 · 건강보험 의료 지도"
+  ],
+  "keywords_must": [
+   "이레이저 코딩(Erasure Coding)",
+   "리드-솔로몬(Reed-Solomon)",
+   "저장 공간 효율성",
+   "YARN Timeline Service v.2",
+   "Native Task 최적화(JNI)",
+   "JDK 8",
+   "다중 Standby NameNode",
+   "Ozone 오브젝트 저장소"
+  ],
+  "keywords_ref": [
+   "3중 복제 대비 저장 오버헤드 감소(200% → 50%)",
+   "HBase",
+   "JNI(Java Native Interface)",
+   "JournalNode"
+  ],
+  "outline": [
+   "하둡 버전별 발전 과정",
+   "- 1.0 기본 → 2.0 YARN → 3.0 EC",
+   "주요 기술",
+   "- 운영 효율 측면",
+   "- 개발 효율 측면",
+   "국내외 활용 동향"
+  ],
+  "sections": [
+   {
+    "title": "하둡 버전별 발전 과정",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "하둡: 분산 환경 빅데이터 저장·처리용 자바 기반 오픈소스 프레임워크",
+       "1.0: 기본 아키텍처 정립, 2.0: YARN으로 Job Tracker 병목 개선, 3.0: 이레이저 코딩으로 HDFS 저장 효율 향상"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 기술",
+    "subsections": [
+     {
+      "title": "운영 효율",
+      "items": [
+       "이레이저 코딩: Reed-Solomon으로 장애 허용을 보장하면서 3중 복제 대비 저장 공간 절감(RS(6,3) 오버헤드 50%)",
+       "YARN Timeline Service v.2: HBase로 쓰기·읽기 분산, Flow·Aggregation으로 단계별 정보 확인",
+       "Native 최적화: 셔플의 Map Output 정렬을 C/C++ 네이티브로 구현해 JNI 호출, 약 30% 성능 향상"
+      ]
+     },
+     {
+      "title": "개발 효율",
+      "items": [
+       "Java: 모든 JAR를 JDK 8로 컴파일",
+       "Shell Script 재작성: 오랜 버그 수정과 새 기능 추가",
+       "NameNode: 2.0은 Active 1·Standby 1·JournalNode 3, 3.0은 Standby 다수 구성 가능"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "국내외 활용 동향",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 댐: 공간 하둡 플랫폼, DataNode 50대로 대용량 분석 지원",
+       "하둡+GPU: 코로나19 시뮬레이션에 GPU·분산 컴퓨팅 활용",
+       "건강보험 의료 지도: 환자·병원 이동 거리 계산으로 의료 접근성 분석"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "이레이저 코딩(Erasure Coding)",
+   "리드-솔로몬(Reed-Solomon)",
+   "저장 공간 효율성",
+   "YARN Timeline Service v.2",
+   "Native Task 최적화(JNI)",
+   "JDK 8",
+   "다중 Standby NameNode",
+   "Ozone 오브젝트 저장소"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_125_1",
+  "code": "DB_125_1",
+  "domain": "DB",
+  "category": "DB > 빅데이터",
+  "title": "ELK 스택(Elasticsearch·Logstash·Kibana)",
+  "subtitle": "",
+  "name": "ELK 스택(Elasticsearch·Logstash·Kibana)",
+  "en": "ELK Stack",
+  "definition": "로그 등 데이터를 수집·변환하는 Logstash, 저장·검색하는 Elasticsearch, 탐색·시각화하는 Kibana를 조합해 효율적인 데이터 수집과 실시간 분석을 제공하는 오픈소스 스택.",
+  "keywords": [
+   "Elasticsearch: 저장·관리하는 오픈소스 검색·분산 엔진",
+   "Logstash: 다양한 소스 데이터 수집·변환·전송",
+   "Kibana: 시각적 탐색·실시간 분석",
+   "Data Flow: Beats(수집) → Logstash(변환·처리) → Elasticsearch(저장·인덱싱) → Kibana(분석·시각화)",
+   "기능: 로그 분석·문서 검색 · SIEM 등 보안·이벤트 관리"
+  ],
+  "keywords_must": [
+   "엘라스틱서치(Elasticsearch)",
+   "로그스태시(Logstash)",
+   "키바나(Kibana)",
+   "비츠(Beats)",
+   "인덱싱(Indexing)",
+   "로그 수집·변환(Log Ingestion)",
+   "실시간 시각화(Real-time Visualization)",
+   "SIEM(Security Information and Event Management)"
+  ],
+  "keywords_ref": [
+   "역색인(Inverted Index)",
+   "Elastic Stack",
+   "Filebeat·Metricbeat",
+   "Apache Lucene"
+  ],
+  "outline": [
+   "데이터 수집·분석 오픈소스 프로젝트",
+   "- 개요",
+   "Data Flow · 기능",
+   "- 수집·변환·저장·시각화",
+   "- 분석·검색과 보안 이벤트 관리"
+  ],
+  "sections": [
+   {
+    "title": "데이터 수집·분석 오픈소스 프로젝트",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Elasticsearch: 수집 데이터를 저장·관리하는 검색·분산 엔진",
+       "Logstash: 다양한 소스에서 수집·변환해 원하는 대상으로 전송",
+       "Kibana: 시각적 탐색과 실시간 분석"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Data Flow · 기능",
+    "subsections": [
+     {
+      "title": "Data Flow와 기능",
+      "items": [
+       "데이터 수집: 수집 대상 서버의 Beats가 트리거에 따라 Logstash로 전송",
+       "변환·처리: Logstash가 가공해 Elasticsearch로 전달",
+       "저장·인덱싱: Elasticsearch가 저장·인덱싱·검색",
+       "분석·시각화: Kibana가 결과 시각화",
+       "기능: 로그 분석·문서 검색, SIEM 연계 보안·이벤트 관리"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "엘라스틱서치(Elasticsearch)",
+   "로그스태시(Logstash)",
+   "키바나(Kibana)",
+   "비츠(Beats)",
+   "인덱싱(Indexing)",
+   "로그 수집·변환(Log Ingestion)",
+   "실시간 시각화(Real-time Visualization)",
+   "SIEM(Security Information and Event Management)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -14506,7 +15880,911 @@
    "이관 데이터 값 검증"
   ],
   "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "ISP": "Information Strategy Planning"
+  }
+ },
+ {
+  "id": "DB_148",
+  "code": "DB_148",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "데이터 패브릭(Data Fabric)",
+  "subtitle": "",
+  "name": "데이터 패브릭(Data Fabric)",
+  "en": "Data Fabric",
+  "definition": "데이터가 저장된 위치와 관계없이 메타데이터·지식 그래프·자동화 파이프라인을 통해 적시에 올바른 데이터에 접근하고 공유하도록 지원하는 데이터 거버넌스 기반 통합 플랫폼.",
+  "keywords": [
+   "등장 배경: 데이터 거버넌스(영구 보관 낭비) · 통합 저장소(관리 기준 부재) · 데이터 가상화(물리·도메인 종속 한계)",
+   "Data Source 측 구성: 증강 데이터 카탈로그 · 시맨틱 지식 그래프 · 메타데이터 활성화",
+   "Data Consumer 측 구성: 추천 엔진 · 데이터 준비 및 제공 · DataOps",
+   "발전 순서: 데이터 웨어하우스 → 데이터 레이크 → 데이터 패브릭",
+   "데이터 레이크와 차이: 적재 없는 분산 접근(가상화) vs 중앙 집중 저장(Schema-on-Read)"
+  ],
+  "keywords_must": [
+   "통합 데이터 액세스(Unified Data Access)",
+   "증강 데이터 카탈로그(Augmented Data Catalog)",
+   "시맨틱 지식 그래프(Semantic Knowledge Graph)",
+   "메타데이터 활성화(Metadata Activation)",
+   "추천 엔진(Recommendation Engine)",
+   "데이터 준비 및 제공(Data Preparation and Integration)",
+   "DataOps",
+   "데이터 가상화(Data Virtualization)"
+  ],
+  "keywords_ref": [
+   "데이터 메시(Data Mesh)",
+   "데이터 레이크(Data Lake)",
+   "Schema-on-Read",
+   "액티브 메타데이터(Active Metadata)"
+  ],
+  "outline": [
+   "거버넌스 기반 통합 플랫폼",
+   "- 거버넌스·통합 저장소·가상화 배경",
+   "아키텍처와 구성요소",
+   "- Data Source 측 3요소",
+   "- Data Consumer 측 3요소",
+   "데이터 레이크와 비교"
+  ],
+  "sections": [
+   {
+    "title": "거버넌스 기반 통합 플랫폼",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 거버넌스: 잠재 가치 때문에 영구 보관하면서 낭비 발생",
+       "데이터 통합 저장소: 활용 가능한 데이터 부족, 보관·관리 기준 부재",
+       "데이터 가상화: 물리적 데이터와 도메인 종속 관리의 한계"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "아키텍처와 구성요소",
+    "subsections": [
+     {
+      "title": "Data Source 측",
+      "items": [
+       "증강 데이터 카탈로그: 카탈로그화된 데이터의 질의 가능한 액세스 경로 설정",
+       "시맨틱 지식 그래프: 데이터 자산에 지식·의미를 보강해 검색 용이",
+       "메타데이터 활성화: 거버넌스를 준수한 메타데이터 관리"
+      ]
+     },
+     {
+      "title": "Data Consumer 측",
+      "items": [
+       "추천 엔진: 최적화된 워크로드 분배·실행",
+       "데이터 준비 및 제공: 분산 데이터 소스 자동 수집·전송",
+       "DataOps: 데이터 파이프라인 생성으로 액세스 지원"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "데이터 레이크와 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "특징: 패브릭 분산 네트워크 환경의 원활한 접근·공유 · 레이크 정형·비정형 중앙 집중 저장소",
+       "기능: 패브릭 통합·시각화·관리, 데이터 메시·가상화 · 레이크 실시간 스트리밍·유연한 메타데이터",
+       "처리: 패브릭 이기종 소스를 적재 없이 추상화 메타데이터로 처리 · 레이크 하둡 분산 병렬·Schema-on-Read"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "통합 데이터 액세스(Unified Data Access)",
+   "증강 데이터 카탈로그(Augmented Data Catalog)",
+   "시맨틱 지식 그래프(Semantic Knowledge Graph)",
+   "메타데이터 활성화(Metadata Activation)",
+   "추천 엔진(Recommendation Engine)",
+   "데이터 준비 및 제공(Data Preparation and Integration)",
+   "DataOps",
+   "데이터 가상화(Data Virtualization)"
+  ],
+  "quiz_groups": [],
   "quiz_avoid": []
+ },
+ {
+  "id": "DB_149",
+  "code": "DB_149",
+  "domain": "DB",
+  "category": "DB > 데이터 관리",
+  "title": "변경 데이터 캡처(CDC, Change Data Capture)",
+  "subtitle": "",
+  "name": "변경 데이터 캡처(CDC, Change Data Capture)",
+  "en": "Change Data Capture",
+  "definition": "데이터베이스 소스 시스템에서 마지막 추출 이후 변경된 데이터를 트랜잭션 로그 기반으로 캡처해 다양한 운영·분석 시스템으로 준실시간 전달하는 데이터 통합 기술.",
+  "keywords": [
+   "특징: Near-Realtime 환경 구축 · 로그 기반으로 운영 시스템 부하 감소 · 신뢰성 있는 복제",
+   "절차: 로그 발생 시 Capture 프로세스로 추출 → Source 엔진에서 Target 엔진 전송 → Target DB 적재",
+   "TimeStamp 방식 대비: 삭제 데이터 추출 가능 · 키 변경 인식 · 트랜잭션 단위 동기화",
+   "ETL 대비: 이벤트 기반 실시간 vs 배치 주기 적재",
+   "도입 유의사항: No-Logging 트랜잭션 · 대량 처리 지연 · 스키마 변경 · 암호화 데이터 · Supplemental Log · 양방향 동기화"
+  ],
+  "keywords_must": [
+   "Near-Realtime(준실시간)",
+   "트랜잭션 로그 기반(Log-based)",
+   "캡처 프로세스(Capture Process)",
+   "Source 엔진·Target 엔진",
+   "이벤트 기반(CUD, Create·Update·Delete)",
+   "TimeStamp 방식",
+   "ETL(Extract, Transform, Load)",
+   "Supplemental Log",
+   "양방향 동기화(Bi-directional Sync)"
+  ],
+  "keywords_ref": [
+   "DB Archive Log",
+   "Debezium·Oracle GoldenGate",
+   "샘플링 검증",
+   "No-Logging 트랜잭션"
+  ],
+  "outline": [
+   "실시간 데이터 통합 기술",
+   "- 준실시간·저부하·신뢰성 복제",
+   "구성도와 절차",
+   "TimeStamp·ETL 방식과 비교",
+   "도입 유의사항과 과제"
+  ],
+  "sections": [
+   {
+    "title": "실시간 데이터 통합 기술",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "실시간 작업 환경: 변경 시점 기반 추출로 Near-Realtime 구축",
+       "운영 부하 감소: 트랜잭션 로그에서 추출해 DBMS 부하 최소화",
+       "신뢰성 있는 복제: 소스와 변경 데이터를 포함해 복제"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성도와 절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① 캡처: DB 로그 발생 시 Capture 프로세스가 변경 데이터 추출",
+       "② 전송: Source 엔진에서 Target 엔진으로 전달",
+       "③ 적용: Target 엔진이 대상 데이터를 Target DB에 적재"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "TimeStamp·ETL 방식과 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "변경 시점: CDC 이벤트(CUD) · TimeStamp 컬럼 갱신",
+       "시스템 부하: CDC 로그 기반으로 무관 · TimeStamp Row 증가 시 부하 증가",
+       "삭제·키 변경: CDC 삭제 추출·키 변경 인식 · TimeStamp 삭제 추출 불가·신규 Insert로 인식",
+       "ETL 비교: CDC 이벤트 기반·적재 주기 무관 · ETL 배치 기반·일·월·시간 주기"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "도입 유의사항과 과제",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "No-Logging 트랜잭션: 성능용 No-Logging 처리 시 전체 재동기화가 효율적",
+       "대량 데이터·스키마 변경: 동기화 지연은 갱신 주기별 분리, 연계 스키마 변경 오류 대응",
+       "암호화·Supplemental Log: 복호화 필요성 검토, 설정 시 REDO Log 증가 영향 확인",
+       "과제: 샘플링 검증으로 신뢰성 확인, 빅데이터 실시간 연계에 활용 확대"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "Near-Realtime(준실시간)",
+   "트랜잭션 로그 기반(Log-based)",
+   "캡처 프로세스(Capture Process)",
+   "Source 엔진·Target 엔진",
+   "이벤트 기반(CUD, Create·Update·Delete)",
+   "TimeStamp 방식",
+   "ETL(Extract, Transform, Load)",
+   "Supplemental Log",
+   "양방향 동기화(Bi-directional Sync)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_150",
+  "code": "DB_150",
+  "domain": "DB",
+  "category": "DB > 분산 DB",
+  "title": "DB 테이블 파티셔닝(DB Table Partitioning)",
+  "subtitle": "",
+  "name": "DB 테이블 파티셔닝(DB Table Partitioning)",
+  "en": "Database Table Partitioning",
+  "definition": "SQL이나 애플리케이션 수정 없이 큰 테이블이나 인덱스를 파티션 키 기준의 작은 단위로 물리적으로 분할해 가용성·관리 용이성·성능을 높이는 관리 기법.",
+  "keywords": [
+   "목적: 가용성(Availability) · 관리 용이성(Manageability) · 성능(Performance)",
+   "기본 유형: 레인지 · 리스트 · 해시 · 결합(Composite)",
+   "최신 기법: 레퍼런스 파티셔닝 · 인터벌 파티셔닝",
+   "결합 예: Range-Hash · Range-List · Range-Range · List-Hash · List-List · List-Range",
+   "적용: 대용량 배치 작업·DW 환경에서 최적 성능"
+  ],
+  "keywords_must": [
+   "파티션 키(Partition Key)",
+   "레인지 파티셔닝(Range Partitioning)",
+   "리스트 파티셔닝(List Partitioning)",
+   "해시 파티셔닝(Hash Partitioning)",
+   "결합 파티셔닝(Composite Partitioning)",
+   "레퍼런스 파티셔닝(Reference Partitioning)",
+   "인터벌 파티셔닝(Interval Partitioning)",
+   "파티션 프루닝(Partition Pruning)"
+  ],
+  "keywords_ref": [
+   "서브 파티션(Sub-partition)",
+   "로컬·글로벌 인덱스(Local·Global Index)",
+   "병렬 처리(Parallel Query)",
+   "DW(Data Warehouse)"
+  ],
+  "outline": [
+   "대형 테이블의 물리적 분할 관리",
+   "- 가용성·관리 용이성·성능",
+   "개념도와 유형",
+   "- 레인지·리스트·해시·결합",
+   "최신 동향",
+   "- 레퍼런스·인터벌 파티셔닝"
+  ],
+  "sections": [
+   {
+    "title": "대형 테이블의 물리적 분할 관리",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "가용성: 특정 파티션 장애가 다른 파티션 사용에 영향 없음",
+       "관리 용이성: 파티션별 로드·백업·복구, 파티션 레벨 DML 수행",
+       "성능: 접근 범위 축소(프루닝)와 파티션별 병렬 처리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "개념도와 유형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "레인지: 파티션 키 값의 범위로 분할, 가장 일반적(월·분기)",
+       "리스트: 불연속 값 목록을 파티션에 지정, 순서 무관 그룹핑",
+       "해시: 파티션 키에 해시 함수 적용, 고른 분산과 병렬 처리 성능",
+       "결합: 레인지 분할 후 각 파티션을 해시·리스트로 서브 파티션"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "최신 동향",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "레퍼런스: 부모 테이블 파티션 키로 자식 테이블 파티셔닝",
+       "인터벌: 레인지 파티션에 간격을 정의해 파티션 자동 추가",
+       "결합 확장: Range-Range·List-Hash·List-List·List-Range 지원"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "파티션 키(Partition Key)",
+   "레인지 파티셔닝(Range Partitioning)",
+   "리스트 파티셔닝(List Partitioning)",
+   "해시 파티셔닝(Hash Partitioning)",
+   "결합 파티셔닝(Composite Partitioning)",
+   "레퍼런스 파티셔닝(Reference Partitioning)",
+   "인터벌 파티셔닝(Interval Partitioning)",
+   "파티션 프루닝(Partition Pruning)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_152",
+  "code": "DB_152",
+  "domain": "DB",
+  "category": "DB > 분산 DB",
+  "title": "데이터베이스 파티셔닝(Database Partitioning)",
+  "subtitle": "",
+  "name": "데이터베이스 파티셔닝(Database Partitioning)",
+  "en": "Database Partitioning",
+  "definition": "서비스 규모와 데이터 증가로 단일 DB의 용량·성능 한계를 극복하기 위해 테이블을 행 또는 컬럼 기준으로 동일한 논리적 속성을 가진 여러 테이블로 분할·저장하는 기법.",
+  "keywords": [
+   "목적: 성능(읽기 부하 분산·쓰기 병렬) · 가용성(훼손 가능성 감소·효율적 복구) · 관리 용이성",
+   "종류: 수평 파티셔닝(행 기준, 동일 스키마) · 수직 파티셔닝(컬럼 기준, 다른 스키마)",
+   "분할 기준: 컬럼 값(Range·List) · 파티셔닝 키(Hash) · 복합(Range-Hash·Range-List)",
+   "분산 DB와 차이: 물리 DB 1대·대용량 테이블 처리 vs 여러 대·분산 저장·고가용성"
+  ],
+  "keywords_must": [
+   "수평 파티셔닝(Horizontal Partitioning)",
+   "수직 파티셔닝(Vertical Partitioning)",
+   "샤딩(Sharding)",
+   "Range Partition",
+   "List Partition",
+   "Hash Partition",
+   "Range-Hash Partition",
+   "Range-List Partition"
+  ],
+  "keywords_ref": [
+   "분산 데이터베이스(Distributed Database)",
+   "파티션 키(Partition Key)",
+   "스키마(Schema) 동일성",
+   "Scale-out"
+  ],
+  "outline": [
+   "단일 DB 한계 극복 기법",
+   "목적과 종류",
+   "- 성능·가용성·관리 용이성",
+   "- 수평·수직 파티셔닝",
+   "분할 기준",
+   "- 컬럼 값·키·복합",
+   "분산 DB · 비교"
+  ],
+  "sections": [
+   {
+    "title": "단일 DB 한계 극복 기법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "등장 배경: 서비스 크기와 대용량 데이터 증가로 단일 DB 용량·성능 한계 봉착"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "목적과 종류",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "성능: 대용량 읽기 부하 분산, 쓰기 병렬 수행",
+       "가용성: 분할로 데이터 훼손 가능성 감소, 효율적 복구",
+       "수평 파티셔닝: 행 기준 분리, 테이블 간 스키마 동일, 키 기반 분산(샤딩과 동일 개념)",
+       "수직 파티셔닝: 컬럼 기준 분리, 서로 다른 스키마, 동일 키로 다른 컬럼 저장"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분할 기준",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "컬럼 값 기준: Range(월·분기 등 범위) · List(유사 분포 값)",
+       "파티셔닝 키 기준: Hash(키에 해시 함수 적용)",
+       "복합 기준: Range-Hash · Range-List(Range 분할 후 내부 Hash·List)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분산 DB · 비교",
+    "subsections": [
+     {
+      "title": "분산 DB와 비교",
+      "items": [
+       "개념: 파티셔닝 논리 속성이 같은 테이블로 분할 · 분산 DB 여러 물리 DB를 하나의 논리 DB로 연결",
+       "물리 DB 수: 파티셔닝 1대 · 분산 DB 여러 대",
+       "목적: 파티셔닝 대용량 테이블 처리·성능 · 분산 DB 분산 저장·고가용성"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "수평 파티셔닝(Horizontal Partitioning)",
+   "수직 파티셔닝(Vertical Partitioning)",
+   "샤딩(Sharding)",
+   "Range Partition",
+   "List Partition",
+   "Hash Partition",
+   "Range-Hash Partition",
+   "Range-List Partition"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_153_00",
+  "code": "DB_153_00",
+  "domain": "DB",
+  "category": "DB > 분산 DB",
+  "title": "데이터베이스 복제(Database Replication)",
+  "subtitle": "",
+  "name": "데이터베이스 복제(Database Replication)",
+  "en": "Database Replication",
+  "definition": "게시자의 데이터를 배포자를 통해 구독자에게 복사·동기화해 안정적인 서비스와 가용성을 확보하는 기법으로, 데이터 볼륨·형식·환경과 복제 오버헤드를 고려해 실시간 또는 시점 복제 유형을 선택한다.",
+  "keywords": [
+   "구성 주체: 게시자(Publisher) · 배포자(Distributor) · 구독자(Subscriber)",
+   "실시간 복제: 트랜잭션 복제 · 피어 투 피어 복제",
+   "시점 복제: 병합 복제 · 스냅샷 복제",
+   "트랜잭션 복제: Log Reader Agent로 변경로그 수집 → Distribution Agent로 구독자 배포",
+   "병합 복제: Merge Agent가 초기 스냅샷·변경 데이터 취합 후 최종 병합본 제공",
+   "스냅샷 복제: Snapshot Agent가 특정 시점 전체 데이터를 폴더에 저장 후 배포"
+  ],
+  "keywords_must": [
+   "게시자(Publisher)",
+   "배포자(Distributor)",
+   "구독자(Subscriber)",
+   "트랜잭션 복제(Transactional Replication)",
+   "피어 투 피어 복제(Peer-to-Peer Replication)",
+   "병합 복제(Merge Replication)",
+   "스냅샷 복제(Snapshot Replication)",
+   "변경로그(Change Log)"
+  ],
+  "keywords_ref": [
+   "Log Reader Agent",
+   "Distribution Agent",
+   "Merge Agent·Snapshot Agent",
+   "Scale-out 부하 분산"
+  ],
+  "outline": [
+   "복제 유형 선택 기준",
+   "실시간 복제",
+   "- 트랜잭션 복제",
+   "- 피어 투 피어 복제",
+   "시점 복제",
+   "- 병합 복제",
+   "- 스냅샷 복제"
+  ],
+  "sections": [
+   {
+    "title": "복제 유형 선택 기준",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "선택 요소: 복제 데이터 볼륨·형식·환경과 복제 오버헤드를 고려해 서비스 환경에 맞게 선택"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "실시간 복제",
+    "subsections": [
+     {
+      "title": "트랜잭션 복제",
+      "items": [
+       "개념: 트랜잭션 변경로그를 배포자를 통해 구독자에게 전파, 일관성 보장",
+       "구성: 게시자(변경로그 발생) · 배포자(Log Reader Agent로 배포) · 구독자(변경 반영) · 변경로그(증분 데이터)"
+      ]
+     },
+     {
+      "title": "피어 투 피어 복제",
+      "items": [
+       "개념: 데이터 중복을 허용해 노드 간 실시간 양방향 복제",
+       "특징: 중복 저장으로 가용성 보장, 분산 서버로 읽기 성능 향상(Scale-out 고가용 환경)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "시점 복제",
+    "subsections": [
+     {
+      "title": "병합 복제",
+      "items": [
+       "개념: 게시자·구독자 모두 변경 가능, 마지막 동기화로 병합된 데이터 복제",
+       "구성: Merge Agent가 초기 스냅샷과 변경 데이터 전달, 배포자가 최종 병합본 제공 → 충돌 처리, 서버-클라이언트 환경"
+      ]
+     },
+     {
+      "title": "스냅샷 복제",
+      "items": [
+       "개념: 특정 시점 모든 데이터를 스냅샷으로 저장해 복제",
+       "적합: 대량 변경·변경 빈도가 낮은 기준 데이터(연 1회 전체 변경)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "게시자(Publisher)",
+   "배포자(Distributor)",
+   "구독자(Subscriber)",
+   "트랜잭션 복제(Transactional Replication)",
+   "피어 투 피어 복제(Peer-to-Peer Replication)",
+   "병합 복제(Merge Replication)",
+   "스냅샷 복제(Snapshot Replication)",
+   "변경로그(Change Log)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_155",
+  "code": "DB_155",
+  "domain": "DB",
+  "category": "DB > 성능",
+  "title": "용량 산정(Capacity Planning)",
+  "subtitle": "",
+  "name": "용량 산정(Capacity Planning)",
+  "en": "Capacity Planning",
+  "definition": "기본 용량과 성능 요구사항을 서버의 CPU·메모리·디스크·네트워크 등 시스템 요구사항으로 변환해 성능 요구를 만족하도록 정량화하는 활동.",
+  "keywords": [
+   "산정 방법: 수식계산법 · 참조법 · 시뮬레이션법",
+   "절차 4단계: 구축 방향·기초자료 조사 → 기초자료·업무 분석 → 참조모델 결정·서버 규모 산정 → 참조모델별 가중치 적용",
+   "CPU: 분당 트랜잭션 수 × 기본 tpmC 보정 × 피크타임 부하 × DB 크기 × AP 구조 × AP 부하 × 클러스터 보정 × 시스템 여유율",
+   "메모리: (시스템 영역 + 사용자당 메모리 × 동시사용자 수) × 버퍼캐시 보정 × 시스템 여유율",
+   "디스크: 내장(OS + 응용 + SWAP) · 외장(데이터 + 백업) × 파일시스템 오버헤드 × RAID 여유율 × 여유율",
+   "성능 기준: OLTP는 TPC-C(tpmC) · 웹·WAS는 SPECjbb2015"
+  ],
+  "keywords_must": [
+   "수식계산법(Calculation Method)",
+   "참조법(Reference Method)",
+   "시뮬레이션법(Simulation Method)",
+   "tpmC(Transactions per Minute C)",
+   "피크타임 부하 보정",
+   "시스템 여유율 30%",
+   "동시사용자 수(총 사용자 10~30%)",
+   "파일시스템 오버헤드 10%",
+   "RAID 여유율(RAID 1 100%·RAID 5 30%)",
+   "TPC-C·SPECjbb2015"
+  ],
+  "keywords_ref": [
+   "참조모델(Reference Model)",
+   "보정계수(Correction Factor)",
+   "SWAP 영역(메모리 2배)",
+   "Active-Active 클러스터 보정"
+  ],
+  "outline": [
+   "성능 요구의 정량화",
+   "- 수식계산·참조·시뮬레이션법",
+   "산정 절차 4단계",
+   "CPU·메모리·디스크 산정식",
+   "- 주요 보정치",
+   "성능 기준과 산정 시 고려사항",
+   "- TPC · SPEC"
+  ],
+  "sections": [
+   {
+    "title": "성능 요구의 정량화",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "수식계산법: 사용자 수 등으로 계산 후 보정치 적용, 근거 명확·간단하나 보정치 오류 시 오차 큼",
+       "참조법: 유사 규모 기존 시스템 산정치 참고, 안전하나 객관적 근거 제시 어려움",
+       "시뮬레이션법: 작업 부하를 모델링해 시뮬레이션, 정확하나 시간·비용 큼"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "산정 절차 4단계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① 구축 방향·기초자료 조사: 서버 개수·AP 아키텍처·통신 환경, 접속자 수·사용률",
+       "② 기초자료·업무 분석: 신규 업무량·복잡도로 예상·기준 부하 산정(TPM·동시사용자)",
+       "③ 참조모델 결정·서버 규모 산정: 아키텍처별 참조모델, 보정계수 설정",
+       "④ 참조모델별 가중치 적용: 서버별 CPU 가중치로 최종 규모 확정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "CPU·메모리·디스크 산정식",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "CPU: 분당 트랜잭션 × tpmC 보정 × 피크타임 × DB 크기 × AP 구조 × AP 부하 × 클러스터 × 여유율",
+       "메모리: (시스템 영역 + 사용자당 필요 메모리 × 동시사용자) × 버퍼캐시 보정 × 여유율",
+       "디스크: 내장 (OS + 응용 + SWAP) × 오버헤드 × 여유율, 외장 (데이터 + 백업) × 오버헤드 × RAID × 여유율"
+      ]
+     },
+     {
+      "title": "주요 보정치",
+      "items": [
+       "기본 tpmC 보정: 단순 20%·복잡 30%, 피크타임: 상 50%~기본 20%",
+       "AP 부하 보정: 배치 동시 수행 정도 30~120%, 클러스터: Active-Active 30~50%",
+       "여유율: 시스템·디스크 30%, 파일시스템 오버헤드 10%, SWAP 메모리 2배"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "성능 기준과 산정 시 고려사항",
+    "subsections": [
+     {
+      "title": "TPC와 SPEC",
+      "items": [
+       "TPC: 트랜잭션 처리·DB 벤치마크 비영리 단체, TPC-C는 분당 트랜잭션(tpmC) 측정",
+       "SPEC: 표준 벤치마크 컨소시엄, SPECjbb2015는 웹·WAS 성능(Operations per Second)"
+      ]
+     },
+     {
+      "title": "산정 시 고려사항",
+      "items": [
+       "장기·단계적 구축: CPU 증설만으로 부족할 때 장기 계획",
+       "장비 설치 요건: 작은 모듈로 메모리를 구성하면 확장 한계",
+       "설치 전략: 다양한 변수에 대한 철저한 검토"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "수식계산법(Calculation Method)",
+   "참조법(Reference Method)",
+   "시뮬레이션법(Simulation Method)",
+   "tpmC(Transactions per Minute C)",
+   "피크타임 부하 보정",
+   "시스템 여유율 30%",
+   "동시사용자 수(총 사용자 10~30%)",
+   "파일시스템 오버헤드 10%",
+   "RAID 여유율(RAID 1 100%·RAID 5 30%)",
+   "TPC-C·SPECjbb2015"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_158",
+  "code": "DB_158",
+  "domain": "DB",
+  "category": "DB > DB 보안",
+  "title": "데이터베이스 보안(Database Security)",
+  "subtitle": "",
+  "name": "데이터베이스 보안(Database Security)",
+  "en": "Database Security",
+  "definition": "저장된 데이터의 인증·기밀성·무결성·가용성을 유지하고 허가받지 않은 사용·변경·파괴·유출로부터 보호하기 위한 관리적·물리적·기술적 보안 조치와 활동.",
+  "keywords": [
+   "보안 요구: 인증 · 가용성 · 무결성 · 기밀성",
+   "정보 노출 위협: 불법 접근 · Aggregation(집단화) · Inference(추론)",
+   "보안 기법: 접근 통제 · 허가 규칙 · 가상 테이블(View) · 암호화",
+   "보안 프로세스: 취약점 평가 → 우선순위 선정 → 취약점 교정 → 위협 모니터링",
+   "관리자 역할: 계정 생성 · 권한 부여 · 권한 취소 · 보안 등급 지정",
+   "암호화 방식: 응용 프로그램 자체(API) · DB 서버(Plug-in) · DBMS 자체(TDE) · 운영체제(파일)"
+  ],
+  "keywords_must": [
+   "보안 요구: 인증·기밀성·무결성·가용성",
+   "집단화(Aggregation)",
+   "추론(Inference)",
+   "접근 통제(Access Control)",
+   "허가 규칙(Authorization Rules)",
+   "DB 암호화(Encryption)",
+   "DAM(Database Activity Monitoring)"
+  ],
+  "keywords_ref": [
+   "TDE(Transparent Data Encryption)",
+   "Plug-in·API 방식",
+   "Native Audit",
+   "BMT(Benchmark Test)"
+  ],
+  "outline": [
+   "기밀성·무결성·가용성 확보 전략",
+   "- 인증·가용성·무결성·기밀성",
+   "- 불법 접근·집단화·추론 위협",
+   "보안 기법",
+   "- 접근 통제·허가 규칙·View·암호화",
+   "보안 프로세스와 관리자 역할",
+   "DB 암호화 구축 전략"
+  ],
+  "sections": [
+   {
+    "title": "기밀성·무결성·가용성 확보 전략",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "인증: 정당한 사용자 확인 없이는 접근 불가",
+       "가용성: 부당한 서비스 거부 감지·예방, 무결성: 불법 변경 방지, 기밀성: 부적절한 조회 방지",
+       "불법 접근: 비인가자 접근, 인가자의 인가 범위 밖 접근",
+       "Aggregation: 낮은 등급 정보 조각을 모아 높은 등급 정보 획득(지사 실적 → 총매출)",
+       "Inference: 비보안 정보에 정당 접근해 기밀 정보 유추"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 기법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "접근 통제: 비인가 사용자의 DB 접근 방지(계정·암호, RBAC)",
+       "허가 규칙: 정당한 사용자라도 허가받지 않은 데이터 접근 방지",
+       "가상 테이블(View): 허가받은 관점만 보이도록 한정",
+       "암호화: 데이터 형태를 변형해 가독성 원천 봉쇄, 유출 시에도 해독 불가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 프로세스와 관리자 역할",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① 취약점 평가: 모의해킹·보안 진단 ② 우선순위 선정: 위험점수 평가",
+       "③ 취약점 교정: 패치·보안 기법·컴플라이언스 ④ 위협 모니터링: DAM·Native Audit·Forensic",
+       "관리자 역할: 계정 생성, 권한 부여·취소, 계정 보안 등급 지정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "DB 암호화 구축 전략",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "고려 항목: 법규 충족·일관성·연동성(ERP)·성능(초기 암호화·OLTP·Batch)·인증 여부",
+       "순차 일정: 1차 DMZ 서버, 2차 인트라넷 기간계 DB, ERP 연동 서버",
+       "API 방식: 응용에서 암·복호화, DB 부하 없으나 응용 수정 필요",
+       "Plug-in 방식: DB 서버에 모듈 설치, 응용 수정 적으나 DB 부하 발생",
+       "TDE 방식: DBMS 커널에서 처리, 응용·스키마 변경 거의 없음"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "보안 요구: 인증·기밀성·무결성·가용성",
+   "집단화(Aggregation)",
+   "추론(Inference)",
+   "접근 통제(Access Control)",
+   "허가 규칙(Authorization Rules)",
+   "DB 암호화(Encryption)",
+   "DAM(Database Activity Monitoring)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_159",
+  "code": "DB_159",
+  "domain": "DB",
+  "category": "DB > DB 보안",
+  "title": "DB 필드 암호화(Database Field Encryption)",
+  "subtitle": "",
+  "name": "DB 필드 암호화(Database Field Encryption)",
+  "en": "Database Field Encryption",
+  "definition": "개인정보가 유출되더라도 피해가 없도록 DB 테이블의 특정 필드(컬럼) 데이터 자체를 암호화해 직접 접근을 통제하는 기법으로, Internal 방식과 External(토큰화) 방식이 있다.",
+  "keywords": [
+   "Internal 방식: 기존 필드에 암호화 값 저장, 처리 속도 빠르고 구조 단순",
+   "External 방식: 기존 필드를 인덱스(토큰) 값으로 치환, 별도 테이블·토큰 서버에 암호값 저장(Tokenization)",
+   "구축 고려사항: 암호 알고리즘 · 암호 사용 정책 · 암호 키 관리 · 암호 키 복구 · 성능 · AP·DB 영향도"
+  ],
+  "keywords_must": [
+   "필드 암호화(Field-level Encryption)",
+   "Internal 방식",
+   "External 방식",
+   "토큰화(Tokenization)",
+   "토큰 서버(Token Server)",
+   "암호 키 관리(Key Management)",
+   "암호 키 복구(Key Recovery)",
+   "검색 성능 저하"
+  ],
+  "keywords_ref": [
+   "컬럼 암호화(Column Encryption)",
+   "일방향 암호화(Hash)",
+   "전자서명·부인봉쇄",
+   "KMS(Key Management System)"
+  ],
+  "outline": [
+   "필드 데이터 자체의 암호화",
+   "Internal·External 방식",
+   "- 기존 필드 암호화와 토큰 치환",
+   "구축 시 고려사항"
+  ],
+  "sections": [
+   {
+    "title": "필드 데이터 자체의 암호화",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "목적: 개인정보 누출 시에도 피해가 없도록 데이터 자체 암호화로 직접 접근 통제"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Internal·External 방식",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Internal: 기존 필드에 암호화해 저장, 가장 빠르고 단순·안정적",
+       "External: 기존 값을 인덱스 값으로 치환하고 별도 테이블에 치환값과 암호값 저장",
+       "External 위치: 암호 테이블은 같은 시스템 또는 별도 토큰 서버에 위치 가능"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구축 시 고려사항",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "암호 알고리즘: 안전한 알고리즘과 적절한 키 길이",
+       "암호 사용 정책: 전자서명·부인봉쇄 적용 여부 포함",
+       "암호 키 관리: 수정·손실·파괴·비인가 누출로부터 보호",
+       "암호 키 복구: 키·패스워드 분실·훼손 대비 복구 절차",
+       "성능·영향도: 암호화·검색 성능 저하 최소화, 응용 변경 최소·스키마 변경 없음"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "필드 암호화(Field-level Encryption)",
+   "Internal 방식",
+   "External 방식",
+   "토큰화(Tokenization)",
+   "토큰 서버(Token Server)",
+   "암호 키 관리(Key Management)",
+   "암호 키 복구(Key Recovery)",
+   "검색 성능 저하"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "KMS": "Key Management System"
+  }
  },
  {
   "id": "DB_160",
@@ -14615,6 +16893,437 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": []
+ },
+ {
+  "id": "DB_161",
+  "code": "DB_161",
+  "domain": "DB",
+  "category": "DB > DB 보안",
+  "title": "DB 접근 통제(Database Access Control)",
+  "subtitle": "",
+  "name": "DB 접근 통제(Database Access Control)",
+  "en": "Database Access Control",
+  "definition": "권한이 있는 주체에게만 데이터베이스 객체에 대한 사용·변경·조회를 허용하거나 제한하는 수단으로, 강제적(MAC)·임의적(DAC)·역할 기반(RBAC) 모델로 구분한다.",
+  "keywords": [
+   "구성요소: 주체(Subject) · 객체(Object) · 조치(Action) · 규칙(Access Rule)",
+   "DAC: 객체 소유자가 사용자 ID에 따라 임의로 권한 부여(사용자·ID 기반)",
+   "DAC 구현: Capability List(행 중심) · ACL(열 중심)",
+   "MAC: 주체 인가 레이블과 객체 민감도 레이블로 접근 결정(규칙 기반), 군사용",
+   "RBAC: 중앙 관리자가 역할에 따라 권한 부여(비임의·임무 기반)",
+   "RBAC 장점: 권한 관리 · 계층적 역할 · 최소 권한 · 임무 분리"
+  ],
+  "keywords_must": [
+   "주체·객체·조치·규칙",
+   "임의적 접근 통제(DAC, Discretionary Access Control)",
+   "강제적 접근 통제(MAC, Mandatory Access Control)",
+   "역할 기반 접근 통제(RBAC, Role-Based Access Control)",
+   "ACL(Access Control List)",
+   "Capability List",
+   "보안 레이블(Clearance·Sensitivity Label)",
+   "최소 권한(Least Privilege)",
+   "임무 분리(Separation of Duties)"
+  ],
+  "keywords_ref": [
+   "Name·Content·Context·History-Dependent 통제",
+   "GRANT·REVOKE",
+   "DBA Role",
+   "Bell-LaPadula 모델"
+  ],
+  "outline": [
+   "권한 있는 주체만의 자원 접근 보장",
+   "- 주체·객체·조치·규칙",
+   "임의적 접근 통제(DAC)",
+   "- Capability List · ACL",
+   "강제적 접근 통제(MAC)",
+   "역할 기반 접근 통제(RBAC)"
+  ],
+  "sections": [
+   {
+    "title": "권한 있는 주체만의 자원 접근 보장",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "주체: 사용자·응용 프로그램·원격 컴퓨터",
+       "객체: DB·Table·Row·Column·View 등 보호 단위, 작을수록 세밀하나 오버헤드",
+       "조치: Read·Write·Delete, 규칙: 주체·객체·조치에 대한 허가 명세(Constraint·Check)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "임의적 접근 통제(DAC)",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "DAC 구현: Capability List(행 중심) · ACL(열 중심)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "강제적 접근 통제(MAC)",
+    "subsections": [
+     {
+      "title": "임의적 접근 통제(DAC)",
+      "items": [
+       "정의: 객체 소유자가 사용자 ID 기반으로 접근 권한을 임의 지정",
+       "장단점: UNIX·Linux 방식, 구현 쉽고 저렴하나 MAC보다 덜 안전",
+       "Capability List: 주체별 접근 가능 객체 목록(행 중심), 객체가 적을 때",
+       "ACL: 객체별 허가 주체 목록(열 중심), 주체가 적을 때",
+       "유형: 명칭 의존(컬럼명) · 내용 의존(값 범위) · 정황 의존(통계) · 이력 의존(시계열)"
+      ]
+     },
+     {
+      "title": null,
+      "items": [
+       "정의: 관리자만 정보 분류를 설정, 주체 인가 등급과 객체 분류 등급 비교(규칙 기반)",
+       "방법: 주체 인가 등급이 객체 분류 등급 이상일 때만 읽기 허용",
+       "특징: 소유자도 변경 불가, 성능·구현 어려움으로 주로 군사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "역할 기반 접근 통제(RBAC)",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "정의: 중앙 관리자가 조직 내 역할에 따라 접근 객체 지정(비임의·임무 기반)",
+       "사례: 인사담당 역할은 인사정보 접근 가능, 홍보담당은 불가 · DBA Role 부여",
+       "장점: 논리적·독립적 권한 할당·회수, 계층적 역할 상속, 최소 권한, 임무 분리"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "주체·객체·조치·규칙",
+   "임의적 접근 통제(DAC, Discretionary Access Control)",
+   "강제적 접근 통제(MAC, Mandatory Access Control)",
+   "역할 기반 접근 통제(RBAC, Role-Based Access Control)",
+   "ACL(Access Control List)",
+   "Capability List",
+   "보안 레이블(Clearance·Sensitivity Label)",
+   "최소 권한(Least Privilege)",
+   "임무 분리(Separation of Duties)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "MAC": "Mandatory Access Control",
+   "DAC": "Discretionary Access Control"
+  }
+ },
+ {
+  "id": "DB_165",
+  "code": "DB_165",
+  "domain": "DB",
+  "category": "DB > 빅데이터 분석",
+  "title": "아프리오리 알고리즘(Apriori Algorithm)",
+  "subtitle": "",
+  "name": "아프리오리 알고리즘(Apriori Algorithm)",
+  "en": "Apriori Algorithm",
+  "definition": "빈발하지 않은 항목집합의 상위 집합도 빈발하지 않는다는 선험적 규칙으로 후보를 가지치기하며 k-항목집합에서 k+1-항목집합으로 레벨 단위 반복 탐색해 빈발항목집합과 연관규칙을 찾는 연관분석 알고리즘.",
+  "keywords": [
+   "선험적 규칙: 빈발집합의 부분집합은 빈발 · 비빈발집합의 상위집합은 비빈발",
+   "탐색 원칙: 최소지지도·최소신뢰도를 넘는 모든 연관규칙 탐색",
+   "3대 척도: 지지도(Support) · 신뢰도(Confidence) · 향상도(Lift)",
+   "수행: 1-항목집합 지지도 계산 → 가지치기 → 후보(Ck) 생성 → 빈발집합(Lk) 확정 → k 증가 반복",
+   "연관규칙 X → Y: X ∩ Y = Ø, 향상도 > 1이면 양의 상관"
+  ],
+  "keywords_must": [
+   "선험적 규칙(Apriori Principle)",
+   "빈발항목집합(Frequent Itemset)",
+   "최소지지도(Minimum Support)",
+   "최소신뢰도(Minimum Confidence)",
+   "지지도(Support)",
+   "신뢰도(Confidence)",
+   "향상도(Lift)",
+   "가지치기(Pruning)",
+   "후보 생성·검사(Generate-and-Test)"
+  ],
+  "keywords_ref": [
+   "FP-Growth·FP-Tree",
+   "장바구니 분석(Market Basket Analysis)",
+   "레벨 단위 탐색(Level-wise)",
+   "연관규칙 X → Y"
+  ],
+  "outline": [
+   "선험적 연관분석 기법",
+   "- 레벨 단위 반복 접근",
+   "- 선험적 규칙",
+   "연관규칙 탐색 원칙과 3대 척도",
+   "수행 과정과 예시"
+  ],
+  "sections": [
+   {
+    "title": "선험적 연관분석 기법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "레벨 단위 반복: k-항목집합으로 k+1-항목집합 발견, 구현이 간단",
+       "선험적 규칙: {b,c,d}가 빈발이면 부분집합도 빈발, {a,b}가 비빈발이면 이를 포함한 집합은 제외"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "연관규칙 탐색 원칙과 3대 척도",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "탐색 원칙: 분석자가 정한 최소지지도와 최소신뢰도를 넘는 규칙만 선택",
+       "지지도: P(X ∩ Y), 전체 거래 중 X와 Y를 함께 포함한 비율",
+       "신뢰도: P(Y | X) = P(X ∩ Y) / P(X), X 포함 거래 중 Y도 포함한 비율",
+       "향상도: P(Y | X) / P(Y), 1보다 크면 양의 상관·1이면 독립"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "수행 과정과 예시",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "과정: C1 지지도 계산 → 최소지지도 미만 제거(L1) → C2 생성·가지치기 → L2 … Lk까지 반복",
+       "규칙 생성: 빈발항목집합에서 최소신뢰도 이상 규칙 도출",
+       "예시: 최소지지도 50%에서 {빵, 버터}가 빈발집합, 두 규칙 모두 향상도 1 초과"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "선험적 규칙(Apriori Principle)",
+   "빈발항목집합(Frequent Itemset)",
+   "최소지지도(Minimum Support)",
+   "최소신뢰도(Minimum Confidence)",
+   "지지도(Support)",
+   "신뢰도(Confidence)",
+   "향상도(Lift)",
+   "가지치기(Pruning)",
+   "후보 생성·검사(Generate-and-Test)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_166",
+  "code": "DB_166",
+  "domain": "DB",
+  "category": "DB > 빅데이터 분석",
+  "title": "K-평균 알고리즘(K-means Algorithm)",
+  "subtitle": "",
+  "name": "K-평균 알고리즘(K-means Algorithm)",
+  "en": "K-means Algorithm",
+  "definition": "n개의 데이터를 K개의 군집으로 나누기 위해 각 데이터를 가장 가까운 중심점(Centroid)에 할당하고 중심점을 다시 계산하는 과정을 수렴할 때까지 반복하는 거리 기반 비지도 학습 군집화 알고리즘.",
+  "keywords": [
+   "특징: 거리 기반(유클리디안) · Centroid 단일 소속(비중첩) · 데이터 양자화 · 반복적 최적해",
+   "절차: K 지정 → 초기 중심 무작위 선정 → 최근접 중심 할당 → 중심 재계산 → 변화 없을 때까지 반복",
+   "한계: K 개수 · 초기값 · 데이터 형상(비원형)에 민감",
+   "K-NN 비교: 지도학습 분류 vs 비지도학습 군집"
+  ],
+  "keywords_must": [
+   "군집화(Clustering)",
+   "비지도 학습(Unsupervised Learning)",
+   "중심점(Centroid)",
+   "유클리디안 거리(Euclidean Distance)",
+   "K 개수 지정",
+   "초기 중심 선정",
+   "중심 재계산·수렴",
+   "K-NN(K-Nearest Neighbors)"
+  ],
+  "keywords_ref": [
+   "엘보 기법(Elbow Method)",
+   "실루엣 계수(Silhouette Coefficient)",
+   "K-means++",
+   "데이터 양자화(Vector Quantization)"
+  ],
+  "outline": [
+   "거리 기반 비지도 군집화",
+   "- 거리·Centroid·양자화·반복 최적해",
+   "수행 절차",
+   "K-NN · 비교"
+  ],
+  "sections": [
+   {
+    "title": "거리 기반 비지도 군집화",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "거리 기반: 각 군집 데이터와 중심 간 유클리디안 거리 합 최소화",
+       "Centroid: 각 데이터는 하나의 군집에만 속함(비중첩)",
+       "데이터 양자화: 분할 오류·왜곡 최소화",
+       "반복적 최적해: 유일해가 아닌 반복 계산으로 최적 해 선택, 지역 최적 가능"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "수행 절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① 데이터 입력 ② 군집 수 K 지정 ③ 초기 평균값(중심) 무작위 선정",
+       "④ 각 데이터를 가장 가까운 중심에 할당 ⑤ 최소 거리 기반 그룹핑",
+       "⑥ 중심 재계산 후 ③~⑤ 반복 ⑦ 중심 변화가 없으면 종료"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "K-NN · 비교",
+    "subsections": [
+     {
+      "title": "K-NN과 비교",
+      "items": [
+       "유형: K-NN 분류(지도학습) · K-means 군집(비지도학습)",
+       "K 의미: K-NN 최근접 이웃 수 · K-means 최종 군집 수",
+       "동작: K-NN 거리순 K개 다수결 라벨 · K-means 중심 할당·재계산 반복",
+       "고려사항: K-NN 노이즈에 약함 · K-means 초기값·K에 영향, 비원형 군집 어려움"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "군집화(Clustering)",
+   "비지도 학습(Unsupervised Learning)",
+   "중심점(Centroid)",
+   "유클리디안 거리(Euclidean Distance)",
+   "K 개수 지정",
+   "초기 중심 선정",
+   "중심 재계산·수렴",
+   "K-NN(K-Nearest Neighbors)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_167",
+  "code": "DB_167",
+  "domain": "DB",
+  "category": "DB > 빅데이터 분석",
+  "title": "데이터 가시화(Data Visualization)",
+  "subtitle": "",
+  "name": "데이터 가시화(Data Visualization)",
+  "en": "Data Visualization",
+  "definition": "데이터를 시간·분포·관계·비교·공간 관점의 시각 요소로 표현해 사람이 분석 결과를 직관적으로 이해하도록 전달하는 기술로, 벤 프라이의 7단계 방법론이 대표적이다.",
+  "keywords": [
+   "표현 관점: 시간순 · 분포 · 관계 · 공간 위치 · 비교",
+   "절차: 정보 구조화(수집·분류·배열) → 정보 시각화(차트 선택) → 정보 시각 표현(디자인 원리)",
+   "벤 프라이 방법론 7단계: 획득 → 분해 → 선별 → 마이닝 → 표현 → 정제 → 상호작용",
+   "도구: 기본 도구(Excel) · 분석 도구(R·Python) · 전문 도구(Tableau·D3.js)"
+  ],
+  "keywords_must": [
+   "시간 시각화",
+   "분포 시각화",
+   "관계 시각화",
+   "비교 시각화",
+   "공간 시각화",
+   "벤 프라이 7단계(Ben Fry's Process)",
+   "정보 구조화(Information Structuring)",
+   "상호작용(Interaction)"
+  ],
+  "keywords_ref": [
+   "인포그래픽(Infographics)",
+   "HCI(Human-Computer Interaction)",
+   "Tableau·D3.js",
+   "대시보드(Dashboard)"
+  ],
+  "outline": [
+   "직관적 정보 전달 기술",
+   "- 시간·분포·관계·공간·비교",
+   "시각화 절차와 도구",
+   "벤 프라이의 시각화 방법론",
+   "- 획득부터 상호작용까지 7단계"
+  ],
+  "sections": [
+   {
+    "title": "직관적 정보 전달 기술",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "목적: 최소 편집 데이터를 접근하기 쉽게 가공해 직관적으로 결과 도출",
+       "객관성: 데이터 기반 객관적 표현에 초점, 정보형 메시지 전달"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "시각화 절차와 도구",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "정보 구조화: 수집·탐색 후 분류·조직화·재배열",
+       "정보 시각화: 시간·분포·관계·비교·공간별 그래프 선택",
+       "정보 시각 표현: 디자인 원리 적용, 보는 이의 인지 과업 고려",
+       "도구: 기본 도구부터 전문가용까지, 상호작용 가능한 프로그래밍 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "벤 프라이의 시각화 방법론",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① 획득: 파일·디스크·네트워크에서 정보 수집(컴퓨터 공학)",
+       "② 분해: 의미에 따라 구조적으로 카테고리화 ③ 선별: 불필요 정보 제거(통계·마이닝)",
+       "④ 마이닝: 정보 추출 알고리즘 도출(수학·통계)",
+       "⑤ 표현·⑥ 정제: 효율적 표현 방법과 시각적 정제(그래픽 디자인)",
+       "⑦ 상호작용: 다양한 시각에서 시뮬레이션 가능하게 반영(정보 시각화·HCI)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "시간 시각화",
+   "분포 시각화",
+   "관계 시각화",
+   "비교 시각화",
+   "공간 시각화",
+   "벤 프라이 7단계(Ben Fry's Process)",
+   "정보 구조화(Information Structuring)",
+   "상호작용(Interaction)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "HCI": "Human-Computer Interaction"
+  }
  },
  {
   "id": "DB_170",
@@ -15467,6 +18176,118 @@
    "인메모리 저장(Main Memory)",
    "분산 합의(Raft·Paxos)",
    "HTAP"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "DB_184",
+  "code": "DB_184",
+  "domain": "DB",
+  "category": "DB > 빅데이터 분석",
+  "title": "재현 데이터(Synthetic Data)",
+  "subtitle": "",
+  "name": "재현 데이터(Synthetic Data)",
+  "en": "Synthetic Data",
+  "definition": "원본 데이터와 통계적으로 유사하도록 통계적 방법이나 기계학습으로 가상 생성한 합성·모의 데이터로, 개인정보·기밀성 보호와 대규모·고품질 데이터 확보에 활용한다.",
+  "keywords": [
+   "재현 대상: 비정형(이미지·음성) · 정형(사회 연구) · 시계열(시뮬레이션·테스트)",
+   "유형: 완전 재현(Fully) · 부분 재현(Partially) · 복합 재현(Hybrid)",
+   "통계적 생성: Multiple Imputation · Perturbed Gibbs Sampler · Re-sampling(부트스트래핑) · 몬테카를로 시뮬레이션",
+   "기계학습 생성: CART · GAN",
+   "차분 프라이버시 생성: Differentially Private Data Synthesizer(노이즈 주입)",
+   "절차: 원본 분석 → 알고리즘으로 생성 → 원본과 유사성 검증(품질 확보)"
+  ],
+  "keywords_must": [
+   "완전 재현 데이터(Fully Synthetic Data)",
+   "부분 재현 데이터(Partially Synthetic Data)",
+   "복합 재현 데이터(Hybrid Synthetic Data)",
+   "다중 대치(Multiple Imputation)",
+   "몬테카를로 시뮬레이션(Monte Carlo Simulation)",
+   "CART(Classification And Regression Tree)",
+   "GAN(Generative Adversarial Network)",
+   "차분 프라이버시(Differential Privacy)",
+   "유사성 검증(Utility Evaluation)"
+  ],
+  "keywords_ref": [
+   "Perturbed Gibbs Sampler",
+   "부트스트래핑(Bootstrapping)",
+   "가명정보(Pseudonymized Data)",
+   "데이터 증강(Data Augmentation)"
+  ],
+  "outline": [
+   "원본과 유사한 가상 데이터",
+   "- 비정형·정형·시계열 재현",
+   "- 완전·부분·복합 유형",
+   "생성 절차와 알고리즘",
+   "- 통계적 방법·기계학습",
+   "- 차분 프라이버시",
+   "분야별 활용 방안"
+  ],
+  "sections": [
+   {
+    "title": "원본과 유사한 가상 데이터",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "비정형: 이미지·음성 수집 비용이 클 때, 정형: 개인정보 노출 우려 대안, 시계열: 시뮬레이션·임베디드 테스트",
+       "완전 재현: 원본 속성(Label·Feature) 전체를 재현, 강력한 보안성",
+       "부분 재현: 민감 속성 일부만 대체, 원본 속성 의존성 고려",
+       "복합 재현: 원본과 재현 데이터를 혼합해 재생성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "생성 절차와 알고리즘",
+    "subsections": [
+     {
+      "title": "통계적 방법·기계학습",
+      "items": [
+       "Multiple Imputation: 대치 → 분석 → 결합의 다중 대치로 완전한 가상 자료 생성",
+       "Perturbed Gibbs Sampler: 피처 해싱·비모수 분포 근사로 완전 합성",
+       "Re-sampling: k-fold·부트스트래핑으로 반복 생성, 몬테카를로: 난수 추출로 실험 곤란 환경 데이터 획득",
+       "CART: 의사결정 트리 노드 단위로 생성, GAN: 생성자·판별자 경쟁으로 Fake data 생성"
+      ]
+     },
+     {
+      "title": "차분 프라이버시",
+      "items": [
+       "DP Data Synthesizer: 원본 통계 측정값에 노이즈를 주입해 생성, 원본과 통계적 유의성 검증"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분야별 활용 방안",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "의료: 현실적 환자 데이터로 임상시험, 항암 후보 분자 생성",
+       "비즈니스: 식별·민감 변수를 배제한 신용정보, 추천 알고리즘 고도화",
+       "기계학습: 자율주행 충돌 환경 학습, 원전·시계열 등 확보 곤란 분야 시뮬레이션"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "완전 재현 데이터(Fully Synthetic Data)",
+   "부분 재현 데이터(Partially Synthetic Data)",
+   "복합 재현 데이터(Hybrid Synthetic Data)",
+   "다중 대치(Multiple Imputation)",
+   "몬테카를로 시뮬레이션(Monte Carlo Simulation)",
+   "CART(Classification And Regression Tree)",
+   "GAN(Generative Adversarial Network)",
+   "차분 프라이버시(Differential Privacy)",
+   "유사성 검증(Utility Evaluation)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
