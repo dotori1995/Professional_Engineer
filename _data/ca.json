@@ -19384,6 +19384,841 @@
     }
   },
   {
+    "id": "CA_182",
+    "code": "CA_182",
+    "title": "입출력 데이터 전송 방식(I/O Data Transfer Method)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 입출력 > 전송 제어",
+    "definition": "CPU와 입출력 장치 사이 데이터 이동을 누가 주도하느냐에 따른 분류로, CPU가 직접 관여하는 프로그램 제어·인터럽트 방식과 CPU와 독립적으로 전송하는 DMA·채널 방식으로 나뉨",
+    "keywords": [
+      "핵심: CPU 관여형 · 프로그램 제어 입출력(Programmed I/O, 폴링) · 인터럽트 구동 입출력(Interrupt-driven I/O) · CPU 독립형",
+      "필수: DMA(Direct Memory Access) · 채널 입출력(I/O Processor) · 사이클 스틸링(Cycle Stealing) · 버스트 전송(Burst Transfer)",
+      "참고: 우선순위 판별 다중 인터럽트선·데이지 체인·폴링 · CPU 부담 PIO > 인터럽트 > DMA > 채널 · 메모리 사상·분리형 주소 지정과 조합 · 현대 NVMe는 DMA + MSI-X"
+    ],
+    "sections": [
+      {
+        "title": "CPU 관여 방식",
+        "subsections": [
+          {
+            "title": "프로그램 제어",
+            "items": [
+              "CPU가 상태 플래그를 반복 검사하며 데이터를 직접 옮겨 대기 시간 낭비 큼"
+            ]
+          },
+          {
+            "title": "인터럽트 구동",
+            "items": [
+              "장치가 준비되면 신호를 보내 CPU가 다른 작업 중 처리 루틴으로 전환"
+            ]
+          },
+          {
+            "title": "우선순위 판별",
+            "items": [
+              "다중 인터럽트선(장치별 전용선)",
+              "데이지 체인(하드웨어 직렬 연결)",
+              "폴링(소프트웨어 순차 검사)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "CPU 독립 방식",
+        "subsections": [
+          {
+            "title": "DMA",
+            "items": [
+              "전용 제어기가 버스를 넘겨받아 메모리와 장치 간 블록 전송, 완료 시 인터럽트"
+            ]
+          },
+          {
+            "title": "채널",
+            "items": [
+              "입출력 전용 프로세서가 채널 프로그램을 실행해 여러 장치를 동시 제어"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "버스 점유 유형",
+        "subsections": [
+          {
+            "title": "버스트 전송",
+            "items": [
+              "버스를 잡은 동안 여러 워드 블록을 연속 전송, 디스크 같은 고속 장치용"
+            ]
+          },
+          {
+            "title": "사이클 스틸링",
+            "items": [
+              "CPU의 메모리 사이클을 한 번씩 빼앗아 전송, 프로그램 상태 보존 불필요"
+            ]
+          },
+          {
+            "title": "인터리브",
+            "items": [
+              "CPU가 버스를 쓰지 않는 사이클에만 DMA가 사용"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      358,
+      363
+    ],
+    "outline": [
+      "CPU 관여 방식",
+      "- 프로그램 제어",
+      "- 인터럽트 구동",
+      "- 우선순위 판별",
+      "CPU 독립 방식",
+      "- DMA",
+      "- 채널",
+      "버스 점유 유형",
+      "- 버스트 전송",
+      "- 사이클 스틸링",
+      "- 인터리브"
+    ],
+    "name": "입출력 데이터 전송 방식(I/O Data Transfer Method)",
+    "en": "I/O Data Transfer Method",
+    "keywords_must": [
+      "CPU 관여형",
+      "프로그램 제어 입출력(Programmed I/O, 폴링)",
+      "인터럽트 구동 입출력(Interrupt-driven I/O)",
+      "CPU 독립형",
+      "DMA(Direct Memory Access)",
+      "채널 입출력(I/O Processor)",
+      "사이클 스틸링(Cycle Stealing)",
+      "버스트 전송(Burst Transfer)"
+    ],
+    "keywords_ref": [
+      "우선순위 판별 다중 인터럽트선·데이지 체인·폴링",
+      "CPU 부담 PIO > 인터럽트 > DMA > 채널",
+      "메모리 사상·분리형 주소 지정과 조합",
+      "현대 NVMe는 DMA + MSI-X"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "CPU 관여형",
+      "프로그램 제어 입출력(Programmed I/O, 폴링)",
+      "인터럽트 구동 입출력(Interrupt-driven I/O)",
+      "CPU 독립형",
+      "DMA(Direct Memory Access)",
+      "채널 입출력(I/O Processor)",
+      "사이클 스틸링(Cycle Stealing)",
+      "버스트 전송(Burst Transfer)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": "다데포",
+    "gloss": {
+      "PIO": "Programmed I/O",
+      "DMA": "Direct Memory Access",
+      "IOP": "I/O Processor"
+    }
+  },
+  {
+    "id": "CA_183",
+    "code": "CA_183",
+    "title": "프로그램 제어 입출력(Programmed I/O)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 입출력 > 전송 제어",
+    "definition": "CPU가 입출력 명령을 내린 뒤 장치의 상태 플래그를 계속 검사하다가 준비되면 데이터를 한 단위씩 직접 옮기는 방식으로, 입출력 과정 전체에 CPU가 묶여 가장 비효율적임",
+    "keywords": [
+      "핵심: CPU 전 과정 관여 · 바쁜 대기(Busy Waiting) · 상태 검사 루프(폴링) · D 플래그(데이터 준비)",
+      "필수: B 플래그(입출력 진행 중) · 데이터 버퍼 · CPU 레지스터 R · 하드웨어 단순",
+      "참고: 저속 장치보다 CPU가 훨씬 빨라 대기 시간 낭비 · 인터럽트 방식으로 개선 · 임베디드 GPIO 비트 뱅잉 · 메모리 사상 입출력과 함께 구현"
+    ],
+    "sections": [
+      {
+        "title": "플래그와 레지스터",
+        "subsections": [
+          {
+            "title": "D 플래그",
+            "items": [
+              "1이면 버퍼와 데이터를 주고받을 수 있는 상태, 0이면 CPU 대기"
+            ]
+          },
+          {
+            "title": "B 플래그",
+            "items": [
+              "1이면 입출력 진행 중으로 새 요청은 대기해야 함"
+            ]
+          },
+          {
+            "title": "R",
+            "items": [
+              "CPU 안의 레지스터, CPU가 제어기 역할을 맡아 버퍼와 R 사이 이동"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "입력 처리 흐름",
+        "subsections": [
+          {
+            "title": "1단계",
+            "items": [
+              "B=0인지 확인 후 B←1로 입력 중 표시"
+            ]
+          },
+          {
+            "title": "2단계",
+            "items": [
+              "D=1이 될 때까지 반복 검사해 한 바이트 준비 확인"
+            ]
+          },
+          {
+            "title": "3단계",
+            "items": [
+              "R←버퍼, D←0으로 데이터 이동"
+            ]
+          },
+          {
+            "title": "4단계",
+            "items": [
+              "추가 입력이 끝나면 B←0으로 완료"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "성능 특성",
+        "subsections": [
+          {
+            "title": "단순성",
+            "items": [
+              "별도 하드웨어 없이 명령어만으로 구현"
+            ]
+          },
+          {
+            "title": "비효율",
+            "items": [
+              "느린 장치가 한 문자를 준비하는 동안 CPU가 계속 대기"
+            ]
+          },
+          {
+            "title": "개선 방향",
+            "items": [
+              "준비 완료를 장치가 알려주도록 인터럽트 도입"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      364,
+      365
+    ],
+    "outline": [
+      "플래그와 레지스터",
+      "- D 플래그",
+      "- B 플래그",
+      "- R",
+      "입력 처리 흐름",
+      "- 1단계",
+      "- 2단계",
+      "- 3단계",
+      "- 4단계",
+      "성능 특성",
+      "- 단순성",
+      "- 비효율",
+      "- 개선 방향"
+    ],
+    "name": "프로그램 제어 입출력(Programmed I/O)",
+    "en": "Programmed I/O",
+    "keywords_must": [
+      "CPU 전 과정 관여",
+      "바쁜 대기(Busy Waiting)",
+      "상태 검사 루프(폴링)",
+      "D 플래그(데이터 준비)",
+      "B 플래그(입출력 진행 중)",
+      "데이터 버퍼",
+      "CPU 레지스터 R",
+      "하드웨어 단순"
+    ],
+    "keywords_ref": [
+      "저속 장치보다 CPU가 훨씬 빨라 대기 시간 낭비",
+      "인터럽트 방식으로 개선",
+      "임베디드 GPIO 비트 뱅잉",
+      "메모리 사상 입출력과 함께 구현"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "CPU 전 과정 관여",
+      "바쁜 대기(Busy Waiting)",
+      "상태 검사 루프(폴링)",
+      "D 플래그(데이터 준비)",
+      "B 플래그(입출력 진행 중)",
+      "데이터 버퍼",
+      "CPU 레지스터 R",
+      "하드웨어 단순"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_184",
+    "code": "CA_184",
+    "title": "인터럽트 구동 입출력(Interrupt-driven I/O)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 입출력 > 전송 제어",
+    "definition": "입출력 장치가 데이터 전송 준비를 마치면 인터럽트 신호로 CPU에 알리고, CPU는 그동안 다른 명령을 수행하다가 인터럽트 처리 루틴에서 데이터를 옮기는 방식으로 상태 검사 대기를 없앰",
+    "keywords": [
+      "핵심: 인터럽트 요청(IRQ) · 인터럽트 처리 루틴(ISR) · 버퍼 · 문맥 저장·복원",
+      "필수: 다중 인터럽트선 · 데이지 체인(Daisy Chain) · 폴링(Polling) 우선순위 판별 · 인터럽트 벡터",
+      "참고: 장치마다 D 플래그를 검사하는 조건 분기 명령 제거로 효율 향상 · 전송 단위마다 인터럽트 오버헤드 · 대량 전송은 DMA가 유리 · 인터럽트 컨트롤러(PIC·APIC)"
+    ],
+    "sections": [
+      {
+        "title": "동작 흐름",
+        "subsections": [
+          {
+            "title": "요청",
+            "items": [
+              "CPU가 입출력을 시작시키고 B←1 후 입출력과 무관한 명령 수행"
+            ]
+          },
+          {
+            "title": "통지",
+            "items": [
+              "장치 인터페이스의 D 플래그가 1이 되면 CPU에 인터럽트 발생"
+            ]
+          },
+          {
+            "title": "처리",
+            "items": [
+              "처리 루틴에서 R←버퍼, D←0으로 데이터 이동 후 원래 작업 복귀"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "우선순위 판별 방식",
+        "subsections": [
+          {
+            "title": "다중 인터럽트선",
+            "items": [
+              "장치별 전용 요청선을 두어 즉시 식별, 선 수만큼 장치 제한"
+            ]
+          },
+          {
+            "title": "데이지 체인",
+            "items": [
+              "장치를 직렬로 연결해 CPU에 전기적으로 가까운 장치가 우선, 응답 빠르나 순위 변경 어려움"
+            ]
+          },
+          {
+            "title": "폴링",
+            "items": [
+              "소프트웨어가 장치를 차례로 검사, 순위 변경은 쉽지만 장치가 많으면 응답 느림"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "장단점",
+        "subsections": [
+          {
+            "title": "효율",
+            "items": [
+              "장치 대기 시간 동안 CPU가 다른 작업 수행"
+            ]
+          },
+          {
+            "title": "오버헤드",
+            "items": [
+              "전송 단위마다 문맥 전환이 발생해 대량 전송에 부적합"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      366,
+      368
+    ],
+    "outline": [
+      "동작 흐름",
+      "- 요청",
+      "- 통지",
+      "- 처리",
+      "우선순위 판별 방식",
+      "- 다중 인터럽트선",
+      "- 데이지 체인",
+      "- 폴링",
+      "장단점",
+      "- 효율",
+      "- 오버헤드"
+    ],
+    "name": "인터럽트 구동 입출력(Interrupt-driven I/O)",
+    "en": "Interrupt-driven I/O",
+    "keywords_must": [
+      "인터럽트 요청(IRQ)",
+      "인터럽트 처리 루틴(ISR)",
+      "버퍼",
+      "문맥 저장·복원",
+      "다중 인터럽트선",
+      "데이지 체인(Daisy Chain)",
+      "폴링(Polling) 우선순위 판별",
+      "인터럽트 벡터"
+    ],
+    "keywords_ref": [
+      "장치마다 D 플래그를 검사하는 조건 분기 명령 제거로 효율 향상",
+      "전송 단위마다 인터럽트 오버헤드",
+      "대량 전송은 DMA가 유리",
+      "인터럽트 컨트롤러(PIC·APIC)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "인터럽트 요청(IRQ)",
+      "인터럽트 처리 루틴(ISR)",
+      "버퍼",
+      "문맥 저장·복원",
+      "다중 인터럽트선",
+      "데이지 체인(Daisy Chain)",
+      "폴링(Polling) 우선순위 판별",
+      "인터럽트 벡터"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": "다데포",
+    "gloss": {
+      "IRQ": "Interrupt Request",
+      "ISR": "Interrupt Service Routine",
+      "PIC": "Programmable Interrupt Controller",
+      "APIC": "Advanced Programmable Interrupt Controller"
+    }
+  },
+  {
+    "id": "CA_186",
+    "code": "CA_186",
+    "title": "채널 제어 입출력(Channel I/O)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 입출력 > 전송 제어",
+    "definition": "CPU의 명령을 받은 입출력 전용 프로세서(채널)가 주기억장치의 채널 프로그램을 스스로 해석·실행해 여러 입출력 장치와 메모리 사이 전송을 CPU 개입 없이 처리하는 방식",
+    "keywords": [
+      "핵심: 입출력 전용 프로세서(IOP) · 채널 프로그램(CCW) · 고정 연결 채널 제어기 · 가변 연결 채널 제어기",
+      "필수: 셀렉터 채널(Selector Channel) · 바이트 멀티플렉서 채널(Byte Multiplexer) · 블록 멀티플렉서 채널(Block Multiplexer) · CPU 독립 전송",
+      "참고: IBM 메인프레임 System/360에서 정착 · DMA보다 지능적(명령 해석) · 완료 시 인터럽트로 보고 · 현대 스토리지 컨트롤러·SmartNIC으로 계승"
+    ],
+    "sections": [
+      {
+        "title": "연결 구조",
+        "subsections": [
+          {
+            "title": "고정 연결",
+            "items": [
+              "장치들이 특정 채널 제어기에 고정 연결, 한 채널이 쉬어도 다른 채널 장치는 사용 불가"
+            ]
+          },
+          {
+            "title": "가변 연결",
+            "items": [
+              "모든 장치가 모든 채널 제어기에 연결되어 동시 작업 가능, 연결 회로가 많아 고가·복잡"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "채널 종류",
+        "subsections": [
+          {
+            "title": "셀렉터",
+            "items": [
+              "한 번에 한 고속 장치만 전담해 블록 전송"
+            ]
+          },
+          {
+            "title": "바이트 멀티플렉서",
+            "items": [
+              "여러 저속 장치를 바이트 단위로 번갈아 처리"
+            ]
+          },
+          {
+            "title": "블록 멀티플렉서",
+            "items": [
+              "여러 고속 장치를 블록 단위로 번갈아 처리"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "처리 절차",
+        "subsections": [
+          {
+            "title": "시작",
+            "items": [
+              "CPU가 채널에 입출력 시작 명령만 전달"
+            ]
+          },
+          {
+            "title": "실행",
+            "items": [
+              "채널이 메모리의 채널 명령어를 읽어 장치 제어와 데이터 전송 수행"
+            ]
+          },
+          {
+            "title": "완료",
+            "items": [
+              "작업이 끝나면 인터럽트로 CPU에 결과 보고"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      371,
+      372
+    ],
+    "outline": [
+      "연결 구조",
+      "- 고정 연결",
+      "- 가변 연결",
+      "채널 종류",
+      "- 셀렉터",
+      "- 바이트 멀티플렉서",
+      "- 블록 멀티플렉서",
+      "처리 절차",
+      "- 시작",
+      "- 실행",
+      "- 완료"
+    ],
+    "name": "채널 제어 입출력(Channel I/O)",
+    "en": "Channel I/O",
+    "keywords_must": [
+      "입출력 전용 프로세서(IOP)",
+      "채널 프로그램(CCW)",
+      "고정 연결 채널 제어기",
+      "가변 연결 채널 제어기",
+      "셀렉터 채널(Selector Channel)",
+      "바이트 멀티플렉서 채널(Byte Multiplexer)",
+      "블록 멀티플렉서 채널(Block Multiplexer)",
+      "CPU 독립 전송"
+    ],
+    "keywords_ref": [
+      "IBM 메인프레임 System/360에서 정착",
+      "DMA보다 지능적(명령 해석)",
+      "완료 시 인터럽트로 보고",
+      "현대 스토리지 컨트롤러·SmartNIC으로 계승"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "입출력 전용 프로세서(IOP)",
+      "채널 프로그램(CCW)",
+      "고정 연결 채널 제어기",
+      "가변 연결 채널 제어기",
+      "셀렉터 채널(Selector Channel)",
+      "바이트 멀티플렉서 채널(Byte Multiplexer)",
+      "블록 멀티플렉서 채널(Block Multiplexer)",
+      "CPU 독립 전송"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "CCW": "Channel Command Word",
+      "NIC": "Network Interface Card"
+    }
+  },
+  {
+    "id": "CA_187",
+    "code": "CA_187",
+    "title": "메모리 사상 입출력(Memory-Mapped I/O)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 입출력 > 주소 지정",
+    "definition": "입출력 제어기의 상태·제어·데이터 레지스터에 주기억장치 주소 영역 일부를 할당해, 메모리와 같은 LOAD·STORE 명령과 같은 주소 버스로 입출력 장치에 접근하는 방식",
+    "keywords": [
+      "핵심: 기억장치 주소 공간 공유 · 상태·제어 레지스터 · 데이터 레지스터 · LOAD·STORE 명령",
+      "필수: 공통 주소 버스 · RDY 비트(준비 완료) · START 비트(동작 시작) · 메모리 가용 공간 감소",
+      "참고: ARM·RISC-V 등 RISC 계열이 주로 채택 · 캐시 비활성(Uncacheable) 영역 지정 필요 · PCIe BAR 매핑 · 프로그래밍이 간단하고 모든 주소 지정 모드 활용 가능"
+    ],
+    "sections": [
+      {
+        "title": "동작 메커니즘",
+        "subsections": [
+          {
+            "title": "준비 확인",
+            "items": [
+              "상태 레지스터 주소의 최하위 비트를 준비 완료 표시로 사용"
+            ]
+          },
+          {
+            "title": "동작 명령",
+            "items": [
+              "제어 레지스터 주소의 최상위 비트에 시작 명령 기록"
+            ]
+          },
+          {
+            "title": "주소 처리",
+            "items": [
+              "CPU가 제어기 레지스터를 일반 기억 장소와 똑같이 취급"
+            ]
+          },
+          {
+            "title": "명령어",
+            "items": [
+              "메모리 접근과 같은 적재·저장 명령으로 레지스터 읽기·쓰기"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "장점",
+        "subsections": [
+          {
+            "title": "프로그래밍 단순",
+            "items": [
+              "별도 입출력 명령 없이 모든 메모리 명령과 주소 지정 방식 활용"
+            ]
+          },
+          {
+            "title": "하드웨어 단순",
+            "items": [
+              "입출력 전용 제어선과 디코딩 회로 불필요"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "단점",
+        "subsections": [
+          {
+            "title": "주소 공간 감소",
+            "items": [
+              "입출력에 할당한 만큼 메모리로 쓸 수 있는 영역 축소"
+            ]
+          },
+          {
+            "title": "캐시 주의",
+            "items": [
+              "장치 레지스터를 캐시하면 최신 값을 놓쳐 비캐시 영역 지정 필요"
+            ]
+          },
+          {
+            "title": "버스 부담",
+            "items": [
+              "주소·데이터 버스를 메모리 접근과 함께 사용"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      373,
+      375
+    ],
+    "outline": [
+      "동작 메커니즘",
+      "- 준비 확인",
+      "- 동작 명령",
+      "- 주소 처리",
+      "- 명령어",
+      "장점",
+      "- 프로그래밍 단순",
+      "- 하드웨어 단순",
+      "단점",
+      "- 주소 공간 감소",
+      "- 캐시 주의",
+      "- 버스 부담"
+    ],
+    "name": "메모리 사상 입출력(Memory-Mapped I/O)",
+    "en": "Memory-Mapped I/O",
+    "keywords_must": [
+      "기억장치 주소 공간 공유",
+      "상태·제어 레지스터",
+      "데이터 레지스터",
+      "LOAD·STORE 명령",
+      "공통 주소 버스",
+      "RDY 비트(준비 완료)",
+      "START 비트(동작 시작)",
+      "메모리 가용 공간 감소"
+    ],
+    "keywords_ref": [
+      "ARM·RISC-V 등 RISC 계열이 주로 채택",
+      "캐시 비활성(Uncacheable) 영역 지정 필요",
+      "PCIe BAR 매핑",
+      "프로그래밍이 간단하고 모든 주소 지정 모드 활용 가능"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "기억장치 주소 공간 공유",
+      "상태·제어 레지스터",
+      "데이터 레지스터",
+      "LOAD·STORE 명령",
+      "공통 주소 버스",
+      "RDY 비트(준비 완료)",
+      "START 비트(동작 시작)",
+      "메모리 가용 공간 감소"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "BAR": "Base Address Register",
+      "RDY": "Ready"
+    }
+  },
+  {
+    "id": "CA_188",
+    "code": "CA_188",
+    "title": "분리형 입출력(Isolated I/O)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 입출력 > 주소 지정",
+    "definition": "입출력 제어기 레지스터에 기억장치와 별도인 입출력 전용 주소 공간을 할당하고, IN·OUT 같은 전용 명령과 입출력 제어 신호로 장치에 접근하는 방식으로 고립형 또는 포트 사상 입출력이라고도 함",
+    "keywords": [
+      "핵심: 입출력 전용 주소 공간(Port) · IN·OUT 전용 명령 · M/IO 구분 제어 신호 · 기억장치 주소 공간 전체 사용",
+      "필수: 하드웨어 구성 복잡 · 프로그래밍 불편 · 포트 사상 입출력(Port-Mapped I/O)",
+      "참고: x86의 64K 입출력 포트 공간 · 메모리 사상 방식과 혼용(현대 x86 PCIe 장치는 대부분 메모리 사상) · 명령어 수 증가 · 보호 모드에서 입출력 권한 제어(IOPL)"
+    ],
+    "sections": [
+      {
+        "title": "동작 메커니즘",
+        "subsections": [
+          {
+            "title": "준비 확인",
+            "items": [
+              "상태 레지스터 최하위 비트로 장치 준비 여부를 읽음"
+            ]
+          },
+          {
+            "title": "동작 명령",
+            "items": [
+              "제어 레지스터 최상위 비트를 세워 입출력 개시"
+            ]
+          },
+          {
+            "title": "주소 처리",
+            "items": [
+              "같은 주소 값이라도 제어 신호로 메모리와 장치를 구분"
+            ]
+          },
+          {
+            "title": "명령어",
+            "items": [
+              "기억장치 접근과 다른 전용 입출력 명령 사용"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "장점",
+        "subsections": [
+          {
+            "title": "메모리 공간 보존",
+            "items": [
+              "기억장치 주소 공간을 전부 메모리로 활용"
+            ]
+          },
+          {
+            "title": "구분 명확",
+            "items": [
+              "입출력 명령이 따로 있어 코드에서 장치 접근이 명확히 드러남"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "단점",
+        "subsections": [
+          {
+            "title": "프로그래밍 제약",
+            "items": [
+              "전용 명령만 쓸 수 있어 연산·주소 지정 방식이 제한"
+            ]
+          },
+          {
+            "title": "하드웨어 복잡",
+            "items": [
+              "주소 공간 구분 신호와 별도 디코딩 회로 필요"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      376,
+      378
+    ],
+    "outline": [
+      "동작 메커니즘",
+      "- 준비 확인",
+      "- 동작 명령",
+      "- 주소 처리",
+      "- 명령어",
+      "장점",
+      "- 메모리 공간 보존",
+      "- 구분 명확",
+      "단점",
+      "- 프로그래밍 제약",
+      "- 하드웨어 복잡"
+    ],
+    "name": "분리형 입출력(Isolated I/O)",
+    "en": "Isolated I/O",
+    "keywords_must": [
+      "입출력 전용 주소 공간(Port)",
+      "IN·OUT 전용 명령",
+      "M/IO 구분 제어 신호",
+      "기억장치 주소 공간 전체 사용",
+      "하드웨어 구성 복잡",
+      "프로그래밍 불편",
+      "포트 사상 입출력(Port-Mapped I/O)"
+    ],
+    "keywords_ref": [
+      "x86의 64K 입출력 포트 공간",
+      "메모리 사상 방식과 혼용(현대 x86 PCIe 장치는 대부분 메모리 사상)",
+      "명령어 수 증가",
+      "보호 모드에서 입출력 권한 제어(IOPL)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "입출력 전용 주소 공간(Port)",
+      "IN·OUT 전용 명령",
+      "M/IO 구분 제어 신호",
+      "기억장치 주소 공간 전체 사용",
+      "하드웨어 구성 복잡",
+      "프로그래밍 불편",
+      "포트 사상 입출력(Port-Mapped I/O)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "IOPL": "I/O Privilege Level"
+    }
+  },
+  {
     "id": "CA_061",
     "code": "CA_061",
     "title": "읽기 전용 메모리(ROM, Read Only Memory) 종류",
