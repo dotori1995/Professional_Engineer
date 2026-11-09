@@ -4674,7 +4674,7 @@
       "title": "망 구성",
       "items": [
        "기지국(eNB) + EPC(MME, S/P-GW, HSS, PCRF)",
-       "MCPTT 서버·GCS AS(그룹 통신 응용 서버)",
+       "MCPTT 서버·GCS AS(Group Communication Service Application Server)",
        "상용망 연동(RAN 공유·로밍)으로 커버리지 보완, 이동형 기지국"
       ]
      }
@@ -5246,85 +5246,1138 @@
  },
  "NW_197": {
   "keywords": [
-   "no discrimination(차별금지)",
-   "모든 콘텐츠 동등 취급",
-   "미국 망 중립성 폐지"
+   "3대 원칙: 차단 금지 · 속도 저하 금지 · 유료 우선 처리 금지 + 투명성",
+   "팀 우(Tim Wu, 2003) 용어 제시",
+   "미국: 2015 도입 → 2017 폐지 → 2024 복원 → 2025 연방항소법원 무효 판결",
+   "EU: 개방 인터넷 규정(2015/2120) · 국내: 2011 망 중립성 가이드라인",
+   "쟁점: 망 이용대가 · 제로 레이팅 · 5G 네트워크 슬라이싱",
+   "합리적 트래픽 관리(Reasonable Traffic Management) 예외"
   ],
   "name": "망 중립성(Network Neutrality)",
-  "en": "Network Neutrality"
+  "en": "Network Neutrality",
+  "definition": "인터넷 망 사업자(ISP)가 망을 통과하는 모든 콘텐츠·트래픽을 내용·유형·제공자와 관계없이 동등하게 취급하고 차별하지 않아야 한다는 원칙",
+  "outline": [
+   "망 중립성의 개념",
+   "- 정의",
+   "- 핵심 원칙",
+   "찬반 논거",
+   "국내외 동향 및 쟁점"
+  ],
+  "sections": [
+   {
+    "title": "망 중립성의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "콜롬비아대 팀 우(Tim Wu)가 2003년 제시, 망을 공공재처럼 중립적으로 운영해야 한다는 원칙"
+      ]
+     },
+     {
+      "title": "핵심 원칙",
+      "items": [
+       "차단 금지: 합법 콘텐츠·서비스 차단 금지",
+       "속도 저하 금지(No Throttling): 특정 트래픽 의도적 감속 금지",
+       "유료 우선 처리 금지: 대가를 받고 특정 트래픽 우대 금지",
+       "투명성: 트래픽 관리 정책 공개",
+       "예외: 망 보안·혼잡 관리 등 합리적 트래픽 관리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "찬반 논거",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "찬성(CP·이용자): 혁신·경쟁 보장, 신생 서비스 진입 장벽 방지, 표현의 자유·이용자 선택권 보호",
+       "반대(ISP): 트래픽 폭증 대비 망 투자비 회수 필요, 서비스별 품질 차등(의료·자율주행) 필요, 대형 CP 무임승차 문제"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "국내외 동향 및 쟁점",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "미국: 2015년 FCC가 통신 서비스(Title II)로 분류해 도입 → 2017년 폐지 → 2024년 복원 → 2025년 1월 연방 제6순회 항소법원이 FCC 권한 없음으로 무효 판결, 일부 주(캘리포니아 등)는 주법으로 유지",
+       "EU: 2015년 개방 인터넷 규정으로 법제화",
+       "국내: 2011년 '망 중립성 및 인터넷 트래픽 관리에 관한 가이드라인', 2020년 전기통신사업법 개정(넷플릭스법)",
+       "쟁점: 망 이용대가 분쟁(SK브로드밴드-넷플릭스, 2023년 합의), 제로 레이팅, 5G 네트워크 슬라이싱·특수 서비스의 허용 범위"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "망 중립성(Network Neutrality)",
+   "동등 취급 원칙(Equal Treatment)",
+   "차별 금지(No Discrimination)",
+   "차단 금지(No Blocking)",
+   "속도 저하 금지(No Throttling)",
+   "유료 우선 처리 금지(No Paid Prioritization)",
+   "투명성(Transparency)",
+   "합리적 트래픽 관리(Reasonable Traffic Management)",
+   "ISP·CP 이해 대립(ISP vs CP)"
+  ],
+  "keywords_ref": [
+   "팀 우(Tim Wu, 2003)",
+   "미국 2025년 항소법원 판결(Sixth Circuit)",
+   "EU 개방 인터넷 규정(Regulation 2015/2120)",
+   "국내 망 중립성 가이드라인(2011)",
+   "제로 레이팅(Zero Rating)",
+   "망 이용대가(Network Usage Fee)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "차단 금지(No Blocking)",
+   "유료 우선 처리 금지(No Paid Prioritization)",
+   "합리적 트래픽 관리(Reasonable Traffic Management)",
+   "제로 레이팅(Zero Rating)"
+  ],
+  "quiz_groups": [
+   "policy"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_199": {
-  "definition": "사업장의 물리적 위치와 관계없이 매출이 발생하는 국가에서 세금을 부과하여 조세 회피를 방지하는 새로운 세금 제도.",
+  "definition": "고정 사업장이 없어도 매출이 발생하는 시장 국가에 과세권을 배분하고(필라 1), 다국적 기업에 최저한세(15%)를 적용해(필라 2) 디지털 기업 등의 조세 회피를 막는 국제 조세 체계",
   "name": "디지털세(Digital Tax)",
-  "en": "Digital Tax"
+  "en": "Digital Tax",
+  "keywords": [
+   "OECD/G20 포괄적 이행 체계(BEPS 2.0)",
+   "필라 1(Pillar 1): 시장 소재국 과세권 배분(Amount A) — 합의 지연",
+   "필라 2(Pillar 2): 글로벌 최저한세 15% · 연결 매출 7.5억 유로 이상",
+   "필라 2 규칙: IIR · UTPR · QDMTT",
+   "국내: 2024년 글로벌 최저한세 시행 · G7 2025 미국 기업 병행 적용 합의",
+   "디지털서비스세(DST): 프랑스 3% · 영국 2% 등 일방 과세"
+  ],
+  "outline": [
+   "디지털세의 개념",
+   "- 정의",
+   "- 등장 배경",
+   "디지털세 구성",
+   "- 필라 1",
+   "- 필라 2",
+   "- 디지털서비스세",
+   "국내외 동향 및 영향"
+  ],
+  "sections": [
+   {
+    "title": "디지털세의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "물리적 사업장 위치와 무관하게 매출 발생국 과세를 가능하게 하는 국제 조세 규범 (OECD/G20 BEPS 2.0)"
+      ]
+     },
+     {
+      "title": "등장 배경",
+      "items": [
+       "기존 국제 조세는 고정 사업장(PE) 기준 → 서버·사업장 없이 매출을 올리는 디지털 기업 과세 곤란",
+       "저세율국 자회사로 이익을 옮기는 조세 회피"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "디지털세 구성",
+    "subsections": [
+     {
+      "title": "필라 1",
+      "items": [
+       "매출 200억 유로·이익률 10% 초과 대형 다국적 기업의 초과 이익 25%를 시장 소재국에 배분(Amount A)",
+       "다자 협약 서명이 지연돼 시행 불투명"
+      ]
+     },
+     {
+      "title": "필라 2",
+      "items": [
+       "연결 매출 7.5억 유로 이상 다국적 기업에 국가별 실효세율 15% 최저한세",
+       "IIR(소득 산입 규칙): 모회사 국가가 추가세 과세",
+       "UTPR(비과세 소득 규칙): 다른 자회사 국가가 보충 과세",
+       "QDMTT(적격 국내 최저한세): 저세율 국가가 자국에서 먼저 과세"
+      ]
+     },
+     {
+      "title": "디지털서비스세",
+      "items": [
+       "국가별 일방 과세: 프랑스 3%, 영국 2% 등 디지털 서비스 매출에 부과",
+       "필라 1 시행 시 폐지 조건으로 미국과 통상 마찰"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "국내외 동향 및 영향",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "국내: 국제조세조정법 개정으로 2024년부터 글로벌 최저한세(IIR) 시행, UTPR은 2025년부터",
+       "EU·일본·영국 등 다수 국가 필라 2 시행",
+       "2025년 G7: 미국 기업은 자국 최저세 제도로 대체하는 병행(Side-by-Side) 적용 합의 → 필라 2 일부 적용 제외",
+       "영향: 국내 대기업 해외 자회사 추가 세 부담, 조세 행정 복잡화, 해외 빅테크 과세 기반 확대"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "디지털세(Digital Tax)",
+   "OECD/G20 BEPS 포괄적 이행 체계(Inclusive Framework)",
+   "필라 1(Pillar 1)",
+   "과세권 배분(Reallocation of Taxing Rights)",
+   "필라 2(Pillar 2)",
+   "글로벌 최저한세 15%(Global Minimum Tax)",
+   "연결 매출 7.5억 유로(Revenue Threshold)",
+   "디지털서비스세(DST, Digital Services Tax)",
+   "고정 사업장 원칙 한계(Permanent Establishment)"
+  ],
+  "keywords_ref": [
+   "IIR(Income Inclusion Rule)",
+   "UTPR(Undertaxed Profits Rule)",
+   "QDMTT(Qualified Domestic Minimum Top-up Tax)",
+   "국내 2024년 시행(국제조세조정법)",
+   "G7 2025 병행 체제(Side-by-Side)",
+   "Amount A"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "필라 1(Pillar 1)",
+   "필라 2(Pillar 2)",
+   "글로벌 최저한세(Global Minimum Tax)",
+   "디지털서비스세(DST, Digital Services Tax)",
+   "IIR(Income Inclusion Rule)"
+  ],
+  "quiz_groups": [
+   "policy"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_205": {
-  "definition": "라우팅 테이블을 생성·유지·업데이트·전달하는 프로토콜이 라우팅 프로토콜이며, 경로 고정 여부에 따라 관리자가 경로를 직접 입력하는 Static과 라우터가 스스로 최적 경로를 찾는 Dynamic으로 분류.",
+  "definition": "라우팅 테이블을 관리자가 직접 입력해 경로를 고정하는 정적 라우팅과, 라우팅 프로토콜로 라우터가 스스로 최적 경로를 찾고 변화에 맞춰 갱신하는 동적 라우팅으로 나뉘는 경로 결정 방식",
   "keywords": [
-   "Static Routing: 수동 입력, 라우터 부하 경감",
-   "Dynamic Routing: RIP, IGRP, OSPF, EIGRP"
+   "정적: 수동 입력 · 오버헤드 없음 · 보안 · 변화 대응 불가",
+   "기본 경로(Default Route 0.0.0.0/0) · 부동 정적 경로(Floating Static)",
+   "동적: RIP · OSPF · EIGRP · IS-IS · BGP",
+   "동적: 자동 수렴 · 장애 우회 · CPU·대역폭 사용",
+   "적용: 스텁망·소규모는 정적 / 대규모·다중 경로는 동적",
+   "관리 거리(AD): 정적 1 · OSPF 110 · RIP 120"
   ],
   "name": "정적·동적 라우팅(Static/Dynamic Routing)",
-  "en": "Static/Dynamic Routing"
+  "en": "Static/Dynamic Routing",
+  "outline": [
+   "정적·동적 라우팅의 개념",
+   "- 정의",
+   "- 라우팅 테이블 구성 방식",
+   "정적 라우팅",
+   "동적 라우팅",
+   "정적·동적 라우팅 비교"
+  ],
+  "sections": [
+   {
+    "title": "정적·동적 라우팅의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "경로를 고정 입력하느냐, 프로토콜로 자동 계산하느냐에 따른 라우팅 분류"
+      ]
+     },
+     {
+      "title": "라우팅 테이블 구성 방식",
+      "items": [
+       "직접 연결(Connected) 경로 + 정적 경로 + 동적 학습 경로가 함께 테이블에 존재"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "정적 라우팅",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "관리자가 목적지·다음 홉을 명령어로 입력",
+       "장점: 라우팅 업데이트 없음 → CPU·대역폭 절약, 경로 예측 가능, 정보 노출 적어 보안 유리",
+       "단점: 토폴로지 변화·장애 시 수동 수정 필요, 대규모 망 관리 어려움",
+       "기본 경로(0.0.0.0/0): 스텁망에서 ISP로 향하는 경로",
+       "부동 정적 경로: 관리 거리를 높게 줘 동적 경로 장애 시 백업으로 사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동적 라우팅",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "라우팅 프로토콜(RIP, OSPF, EIGRP, IS-IS, BGP)로 이웃과 정보를 교환해 자동으로 테이블 작성",
+       "장점: 변화·장애에 자동 대응(수렴), 다중 경로 부하 분산, 대규모 확장",
+       "단점: 업데이트 트래픽·CPU·메모리 사용, 설정·보안(인증) 관리 필요, 수렴 중 일시 루프"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "정적·동적 라우팅 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "설정: 정적 수동 / 동적 자동",
+       "오버헤드: 정적 없음 / 동적 있음",
+       "장애 대응: 정적 수동 / 동적 자동 우회",
+       "적합 환경: 정적 소규모·스텁망·백업 / 동적 대규모·다중 경로",
+       "관리 거리: 직접 연결 0, 정적 1, eBGP 20, OSPF 110, RIP 120"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "정적 라우팅(Static Routing)",
+   "동적 라우팅(Dynamic Routing)",
+   "수동 설정(Manual Configuration)",
+   "라우터 부하 경감(Low Overhead)",
+   "기본 경로(Default Route)",
+   "자동 경로 학습(Automatic Learning)",
+   "수렴(Convergence)",
+   "장애 우회(Failover)",
+   "확장성(Scalability)"
+  ],
+  "keywords_ref": [
+   "부동 정적 경로(Floating Static Route)",
+   "스텁 네트워크(Stub Network)",
+   "관리 거리(AD) 정적 1",
+   "RIP·OSPF·EIGRP·BGP",
+   "IGRP 단종"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "기본 경로(Default Route)",
+   "부동 정적 경로(Floating Static Route)",
+   "스텁 네트워크(Stub Network)"
+  ],
+  "quiz_groups": [
+   "routing"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_206": {
-  "definition": "AS(자율 시스템) 내부·외부 연결에 따라 AS 내부 라우팅을 담당하는 IGP와 서로 다른 AS 사이에서 사용하는 EGP로 구분하는 라우팅 분류.",
+  "definition": "하나의 관리 주체가 운영하는 자율 시스템(AS) 내부에서 쓰는 IGP와, 서로 다른 AS 사이에서 경로를 교환하는 EGP로 라우팅 프로토콜을 구분하는 분류",
   "keywords": [
-   "IGP: RIP, IGRP, OSPF, EIGRP, IS-IS (Multicast)",
-   "EGP: BGP, EGP (Unicast)",
-   "AS(Autonomous System)"
+   "AS(자율 시스템): AS 번호(ASN, 16/32비트)",
+   "IGP: RIP · OSPF · IS-IS · EIGRP (IGRP는 단종)",
+   "EGP: BGP-4(RFC 4271) · 구 EGP 프로토콜(RFC 904)은 폐기",
+   "IGP 목표: 빠른 수렴·최적 경로 / EGP 목표: 정책·확장성",
+   "BGP: 경로 벡터 · TCP 179 · eBGP/iBGP"
   ],
   "name": "내부·외부 라우팅(IGP/EGP)",
-  "en": "IGP/EGP"
+  "en": "IGP/EGP",
+  "outline": [
+   "IGP와 EGP의 개념",
+   "- 자율 시스템(AS)",
+   "- 분류 기준",
+   "IGP",
+   "EGP(BGP)",
+   "IGP와 EGP 비교"
+  ],
+  "sections": [
+   {
+    "title": "IGP와 EGP의 개념",
+    "subsections": [
+     {
+      "title": "자율 시스템(AS)",
+      "items": [
+       "하나의 기관(ISP·대기업 등)이 단일 라우팅 정책으로 관리하는 네트워크 집합, IANA·RIR이 ASN 할당(16비트 → 32비트 확장)"
+      ]
+     },
+     {
+      "title": "분류 기준",
+      "items": [
+       "AS 내부 경로 교환 = IGP, AS 간 경로 교환 = EGP"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "IGP",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "RIP: 거리 벡터, 홉 수(최대 15)",
+       "OSPF: 링크 상태, 비용, 영역 계층",
+       "IS-IS: 링크 상태, 대형 사업자 코어",
+       "EIGRP: 고급 거리 벡터(DUAL), 대역폭·지연 메트릭",
+       "IGRP: 시스코 구형 프로토콜, 현재 단종"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "EGP(BGP)",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "BGP-4(RFC 4271): 사실상 유일한 인터넷 EGP, 경로 벡터 방식",
+       "TCP 179로 이웃(피어) 연결, AS_PATH로 루프 방지",
+       "eBGP: 다른 AS 간 / iBGP: 같은 AS 내부에서 외부 경로 전달",
+       "경로 속성(LOCAL_PREF, AS_PATH, MED 등)으로 정책 기반 선택",
+       "'EGP'라는 이름의 초기 프로토콜(RFC 904)은 폐기"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "IGP와 EGP 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "범위: IGP AS 내부 / EGP AS 간",
+       "목표: IGP 빠른 수렴·최적 경로 / EGP 정책·안정성·확장성",
+       "메트릭: IGP 홉·비용·대역폭 / EGP 경로 속성",
+       "규모: EGP는 인터넷 전체 경로(수십만 개) 처리"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "AS(Autonomous System)",
+   "AS 번호(ASN)",
+   "IGP(Interior Gateway Protocol)",
+   "EGP(Exterior Gateway Protocol)",
+   "RIP(Routing Information Protocol)",
+   "OSPF(Open Shortest Path First)",
+   "IS-IS(Intermediate System to Intermediate System)",
+   "EIGRP(Enhanced IGRP)",
+   "BGP(Border Gateway Protocol)",
+   "정책 기반 라우팅(Policy-based)"
+  ],
+  "keywords_ref": [
+   "BGP-4(RFC 4271)",
+   "eBGP·iBGP",
+   "TCP 179",
+   "경로 벡터(Path Vector)",
+   "IGRP 단종",
+   "구 EGP 프로토콜(RFC 904) 폐기"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "AS 번호(ASN, Autonomous System Number)",
+   "eBGP·iBGP(External/Internal BGP)",
+   "AS_PATH 속성(AS Path Attribute)"
+  ],
+  "quiz_groups": [
+   "routing"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_208": {
-  "definition": "각 노드가 직접 연결된 이웃이 보내는 정보로 목적지까지의 거리(Hop)와 방향을 계산하고 그 결과를 다시 이웃에게 알리는(분산적·반복적·비동기적) 라우팅 방식.",
+  "definition": "각 라우터가 직접 연결된 이웃에게서 받은 거리 정보로 목적지까지의 거리와 방향(다음 홉)을 계산하고, 그 결과를 다시 이웃에게 알리는 분산적·반복적·비동기적 라우팅 알고리즘",
   "keywords": [
-   "RIP",
-   "IGRP",
-   "분산적·반복적·비동기적",
-   "Hop Count",
-   "이웃 라우터와 테이블 교환"
+   "벨만-포드 식: Dx(y) = min_v { c(x,v) + Dv(y) }",
+   "분산적 · 반복적 · 비동기적(Distributed · Iterative · Asynchronous)",
+   "이웃과만 라우팅 테이블(거리 벡터) 교환",
+   "메트릭: 홉 수(RIP) · 복합 메트릭(EIGRP)",
+   "문제: 무한 카운트 · 라우팅 루프 · 느린 수렴",
+   "대책: 스플릿 호라이즌 · 포이즌 리버스 · 홀드다운 · 최대 홉"
   ],
-  "note": "원문 '정의' 칸은 SPF로 적혀 있으나 이는 Link State 설명이라, 원문 특징·개념도 설명으로 정의를 정리함",
+  "note": null,
   "name": "거리 벡터 알고리즘(Distance Vector Algorithm)",
-  "en": "Distance Vector Algorithm"
+  "en": "Distance Vector Algorithm",
+  "outline": [
+   "거리 벡터 알고리즘의 개념",
+   "- 정의",
+   "- 특징",
+   "동작 원리",
+   "문제점 및 해결 방안",
+   "링크 상태 알고리즘과 비교"
+  ],
+  "sections": [
+   {
+    "title": "거리 벡터 알고리즘의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "'소문에 의한 라우팅': 전체 지도 없이 이웃이 알려 준 거리만으로 경로를 정하는 방식"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "분산적: 각 노드가 이웃 정보로 계산",
+       "반복적: 더 이상 바뀌지 않을 때까지 교환 반복",
+       "비동기적: 모든 노드가 동시에 계산할 필요 없음",
+       "구현·설정이 단순, 메모리·CPU 부담 적음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작 원리",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① 초기: 직접 연결된 네트워크만 거리 0(또는 1)으로 테이블 작성",
+       "② 주기적·변경 시 이웃에게 자신의 거리 벡터 전송",
+       "③ 벨만-포드 식으로 갱신: 목적지 y까지 거리 = 이웃 v까지 비용 + v가 알려 준 y까지 거리 중 최소",
+       "④ 변화가 없을 때까지 반복 → 수렴"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "문제점 및 해결 방안",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "무한 카운트: 링크 장애 시 이웃끼리 서로 낡은 경로를 주고받아 거리가 끝없이 증가",
+       "라우팅 루프·느린 수렴(나쁜 소식은 천천히 퍼짐)",
+       "해결: 최대 홉(RIP 16 = 무한대), 스플릿 호라이즌, 포이즌 리버스, 홀드다운 타이머, 트리거드 업데이트",
+       "EIGRP는 DUAL(확산 갱신 알고리즘)로 루프 없는 빠른 수렴 보완"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "링크 상태 알고리즘과 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "정보 범위: 거리 벡터 이웃 정보만 / 링크 상태 전체 토폴로지",
+       "교환 내용: 거리 벡터 라우팅 테이블 / 링크 상태 LSA(링크 정보)",
+       "알고리즘: 벨만-포드 / 다익스트라(SPF)",
+       "수렴·규모: 거리 벡터 느림·소규모 / 링크 상태 빠름·대규모",
+       "자원: 거리 벡터 적음 / 링크 상태 CPU·메모리 많음"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "거리 벡터 알고리즘(Distance Vector Algorithm)",
+   "벨만-포드(Bellman-Ford)",
+   "분산적(Distributed)",
+   "반복적(Iterative)",
+   "비동기적(Asynchronous)",
+   "이웃 라우터와 테이블 교환(Neighbor Exchange)",
+   "홉 수(Hop Count)",
+   "무한 카운트 문제(Count to Infinity)",
+   "라우팅 루프(Routing Loop)",
+   "느린 수렴(Slow Convergence)"
+  ],
+  "keywords_ref": [
+   "스플릿 호라이즌(Split Horizon)",
+   "포이즌 리버스(Poison Reverse)",
+   "홀드다운(Hold-down)",
+   "RIP(Routing Information Protocol)",
+   "EIGRP DUAL",
+   "링크 상태 비교(Link State)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "벨만-포드 알고리즘(Bellman-Ford Algorithm)",
+   "무한 카운트(Count to Infinity)",
+   "라우팅 루프(Routing Loop)"
+  ],
+  "quiz_groups": [
+   "routing"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "review": null
  },
  "NW_209": {
-  "definition": "라우터가 네트워크 전반의 링크 상태 정보를 유지하고, 자신을 루트로 최단 경로 알고리즘(다익스트라)을 계산해 모든 목적지까지의 경로를 라우팅 테이블에 기록하는 방식(대표: OSPF).",
+  "definition": "각 라우터가 자신의 링크 상태 정보를 망 전체에 플러딩해 모든 라우터가 같은 토폴로지 데이터베이스를 갖고, 자신을 루트로 다익스트라(SPF) 최단 경로를 계산해 라우팅 테이블을 만드는 방식 (대표: OSPF, IS-IS)",
   "name": "링크 상태 알고리즘(Link State Algorithm)",
-  "en": "Link State Algorithm"
+  "en": "Link State Algorithm",
+  "keywords": [
+   "LSA(링크 상태 광고) 플러딩 → LSDB(링크 상태 DB) 동기화",
+   "다익스트라 알고리즘(SPF) → 최단 경로 트리",
+   "Hello로 이웃 발견 · 변화 시에만 갱신(트리거드)",
+   "빠른 수렴 · 루프 없음 · 대규모 망",
+   "단점: CPU·메모리 사용 · 설계 복잡 → 영역(Area) 계층화",
+   "OSPF · IS-IS"
+  ],
+  "outline": [
+   "링크 상태 알고리즘의 개념",
+   "- 정의",
+   "- 특징",
+   "동작 절차",
+   "다익스트라 알고리즘",
+   "장단점 및 거리 벡터와 비교"
+  ],
+  "sections": [
+   {
+    "title": "링크 상태 알고리즘의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "'지도에 의한 라우팅': 모든 라우터가 같은 망 지도를 가지고 각자 최단 경로를 계산"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "전체 토폴로지 인식, 변화가 생길 때만 LSA 전송(+주기적 갱신 30분)",
+       "링크 비용(대역폭 기반 등) 메트릭"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작 절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① Hello 패킷으로 이웃 발견·유지",
+       "② 자신의 링크 상태를 LSA로 만들어 망 전체에 플러딩",
+       "③ 모든 라우터가 동일한 LSDB 구성",
+       "④ 자신을 루트로 SPF(다익스트라) 계산 → 최단 경로 트리 → 라우팅 테이블 작성",
+       "⑤ 링크 변화 시 해당 LSA만 즉시 플러딩·재계산"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "다익스트라 알고리즘",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "시작 노드 거리 0, 나머지 무한대로 초기화",
+       "확정되지 않은 노드 중 거리가 가장 짧은 노드를 확정하고, 그 이웃의 거리를 갱신",
+       "모든 노드가 확정될 때까지 반복 → 음수 비용 없는 그래프의 최단 경로"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "장단점 및 거리 벡터와 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "장점: 빠른 수렴, 루프 발생 적음, 대규모 망 확장(영역 계층화), 비용 기반 정밀 경로",
+       "단점: LSDB 저장 메모리·SPF 계산 CPU 부담, 설계·설정 복잡, 초기 플러딩 트래픽",
+       "거리 벡터 대비: 이웃 정보 대신 전체 지도, 벨만-포드 대신 다익스트라, 수렴 빠름"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "링크 상태 알고리즘(Link State Algorithm)",
+   "LSA(Link State Advertisement)",
+   "플러딩(Flooding)",
+   "LSDB(Link State Database)",
+   "전체 토폴로지(Full Topology)",
+   "다익스트라 알고리즘(Dijkstra)",
+   "SPF(Shortest Path First)",
+   "최단 경로 트리(SPT, Shortest Path Tree)",
+   "빠른 수렴(Fast Convergence)",
+   "OSPF(Open Shortest Path First)"
+  ],
+  "keywords_ref": [
+   "Hello 패킷(Hello Packet)",
+   "IS-IS(Intermediate System to Intermediate System)",
+   "영역 계층화(Area Hierarchy)",
+   "링크 비용(Link Cost)",
+   "거리 벡터 비교(Distance Vector)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "LSA(Link State Advertisement)",
+   "LSDB(Link State Database)",
+   "다익스트라 알고리즘(Dijkstra's Algorithm)",
+   "SPF(Shortest Path First)"
+  ],
+  "quiz_groups": [
+   "routing"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_210": {
   "keywords": [
-   "Hop 수(최대 15)",
-   "거리벡터(DVA)",
-   "라우팅 테이블",
-   "UDP 520"
+   "메트릭 = 홉 수 · 최대 15(16 = 도달 불가)",
+   "거리 벡터(DVA) · 30초 주기 전체 테이블 전송",
+   "라우팅 테이블: 목적지 · 다음 홉 · 홉 수 · 타이머",
+   "메시지: 요청(Request) · 응답(Response), 최대 25개 경로/메시지",
+   "UDP 520(RIPv1·v2) · RIPng UDP 521",
+   "OSPF 대비: 단순·느린 수렴·소규모"
   ],
   "name": "RIP(Routing Information Protocol)",
-  "en": "Routing Information Protocol"
+  "en": "Routing Information Protocol",
+  "definition": "경유 라우터 수(홉 수)를 메트릭으로 수치화해, 거리 벡터 알고리즘으로 인접 라우터와 경로 정보를 주기적으로 교환하는 동적 라우팅 프로토콜 (UDP 520)",
+  "outline": [
+   "RIP의 개념",
+   "- 정의",
+   "- 특징",
+   "RIP 메시지와 라우팅 테이블",
+   "- 메시지 형식",
+   "- 라우팅 테이블 갱신",
+   "RIP과 OSPF 비교"
+  ],
+  "sections": [
+   {
+    "title": "RIP의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "홉 수 기반 거리 벡터 IGP, 소규모 사내망에서 설정이 간편해 널리 사용"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "메트릭이 홉 수뿐이라 느린 링크도 홉이 적으면 선택",
+       "최대 15홉 제한, 16은 도달 불가",
+       "주기적 전체 테이블 전송으로 대역폭 사용, 수렴 수 분 소요 가능"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "RIP 메시지와 라우팅 테이블",
+    "subsections": [
+     {
+      "title": "메시지 형식",
+      "items": [
+       "명령(Request·Response), 버전, 경로 항목(주소 패밀리, 목적지, (v2) 서브넷 마스크·다음 홉, 메트릭)",
+       "한 메시지에 최대 25개 경로, UDP 520(RIPng 521)"
+      ]
+     },
+     {
+      "title": "라우팅 테이블 갱신",
+      "items": [
+       "Request: 기동 시 이웃에게 테이블 요청",
+       "Response: 30초마다 또는 변경 시 테이블 광고",
+       "수신 경로의 홉 수 + 1이 기존보다 작거나 같은 다음 홉에서 온 정보면 갱신",
+       "180초 동안 갱신 없으면 무효, 240초에 삭제"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "RIP과 OSPF 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "알고리즘: RIP 거리 벡터(벨만-포드) / OSPF 링크 상태(다익스트라)",
+       "메트릭: RIP 홉 수 / OSPF 비용(대역폭 기반)",
+       "갱신: RIP 30초 주기 전체 / OSPF 변화 시 LSA",
+       "수렴·규모: RIP 느림·15홉 제한 / OSPF 빠름·영역 계층으로 대규모",
+       "전송: RIP UDP 520 / OSPF IP 프로토콜 89"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "RIP(Routing Information Protocol)",
+   "홉 수 메트릭(Hop Count)",
+   "최대 15홉(Maximum 15 Hops)",
+   "거리 벡터(Distance Vector)",
+   "라우팅 테이블(Routing Table)",
+   "주기적 갱신 30초(Periodic Update)",
+   "UDP 520",
+   "RIP 요청·응답(Request/Response)",
+   "무한 카운트 방지(Count to Infinity)"
+  ],
+  "keywords_ref": [
+   "메시지당 최대 25개 경로",
+   "RIPv2 인증(MD5)",
+   "RIPng(UDP 521)",
+   "스플릿 호라이즌(Split Horizon)",
+   "OSPF 비교(Open Shortest Path First)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "RIP 응답 메시지(RIP Response)",
+   "홉 수 메트릭(Hop Count Metric)",
+   "UDP 520 포트(RIP Port)"
+  ],
+  "quiz_groups": [
+   "routing"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_212_00": {
-  "definition": "라우터가 목적지까지의 여러 경로 중 최적 경로를 선택하기 위한 기준 변수.",
+  "definition": "라우터가 목적지까지의 여러 경로 중 최적 경로를 고르기 위해 각 경로에 매기는 값(기준 변수)으로, 프로토콜마다 홉 수·대역폭·지연·비용·경로 속성 등을 사용",
   "name": "라우팅 프로토콜 메트릭(Routing Protocol Metric)",
-  "en": "Routing Protocol Metric"
+  "en": "Routing Protocol Metric",
+  "keywords": [
+   "홉 수(Hop Count): RIP",
+   "비용(Cost): OSPF · IS-IS",
+   "복합 메트릭(대역폭 · 지연 · 신뢰도 · 부하 · MTU): EIGRP(K 값, 기본은 대역폭+지연)",
+   "경로 속성(Path Attributes): BGP",
+   "메트릭은 같은 프로토콜 내 비교 · 프로토콜 간은 관리 거리(AD)",
+   "동일 비용 다중 경로(ECMP) 부하 분산"
+  ],
+  "outline": [
+   "라우팅 메트릭의 개념",
+   "- 정의",
+   "- 메트릭과 관리 거리",
+   "메트릭 유형",
+   "프로토콜별 메트릭 비교"
+  ],
+  "sections": [
+   {
+    "title": "라우팅 메트릭의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "경로의 '좋음'을 수치화한 값, 값이 작을수록 우선(대부분 프로토콜)"
+      ]
+     },
+     {
+      "title": "메트릭과 관리 거리",
+      "items": [
+       "메트릭: 같은 라우팅 프로토콜이 배운 경로끼리 비교",
+       "관리 거리(AD): 서로 다른 출처(정적·OSPF·RIP) 경로 간 신뢰도 비교 → 낮을수록 우선",
+       "같은 메트릭 경로가 여럿이면 ECMP로 부하 분산"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "메트릭 유형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "홉 수: 거쳐 가는 라우터 수 → 단순하나 링크 속도 무시",
+       "대역폭: 경로상 최소 대역폭",
+       "지연: 경로 누적 지연",
+       "신뢰도: 링크 오류율",
+       "부하: 링크 사용률",
+       "MTU: 경로 최대 전송 단위",
+       "비용: 관리자가 지정하거나 대역폭으로 자동 계산"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "프로토콜별 메트릭 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "RIP: 홉 수(최대 15)",
+       "OSPF: 비용 = 기준 대역폭 / 인터페이스 대역폭, 경로 비용 합",
+       "IS-IS: 인터페이스 메트릭(기본 10) 합, 와이드 메트릭",
+       "EIGRP: 대역폭·지연·신뢰도·부하·MTU 복합(K 값), 기본은 대역폭과 지연만 사용",
+       "BGP: 메트릭 대신 경로 속성(LOCAL_PREF, AS_PATH 길이, MED 등) 순서로 결정"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "라우팅 메트릭(Routing Metric)",
+   "최적 경로 선택(Best Path)",
+   "홉 수(Hop Count)",
+   "대역폭(Bandwidth)",
+   "지연(Delay)",
+   "신뢰도(Reliability)",
+   "부하(Load)",
+   "MTU(Maximum Transmission Unit)",
+   "비용(Cost)",
+   "관리 거리(AD, Administrative Distance)"
+  ],
+  "keywords_ref": [
+   "EIGRP 복합 메트릭(K Values)",
+   "BGP 경로 속성(Path Attributes)",
+   "ECMP(Equal-Cost Multi-Path)",
+   "OSPF 기준 대역폭(Reference Bandwidth)",
+   "IS-IS 메트릭"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "관리 거리(AD, Administrative Distance)",
+   "ECMP(Equal-Cost Multi-Path)",
+   "복합 메트릭(Composite Metric)"
+  ],
+  "quiz_groups": [
+   "routing"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_213": {
-  "note": "NW_222 스마트 홈과 거의 같은 내용",
+  "note": null,
   "name": "홈 네트워킹(Home Networking)",
-  "en": "Home Networking"
+  "en": "Home Networking",
+  "definition": "가정 내 가전·에너지 소비 장치(수도·전기·냉난방)·보안 기기(도어록·카메라) 등을 유무선 통신망으로 연결해 상호 연동하고 원격 제어하는 기술",
+  "keywords": [
+   "구성: 홈 게이트웨이(월패드) · 홈 서버 · 단말 기기 · 외부망",
+   "유선: 이더넷 · 전력선 통신(PLC: HomePlug · G.hn)",
+   "무선: Wi-Fi · Zigbee · Z-Wave · BLE · Thread",
+   "미들웨어·표준: UPnP · DLNA · OCF · Matter",
+   "스마트 미터(Smart Meter) · 스마트 태그(RFID · NFC)",
+   "서비스: 원격 제어 · 에너지 관리 · 보안 · 헬스케어"
+  ],
+  "outline": [
+   "홈 네트워킹의 개념",
+   "- 정의",
+   "- 구성 요소",
+   "홈 네트워킹 기술",
+   "- 유선·무선 전송 기술",
+   "- 미들웨어·연동 표준",
+   "서비스 및 보안 과제"
+  ],
+  "sections": [
+   {
+    "title": "홈 네트워킹의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "주거 공간의 정보 가전과 설비를 하나의 망으로 묶어 언제 어디서나 제어하는 기술, 스마트홈의 기반"
+      ]
+     },
+     {
+      "title": "구성 요소",
+      "items": [
+       "홈 게이트웨이: 댁내망과 외부 인터넷 연결, 국내 아파트는 월패드가 역할 수행",
+       "홈 서버·플랫폼: 기기 등록·자동화 규칙",
+       "단말: 가전, 조명, 도어록, 카메라, 센서, 스마트 미터"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "홈 네트워킹 기술",
+    "subsections": [
+     {
+      "title": "유선·무선 전송 기술",
+      "items": [
+       "유선: 이더넷, 전력선 통신(PLC: HomePlug AV, ITU-T G.hn) — 기존 전력선 재활용",
+       "무선: Wi-Fi(고속), Zigbee·Thread(IEEE 802.15.4 저전력 메시), Z-Wave(서브 GHz), BLE"
+      ]
+     },
+     {
+      "title": "미들웨어·연동 표준",
+      "items": [
+       "UPnP: 기기 자동 발견·제어",
+       "DLNA: 미디어 공유(현재 해산)",
+       "OCF(Open Connectivity Foundation): IoT 기기 연동",
+       "Matter(CSA): IP 기반 스마트홈 통합 표준",
+       "스마트 태그: RFID·NFC로 사물 식별·간편 등록"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "서비스 및 보안 과제",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "서비스: 원격 가전 제어, 원격 검침·에너지 관리(스마트 미터), 방범·방재, 원격 헬스케어, 엔터테인먼트",
+       "보안 과제: 월패드 해킹으로 사생활 영상 유출(2021), 단지망 분리 의무화(지능형 홈네트워크 설비 기준), 기기 인증·암호화, 펌웨어 업데이트",
+       "상호 운용성: 제조사별 프로토콜 → Matter로 통합 추세"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "홈 네트워킹(Home Networking)",
+   "홈 게이트웨이(Home Gateway)",
+   "월패드(Wall Pad)",
+   "유선 홈 네트워크(Wired Home Network)",
+   "전력선 통신(PLC, Power Line Communication)",
+   "무선 홈 네트워크(Wireless Home Network)",
+   "Zigbee",
+   "Wi-Fi",
+   "미들웨어(Middleware)",
+   "스마트 미터(Smart Meter)"
+  ],
+  "keywords_ref": [
+   "HomePlug·G.hn",
+   "Z-Wave·BLE·Thread",
+   "UPnP(Universal Plug and Play)",
+   "DLNA(Digital Living Network Alliance)",
+   "Matter 표준",
+   "스마트 태그(Smart Tag, RFID·NFC)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "홈 게이트웨이(Home Gateway)",
+   "월패드(Wall Pad)",
+   "전력선 통신(PLC, Power Line Communication)",
+   "UPnP(Universal Plug and Play)"
+  ],
+  "quiz_groups": [
+   "iot"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "review": null
  },
  "NW_222": {
-  "definition": "가전제품, 에너지 소비장치(수도·전기·냉난방), 보안기기(도어록·감시카메라) 등 다양한 분야의 모든 것을 통신망으로 제어할 수 있는 기술. 주거환경에 IT를 융합한 인간 중심의 스마트 라이프 환경.",
+  "definition": "주거 환경에 IT를 융합해 가전·에너지 설비·보안 기기 등 집 안의 모든 것을 통신망으로 연결하고, AI·클라우드로 상황을 인지해 자동 제어하는 인간 중심의 지능형 주거 서비스",
   "keywords": [
-   "Smart Tag",
-   "PLC",
-   "Smart Meter"
+   "구성: 스마트 기기 · 허브/게이트웨이 · 클라우드 플랫폼 · 앱(음성 비서)",
+   "연결: Wi-Fi · Zigbee · Thread · BLE · 전력선 통신(PLC)",
+   "통합 표준: Matter(CSA) · OCF",
+   "생태계: SmartThings · Google Home · Apple Home · Alexa",
+   "AI 자동화: 상황 인지 · 루틴 · 에너지 최적화(스마트 미터 · HEMS)",
+   "보안: 기기 인증 · 망 분리 · 개인정보 보호"
   ],
-  "note": "NW_213 Home Networking과 거의 같은 내용",
+  "note": null,
   "name": "스마트 홈(Smart Home)",
-  "en": "Smart Home"
+  "en": "Smart Home",
+  "outline": [
+   "스마트 홈의 개념",
+   "- 정의",
+   "- 홈 네트워킹과 비교",
+   "스마트 홈 구성 및 기술",
+   "- 구성 요소",
+   "- 핵심 기술",
+   "서비스 및 보안 과제"
+  ],
+  "sections": [
+   {
+    "title": "스마트 홈의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "연결(홈 네트워킹)에 지능(AI)과 서비스를 더해 사용자 중심으로 스스로 동작하는 집"
+      ]
+     },
+     {
+      "title": "홈 네트워킹과 비교",
+      "items": [
+       "홈 네트워킹: 기기 연결·원격 제어 중심",
+       "스마트 홈: 데이터 분석·자동화·개인 맞춤 서비스까지 포함"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "스마트 홈 구성 및 기술",
+    "subsections": [
+     {
+      "title": "구성 요소",
+      "items": [
+       "스마트 기기: 가전, 조명, 도어록, 카메라, 센서",
+       "허브·게이트웨이: 서로 다른 무선 기기 연결(Thread 보더 라우터 등)",
+       "클라우드 플랫폼: 기기 관리·데이터 분석·외부 서비스 연동",
+       "사용자 인터페이스: 스마트폰 앱, AI 스피커·음성 비서, 월패드"
+      ]
+     },
+     {
+      "title": "핵심 기술",
+      "items": [
+       "연결: Wi-Fi, Zigbee, Thread, BLE, PLC",
+       "통합 표준: Matter(멀티 어드민·로컬 제어), OCF",
+       "AI: 생활 패턴 학습, 상황 인지 루틴(외출 시 조명·가스 차단)",
+       "에너지: 스마트 미터·HEMS로 전력 사용 최적화, 수요 반응"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "서비스 및 보안 과제",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "서비스: 원격·자동 가전 제어, 에너지 절감, 방범·방재, 독거노인 돌봄·헬스케어, 엔터테인먼트",
+       "보안 위협: 기기 해킹·봇넷, 카메라 영상 유출, 월패드 해킹(2021), 개인정보 과다 수집",
+       "대응: 기기 보안 인증(국내 IoT 보안인증), 세대 간 망 분리, 암호화·안전한 업데이트, 개인정보 최소 수집",
+       "과제: 생태계 간 상호 운용성, 고령층 사용성"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "스마트 홈(Smart Home)",
+   "스마트 기기(Smart Device)",
+   "허브·게이트웨이(Hub/Gateway)",
+   "클라우드 플랫폼(Cloud Platform)",
+   "음성 비서(Voice Assistant)",
+   "Matter 표준(Matter)",
+   "상황 인지 자동화(Context-aware Automation)",
+   "HEMS(Home Energy Management System)",
+   "스마트 미터(Smart Meter)",
+   "스마트 홈 보안(Smart Home Security)"
+  ],
+  "keywords_ref": [
+   "Zigbee·Thread·BLE",
+   "OCF(Open Connectivity Foundation)",
+   "SmartThings·Google Home·Apple Home",
+   "스마트 태그(Smart Tag)",
+   "전력선 통신(PLC)",
+   "월패드 해킹(2021)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "HEMS(Home Energy Management System)",
+   "음성 비서(Voice Assistant)",
+   "상황 인지 자동화(Context-aware Automation)",
+   "스마트 홈 플랫폼(Smart Home Platform)"
+  ],
+  "quiz_groups": [
+   "iot"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "review": null
  },
  "NW_233": {
   "keywords": [
@@ -8333,7 +9386,7 @@
   "en": "Wi-Fi Protected Access 3",
   "definition": "WPA2의 취약점(사전 공격·KRACK 등)을 보완하기 위해 Wi-Fi Alliance가 2018년 발표한 무선랜 보안 인증 규격으로, SAE 인증·PMF 의무화·192비트 보안 모드를 제공",
   "keywords": [
-   "WPA3-Personal: SAE(동등 개체 동시 인증, Dragonfly) → PSK 대체",
+   "WPA3-Personal: SAE(동등 개체 동시 인증, Dragonfly) → PSK(Pre-Shared Key) 대체",
    "오프라인 사전 공격 방어 · 전방향 안전성(Forward Secrecy)",
    "PMF(관리 프레임 보호, IEEE 802.11w) 의무 → 인증 해제 공격 방어",
    "WPA3-Enterprise 192비트 모드(CNSA: GCMP-256 · HMAC-SHA-384)",
@@ -8363,7 +9416,7 @@
      {
       "title": "등장 배경(WPA2의 한계)",
       "items": [
-       "PSK 4-way 핸드셰이크를 캡처하면 오프라인 사전 대입으로 비밀번호 추측 가능",
+       "PSK(Pre-Shared Key) 4-way 핸드셰이크를 캡처하면 오프라인 사전 대입으로 비밀번호 추측 가능",
        "KRACK(2017): 4-way 핸드셰이크 재설치 공격",
        "관리 프레임 비보호 → 인증 해제(Deauth) 공격",
        "공용 개방형 Wi-Fi는 암호화 없음"
@@ -8454,7 +9507,7 @@
   "keywords": [
    "RTK: 반송파 위상(Carrier Phase) + 기준국 보정 → cm급",
    "NRTK: 여러 상시 기준국(CORS) 망으로 오차 모델링 → 기준국 거리 제약 완화",
-   "보정 방식: VRS(가상 기준국) · FKP(면 보정 계수) · MAC(주-보조국 개념)",
+   "보정 방식: VRS(가상 기준국) · FKP(면 보정 계수) · MAC(Master Auxiliary Concept, 주-보조국 개념)",
    "전송: RTCM 형식 · NTRIP(인터넷)",
    "활용: 측량 · 정밀 농업 · 드론 · 자율주행"
   ],
@@ -8921,7 +9974,7 @@
   "keywords": [
    "흐름별 큐 · 가중치(Weight) 비례 대역폭 분배",
    "가상 종료 시간(Finish Time)이 가장 작은 패킷부터 전송",
-   "GPS(일반화 프로세서 공유) 이론 모델의 근사",
+   "GPS(Generalized Processor Sharing, 일반화 프로세서 공유) 이론 모델의 근사",
    "가중치 기준: IP 우선순위(ToS) · DSCP",
    "작은 패킷·대화형 흐름 보호, 대형 흐름 독점 방지",
    "변형: CBWFQ · LLQ / 비교: WRR · DRR"
@@ -8959,7 +10012,7 @@
       "title": null,
       "items": [
        "① 분류: 출발지·목적지 주소, 포트, 프로토콜, ToS로 흐름 구분 → 흐름별 큐",
-       "② 가상 종료 시간 계산: 패킷 길이 / 가중치를 누적해 비트 단위 라운드 로빈(GPS)을 흉내",
+       "② 가상 종료 시간 계산: 패킷 길이 / 가중치를 누적해 비트 단위 라운드 로빈(일반화 프로세서 공유 모델)을 흉내",
        "③ 종료 시간이 가장 작은 패킷부터 전송 → 작은 패킷·저용량 흐름이 먼저 처리",
        "④ 대역폭 할당 = 해당 흐름 가중치 / 전체 가중치 합 × 링크 대역폭"
       ]
@@ -9247,7 +10300,7 @@
   "definition": "IP 패킷에 짧은 고정 길이 레이블(4바이트 심 헤더)을 붙여, 라우터가 IP 헤더 대신 레이블만 보고 고속으로 전달하는 레이블 교환 기술로 트래픽 엔지니어링·VPN·QoS에 활용",
   "keywords": [
    "레이블 헤더 32비트: 레이블 20 · TC 3 · S(스택 하단) 1 · TTL 8",
-   "LER(경계) · LSR(코어) · LSP(레이블 교환 경로) · FEC(전달 등가 클래스)",
+   "LER(경계) · LSR(코어) · LSP(레이블 교환 경로) · FEC(Forwarding Equivalence Class)",
    "레이블 연산: Push · Swap · Pop (PHP: 끝에서 두 번째 홉 제거)",
    "레이블 분배: LDP · RSVP-TE · BGP",
    "LIB · LFIB(레이블 전달 테이블)",
@@ -9289,7 +10342,7 @@
      {
       "title": "구성 요소",
       "items": [
-       "LER(Label Edge Router): 진입 시 FEC 분류·레이블 부착, 출구에서 제거",
+       "LER(Label Edge Router): 진입 시 전달 등가 클래스 분류·레이블 부착, 출구에서 제거",
        "LSR(Label Switching Router): 레이블만 보고 교환·전달",
        "LSP(Label Switched Path): 레이블로 정해진 단방향 경로",
        "FEC(Forwarding Equivalence Class): 같은 방식으로 전달될 패킷 집합",
@@ -9308,7 +10361,7 @@
       "title": "동작 절차",
       "items": [
        "① LDP·RSVP-TE로 레이블 분배, LSP 구성",
-       "② 진입 LER이 FEC 분류 후 Push",
+       "② 진입 LER이 전달 등가 클래스 분류 후 Push",
        "③ LSR이 LFIB로 Swap하며 전달",
        "④ 출구에서 Pop 후 IP 라우팅"
       ]
@@ -10472,27 +11525,708 @@
  },
  "NW_198": {
   "name": "넷플릭스법(Netflix Act)",
-  "en": "Netflix Act"
+  "en": "Netflix Act",
+  "definition": "이용자 수와 트래픽 비중이 큰 부가통신사업자(대형 콘텐츠 사업자)에게 통신 서비스 품질(안정성) 유지 의무를 부과한 전기통신사업법 개정(2020년, 제22조의7)",
+  "keywords": [
+   "전기통신사업법 제22조의7(2020년 6월 개정 · 12월 시행)",
+   "대상: 일평균 이용자 100만 명 이상 + 국내 총 트래픽 1% 이상",
+   "의무: 서비스 안정성 확보 · 트래픽 경로 변경 시 사전 협의 · 이용자 요구 처리",
+   "대상 예: 구글 · 넷플릭스 · 메타 · 네이버 · 카카오",
+   "배경: 해외 CP 무임승차 · 트래픽 경로 임의 변경 사태",
+   "연관: 망 중립성 · 망 이용대가 분쟁"
+  ],
+  "outline": [
+   "넷플릭스법의 개념",
+   "- 정의",
+   "- 도입 배경",
+   "주요 내용",
+   "- 적용 대상",
+   "- 부과 의무",
+   "쟁점 및 동향"
+  ],
+  "sections": [
+   {
+    "title": "넷플릭스법의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "대형 부가통신사업자에게 서비스 안정성 책임을 지운 전기통신사업법 개정안의 통칭"
+      ]
+     },
+     {
+      "title": "도입 배경",
+      "items": [
+       "해외 CP가 국내 트래픽을 대량 유발하면서 망 품질 책임은 통신사에만 있다는 비판",
+       "2016~2017년 해외 CP의 접속 경로 임의 변경으로 국내 이용자 접속 장애 발생"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 내용",
+    "subsections": [
+     {
+      "title": "적용 대상",
+      "items": [
+       "전년도 말 3개월간 일평균 국내 이용자 100만 명 이상이고 국내 총 트래픽의 1% 이상인 부가통신사업자 (시행령)"
+      ]
+     },
+     {
+      "title": "부과 의무",
+      "items": [
+       "서비스 안정성 확보: 트래픽 양 변동에 대비한 서버·망 설계, 이용 환경별 최적화",
+       "트래픽 경로 변경 등 품질에 영향을 주는 경우 통신사와 사전 협의·통보",
+       "장애 시 이용자 고지·상담 창구, 국내 대리인 지정",
+       "정부의 이행 점검·시정 명령"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "쟁점 및 동향",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "찬성: 이용자 보호, 국내외 사업자 형평",
+       "반대: 품질 책임을 CP에 전가, 망 중립성 훼손 우려, 국내 CP 부담",
+       "후속 쟁점: 망 이용대가 의무화 법안 논의, SK브로드밴드-넷플릭스 소송(2023년 합의)",
+       "정책 과제: 실효성 있는 이행 점검, 국외 사업자 집행력 확보"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "넷플릭스법(Netflix Act)",
+   "전기통신사업법 제22조의7",
+   "부가통신사업자(Value-added Service Provider)",
+   "서비스 안정성 확보 의무(Service Stability)",
+   "일평균 이용자 100만 명 이상",
+   "국내 총 트래픽 1% 이상",
+   "트래픽 경로 변경 사전 협의(Traffic Route Change)",
+   "이용자 보호(User Protection)"
+  ],
+  "keywords_ref": [
+   "2020년 12월 시행",
+   "구글·넷플릭스·메타·네이버·카카오",
+   "망 이용대가(Network Usage Fee)",
+   "망 중립성(Network Neutrality)",
+   "SK브로드밴드-넷플릭스 소송"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "부가통신사업자(Value-added Service Provider)",
+   "서비스 안정성 확보 의무(Service Stability Obligation)",
+   "전기통신사업법 제22조의7"
+  ],
+  "quiz_groups": [
+   "policy"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_201": {
   "name": "CDN(Content Delivery Network)",
-  "en": "Content Delivery Network"
+  "en": "Content Delivery Network",
+  "definition": "원본 서버의 콘텐츠를 지리적으로 분산된 여러 캐시 서버(PoP)에 저장해 두고, 사용자와 가장 가까운 서버에서 제공함으로써 전송 지연과 원본·망 부하를 줄이는 콘텐츠 전송 네트워크",
+  "keywords": [
+   "참여자: CP(콘텐츠 사업자) · CDN 사업자 · ISP · 사용자",
+   "구성: 원본 서버(Origin) · 엣지 캐시(PoP) · IX(인터넷 교환점)",
+   "요청 라우팅: DNS 기반(GSLB) · 애니캐스트",
+   "캐싱: Pull · Push · TTL · 캐시 적중률",
+   "전송 구간: First Mile · Middle Mile · Last Mile",
+   "부가 기능: DDoS 방어 · TLS 오프로딩 · 엣지 컴퓨팅"
+  ],
+  "outline": [
+   "CDN의 개념",
+   "- 정의",
+   "- 필요성",
+   "CDN 구성 및 동작",
+   "- 구성 요소",
+   "- 요청 라우팅과 캐싱",
+   "CDN 부가 기능 및 동향"
+  ],
+  "sections": [
+   {
+    "title": "CDN의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "1990년대 말 Akamai가 상용화, 웹캐시 노드망으로 콘텐츠를 사용자 가까이에서 전달하는 시스템"
+      ]
+     },
+     {
+      "title": "필요성",
+      "items": [
+       "원본 서버까지 먼 경로(미들 마일)에서 지연·혼잡·패킷 손실 발생",
+       "동영상·대용량 트래픽 급증, 특정 시점 접속 폭주"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "CDN 구성 및 동작",
+    "subsections": [
+     {
+      "title": "구성 요소",
+      "items": [
+       "CP(Content Provider): 원본 서버 운영",
+       "CDN 사업자: 전 세계 PoP에 엣지 캐시 서버 운영",
+       "ISP·IX: PoP를 사업자망·교환점에 배치",
+       "사용자: 최종 이용자"
+      ]
+     },
+     {
+      "title": "요청 라우팅과 캐싱",
+      "items": [
+       "① 사용자가 도메인 질의 → CDN DNS(GSLB)가 가까운·정상 PoP 주소 응답 (또는 애니캐스트로 최근접 PoP 연결)",
+       "② 엣지에 콘텐츠가 있으면 즉시 응답(캐시 적중)",
+       "③ 없으면 원본에서 가져와 저장 후 응답(Pull), 미리 배포하는 Push 방식도 있음",
+       "TTL·무효화(Purge)로 최신성 관리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "CDN 부가 기능 및 동향",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "보안: DDoS 흡수, WAF, 봇 차단, TLS 오프로딩",
+       "성능: 압축·이미지 최적화, HTTP/3, 동적 콘텐츠 가속(경로 최적화)",
+       "엣지 컴퓨팅: 엣지에서 코드 실행(Cloudflare Workers, Lambda@Edge)",
+       "ISP 내장 캐시: 넷플릭스 Open Connect처럼 CP가 통신사망 내부에 캐시 설치",
+       "멀티 CDN, 5G MEC 연계, 망 이용대가 쟁점"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "콘텐츠 전송 네트워크(Content Delivery Network)",
+   "원본 서버(Origin Server)",
+   "엣지 캐시 서버(Edge Cache)",
+   "PoP(Point of Presence)",
+   "요청 라우팅(Request Routing)",
+   "DNS 기반 라우팅(DNS-based, GSLB)",
+   "애니캐스트(Anycast)",
+   "캐시 적중률(Cache Hit Ratio)",
+   "미들 마일(Middle Mile)",
+   "지연 감소(Latency Reduction)"
+  ],
+  "keywords_ref": [
+   "Pull·Push 캐싱",
+   "TTL(Time To Live)",
+   "IX(Internet Exchange)",
+   "DDoS 방어(DDoS Protection)",
+   "ISP 내장 캐시(Netflix Open Connect)",
+   "Akamai·Cloudflare·CloudFront"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "PoP(Point of Presence)",
+   "요청 라우팅(Request Routing)",
+   "캐시 적중률(Cache Hit Ratio)",
+   "원본 서버(Origin Server)",
+   "미들 마일(Middle Mile)"
+  ],
+  "quiz_groups": [
+   "app",
+   "edge"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_203": {
   "name": "라우팅 프로토콜(Routing Protocol)",
-  "en": "Routing Protocol"
+  "en": "Routing Protocol",
+  "definition": "라우터들이 목적지 네트워크별로 패킷을 내보낼 인터페이스(다음 홉)를 미리 계산해 라우팅 테이블을 만들고, 이를 생성·유지·갱신·교환하는 규칙",
+  "keywords": [
+   "라우팅 테이블(Routing Table): 목적지 · 다음 홉 · 인터페이스 · 메트릭",
+   "정적(Static) vs 동적(Dynamic) 라우팅",
+   "IGP(AS 내부): RIP · OSPF · IS-IS · EIGRP / EGP(AS 간): BGP",
+   "알고리즘: 거리 벡터 · 링크 상태 · 경로 벡터",
+   "클래스풀 vs 클래스리스",
+   "관리 거리(AD) · 수렴(Convergence)"
+  ],
+  "outline": [
+   "라우팅 프로토콜의 개념",
+   "- 정의",
+   "- 라우팅 테이블",
+   "라우팅 프로토콜 분류",
+   "- 경로 결정 방식",
+   "- 적용 범위",
+   "- 알고리즘",
+   "주요 라우팅 프로토콜 비교"
+  ],
+  "sections": [
+   {
+    "title": "라우팅 프로토콜의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "라우터 간 경로 정보를 교환해 최적 경로를 결정하고 라우팅 테이블을 관리하는 프로토콜"
+      ]
+     },
+     {
+      "title": "라우팅 테이블",
+      "items": [
+       "목적지 네트워크(접두사), 다음 홉, 출력 인터페이스, 메트릭, 경로 출처(Connected·Static·OSPF 등)",
+       "최장 접두사 일치로 경로 선택, 같은 목적지가 여러 출처면 관리 거리(AD)가 낮은 것 우선"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "라우팅 프로토콜 분류",
+    "subsections": [
+     {
+      "title": "경로 결정 방식",
+      "items": [
+       "정적 라우팅: 관리자가 수동 설정",
+       "동적 라우팅: 라우팅 프로토콜로 자동 학습·갱신"
+      ]
+     },
+     {
+      "title": "적용 범위",
+      "items": [
+       "IGP(Interior Gateway Protocol): 하나의 AS 내부 — RIP, OSPF, IS-IS, EIGRP",
+       "EGP(Exterior Gateway Protocol): AS 간 — BGP-4"
+      ]
+     },
+     {
+      "title": "알고리즘",
+      "items": [
+       "거리 벡터: 이웃에게 거리·방향 전달(벨만-포드) — RIP",
+       "링크 상태: 전체 토폴로지로 최단 경로 계산(다익스트라) — OSPF, IS-IS",
+       "경로 벡터: AS 경로 목록으로 정책 기반 선택 — BGP",
+       "하이브리드: EIGRP(DUAL 알고리즘)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 라우팅 프로토콜 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "RIP: 홉 수, 최대 15홉, 소규모",
+       "OSPF: 비용(Cost), 영역(Area) 계층, 빠른 수렴, 중대규모",
+       "IS-IS: 링크 상태, 사업자 코어망",
+       "EIGRP: 대역폭·지연 복합 메트릭(시스코, RFC 7868 공개)",
+       "BGP: 경로 속성·정책, 인터넷 AS 간",
+       "IGRP: 시스코 구형, 단종(EIGRP로 대체)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "라우팅 프로토콜(Routing Protocol)",
+   "라우팅 테이블(Routing Table)",
+   "다음 홉(Next Hop)",
+   "메트릭(Metric)",
+   "정적 라우팅(Static Routing)",
+   "동적 라우팅(Dynamic Routing)",
+   "IGP(Interior Gateway Protocol)",
+   "EGP(Exterior Gateway Protocol)",
+   "거리 벡터(Distance Vector)",
+   "링크 상태(Link State)",
+   "경로 벡터(Path Vector)"
+  ],
+  "keywords_ref": [
+   "RIP·OSPF·IS-IS·EIGRP",
+   "BGP(Border Gateway Protocol)",
+   "관리 거리(AD, Administrative Distance)",
+   "수렴(Convergence)",
+   "클래스리스(Classless)",
+   "IGRP 단종(Discontinued)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "라우팅 테이블(Routing Table)",
+   "관리 거리(AD, Administrative Distance)",
+   "수렴(Convergence)",
+   "경로 벡터(Path Vector)"
+  ],
+  "quiz_groups": [
+   "routing"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_207": {
   "name": "RIP(Routing Information Protocol)",
-  "en": "Routing Information Protocol"
+  "en": "Routing Information Protocol",
+  "definition": "벨만-포드(Bellman-Ford) 거리 벡터 알고리즘을 사용해 홉 수를 메트릭으로 이웃 라우터와 주기적으로 라우팅 테이블을 교환하는 동적 IGP 라우팅 프로토콜",
+  "keywords": [
+   "거리 벡터 · 메트릭 = 홉 수(Hop Count), 최대 15홉(16 = 도달 불가)",
+   "30초 주기 전체 테이블 갱신 · UDP 520",
+   "타이머: 갱신 30 · 무효 180 · 홀드다운 180 · 삭제 240초",
+   "RIPv1(클래스풀 · 브로드캐스트) · RIPv2(RFC 2453, 클래스리스 · 224.0.0.9 · 인증)",
+   "RIPng(RFC 2080): IPv6 · UDP 521",
+   "루프 방지: 스플릿 호라이즌 · 포이즌 리버스 · 홀드다운 · 트리거드 업데이트"
+  ],
+  "outline": [
+   "RIP의 개념",
+   "- 정의",
+   "- 특징",
+   "RIP 동작 및 타이머",
+   "RIP 버전 비교",
+   "RIP 문제점 및 해결 기법"
+  ],
+  "sections": [
+   {
+    "title": "RIP의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "가장 오래된 IGP 중 하나(RFC 1058, 1988), 소규모 망용 거리 벡터 프로토콜"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "설정이 간단, 메트릭은 홉 수뿐 → 대역폭·지연 무시",
+       "최대 15홉으로 망 규모 제한, 느린 수렴"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "RIP 동작 및 타이머",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "이웃에게 30초마다 전체 라우팅 테이블 전송, 받은 거리 + 1로 경로 갱신",
+       "갱신(Update) 30초, 무효(Invalid) 180초(수신 없으면 경로 무효), 홀드다운 180초, 삭제(Flush) 240초",
+       "UDP 520 포트, 동일 비용 경로 부하 분산"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "RIP 버전 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "RIPv1(RFC 1058): 클래스풀(서브넷 마스크 미전달), 브로드캐스트, 인증 없음",
+       "RIPv2(RFC 2453): 클래스리스(VLSM·CIDR), 멀티캐스트 224.0.0.9, 인증(MD5), 다음 홉 필드",
+       "RIPng(RFC 2080): IPv6용, UDP 521, 인증은 IPsec에 위임"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "RIP 문제점 및 해결 기법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "무한 카운트(Count to Infinity): 끊긴 경로를 이웃끼리 서로 광고해 홉 수가 계속 증가 → 최대 16으로 무한대 정의",
+       "스플릿 호라이즌: 경로를 배운 인터페이스로는 다시 광고하지 않음",
+       "포이즌 리버스: 배운 인터페이스로 거리 16(도달 불가)을 광고",
+       "홀드다운: 경로 장애 후 일정 시간 더 나쁜 정보 무시",
+       "트리거드 업데이트: 변화 즉시 갱신 전송"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "RIP(Routing Information Protocol)",
+   "거리 벡터 알고리즘(Distance Vector)",
+   "벨만-포드(Bellman-Ford)",
+   "홉 수(Hop Count)",
+   "최대 15홉(Maximum 15 Hops)",
+   "30초 주기 갱신(Periodic Update)",
+   "UDP 520",
+   "RIPv1",
+   "RIPv2",
+   "RIPng"
+  ],
+  "keywords_ref": [
+   "16 = 무한대(Infinity)",
+   "스플릿 호라이즌(Split Horizon)",
+   "포이즌 리버스(Poison Reverse)",
+   "홀드다운 타이머(Hold-down Timer)",
+   "트리거드 업데이트(Triggered Update)",
+   "멀티캐스트 224.0.0.9"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "스플릿 호라이즌(Split Horizon)",
+   "포이즌 리버스(Poison Reverse)",
+   "무한 카운트(Count to Infinity)",
+   "홀드다운 타이머(Hold-down Timer)",
+   "RIPng(RIP next generation)"
+  ],
+  "quiz_groups": [
+   "routing"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_211": {
   "name": "OSPF(Open Shortest Path First)",
-  "en": "Open Shortest Path First"
+  "en": "Open Shortest Path First",
+  "definition": "링크 상태 알고리즘을 바탕으로 자율 시스템(AS) 내부 라우터들이 비용(Cost) 메트릭과 영역(Area) 계층 구조로 최단 경로를 계산·교환하는 IGP 라우팅 프로토콜 (OSPFv2 RFC 2328)",
+  "keywords": [
+   "링크 상태 · 다익스트라(SPF) · 메트릭 = 비용(Cost = 기준 대역폭 / 인터페이스 대역폭)",
+   "영역 계층: 백본 영역 0 · ABR · ASBR",
+   "DR · BDR: 다중 접속망에서 인접 관계 축소",
+   "패킷: Hello · DBD · LSR · LSU · LSAck · IP 프로토콜 89",
+   "멀티캐스트 224.0.0.5(모든 OSPF) · 224.0.0.6(DR/BDR)",
+   "OSPFv3(RFC 5340): IPv6"
+  ],
+  "outline": [
+   "OSPF의 개념",
+   "- 정의",
+   "- 특징",
+   "OSPF 구성 요소",
+   "- 영역과 라우터 유형",
+   "- DR/BDR",
+   "OSPF 동작",
+   "- 패킷 유형",
+   "- 인접 관계 형성"
+  ],
+  "sections": [
+   {
+    "title": "OSPF의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "IETF 표준 링크 상태 IGP, OSPFv2(RFC 2328, IPv4)·OSPFv3(RFC 5340, IPv6)"
+      ]
+     },
+     {
+      "title": "특징",
+      "items": [
+       "비용 = 기준 대역폭(기본 100Mbps) / 인터페이스 대역폭 → 대역폭을 반영한 경로",
+       "변화 시에만 LSA 전송으로 빠른 수렴, 루프 없음",
+       "VLSM·CIDR·경로 요약·인증 지원, 홉 수 제한 없음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "OSPF 구성 요소",
+    "subsections": [
+     {
+      "title": "영역과 라우터 유형",
+      "items": [
+       "영역(Area): LSA 플러딩 범위를 나눠 SPF 계산·LSDB 크기 축소",
+       "백본 영역(Area 0): 모든 영역이 연결되는 중심",
+       "ABR(영역 경계 라우터): 여러 영역 연결·경로 요약",
+       "ASBR(AS 경계 라우터): 외부 AS·다른 프로토콜 경로 재분배",
+       "특수 영역: 스텁, 완전 스텁, NSSA → 외부 LSA 차단"
+      ]
+     },
+     {
+      "title": "DR/BDR",
+      "items": [
+       "이더넷 같은 다중 접속망에서 모든 라우터가 서로 인접하면 n(n−1)/2 관계 → DR과만 인접해 LSA 교환 축소",
+       "우선순위·라우터 ID로 선출, BDR은 대기"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "OSPF 동작",
+    "subsections": [
+     {
+      "title": "패킷 유형",
+      "items": [
+       "IP 프로토콜 89, 멀티캐스트 224.0.0.5(모든 OSPF 라우터)·224.0.0.6(DR/BDR)",
+       "Hello(이웃 발견·유지), DBD(DB 요약), LSR(LSA 요청), LSU(LSA 갱신), LSAck(확인)"
+      ]
+     },
+     {
+      "title": "인접 관계 형성",
+      "items": [
+       "Down → Init → 2-Way → ExStart → Exchange → Loading → Full",
+       "Full 이후 LSDB 동기화 완료 → SPF 계산 → 라우팅 테이블 반영"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "OSPF(Open Shortest Path First)",
+   "링크 상태(Link State)",
+   "다익스트라 SPF(Dijkstra SPF)",
+   "비용 메트릭(Cost)",
+   "영역(Area)",
+   "백본 영역 0(Backbone Area 0)",
+   "ABR(Area Border Router)",
+   "ASBR(AS Boundary Router)",
+   "DR(Designated Router)",
+   "BDR(Backup Designated Router)",
+   "LSA(Link State Advertisement)"
+  ],
+  "keywords_ref": [
+   "RFC 2328 · OSPFv3 RFC 5340",
+   "Hello·DBD·LSR·LSU·LSAck",
+   "IP 프로토콜 89",
+   "224.0.0.5 · 224.0.0.6",
+   "스텁 영역·NSSA(Stub Area·Not-So-Stubby Area)",
+   "이웃 상태 Full(Neighbor States)"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "ABR(Area Border Router)",
+   "DR(Designated Router)",
+   "백본 영역(Backbone Area 0)",
+   "비용 메트릭(OSPF Cost)"
+  ],
+  "quiz_groups": [
+   "routing"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_212_01": {
   "name": "STP(Spanning Tree Protocol, 스패닝 트리 프로토콜)",
-  "en": "Spanning Tree Protocol"
+  "en": "Spanning Tree Protocol",
+  "definition": "이중화로 경로가 둘 이상인 스위치·브리지 망에서 발생하는 L2 루프(브로드캐스트 스톰)를 막기 위해, 루트 브리지를 기준으로 일부 포트를 차단해 논리적 트리 구조를 만드는 프로토콜 (IEEE 802.1D)",
+  "keywords": [
+   "L2 루프 문제: 브로드캐스트 스톰 · MAC 테이블 불안정 · 중복 프레임",
+   "BPDU 교환 · 루트 브리지 선출(가장 낮은 브리지 ID = 우선순위 + MAC)",
+   "포트 역할: 루트 포트 · 지정 포트 · 차단(대체) 포트 · 경로 비용",
+   "포트 상태: Blocking → Listening → Learning → Forwarding (수렴 30~50초)",
+   "RSTP(IEEE 802.1w): 수 초 내 수렴 · MSTP(IEEE 802.1s): VLAN 그룹별 인스턴스",
+   "보호: BPDU Guard · Root Guard"
+  ],
+  "outline": [
+   "STP의 개념",
+   "- 정의",
+   "- L2 루프 문제",
+   "STP 동작",
+   "- 루트 브리지·포트 역할 선출",
+   "- 포트 상태",
+   "STP 개선 프로토콜 및 보호 기능"
+  ],
+  "sections": [
+   {
+    "title": "STP의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "래디아 펄먼(Radia Perlman)이 고안, 물리적 이중화는 유지하면서 논리적으로 루프 없는 트리를 만드는 L2 프로토콜"
+      ]
+     },
+     {
+      "title": "L2 루프 문제",
+      "items": [
+       "이더넷 프레임에는 TTL이 없어 루프에서 무한 순환",
+       "브로드캐스트 스톰으로 대역폭·CPU 고갈",
+       "같은 MAC이 여러 포트에서 보여 MAC 테이블 불안정, 중복 프레임 수신"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "STP 동작",
+    "subsections": [
+     {
+      "title": "루트 브리지·포트 역할 선출",
+      "items": [
+       "① 루트 브리지: BPDU를 교환해 브리지 ID(우선순위 + MAC)가 가장 낮은 스위치 선출",
+       "② 루트 포트: 비루트 스위치마다 루트까지 경로 비용이 가장 낮은 포트",
+       "③ 지정 포트: 세그먼트마다 루트에 가장 가까운 포트",
+       "④ 나머지 포트는 차단 → 장애 시 차단 포트가 다시 활성화"
+      ]
+     },
+     {
+      "title": "포트 상태",
+      "items": [
+       "Blocking(BPDU만 수신) → Listening(역할 결정, 15초) → Learning(MAC 학습, 15초) → Forwarding",
+       "Max Age 20초 + 15 + 15 → 수렴 최대 약 50초",
+       "Disabled: 관리자 비활성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "STP 개선 프로토콜 및 보호 기능",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "RSTP(IEEE 802.1w, 현재 802.1D에 통합): 대체·백업 포트 역할, 제안/합의 핸드셰이크로 수 초 내 수렴",
+       "MSTP(IEEE 802.1s, 현재 802.1Q에 통합): 여러 VLAN을 인스턴스로 묶어 인스턴스별 트리 → 부하 분산",
+       "PVST+: 시스코 VLAN별 STP",
+       "보호: PortFast(단말 포트 즉시 전달), BPDU Guard(단말 포트에 BPDU 오면 차단), Root Guard(루트 변경 방지)",
+       "대안: 링크 집성(LACP), 패브릭(TRILL·SPB·EVPN)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "keywords_must": [
+   "스패닝 트리 프로토콜(Spanning Tree Protocol)",
+   "IEEE 802.1D",
+   "L2 루프 방지(Loop Prevention)",
+   "브로드캐스트 스톰(Broadcast Storm)",
+   "BPDU(Bridge Protocol Data Unit)",
+   "루트 브리지(Root Bridge)",
+   "브리지 ID(Bridge ID)",
+   "루트 포트(Root Port)",
+   "지정 포트(Designated Port)",
+   "차단 포트(Blocking Port)",
+   "경로 비용(Path Cost)"
+  ],
+  "keywords_ref": [
+   "포트 상태 Blocking·Listening·Learning·Forwarding",
+   "수렴 30~50초(Convergence)",
+   "RSTP(IEEE 802.1w)",
+   "MSTP(IEEE 802.1s)",
+   "BPDU Guard·Root Guard",
+   "PortFast"
+  ],
+  "curated": true,
+  "quiz_terms": [
+   "루트 브리지(Root Bridge)",
+   "BPDU(Bridge Protocol Data Unit)",
+   "RSTP(Rapid Spanning Tree Protocol)",
+   "MSTP(Multiple Spanning Tree Protocol)",
+   "브로드캐스트 스톰(Broadcast Storm)"
+  ],
+  "quiz_groups": [
+   "routing",
+   "mac"
+  ],
+  "quiz_avoid": [],
+  "keywords_note": null,
+  "note": null,
+  "review": null
  },
  "NW_234": {
   "name": "오픈플로(OpenFlow)",

@@ -30,8 +30,10 @@ AXFR: Full Zone Transfer
 BBR: Bottleneck Bandwidth and Round-trip propagation time
 BDR: Backup Designated Router
 BEC: Backward Error Correction
+BEPS: Base Erosion and Profit Shifting
 BGP: Border Gateway Protocol
 BOOTP: Bootstrap Protocol
+BPDU: Bridge Protocol Data Unit
 BSM: Basic Safety Message
 BSS: Business Support System
 C-V2X: Cellular Vehicle-to-Everything
@@ -69,6 +71,7 @@ DF: Don't Fragment
 DHCP: Dynamic Host Configuration Protocol
 DiffServ: Differentiated Services
 DIFS: DCF Inter-Frame Space
+DLNA: Digital Living Network Alliance
 DNS: Domain Name System
 DNS64: DNS extensions for NAT64
 DNSSEC: DNS Security Extensions
@@ -76,7 +79,6 @@ DoH: DNS over HTTPS
 DoQ: DNS over QUIC
 DoT: DNS over TLS
 DPP: Device Provisioning Protocol
-DR: Designated Router
 DS-Lite: Dual-Stack Lite
 DSA: Dynamic Spectrum Access
 DSCP: Differentiated Services Code Point
@@ -118,6 +120,7 @@ GAF: Geographic Adaptive Fidelity
 GARP: Gratuitous ARP
 GCSE: Group Communication System Enablers
 GEAR: Geographical and Energy Aware Routing
+GloBE: Global Anti-Base Erosion
 GNSS: Global Navigation Satellite System
 GPS: Global Positioning System
 GSLB: Global Server Load Balancing
@@ -140,6 +143,7 @@ IFS: Inter-Frame Space
 IGMP: Internet Group Management Protocol
 IGP: Interior Gateway Protocol
 IGRP: Interior Gateway Routing Protocol
+IIR: Income Inclusion Rule
 IMT-2020: International Mobile Telecommunications-2020
 IMT-Advanced: International Mobile Telecommunications-Advanced
 IntServ: Integrated Services
@@ -175,6 +179,8 @@ LLM: Large Language Model
 LLQ: Low Latency Queuing
 LOS: Line of Sight
 LPWA: Low Power Wide Area
+LSA: Link State Advertisement
+LSDB: Link State Database
 LSP: Label Switched Path
 LSR: Label Switching Router
 LTE: Long Term Evolution
@@ -206,6 +212,7 @@ MQTT: MQ Telemetry Transport (현재 OASIS 표준명은 약어 아님)
 MSD: Minimum Set of Data
 MSL: Maximum Segment Lifetime
 MSS: Maximum Segment Size
+MSTP: Multiple Spanning Tree Protocol
 MTU: Maximum Transmission Unit
 MU-MIMO: Multi-User MIMO
 MUX: Multiplexer
@@ -228,11 +235,13 @@ NR-V2X: New Radio Vehicle-to-Everything
 NRTK: Network Real-Time Kinematic
 NRZ: Non-Return-to-Zero
 NSA: Non-Standalone
+NSSA: Not-So-Stubby Area
 NSSAI: Network Slice Selection Assistance Information
 NSSF: Network Slice Selection Function
 NTN: Non-Terrestrial Network
 NTRIP: Networked Transport of RTCM via Internet Protocol
 OBU: On-Board Unit
+OCF: Open Connectivity Foundation
 OECD: Organisation for Economic Co-operation and Development
 OFDM: Orthogonal Frequency Division Multiplexing
 OFDMA: Orthogonal Frequency Division Multiple Access
@@ -267,8 +276,8 @@ PSAP: Public Safety Answering Point
 PSH: Push
 PSK: Phase Shift Keying
 PTR: Pointer
-PU: Primary User
 QAM: Quadrature Amplitude Modulation
+QDMTT: Qualified Domestic Minimum Top-up Tax
 QoE: Quality of Experience
 QoS: Quality of Service
 RAN: Radio Access Network
@@ -285,6 +294,7 @@ RR: Resource Record
 RRL: Response Rate Limiting
 RSSI: Received Signal Strength Indicator
 RST: Reset
+RSTP: Rapid Spanning Tree Protocol
 RSU: Road Side Unit
 RSVP: Resource Reservation Protocol
 RTK: Real-Time Kinematic
@@ -295,7 +305,6 @@ RTTVAR: Round-Trip Time Variation
 RU: Radio Unit
 SA: Standalone
 SACK: Selective Acknowledgment
-SAE: Simultaneous Authentication of Equals
 SAM: Slot Availability Mask
 SASL: Simple Authentication and Security Layer
 SATIN: Satellite-Aerial-Terrestrial Integrated Network
@@ -323,6 +332,7 @@ SLAAC: Stateless Address Autoconfiguration
 SLD: Second-Level Domain
 SMF: Session Management Function
 SNPN: Standalone Non-Public Network
+SPF: Shortest Path First
 SPIN: Sensor Protocols for Information via Negotiation
 SRTP: Secure Real-time Transport Protocol
 SRTT: Smoothed Round-Trip Time
@@ -332,7 +342,6 @@ SSM: Source-Specific Multicast
 SST: Slice/Service Type
 STP: Spanning Tree Protocol
 STUN: Session Traversal Utilities for NAT
-SU: Secondary User
 SUMS: Software Update Management System
 SYN: Synchronize
 TCP: Transmission Control Protocol
@@ -354,7 +363,9 @@ UHR: Ultra High Reliability
 ULA: Unique Local Address
 ULCL: Uplink Classifier
 UPF: User Plane Function
+UPnP: Universal Plug and Play
 URG: Urgent
+UTPR: Undertaxed Profits Rule
 UWB: Ultra-Wideband
 V2I: Vehicle-to-Infrastructure
 V2N: Vehicle-to-Network
