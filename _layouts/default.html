@@ -42,6 +42,7 @@
     {{ content }}
   </main>
   <script src="{{ '/assets/js/app.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+  {% if page.vendor %}<script src="{{ page.vendor | relative_url }}"></script>{% endif %}
   {% if page.script %}<script src="{{ page.script | relative_url }}?v={{ site.time | date: '%s' }}"></script>{% endif %}
 </body>
 </html>

@@ -77,7 +77,14 @@
   function autoCheck(list, prefix) {
     const n = norm(notes);
     if (!n) return;
-    list.forEach((k, i) => { if (kwTokens(k).some(tok => n.includes(tok))) { checked.add(prefix + i); autoIds.add(prefix + i); } });
+    // 1) 정규화 후 부분 일치  2) Fuse.js 유사도(오타·띄어쓰기·조금 다른 표현)
+    const segs = String(notes).split(/[\n,，·;/]+/).map(norm).filter(x => x.length >= 2);
+    const fuse = window.Fuse && segs.length ? new window.Fuse(segs, { includeScore: true, threshold: 0.34, ignoreLocation: true, minMatchCharLength: 2 }) : null;
+    const fuzzy = tok => tok.length >= 3 && fuse && fuse.search(tok).some(r => r.score <= 0.34);
+    list.forEach((k, i) => {
+      const toks = kwTokens(k);
+      if (toks.some(tok => n.includes(tok)) || toks.some(fuzzy)) { checked.add(prefix + i); autoIds.add(prefix + i); }
+    });
   }
   let autoIds = new Set();
 
