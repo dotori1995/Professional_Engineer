@@ -20,7 +20,7 @@
     body.innerHTML = '<div class="dr-label">도메인</div>' + PE.domains(list).map(code => {
       const m = metaOf(code), ts = list.filter(t => t.domain === code), q = '?d=' + encodeURIComponent(code);
       return `<details class="dr-dom"${code === PE.cur ? ' open' : ''}><summary><b>${PE.esc(code)}</b> ${PE.esc(m.name)} <span class="dr-n">${ts.length}</span></summary>
-        <div class="dr-links"><a href="${PE.url('/')}${q}">📚 목록</a><a href="${PE.url('/cards/')}${q}">🃏 카드</a><a href="${PE.url('/quiz/')}${q}">📝 문제</a></div>
+        <div class="dr-links"><a href="${PE.url('/')}${q}">목록</a><a href="${PE.url('/cards/')}${q}">카드</a><a href="${PE.url('/quiz/')}${q}">문제</a></div>
         <ul class="dr-topics">${ts.map(t => `<li><a href="${PE.topicUrl(t.id)}&d=${encodeURIComponent(code)}"><span class="dr-id">${PE.esc(t.id)}</span> ${PE.esc(PE.name(t))}</a></li>`).join('')}</ul></details>`;
     }).join('');
   };

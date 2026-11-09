@@ -23,8 +23,8 @@
         </div>
         <div class="tfoot">
           ${prev ? `<a class="btn ghost nav" href="${PE.topicUrl(prev.id)}" aria-label="이전 토픽">◀</a>` : '<span class="btn ghost nav" aria-hidden="true"></span>'}
-          <a class="btn ghost" href="${PE.url('/cards/')}?topic=${encodeURIComponent(t.id)}">🃏 카드</a>
-          ${t.curated ? `<a class="btn ghost" href="${PE.url('/quiz/')}?topic=${encodeURIComponent(t.id)}">📝 문제</a>` : ''}
+          <a class="btn ghost" href="${PE.url('/cards/')}?topic=${encodeURIComponent(t.id)}">카드</a>
+          ${t.curated ? `<a class="btn ghost" href="${PE.url('/quiz/')}?topic=${encodeURIComponent(t.id)}">문제</a>` : ''}
           <span class="pos">${j + 1}/${same.length}</span>
           ${next ? `<a class="btn ghost nav" href="${PE.topicUrl(next.id)}" aria-label="다음 토픽">▶</a>` : '<span class="btn ghost nav" aria-hidden="true"></span>'}
         </div>`;

@@ -3,7 +3,7 @@ layout: null
 permalink: /sw.js
 ---
 // 서비스 워커: 모든 요청 네트워크 우선(배포 직후 옛 JS와 새 페이지가 섞이지 않게), 오프라인이면 캐시
-const VERSION = 'pe-{{ site.time | date: "%Y%m%d%H%M%S" }}';
+const VERSION = 'pe-{{ site.time | date: -t2"%Y%m%d%H%M%S" }}';
 const BASE = '{{ site.baseurl }}';
 const PRECACHE = [
   BASE + '/', BASE + '/cards/', BASE + '/quiz/', BASE + '/topic/', BASE + '/data.json', BASE + '/glossary.json', BASE + '/quiz.json',
