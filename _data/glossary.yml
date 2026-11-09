@@ -10,6 +10,7 @@ AIoE: Ambient Internet of Everything
 AMC: Adaptive Modulation and Coding
 AMI: Advanced Metering Infrastructure
 AMPS: Advanced Mobile Phone System
+AoA: Angle of Arrival
 AODV: Ad hoc On-demand Distance Vector
 AP: Access Point
 APIPA: Automatic Private IP Addressing
@@ -39,6 +40,7 @@ CoAP: Constrained Application Protocol
 CoRE: Constrained RESTful Environments
 CPU: Central Processing Unit
 CRC: Cyclic Redundancy Check
+CSA: Connectivity Standards Alliance
 CSMA: Carrier Sense Multiple Access
 CSMA/CA: Carrier Sense Multiple Access with Collision Avoidance
 CSMA/CD: Carrier Sense Multiple Access with Collision Detection
@@ -59,6 +61,7 @@ DNSSEC: DNS Security Extensions
 DoH: DNS over HTTPS
 DoQ: DNS over QUIC
 DoT: DNS over TLS
+DPP: Device Provisioning Protocol
 DR: Designated Router
 DSCP: Differentiated Services Code Point
 DSDV: Destination-Sequenced Distance Vector
@@ -74,18 +77,22 @@ DWDM: Dense Wavelength Division Multiplexing
 E2E: End-to-End
 eCall: Emergency Call
 ECC: Elliptic Curve Cryptography
+ECU: Electronic Control Unit
 EGP: Exterior Gateway Protocol
 EIFS: Extended Inter-Frame Space
 EIGRP: Enhanced Interior Gateway Routing Protocol
 EMS: Element Management System
 EPC: Evolved Packet Core
+ESS: Extended Service Set
 FCS: Frame Check Sequence
 FDM: Frequency Division Multiplexing
 FDMA: Frequency Division Multiple Access
 FEC: Forward Error Correction
 FHSS: Frequency Hopping Spread Spectrum
 FIN: Finish
+FKP: Flächenkorrekturparameter
 FQDN: Fully Qualified Domain Name
+FTM: Fine Timing Measurement
 GAF: Geographic Adaptive Fidelity
 GARP: Gratuitous ARP
 GCSE: Group Communication System Enablers
@@ -122,6 +129,7 @@ IPsec: IP Security
 IPv4: Internet Protocol version 4
 IPv6: Internet Protocol version 6
 IS-IS: Intermediate System to Intermediate System
+ISAC: Integrated Sensing and Communication
 ISN: Initial Sequence Number
 ISO: International Organization for Standardization
 ISP: Internet Service Provider
@@ -129,6 +137,7 @@ ITS: Intelligent Transport Systems
 IVN: In-Vehicle Network
 IX: Internet eXchange
 IXFR: Incremental Zone Transfer
+JID: Jabber ID
 JSEP: JavaScript Session Establishment Protocol
 KL: Kullback-Leibler
 LAN: Local Area Network
@@ -156,6 +165,7 @@ MEC: Multi-access Edge Computing
 MF: More Fragments
 MIMO: Multiple-Input Multiple-Output
 MLD: Multicast Listener Discovery
+MLO: Multi-Link Operation
 MOCN: Multi-Operator Core Network
 MORAN: Multi-Operator Radio Access Network
 MoS: Mean Opinion Score
@@ -164,6 +174,7 @@ MPLS-TP: MPLS Transport Profile
 MPR: Multipoint Relay
 MPTCP: Multipath TCP
 MQTT: MQ Telemetry Transport (현재 OASIS 표준명은 약어 아님)
+MSD: Minimum Set of Data
 MSL: Maximum Segment Lifetime
 MSS: Maximum Segment Size
 MTU: Maximum Transmission Unit
@@ -183,6 +194,8 @@ NR-V2X: New Radio Vehicle-to-Everything
 NRTK: Network Real-Time Kinematic
 NRZ: Non-Return-to-Zero
 NSA: Non-Standalone
+NTN: Non-Terrestrial Network
+NTRIP: Networked Transport of RTCM via Internet Protocol
 OBU: On-Board Unit
 OECD: Organisation for Economic Co-operation and Development
 OFDM: Orthogonal Frequency Division Multiplexing
@@ -193,15 +206,19 @@ OPNFV: Open Platform for NFV
 OSPF: Open Shortest Path First
 OSS: Operations Support System
 OTA: Over-The-Air
+OWE: Opportunistic Wireless Encryption
 P2P: Peer-to-Peer
 PCF: Point Coordination Function
+PDR: Pedestrian Dead Reckoning
 PIFS: PCF Inter-Frame Space
 PIM: Protocol Independent Multicast
 PLC: Programmable Logic Controller
+PMF: Protected Management Frames
 PMTUD: Path MTU Discovery
 POP: Point of Presence
 PPP: Point-to-Point Protocol
 PS-LTE: Public Safety LTE
+PSAP: Public Safety Answering Point
 PSH: Push
 PSK: Phase Shift Keying
 PTR: Pointer
@@ -223,6 +240,7 @@ RSSI: Received Signal Strength Indicator
 RST: Reset
 RSU: Road Side Unit
 RSVP: Resource Reservation Protocol
+RTK: Real-Time Kinematic
 RTO: Retransmission TimeOut
 RTS: Request To Send
 RTT: Round Trip Time
@@ -245,6 +263,7 @@ SDP: Session Description Protocol
 SDR: Software-Defined Radio
 SDS: Software-Defined Storage
 SDV: Software Defined Vehicle
+SecOC: Secure Onboard Communication
 SFU: Selective Forwarding Unit
 SIC: Successive Interference Cancellation
 SIFS: Short Inter-Frame Space
@@ -263,10 +282,12 @@ SYN: Synchronize
 TCP: Transmission Control Protocol
 TDM: Time Division Multiplexing
 TDMA: Time Division Multiple Access
+TDoA: Time Difference of Arrival
 TEEN: Threshold-sensitive Energy Efficient sensor Network
 THz: Terahertz
 TLD: Top-Level Domain
 TLS: Transport Layer Security
+ToA: Time of Arrival
 TOS: Type of Service
 TTL: Time To Live
 TURN: Traversal Using Relays around NAT
@@ -275,6 +296,7 @@ UDP: User Datagram Protocol
 UHR: Ultra High Reliability
 UPF: User Plane Function
 URG: Urgent
+UWB: Ultra-Wideband
 V2I: Vehicle-to-Infrastructure
 V2N: Vehicle-to-Network
 V2P: Vehicle-to-Pedestrian
