@@ -14018,7 +14018,11 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "POP": null,
+      "PUSH": null
+    }
   },
   {
     "id": "CA_128",
@@ -16041,7 +16045,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "CP": "Clock Pulse"
+    }
   },
   {
     "id": "CA_150",
@@ -16471,7 +16478,11 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "SOP": "Sum of Products",
+      "POS": "Product of Sums"
+    }
   },
   {
     "id": "CA_153",
@@ -16782,6 +16793,1530 @@
     "quiz_avoid": [],
     "reviewed": true,
     "dueum": null
+  },
+  {
+    "id": "CA_155",
+    "code": "CA_155",
+    "title": "하드웨어 기술 언어(HDL, Hardware Description Language)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 설계 언어",
+    "definition": "디지털 회로의 동작과 구조, 연결 관계와 타이밍을 텍스트로 정밀하게 기술하는 컴퓨터 언어로, 시뮬레이션으로 동작을 검증하고 합성 도구로 게이트 수준 회로를 생성함",
+    "keywords": [
+      "핵심: VHDL · Verilog · 동시성(Concurrency) · 타이밍(Timing)·전파 지연",
+      "필수: 동작적 기술(Behavioral) · 구조적 기술(Structural) · 레지스터 전송 수준(RTL, Register Transfer Level) · 논리 합성(Synthesis)",
+      "참고: VHDL: 미 국방부 VHSIC 사업(1981 착수), IEEE 1076(1987)·1164 · Verilog: Gateway Design Automation(1984), IEEE 1364(1995) · SystemVerilog(IEEE 1800) · 고수준 합성(HLS)"
+    ],
+    "sections": [
+      {
+        "title": "등장 배경",
+        "subsections": [
+          {
+            "title": "기존 언어 한계",
+            "items": [
+              "순차 실행 중심 프로그래밍 언어로는 병렬 하드웨어 표현 곤란"
+            ]
+          },
+          {
+            "title": "설계 규모 증가",
+            "items": [
+              "수백만 게이트 회로는 회로도 입력으로 관리 불가"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "표현 특성",
+        "subsections": [
+          {
+            "title": "회로 특성",
+            "items": [
+              "엔티티·연결·동시성·타이밍을 언어 요소로 표현"
+            ]
+          },
+          {
+            "title": "추상화 범위",
+            "items": [
+              "동작 수준부터 레지스터 전송 수준, 게이트 수준까지 기술"
+            ]
+          },
+          {
+            "title": "계층 설계",
+            "items": [
+              "모듈 단위로 추상화해 상위·하위 모듈을 조합"
+            ]
+          },
+          {
+            "title": "지연 정보",
+            "items": [
+              "전파 지연과 타이밍 조건을 시뮬레이션에 반영"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "대표 언어 비교",
+        "subsections": [
+          {
+            "title": "개발 주체",
+            "items": [
+              "VHDL(미 국방부)",
+              "Verilog(Gateway Design Automation)"
+            ]
+          },
+          {
+            "title": "표준",
+            "items": [
+              "VHDL(IEEE 1076·1164)",
+              "Verilog(IEEE 1364)"
+            ]
+          },
+          {
+            "title": "문법",
+            "items": [
+              "VHDL(Ada 기반, 강한 자료형)",
+              "Verilog(C 언어와 유사, 간결)"
+            ]
+          },
+          {
+            "title": "공통점",
+            "items": [
+              "표현 역량과 범위가 비슷하고 대부분 상용 도구가 둘 다 지원"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      313,
+      313
+    ],
+    "outline": [
+      "등장 배경",
+      "- 기존 언어 한계",
+      "- 설계 규모 증가",
+      "표현 특성",
+      "- 회로 특성",
+      "- 추상화 범위",
+      "- 계층 설계",
+      "- 지연 정보",
+      "대표 언어 비교",
+      "- 개발 주체",
+      "- 표준",
+      "- 문법",
+      "- 공통점"
+    ],
+    "name": "하드웨어 기술 언어(HDL, Hardware Description Language)",
+    "en": "Hardware Description Language",
+    "keywords_must": [
+      "VHDL",
+      "Verilog",
+      "동시성(Concurrency)",
+      "타이밍(Timing)·전파 지연",
+      "동작적 기술(Behavioral)",
+      "구조적 기술(Structural)",
+      "레지스터 전송 수준(RTL, Register Transfer Level)",
+      "논리 합성(Synthesis)"
+    ],
+    "keywords_ref": [
+      "VHDL: 미 국방부 VHSIC 사업(1981 착수), IEEE 1076(1987)·1164",
+      "Verilog: Gateway Design Automation(1984), IEEE 1364(1995)",
+      "SystemVerilog(IEEE 1800)",
+      "고수준 합성(HLS)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "VHDL",
+      "Verilog",
+      "동시성(Concurrency)",
+      "타이밍(Timing)·전파 지연",
+      "동작적 기술(Behavioral)",
+      "구조적 기술(Structural)",
+      "레지스터 전송 수준(RTL, Register Transfer Level)",
+      "논리 합성(Synthesis)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "HLS": "High-Level Synthesis",
+      "DoD": "Department of Defense",
+      "RTL": "Register Transfer Level"
+    }
+  },
+  {
+    "id": "CA_156",
+    "code": "CA_156",
+    "title": "VHDL 설계 및 구성(VHDL Design Structure)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 설계 언어",
+    "definition": "초고속 집적회로용 하드웨어 기술 언어로 회로를 기술한 뒤 시뮬레이션·합성·배치배선을 거쳐 FPGA 등에 구현하는 설계 방식으로, 엔티티로 외부 인터페이스를, 아키텍처로 내부 동작을 정의함",
+    "keywords": [
+      "핵심: 엔티티(Entity, 입출력 포트) · 아키텍처(Architecture, 내부 동작) · 라이브러리(Library)·패키지(Package) · 동작적 레벨",
+      "필수: 구조적 레벨 · 데이터 흐름 모델(병행문) · 알고리즘 모델(순차문, Process) · 합성·배치와 라우트(Place & Route)",
+      "참고: VHSIC = Very High Speed Integrated Circuit · 병행문 when~else·with~select · 순차문 if·case~when(Process 내부) · 네트리스트(Netlist) · 컨피규레이션(Configuration) · IEEE 1164 std_logic"
+    ],
+    "sections": [
+      {
+        "title": "설계 절차",
+        "subsections": [
+          {
+            "title": "설계 입력",
+            "items": [
+              "설계자가 다양한 추상화 수준으로 회로 기술"
+            ]
+          },
+          {
+            "title": "시뮬레이션",
+            "items": [
+              "신호 지연과 타이밍을 확인해 기능 검증"
+            ]
+          },
+          {
+            "title": "합성",
+            "items": [
+              "추상 기술을 논리 게이트 네트리스트로 변환"
+            ]
+          },
+          {
+            "title": "배치·배선",
+            "items": [
+              "게이트 위치를 정하고 연결 경로 생성 후 타이밍 분석"
+            ]
+          },
+          {
+            "title": "디바이스 프로그래밍",
+            "items": [
+              "결과 비트스트림을 소자에 적재"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "추상화 모델",
+        "subsections": [
+          {
+            "title": "동작적 레벨",
+            "items": [
+              "입력과 출력 관계만 규정, 예) 경고 = 시동 AND (문 열림 OR 벨트 미착용)"
+            ]
+          },
+          {
+            "title": "구조적 레벨",
+            "items": [
+              "서로 연결된 게이트와 컴포넌트 집합으로 표현"
+            ]
+          },
+          {
+            "title": "데이터 흐름",
+            "items": [
+              "레지스터 간 데이터 이동을 병행문으로 기술, 입력이 오면 모든 문장 동시 실행"
+            ]
+          },
+          {
+            "title": "알고리즘",
+            "items": [
+              "Process 안에서 순차문으로 절차적 실행"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "기본 구성",
+        "subsections": [
+          {
+            "title": "엔티티",
+            "items": [
+              "회로 이름과 입출력 포트 선언, 외부에서 보이는 모습"
+            ]
+          },
+          {
+            "title": "아키텍처",
+            "items": [
+              "엔티티의 내부 동작이나 구조 기술, 하나의 엔티티에 여러 개 가능"
+            ]
+          },
+          {
+            "title": "패키지·라이브러리",
+            "items": [
+              "공통 자료형·함수·컴포넌트를 모아 재사용"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      314,
+      315
+    ],
+    "outline": [
+      "설계 절차",
+      "- 설계 입력",
+      "- 시뮬레이션",
+      "- 합성",
+      "- 배치·배선",
+      "- 디바이스 프로그래밍",
+      "추상화 모델",
+      "- 동작적 레벨",
+      "- 구조적 레벨",
+      "- 데이터 흐름",
+      "- 알고리즘",
+      "기본 구성",
+      "- 엔티티",
+      "- 아키텍처",
+      "- 패키지·라이브러리"
+    ],
+    "name": "VHDL 설계 및 구성(VHDL Design Structure)",
+    "en": "VHDL Design Structure",
+    "keywords_must": [
+      "엔티티(Entity, 입출력 포트)",
+      "아키텍처(Architecture, 내부 동작)",
+      "라이브러리(Library)·패키지(Package)",
+      "동작적 레벨",
+      "구조적 레벨",
+      "데이터 흐름 모델(병행문)",
+      "알고리즘 모델(순차문, Process)",
+      "합성·배치와 라우트(Place & Route)"
+    ],
+    "keywords_ref": [
+      "VHSIC = Very High Speed Integrated Circuit",
+      "병행문 when~else·with~select",
+      "순차문 if·case~when(Process 내부)",
+      "네트리스트(Netlist)",
+      "컨피규레이션(Configuration)",
+      "IEEE 1164 std_logic"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "엔티티(Entity, 입출력 포트)",
+      "아키텍처(Architecture, 내부 동작)",
+      "라이브러리(Library)·패키지(Package)",
+      "동작적 레벨",
+      "구조적 레벨",
+      "데이터 흐름 모델(병행문)",
+      "알고리즘 모델(순차문, Process)",
+      "합성·배치와 라우트(Place & Route)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "VHDL": "VHSIC Hardware Description Language",
+      "VHSIC": "Very High Speed Integrated Circuit",
+      "RTL": "Register Transfer Level"
+    }
+  },
+  {
+    "id": "CA_159",
+    "code": "CA_159",
+    "title": "프로그래머블 논리 소자(PLD, Programmable Logic Device)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 프로그래머블 반도체",
+    "definition": "제조 시에는 기능이 정해지지 않고 사용자가 프로그래밍해 원하는 논리 기능을 갖게 되는 IC로, 규모에 따라 단순 PLD(PROM·PAL·PLA·GAL)와 고밀도 PLD(CPLD·FPGA)로 나뉨",
+    "keywords": [
+      "핵심: 사용자 프로그래밍 IC · SPLD(Simple PLD) · PAL(AND 프로그램·OR 고정) · PLA(AND·OR 모두 프로그램)",
+      "필수: GAL(재프로그램 가능 PAL) · HDPLD(고밀도 PLD) · CPLD · FPGA",
+      "참고: PROM은 AND 고정·OR 프로그램 · 퓨즈·안티퓨즈·EEPROM·SRAM 프로그래밍 기술 · ASIC 대비 NRE 비용 없음·단가는 높음 · 시제품·소량 생산에 적합"
+    ],
+    "sections": [
+      {
+        "title": "도입 이점",
+        "subsections": [
+          {
+            "title": "총비용 절감",
+            "items": [
+              "조립·테스트·유지보수 비용 감소"
+            ]
+          },
+          {
+            "title": "출시 기간 단축",
+            "items": [
+              "칩 제작 없이 바로 구현해 시장 대응력 확보"
+            ]
+          },
+          {
+            "title": "실패 위험 감소",
+            "items": [
+              "생산 직전까지 수정 가능"
+            ]
+          },
+          {
+            "title": "부품 축소",
+            "items": [
+              "여러 부품을 하나로 통합해 PCB 크기와 재고 비용 감소"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "단순형 소자",
+        "subsections": [
+          {
+            "title": "PROM",
+            "items": [
+              "AND 배열 고정, OR 배열 프로그램"
+            ]
+          },
+          {
+            "title": "PAL",
+            "items": [
+              "AND 배열 프로그램, OR 배열 고정, 저렴하고 빠름"
+            ]
+          },
+          {
+            "title": "PLA",
+            "items": [
+              "두 배열 모두 프로그램, 유연하지만 느리고 비쌈"
+            ]
+          },
+          {
+            "title": "GAL",
+            "items": [
+              "PAL 구조에 EEPROM을 써서 반복 재프로그램 가능"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "고밀도 소자",
+        "subsections": [
+          {
+            "title": "복합형",
+            "items": [
+              "PAL형 블록 여러 개를 연결망으로 묶음, 비휘발성·예측 가능한 지연"
+            ]
+          },
+          {
+            "title": "게이트 배열형",
+            "items": [
+              "대규모 논리 블록 배열과 배선 자원, 주로 SRAM 기반"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      316,
+      317
+    ],
+    "outline": [
+      "도입 이점",
+      "- 총비용 절감",
+      "- 출시 기간 단축",
+      "- 실패 위험 감소",
+      "- 부품 축소",
+      "단순형 소자",
+      "- PROM",
+      "- PAL",
+      "- PLA",
+      "- GAL",
+      "고밀도 소자",
+      "- 복합형",
+      "- 게이트 배열형"
+    ],
+    "name": "프로그래머블 논리 소자(PLD, Programmable Logic Device)",
+    "en": "Programmable Logic Device",
+    "keywords_must": [
+      "사용자 프로그래밍 IC",
+      "SPLD(Simple PLD)",
+      "PAL(AND 프로그램·OR 고정)",
+      "PLA(AND·OR 모두 프로그램)",
+      "GAL(재프로그램 가능 PAL)",
+      "HDPLD(고밀도 PLD)",
+      "CPLD",
+      "FPGA"
+    ],
+    "keywords_ref": [
+      "PROM은 AND 고정·OR 프로그램",
+      "퓨즈·안티퓨즈·EEPROM·SRAM 프로그래밍 기술",
+      "ASIC 대비 NRE 비용 없음·단가는 높음",
+      "시제품·소량 생산에 적합"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "사용자 프로그래밍 IC",
+      "SPLD(Simple PLD)",
+      "PAL(AND 프로그램·OR 고정)",
+      "PLA(AND·OR 모두 프로그램)",
+      "GAL(재프로그램 가능 PAL)",
+      "HDPLD(고밀도 PLD)",
+      "CPLD",
+      "FPGA"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "SPLD": "Simple Programmable Logic Device",
+      "PAL": "Programmable Array Logic",
+      "PLA": "Programmable Logic Array",
+      "GAL": "Generic Array Logic",
+      "HDPLD": "High Density Programmable Logic Device",
+      "NRE": "Non-Recurring Engineering"
+    }
+  },
+  {
+    "id": "CA_160",
+    "code": "CA_160",
+    "title": "복합 프로그래머블 논리 소자(CPLD, Complex Programmable Logic Device)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 프로그래머블 반도체",
+    "definition": "PAL 개념을 확장해 PAL과 같은 논리 블록 여러 개를 하나의 칩에 넣고 프로그래머블 연결망으로 묶은 소자로, EEPROM·플래시 기반이라 전원을 껐다 켜도 구성이 유지됨",
+    "keywords": [
+      "핵심: PAL형 블록 · LAB(Logic Array Block) · PIA(Programmable Interconnect Array) · 매크로셀(Macrocell)",
+      "필수: 프로그램 가능 AND 배열 · 고정 OR 배열 · 프로그래머블 레지스터(플립플롭) · 비휘발성 구성",
+      "참고: 핀 간 지연이 일정해 타이밍 예측 쉬움 · 수천~수만 게이트 규모 · 즉시 동작(Instant-on) · 글루 로직·버스 인터페이스·부팅 제어 용도"
+    ],
+    "sections": [
+      {
+        "title": "칩 구조",
+        "subsections": [
+          {
+            "title": "논리 블록",
+            "items": [
+              "각 SPLD에 해당하는 단위, 기능 블록 또는 LAB라 부름"
+            ]
+          },
+          {
+            "title": "연결망",
+            "items": [
+              "블록 사이 신호를 잇는 프로그래머블 상호 연결 배열"
+            ]
+          },
+          {
+            "title": "입출력 블록",
+            "items": [
+              "외부 핀과 내부 블록 사이 신호 버퍼링"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "매크로셀 구성",
+        "subsections": [
+          {
+            "title": "AND 배열",
+            "items": [
+              "프로그램 가능, 곱 항 생성"
+            ]
+          },
+          {
+            "title": "OR 배열",
+            "items": [
+              "고정, 곱 항을 더해 조합 함수 완성"
+            ]
+          },
+          {
+            "title": "레지스터",
+            "items": [
+              "조합 출력을 플립플롭에 저장할지 선택해 순차 회로 구현"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "고밀도 FPGA 대비 비교",
+        "subsections": [
+          {
+            "title": "구성 저장",
+            "items": [
+              "CPLD(EEPROM·플래시, 비휘발)",
+              "FPGA(주로 SRAM, 전원 인가 시 재적재)"
+            ]
+          },
+          {
+            "title": "규모",
+            "items": [
+              "CPLD(소~중규모)",
+              "FPGA(대규모)"
+            ]
+          },
+          {
+            "title": "지연",
+            "items": [
+              "CPLD(일정·예측 용이)",
+              "FPGA(배선 경로에 따라 가변)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      318,
+      319
+    ],
+    "outline": [
+      "칩 구조",
+      "- 논리 블록",
+      "- 연결망",
+      "- 입출력 블록",
+      "매크로셀 구성",
+      "- AND 배열",
+      "- OR 배열",
+      "- 레지스터",
+      "고밀도 FPGA 대비 비교",
+      "- 구성 저장",
+      "- 규모",
+      "- 지연"
+    ],
+    "name": "복합 프로그래머블 논리 소자(CPLD, Complex Programmable Logic Device)",
+    "en": "Complex Programmable Logic Device",
+    "keywords_must": [
+      "PAL형 블록",
+      "LAB(Logic Array Block)",
+      "PIA(Programmable Interconnect Array)",
+      "매크로셀(Macrocell)",
+      "프로그램 가능 AND 배열",
+      "고정 OR 배열",
+      "프로그래머블 레지스터(플립플롭)",
+      "비휘발성 구성"
+    ],
+    "keywords_ref": [
+      "핀 간 지연이 일정해 타이밍 예측 쉬움",
+      "수천~수만 게이트 규모",
+      "즉시 동작(Instant-on)",
+      "글루 로직·버스 인터페이스·부팅 제어 용도"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "PAL형 블록",
+      "LAB(Logic Array Block)",
+      "PIA(Programmable Interconnect Array)",
+      "매크로셀(Macrocell)",
+      "프로그램 가능 AND 배열",
+      "고정 OR 배열",
+      "프로그래머블 레지스터(플립플롭)",
+      "비휘발성 구성"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "LAB": "Logic Array Block",
+      "PIA": "Programmable Interconnect Array"
+    }
+  },
+  {
+    "id": "CA_161",
+    "code": "CA_161",
+    "title": "현장 프로그래머블 게이트 배열(FPGA, Field Programmable Gate Array)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 프로그래머블 반도체",
+    "definition": "제조 후 사용자가 현장에서 구성 정보를 적재해 원하는 디지털 논리를 구현하는 반도체로, 룩업 테이블 기반 논리 블록 배열과 프로그래머블 배선·입출력 블록으로 이루어지며 대부분 SRAM에 구성을 저장함",
+    "keywords": [
+      "핵심: CLB(LUT + 플립플롭) · 룩업 테이블(LUT, 진리표 저장) · 스위치 매트릭스(Programmable Interconnect) · 입출력 블록(IOB)",
+      "필수: 블록 RAM(BRAM) · DSP 슬라이스(곱셈기) · SRAM 기반 구성(전원 차단 시 재구성) · 비트스트림(Bitstream)",
+      "참고: 하드웨어 가속(AI 추론·네트워크·금융 거래) · ASIC 시제품 검증 · 부분 재구성(Partial Reconfiguration) · 하드 IP(PCIe·SerDes·ARM 코어) 내장 SoC FPGA · 방사선 소프트 에러 대책 필요"
+    ],
+    "sections": [
+      {
+        "title": "주요 구성 요소",
+        "subsections": [
+          {
+            "title": "구성 가능 논리 블록",
+            "items": [
+              "슬라이스·로직 셀 단위로 LUT와 플립플롭을 묶음"
+            ]
+          },
+          {
+            "title": "스위치 매트릭스",
+            "items": [
+              "트랜지스터 스위치로 블록 사이 데이터 경로 구성"
+            ]
+          },
+          {
+            "title": "고정 기능 블록",
+            "items": [
+              "곱셈기 같은 전용 연산 로직"
+            ]
+          },
+          {
+            "title": "메모리 자원",
+            "items": [
+              "칩 내장 블록 RAM"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "동작 원리",
+        "subsections": [
+          {
+            "title": "논리 구현",
+            "items": [
+              "진리표를 LUT에 저장해 입력 조합을 주소로 출력값을 읽음"
+            ]
+          },
+          {
+            "title": "구성 적재",
+            "items": [
+              "전원 인가 시 외부 플래시에서 비트스트림을 읽어 SRAM에 기록"
+            ]
+          },
+          {
+            "title": "인터페이스",
+            "items": [
+              "입출력 블록을 프로그램해 다양한 전압·규격의 칩과 연결"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "용도와 제약",
+        "subsections": [
+          {
+            "title": "장점",
+            "items": [
+              "설계 변경이 자유롭고 병렬 처리로 특정 연산 고속화"
+            ]
+          },
+          {
+            "title": "단점",
+            "items": [
+              "같은 기능의 ASIC보다 전력·면적·단가가 큼"
+            ]
+          },
+          {
+            "title": "주요 분야",
+            "items": [
+              "통신 장비, 데이터센터 가속기, ASIC 시제품 검증"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      320,
+      322
+    ],
+    "outline": [
+      "주요 구성 요소",
+      "- 구성 가능 논리 블록",
+      "- 스위치 매트릭스",
+      "- 고정 기능 블록",
+      "- 메모리 자원",
+      "동작 원리",
+      "- 논리 구현",
+      "- 구성 적재",
+      "- 인터페이스",
+      "용도와 제약",
+      "- 장점",
+      "- 단점",
+      "- 주요 분야"
+    ],
+    "name": "현장 프로그래머블 게이트 배열(FPGA, Field Programmable Gate Array)",
+    "en": "Field Programmable Gate Array",
+    "keywords_must": [
+      "CLB(LUT + 플립플롭)",
+      "룩업 테이블(LUT, 진리표 저장)",
+      "스위치 매트릭스(Programmable Interconnect)",
+      "입출력 블록(IOB)",
+      "블록 RAM(BRAM)",
+      "DSP 슬라이스(곱셈기)",
+      "SRAM 기반 구성(전원 차단 시 재구성)",
+      "비트스트림(Bitstream)"
+    ],
+    "keywords_ref": [
+      "하드웨어 가속(AI 추론·네트워크·금융 거래)",
+      "ASIC 시제품 검증",
+      "부분 재구성(Partial Reconfiguration)",
+      "하드 IP(PCIe·SerDes·ARM 코어) 내장 SoC FPGA",
+      "방사선 소프트 에러 대책 필요"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "CLB(LUT + 플립플롭)",
+      "룩업 테이블(LUT, 진리표 저장)",
+      "스위치 매트릭스(Programmable Interconnect)",
+      "입출력 블록(IOB)",
+      "블록 RAM(BRAM)",
+      "DSP 슬라이스(곱셈기)",
+      "SRAM 기반 구성(전원 차단 시 재구성)",
+      "비트스트림(Bitstream)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "CLB": "Configurable Logic Block",
+      "LUT": "Look-Up Table",
+      "IOB": "Input/Output Block",
+      "BRAM": "Block RAM",
+      "SerDes": "Serializer/Deserializer"
+    }
+  },
+  {
+    "id": "CA_162_00",
+    "code": "CA_162_00",
+    "title": "저항-트랜지스터 논리(RTL, Resistor-Transistor Logic)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 논리 계열",
+    "definition": "입력단에 저항을, 스위칭 소자로 바이폴라 접합 트랜지스터를 사용해 논리 게이트를 구성한 초기 디지털 논리 계열로, 구조가 단순하지만 전력 소모가 크고 팬아웃이 작아 DTL·TTL로 대체됨",
+    "keywords": [
+      "핵심: 저항 + 바이폴라 접합 트랜지스터(BJT) · 초기 논리 계열(1960년대) · 기본 NOR 게이트 · RTL 인버터(One TR RTL)",
+      "필수: 다중 트랜지스터 RTL(Multi TR RTL) · 고전력 소모 · 낮은 팬아웃·잡음 여유 · DTL·TTL로 전환",
+      "참고: 아폴로 유도 컴퓨터에 RTL NOR IC 사용 · 논리 계열 발전 RTL → DTL → TTL → CMOS · 레지스터 전송 수준(Register Transfer Level)과 동음이의"
+    ],
+    "sections": [
+      {
+        "title": "소자 특성",
+        "subsections": [
+          {
+            "title": "단순 구조",
+            "items": [
+              "저항과 트랜지스터만으로 구성, 동작 확실"
+            ]
+          },
+          {
+            "title": "전력 소모",
+            "items": [
+              "트랜지스터가 켜질 때 저항으로 전류가 흘러 소비 전력 큼"
+            ]
+          },
+          {
+            "title": "성능 한계",
+            "items": [
+              "입력 저항 때문에 스위칭이 느리고 잡음에 약함"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "게이트 구성",
+        "subsections": [
+          {
+            "title": "단일 트랜지스터형",
+            "items": [
+              "입력 하나에 트랜지스터 하나로 인버터 구성"
+            ]
+          },
+          {
+            "title": "다중 트랜지스터형",
+            "items": [
+              "입력마다 트랜지스터를 병렬로 두어 NOR 게이트 구성"
+            ]
+          },
+          {
+            "title": "진리표",
+            "items": [
+              "두 입력이 모두 0일 때만 출력 1, 나머지는 0"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "논리 계열 발전",
+        "subsections": [
+          {
+            "title": "다이오드 결합형",
+            "items": [
+              "입력단 저항을 다이오드로 바꿔 팬아웃 개선"
+            ]
+          },
+          {
+            "title": "트랜지스터 결합형",
+            "items": [
+              "다중 이미터 트랜지스터로 속도 향상, 표준 계열로 정착"
+            ]
+          },
+          {
+            "title": "상보형 MOS",
+            "items": [
+              "정적 전력이 거의 없어 현재 주류"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      323,
+      324
+    ],
+    "outline": [
+      "소자 특성",
+      "- 단순 구조",
+      "- 전력 소모",
+      "- 성능 한계",
+      "게이트 구성",
+      "- 단일 트랜지스터형",
+      "- 다중 트랜지스터형",
+      "- 진리표",
+      "논리 계열 발전",
+      "- 다이오드 결합형",
+      "- 트랜지스터 결합형",
+      "- 상보형 MOS"
+    ],
+    "name": "저항-트랜지스터 논리(RTL, Resistor-Transistor Logic)",
+    "en": "Resistor-Transistor Logic",
+    "keywords_must": [
+      "저항 + 바이폴라 접합 트랜지스터(BJT)",
+      "초기 논리 계열(1960년대)",
+      "기본 NOR 게이트",
+      "RTL 인버터(One TR RTL)",
+      "다중 트랜지스터 RTL(Multi TR RTL)",
+      "고전력 소모",
+      "낮은 팬아웃·잡음 여유",
+      "DTL·TTL로 전환"
+    ],
+    "keywords_ref": [
+      "아폴로 유도 컴퓨터에 RTL NOR IC 사용",
+      "논리 계열 발전 RTL → DTL → TTL → CMOS",
+      "레지스터 전송 수준(Register Transfer Level)과 동음이의"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "저항 + 바이폴라 접합 트랜지스터(BJT)",
+      "초기 논리 계열(1960년대)",
+      "기본 NOR 게이트",
+      "RTL 인버터(One TR RTL)",
+      "다중 트랜지스터 RTL(Multi TR RTL)",
+      "고전력 소모",
+      "낮은 팬아웃·잡음 여유",
+      "DTL·TTL로 전환"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "BJT": "Bipolar Junction Transistor",
+      "DTL": "Diode-Transistor Logic",
+      "TTL": "Transistor-Transistor Logic",
+      "CMOS": "Complementary Metal-Oxide-Semiconductor",
+      "TR": "Transistor",
+      "RTL": "Resistor-Transistor Logic"
+    }
+  },
+  {
+    "id": "CA_162_01",
+    "code": "CA_162_01",
+    "title": "3상태 버퍼(Tri-State Buffer)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 디지털 논리회로 > 기본 소자",
+    "definition": "데이터 입력 외에 제어 신호를 추가로 받아 High·Low 두 논리 출력과, 출력을 회로에서 전기적으로 분리하는 고임피던스(Z) 상태까지 세 가지 출력을 갖는 논리 소자로, 공유 버스 구동에 필수임",
+    "keywords": [
+      "핵심: High(1) · Low(0) · 고임피던스(High-Impedance, Z) · 제어 입력(Enable)",
+      "필수: 단방향 신호 흐름 · 양방향 버퍼(2개 조합) · 공유 버스 구동 · 2-to-1 멀티플렉서 구성",
+      "참고: 제어 1 → 입력 전달(또는 반전형은 반전 출력) · 제어 0 → 출력 단절 · 버스 경합(Bus Contention) 방지 · 메모리 데이터 버스·GPIO 핀 방향 제어"
+    ],
+    "sections": [
+      {
+        "title": "출력 상태",
+        "subsections": [
+          {
+            "title": "논리 출력",
+            "items": [
+              "제어가 활성일 때 입력에 따라 1 또는 0"
+            ]
+          },
+          {
+            "title": "고임피던스",
+            "items": [
+              "제어가 비활성이면 출력이 끊긴 것처럼 동작해 다른 소자에 영향 없음"
+            ]
+          },
+          {
+            "title": "방향성",
+            "items": [
+              "입력 A에서 출력 Y로만 신호가 흐르고 반대 방향은 차단"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "제어 입력 동작",
+        "subsections": [
+          {
+            "title": "제어 1",
+            "items": [
+              "비반전형은 증폭기, 반전형은 인버터로 동작"
+            ]
+          },
+          {
+            "title": "제어 0",
+            "items": [
+              "출력이 분리되어 입력 단자가 차단된 상태"
+            ]
+          },
+          {
+            "title": "버스 경합 방지",
+            "items": [
+              "공유선에 연결된 여러 출력 중 하나만 활성화"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "응용 회로",
+        "subsections": [
+          {
+            "title": "2-to-1 선택기",
+            "items": [
+              "두 버퍼와 선택선 S로 S=1이면 A, S=0이면 B 출력"
+            ]
+          },
+          {
+            "title": "양방향 포트",
+            "items": [
+              "방향이 반대인 두 버퍼를 묶어 송수신 겸용 신호선 구성"
+            ]
+          },
+          {
+            "title": "메모리 버스",
+            "items": [
+              "칩 선택 신호로 해당 칩의 데이터 출력만 버스에 연결"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      325,
+      326
+    ],
+    "outline": [
+      "출력 상태",
+      "- 논리 출력",
+      "- 고임피던스",
+      "- 방향성",
+      "제어 입력 동작",
+      "- 제어 1",
+      "- 제어 0",
+      "- 버스 경합 방지",
+      "응용 회로",
+      "- 2-to-1 선택기",
+      "- 양방향 포트",
+      "- 메모리 버스"
+    ],
+    "name": "3상태 버퍼(Tri-State Buffer)",
+    "en": "Tri-State Buffer",
+    "keywords_must": [
+      "High(1)",
+      "Low(0)",
+      "고임피던스(High-Impedance, Z)",
+      "제어 입력(Enable)",
+      "단방향 신호 흐름",
+      "양방향 버퍼(2개 조합)",
+      "공유 버스 구동",
+      "2-to-1 멀티플렉서 구성"
+    ],
+    "keywords_ref": [
+      "제어 1 → 입력 전달(또는 반전형은 반전 출력)",
+      "제어 0 → 출력 단절",
+      "버스 경합(Bus Contention) 방지",
+      "메모리 데이터 버스·GPIO 핀 방향 제어"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "High(1)",
+      "Low(0)",
+      "고임피던스(High-Impedance, Z)",
+      "제어 입력(Enable)",
+      "단방향 신호 흐름",
+      "양방향 버퍼(2개 조합)",
+      "공유 버스 구동",
+      "2-to-1 멀티플렉서 구성"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "GPIO": "General Purpose Input/Output"
+    }
+  },
+  {
+    "id": "CA_163",
+    "code": "CA_163",
+    "title": "미세 전자기계 시스템(MEMS, Micro Electro Mechanical Systems)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 시스템 > 융합 반도체",
+    "definition": "반도체 공정과 기계 가공 기술을 융합해 1㎛~1mm 크기의 센서·구동기·기계 구조물과 전자회로를 실리콘 기판 위에 일괄 제작하는 초소형 시스템 기술",
+    "keywords": [
+      "핵심: 마이크로미터 단위 구조물 · 미세 전자기계 · 경박단소 · 반도체 일괄 공정",
+      "필수: 센서(Sensing)·액추에이터(Actuator) · 트랜스듀서(Transducer) · 벌크·표면 마이크로머시닝 · 웨이퍼 본딩·패키징",
+      "참고: 가속도계·자이로스코프(스마트폰·에어백) · MEMS 마이크 · 잉크젯 헤드·DMD 프로젝터 · 압력 센서·바이오 MEMS(Lab-on-a-chip) · RF MEMS 스위치 · NEMS로 발전"
+    ],
+    "sections": [
+      {
+        "title": "기술 특성",
+        "subsections": [
+          {
+            "title": "미세 가공",
+            "items": [
+              "마이크로미터 이하의 초미세 구조물 제작"
+            ]
+          },
+          {
+            "title": "소형화",
+            "items": [
+              "실리콘 칩 가공 기술 응용으로 현미경 수준 크기 구현"
+            ]
+          },
+          {
+            "title": "저가격화",
+            "items": [
+              "웨이퍼 단위 일괄 생산으로 단가 절감"
+            ]
+          },
+          {
+            "title": "집적화",
+            "items": [
+              "전자회로와 기계 부품을 단일 기판에 3차원 구조로 통합"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "동작 구조",
+        "subsections": [
+          {
+            "title": "감지부",
+            "items": [
+              "가속·압력·회전 같은 물리량을 전기 신호로 변환"
+            ]
+          },
+          {
+            "title": "구동부",
+            "items": [
+              "전기 신호를 받아 미세 기계 구조를 움직임"
+            ]
+          },
+          {
+            "title": "신호 처리부",
+            "items": [
+              "감지 신호를 증폭·디지털화해 제어 판단"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "제작 기술",
+        "subsections": [
+          {
+            "title": "벌크 가공",
+            "items": [
+              "실리콘 기판을 식각해 깊은 3차원 구조 형성"
+            ]
+          },
+          {
+            "title": "표면 가공",
+            "items": [
+              "박막을 쌓고 희생층을 제거해 떠 있는 구조 형성"
+            ]
+          },
+          {
+            "title": "패키징",
+            "items": [
+              "가동 구조를 보호하는 밀봉·웨이퍼 본딩 기술"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      327,
+      331
+    ],
+    "outline": [
+      "기술 특성",
+      "- 미세 가공",
+      "- 소형화",
+      "- 저가격화",
+      "- 집적화",
+      "동작 구조",
+      "- 감지부",
+      "- 구동부",
+      "- 신호 처리부",
+      "제작 기술",
+      "- 벌크 가공",
+      "- 표면 가공",
+      "- 패키징"
+    ],
+    "name": "미세 전자기계 시스템(MEMS, Micro Electro Mechanical Systems)",
+    "en": "Micro Electro Mechanical Systems",
+    "keywords_must": [
+      "마이크로미터 단위 구조물",
+      "미세 전자기계",
+      "경박단소",
+      "반도체 일괄 공정",
+      "센서(Sensing)·액추에이터(Actuator)",
+      "트랜스듀서(Transducer)",
+      "벌크·표면 마이크로머시닝",
+      "웨이퍼 본딩·패키징"
+    ],
+    "keywords_ref": [
+      "가속도계·자이로스코프(스마트폰·에어백)",
+      "MEMS 마이크",
+      "잉크젯 헤드·DMD 프로젝터",
+      "압력 센서·바이오 MEMS(Lab-on-a-chip)",
+      "RF MEMS 스위치",
+      "NEMS로 발전"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "마이크로미터 단위 구조물",
+      "미세 전자기계",
+      "경박단소",
+      "반도체 일괄 공정",
+      "센서(Sensing)·액추에이터(Actuator)",
+      "트랜스듀서(Transducer)",
+      "벌크·표면 마이크로머시닝",
+      "웨이퍼 본딩·패키징"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "DMD": "Digital Micromirror Device",
+      "NEMS": "Nano Electro Mechanical Systems",
+      "RF": "Radio Frequency"
+    }
+  },
+  {
+    "id": "CA_164",
+    "code": "CA_164",
+    "title": "시스템 인 패키지(SiP, System in Package)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 시스템 > 반도체 패키징",
+    "definition": "서로 다른 공정으로 만든 여러 칩과 수동 소자를 하나의 패키지 안에 적층·배열해 독립된 시스템이나 서브시스템 기능을 구현하는 패키징 기술로, 단일 칩 통합이 어려울 때 SoC 대안으로 쓰임",
+    "keywords": [
+      "핵심: 단일 패키지 통합 · 개별 칩 조합(이종 공정) · 적층(Stacking, 3D·PoP) · 기판 내장 수동 소자(Embedded Passive)",
+      "필수: 안테나 인 패키지(AiP) · 칩·패키지·PCB·개별 소자 수준 설계 · 빠른 출시(Time-to-market) · 소형 경량화",
+      "참고: 세션 개시 프로토콜(SIP)과 구분 · 칩렛(Chiplet)·2.5D 인터포저와 연계 · 스마트워치·무선 이어폰·통신 모듈 · 열·신호 무결성 관리 과제"
+    ],
+    "sections": [
+      {
+        "title": "기술 특성",
+        "subsections": [
+          {
+            "title": "빠른 출시",
+            "items": [
+              "기존 칩 설계를 큰 변경 없이 재사용"
+            ]
+          },
+          {
+            "title": "낮은 초기 개발비",
+            "items": [
+              "검증된 칩을 사서 하나로 결합"
+            ]
+          },
+          {
+            "title": "다품종 소량 생산",
+            "items": [
+              "칩 조합을 바꿔 다양한 제품 구성"
+            ]
+          },
+          {
+            "title": "부품 통합",
+            "items": [
+              "RF·안테나·센서와 인덕터·저항까지 하나로 집적"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "요소 기술",
+        "subsections": [
+          {
+            "title": "설계 기술",
+            "items": [
+              "칩·패키지·PCB·개별 소자 수준을 함께 고려한 공동 설계"
+            ]
+          },
+          {
+            "title": "적층 기술",
+            "items": [
+              "칩이나 패키지를 수직으로 쌓아 실장 면적 축소"
+            ]
+          },
+          {
+            "title": "내장 기술",
+            "items": [
+              "수동 소자와 안테나를 기판 내부에 형성"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "단일 칩 통합 대비 비교",
+        "subsections": [
+          {
+            "title": "통합 방식",
+            "items": [
+              "SiP(여러 칩을 패키지로 결합)",
+              "SoC(한 다이에 집적)"
+            ]
+          },
+          {
+            "title": "개발 비용·기간",
+            "items": [
+              "SiP(낮고 짧음)",
+              "SoC(높고 김)"
+            ]
+          },
+          {
+            "title": "성능·크기",
+            "items": [
+              "SiP(칩 간 연결로 다소 불리)",
+              "SoC(최소 크기·고속)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      332,
+      334
+    ],
+    "outline": [
+      "기술 특성",
+      "- 빠른 출시",
+      "- 낮은 초기 개발비",
+      "- 다품종 소량 생산",
+      "- 부품 통합",
+      "요소 기술",
+      "- 설계 기술",
+      "- 적층 기술",
+      "- 내장 기술",
+      "단일 칩 통합 대비 비교",
+      "- 통합 방식",
+      "- 개발 비용·기간",
+      "- 성능·크기"
+    ],
+    "name": "시스템 인 패키지(SiP, System in Package)",
+    "en": "System in Package",
+    "keywords_must": [
+      "단일 패키지 통합",
+      "개별 칩 조합(이종 공정)",
+      "적층(Stacking, 3D·PoP)",
+      "기판 내장 수동 소자(Embedded Passive)",
+      "안테나 인 패키지(AiP)",
+      "칩·패키지·PCB·개별 소자 수준 설계",
+      "빠른 출시(Time-to-market)",
+      "소형 경량화"
+    ],
+    "keywords_ref": [
+      "세션 개시 프로토콜(SIP)과 구분",
+      "칩렛(Chiplet)·2.5D 인터포저와 연계",
+      "스마트워치·무선 이어폰·통신 모듈",
+      "열·신호 무결성 관리 과제"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "단일 패키지 통합",
+      "개별 칩 조합(이종 공정)",
+      "적층(Stacking, 3D·PoP)",
+      "기판 내장 수동 소자(Embedded Passive)",
+      "안테나 인 패키지(AiP)",
+      "칩·패키지·PCB·개별 소자 수준 설계",
+      "빠른 출시(Time-to-market)",
+      "소형 경량화"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "AiP": "Antenna in Package",
+      "PoP": "Package on Package",
+      "SIP": null
+    }
+  },
+  {
+    "id": "CA_165",
+    "code": "CA_165",
+    "title": "시스템 온 칩(SoC, System on Chip)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 시스템 > 시스템 반도체",
+    "definition": "프로세서·메모리·버스·주변장치와 아날로그·RF 기능 등 시스템 전체 구성 요소를 하나의 반도체 다이에 집적한 칩으로, 재사용 가능한 설계 자산(IP)을 조합해 개발함",
+    "keywords": [
+      "핵심: 프로그램 가능 프로세서(CPU·DSP·GPU) · 내장 메모리 · 온칩 버스(On-Chip Bus, AMBA) · 설계 자산(IP, Intellectual Property)",
+      "필수: 블록 기반 설계 · 플랫폼 기반 설계 · 혼성 신호(아날로그·디지털·RF) · 저전력 설계",
+      "참고: 스마트폰 AP·차량용 SoC · 네트워크 온 칩(NoC) · 하드웨어·소프트웨어 공동 설계(Co-design) · 검증 비용 증가 · 단일 칩이 어려우면 SiP·칩렛 사용"
+    ],
+    "sections": [
+      {
+        "title": "통합 특성",
+        "subsections": [
+          {
+            "title": "기능 통합",
+            "items": [
+              "멀티미디어·모뎀 부품과 프로세서·메모리를 한 칩으로 구성"
+            ]
+          },
+          {
+            "title": "혼성 신호",
+            "items": [
+              "디지털·아날로그·RF 기능을 단일 다이에 구현"
+            ]
+          },
+          {
+            "title": "소형·저전력",
+            "items": [
+              "칩 간 배선이 사라져 크기·전력·지연 감소"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "기술 요소",
+        "subsections": [
+          {
+            "title": "프로세서",
+            "items": [
+              "프로그램 가능 코어가 소프트웨어로 기능 제어"
+            ]
+          },
+          {
+            "title": "설계 자산",
+            "items": [
+              "검증된 기능 블록을 라이선스해 재사용"
+            ]
+          },
+          {
+            "title": "온칩 연결",
+            "items": [
+              "표준 버스나 칩 내부 네트워크로 블록 간 데이터 전송"
+            ]
+          },
+          {
+            "title": "공정 기술",
+            "items": [
+              "미세 공정으로 수십억 개 트랜지스터 집적"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "설계 방법론",
+        "subsections": [
+          {
+            "title": "블록 기반",
+            "items": [
+              "필요한 IP 블록을 선택해 버스로 연결"
+            ]
+          },
+          {
+            "title": "플랫폼 기반",
+            "items": [
+              "검증된 기본 플랫폼에 응용별 블록만 추가해 개발 기간 단축"
+            ]
+          },
+          {
+            "title": "공동 설계",
+            "items": [
+              "하드웨어와 소프트웨어 기능 분할을 초기부터 함께 최적화"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      335,
+      338
+    ],
+    "outline": [
+      "통합 특성",
+      "- 기능 통합",
+      "- 혼성 신호",
+      "- 소형·저전력",
+      "기술 요소",
+      "- 프로세서",
+      "- 설계 자산",
+      "- 온칩 연결",
+      "- 공정 기술",
+      "설계 방법론",
+      "- 블록 기반",
+      "- 플랫폼 기반",
+      "- 공동 설계"
+    ],
+    "name": "시스템 온 칩(SoC, System on Chip)",
+    "en": "System on Chip",
+    "keywords_must": [
+      "프로그램 가능 프로세서(CPU·DSP·GPU)",
+      "내장 메모리",
+      "온칩 버스(On-Chip Bus, AMBA)",
+      "설계 자산(IP, Intellectual Property)",
+      "블록 기반 설계",
+      "플랫폼 기반 설계",
+      "혼성 신호(아날로그·디지털·RF)",
+      "저전력 설계"
+    ],
+    "keywords_ref": [
+      "스마트폰 AP·차량용 SoC",
+      "네트워크 온 칩(NoC)",
+      "하드웨어·소프트웨어 공동 설계(Co-design)",
+      "검증 비용 증가",
+      "단일 칩이 어려우면 SiP·칩렛 사용"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "프로그램 가능 프로세서(CPU·DSP·GPU)",
+      "내장 메모리",
+      "온칩 버스(On-Chip Bus, AMBA)",
+      "설계 자산(IP, Intellectual Property)",
+      "블록 기반 설계",
+      "플랫폼 기반 설계",
+      "혼성 신호(아날로그·디지털·RF)",
+      "저전력 설계"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "IP": "Intellectual Property",
+      "AMBA": "Advanced Microcontroller Bus Architecture",
+      "NoC": "Network on Chip",
+      "AP": "Application Processor",
+      "DSP": "Digital Signal Processor"
+    }
   },
   {
     "id": "CA_061",
