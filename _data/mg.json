@@ -14615,59 +14615,72 @@
   {
     "id": "MG_134",
     "code": "MG_134",
-    "title": "표준특허·FRAND(Standard-Essential Patent)",
-    "subtitle": "지식재산권",
+    "title": "표준특허·FRAND(Standard Essential Patent)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "MG > 특허 > 지식재산권",
-    "definition": "표준에 필수인 특허(SEP)를 공정·합리·비차별(FRAND) 조건으로 라이선스해야 하는 원칙",
+    "category": "MG > 특허 > 표준특허·FRAND",
+    "definition": "표준필수특허(SEP)는 표준 기술 구현 시 반드시 실시해야 하는 특허이며, FRAND는 표준특허 권리자가 공정하고(Fair) 합리적이며(Reasonable) 비차별적인(Non-Discriminatory) 조건으로 실시를 허락해야 한다는 원칙(ETSI 지식재산권 정책)",
     "keywords": [
-      "핵심: 표준필수특허(SEP) · FRAND · Fair",
-      "구성: Reasonable · Non-Discriminatory · 표준화 기구",
-      "활용: 라이선스 · 홀드업·홀드아웃"
+      "핵심: 공정성(Fair) · 합리성(Reasonable) · 비차별성(Non-Discriminatory) · 표준필수특허(SEP, Standard Essential Patent)",
+      "필수: 실시 허락(라이선스) · 실시료(로열티) · 금지명령(Injunction) 제한 · 특허 매복(Patent Ambush)",
+      "참고: 유럽전기통신표준협회(ETSI) · 특허 풀(Patent Pool) · 애플–삼성·에릭슨–삼성 소송 · 화웨이–ZTE 판결(2015, EU) · 공정거래법 시장지배력 남용"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "표준특허와 FRAND의 개요",
         "subsections": [
           {
-            "title": "정의",
+            "title": "표준특허",
             "items": [
-              "표준에 필수인 특허(SEP)를 공정·합리·비차별(FRAND) 조건으로 라이선스해야 하는 원칙"
+              "표준 문서에 포함되어 회피 설계가 불가능한 특허"
             ]
           },
           {
-            "title": "목적",
+            "title": "FRAND 확약",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "표준화 기구 참여 시 권리자가 FRAND 조건 실시 허락을 선언"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "FRAND 3원칙",
         "subsections": [
           {
-            "title": null,
+            "title": "공정성",
             "items": [
-              "표준필수특허(SEP)",
-              "FRAND",
-              "Fair",
-              "Reasonable",
-              "Non-Discriminatory",
-              "표준화 기구"
+              "경쟁 제한적 조건(끼워팔기·부당 조건) 금지"
+            ]
+          },
+          {
+            "title": "합리성",
+            "items": [
+              "특허 가치에 부합하는 합리적 실시료"
+            ]
+          },
+          {
+            "title": "비차별성",
+            "items": [
+              "동일 조건 실시자 간 차별 금지"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "시사점과 분쟁 사례",
         "subsections": [
           {
-            "title": null,
+            "title": "시사점",
             "items": [
-              "라이선스",
-              "홀드업·홀드아웃",
-              "관련 지표·표준·한계를 함께 제시"
+              "금지명령 남용 논란으로 가치평가 현실화",
+              "국내·해외 기업 동일 실시료 문화 필요"
+            ]
+          },
+          {
+            "title": "사례",
+            "items": [
+              "애플–삼성(삼성의 FRAND 위반 주장, 배심원 평결)",
+              "에릭슨–삼성(실시료 분쟁)"
             ]
           }
         ]
@@ -14679,104 +14692,122 @@
       112
     ],
     "outline": [
-      "표준특허·FRAND의 개념",
-      "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "표준특허와 FRAND의 개요",
+      "- 표준특허",
+      "- FRAND 확약",
+      "FRAND 3원칙",
+      "- 공정성",
+      "- 합리성",
+      "- 비차별성",
+      "시사점과 분쟁 사례",
+      "- 시사점",
+      "- 사례"
     ],
-    "name": "표준특허·FRAND(Standard-Essential Patent)",
-    "en": "SEP and FRAND",
+    "name": "표준특허·FRAND(Standard Essential Patent)",
+    "en": "Standard Essential Patent · FRAND",
     "keywords_must": [
-      "표준필수특허(SEP)",
-      "FRAND",
-      "Fair",
-      "Reasonable",
-      "Non-Discriminatory",
-      "표준화 기구",
-      "라이선스",
-      "홀드업·홀드아웃"
+      "공정성(Fair)",
+      "합리성(Reasonable)",
+      "비차별성(Non-Discriminatory)",
+      "표준필수특허(SEP, Standard Essential Patent)",
+      "실시 허락(라이선스)",
+      "실시료(로열티)",
+      "금지명령(Injunction) 제한",
+      "특허 매복(Patent Ambush)"
     ],
     "keywords_ref": [
-      "특허풀",
-      "경쟁법",
-      "로열티",
-      "상호면허",
-      "관련 표준·사례"
+      "유럽전기통신표준협회(ETSI)",
+      "특허 풀(Patent Pool)",
+      "애플–삼성·에릭슨–삼성 소송",
+      "화웨이–ZTE 판결(2015, EU)",
+      "공정거래법 시장지배력 남용"
     ],
     "curated": true,
     "quiz_terms": [
-      "표준필수특허(SEP)",
-      "FRAND",
-      "Fair",
-      "Reasonable",
-      "Non-Discriminatory",
-      "표준화 기구",
-      "라이선스",
-      "홀드업·홀드아웃"
+      "공정성(Fair)",
+      "합리성(Reasonable)",
+      "비차별성(Non-Discriminatory)",
+      "표준필수특허(SEP, Standard Essential Patent)",
+      "실시 허락(라이선스)",
+      "실시료(로열티)",
+      "금지명령(Injunction) 제한",
+      "특허 매복(Patent Ambush)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_135",
     "code": "MG_135",
     "title": "지식재산권(Intellectual Property Rights)",
-    "subtitle": "ISO 14000",
+    "subtitle": "",
     "domain": "MG",
-    "category": "경영전략",
-    "definition": "특허·상표·디자인·저작권·영업비밀 등 무형 창작·표시를 보호하는 법적 권리",
+    "category": "MG > 특허 > 지식재산권",
+    "definition": "인간의 창조적 활동이나 경험을 통해 창출·발견한 지식·정보·기술·표현 등 재산적 가치가 실현될 수 있는 무형의 지적 창작물에 대해 법이 부여한 독점·배타적 권리",
     "keywords": [
-      "핵심: 지식재산권(IPR) · 특허 · 상표",
-      "구성: 디자인 · 저작권 · 영업비밀",
-      "활용: 출원·등록 · 침해·라이선스"
+      "핵심: 산업재산권(특허·실용신안·디자인·상표) · 저작권(저작인격권·저작재산권) · 저작인접권 · 신지식재산권",
+      "필수: 첨단산업재산권(반도체 배치설계·생명공학) · 산업저작권(컴퓨터 프로그램) · 정보재산권(데이터베이스·영업비밀) · 기타(지리적 표시·도메인·소리·냄새 상표)",
+      "참고: 특허청 출원·등록(산업재산권) · 창작과 동시 발생(저작권, 무방식주의) · 특허 존속기간 출원 후 20년 · 저작권 사후 70년 · 선행기술조사 · SW 지식재산권 보호"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "지식재산권의 개요",
         "subsections": [
           {
-            "title": "정의",
+            "title": "보호 대상",
             "items": [
-              "특허·상표·디자인·저작권·영업비밀 등 무형 창작·표시를 보호하는 법적 권리"
+              "법으로 보호할 가치가 있는 인간의 지적 창조물"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "종류와 상세",
+        "subsections": [
+          {
+            "title": "산업재산권",
+            "items": [
+              "특허(기술적 창작)",
+              "실용신안(실용적 고안)",
+              "디자인(심미적 형상)",
+              "상표(식별 표지), 특허청 등록으로 권리 발생"
             ]
           },
           {
-            "title": "목적",
+            "title": "저작권",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "저작권(문화·예술 창작물, 창작과 동시 보호)",
+              "저작인접권(실연자·음반제작자·방송사업자)"
+            ]
+          },
+          {
+            "title": "신지식재산권",
+            "items": [
+              "첨단산업재산권",
+              "산업저작권(SW)",
+              "정보재산권(DB·영업비밀·뉴미디어)",
+              "기타(프랜차이징·캐릭터·지리적 표시)"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "활성화 방안",
         "subsections": [
           {
-            "title": null,
+            "title": "R&D 연계",
             "items": [
-              "지식재산권(IPR)",
-              "특허",
-              "상표",
-              "디자인",
-              "저작권",
-              "영업비밀"
+              "외부 컨설팅 비용 지원, 선행기술 조사로 중복 연구 방지"
             ]
-          }
-        ]
-      },
-      {
-        "title": "활용·시사점",
-        "subsections": [
+          },
           {
-            "title": null,
+            "title": "보호·활용",
             "items": [
-              "출원·등록",
-              "침해·라이선스",
-              "관련 지표·표준·한계를 함께 제시"
+              "IP 포트폴리오 관리, 기술 이전·사업화, 분쟁 대응 체계"
             ]
           }
         ]
@@ -14788,104 +14819,125 @@
       115
     ],
     "outline": [
-      "지식재산권의 개념",
-      "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "지식재산권의 개요",
+      "- 보호 대상",
+      "종류와 상세",
+      "- 산업재산권",
+      "- 저작권",
+      "- 신지식재산권",
+      "활성화 방안",
+      "- R&D 연계",
+      "- 보호·활용"
     ],
     "name": "지식재산권(Intellectual Property Rights)",
     "en": "Intellectual Property Rights",
     "keywords_must": [
-      "지식재산권(IPR)",
-      "특허",
-      "상표",
-      "디자인",
-      "저작권",
-      "영업비밀",
-      "출원·등록",
-      "침해·라이선스"
+      "산업재산권(특허·실용신안·디자인·상표)",
+      "저작권(저작인격권·저작재산권)",
+      "저작인접권",
+      "신지식재산권",
+      "첨단산업재산권(반도체 배치설계·생명공학)",
+      "산업저작권(컴퓨터 프로그램)",
+      "정보재산권(데이터베이스·영업비밀)",
+      "기타(지리적 표시·도메인·소리·냄새 상표)"
     ],
     "keywords_ref": [
-      "직무발명",
-      "IP 전략",
-      "포트폴리오",
-      "국제출원",
-      "관련 표준·사례"
+      "특허청 출원·등록(산업재산권)",
+      "창작과 동시 발생(저작권, 무방식주의)",
+      "특허 존속기간 출원 후 20년",
+      "저작권 사후 70년",
+      "선행기술조사",
+      "SW 지식재산권 보호"
     ],
     "curated": true,
     "quiz_terms": [
-      "지식재산권(IPR)",
-      "특허",
-      "상표",
-      "디자인",
-      "저작권",
-      "영업비밀",
-      "출원·등록",
-      "침해·라이선스"
+      "산업재산권(특허·실용신안·디자인·상표)",
+      "저작권(저작인격권·저작재산권)",
+      "저작인접권",
+      "신지식재산권",
+      "첨단산업재산권(반도체 배치설계·생명공학)",
+      "산업저작권(컴퓨터 프로그램)",
+      "정보재산권(데이터베이스·영업비밀)",
+      "기타(지리적 표시·도메인·소리·냄새 상표)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_137_0",
     "code": "MG_137_0",
-    "title": "사회책임·환경경영(ISO 26000·ISO 14001)",
-    "subtitle": "IT 생산성 패러독스(Productivity Paradox of IT)",
+    "title": "사회책임·환경경영 표준(ISO 26000·ISO 14001)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "IT 경영전략 > 투자평가관리",
-    "definition": "ISO 26000은 사회적 책임 지침, ISO 14001은 환경경영시스템 요구사항. ESG·지속가능 경영의 근거 표준",
+    "category": "MG > CSR > ISO 26000·ISO 14001",
+    "definition": "ISO 26000은 조직의 사회적 책임(SR)에 대한 원칙과 7대 핵심 주제를 제시한 비인증 국제 가이드라인(2010)이고, ISO 14001은 PDCA 기반 환경경영시스템 요구사항을 규정한 인증 표준",
     "keywords": [
-      "핵심: ISO 26000 · 사회적 책임(SR) · ISO 14001",
-      "구성: 환경경영시스템(EMS) · PDCA · 이해관계자",
-      "활용: 지속가능성 · 준법·윤리"
+      "핵심: 조직 거버넌스 · 인권 · 노동 관행 · 환경",
+      "필수: 공정 운영 관행 · 소비자 이슈 · 지역사회 참여와 발전 · 환경경영시스템·PDCA",
+      "참고: 7대 원칙(책임성·투명성·윤리적 행동·이해관계자 존중·법치 존중·국제 행동 규범·인권 존중) · 인증 불가 지침(ISO 26000) · ISO 14001:2015 · 정도 경영·사회 공헌 · ESG 경영 연계"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "ISO 26000의 개요",
         "subsections": [
           {
-            "title": "정의",
+            "title": "ISO의 정의",
             "items": [
-              "ISO 26000은 사회적 책임 지침, ISO 14001은 환경경영시스템 요구사항. ESG·지속가능 경영의 근거 표준"
+              "모든 조직에 적용 가능한 사회적 책임 운영 지침, 인증 목적 아님"
             ]
           },
           {
-            "title": "목적",
+            "title": "구성",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "7대 원칙 + 7대 핵심 주제 + 이해관계자 참여"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "7대 핵심 주제",
         "subsections": [
           {
-            "title": null,
+            "title": "지배·인권·노동",
             "items": [
-              "ISO 26000",
-              "사회적 책임(SR)",
-              "ISO 14001",
-              "환경경영시스템(EMS)",
-              "PDCA",
-              "이해관계자"
+              "조직 거버넌스(책임성·투명성)",
+              "인권(취약 집단·직장 기본권)",
+              "노동 관행(고용·안전·인적 개발)"
+            ]
+          },
+          {
+            "title": "환경·공정",
+            "items": [
+              "환경(자원·기후 변화·생태계)",
+              "공정 운영 관행(부패 방지·공정 경쟁·지식재산권 존중)"
+            ]
+          },
+          {
+            "title": "소비자·지역사회",
+            "items": [
+              "소비자 이슈(정보·사생활 보호·지속 가능 소비)",
+              "지역사회 참여와 발전(경제·사회 개발 기여)"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "ISO 14001 환경경영시스템",
         "subsections": [
           {
-            "title": null,
+            "title": "PDCA",
             "items": [
-              "지속가능성",
-              "준법·윤리",
-              "관련 지표·표준·한계를 함께 제시"
+              "계획(환경 방침·측면 파악) → 실행 → 점검(모니터링·내부 심사) → 조치(경영 검토)"
+            ]
+          },
+          {
+            "title": "비교",
+            "items": [
+              "ISO 26000(지침·비인증·사회 전반) vs ISO 14001(요구사항·인증·환경)"
             ]
           }
         ]
@@ -14897,104 +14949,130 @@
       245
     ],
     "outline": [
-      "ISO 26000·ISO 14001의 개념",
-      "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "ISO 26000의 개요",
+      "- ISO의 정의",
+      "- 구성",
+      "7대 핵심 주제",
+      "- 지배·인권·노동",
+      "- 환경·공정",
+      "- 소비자·지역사회",
+      "ISO 14001 환경경영시스템",
+      "- PDCA",
+      "- 비교"
     ],
-    "name": "사회책임·환경경영(ISO 26000·ISO 14001)",
-    "en": "ISO 26000 ISO 14001",
+    "name": "사회책임·환경경영 표준(ISO 26000·ISO 14001)",
+    "en": "ISO 26000 Social Responsibility · ISO 14001",
     "keywords_must": [
-      "ISO 26000",
-      "사회적 책임(SR)",
-      "ISO 14001",
-      "환경경영시스템(EMS)",
-      "PDCA",
-      "이해관계자",
-      "지속가능성",
-      "준법·윤리"
+      "조직 거버넌스",
+      "인권",
+      "노동 관행",
+      "환경",
+      "공정 운영 관행",
+      "소비자 이슈",
+      "지역사회 참여와 발전",
+      "환경경영시스템·PDCA"
     ],
     "keywords_ref": [
-      "ESG",
-      "GRI",
-      "탄소",
-      "인증",
-      "관련 표준·사례"
+      "7대 원칙(책임성·투명성·윤리적 행동·이해관계자 존중·법치 존중·국제 행동 규범·인권 존중)",
+      "인증 불가 지침(ISO 26000)",
+      "ISO 14001:2015",
+      "정도 경영·사회 공헌",
+      "ESG 경영 연계"
     ],
     "curated": true,
     "quiz_terms": [
-      "ISO 26000",
-      "사회적 책임(SR)",
-      "ISO 14001",
-      "환경경영시스템(EMS)",
-      "PDCA",
-      "이해관계자",
-      "지속가능성",
-      "준법·윤리"
+      "조직 거버넌스",
+      "인권",
+      "노동 관행",
+      "환경",
+      "공정 운영 관행",
+      "소비자 이슈",
+      "지역사회 참여와 발전",
+      "환경경영시스템·PDCA"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_137_1",
     "code": "MG_137_1",
     "title": "환경경영 표준(ISO 14000)",
-    "subtitle": "투자관리",
+    "subtitle": "",
     "domain": "MG",
-    "category": "PM > 투자평가관리",
-    "definition": "환경경영·평가·라벨링 등을 다루는 국제표준 시리즈. 14001이 핵심 인증 규격",
+    "category": "MG > CSR > ISO 14000",
+    "definition": "국제표준화기구(ISO)가 제정한 환경경영 관련 국제 규격군으로, 조직의 환경경영시스템이 ISO 14001 요구사항에 적합한지 독립 인증기관이 심사·인증하는 환경경영 인증 제도",
     "keywords": [
-      "핵심: ISO 14000 · ISO 14001 · 환경측면",
-      "구성: 환경영향 · 법규 준수 · 지속적 개선",
-      "활용: 감사 · 문서화"
+      "핵심: 환경경영시스템(ISO 14001/14004) · 환경 심사(ISO 19011) · 환경성과평가(EPE, ISO 14031) · 전과정평가(LCA, ISO 14040/14044)",
+      "필수: 환경 라벨링(EL, ISO 14020) · 용어 정의(ISO 14050) · 도입 준비–구축·실행–인증 심사 · PDCA",
+      "참고: 환경 오염·국제 환경 규제(ESG) 강화 · 모기업 요구 · 예비·문서·본 심사 · 탄소발자국(ISO 14067) · 온실가스(ISO 14064)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "ISO 14000의 개념과 필요성",
         "subsections": [
           {
-            "title": "정의",
+            "title": "ISO의 필요성",
             "items": [
-              "환경경영·평가·라벨링 등을 다루는 국제표준 시리즈. 14001이 핵심 인증 규격"
+              "환경 오염 문제",
+              "환경 보호 의무 강화",
+              "국제 환경 규제 강화",
+              "모기업 요구",
+              "대외 경쟁력(브랜드)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "인증 규격과 절차",
+        "subsections": [
+          {
+            "title": "인증 규격",
+            "items": [
+              "환경경영시스템(14001/14004)",
+              "환경 심사(구 14010~12 → 19011)",
+              "EPE(14031)",
+              "LCA(14040/14044)",
+              "환경 라벨링(14020/14021/14024/14025)",
+              "용어(14050)"
             ]
           },
           {
-            "title": "목적",
+            "title": "도입 준비",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "정보 수집·분석 → 현황 파악 → TFT 구성 → 추진 계획"
+            ]
+          },
+          {
+            "title": "구축·실행",
+            "items": [
+              "환경 방침 → 환경 측면·영향 평가 → 목표 수립 → 절차 운영 → 내부 감사 → 경영 검토"
+            ]
+          },
+          {
+            "title": "인증 심사",
+            "items": [
+              "인증 신청 → 예비 심사 → 문서 심사 → 본 심사 → 인증서 발행"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "인증 효과",
         "subsections": [
           {
-            "title": null,
+            "title": "비용 측면",
             "items": [
-              "ISO 14000",
-              "ISO 14001",
-              "환경측면",
-              "환경영향",
-              "법규 준수",
-              "지속적 개선"
+              "자원·에너지 절감, 환경 사고 비용 감소"
             ]
-          }
-        ]
-      },
-      {
-        "title": "활용·시사점",
-        "subsections": [
+          },
           {
-            "title": null,
+            "title": "경영 측면",
             "items": [
-              "감사",
-              "문서화",
-              "관련 지표·표준·한계를 함께 제시"
+              "기업 이미지·수출 경쟁력 제고, 규제 대응"
             ]
           }
         ]
@@ -15006,104 +15084,121 @@
       119
     ],
     "outline": [
-      "ISO 14000 시리즈의 개념",
-      "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "ISO 14000의 개념과 필요성",
+      "- ISO의 필요성",
+      "인증 규격과 절차",
+      "- 인증 규격",
+      "- 도입 준비",
+      "- 구축·실행",
+      "- 인증 심사",
+      "인증 효과",
+      "- 비용 측면",
+      "- 경영 측면"
     ],
     "name": "환경경영 표준(ISO 14000)",
-    "en": "ISO 14000",
+    "en": "ISO 14000 Environmental Management",
     "keywords_must": [
-      "ISO 14000",
-      "ISO 14001",
-      "환경측면",
-      "환경영향",
-      "법규 준수",
-      "지속적 개선",
-      "감사",
-      "문서화"
+      "환경경영시스템(ISO 14001/14004)",
+      "환경 심사(ISO 19011)",
+      "환경성과평가(EPE, ISO 14031)",
+      "전과정평가(LCA, ISO 14040/14044)",
+      "환경 라벨링(EL, ISO 14020)",
+      "용어 정의(ISO 14050)",
+      "도입 준비–구축·실행–인증 심사",
+      "PDCA"
     ],
     "keywords_ref": [
-      "LCA",
-      "탄소발자국",
-      "녹색구매",
-      "EMS",
-      "관련 표준·사례"
+      "환경 오염·국제 환경 규제(ESG) 강화",
+      "모기업 요구",
+      "예비·문서·본 심사",
+      "탄소발자국(ISO 14067)",
+      "온실가스(ISO 14064)"
     ],
     "curated": true,
     "quiz_terms": [
-      "ISO 14000",
-      "ISO 14001",
-      "환경측면",
-      "환경영향",
-      "법규 준수",
-      "지속적 개선",
-      "감사",
-      "문서화"
+      "환경경영시스템(ISO 14001/14004)",
+      "환경 심사(ISO 19011)",
+      "환경성과평가(EPE, ISO 14031)",
+      "전과정평가(LCA, ISO 14040/14044)",
+      "환경 라벨링(EL, ISO 14020)",
+      "용어 정의(ISO 14050)",
+      "도입 준비–구축·실행–인증 심사",
+      "PDCA"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_138",
     "code": "MG_138",
     "title": "IT 생산성 패러독스(IT Productivity Paradox)",
-    "subtitle": "ISO 9000",
+    "subtitle": "",
     "domain": "MG",
-    "category": "품질경영>품질 표준>ISO 9000",
-    "definition": "IT 투자 증가에도 생산성 통계가 비례 향상되지 않거나 지연되는 현상. 측정·시차·보완투자로 설명",
+    "category": "MG > IT 투자평가 > IT 생산성 패러독스",
+    "definition": "IT 투자가 증가함에도 기업·산업·국가 수준의 생산성이 비례해 증가하지 않는 현상으로, \"컴퓨터 시대는 어디서나 볼 수 있지만 생산성 통계에서만 볼 수 없다\"는 솔로(Solow, 1987)의 지적에서 비롯된 IT 실효성 논쟁",
     "keywords": [
-      "핵심: IT 생산성 패러독스 · 투자 대비 성과 · 측정 문제",
-      "구성: 시차(Lag) · 보완 조직·프로세스 · 무형 편익",
-      "활용: 솔로우 패러독스 · 가치실현"
+      "핵심: 측정 오류(Mismeasurement) · 시간 지연(Time Lag) · 이익 재분배(Redistribution) · 잘못된 관리(Mismanagement)",
+      "필수: 학습 곡선(Learning Curve) · 보완적 투자(조직·프로세스 변화) · IT 투자 성과 평가(ROI·BSC) · 로버트 솔로(Robert Solow, 1987)",
+      "참고: 브린욜프슨(Brynjolfsson, 1993) 4대 원인 · 맥킨지 리포트(2001) · IT 자산 빠른 상각 · 무형 효과(품질·고객 만족) 측정 한계 · 경영 투자 오류"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "IT 생산성 패러독스의 개요",
         "subsections": [
           {
-            "title": "정의",
+            "title": "사례",
             "items": [
-              "IT 투자 증가에도 생산성 통계가 비례 향상되지 않거나 지연되는 현상. 측정·시차·보완투자로 설명"
+              "1970~80년대 미국 기업 대규모 IT 투자에도 매출·생산성 정체(맥킨지 2001)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "발생 원인(브린욜프슨)",
+        "subsections": [
+          {
+            "title": "측정 오류",
+            "items": [
+              "품질·편의성 등 무형 산출물 미반영"
             ]
           },
           {
-            "title": "목적",
+            "title": "시간 지연",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "학습 곡선으로 효과 발현까지 시차"
+            ]
+          },
+          {
+            "title": "재분배",
+            "items": [
+              "기업 간 이익 이동, 산업 전체 생산성 불변"
+            ]
+          },
+          {
+            "title": "잘못된 관리",
+            "items": [
+              "경험·관리 미숙, 프로세스 미개선 상태의 투자"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "해결 방안",
         "subsections": [
           {
-            "title": null,
+            "title": "관리 측면",
             "items": [
-              "IT 생산성 패러독스",
-              "투자 대비 성과",
-              "측정 문제",
-              "시차(Lag)",
-              "보완 조직·프로세스",
-              "무형 편익"
+              "BPR·변화 관리 등 보완적 조직 투자, 사용자 교육"
             ]
-          }
-        ]
-      },
-      {
-        "title": "활용·시사점",
-        "subsections": [
+          },
           {
-            "title": null,
+            "title": "평가 측면",
             "items": [
-              "솔로우 패러독스",
-              "가치실현",
-              "관련 지표·표준·한계를 함께 제시"
+              "IT BSC·IT ROI·포트폴리오 관리로 성과 측정, 사후 평가"
             ]
           }
         ]
@@ -15115,104 +15210,135 @@
       247
     ],
     "outline": [
-      "IT 생산성 패러독스의 개념",
-      "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "IT 생산성 패러독스의 개요",
+      "- 사례",
+      "발생 원인(브린욜프슨)",
+      "- 측정 오류",
+      "- 시간 지연",
+      "- 재분배",
+      "- 잘못된 관리",
+      "해결 방안",
+      "- 관리 측면",
+      "- 평가 측면"
     ],
     "name": "IT 생산성 패러독스(IT Productivity Paradox)",
-    "en": "IT Productivity Paradox",
+    "en": "Productivity Paradox of IT",
     "keywords_must": [
-      "IT 생산성 패러독스",
-      "투자 대비 성과",
-      "측정 문제",
-      "시차(Lag)",
-      "보완 조직·프로세스",
-      "무형 편익",
-      "솔로우 패러독스",
-      "가치실현"
+      "측정 오류(Mismeasurement)",
+      "시간 지연(Time Lag)",
+      "이익 재분배(Redistribution)",
+      "잘못된 관리(Mismanagement)",
+      "학습 곡선(Learning Curve)",
+      "보완적 투자(조직·프로세스 변화)",
+      "IT 투자 성과 평가(ROI·BSC)",
+      "로버트 솔로(Robert Solow, 1987)"
     ],
     "keywords_ref": [
-      "ROI",
-      "BSC",
-      "변화관리",
-      "디지털 전환",
-      "관련 표준·사례"
+      "브린욜프슨(Brynjolfsson, 1993) 4대 원인",
+      "맥킨지 리포트(2001)",
+      "IT 자산 빠른 상각",
+      "무형 효과(품질·고객 만족) 측정 한계",
+      "경영 투자 오류"
     ],
     "curated": true,
     "quiz_terms": [
-      "IT 생산성 패러독스",
-      "투자 대비 성과",
-      "측정 문제",
-      "시차(Lag)",
-      "보완 조직·프로세스",
-      "무형 편익",
-      "솔로우 패러독스",
-      "가치실현"
+      "측정 오류(Mismeasurement)",
+      "시간 지연(Time Lag)",
+      "이익 재분배(Redistribution)",
+      "잘못된 관리(Mismanagement)",
+      "학습 곡선(Learning Curve)",
+      "보완적 투자(조직·프로세스 변화)",
+      "IT 투자 성과 평가(ROI·BSC)",
+      "로버트 솔로(Robert Solow, 1987)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": null
   },
   {
     "id": "MG_139",
     "code": "MG_139",
     "title": "경제성 평가 기법(BCR·TCO·ROI·NPV·IRR·PP)",
-    "subtitle": "퀵 커머스(Quick Commerce)",
+    "subtitle": "",
     "domain": "MG",
-    "category": "BS > 커머스",
-    "definition": "IT·사업 투자의 타당성을 BCR·TCO·ROI·NPV·IRR·회수기간 등으로 평가하는 기법 묶음",
+    "category": "MG > IT 투자평가 > 경제성 분석",
+    "definition": "사업의 비용과 편익을 측정하고 경제적 수익률을 산정해 비즈니스 케이스의 타당성을 판단하는 분석 기법으로, 일반적으로 TCO → ROI → NPV → IRR → PP 순으로 산정",
     "keywords": [
-      "핵심: BCR · TCO(Total Cost of Ownership) · ROI",
-      "구성: NPV · IRR · Payback Period",
-      "활용: 할인율 · 현금흐름"
+      "핵심: 편익비용비율(BCR, Benefit Cost Ratio) · 총소유비용(TCO, Total Cost of Ownership) · 투자수익률(ROI, Return on Investment) · 순현재가치(NPV, Net Present Value)",
+      "필수: 내부수익률(IRR, Internal Rate of Return) · 회수 기간(PP, Payback Period) · 할인율(Discount Rate) · 손익분기점(BEP, Break-Even Point)",
+      "참고: 비즈니스 케이스(Business Case) · 현재가치(PV) = 미래가치/(1+r)^t · NPV>0·BCR>1 채택 · IRR>자본비용 채택 · 비용편익분석(B−C)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "경제성 분석의 개요",
         "subsections": [
           {
-            "title": "정의",
+            "title": "BCR·TCO·ROI·NPV·IRR·PP의 정의",
             "items": [
-              "IT·사업 투자의 타당성을 BCR·TCO·ROI·NPV·IRR·회수기간 등으로 평가하는 기법 묶음"
+              "편익·비용의 화폐가치화로 경제적 타당성 결정"
             ]
           },
           {
-            "title": "목적",
+            "title": "비교",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "재무 분석(ROI 중심)과 대비되는 국가·사회적 관점 포함"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "분석 기법",
         "subsections": [
           {
-            "title": null,
+            "title": "BCR",
             "items": [
-              "BCR",
-              "TCO(Total Cost of Ownership)",
-              "ROI",
-              "NPV",
-              "IRR",
-              "Payback Period"
+              "편익/비용, 1 초과 시 타당"
+            ]
+          },
+          {
+            "title": "TCO",
+            "items": [
+              "직접 비용 + 숨겨진 간접 비용(운영·교육·중단)을 수명주기 통합"
+            ]
+          },
+          {
+            "title": "ROI",
+            "items": [
+              "(편익 − 투자비)/투자비 × 100"
+            ]
+          },
+          {
+            "title": "NPV·IRR",
+            "items": [
+              "NPV = Σ CFt/(1+r)^t − C0, NPV>0 채택",
+              "IRR은 NPV=0이 되는 할인율, 높을수록 유리"
+            ]
+          },
+          {
+            "title": "PP·BEP",
+            "items": [
+              "투자 회수 기간(짧을수록 유리)",
+              "비용=성과 손익분기점"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "NPV 계산 예시",
         "subsections": [
           {
-            "title": null,
+            "title": "조건",
             "items": [
-              "할인율",
-              "현금흐름",
-              "관련 지표·표준·한계를 함께 제시"
+              "초기 투자 50만 원, 할인율 10%, 3년간 매년 20만 원"
+            ]
+          },
+          {
+            "title": "결과",
+            "items": [
+              "18.18 + 16.53 + 15.03 − 50 = −0.26만 원(NPV<0, 3년 기준 부적합)"
             ]
           }
         ]
@@ -15224,104 +15350,128 @@
       122
     ],
     "outline": [
-      "경제성 평가 기법의 개념",
-      "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "경제성 분석의 개요",
+      "- BCR·TCO·ROI·NPV·IRR·PP의 정의",
+      "- 비교",
+      "분석 기법",
+      "- BCR",
+      "- TCO",
+      "- ROI",
+      "- NPV·IRR",
+      "- PP·BEP",
+      "NPV 계산 예시",
+      "- 조건",
+      "- 결과"
     ],
     "name": "경제성 평가 기법(BCR·TCO·ROI·NPV·IRR·PP)",
-    "en": "Economic Evaluation Techniques",
+    "en": "Economic Feasibility Analysis",
     "keywords_must": [
-      "BCR",
-      "TCO(Total Cost of Ownership)",
-      "ROI",
-      "NPV",
-      "IRR",
-      "Payback Period",
-      "할인율",
-      "현금흐름"
+      "편익비용비율(BCR, Benefit Cost Ratio)",
+      "총소유비용(TCO, Total Cost of Ownership)",
+      "투자수익률(ROI, Return on Investment)",
+      "순현재가치(NPV, Net Present Value)",
+      "내부수익률(IRR, Internal Rate of Return)",
+      "회수 기간(PP, Payback Period)",
+      "할인율(Discount Rate)",
+      "손익분기점(BEP, Break-Even Point)"
     ],
     "keywords_ref": [
-      "민감도 분석",
-      "정성 편익",
-      "위험",
-      "자본비용",
-      "관련 표준·사례"
+      "비즈니스 케이스(Business Case)",
+      "현재가치(PV) = 미래가치/(1+r)^t",
+      "NPV>0·BCR>1 채택",
+      "IRR>자본비용 채택",
+      "비용편익분석(B−C)"
     ],
     "curated": true,
     "quiz_terms": [
-      "BCR",
-      "TCO(Total Cost of Ownership)",
-      "ROI",
-      "NPV",
-      "IRR",
-      "Payback Period",
-      "할인율",
-      "현금흐름"
+      "편익비용비율(BCR, Benefit Cost Ratio)",
+      "총소유비용(TCO, Total Cost of Ownership)",
+      "투자수익률(ROI, Return on Investment)",
+      "순현재가치(NPV, Net Present Value)",
+      "내부수익률(IRR, Internal Rate of Return)",
+      "회수 기간(PP, Payback Period)",
+      "할인율(Discount Rate)",
+      "손익분기점(BEP, Break-Even Point)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": "평가 순서: TCO → ROI → NPV → IRR → PP"
   },
   {
     "id": "MG_140",
     "code": "MG_140",
     "title": "품질경영 표준(ISO 9000)",
-    "subtitle": "6 sigma",
+    "subtitle": "",
     "domain": "MG",
-    "category": "경영 > 경영전략기법> 6Sigma",
-    "definition": "품질경영 원칙과 용어·요구사항(ISO 9001)을 담은 국제 품질 표준군",
+    "category": "MG > 품질경영 > ISO 9000",
+    "definition": "국제표준화기구(ISO/TC 176)가 제정한 품질경영과 품질보증에 관한 국제 규격군으로, 고객 만족과 지속적 개선을 위해 프로세스 접근법(PDCA) 기반 품질경영시스템(QMS) 요구사항을 규정하며 ISO 9001로 인증",
     "keywords": [
-      "핵심: ISO 9000 · ISO 9001 · 품질경영시스템(QMS)",
-      "구성: 고객 초점 · 프로세스 접근 · PDCA",
-      "활용: 문서화 · 인증"
+      "핵심: 품질경영시스템(QMS, Quality Management System) · 기본 사항·용어 규격 · ISO 9001(요구사항·인증) · ISO 9004(지속적 성공 지침)",
+      "필수: 프로세스 접근법(PDCA) · 고객 중시 · 지속적 개선 · 증거 기반 의사결정",
+      "참고: 7대 품질경영 원칙(고객 중시·리더십·인원 참여·프로세스 접근·개선·증거 기반 의사결정·관계 관리) · ISO 9002·9003 폐지(2000년 9001 통합) · ISO/IEC 90003(SW 적용 지침) · 리스크 기반 사고(ISO 9001:2015) · ISO 19011 심사 지침"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "ISO 9000의 개요",
         "subsections": [
           {
-            "title": "정의",
+            "title": "ISO의 정의",
             "items": [
-              "품질경영 원칙과 용어·요구사항(ISO 9001)을 담은 국제 품질 표준군"
+              "공급자–구매자 간 품질경영·품질보증 국제 규격"
             ]
           },
           {
-            "title": "목적",
+            "title": "인증 필요성",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "고객 기대·요구 부응(제3자 인증)",
+              "조직 역량 강화(불량 예방·낭비 제거)",
+              "국내외 환경 대비(조달 우대)"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "인증 규격과 품질경영 원칙",
         "subsections": [
           {
-            "title": null,
+            "title": "규격 구성",
             "items": [
-              "ISO 9000",
-              "ISO 9001",
-              "품질경영시스템(QMS)",
-              "고객 초점",
-              "프로세스 접근",
-              "PDCA"
+              "ISO 9000(용어)",
+              "ISO 9001(요구사항)",
+              "ISO 9004(지침)",
+              "ISO/IEC 90003(SW 적용)"
+            ]
+          },
+          {
+            "title": "변천",
+            "items": [
+              "1994년 9001·9002·9003 품질보증 모델 → 2000년 9001 통합 → 2015년 리스크 기반 사고"
+            ]
+          },
+          {
+            "title": "7대 원칙",
+            "items": [
+              "고객 중시, 리더십, 인원 적극 참여, 프로세스 접근법, 개선, 증거 기반 의사결정, 관계 관리"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "프로세스 접근법",
         "subsections": [
           {
-            "title": null,
+            "title": "PDCA 사이클",
             "items": [
-              "문서화",
-              "인증",
-              "관련 지표·표준·한계를 함께 제시"
+              "계획(조직 상황·리스크) → 실행(지원·운용) → 점검(성과 평가) → 조치(개선)"
+            ]
+          },
+          {
+            "title": "고객 연계",
+            "items": [
+              "고객 요구사항 입력 → 제품·서비스 실현 → 고객 만족 피드백"
             ]
           }
         ]
@@ -15333,104 +15483,121 @@
       250
     ],
     "outline": [
-      "ISO 9000의 개념",
-      "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "ISO 9000의 개요",
+      "- ISO의 정의",
+      "- 인증 필요성",
+      "인증 규격과 품질경영 원칙",
+      "- 규격 구성",
+      "- 변천",
+      "- 7대 원칙",
+      "프로세스 접근법",
+      "- PDCA 사이클",
+      "- 고객 연계"
     ],
     "name": "품질경영 표준(ISO 9000)",
-    "en": "ISO 9000",
+    "en": "ISO 9000 Quality Management",
     "keywords_must": [
-      "ISO 9000",
-      "ISO 9001",
-      "품질경영시스템(QMS)",
-      "고객 초점",
-      "프로세스 접근",
-      "PDCA",
-      "문서화",
-      "인증"
+      "품질경영시스템(QMS, Quality Management System)",
+      "기본 사항·용어 규격",
+      "ISO 9001(요구사항·인증)",
+      "ISO 9004(지속적 성공 지침)",
+      "프로세스 접근법(PDCA)",
+      "고객 중시",
+      "지속적 개선",
+      "증거 기반 의사결정"
     ],
     "keywords_ref": [
-      "심사",
-      "부적합",
-      "지속개선",
-      "리스크기반사고",
-      "관련 표준·사례"
+      "7대 품질경영 원칙(고객 중시·리더십·인원 참여·프로세스 접근·개선·증거 기반 의사결정·관계 관리)",
+      "ISO 9002·9003 폐지(2000년 9001 통합)",
+      "ISO/IEC 90003(SW 적용 지침)",
+      "리스크 기반 사고(ISO 9001:2015)",
+      "ISO 19011 심사 지침"
     ],
     "curated": true,
     "quiz_terms": [
-      "ISO 9000",
-      "ISO 9001",
-      "품질경영시스템(QMS)",
-      "고객 초점",
-      "프로세스 접근",
-      "PDCA",
-      "문서화",
-      "인증"
+      "품질경영시스템(QMS, Quality Management System)",
+      "기본 사항·용어 규격",
+      "ISO 9001(요구사항·인증)",
+      "ISO 9004(지속적 성공 지침)",
+      "프로세스 접근법(PDCA)",
+      "고객 중시",
+      "지속적 개선",
+      "증거 기반 의사결정"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": "PDCA(계획·실행·점검·조치)"
   },
   {
     "id": "MG_141",
     "code": "MG_141",
     "title": "6시그마(Six Sigma)",
-    "subtitle": "Commerce",
+    "subtitle": "",
     "domain": "MG",
-    "category": "MG > 마케팅 > Commerce",
-    "definition": "데이터 기반으로 결함을 백만 기회당 3.4 수준까지 줄이는 품질·프로세스 개선 방법. DMAIC가 핵심",
+    "category": "MG > 경영전략 기법 > 6시그마",
+    "definition": "고객 관점에서 품질 핵심 요소(CTQ)를 정의하고 통계적 측정·분석으로 핵심 원인을 찾아 프로세스를 개선·관리함으로써 결함을 백만 기회당 3.4개(3.4 DPMO) 수준으로 줄이는 전사적 경영 혁신 기법",
     "keywords": [
-      "핵심: 6시그마 · DMAIC · DMADV",
-      "구성: 결함률(DPMO) · 시그마 수준 · 벨트 체계",
-      "활용: 통계적 사고 · 고객 CTQ"
+      "핵심: 정의(Define) · 측정(Measure) · 분석(Analyze) · 개선(Improve)",
+      "필수: 관리(Control) · 품질 핵심 요소(CTQ, Critical to Quality) · DMADV(설계형 6시그마, DFSS) · 벨트 체계(챔피언·MBB·BB·GB)",
+      "참고: 3.4 DPMO(Defects Per Million Opportunities) · 모토로라 창안·GE 전사 확산 · 린 6시그마(Lean Six Sigma) · 시그마 수준(Z값) · 프로세스 능력 지수(Cp·Cpk)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "6시그마의 개요",
         "subsections": [
           {
-            "title": "정의",
+            "title": "Six의 특징",
             "items": [
-              "데이터 기반으로 결함을 백만 기회당 3.4 수준까지 줄이는 품질·프로세스 개선 방법. DMAIC가 핵심"
+              "기업 문화 혁신(자발적 참여)",
+              "전사적 프로세스 혁신",
+              "과학적 기법(통계)",
+              "고객 만족도 향상"
             ]
           },
           {
-            "title": "목적",
+            "title": "CTQ",
             "items": [
-              "전략·운영 의사결정과 시험 답안의 핵심 키워드로 활용"
+              "고객 구매 기준이 되는 품질 특성(핵심 성공 요인)"
             ]
           }
         ]
       },
       {
-        "title": "구성·유형",
+        "title": "문제 해결 방법론",
         "subsections": [
           {
-            "title": null,
+            "title": "DMAIC(기존 프로세스 개선)",
             "items": [
-              "6시그마",
-              "DMAIC",
-              "DMADV",
-              "결함률(DPMO)",
-              "시그마 수준",
-              "벨트 체계"
+              "정의(CTQ·프로젝트 선정) → 측정(현 수준·시그마) → 분석(근본 원인) → 개선(해결안) → 관리(관리도·표준화)"
+            ]
+          },
+          {
+            "title": "DMADV(신규 설계, DFSS)",
+            "items": [
+              "정의 → 측정 → 분석 → 설계(Design) → 검증(Verify)"
             ]
           }
         ]
       },
       {
-        "title": "활용·시사점",
+        "title": "추진 조직과 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "벨트 체계",
             "items": [
-              "통계적 사고",
-              "고객 CTQ",
-              "관련 지표·표준·한계를 함께 제시"
+              "챔피언(경영진 후원)",
+              "MBB(전문 지도)",
+              "BB(전임 과제 리더)",
+              "GB(현업 병행)"
+            ]
+          },
+          {
+            "title": "린과 비교",
+            "items": [
+              "6시그마(변동 감소·품질) vs 린(낭비 제거·속도) → 린 6시그마로 통합"
             ]
           }
         ]
@@ -15442,47 +15609,52 @@
       252
     ],
     "outline": [
-      "6시그마의 개념",
-      "- 정의",
-      "- 목적",
-      "구성·유형",
-      "활용·시사점"
+      "6시그마의 개요",
+      "- Six의 특징",
+      "- CTQ",
+      "문제 해결 방법론",
+      "- DMAIC(기존 프로세스 개선)",
+      "- DMADV(신규 설계, DFSS)",
+      "추진 조직과 비교",
+      "- 벨트 체계",
+      "- 린과 비교"
     ],
     "name": "6시그마(Six Sigma)",
     "en": "Six Sigma",
     "keywords_must": [
-      "6시그마",
-      "DMAIC",
-      "DMADV",
-      "결함률(DPMO)",
-      "시그마 수준",
-      "벨트 체계",
-      "통계적 사고",
-      "고객 CTQ"
+      "정의(Define)",
+      "측정(Measure)",
+      "분석(Analyze)",
+      "개선(Improve)",
+      "관리(Control)",
+      "품질 핵심 요소(CTQ, Critical to Quality)",
+      "DMADV(설계형 6시그마, DFSS)",
+      "벨트 체계(챔피언·MBB·BB·GB)"
     ],
     "keywords_ref": [
-      "린 시그마",
-      "관리도",
-      "가설검정",
-      "프로젝트 선정",
-      "관련 표준·사례"
+      "3.4 DPMO(Defects Per Million Opportunities)",
+      "모토로라 창안·GE 전사 확산",
+      "린 6시그마(Lean Six Sigma)",
+      "시그마 수준(Z값)",
+      "프로세스 능력 지수(Cp·Cpk)"
     ],
     "curated": true,
     "quiz_terms": [
-      "6시그마",
-      "DMAIC",
-      "DMADV",
-      "결함률(DPMO)",
-      "시그마 수준",
-      "벨트 체계",
-      "통계적 사고",
-      "고객 CTQ"
+      "정의(Define)",
+      "측정(Measure)",
+      "분석(Analyze)",
+      "개선(Improve)",
+      "관리(Control)",
+      "품질 핵심 요소(CTQ, Critical to Quality)",
+      "DMADV(설계형 6시그마, DFSS)",
+      "벨트 체계(챔피언·MBB·BB·GB)"
     ],
     "quiz_groups": [
       "mg"
     ],
     "quiz_avoid": [],
-    "reviewed": true
+    "reviewed": true,
+    "dueum": "DMAIC(정의·측정·분석·개선·관리)"
   },
   {
     "id": "MG_142",
