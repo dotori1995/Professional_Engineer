@@ -216,7 +216,7 @@
     "en": "Quadrature Amplitude Modulation",
     "definition": "위상이 90° 다른 두 직교 반송파(I/Q)에 각각 진폭 변조를 걸어, 진폭과 위상을 동시에 바꿔 한 심볼에 여러 비트를 싣는 고효율 변조 방식",
     "outline": [
-      "QAM의 원리",
+      "QAM 원리",
       "- 변조 구조",
       "장단점",
       "- 장점",
@@ -226,7 +226,7 @@
     ],
     "sections": [
       {
-        "title": "QAM의 원리",
+        "title": "QAM 원리",
         "subsections": [
           {
             "title": "변조 구조",
@@ -325,7 +325,7 @@
       "- 최소 프레임 조건",
       "지속 전략 3가지",
       "- 매체 사용 중일 때",
-      "CSMA/CA와 비교",
+      "CSMA/CA 비교",
       "- 비교 항목"
     ],
     "sections": [
@@ -363,7 +363,7 @@
         ]
       },
       {
-        "title": "CSMA/CA와 비교",
+        "title": "CSMA/CA 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -537,7 +537,7 @@
       "질의: 재귀적 질의(Recursive Query) · 반복적 질의(Iterative Query) · 리소스 레코드(RR: A·AAAA·CNAME·MX·PTR) · UDP/TCP 53"
     ],
     "outline": [
-      "DNS의 개념",
+      "DNS 개념",
       "- 등장 이유",
       "구성요소와 동작",
       "- 3대 구성요소",
@@ -549,7 +549,7 @@
     ],
     "sections": [
       {
-        "title": "DNS의 개념",
+        "title": "DNS 개념",
         "subsections": [
           {
             "title": "등장 이유",
@@ -652,7 +652,10 @@
       "DNS 증폭 공격(Amplification)",
       "TTL 캐싱"
     ],
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "SOA": "Start of Authority"
+    }
   },
   "NW_031_01": {
     "title": "다중화와 다원접속(Multiplexing & Multiple Access)",
@@ -1005,7 +1008,10 @@
       "체크섬(Checksum)"
     ],
     "title": "전송 계층(Transport Layer, OSI 4계층)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "RTO": "Retransmission TimeOut"
+    }
   },
   "NW_049": {
     "definition": "체크섬으로 손상 세그먼트를 검출하고 순서 번호·확인 응답·재전송 타이머로 손실·중복·순서 오류를 복구해 신뢰성 있는 전달을 보장하는 TCP 기능",
@@ -1110,7 +1116,10 @@
       "순서 외 세그먼트 버퍼링"
     ],
     "title": "TCP 오류 제어(TCP Error Control)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "RTO": "Retransmission TimeOut"
+    }
   },
   "NW_050_1": {
     "definition": "TCP 송신 측이 아주 작은 데이터를 자주 보내거나 수신 측이 작은 윈도를 광고해, 헤더 대비 데이터가 극히 작은 세그먼트가 반복 전송되며 효율이 떨어지는 현상",
@@ -1215,7 +1224,7 @@
     "en": "Classless Inter-Domain Routing",
     "definition": "클래스 구분 없이 프리픽스 길이(/n)로 IP 주소를 유연하게 할당하고 여러 경로를 하나로 묶어 라우팅하는 방식으로, 주소 낭비와 라우팅 테이블 폭증을 해결함 (RFC 4632)",
     "outline": [
-      "CIDR의 등장",
+      "CIDR 등장",
       "- 클래스 체계 한계",
       "표기법과 동작",
       "- 프리픽스 표기",
@@ -1224,7 +1233,7 @@
     ],
     "sections": [
       {
-        "title": "CIDR의 등장",
+        "title": "CIDR 등장",
         "subsections": [
           {
             "title": "클래스 체계 한계",
@@ -1310,16 +1319,16 @@
     "en": "Variable Length Subnet Mask",
     "definition": "하나의 네트워크를 서브네팅할 때 서브넷마다 필요한 호스트 수에 맞춰 길이가 다른 서브넷 마스크를 적용하는 기법으로, 서브넷을 다시 서브네팅해 주소 낭비를 최소화함 (RFC 1878)",
     "outline": [
-      "VLSM의 개념",
+      "VLSM 개념",
       "- VLSM 특징",
       "적용 절차",
       "- 할당 순서",
-      "CIDR와 비교",
+      "CIDR 비교",
       "- 비교 항목"
     ],
     "sections": [
       {
-        "title": "VLSM의 개념",
+        "title": "VLSM 개념",
         "subsections": [
           {
             "title": "VLSM 특징",
@@ -1346,7 +1355,7 @@
         ]
       },
       {
-        "title": "CIDR와 비교",
+        "title": "CIDR 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -1405,7 +1414,7 @@
     "name": "IGMP(Internet Group Management Protocol)",
     "en": "Internet Group Management Protocol",
     "outline": [
-      "IGMP의 역할",
+      "IGMP 역할",
       "- 동작",
       "버전별 차이",
       "- 버전 비교",
@@ -1414,7 +1423,7 @@
     ],
     "sections": [
       {
-        "title": "IGMP의 역할",
+        "title": "IGMP 역할",
         "subsections": [
           {
             "title": "동작",
@@ -1508,7 +1517,7 @@
       "보안: DHCP 스누핑(DHCP Snooping) · DHCP 스푸핑·고갈 공격(Starvation)"
     ],
     "outline": [
-      "DHCP의 개념",
+      "DHCP 개념",
       "- 장점",
       "동작 원리",
       "- 최초 할당(DORA)",
@@ -1519,7 +1528,7 @@
     ],
     "sections": [
       {
-        "title": "DHCP의 개념",
+        "title": "DHCP 개념",
         "subsections": [
           {
             "title": "장점",
@@ -1734,16 +1743,16 @@
     "en": "Vehicle-to-Everything",
     "definition": "차량이 다른 차량·도로 인프라·보행자·네트워크와 무선으로 정보를 교환해 교통 안전과 효율, 자율주행을 지원하는 차량 통신 기술의 총칭",
     "outline": [
-      "V2X의 개념",
+      "V2X 개념",
       "- V2X 특징",
       "V2X 종류",
       "- 통신 대상",
-      "WAVE와 C-V2X 비교",
+      "WAVE·C-V2X 비교",
       "- 비교 항목"
     ],
     "sections": [
       {
-        "title": "V2X의 개념",
+        "title": "V2X 개념",
         "subsections": [
           {
             "title": "V2X 특징",
@@ -1770,7 +1779,7 @@
         ]
       },
       {
-        "title": "WAVE와 C-V2X 비교",
+        "title": "WAVE·C-V2X 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -1833,17 +1842,17 @@
     "en": "Wireless Access in Vehicular Environments",
     "definition": "고속 주행 차량 간(V2V)·차량-인프라 간(V2I) 통신을 위해 IEEE 802.11p 물리·MAC과 IEEE 1609 상위 계층으로 구성된 차량 무선 통신 표준",
     "outline": [
-      "WAVE의 개념",
+      "WAVE 개념",
       "- WAVE 특징",
       "- 발전 과정",
       "프로토콜 스택",
       "- 계층 구성",
       "V2X 통신 표준 비교",
-      "- WAVE와 C-V2X"
+      "- WAVE·C-V2X"
     ],
     "sections": [
       {
-        "title": "WAVE의 개념",
+        "title": "WAVE 개념",
         "subsections": [
           {
             "title": "WAVE 특징",
@@ -1881,7 +1890,7 @@
         "title": "V2X 통신 표준 비교",
         "subsections": [
           {
-            "title": "WAVE와 C-V2X",
+            "title": "WAVE·C-V2X",
             "items": [
               "WAVE: 기존 Wi-Fi 기반, 성숙·즉시 적용",
               "C-V2X: 3GPP 기반, 커버리지·5G 진화",
@@ -2168,7 +2177,7 @@
     "en": "Internet of Things",
     "definition": "사람·사물·공간·데이터 등 모든 것이 인터넷으로 연결되어 정보를 생성·수집·공유·활용하며 지능형 서비스를 제공하는 초연결 기술 및 환경",
     "outline": [
-      "IoT의 개념",
+      "IoT 개념",
       "- 특성",
       "3대 구성 기술과 보안",
       "- 구성 기술",
@@ -2179,7 +2188,7 @@
     ],
     "sections": [
       {
-        "title": "IoT의 개념",
+        "title": "IoT 개념",
         "subsections": [
           {
             "title": "특성",
@@ -2284,18 +2293,18 @@
     "en": "Constrained Application Protocol",
     "definition": "메모리·전력·대역이 제한된 IoT 기기를 위해 HTTP의 REST 모델을 UDP 위에 경량화한 웹 전송 프로토콜 (IETF RFC 7252)",
     "outline": [
-      "CoAP의 개념",
+      "CoAP 개념",
       "- CoAP 필요성",
       "구성요소와 메시지",
       "- CoAP 구성요소",
       "- 메시지 계층",
       "프로토콜 스택과 비교",
       "- 스택",
-      "- MQTT와 비교"
+      "- MQTT 비교"
     ],
     "sections": [
       {
-        "title": "CoAP의 개념",
+        "title": "CoAP 개념",
         "subsections": [
           {
             "title": "CoAP 필요성",
@@ -2340,7 +2349,7 @@
             ]
           },
           {
-            "title": "MQTT와 비교",
+            "title": "MQTT 비교",
             "items": [
               "CoAP: UDP·REST·1:1 요청응답(+Observe)",
               "MQTT: TCP·발행/구독·브로커 필요",
@@ -2519,7 +2528,7 @@
     "en": "Energy IoT",
     "definition": "발전·송배전·수요 측 에너지 설비와 기기에 센서·통신을 연결해 에너지 데이터를 수집·분석하고 원격 제어로 효율적인 에너지 관리를 구현하는 IoT 서비스",
     "outline": [
-      "e-IoT의 개념",
+      "e-IoT 개념",
       "- 에너지 사물인터넷 특징",
       "서비스 구성과 구성요소",
       "- 에너지 사물인터넷 구성요소",
@@ -2529,7 +2538,7 @@
     ],
     "sections": [
       {
-        "title": "e-IoT의 개념",
+        "title": "e-IoT 개념",
         "subsections": [
           {
             "title": "에너지 사물인터넷 특징",
@@ -2838,7 +2847,7 @@
     "en": "IPv6-based All-IP",
     "definition": "128비트 주소 체계의 IPv6를 기반으로 음성·데이터·방송·이동통신 등 모든 서비스를 단일 IP 망에서 통합 제공하는 차세대 네트워크",
     "outline": [
-      "IPv6의 개념",
+      "IPv6 개념",
       "- IPv6 기반 All-IP 특징",
       "헤더 구조와 전환 방법",
       "- 기본 헤더 필드",
@@ -2848,7 +2857,7 @@
     ],
     "sections": [
       {
-        "title": "IPv6의 개념",
+        "title": "IPv6 개념",
         "subsections": [
           {
             "title": "IPv6 기반 All-IP 특징",
@@ -3176,7 +3185,7 @@
       "버퍼 관리: 테일 드롭(Tail Drop) · RED(Random Early Detection) · WRED(Weighted RED)"
     ],
     "outline": [
-      "QoS와 큐 관리",
+      "QoS·큐 관리",
       "- QoS 큐 관리 필요성",
       "큐 스케줄링",
       "- 방식 비교",
@@ -3185,7 +3194,7 @@
     ],
     "sections": [
       {
-        "title": "QoS와 큐 관리",
+        "title": "QoS·큐 관리",
         "subsections": [
           {
             "title": "QoS 큐 관리 필요성",
@@ -3594,17 +3603,17 @@
     "en": "Differentiated Services",
     "definition": "망 경계에서 패킷을 클래스로 분류해 IP 헤더의 DSCP에 표시하고, 내부 라우터는 DSCP별 홉 동작(PHB)으로 차등 처리하는 확장성 있는 QoS 모델 (RFC 2474/2475)",
     "outline": [
-      "DiffServ의 개념",
+      "DiffServ 개념",
       "- DiffServ 특징",
       "구현 방식과 구성요소",
       "- DiffServ 구성요소",
       "- PHB 종류",
-      "IntServ와 비교",
+      "IntServ 비교",
       "- 비교 항목"
     ],
     "sections": [
       {
-        "title": "DiffServ의 개념",
+        "title": "DiffServ 개념",
         "subsections": [
           {
             "title": "DiffServ 특징",
@@ -3638,7 +3647,7 @@
         ]
       },
       {
-        "title": "IntServ와 비교",
+        "title": "IntServ 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -3810,17 +3819,17 @@
       "관계: QoS(Quality of Service) · NP(Network Performance)"
     ],
     "outline": [
-      "QoE의 개념",
+      "QoE 개념",
       "- QoE 특징",
       "품질 지표",
       "- 서비스별 지표",
       "- 평가 방식",
-      "QoS·NP와 비교",
+      "QoS·NP 비교",
       "- 관점 비교"
     ],
     "sections": [
       {
-        "title": "QoE의 개념",
+        "title": "QoE 개념",
         "subsections": [
           {
             "title": "QoE 특징",
@@ -3853,7 +3862,7 @@
         ]
       },
       {
-        "title": "QoS·NP와 비교",
+        "title": "QoS·NP 비교",
         "subsections": [
           {
             "title": "관점 비교",
@@ -3915,7 +3924,7 @@
       "관계: QoS(Quality of Service) · QoE(Quality of Experience)"
     ],
     "outline": [
-      "NP의 개념",
+      "NP 개념",
       "- NP 특징",
       "관계와 지표화 요건",
       "- QoS·QoE·NP 관계",
@@ -3925,7 +3934,7 @@
     ],
     "sections": [
       {
-        "title": "NP의 개념",
+        "title": "NP 개념",
         "subsections": [
           {
             "title": "NP 특징",
@@ -4020,7 +4029,7 @@
       "보안: 보안 요소(SE, Secure Element) · HCE(Host Card Emulation)"
     ],
     "outline": [
-      "NFC의 개념",
+      "NFC 개념",
       "- NFC 특징",
       "동작 모드",
       "- 3가지 모드",
@@ -4030,7 +4039,7 @@
     ],
     "sections": [
       {
-        "title": "NFC의 개념",
+        "title": "NFC 개념",
         "subsections": [
           {
             "title": "NFC 특징",
@@ -7461,17 +7470,17 @@
       "기능: 스트림 다중화(Stream Multiplexing) · HOL 블로킹 해소 · 연결 마이그레이션(Connection ID) · 패킷 번호 단조 증가"
     ],
     "outline": [
-      "QUIC의 개념",
+      "QUIC 개념",
       "- 등장 배경",
       "연결 수립 과정",
       "- 기존 방식과 비교",
-      "특징과 동향",
+      "QUIC 특징·동향",
       "- 핵심 특징",
       "- 동향"
     ],
     "sections": [
       {
-        "title": "QUIC의 개념",
+        "title": "QUIC 개념",
         "subsections": [
           {
             "title": "등장 배경",
@@ -7497,7 +7506,7 @@
         ]
       },
       {
-        "title": "특징과 동향",
+        "title": "QUIC 특징·동향",
         "subsections": [
           {
             "title": "핵심 특징",
@@ -7800,7 +7809,7 @@
       "제어: DCF(Distributed Coordination Function) · RTS/CTS(Request To Send/Clear To Send) · NAV(Network Allocation Vector) · 숨은 노드(Hidden Node) · ACK(Acknowledgment)"
     ],
     "outline": [
-      "CSMA/CA의 개념",
+      "CSMA/CA 개념",
       "- 사용 이유",
       "충돌 회피 절차",
       "- 기본 동작(DCF)",
@@ -7810,7 +7819,7 @@
     ],
     "sections": [
       {
-        "title": "CSMA/CA의 개념",
+        "title": "CSMA/CA 개념",
         "subsections": [
           {
             "title": "사용 이유",
@@ -7909,17 +7918,17 @@
       "구분: 근거리 사용자(Near User) · 원거리 사용자(Far User) · 코드 영역 NOMA(SCMA)"
     ],
     "outline": [
-      "NOMA의 개념",
+      "NOMA 개념",
       "- 특성",
       "원리와 핵심 기술",
       "- 송신(기지국)",
       "- 수신(단말)",
-      "OFDMA와 비교",
+      "OFDMA 비교",
       "- 비교 항목"
     ],
     "sections": [
       {
-        "title": "NOMA의 개념",
+        "title": "NOMA 개념",
         "subsections": [
           {
             "title": "특성",
@@ -7950,7 +7959,7 @@
         ]
       },
       {
-        "title": "OFDMA와 비교",
+        "title": "OFDMA 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -8132,7 +8141,7 @@
       "- 오류 검출·정정",
       "- ARQ 기법",
       "대표 프로토콜",
-      "- HDLC와 PPP"
+      "- HDLC·PPP"
     ],
     "sections": [
       {
@@ -8174,7 +8183,7 @@
         "title": "대표 프로토콜",
         "subsections": [
           {
-            "title": "HDLC와 PPP",
+            "title": "HDLC·PPP",
             "items": [
               "HDLC 동작 모드: NRM(정규 응답)·ARM(비동기 응답)·ABM(Asynchronous Balanced Mode)",
               "HDLC 프레임: I(정보)·S(감독)·U(비번호)",
@@ -8223,7 +8232,10 @@
       "스위치·브리지"
     ],
     "title": "데이터 링크 계층(Data Link Layer, OSI 2계층)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "ABM": "Asynchronous Balanced Mode"
+    }
   },
   "NW_046": {
     "name": "TCP(Transmission Control Protocol)",
@@ -8235,7 +8247,7 @@
       "헤더: TCP 플래그(SYN·ACK·FIN·RST·PSH·URG) · 순서 번호·확인 번호(Seq/Ack)"
     ],
     "outline": [
-      "TCP의 특징",
+      "TCP 특징",
       "- 신뢰성 보장",
       "연결 설정·종료",
       "- 3-웨이 핸드셰이크",
@@ -8246,7 +8258,7 @@
     ],
     "sections": [
       {
-        "title": "TCP의 특징",
+        "title": "TCP 특징",
         "subsections": [
           {
             "title": "신뢰성 보장",
@@ -8354,7 +8366,7 @@
       "서브넷 계산 절차",
       "- 계산 단계",
       "- 예시",
-      "CIDR과 VLSM 비교",
+      "CIDR·VLSM 비교",
       "- 비교 항목"
     ],
     "sections": [
@@ -8395,7 +8407,7 @@
         ]
       },
       {
-        "title": "CIDR과 VLSM 비교",
+        "title": "CIDR·VLSM 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -8651,18 +8663,18 @@
       "구성: 연관(Association) · 청크(Chunk) · 상태 쿠키(State Cookie) · 하트비트(Heartbeat)"
     ],
     "outline": [
-      "SCTP의 개념",
+      "SCTP 개념",
       "- 위치와 목적",
       "SCTP 핵심 기술",
       "- 멀티호밍",
       "- 멀티스트리밍",
       "- 연결 관리",
-      "TCP·UDP와 비교",
+      "TCP·UDP 비교",
       "- 비교 항목"
     ],
     "sections": [
       {
-        "title": "SCTP의 개념",
+        "title": "SCTP 개념",
         "subsections": [
           {
             "title": "위치와 목적",
@@ -8702,7 +8714,7 @@
         ]
       },
       {
-        "title": "TCP·UDP와 비교",
+        "title": "TCP·UDP 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -8764,9 +8776,9 @@
       "보안: ARP 스푸핑(ARP Spoofing) · ARP 리다이렉트(ARP Redirect) · DAI(Dynamic ARP Inspection)"
     ],
     "outline": [
-      "ARP의 동작",
+      "ARP 동작",
       "- 주소 해석 절차",
-      "ARP와 RARP 비교",
+      "ARP·RARP 비교",
       "- 비교 항목",
       "보안 취약점과 대응",
       "- 공격 유형",
@@ -8774,7 +8786,7 @@
     ],
     "sections": [
       {
-        "title": "ARP의 동작",
+        "title": "ARP 동작",
         "subsections": [
           {
             "title": "주소 해석 절차",
@@ -8788,7 +8800,7 @@
         ]
       },
       {
-        "title": "ARP와 RARP 비교",
+        "title": "ARP·RARP 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -8873,7 +8885,7 @@
       "대체: BOOTP(Bootstrap Protocol) · DHCP(Dynamic Host Configuration Protocol)"
     ],
     "outline": [
-      "RARP의 필요성",
+      "RARP 필요성",
       "- 사용 환경",
       "RARP 동작",
       "- 절차",
@@ -8883,7 +8895,7 @@
     ],
     "sections": [
       {
-        "title": "RARP의 필요성",
+        "title": "RARP 필요성",
         "subsections": [
           {
             "title": "사용 환경",
@@ -8975,7 +8987,7 @@
       "프로토콜: SDP(Session Description Protocol) · SRTP(Secure RTP) · DTLS(Datagram TLS)"
     ],
     "outline": [
-      "WebRTC의 개념",
+      "WebRTC 개념",
       "- WebRTC 특징",
       "WebRTC 구성요소",
       "- 웹 API",
@@ -8986,7 +8998,7 @@
     ],
     "sections": [
       {
-        "title": "WebRTC의 개념",
+        "title": "WebRTC 개념",
         "subsections": [
           {
             "title": "WebRTC 특징",
@@ -9092,17 +9104,17 @@
       "동작: 우선순위(Priority, 기본 100) · 광고 메시지(Advertisement, 224.0.0.18) · 선점(Preemption)"
     ],
     "outline": [
-      "VRRP의 개념",
+      "VRRP 개념",
       "- VRRP 목적",
       "구성요소와 동작",
       "- VRRP 구성요소",
       "- 절체 과정",
-      "VRRP와 HSRP 비교",
+      "VRRP·HSRP 비교",
       "- 비교 항목"
     ],
     "sections": [
       {
-        "title": "VRRP의 개념",
+        "title": "VRRP 개념",
         "subsections": [
           {
             "title": "VRRP 목적",
@@ -9137,7 +9149,7 @@
         ]
       },
       {
-        "title": "VRRP와 HSRP 비교",
+        "title": "VRRP·HSRP 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -9201,7 +9213,7 @@
       "특징: 결합 혼잡 제어(Coupled Congestion Control, LIA) · 경로 스케줄러(Scheduler)"
     ],
     "outline": [
-      "MPTCP의 개념",
+      "MPTCP 개념",
       "- MPTCP 특징",
       "계층 구조와 연결 절차",
       "- 계층 구조",
@@ -9211,7 +9223,7 @@
     ],
     "sections": [
       {
-        "title": "MPTCP의 개념",
+        "title": "MPTCP 개념",
         "subsections": [
           {
             "title": "MPTCP 특징",
@@ -9411,7 +9423,7 @@
       "안전 서비스: 전방 충돌 경고(FCW) · 긴급 전자 브레이크등(EEBL) · 교차로 이동 보조(IMA)"
     ],
     "outline": [
-      "V2V의 개념",
+      "V2V 개념",
       "- 요구사항",
       "통신 기술과 서비스",
       "- 통신 방식",
@@ -9421,7 +9433,7 @@
     ],
     "sections": [
       {
-        "title": "V2V의 개념",
+        "title": "V2V 개념",
         "subsections": [
           {
             "title": "요구사항",
@@ -9522,7 +9534,7 @@
       "특성: 가시선(LOS) · 고속 전송(1Mbps 이상)"
     ],
     "outline": [
-      "DSRC의 개념",
+      "DSRC 개념",
       "- DSRC 특징",
       "- 요구사항",
       "구성과 기술 방식",
@@ -9533,7 +9545,7 @@
     ],
     "sections": [
       {
-        "title": "DSRC의 개념",
+        "title": "DSRC 개념",
         "subsections": [
           {
             "title": "DSRC 특징",
@@ -9635,7 +9647,7 @@
       "동작: 자동 호출(Automatic, 에어백·충돌 센서) · 수동 호출(SOS 버튼) · 인밴드 모뎀(In-band Modem)"
     ],
     "outline": [
-      "eCall의 개념",
+      "eCall 개념",
       "- 기대 효과",
       "구성과 동작",
       "- 시스템 구성",
@@ -9645,7 +9657,7 @@
     ],
     "sections": [
       {
-        "title": "eCall의 개념",
+        "title": "eCall 개념",
         "subsections": [
           {
             "title": "기대 효과",
@@ -9741,7 +9753,7 @@
       "통합: 통신-센싱 통합(ISAC) · 비지상 네트워크(NTN) 협력 · 고정밀 측위(Positioning)"
     ],
     "outline": [
-      "6G-V2X의 등장 배경",
+      "6G-V2X 등장 배경",
       "- 6G-V2X 필요성",
       "기술 요소",
       "- 6G-V2X 핵심 기술",
@@ -9750,7 +9762,7 @@
     ],
     "sections": [
       {
-        "title": "6G-V2X의 등장 배경",
+        "title": "6G-V2X 등장 배경",
         "subsections": [
           {
             "title": "6G-V2X 필요성",
@@ -9840,7 +9852,7 @@
       "오류 처리: 에러 액티브·패시브·버스 오프(Error Active/Passive/Bus-off) · CRC·ACK 검사"
     ],
     "outline": [
-      "CAN의 개념",
+      "CAN 개념",
       "- CAN 특징",
       "아키텍처와 기술요소",
       "- 통신 방식",
@@ -9852,7 +9864,7 @@
     ],
     "sections": [
       {
-        "title": "CAN의 개념",
+        "title": "CAN 개념",
         "subsections": [
           {
             "title": "CAN 특징",
@@ -9959,7 +9971,7 @@
       "핵심 기술: 멀티 AP 협력(Multi-AP Coordination: Co-BF·Co-SR·Co-TDMA) · DSO(Dynamic Subchannel Operation) · NPCA(Non-Primary Channel Access) · 분산 RU(dRU, Distributed RU) · 끊김 없는 로밍(Seamless Roaming)"
     ],
     "outline": [
-      "Wi-Fi 8의 개념",
+      "Wi-Fi 8 개념",
       "- 개발 배경",
       "요구 사양과 기술",
       "- 요구 사양",
@@ -9969,7 +9981,7 @@
     ],
     "sections": [
       {
-        "title": "Wi-Fi 8의 개념",
+        "title": "Wi-Fi 8 개념",
         "subsections": [
           {
             "title": "개발 배경",
@@ -10181,7 +10193,7 @@
       "공통: PMF(Protected Management Frames, 802.11w) 의무화 · OWE(Enhanced Open)"
     ],
     "outline": [
-      "WPA3의 개요",
+      "WPA3 개요",
       "- WPA3 특징",
       "주요 기능",
       "- 개선 내용",
@@ -10190,7 +10202,7 @@
     ],
     "sections": [
       {
-        "title": "WPA3의 개요",
+        "title": "WPA3 개요",
         "subsections": [
           {
             "title": "WPA3 특징",
@@ -10278,7 +10290,7 @@
       "보정 방식: VRS(Virtual Reference Station) · FKP(Flächen-Korrektur-Parameter) · MAC(Master-Auxiliary Concept)"
     ],
     "outline": [
-      "NRTK의 개념",
+      "NRTK 개념",
       "- 네트워크 실시간 이동 측위 특징",
       "구성과 동작",
       "- 동작 흐름",
@@ -10287,7 +10299,7 @@
     ],
     "sections": [
       {
-        "title": "NRTK의 개념",
+        "title": "NRTK 개념",
         "subsections": [
           {
             "title": "네트워크 실시간 이동 측위 특징",
@@ -10374,7 +10386,7 @@
       "기능: 최소 2바이트 고정 헤더 · 유지 메시지(Retained Message) · 유언 메시지(LWT, Last Will and Testament) · Keep Alive"
     ],
     "outline": [
-      "MQTT의 개념",
+      "MQTT 개념",
       "- MQTT 특징",
       "구성과 메시지",
       "- 구성",
@@ -10385,7 +10397,7 @@
     ],
     "sections": [
       {
-        "title": "MQTT의 개념",
+        "title": "MQTT 개념",
         "subsections": [
           {
             "title": "MQTT 특징",
@@ -10496,7 +10508,7 @@
       "보안·확장: TLS + SASL 인증 · XEP(XMPP Extension Protocol) · 발행/구독(PubSub, XEP-0060)"
     ],
     "outline": [
-      "XMPP의 개념",
+      "XMPP 개념",
       "- XMPP 특징",
       "구조와 프로토콜",
       "- 아키텍처",
@@ -10507,7 +10519,7 @@
     ],
     "sections": [
       {
-        "title": "XMPP의 개념",
+        "title": "XMPP 개념",
         "subsections": [
           {
             "title": "XMPP 특징",
@@ -10729,16 +10741,16 @@
       "확장: CBWFQ(Class-Based WFQ) · LLQ(Low Latency Queuing)"
     ],
     "outline": [
-      "WFQ의 개념",
+      "WFQ 개념",
       "- WFQ 특징",
       "동작 방식",
       "- 스케줄링",
       "확장 기법",
-      "- CBWFQ와 LLQ"
+      "- CBWFQ·LLQ"
     ],
     "sections": [
       {
-        "title": "WFQ의 개념",
+        "title": "WFQ 개념",
         "subsections": [
           {
             "title": "WFQ 특징",
@@ -10767,7 +10779,7 @@
         "title": "확장 기법",
         "subsections": [
           {
-            "title": "CBWFQ와 LLQ",
+            "title": "CBWFQ·LLQ",
             "items": [
               "CBWFQ: 흐름이 아닌 클래스 단위로 최소 대역 보장",
               "LLQ: CBWFQ에 엄격 우선 큐 추가 → 음성·영상 저지연",
@@ -10827,7 +10839,7 @@
     "outline": [
       "사전 폐기의 필요성",
       "- 테일 드롭 문제",
-      "RED와 WRED",
+      "RED·WRED",
       "- RED 동작",
       "- WRED 동작",
       "TCP 송신 측 연동",
@@ -10848,7 +10860,7 @@
         ]
       },
       {
-        "title": "RED와 WRED",
+        "title": "RED·WRED",
         "subsections": [
           {
             "title": "RED 동작",
@@ -10928,17 +10940,17 @@
       "구성: 수락 제어(Admission Control) · 분류기(Classifier) · 패킷 스케줄러(Scheduler) · 흐름별 상태(Per-flow State)"
     ],
     "outline": [
-      "IntServ의 개념",
+      "IntServ 개념",
       "- 서비스 종류",
       "동작과 구성요소",
       "- RSVP 예약",
       "- 라우터 기능",
-      "DiffServ와 비교",
+      "DiffServ 비교",
       "- 비교 항목"
     ],
     "sections": [
       {
-        "title": "IntServ의 개념",
+        "title": "IntServ 개념",
         "subsections": [
           {
             "title": "서비스 종류",
@@ -10972,7 +10984,7 @@
         ]
       },
       {
-        "title": "DiffServ와 비교",
+        "title": "DiffServ 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -11039,7 +11051,7 @@
       "동작: 푸시·스왑·팝(Push/Swap/Pop)"
     ],
     "outline": [
-      "MPLS의 개념",
+      "MPLS 개념",
       "- MPLS 특징",
       "구조와 요소 기술",
       "- 요소 기술",
@@ -11048,7 +11060,7 @@
     ],
     "sections": [
       {
-        "title": "MPLS의 개념",
+        "title": "MPLS 개념",
         "subsections": [
           {
             "title": "MPLS 특징",
@@ -11141,7 +11153,7 @@
       "공존: SAM(Slot Availability Mask) · 채널 선택 알고리즘 #2"
     ],
     "outline": [
-      "블루투스 5의 특징",
+      "블루투스 5 특징",
       "- 개선 사항",
       "메시 네트워크 구성요소",
       "- 노드 유형",
@@ -11150,7 +11162,7 @@
     ],
     "sections": [
       {
-        "title": "블루투스 5의 특징",
+        "title": "블루투스 5 특징",
         "subsections": [
           {
             "title": "개선 사항",
@@ -14175,7 +14187,7 @@
       "재생 중계(Regenerative Repeater)"
     ],
     "outline": [
-      "PCM의 개념",
+      "PCM 개념",
       "- 구성 흐름",
       "단계별 동작",
       "- 송신 단계",
@@ -14185,7 +14197,7 @@
     ],
     "sections": [
       {
-        "title": "PCM의 개념",
+        "title": "PCM 개념",
         "subsections": [
           {
             "title": "구성 흐름",
@@ -14282,7 +14294,7 @@
       "- 캡슐화가 필요한 이유",
       "계층별 PDU",
       "- TCP/IP 기준",
-      "- PDU와 SDU",
+      "- PDU·SDU",
       "다중화와의 관계",
       "- 연결 관계"
     ],
@@ -14321,7 +14333,7 @@
             ]
           },
           {
-            "title": "PDU와 SDU",
+            "title": "PDU·SDU",
             "items": [
               "SDU: 상위에서 받은 데이터",
               "PDU = 헤더 + SDU"
@@ -14463,7 +14475,10 @@
       "QAM(Quadrature Amplitude Modulation)",
       "PAM·PWM·PPM(Pulse Position Modulation)",
       "PCM(Pulse Code Modulation)"
-    ]
+    ],
+    "gloss": {
+      "PPM": "Pulse Position Modulation"
+    }
   },
   "NW_008": {
     "name": "ASK(Amplitude Shift Keying, 진폭 편이 변조)",
@@ -14492,7 +14507,7 @@
       "심볼 에너지(Es)"
     ],
     "outline": [
-      "ASK의 개념",
+      "ASK 개념",
       "- 변조 원리",
       "특성과 검파",
       "- 장점",
@@ -14502,7 +14517,7 @@
     ],
     "sections": [
       {
-        "title": "ASK의 개념",
+        "title": "ASK 개념",
         "subsections": [
           {
             "title": "변조 원리",
@@ -14592,17 +14607,17 @@
       "위성통신·Wi-Fi·LTE"
     ],
     "outline": [
-      "PSK의 개념",
+      "PSK 개념",
       "- 변조 원리",
       "유형별 특징",
       "- 위상 수 기준",
       "- 검파 방식",
-      "ASK·FSK와 비교",
+      "ASK·FSK 비교",
       "- 비교 항목"
     ],
     "sections": [
       {
-        "title": "PSK의 개념",
+        "title": "PSK 개념",
         "subsections": [
           {
             "title": "변조 원리",
@@ -14635,7 +14650,7 @@
         ]
       },
       {
-        "title": "ASK·FSK와 비교",
+        "title": "ASK·FSK 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -14867,7 +14882,10 @@
       "페이로드 46~1500바이트",
       "스위치드 전이중(Full-duplex)",
       "10BASE-T~400GbE"
-    ]
+    ],
+    "gloss": {
+      "SFD": "Start Frame Delimiter"
+    }
   },
   "NW_015": {
     "name": "프레임 릴레이(Frame Relay)",
@@ -14999,16 +15017,16 @@
       "POTN·OTN 전환"
     ],
     "outline": [
-      "EoS의 개념",
+      "EoS 개념",
       "- 동작 방식",
       "이더넷 링 보호 절체(G.8032)",
       "- 동작 시나리오",
-      "EoS와 ERPS 비교",
+      "EoS·ERPS 비교",
       "- 비교 항목"
     ],
     "sections": [
       {
-        "title": "EoS의 개념",
+        "title": "EoS 개념",
         "subsections": [
           {
             "title": "동작 방식",
@@ -15034,7 +15052,7 @@
         ]
       },
       {
-        "title": "EoS와 ERPS 비교",
+        "title": "EoS·ERPS 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -15197,7 +15215,7 @@
       "브로드캐스트 도메인"
     ],
     "outline": [
-      "LAN의 특징",
+      "LAN 특징",
       "- 기본 특성",
       "계층 구조와 매체 접근",
       "- IEEE 802 계층",
@@ -15208,7 +15226,7 @@
     ],
     "sections": [
       {
-        "title": "LAN의 특징",
+        "title": "LAN 특징",
         "subsections": [
           {
             "title": "기본 특성",
@@ -15309,7 +15327,7 @@
       "DWDM 메트로망"
     ],
     "outline": [
-      "MAN의 개념",
+      "MAN 개념",
       "- 규모와 역할",
       "DQDB(IEEE 802.6)",
       "- 구조와 동작",
@@ -15318,7 +15336,7 @@
     ],
     "sections": [
       {
-        "title": "MAN의 개념",
+        "title": "MAN 개념",
         "subsections": [
           {
             "title": "규모와 역할",
@@ -15402,7 +15420,7 @@
       "PPP·HDLC"
     ],
     "outline": [
-      "WAN의 구조",
+      "WAN 구조",
       "- 망 구성",
       "WAN 유형",
       "- 연결 방식",
@@ -15412,7 +15430,7 @@
     ],
     "sections": [
       {
-        "title": "WAN의 구조",
+        "title": "WAN 구조",
         "subsections": [
           {
             "title": "망 구성",
@@ -15505,7 +15523,7 @@
       "보안(인증·암호화)"
     ],
     "outline": [
-      "WBAN의 개념",
+      "WBAN 개념",
       "- 기술 특성",
       "용도별 구분",
       "- 의료(Medical BAN)",
@@ -15516,7 +15534,7 @@
     ],
     "sections": [
       {
-        "title": "WBAN의 개념",
+        "title": "WBAN 개념",
         "subsections": [
           {
             "title": "기술 특성",
@@ -15614,17 +15632,17 @@
       "DTN(Delay-Tolerant Networking)"
     ],
     "outline": [
-      "FANET의 개념",
+      "FANET 개념",
       "- 적용 환경",
       "구성과 라우팅",
       "- 네트워크 구성",
       "- 라우팅 프로토콜",
-      "MANET·VANET과 비교",
+      "MANET·VANET 비교",
       "- 비교 항목"
     ],
     "sections": [
       {
-        "title": "FANET의 개념",
+        "title": "FANET 개념",
         "subsections": [
           {
             "title": "적용 환경",
@@ -15658,7 +15676,7 @@
         ]
       },
       {
-        "title": "MANET·VANET과 비교",
+        "title": "MANET·VANET 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -15687,7 +15705,10 @@
       "요구형(Reactive, AODV·DSR)",
       "위치 기반 라우팅(Geographic, GPSR)",
       "하이브리드(Hybrid)"
-    ]
+    ],
+    "gloss": {
+      "DTN": "Delay-Tolerant Networking"
+    }
   },
   "NW_024": {
     "name": "LPWAN(Low-Power Wide-Area Network)",
@@ -15718,7 +15739,7 @@
       "PSM·eDRX 절전 모드"
     ],
     "outline": [
-      "LPWAN의 개념",
+      "LPWAN 개념",
       "- 핵심 특성",
       "주요 기술",
       "- 비면허 대역",
@@ -15728,7 +15749,7 @@
     ],
     "sections": [
       {
-        "title": "LPWAN의 개념",
+        "title": "LPWAN 개념",
         "subsections": [
           {
             "title": "핵심 특성",
@@ -15824,7 +15845,7 @@
       "PDH(비동기 계위) 대비"
     ],
     "outline": [
-      "SONET의 개념",
+      "SONET 개념",
       "- 동기식 전송의 이점",
       "신호 계위와 프레임",
       "- 계위",
@@ -15835,7 +15856,7 @@
     ],
     "sections": [
       {
-        "title": "SONET의 개념",
+        "title": "SONET 개념",
         "subsections": [
           {
             "title": "동기식 전송의 이점",
@@ -15907,7 +15928,10 @@
       "포토닉(Photonic)",
       "APS(Automatic Protection Switching)",
       "자기 치유 링(Self-healing Ring)"
-    ]
+    ],
+    "gloss": {
+      "ADM": "Add-Drop Multiplexer"
+    }
   },
   "NW_027": {
     "name": "DNSSEC(DNS Security Extensions)",
@@ -15937,7 +15961,7 @@
       "존 열거(Zone Walking)"
     ],
     "outline": [
-      "DNSSEC의 개념",
+      "DNSSEC 개념",
       "- 보안 목표",
       "서명·검증 메커니즘",
       "- 서명 과정",
@@ -15948,7 +15972,7 @@
     ],
     "sections": [
       {
-        "title": "DNSSEC의 개념",
+        "title": "DNSSEC 개념",
         "subsections": [
           {
             "title": "보안 목표",
@@ -16051,18 +16075,18 @@
       "WDM(광 FDM)"
     ],
     "outline": [
-      "FDM의 원리",
+      "FDM 원리",
       "- 송신 과정",
       "- 수신 과정",
       "장단점",
       "- 장점",
       "- 단점",
-      "FDM의 발전",
+      "FDM 발전",
       "- 진화 기술"
     ],
     "sections": [
       {
-        "title": "FDM의 원리",
+        "title": "FDM 원리",
         "subsections": [
           {
             "title": "송신 과정",
@@ -16100,7 +16124,7 @@
         ]
       },
       {
-        "title": "FDM의 발전",
+        "title": "FDM 발전",
         "subsections": [
           {
             "title": "진화 기술",
@@ -16158,17 +16182,17 @@
       "버퍼링"
     ],
     "outline": [
-      "TDM의 원리",
+      "TDM 원리",
       "- 동작 방식",
       "동기식과 통계적 TDM",
       "- 동기식 TDM",
       "- 통계적 TDM",
-      "FDM과 비교",
+      "FDM 비교",
       "- 비교 항목"
     ],
     "sections": [
       {
-        "title": "TDM의 원리",
+        "title": "TDM 원리",
         "subsections": [
           {
             "title": "동작 방식",
@@ -16200,7 +16224,7 @@
         ]
       },
       {
-        "title": "FDM과 비교",
+        "title": "FDM 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -16257,16 +16281,16 @@
       "파장 라우팅"
     ],
     "outline": [
-      "WDM의 개념",
+      "WDM 개념",
       "- 장점",
       "WDM 종류",
-      "- CWDM과 DWDM",
+      "- CWDM·DWDM",
       "WDM 망 구성 장비",
       "- 핵심 장비"
     ],
     "sections": [
       {
-        "title": "WDM의 개념",
+        "title": "WDM 개념",
         "subsections": [
           {
             "title": "장점",
@@ -16282,7 +16306,7 @@
         "title": "WDM 종류",
         "subsections": [
           {
-            "title": "CWDM과 DWDM",
+            "title": "CWDM·DWDM",
             "items": [
               "CWDM: 20nm 간격 18파장, 증폭 없이 단거리·저비용(메트로)",
               "DWDM: 0.8nm(100GHz) 이하 간격 수십~수백 파장, EDFA로 장거리 증폭(백본)",
@@ -16828,7 +16852,10 @@
       "DNS",
       "SNMP(Simple Network Management Protocol)",
       "SIP(Session Initiation Protocol)"
-    ]
+    ],
+    "gloss": {
+      "SIP": "Session Initiation Protocol"
+    }
   },
   "NW_038": {
     "name": "HTTP/3",
@@ -16858,16 +16885,16 @@
       "방화벽 UDP 차단 문제"
     ],
     "outline": [
-      "HTTP/3의 개념",
+      "HTTP/3 개념",
       "- 등장 배경",
-      "QUIC의 특징",
+      "QUIC 특징",
       "- 전송 특성",
-      "HTTP/2와 비교",
+      "HTTP/2 비교",
       "- 비교 항목"
     ],
     "sections": [
       {
-        "title": "HTTP/3의 개념",
+        "title": "HTTP/3 개념",
         "subsections": [
           {
             "title": "등장 배경",
@@ -16879,7 +16906,7 @@
         ]
       },
       {
-        "title": "QUIC의 특징",
+        "title": "QUIC 특징",
         "subsections": [
           {
             "title": "전송 특성",
@@ -16893,7 +16920,7 @@
         ]
       },
       {
-        "title": "HTTP/2와 비교",
+        "title": "HTTP/2 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -17421,7 +17448,10 @@
       "임계값(ssthresh)",
       "AIMD(Additive Increase Multiplicative Decrease)",
       "3 중복 ACK(3 Duplicate ACK)"
-    ]
+    ],
+    "gloss": {
+      "RTO": "Retransmission TimeOut"
+    }
   },
   "NW_050": {
     "name": "슬라이딩 윈도우(Sliding Window)",
@@ -17551,17 +17581,17 @@
       "DTLS"
     ],
     "outline": [
-      "UDP의 특징",
+      "UDP 특징",
       "- 경량 전송",
       "헤더 구조",
       "- 8바이트 헤더",
-      "TCP와 비교",
+      "TCP 비교",
       "- 비교 항목",
       "- 보안 이슈"
     ],
     "sections": [
       {
-        "title": "UDP의 특징",
+        "title": "UDP 특징",
         "subsections": [
           {
             "title": "경량 전송",
@@ -17588,7 +17618,7 @@
         ]
       },
       {
-        "title": "TCP와 비교",
+        "title": "TCP 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -17659,7 +17689,7 @@
       "IP 주소의 구조",
       "- IPv4 클래스",
       "- 특수 주소",
-      "IPv4의 한계와 IPv6",
+      "IPv4 한계와 IPv6",
       "- IPv4 문제점",
       "- IPv6 개선",
       "3단계 주소 체계",
@@ -17690,7 +17720,7 @@
         ]
       },
       {
-        "title": "IPv4의 한계와 IPv6",
+        "title": "IPv4 한계와 IPv6",
         "subsections": [
           {
             "title": "IPv4 문제점",
@@ -17866,7 +17896,7 @@
       "IPsec NAT-T"
     ],
     "outline": [
-      "NAT의 개념",
+      "NAT 개념",
       "- 동작 절차",
       "핵심 기능",
       "- 주요 기능",
@@ -17876,7 +17906,7 @@
     ],
     "sections": [
       {
-        "title": "NAT의 개념",
+        "title": "NAT 개념",
         "subsections": [
           {
             "title": "동작 절차",
@@ -17968,7 +17998,7 @@
       "재전송 없음"
     ],
     "outline": [
-      "RTP의 특징",
+      "RTP 특징",
       "- 실시간 전송",
       "헤더 구조",
       "- 주요 필드",
@@ -17977,7 +18007,7 @@
     ],
     "sections": [
       {
-        "title": "RTP의 특징",
+        "title": "RTP 특징",
         "subsections": [
           {
             "title": "실시간 전송",
@@ -18034,7 +18064,10 @@
       "RTSP(Real Time Streaming Protocol)",
       "SDP(Session Description Protocol)",
       "SIP(Session Initiation Protocol)"
-    ]
+    ],
+    "gloss": {
+      "SIP": "Session Initiation Protocol"
+    }
   },
   "NW_061": {
     "name": "FTP(File Transfer Protocol)",
@@ -18232,7 +18265,10 @@
       "지터·손실률(Jitter/Loss)",
       "PLAY·PAUSE·SETUP·TEARDOWN",
       "SDP(Session Description Protocol)"
-    ]
+    ],
+    "gloss": {
+      "HLS": "HTTP Live Streaming"
+    }
   },
   "NW_067": {
     "name": "NTP(Network Time Protocol)",
@@ -18266,7 +18302,7 @@
       "로그·인증서 유효성에 시간 중요"
     ],
     "outline": [
-      "NTP의 개념",
+      "NTP 개념",
       "- 동기화 구조",
       "동작 원리",
       "- 오프셋·지연 계산",
@@ -18277,7 +18313,7 @@
     ],
     "sections": [
       {
-        "title": "NTP의 개념",
+        "title": "NTP 개념",
         "subsections": [
           {
             "title": "동기화 구조",
@@ -18383,7 +18419,7 @@
       "비트 지향(Bit-oriented)"
     ],
     "outline": [
-      "HDLC의 구조",
+      "HDLC 구조",
       "- 프레임 구성",
       "프레임 유형",
       "- 3가지 프레임",
@@ -18392,7 +18428,7 @@
     ],
     "sections": [
       {
-        "title": "HDLC의 구조",
+        "title": "HDLC 구조",
         "subsections": [
           {
             "title": "프레임 구성",
@@ -18449,7 +18485,10 @@
       "NRM(Normal Response Mode)",
       "ARM(Asynchronous Response Mode)",
       "ABM(Asynchronous Balanced Mode)"
-    ]
+    ],
+    "gloss": {
+      "ABM": "Asynchronous Balanced Mode"
+    }
   },
   "NW_074": {
     "name": "L7 스위치(Layer 7 Switch, 콘텐츠 스위치)",
@@ -18584,7 +18623,7 @@
       "- L3 스위치 특징",
       "구성과 주요 기능",
       "- 동작 구조",
-      "L2와 L3 스위칭 비교",
+      "L2·L3 스위칭 비교",
       "- 비교 항목"
     ],
     "sections": [
@@ -18615,7 +18654,7 @@
         ]
       },
       {
-        "title": "L2와 L3 스위칭 비교",
+        "title": "L2·L3 스위칭 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -18777,8 +18816,8 @@
       "100ms 이하 지연"
     ],
     "outline": [
-      "IoV의 개념",
-      "- VANET과 차이",
+      "IoV 개념",
+      "- VANET 차이",
       "주요 기술",
       "- IoV 핵심 기술",
       "인포테인먼트 동향",
@@ -18786,10 +18825,10 @@
     ],
     "sections": [
       {
-        "title": "IoV의 개념",
+        "title": "IoV 개념",
         "subsections": [
           {
-            "title": "VANET과 차이",
+            "title": "VANET 차이",
             "items": [
               "VANET은 차량 간 애드혹 통신 중심",
               "IoV는 클라우드·인프라까지 포함한 인터넷 연결",
@@ -18875,7 +18914,7 @@
       "프라이빗 VLAN"
     ],
     "outline": [
-      "VLAN의 개념",
+      "VLAN 개념",
       "- 장점",
       "구성요소와 구성 방법",
       "- VLAN 구성요소",
@@ -18885,7 +18924,7 @@
     ],
     "sections": [
       {
-        "title": "VLAN의 개념",
+        "title": "VLAN 개념",
         "subsections": [
           {
             "title": "장점",
@@ -19080,7 +19119,7 @@
       "Wi-Fi 8(UHR)로 진화"
     ],
     "outline": [
-      "Wi-Fi 7의 개요",
+      "Wi-Fi 7 개요",
       "- 목표 사양",
       "기술 요소",
       "- PHY 기술",
@@ -19090,7 +19129,7 @@
     ],
     "sections": [
       {
-        "title": "Wi-Fi 7의 개요",
+        "title": "Wi-Fi 7 개요",
         "subsections": [
           {
             "title": "목표 사양",
@@ -19186,7 +19225,7 @@
       "3GPP MTC"
     ],
     "outline": [
-      "M2M의 개념",
+      "M2M 개념",
       "- M2M 특징",
       "기술 요소",
       "- 계층별 기술",
@@ -19196,7 +19235,7 @@
     ],
     "sections": [
       {
-        "title": "M2M의 개념",
+        "title": "M2M 개념",
         "subsections": [
           {
             "title": "M2M 특징",
@@ -19405,7 +19444,7 @@
       "oneM2M 연동"
     ],
     "outline": [
-      "LwM2M의 개념",
+      "LwM2M 개념",
       "- LwM2M 특징",
       "구성",
       "- 구성도",
@@ -19414,7 +19453,7 @@
     ],
     "sections": [
       {
-        "title": "LwM2M의 개념",
+        "title": "LwM2M 개념",
         "subsections": [
           {
             "title": "LwM2M 특징",
@@ -19501,7 +19540,7 @@
       "IoT 사일로 해소"
     ],
     "outline": [
-      "WoT의 개념",
+      "WoT 개념",
       "- WoT 특징",
       "- 사물 웹 접속 기술",
       "사물 웹 브로커 구성",
@@ -19512,7 +19551,7 @@
     ],
     "sections": [
       {
-        "title": "WoT의 개념",
+        "title": "WoT 개념",
         "subsections": [
           {
             "title": "WoT 특징",
@@ -19610,17 +19649,17 @@
       "M2P·P2P 연결"
     ],
     "outline": [
-      "IoE의 개념",
+      "IoE 개념",
       "- IoE 특징",
       "IoE 구성요소",
       "- 4대 요소",
       "- 기반 기술",
-      "M2M·IoT와 비교",
+      "M2M·IoT 비교",
       "- 비교 항목"
     ],
     "sections": [
       {
-        "title": "IoE의 개념",
+        "title": "IoE 개념",
         "subsections": [
           {
             "title": "IoE 특징",
@@ -19655,7 +19694,7 @@
         ]
       },
       {
-        "title": "M2M·IoT와 비교",
+        "title": "M2M·IoT 비교",
         "subsections": [
           {
             "title": "비교 항목",
@@ -19716,7 +19755,7 @@
       "스타-오브-스타 토폴로지"
     ],
     "outline": [
-      "LoRa의 개념",
+      "LoRa 개념",
       "- LoRa 특징",
       "LoRa 구성요소",
       "- 망 구성",
@@ -19726,7 +19765,7 @@
     ],
     "sections": [
       {
-        "title": "LoRa의 개념",
+        "title": "LoRa 개념",
         "subsections": [
           {
             "title": "LoRa 특징",
@@ -19819,7 +19858,7 @@
       "위치 추적·스마트 검침"
     ],
     "outline": [
-      "Sigfox의 개념",
+      "Sigfox 개념",
       "- 시그폭스 특징",
       "네트워크 구성과 기술",
       "- 구성",
@@ -19830,7 +19869,7 @@
     ],
     "sections": [
       {
-        "title": "Sigfox의 개념",
+        "title": "Sigfox 개념",
         "subsections": [
           {
             "title": "시그폭스 특징",
@@ -19934,7 +19973,7 @@
       "웨어러블·차량 추적"
     ],
     "outline": [
-      "LTE-M의 개념",
+      "LTE-M 개념",
       "- LTE-M 특징",
       "기술요소",
       "- LTE-M 핵심 기술",
@@ -19943,7 +19982,7 @@
     ],
     "sections": [
       {
-        "title": "LTE-M의 개념",
+        "title": "LTE-M 개념",
         "subsections": [
           {
             "title": "LTE-M 특징",
@@ -20032,18 +20071,18 @@
       "스마트 검침·주차"
     ],
     "outline": [
-      "NB-IoT의 개념",
+      "NB-IoT 개념",
       "- NB-IoT 특징",
       "- 요구사항",
       "운용 모드",
       "- 3가지 모드",
       "활용과 비교",
       "- 활용",
-      "- LTE-M과 비교"
+      "- LTE-M 비교"
     ],
     "sections": [
       {
-        "title": "NB-IoT의 개념",
+        "title": "NB-IoT 개념",
         "subsections": [
           {
             "title": "NB-IoT 특징",
@@ -20087,7 +20126,7 @@
             ]
           },
           {
-            "title": "LTE-M과 비교",
+            "title": "LTE-M 비교",
             "items": [
               "NB-IoT: 저속·고정·심층 실내",
               "LTE-M: 고속·이동성·음성"
@@ -20143,7 +20182,7 @@
       "5G NR 사이드링크"
     ],
     "outline": [
-      "D2D의 개념",
+      "D2D 개념",
       "- 장점",
       "기술 종류",
       "- 근거리 기술",
@@ -20153,7 +20192,7 @@
     ],
     "sections": [
       {
-        "title": "D2D의 개념",
+        "title": "D2D 개념",
         "subsections": [
           {
             "title": "장점",
@@ -20352,7 +20391,7 @@
       "데이터 거버넌스"
     ],
     "outline": [
-      "IoB의 개념",
+      "IoB 개념",
       "- 활용 분야",
       "IoB 구성요소",
       "- 처리 흐름",
@@ -20362,7 +20401,7 @@
     ],
     "sections": [
       {
-        "title": "IoB의 개념",
+        "title": "IoB 개념",
         "subsections": [
           {
             "title": "활용 분야",
@@ -20672,7 +20711,7 @@
       "애플 에어태그"
     ],
     "outline": [
-      "UWB의 개념",
+      "UWB 개념",
       "- UWB 특징",
       "측위 원리",
       "- 거리·위치 측정",
@@ -20682,7 +20721,7 @@
     ],
     "sections": [
       {
-        "title": "UWB의 개념",
+        "title": "UWB 개념",
         "subsections": [
           {
             "title": "UWB 특징",
