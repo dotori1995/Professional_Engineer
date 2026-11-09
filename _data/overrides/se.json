@@ -383,7 +383,10 @@
    "초기화 벡터(IV)",
    "패딩(Padding)"
   ],
-  "dueum": "이씨씨오씨"
+  "dueum": "이씨씨오씨",
+  "gloss": {
+   "IV": "Initialization Vector"
+  }
  },
  "SE_007": {
   "title": "암호학적 해시 함수(Cryptographic Hash Function)",
@@ -1394,6 +1397,7 @@
    "양자 광학 센서"
   ],
   "gloss": {
+   "NV": "Nitrogen-Vacancy",
    "GPS": "Global Positioning System"
   }
  },
@@ -1641,7 +1645,10 @@
    "지불 게이트웨이(Payment Gateway)",
    "전자봉투(Digital Envelope)",
    "PKI 인증서"
-  ]
+  ],
+  "gloss": {
+   "SET": "Secure Electronic Transaction"
+  }
  },
  "SE_021": {
   "title": "전자서명(Digital Signature)",
@@ -13130,6 +13137,7 @@
    "엔드포인트"
   ],
   "gloss": {
+   "SRM": "Shared Responsibility Model",
    "CSP": "Cloud Service Provider",
    "SLA": "Service Level Agreement",
    "RACI": "Responsible, Accountable, Consulted, Informed"

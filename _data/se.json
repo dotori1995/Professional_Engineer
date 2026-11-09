@@ -404,7 +404,10 @@
   "quiz_groups": [
    "se"
   ],
-  "dueum": "이씨씨오씨"
+  "dueum": "이씨씨오씨",
+  "gloss": {
+   "IV": "Initialization Vector"
+  }
  },
  {
   "id": "SE_007",
@@ -1471,6 +1474,7 @@
    "se"
   ],
   "gloss": {
+   "NV": "Nitrogen-Vacancy",
    "GPS": "Global Positioning System"
   }
  },
@@ -1732,7 +1736,10 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "SET": "Secure Electronic Transaction"
+  }
  },
  {
   "id": "SE_021",
@@ -13823,6 +13830,7 @@
    "se"
   ],
   "gloss": {
+   "SRM": "Shared Responsibility Model",
    "CSP": "Cloud Service Provider",
    "SLA": "Service Level Agreement",
    "RACI": "Responsible, Accountable, Consulted, Informed"

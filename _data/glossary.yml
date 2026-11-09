@@ -1523,3 +1523,38 @@ IACS: Industrial Automation and Control Systems
 SOAR: "Security Orchestration, Automation and Response"
 MDR: Managed Detection and Response
 EPP: Endpoint Protection Platform
+RSA: Rivest-Shamir-Adleman
+SHA: Secure Hash Algorithm
+MD5: Message Digest 5
+DES: Data Encryption Standard
+NIST: National Institute of Standards and Technology
+"ATT&CK": "Adversarial Tactics, Techniques, and Common Knowledge"
+CASB: Cloud Access Security Broker
+BLP: Bell-LaPadula
+DRM: Digital Rights Management
+CSAP: Cloud Security Assurance Program
+DH: Diffie-Hellman
+TFN: Tribe Flood Network
+UEBA: User and Entity Behavior Analytics
+CARTA: Continuous Adaptive Risk and Trust Assessment
+TOCTOU: Time-Of-Check to Time-Of-Use
+AAA: "Authentication, Authorization, Accounting"
+NAC: Network Access Control
+FWaaS: Firewall as a Service
+ZTNA: Zero Trust Network Access
+SWG: Secure Web Gateway
+CAPTCHA: Completely Automated Public Turing test to tell Computers and Humans Apart
+CTAP: Client to Authenticator Protocol
+PIN: Personal Identification Number
+CCL: Creative Commons License
+INDECS: Interoperability of Data in E-Commerce Systems
+DOI: Digital Object Identifier
+PET: Privacy-Enhancing Technologies
+C-TAS: "Cyber Threat Analysis & Sharing"
+TTPs: "Tactics, Techniques and Procedures"
+VM: Virtual Machine
+NAT-T: NAT Traversal
+PPPoE: Point-to-Point Protocol over Ethernet
+FIPS: Federal Information Processing Standards
+SPAN: Switched Port Analyzer
+FTK: Forensic Toolkit
