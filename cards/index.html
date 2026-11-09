@@ -7,6 +7,8 @@ script: /assets/js/cards.js
 ---
 <section class="card-tools">
   <div class="chips" role="group" aria-label="카드 옵션">
+    <button type="button" class="chip on" data-view="flash">🃏 플래시카드</button>
+    <button type="button" class="chip" data-view="quiz">📝 객관식</button>
     <span id="domainChips" class="chipgroup" role="group" aria-label="도메인 필터"></span>
     <button type="button" class="chip toggle" id="shuffleBtn" aria-pressed="false">🔀 섞기</button>
   </div>
@@ -19,10 +21,15 @@ script: /assets/js/cards.js
     <div class="face front fitbox" id="front"></div>
     <div class="face back fitbox" id="back" hidden></div>
   </article>
+  <section class="quiz fitbox" id="quiz" hidden aria-live="polite"></section>
 </div>
 
-<div class="card-actions">
+<div class="card-actions" id="flashActions">
   <button type="button" class="btn ghost nav" id="prevBtn" aria-label="이전 카드">◀</button>
   <button type="button" class="btn ghost" id="flipBtn">🔄 뒤집기</button>
   <button type="button" class="btn ghost nav" id="nextBtn" aria-label="다음 카드">▶</button>
+</div>
+<div class="card-actions" id="quizActions" hidden>
+  <button type="button" class="btn ghost" id="quizReset">↺ 점수 초기화</button>
+  <button type="button" class="btn know" id="quizNext" disabled>다음 문제 ▶</button>
 </div>

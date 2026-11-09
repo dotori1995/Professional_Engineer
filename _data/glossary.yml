@@ -1,0 +1,226 @@
+# 약어 → 정식 명칭 (표준 문서·교과서 기준). 화면에서 약어 옆에 작게 표시됨.
+# 뜻이 여러 개라 헷갈리는 약어(CA, CD, CP, SP, IS, MC, AM, EU 등)는 넣지 않음.
+ABR: Area Border Router
+ADN: Application Delivery Network
+AES: Advanced Encryption Standard
+AI: Artificial Intelligence
+AIoE: Ambient Internet of Everything
+AMI: Advanced Metering Infrastructure
+AODV: Ad hoc On-demand Distance Vector
+AP: Access Point
+APTEEN: Adaptive Periodic Threshold-sensitive Energy Efficient sensor Network
+ARP: Address Resolution Protocol
+ARQ: Automatic Repeat reQuest
+AS: Autonomous System
+ASBR: Autonomous System Boundary Router
+ASK: Amplitude Shift Keying
+BDR: Backup Designated Router
+BEC: Backward Error Correction
+BGP: Border Gateway Protocol
+BSS: Business Support System
+CAN: Controller Area Network
+CCTV: Closed-Circuit Television
+CDM: Code Division Multiplexing
+CDMA: Code Division Multiple Access
+CDN: Content Delivery Network
+CIDR: Classless Inter-Domain Routing
+CoAP: Constrained Application Protocol
+CoRE: Constrained RESTful Environments
+CPU: Central Processing Unit
+CRC: Cyclic Redundancy Check
+CSMA: Carrier Sense Multiple Access
+CSMA/CA: Carrier Sense Multiple Access with Collision Avoidance
+CSMA/CD: Carrier Sense Multiple Access with Collision Detection
+CTS: Clear To Send
+CU: Central Unit
+D2D: Device-to-Device
+DHCP: Dynamic Host Configuration Protocol
+DiffServ: Differentiated Services
+DIFS: DCF Inter-Frame Space
+DNS: Domain Name System
+DR: Designated Router
+DSCP: Differentiated Services Code Point
+DSDV: Destination-Sequenced Distance Vector
+DSRC: Dedicated Short-Range Communications
+DSSS: Direct Sequence Spread Spectrum
+DST: Digital Services Tax
+DTLS: Datagram Transport Layer Security
+DU: Distributed Unit
+DVA: Distance Vector Algorithm
+DVB-T: Digital Video Broadcasting – Terrestrial
+E2E: End-to-End
+ECC: Elliptic Curve Cryptography
+EGP: Exterior Gateway Protocol
+EIGRP: Enhanced Interior Gateway Routing Protocol
+EMS: Element Management System
+EPC: Evolved Packet Core
+FDM: Frequency Division Multiplexing
+FDMA: Frequency Division Multiple Access
+FEC: Forward Error Correction
+FHSS: Frequency Hopping Spread Spectrum
+GAF: Geographic Adaptive Fidelity
+GCSE: Group Communication System Enablers
+GEAR: Geographical and Energy Aware Routing
+GNSS: Global Navigation Satellite System
+GPS: Global Positioning System
+GWCN: Gateway Core Network
+HSRP: Hot Standby Router Protocol
+HTTP: HyperText Transfer Protocol
+IBN: Intent-Based Networking
+ICE: Interactive Connectivity Establishment
+ICMP: Internet Control Message Protocol
+ICMPv6: Internet Control Message Protocol for IPv6
+IEEE: Institute of Electrical and Electronics Engineers
+IETF: Internet Engineering Task Force
+IFS: Inter-Frame Space
+IGMP: Internet Group Management Protocol
+IGP: Interior Gateway Protocol
+IGRP: Interior Gateway Routing Protocol
+IMT-2020: International Mobile Telecommunications-2020
+IMT-Advanced: International Mobile Telecommunications-Advanced
+IntServ: Integrated Services
+IoE: Internet of Everything
+IOPS: Isolated E-UTRAN Operation for Public Safety
+IoT: Internet of Things
+IoV: Internet of Vehicles
+IP: Internet Protocol
+IPsec: IP Security
+IPv4: Internet Protocol version 4
+IPv6: Internet Protocol version 6
+IS-IS: Intermediate System to Intermediate System
+ISN: Initial Sequence Number
+ISO: International Organization for Standardization
+ISP: Internet Service Provider
+ITS: Intelligent Transport Systems
+IVN: In-Vehicle Network
+IX: Internet eXchange
+JSEP: JavaScript Session Establishment Protocol
+LAN: Local Area Network
+LDP: Label Distribution Protocol
+LEACH: Low-Energy Adaptive Clustering Hierarchy
+LER: Label Edge Router
+LIB: Label Information Base
+LLC: Logical Link Control
+LLM: Large Language Model
+LOS: Line of Sight
+LPWA: Low Power Wide Area
+LSP: Label Switched Path
+LSR: Label Switching Router
+LTE: Long Term Evolution
+LTE-R: LTE-Railway
+LwM2M: Lightweight Machine-to-Machine
+M2M: Machine-to-Machine
+MAC: Medium Access Control
+MANO: Management and Orchestration
+MCPTT: Mission Critical Push-To-Talk
+MCU: Multipoint Control Unit
+MEC: Multi-access Edge Computing
+MLD: Multicast Listener Discovery
+MOCN: Multi-Operator Core Network
+MORAN: Multi-Operator Radio Access Network
+MoS: Mean Opinion Score
+MPLS: Multi-Protocol Label Switching
+MPLS-TP: MPLS Transport Profile
+MPTCP: Multipath TCP
+MQTT: MQ Telemetry Transport (현재 OASIS 표준명은 약어 아님)
+MSS: Maximum Segment Size
+MTU: Maximum Transmission Unit
+NAT: Network Address Translation
+NAV: Network Allocation Vector
+NB-IoT: Narrowband IoT
+NFC: Near Field Communication
+NFV: Network Functions Virtualization
+NFVI: NFV Infrastructure
+NOMA: Non-Orthogonal Multiple Access
+NR: New Radio
+NRTK: Network Real-Time Kinematic
+NRZ: Non-Return-to-Zero
+NSA: Non-Standalone
+OECD: Organisation for Economic Co-operation and Development
+OPNFV: Open Platform for NFV
+OSPF: Open Shortest Path First
+OSS: Operations Support System
+P2P: Peer-to-Peer
+PLC: Programmable Logic Controller
+POP: Point of Presence
+PS-LTE: Public Safety LTE
+PSK: Phase Shift Keying
+QAM: Quadrature Amplitude Modulation
+QoE: Quality of Experience
+QoS: Quality of Service
+RAN: Radio Access Network
+RARP: Reverse Address Resolution Protocol
+RED: Random Early Detection
+REST: Representational State Transfer
+RF: Radio Frequency
+RFC: Request for Comments
+RIP: Routing Information Protocol
+RIPng: RIP next generation
+RSSI: Received Signal Strength Indicator
+RSVP: Resource Reservation Protocol
+RTO: Retransmission TimeOut
+RTS: Request To Send
+RTT: Round Trip Time
+RU: Radio Unit
+SA: Standalone
+SACK: Selective Acknowledgment
+SAE: Simultaneous Authentication of Equals
+SASL: Simple Authentication and Security Layer
+SATIN: Satellite-Aerial-Terrestrial Integrated Network
+SCTP: Stream Control Transmission Protocol
+SDDC: Software-Defined Data Center
+SDE: Software-Defined Everything
+SDM: Space Division Multiplexing
+SDMA: Space Division Multiple Access
+SDN: Software-Defined Networking
+SDP: Session Description Protocol
+SDR: Software-Defined Radio
+SDS: Software-Defined Storage
+SD-WAN: Software-Defined Wide Area Network
+SFU: Selective Forwarding Unit
+SIC: Successive Interference Cancellation
+SIFS: Short Inter-Frame Space
+SLA: Service Level Agreement
+SPIN: Sensor Protocols for Information via Negotiation
+SRTP: Secure Real-time Transport Protocol
+SSID: Service Set Identifier
+STP: Spanning Tree Protocol
+STUN: Session Traversal Utilities for NAT
+TCP: Transmission Control Protocol
+TDM: Time Division Multiplexing
+TDMA: Time Division Multiple Access
+TEEN: Threshold-sensitive Energy Efficient sensor Network
+THz: Terahertz
+TLS: Transport Layer Security
+TOS: Type of Service
+TTL: Time To Live
+TURN: Traversal Using Relays around NAT
+UAV: Unmanned Aerial Vehicle
+UDP: User Datagram Protocol
+UHR: Ultra High Reliability
+UPF: User Plane Function
+V2I: Vehicle-to-Infrastructure
+V2N: Vehicle-to-Network
+V2P: Vehicle-to-Pedestrian
+V2V: Vehicle-to-Vehicle
+V2X: Vehicle-to-Everything
+VANET: Vehicular Ad-hoc Network
+VIP: Virtual IP
+VLSM: Variable Length Subnet Mask
+VNF: Virtualized Network Function
+VPN: Virtual Private Network
+VRRP: Virtual Router Redundancy Protocol
+VRS: Virtual Reference Station
+WAVE: Wireless Access in Vehicular Environments
+WDM: Wavelength Division Multiplexing
+WEP: Wired Equivalent Privacy
+WFQ: Weighted Fair Queuing
+WLAN: Wireless Local Area Network
+WoT: Web of Things
+WPA3: Wi-Fi Protected Access 3
+WRAN: Wireless Regional Area Network
+WRED: Weighted Random Early Detection
+XML: eXtensible Markup Language
+XMPP: eXtensible Messaging and Presence Protocol
+XOR: Exclusive OR
+ZSM: Zero-touch network and Service Management

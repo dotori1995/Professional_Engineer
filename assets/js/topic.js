@@ -9,7 +9,8 @@
     document.title = t.title + ' · ' + document.title;
     const rv = t.review || [];
     const notes = [t.keywords_note, t.note].filter(Boolean);
-    const hasRaw = (t.sections || []).some(s => s.bullets.length);
+    const secs = (t.sections || []).filter(s => (s.subsections || []).some(x => x.items.length));
+    const hasRaw = secs.length > 0;
     const sub = t.subtitle && t.subtitle.replace(/\s/g, '') !== t.title.replace(/\s/g, '') ? t.subtitle : '';
     const draw = () => {
       el.innerHTML = `
@@ -18,12 +19,12 @@
           <h1>${PE.esc(t.title)}</h1>${sub ? `<div class="sub">${PE.esc(sub)}</div>` : ''}
           <div class="lbl">정의</div><div class="def">${PE.esc(t.definition || '(원문에서 정의 텍스트를 찾지 못함)')}</div>
           ${t.dueum ? `<div class="dueum-box">💡 ${PE.esc(t.dueum)}</div>` : ''}
-          ${(t.keywords || []).length ? `<div class="lbl">키워드</div><ul class="kw">${t.keywords.map(k => `<li>${PE.esc(k)}</li>`).join('')}</ul>` : ''}
+          ${(t.keywords || []).length ? `<div class="lbl">키워드</div><ul class="kw">${t.keywords.map(k => `<li>${PE.gl(k)}</li>`).join('')}</ul>` : ''}
           ${(t.outline || []).length ? `<div class="lbl">목차</div>${PE.outlineHtml(t.outline, true)}` : ''}
-          ${rv.length || notes.length || hasRaw ? `<details class="more"><summary>${rv.length ? `🔍 검토 메모 ${rv.length}건` : '📄 메모'}${hasRaw ? ' · 원문 발췌' : ''}</summary>
+          ${rv.length || notes.length || hasRaw ? `<details class="more"><summary>자세히</summary>
             ${notes.map(n => `<div class="note">📝 ${PE.esc(n)}</div>`).join('')}
             ${rv.length ? `<ul class="review">${rv.map(r => { const m = r.match(/^\[([ABCD])\]\s*/); return `<li>${m ? `<span class="rv rv-${m[1]}">${LBL[m[1]]}</span> ` : ''}${PE.esc(m ? r.slice(m[0].length) : r)}</li>`; }).join('')}</ul>` : ''}
-            ${hasRaw ? `<div class="raw"><div class="raw-h">원문 발췌 (자동 추출·미검수, 원문 ${t.pages ? t.pages[0] + '–' + t.pages[1] + '쪽' : ''})</div>` + t.sections.filter(s => s.bullets.length).map(s => `<div class="raw-t">${PE.esc(s.title)}</div><ul>${s.bullets.map(b => `<li>${PE.esc(b.replace(/^▸ /, ''))}</li>`).join('')}</ul>`).join('') + '</div>' : ''}
+            ${hasRaw ? `<div class="raw"><div class="raw-h">원문 발췌 (자동 추출·미검수, 원문 ${t.pages ? t.pages[0] + '–' + t.pages[1] + '쪽' : ''})</div>` + secs.map((s, n) => `<section class="rsec"><h3 class="rsec-t"><span class="rn">${['I','II','III','IV','V','VI'][n] || n + 1}.</span> ${PE.gl(s.title)}</h3>` + s.subsections.filter(x => x.items.length).map(x => `${x.title ? `<div class="rsub">${PE.gl(x.title)}</div>` : ''}<ul class="ritems${x.title ? '' : ' notitle'}">${x.items.map(b => `<li>${PE.esc(b)}</li>`).join('')}</ul>`).join('') + '</section>').join('') + '</div>' : ''}
           </details>` : ''}
         </div>
         <div class="tfoot">

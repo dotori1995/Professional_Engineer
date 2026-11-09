@@ -10,7 +10,7 @@
   * 각 토픽 첫 페이지에 '토픽 이름 / 분류 / 키워드(암기) / 암기법(해당경우) / 기출문제' 헤더 표가 있음
   * 본문은 'I. ...', 'II. ...' 섹션과 '- ' 불릿으로 구성
 
-결과 JSON 각 항목: id, code, title, domain, category, definition, keywords[], sections[{title, bullets[]}],
+결과 JSON 각 항목: id, code, title, domain, category, definition, keywords[], sections[{title, subsections[{title|null, items[]}]}],
 dueum(원문 '암기법' 칸에 값이 있을 때만), pages[start,end], questions[], warnings[], outline[](목차)
 검토 필드(overrides에서만): review[] = '[A]/[B]/[C]/[D] ...' 형식의 검토 메모 (A 사실오류·B 최신화·C 모호·D 파싱깨짐)
 같은 id에 대해 `_data/overrides/<domain>.json` 이 있으면 해당 필드를 덮어씀(수동 보정용).
@@ -173,6 +173,23 @@ def clean_title(t):
     return t
 
 
+def to_nested(sec):
+    """{title, bullets['▸ 소제목', '내용', ...]} -> {title, subsections[{title|None, items[]}]}.
+    '▸ '로 시작하는 줄(원문 PDF의 '가./나.'·소제목 레벨)을 소제목으로, 그 뒤 불릿을 하위 항목으로 묶음."""
+    if 'subsections' in sec:
+        return sec
+    subs = []
+    for b in sec.get('bullets', []):
+        if b.startswith('▸ '):
+            subs.append({'title': b[2:].strip(), 'items': []})
+        else:
+            if not subs:
+                subs.append({'title': None, 'items': []})
+            subs[-1]['items'].append(b)
+    subs = [x for x in subs if x['items'] or x['title']]
+    return {'title': sec.get('title', ''), 'subsections': subs}
+
+
 def build_entry(domain, raw_name, code, toc_title, header_page, body):
     hdr = parse_header(header_page) if header_page else {'title': '', 'category': '', 'keywords': '', 'dueum': ''}
     warnings = []
@@ -210,6 +227,7 @@ def build_entry(domain, raw_name, code, toc_title, header_page, body):
         while s['bullets'] and s['bullets'][-1].startswith('▸ '):
             s['bullets'].pop()
     sections = [s for s in sections if s['bullets'] or len(sections) <= 2][:5]
+    sections = [to_nested(x) for x in sections]
     title = hdr['title'] or toc_title
     if not definition:
         warnings.append('정의 불릿 자동 추출 실패')
@@ -290,6 +308,8 @@ def main():
                         e[k] = v
                 e['reviewed'] = True
                 e['warnings'] = [w for w in e['warnings'] if not (('키워드' in w and e.get('keywords')) or ('정의' in w and e.get('definition')))]
+    for e in entries:
+        e['sections'] = [to_nested(x) for x in e.get('sections', [])]
     # 목차(outline): 섹션 제목 + 섹션 안 '▸' 소제목. 문자열 목록, '- '로 시작하면 하위 항목. overrides의 outline이 있으면 대체.
     for e in entries:
         if 'outline' in e:
@@ -300,11 +320,10 @@ def main():
             if not t:
                 continue
             ol.append(t)
-            for b in s.get('bullets', []):
-                if b.startswith('▸ '):
-                    sub = b[2:].strip()
-                    if sub and sub != t:
-                        ol.append('- ' + sub)
+            for ss in s.get('subsections', []):
+                sub = (ss.get('title') or '').strip()
+                if sub and sub != t:
+                    ol.append('- ' + sub)
         e['outline'] = ol
     os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
     json.dump(entries, open(a.out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

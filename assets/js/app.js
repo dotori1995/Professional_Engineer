@@ -2,7 +2,27 @@
 (function () {
   const PE = window.PE;
   try { localStorage.removeItem('pe-status-v1'); localStorage.removeItem('pe-card-mode'); } catch (e) {}
-  PE.load = () => fetch(PE.data).then(r => r.json());
+  // 약어 사전(_data/glossary.yml → glossary.json)
+  let GL = {}, GLRE = null;
+  PE.loadGlossary = () => fetch(PE.base + '/glossary.json').then(r => r.json()).then(g => {
+    GL = g || {}; const keys = Object.keys(GL).sort((a, b) => b.length - a.length).map(k => k.replace(/[.*+?^${}()|[\]\\\/-]/g, '\\$&'));
+    GLRE = keys.length ? new RegExp('(?<![A-Za-z0-9])(' + keys.join('|') + ')(?![A-Za-z0-9])', 'g') : null;
+  }).catch(() => {});
+  PE.load = () => Promise.all([fetch(PE.data).then(r => r.json()), PE.loadGlossary()]).then(([d]) => d);
+  // 텍스트를 escape하고, 약어 뒤에 정식 명칭을 작게 붙임(이미 괄호로 풀어 쓴 경우·같은 약어 반복은 생략)
+  PE.gl = text => {
+    const raw = String(text == null ? '' : text);
+    if (!GLRE) return PE.esc(raw);
+    const seen = new Set(); let out = '', last = 0;
+    raw.replace(GLRE, (m, k, off) => {
+      const after = raw.slice(off + m.length).trimStart();
+      const full = GL[k];
+      out += PE.esc(raw.slice(last, off + m.length)); last = off + m.length;
+      if (!seen.has(k) && !after.startsWith('(') && !raw.toLowerCase().includes(String(full).toLowerCase())) { out += `<small class="gl">(${PE.esc(full)})</small>`; seen.add(k); }
+      return m;
+    });
+    return out + PE.esc(raw.slice(last));
+  };
   PE.esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   PE.url = (path) => PE.base + path;
   PE.topicUrl = id => PE.base + '/topic/?id=' + encodeURIComponent(id);
@@ -34,7 +54,7 @@
     const top = [];
     (ol || []).forEach(x => { if (x.startsWith('- ')) { if (top.length) top[top.length - 1].subs.push(x.slice(2)); } else top.push({ t: x, subs: [] }); });
     if (!top.length) return '';
-    return '<ol class="outline">' + top.map((o, i) => `<li><span class="rn">${ROM[i] || i + 1}.</span> ${PE.esc(o.t)}${full && o.subs.length ? `<span class="subs">${o.subs.map(PE.esc).join(' · ')}</span>` : ''}</li>`).join('') + '</ol>';
+    return '<ol class="outline">' + top.map((o, i) => `<li><span class="rn">${ROM[i] || i + 1}.</span> ${PE.gl(o.t)}${full && o.subs.length ? `<span class="subs">${o.subs.map(PE.gl).join(' · ')}</span>` : ''}</li>`).join('') + '</ol>';
   };
   PE.reviewFixed = t => (t.review || []).some(r => /^\[[ABD]\]/.test(r));
   // 테마 토글: 시스템 → 다크 → 라이트
