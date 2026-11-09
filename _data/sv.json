@@ -17959,58 +17959,100 @@
   ],
   "en": "Smart Factory",
   "dueum": null,
-  "name": "스마트팩토리(Smart Factory)",
-  "title": "스마트팩토리(Smart Factory)",
-  "definition": "제품의 기획부터 판매까지 모든 생산과정을 ICT기술로 통합해 최소 비용과 시간으로 고객 맞춤형 제품을 생산하는 사람 중심의 첨단 지능형 공장 시스템",
+  "name": "스마트 팩토리(Smart Factory)",
+  "title": "스마트 팩토리(Smart Factory)",
+  "definition": "제품 기획·설계·생산·유통·판매 전 과정을 IoT·CPS·AI 등 ICT로 통합해 설비와 시스템이 데이터 기반으로 스스로 판단·제어함으로써 최소 비용과 시간으로 고객 맞춤형 제품을 생산하는 사람 중심의 지능형 공장",
   "keywords_must": [
-   "스마트팩토리(Smart Factory)의 개념도",
-   "스마트팩토리의 기술요소",
-   "스마트팩토리 아키텍처",
-   "KIOSK",
-   "스마트팩토리시스템(Smart Factory System)",
-   "생산성(Productivity)",
-   "센서·액추에이터"
+   "4M1E 디지털화",
+   "수직 통합(설비~ERP)",
+   "수평 통합(가치사슬)",
+   "제조실행시스템(MES)",
+   "전사적 자원관리(ERP)",
+   "제품수명주기관리(PLM)",
+   "공급망 관리(SCM)",
+   "사이버물리시스템(CPS)",
+   "수준 5단계(ICT 미적용~고도화)",
+   "PQCD 성과 지표"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "KS X 9001(스마트공장 운영관리 수준)",
+   "협동 로봇",
+   "머신 비전",
+   "AGV·AMR",
+   "디지털 트윈"
+  ],
   "keywords": [
-   "핵심: 스마트팩토리(Smart Factory)의 개념도 · 스마트팩토리의 기술요소 · 스마트팩토리 아키텍처",
-   "기술: KIOSK · 스마트팩토리시스템(Smart Factory System) · 생산성(Productivity)",
-   "운영: 센서·액추에이터"
+   "요건: 4M1E 디지털화 · 지능화 · 수평·수직 통합 · 엔지니어링 지식 창출 · 스마트 시스템 연결",
+   "5대 영역: 공장자동화(PLC·센서·로봇) · 공장운영(MES) · 기업자원관리(ERP) · 제품개발(PLM) · 공급사슬(SCM)",
+   "수준: ICT 미적용 → 기초 → 중간1 → 중간2 → 고도화 / 성과: 생산성·품질·원가·납기(PQCD)"
   ],
   "outline": [
-   "공장설비부터 생산까지의 새로운 생산 체계, 스마트 Factory 개요",
-   "- 스마트팩토리(Smart Factory)의 정의",
-   "- 스마트팩토리의 등장배경",
-   "스마트팩토리(Smart Factory)의 개념도 및 기술요소",
-   "- 스마트팩토리(Smart Factory)의 개념도",
-   "- 스마트팩토리의 기술요소",
-   "스마트팩토리시스템의 수준 5단계",
-   "- 스마트팩토리 요점"
+   "등장 배경과 요건",
+   "- 배경: 제조 경쟁력 위기",
+   "- 요건: 디지털화·통합",
+   "5대 영역별 기술요소",
+   "- 현장: 자동화 설비",
+   "- 운영·경영: MES·ERP",
+   "- 개발·공급: PLM·SCM",
+   "수준 단계와 성과",
+   "- 수준: 5단계 고도화",
+   "- 성과: PQCD 측정"
   ],
   "sections": [
    {
-    "title": "스마트팩토리 핵심",
+    "title": "등장 배경과 요건",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 제조 경쟁력 위기",
       "items": [
-       "스마트팩토리(Smart Factory)의 개념도: 스마트팩토리의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "스마트팩토리의 기술요소: 스마트팩토리에서 스마트팩토리의 기술요소를 다루는 핵심 암기 포인트",
-       "스마트팩토리 아키텍처: 스마트팩토리의 계층·모듈 배치와 상호작용 구조",
-       "KIOSK: KIOSK를 스마트팩토리 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "인건비·원자재 상승과 수요 다양화로 맞춤형 생산 요구, 독일 인더스트리 4.0과 한국 제조업 혁신 3.0 추진"
+      ]
+     },
+     {
+      "title": "요건: 디지털화·통합",
+      "items": [
+       "4M1E 디지털화: 사람·기계·자재·방법·환경 정보를 실시간 측정·통신, AI로 최적해 산출",
+       "수직 통합(설비~ERP)과 수평 통합(가치사슬)으로 현장부터 협력사까지 데이터 연결"
       ]
      }
     ]
    },
    {
-    "title": "스마트팩토리 구성·기술",
+    "title": "5대 영역별 기술요소",
     "subsections": [
      {
-      "title": null,
+      "title": "현장: 자동화 설비",
       "items": [
-       "스마트팩토리시스템(Smart Factory System): 스마트팩토리에서 스마트팩토리시스템(Smart Factory System)을 다루는 핵심 암기 포인트",
-       "생산성(Productivity): 스마트팩토리에서 생산성(Productivity)을 다루는 핵심 암기 포인트",
-       "센서·액추에이터: 스마트팩토리에서 센서·액추에이터를 다루는 핵심 암기 포인트"
+       "공장자동화 영역은 스마트 센서·PLC·협동 로봇·머신 비전·AGV, CNC로 설비 제어"
+      ]
+     },
+     {
+      "title": "운영·경영: MES·ERP",
+      "items": [
+       "제조실행시스템(MES)은 작업 지시·실적·품질·설비 이력 관리, 전사적 자원관리(ERP)는 구매·재고·회계 통합"
+      ]
+     },
+     {
+      "title": "개발·공급: PLM·SCM",
+      "items": [
+       "제품수명주기관리(PLM)는 CAD·CAE와 연계해 설계 이력 관리, 공급망 관리(SCM)는 수요예측·APS 생산계획"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "수준 단계와 성과",
+    "subsections": [
+     {
+      "title": "수준: 5단계 고도화",
+      "items": [
+       "기초는 바코드·RFID 실적 집계, 중간1은 설비 데이터 자동 수집, 중간2는 설비 제어 자동화, 고도화는 CPS 기반 자율 운영"
+      ]
+     },
+     {
+      "title": "성과: PQCD 측정",
+      "items": [
+       "PQCD 성과 지표: 생산성·품질·원가·납기 개선이 매출 증가·원가 절감을 거쳐 이익 향상으로 연결"
       ]
      }
     ]
@@ -18019,20 +18061,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "스마트팩토리(Smart Factory)의 개념도",
-   "스마트팩토리의 기술요소",
-   "스마트팩토리 아키텍처",
-   "KIOSK",
-   "스마트팩토리시스템(Smart Factory System)",
-   "생산성(Productivity)",
-   "센서·액추에이터"
+   "4M1E 디지털화",
+   "수직 통합(설비~ERP)",
+   "수평 통합(가치사슬)",
+   "제조실행시스템(MES)",
+   "전사적 자원관리(ERP)",
+   "제품수명주기관리(PLM)",
+   "공급망 관리(SCM)",
+   "사이버물리시스템(CPS)",
+   "수준 5단계(ICT 미적용~고도화)",
+   "PQCD 성과 지표"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_208",
@@ -18043,55 +18089,94 @@
    236,
    238
   ],
-  "en": "Cyber-Physical Systems",
-  "dueum": "SAC 모자실S 유",
-  "name": "사이버물리시스템(CPS)",
-  "title": "사이버물리시스템(CPS)",
-  "definition": "정보/데이터/기능 통합을 통한 새로운 시스템 센서와 엑츄에이터 네트워크를 통한 접근 제어",
+  "en": "Cyber-Physical System",
+  "dueum": "SAC 모자실S 유(Sensor·Actuator·Controller·모델링·자율 컴퓨팅·실시간 미들웨어·SW 검증·유무선 통신)",
+  "name": "사이버물리시스템(CPS, Cyber-Physical System)",
+  "title": "사이버물리시스템(CPS, Cyber-Physical System)",
+  "definition": "센서·액추에이터를 갖춘 물리 시스템과 연산·네트워크로 이루어진 사이버 시스템을 실시간으로 결합해 물리 세계를 감지·분석하고 사람의 개입 없이 자율적·지능적으로 제어하는 복합 시스템",
   "keywords_must": [
-   "연산(Computation)",
-   "조작(Control)",
-   "통신(Communication)",
-   "사이버물리시스템의 핵심 요소",
-   "IoT(Internet of Things)",
-   "시스템(컴퓨터 + 네트워크)"
+   "3C(Computation·Communication·Control)",
+   "센서(Sensor)",
+   "액추에이터(Actuator)",
+   "제어기(Controller)",
+   "모델링(이산·연속·하이브리드)",
+   "자율 컴퓨팅(Self-Adaptation)",
+   "실시간 미들웨어(DDS)",
+   "SW 정형 검증",
+   "피드백 제어 루프"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "디지털 트윈",
+   "임베디드 시스템",
+   "IIoT",
+   "실시간 운영체제(RTOS)",
+   "안전 필수 시스템"
+  ],
   "keywords": [
-   "핵심: 연산(Computation) · 조작(Control) · 통신(Communication)",
-   "기술: 사이버물리시스템의 핵심 요소 · IoT(Internet of Things) · 시스템(컴퓨터 + 네트워크)"
+   "3C: 연산(Computation) · 통신(Communication) · 제어(Control)",
+   "HW: 센서 · 액추에이터 · 제어기 / SW: 모델링 · 자율 컴퓨팅 · 실시간 미들웨어 · SW 검증 / NW: 유무선 통신",
+   "과제: 데이터 관리 · 신뢰성(정형 검증) · 프라이버시 · 정보보안"
   ],
   "outline": [
-   "현실 세계의 다양한 물리",
-   "- 사이버물리시스템의 정의",
-   "- 사이버물리시스템의 등장 배경",
-   "CPS 구성도 및 구성요소",
-   "- 사이버물리시스템의 핵심 요소",
-   "- 사이버물리시스템의 구조"
+   "개념과 3C 특성",
+   "- 개념: 물리-사이버 결합",
+   "- 3C: 연산·통신·제어",
+   "계층별 구성요소",
+   "- HW: 감지·구동",
+   "- SW: 모델·검증",
+   "구현 과제",
+   "- 신뢰: 검증·실시간",
+   "- 보호: 보안·프라이버시"
   ],
   "sections": [
    {
-    "title": "사이버물리시스템 핵심",
+    "title": "개념과 3C 특성",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 물리-사이버 결합",
       "items": [
-       "연산(Computation): 사이버물리시스템에서 연산(Computation)을 다루는 핵심 암기 포인트",
-       "조작(Control): 사이버물리시스템에서 조작(Control)을 다루는 핵심 암기 포인트",
-       "통신(Communication): 사이버물리시스템에서 통신(Communication)을 다루는 핵심 암기 포인트",
-       "사이버물리시스템의 핵심 요소: 사이버물리시스템에서 사이버물리시스템의 핵심 요소를 다루는 핵심 암기 포인트"
+       "피드백 제어 루프: 감지 → 분석 → 판단 → 구동을 실시간 반복, 임베디드 단일 기기를 넘어 대규모 네트워크 연동"
+      ]
+     },
+     {
+      "title": "3C: 연산·통신·제어",
+      "items": [
+       "연산은 정보·기능 통합, 통신은 물리·사이버 세계 직접 연결, 제어는 센서·액추에이터 네트워크 접근 제어"
       ]
      }
     ]
    },
    {
-    "title": "사이버물리시스템 구성·기술",
+    "title": "계층별 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "HW: 감지·구동",
       "items": [
-       "IoT(Internet of Things): 센서·장비가 네트워크로 연결돼 데이터를 주고받는 체계",
-       "시스템(컴퓨터 + 네트워크): 사이버물리시스템에서 시스템(컴퓨터 + 네트워크)을 다루는 핵심 암기 포인트"
+       "센서(Sensor)가 상태 감지, 제어기(Controller)가 제어 로직 실행, 액추에이터(Actuator)가 물리 동작 수행"
+      ]
+     },
+     {
+      "title": "SW: 모델·검증",
+      "items": [
+       "모델링(이산·연속·하이브리드)으로 시스템 동작 표현, 자율 컴퓨팅(Self-Adaptation)으로 오류 자가 치유",
+       "실시간 미들웨어(DDS)는 분산 노드 간 시한 보장 전송, SW 정형 검증으로 생성 코드 결함 확인"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구현 과제",
+    "subsections": [
+     {
+      "title": "신뢰: 검증·실시간",
+      "items": [
+       "정형 검증으로 오동작 방지, 연산 시간 예측 가능성 확보가 안전 필수 시스템(차량·의료)의 전제"
+      ]
+     },
+     {
+      "title": "보호: 보안·프라이버시",
+      "items": [
+       "물리 피해로 이어지는 사이버 공격 대비 접근 통제, 대량 수집 데이터의 개인정보 최소 수집"
       ]
      }
     ]
@@ -18100,19 +18185,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "연산(Computation)",
-   "조작(Control)",
-   "통신(Communication)",
-   "사이버물리시스템의 핵심 요소",
-   "IoT(Internet of Things)",
-   "시스템(컴퓨터 + 네트워크)"
+   "3C(Computation·Communication·Control)",
+   "센서(Sensor)",
+   "액추에이터(Actuator)",
+   "제어기(Controller)",
+   "모델링(이산·연속·하이브리드)",
+   "자율 컴퓨팅(Self-Adaptation)",
+   "실시간 미들웨어(DDS)",
+   "SW 정형 검증",
+   "피드백 제어 루프"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_209_00",
@@ -18123,59 +18212,93 @@
    255,
    256
   ],
-  "en": "CPPS",
+  "en": "Cyber-Physical Production System",
   "dueum": null,
-  "name": "디지털서비스(CPPS)",
-  "title": "디지털서비스(CPPS)",
-  "definition": "다양한 분야에 적용된 CPS를 스마트팩토리 모델링, 시뮬레이션, 공장 제조 자원/설비간 통신기술을 이용, 제조업분야로 한정하여 적용한 시스템",
+  "name": "사이버물리생산시스템(CPPS, Cyber-Physical Production System)",
+  "title": "사이버물리생산시스템(CPPS, Cyber-Physical Production System)",
+  "definition": "CPS를 제조 도메인에 적용해 설비·공정·제품·물류가 제조 수명주기 전반에서 네트워크로 연결된 자율·협력 요소로 동작하고, 실공장 데이터 모델을 기반으로 유연 생산과 생산 최적화를 수행하는 생산 시스템",
   "keywords_must": [
-   "CPPS의 아키텍처",
-   "CPPS 미들웨어 적용",
-   "디지털서비스 아키텍처",
-   "디지털서비스 표준",
-   "디지털서비스 보안",
-   "CPS",
-   "ETRI",
-   "Sentiment"
+   "제조 도메인 CPS",
+   "자율·협력 생산 요소",
+   "실공장 데이터 모델",
+   "모델링·시뮬레이션",
+   "발행·구독(Publish/Subscribe) 미들웨어",
+   "OPC UA",
+   "설비 고유 프로토콜 변환",
+   "의사결정 자동화",
+   "유연 생산(Flexible Production)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "자산관리셸(AAS)",
+   "DDS",
+   "디지털 트윈",
+   "MES",
+   "RAMI 4.0"
+  ],
   "keywords": [
-   "핵심: CPPS의 아키텍처 · CPPS 미들웨어 적용 · 디지털서비스 아키텍처",
-   "기술: 디지털서비스 표준 · 디지털서비스 보안 · CPS",
-   "운영: ETRI · Sentiment"
+   "범위: CPS의 제조 특화 → 설비·공정·제품·물류 수명주기 연결",
+   "아키텍처: 제조 자원 실시간 빅데이터 → 실공장 데이터 모델 → 시뮬레이션 → 최적 운영",
+   "연동: 발행·구독 미들웨어 · OPC UA · 설비 고유 프로토콜 변환"
   ],
   "outline": [
-   "CPPS(Cyber Physical Product System)의 정의",
-   "- 디지털서비스 요점",
-   "CPPS 의 아키텍처와 CPPS 미들웨어 적용",
-   "- CPPS 의 아키텍처",
-   "- CPPS 미들웨어 적용"
+   "개념과 범위",
+   "- 범위: 제조 특화",
+   "- 요소: 자율·협력",
+   "아키텍처",
+   "- 데이터: 실공장 모델",
+   "- 최적화: 시뮬레이션",
+   "미들웨어와 의사결정",
+   "- 연동: 발행·구독",
+   "- 고도화: 의사결정 자동화"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "개념과 범위",
     "subsections": [
      {
-      "title": null,
+      "title": "범위: 제조 특화",
       "items": [
-       "CPPS의 아키텍처: 디지털서비스의 계층·모듈 배치와 상호작용 구조 (디지털서비스/be80)",
-       "CPPS 미들웨어 적용: 디지털서비스에서 CPPS 미들웨어 적용을 다루는 핵심 암기 포인트",
-       "디지털서비스 아키텍처: 디지털서비스의 계층·모듈 배치와 상호작용 구조 (디지털서비스/25d8)",
-       "디지털서비스 표준: 디지털서비스 상호운용·품질을 맞추는 규격·기준 (디지털서비스/4b71)"
+       "제조 도메인 CPS: 일반 CPS를 스마트 팩토리 모델링·시뮬레이션·설비 간 통신에 한정 적용, 명칭의 P는 Production(생산)"
+      ]
+     },
+     {
+      "title": "요소: 자율·협력",
+      "items": [
+       "자율·협력 생산 요소: 설비·제품이 스스로 상태를 알리고 협상해 작업 순서·경로를 조정"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "아키텍처",
     "subsections": [
      {
-      "title": null,
+      "title": "데이터: 실공장 모델",
       "items": [
-       "디지털서비스 보안: 디지털서비스에서 디지털서비스 보안을 다루는 핵심 암기 포인트 (디지털서비스/0624)",
-       "CPS: CPS를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ETRI: ETRI를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Sentiment: 텍스트의 긍정·부정 등 감성 극성을 분류 (디지털서비스/3ac7)"
+       "실공장 데이터 모델: 실시간성이 보장된 제조 자원 빅데이터로 공장 상태를 가상에 반영"
+      ]
+     },
+     {
+      "title": "최적화: 시뮬레이션",
+      "items": [
+       "모델링·시뮬레이션으로 계획 변경 영향을 사전 검증해 유연 생산(Flexible Production) 실현"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "미들웨어와 의사결정",
+    "subsections": [
+     {
+      "title": "연동: 발행·구독",
+      "items": [
+       "발행·구독(Publish/Subscribe) 미들웨어: 국제 표준(OPC UA·DDS) 기반으로 설비 고유 프로토콜을 제어 레벨에서 변환·통합"
+      ]
+     },
+     {
+      "title": "고도화: 의사결정 자동화",
+      "items": [
+       "제조 시스템 고도화에 따라 모니터링 → 분석 → 예측 → 자율 의사결정 순으로 자동화 범위 확대"
       ]
      }
     ]
@@ -18184,21 +18307,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "CPPS의 아키텍처",
-   "CPPS 미들웨어 적용",
-   "디지털서비스 아키텍처",
-   "디지털서비스 표준",
-   "디지털서비스 보안",
-   "CPS",
-   "ETRI",
-   "Sentiment"
+   "제조 도메인 CPS",
+   "자율·협력 생산 요소",
+   "실공장 데이터 모델",
+   "모델링·시뮬레이션",
+   "발행·구독(Publish/Subscribe) 미들웨어",
+   "OPC UA",
+   "설비 고유 프로토콜 변환",
+   "의사결정 자동화",
+   "유연 생산(Flexible Production)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_209_01",
@@ -18209,73 +18334,93 @@
    257,
    258
   ],
-  "en": "EdgeCPS Cyber-Physical Systems",
+  "en": "Edge Cyber-Physical Systems",
   "dueum": null,
-  "name": "엣지(EdgeCPS(Cyber-Physical Systems))",
-  "title": "엣지(EdgeCPS(Cyber-Physical Systems))",
-  "definition": "디바이스리스 컴퓨팅 및 서버자원융합형 대규모 디바이스 가상화 기술 활용 엣지 서버에 생성되는 가상디바이스는 응용 수행이 가능한 SW 환경(운영체제·플랫폼·프레임워크)으로 제공",
+  "name": "엣지 사이버물리시스템(EdgeCPS)",
+  "title": "엣지 사이버물리시스템(EdgeCPS)",
+  "definition": "자원이 부족한 저사양 디바이스를 엣지 서버의 자원과 융합한 고성능 가상 디바이스로 구성해, 디바이스 자체 성능 한계 없이 실세계를 실시간 분석·제어하는 지능형 서비스를 제공하는 엣지 기반 CPS 기술",
   "keywords_must": [
-   "디바이스리스",
-   "가상화",
+   "디바이스리스 컴퓨팅(Deviceless)",
+   "가상 디바이스",
+   "서버 자원 융합",
+   "마이크로서비스 기반 실행 가상화",
+   "HW 가속 공유(GPU·NPU·FPGA)",
    "디바이스 트윈",
-   "EdgeCPS 플랫폼",
-   "EdgeCPS의 주요기술",
-   "GPU",
-   "NPU",
-   "FPGA",
-   "Fog Devices",
-   "센서·액추에이터"
+   "Eclipse Ditto",
+   "Eclipse Hono",
+   "스키마 사상(Mapping)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "엣지 컴퓨팅(MEC)",
+   "서버리스",
+   "디지털 트윈",
+   "ETRI",
+   "메타버스 실시간 시뮬레이션"
+  ],
   "keywords": [
-   "핵심: 디바이스리스 · 가상화 · 디바이스 트윈",
-   "기술: EdgeCPS 플랫폼 · EdgeCPS의 주요기술 · GPU",
-   "운영: NPU · FPGA · Fog Devices"
+   "개념: 실디바이스 → 엣지 서버 가상 디바이스(Device to the Edge) → 자원 증강",
+   "디바이스리스: 실디바이스 가상화 · 마이크로서비스 실행 · HW 가속 공유",
+   "대규모 가상화: 디바이스 트윈(Eclipse Ditto) · 연결 인터페이스(Eclipse Hono) · 스키마 사상"
   ],
   "outline": [
-   "EdgeCPS 플랫폼 및 주요기술",
-   "- EdgeCPS 플랫폼",
-   "- EdgeCPS 의 주요기술",
-   "EdgeCPS 응용 사례",
-   "- 엣지 요점"
+   "개념과 특징",
+   "- 개념: 디바이스를 엣지로",
+   "- 특징: 실시간 분석·제어",
+   "플랫폼 핵심 기술",
+   "- 디바이스리스: 자원 증강",
+   "- 대규모 가상화: 디바이스 트윈",
+   "응용과 고려사항",
+   "- 응용: AI·교통·메타버스",
+   "- 고려: 도메인 분석"
   ],
   "sections": [
    {
-    "title": "엣지 핵심",
+    "title": "개념과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 디바이스를 엣지로",
       "items": [
-       "디바이스리스: 엣지에서 디바이스리스를 다루는 핵심 암기 포인트",
-       "가상화: 엣지에서 가상화를 다루는 핵심 암기 포인트",
-       "디바이스 트윈: 엣지에서 디바이스 트윈을 다루는 핵심 암기 포인트",
-       "EdgeCPS 플랫폼: 엣지에서 EdgeCPS 플랫폼을 다루는 핵심 암기 포인트"
+       "가상 디바이스: 저사양 기기의 연산을 엣지 서버로 옮겨 OS·프레임워크를 갖춘 SW 환경으로 제공"
+      ]
+     },
+     {
+      "title": "특징: 실시간 분석·제어",
+      "items": [
+       "사람·환경·디바이스 행동을 실시간 분석하고 지식화된 정보로 AI가 실세계를 정밀 제어"
       ]
      }
     ]
    },
    {
-    "title": "엣지 구성·기술",
+    "title": "플랫폼 핵심 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "디바이스리스: 자원 증강",
       "items": [
-       "EdgeCPS의 주요기술: 엣지에서 EdgeCPS의 주요기술을 다루는 핵심 암기 포인트",
-       "GPU: GPU를 엣지 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "NPU: NPU를 엣지 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "FPGA: FPGA를 엣지 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "마이크로서비스 기반 실행 가상화로 최소 단위 기능 실행, HW 가속 공유(GPU·NPU·FPGA)로 성능 증강"
+      ]
+     },
+     {
+      "title": "대규모 가상화: 디바이스 트윈",
+      "items": [
+       "디바이스 트윈은 Eclipse Ditto로 제어 루프 구성, Eclipse Hono로 다양한 프로토콜 연결, 스키마 사상(Mapping)으로 데이터 변환"
       ]
      }
     ]
    },
    {
-    "title": "엣지 운영",
+    "title": "응용과 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "응용: AI·교통·메타버스",
       "items": [
-       "Fog Devices: 엣지에서 Fog Devices를 다루는 핵심 암기 포인트",
-       "센서·액추에이터: 엣지에서 센서·액추에이터를 다루는 핵심 암기 포인트"
+       "퍼블릭망과 분리된 엣지 서버로 민감 데이터 AI 서비스, 도심 통합 관제·자율주행, 메타버스 실시간 시뮬레이션"
+      ]
+     },
+     {
+      "title": "고려: 도메인 분석",
+      "items": [
+       "엣지 서버 용량·네트워크 지연이 서비스 품질을 좌우하므로 적용 도메인 분석과 사전 구축 계획 필요"
       ]
      }
     ]
@@ -18284,23 +18429,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "디바이스리스",
-   "가상화",
+   "디바이스리스 컴퓨팅(Deviceless)",
+   "가상 디바이스",
+   "서버 자원 융합",
+   "마이크로서비스 기반 실행 가상화",
+   "HW 가속 공유(GPU·NPU·FPGA)",
    "디바이스 트윈",
-   "EdgeCPS 플랫폼",
-   "EdgeCPS의 주요기술",
-   "GPU",
-   "NPU",
-   "FPGA",
-   "Fog Devices",
-   "센서·액추에이터"
+   "Eclipse Ditto",
+   "Eclipse Hono",
+   "스키마 사상(Mapping)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_212",
