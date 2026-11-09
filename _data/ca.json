@@ -18319,6 +18319,1071 @@
     }
   },
   {
+    "id": "CA_166",
+    "code": "CA_166",
+    "title": "스토리지 구축 방식(Storage Architecture)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 스토리지 > 구축 방식",
+    "definition": "서버와 저장 장치를 연결하는 방식에 따라 직접 연결형(DAS), 네트워크 파일 공유형(NAS), 전용 고속망형(SAN)으로 나뉘며, 이를 확장한 파일 영역 네트워크(FAN)와 소프트웨어 정의 스토리지(SDS)가 있음",
+    "keywords": [
+      "핵심: DAS(직접 연결, SCSI·SAS) · NAS(파일 단위, NFS·CIFS/SMB) · SAN(블록 단위, FC 스위치) · IP-SAN(iSCSI)",
+      "필수: FAN(파일 가상화·통합 네임스페이스) · SDS(제어·데이터 평면 분리) · 가상 스토리지 풀(Virtual Storage Pool) · 무정지 확장",
+      "참고: 블록 vs 파일 vs 객체 스토리지 · 하이퍼컨버지드 인프라(HCI) · Ceph·vSAN · 스토리지 티어링·씬 프로비저닝 연계 · 소규모 DAS → 중규모 NAS → 대규모 SAN"
+    ],
+    "sections": [
+      {
+        "title": "연결 방식 비교",
+        "subsections": [
+          {
+            "title": "전송 단위",
+            "items": [
+              "DAS(블록, SCSI·SAS)",
+              "NAS(파일, NFS·CIFS)",
+              "SAN(블록, FC·iSCSI)"
+            ]
+          },
+          {
+            "title": "데이터 공유",
+            "items": [
+              "DAS(불가)",
+              "NAS(서버 간 파일 공유)",
+              "SAN(볼륨 단위 할당, 공유는 클러스터 파일시스템 필요)"
+            ]
+          },
+          {
+            "title": "접속 장치",
+            "items": [
+              "DAS(직결 케이블)",
+              "NAS(이더넷 스위치)",
+              "SAN(파이버 채널 스위치)"
+            ]
+          },
+          {
+            "title": "확장성",
+            "items": [
+              "DAS(확장 시 서버 중단)",
+              "NAS·SAN(무정지 확장)"
+            ]
+          },
+          {
+            "title": "적용 규모",
+            "items": [
+              "DAS(소규모)",
+              "NAS(중규모)",
+              "SAN(대규모)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "파일 영역 네트워크",
+        "subsections": [
+          {
+            "title": "저장 장치",
+            "items": [
+              "SAN이나 NAS 저장소가 기반"
+            ]
+          },
+          {
+            "title": "파일 서빙 장치",
+            "items": [
+              "표준 파일 프로토콜로 파일 단위 접근 제공"
+            ]
+          },
+          {
+            "title": "가상화 계층",
+            "items": [
+              "여러 저장소를 하나의 네임스페이스로 묶어 파일 위치 투명성 제공"
+            ]
+          },
+          {
+            "title": "최종 클라이언트",
+            "items": [
+              "플랫폼에 무관하게 통합 네임스페이스로 접근"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "소프트웨어 정의 방식",
+        "subsections": [
+          {
+            "title": "관리 인터페이스",
+            "items": [
+              "프로비저닝·백업 관리와 I/O 성능·지연 모니터링"
+            ]
+          },
+          {
+            "title": "스토리지 서비스",
+            "items": [
+              "동적 프로비저닝·자동 계층화·스냅샷·데이터 효율화"
+            ]
+          },
+          {
+            "title": "가상 스토리지 풀",
+            "items": [
+              "물리 자원(데이터 평면)을 추상화해 하나의 풀로 제공"
+            ]
+          },
+          {
+            "title": "이기종 연계",
+            "items": [
+              "REST API로 여러 벤더 저장 장치를 통합 관리"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      339,
+      342
+    ],
+    "outline": [
+      "연결 방식 비교",
+      "- 전송 단위",
+      "- 데이터 공유",
+      "- 접속 장치",
+      "- 확장성",
+      "- 적용 규모",
+      "파일 영역 네트워크",
+      "- 저장 장치",
+      "- 파일 서빙 장치",
+      "- 가상화 계층",
+      "- 최종 클라이언트",
+      "소프트웨어 정의 방식",
+      "- 관리 인터페이스",
+      "- 스토리지 서비스",
+      "- 가상 스토리지 풀",
+      "- 이기종 연계"
+    ],
+    "name": "스토리지 구축 방식(Storage Architecture)",
+    "en": "Storage Architecture",
+    "keywords_must": [
+      "DAS(직접 연결, SCSI·SAS)",
+      "NAS(파일 단위, NFS·CIFS/SMB)",
+      "SAN(블록 단위, FC 스위치)",
+      "IP-SAN(iSCSI)",
+      "FAN(파일 가상화·통합 네임스페이스)",
+      "SDS(제어·데이터 평면 분리)",
+      "가상 스토리지 풀(Virtual Storage Pool)",
+      "무정지 확장"
+    ],
+    "keywords_ref": [
+      "블록 vs 파일 vs 객체 스토리지",
+      "하이퍼컨버지드 인프라(HCI)",
+      "Ceph·vSAN",
+      "스토리지 티어링·씬 프로비저닝 연계",
+      "소규모 DAS → 중규모 NAS → 대규모 SAN"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "DAS(직접 연결, SCSI·SAS)",
+      "NAS(파일 단위, NFS·CIFS/SMB)",
+      "SAN(블록 단위, FC 스위치)",
+      "IP-SAN(iSCSI)",
+      "FAN(파일 가상화·통합 네임스페이스)",
+      "SDS(제어·데이터 평면 분리)",
+      "가상 스토리지 풀(Virtual Storage Pool)",
+      "무정지 확장"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "DAS": "Direct Attached Storage",
+      "NAS": "Network Attached Storage",
+      "SAN": "Storage Area Network",
+      "FAN": "File Area Network",
+      "SDS": "Software Defined Storage",
+      "SAS": "Serial Attached SCSI",
+      "CIFS": "Common Internet File System",
+      "SMB": "Server Message Block",
+      "NFS": "Network File System",
+      "FC": "Fibre Channel",
+      "HCI": "Hyper-Converged Infrastructure"
+    }
+  },
+  {
+    "id": "CA_170",
+    "code": "CA_170",
+    "title": "IP 기반 스토리지 네트워크(IP-SAN)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 스토리지 > 구축 방식",
+    "definition": "파이버 채널로 구성하던 SAN을 IP 네트워크 기술과 접목해 원거리·저비용으로 확장하는 스토리지 네트워크 기술로, FC 프레임을 IP로 터널링하는 FCIP, FC 장비를 IP망에 직접 붙이는 iFCP, SCSI 명령을 IP로 보내는 iSCSI로 나뉨",
+    "keywords": [
+      "핵심: FCIP(FC over IP, 터널링) · iFCP(Internet FC Protocol, 게이트웨이) · iSCSI(Internet SCSI) · 캡슐화 통신",
+      "필수: 원거리 구축 · 저비용(기존 이더넷 활용) · IPSec 보안 · 이니시에이터·타깃(Initiator·Target)",
+      "참고: FCIP 요소 ISL·E_Port · iFCP 요소 iSNS·SCN·F/FL_Port · FCoE(FC over Ethernet) · 원격 복제·재해 복구 센터 연결 · 무손실 이더넷(DCB) 필요성"
+    ],
+    "sections": [
+      {
+        "title": "등장 배경",
+        "subsections": [
+          {
+            "title": "호환성 부족",
+            "items": [
+              "FC 장비 간 상호 운용 문제"
+            ]
+          },
+          {
+            "title": "거리 제한",
+            "items": [
+              "FC 전용망의 전송 거리 한계 극복"
+            ]
+          },
+          {
+            "title": "비용 증가",
+            "items": [
+              "별도 스토리지 전용망 구축 부담"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "유형별 방식",
+        "subsections": [
+          {
+            "title": "FCIP",
+            "items": [
+              "원격 FC SAN을 잇기 위해 FC 프레임을 IP 패킷에 캡슐화하는 터널링"
+            ]
+          },
+          {
+            "title": "iFCP",
+            "items": [
+              "게이트웨이로 FC 장비를 IP망에 직접 연결, 한 지역 장애가 다른 지역에 전파되지 않음"
+            ]
+          },
+          {
+            "title": "iSCSI",
+            "items": [
+              "SCSI 명령과 블록 데이터를 IP 패킷으로 전달, FC 장비 없이 이더넷만으로 구성"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "과제와 활용",
+        "subsections": [
+          {
+            "title": "과제",
+            "items": [
+              "지연·혼잡 시 성능 저하, 보안 설정과 QoS 확보 필요"
+            ]
+          },
+          {
+            "title": "활용",
+            "items": [
+              "스토리지 가상화, 백업 센터, 재해 복구 시스템 간 연결"
+            ]
+          },
+          {
+            "title": "전망",
+            "items": [
+              "성능 중심 FC와 비용 중심 IP가 업무 특성에 따라 공존"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      343,
+      344
+    ],
+    "outline": [
+      "등장 배경",
+      "- 호환성 부족",
+      "- 거리 제한",
+      "- 비용 증가",
+      "유형별 방식",
+      "- FCIP",
+      "- iFCP",
+      "- iSCSI",
+      "과제와 활용",
+      "- 과제",
+      "- 활용",
+      "- 전망"
+    ],
+    "name": "IP 기반 스토리지 네트워크(IP-SAN)",
+    "en": "IP Storage Area Network",
+    "keywords_must": [
+      "FCIP(FC over IP, 터널링)",
+      "iFCP(Internet FC Protocol, 게이트웨이)",
+      "iSCSI(Internet SCSI)",
+      "캡슐화 통신",
+      "원거리 구축",
+      "저비용(기존 이더넷 활용)",
+      "IPSec 보안",
+      "이니시에이터·타깃(Initiator·Target)"
+    ],
+    "keywords_ref": [
+      "FCIP 요소 ISL·E_Port",
+      "iFCP 요소 iSNS·SCN·F/FL_Port",
+      "FCoE(FC over Ethernet)",
+      "원격 복제·재해 복구 센터 연결",
+      "무손실 이더넷(DCB) 필요성"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "FCIP(FC over IP, 터널링)",
+      "iFCP(Internet FC Protocol, 게이트웨이)",
+      "iSCSI(Internet SCSI)",
+      "캡슐화 통신",
+      "원거리 구축",
+      "저비용(기존 이더넷 활용)",
+      "IPSec 보안",
+      "이니시에이터·타깃(Initiator·Target)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "FCIP": "Fibre Channel over IP",
+      "iFCP": "Internet Fibre Channel Protocol",
+      "ISL": "Inter-Switch Link",
+      "iSNS": "Internet Storage Name Service",
+      "SCN": "State Change Notification",
+      "FCoE": "Fibre Channel over Ethernet",
+      "DCB": "Data Center Bridging"
+    }
+  },
+  {
+    "id": "CA_171",
+    "code": "CA_171",
+    "title": "스토리지 티어링(Storage Tiering)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 스토리지 > 데이터 관리",
+    "definition": "데이터의 중요도와 사용 빈도에 따라 고성능·고비용 매체부터 저성능·대용량 매체까지 계층을 나누고, 정책에 따라 데이터를 자동으로 적합한 계층에 배치·이동하는 스토리지 관리 기술",
+    "keywords": [
+      "핵심: 데이터 활용도 분석 · 성능 계층(Performance Tier, SSD·FC/SAS RAID) · 용량 계층(Capacity Tier, SATA RAID·클라우드) · 아카이브 계층(Archive Tier, 테이프·광디스크)",
+      "필수: 스토리지 컨트롤러 · 스토리지 정책 · 자동 계층화(Auto-Tiering) · 청크 크기(Chunk Size)",
+      "참고: ILM(정보 수명 주기 관리)과 연계 · 핫·웜·콜드 데이터 · 클라우드 객체 스토리지 계층(Standard·IA·Glacier) · 캐시 계층과 차이(복사 vs 이동)"
+    ],
+    "sections": [
+      {
+        "title": "도입 목적",
+        "subsections": [
+          {
+            "title": "비용 절감",
+            "items": [
+              "급증하는 데이터를 모두 고가 매체에 두지 않음"
+            ]
+          },
+          {
+            "title": "관리 효율",
+            "items": [
+              "고비용·저비용 스토리지를 하나의 정책으로 운영"
+            ]
+          },
+          {
+            "title": "성능 확보",
+            "items": [
+              "업무상 중요한 데이터는 최상위 계층에서 고속 처리"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "계층 구성",
+        "subsections": [
+          {
+            "title": "1계층(성능)",
+            "items": [
+              "사용 빈도 높은 핵심 업무 데이터, SSD·FC/SAS RAID"
+            ]
+          },
+          {
+            "title": "2계층(용량)",
+            "items": [
+              "가끔 쓰는 업무 데이터, SATA RAID·사설 클라우드"
+            ]
+          },
+          {
+            "title": "3계층(보관)",
+            "items": [
+              "이벤트성으로 드물게 쓰는 데이터, 테이프·광디스크·클라우드"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "구현 요소",
+        "subsections": [
+          {
+            "title": "컨트롤러",
+            "items": [
+              "단계별 스토리지와 이기종 장비를 통합 제어, 병목 방지 대역폭 확보"
+            ]
+          },
+          {
+            "title": "정책 관리",
+            "items": [
+              "데이터 종류·시간별 사용 빈도를 기준으로 이동 규칙 정의"
+            ]
+          },
+          {
+            "title": "워크로드 분석",
+            "items": [
+              "계층 간 이동 전 수집·분석 주기 결정"
+            ]
+          },
+          {
+            "title": "청크 최적화",
+            "items": [
+              "이동 단위가 크면 용량 낭비, 작으면 관리 부담 증가"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      345,
+      346
+    ],
+    "outline": [
+      "도입 목적",
+      "- 비용 절감",
+      "- 관리 효율",
+      "- 성능 확보",
+      "계층 구성",
+      "- 1계층(성능)",
+      "- 2계층(용량)",
+      "- 3계층(보관)",
+      "구현 요소",
+      "- 컨트롤러",
+      "- 정책 관리",
+      "- 워크로드 분석",
+      "- 청크 최적화"
+    ],
+    "name": "스토리지 티어링(Storage Tiering)",
+    "en": "Storage Tiering",
+    "keywords_must": [
+      "데이터 활용도 분석",
+      "성능 계층(Performance Tier, SSD·FC/SAS RAID)",
+      "용량 계층(Capacity Tier, SATA RAID·클라우드)",
+      "아카이브 계층(Archive Tier, 테이프·광디스크)",
+      "스토리지 컨트롤러",
+      "스토리지 정책",
+      "자동 계층화(Auto-Tiering)",
+      "청크 크기(Chunk Size)"
+    ],
+    "keywords_ref": [
+      "ILM(정보 수명 주기 관리)과 연계",
+      "핫·웜·콜드 데이터",
+      "클라우드 객체 스토리지 계층(Standard·IA·Glacier)",
+      "캐시 계층과 차이(복사 vs 이동)"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "데이터 활용도 분석",
+      "성능 계층(Performance Tier, SSD·FC/SAS RAID)",
+      "용량 계층(Capacity Tier, SATA RAID·클라우드)",
+      "아카이브 계층(Archive Tier, 테이프·광디스크)",
+      "스토리지 컨트롤러",
+      "스토리지 정책",
+      "자동 계층화(Auto-Tiering)",
+      "청크 크기(Chunk Size)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "ILM": "Information Lifecycle Management",
+      "IA": "Infrequent Access"
+    }
+  },
+  {
+    "id": "CA_172",
+    "code": "CA_172",
+    "title": "스토리지 프로비저닝(Storage Provisioning)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 스토리지 > 데이터 관리",
+    "definition": "물리적으로 확보한 스토리지 풀에서 사용자·애플리케이션의 요구와 미리 정의한 정책에 따라 용량을 할당·제공하는 관리 기술로, 용량을 미리 모두 잡는 씩 방식과 실제 사용량만큼 동적으로 잡는 씬 방식이 있음",
+    "keywords": [
+      "핵심: 스토리지 풀(Storage Pool) · 할당 정책 · 씩 프로비저닝(Thick, 사전 전체 할당) · 씬 프로비저닝(Thin, 쓰기 시 할당)",
+      "필수: 가상 디스크 · 오버 커밋(Over-commit) · 무중단 확장 · 스냅샷·백업",
+      "참고: 용량 고갈 임계치 경보 필요 · 공간 회수(UNMAP·TRIM) · 클라우드 블록 스토리지 동적 확장 · 데이터 중복 제거·압축과 결합"
+    ],
+    "sections": [
+      {
+        "title": "씩 방식",
+        "subsections": [
+          {
+            "title": "할당",
+            "items": [
+              "볼륨 생성 시 요청 용량 전체를 호스트에 미리 할당"
+            ]
+          },
+          {
+            "title": "장점",
+            "items": [
+              "용량 부족 위험이 없고 성능 예측이 쉬움"
+            ]
+          },
+          {
+            "title": "단점",
+            "items": [
+              "쓰지 않는 공간까지 묶여 활용률 저하"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "씬 방식",
+        "subsections": [
+          {
+            "title": "할당",
+            "items": [
+              "헤더 정보로 가상 디스크만 만들고 실제 쓰기 때 물리 공간 배정"
+            ]
+          },
+          {
+            "title": "장점",
+            "items": [
+              "실제 사용분만 소비해 활용률 향상, 초기 투자 절감"
+            ]
+          },
+          {
+            "title": "단점",
+            "items": [
+              "여러 볼륨이 동시에 커지면 풀이 고갈될 수 있어 모니터링 필수"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "기술 요소 비교",
+        "subsections": [
+          {
+            "title": "가상화",
+            "items": [
+              "씩(풀 통합 목적의 제한적 사용)",
+              "씬(동적 확장의 핵심)"
+            ]
+          },
+          {
+            "title": "무중단 확장",
+            "items": [
+              "씩(재해 대응용 미러 사이트 중심)",
+              "씬(풀에 실시간으로 디스크 추가)"
+            ]
+          },
+          {
+            "title": "장애 대응",
+            "items": [
+              "씩(고정 공간 재할당)",
+              "씬(스냅샷·백업으로 데이터 보호)"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      347,
+      349
+    ],
+    "outline": [
+      "씩 방식",
+      "- 할당",
+      "- 장점",
+      "- 단점",
+      "씬 방식",
+      "- 할당",
+      "- 장점",
+      "- 단점",
+      "기술 요소 비교",
+      "- 가상화",
+      "- 무중단 확장",
+      "- 장애 대응"
+    ],
+    "name": "스토리지 프로비저닝(Storage Provisioning)",
+    "en": "Storage Provisioning",
+    "keywords_must": [
+      "스토리지 풀(Storage Pool)",
+      "할당 정책",
+      "씩 프로비저닝(Thick, 사전 전체 할당)",
+      "씬 프로비저닝(Thin, 쓰기 시 할당)",
+      "가상 디스크",
+      "오버 커밋(Over-commit)",
+      "무중단 확장",
+      "스냅샷·백업"
+    ],
+    "keywords_ref": [
+      "용량 고갈 임계치 경보 필요",
+      "공간 회수(UNMAP·TRIM)",
+      "클라우드 블록 스토리지 동적 확장",
+      "데이터 중복 제거·압축과 결합"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "스토리지 풀(Storage Pool)",
+      "할당 정책",
+      "씩 프로비저닝(Thick, 사전 전체 할당)",
+      "씬 프로비저닝(Thin, 쓰기 시 할당)",
+      "가상 디스크",
+      "오버 커밋(Over-commit)",
+      "무중단 확장",
+      "스냅샷·백업"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null
+  },
+  {
+    "id": "CA_173",
+    "code": "CA_173",
+    "title": "가상 테이프 라이브러리(VTL, Virtual Tape Library)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 스토리지 > 백업",
+    "definition": "가상화 소프트웨어로 디스크 스토리지를 테이프 라이브러리처럼 에뮬레이션해, 기존 백업 소프트웨어 변경 없이 디스크 속도로 백업·복구하도록 하는 하드웨어·소프트웨어 결합 백업 솔루션",
+    "keywords": [
+      "핵심: 테이프 에뮬레이션 · 디스크 기반 백업(D2D) · 기존 백업 SW 호환 · 다중 I/O 병렬 백업",
+      "필수: RAID·핫 스페어(Hot Spare) 가용성 · 일체형 VTL(Turnkey) · 분리형 VTL(SW + 기존 스토리지) · 중복 제거(De-duplication)",
+      "참고: D2D2T(디스크 → 디스크 → 테이프) 장기 보관 · 물리 테이프 내보내기 · CDP와 병행 구축 · 랜섬웨어 대비 소산 보관"
+    ],
+    "sections": [
+      {
+        "title": "도입 효과",
+        "subsections": [
+          {
+            "title": "백업 시간 단축",
+            "items": [
+              "기계적 탐색 없이 디스크 속도로 기록"
+            ]
+          },
+          {
+            "title": "기존 자산 활용",
+            "items": [
+              "백업 소프트웨어는 실제 테이프로 인식해 그대로 사용"
+            ]
+          },
+          {
+            "title": "복구 속도",
+            "items": [
+              "원하는 데이터에 임의 접근으로 바로 복원"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "테이프 백업 대비 비교",
+        "subsections": [
+          {
+            "title": "속도",
+            "items": [
+              "가상 테이프(다중 I/O로 빠른 백업·복원)",
+              "실제 테이프(순차 접근으로 느린 복원)"
+            ]
+          },
+          {
+            "title": "가용성",
+            "items": [
+              "가상 테이프(RAID 5·핫 스페어로 높음)",
+              "실제 테이프(매체 손상에 취약)"
+            ]
+          },
+          {
+            "title": "매체 이동",
+            "items": [
+              "가상 테이프(소산 불가)",
+              "실제 테이프(이동·소산·장기 보관 용이)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "구성 유형",
+        "subsections": [
+          {
+            "title": "일체형",
+            "items": [
+              "백업용 디스크와 컨트롤러를 내장한 턴키 장비, 처리 속도가 빠름"
+            ]
+          },
+          {
+            "title": "분리형",
+            "items": [
+              "기존 스토리지에 소프트웨어를 설치, 확장 요구에 유연하고 관리 비용 절감"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      350,
+      351
+    ],
+    "outline": [
+      "도입 효과",
+      "- 백업 시간 단축",
+      "- 기존 자산 활용",
+      "- 복구 속도",
+      "테이프 백업 대비 비교",
+      "- 속도",
+      "- 가용성",
+      "- 매체 이동",
+      "구성 유형",
+      "- 일체형",
+      "- 분리형"
+    ],
+    "name": "가상 테이프 라이브러리(VTL, Virtual Tape Library)",
+    "en": "Virtual Tape Library",
+    "keywords_must": [
+      "테이프 에뮬레이션",
+      "디스크 기반 백업(D2D)",
+      "기존 백업 SW 호환",
+      "다중 I/O 병렬 백업",
+      "RAID·핫 스페어(Hot Spare) 가용성",
+      "일체형 VTL(Turnkey)",
+      "분리형 VTL(SW + 기존 스토리지)",
+      "중복 제거(De-duplication)"
+    ],
+    "keywords_ref": [
+      "D2D2T(디스크 → 디스크 → 테이프) 장기 보관",
+      "물리 테이프 내보내기",
+      "CDP와 병행 구축",
+      "랜섬웨어 대비 소산 보관"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "테이프 에뮬레이션",
+      "디스크 기반 백업(D2D)",
+      "기존 백업 SW 호환",
+      "다중 I/O 병렬 백업",
+      "RAID·핫 스페어(Hot Spare) 가용성",
+      "일체형 VTL(Turnkey)",
+      "분리형 VTL(SW + 기존 스토리지)",
+      "중복 제거(De-duplication)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "D2D": "Disk to Disk",
+      "D2D2T": "Disk to Disk to Tape"
+    }
+  },
+  {
+    "id": "CA_174_0",
+    "code": "CA_174_0",
+    "title": "연속 데이터 보호(CDP, Continuous Data Protection)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 스토리지 > 백업",
+    "definition": "데이터의 모든 변경을 실시간으로 캡처해 원본과 별도로 변경 로그를 저장함으로써, 과거 임의 시점으로 데이터를 복원할 수 있게 하는 데이터 보호 기술",
+    "keywords": [
+      "핵심: 임의 시점 복구(APIT, Any Point In Time) · 실시간 변경 캡처 · 저널(Journal)·변경 로그 · 백업 윈도우 불필요",
+      "필수: 블록 기반 · 응용 프로그램 기반 · 파일 기반 · 로컬·원격 복제",
+      "참고: RPO를 0에 가깝게, RTO 단축 · 니어 CDP(Near-CDP, 주기적 스냅샷) · DB 아카이브 로그와 유사 원리 · VTL·중복 제거·BMR과 병행 시 시너지 · 랜섬웨어 감염 전 시점 복원"
+    ],
+    "sections": [
+      {
+        "title": "주요 특성",
+        "subsections": [
+          {
+            "title": "시점 복원",
+            "items": [
+              "다양한 시점 또는 원하는 시점으로 복구"
+            ]
+          },
+          {
+            "title": "실시간 보호",
+            "items": [
+              "별도 백업 시간대 없이 연속적으로 변경 기록"
+            ]
+          },
+          {
+            "title": "부하 최소화",
+            "items": [
+              "변경분만 전송해 백업 서버 트래픽 감소"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "구현 방식",
+        "subsections": [
+          {
+            "title": "블록 기반",
+            "items": [
+              "응용 프로그램과 독립적이고 성능 영향이 적음, 임의 시점 전환 시 재동기화 비용 큼"
+            ]
+          },
+          {
+            "title": "응용 프로그램 기반",
+            "items": [
+              "특정 DB와 밀접히 통합되어 복구 능력 우수, 서버 자원 소비와 종속성 큼"
+            ]
+          },
+          {
+            "title": "파일 기반",
+            "items": [
+              "정책 조절이 쉽고 경량, 가장 우선적으로 검토되는 방식"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "시스템 구성",
+        "subsections": [
+          {
+            "title": "로컬 복제",
+            "items": [
+              "보호 대상 서버의 변경을 같은 사이트 CDP 장비에 연속 기록"
+            ]
+          },
+          {
+            "title": "원격 복제",
+            "items": [
+              "WAN을 통해 재해 복구 센터로 복제, 변경분만 보내 트래픽 최소화"
+            ]
+          },
+          {
+            "title": "도입 효과",
+            "items": [
+              "업무 연속성을 위한 복구 시점·시간 목표를 최소화"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      352,
+      353
+    ],
+    "outline": [
+      "주요 특성",
+      "- 시점 복원",
+      "- 실시간 보호",
+      "- 부하 최소화",
+      "구현 방식",
+      "- 블록 기반",
+      "- 응용 프로그램 기반",
+      "- 파일 기반",
+      "시스템 구성",
+      "- 로컬 복제",
+      "- 원격 복제",
+      "- 도입 효과"
+    ],
+    "name": "연속 데이터 보호(CDP, Continuous Data Protection)",
+    "en": "Continuous Data Protection",
+    "keywords_must": [
+      "임의 시점 복구(APIT, Any Point In Time)",
+      "실시간 변경 캡처",
+      "저널(Journal)·변경 로그",
+      "백업 윈도우 불필요",
+      "블록 기반",
+      "응용 프로그램 기반",
+      "파일 기반",
+      "로컬·원격 복제"
+    ],
+    "keywords_ref": [
+      "RPO를 0에 가깝게, RTO 단축",
+      "니어 CDP(Near-CDP, 주기적 스냅샷)",
+      "DB 아카이브 로그와 유사 원리",
+      "VTL·중복 제거·BMR과 병행 시 시너지",
+      "랜섬웨어 감염 전 시점 복원"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "임의 시점 복구(APIT, Any Point In Time)",
+      "실시간 변경 캡처",
+      "저널(Journal)·변경 로그",
+      "백업 윈도우 불필요",
+      "블록 기반",
+      "응용 프로그램 기반",
+      "파일 기반",
+      "로컬·원격 복제"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "APIT": "Any Point In Time",
+      "RPO": "Recovery Point Objective",
+      "RTO": "Recovery Time Objective",
+      "BMR": "Bare Metal Recovery",
+      "BCP": "Business Continuity Planning"
+    }
+  },
+  {
+    "id": "CA_175",
+    "code": "CA_175",
+    "title": "스토리지 인터페이스(Storage Interface)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 스토리지 > 인터페이스",
+    "definition": "호스트와 저장 장치 사이의 명령·데이터 전달 규약으로, HDD 시대의 SATA 기반 AHCI에서 플래시 SSD의 병렬성을 살리도록 PCIe에 직접 연결하는 NVMe로 진화함",
+    "keywords": [
+      "핵심: AHCI(SATA, HDD 최적화) · NVMe(PCIe, 플래시 최적화) · 레지스터 인터페이스 · 대규모 병렬 큐(최대 64K 큐 × 64K 명령)",
+      "필수: 단일 큐 32 명령(AHCI) · MSI-X 인터럽트 분산 · 잠금 없는 다중 스레드 처리 · HBA 불필요",
+      "참고: NVMe-oF(RDMA·TCP·FC 확장) · U.2·M.2 폼 팩터 · ZNS(Zoned Namespace) SSD · CXL 메모리와 연계 · 명령당 레지스터 접근 횟수 감소"
+    ],
+    "sections": [
+      {
+        "title": "진화 배경",
+        "subsections": [
+          {
+            "title": "대용량 처리 요구",
+            "items": [
+              "데이터 증가로 저장 장치 병목 심화"
+            ]
+          },
+          {
+            "title": "SSD 성능 향상",
+            "items": [
+              "SATA 링크와 단일 큐가 플래시 성능을 제한"
+            ]
+          },
+          {
+            "title": "직접 연결",
+            "items": [
+              "CPU에 붙은 PCIe 레인으로 어댑터 없이 고속 전송"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "레거시 SATA 방식",
+        "subsections": [
+          {
+            "title": "설계 대상",
+            "items": [
+              "회전형 HDD의 큐잉·비동기 응답·전원 관리 개선"
+            ]
+          },
+          {
+            "title": "큐 구조",
+            "items": [
+              "포트당 명령 목록 1개, 최대 32개 명령"
+            ]
+          },
+          {
+            "title": "오버헤드",
+            "items": [
+              "캐시 불가 레지스터 접근이 명령당 6~9회, 잠금 동기화 필요"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "플래시 전용 방식",
+        "subsections": [
+          {
+            "title": "큐 구조",
+            "items": [
+              "코어별 제출·완료 큐 쌍, 최대 64K개 큐와 큐당 64K 명령"
+            ]
+          },
+          {
+            "title": "우선순위",
+            "items": [
+              "긴급 우선 가중 라운드 로빈으로 큐 중재"
+            ]
+          },
+          {
+            "title": "효율",
+            "items": [
+              "명령당 레지스터 접근 2회, 최대 2K개 MSI-X 인터럽트를 코어별로 분산"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      354,
+      357
+    ],
+    "outline": [
+      "진화 배경",
+      "- 대용량 처리 요구",
+      "- SSD 성능 향상",
+      "- 직접 연결",
+      "레거시 SATA 방식",
+      "- 설계 대상",
+      "- 큐 구조",
+      "- 오버헤드",
+      "플래시 전용 방식",
+      "- 큐 구조",
+      "- 우선순위",
+      "- 효율"
+    ],
+    "name": "스토리지 인터페이스(Storage Interface)",
+    "en": "Storage Interface",
+    "keywords_must": [
+      "AHCI(SATA, HDD 최적화)",
+      "NVMe(PCIe, 플래시 최적화)",
+      "레지스터 인터페이스",
+      "대규모 병렬 큐(최대 64K 큐 × 64K 명령)",
+      "단일 큐 32 명령(AHCI)",
+      "MSI-X 인터럽트 분산",
+      "잠금 없는 다중 스레드 처리",
+      "HBA 불필요"
+    ],
+    "keywords_ref": [
+      "NVMe-oF(RDMA·TCP·FC 확장)",
+      "U.2·M.2 폼 팩터",
+      "ZNS(Zoned Namespace) SSD",
+      "CXL 메모리와 연계",
+      "명령당 레지스터 접근 횟수 감소"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "AHCI(SATA, HDD 최적화)",
+      "NVMe(PCIe, 플래시 최적화)",
+      "레지스터 인터페이스",
+      "대규모 병렬 큐(최대 64K 큐 × 64K 명령)",
+      "단일 큐 32 명령(AHCI)",
+      "MSI-X 인터럽트 분산",
+      "잠금 없는 다중 스레드 처리",
+      "HBA 불필요"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "AHCI": "Advanced Host Controller Interface",
+      "NVMe": "Non-Volatile Memory Express",
+      "HBA": "Host Bus Adapter",
+      "MSI-X": "Message Signaled Interrupts Extended",
+      "NVMe-oF": "NVMe over Fabrics",
+      "ZNS": "Zoned Namespace"
+    }
+  },
+  {
     "id": "CA_061",
     "code": "CA_061",
     "title": "읽기 전용 메모리(ROM, Read Only Memory) 종류",
