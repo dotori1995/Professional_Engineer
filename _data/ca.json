@@ -19246,7 +19246,7 @@
     "keywords": [
       "핵심: AHCI(SATA, HDD 최적화) · NVMe(PCIe, 플래시 최적화) · 레지스터 인터페이스 · 대규모 병렬 큐(최대 64K 큐 × 64K 명령)",
       "필수: 단일 큐 32 명령(AHCI) · MSI-X 인터럽트 분산 · 잠금 없는 다중 스레드 처리 · HBA 불필요",
-      "참고: NVMe-oF(RDMA·TCP·FC 확장) · U.2·M.2 폼 팩터 · ZNS(Zoned Namespace) SSD · CXL 메모리와 연계 · 명령당 레지스터 접근 횟수 감소"
+      "참고: NVMe-oF(RDMA·TCP·FC 확장) · U.2·M.2 폼 팩터 · 같은 IOPS에 필요한 CPU 코어 감소 · ZNS(Zoned Namespace) SSD · CXL 메모리와 연계 · 명령당 레지스터 접근 횟수 감소"
     ],
     "sections": [
       {
@@ -19322,7 +19322,7 @@
     "warnings": [],
     "pages": [
       354,
-      357
+      417
     ],
     "outline": [
       "진화 배경",
@@ -19353,6 +19353,7 @@
     "keywords_ref": [
       "NVMe-oF(RDMA·TCP·FC 확장)",
       "U.2·M.2 폼 팩터",
+      "같은 IOPS에 필요한 CPU 코어 감소",
       "ZNS(Zoned Namespace) SSD",
       "CXL 메모리와 연계",
       "명령당 레지스터 접근 횟수 감소"
@@ -21186,6 +21187,623 @@
       "hUMA": "heterogeneous Uniform Memory Access",
       "iGPU": "integrated GPU",
       "NPU": "Neural Processing Unit"
+    }
+  },
+  {
+    "id": "CA_196",
+    "code": "CA_196",
+    "title": "비대칭 멀티코어 프로세서(AMP, Asymmetric Multicore Processor)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 프로세서 > 이종 통합 프로세서",
+    "definition": "성능과 전력 특성이 서로 다른 코어나 아키텍처가 다른 프로세서를 한 시스템에 함께 두고, 작업 특성에 맞는 코어에 일을 배분해 성능과 전력 효율을 동시에 높이는 이기종 멀티코어 구조",
+    "keywords": [
+      "핵심: 이기종 멀티코어(Heterogeneous Multicore) · 고성능 코어(고전력·복잡 파이프라인·순차 처리) · 고효율 코어(저전력·단순 파이프라인·병렬 처리) · ARM big.LITTLE",
+      "필수: 작업 이동·스케줄링 · OpenMP · OpenCL · OpenGL·OpenVG",
+      "참고: Cortex-A15 + Cortex-A7 조합 · DynamIQ 클러스터 · 인텔 P코어·E코어(Thread Director) · 운영체제 에너지 인지 스케줄링(EAS) · 크로노스 그룹(Khronos)이 OpenCL·OpenGL·WebCL·OpenVG 관리"
+    ],
+    "sections": [
+      {
+        "title": "구조적 특성",
+        "subsections": [
+          {
+            "title": "작업 특화",
+            "items": [
+              "아키텍처에 맞는 작업을 배정해 처리 효율 극대화"
+            ]
+          },
+          {
+            "title": "전력 한계 극복",
+            "items": [
+              "저전력 코어로 평상시를 처리하고 필요할 때만 고성능 코어 사용"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "코어 구성",
+        "subsections": [
+          {
+            "title": "고성능 코어",
+            "items": [
+              "고속·고전력, 복잡한 파이프라인으로 단일 스레드 순차 성능 담당"
+            ]
+          },
+          {
+            "title": "고효율 코어",
+            "items": [
+              "저속·저전력, 단순한 파이프라인으로 병렬 확장성과 전력 효율 담당"
+            ]
+          },
+          {
+            "title": "적용 사례",
+            "items": [
+              "일상 작업은 Cortex-A7 클러스터, 고부하 작업은 Cortex-A15 클러스터가 처리"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "이기종 프로그래밍 인터페이스",
+        "subsections": [
+          {
+            "title": "공유 메모리 병렬",
+            "items": [
+              "컴파일러 지시어로 멀티프로세서 태스크 병렬화"
+            ]
+          },
+          {
+            "title": "범용 병렬 프레임워크",
+            "items": [
+              "CPU·GPU·기타 가속기를 아우르는 데이터·태스크 병렬 프로그래밍"
+            ]
+          },
+          {
+            "title": "웹 가속",
+            "items": [
+              "브라우저에서 이기종 코어를 활용하는 인터페이스"
+            ]
+          },
+          {
+            "title": "그래픽·비전",
+            "items": [
+              "GPU 기반 3D·2D 그래픽 API와 실시간 영상 처리 라이브러리"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      406,
+      407
+    ],
+    "outline": [
+      "구조적 특성",
+      "- 작업 특화",
+      "- 전력 한계 극복",
+      "코어 구성",
+      "- 고성능 코어",
+      "- 고효율 코어",
+      "- 적용 사례",
+      "이기종 프로그래밍 인터페이스",
+      "- 공유 메모리 병렬",
+      "- 범용 병렬 프레임워크",
+      "- 웹 가속",
+      "- 그래픽·비전"
+    ],
+    "name": "비대칭 멀티코어 프로세서(AMP, Asymmetric Multicore Processor)",
+    "en": "Asymmetric Multicore Processor",
+    "keywords_must": [
+      "이기종 멀티코어(Heterogeneous Multicore)",
+      "고성능 코어(고전력·복잡 파이프라인·순차 처리)",
+      "고효율 코어(저전력·단순 파이프라인·병렬 처리)",
+      "ARM big.LITTLE",
+      "작업 이동·스케줄링",
+      "OpenMP",
+      "OpenCL",
+      "OpenGL·OpenVG"
+    ],
+    "keywords_ref": [
+      "Cortex-A15 + Cortex-A7 조합",
+      "DynamIQ 클러스터",
+      "인텔 P코어·E코어(Thread Director)",
+      "운영체제 에너지 인지 스케줄링(EAS)",
+      "크로노스 그룹(Khronos)이 OpenCL·OpenGL·WebCL·OpenVG 관리"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "이기종 멀티코어(Heterogeneous Multicore)",
+      "고성능 코어(고전력·복잡 파이프라인·순차 처리)",
+      "고효율 코어(저전력·단순 파이프라인·병렬 처리)",
+      "ARM big.LITTLE",
+      "작업 이동·스케줄링",
+      "OpenMP",
+      "OpenCL",
+      "OpenGL·OpenVG"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "OpenMP": "Open Multi-Processing",
+      "OpenCL": "Open Computing Language",
+      "OpenGL": "Open Graphics Library",
+      "OpenVG": "Open Vector Graphics",
+      "OpenCV": "Open Source Computer Vision Library",
+      "WebCL": "Web Computing Language",
+      "EAS": "Energy Aware Scheduling"
+    }
+  },
+  {
+    "id": "CA_197",
+    "code": "CA_197",
+    "title": "터보 부스트와 오버클로킹(Turbo Boost vs Overclocking)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 프로세서 > 성능 제어",
+    "definition": "둘 다 정격 클럭보다 높은 주파수로 CPU를 동작시키는 기술로, 터보 부스트는 전력·온도·전류 여유가 있을 때 프로세서가 스스로 클럭을 올리는 공식 기능이고, 오버클로킹은 사용자가 배수·전압을 바꿔 강제로 올리는 비공식 방법임",
+    "keywords": [
+      "핵심: 자율 수행(CPU 자동 제어) · 강제 수행(사용자 BIOS 설정) · TDP(열 설계 전력) 기준 · 유휴 코어 전력을 활성 코어에 배분",
+      "필수: 배수(Multiplier)·전압 조정 · 발열·안정성 · 터보 부스트 2.0(TDP 순간 초과 허용) · 터보 부스트 맥스 3.0(가장 빠른 코어 선별)",
+      "참고: 2008 네할렘에서 도입 · 2.0은 2011 샌디브리지 · AMD 정밀 부스트(Precision Boost) · DVFS와 연계 · 언락(K) 모델만 배수 오버클로킹 허용 · 보증 제외 위험"
+    ],
+    "sections": [
+      {
+        "title": "동작 비교",
+        "subsections": [
+          {
+            "title": "처리 주체",
+            "items": [
+              "자동 부스트(CPU가 자동 판단)",
+              "수동 클럭 상향(사용자가 직접 설정)"
+            ]
+          },
+          {
+            "title": "공식 여부",
+            "items": [
+              "자동 부스트(제조사 공식 기능)",
+              "수동 클럭 상향(비공식, 보증 제한)"
+            ]
+          },
+          {
+            "title": "발열 제어",
+            "items": [
+              "자동 부스트(TDP 기반 자동 제어)",
+              "수동 클럭 상향(전용 유틸리티로 직접 관리)"
+            ]
+          },
+          {
+            "title": "안정성",
+            "items": [
+              "자동 부스트(검증된 범위 내 동작)",
+              "수동 클럭 상향(과부하로 고장 위험)"
+            ]
+          },
+          {
+            "title": "전력",
+            "items": [
+              "자동 부스트(작업량에 맞춰 조정)",
+              "수동 클럭 상향(저부하에도 고클럭 유지)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "자동 부스트 원리",
+        "subsections": [
+          {
+            "title": "코어 배분",
+            "items": [
+              "쉬는 코어의 전력을 줄이고 바쁜 코어 클럭을 올려 스레드 성능 극대화"
+            ]
+          },
+          {
+            "title": "저부하 절전",
+            "items": [
+              "작업량이 적으면 낮은 클럭으로 전력 최소화"
+            ]
+          },
+          {
+            "title": "임계값",
+            "items": [
+              "냉각 한계를 나타내는 TDP를 넘지 않도록 감시"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "기술 발전",
+        "subsections": [
+          {
+            "title": "2세대",
+            "items": [
+              "냉각 여유가 있으면 순간적으로 TDP 이상 클럭 허용, CPU·GPU 통합 관리"
+            ]
+          },
+          {
+            "title": "맥스 3.0",
+            "items": [
+              "품질이 가장 좋은 코어를 식별해 중요한 단일 스레드 작업을 배정"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      408,
+      410
+    ],
+    "outline": [
+      "동작 비교",
+      "- 처리 주체",
+      "- 공식 여부",
+      "- 발열 제어",
+      "- 안정성",
+      "- 전력",
+      "자동 부스트 원리",
+      "- 코어 배분",
+      "- 저부하 절전",
+      "- 임계값",
+      "기술 발전",
+      "- 2세대",
+      "- 맥스 3.0"
+    ],
+    "name": "터보 부스트와 오버클로킹(Turbo Boost vs Overclocking)",
+    "en": "Turbo Boost vs Overclocking",
+    "keywords_must": [
+      "자율 수행(CPU 자동 제어)",
+      "강제 수행(사용자 BIOS 설정)",
+      "TDP(열 설계 전력) 기준",
+      "유휴 코어 전력을 활성 코어에 배분",
+      "배수(Multiplier)·전압 조정",
+      "발열·안정성",
+      "터보 부스트 2.0(TDP 순간 초과 허용)",
+      "터보 부스트 맥스 3.0(가장 빠른 코어 선별)"
+    ],
+    "keywords_ref": [
+      "2008 네할렘에서 도입",
+      "2.0은 2011 샌디브리지",
+      "AMD 정밀 부스트(Precision Boost)",
+      "DVFS와 연계",
+      "언락(K) 모델만 배수 오버클로킹 허용",
+      "보증 제외 위험"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "자율 수행(CPU 자동 제어)",
+      "강제 수행(사용자 BIOS 설정)",
+      "TDP(열 설계 전력) 기준",
+      "유휴 코어 전력을 활성 코어에 배분",
+      "배수(Multiplier)·전압 조정",
+      "발열·안정성",
+      "터보 부스트 2.0(TDP 순간 초과 허용)",
+      "터보 부스트 맥스 3.0(가장 빠른 코어 선별)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "TDP": "Thermal Design Power",
+      "DVFS": "Dynamic Voltage and Frequency Scaling",
+      "BIOS": "Basic Input/Output System"
+    }
+  },
+  {
+    "id": "CA_198",
+    "code": "CA_198",
+    "title": "유한 오토마타(Finite Automata)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 이론 > 계산 모델",
+    "definition": "유한한 개수의 상태와 입력에 따른 상태 전이 함수로 정의되는 이산 시스템의 수학적 모형으로, 한 시점에 하나의 상태만 가지며 상태 기계라고도 하고 논리회로·컴파일러·프로토콜 설계에 쓰임",
+    "keywords": [
+      "핵심: 수학적 모형 · 상태(State)·현재 상태 · 사건(Event) · 전이(Transition)·전이 함수(δ)",
+      "필수: 시작 상태·수락 상태 · 결정적 유한 오토마타(DFA) · 비결정적 유한 오토마타(NFA) · 정규 언어(Regular Language)",
+      "참고: 5-튜플 (Q, Σ, δ, q0, F) · NFA는 부분집합 구성법으로 DFA 변환 가능 · 정규 표현식과 표현력 동일 · 출력 있는 기계 밀리·무어 · 촘스키 계층 최하위"
+    ],
+    "sections": [
+      {
+        "title": "구성 개념",
+        "subsections": [
+          {
+            "title": "단일 상태",
+            "items": [
+              "한 시점에 오직 하나의 현재 상태만 가짐"
+            ]
+          },
+          {
+            "title": "전이",
+            "items": [
+              "사건이 발생하면 정해진 규칙에 따라 다른 상태로 변화"
+            ]
+          },
+          {
+            "title": "상태 동작",
+            "items": [
+              "진입 시 수행하는 동작과 퇴장 시 수행하는 동작"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "유형",
+        "subsections": [
+          {
+            "title": "결정적",
+            "items": [
+              "상태와 입력이 정해지면 다음 상태가 하나로 확정"
+            ]
+          },
+          {
+            "title": "비결정적",
+            "items": [
+              "같은 입력에 다음 상태가 여러 개이거나 입력 없이 전이 가능"
+            ]
+          },
+          {
+            "title": "상호 변환",
+            "items": [
+              "비결정적 기계는 같은 언어를 인식하는 결정적 기계로 변환 가능"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "활용 분야",
+        "subsections": [
+          {
+            "title": "디지털 회로",
+            "items": [
+              "플립플롭·순차 논리·PLC 제어 설계"
+            ]
+          },
+          {
+            "title": "응용 프로그램",
+            "items": [
+              "이벤트·상태·전이·액션으로 동작 모델링"
+            ]
+          },
+          {
+            "title": "텍스트 검사",
+            "items": [
+              "이메일 형식처럼 문자열 정합성 판별"
+            ]
+          },
+          {
+            "title": "컴파일러",
+            "items": [
+              "어휘 분석기에서 토큰 단위로 소스 분리"
+            ]
+          },
+          {
+            "title": "오류 검사",
+            "items": [
+              "짝수·홀수 패리티 비트 생성"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      411,
+      413
+    ],
+    "outline": [
+      "구성 개념",
+      "- 단일 상태",
+      "- 전이",
+      "- 상태 동작",
+      "유형",
+      "- 결정적",
+      "- 비결정적",
+      "- 상호 변환",
+      "활용 분야",
+      "- 디지털 회로",
+      "- 응용 프로그램",
+      "- 텍스트 검사",
+      "- 컴파일러",
+      "- 오류 검사"
+    ],
+    "name": "유한 오토마타(Finite Automata)",
+    "en": "Finite Automata",
+    "keywords_must": [
+      "수학적 모형",
+      "상태(State)·현재 상태",
+      "사건(Event)",
+      "전이(Transition)·전이 함수(δ)",
+      "시작 상태·수락 상태",
+      "결정적 유한 오토마타(DFA)",
+      "비결정적 유한 오토마타(NFA)",
+      "정규 언어(Regular Language)"
+    ],
+    "keywords_ref": [
+      "5-튜플 (Q, Σ, δ, q0, F)",
+      "NFA는 부분집합 구성법으로 DFA 변환 가능",
+      "정규 표현식과 표현력 동일",
+      "출력 있는 기계 밀리·무어",
+      "촘스키 계층 최하위"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "수학적 모형",
+      "상태(State)·현재 상태",
+      "사건(Event)",
+      "전이(Transition)·전이 함수(δ)",
+      "시작 상태·수락 상태",
+      "결정적 유한 오토마타(DFA)",
+      "비결정적 유한 오토마타(NFA)",
+      "정규 언어(Regular Language)"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "DFA": "Deterministic Finite Automaton",
+      "NFA": "Nondeterministic Finite Automaton"
+    }
+  },
+  {
+    "id": "CA_201",
+    "code": "CA_201",
+    "title": "엑사스케일 컴퓨팅(Exascale Computing)",
+    "subtitle": "",
+    "domain": "CA",
+    "category": "CA > 고성능 컴퓨팅 > 슈퍼컴퓨터",
+    "definition": "초당 10^18회(100경 회) 이상의 부동소수점 연산, 즉 1 엑사플롭스 이상의 처리 능력을 갖춘 슈퍼컴퓨팅 시스템으로, 페타스케일 대비 1,000배 성능을 전력 약 20MW 수준에서 달성하는 것이 목표임",
+    "keywords": [
+      "핵심: 1 엑사플롭스(10^18 FLOPS) · 페타스케일(10^15) 대비 1,000배 · 20MW 전력 목표 · 에너지 효율 프로세서",
+      "필수: 고대역 인터커넥트 · 계층적 메모리(HBM·비휘발 메모리) · 오류 회복성(Resilience) · 엑사스케일 알고리즘",
+      "참고: 2022 Frontier(미 ORNL)가 첫 공인 엑사스케일 · Aurora·El Capitan · 미 에너지부 10대 연구 과제 · 기상 예측·유전체·AI 수요 · 이기종 CPU + GPU 노드"
+    ],
+    "sections": [
+      {
+        "title": "등장 배경",
+        "subsections": [
+          {
+            "title": "수요 폭증",
+            "items": [
+              "기상·유전체 분석·빅데이터·인공지능의 초고속 연산 요구"
+            ]
+          },
+          {
+            "title": "성능 한계",
+            "items": [
+              "페타스케일 시스템으로는 목표 해상도·시뮬레이션 규모 충족 불가"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "하드웨어 과제",
+        "subsections": [
+          {
+            "title": "에너지",
+            "items": [
+              "문턱 전압 근처 구동 등 저전력 프로세서와 데이터 이동 최소화"
+            ]
+          },
+          {
+            "title": "인터커넥트",
+            "items": [
+              "대역폭과 에너지 효율을 높이는 광 데이터 전송"
+            ]
+          },
+          {
+            "title": "메모리",
+            "items": [
+              "면적당 용량과 속도를 높인 계층 구조와 적층 메모리"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "소프트웨어 과제",
+        "subsections": [
+          {
+            "title": "시스템 소프트웨어",
+            "items": [
+              "수많은 노드의 결함과 오류에서 복원하는 확장형 운영 체계"
+            ]
+          },
+          {
+            "title": "프로그래밍",
+            "items": [
+              "대규모 병렬성을 다루는 모델과 언어"
+            ]
+          },
+          {
+            "title": "데이터 관리",
+            "items": [
+              "시뮬레이션·센싱·실험 데이터의 폭증 처리"
+            ]
+          },
+          {
+            "title": "알고리즘",
+            "items": [
+              "값을 저장 후 재사용하기보다 다시 계산하는 방식 등 재설계"
+            ]
+          },
+          {
+            "title": "신뢰성·생산성",
+            "items": [
+              "오류 정확성 검증과 개발 도구·디버거 개선"
+            ]
+          }
+        ]
+      }
+    ],
+    "warnings": [],
+    "pages": [
+      418,
+      419
+    ],
+    "outline": [
+      "등장 배경",
+      "- 수요 폭증",
+      "- 성능 한계",
+      "하드웨어 과제",
+      "- 에너지",
+      "- 인터커넥트",
+      "- 메모리",
+      "소프트웨어 과제",
+      "- 시스템 소프트웨어",
+      "- 프로그래밍",
+      "- 데이터 관리",
+      "- 알고리즘",
+      "- 신뢰성·생산성"
+    ],
+    "name": "엑사스케일 컴퓨팅(Exascale Computing)",
+    "en": "Exascale Computing",
+    "keywords_must": [
+      "1 엑사플롭스(10^18 FLOPS)",
+      "페타스케일(10^15) 대비 1,000배",
+      "20MW 전력 목표",
+      "에너지 효율 프로세서",
+      "고대역 인터커넥트",
+      "계층적 메모리(HBM·비휘발 메모리)",
+      "오류 회복성(Resilience)",
+      "엑사스케일 알고리즘"
+    ],
+    "keywords_ref": [
+      "2022 Frontier(미 ORNL)가 첫 공인 엑사스케일",
+      "Aurora·El Capitan",
+      "미 에너지부 10대 연구 과제",
+      "기상 예측·유전체·AI 수요",
+      "이기종 CPU + GPU 노드"
+    ],
+    "curated": true,
+    "quiz_terms": [
+      "1 엑사플롭스(10^18 FLOPS)",
+      "페타스케일(10^15) 대비 1,000배",
+      "20MW 전력 목표",
+      "에너지 효율 프로세서",
+      "고대역 인터커넥트",
+      "계층적 메모리(HBM·비휘발 메모리)",
+      "오류 회복성(Resilience)",
+      "엑사스케일 알고리즘"
+    ],
+    "quiz_groups": [
+      "ca"
+    ],
+    "quiz_avoid": [],
+    "reviewed": true,
+    "dueum": null,
+    "gloss": {
+      "FLOPS": "Floating-point Operations Per Second",
+      "ORNL": "Oak Ridge National Laboratory",
+      "HBM": "High Bandwidth Memory"
     }
   },
   {
