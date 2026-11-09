@@ -1,0 +1,3744 @@
+[
+ {
+  "id": "ST_001",
+  "code": "ST_001",
+  "domain": "ST",
+  "category": "ST > 통계 기초",
+  "title": "통계학(Statistics)",
+  "subtitle": "",
+  "name": "통계학(Statistics)",
+  "en": "Statistics",
+  "definition": "모집단의 특성을 알기 위해 표본을 수집·요약(기술통계)하고, 확률 이론으로 모집단을 추론(추리통계)하여 불확실성 속 의사결정을 돕는 학문.",
+  "keywords": [
+   "분류: 기술통계(Descriptive) · 추리통계(Inferential)",
+   "대상: 모집단(Population) · 표본(Sample) · 모수(Parameter) · 통계량(Statistic)",
+   "추론: 추정(Estimation) · 가설검정(Hypothesis Testing)",
+   "활용: 데이터 분석 · 기계학습 · 품질관리"
+  ],
+  "keywords_must": [
+   "모집단(Population)",
+   "표본(Sample)",
+   "모수(Parameter)",
+   "통계량(Statistic)",
+   "기술통계(Descriptive Statistics)",
+   "추리통계(Inferential Statistics)",
+   "확률(Probability)",
+   "추정(Estimation)",
+   "가설검정(Hypothesis Testing)"
+  ],
+  "keywords_ref": [
+   "표본추출(Sampling)",
+   "빈도주의(Frequentist)",
+   "베이지안(Bayesian)",
+   "데이터 과학(Data Science)",
+   "탐색적 자료 분석(Exploratory Data Analysis)"
+  ],
+  "outline": [
+   "통계학의 개념",
+   "- 정의",
+   "- 모집단·표본·모수·통계량",
+   "통계학의 분류",
+   "- 기술통계",
+   "- 추리통계(추정·검정)",
+   "통계학의 활용",
+   "- 데이터 분석·AI",
+   "- 빈도주의와 베이지안"
+  ],
+  "sections": [
+   {
+    "title": "통계학의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "데이터 수집 설계, 요약·설명, 결론 도출(일반화)의 원리와 방법을 다루는 학문"
+      ]
+     },
+     {
+      "title": "핵심 용어",
+      "items": [
+       "모집단의 특성값 = 모수(μ, σ²), 표본에서 계산한 값 = 통계량(x̄, s²)",
+       "전수조사가 어려워 표본으로 모수를 추론"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "통계학의 분류",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "기술통계: 중심위치(평균·중앙값), 산포(분산·표준편차), 분포 모양(왜도·첨도), 그래프로 요약",
+       "추리통계: 표본 통계량과 확률분포로 모수를 추정하고 가설을 검정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "통계학의 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "데이터 분석 전처리, 기계학습 모델 평가, 품질관리(SPC), 여론조사",
+       "빈도주의(반복 실험의 상대빈도) vs 베이지안(사전확률을 데이터로 갱신)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "모집단(Population)",
+   "표본(Sample)",
+   "모수(Parameter)",
+   "통계량(Statistic)",
+   "기술통계(Descriptive Statistics)",
+   "추리통계(Inferential Statistics)",
+   "확률(Probability)",
+   "추정(Estimation)",
+   "가설검정(Hypothesis Testing)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_002",
+  "code": "ST_002",
+  "domain": "ST",
+  "category": "ST > 통계 기초",
+  "title": "모집단(Population)",
+  "subtitle": "",
+  "name": "모집단(Population)",
+  "en": "Population",
+  "definition": "얻고자 하는 정보와 관련된 모든 개체(관측값)의 집합으로, 통계적 추론의 대상이며 그 특성값을 모수라 한다.",
+  "keywords": [
+   "유형: 유한 모집단(Finite) · 무한 모집단(Infinite)",
+   "조사: 전수조사(Census) · 표본조사(Sample Survey)",
+   "모수: 모평균(μ) · 모분산(σ²) · 모비율(p)",
+   "연계: 표본추출 → 기술통계 → 추리통계"
+  ],
+  "keywords_must": [
+   "모집단(Population)",
+   "모수(Parameter)",
+   "유한 모집단(Finite Population)",
+   "무한 모집단(Infinite Population)",
+   "전수조사(Census)",
+   "표본조사(Sample Survey)",
+   "모평균(μ)",
+   "모분산(σ²)",
+   "표본추출(Sampling)"
+  ],
+  "keywords_ref": [
+   "표본틀(Sampling Frame)",
+   "모비율(Population Proportion)",
+   "유한 모집단 수정계수(FPC, Finite Population Correction)",
+   "목표 모집단(Target Population)"
+  ],
+  "outline": [
+   "모집단의 개념",
+   "- 정의",
+   "- 모수",
+   "모집단의 유형과 조사",
+   "- 유한·무한 모집단",
+   "- 전수조사·표본조사",
+   "모집단 추론 흐름",
+   "- 표본추출 → 기술통계 → 추리통계"
+  ],
+  "sections": [
+   {
+    "title": "모집단의 개념",
+    "subsections": [
+     {
+      "title": "정의",
+      "items": [
+       "관심 대상 전체 개체에서 얻을 수 있는 모든 관측값의 집합"
+      ]
+     },
+     {
+      "title": "모수",
+      "items": [
+       "모평균 μ, 모분산 σ², 모비율 p 등 모집단을 요약하는 상수(대개 미지)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형과 조사",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "유한 모집단: 크기 N이 정해짐(예: 사내 직원), 무한 모집단: 크기 무한(예: 공정 생산품)",
+       "전수조사: 모집단 전체 조사, 규모가 작을 때 / 표본조사: 시간·비용 문제로 일부만 조사"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "추론 흐름",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "표본틀에서 표본 추출 → 기술통계로 표본 요약 → 추리통계로 모수 추정·검정",
+       "유한 모집단에서 비복원추출 시 FPC √((N−n)/(N−1))로 분산 보정"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "모집단(Population)",
+   "모수(Parameter)",
+   "유한 모집단(Finite Population)",
+   "무한 모집단(Infinite Population)",
+   "전수조사(Census)",
+   "표본조사(Sample Survey)",
+   "모평균(μ)",
+   "모분산(σ²)",
+   "표본추출(Sampling)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_003",
+  "code": "ST_003",
+  "domain": "ST",
+  "category": "ST > 통계 기초",
+  "title": "표본(Sample)",
+  "subtitle": "",
+  "name": "표본(Sample)",
+  "en": "Sample",
+  "definition": "모집단의 특성을 추론하기 위해 관측 과정을 거쳐 실제로 얻은 모집단 일부의 관측 결과 집합으로, 모집단 특성이 잘 반영되도록 확률적으로 추출해야 한다.",
+  "keywords": [
+   "오차: 표본오차(Sampling Error) · n↑ → 감소(0은 안 됨)",
+   "추론: 통계량 → 모수 · 통계적 추론",
+   "확률 추출: 단순확률 · 계통 · 층화확률 · 집락(군집)",
+   "비확률 추출: 판단 · 편의 · 할당 · 유의(포커스 그룹) · 눈덩이"
+  ],
+  "keywords_must": [
+   "표본(Sample)",
+   "표본오차(Sampling Error)",
+   "통계적 추론(Statistical Inference)",
+   "확률 추출(Probability Sampling)",
+   "단순확률 추출(Simple Random Sampling)",
+   "계통 추출(Systematic Sampling)",
+   "층화확률 추출(Stratified Random Sampling)",
+   "집락 추출(Cluster Sampling)",
+   "비확률 추출(Non-probability Sampling)",
+   "할당 추출(Quota Sampling)"
+  ],
+  "keywords_ref": [
+   "판단 추출(Judgement Sampling)",
+   "편의 추출(Convenience Sampling)",
+   "유의 추출(Purposive Sampling, 포커스 그룹)",
+   "눈덩이 추출(Snowball Sampling)",
+   "NCn 가지 표본 동일 확률"
+  ],
+  "outline": [
+   "표본의 개념",
+   "- 정의",
+   "- 표본오차",
+   "- 통계적 추론",
+   "확률 추출 방법",
+   "- 단순확률·계통",
+   "- 층화확률·집락",
+   "비확률 추출 방법",
+   "- 판단·편의·할당",
+   "- 유의·눈덩이"
+  ],
+  "sections": [
+   {
+    "title": "표본의 개념",
+    "subsections": [
+     {
+      "title": "표본오차",
+      "items": [
+       "모수와 표본 통계량 사이의 오차, 표본을 크게 하면 줄지만 없어지지 않음",
+       "표본오차의 허용 범위를 확률로 구하는 것이 목적"
+      ]
+     },
+     {
+      "title": "통계적 추론",
+      "items": [
+       "알고 싶은 것은 통계량이 아니라 모수 → 표본에서 구한 값으로 모집단 값을 추론"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "확률 추출",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "모든 추출 단위에 사전에 일정한 추출 확률이 주어짐",
+       "단순확률: 각 원소가 같은 확률, NCn 가지 표본을 동일 확률로(예: 1,000명 중 100명 난수 추출)",
+       "계통: 일련번호 후 첫 구간에서 무작위 1개, 이후 k 간격(예: 10·20·30번째 손님)",
+       "층화확률: 겹치지 않는 동질 층으로 나눠 층별 단순임의추출(예: 구별 인구비율 배분)",
+       "집락: 모집단을 집락으로 나눠 일부 집락 추출 후 일부·전부 조사(예: 56개 대학 중 몇 곳)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "비확률 추출",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "추출 확률을 객관적으로 나타낼 수 없음",
+       "판단: 조사원 지식으로 대표 표본 선정(소표본), 편의: 이용 가능한 대상 임의 선택, 할당: 특성별 층 구성 후 조사원이 직접 선정",
+       "유의(포커스 그룹): 깊이 있는 연구용 대표자 선정, 눈덩이: 응답자에게 비슷한 사람을 소개받아 확대"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "표본(Sample)",
+   "표본오차(Sampling Error)",
+   "통계적 추론(Statistical Inference)",
+   "확률 추출(Probability Sampling)",
+   "단순확률 추출(Simple Random Sampling)",
+   "계통 추출(Systematic Sampling)",
+   "층화확률 추출(Stratified Random Sampling)",
+   "집락 추출(Cluster Sampling)",
+   "비확률 추출(Non-probability Sampling)",
+   "할당 추출(Quota Sampling)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_004",
+  "code": "ST_004",
+  "domain": "ST",
+  "category": "ST > 통계 기초",
+  "title": "자료와 측정 척도(Data and Measurement Scales)",
+  "subtitle": "",
+  "name": "자료와 측정 척도(Data and Measurement Scales)",
+  "en": "Data and Measurement Scales",
+  "definition": "관측·측정으로 얻은 값으로, 형태에 따라 범주형(질적)과 수치형(양적) 자료로 나뉘며 명목·서열·등간·비율 척도로 측정된다.",
+  "keywords": [
+   "형태: 범주형(Categorical) · 수치형(Numerical)",
+   "수치형: 이산형(Discrete) · 연속형(Continuous)",
+   "척도: 명목(Nominal) · 서열(Ordinal) · 등간(Interval) · 비율(Ratio)",
+   "구조: 정형 · 반정형 · 비정형"
+  ],
+  "keywords_must": [
+   "범주형 자료(Categorical Data)",
+   "수치형 자료(Numerical Data)",
+   "이산형(Discrete)",
+   "연속형(Continuous)",
+   "명목척도(Nominal Scale)",
+   "서열척도(Ordinal Scale)",
+   "등간척도(Interval Scale)",
+   "비율척도(Ratio Scale)",
+   "절대영점(Absolute Zero)"
+  ],
+  "keywords_ref": [
+   "질적 자료(Qualitative)",
+   "양적 자료(Quantitative)",
+   "정형·반정형·비정형(Structured·Semi·Unstructured)",
+   "횡단면·시계열 자료(Cross-sectional·Time Series)"
+  ],
+  "outline": [
+   "자료의 개념",
+   "- 정의",
+   "- 질적·양적 자료",
+   "측정 척도",
+   "- 명목·서열",
+   "- 등간·비율",
+   "척도별 통계 기법",
+   "- 가능한 연산·대표값",
+   "- 분석 기법 선택"
+  ],
+  "sections": [
+   {
+    "title": "자료의 개념",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "범주형(질적): 성별·혈액형처럼 분류 값, 수치형(양적): 키·매출처럼 수량 값",
+       "수치형은 셀 수 있는 이산형(사고 건수)과 실수 구간의 연속형(키·무게)으로 구분"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "측정 척도",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "명목: 구분만(=, ≠), 예) 성별·지역 / 서열: 순서 있음(<, >), 예) 학점·만족도",
+       "등간: 간격 동일, 절대영점 없음(+, −), 예) 섭씨온도·IQ / 비율: 절대영점 있음(×, ÷), 예) 키·소득"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "척도별 통계 기법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "대표값: 명목 → 최빈값, 서열 → 중앙값, 등간·비율 → 평균",
+       "분석: 범주형 간 → 교차분석(χ²), 서열 → 스피어만 상관, 등간·비율 → 피어슨 상관·회귀"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "범주형 자료(Categorical Data)",
+   "수치형 자료(Numerical Data)",
+   "이산형(Discrete)",
+   "연속형(Continuous)",
+   "명목척도(Nominal Scale)",
+   "서열척도(Ordinal Scale)",
+   "등간척도(Interval Scale)",
+   "비율척도(Ratio Scale)",
+   "절대영점(Absolute Zero)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_005",
+  "code": "ST_005",
+  "domain": "ST",
+  "category": "ST > 모델 평가",
+  "title": "정밀도·재현율(Precision & Recall)",
+  "subtitle": "",
+  "name": "정밀도·재현율(Precision & Recall)",
+  "en": "Precision and Recall",
+  "definition": "분류·검색 성능 지표로, 정밀도는 양성으로 예측한 것 중 실제 양성의 비율, 재현율은 실제 양성 중 모델이 찾아낸 비율이며 혼동행렬의 TP·FP(False Positive)·FN으로 계산한다.",
+  "keywords": [
+   "혼동행렬: TP · FP(False Positive) · FN · TN",
+   "지표: 정밀도 = TP/예측 양성 · 재현율 = TP/실제 양성 · 정확도(Accuracy)",
+   "조화: F1-score = 2PR/(P+R) · Fβ",
+   "관계: 임계값(Threshold) 따라 상충(Trade-off) · PR 곡선"
+  ],
+  "keywords_must": [
+   "혼동행렬(Confusion Matrix)",
+   "정밀도(Precision)",
+   "재현율(Recall)",
+   "정확도(Accuracy)",
+   "F1 점수(F1-score)",
+   "TP(True Positive)",
+   "FP(False Positive)",
+   "FN(False Negative)",
+   "임계값(Threshold)",
+   "상충 관계(Trade-off)"
+  ],
+  "keywords_ref": [
+   "민감도(Sensitivity) = 재현율",
+   "특이도(Specificity) = TN/실제 음성",
+   "Fβ 점수(Fβ-score)",
+   "PR 곡선(Precision-Recall Curve)",
+   "클래스 불균형(Class Imbalance)"
+  ],
+  "outline": [
+   "정밀도·재현율의 개념",
+   "- 혼동행렬",
+   "- 정의·수식",
+   "정보검색·분류에서의 계산",
+   "- 계산 예",
+   "- F1 점수",
+   "기계학습 활용",
+   "- 상충 관계와 임계값",
+   "- 지표 선택 기준"
+  ],
+  "sections": [
+   {
+    "title": "개념",
+    "subsections": [
+     {
+      "title": "혼동행렬",
+      "items": [
+       "TP(양성 맞힘), FP(False Positive, 음성을 양성으로 오판), FN(양성을 놓침), TN(음성 맞힘)"
+      ]
+     },
+     {
+      "title": "수식",
+      "items": [
+       "정밀도 = TP/(TP+FP(False Positive)): 예측의 정확성, 재현율 = TP/(TP+FN): 실제 양성 검출률",
+       "정확도 = (TP+TN)/전체 → 불균형 데이터에서 착시"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "계산 예",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "관련 문서 10건 중 검색 8건, 그중 관련 6건 → 정밀도 6/8=0.75, 재현율 6/10=0.6",
+       "F1 = 2·0.75·0.6/(0.75+0.6) ≈ 0.67"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "임계값을 높이면 정밀도↑ 재현율↓, 낮추면 반대",
+       "거짓 양성 비용이 큼(스팸 필터) → 정밀도, 거짓 음성 비용이 큼(암 진단·사기 탐지) → 재현율 중시"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "혼동행렬(Confusion Matrix)",
+   "정밀도(Precision)",
+   "재현율(Recall)",
+   "정확도(Accuracy)",
+   "F1 점수(F1-score)",
+   "TP(True Positive)",
+   "FP(False Positive)",
+   "FN(False Negative)",
+   "임계값(Threshold)",
+   "상충 관계(Trade-off)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_006",
+  "code": "ST_006",
+  "domain": "ST",
+  "category": "ST > 기술통계",
+  "title": "왜도와 첨도(Skewness and Kurtosis)",
+  "subtitle": "",
+  "name": "왜도와 첨도(Skewness and Kurtosis)",
+  "en": "Skewness and Kurtosis",
+  "definition": "분포 모양을 나타내는 기술통계량으로, 왜도는 평균 중심 비대칭 정도(3차 표준화 적률), 첨도는 꼬리 두께·뾰족한 정도(4차 표준화 적률)이다.",
+  "keywords": [
+   "왜도: 양(+)=오른쪽 꼬리 · 음(−)=왼쪽 꼬리 · 0=대칭",
+   "대표값 순서: 양의 왜도 최빈값<중앙값<평균",
+   "첨도: 정규분포 3(초과첨도 0) · 첨용(Leptokurtic) · 평용(Platykurtic)",
+   "활용: 정규성 판단 · 로그 변환 · 이상치"
+  ],
+  "keywords_must": [
+   "왜도(Skewness)",
+   "첨도(Kurtosis)",
+   "3차 적률(Third Moment)",
+   "4차 적률(Fourth Moment)",
+   "양의 왜도(Positive Skew)",
+   "음의 왜도(Negative Skew)",
+   "초과첨도(Excess Kurtosis)",
+   "첨용 분포(Leptokurtic)",
+   "평용 분포(Platykurtic)",
+   "정규성(Normality)"
+  ],
+  "keywords_ref": [
+   "중첨 분포(Mesokurtic)",
+   "두꺼운 꼬리(Fat Tail)",
+   "로그 변환(Log Transformation)",
+   "자크-베라 검정(Jarque-Bera Test)",
+   "Q-Q 플롯(Q-Q Plot)"
+  ],
+  "outline": [
+   "왜도·첨도의 개념",
+   "- 분포 모양 지표",
+   "- 수식",
+   "왜도·첨도의 유형",
+   "- 왜도: 양·음·대칭",
+   "- 첨도: 첨용·중첨·평용",
+   "활용",
+   "- 정규성 판단",
+   "- 변환·이상치"
+  ],
+  "sections": [
+   {
+    "title": "개념",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "왜도 = E[(X−μ)³]/σ³, 첨도 = E[(X−μ)⁴]/σ⁴",
+       "정규분포: 왜도 0, 첨도 3(초과첨도 = 첨도 − 3 = 0)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": "왜도",
+      "items": [
+       "양의 왜도: 오른쪽 꼬리 김, 최빈값 < 중앙값 < 평균(예: 소득)",
+       "음의 왜도: 왼쪽 꼬리 김, 평균 < 중앙값 < 최빈값(예: 쉬운 시험 점수)"
+      ]
+     },
+     {
+      "title": "첨도",
+      "items": [
+       "첨용(>3): 중심 뾰족·꼬리 두꺼움 → 극단값 빈번, 평용(<3): 평평·꼬리 얇음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "|왜도|·|초과첨도|가 크면 정규성 위반 → 로그·Box-Cox 변환, 비모수 검정",
+       "금융 수익률의 두꺼운 꼬리 → 위험(VaR) 과소평가 주의"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "왜도(Skewness)",
+   "첨도(Kurtosis)",
+   "3차 적률(Third Moment)",
+   "4차 적률(Fourth Moment)",
+   "양의 왜도(Positive Skew)",
+   "음의 왜도(Negative Skew)",
+   "초과첨도(Excess Kurtosis)",
+   "첨용 분포(Leptokurtic)",
+   "평용 분포(Platykurtic)",
+   "정규성(Normality)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_007_0",
+  "code": "ST_007_0",
+  "domain": "ST",
+  "category": "ST > 모델 평가",
+  "title": "타당도와 신뢰도(Validity and Reliability)",
+  "subtitle": "",
+  "name": "타당도와 신뢰도(Validity and Reliability)",
+  "en": "Validity and Reliability",
+  "definition": "측정 도구의 품질 기준으로, 타당도는 측정하려는 개념을 정확히 측정하는 정도, 신뢰도는 반복 측정 시 결과가 일관된 정도이다.",
+  "keywords": [
+   "타당도: 내용 · 기준(동시·예측) · 구성(수렴·판별)",
+   "신뢰도: 재검사 · 동형검사 · 반분 · 내적 일관성(크론바흐 α)",
+   "관계: 신뢰도는 타당도의 필요조건(충분조건 아님)",
+   "비유: 과녁(정확·일관)"
+  ],
+  "keywords_must": [
+   "타당도(Validity)",
+   "신뢰도(Reliability)",
+   "내용 타당도(Content Validity)",
+   "기준 타당도(Criterion Validity)",
+   "구성 타당도(Construct Validity)",
+   "재검사 신뢰도(Test-Retest)",
+   "반분 신뢰도(Split-half)",
+   "크론바흐 알파(Cronbach's α)",
+   "필요조건(Necessary Condition)"
+  ],
+  "keywords_ref": [
+   "수렴·판별 타당도(Convergent·Discriminant)",
+   "동형검사 신뢰도(Parallel Forms)",
+   "요인분석(Factor Analysis)",
+   "측정오차(Measurement Error)",
+   "α ≥ 0.7 기준"
+  ],
+  "outline": [
+   "타당도",
+   "- 정의",
+   "- 내용·기준·구성 타당도",
+   "신뢰도",
+   "- 정의",
+   "- 재검사·동형·반분·내적 일관성",
+   "타당도와 신뢰도의 관계",
+   "- 필요조건 관계",
+   "- 과녁 비유"
+  ],
+  "sections": [
+   {
+    "title": "타당도",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "내용: 문항이 개념 영역을 대표(전문가 판단), 기준: 외부 기준과 상관(동시·예측)",
+       "구성: 이론적 개념과의 일치, 수렴(같은 개념 상관↑)·판별(다른 개념 상관↓), 요인분석으로 확인"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "신뢰도",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "재검사: 시간 간격 두고 같은 검사 반복, 동형: 동등한 두 검사, 반분: 문항을 반으로 나눠 상관",
+       "내적 일관성: 크론바흐 α, 보통 0.7 이상이면 수용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "관계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "신뢰도 없이 타당도 없음, 신뢰도가 높아도 타당도가 낮을 수 있음",
+       "과녁: 탄착이 모이면 신뢰도↑, 중심에 모이면 타당도↑"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "타당도(Validity)",
+   "신뢰도(Reliability)",
+   "내용 타당도(Content Validity)",
+   "기준 타당도(Criterion Validity)",
+   "구성 타당도(Construct Validity)",
+   "재검사 신뢰도(Test-Retest)",
+   "반분 신뢰도(Split-half)",
+   "크론바흐 알파(Cronbach's α)",
+   "필요조건(Necessary Condition)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_007_1",
+  "code": "ST_007_1",
+  "domain": "ST",
+  "category": "ST > 모델 평가",
+  "title": "PR 곡선·ROC 곡선(Precision-Recall Curve and ROC Curve)",
+  "subtitle": "",
+  "name": "PR 곡선·ROC 곡선(Precision-Recall Curve and ROC Curve)",
+  "en": "PR Curve and ROC Curve",
+  "definition": "분류 임계값을 바꿔 가며 성능을 그린 곡선으로, ROC는 FPR 대비 TPR, PR은 재현율 대비 정밀도를 나타내며 곡선 아래 면적(AUC)으로 모델을 비교한다.",
+  "keywords": [
+   "ROC: x=FPR(1−특이도) · y=TPR(재현율) · AUC 0.5~1",
+   "PR: x=재현율(Recall) · y=정밀도(Precision) · AP(Average Precision)",
+   "선택: 불균형 데이터 → PR 곡선 · 균형 → ROC",
+   "공통: 임계값(Threshold) 변화 · 혼동행렬 기반"
+  ],
+  "keywords_must": [
+   "ROC 곡선(Receiver Operating Characteristic Curve)",
+   "AUC(Area Under the Curve)",
+   "TPR(True Positive Rate)",
+   "FPR(False Positive Rate)",
+   "PR 곡선(Precision-Recall Curve)",
+   "정밀도(Precision)",
+   "재현율(Recall)",
+   "임계값(Threshold)",
+   "클래스 불균형(Class Imbalance)"
+  ],
+  "keywords_ref": [
+   "평균 정밀도(Average Precision)",
+   "특이도(Specificity)",
+   "무작위 분류기 대각선(AUC=0.5)",
+   "혼동행렬(Confusion Matrix)",
+   "F1 점수(F1-score)"
+  ],
+  "outline": [
+   "PR·ROC 곡선의 정의",
+   "- 임계값 기반 성능 곡선",
+   "ROC 곡선과 PR 곡선 상세",
+   "- ROC: TPR·FPR·AUC",
+   "- PR: 정밀도·재현율·평균 정밀도",
+   "PR·ROC 곡선 비교와 선택",
+   "- 불균형 데이터",
+   "- 모델 비교"
+  ],
+  "sections": [
+   {
+    "title": "정의",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "임계값별 혼동행렬에서 지표 쌍을 계산해 연결한 곡선, 단일 임계값에 의존하지 않는 평가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "상세",
+    "subsections": [
+     {
+      "title": "ROC",
+      "items": [
+       "TPR = TP/(TP+FN), FPR = FP(False Positive)/(전체 실제 음성)",
+       "좌상단에 가까울수록 우수, AUC 1 완벽·0.5 무작위"
+      ]
+     },
+     {
+      "title": "PR",
+      "items": [
+       "정밀도 = TP/예측 양성, 재현율 = TP/실제 양성, 우상단에 가까울수록 우수",
+       "기준선은 양성 비율, 곡선 아래 면적은 평균 정밀도"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "ROC는 TN이 많으면 FPR이 작아져 낙관적 → 불균형 데이터(사기·질병)는 PR 곡선이 적합",
+       "양성·음성 모두 중요하고 균형 잡힌 데이터는 ROC-AUC로 비교"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "ROC 곡선(Receiver Operating Characteristic Curve)",
+   "AUC(Area Under the Curve)",
+   "TPR(True Positive Rate)",
+   "FPR(False Positive Rate)",
+   "PR 곡선(Precision-Recall Curve)",
+   "정밀도(Precision)",
+   "재현율(Recall)",
+   "임계값(Threshold)",
+   "클래스 불균형(Class Imbalance)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_008",
+  "code": "ST_008",
+  "domain": "ST",
+  "category": "ST > 확률",
+  "title": "확률(Probability)",
+  "subtitle": "",
+  "name": "확률(Probability)",
+  "en": "Probability",
+  "definition": "어떤 사건이 일어날 가능성을 0과 1 사이의 수로 나타낸 것으로, 표본공간·사건과 콜모고로프 공리를 바탕으로 조건부확률·독립·전확률을 정의한다.",
+  "keywords": [
+   "정의: 고전적 · 경험적(상대빈도) · 주관적 · 공리적(콜모고로프)",
+   "기본: 표본공간(S) · 사건(Event) · 여사건 · 배반",
+   "법칙: 덧셈정리 · 곱셈정리 · 조건부확률 P(A|B)",
+   "확장: 독립 · 전확률 정리 · 베이즈 정리"
+  ],
+  "keywords_must": [
+   "표본공간(Sample Space)",
+   "사건(Event)",
+   "확률의 공리(Kolmogorov Axioms)",
+   "덧셈정리(Addition Rule)",
+   "곱셈정리(Multiplication Rule)",
+   "조건부확률(Conditional Probability)",
+   "독립사건(Independent Events)",
+   "배반사건(Mutually Exclusive Events)",
+   "전확률 정리(Law of Total Probability)"
+  ],
+  "keywords_ref": [
+   "고전적 확률(Classical)",
+   "상대빈도 확률(Relative Frequency)",
+   "주관적 확률(Subjective)",
+   "큰 수의 법칙(Law of Large Numbers)",
+   "여사건(Complement)"
+  ],
+  "outline": [
+   "확률의 개념",
+   "- 정의",
+   "- 확률의 해석",
+   "확률의 기본 법칙",
+   "- 공리·덧셈정리",
+   "- 조건부확률·곱셈정리",
+   "독립과 전확률",
+   "- 독립·배반",
+   "- 전확률 정리 → 베이즈 정리"
+  ],
+  "sections": [
+   {
+    "title": "개념",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "고전적: 경우의 수 비율, 경험적: 반복 시행의 상대빈도(큰 수의 법칙), 주관적: 믿음의 정도",
+       "공리: P(A)≥0, P(S)=1, 배반사건 합의 확률 = 확률의 합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기본 법칙",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "덧셈정리: P(A∪B) = P(A)+P(B)−P(A∩B)",
+       "조건부확률 P(A|B) = P(A∩B)/P(B), 곱셈정리 P(A∩B) = P(B)·P(A|B)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "독립과 전확률",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "독립: P(A∩B) = P(A)P(B), 배반: A∩B = ∅ (배반이면서 독립은 확률 0일 때만)",
+       "전확률: P(A) = Σ P(A|Bi)P(Bi) → 베이즈 정리의 분모"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "표본공간(Sample Space)",
+   "사건(Event)",
+   "확률의 공리(Kolmogorov Axioms)",
+   "덧셈정리(Addition Rule)",
+   "곱셈정리(Multiplication Rule)",
+   "조건부확률(Conditional Probability)",
+   "독립사건(Independent Events)",
+   "배반사건(Mutually Exclusive Events)",
+   "전확률 정리(Law of Total Probability)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_009",
+  "code": "ST_009",
+  "domain": "ST",
+  "category": "ST > 확률",
+  "title": "연관규칙 분석(Association Rule Analysis)",
+  "subtitle": "",
+  "name": "연관규칙 분석(Association Rule Analysis)",
+  "en": "Association Rule Analysis",
+  "definition": "거래 데이터에서 'A이면 B' 형태로 함께 발생하는 항목 간 규칙을 찾는 비지도학습 기법으로, 지지도·신뢰도·향상도로 규칙의 유용성을 평가한다.",
+  "keywords": [
+   "척도: 지지도(Support) · 신뢰도(Confidence) · 향상도(Lift)",
+   "알고리즘: Apriori · FP(Frequent Pattern)-Growth · Eclat",
+   "형태: 조건절(Antecedent) → 결과절(Consequent)",
+   "활용: 장바구니 분석 · 추천 · 교차판매"
+  ],
+  "keywords_must": [
+   "연관규칙(Association Rule)",
+   "장바구니 분석(Market Basket Analysis)",
+   "지지도(Support)",
+   "신뢰도(Confidence)",
+   "향상도(Lift)",
+   "빈발 항목집합(Frequent Itemset)",
+   "Apriori 알고리즘",
+   "FP(Frequent Pattern)-Growth",
+   "비지도학습(Unsupervised Learning)"
+  ],
+  "keywords_ref": [
+   "최소 지지도(Minimum Support)",
+   "조건절·결과절(Antecedent·Consequent)",
+   "교차판매(Cross-selling)",
+   "순차 패턴(Sequential Pattern)",
+   "Eclat"
+  ],
+  "outline": [
+   "연관규칙의 개념",
+   "- 정의·비지도학습",
+   "- 규칙 형태",
+   "연관규칙 평가 척도",
+   "- 지지도·신뢰도·향상도",
+   "- 해석 예",
+   "연관규칙 알고리즘과 활용",
+   "- Apriori·FP(Frequent Pattern)-Growth",
+   "- 장바구니 분석·추천"
+  ],
+  "sections": [
+   {
+    "title": "개념",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "레이블 없이 데이터 속 동시 발생 패턴을 찾는 비지도학습, 규칙 A → B"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "평가 척도",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "지지도 = P(A∩B): 전체 거래 중 A·B 동시 포함 비율",
+       "신뢰도 = P(B|A) = P(A∩B)/P(A): A 구매 시 B 구매 비율",
+       "향상도 = P(B|A)/P(B): 1 초과 양의 연관, 1 독립, 1 미만 음의 연관"
+      ]
+     },
+     {
+      "title": "예",
+      "items": [
+       "1,000건 중 빵 200, 우유 300, 둘 다 100 → 지지도 0.1, 신뢰도(빵→우유) 0.5, 향상도 0.5/0.3≈1.67"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "알고리즘과 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Apriori: 빈발 집합의 부분집합도 빈발 → 후보 생성·가지치기, FP(Frequent Pattern)-Growth: 빈발 패턴 트리로 후보 생성 없이 탐색",
+       "매장 진열, 상품 추천, 교차판매, 웹 로그 분석"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "연관규칙(Association Rule)",
+   "장바구니 분석(Market Basket Analysis)",
+   "지지도(Support)",
+   "신뢰도(Confidence)",
+   "향상도(Lift)",
+   "빈발 항목집합(Frequent Itemset)",
+   "Apriori 알고리즘",
+   "FP(Frequent Pattern)-Growth",
+   "비지도학습(Unsupervised Learning)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_010",
+  "code": "ST_010",
+  "domain": "ST",
+  "category": "ST > 확률",
+  "title": "베이즈 정리(Bayes' Theorem)",
+  "subtitle": "",
+  "name": "베이즈 정리(Bayes' Theorem)",
+  "en": "Bayes' Theorem",
+  "definition": "사전확률과 우도를 이용해 새로운 증거가 주어졌을 때의 사후확률을 구하는 정리로, P(A|B) = P(B|A)P(A)/P(B)이다.",
+  "keywords": [
+   "수식: P(A|B) = P(B|A)·P(A) / P(B)",
+   "구성: 사전확률(Prior) · 우도(Likelihood) · 증거(Evidence) · 사후확률(Posterior)",
+   "기반: 조건부확률 · 전확률 정리",
+   "활용: 나이브 베이즈 · 스팸 필터 · 진단 · 베이지안 추론"
+  ],
+  "keywords_must": [
+   "베이즈 정리(Bayes' Theorem)",
+   "사전확률(Prior Probability)",
+   "사후확률(Posterior Probability)",
+   "우도(Likelihood)",
+   "증거(Evidence)",
+   "조건부확률(Conditional Probability)",
+   "전확률 정리(Law of Total Probability)",
+   "베이지안 추론(Bayesian Inference)",
+   "나이브 베이즈(Naive Bayes)"
+  ],
+  "keywords_ref": [
+   "기저율 오류(Base Rate Fallacy)",
+   "베이지안 갱신(Bayesian Updating)",
+   "최대 사후확률 추정(MAP, Maximum A Posteriori)",
+   "켤레 사전분포(Conjugate Prior)"
+  ],
+  "outline": [
+   "베이즈 정리의 개요",
+   "- 정의",
+   "- 확률과 우도",
+   "베이즈 정리의 수식과 사례",
+   "- 전확률 정리",
+   "- 불량품·지각 사례",
+   "베이즈 정리의 활용",
+   "- 나이브 베이즈·스팸 필터",
+   "- 베이지안 추론"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "결과(증거)를 보고 원인의 확률을 역으로 갱신하는 불확실성 추론의 기초",
+       "사후확률 ∝ 우도 × 사전확률"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "수식과 사례",
+    "subsections": [
+     {
+      "title": "수식",
+      "items": [
+       "P(Ai|B) = P(B|Ai)P(Ai) / Σ P(B|Aj)P(Aj) (분모 = 전확률)"
+      ]
+     },
+     {
+      "title": "사례",
+      "items": [
+       "기계 A·B·C 생산 50·30·20%, 불량률 3·2·1% → 전체 불량률 0.023, 불량품이 A산일 확률 0.015/0.023≈0.652",
+       "지하철 60%(지각 10%), 자가용 40%(지각 30%) → 지각자가 지하철 이용일 확률 0.06/0.18=1/3"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "나이브 베이즈 분류(스팸 필터), 의료 진단(검사 양성의 실제 유병 확률), 베이지안 최적화·추론",
+       "기저율을 무시하면 사후확률을 크게 오판(기저율 오류)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "베이즈 정리(Bayes' Theorem)",
+   "사전확률(Prior Probability)",
+   "사후확률(Posterior Probability)",
+   "우도(Likelihood)",
+   "증거(Evidence)",
+   "조건부확률(Conditional Probability)",
+   "전확률 정리(Law of Total Probability)",
+   "베이지안 추론(Bayesian Inference)",
+   "나이브 베이즈(Naive Bayes)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_013",
+  "code": "ST_013",
+  "domain": "ST",
+  "category": "ST > 확률",
+  "title": "우도(Likelihood)",
+  "subtitle": "",
+  "name": "우도(Likelihood)",
+  "en": "Likelihood",
+  "definition": "관측된 데이터가 주어졌을 때 특정 모수 값이 그 데이터를 만들어 냈을 그럴듯함으로, 모수의 함수 L(θ|x) = P(x|θ)이며 이를 최대화하는 값이 최대우도추정량이다.",
+  "keywords": [
+   "정의: L(θ|x) = f(x|θ) · 모수의 함수",
+   "대비: 확률(모수 고정·데이터 변화) ↔ 우도(데이터 고정·모수 변화)",
+   "다중 관측: L(θ) = Π f(xi|θ) · 로그우도 Σ log f(xi|θ)",
+   "추정: 최대우도추정(MLE) · 우도비 검정"
+  ],
+  "keywords_must": [
+   "우도(Likelihood)",
+   "가능도 함수(Likelihood Function)",
+   "확률(Probability)",
+   "모수(Parameter)",
+   "로그우도(Log-likelihood)",
+   "최대우도추정(MLE, Maximum Likelihood Estimation)",
+   "독립 동일 분포(i.i.d.)",
+   "확률밀도 값(Density Value)"
+  ],
+  "keywords_ref": [
+   "우도비 검정(Likelihood Ratio Test)",
+   "음의 로그우도(Negative Log-likelihood)",
+   "교차 엔트로피(Cross-Entropy)",
+   "AIC(Akaike Information Criterion)",
+   "베이즈 정리의 우도항"
+  ],
+  "outline": [
+   "우도의 개념",
+   "- 정의",
+   "- 확률과 우도의 비교",
+   "우도 함수 계산",
+   "- 연속사건의 우도",
+   "- 여러 관측의 우도·로그우도",
+   "최대우도추정과 활용",
+   "- MLE",
+   "- 기계학습 손실 함수"
+  ],
+  "sections": [
+   {
+    "title": "개념",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "확률: 모수가 정해졌을 때 데이터가 나올 가능성, 우도: 데이터가 주어졌을 때 모수의 그럴듯함",
+       "우도는 모수에 대해 합이 1일 필요 없음(확률분포가 아님)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "계산",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "연속형은 한 점의 확률이 0이므로 확률밀도 값 f(x|θ)를 우도로 사용",
+       "i.i.d. 관측: L(θ)=Π f(xi|θ), 곱 대신 로그우도 합으로 계산"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "MLE와 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "θ̂ = argmax L(θ): 정규분포에서 μ̂ = x̄, σ̂² = Σ(x−x̄)²/n",
+       "로지스틱 회귀·신경망 분류 손실(음의 로그우도 = 교차 엔트로피), 모델 선택 AIC·BIC"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "우도(Likelihood)",
+   "가능도 함수(Likelihood Function)",
+   "확률(Probability)",
+   "모수(Parameter)",
+   "로그우도(Log-likelihood)",
+   "최대우도추정(MLE, Maximum Likelihood Estimation)",
+   "독립 동일 분포(i.i.d.)",
+   "확률밀도 값(Density Value)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_014",
+  "code": "ST_014",
+  "domain": "ST",
+  "category": "ST > 확률",
+  "title": "확률변수와 확률밀도함수(Random Variable and Probability Density Function)",
+  "subtitle": "",
+  "name": "확률변수와 확률밀도함수(Random Variable and Probability Density Function)",
+  "en": "Random Variable and Probability Density Function",
+  "definition": "확률변수는 표본공간의 결과에 수를 대응시키는 함수이고, 확률밀도함수는 연속확률변수의 밀도를 나타내며 구간 적분값이 그 구간에 속할 확률이다.",
+  "keywords": [
+   "확률변수: 이산형(Discrete) · 연속형(Continuous)",
+   "함수: PMF(Probability Mass Function, 이산) · PDF(Probability Density Function, 연속) · CDF(누적)",
+   "성질: f(x)≥0 · ∫f(x)dx=1 · P(X=a)=0",
+   "요약: 기댓값 E[X] · 분산 Var(X)"
+  ],
+  "keywords_must": [
+   "확률변수(Random Variable)",
+   "이산확률변수(Discrete Random Variable)",
+   "연속확률변수(Continuous Random Variable)",
+   "확률질량함수(Probability Mass Function)",
+   "확률밀도함수(Probability Density Function)",
+   "누적분포함수(Cumulative Distribution Function)",
+   "기댓값(Expected Value)",
+   "분산(Variance)"
+  ],
+  "keywords_ref": [
+   "P(a≤X≤b) = ∫f(x)dx",
+   "F'(x) = f(x)",
+   "P(X=a) = 0(연속형)",
+   "적률생성함수(MGF, Moment Generating Function)"
+  ],
+  "outline": [
+   "확률변수의 개념",
+   "- 정의",
+   "- 이산형·연속형",
+   "확률밀도함수",
+   "- 정의와 성질",
+   "- 누적분포함수와의 관계",
+   "확률변수의 요약 통계",
+   "- 기댓값·분산",
+   "- 대표 확률분포"
+  ],
+  "sections": [
+   {
+    "title": "확률변수",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "표본공간 → 실수로의 함수, 이산형(셀 수 있는 값: 불량 개수)·연속형(실수 구간: 키·강수량)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "확률밀도함수",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "f(x) ≥ 0, 전체 적분 = 1, P(a≤X≤b) = ∫ₐᵇ f(x)dx(곡선 아래 넓이)",
+       "연속형은 한 점의 확률이 0, f(x) 값 자체는 확률이 아니라 밀도(1 초과 가능)",
+       "CDF F(x) = P(X≤x) = ∫ f(t)dt, F'(x) = f(x)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "요약 통계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "E[X] = ∫x f(x)dx (이산: Σx p(x)), Var(X) = E[X²] − (E[X])²",
+       "이산: 베르누이·이항·포아송·기하 / 연속: 정규·지수·t·χ²·F"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "확률변수(Random Variable)",
+   "이산확률변수(Discrete Random Variable)",
+   "연속확률변수(Continuous Random Variable)",
+   "확률질량함수(Probability Mass Function)",
+   "확률밀도함수(Probability Density Function)",
+   "누적분포함수(Cumulative Distribution Function)",
+   "기댓값(Expected Value)",
+   "분산(Variance)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_016",
+  "code": "ST_016",
+  "domain": "ST",
+  "category": "ST > 확률분포",
+  "title": "확률분포(Probability Distribution)",
+  "subtitle": "",
+  "name": "확률분포(Probability Distribution)",
+  "en": "Probability Distribution",
+  "definition": "확률변수가 취하는 값과 그 값이 나올 확률의 대응 관계로, 이산확률분포와 연속확률분포로 나뉘며 표본분포는 추정·검정의 기반이 된다.",
+  "keywords": [
+   "이산형: 베르누이 · 이항 · 포아송 · 기하 · 초기하",
+   "연속형: 균등 · 정규 · 지수 · 감마",
+   "표본분포: t분포 · χ²분포 · F분포",
+   "표현: 확률질량함수 · 확률밀도함수 · 누적분포함수(CDF) · 기댓값 · 분산"
+  ],
+  "keywords_must": [
+   "확률분포(Probability Distribution)",
+   "이산확률분포(Discrete Distribution)",
+   "연속확률분포(Continuous Distribution)",
+   "이항분포(Binomial Distribution)",
+   "포아송분포(Poisson Distribution)",
+   "정규분포(Normal Distribution)",
+   "지수분포(Exponential Distribution)",
+   "t분포(t-Distribution)",
+   "카이제곱분포(Chi-square Distribution)",
+   "F분포(F-Distribution)"
+  ],
+  "keywords_ref": [
+   "베르누이분포(Bernoulli)",
+   "기하분포(Geometric)",
+   "초기하분포(Hypergeometric)",
+   "균등분포(Uniform)",
+   "표본분포(Sampling Distribution)"
+  ],
+  "outline": [
+   "확률분포의 개념",
+   "- 정의",
+   "- 이산·연속",
+   "이산확률분포",
+   "- 베르누이·이항·포아송·기하",
+   "연속확률분포와 표본분포",
+   "- 균등·정규·지수",
+   "- t·χ²·F 분포"
+  ],
+  "sections": [
+   {
+    "title": "개념",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "확률변수 X의 값별 확률(확률질량함수) 또는 밀도(확률밀도함수)로 표현, CDF로 누적 확률"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "이산확률분포",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "베르누이(1회 성공·실패, p), 이항 B(n,p): n회 중 성공 수, 평균 np",
+       "포아송(단위 시간 발생 수, 평균=분산=λ), 기하(첫 성공까지 시행 수), 초기하(비복원추출)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "연속확률분포와 표본분포",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "균등, 정규 N(μ,σ²), 지수(사건 간 대기 시간, 무기억성)",
+       "t분포(소표본 평균), χ²분포(분산·적합도·독립성), F분포(두 분산 비·ANOVA)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "확률분포(Probability Distribution)",
+   "이산확률분포(Discrete Distribution)",
+   "연속확률분포(Continuous Distribution)",
+   "이항분포(Binomial Distribution)",
+   "포아송분포(Poisson Distribution)",
+   "정규분포(Normal Distribution)",
+   "지수분포(Exponential Distribution)",
+   "t분포(t-Distribution)",
+   "카이제곱분포(Chi-square Distribution)",
+   "F분포(F-Distribution)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_017",
+  "code": "ST_017",
+  "domain": "ST",
+  "category": "ST > 확률분포",
+  "title": "정규분포(Normal Distribution)",
+  "subtitle": "",
+  "name": "정규분포(Normal Distribution)",
+  "en": "Normal Distribution",
+  "definition": "평균 μ를 중심으로 좌우 대칭인 종 모양의 연속확률분포 N(μ, σ²)로, 자연·사회 현상의 오차 분포와 중심극한정리의 극한 분포로 통계 추론의 기본이 된다.",
+  "keywords": [
+   "모수: 평균(μ) · 분산(σ²) · N(μ, σ²)",
+   "성질: 좌우 대칭 · 평균=중앙값=최빈값 · 곡선 아래 면적 1",
+   "경험법칙: ±1σ 68.3% · ±2σ 95.4% · ±3σ 99.7%",
+   "표준화: Z = (X−μ)/σ → N(0,1)"
+  ],
+  "keywords_must": [
+   "정규분포(Normal Distribution)",
+   "가우스 분포(Gaussian Distribution)",
+   "평균(μ)",
+   "표준편차(σ)",
+   "종 모양 대칭(Bell-shaped Symmetry)",
+   "경험법칙(68-95-99.7 Rule)",
+   "표준화(Standardization)",
+   "표준정규분포(Standard Normal Distribution)",
+   "중심극한정리(Central Limit Theorem)"
+  ],
+  "keywords_ref": [
+   "Z-점수(Z-score)",
+   "왜도 0·첨도 3",
+   "정규성 검정(샤피로-윌크, Shapiro-Wilk)",
+   "Q-Q 플롯(Q-Q Plot)",
+   "6시그마(Six Sigma)"
+  ],
+  "outline": [
+   "정규분포의 정의",
+   "- 정의·확률밀도함수",
+   "정규분포의 특징",
+   "- 대칭·모수",
+   "- 경험법칙",
+   "정규분포의 활용",
+   "- 표준화·Z 검정",
+   "- 중심극한정리·품질관리"
+  ],
+  "sections": [
+   {
+    "title": "정의",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "f(x) = (1/(σ√(2π)))·exp(−(x−μ)²/(2σ²)), 가우스가 오차 이론에서 정립"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "특징",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "μ가 위치, σ가 퍼짐을 결정, 평균=중앙값=최빈값, 왜도 0·첨도 3",
+       "정규 확률변수의 선형결합도 정규분포",
+       "μ±1σ 68.3%, ±2σ 95.4%, ±3σ 99.7%"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Z = (X−μ)/σ로 표준정규분포표 이용, 신뢰구간 x̄ ± 1.96σ/√n(95%)",
+       "표본평균 분포의 근사(CLT), 관리도·6시그마 품질관리, 회귀 잔차 가정"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "정규분포(Normal Distribution)",
+   "가우스 분포(Gaussian Distribution)",
+   "평균(μ)",
+   "표준편차(σ)",
+   "종 모양 대칭(Bell-shaped Symmetry)",
+   "경험법칙(68-95-99.7 Rule)",
+   "표준화(Standardization)",
+   "표준정규분포(Standard Normal Distribution)",
+   "중심극한정리(Central Limit Theorem)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_019",
+  "code": "ST_019",
+  "domain": "ST",
+  "category": "ST > 확률분포",
+  "title": "표준정규분포와 Z 검정(Standard Normal Distribution and Z-test)",
+  "subtitle": "",
+  "name": "표준정규분포와 Z 검정(Standard Normal Distribution and Z-test)",
+  "en": "Standard Normal Distribution and Z-test",
+  "definition": "표준정규분포는 평균 0·분산 1인 정규분포 N(0,1)이며, Z 검정은 모분산을 알거나 표본이 클 때(n≥30) 표준화한 검정통계량 Z로 평균 차이를 검정하는 방법이다.",
+  "keywords": [
+   "분포: Z = (X−μ)/σ ~ N(0,1) · 표준정규분포표",
+   "임계값: 양측 5% ±1.96 · 양측 1% ±2.58 · 단측 5% 1.645",
+   "검정통계량: Z = (x̄−μ0)/(σ/√n)",
+   "유형: 단일표본 · 두 독립표본 · 비율 Z 검정"
+  ],
+  "keywords_must": [
+   "표준정규분포(Standard Normal Distribution)",
+   "Z-점수(Z-score)",
+   "Z 검정(Z-test)",
+   "모분산 기지(Known Population Variance)",
+   "대표본(Large Sample, n≥30)",
+   "검정통계량(Test Statistic)",
+   "임계값(Critical Value)",
+   "1.96(양측 5%)",
+   "t 검정(t-test)"
+  ],
+  "keywords_ref": [
+   "단일표본 Z 검정(One-sample Z-test)",
+   "두 독립표본 Z 검정(Two-sample Z-test)",
+   "비율 검정(Proportion Z-test)",
+   "유의수준(Significance Level)",
+   "p-값(p-value)"
+  ],
+  "outline": [
+   "표준정규분포의 개요",
+   "- 정의·표준화",
+   "- 표준정규분포표",
+   "Z 검정의 분류",
+   "- 단일표본",
+   "- 두 독립표본·비율",
+   "Z 검정과 t 검정 비교",
+   "- 적용 조건",
+   "- 실무 활용"
+  ],
+  "sections": [
+   {
+    "title": "표준정규분포",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "임의의 정규분포를 Z=(X−μ)/σ로 변환해 하나의 표로 확률 계산",
+       "P(−1.96≤Z≤1.96) = 0.95, P(−2.58≤Z≤2.58) = 0.99"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Z 검정",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "단일표본: Z=(x̄−μ0)/(σ/√n)로 모평균이 특정 값인지 검정",
+       "두 독립표본: Z=(x̄1−x̄2)/√(σ1²/n1+σ2²/n2), 두 모분산을 알 때",
+       "비율: Z=(p̂−p0)/√(p0(1−p0)/n)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "t 검정과 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Z: 모분산 기지 또는 대표본, t: 모분산 미지·소표본(표본표준편차 사용)",
+       "실무에서 모분산을 아는 경우가 드물어 대부분 t 검정을 사용, n이 크면 t분포 ≈ Z분포"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "표준정규분포(Standard Normal Distribution)",
+   "Z-점수(Z-score)",
+   "Z 검정(Z-test)",
+   "모분산 기지(Known Population Variance)",
+   "대표본(Large Sample, n≥30)",
+   "검정통계량(Test Statistic)",
+   "임계값(Critical Value)",
+   "1.96(양측 5%)",
+   "t 검정(t-test)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_019_01",
+  "code": "ST_019_01",
+  "domain": "ST",
+  "category": "ST > 확률분포",
+  "title": "베르누이 분포와 기하 분포(Bernoulli and Geometric Distribution)",
+  "subtitle": "",
+  "name": "베르누이 분포와 기하 분포(Bernoulli and Geometric Distribution)",
+  "en": "Bernoulli and Geometric Distribution",
+  "definition": "베르누이 분포는 성공 확률 p인 1회 시행의 결과(0 또는 1) 분포이고, 기하 분포는 독립 베르누이 시행을 반복할 때 첫 성공까지 걸린 시행 횟수의 분포이다.",
+  "keywords": [
+   "베르누이: X∈{0,1} · P(X=1)=p · E=p · Var=p(1−p)",
+   "기하: P(X=k)=(1−p)^(k−1)·p · E=1/p · Var=(1−p)/p²",
+   "관계: 베르누이 반복 → 이항(성공 수) · 기하(첫 성공 시점)",
+   "성질: 기하 분포 무기억성(Memoryless)"
+  ],
+  "keywords_must": [
+   "베르누이 시행(Bernoulli Trial)",
+   "베르누이 분포(Bernoulli Distribution)",
+   "성공 확률(p)",
+   "기하 분포(Geometric Distribution)",
+   "첫 성공까지 시행 횟수",
+   "무기억성(Memoryless Property)",
+   "기댓값 1/p",
+   "이항분포(Binomial Distribution)",
+   "독립 시행(Independent Trials)"
+  ],
+  "keywords_ref": [
+   "음이항분포(Negative Binomial)",
+   "지수분포(Exponential, 연속형 무기억성)",
+   "분산 p(1−p)",
+   "분산 (1−p)/p²"
+  ],
+  "outline": [
+   "베르누이 분포와 기하 분포의 관계",
+   "- 베르누이 시행",
+   "- 이항·기하와의 연결",
+   "베르누이 분포",
+   "- 정의·평균·분산",
+   "기하 분포",
+   "- 정의·평균·분산",
+   "- 무기억성·활용"
+  ],
+  "sections": [
+   {
+    "title": "관계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "베르누이 시행: 결과가 성공·실패 둘뿐, 성공 확률 p 일정, 시행 간 독립",
+       "n회 반복 시 성공 횟수 → 이항분포, 첫 성공까지 시행 수 → 기하 분포"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "베르누이 분포",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "P(X=1)=p, P(X=0)=1−p, E[X]=p, Var(X)=p(1−p)",
+       "예: 동전 1회 앞면, 제품 1개 불량 여부"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기하 분포",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "P(X=k) = (1−p)^(k−1)·p (k=1,2,…), E[X]=1/p, Var(X)=(1−p)/p²",
+       "무기억성: P(X>m+n | X>m) = P(X>n), 이산형 중 유일(연속형은 지수분포)",
+       "예: 불량률 2% 공정에서 첫 불량까지 평균 50개 검사"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "베르누이 시행(Bernoulli Trial)",
+   "베르누이 분포(Bernoulli Distribution)",
+   "성공 확률(p)",
+   "기하 분포(Geometric Distribution)",
+   "첫 성공까지 시행 횟수",
+   "무기억성(Memoryless Property)",
+   "기댓값 1/p",
+   "이항분포(Binomial Distribution)",
+   "독립 시행(Independent Trials)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_019_02",
+  "code": "ST_019_02",
+  "domain": "ST",
+  "category": "ST > 확률분포",
+  "title": "중심극한정리(Central Limit Theorem)",
+  "subtitle": "",
+  "name": "중심극한정리(Central Limit Theorem)",
+  "en": "Central Limit Theorem",
+  "definition": "모집단 분포와 관계없이 평균 μ·분산 σ²인 모집단에서 크기 n인 표본을 뽑으면, n이 충분히 클 때(보통 30 이상) 표본평균의 분포가 정규분포 N(μ, σ²/n)에 근사한다는 정리.",
+  "keywords": [
+   "결론: x̄ ~ N(μ, σ²/n) 근사 · 표준오차 σ/√n",
+   "조건: i.i.d. 표본 · 유한 분산 · n ≥ 30",
+   "의의: 모집단 분포 몰라도 정규분포로 추정·검정",
+   "구분: 큰 수의 법칙(x̄ → μ 수렴)과 다름"
+  ],
+  "keywords_must": [
+   "중심극한정리(CLT, Central Limit Theorem)",
+   "표본평균(Sample Mean)",
+   "표본분포(Sampling Distribution)",
+   "정규분포 근사(Normal Approximation)",
+   "표준오차(Standard Error)",
+   "표본 크기 n≥30",
+   "독립 동일 분포(i.i.d.)",
+   "통계적 추론(Statistical Inference)",
+   "큰 수의 법칙(Law of Large Numbers)"
+  ],
+  "keywords_ref": [
+   "σ/√n",
+   "유한 분산(Finite Variance)",
+   "이항분포의 정규근사(np≥5)",
+   "신뢰구간(Confidence Interval)",
+   "부트스트랩(Bootstrap)"
+  ],
+  "outline": [
+   "중심극한정리의 개념",
+   "- 추론 통계의 기반",
+   "- 정의",
+   "중심극한정리의 내용",
+   "- 표본평균의 분포",
+   "- 성립 조건",
+   "중심극한정리의 활용",
+   "- 구간추정·Z·t 검정",
+   "- 큰 수의 법칙과 비교"
+  ],
+  "sections": [
+   {
+    "title": "개념",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "모집단 전체를 알 수 없을 때 표본평균의 분포를 정규분포로 다룰 수 있게 하는 추론 통계의 핵심 정리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "내용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "E[x̄] = μ, Var(x̄) = σ²/n, 표준화 Z = (x̄−μ)/(σ/√n) → N(0,1)",
+       "조건: 독립·동일 분포, 분산 유한, 모집단이 치우칠수록 더 큰 n 필요(모집단이 정규면 n과 무관)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "모평균 신뢰구간 x̄ ± z·σ/√n, 평균 차이의 Z·t 검정, 이항분포의 정규근사",
+       "큰 수의 법칙: x̄가 μ로 수렴(값), CLT: x̄의 분포 모양이 정규로 수렴(분포)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "중심극한정리(CLT, Central Limit Theorem)",
+   "표본평균(Sample Mean)",
+   "표본분포(Sampling Distribution)",
+   "정규분포 근사(Normal Approximation)",
+   "표준오차(Standard Error)",
+   "표본 크기 n≥30",
+   "독립 동일 분포(i.i.d.)",
+   "통계적 추론(Statistical Inference)",
+   "큰 수의 법칙(Law of Large Numbers)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_019_03",
+  "code": "ST_019_03",
+  "domain": "ST",
+  "category": "ST > 확률분포",
+  "title": "이항분포와 포아송분포(Binomial and Poisson Distribution)",
+  "subtitle": "",
+  "name": "이항분포와 포아송분포(Binomial and Poisson Distribution)",
+  "en": "Binomial and Poisson Distribution",
+  "definition": "이항분포는 성공 확률 p인 독립 시행 n회 중 성공 횟수의 분포 B(n,p)이고, 포아송분포는 단위 시간·공간에서 평균 λ번 일어나는 드문 사건의 발생 횟수 분포이다.",
+  "keywords": [
+   "이항: P(X=k)=nCk·p^k·(1−p)^(n−k) · E=np · Var=np(1−p)",
+   "포아송: P(X=k)=e^(−λ)λ^k/k! · E=Var=λ",
+   "관계: n 큼·p 작음 → 이항 ≈ 포아송(λ=np)",
+   "근사: np·n(1−p) ≥ 5 → 정규근사"
+  ],
+  "keywords_must": [
+   "이항분포(Binomial Distribution)",
+   "시행 횟수(n)",
+   "성공 확률(p)",
+   "포아송분포(Poisson Distribution)",
+   "평균 발생률(λ)",
+   "평균 = 분산 = λ",
+   "포아송 근사(Poisson Approximation)",
+   "정규근사(Normal Approximation)",
+   "이산확률분포(Discrete Distribution)"
+  ],
+  "keywords_ref": [
+   "베르누이 시행(Bernoulli Trial)",
+   "단위 구간(Unit Interval)",
+   "지수분포(Exponential, 발생 간격)",
+   "과대산포(Overdispersion)",
+   "포아송 과정(Poisson Process)"
+  ],
+  "outline": [
+   "확률분포의 개요",
+   "- 이산확률분포",
+   "이항분포와 포아송분포의 개념 비교",
+   "- 정의·확률질량함수",
+   "- 평균·분산",
+   "이항분포와 포아송분포 상세 비교",
+   "- 근사 관계",
+   "- 적용 사례"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "둘 다 '횟수'를 세는 이산확률분포, 이항은 시행 수 n이 정해짐, 포아송은 연속 구간 내 발생 수"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "개념 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "이항 B(n,p): nCk p^k(1−p)^(n−k), E=np, Var=np(1−p) (Var<E)",
+       "포아송 Po(λ): e^(−λ)λ^k/k!, E=Var=λ, 사건 독립·구간 비례·동시 발생 없음 가정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "상세 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "n≥20·p≤0.05 정도면 이항을 포아송(λ=np)으로 근사",
+       "이항: 불량품 개수, 합격자 수 / 포아송: 시간당 콜센터 전화 수, 페이지당 오타 수, 서버 요청 수",
+       "포아송 발생 간격은 지수분포를 따름"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "이항분포(Binomial Distribution)",
+   "시행 횟수(n)",
+   "성공 확률(p)",
+   "포아송분포(Poisson Distribution)",
+   "평균 발생률(λ)",
+   "평균 = 분산 = λ",
+   "포아송 근사(Poisson Approximation)",
+   "정규근사(Normal Approximation)",
+   "이산확률분포(Discrete Distribution)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_025",
+  "code": "ST_025",
+  "domain": "ST",
+  "category": "ST > 추정",
+  "title": "추리통계(Inferential Statistics)",
+  "subtitle": "",
+  "name": "추리통계(Inferential Statistics)",
+  "en": "Inferential Statistics",
+  "definition": "표본에서 얻은 통계량과 확률 이론을 바탕으로 모집단의 모수를 추정하고 가설을 검정하여, 표본의 결과를 모집단으로 일반화하는 통계 방법.",
+  "keywords": [
+   "목적: 표본 → 모집단 일반화 · 모수 추정",
+   "방법: 추정(점·구간) · 가설검정",
+   "모수적: t 검정 · ANOVA · 피어슨 상관",
+   "비모수적: 윌콕슨 · 맨-휘트니 · 크러스컬-월리스 · 프리드먼"
+  ],
+  "keywords_must": [
+   "추리통계(Inferential Statistics)",
+   "기술통계(Descriptive Statistics)",
+   "모집단 추정(Population Inference)",
+   "모수(Parameter)",
+   "점추정(Point Estimation)",
+   "구간추정(Interval Estimation)",
+   "가설검정(Hypothesis Testing)",
+   "모수적 방법(Parametric Method)",
+   "비모수적 방법(Nonparametric Method)"
+  ],
+  "keywords_ref": [
+   "대응표본 t 검정(Paired t-test)",
+   "윌콕슨 부호순위 검정(Wilcoxon Signed-rank)",
+   "맨-휘트니 U 검정(Mann-Whitney U)",
+   "크러스컬-월리스 검정(Kruskal-Wallis)",
+   "프리드먼 검정(Friedman Test)"
+  ],
+  "outline": [
+   "추리통계의 개요",
+   "- 정의",
+   "- 필요성",
+   "추리통계의 방법",
+   "- 추정·가설검정",
+   "- 모수적·비모수적 방법",
+   "기술통계와 추리통계 비교",
+   "- 목적·방법·활용"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "전수조사가 불가능할 때 확률 원리와 신뢰구간으로 모수 특성 파악",
+       "표본통계량만으로는 일반화 한계 → 가설 검증으로 일반화 여부 판단"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "방법",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "모수적(정규성 가정): 대응·독립표본 t 검정, 일원배치·반복측정 ANOVA",
+       "비모수적(분포 가정 없음): 윌콕슨 부호순위(대응 2), 맨-휘트니(독립 2), 크러스컬-월리스(독립 3+), 프리드먼(반복 3+)",
+       "가설검정 절차: 가설 수립 → 검정통계량 선정 → 유의수준 결정 → 통계량 계산 → p-값으로 판정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "기술통계: 표본 요약(평균·표준편차·중앙값), 예) 학급 성적 추세",
+       "추리통계: 모수 추정·검정, 예) 생산라인 불량률 추정, 선거 지지율 조사"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "추리통계(Inferential Statistics)",
+   "기술통계(Descriptive Statistics)",
+   "모집단 추정(Population Inference)",
+   "모수(Parameter)",
+   "점추정(Point Estimation)",
+   "구간추정(Interval Estimation)",
+   "가설검정(Hypothesis Testing)",
+   "모수적 방법(Parametric Method)",
+   "비모수적 방법(Nonparametric Method)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_026",
+  "code": "ST_026",
+  "domain": "ST",
+  "category": "ST > 추정",
+  "title": "점추정(Point Estimation)",
+  "subtitle": "",
+  "name": "점추정(Point Estimation)",
+  "en": "Point Estimation",
+  "definition": "표본 자료로부터 계산한 하나의 값(추정치)으로 모집단의 모수를 추정하는 방법으로, 좋은 추정량은 불편성·효율성·일치성·충분성을 갖는다.",
+  "keywords": [
+   "대상: 모평균 → x̄ · 모분산 → s² · 모비율 → p̂",
+   "성질: 불편성 · 효율성 · 일치성 · 충분성",
+   "방법: 적률추정법(MoM) · 최대우도추정(MLE) · 최소제곱법",
+   "평가: 평균제곱오차 MSE = 분산 + 편향²"
+  ],
+  "keywords_must": [
+   "점추정(Point Estimation)",
+   "추정량(Estimator)",
+   "추정치(Estimate)",
+   "불편성(Unbiasedness)",
+   "효율성(Efficiency)",
+   "일치성(Consistency)",
+   "충분성(Sufficiency)",
+   "최대우도추정(MLE, Maximum Likelihood Estimation)",
+   "적률추정법(Method of Moments)"
+  ],
+  "keywords_ref": [
+   "평균제곱오차(MSE, Mean Squared Error)",
+   "편향(Bias)",
+   "최소분산 불편추정량(MVUE)",
+   "최소제곱법(Least Squares)",
+   "크래머-라오 하한(Cramér-Rao Bound)"
+  ],
+  "outline": [
+   "점추정의 개요",
+   "- 정의",
+   "- 추정량과 추정치",
+   "점추정량의 성질",
+   "- 불편성·효율성",
+   "- 일치성·충분성",
+   "점추정 방법과 구간추정과의 비교",
+   "- 적률법·MLE",
+   "- 점추정 vs 구간추정"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "모수 θ를 표본의 함수 θ̂ 하나로 추정, 예) 모평균 μ → x̄"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "성질",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "불편성: E[θ̂] = θ (s²는 n−1로 나눠야 불편)",
+       "효율성: 불편추정량 중 분산이 최소, 일치성: n → ∞일 때 θ̂ → θ",
+       "충분성: 표본이 가진 모수 정보를 모두 담음",
+       "MSE = Var(θ̂) + Bias² → 편향과 분산의 균형"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "방법과 비교",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "적률법: 표본 적률 = 모적률로 놓고 풂, MLE: 우도를 최대화하는 값",
+       "점추정은 오차 정보가 없음 → 신뢰수준과 범위를 주는 구간추정으로 보완"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "점추정(Point Estimation)",
+   "추정량(Estimator)",
+   "추정치(Estimate)",
+   "불편성(Unbiasedness)",
+   "효율성(Efficiency)",
+   "일치성(Consistency)",
+   "충분성(Sufficiency)",
+   "최대우도추정(MLE, Maximum Likelihood Estimation)",
+   "적률추정법(Method of Moments)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_027",
+  "code": "ST_027",
+  "domain": "ST",
+  "category": "ST > 추정",
+  "title": "구간추정(Interval Estimation)",
+  "subtitle": "",
+  "name": "구간추정(Interval Estimation)",
+  "en": "Interval Estimation",
+  "definition": "표본 통계량과 표본분포를 이용해 모수가 포함될 것으로 기대되는 구간을 신뢰수준과 함께 제시하는 추정 방법으로, 점추정값 ± 오차한계 형태이다.",
+  "keywords": [
+   "형태: 점추정값 ± 임계값 × 표준오차",
+   "모분산 기지: x̄ ± z(α/2)·σ/√n",
+   "모분산 미지: x̄ ± t(α/2, n−1)·s/√n",
+   "영향: 신뢰수준↑ → 구간↑ · n↑ → 구간↓"
+  ],
+  "keywords_must": [
+   "구간추정(Interval Estimation)",
+   "신뢰구간(Confidence Interval)",
+   "신뢰수준(Confidence Level, 1−α)",
+   "오차한계(Margin of Error)",
+   "표준오차(Standard Error)",
+   "신뢰한계(Confidence Limits)",
+   "Z분포(Z-distribution)",
+   "t분포(t-Distribution)",
+   "표본 크기(Sample Size)"
+  ],
+  "keywords_ref": [
+   "95% → z=1.96 · 99% → z=2.58",
+   "모비율 구간 p̂ ± z√(p̂(1−p̂)/n)",
+   "모분산 구간(χ²분포)",
+   "신뢰구간의 해석(반복 추출 시 95%가 모수 포함)"
+  ],
+  "outline": [
+   "구간추정의 정의",
+   "- 신뢰구간·신뢰수준",
+   "모분산을 알 때 모평균 구간추정",
+   "- Z분포 이용",
+   "- 예제",
+   "모분산을 모를 때 모평균 구간추정",
+   "- t분포 이용",
+   "- 해석·구간 폭"
+  ],
+  "sections": [
+   {
+    "title": "정의",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "P(T1 ≤ θ ≤ T2) = 1−α인 구간 (T1, T2), α는 유의수준, T1·T2는 신뢰한계"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "모분산 기지",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "x̄ ± z(α/2)·σ/√n, 95%는 z=1.96",
+       "예: n=100, x̄=50, σ=10 → 50 ± 1.96 → (48.04, 51.96)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "모분산 미지",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "s로 σ 대체 → x̄ ± t(α/2, n−1)·s/√n (소표본에서 Z보다 넓음)",
+       "해석: 같은 방법으로 반복 추출하면 구간의 95%가 모수를 포함(모수가 95% 확률로 들어 있다는 뜻 아님)",
+       "구간 폭 축소: n 증가, 신뢰수준 낮춤, 산포 감소"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "구간추정(Interval Estimation)",
+   "신뢰구간(Confidence Interval)",
+   "신뢰수준(Confidence Level, 1−α)",
+   "오차한계(Margin of Error)",
+   "표준오차(Standard Error)",
+   "신뢰한계(Confidence Limits)",
+   "Z분포(Z-distribution)",
+   "t분포(t-Distribution)",
+   "표본 크기(Sample Size)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_028",
+  "code": "ST_028",
+  "domain": "ST",
+  "category": "ST > 추정",
+  "title": "추정이론(Estimation Theory)",
+  "subtitle": "",
+  "name": "추정이론(Estimation Theory)",
+  "en": "Estimation Theory",
+  "definition": "무작위성을 가진 표본 데이터를 근거로 모집단의 모수 값을 추정하는 이론으로, 하나의 값으로 추정하는 점추정과 구간으로 추정하는 구간추정으로 나뉜다.",
+  "keywords": [
+   "요소: 모수(θ) · 추정량(Estimator) · 추정치(Estimate)",
+   "유형: 점추정 · 구간추정(신뢰도 · 신뢰구간 · 오차한계)",
+   "추정량 조건: 불편성 · 효율성 · 일치성 · 충분성",
+   "분포: 모분산 기지 → Z분포 · 미지 → t분포"
+  ],
+  "keywords_must": [
+   "추정이론(Estimation Theory)",
+   "모수(Parameter)",
+   "통계량(Statistic)",
+   "추정량(Estimator)",
+   "점추정(Point Estimation)",
+   "구간추정(Interval Estimation)",
+   "신뢰수준(Confidence Level)",
+   "신뢰구간(Confidence Interval)",
+   "불편성(Unbiasedness)",
+   "일치성(Consistency)"
+  ],
+  "keywords_ref": [
+   "효율성(Efficiency)",
+   "충분성(Sufficiency)",
+   "최대우도추정(MLE)",
+   "베이지안 추정(Bayesian Estimation)",
+   "칼만 필터(Kalman Filter, 신호처리)"
+  ],
+  "outline": [
+   "추정이론의 개요",
+   "- 정의",
+   "- 점추정·구간추정",
+   "추정량의 조건",
+   "- 불편성·효율성·일치성·충분성",
+   "상황별 모평균 구간추정 과정",
+   "- 모분산을 알 때(Z분포)",
+   "- 모분산을 모를 때(t분포)"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "통계학·신호처리 분야에서 관측 자료로 모수를 추정하는 이론, 추정에 쓰는 통계량이 추정량",
+       "점추정: 하나의 수치, 구간추정: 신뢰수준 1−α의 구간"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "추정량의 조건",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "불편성(기댓값 = 모수), 효율성(분산 최소), 일치성(n↑ → 모수 수렴), 충분성(정보 손실 없음)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "상황별 구간추정",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "모분산 기지: x̄ ± z(α/2)·σ/√n",
+       "모분산 미지: x̄ ± t(α/2, n−1)·s/√n, n이 크면 Z로 근사",
+       "1−α: 신뢰도, (T1, T2): 신뢰구간, T1·T2: 신뢰한계"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "추정이론(Estimation Theory)",
+   "모수(Parameter)",
+   "통계량(Statistic)",
+   "추정량(Estimator)",
+   "점추정(Point Estimation)",
+   "구간추정(Interval Estimation)",
+   "신뢰수준(Confidence Level)",
+   "신뢰구간(Confidence Interval)",
+   "불편성(Unbiasedness)",
+   "일치성(Consistency)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_028_01",
+  "code": "ST_028_01",
+  "domain": "ST",
+  "category": "ST > 기술통계",
+  "title": "평균값의 함정(Pitfall of the Mean)",
+  "subtitle": "",
+  "name": "평균값의 함정(Pitfall of the Mean)",
+  "en": "Pitfall of the Mean",
+  "definition": "자료에 극단적으로 크거나 작은 값이 있거나 분포가 치우쳐 있을 때 산술평균이 집단을 제대로 대표하지 못해 해석이 왜곡되는 현상.",
+  "keywords": [
+   "원인: 이상치(Outlier) · 치우친 분포(Skewed) · 이질 집단 혼합",
+   "대안: 중앙값(Median) · 최빈값(Mode) · 절사평균(Trimmed Mean)",
+   "산포 병기: 분산 · 표준편차 · 사분위수",
+   "올바른 평균: 기하평균 · 조화평균 · 가중평균"
+  ],
+  "keywords_must": [
+   "산술평균(Arithmetic Mean)",
+   "이상치(Outlier)",
+   "치우친 분포(Skewed Distribution)",
+   "중앙값(Median)",
+   "최빈값(Mode)",
+   "산포도(Dispersion)",
+   "기하평균(Geometric Mean)",
+   "조화평균(Harmonic Mean)",
+   "가중평균(Weighted Average)"
+  ],
+  "keywords_ref": [
+   "절사평균(Trimmed Mean)",
+   "심슨의 역설(Simpson's Paradox)",
+   "표준편차(Standard Deviation)",
+   "로버스트 통계(Robust Statistics)"
+  ],
+  "outline": [
+   "평균값의 함정 개요",
+   "- 정의·원인",
+   "평균값의 함정 예시",
+   "- 소득 분포 예",
+   "- 평균·중앙값·최빈값 비교",
+   "평균값의 함정 대안",
+   "- 중앙값·산포도·추가 분석",
+   "- 기하·조화·가중평균"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "평균에 해당하는 실제 데이터는 극소수일 수 있음, 오른쪽으로 치우친 분포에서 평균 > 중앙값"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "예시",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "100명 소득: 1,000만 50명·2,000만 30명·2,500만 10명·8,000만 5명·1억 3명·2.25억 2명 → 평균 2,500만, 90%가 평균 이하",
+       "중앙값 1,500만·최빈값 1,000만이 실제 다수를 더 잘 대표"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대안",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "중앙값·최빈값·절사평균 병기, 분산·표준편차 함께 제시(작을수록 평균 신뢰↑), 하위 집단별 분석",
+       "기하평균: 성장률·수익률(√(x1·x2…)), 조화평균: 속도·비율(n/Σ(1/x)), 가중평균: 중요도·비중 반영"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "산술평균(Arithmetic Mean)",
+   "이상치(Outlier)",
+   "치우친 분포(Skewed Distribution)",
+   "중앙값(Median)",
+   "최빈값(Mode)",
+   "산포도(Dispersion)",
+   "기하평균(Geometric Mean)",
+   "조화평균(Harmonic Mean)",
+   "가중평균(Weighted Average)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_028_02",
+  "code": "ST_028_02",
+  "domain": "ST",
+  "category": "ST > 추정",
+  "title": "표준오차(Standard Error)",
+  "subtitle": "",
+  "name": "표준오차(Standard Error)",
+  "en": "Standard Error",
+  "definition": "추정량(주로 표본평균)의 표본분포가 갖는 표준편차로, 표본으로 구한 값이 모수에서 벗어날 수 있는 정도를 나타내며 평균의 표준오차는 σ/√n(추정 시 s/√n)이다.",
+  "keywords": [
+   "정의: SE(x̄) = σ/√n ≈ s/√n",
+   "대비: 표준편차(표본 내 변동) ↔ 표준오차(표본 간 변동)",
+   "성질: n을 4배 → SE 1/2",
+   "활용: 신뢰구간 · 검정통계량 · 오차한계"
+  ],
+  "keywords_must": [
+   "표준오차(Standard Error)",
+   "표본평균(Sample Mean)",
+   "표본분포(Sampling Distribution)",
+   "표준편차(Standard Deviation)",
+   "σ/√n",
+   "표본 크기(Sample Size)",
+   "신뢰구간(Confidence Interval)",
+   "검정통계량(Test Statistic)",
+   "오차한계(Margin of Error)"
+  ],
+  "keywords_ref": [
+   "비율의 표준오차 √(p(1−p)/n)",
+   "분산(Variance)",
+   "중심극한정리(CLT)",
+   "부트스트랩 표준오차(Bootstrap SE)"
+  ],
+  "outline": [
+   "표준오차의 개념",
+   "- 정의",
+   "- 표준편차와의 차이",
+   "분산·표준편차·표준오차의 관계",
+   "- 모집단·표본·표본분포",
+   "- 수식",
+   "표준오차 예제와 활용",
+   "- 계산·해석",
+   "- 신뢰구간·검정"
+  ],
+  "sections": [
+   {
+    "title": "개념",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "표본을 여러 번 뽑을 때 표본평균들이 흩어진 정도 = 추정의 정밀도",
+       "표준편차는 한 표본 안 관측값의 퍼짐, 표준오차는 표본 간 통계량의 퍼짐"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "관계",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "모집단: μ, σ² → 표본: x̄, s² → 표본평균의 분포: 평균 μ, 표준오차 σ/√n",
+       "n이 커질수록 SE 감소, √n에 반비례"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "예제와 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "n=100, x̄=4, s=2 → SE = 2/√100 = 0.2, x̄±SE = 3.8~4.2 (95% 신뢰구간은 4 ± 1.96×0.2)",
+       "신뢰구간 = 추정치 ± 임계값×SE, t = (x̄−μ0)/SE"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "표준오차(Standard Error)",
+   "표본평균(Sample Mean)",
+   "표본분포(Sampling Distribution)",
+   "표준편차(Standard Deviation)",
+   "σ/√n",
+   "표본 크기(Sample Size)",
+   "신뢰구간(Confidence Interval)",
+   "검정통계량(Test Statistic)",
+   "오차한계(Margin of Error)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_030",
+  "code": "ST_030",
+  "domain": "ST",
+  "category": "ST > 가설검정",
+  "title": "통계적 가설검정(Statistical Hypothesis Testing)",
+  "subtitle": "",
+  "name": "통계적 가설검정(Statistical Hypothesis Testing)",
+  "en": "Statistical Hypothesis Testing",
+  "definition": "모집단에 대한 가설을 세우고 표본에서 계산한 검정통계량이 귀무가설 아래에서 나타날 확률(p-값)을 유의수준과 비교해 귀무가설의 기각 여부를 판단하는 통계적 추론 방법.",
+  "keywords": [
+   "가설: 귀무가설(H0) · 대립가설(H1)",
+   "절차: 가설 설정 → 유의수준 α → 검정통계량 → 기각역·p-값 → 판정",
+   "오류: 1종 오류(α) · 2종 오류(β) · 검정력(1−β)",
+   "방식: 양측 · 단측(좌·우) 검정"
+  ],
+  "keywords_must": [
+   "가설검정(Hypothesis Testing)",
+   "귀무가설(Null Hypothesis, H0)",
+   "대립가설(Alternative Hypothesis, H1)",
+   "유의수준(Significance Level, α)",
+   "검정통계량(Test Statistic)",
+   "기각역(Rejection Region)",
+   "유의확률(p-value)",
+   "1종 오류(Type I Error)",
+   "2종 오류(Type II Error)",
+   "검정력(Power)"
+  ],
+  "keywords_ref": [
+   "양측 검정(Two-tailed Test)",
+   "단측 검정(One-tailed Test)",
+   "임계값(Critical Value)",
+   "모수·비모수 검정",
+   "효과 크기(Effect Size)"
+  ],
+  "outline": [
+   "가설검정의 개요",
+   "- 개념",
+   "- 귀무가설·대립가설",
+   "- 1종·2종 오류",
+   "통계적 가설검정의 수행 절차와 구성",
+   "- 5단계 절차",
+   "- 검정통계량·기각역",
+   "p-값과 가설검정 해석",
+   "- p-값 판정",
+   "- 해석 예"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "표본 정보로 모집단 가설의 타당성을 확률적으로 판단, 귀무가설이 틀렸다는 증거를 찾는 방식(귀류법)",
+       "1종 오류: 참인 H0 기각(α), 2종 오류: 거짓인 H0 채택(β)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "절차",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① H0·H1 설정 ② 유의수준 α(0.05·0.01) 결정 ③ 검정통계량 선택·계산(Z·t·χ²·F) ④ 기각역 또는 p-값 산출 ⑤ 판정·해석",
+       "대립가설 방향에 따라 양측(≠)·단측(>, <) 결정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "해석",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "p ≤ α → H0 기각(통계적으로 유의), p > α → H0 기각 못 함(채택이 아니라 증거 부족)",
+       "예: 전구 평균 수명 1,000시간 → 새 공법 표본 평균 1,050, p=0.01 < 0.05 → 수명 증가 결론"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "가설검정(Hypothesis Testing)",
+   "귀무가설(Null Hypothesis, H0)",
+   "대립가설(Alternative Hypothesis, H1)",
+   "유의수준(Significance Level, α)",
+   "검정통계량(Test Statistic)",
+   "기각역(Rejection Region)",
+   "유의확률(p-value)",
+   "1종 오류(Type I Error)",
+   "2종 오류(Type II Error)",
+   "검정력(Power)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_031_01",
+  "code": "ST_031_01",
+  "domain": "ST",
+  "category": "ST > 가설검정",
+  "title": "귀무가설과 대립가설(Null and Alternative Hypothesis)",
+  "subtitle": "",
+  "name": "귀무가설과 대립가설(Null and Alternative Hypothesis)",
+  "en": "Null and Alternative Hypothesis",
+  "definition": "귀무가설(H0)은 '차이·효과가 없다'는 기존의 주장으로 검정의 대상이 되고, 대립가설(H1)은 연구자가 입증하려는 '차이·효과가 있다'는 주장으로 H0가 기각될 때 채택된다.",
+  "keywords": [
+   "H0: 등호(=, ≤, ≥) 포함 · 차이 없음 · 검정 대상",
+   "H1: 연구 가설 · 차이 있음(≠, >, <)",
+   "판단: 유의수준(α) · p-값 · 기각 / 기각하지 못함",
+   "오류: 1종 오류(H0 참인데 기각) · 2종 오류(H1 참인데 H0 유지)"
+  ],
+  "keywords_must": [
+   "귀무가설(Null Hypothesis, H0)",
+   "대립가설(Alternative Hypothesis, H1)",
+   "연구 가설(Research Hypothesis)",
+   "유의수준(Significance Level)",
+   "기각(Reject)",
+   "기각하지 못함(Fail to Reject)",
+   "양측 검정(Two-tailed Test)",
+   "단측 검정(One-tailed Test)",
+   "1종 오류(Type I Error)",
+   "2종 오류(Type II Error)"
+  ],
+  "keywords_ref": [
+   "영가설(Null Hypothesis 다른 이름)",
+   "p-값(p-value)",
+   "임계값(Critical Value)",
+   "입증 책임(Burden of Proof)"
+  ],
+  "outline": [
+   "귀무가설과 대립가설의 개요",
+   "- 가설 검정의 개념",
+   "- 귀무가설·대립가설·유의수준",
+   "가설 검정의 순서",
+   "- 가설 설정 → 판정",
+   "가설 검정 예제",
+   "- 전구 수명 개선",
+   "- 해석"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "H0: μ = μ0 (현상 유지·무죄 추정과 유사), H1: μ ≠ μ0 / μ > μ0 / μ < μ0",
+       "증거가 충분할 때만 H0를 기각, 기각하지 못해도 H0가 참이라는 증명은 아님"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "순서",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① 가설 설정 ② 유의수준 α 결정 ③ 검정통계량 계산 ④ 임계값·p-값과 비교 ⑤ H0 기각 여부 결론"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "예제",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "기존 전구 평균 수명 μ0=1,500시간·σ=200, 새 공법 n=100 표본 평균 1,550",
+       "H0: μ = 1,500, H1: μ > 1,500(우측 단측), Z = (1,550−1,500)/(200/10) = 2.5 > 1.645 → H0 기각, 수명 개선"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "귀무가설(Null Hypothesis, H0)",
+   "대립가설(Alternative Hypothesis, H1)",
+   "연구 가설(Research Hypothesis)",
+   "유의수준(Significance Level)",
+   "기각(Reject)",
+   "기각하지 못함(Fail to Reject)",
+   "양측 검정(Two-tailed Test)",
+   "단측 검정(One-tailed Test)",
+   "1종 오류(Type I Error)",
+   "2종 오류(Type II Error)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_032",
+  "code": "ST_032",
+  "domain": "ST",
+  "category": "ST > 가설검정",
+  "title": "유의확률(p-value)",
+  "subtitle": "",
+  "name": "유의확률(p-value)",
+  "en": "p-value",
+  "definition": "귀무가설이 참이라고 가정할 때, 실제 관측된 검정통계량만큼 또는 그보다 더 극단적인 결과가 나올 확률로, 유의수준 α 이하이면 귀무가설을 기각한다.",
+  "keywords": [
+   "정의: P(관측값 이상 극단 | H0 참) · 0~1",
+   "판정: p ≤ α → H0 기각 · p > α → 기각 못 함",
+   "양측: 단측 p-값의 2배(대칭 분포)",
+   "ASA 6원칙: 효과 크기 아님 · 단독 결론 금지 · 투명한 보고"
+  ],
+  "keywords_must": [
+   "유의확률(p-value)",
+   "귀무가설(Null Hypothesis)",
+   "검정통계량(Test Statistic)",
+   "극단값(More Extreme Result)",
+   "유의수준(Significance Level, α)",
+   "기각(Reject)",
+   "통계적 유의성(Statistical Significance)",
+   "효과 크기(Effect Size)",
+   "ASA 성명(ASA Statement, 2016)"
+  ],
+  "keywords_ref": [
+   "p-해킹(p-hacking)",
+   "다중검정 보정(본페로니, Bonferroni)",
+   "신뢰구간 병기(Confidence Interval)",
+   "양측 검정(Two-tailed)",
+   "실질적 유의성(Practical Significance)"
+  ],
+  "outline": [
+   "p-value의 개요",
+   "- 정의",
+   "- 판정 기준",
+   "p-value 해석 원칙",
+   "- ASA 6원칙",
+   "- 흔한 오해",
+   "p-value 계산 예",
+   "- 단측·양측",
+   "- 효과 크기와 병행"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "p-값이 작을수록 관측 데이터가 H0와 맞지 않음 → H0 기각 근거",
+       "p-값은 H0가 참일 확률도, 결과가 우연일 확률도 아님"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "ASA 6원칙",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "① 데이터가 특정 통계 모형과 얼마나 맞지 않는지 나타냄 ② 가설이 참일 확률을 측정하지 않음 ③ 임계값 통과만으로 결론·결정 금지",
+       "④ 완전한 보고와 투명성 필요(p-해킹 금지) ⑤ 효과 크기·중요성을 측정하지 않음 ⑥ 단독으로는 증거의 좋은 척도가 아님"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "계산 예",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "H0: μ=170, H1: μ>170, 표본평균 175, SE=1 → p = P(Z>5) ≈ 0 → H0 기각",
+       "양측 H1: μ≠170이면 P(|Z|>5), 대칭 분포는 단측의 2배",
+       "표본이 크면 미미한 차이도 유의 → 효과 크기·신뢰구간 함께 보고"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "유의확률(p-value)",
+   "귀무가설(Null Hypothesis)",
+   "검정통계량(Test Statistic)",
+   "극단값(More Extreme Result)",
+   "유의수준(Significance Level, α)",
+   "기각(Reject)",
+   "통계적 유의성(Statistical Significance)",
+   "효과 크기(Effect Size)",
+   "ASA 성명(ASA Statement, 2016)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_036",
+  "code": "ST_036",
+  "domain": "ST",
+  "category": "ST > 분산분석",
+  "title": "분산분석(ANOVA, Analysis of Variance)",
+  "subtitle": "",
+  "name": "분산분석(ANOVA, Analysis of Variance)",
+  "en": "Analysis of Variance",
+  "definition": "세 개 이상 집단의 평균 차이를 전체 변동을 집단 간 변동과 집단 내 변동으로 분해한 F 통계량으로 한 번에 검정하는 기법.",
+  "keywords": [
+   "원리: 총변동 = 집단 간 변동 + 집단 내 변동 · F = MSB/MSW",
+   "필요성: t 검정 반복 시 1종 오류 누적(1−(1−α)^k)",
+   "가정: 정규성 · 등분산성 · 독립성",
+   "유형: 일원배치 · 이원배치 · 반복측정 · MANOVA"
+  ],
+  "keywords_must": [
+   "분산분석(ANOVA, Analysis of Variance)",
+   "F 통계량(F-statistic)",
+   "집단 간 변동(Between-group Variation)",
+   "집단 내 변동(Within-group Variation)",
+   "평균제곱(Mean Square)",
+   "1종 오류 누적(Familywise Error)",
+   "정규성(Normality)",
+   "등분산성(Homoscedasticity)",
+   "독립성(Independence)",
+   "사후검정(Post-hoc Test)"
+  ],
+  "keywords_ref": [
+   "일원배치 분산분석(One-way ANOVA)",
+   "이원배치 분산분석(Two-way ANOVA)",
+   "튜키 HSD(Tukey's HSD)",
+   "크러스컬-월리스 검정(비모수)",
+   "다변량 분산분석(MANOVA)"
+  ],
+  "outline": [
+   "ANOVA의 개요",
+   "- 정의·필요성",
+   "- 기본 가정·유형",
+   "One-Way ANOVA",
+   "- 분석 순서",
+   "- 분산분석표",
+   "F값과 p-value의 관계",
+   "Two-Way ANOVA",
+   "- 주효과·교호작용",
+   "- 제곱합 분해·분산분석표"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "피셔가 고안, H0: μ1 = μ2 = … = μk, H1: 적어도 하나의 평균이 다름",
+       "3집단 t 검정 3회(α=0.05) → 1종 오류 약 14% → ANOVA로 한 번에 검정",
+       "가정: 정규성·등분산성·독립성, 유형: 일원·이원·반복측정·MANOVA"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "One-Way ANOVA",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "요인 1개(예: 교육 방법 3가지)로 나뉜 집단의 평균 비교",
+       "순서: 가정 확인 → 집단 간·집단 내 제곱합 → 평균제곱 MSB = 집단 간/(k−1), MSW = 집단 내/(N−k) → F = MSB/MSW",
+       "분산분석표: 변동원(처리·오차·합계) | 제곱합 | 자유도(k−1, N−k, N−1) | 평균제곱 | F"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "F값과 p-value",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "F가 클수록(집단 간 차이 ≫ 집단 내 오차) p-값이 작아짐, p < α면 H0 기각",
+       "기각 후 튜키 HSD·본페로니 사후검정으로 어느 집단이 다른지 확인"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Two-Way ANOVA",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "요인 2개(예: 비료 × 물 양)의 주효과 A·B와 교호작용 A×B를 동시 검정",
+       "총제곱합 = A + B + A×B + 오차 제곱합, 자유도 a−1, b−1, (a−1)(b−1), ab(r−1), 교호작용 검정엔 반복 필요"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "분산분석(ANOVA, Analysis of Variance)",
+   "F 통계량(F-statistic)",
+   "집단 간 변동(Between-group Variation)",
+   "집단 내 변동(Within-group Variation)",
+   "평균제곱(Mean Square)",
+   "1종 오류 누적(Familywise Error)",
+   "정규성(Normality)",
+   "등분산성(Homoscedasticity)",
+   "독립성(Independence)",
+   "사후검정(Post-hoc Test)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_038",
+  "code": "ST_038",
+  "domain": "ST",
+  "category": "ST > 관계분석",
+  "title": "관계검정(Test of Relationship)",
+  "subtitle": "",
+  "name": "관계검정(Test of Relationship)",
+  "en": "Test of Relationship",
+  "definition": "변수 간의 관련성을 검정하는 기법으로, 범주형 변수 간 독립성은 교차분석, 연속형 변수 간 선형 관계의 강도는 상관분석, 인과적 영향은 회귀분석으로 분석한다.",
+  "keywords": [
+   "교차분석: 범주형 × 범주형 · χ² 독립성 검정",
+   "상관분석: 연속형 × 연속형 · 피어슨 r · 스피어만 ρ",
+   "회귀분석: 독립변수 → 종속변수 · 인과·예측",
+   "선택 기준: 변수 척도(명목·서열·등간·비율)"
+  ],
+  "keywords_must": [
+   "관계검정(Test of Relationship)",
+   "교차분석(Cross-tabulation Analysis)",
+   "카이제곱 독립성 검정(Chi-square Test of Independence)",
+   "기대빈도(Expected Frequency)",
+   "상관분석(Correlation Analysis)",
+   "상관계수(Correlation Coefficient)",
+   "회귀분석(Regression Analysis)",
+   "독립변수(Independent Variable)",
+   "종속변수(Dependent Variable)"
+  ],
+  "keywords_ref": [
+   "로지스틱 회귀(Logistic Regression)",
+   "로짓 변환(Logit Transformation)",
+   "교차표(Contingency Table)",
+   "상관 ≠ 인과(Correlation is not Causation)"
+  ],
+  "outline": [
+   "관계검정의 개요",
+   "- 종류와 선택 기준",
+   "교차분석",
+   "- 정의",
+   "- 카이제곱 통계량",
+   "상관분석과 회귀분석",
+   "- 상관계수",
+   "- 회귀분석의 유형"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "교차분석: 두 범주형 변수의 독립 여부, 상관분석: 두 변수의 선형 관계 방향·강도, 회귀분석: 독립변수가 종속변수에 미치는 인과적 영향"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "교차분석",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "교차표의 관측빈도 O와 기대빈도 E(행합 × 열합 / N) 비교",
+       "χ² = Σ(O−E)²/E, df = (r−1)(c−1), 차이가 작으면 두 변수는 독립"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "상관·회귀",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "상관: 피어슨(등간·비율), 스피어만·켄달(서열), −1 ≤ r ≤ 1",
+       "회귀 유형: 독립변수 수(단순·다중), 종속변수 수(단변량·다변량), 종속변수 형태(선형·로지스틱·포아송)",
+       "로지스틱 회귀: 로짓 log(p/(1−p))를 선형식으로 모형화"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "관계검정(Test of Relationship)",
+   "교차분석(Cross-tabulation Analysis)",
+   "카이제곱 독립성 검정(Chi-square Test of Independence)",
+   "기대빈도(Expected Frequency)",
+   "상관분석(Correlation Analysis)",
+   "상관계수(Correlation Coefficient)",
+   "회귀분석(Regression Analysis)",
+   "독립변수(Independent Variable)",
+   "종속변수(Dependent Variable)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_039",
+  "code": "ST_039",
+  "domain": "ST",
+  "category": "ST > 관계분석",
+  "title": "상관관계분석(Correlation Analysis)",
+  "subtitle": "",
+  "name": "상관관계분석(Correlation Analysis)",
+  "en": "Correlation Analysis",
+  "definition": "두 변수 사이 선형 관계의 방향과 강도를 상관계수(−1~1)로 나타내고 그 유의성을 검정하는 분석으로, 인과관계를 의미하지는 않는다.",
+  "keywords": [
+   "계수: 피어슨 r(등간·비율) · 스피어만 ρ(서열) · 켄달 τ(서열)",
+   "해석: +1 완전 양 · 0 무상관 · −1 완전 음",
+   "전제: 산점도 확인 · 선형성 · 이상치 점검",
+   "주의: 상관 ≠ 인과 · 허위 상관(제3변수)"
+  ],
+  "keywords_must": [
+   "상관분석(Correlation Analysis)",
+   "상관계수(Correlation Coefficient)",
+   "피어슨 상관계수(Pearson's r)",
+   "스피어만 순위상관(Spearman's ρ)",
+   "켄달 타우(Kendall's τ)",
+   "공분산(Covariance)",
+   "산점도(Scatter Plot)",
+   "선형성(Linearity)",
+   "허위 상관(Spurious Correlation)"
+  ],
+  "keywords_ref": [
+   "결정계수 r²(Coefficient of Determination)",
+   "편상관(Partial Correlation)",
+   "상관 유의성 t 검정",
+   "이변량 정규성(Bivariate Normality)",
+   "다중공선성(Multicollinearity)"
+  ],
+  "outline": [
+   "상관관계분석의 개요",
+   "- 개념",
+   "- 기본사항(이변량·선형성)",
+   "상관관계 분석 구성도와 상관계수",
+   "- 산점도 유형",
+   "- 피어슨·스피어만·켄달",
+   "상관분석의 해석과 주의점",
+   "- 계수의 크기·유의성",
+   "- 상관과 인과"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "한 변수가 변할 때 다른 변수가 함께 변하는 정도를 분석",
+       "분석 전 산점도로 선형 여부 확인, 곡선 관계는 r이 0에 가까워도 관계 있을 수 있음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "상관계수",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "피어슨 r = Cov(X,Y)/(σXσY): 등간·비율 척도, 이변량 정규성 가정",
+       "스피어만: 순위로 계산한 피어슨(비모수), 켄달: 순위 쌍의 일치·불일치 비율(소표본·동순위 많을 때)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "해석과 주의",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "|r| 0.7 이상 강함, 0.3~0.7 보통, 0.3 미만 약함(분야별 상이), t = r√(n−2)/√(1−r²)로 유의성 검정",
+       "아이스크림 판매와 익사 사고처럼 제3변수(기온)로 인한 허위 상관 → 인과는 실험·회귀·인과추론으로 확인"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "상관분석(Correlation Analysis)",
+   "상관계수(Correlation Coefficient)",
+   "피어슨 상관계수(Pearson's r)",
+   "스피어만 순위상관(Spearman's ρ)",
+   "켄달 타우(Kendall's τ)",
+   "공분산(Covariance)",
+   "산점도(Scatter Plot)",
+   "선형성(Linearity)",
+   "허위 상관(Spurious Correlation)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_040",
+  "code": "ST_040",
+  "domain": "ST",
+  "category": "ST > 관계분석",
+  "title": "회귀분석(Regression Analysis)",
+  "subtitle": "",
+  "name": "회귀분석(Regression Analysis)",
+  "en": "Regression Analysis",
+  "definition": "독립변수와 종속변수 사이의 함수 관계를 모형으로 추정해 독립변수가 종속변수에 미치는 영향을 설명하고 값을 예측하는 지도학습·통계 기법.",
+  "keywords": [
+   "유형: 단순·다중 · 선형·비선형 · 로지스틱 · 다항",
+   "추정: 최소제곱법(OLS) · 최대우도추정(MLE)",
+   "가정: 선형성 · 독립성 · 등분산성 · 정규성(잔차)",
+   "평가: 결정계수 R² · F 검정 · t 검정 · RMSE"
+  ],
+  "keywords_must": [
+   "회귀분석(Regression Analysis)",
+   "독립변수(Independent Variable)",
+   "종속변수(Dependent Variable)",
+   "회귀계수(Regression Coefficient)",
+   "최소제곱법(OLS, Ordinary Least Squares)",
+   "잔차(Residual)",
+   "결정계수(R², Coefficient of Determination)",
+   "선형회귀(Linear Regression)",
+   "로지스틱 회귀(Logistic Regression)",
+   "다중회귀(Multiple Regression)"
+  ],
+  "keywords_ref": [
+   "등분산성(Homoscedasticity)",
+   "다중공선성(Multicollinearity)",
+   "수정 결정계수(Adjusted R²)",
+   "릿지·라쏘(Ridge·Lasso)",
+   "더빈-왓슨 검정(Durbin-Watson)"
+  ],
+  "outline": [
+   "회귀분석의 개념",
+   "- 정의",
+   "- 유형",
+   "선형회귀분석",
+   "- 모형의 가정",
+   "- 절차·적합성 검증",
+   "로지스틱 회귀분석",
+   "- 로짓 변환",
+   "- 오즈비·다항 로지스틱"
+  ],
+  "sections": [
+   {
+    "title": "개념",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "Y = β0 + β1X1 + … + ε, 연속형 종속변수 예측(분류는 로지스틱)",
+       "유형: 독립변수 수(단순·다중), 관계 형태(선형·다항), 종속변수 형태(선형·로지스틱·포아송)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "선형회귀",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "가정(LINE): 선형성, 잔차의 독립성·정규성·등분산성",
+       "절차: 변수 선정 → 산점도 → OLS로 SSE 최소화 추정 → 유의성(F·t) → 잔차 진단 → 예측",
+       "적합성: R² = SSR/SST, 다중회귀는 수정 R², 다중공선성은 VIF로 확인"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "로지스틱 회귀",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "종속변수가 범주형(0/1), log(p/(1−p)) = β0 + β1X, 시그모이드로 확률 출력",
+       "e^β = 오즈비, MLE로 추정, 3개 이상 범주는 다항 로지스틱"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "회귀분석(Regression Analysis)",
+   "독립변수(Independent Variable)",
+   "종속변수(Dependent Variable)",
+   "회귀계수(Regression Coefficient)",
+   "최소제곱법(OLS, Ordinary Least Squares)",
+   "잔차(Residual)",
+   "결정계수(R², Coefficient of Determination)",
+   "선형회귀(Linear Regression)",
+   "로지스틱 회귀(Logistic Regression)",
+   "다중회귀(Multiple Regression)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_041",
+  "code": "ST_041",
+  "domain": "ST",
+  "category": "ST > 시계열",
+  "title": "시계열 분석(Time Series Analysis)",
+  "subtitle": "",
+  "name": "시계열 분석(Time Series Analysis)",
+  "en": "Time Series Analysis",
+  "definition": "시간 순서로 관측된 자료의 추세·계절성·순환·불규칙 성분과 자기상관 구조를 분석해 미래 값을 예측하는 기법으로, 정상성 확보가 모형화의 전제이다.",
+  "keywords": [
+   "성분: 추세(Trend) · 계절(Seasonal) · 순환(Cyclical) · 불규칙(Irregular)",
+   "정상성: 평균·분산 일정 · 공분산이 시차에만 의존 · 차분·로그 변환",
+   "모형: AR · MA · ARMA · ARIMA · SARIMA · 지수평활",
+   "딥러닝: RNN · LSTM · GRU · Transformer"
+  ],
+  "keywords_must": [
+   "시계열(Time Series)",
+   "정상성(Stationarity)",
+   "추세(Trend)",
+   "계절성(Seasonality)",
+   "자기상관(Autocorrelation)",
+   "차분(Differencing)",
+   "자기회귀 모형(AR, Autoregressive)",
+   "이동평균 모형(MA, Moving Average Model)",
+   "ARIMA(Autoregressive Integrated Moving Average)",
+   "LSTM(Long Short-Term Memory)"
+  ],
+  "keywords_ref": [
+   "ACF(Autocorrelation Function)·PACF(Partial ACF)",
+   "ADF 단위근 검정(Augmented Dickey-Fuller)",
+   "백색잡음(White Noise)",
+   "지수평활법(Exponential Smoothing)",
+   "시계열 분해(Decomposition)"
+  ],
+  "outline": [
+   "시계열 분석의 개요",
+   "- 개념·구성 성분",
+   "- 정상성",
+   "정상 시계열 모형",
+   "- 자기회귀(AR)·이동평균(MA)",
+   "- ARIMA 모형",
+   "빅데이터 시계열 분석을 위한 심층신경망",
+   "- 순환 신경망(RNN·LSTM)",
+   "- 활용"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "시계열 = 추세 + 계절 + 순환 + 불규칙(가법) 또는 곱(승법)으로 분해",
+       "정상성: 평균·분산이 시간에 따라 일정, 자기공분산이 시차에만 의존 → 비정상은 차분·로그 변환, ADF 검정으로 확인"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "정상 시계열 모형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "AR(p): 과거 p개 자기 값의 선형결합 (PACF가 p 이후 절단)",
+       "MA(q): 과거 q개 오차(백색잡음)의 선형결합 (ACF가 q 이후 절단)",
+       "ARIMA(p,d,q): d차 차분으로 정상화한 뒤 ARMA 적용, 계절성은 SARIMA"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "심층신경망",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "RNN은 은닉 상태로 순서 정보 학습, 장기 의존성 문제 → LSTM·GRU 게이트 구조",
+       "대량·다변량·비선형 시계열(센서·트래픽·수요 예측)에 Transformer 계열도 활용"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "시계열(Time Series)",
+   "정상성(Stationarity)",
+   "추세(Trend)",
+   "계절성(Seasonality)",
+   "자기상관(Autocorrelation)",
+   "차분(Differencing)",
+   "자기회귀 모형(AR, Autoregressive)",
+   "이동평균 모형(MA, Moving Average Model)",
+   "ARIMA(Autoregressive Integrated Moving Average)",
+   "LSTM(Long Short-Term Memory)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_042",
+  "code": "ST_042",
+  "domain": "ST",
+  "category": "ST > 시계열",
+  "title": "자기회귀누적이동평균 모형(ARIMA)",
+  "subtitle": "",
+  "name": "자기회귀누적이동평균 모형(ARIMA)",
+  "en": "ARIMA Model",
+  "definition": "비정상 시계열을 d번 차분해 정상 시계열로 만든 뒤 자기회귀(AR, p차)와 이동평균(MA, q차)을 결합한 ARMA로 모형화하는 시계열 예측 모형 ARIMA(p, d, q).",
+  "keywords": [
+   "차수: p = AR 차수 · d = 차분 차수 · q = MA 차수",
+   "대상: 비정상 시계열 → 차분으로 정상화",
+   "식별: ACF · PACF · AIC/BIC 최소",
+   "확장: SARIMA(계절) · ARIMAX(외생변수)"
+  ],
+  "keywords_must": [
+   "ARIMA(Autoregressive Integrated Moving Average)",
+   "자기회귀(AR, Autoregressive)",
+   "이동평균(MA, Moving Average Model)",
+   "차분(Differencing)",
+   "정상성(Stationarity)",
+   "ARMA 모형",
+   "ACF(Autocorrelation Function)",
+   "PACF(Partial Autocorrelation Function)",
+   "백색잡음(White Noise)",
+   "박스-젠킨스 방법론(Box-Jenkins)"
+  ],
+  "keywords_ref": [
+   "SARIMA(Seasonal ARIMA)",
+   "ARIMAX(외생변수 포함)",
+   "공적분(Cointegration)",
+   "AIC·BIC 모형 선택",
+   "융-박스 검정(Ljung-Box Test)"
+  ],
+  "outline": [
+   "ARIMA 모형의 개요",
+   "- 정의·비정상 시계열",
+   "- ARIMA(p,d,q)",
+   "ARIMA 모형의 구성과 수식",
+   "- AR·MA·차분",
+   "- ARIMA(1,1,1) 예",
+   "ARIMA 모형의 구축 절차와 활용",
+   "- 박스-젠킨스 절차",
+   "- 활용·한계"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "추세가 있는 비정상 시계열을 차분해 ARMA로 다루는 모형, 'I(Integrated)'가 차분(누적)을 의미",
+       "ARIMA(0,1,0)은 랜덤워크, ARIMA(p,0,q) = ARMA(p,q)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성과 수식",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "AR(p): Xt = c + Σφi·Xt−i + εt, MA(q): Xt = μ + εt + Σθj·εt−j",
+       "ARIMA(1,1,1): ΔXt = c + φ1·ΔXt−1 + εt + θ1·εt−1 (ΔXt = Xt − Xt−1)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "절차와 활용",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "박스-젠킨스: ① 정상화(차분·변환, ADF) ② 식별(ACF·PACF로 p·q) ③ 추정(MLE) ④ 진단(잔차 백색잡음, 융-박스) ⑤ 예측",
+       "수요·매출·트래픽·주가 단기 예측, 선형 가정이라 급변·비선형 패턴은 LSTM 등과 병행"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "ARIMA(Autoregressive Integrated Moving Average)",
+   "자기회귀(AR, Autoregressive)",
+   "이동평균(MA, Moving Average Model)",
+   "차분(Differencing)",
+   "정상성(Stationarity)",
+   "ARMA 모형",
+   "ACF(Autocorrelation Function)",
+   "PACF(Partial Autocorrelation Function)",
+   "백색잡음(White Noise)",
+   "박스-젠킨스 방법론(Box-Jenkins)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_042_01",
+  "code": "ST_042_01",
+  "domain": "ST",
+  "category": "ST > 시계열",
+  "title": "시계열 데이터 이상치 탐지(Time Series Anomaly Detection)",
+  "subtitle": "",
+  "name": "시계열 데이터 이상치 탐지(Time Series Anomaly Detection)",
+  "en": "Time Series Anomaly Detection",
+  "definition": "시간 순서로 수집되는 데이터에서 정상 패턴(추세·계절성)에서 벗어난 점·구간·패턴을 통계·기계학습·딥러닝 기법으로 실시간 또는 사후에 찾아내는 기술.",
+  "keywords": [
+   "유형: 점 이상치(Point) · 맥락 이상치(Contextual) · 집단 이상치(Collective)",
+   "통계: 이동평균·Z-점수 · 시계열 분해 잔차 · ARIMA 예측 오차",
+   "기계학습: Isolation Forest · One-Class SVM · LOF",
+   "딥러닝: LSTM 예측 오차 · 오토인코더 재구성 오차 · Transformer"
+  ],
+  "keywords_must": [
+   "이상치 탐지(Anomaly Detection)",
+   "점 이상치(Point Anomaly)",
+   "맥락 이상치(Contextual Anomaly)",
+   "집단 이상치(Collective Anomaly)",
+   "시계열 분해(STL Decomposition)",
+   "예측 기반 탐지(Prediction-based)",
+   "재구성 오차(Reconstruction Error)",
+   "오토인코더(Autoencoder)",
+   "LSTM(Long Short-Term Memory)",
+   "Isolation Forest"
+  ],
+  "keywords_ref": [
+   "개념 드리프트(Concept Drift)",
+   "동적 임계값(Dynamic Threshold)",
+   "One-Class SVM",
+   "LOF(Local Outlier Factor)",
+   "비지도 학습(Unsupervised Learning)"
+  ],
+  "outline": [
+   "실시간 시계열 이상치 탐지의 개요",
+   "- 정의·필요성",
+   "시계열 이상치 유형",
+   "- 점·맥락·집단 이상치",
+   "시계열 이상치 탐지 방식",
+   "- 통계 기반",
+   "- 기계학습 기반",
+   "- 딥러닝 기반(LSTM·오토인코더)"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "IoT 센서·서버 지표·금융 거래에서 장애·사기·설비 고장을 조기 탐지",
+       "레이블이 드물어 비지도·준지도 방식이 주류, 계절성·드리프트 반영 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "점: 단일 시점이 급격히 튐(센서 스파이크)",
+       "맥락: 값 자체는 정상 범위지만 시점상 비정상(새벽 3시 대량 트래픽)",
+       "집단: 개별은 정상이나 연속 구간 패턴이 비정상(심전도 평탄 구간)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "탐지 방식",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "통계: STL 분해 잔차·이동 Z-점수·ARIMA 예측 오차가 임계값 초과",
+       "기계학습: Isolation Forest(짧은 분리 경로), One-Class SVM, LOF(국소 밀도)",
+       "딥러닝: LSTM 예측 오차, LSTM 오토인코더 재구성 오차, Transformer·GAN 기반, 동적 임계값 적용"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "이상치 탐지(Anomaly Detection)",
+   "점 이상치(Point Anomaly)",
+   "맥락 이상치(Contextual Anomaly)",
+   "집단 이상치(Collective Anomaly)",
+   "시계열 분해(STL Decomposition)",
+   "예측 기반 탐지(Prediction-based)",
+   "재구성 오차(Reconstruction Error)",
+   "오토인코더(Autoencoder)",
+   "LSTM(Long Short-Term Memory)",
+   "Isolation Forest"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "ST_043",
+  "code": "ST_043",
+  "domain": "ST",
+  "category": "ST > 관계분석",
+  "title": "다중공선성(Multicollinearity)",
+  "subtitle": "",
+  "name": "다중공선성(Multicollinearity)",
+  "en": "Multicollinearity",
+  "definition": "다중회귀에서 독립변수들 사이에 강한 선형 상관이 있어 회귀계수 추정이 불안정해지고 표준오차가 커져 개별 변수의 영향을 해석하기 어려워지는 문제.",
+  "keywords": [
+   "진단: VIF > 10 · 공차(Tolerance) < 0.1 · 상관행렬 · 상태지수",
+   "증상: 계수 부호·크기 불안정 · 표준오차↑ · R²는 높은데 t 검정 비유의",
+   "해결: 변수 제거 · 변수 결합 · PCA · 릿지 회귀",
+   "변수 선택: 전진 · 후진 · 단계적 선택"
+  ],
+  "keywords_must": [
+   "다중공선성(Multicollinearity)",
+   "독립변수 간 상관(Inter-correlation)",
+   "분산팽창계수(VIF, Variance Inflation Factor)",
+   "공차(Tolerance)",
+   "상관행렬(Correlation Matrix)",
+   "표준오차 증가(Inflated Standard Error)",
+   "주성분 분석(PCA, Principal Component Analysis)",
+   "릿지 회귀(Ridge Regression)",
+   "변수 선택(Variable Selection)"
+  ],
+  "keywords_ref": [
+   "상태지수(Condition Index)",
+   "VIF = 1/(1−Rj²)",
+   "라쏘(Lasso)",
+   "단계적 선택법(Stepwise)",
+   "완전 공선성(Perfect Collinearity)"
+  ],
+  "outline": [
+   "다중공선성의 개요",
+   "- 정의",
+   "- 특징·증상",
+   "다중공선성 진단",
+   "- VIF·공차",
+   "- 상관행렬·상태지수",
+   "다중공선성 해결과 변수 선택",
+   "- 제거·결합·PCA·릿지",
+   "- 전진·후진·단계적 선택"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "예측력(R²)에는 큰 영향이 없지만 계수 해석·유의성 판단을 왜곡",
+       "완전 공선성(한 변수가 다른 변수의 선형결합)이면 OLS 해가 유일하지 않음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "진단",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "VIFj = 1/(1−Rj²) (Rj²: Xj를 나머지 독립변수로 회귀한 결정계수), 10 초과(엄격히 5) 의심",
+       "공차 = 1/VIF < 0.1, 상관계수 |r| > 0.8, 상태지수 > 30"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "해결과 변수 선택",
+    "subsections": [
+     {
+      "title": null,
+      "items": [
+       "중복 변수 제거, 파생 변수로 결합, PCA로 직교 성분 변환, 릿지(L2) 정규화",
+       "전진선택(유의 변수 추가), 후진제거(비유의 변수 제거), 단계적(추가·제거 반복), AIC·BIC 기준"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "다중공선성(Multicollinearity)",
+   "독립변수 간 상관(Inter-correlation)",
+   "분산팽창계수(VIF, Variance Inflation Factor)",
+   "공차(Tolerance)",
+   "상관행렬(Correlation Matrix)",
+   "표준오차 증가(Inflated Standard Error)",
+   "주성분 분석(PCA, Principal Component Analysis)",
+   "릿지 회귀(Ridge Regression)",
+   "변수 선택(Variable Selection)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ }
+]

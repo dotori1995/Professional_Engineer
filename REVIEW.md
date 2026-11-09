@@ -64,3 +64,9 @@ NW_001 cross-entropy 표현 부정확 / NW_004_01 비교표 문장 뒤섞임(D �
 
 ## D. 파싱 깨짐·오타
 NW_023_00(HTTP/PDA 문장 섞임), NW_073 제목 MTCP→MPTCP, NW_072 VRRS/HSRP 명칭, NW_132 QoS 요소 표, NW_150 동작방식 표, NW_187 "NR-MINO"→NR-MIMO, NW_190_00 "3Lt", NW_191 "1Tbs", 이 밖에 원문 발췌 bullet 다수(이제 기본 화면에서는 숨기고 "원문 발췌 보기"에서만 보임)
+
+## ST(통계) 검토 메모
+- ST_005: 원문 Precision(정확도) → 정밀도로 정정(정확도=Accuracy 구분)
+- ST_014: probability "destiny" function → density로 정정
+- ST_030/ST_031_00 가설검정 중복 토픽을 ST_030으로 통합
+- ST_019_02: 중심극한정리로 정리(t/z 검정 비교는 ST_019에 서술)

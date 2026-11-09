@@ -3,11 +3,14 @@
 5GC: 5G Core
 6rd: IPv6 Rapid Deployment
 ABR: Area Border Router
+ACF: Autocorrelation Function
 ACK: Acknowledgment
 ADAS: Advanced Driver Assistance System
+ADF: Augmented Dickey-Fuller
 ADN: Application Delivery Network
 AES: Advanced Encryption Standard
 AI: Artificial Intelligence
+AIC: Akaike Information Criterion
 AIMD: Additive Increase Multiplicative Decrease
 AIoE: Ambient Internet of Everything
 ALG: Application Level Gateway
@@ -16,6 +19,7 @@ AMC: Adaptive Modulation and Coding
 AMF: Access and Mobility Management Function
 AMI: Advanced Metering Infrastructure
 AMPS: Advanced Mobile Phone System
+ANOVA: Analysis of Variance
 ANR: Automatic Neighbor Relation
 AoA: Angle of Arrival
 AODV: Ad hoc On-demand Distance Vector
@@ -24,6 +28,9 @@ AP: Access Point
 APIPA: Automatic Private IP Addressing
 APTEEN: Adaptive Periodic Threshold-sensitive Energy Efficient sensor Network
 AQM: Active Queue Management
+ARIMA: Autoregressive Integrated Moving Average
+ARIMAX: ARIMA with Exogenous Variables
+ARMA: Autoregressive Moving Average
 ARP: Address Resolution Protocol
 ARQ: Automatic Repeat reQuest
 AS: Autonomous System
@@ -31,6 +38,7 @@ ASBR: Autonomous System Boundary Router
 ASK: Amplitude Shift Keying
 ASN.1: Abstract Syntax Notation One
 ATAM: Architecture Tradeoff Analysis Method
+AUC: Area Under the Curve
 AXFR: Full Zone Transfer
 BAC: Budget at Completion
 BAM: Business Activity Monitoring
@@ -45,6 +53,7 @@ BEC: Backward Error Correction
 BEPS: Base Erosion and Profit Shifting
 BGP: Border Gateway Protocol
 BIA: Business Impact Analysis
+BIC: Bayesian Information Criterion
 BML: Build-Measure-Learn
 BOOTP: Bootstrap Protocol
 BPDU: Bridge Protocol Data Unit
@@ -65,6 +74,7 @@ CBWFQ: Class-Based Weighted Fair Queuing
 CCB: Change Control Board
 CCM: Critical Chain Method
 CCTV: Closed-Circuit Television
+CDF: Cumulative Distribution Function
 CDM: Code Division Multiplexing
 CDMA: Code Division Multiple Access
 CDN: Content Delivery Network
@@ -72,6 +82,7 @@ CFD: Cumulative Flow Diagram
 CIDR: Classless Inter-Domain Routing
 CIR: Committed Information Rate
 CLAT: Customer-side Translator
+CLT: Central Limit Theorem
 CMMI: Capability Maturity Model Integration
 CNAME: Canonical Name
 CNF: Cloud-native Network Function
@@ -180,6 +191,8 @@ FMC: Fixed Mobile Convergence
 FMEA: Failure Mode and Effects Analysis
 FMS: Fixed Mobile Substitution
 FP: Function Point
+FPC: Finite Population Correction
+FPR: False Positive Rate
 FQDN: Fully Qualified Domain Name
 FRAND: Fair Reasonable And Non-Discriminatory
 FSK: Frequency Shift Keying
@@ -194,6 +207,7 @@ GEAR: Geographical and Energy Aware Routing
 GloBE: Global Anti-Base Erosion
 GNSS: Global Navigation Satellite System
 GPS: Global Positioning System
+GRU: Gated Recurrent Unit
 GS: Good Software
 GSLB: Global Server Load Balancing
 GSM: Global System for Mobile Communications
@@ -206,6 +220,7 @@ HCI: Hyper-Converged Infrastructure
 HDLC: High-level Data Link Control
 HOL: Head-of-Line
 HOLAP: Hybrid OLAP
+HSD: Honestly Significant Difference
 HSRP: Hot Standby Router Protocol
 HSS: Home Subscriber Server
 HTTP: HyperText Transfer Protocol
@@ -268,6 +283,7 @@ LLC: Logical Link Control
 LLM: Large Language Model
 LLQ: Low Latency Queuing
 LOC: Lines of Code
+LOF: Local Outlier Factor
 LoRa: Long Range
 LOS: Line of Sight
 LPWA: Low Power Wide Area
@@ -276,6 +292,7 @@ LSA: Link State Advertisement
 LSDB: Link State Database
 LSP: Label Switched Path
 LSR: Label Switching Router
+LSTM: Long Short-Term Memory
 LTE: Long Term Evolution
 LTE-R: LTE-Railway
 LTE-V2X: LTE Vehicle-to-Everything
@@ -284,6 +301,7 @@ M2M: Machine-to-Machine
 MAC: Medium Access Control
 MANET: Mobile Ad hoc Network
 MANO: Management and Orchestration
+MANOVA: Multivariate Analysis of Variance
 MBAP: Modbus Application Protocol
 MCPTT: Mission Critical Push-To-Talk
 MCU: Multipoint Control Unit
@@ -294,8 +312,10 @@ MEF: Metro Ethernet Forum
 MEO: MEC Orchestrator
 MES: Manufacturing Execution System
 MF: More Fragments
+MGF: Moment Generating Function
 MIMO: Multiple-Input Multiple-Output
 MLD: Multicast Listener Discovery
+MLE: Maximum Likelihood Estimation
 MLO: Multi-Link Operation
 MNO: Mobile Network Operator
 MOCN: Multi-Operator Core Network
@@ -312,6 +332,7 @@ MQTT: MQ Telemetry Transport (현재 OASIS 표준명은 약어 아님)
 MRO: Maintenance, Repair and Operations
 MSA: Microservice Architecture
 MSD: Minimum Set of Data
+MSE: Mean Squared Error
 MSL: Maximum Segment Lifetime
 MSP: Managed Service Provider
 MSS: Maximum Segment Size
@@ -322,6 +343,7 @@ MUX: Multiplexer
 MVC: Multiview Video Coding
 MVNO: Mobile Virtual Network Operator
 MVP: Minimum Viable Product
+MVUE: Minimum Variance Unbiased Estimator
 MX: Mail Exchanger
 NAK: Negative Acknowledgment
 NAT: Network Address Translation
@@ -368,6 +390,7 @@ OFDM: Orthogonal Frequency Division Multiplexing
 OFDMA: Orthogonal Frequency Division Multiple Access
 OKR: Objectives and Key Results
 OLAP: Online Analytical Processing
+OLS: Ordinary Least Squares
 OLSR: Optimized Link State Routing
 OMA: Orthogonal Multiple Access
 ONF: Open Networking Foundation
@@ -383,7 +406,9 @@ OSS: Operations Support System
 OTA: Over-The-Air
 OWE: Opportunistic Wireless Encryption
 P2P: Peer-to-Peer
+PACF: Partial Autocorrelation Function
 PAT: Port Address Translation
+PCA: Principal Component Analysis
 PCell: Primary Cell
 PCF: Point Coordination Function
 PCM: Pulse Code Modulation
@@ -437,7 +462,10 @@ RIC: RAN Intelligent Controller
 RIP: Routing Information Protocol
 RIPng: RIP next generation
 RIS: Reconfigurable Intelligent Surface
+RMSE: Root Mean Squared Error
+RNN: Recurrent Neural Network
 ROAS: Return on Ad Spend
+ROC: Receiver Operating Characteristic
 RPF: Reverse Path Forwarding
 RPO: Recovery Point Objective
 RR: Resource Record
@@ -463,6 +491,7 @@ RU: Radio Unit
 SA: Standalone
 SACK: Selective Acknowledgment
 SAM: Slot Availability Mask
+SARIMA: Seasonal ARIMA
 SASE: Secure Access Service Edge
 SASL: Simple Authentication and Security Layer
 SATIN: Satellite-Aerial-Terrestrial Integrated Network
@@ -516,10 +545,12 @@ SSID: Service Set Identifier
 SSM: Source-Specific Multicast
 SSP: Supply-Side Platform
 SST: Slice/Service Type
+STL: Seasonal-Trend decomposition using Loess
 STP: Spanning Tree Protocol
 STUN: Session Traversal Utilities for NAT
 SUMS: Software Update Management System
 SupTech: Supervisory Technology
+SVM: Support Vector Machine
 SWEBOK: Software Engineering Body of Knowledge
 SYN: Synchronize
 T&M: Time and Materials
@@ -539,6 +570,7 @@ TMMi: Test Maturity Model integration
 ToA: Time of Arrival
 TOC: Theory of Constraints
 TOS: Type of Service
+TPR: True Positive Rate
 TPS: Toyota Production System
 TTL: Time To Live
 TURN: Traversal Using Relays around NAT
@@ -562,6 +594,7 @@ V2V: Vehicle-to-Vehicle
 V2X: Vehicle-to-Everything
 VAC: Variance at Completion
 VANET: Vehicular Ad-hoc Network
+VIF: Variance Inflation Factor
 VIM: Virtualized Infrastructure Manager
 VIP: Virtual IP
 VLAN: Virtual LAN

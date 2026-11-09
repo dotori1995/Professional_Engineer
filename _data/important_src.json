@@ -11991,9 +11991,9 @@
   },
   "STAT": {
    "sheet_topics": 47,
-   "matched": 0,
-   "unmatched": 47,
-   "site_domain_present": false
+   "site_domain_present": true,
+   "site_code": "ST",
+   "note": "ST site topics come from PDFs only; stars on PDF topics matching sheet titles"
   },
   "SV": {
    "sheet_topics": 456,
