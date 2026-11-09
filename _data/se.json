@@ -11092,5 +11092,1025 @@
   "quiz_groups": [
    "se"
   ]
+ },
+ {
+  "id": "SE_144",
+  "code": "SE_144",
+  "title": "생체인식 기술(Biometrics)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 생체인식기술 > 생체인식기술",
+  "definition": "지문·얼굴·홍채 등 신체적 특성이나 서명·음성 등 행동적 특성을 센서로 측정·추출한 특징 정보를 등록 템플릿과 비교해 개인을 인증·식별하는 기술",
+  "keywords": [
+   "인식 대상: 신체적 특성(지문·얼굴·홍채·정맥) · 행동적 특성(서명·음성·걸음걸이·키 입력)",
+   "요구 특성: 보편성 · 유일성 · 영구성 · 획득성 · 성능 · 수용성",
+   "성능 지표: 오인식률(FAR) · 오거부율(FRR) · 동일 오류율(EER·CER)"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "비대면 신원 도용",
+      "items": [
+       "비밀번호·카드는 분실·탈취·공유 가능"
+      ]
+     },
+     {
+      "title": "인증 요소 보완",
+      "items": [
+       "지식·소유 기반 한계를 존재 기반 인증으로 보완"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "요구 특성과 처리 과정",
+    "subsections": [
+     {
+      "title": "요구 특성",
+      "items": [
+       "보편성(누구나 보유), 유일성(개인별 구별), 영구성(시간 불변), 획득성(측정 가능), 성능(정확·신속), 수용성(거부감 없음)"
+      ]
+     },
+     {
+      "title": "처리",
+      "items": [
+       "센서 획득 → 전처리 → 특징 추출 → 템플릿 등록 → 입력 특징과 매칭 → 임계값 판정"
+      ]
+     },
+     {
+      "title": "방식",
+      "items": [
+       "인증은 1:1 비교, 식별은 1:N 탐색"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "성능 지표",
+    "subsections": [
+     {
+      "title": "FAR",
+      "items": [
+       "타인을 본인으로 잘못 수락하는 비율",
+       "보안상 가장 위험해 우선 최소화"
+      ]
+     },
+     {
+      "title": "FRR",
+      "items": [
+       "본인을 거부하는 비율",
+       "편의성 저하"
+      ]
+     },
+     {
+      "title": "EER(CER)",
+      "items": [
+       "임계값 조정 시 FAR과 FRR이 같아지는 지점",
+       "낮을수록 우수한 시스템"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 비대면 신원 도용",
+   "- 인증 요소 보완",
+   "요구 특성과 처리 과정",
+   "- 요구 특성",
+   "- 처리",
+   "- 방식",
+   "성능 지표",
+   "- FAR",
+   "- FRR",
+   "- EER(CER)"
+  ],
+  "name": "생체인식 기술(Biometrics)",
+  "en": "Biometrics",
+  "keywords_must": [
+   "신체적 특성(지문·얼굴·홍채·정맥)",
+   "행동적 특성(서명·음성·걸음걸이·키 입력)",
+   "보편성",
+   "유일성",
+   "영구성",
+   "획득성",
+   "성능",
+   "수용성",
+   "오인식률(FAR)",
+   "오거부율(FRR)",
+   "동일 오류율(EER·CER)"
+  ],
+  "keywords_ref": [
+   "등록·추출·매칭 과정",
+   "1:1 인증·1:N 식별",
+   "위조 탐지(Liveness Detection)",
+   "다중 생체인식(Multimodal)",
+   "템플릿 보호(취소 가능 생체인식)",
+   "FIDO 연계",
+   "보안 분야는 FAR 최소화 우선"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "신체적 특성(지문·얼굴·홍채·정맥)",
+   "행동적 특성(서명·음성·걸음걸이·키 입력)",
+   "보편성",
+   "유일성",
+   "영구성",
+   "획득성",
+   "성능",
+   "수용성",
+   "오인식률(FAR)",
+   "오거부율(FRR)",
+   "동일 오류율(EER·CER)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "FAR": "False Acceptance Rate",
+   "FRR": "False Rejection Rate",
+   "EER": "Equal Error Rate",
+   "CER": "Crossover Error Rate"
+  }
+ },
+ {
+  "id": "SE_147_1",
+  "code": "SE_147_1",
+  "title": "패스키(Passkey)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 정보보안",
+  "definition": "FIDO2(WebAuthn·CTAP) 표준에 기반해 서비스별 공개키·개인키 쌍을 만들고, 개인키는 사용자 기기에 두고 생체인식·PIN으로 잠금 해제해 서명함으로써 비밀번호 없이 로그인하는 피싱 저항형 인증 자격 증명",
+  "keywords": [
+   "구성 요소: 인증자(Authenticator) · 클라이언트 애플리케이션 · 신뢰 당사자(RP, Relying Party) · 메타데이터 저장소(MDS)",
+   "기반 표준: WebAuthn · CTAP(Client to Authenticator Protocol)",
+   "특징: 피싱 저항(도메인 바인딩) · 서비스별 고유 키 · 서버에 비밀 미저장",
+   "유형: 동기화 패스키(Synced) · 기기 종속 패스키(Device-bound)"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "비밀번호 문제",
+      "items": [
+       "재사용·추측·피싱·서버 유출"
+      ]
+     },
+     {
+      "title": "FIDO 확산 장애",
+      "items": [
+       "기기 분실 시 재등록 부담 → 클라우드 동기화로 해결"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성과 동작",
+    "subsections": [
+     {
+      "title": "인증자",
+      "items": [
+       "개인키 생성·보관·서명(스마트폰·보안키)",
+       "RP: 공개키 저장, 챌린지 검증"
+      ]
+     },
+     {
+      "title": "등록",
+      "items": [
+       "RP 챌린지 → 인증자가 RP 도메인 전용 키 쌍 생성 → 공개키 등록"
+      ]
+     },
+     {
+      "title": "인증",
+      "items": [
+       "RP 챌린지 → 사용자 생체·PIN 확인 → 개인키 서명 → RP가 공개키로 검증"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 이점과 과제",
+    "subsections": [
+     {
+      "title": "보안",
+      "items": [
+       "키가 도메인에 묶여 가짜 사이트에서 서명 불가",
+       "서버 유출 시에도 공개키만 노출"
+      ]
+     },
+     {
+      "title": "유형",
+      "items": [
+       "동기화 패스키는 편리하지만 클라우드 계정 보안에 의존",
+       "기기 종속은 보안 강하나 분실 대비 필요"
+      ]
+     },
+     {
+      "title": "과제",
+      "items": [
+       "플랫폼 간 이동성, 계정 복구 절차, 기업 정책 관리"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 비밀번호 문제",
+   "- FIDO 확산 장애",
+   "구성과 동작",
+   "- 인증자",
+   "- 등록",
+   "- 인증",
+   "보안 이점과 과제",
+   "- 보안",
+   "- 유형",
+   "- 과제"
+  ],
+  "name": "패스키(Passkey)",
+  "en": "Passkey",
+  "keywords_must": [
+   "인증자(Authenticator)",
+   "클라이언트 애플리케이션",
+   "신뢰 당사자(RP, Relying Party)",
+   "메타데이터 저장소(MDS)",
+   "WebAuthn",
+   "CTAP(Client to Authenticator Protocol)",
+   "피싱 저항(도메인 바인딩)",
+   "서비스별 고유 키",
+   "서버에 비밀 미저장",
+   "동기화 패스키(Synced)",
+   "기기 종속 패스키(Device-bound)"
+  ],
+  "keywords_ref": [
+   "챌린지 서명 검증",
+   "플랫폼·로밍 인증자",
+   "클라우드 키체인 동기화",
+   "하이브리드(QR·BLE) 교차 기기 인증",
+   "증명(Attestation)",
+   "계정 복구 문제"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "인증자(Authenticator)",
+   "클라이언트 애플리케이션",
+   "신뢰 당사자(RP, Relying Party)",
+   "메타데이터 저장소(MDS)",
+   "WebAuthn",
+   "CTAP(Client to Authenticator Protocol)",
+   "피싱 저항(도메인 바인딩)",
+   "서비스별 고유 키",
+   "서버에 비밀 미저장",
+   "동기화 패스키(Synced)",
+   "기기 종속 패스키(Device-bound)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "MDS": "Metadata Service",
+   "BLE": "Bluetooth Low Energy"
+  }
+ },
+ {
+  "id": "SE_149",
+  "code": "SE_149",
+  "title": "생체정보 보호 가이드라인(Biometric Information Protection Guideline)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 생체정보 보호 가이드라인",
+  "definition": "개인정보보호위원회가 2021년 개정한 지침으로, 유출 시 변경이 불가능한 생체인식정보의 특성을 고려해 6대 보호 원칙과 기획부터 파기까지 처리 5단계별 보호 조치를 규정한다",
+  "keywords": [
+   "6대 원칙: 비례성 · 적법성 · 목적 제한 · 투명성 · 안전성 · 통제권 보장",
+   "처리 5단계: 기획·설계 · 수집 · 이용·제공 · 보관 · 파기"
+  ],
+  "sections": [
+   {
+    "title": "정보 구분과 특성",
+    "subsections": [
+     {
+      "title": "구분",
+      "items": [
+       "생체정보(신체·생리·행동 특징) ⊃ 생체인식정보(인증·식별 목적 처리) → 원본정보(수집 원본)와 특징정보(특징점 추출값)"
+      ]
+     },
+     {
+      "title": "특성",
+      "items": [
+       "개인을 유일하게 식별, 변경 불가",
+       "원본에서 건강 등 민감정보 추출 가능",
+       "실리콘 지문 등 위조 위험"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "6대 보호 원칙",
+    "subsections": [
+     {
+      "title": "비례성",
+      "items": [
+       "편익 대비 침해 위험 판단",
+       "적법성: 처리 근거 명확"
+      ]
+     },
+     {
+      "title": "목적 제한",
+      "items": [
+       "동의한 인증·식별 외 사용 금지",
+       "투명성: 보관·이용 사항 공개"
+      ]
+     },
+     {
+      "title": "안전성",
+      "items": [
+       "유출·위변조 방지",
+       "통제권 보장: 정보주체 삭제·정지 수단 제공"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "처리 5단계 보호 조치",
+    "subsections": [
+     {
+      "title": "1 기획·설계",
+      "items": [
+       "필요성 검토, PbD 적용, 대체 수단 마련, 영향평가"
+      ]
+     },
+     {
+      "title": "2 수집",
+      "items": [
+       "별도 동의, 위조 탐지, 전송 구간 암호화"
+      ]
+     },
+     {
+      "title": "3 이용·제공",
+      "items": [
+       "목적 범위 내 이용, 제3자 제공 최소화"
+      ]
+     },
+     {
+      "title": "4 보관",
+      "items": [
+       "원본 즉시 파기, 특징정보 암호화·분리 보관"
+      ]
+     },
+     {
+      "title": "5 파기",
+      "items": [
+       "목적 달성·탈퇴 시 지체 없이 복구 불가 파기",
+       "전 단계 상시 점검"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "정보 구분과 특성",
+   "- 구분",
+   "- 특성",
+   "6대 보호 원칙",
+   "- 비례성",
+   "- 목적 제한",
+   "- 안전성",
+   "처리 5단계 보호 조치",
+   "- 1 기획·설계",
+   "- 2 수집",
+   "- 3 이용·제공",
+   "- 4 보관",
+   "- 5 파기"
+  ],
+  "name": "생체정보 보호 가이드라인(Biometric Information Protection Guideline)",
+  "en": "Biometric Information Protection Guideline",
+  "keywords_must": [
+   "비례성",
+   "적법성",
+   "목적 제한",
+   "투명성",
+   "안전성",
+   "통제권 보장",
+   "기획·설계",
+   "수집",
+   "이용·제공",
+   "보관",
+   "파기"
+  ],
+  "keywords_ref": [
+   "원본정보·특징정보 구분",
+   "유일성·불변성",
+   "민감정보 추출·위변조 가능성",
+   "개인정보보호법 민감정보(제23조)",
+   "별도 동의",
+   "대체 수단 마련",
+   "원본정보 즉시 파기",
+   "특징정보 암호화 분리 보관",
+   "위조 탐지(다중 인식)",
+   "PbD·영향평가"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "비례성",
+   "적법성",
+   "목적 제한",
+   "투명성",
+   "안전성",
+   "통제권 보장",
+   "기획·설계",
+   "수집",
+   "이용·제공",
+   "보관",
+   "파기"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "PbD": "Privacy by Design"
+  }
+ },
+ {
+  "id": "SE_172",
+  "code": "SE_172",
+  "title": "디지털 콘텐츠 보호 기술(Digital Content Protection Technologies)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 컨텐츠 보안 > 컨텐츠 보안",
+  "definition": "음악·영상·게임·문서 등 디지털 콘텐츠의 불법 복제·유통을 막고 저작권자 권리를 보호하기 위해 암호화·접근 통제, 저작권 정보 삽입·추적, 식별·관리 기술을 아우르는 기술 총칭",
+  "keywords": [
+   "보호 기술: 암호화·접근 제어 · 수신 제한 시스템(CAS) · 디지털 저작권 관리(DRM) · 콘텐츠 무해화(CDR)",
+   "추적 기술: 워터마킹(Watermarking) · 핑거프린팅(Fingerprinting) · 전자지문",
+   "관리 기술: DOI · INDECS · CCL(Creative Commons License)"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "복제 용이",
+      "items": [
+       "디지털 콘텐츠는 품질 손실 없이 무한 복제·배포"
+      ]
+     },
+     {
+      "title": "산업 보호",
+      "items": [
+       "온라인·모바일 유통 확대로 저작권 침해 증가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기술 분류",
+    "subsections": [
+     {
+      "title": "보호(사전)",
+      "items": [
+       "암호화와 조회·복사·인쇄 권한 통제",
+       "CAS로 유료 방송 가입자만 수신",
+       "DRM으로 라이선스 기반 이용 통제"
+      ]
+     },
+     {
+      "title": "추적(사후)",
+      "items": [
+       "워터마킹은 저작권자 정보 삽입",
+       "핑거프린팅은 구매자 정보 삽입해 유포자 추적",
+       "전자지문은 해시로 원본 증명"
+      ]
+     },
+     {
+      "title": "관리",
+      "items": [
+       "DOI 고유 식별자",
+       "INDECS 메타데이터",
+       "CCL 이용 허락 표시"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "배포·유통 연계",
+    "subsections": [
+     {
+      "title": "배포",
+      "items": [
+       "PKI 인증, 스트리밍, CDN 캐시 서버"
+      ]
+     },
+     {
+      "title": "프레임워크",
+      "items": [
+       "MPEG-21로 식별·권리 표현·유통 통합"
+      ]
+     },
+     {
+      "title": "감시",
+      "items": [
+       "DPI·특징 기반 필터링으로 불법 공유 탐지"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 복제 용이",
+   "- 산업 보호",
+   "기술 분류",
+   "- 보호(사전)",
+   "- 추적(사후)",
+   "- 관리",
+   "배포·유통 연계",
+   "- 배포",
+   "- 프레임워크",
+   "- 감시"
+  ],
+  "name": "디지털 콘텐츠 보호 기술(Digital Content Protection Technologies)",
+  "en": "Digital Content Protection Technologies",
+  "keywords_must": [
+   "암호화·접근 제어",
+   "수신 제한 시스템(CAS)",
+   "디지털 저작권 관리(DRM)",
+   "콘텐츠 무해화(CDR)",
+   "워터마킹(Watermarking)",
+   "핑거프린팅(Fingerprinting)",
+   "전자지문",
+   "DOI",
+   "INDECS",
+   "CCL(Creative Commons License)"
+  ],
+  "keywords_ref": [
+   "MPEG-21 프레임워크",
+   "포렌식 마킹",
+   "DPI(Deep Packet Inspection)",
+   "특징 기반 필터링(콘텐츠 인식)",
+   "PKI·CDN 배포",
+   "저작권법 기술적 보호 조치"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "암호화·접근 제어",
+   "수신 제한 시스템(CAS)",
+   "디지털 저작권 관리(DRM)",
+   "콘텐츠 무해화(CDR)",
+   "워터마킹(Watermarking)",
+   "핑거프린팅(Fingerprinting)",
+   "전자지문",
+   "DOI",
+   "INDECS",
+   "CCL(Creative Commons License)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "CAS": "Conditional Access System",
+   "DOI": "Digital Object Identifier",
+   "INDECS": "Interoperability of Data in E-Commerce Systems",
+   "CDR": "Content Disarm and Reconstruction"
+  }
+ },
+ {
+  "id": "SE_179",
+  "code": "SE_179",
+  "title": "디지털 저작권 관리(DRM, Digital Rights Management)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 컨텐츠보안 > DRM",
+  "definition": "디지털 콘텐츠를 암호화해 패키징하고, 사용 횟수·기간·환경 등 권리 정보를 담은 라이선스를 발급받은 사용자만 허가 범위 안에서 복호화·이용하도록 통제하는 저작권 보호 기술",
+  "keywords": [
+   "참여 주체: 콘텐츠 제공자(CP) · 콘텐츠 분배자(CD) · 콘텐츠 소비자(CC) · 클리어링 하우스(CH)",
+   "구성 요소: 패키저(Packager) · 보안 컨테이너(Secure Container) · 라이선스 · DRM 클라이언트",
+   "요소 기술: 식별 체계(DOI·URI) · 메타데이터(INDECS) · 권리 표현 언어(REL) · 암호화·키 관리"
+  ],
+  "sections": [
+   {
+    "title": "통제 방식",
+    "subsections": [
+     {
+      "title": "사용 규칙",
+      "items": [
+       "이용 횟수·유효기간·기기 제한 등 정의"
+      ]
+     },
+     {
+      "title": "거래 투명성",
+      "items": [
+       "클리어링 하우스가 사용 내역 기반 과금·정산"
+      ]
+     },
+     {
+      "title": "자유 유통",
+      "items": [
+       "암호화 상태로 메일·네트워크 배포, 라이선스 있는 사용자만 이용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "서비스 흐름",
+    "subsections": [
+     {
+      "title": "1 패키징",
+      "items": [
+       "CP가 콘텐츠를 암호화하고 메타데이터·사용 규칙과 함께 보안 컨테이너로 생성"
+      ]
+     },
+     {
+      "title": "2 배포",
+      "items": [
+       "CD가 포털·스트리밍으로 배포"
+      ]
+     },
+     {
+      "title": "3 라이선스",
+      "items": [
+       "CC가 CH에 요청 → 정책 확인 후 복호화 키와 권한 담은 라이선스 발급"
+      ]
+     },
+     {
+      "title": "4 이용·정산",
+      "items": [
+       "DRM 클라이언트가 권한 범위에서 복호화·재생, 사용 내역을 CH에 보고"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "요소 기술",
+    "subsections": [
+     {
+      "title": "식별",
+      "items": [
+       "DOI·URI로 위치와 무관한 콘텐츠 식별"
+      ]
+     },
+     {
+      "title": "메타데이터",
+      "items": [
+       "INDECS로 전자상거래 상호 운용"
+      ]
+     },
+     {
+      "title": "권리 표현",
+      "items": [
+       "MPEG-21 REL·ODRL로 허용 행위 기술"
+      ]
+     },
+     {
+      "title": "보호",
+      "items": [
+       "암호화·키 관리, 클라이언트 탬퍼 저항"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "통제 방식",
+   "- 사용 규칙",
+   "- 거래 투명성",
+   "- 자유 유통",
+   "서비스 흐름",
+   "- 1 패키징",
+   "- 2 배포",
+   "- 3 라이선스",
+   "- 4 이용·정산",
+   "요소 기술",
+   "- 식별",
+   "- 메타데이터",
+   "- 권리 표현",
+   "- 보호"
+  ],
+  "name": "디지털 저작권 관리(DRM, Digital Rights Management)",
+  "en": "Digital Rights Management",
+  "keywords_must": [
+   "콘텐츠 제공자(CP)",
+   "콘텐츠 분배자(CD)",
+   "콘텐츠 소비자(CC)",
+   "클리어링 하우스(CH)",
+   "패키저(Packager)",
+   "보안 컨테이너(Secure Container)",
+   "라이선스",
+   "DRM 클라이언트",
+   "식별 체계(DOI·URI)",
+   "메타데이터(INDECS)",
+   "권리 표현 언어(REL)",
+   "암호화·키 관리"
+  ],
+  "keywords_ref": [
+   "MPEG-21·ODRL",
+   "OMA DRM",
+   "상용 DRM(Widevine·PlayReady·FairPlay)",
+   "기업 문서 DRM",
+   "탬퍼 저항",
+   "사용 내역(Usage) 과금",
+   "상호 운용성 문제"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "콘텐츠 제공자(CP)",
+   "콘텐츠 분배자(CD)",
+   "콘텐츠 소비자(CC)",
+   "클리어링 하우스(CH)",
+   "패키저(Packager)",
+   "보안 컨테이너(Secure Container)",
+   "라이선스",
+   "DRM 클라이언트",
+   "식별 체계(DOI·URI)",
+   "메타데이터(INDECS)",
+   "권리 표현 언어(REL)",
+   "암호화·키 관리"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "CP": "Content Provider",
+   "CD": "Content Distributor",
+   "CC": "Content Consumer",
+   "CH": "Clearing House",
+   "REL": "Rights Expression Language",
+   "ODRL": "Open Digital Rights Language",
+   "OMA": "Open Mobile Alliance",
+   "URI": "Uniform Resource Identifier"
+  }
+ },
+ {
+  "id": "SE_181",
+  "code": "SE_181",
+  "title": "전자지문(Digital Fingerprint of Document)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 컨텐츠보안 > 전자지문",
+  "definition": "전자문서에서 해시 함수로 추출한 고유 해시값을 전자지문으로 보관해 두고, 이후 같은 해시 함수로 다시 계산한 값과 비교해 문서의 위변조 여부와 원본임을 증명하는 기술",
+  "keywords": [
+   "동작 단계: 전자지문 생성 · 보관 · 원본 비교 · 위변조 확인",
+   "소요 기술: 해시 함수(SHA-2) · 타임스탬프 · 공인 전자문서 센터",
+   "활용: 비밀 원본 증명 · 공인전자주소·전자문서 보관 · 디지털 증거 무결성"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "위변조 용이",
+      "items": [
+       "디지털 문서는 흔적 없이 수정 가능"
+      ]
+     },
+     {
+      "title": "비밀 유지",
+      "items": [
+       "영업 비밀 등 내용을 공개하지 않고도 존재·원본성 증명 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작 원리",
+    "subsections": [
+     {
+      "title": "1 생성",
+      "items": [
+       "원본 문서를 해시 함수에 입력해 고정 길이 해시값 생성"
+      ]
+     },
+     {
+      "title": "2 보관",
+      "items": [
+       "필요 시 인증센터에 인증서·타임스탬프와 함께 보관"
+      ]
+     },
+     {
+      "title": "3 비교",
+      "items": [
+       "대상 문서를 같은 해시 함수로 다시 계산"
+      ]
+     },
+     {
+      "title": "4 확인",
+      "items": [
+       "저장값과 일치하면 원본, 1비트라도 다르면 위변조"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용과 유의점",
+    "subsections": [
+     {
+      "title": "활용",
+      "items": [
+       "기술 자료 임치·비밀 원본 증명",
+       "디지털 포렌식 증거 해시",
+       "계약서 진본 확인"
+      ]
+     },
+     {
+      "title": "유의",
+      "items": [
+       "충돌 공격에 약한 MD5·CRC32 대신 SHA-256 이상",
+       "작성 시점 증명은 신뢰 타임스탬프 필요"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 위변조 용이",
+   "- 비밀 유지",
+   "동작 원리",
+   "- 1 생성",
+   "- 2 보관",
+   "- 3 비교",
+   "- 4 확인",
+   "활용과 유의점",
+   "- 활용",
+   "- 유의"
+  ],
+  "name": "전자지문(Digital Fingerprint of Document)",
+  "en": "Digital Document Fingerprint",
+  "keywords_must": [
+   "전자지문 생성",
+   "보관",
+   "원본 비교",
+   "위변조 확인",
+   "해시 함수(SHA-2)",
+   "타임스탬프",
+   "공인 전자문서 센터",
+   "비밀 원본 증명",
+   "공인전자주소·전자문서 보관",
+   "디지털 증거 무결성"
+  ],
+  "keywords_ref": [
+   "문서 공개 없이 증명",
+   "MD5·CRC32 충돌 취약",
+   "눈사태 효과",
+   "전자서명 연계",
+   "블록체인 앵커링",
+   "핑거프린팅(유포자 추적)과 구분"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "전자지문 생성",
+   "보관",
+   "원본 비교",
+   "위변조 확인",
+   "해시 함수(SHA-2)",
+   "타임스탬프",
+   "공인 전자문서 센터",
+   "비밀 원본 증명",
+   "공인전자주소·전자문서 보관",
+   "디지털 증거 무결성"
+  ],
+  "quiz_groups": [
+   "se"
+  ]
+ },
+ {
+  "id": "SE_182_1",
+  "code": "SE_182_1",
+  "title": "개인정보 보호 강화 기술(PET, Privacy-Enhancing Technologies)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안",
+  "definition": "데이터를 활용하면서도 개인정보 노출과 재식별 위험을 줄이도록 데이터 난독화, 암호화 상태 처리, 분산 학습 등을 제공하는 기술·프로세스의 총칭",
+  "keywords": [
+   "데이터 난독 도구: 차분 프라이버시(Differential Privacy) · 합성 데이터(SDG) · 영지식 증명(ZKP)",
+   "암호화 처리 도구: 동형 암호(HE) · 안전한 다자 연산(SMPC) · 신뢰 실행 환경(TEE) · 신원 기반 암호(IBE)",
+   "분산 학습 도구: 연합 학습(Federated Learning)"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "활용과 보호의 충돌",
+      "items": [
+       "AI·빅데이터 분석에 개인정보 필요, 유출·재식별 위험 증가"
+      ]
+     },
+     {
+      "title": "규제",
+      "items": [
+       "GDPR·데이터 3법이 가명정보 활용과 안전 조치를 함께 요구"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기술 분류",
+    "subsections": [
+     {
+      "title": "데이터 난독",
+      "items": [
+       "차분 프라이버시는 통계 결과에 노이즈 추가",
+       "합성 데이터는 원본 통계 특성만 모사",
+       "영지식 증명은 값 공개 없이 참 증명"
+      ]
+     },
+     {
+      "title": "암호화 처리",
+      "items": [
+       "동형 암호는 암호문 상태 연산",
+       "SMPC는 입력을 숨긴 채 공동 계산",
+       "TEE는 하드웨어 격리 영역에서 평문 처리",
+       "IBE는 이메일 등 신원을 공개키로 사용"
+      ]
+     },
+     {
+      "title": "분산 학습",
+      "items": [
+       "연합 학습은 원본을 모으지 않고 모델 갱신값만 공유"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 고려",
+    "subsections": [
+     {
+      "title": "선택",
+      "items": [
+       "유용성·정확도와 보호 수준의 균형, 연산 비용"
+      ]
+     },
+     {
+      "title": "조합",
+      "items": [
+       "연합 학습+차분 프라이버시, TEE 기반 데이터 클린룸"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 활용과 보호의 충돌",
+   "- 규제",
+   "기술 분류",
+   "- 데이터 난독",
+   "- 암호화 처리",
+   "- 분산 학습",
+   "적용 고려",
+   "- 선택",
+   "- 조합"
+  ],
+  "name": "개인정보 보호 강화 기술(PET, Privacy-Enhancing Technologies)",
+  "en": "Privacy-Enhancing Technologies",
+  "keywords_must": [
+   "차분 프라이버시(Differential Privacy)",
+   "합성 데이터(SDG)",
+   "영지식 증명(ZKP)",
+   "동형 암호(HE)",
+   "안전한 다자 연산(SMPC)",
+   "신뢰 실행 환경(TEE)",
+   "신원 기반 암호(IBE)",
+   "연합 학습(Federated Learning)"
+  ],
+  "keywords_ref": [
+   "OECD·UN PET 지침",
+   "가명처리·익명처리",
+   "노이즈 예산(ε)",
+   "데이터 클린룸",
+   "개인정보 영향평가",
+   "데이터 3법 활용"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "차분 프라이버시(Differential Privacy)",
+   "합성 데이터(SDG)",
+   "영지식 증명(ZKP)",
+   "동형 암호(HE)",
+   "안전한 다자 연산(SMPC)",
+   "신뢰 실행 환경(TEE)",
+   "신원 기반 암호(IBE)",
+   "연합 학습(Federated Learning)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "SDG": "Synthetic Data Generation",
+   "ZKP": "Zero-Knowledge Proof",
+   "HE": "Homomorphic Encryption",
+   "SMPC": "Secure Multi-Party Computation",
+   "TEE": "Trusted Execution Environment",
+   "IBE": "Identity-Based Encryption"
+  }
  }
 ]
