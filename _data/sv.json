@@ -8316,77 +8316,88 @@
   ],
   "en": "Fabric Computing",
   "dueum": null,
-  "name": "디지털서비스(Fabric Computing)",
-  "title": "디지털서비스(Fabric Computing)",
-  "definition": "느슨히 결합된 저장장치/NW/프로세싱 기능이 높은 대역폭의 연결망으로 연결되어 있는 고성능 컴퓨팅시스템 (  컴퓨터의 요소들을 모듈화하여 동적으로 조직하는 기술 )",
+  "name": "패브릭 컴퓨팅(Fabric Computing)",
+  "title": "패브릭 컴퓨팅(Fabric Computing)",
+  "definition": "프로세서·메모리·스토리지·네트워크 자원을 모듈화해 고대역폭 연결망(패브릭)으로 느슨하게 결합하고 워크로드에 따라 필요한 만큼 동적으로 구성·재구성하는 고성능 컴퓨팅 시스템",
   "keywords_must": [
-   "FBC",
-   "FEC",
-   "FBI",
-   "가상화",
-   "병렬처리",
-   "분산 스토리지",
-   "연결망",
-   "QPI",
-   "HyperTransport",
-   "PCI express"
+   "패브릭 기반 컴퓨터(FBC, Fabric-Based Computer)",
+   "패브릭 가능 컴퓨터(FEC, Fabric-Enabled Computer)",
+   "패브릭 기반 인프라(FBI, Fabric-Based Infrastructure)",
+   "자원 풀(Resource Pool)",
+   "서버 가상화·파티셔닝",
+   "가상 서버 이동(Iterative Pre-copy)",
+   "QPI(QuickPath Interconnect)",
+   "하이퍼트랜스포트(HyperTransport)",
+   "PCI 익스프레스(PCIe)",
+   "인피니밴드(InfiniBand)"
   ],
   "keywords_ref": [
-   "PCI"
+   "백플레인 스위치",
+   "SMP·MPP 병렬처리",
+   "분산 스토리지(메타데이터 서버)",
+   "GSLB·웹 캐싱",
+   "CXL·컴포저블 인프라"
   ],
   "keywords": [
-   "핵심: FBC · FEC · FBI",
-   "기술: 가상화 · 병렬처리 · 분산 스토리지",
-   "운영: 연결망 · QPI · HyperTransport",
-   "참고: PCI"
+   "모델: FEC(블레이드 수준 부분 통합) → FBC(빌딩 블록 모듈 조합) → FBI(데이터센터 자원 풀)",
+   "인프라 기술: 서버 가상화 · 프로비저닝·자원 스케줄링 · 분산 스토리지 · 병렬처리",
+   "연결망: QPI(25.6GB/s) · HyperTransport(51.2GB/s) · PCIe · InfiniBand"
   ],
   "outline": [
-   "Fabric Computing",
-   "- Fabric Computing 의 정의 (Wikipedia)",
-   "- Fabric Computing 의 종류 (개념적 모델의 종류)",
-   "Fabric Computing 의 개념도 및 요소기술",
-   "- Fabric Computing 의 개념도",
-   "- Fabric Computing 의 요소기술(인프라 가상화 및 관리기술)",
-   "패브릭 컴퓨팅의 개발 사례",
-   "- 디지털서비스 요점"
+   "개념과 모델 분류",
+   "- 모델: FEC→FBC→FBI",
+   "인프라 가상화·관리 기술",
+   "- 가상화: 파티셔닝·VM",
+   "- 이동·저장: 마이그레이션·분산 스토리지",
+   "연결망·I/O 가상화 기술",
+   "- 칩 간 연결: QPI·HyperTransport",
+   "- 장치·노드 연결: PCIe·InfiniBand"
   ],
   "sections": [
    {
-    "title": "디지털서비스 핵심",
+    "title": "개념과 모델 분류",
     "subsections": [
      {
-      "title": null,
+      "title": "모델: FEC→FBC→FBI",
       "items": [
-       "FBC: FBC를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "FEC: FEC를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "FBI: FBI를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "가상화: 디지털서비스에서 가상화를 다루는 핵심 암기 포인트"
+       "패브릭 가능 컴퓨터(FEC): 프로세싱·저장·네트워킹 부분 통합의 중간 단계, 현재 블레이드 서버에 해당",
+       "패브릭 기반 컴퓨터(FBC): 패브릭 인터커넥트·백플레인 스위치에 연결된 빌딩 블록 모듈을 조합",
+       "패브릭 기반 인프라(FBI): 장치별 관리에서 자원 풀 중심 관리로 전환, 워크로드에 따라 재구성"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 구성·기술",
+    "title": "인프라 가상화·관리 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "가상화: 파티셔닝·VM",
       "items": [
-       "병렬처리: 디지털서비스에서 병렬처리를 다루는 핵심 암기 포인트",
-       "분산 스토리지: 디지털서비스에서 분산 스토리지를 다루는 핵심 암기 포인트",
-       "연결망: 디지털서비스에서 연결망을 다루는 핵심 암기 포인트",
-       "QPI: QPI를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "서버 가상화·파티셔닝: 물리 서버를 논리 분할, 프로비저닝과 자원 스케줄링으로 최적 H/W에 할당"
+      ]
+     },
+     {
+      "title": "이동·저장: 마이그레이션·분산 스토리지",
+      "items": [
+       "가상 서버 이동(Iterative Pre-copy): 파일화된 VM을 H/W 간 이동·백업, 분산 스토리지는 메타데이터 서버가 위치 관리"
       ]
      }
     ]
    },
    {
-    "title": "디지털서비스 운영",
+    "title": "연결망·I/O 가상화 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "칩 간 연결: QPI·HyperTransport",
       "items": [
-       "HyperTransport: HyperTransport를 디지털서비스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "PCI express: 디지털서비스에서 PCI express를 다루는 핵심 암기 포인트"
+       "QPI(QuickPath Interconnect): 인텔 네할렘부터 적용된 점대점 패킷 버스, 최대 25.6GB/s",
+       "하이퍼트랜스포트(HyperTransport): AMD 주도 컨소시엄의 점대점 연결, 최대 51.2GB/s"
+      ]
+     },
+     {
+      "title": "장치·노드 연결: PCIe·InfiniBand",
+      "items": [
+       "PCI 익스프레스(PCIe): PCI-SIG 표준 직렬 레인 인터페이스, 인피니밴드는 RDMA 기반 저지연 노드 간 연결"
       ]
      }
     ]
@@ -8395,16 +8406,16 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "FBC",
-   "FEC",
-   "FBI",
-   "가상화",
-   "병렬처리",
-   "분산 스토리지",
-   "연결망",
-   "QPI",
-   "HyperTransport",
-   "PCI express"
+   "패브릭 기반 컴퓨터(FBC, Fabric-Based Computer)",
+   "패브릭 가능 컴퓨터(FEC, Fabric-Enabled Computer)",
+   "패브릭 기반 인프라(FBI, Fabric-Based Infrastructure)",
+   "자원 풀(Resource Pool)",
+   "서버 가상화·파티셔닝",
+   "가상 서버 이동(Iterative Pre-copy)",
+   "QPI(QuickPath Interconnect)",
+   "하이퍼트랜스포트(HyperTransport)",
+   "PCI 익스프레스(PCIe)",
+   "인피니밴드(InfiniBand)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -8414,7 +8425,8 @@
   "warnings": [],
   "gloss": {
    "FEC": "Fabric-Enabled Computer"
-  }
+  },
+  "hand": true
  },
  {
   "id": "SV_071",
@@ -8427,61 +8439,88 @@
   ],
   "en": "Utility Computing",
   "dueum": null,
-  "name": "회(Utility Computing)",
-  "title": "회(Utility Computing)",
-  "definition": "서버, 스토리지, 네트워크, H/W, S/W 등의 IT 자원을 하나의 서비스 개념으로 보고 구입 또는 자체 개발을하지 않고, 서비스 공급자와의 계약을 통하여 실제로 사용한 양만큼(pay-as-you-use, Payper-Use)요금을지불하는 컴퓨팅 패러다임 (회(Utility Computing) 기준).",
+  "name": "유틸리티 컴퓨팅(Utility Computing)",
+  "title": "유틸리티 컴퓨팅(Utility Computing)",
+  "definition": "서버·스토리지·네트워크·소프트웨어 등 IT 자원을 전기·수도 같은 공공 서비스처럼 구매·개발 없이 공급자와 계약해 실제 사용한 양만큼 요금을 지불(Pay-per-Use)하는 컴퓨팅 패러다임",
   "keywords_must": [
-   "자율컴퓨팅",
-   "유틸리티 컴퓨팅의 구성도",
-   "SON(자가 조직 N/W)",
-   "ROI(투자수익률: Return of Investment)",
-   "TCO(소유총비용: Total Cost of Ownership)",
-   "회 표준"
+   "종량제 과금(Pay-per-Use)",
+   "ROI·TCO 관리",
+   "서비스 관리(과금·모니터링·보안)",
+   "서비스 자원관리",
+   "서비스 자원(서버·스토리지·OS·미들웨어)",
+   "클러스터(Cluster)",
+   "가상화(Virtualization)",
+   "분할(Partitioning)",
+   "프로비저닝(Provisioning)",
+   "자율 컴퓨팅(Autonomic Computing)"
   ],
   "keywords_ref": [
-   "SON",
-   "ROI(투자수익률",
-   "TCO(소유총비용",
-   "ROI"
+   "그리드 컴퓨팅",
+   "클라우드 컴퓨팅",
+   "아웃소싱",
+   "SON(Self-Organizing Network)",
+   "존 매카시 1961년 제안"
   ],
   "keywords": [
-   "핵심: 자율컴퓨팅 · 유틸리티 컴퓨팅의 구성도 · SON(자가 조직 N/W)",
-   "기술: ROI(투자수익률: Return of Investment) · TCO(소유총비용: Total Cost of Ownership) · 회 표준",
-   "참고: SON · ROI(투자수익률 · TCO(소유총비용"
+   "3계층: 서비스 관리 · 서비스 자원관리 · 서비스 자원",
+   "기반 기술: 클러스터 · 가상화 · 분할 · 프로비저닝 · 자율 컴퓨팅 · 그리드",
+   "비교: 유틸리티(과금 모델) · 그리드(분산 자원 공유) · 클라우드(서비스 제공 형태)"
   ],
   "outline": [
-   "IT 자원, 서비스를 사용한 만큼 비용을 지불하는 개념의 컴퓨팅 패러다임",
-   "- 유틸리티 컴퓨팅(Utility Computing)의 정의",
-   "- 유틸리티 컴퓨팅의 등장배경",
-   "유틸리티 컴퓨팅의 구성요소 및 기반기술",
-   "- 유틸리티 컴퓨팅의 구성도",
-   "- 유틸리티 컴퓨팅의 구성요소",
-   "컴퓨팅 패러다임간 비교",
-   "- 회 요점"
+   "등장 배경",
+   "- 배경: IT 투자 효율화",
+   "3계층 구성",
+   "- 관리 계층: 과금·모니터링",
+   "- 자원 계층: 자원관리·물리 자원",
+   "기반 기술과 비교",
+   "- 기반 기술: 가상화·분할·프로비저닝·자율",
+   "- 비교: 그리드·클라우드"
   ],
   "sections": [
    {
-    "title": "회 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: IT 투자 효율화",
       "items": [
-       "자율컴퓨팅: 회에서 자율컴퓨팅을 다루는 핵심 암기 포인트",
-       "유틸리티 컴퓨팅의 구성도: 회의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "SON(자가 조직 N/W): SON를 회 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "ROI(투자수익률: Return of Investment): 투자 대비 회수 효과를 나타내는 지표 (회/34a5)"
+       "ROI·TCO 관리: IT 투자수익 측정이 불확실해 소유 대신 사용량 기반 비용 구조가 관심사로 부상"
       ]
      }
     ]
    },
    {
-    "title": "회 구성·기술",
+    "title": "3계층 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "관리 계층: 과금·모니터링",
       "items": [
-       "TCO(소유총비용: Total Cost of Ownership): 도입부터 폐기까지 총소유비용 (회/106a)",
-       "회 표준: 회 상호운용·품질을 맞추는 규격·기준"
+       "서비스 관리(과금·모니터링·보안): 사용량 계량(Metering)과 빌링이 종량제의 전제"
+      ]
+     },
+     {
+      "title": "자원 계층: 자원관리·물리 자원",
+      "items": [
+       "서비스 자원관리: 그리드·가상화·자동화·분할로 자원 최적화, 유틸리티 컴퓨팅의 핵심",
+       "서비스 자원(서버·스토리지·OS·미들웨어): 실제 서비스를 제공하는 물리·소프트웨어 자원"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기반 기술과 비교",
+    "subsections": [
+     {
+      "title": "기반 기술: 가상화·분할·프로비저닝·자율",
+      "items": [
+       "분할(Partitioning): 대용량 서버 한 대를 논리적 여러 대로 나눠 독립 운영환경 제공",
+       "프로비저닝(Provisioning): 가상화된 자원을 요구에 맞게 조합·할당, 스토리지 증설 시점 자동 통지",
+       "자율 컴퓨팅(Autonomic Computing): 자기 구성·최적화·방어·복구로 정책 기반 자원 변경"
+      ]
+     },
+     {
+      "title": "비교: 그리드·클라우드",
+      "items": [
+       "그리드는 지리적 분산 자원 공유 기술, 클라우드는 이를 서비스로 제공하는 형태, 유틸리티는 그 과금 개념"
       ]
      }
     ]
@@ -8490,19 +8529,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "자율컴퓨팅",
-   "유틸리티 컴퓨팅의 구성도",
-   "SON(자가 조직 N/W)",
-   "ROI(투자수익률: Return of Investment)",
-   "TCO(소유총비용: Total Cost of Ownership)",
-   "회 표준"
+   "종량제 과금(Pay-per-Use)",
+   "ROI·TCO 관리",
+   "서비스 관리(과금·모니터링·보안)",
+   "서비스 자원관리",
+   "서비스 자원(서버·스토리지·OS·미들웨어)",
+   "클러스터(Cluster)",
+   "가상화(Virtualization)",
+   "분할(Partitioning)",
+   "프로비저닝(Provisioning)",
+   "자율 컴퓨팅(Autonomic Computing)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_072",
@@ -8517,58 +8561,84 @@
   "dueum": null,
   "name": "상황인식 컴퓨팅(Context-Aware Computing)",
   "title": "상황인식 컴퓨팅(Context-Aware Computing)",
-  "definition": "사용자 주변의 정적/동적 상황 인식하고 정보화하여 사용자 중심의 지능화된 서비스를 제공하는 컴퓨팅기술",
+  "definition": "센서로 사용자 주변의 정적·동적 상황정보를 수집·모델링하고 추론해 사용자가 명시적으로 요청하지 않아도 현재 상황에 맞는 지능형 서비스를 자율적으로 제공하는 유비쿼터스 컴퓨팅의 핵심 기술",
   "keywords_must": [
-   "상황(Context)정보의 카테고리",
-   "상황인식과 유비쿼터스 컴퓨팅의 연결 관계",
-   "상황인식 컴퓨팅의 구성도",
-   "상황정보 전달 미들웨어 아키텍처",
-   "개인화 (web 2.0- 참여, 공유,개방)",
-   "문맥(Context)",
-   "유비쿼터스 컴퓨팅"
+   "상황(Context, 개체 상태를 특징짓는 모든 정보)",
+   "상황정보 4범주(Identity·Location·Status·Time)",
+   "사용자·물리적·컴퓨팅 시스템 상황정보",
+   "처리 과정(센싱→종합→정의→분석→서비스 매칭)",
+   "상황 모델링(Key-Value·온톨로지)",
+   "상황 센싱(GPS·RFID·자이로스코프)",
+   "상황 융합·추론(Reasoning)",
+   "서비스 발견(WSDL)",
+   "상황인식 미들웨어(CASA·Context Toolkit)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "유비쿼터스 컴퓨팅",
+   "Jena2 추론엔진",
+   "상호작용 이력 정보",
+   "프라이버시 침해",
+   "앤 데이(Anind Dey) 정의"
+  ],
   "keywords": [
-   "핵심: 상황(Context)정보의 카테고리 · 상황인식과 유비쿼터스 컴퓨팅의 연결 관계 · 상황인식 컴퓨팅의 구성도",
-   "기술: 상황정보 전달 미들웨어 아키텍처 · 개인화 (web 2.0- 참여, 공유,개방) · 문맥(Context)",
-   "운영: 유비쿼터스 컴퓨팅"
+   "상황정보: Identity · Location · Status(Activity) · Time",
+   "처리: 정보 센싱 → 정보 종합 → 상황 정의 → 상황 분석 → 서비스 매칭",
+   "요소기술: 모델링 · 센싱 · 융합·추론 · 서비스 발견 · 서비스 구조 · 상황정보 시스템"
   ],
   "outline": [
-   "라이프 스타일을 바꾸는, 상황인식 컴퓨팅의 개요",
-   "- 상황인식 컴퓨팅의 정의",
-   "- 상황인식과 유비쿼터스 컴퓨팅의 연결 관계",
-   "상황정보의 컴퓨팅의 구성과 상황정보 유형",
-   "- 상황(Context)의 정의",
-   "- 상황인식 컴퓨팅의 구성도",
-   "- 상황(Context)정보의 카테고리",
-   "상황 정보전달 미들웨어 아키텍처 및 구성요소",
-   "- 상황정보 전달 미들웨어 아키텍처",
-   "- 미들웨어 아키텍처 구성요소"
+   "상황과 상황정보",
+   "- 상황: 개체 상태 정보",
+   "- 분류: 4범주·출처별",
+   "처리 과정",
+   "- 흐름: 센싱→서비스 매칭",
+   "요소기술",
+   "- 수집·표현: 센싱·모델링",
+   "- 판단·제공: 추론·서비스 발견"
   ],
   "sections": [
    {
-    "title": "상황인식 컴퓨팅 핵심",
+    "title": "상황과 상황정보",
     "subsections": [
      {
-      "title": null,
+      "title": "상황: 개체 상태 정보",
       "items": [
-       "상황(Context)정보의 카테고리: 상황인식 컴퓨팅에서 상황(Context)정보의 카테고리를 다루는 핵심 암기 포인트",
-       "상황인식과 유비쿼터스 컴퓨팅의 연결 관계: 상황인식 컴퓨팅에서 상황인식과 유비쿼터스 컴퓨팅의 연결 관계를 다루는 핵심 암기 포인트",
-       "상황인식 컴퓨팅의 구성도: 상황인식 컴퓨팅의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "상황정보 전달 미들웨어 아키텍처: 상황인식 컴퓨팅의 계층·모듈 배치와 상호작용 구조"
+       "상황(Context): 사용자와 응용 상호작용에 관련된 개체의 상태를 특징짓는 모든 정보(Anind Dey)"
+      ]
+     },
+     {
+      "title": "분류: 4범주·출처별",
+      "items": [
+       "상황정보 4범주: Identity(이름·번호), Location(장소·주변인), Status(온도·조도·대역폭), Time(시간·계절)",
+       "사용자(프로필·사회적 상황), 물리적(조명·소음·교통), 컴퓨팅 시스템(가용 기기·대역폭), 상호작용 이력"
       ]
      }
     ]
    },
    {
-    "title": "상황인식 컴퓨팅 구성·기술",
+    "title": "처리 과정",
     "subsections": [
      {
-      "title": null,
+      "title": "흐름: 센싱→서비스 매칭",
       "items": [
-       "개인화 (web 2.0- 참여, 공유,개방): 상황인식 컴퓨팅에서 개인화 (web 2.0- 참여, 공유,개방)를 다루는 핵심 암기 포인트",
-       "문맥(Context): 상황인식 컴퓨팅에서 문맥(Context)을 다루는 핵심 암기 포인트",
-       "유비쿼터스 컴퓨팅: 상황인식 컴퓨팅에서 유비쿼터스 컴퓨팅을 다루는 핵심 암기 포인트"
+       "처리 과정: 환경 정보를 센싱·종합해 상황을 정의하고 분석한 뒤 상황에 맞는 서비스를 매칭"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "요소기술",
+    "subsections": [
+     {
+      "title": "수집·표현: 센싱·모델링",
+      "items": [
+       "상황 센싱: 온습도·자이로스코프·카메라·GPS·RFID·조도 센서, 상황 모델링은 Key-Value·온톨로지로 표준 표현"
+      ]
+     },
+     {
+      "title": "판단·제공: 추론·서비스 발견",
+      "items": [
+       "상황 융합·추론(Reasoning): 신경망·온톨로지 추론엔진(Jena2)으로 상위 상황 유도",
+       "서비스 발견(WSDL): 추론 결과에 맞는 서비스 탐색, 조지아텍 CASA 등 미들웨어가 플랫폼 독립성 제공"
       ]
      }
     ]
@@ -8577,20 +8647,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "상황(Context)정보의 카테고리",
-   "상황인식과 유비쿼터스 컴퓨팅의 연결 관계",
-   "상황인식 컴퓨팅의 구성도",
-   "상황정보 전달 미들웨어 아키텍처",
-   "개인화 (web 2.0- 참여, 공유,개방)",
-   "문맥(Context)",
-   "유비쿼터스 컴퓨팅"
+   "상황(Context, 개체 상태를 특징짓는 모든 정보)",
+   "상황정보 4범주(Identity·Location·Status·Time)",
+   "사용자·물리적·컴퓨팅 시스템 상황정보",
+   "처리 과정(센싱→종합→정의→분석→서비스 매칭)",
+   "상황 모델링(Key-Value·온톨로지)",
+   "상황 센싱(GPS·RFID·자이로스코프)",
+   "상황 융합·추론(Reasoning)",
+   "서비스 발견(WSDL)",
+   "상황인식 미들웨어(CASA·Context Toolkit)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_074",
@@ -8605,57 +8678,84 @@
   "dueum": null,
   "name": "자율공장(Autonomous Factory)",
   "title": "자율공장(Autonomous Factory)",
-  "definition": "AI 발전이 가속화되면서 변화된 제조 패러다임을 맞출 수 있는 미래 공장의 모습이 자율 공장임.",
+  "definition": "인공지능을 갖춘 제조설비와 로봇이 스마트공장 기반 위에서 조립·운반·포장·검사 등 생산 전 과정을 스스로 인지·계획·실행하고 필요 시 사람과 협업하는 유연 생산의 궁극적 형태의 미래 생산 환경",
   "keywords_must": [
-   "CPS",
-   "Digital Twin",
-   "Big Data",
-   "IIoT",
-   "제조작업 인지기술",
+   "CPS(Cyber-Physical System)",
+   "디지털 트윈(Digital Twin)",
+   "산업 빅데이터·AI",
+   "산업용 사물인터넷(IIoT)",
+   "스마트 센서(Smart Sensor)",
+   "제조 작업환경 인지 기술",
    "협업작업 자율 계획 기술",
-   "유연생 산 분산협업 실행제어 기술",
-   "KAMP"
+   "유연생산 분산협업 실행제어 기술",
+   "협동로봇(Cobot)·멀티 에이전트",
+   "Sim2Real Transfer"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "Meta Learning·Active Learning·GAN",
+   "KAMP(인공지능 제조 플랫폼)",
+   "분산 병렬 학습",
+   "스마트공장 수준(1~5단계)",
+   "ETRI 2021"
+  ],
   "keywords": [
-   "핵심: CPS · Digital Twin · Big Data",
-   "기술: IIoT · 제조작업 인지기술 · 협업작업 자율 계획 기술",
-   "운영: 유연생 산 분산협업 실행제어 기술 · KAMP"
+   "기반: 제어(CPS·디지털 트윈) · 분석(AI·빅데이터) · 감지(IIoT·스마트 센서)",
+   "핵심: 작업환경 인지 · 협업작업 자율 계획 · 유연생산 분산협업 실행제어",
+   "진화: 자동화 → 스마트공장(지능화) → 자율공장(자율화)"
   ],
   "outline": [
-   "자율공장의 개념 및 개념도",
-   "- 자율공장의 개념",
-   "- 자율공장의 개념도",
-   "자율공장을 구현하기 위한 핵심 기술",
-   "- 자율공장 구성을 위한 기반 기술",
-   "자율공장 활성화를 위한 고려 사항",
-   "- 자율공장 요점"
+   "등장 배경",
+   "- 배경: 자동화에서 지능화로",
+   "기반 기술",
+   "- 제어: CPS·디지털 트윈",
+   "- 분석·감지: AI·IIoT",
+   "구현 핵심 기술",
+   "- 인지·계획: 작업환경·작업 계획",
+   "- 실행: 분산협업 제어"
   ],
   "sections": [
    {
-    "title": "자율공장 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 자동화에서 지능화로",
       "items": [
-       "CPS: CPS를 자율공장 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Digital Twin: 자율공장에서 Digital Twin를 다루는 핵심 암기 포인트",
-       "Big Data: 자율공장에서 Big Data를 다루는 핵심 암기 포인트",
-       "IIoT: IIoT를 자율공장 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "스마트공장 고도화: AI 발전으로 다품종 유연 생산을 사람 개입 없이 계획·실행하는 공장 요구"
       ]
      }
     ]
    },
    {
-    "title": "자율공장 구성·기술",
+    "title": "기반 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "제어: CPS·디지털 트윈",
       "items": [
-       "제조작업 인지기술: 자율공장에서 제조작업 인지기술을 다루는 핵심 암기 포인트",
-       "협업작업 자율 계획 기술: 자율공장에서 협업작업 자율 계획 기술을 다루는 핵심 암기 포인트",
-       "유연생 산 분산협업 실행제어 기술: 자율공장에서 유연생 산 분산협업 실행제어 기술을 다루는 핵심 암기 포인트",
-       "KAMP: KAMP를 자율공장 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "CPS(Cyber-Physical System): 물리 요소를 실시간·고신뢰로 제어, 디지털 트윈은 현실을 재현해 시뮬레이션 분석"
+      ]
+     },
+     {
+      "title": "분석·감지: AI·IIoT",
+      "items": [
+       "산업 빅데이터·AI: SVM·PCA·신경망으로 대규모 제조 데이터 예측, IIoT와 자가진단 스마트 센서로 수집"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구현 핵심 기술",
+    "subsections": [
+     {
+      "title": "인지·계획: 작업환경·작업 계획",
+      "items": [
+       "제조 작업환경 인지 기술: 비전 등 센서로 비정형 환경과 작업자 의도 파악(Meta·Active Learning·GAN)",
+       "협업작업 자율 계획 기술: 설비가 할 일과 수행 방법을 스스로 계획, 협동로봇 작업계획"
+      ]
+     },
+     {
+      "title": "실행: 분산협업 제어",
+      "items": [
+       "유연생산 분산협업 실행제어 기술: 멀티 에이전트·분산 병렬 학습·Sim2Real로 이기종 로봇이 협력, 확산은 KAMP 플랫폼·대중소 파트너십 활용"
       ]
      }
     ]
@@ -8664,21 +8764,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "CPS",
-   "Digital Twin",
-   "Big Data",
-   "IIoT",
-   "제조작업 인지기술",
+   "CPS(Cyber-Physical System)",
+   "디지털 트윈(Digital Twin)",
+   "산업 빅데이터·AI",
+   "산업용 사물인터넷(IIoT)",
+   "스마트 센서(Smart Sensor)",
+   "제조 작업환경 인지 기술",
    "협업작업 자율 계획 기술",
-   "유연생 산 분산협업 실행제어 기술",
-   "KAMP"
+   "유연생산 분산협업 실행제어 기술",
+   "협동로봇(Cobot)·멀티 에이전트",
+   "Sim2Real Transfer"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_075",
@@ -8693,55 +8796,96 @@
   "dueum": null,
   "name": "인메모리 컴퓨팅(In-Memory Computing)",
   "title": "인메모리 컴퓨팅(In-Memory Computing)",
-  "definition": "어플리케이션을 구동하는 컴퓨터의 메인 메모리에 DB 데이터와 같은 주요 데이터를 저장하고 처리하는 컴퓨팅 기술",
+  "definition": "데이터베이스 등 주요 데이터를 디스크가 아닌 서버의 메인 메모리에 저장·처리해 디스크 I/O를 최소화하고 대용량 트랜잭션과 분석 결과를 실시간으로 제공하는 컴퓨팅 기술",
   "keywords_must": [
-   "인메모리 분산디비",
-   "OLAP지원 인메모리",
-   "인메모리 컴퓨팅(In-Memory Computing) 정의",
-   "인메모리 컴퓨팅 아키텍처",
-   "SSD",
-   "DRAM",
-   "CPU",
-   "OLAP"
+   "메인 메모리 데이터베이스(IMDB)",
+   "디스크 백업·로그(영속성 확보)",
+   "인메모리 데이터 그리드(IMDG)",
+   "인메모리 분석(In-Memory Analytics)",
+   "복합 이벤트 처리(CEP)",
+   "64비트 멀티코어",
+   "인피니밴드(InfiniBand)",
+   "컬럼 기반 저장·압축",
+   "HTAP(OLTP·OLAP 통합)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "SAP HANA",
+   "Redis·Apache Ignite",
+   "스냅샷·체크포인트",
+   "NVDIMM·PMEM",
+   "BI 애플리케이션"
+  ],
   "keywords": [
-   "핵심: 인메모리 분산디비 · OLAP지원 인메모리 · 인메모리 컴퓨팅(In-Memory Computing) 정의",
-   "기술: 인메모리 컴퓨팅 아키텍처 · SSD · DRAM",
-   "운영: CPU · OLAP"
+   "특징: 메모리 상주 DB · 디스크는 백업 · 디스크 접근 최소화로 처리율 향상",
+   "기술 계층: 메모리 집약 플랫폼 · 인메모리 데이터 관리 · 인메모리 애플리케이션 플랫폼",
+   "데이터 관리: IMDB · IMDG · 분석 · CEP · 인메모리 애플리케이션 서버"
   ],
   "outline": [
-   "대용량의 데이터를 실시간 저장/처리 인메모리 컴퓨팅 개요.",
-   "- 인메모리 컴퓨팅(In-Memory Computing) 정의",
-   "- 인메모리 컴퓨팅 특징",
-   "인메모리 컴퓨팅의 기술요소",
-   "- 인메모리 컴퓨팅 요점"
+   "처리 방식",
+   "- 저장: 메모리 상주·디스크 백업",
+   "- 영속성: 장애 시 복구",
+   "기술 계층",
+   "- 하드웨어: 메모리 집약 플랫폼",
+   "- 데이터 관리: IMDB·IMDG",
+   "- 애플리케이션: 분석·이벤트 처리",
+   "활용과 고려사항",
+   "- 활용: HTAP·실시간 분석",
+   "- 고려사항: 비용·영속성"
   ],
   "sections": [
    {
-    "title": "인메모리 컴퓨팅 핵심",
+    "title": "처리 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "저장: 메모리 상주·디스크 백업",
       "items": [
-       "인메모리 분산디비: 인메모리 컴퓨팅에서 인메모리 분산디비를 다루는 핵심 암기 포인트",
-       "OLAP지원 인메모리: 인메모리 컴퓨팅에서 OLAP지원 인메모리를 다루는 핵심 암기 포인트",
-       "인메모리 컴퓨팅(In-Memory Computing) 정의: 인메모리 컴퓨팅에서 인메모리 컴퓨팅(In-Memory Computing) 정의를 다루는 핵심 암기 포인트",
-       "인메모리 컴퓨팅 아키텍처: 인메모리 컴퓨팅의 계층·모듈 배치와 상호작용 구조"
+       "메인 메모리 데이터베이스(IMDB): 테이블·인덱스를 메모리에 직접 저장, 디스크는 로그·백업용"
+      ]
+     },
+     {
+      "title": "영속성: 장애 시 복구",
+      "items": [
+       "디스크 백업·로그(영속성 확보): 휘발성 보완을 위해 트랜잭션 로그·스냅샷·체크포인트 유지"
       ]
      }
     ]
    },
    {
-    "title": "인메모리 컴퓨팅 구성·기술",
+    "title": "기술 계층",
     "subsections": [
      {
-      "title": null,
+      "title": "하드웨어: 메모리 집약 플랫폼",
       "items": [
-       "SSD: SSD를 인메모리 컴퓨팅 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "DRAM: DRAM를 인메모리 컴퓨팅 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CPU: CPU를 인메모리 컴퓨팅 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OLAP: 다차원 집계·분석에 최적화된 처리 방식"
+       "64비트 멀티코어로 대용량 메모리 주소·병렬처리 지원, SSD와 인피니밴드로 고속 저장·통신"
+      ]
+     },
+     {
+      "title": "데이터 관리: IMDB·IMDG",
+      "items": [
+       "인메모리 데이터 그리드(IMDG): DBMS 접속 병목을 줄이도록 여러 노드 메모리에 데이터를 분산 저장하는 미들웨어"
+      ]
+     },
+     {
+      "title": "애플리케이션: 분석·이벤트 처리",
+      "items": [
+       "인메모리 분석(In-Memory Analytics): BI 조회·집계 고속화, 복합 이벤트 처리(CEP)는 대량 이벤트를 메모리에서 연속 처리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용과 고려사항",
+    "subsections": [
+     {
+      "title": "활용: HTAP·실시간 분석",
+      "items": [
+       "HTAP(OLTP·OLAP 통합): 컬럼 기반 저장·압축으로 한 DB에서 거래와 분석 동시 수행(SAP HANA)"
+      ]
+     },
+     {
+      "title": "고려사항: 비용·영속성",
+      "items": [
+       "메모리 비용과 용량 한계, 재기동 시 적재 시간, NVDIMM·PMEM 등 비휘발 메모리로 보완"
       ]
      }
     ]
@@ -8750,21 +8894,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "인메모리 분산디비",
-   "OLAP지원 인메모리",
-   "인메모리 컴퓨팅(In-Memory Computing) 정의",
-   "인메모리 컴퓨팅 아키텍처",
-   "SSD",
-   "DRAM",
-   "CPU",
-   "OLAP"
+   "메인 메모리 데이터베이스(IMDB)",
+   "디스크 백업·로그(영속성 확보)",
+   "인메모리 데이터 그리드(IMDG)",
+   "인메모리 분석(In-Memory Analytics)",
+   "복합 이벤트 처리(CEP)",
+   "64비트 멀티코어",
+   "인피니밴드(InfiniBand)",
+   "컬럼 기반 저장·압축",
+   "HTAP(OLTP·OLAP 통합)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_076",
@@ -8777,57 +8923,93 @@
   ],
   "en": "Autonomic Computing",
   "dueum": null,
-  "name": "자율컴퓨팅(Autonomic Computing)",
-  "title": "자율컴퓨팅(Autonomic Computing)",
-  "definition": "컴퓨터의 시스템들이 스스로의 상태를 인식해 인간의 개입을 최소화한 자가 관리(Self-Management) 능력을제공하는 기술.",
+  "name": "자율 컴퓨팅(Autonomic Computing)",
+  "title": "자율 컴퓨팅(Autonomic Computing)",
+  "definition": "인체 자율신경계처럼 컴퓨터 시스템이 스스로 상태를 인식해 자가 구성·치유·최적화·방어를 수행함으로써 관리자 개입을 최소화하는 IBM 제안(2001년) 자가 관리(Self-Management) 컴퓨팅 기술",
   "keywords_must": [
-   "엘리먼트",
-   "자율 매니저",
-   "관리 엘리먼트",
-   "MAPE",
-   "1. IT 자원",
-   "네트워크",
-   "스토리지",
-   "센서·액추에이터"
+   "자가 구성(Self-Configuration)",
+   "자가 치유(Self-Healing)",
+   "자가 최적화(Self-Optimization)",
+   "자가 방어(Self-Protection)",
+   "MAPE-K 루프(Monitor·Analyze·Plan·Execute·Knowledge)",
+   "자율 매니저(Autonomic Manager)",
+   "관리 엘리먼트(Managed Element)",
+   "센서·이펙터(Sensor·Effector)",
+   "자율 엘리먼트(Autonomic Element)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "IBM 2001 선언",
+   "정책 기반 관리",
+   "AIOps",
+   "자율 컴퓨팅 성숙도 5단계",
+   "유틸리티 컴퓨팅"
+  ],
   "keywords": [
-   "핵심: 엘리먼트 · 자율 매니저 · 관리 엘리먼트",
-   "기술: MAPE · 1. IT 자원 · 네트워크",
-   "운영: 스토리지 · 센서·액추에이터"
+   "Self-CHOP: 구성 · 치유 · 최적화 · 방어",
+   "MAPE-K: 모니터 → 분석 → 계획 → 실행 + 지식",
+   "구성: 자율 엘리먼트 = 자율 매니저 + 관리 엘리먼트 (센서·이펙터 연결)"
   ],
   "outline": [
-   "자율컴퓨팅의 참조모델 및 구성요소",
-   "- 자율컴퓨팅의 참조모델(IBM MAPE-K(Monitor, Analyz…",
-   "- 자율컴퓨팅의 구성요소",
-   "자율 매니저의 동작 과정",
-   "- 자율컴퓨팅 요점"
+   "등장 배경과 자가 관리 속성",
+   "- 배경: 관리 복잡성 증가",
+   "- 속성: Self-CHOP",
+   "참조모델과 구성요소",
+   "- 참조모델: MAPE-K",
+   "- 구성: 자율 매니저·관리 엘리먼트",
+   "자율 매니저 동작",
+   "- 감시·분석: 모니터·분석",
+   "- 계획·실행: 변경 적용"
   ],
   "sections": [
    {
-    "title": "자율컴퓨팅 핵심",
+    "title": "등장 배경과 자가 관리 속성",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 관리 복잡성 증가",
       "items": [
-       "엘리먼트: 자율컴퓨팅에서 엘리먼트를 다루는 핵심 암기 포인트",
-       "자율 매니저: 자율컴퓨팅에서 자율 매니저를 다루는 핵심 암기 포인트",
-       "관리 엘리먼트: 자율컴퓨팅에서 관리 엘리먼트를 다루는 핵심 암기 포인트",
-       "MAPE: MAPE를 자율컴퓨팅 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "IBM 2001 선언: 시스템 복잡도가 인간 관리 한계를 넘어 자율신경계 모델의 자가 관리 제안"
+      ]
+     },
+     {
+      "title": "속성: Self-CHOP",
+      "items": [
+       "자가 구성: 컴포넌트 설치·구성 자동화, 자가 치유는 오류를 스스로 발견·진단·수정",
+       "자가 최적화: 자원 활용도 극대화를 위한 작업량 조정, 자가 방어는 악성 코드·의도치 않은 변경 차단"
       ]
      }
     ]
    },
    {
-    "title": "자율컴퓨팅 구성·기술",
+    "title": "참조모델과 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "참조모델: MAPE-K",
       "items": [
-       "1. IT 자원: 자율컴퓨팅에서 1. IT 자원을 다루는 핵심 암기 포인트",
-       "네트워크: 자율컴퓨팅에서 네트워크를 다루는 핵심 암기 포인트",
-       "스토리지: 자율컴퓨팅에서 스토리지를 다루는 핵심 암기 포인트",
-       "센서·액추에이터: 자율컴퓨팅에서 센서·액추에이터를 다루는 핵심 암기 포인트"
+       "MAPE-K 루프: 공유 지식(Knowledge)을 기반으로 감시·분석·계획·실행을 반복"
+      ]
+     },
+     {
+      "title": "구성: 자율 매니저·관리 엘리먼트",
+      "items": [
+       "자율 매니저(Autonomic Manager): 하나 이상의 관리 엘리먼트를 MAPE 루프로 감시·제어",
+       "관리 엘리먼트(Managed Element): CPU·저장장치 같은 H/W, DB·디렉터리 같은 S/W 자원, 센서·이펙터로 노출"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "자율 매니저 동작",
+    "subsections": [
+     {
+      "title": "감시·분석: 모니터·분석",
+      "items": [
+       "모니터는 센서 수집 데이터를 조직·융합, 분석은 상황 정보와 실행 기록으로 변경 필요성 판단"
+      ]
+     },
+     {
+      "title": "계획·실행: 변경 적용",
+      "items": [
+       "계획은 변경 시점·대상 자원을 정하고 실행은 이펙터를 통해 관리 자원에 조치 적용"
       ]
      }
     ]
@@ -8836,21 +9018,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "엘리먼트",
-   "자율 매니저",
-   "관리 엘리먼트",
-   "MAPE",
-   "1. IT 자원",
-   "네트워크",
-   "스토리지",
-   "센서·액추에이터"
+   "자가 구성(Self-Configuration)",
+   "자가 치유(Self-Healing)",
+   "자가 최적화(Self-Optimization)",
+   "자가 방어(Self-Protection)",
+   "MAPE-K 루프(Monitor·Analyze·Plan·Execute·Knowledge)",
+   "자율 매니저(Autonomic Manager)",
+   "관리 엘리먼트(Managed Element)",
+   "센서·이펙터(Sensor·Effector)",
+   "자율 엘리먼트(Autonomic Element)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_077_0",
