@@ -67,6 +67,17 @@
   "pages": [
    1,
    4
+  ],
+  "outline": [
+   "의미 있는 정보 전달을 위한 정보이론(Information Theory)의 개념",
+   "샤논의 제1정리 및 제2정리 설명",
+   "- 샤논의 제1정리(Source Coding Theorem, 정보원 부호화 정리) 설명",
+   "최대 데이터 전송 한계, 채널용량(샤논 제3정리, Information Capacity Theorem)",
+   "- 채널용량(샤논 제3정리, Information Capacity Theorem)의 정의",
+   "채널용량(샤논 제3정리, Information Capacity Theorem)의 정리",
+   "- 채널용량(샤논 제3정리, Information Capacity Theorem)의 수식 정리",
+   "- 채널용량(샤논 제3정리, Information Capacity Theorem)의 정리 상세 설명",
+   "기계학습 분야에서 활용되는 정보이론 설명"
   ]
  },
  {
@@ -114,7 +125,15 @@
    6
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "맨체스터 코딩 (Manchester Coding)의 개요",
+   "- 맨체스터 코딩 (Manchester Coding)의 정의",
+   "- 맨체스터 코딩 (Manchester Coding)의 특징",
+   "맨체스터 코딩 (Manchester Coding)의 신호변환 방식 개념도 및 상세설명",
+   "- 맨체스터 코딩 (Manchester Coding)의 신호변환 방식 개념도",
+   "- 맨체스터 코딩 (Manchester Coding)의 신호변환 방식 상세설명"
+  ]
  },
  {
   "id": "NW_004_01",
@@ -166,7 +185,14 @@
    7,
    8
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "차등적 맨체스터 부호화(Differential Manchester Encoding) 의 개념",
+   "차등적 맨체스터 부호화 개념도 및 단계별 특징",
+   "- 차등적 맨체스터 부호화 개념도",
+   "- 차등적 맨체스터 코딩 상세 설명",
+   "맨체스터 코딩방식과 차등(Differential) 맨체스터 코딩방식의 비교"
+  ]
  },
  {
   "id": "NW_010",
@@ -211,7 +237,14 @@
    10
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "직교 진폭 변조, QAM(Quadrature Amplitude Modulation)의 개요",
+   "- QAM(Quadrature Amplitude Modulation)의 정의",
+   "- QAM(Quadrature Amplitude Modulation) 장/단점",
+   "QAM(Quadrature Amplitude Modulation) 구성",
+   "- 16 QAM 성상도(Constellation Diagram) 및 설명"
+  ]
  },
  {
   "id": "NW_011",
@@ -249,7 +282,12 @@
    14
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "반송파 감지 다중 접속 및 충돌탐지, CSMA/CD의 개념",
+   "- CSMA/CD정의",
+   "CSMA/CD와 CSMA/CA 비교"
+  ]
  },
  {
   "id": "NW_012",
@@ -299,6 +337,16 @@
   "pages": [
    15,
    17
+  ],
+  "outline": [
+   "IEEE 802.11 Protocol 의 무선랜 MAC (Media Access Control) 기법, CSMA/CA의 개요",
+   "- CSMA/CA (Carrier Sense Multiple Access/Collision Avoidance) 의 정의",
+   "- CSMA/CA 특징",
+   "CSMA/CA개념도 및 충돌 회피 방법",
+   "- CSMA/CA개념도",
+   "CSMA/CA의 IFS(Inter Frame Space)와 Contention Window",
+   "- IFS(Inter Frame Space)와 Contention Window의 개념도",
+   "- IFS(Inter Frame Space) 및 Contention Window 상세 설명"
   ]
  },
  {
@@ -356,7 +404,18 @@
    18,
    23
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "기지국과 유선망이 필요 없는, Ad-hoc Network의 개요",
+   "- Ad-hoc Network의 정의",
+   "- Ad-hoc Network의 특징",
+   "Ad-Hoc Network의 개념도 및 기술요소",
+   "- Ad-Hoc Network의 개념도",
+   "- Ad-Hoc Network의 기술요소",
+   "- Ad-Hoc Network의 구성",
+   "Ad-Hoc Routing 분류 및 Protocol 설명",
+   "- Ad-Hoc Routing 분류"
+  ]
  },
  {
   "id": "NW_026",
@@ -399,7 +458,15 @@
    24,
    30
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "네트워크 관리를 위한 DNS(Domain Name Server) 개요",
+   "- DNS(Domain Name Server)의 정의",
+   "- 네트워크 관리를 위한 DNS 역할",
+   "DNS 구성도, 구성요소 및 동작절차",
+   "- DNS 구성도, 구성요소",
+   "- DNS의 구성 요소"
+  ]
  },
  {
   "id": "NW_031_01",
@@ -445,7 +512,12 @@
    33
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "네트워크 모델에서 다중화와 다원접속 설명",
+   "- 전송방식의 다중화(Multiplexing)",
+   "다중화와 다중접속의 기술적 차이점"
+  ]
  },
  {
   "id": "NW_031_02",
@@ -499,6 +571,15 @@
   "pages": [
    34,
    35
+  ],
+  "outline": [
+   "5G 주파수 효율 향상 기술, NOMA (Non-Orthogonal Multiple Access)의 개요",
+   "- NOMA (Non-Orthogonal Multiple Access)의 정의",
+   "- NOMA (Non-Orthogonal Multiple Access)의 특징",
+   "NOMA (Non-Orthogonal Multiple Access)의 개념도와 원리 및 핵심기술",
+   "- NOMA (Non-Orthogonal Multiple Access)의 개념도",
+   "- NOMA (Non-Orthogonal Multiple Access)의 원리 및 핵심기술",
+   "NOMA의 활용 연구"
   ]
  },
  {
@@ -563,7 +644,18 @@
    36,
    44
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "데이터 중복전송 최소화한 1:N 전송기술, Multicast의 개요",
+   "- Multicast 정의",
+   "- Multicast 특징",
+   "개념도 및 기술요소",
+   "- Multicast 개념도",
+   "- Multicast의 구성요소",
+   "멀티캐스트 호스트 그룹에 대한 정의 (Addressing)",
+   "IGMP(Internet Group Management Protocol)",
+   "멀티캐스트 라우팅 프로토콜"
+  ]
  },
  {
   "id": "NW_041",
@@ -640,7 +732,21 @@
    45,
    54
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "세그먼트 단위 데이터 전송 보장 계층, Transport Layer의 개요",
+   "- 전송 계층(Transport Layer)의 정의",
+   "- 전송 계층의 역할",
+   "전송 계층의 구조 및 기능 설명",
+   "- 전송 계층의 구조도",
+   "전송 계층의 주요 기능 오류 제어",
+   "- 오류 제어의 개념도",
+   "송신측 전송데이터 크기 조정, 흐름 제어(Flow Control : 슬라이딩 원도우 기법)",
+   "- TCP 흐름 제어(Flow Control)의 개념",
+   "- 슬라이딩 원도우(Sliding Window) 기법",
+   "네트워크 유입 트래픽 조절, 혼잡 제어",
+   "- 혼잡 제어(Congestion Control)의 개념"
+  ]
  },
  {
   "id": "NW_042",
@@ -686,6 +792,12 @@
   "pages": [
    55,
    57
+  ],
+  "outline": [
+   "Data 전송을 통신 경로 선택, Network Layer의 개요",
+   "- Network Layer의 정의",
+   "- Network Layer의 구성도",
+   "Network Layer 프로토콜"
   ]
  },
  {
@@ -718,6 +830,10 @@
   "pages": [
    58,
    59
+  ],
+  "outline": [
+   "Data Link Layer의 개요",
+   "Data Link Layer에서의 오류제어 유형 및 기법설명"
   ]
  },
  {
@@ -753,6 +869,11 @@
   "pages": [
    60,
    64
+  ],
+  "outline": [
+   "TCP 데이터 전송절차 및 Handshake설명",
+   "- TCP 데이터 전송절차",
+   "TCP 데이터 전송에 사용되는 TCP Flag"
   ]
  },
  {
@@ -806,7 +927,16 @@
    65,
    67
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "신뢰성 있는 통신, TCP/IP 오류제어의 개요",
+   "- TCP/IP 오류제어 정의",
+   "- TCP/IP 오류제어 기법",
+   "TCP/IP 오류제어 과정 및 제어요소",
+   "- TCP/IP 오류제어 과정",
+   "- TCP/IP 오류제어 요소",
+   "TCP/IP 오류제어 고려사항"
+  ]
  },
  {
   "id": "NW_050_1",
@@ -864,7 +994,18 @@
    70
   ],
   "keywords_note": "원문 키워드 칸에 다른 토픽(Harbor) 키워드가 잘못 들어가 있어 본문에서 발췌",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "비효율적 네트워크 흐름제어 현상, 어리석은 윈도우 신드롬(Silly Window Syndrome) 설명",
+   "- 어리석은 윈도우 신드롬 개념",
+   "- 어리석은 윈도우 신드롬 개념도, 상세설명",
+   "송신측 신드롬 해결 방안, Nagle's Algorithm 설명",
+   "- Nagle'a Algorithm 개념",
+   "- Nagle'a Algorithm 개념도, 상세설명",
+   "수신측 신드롬 해결 방안, Clark's Solution 설명",
+   "- Clark's Solution 개념",
+   "- Clark's Solution 개념도, 상세설명"
+  ]
  },
  {
   "id": "NW_053",
@@ -883,7 +1024,8 @@
   "pages": [
    71,
    73
-  ]
+  ],
+  "outline": []
  },
  {
   "id": "NW_054",
@@ -914,6 +1056,10 @@
   "pages": [
    74,
    75
+  ],
+  "outline": [
+   "라우팅 관리에 유용한 Supernetting 의 개념도",
+   "Supernetting의 계산방법"
   ]
  },
  {
@@ -937,7 +1083,8 @@
    76,
    77
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": []
  },
  {
   "id": "NW_056",
@@ -987,7 +1134,14 @@
    78,
    79
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "서브네트의 서브넷팅, VLSM 개요",
+   "- VLSM 개념",
+   "- VLSM 특징",
+   "VLSM 적용 및 상세설명",
+   "추가자료"
+  ]
  },
  {
   "id": "NW_059",
@@ -1030,6 +1184,11 @@
   "pages": [
    80,
    81
+  ],
+  "outline": [
+   "IP 패킷 단편화의 개념과 특징",
+   "Ipv4와 Ipv6에서의 처리방식",
+   "- IPv4에서의 처리방식"
   ]
  },
  {
@@ -1076,7 +1235,14 @@
    82,
    84
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "멀티캐스트의 기본 요소 및 IGMP",
+   "- IGMP (Internet Group Management Protocol)의 정의",
+   "- 멀티캐스트의 기본 요소",
+   "IGMP 역할 및 메시지 유형",
+   "- IGMP 역할"
+  ]
  },
  {
   "id": "NW_064",
@@ -1113,6 +1279,10 @@
   "pages": [
    85,
    87
+  ],
+  "outline": [
+   "SCTP 프로토콜 계층구조 및 기술요소",
+   "- SCTP 프로토콜 계층구조"
   ]
  },
  {
@@ -1152,6 +1322,13 @@
   "pages": [
    88,
    92
+  ],
+  "outline": [
+   "네트워크 주소변환, ARP(Address Resolution Protocol) 개요",
+   "- ARP 정의",
+   "- 네트워크 주소변환, ARP(Address Resolution Protocol) 개념도",
+   "ARP의 보안 취약점 및 대응 방안",
+   "- ARP Spoofing"
   ]
  },
  {
@@ -1186,6 +1363,12 @@
   "pages": [
    93,
    94
+  ],
+  "outline": [
+   "RARP(Reverse Address Resolution Protocol) 개요",
+   "- RARP 의 정의",
+   "- RARP(Reverse Address Resolution Protocol) 필요성",
+   "RARP 개념도"
   ]
  },
  {
@@ -1239,7 +1422,16 @@
    95,
    97
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "IP 주소 및 세부정보의 동적 호스트 구성 프로토콜, DHCP의 개념",
+   "- DHCP(Dynamic Host Configuration Protocol)의 정의",
+   "- DHCP의 특징",
+   "DHCP의 개념도 및 동작원리",
+   "- DHCP의 개념도",
+   "- DHCP의 동작 원리",
+   "DHCP의 장단점"
+  ]
  },
  {
   "id": "NW_070",
@@ -1299,6 +1491,13 @@
   "pages": [
    98,
    100
+  ],
+  "outline": [
+   "브라우저 기반 음성/화상 통신, WebRTC의 개념",
+   "WebRTC의 구성도 및 구성요소",
+   "- WebRTC의 구성도",
+   "- WebRTC의 구성요소",
+   "WebRTC의 다자간 통신의 유형"
   ]
  },
  {
@@ -1346,6 +1545,13 @@
   "pages": [
    101,
    102
+  ],
+  "outline": [
+   "RTT 최소화 위한, QUIC 의 개요",
+   "- QUIC(Quick UDP Internet Connections)의 개념",
+   "- QUIC의 특징",
+   "QUIC 의 연결 수립과정 (기존 방식과 효율성 측면 비교)",
+   "QUIC 최신 동향"
   ]
  },
  {
@@ -1383,6 +1589,12 @@
   "pages": [
    103,
    104
+  ],
+  "outline": [
+   "VRRP의 구성도 및 구성 요소",
+   "- VRRP의 구성도",
+   "- VRRP의 구성요소",
+   "VRRS와 HSRP 비교"
   ]
  },
  {
@@ -1435,6 +1647,16 @@
   "pages": [
    105,
    106
+  ],
+  "outline": [
+   "MPCTP 의 개요",
+   "- MPTCP 의 개념",
+   "- MPTCP 의 특징",
+   "MPTCP 의 계층구조",
+   "- MPTCP 계층구조 상세설명",
+   "MPTCP 의 Subflow JOIN 절차",
+   "- MP_CAPABLE, MP_JOIN 절차",
+   "- MP_CAPABLE, MP_JOIN 절차설명"
   ]
  },
  {
@@ -1487,7 +1709,13 @@
    107,
    111
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "L4 스위치의 개요",
+   "- L4 스위치의 정의",
+   "L4 스위치의 주요 기능",
+   "이더넷 스위치의 발전 방향"
+  ]
  },
  {
   "id": "NW_078",
@@ -1532,6 +1760,11 @@
   "pages": [
    112,
    113
+  ],
+  "outline": [
+   "로드밸런서의 유형과 기술요소",
+   "- 로드밸런서의 유형",
+   "로드밸런서의 가용성 확보방안"
   ]
  },
  {
@@ -1585,6 +1818,15 @@
   "pages": [
    114,
    115
+  ],
+  "outline": [
+   "교통 효율성 증대 통신기술, V2V의 개요",
+   "- V2V(Vehicle to Vehicle)의 정의",
+   "- V2X의 종류",
+   "- V2V 요구사항",
+   "V2X 구성도에서의 V2V 개념도 및 기술요소",
+   "- V2X 구성도에서의 V2V 개념도",
+   "V2V(Vehicle to Vehicle) 적용 시 고려사항"
   ]
  },
  {
@@ -1629,6 +1871,12 @@
   "pages": [
    116,
    120
+  ],
+  "outline": [
+   "커넥티드 카의 개념도 및 구성요소",
+   "- 커넥티드 카의 개념도",
+   "연결방식에 따른 분류 및 서비스 종류",
+   "- 연결방식에 따른 분류"
   ]
  },
  {
@@ -1702,7 +1950,18 @@
    121,
    125
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "지능형 교통시스템의 핵심 기술, V2X(Vehicle to Everything) 의 개요",
+   "- V2X(Vehicle to Everything) 의 정의",
+   "- V2X 의 특징",
+   "V2X 의 개념도 및 종류",
+   "- V2X 의 개념도",
+   "- V2X(Vehicle to Everything)의 종류",
+   "V2X(Vehicle to Everything)의 통신표준",
+   "V2X 표준 기술 비교",
+   "국내 V2X(Vehicle to Everything)의 발전을 위한 현황 및 제언"
+  ]
  },
  {
   "id": "NW_083",
@@ -1749,6 +2008,14 @@
   "pages": [
    126,
    130
+  ],
+  "outline": [
+   "노변 기지국 통신을 위한 근거리 통신 DSRC의 개요",
+   "- DSRC(Dedicated Short Range Communication)의 정의",
+   "- DSRC의 특징",
+   "DSRC의 통신방식 비교 및 고려사항",
+   "- DSRC의 통신방식 비교",
+   "- DSRC의 고려사항"
   ]
  },
  {
@@ -1790,7 +2057,13 @@
    131,
    134
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "자율주행차의 V2X를 위한 근거리 통신 표준기술, WAVE의 개요",
+   "- WAVE(Wireless Access in Vehicular Environment)의 정의",
+   "표준관점에서 WAVE가 적용된 단말의 기본적인 스택 구조",
+   "- WAVE 기반의 V2X 통신 표준"
+  ]
  },
  {
   "id": "NW_085_00",
@@ -1832,6 +2105,12 @@
   "pages": [
    135,
    137
+  ],
+  "outline": [
+   "e-Call의 개념도 및 기술요소",
+   "- e-Call 개념도",
+   "- IOB의 구성 요소",
+   "e-call 동향"
   ]
  },
  {
@@ -1886,6 +2165,13 @@
   "pages": [
    138,
    139
+  ],
+  "outline": [
+   "완전 자율주행 핵심 기술, 6G-V2X의 개요",
+   "- 6G-V2X의 정의",
+   "- 6G-V2X 의 등장 배경",
+   "6G-V2X의 기술요소",
+   "6G-V2X와 5G-V2X의 비교"
   ]
  },
  {
@@ -1935,6 +2221,14 @@
   "pages": [
    140,
    141
+  ],
+  "outline": [
+   "ISO 11898, CAN(Controller Area Network)의 개요",
+   "- CAN(Controller Area Network)의 정의",
+   "CAN(Controller Area Network)의 아키텍처와 기술요소",
+   "- CAN(Controller Area Network)의 아키텍처",
+   "- CAN(Controller Area Network)의 기술요소",
+   "CAN 통신의 보안 약점 및 대응 방안"
   ]
  },
  {
@@ -1991,7 +2285,20 @@
    142,
    151
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "무선랜 Topology 및 구성 요소",
+   "- 무선랜 구성도",
+   "- 무선랜 구성요소",
+   "무선 LAN 보안",
+   "- 무선 LAN 보안 취약점 공격 기술 발달 추이",
+   "- 무선 LAN 보안 취약점",
+   "- 무선 LAN의 해킹 유형",
+   "무선랜 데이터 전송 취약성과 대응기술",
+   "- 무선랜 데이터 전송 취약성",
+   "- 무선랜 데이터 전송 대응기술",
+   "- 무선 LAN 보안방법"
+  ]
  },
  {
   "id": "NW_099",
@@ -2027,6 +2334,10 @@
   "pages": [
    152,
    153
+  ],
+  "outline": [
+   "차세대 Wi-Fi 8 표준인 IEEE 802.11bn의 정의",
+   "Wi-Fi 버전별 비교"
   ]
  },
  {
@@ -2080,6 +2391,12 @@
   "pages": [
    154,
    156
+  ],
+  "outline": [
+   "위치 정보 측위 기술의 유형",
+   "무선랜 기반 측위 기술",
+   "- 무선랜 기반 측위 기술 유형",
+   "WLAN 기반 실내 위치 측위 사례"
   ]
  },
  {
@@ -2126,6 +2443,15 @@
   "pages": [
    157,
    160
+  ],
+  "outline": [
+   "차세대 무선랜 암호화 프토토콜, WPA3 의 개요",
+   "- WPA3(Wi-Fi Protected Access 3) 의 정의",
+   "- WPA3 특징",
+   "WPA3 암호절차및 운영모드 설명",
+   "- WPA3 암호절차 비교",
+   "- 주요 기능",
+   "- 운영모드 설명"
   ]
  },
  {
@@ -2189,7 +2515,18 @@
    172
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "실내 위치 측위 기술 및 측위 방식",
+   "- 실내 위치 측위 기술 종류 및 장단점",
+   "실내외 위치 측위 기술 종류 및 장단점",
+   "- 실외 측위기술",
+   "실내 공간 정보 응용 서비스의 핵심 기술, 실내 측위 Indoor Positioning",
+   "- 실내 측위의 개념",
+   "WiFi 기반의 실내 측위 방식 상세 설명",
+   "- 단일 AP 측위 기법",
+   "- 삼각 측량 기법"
+  ]
  },
  {
   "id": "NW_102_1",
@@ -2232,6 +2569,14 @@
   "pages": [
    173,
    174
+  ],
+  "outline": [
+   "네트워크 실시간 측위(NRTK, Network RealTime Kinematic)의 개념",
+   "- 네트워크 실시간 측위(NRTK, Network RealTime Kinematic)의 정의",
+   "- 네트워크 실시간 측위(NRTK, Network RealTime Kinematic)의 특징",
+   "네트워크 실시간 측위의 개념도 및 NRTK 보정신호의 구분",
+   "- 네트워크 실시간 측위의 개념도",
+   "- NRTK 보정신호의 구분"
   ]
  },
  {
@@ -2306,7 +2651,20 @@
    175,
    180
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "능동적 사물과 인간의 소통, IoT의 개요",
+   "- IoT(Internet Of Things)의 정의",
+   "- 사물인터넷의 등장배경",
+   "- IoT의 주목이유",
+   "개념 관점의 특성",
+   "소통 관점의 특성",
+   "IoT의 구성도 및 구성요소",
+   "- IoT의 구성도",
+   "- 기술요소",
+   "IoT 3대 주요기술 및 핵심기술",
+   "- 3대 주요기술"
+  ]
  },
  {
   "id": "NW_106",
@@ -2358,7 +2716,15 @@
    181,
    182
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "낮은사양: 적은 메모리, 낮은 성능의 프로세서 사용",
+   "- CoAP 특성",
+   "CoAP 구성도 및 구성요소",
+   "- CoAP 구성도",
+   "- CoAP 구성요소",
+   "CoAP 프로토콜 스택"
+  ]
  },
  {
   "id": "NW_107",
@@ -2402,6 +2768,15 @@
   "pages": [
    183,
    185
+  ],
+  "outline": [
+   "IoT 환경의 Publish/Subscribe 기반 경량화 프로토콜, MQTT의 개요",
+   "- MQTT(Message Queue Telemetry Transport)의 정의",
+   "- MQTT의 특징",
+   "- MQTT의 필요성",
+   "MQTT의 구성도 및 프로토콜 메시지 타입, 구성요소",
+   "- MQTT의 구성도",
+   "- MQTT 프로토콜 메시지 형식"
   ]
  },
  {
@@ -2441,6 +2816,13 @@
   "pages": [
    186,
    188
+  ],
+  "outline": [
+   "XML기반 실시간 메시지 교환 프로토콜, XMPP의 개요",
+   "- XMPP(eXtensible Messaging and Presence Protocol)의 정의",
+   "XMPP의 구성도",
+   "- XMPP 구성도 개요",
+   "- XMPP 아키텍처"
   ]
  },
  {
@@ -2502,7 +2884,13 @@
    189,
    194
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "유무선 통신망을 활용한 차량 통신기술인 V2X(Vehicle to Everything)의 개요",
+   "V2X(Vehicle to Everything)의 종류",
+   "V2X(Vehicle to Everything)의 통신표준",
+   "국내 V2X(Vehicle to Everything)의 발전을 위한 현황 및 제언"
+  ]
  },
  {
   "id": "NW_121",
@@ -2540,7 +2928,11 @@
    197
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "전력 에너지와 IoT 의 융합,e-IoT(Energy IoT)의 개요",
+   "e-IoT(Energy IoT)의 표준화 동향"
+  ]
  },
  {
   "id": "NW_123",
@@ -2594,7 +2986,15 @@
    201
   ],
   "note": "원문 키워드에는 'REACH'로 적혀 있으나 본문 표기는 LEACH",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "센서 라우팅의 정의",
+   "무선 센서 네트워크 라우팅 프로토콜 상세 설명",
+   "- 무선 센서 네트워크 라우팅 프로토콜의 분류",
+   "- 무선 센서 네트워크 주요 라우팅 프로토콜 상세 설명",
+   "센서 라우팅의 유형",
+   "- 평면 라우팅 프로토콜"
+  ]
  },
  {
   "id": "NW_124_01",
@@ -2674,7 +3074,14 @@
    202,
    205
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "스마트홈(Smart Home)의 개요",
+   "매터(Matter)의 개념",
+   "매터의 프로토콜 스택 및 주요 프로토콜",
+   "Thread의 개념",
+   "Thread의 스택 및 매시 네트워크 구성요소"
+  ]
  },
  {
   "id": "NW_125",
@@ -2731,7 +3138,15 @@
    205,
    209
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "IPv6 헤더정보 및 전환방법",
+   "- IPv6 헤더정보",
+   "- IPv4 에서 IPv6 로의 전환방법",
+   "IPv6 프로토콜 자체에서 발생하는 보안위협 및 해결방안",
+   "- IPv4 와 다른 확장 프로토콜을 설계하고자 추가한 기능들이 보안관점에서 위험이 된 경우",
+   "안전한 IPv6 전환을 위한 대응방안"
+  ]
  },
  {
   "id": "NW_126",
@@ -2762,7 +3177,10 @@
    210,
    210
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "IPv4/IPv6 Dual stack 방식의 개념"
+  ]
  },
  {
   "id": "NW_127",
@@ -2796,6 +3214,12 @@
   "pages": [
    211,
    211
+  ],
+  "outline": [
+   "전송 데이터의 캡슐화를 통한 보안기능, 터널링의 개요",
+   "- 터널링 ( Tunneling)의 정의",
+   "- 터널링을 이용한 대표적인 사례",
+   "IPV6의 변환기술에서의 Tunneling"
   ]
  },
  {
@@ -2852,7 +3276,19 @@
    215
   ],
   "note": "원문 키워드에는 'IPv4 특징 : 128 bit'로 적혀 있으나 128bit는 IPv6 특징",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "IPv6 전환 필요성",
+   "IPv6 의 개념 및 주요 특징",
+   "- IPv4 와 비교를 통한 주요 IPv6 의 특징",
+   "- IPv6 의 주요 특징",
+   "IPv6 전환 기술",
+   "- IPv6 전환의 개념",
+   "- IPv6 전환의 기술",
+   "IPv6 확산 추진 전략",
+   "- IPv6 확산 로드맵",
+   "- IPv6 확산 방안"
+  ]
  },
  {
   "id": "NW_132",
@@ -2910,7 +3346,15 @@
    216,
    217
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "네트워크 서비스 품질 향상을 위한 기술, QoS의 개요",
+   "- QoS 정의",
+   "- QoS 필요성",
+   "QoS를 결정하는 요소 및 관리 기술",
+   "- QoS 결정 주요 요소",
+   "QoS 구현기술"
+  ]
  },
  {
   "id": "NW_133",
@@ -2949,6 +3393,14 @@
   "pages": [
    218,
    219
+  ],
+  "outline": [
+   "가중치를 통한 QoS 의 공정성 확보, WFQ 의 개요",
+   "- WFQ(Weighted Fair Queuing)의 정의",
+   "- WFQ 의 특징",
+   "WFQ 의 개념도 및 동작방식",
+   "- WFQ 의 개념도",
+   "- WFQ 의 동작방식"
   ]
  },
  {
@@ -2985,7 +3437,11 @@
    221
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "트래픽 대역폭 제어기술, 트래픽 감시 개념",
+   "Traffic Policing 구성요소 및 구현 알고리즘"
+  ]
  },
  {
   "id": "NW_135",
@@ -3017,7 +3473,11 @@
    222,
    222
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "Traffic Shaping 기법",
+   "- Leaky Bucket 나. Token Bucket"
+  ]
  },
  {
   "id": "NW_136",
@@ -3048,6 +3508,10 @@
   "pages": [
    223,
    224
+  ],
+  "outline": [
+   "사전패킷 폐기(Proactive Packet Discard)",
+   "- RED, WRED 설명"
   ]
  },
  {
@@ -3079,7 +3543,10 @@
    225,
    227
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "호스트 중심의 혼잡제어(종단간 혼잡제어)"
+  ]
  },
  {
   "id": "NW_138",
@@ -3127,6 +3594,16 @@
   "pages": [
    228,
    229
+  ],
+  "outline": [
+   "QoS 보장기술인 IntServ모델의 개요",
+   "- IntServ(Integrated Services)의 정의",
+   "- IntServ의 서비스의 종류",
+   "IntServ 개념도 및 IntServ 동작 설명",
+   "- IntServ 개념도",
+   "- IntServ의 동작 설명",
+   "[참고]Resource Reservation Protocol)의 개요",
+   "- Resource Reservation의 정의"
   ]
  },
  {
@@ -3161,7 +3638,12 @@
    230,
    231
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "DiffServ 구현방식 및 구성요소",
+   "- DiffServ 구현방식",
+   "- DiffServ 구성요소"
+  ]
  },
  {
   "id": "NW_140",
@@ -3232,6 +3714,17 @@
   "pages": [
    232,
    235
+  ],
+  "outline": [
+   "고속 패킷 전달을 통한 QoS 구현기술 MPLS의 개념",
+   "- MPLS",
+   "- MLPS 특징",
+   "MPLS(Multi Protocol Label Switching)의 구조 및 전송순서",
+   "- MPLS(Multi Protocol Label Switching)의 구조",
+   "- MPLS(Multi Protocol Label Switching)의 요소기술",
+   "MPLS와 기존 라우팅과의 비교",
+   "MPLS 트래픽 엔지니어링",
+   "MPLS VPN"
   ]
  },
  {
@@ -3255,7 +3748,8 @@
    238
   ],
   "note": "원문 본문 대부분이 이미지라 텍스트로 확인된 내용만 정리",
-  "reviewed": true
+  "reviewed": true,
+  "outline": []
  },
  {
   "id": "NW_142",
@@ -3296,7 +3790,12 @@
    239,
    241
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "QoE의 개념도 및 QoE를 위한 주요 품질지표",
+   "- QoE의 개념도",
+   "QoE를 위한 품질 관리방법"
+  ]
  },
  {
   "id": "NW_143",
@@ -3345,7 +3844,15 @@
    242,
    243
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "NP(Network Performance)의 개요",
+   "- NP(Network Performance)의 정의",
+   "서비스 품질을 나타내는 QoS, QoE, NP의 관계도 및 망 지표화 요건",
+   "- QoS, QoE, NP의 관계도",
+   "- 망 지표화 요건",
+   "QoS, QoE, NP의 비교"
+  ]
  },
  {
   "id": "NW_147",
@@ -3415,6 +3922,22 @@
   "pages": [
    244,
    250
+  ],
+  "outline": [
+   "IoT를 위한 차세대 저전력 프로토콜, 블루투스5의 개요",
+   "- 블루투스5(Bluetooth5)의 정의",
+   "- 블루투스5의 특징",
+   "블루투스5의 개념도와 구성 요소",
+   "- 블루투스 5 개념도",
+   "블루투스5에 추가된 기술 요소",
+   "- 블루투스5를 활용한 IoT 아키텍쳐",
+   "- 아키텍쳐의 구성요소",
+   "블루투스 5의 동작 개념도 및 설명",
+   "- 블루투스 5의 동작 개념도",
+   "- 블루투스 5의 동작 요소",
+   "Bluetooth 5.0의 상세 기술 및 활용 분야",
+   "- Bluetooth 5.0의 상세 기술",
+   "- Bluetooth 5.0 활용 분야"
   ]
  },
  {
@@ -3471,7 +3994,14 @@
    251,
    255
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "10cm이내에서 양방향 통신하는 비접촉 근거리 무선 통신 기술, NFC의 개요",
+   "대상 기기는 동일한 전송속도로 리더 역할을 하는 NFC 기기에 응답",
+   "- NFC 통신 동작방식",
+   "NFC 기술 동향 및 활성화를 위한 주요 적용분야",
+   "- NFC 기술 동향"
+  ]
  },
  {
   "id": "NW_160",
@@ -3496,7 +4026,8 @@
   "pages": [
    256,
    258
-  ]
+  ],
+  "outline": []
  },
  {
   "id": "NW_166",
@@ -3533,7 +4064,13 @@
    259,
    260
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "데이터 트래픽을 분산시키는 기술, 멀티캐리어(Multi Carrier)의 개요",
+   "멀티캐리어의 개념도 및 기술설명",
+   "- 멀티캐리어의 개념도",
+   "- 멀티캐리어의 기술설명"
+  ]
  },
  {
   "id": "NW_167",
@@ -3578,7 +4115,15 @@
    261,
    263
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "LTE 의 차세대 진화 시스템 핵심기술, Carrier Aggregation 개요",
+   "- Carrier Aggregation(반송파 직접) 의 정의",
+   "- Carrier Aggregation(반송파 직접기술)의 특징",
+   "Carrier Aggregation 의 구성도 및 기술요소",
+   "- Carrier Aggregation 의 구성도",
+   "- Carrier Aggregation 의 기술요소"
+  ]
  },
  {
   "id": "NW_178",
@@ -3615,7 +4160,12 @@
    265
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "해상재난망의 구성",
+   "- 해상재난망 구성도",
+   "- 해상재난망 구성요소"
+  ]
  },
  {
   "id": "NW_181",
@@ -3676,7 +4226,16 @@
    266,
    269
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "LTE 기술을 기반 공공안전 통신망, PS-LTE (Public Safety - Long Term Evolution)의 정의",
+   "재난안전통신망(PS-LTE)의 구성도 및 구성요소",
+   "- 재난안전통신망(PS-LTE)의 구성도",
+   "- 재난안전통신망(PS-LTE)의 구성요소",
+   "재난안전통신망(PS-LTE)의 주요서비스",
+   "재난안전통신망(PS-LTE)의 표준화 동향",
+   "- PS-LTE 주요항목별 표준화 현황 내용"
+  ]
  },
  {
   "id": "NW_184",
@@ -3729,6 +4288,15 @@
   "pages": [
    270,
    272
+  ],
+  "outline": [
+   "RAN-Sharing의 개념 및 목적",
+   "- RAN-Sharing의 개념",
+   "- RAN-Sharing의 목적",
+   "RAN-Sharing 기술방식 설명",
+   "- MORAN(Multi-operator RAN)",
+   "- MOCN(Multi-operator core network)",
+   "국가 공공안전망 구축 현황"
   ]
  },
  {
@@ -3799,7 +4367,18 @@
    277
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문 성능 비교표(두음 '전체주고지연에면')에서 발췌",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "초연결시대, IMT-2020/5G의 개요",
+   "- IMT-2020/5G의 개념",
+   "- 4G(IMT-Advanced)와 5G(IMT-2020) 핵심 성능 비교(전체주고지연에면)",
+   "5G 네트워크의 기술적 특징",
+   "- 5G 네트워크의 기술적 특징 개요",
+   "- 5G 네트워크의 기술적 특징 상세설명",
+   "IMT-2020/5G 기술요소",
+   "5G 네트워크의 국내외 추진동향 및 시사점",
+   "- 5G 네트워크의 국내외 추진동향"
+  ]
  },
  {
   "id": "NW_186",
@@ -3850,7 +4429,18 @@
    278,
    280
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "5G의 핵심기술, Network Slicing의 개요",
+   "- Network Slicing의 개념",
+   "- Network Slicing의 특징",
+   "Network Slicing의 개념도 및 핵심기술",
+   "- Network Slicing의 개념도",
+   "- Network Slicing의 핵심 기술",
+   "Network Slicing을 위한 NFV의 개념도 및 구성요소",
+   "- NFV(Network Funcition Virtualization)의 개념도",
+   "- NFV(Network Function Virtualization)의 구성요소"
+  ]
  },
  {
   "id": "NW_187",
@@ -3916,6 +4506,19 @@
   "pages": [
    281,
    285
+  ],
+  "outline": [
+   "5G NR(new Radio) 개요",
+   "- NR(New Radio) 의 정의",
+   "- NR 의 필요성",
+   "NR의 구성도 및 기술요소",
+   "- NR의 구성도",
+   "- NR의 기술요소",
+   "NR-MIMO 의 주요 기술 및 기대효과",
+   "NR 의 표준화 동향",
+   "NR의 사례 및 서비스 요구사항",
+   "- NR의 사례",
+   "- NR 의 서비스 요구사항"
   ]
  },
  {
@@ -3953,6 +4556,10 @@
   "pages": [
    286,
    287
+  ],
+  "outline": [
+   "5G NSA와 SA의 비교",
+   "5G 표준화 및 사용화 일정"
   ]
  },
  {
@@ -4004,7 +4611,15 @@
    290
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "최저지연을 위한 모바일 엣지 컴퓨팅(MEC)의 개요",
+   "- 모바일 엣지 컴퓨팅(Mobile Edge Computing)의 정의",
+   "모바일 엣지 컴퓨팅(Mobile Edge Computing)의 플랫폼 구조 및 구성요소",
+   "- MEC 플랫폼 구조",
+   "- MEC 플랫폼 구성요소",
+   "MEC 성공 위한 Enabler Technology"
+  ]
  },
  {
   "id": "NW_190_00",
@@ -4066,6 +4681,15 @@
   "pages": [
    291,
    293
+  ],
+  "outline": [
+   "대규모 데이터의 빠른 연산 처리, 엣지 컴퓨팅 개요",
+   "- 엣지 컴퓨팅의 스케쥴러",
+   "가상화 기술 활용, 컨테이너 오케스트레이션의 스케쥴러",
+   "- 컨테이너 오케스트레이션의 개념",
+   "- 컨테이너 오케스트레이션의 주요 스케쥴링",
+   "초저지연 지능형 엣지 SW플랫폼, GEdge 플랫폼의 스케줄러",
+   "- GEdge 플랫폼의 개념"
   ]
  },
  {
@@ -4116,6 +4740,15 @@
   "pages": [
    294,
    296
+  ],
+  "outline": [
+   "사이버-물리 시스템 실현을 위한 컴퓨팅 컨티뉴엄 (Computing Continuum)",
+   "- 컴퓨팅 컨티뉴엄 (Computing Continuum) 정의",
+   "- 컴퓨팅 컨티뉴엄 (Computing Continuum) 의 등장 배경",
+   "컴퓨팅 컨티뉴엄 (Computing Continuum)의 개념도와 실현기술",
+   "- 컴퓨팅 컨티뉴엄 (Computing Continuum)의 개념도",
+   "- 컴퓨팅 컨티뉴엄 (Computing Continuum)의 실현 기술",
+   "컴퓨팅 컨티뉴엄 (Computing Continuum)의 활용"
   ]
  },
  {
@@ -4172,7 +4805,17 @@
    297,
    300
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "만물지능인터넷, 6G 개요",
+   "- 6G 정의",
+   "- 특징",
+   "6G 필요 기술 및 기술 성능 목표",
+   "- 6G 기술 요소",
+   "6G 기술 변화 및 비교",
+   "- 6G 기술변화",
+   "- 5G vs 6G 기술 비교"
+  ]
  },
  {
   "id": "NW_192_0",
@@ -4226,6 +4869,15 @@
   "pages": [
    301,
    303
+  ],
+  "outline": [
+   "특정 산업만을 위한 전용망, 5G 특화망(지역 5G)의 개요",
+   "- 5G 특화망(지역 5G)의 정의",
+   "- 5G 특화망(지역 5G)의 특징",
+   "5G 특화망(지역 5G) 5G 구축방식",
+   "- 5G 특화망(지역 5G) 구축 아키텍처",
+   "- 5G 특화망(지역 5G) 구축방식별 상세",
+   "5G 공중망과 특화망의 특성 비교"
   ]
  },
  {
@@ -4293,6 +4945,16 @@
   "pages": [
    304,
    306
+  ],
+  "outline": [
+   "민간기업의 디지털전환 가속화, 이음5G의 개념",
+   "- 이음5G의 정의",
+   "- 이음 5G의 필요성",
+   "이음 5G의 기술요소",
+   "- 이음 5G의 기술구성도",
+   "28GHz 주파수대역 활용 방안 및 한계점",
+   "- 28GHz 주파수 대역 활용 방안",
+   "이음 5G의 활용 효과"
   ]
  },
  {
@@ -4356,6 +5018,15 @@
   "pages": [
    307,
    308
+  ],
+  "outline": [
+   "디지털 트윈과 네트워크의 결합, 6G의 DTN(Digital Twin Network) 개요",
+   "- 6G의 DTN(Digital Twin Network) 정의",
+   "- 6G의 DTN(Digital Twin Network) 요구사항",
+   "6G 의 DTN(Digital Twin Network) 아키텍처",
+   "- 6G의 DTN(Digital Twin Network) 아키텍처",
+   "- 6G의 DTN(Digital Twin Network) 아키텍처 상세 설명",
+   "6G DTN의 Use-Case"
   ]
  },
  {
@@ -4411,7 +5082,16 @@
    310
   ],
   "keywords_note": "원문 키워드 칸에 다른 토픽(데이터거버넌스) 키워드가 들어가 있어 본문에서 발췌",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "네트워크 쉐어링 기술, MOCN(Multi-Operator Core Network)의 개요",
+   "- MOCN의 정의",
+   "- MOCN의 특징",
+   "MOCN 의 구성도와 동작절차",
+   "- MOCN의 구성도",
+   "- MOCN의 동작절차",
+   "MOCN과 MORAN의 비교"
+  ]
  },
  {
   "id": "NW_197",
@@ -4477,7 +5157,20 @@
    311,
    315
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "미래 인터넷을 위한 망중립성(Network Neutrality)의 개요",
+   "- 미래 인터넷을 위한 망중립성(Network Neutrality)의 정의",
+   "- 망중립성 이슈 발생 배경",
+   "- 망중립성의 3가지 원칙",
+   "망중립성 잼정사항 및 정책이슈",
+   "- 망중립성 주요 쟁점사항",
+   "- 망중립성 정책이슈",
+   "망중립성 이슈에 대한 시사점과 대응방안",
+   "- 망중립성 이슈에 대한 시사점",
+   "망중립성 및 인터넷 트래픽 관리에 관한 가이드라인 개정안 주요 내용(20.12.28)",
+   "- 개정안 주요내용"
+  ]
  },
  {
   "id": "NW_198",
@@ -4528,6 +5221,12 @@
   "pages": [
    316,
    317
+  ],
+  "outline": [
+   "통신서비스 품질유지의무, 넷플릭스(Netflix)법 개요",
+   "넷플릭스법 규제대상 및 부과의무",
+   "- 넷플릭스법 규제대상",
+   "넷플릭스법의 찬반 논란"
   ]
  },
  {
@@ -4586,7 +5285,13 @@
    318,
    322
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "돈 번 나라에 세금 내는, 디지털세의 개념",
+   "디지털세의 과세 방식",
+   "- 매출발생국에 과세권 배분하는 필라1(Pillar 1) 방식",
+   "시행 불투명하게 만드는, 디지털세의 쟁점"
+  ]
  },
  {
   "id": "NW_201",
@@ -4644,6 +5349,15 @@
   "pages": [
    323,
    327
+  ],
+  "outline": [
+   "Middle Mile 최소화를 통한 콘텐츠 유통 기술 혁명, CDN 개요",
+   "- CDN (Contents Delivery Network) 정의",
+   "- 이해관계자 관점 별 특징",
+   "CDN(Contents Delivery Network) 개념도 및 구성요소",
+   "- CDN 개념도",
+   "- CDN 구성요소",
+   "CDN 기술요소"
   ]
  },
  {
@@ -4707,6 +5421,15 @@
   "pages": [
    328,
    340
+  ],
+  "outline": [
+   "라우팅 프로토콜",
+   "- Routing과 Routing Protocol의 개념",
+   "라우팅 프로토콜의 분류 및 상세설명",
+   "- 라우팅 프로토콜 분류",
+   "RIP : (Routing Information Protocol): RIPv1/RIPv2)",
+   "IGRP (Interior Gateway Routing Protocol): CISCO 독자 프로토콜",
+   "IGRP 구성 예"
   ]
  },
  {
@@ -4743,7 +5466,12 @@
    341,
    342
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "라우팅 프로토콜의 개요",
+   "라우팅 프로토콜의 분류 및 상세설명",
+   "- 라우팅 프로토콜 분류"
+  ]
  },
  {
   "id": "NW_206",
@@ -4776,7 +5504,11 @@
    343,
    344
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "내/외부 관점 라우팅 IGP, EGP 개념과 특성",
+   "내/외부 관점 라우팅 개념도"
+  ]
  },
  {
   "id": "NW_207",
@@ -4853,6 +5585,17 @@
   "pages": [
    345,
    349
+  ],
+  "outline": [
+   "간단하고 가장 널리 사용되는 TCP/IP 내부 라우팅 프로토콜, RIP 개요",
+   "- RIP(Routing Information Protocol) 정의",
+   "- RIP 특징",
+   "RIP 라우팅 정보와 경로 거리 척도 및 경로 결정 알고리즘",
+   "- RIP 라우팅 정보와 경로 거리 척도",
+   "RIP 경로 결정과 정보 전파(4 개의 NW 로 이루어진 간단한 AS 의 예)",
+   "RIP 일반 동작, 메시지 교환, 타이머",
+   "RIP 버전별 특성",
+   "- RIPv2 특성"
   ]
  },
  {
@@ -4888,7 +5631,12 @@
    351
   ],
   "note": "원문 '정의' 칸은 SPF로 적혀 있으나 이는 Link State 설명이라, 원문 특징·개념도 설명으로 정의를 정리함",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "거리중심의 프로토콜 Distance Vector Algorithm의 개요",
+   "- Distance Vector Algorithm의 정의",
+   "- Distance Vector Algorithm 특징"
+  ]
  },
  {
   "id": "NW_209",
@@ -4924,7 +5672,11 @@
    352,
    353
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "라우팅 테이블 관리 Link State Algorithm 개요",
+   "Link State Algorithm 동작 방식"
+  ]
  },
  {
   "id": "NW_210",
@@ -4979,7 +5731,17 @@
    354,
    355
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "RIP (Routing Information Protocol)",
+   "- RIP의 정의",
+   "- RIP의 특징",
+   "RIP(Routing Information Protocol) 의 패킷구조및 주요내용",
+   "- RIP 의 패킷구조",
+   "- RIP 의 주요내용",
+   "RIP의 한계및 해결책",
+   "- RIP의 한계"
+  ]
  },
  {
   "id": "NW_211",
@@ -5034,6 +5796,15 @@
   "pages": [
    356,
    359
+  ],
+  "outline": [
+   "OSPF(Open Shortest Path First)",
+   "- OSPF 의 정의",
+   "- OSPF 의 특징",
+   "OSPF 구조 및 주요내용",
+   "- OSPF의 구조도",
+   "AS external Link Advertisement: ASBR이 생성, 다른 AS내의 목적지 전달",
+   "- 특징"
   ]
  },
  {
@@ -5090,7 +5861,16 @@
    360,
    361
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "라우팅의 최적 경로 선정 기준, 라우팅 프로토콜 메트릭의 개요",
+   "- 라우팅 프로토콜 메트릭의 정의",
+   "- 라우팅 경로 결정 요소",
+   "라우팅 메트릭의 경로선정 메커니즘과 유형",
+   "- 라우팅 메트릭의 경로선정 메커니즘",
+   "- 라우팅 프로토콜 메트릭 유형",
+   "라우팅 프로토콜 별 활용 메트릭"
+  ]
  },
  {
   "id": "NW_212_01",
@@ -5142,6 +5922,15 @@
   "pages": [
    362,
    363
+  ],
+  "outline": [
+   "스위치 이중화 구조 문제해결, STP의 개요",
+   "- STP(Spinning Tree Protocol)의 정의",
+   "- 스위치 이중화 구조 문제점",
+   "STP의 구성도와 구성요소",
+   "- STP의 구성도",
+   "- STP의 구성요소",
+   "STP와 VRRP의 비교"
   ]
  },
  {
@@ -5209,7 +5998,21 @@
    368
   ],
   "note": "NW_222 스마트 홈과 거의 같은 내용",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "스마트홈(Smart Home)의 개요",
+   "- 스마트홈(Smart Home)의 정의",
+   "- 스마트홈(Smart Home)의 적용분야",
+   "스마트홈(Smart Home)의 구성도 및 구성요소",
+   "- 스마트홈(Smart Home)의 구성도",
+   "- 스마트홈(Smart Home)의 구성요소",
+   "- 스마트홈(Smart Home)의 기능 요소",
+   "IoT 보안가이드에 기반한 스마트 홈 제품 유형별 보안 위협 및 대응방안",
+   "- 스마트 홈 제품 유형별 보안위협",
+   "국내 스마트 홈 활성화를 위한 중소기업 로드맵과 표준화 동향",
+   "- 스마트 홈 플랫폼 중소기업형 기술 로드맵",
+   "- 표준화 동향"
+  ]
  },
  {
   "id": "NW_222",
@@ -5276,7 +6079,21 @@
    374
   ],
   "note": "NW_213 Home Networking과 거의 같은 내용",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "스마트홈(Smart Home)의 개요",
+   "- 스마트홈(Smart Home)의 정의",
+   "- 스마트홈(Smart Home)의 적용분야",
+   "스마트홈(Smart Home)의 구성도 및 구성요소",
+   "- 스마트홈(Smart Home)의 구성도",
+   "- 스마트홈(Smart Home)의 구성요소",
+   "- 스마트홈(Smart Home)의 기능 요소",
+   "IoT 보안가이드에 기반한 스마트 홈 제품 유형별 보안 위협 및 대응방안",
+   "- 스마트 홈 제품 유형별 보안위협",
+   "국내 스마트 홈 활성화를 위한 중소기업 로드맵과 표준화 동향",
+   "- 스마트 홈 플랫폼 중소기업형 기술 로드맵",
+   "- 표준화 동향"
+  ]
  },
  {
   "id": "NW_233",
@@ -5339,7 +6156,19 @@
    375,
    378
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "네트워크의 추상화를 통한 효율적 네트워크 트래픽 관리, SDN의 개요",
+   "- SDN(Software Defined Network)의 정의",
+   "SDN 개념도 및 구성요소",
+   "- SDN 개념도",
+   "- SDN LAYER 구성도",
+   "- SDN의 구성 요소",
+   "SDN 주요 기술 요소",
+   "- 주요 요소기술",
+   "- 주요 요소기술 상세",
+   "SDN과 기존 네트워크 비교"
+  ]
  },
  {
   "id": "NW_234",
@@ -5394,6 +6223,16 @@
   "pages": [
    379,
    384
+  ],
+  "outline": [
+   "관심사의 분리를 통한 네트워크 가상화 기술, OpenFlow의 개요",
+   "- OpenFlow의 정의",
+   "- OpenFlow의 특징",
+   "OpenFlow 시스템 구성도 및 구성요소",
+   "- OpenFlow 시스템 구성도",
+   "- OpenFlow 시스템 구성요소",
+   "OpenFlow 동작절차 개념도와 동작상세",
+   "- OpenFlow 동작절차 개념도"
   ]
  },
  {
@@ -5434,6 +6273,14 @@
   "pages": [
    385,
    387
+  ],
+  "outline": [
+   "종단간 SDN 프로덕션 서비스를 위한 SDN-WAN의 개요",
+   "- SD-WAN(Software-Defined Wide-Area Networking)의 정의",
+   "- SD-WAN 등장 배경 및 목적",
+   "SD-WAN의 개념도와 기술 요소",
+   "- SD-WAN의 개념도",
+   "- SD-WAN의 구성 및 기술 요소"
   ]
  },
  {
@@ -5479,6 +6326,13 @@
   "pages": [
    388,
    391
+  ],
+  "outline": [
+   "기관 인프라의 미래, SDE의 개요",
+   "- SDE(Software Defined Everything)의 정의",
+   "- SDE의 특징",
+   "SDE의 구성도와 혁신 내용",
+   "- SDE의 구성도"
   ]
  },
  {
@@ -5533,6 +6387,15 @@
   "pages": [
    392,
    395
+  ],
+  "outline": [
+   "네트워크 기능 가상화, NFV의 개요",
+   "- NFV(Network Function Virtualization )의 정의",
+   "- NFV 목적",
+   "NFV의 프레임워크 및 구성요소",
+   "- NFV 프레임워크",
+   "- NFV의 구성요소",
+   "NFV와 SDN의 비교"
   ]
  },
  {
@@ -5582,7 +6445,14 @@
    395,
    398
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "NFV를 위한 오픈소스 소프트웨어 플랫폼, OPNFV의 개요",
+   "OPNFV의 주요 개발 범위 및 구조",
+   "- OPNFV의 개발 범위 개념도",
+   "- OPNFV의 기술구조",
+   "OPNFV의 기술동향"
+  ]
  },
  {
   "id": "NW_239",
@@ -5622,7 +6492,12 @@
    399,
    402
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "SDDC 의 구성도 및 구성요소",
+   "- SDDC 의 구성도",
+   "SDDC 의 주요 기술요소"
+  ]
  },
  {
   "id": "NW_240",
@@ -5665,6 +6540,12 @@
   "pages": [
    403,
    404
+  ],
+  "outline": [
+   "O-RAN(Open Radio Access Network) Architecture와 구성 요소",
+   "- O-RAN(Open Radio Access Network) Architecture",
+   "- O-RAN(Open Radio Access Network) 구성 요소",
+   "기존 RAN과 O-RAN의 비교"
   ]
  },
  {
@@ -5699,7 +6580,10 @@
    406
   ],
   "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "FEC의 주요 용도"
+  ]
  },
  {
   "id": "NW_245",
@@ -5760,6 +6644,13 @@
   "pages": [
    407,
    412
+  ],
+  "outline": [
+   "패리티 비트 종류",
+   "동작 과정",
+   "예시",
+   "단점",
+   "동작 과정"
   ]
  },
  {
@@ -5795,7 +6686,12 @@
    413,
    415
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "CRC의 개념도 및 송수신 계산방법",
+   "- CRC의 개념도",
+   "- CRC의 송수신측 계산방법"
+  ]
  },
  {
   "id": "NW_247",
@@ -5852,7 +6748,18 @@
    416,
    421
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "데이터 링크 계층의 오류제어 개요",
+   "- 오류제어의 개념",
+   "- 오류의 발생원인",
+   "ARQ(Automatic Repeat Request)의 개념 및 방식",
+   "- ARQ 의 개념",
+   "- ARQ 에 의한 재전송이 발생하는 경우",
+   "ARQ 처리 과정의 문제 설명",
+   "- Go-back-n ARQ",
+   "- Selective-reject ARQ"
+  ]
  },
  {
   "id": "NW_248",
@@ -5890,7 +6797,10 @@
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
   "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "검사합 처리 절차(16비트 기준)"
+  ]
  },
  {
   "id": "NW_249",
@@ -5925,7 +6835,12 @@
    424,
    426
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "해밍 코드 설명",
+   "- 해밍 코드(Hamming code)",
+   "- 해밍 코드 전송 방법"
+  ]
  },
  {
   "id": "NW_271",
@@ -5960,7 +6875,10 @@
   ],
   "keywords_note": "원문 키워드 칸이 비어 있어 본문에서 발췌",
   "note": "원문 본문이 이미지라 페이지 이미지를 읽어 정리",
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "DSSS 동작"
+  ]
  },
  {
   "id": "NW_273",
@@ -6007,7 +6925,16 @@
    429,
    434
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "분권화 된 시스템의 핵심 기술, P2P 네트워크의 기술 개요",
+   "- P2P 네트워크의 개념",
+   "- P2P 네트워크 사용 필요성",
+   "P2P 네트워크의 요소 기술 및 세부유형",
+   "- P2P 네트워크의 요소 기술",
+   "- P2P 네트워크의 세부유형",
+   "P2P 네트워크 구현 시 고려사항"
+  ]
  },
  {
   "id": "NW_275",
@@ -6073,6 +7000,18 @@
   "pages": [
    435,
    437
+  ],
+  "outline": [
+   "SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 개념 및 네트워크 특징",
+   "- SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 개념",
+   "- SATIN(Satellite-Aerial-Terrestrial Integrated Network) 의 특징",
+   "SATIN의 재난대비 활용방법",
+   "- 재난대비, UAV 활용, 낙후지역 서비스 구성도",
+   "- SATIN의 재난대비 활용방법 시나리오",
+   "SATIN의 UAV 활용 및 낙후지역 네트워크 활용방법",
+   "- SATIN의 UAV(Unmanned Aerial Vehicle) 활용 시나리오",
+   "- SATIN의 낙후지역 네트워크 서비스 활용 시나리오",
+   "SATIN 표준화 및 산업동향"
   ]
  },
  {
@@ -6115,6 +7054,14 @@
   "pages": [
    438,
    439
+  ],
+  "outline": [
+   "의도 기반 네트워킹(Intent-Based Networking)의 개념",
+   "- 의도 기반 네트워킹의 정의",
+   "- 의도 기반 네트워킹의 등장 배경",
+   "의도 기반 네트워킹의 매커니즘 및 기술요소",
+   "- 의도 기반 네트워킹의 매커니즘",
+   "- 의도 기반 네트워킹의 기술요소"
   ]
  },
  {
@@ -6161,6 +7108,12 @@
   "pages": [
    440,
    441
+  ],
+  "outline": [
+   "ZSM(Zero-touch network and Service Management)의 구성도 및 구성요소",
+   "- ZSM(Zero-touch network and Service Management)의 구성도",
+   "- ZSM 의 구성요소",
+   "ZSM 에서 AI 기술사용 시 제약사항"
   ]
  },
  {
@@ -6217,6 +7170,12 @@
    442,
    444
   ],
-  "reviewed": true
+  "reviewed": true,
+  "outline": [
+   "산업용 직렬 방식 통신 프로토콜, Modbus 의 개요",
+   "Modbus 프로토콜 유형 및 프레임 구조",
+   "- Modbus 프로토콜 유형",
+   "Modbus 프로토콜 활용 사례"
+  ]
  }
 ]

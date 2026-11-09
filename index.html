@@ -6,12 +6,6 @@ script: /assets/js/list.js
 <section class="controls">
   <input id="q" class="search" type="search" placeholder="제목·키워드·정의 검색" autocomplete="off" enterkeyhint="search" aria-label="검색">
   <div class="chips" id="domainChips" role="group" aria-label="도메인 필터"></div>
-  <div class="chips" id="statusChips" role="group" aria-label="학습 상태 필터">
-    <button type="button" class="chip on" data-status="all">전체</button>
-    <button type="button" class="chip" data-status="dont">몰라요</button>
-    <button type="button" class="chip" data-status="know">알아요</button>
-    <button type="button" class="chip" data-status="new">미학습</button>
-  </div>
   <p class="meta" id="count">불러오는 중…</p>
 </section>
 <ul class="list" id="list"></ul>

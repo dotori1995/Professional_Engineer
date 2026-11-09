@@ -31,7 +31,7 @@
   <nav class="tabbar" aria-label="주요 메뉴">
     <a href="{{ '/' | relative_url }}" class="{% if page.page_id == 'home' %}on{% endif %}"><span>📚</span>목록</a>
     <a href="{{ '/cards/' | relative_url }}" class="{% if page.page_id == 'cards' %}on{% endif %}"><span>🃏</span>카드</a>
-    <a href="{{ '/cards/?mode=dont' | relative_url }}"><span>🔁</span>복습</a>
+    <a href="{{ '/cards/?shuffle=1' | relative_url }}"><span>🔀</span>랜덤</a>
   </nav>
   <script src="{{ '/assets/js/app.js' | relative_url }}"></script>
   {% if page.script %}<script src="{{ page.script | relative_url }}"></script>{% endif %}

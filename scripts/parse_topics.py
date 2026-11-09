@@ -11,7 +11,8 @@
   * 본문은 'I. ...', 'II. ...' 섹션과 '- ' 불릿으로 구성
 
 결과 JSON 각 항목: id, code, title, domain, category, definition, keywords[], sections[{title, bullets[]}],
-dueum(원문 '암기법' 칸에 값이 있을 때만), pages[start,end], questions[], warnings[]
+dueum(원문 '암기법' 칸에 값이 있을 때만), pages[start,end], questions[], warnings[], outline[](목차)
+검토 필드(overrides에서만): review[] = '[A]/[B]/[C]/[D] ...' 형식의 검토 메모 (A 사실오류·B 최신화·C 모호·D 파싱깨짐)
 같은 id에 대해 `_data/overrides/<domain>.json` 이 있으면 해당 필드를 덮어씀(수동 보정용).
 """
 import argparse, json, os, re, subprocess, sys
@@ -289,6 +290,22 @@ def main():
                         e[k] = v
                 e['reviewed'] = True
                 e['warnings'] = [w for w in e['warnings'] if not (('키워드' in w and e.get('keywords')) or ('정의' in w and e.get('definition')))]
+    # 목차(outline): 섹션 제목 + 섹션 안 '▸' 소제목. 문자열 목록, '- '로 시작하면 하위 항목. overrides의 outline이 있으면 대체.
+    for e in entries:
+        if 'outline' in e:
+            continue
+        ol = []
+        for s in e.get('sections', []):
+            t = re.sub(r'^[\s\.\-·]+', '', s.get('title', '')).rstrip(' .')
+            if not t:
+                continue
+            ol.append(t)
+            for b in s.get('bullets', []):
+                if b.startswith('▸ '):
+                    sub = b[2:].strip()
+                    if sub and sub != t:
+                        ol.append('- ' + sub)
+        e['outline'] = ol
     os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
     json.dump(entries, open(a.out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'TOC {len(toc)}개, 헤더 매칭 {sum(1 for s in starts if s[1])}개, 출력 {len(entries)}개 -> {a.out}', file=sys.stderr)
