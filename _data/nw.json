@@ -4650,7 +4650,8 @@
   ],
   "quiz_groups": [],
   "gloss": {
-   "DER": "Distinguished Encoding Rules"
+   "DER": "Distinguished Encoding Rules",
+   "XDR": "External Data Representation"
   }
  },
  {
@@ -11048,7 +11049,8 @@
   "reviewed": true,
   "gloss": {
    "AP": "Access Point",
-   "GPS": "Global Positioning System"
+   "GPS": "Global Positioning System",
+   "IPS": "Indoor Positioning System"
   }
  },
  {
@@ -18940,8 +18942,7 @@
   "reviewed": true,
   "gloss": {
    "SA": "Standalone",
-   "DC": "Dual Connectivity",
-   "SMF": "Session Management Function"
+   "DC": "Dual Connectivity"
   }
  },
  {
@@ -19669,8 +19670,7 @@
   "reviewed": true,
   "gloss": {
    "SMF": "Session Management Function",
-   "DX": "Digital Transformation",
-   "SA": "Standalone"
+   "DX": "Digital Transformation"
   }
  },
  {
@@ -21296,8 +21296,7 @@
   ],
   "reviewed": true,
   "gloss": {
-   "AD": "Administrative Distance",
-   "ISP": "Internet Service Provider"
+   "AD": "Administrative Distance"
   }
  },
  {
@@ -21758,7 +21757,8 @@
   "reviewed": true,
   "gloss": {
    "DR": "Designated Router",
-   "IS": "Intermediate System"
+   "IS": "Intermediate System",
+   "SPF": "Shortest Path First"
   }
  },
  {
@@ -21995,7 +21995,8 @@
    "LSR": "Link State Request",
    "ABR": "Area Border Router",
    "AS": "Autonomous System",
-   "DR": "Designated Router"
+   "DR": "Designated Router",
+   "SPF": "Shortest Path First"
   }
  },
  {
@@ -22104,8 +22105,7 @@
   ],
   "reviewed": true,
   "gloss": {
-   "AD": "Administrative Distance",
-   "AS": "Autonomous System"
+   "AD": "Administrative Distance"
   }
  },
  {
@@ -23631,10 +23631,7 @@
   "quiz_groups": [
    "sdn"
   ],
-  "reviewed": true,
-  "gloss": {
-   "FEC": "Forward Error Correction"
-  }
+  "reviewed": true
  },
  {
   "id": "NW_236",
@@ -24091,8 +24088,7 @@
   ],
   "reviewed": true,
   "gloss": {
-   "CMP": "Cloud Management Platform",
-   "HCI": "Hyper-Converged Infrastructure"
+   "CMP": "Cloud Management Platform"
   }
  },
  {

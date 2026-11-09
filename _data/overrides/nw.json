@@ -2177,7 +2177,10 @@
       "프라이버시"
     ],
     "title": "실내외 위치 측위 기술(Indoor/Outdoor Positioning)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "IPS": "Indoor Positioning System"
+    }
   },
   "NW_104": {
     "keywords": [
@@ -5816,7 +5819,8 @@
     "reviewed": true,
     "gloss": {
       "DR": "Designated Router",
-      "IS": "Intermediate System"
+      "IS": "Intermediate System",
+      "SPF": "Shortest Path First"
     }
   },
   "NW_210": {
@@ -12877,7 +12881,8 @@
     "gloss": {
       "LSR": "Link State Request",
       "DR": "Designated Router",
-      "AS": "Autonomous System"
+      "AS": "Autonomous System",
+      "SPF": "Shortest Path First"
     }
   },
   "NW_212_01": {
@@ -17089,7 +17094,10 @@
       "BER·DER(인코딩 규칙)",
       "MIME",
       "ASCII·EBCDIC·Unicode"
-    ]
+    ],
+    "gloss": {
+      "XDR": "External Data Representation"
+    }
   },
   "NW_040": {
     "name": "세션 계층(Session Layer, OSI 5계층)",

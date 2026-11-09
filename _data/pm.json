@@ -988,10 +988,7 @@
   "quiz_groups": [
    "pm"
   ],
-  "reviewed": true,
-  "gloss": {
-   "RAM": "Responsibility Assignment Matrix"
-  }
+  "reviewed": true
  },
  {
   "id": "PM_013",
@@ -2467,7 +2464,7 @@
    }
   ],
   "warnings": [],
-  "dueum": "명완검일수추개(명확·완전·검증·일관·수정·추적·운영 중 사용 가능)",
+  "dueum": "명완검일수추개(명확·완전·검증 가능·일관·수정 용이·추적 가능·개발 후 운영·유지보수 활용, IEEE 830-1984 7특성)",
   "pages": [
    32,
    35
@@ -2497,6 +2494,7 @@
    "상세 요구사항(기능·성능·인터페이스·제약)"
   ],
   "keywords_ref": [
+   "1998판 변경: 정확성·순위화 추가, 운영·유지보수 활용 제외",
    "ISO/IEC/IEEE 29148(대체 표준)",
    "SW진흥법 요구사항 상세화·과업심의위원회",
    "SRS 없는 사업 문제: 과업 변경·분쟁",
@@ -7021,10 +7019,7 @@
   "quiz_groups": [
    "pm"
   ],
-  "reviewed": true,
-  "gloss": {
-   "FP": "Function Point"
-  }
+  "reviewed": true
  },
  {
   "id": "PM_065",
@@ -8663,7 +8658,7 @@
   ],
   "reviewed": true,
   "gloss": {
-   "TDD": "Time Division Duplex"
+   "TDD": "Test-Driven Development"
   }
  },
  {
@@ -9230,10 +9225,7 @@
   "quiz_groups": [
    "pm"
   ],
-  "reviewed": true,
-  "gloss": {
-   "EVM": "Earned Value Management"
-  }
+  "reviewed": true
  },
  {
   "id": "PM_086",
