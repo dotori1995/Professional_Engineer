@@ -7671,6 +7671,469 @@
   }
  },
  {
+  "id": "SE_049_02",
+  "code": "SE_049_02",
+  "title": "고회피 적응형 위협(HEAT, Highly Evasive Adaptive Threats)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 해킹",
+  "definition": "웹 브라우저를 공격 경로로 삼아 HTML 스머글링·자바스크립트 난독화·평판 좋은 도메인 악용 등으로 안티바이러스·샌드박스·URL 필터·HTTP 검사 같은 기존 보안 계층을 회피하고 악성코드나 피싱 페이지를 전달하는 지능형 위협",
+  "keywords": [
+   "공격 기법: 동적 파일 다운로드(HTML 스머글링) · 대체 피싱 경로(SNS·협업 도구) · 일시적·손상 도메인 사용 · HTTP 트래픽 검사 회피",
+   "회피 대상: 안티바이러스·샌드박스 · 이메일 링크 분석 · URL 분류·IoC · HTTP 콘텐츠 검사",
+   "대응: 원격 브라우저 격리(RBI) · 제로 트러스트 · SASE"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "업무 환경",
+      "items": [
+       "클라우드·SaaS로 업무 대부분이 브라우저에서 수행"
+      ]
+     },
+     {
+      "title": "기존 방어",
+      "items": [
+       "시그니처·샌드박스·URL 평판에 의존해 브라우저 내부 동적 생성 콘텐츠 분석 곤란"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 기법",
+    "subsections": [
+     {
+      "title": "동적 파일 다운로드",
+      "items": [
+       "HTML5·자바스크립트로 브라우저 안에서 악성 파일 조립, 네트워크 콘텐츠 검사 우회"
+      ]
+     },
+     {
+      "title": "대체 피싱 경로",
+      "items": [
+       "이메일 대신 SNS·협업 도구 초대 링크로 피싱 탐지 회피"
+      ]
+     },
+     {
+      "title": "일시적·손상 도메인",
+      "items": [
+       "크롤러 분류 전 사이트 교체, 정상 평판 도메인을 악성으로 전환"
+      ]
+     },
+     {
+      "title": "HTTP 검사 회피",
+      "items": [
+       "난독화 스크립트로 브라우저에서 익스플로잇 생성(eval 등)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "격리",
+      "items": [
+       "원격 브라우저 격리로 웹 코드는 클라우드에서 실행하고 안전한 화면만 전달"
+      ]
+     },
+     {
+      "title": "구조",
+      "items": [
+       "제로 트러스트·SASE로 모든 웹 접근 검사"
+      ]
+     },
+     {
+      "title": "운영",
+      "items": [
+       "브라우저 최신 패치, 위험 확장 차단, 피싱 인식 교육"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 업무 환경",
+   "- 기존 방어",
+   "공격 기법",
+   "- 동적 파일 다운로드",
+   "- 대체 피싱 경로",
+   "- 일시적·손상 도메인",
+   "- HTTP 검사 회피",
+   "대응",
+   "- 격리",
+   "- 구조",
+   "- 운영"
+  ],
+  "name": "고회피 적응형 위협(HEAT, Highly Evasive Adaptive Threats)",
+  "en": "Highly Evasive Adaptive Threats",
+  "keywords_must": [
+   "동적 파일 다운로드(HTML 스머글링)",
+   "대체 피싱 경로(SNS·협업 도구)",
+   "일시적·손상 도메인 사용",
+   "HTTP 트래픽 검사 회피",
+   "안티바이러스·샌드박스",
+   "이메일 링크 분석",
+   "URL 분류·IoC",
+   "HTTP 콘텐츠 검사",
+   "원격 브라우저 격리(RBI)",
+   "제로 트러스트",
+   "SASE"
+  ],
+  "keywords_ref": [
+   "2021 멘로 시큐리티 명명",
+   "HTML5 Blob·자바스크립트로 브라우저 안에서 파일 조립",
+   "Good2Bad 도메인(정상 평판 후 악성 전환)",
+   "랜섬웨어 초기 침투 매개",
+   "하이브리드 근무·클라우드 협업 확산",
+   "브라우저 보안 확장"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "동적 파일 다운로드(HTML 스머글링)",
+   "대체 피싱 경로(SNS·협업 도구)",
+   "일시적·손상 도메인 사용",
+   "HTTP 트래픽 검사 회피",
+   "안티바이러스·샌드박스",
+   "이메일 링크 분석",
+   "URL 분류·IoC",
+   "HTTP 콘텐츠 검사",
+   "원격 브라우저 격리(RBI)",
+   "제로 트러스트",
+   "SASE"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "RBI": "Remote Browser Isolation",
+   "SASE": "Secure Access Service Edge",
+   "IoC": "Indicators of Compromise"
+  }
+ },
+ {
+  "id": "SE_049_03",
+  "code": "SE_049_03",
+  "title": "인포스틸러(InfoStealer)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > SM > 취약점공격",
+  "definition": "사용자 PC에 침투해 웹 브라우저·이메일 클라이언트·암호화폐 지갑 등에 저장된 계정·쿠키·카드 정보·파일을 수집해 공격자 서버로 빼돌리는 정보 탈취형 악성코드",
+  "keywords": [
+   "탈취 정보: 저장 계정·비밀번호 · 세션 쿠키 · 신용카드·자동 완성 · 암호화폐 지갑 · 키로깅·클립보드",
+   "대표 종류: 비다르(Vidar) · 레드라인(RedLine) · 크립트봇(CryptBot)",
+   "대응: 다중 요소 인증(MFA)·패스키 · EDR 행위 탐지"
+  ],
+  "sections": [
+   {
+    "title": "공격 절차",
+    "subsections": [
+     {
+      "title": "1 감염",
+      "items": [
+       "피싱 메일, 크랙 파일, 검색 광고 위장 사이트로 유포"
+      ]
+     },
+     {
+      "title": "2 스캔",
+      "items": [
+       "브라우저 프로필·메일·지갑·문서 파일 탐색"
+      ]
+     },
+     {
+      "title": "3 수집",
+      "items": [
+       "계정·쿠키·히스토리·카드·키 입력·클립보드"
+      ]
+     },
+     {
+      "title": "4 복호화",
+      "items": [
+       "브라우저 암호 키를 얻어 저장 정보 평문화"
+      ]
+     },
+     {
+      "title": "5 전송",
+      "items": [
+       "C&C 서버로 업로드, 흔적 삭제"
+      ]
+     },
+     {
+      "title": "6 악용",
+      "items": [
+       "계정 탈취·판매, 랜섬웨어 등 2차 악성코드 설치"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "브라우저별 탈취 방식",
+    "subsections": [
+     {
+      "title": "크로미움(크롬·엣지)",
+      "items": [
+       "Local State의 encrypted_key를 Base64 디코딩해 AES 키 획득, SQLite DB(로그인·쿠키·카드) 복호화"
+      ]
+     },
+     {
+      "title": "게코(파이어폭스)",
+      "items": [
+       "logins.json 계정 정보를 NSS 라이브러리 PK11SDR_Decrypt 함수로 복호화, cookies·places.sqlite는 평문 조회"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "기술",
+      "items": [
+       "스팸 메일 차단, MFA·패스키, 자동 로그인 해제, EDR로 브라우저 DB 접근 탐지"
+      ]
+     },
+     {
+      "title": "관리",
+      "items": [
+       "정품 소프트웨어 사용, 비밀번호 관리자 사용, 주기적 히스토리·쿠키 정리"
+      ]
+     },
+     {
+      "title": "사고 시",
+      "items": [
+       "세션 전면 무효화, 비밀번호 변경, 유출 계정 모니터링"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "공격 절차",
+   "- 1 감염",
+   "- 2 스캔",
+   "- 3 수집",
+   "- 4 복호화",
+   "- 5 전송",
+   "- 6 악용",
+   "브라우저별 탈취 방식",
+   "- 크로미움(크롬·엣지)",
+   "- 게코(파이어폭스)",
+   "대응",
+   "- 기술",
+   "- 관리",
+   "- 사고 시"
+  ],
+  "name": "인포스틸러(InfoStealer)",
+  "en": "Information Stealer Malware",
+  "keywords_must": [
+   "저장 계정·비밀번호",
+   "세션 쿠키",
+   "신용카드·자동 완성",
+   "암호화폐 지갑",
+   "키로깅·클립보드",
+   "비다르(Vidar)",
+   "레드라인(RedLine)",
+   "크립트봇(CryptBot)",
+   "다중 요소 인증(MFA)·패스키",
+   "EDR 행위 탐지"
+  ],
+  "keywords_ref": [
+   "공격 절차: 감염→스캔→수집→복호화→C&C 전송→2차 악용",
+   "브라우저 비밀번호 저장 금지·정품 사용",
+   "크로미움: Local State의 Base64 AES 키로 SQLite Login Data 복호화",
+   "게코: logins.json을 NSS nss3.dll PK11SDR_Decrypt로 복호화",
+   "세션 쿠키 탈취로 MFA 우회",
+   "크랙·광고·피싱 유포",
+   "서비스형 인포스틸러(MaaS)",
+   "2024 크롬 앱 바인딩 암호화",
+   "다크웹 로그 판매"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "저장 계정·비밀번호",
+   "세션 쿠키",
+   "신용카드·자동 완성",
+   "암호화폐 지갑",
+   "키로깅·클립보드",
+   "비다르(Vidar)",
+   "레드라인(RedLine)",
+   "크립트봇(CryptBot)",
+   "다중 요소 인증(MFA)·패스키",
+   "EDR 행위 탐지"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "PC": "Personal Computer",
+   "MaaS": "Malware as a Service",
+   "NSS": "Network Security Services",
+   "EDR": "Endpoint Detection and Response",
+   "C&C": "Command and Control"
+  }
+ },
+ {
+  "id": "SE_049_04",
+  "code": "SE_049_04",
+  "title": "타이포스쿼팅(Typosquatting)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 해킹공격",
+  "definition": "사용자가 자주 방문하는 사이트 주소를 잘못 입력하기 쉬운 형태나 비슷해 보이는 문자로 바꾼 가짜 도메인(또는 오픈소스 패키지명)을 등록해 접속자를 피싱·악성코드 배포·광고 사기로 유도하는 사회공학 공격(URL 하이재킹)",
+  "keywords": [
+   "공격 방식: 오탈자 도메인 · 다른 최상위 도메인 · 관련 단어 조합(콤보 스쿼팅) · 구두점 추가 · 유사 문자(호모글리프)",
+   "공격 목적: 부당 이득(도메인 되팔기) · 광고 사기 · 정보 탈취 · 악성코드 전송 · 명예 훼손"
+  ],
+  "sections": [
+   {
+    "title": "위장 수법",
+    "subsections": [
+     {
+      "title": "사회공학",
+      "items": [
+       "정상 사이트와 구별하기 어려운 URL로 신뢰 악용"
+      ]
+     },
+     {
+      "title": "위장",
+      "items": [
+       "가짜 사이트에도 HTTPS 인증서를 적용해 안전한 사이트처럼 보임"
+      ]
+     },
+     {
+      "title": "확장",
+      "items": [
+       "도메인을 넘어 오픈소스 패키지 이름으로 공급망 공격"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공격 방식",
+    "subsections": [
+     {
+      "title": "오탈자",
+      "items": [
+       "csoonline.com 대신 csonline.com"
+      ]
+     },
+     {
+      "title": "최상위 도메인 변경",
+      "items": [
+       ".co.kr 대신 .kr"
+      ]
+     },
+     {
+      "title": "단어 조합",
+      "items": [
+       "정상 도메인에 security·login 등 결합"
+      ]
+     },
+     {
+      "title": "구두점",
+      "items": [
+       "cso.online.com처럼 점·하이픈 추가"
+      ]
+     },
+     {
+      "title": "유사 문자",
+      "items": [
+       "소문자 l 대신 대문자 I, 퓨니코드 문자"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "기업",
+      "items": [
+       "주요 오탈자·유사 도메인 선점, 신규 유사 도메인 등록 감시, 위반 도메인 분쟁 신청"
+      ]
+     },
+     {
+      "title": "기술",
+      "items": [
+       "브라우저·DNS 필터링, 메일 DMARC, 패키지 저장소 서명·의존성 검증"
+      ]
+     },
+     {
+      "title": "사용자",
+      "items": [
+       "북마크 사용, 주소창 확인, 다운로드 출처 확인"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "위장 수법",
+   "- 사회공학",
+   "- 위장",
+   "- 확장",
+   "공격 방식",
+   "- 오탈자",
+   "- 최상위 도메인 변경",
+   "- 단어 조합",
+   "- 구두점",
+   "- 유사 문자",
+   "대응",
+   "- 기업",
+   "- 기술",
+   "- 사용자"
+  ],
+  "name": "타이포스쿼팅(Typosquatting)",
+  "en": "Typosquatting",
+  "keywords_must": [
+   "오탈자 도메인",
+   "다른 최상위 도메인",
+   "관련 단어 조합(콤보 스쿼팅)",
+   "구두점 추가",
+   "유사 문자(호모글리프)",
+   "부당 이득(도메인 되팔기)",
+   "광고 사기",
+   "정보 탈취",
+   "악성코드 전송",
+   "명예 훼손"
+  ],
+  "keywords_ref": [
+   "대응: 유사 도메인 선점·모니터링·DMARC",
+   "예: goggle.com·googIe.com(대문자 I)·google_mail.com·cso.online.com",
+   "국제화 도메인 퓨니코드 공격",
+   "npm·PyPI 유사 패키지명 공급망 공격",
+   "가짜 사이트도 SSL 인증서 사용",
+   "사이버스쿼팅 분쟁 해결(UDRP)",
+   "북마크 사용 습관"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "오탈자 도메인",
+   "다른 최상위 도메인",
+   "관련 단어 조합(콤보 스쿼팅)",
+   "구두점 추가",
+   "유사 문자(호모글리프)",
+   "부당 이득(도메인 되팔기)",
+   "광고 사기",
+   "정보 탈취",
+   "악성코드 전송",
+   "명예 훼손"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "DMARC": "Domain-based Message Authentication, Reporting and Conformance",
+   "UDRP": "Uniform Domain-Name Dispute-Resolution Policy"
+  }
+ },
+ {
   "id": "SE_051",
   "code": "SE_051",
   "title": "스턱스넷(Stuxnet)",
