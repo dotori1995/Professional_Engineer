@@ -24,14 +24,17 @@
    "추리통계(Inferential Statistics)",
    "확률(Probability)",
    "추정(Estimation)",
-   "가설검정(Hypothesis Testing)"
+   "가설검정(Hypothesis Testing)",
+   "추정치(Estimate)",
+   "표본추출(Sampling)"
   ],
   "keywords_ref": [
-   "표본추출(Sampling)",
    "빈도주의(Frequentist)",
    "베이지안(Bayesian)",
    "데이터 과학(Data Science)",
-   "탐색적 자료 분석(Exploratory Data Analysis)"
+   "탐색적 자료 분석(Exploratory Data Analysis)",
+   "차이검정·관계검정(Difference·Relationship Test)",
+   "데이터 분석 방법론(KDD·SEMMA·CRISP-DM)"
   ],
   "outline": [
    "통계학의 개념",
@@ -102,7 +105,9 @@
    "추리통계(Inferential Statistics)",
    "확률(Probability)",
    "추정(Estimation)",
-   "가설검정(Hypothesis Testing)"
+   "가설검정(Hypothesis Testing)",
+   "추정치(Estimate)",
+   "표본추출(Sampling)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -348,13 +353,13 @@
    "서열척도(Ordinal Scale)",
    "등간척도(Interval Scale)",
    "비율척도(Ratio Scale)",
-   "절대영점(Absolute Zero)"
+   "횡단면 자료(Cross-sectional Data)",
+   "종단 자료(Longitudinal Data)"
   ],
   "keywords_ref": [
    "질적 자료(Qualitative)",
    "양적 자료(Quantitative)",
-   "정형·반정형·비정형(Structured·Semi·Unstructured)",
-   "횡단면·시계열 자료(Cross-sectional·Time Series)"
+   "절대영점(Absolute Zero)"
   ],
   "outline": [
    "자료의 개념",
@@ -419,7 +424,8 @@
    "서열척도(Ordinal Scale)",
    "등간척도(Interval Scale)",
    "비율척도(Ratio Scale)",
-   "절대영점(Absolute Zero)"
+   "횡단면 자료(Cross-sectional Data)",
+   "종단 자료(Longitudinal Data)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -455,9 +461,11 @@
   "keywords_ref": [
    "민감도(Sensitivity) = 재현율",
    "특이도(Specificity) = TN/실제 음성",
-   "Fβ 점수(Fβ-score)",
    "PR 곡선(Precision-Recall Curve)",
-   "클래스 불균형(Class Imbalance)"
+   "클래스 불균형(Class Imbalance)",
+   "F-measure(Fβ, β=1이면 F1)",
+   "위양성률(Fall-out) = 1 − 특이도",
+   "1종 오류 = 거짓 양성 · 2종 오류 = 거짓 음성"
   ],
   "outline": [
    "정밀도·재현율의 개념",
@@ -495,8 +503,8 @@
      {
       "title": null,
       "items": [
-       "관련 문서 10건 중 검색 8건, 그중 관련 6건 → 정밀도 6/8=0.75, 재현율 6/10=0.6",
-       "F1 = 2·0.75·0.6/(0.75+0.6) ≈ 0.67"
+       "검색 20건 중 관련 16건, 전체 관련 문서 32건 → 정밀도 16/20=0.8, 재현율 16/32=0.5",
+       "F1 = 2·0.8·0.5/(0.8+0.5) ≈ 0.62"
       ]
      }
     ]
@@ -553,8 +561,8 @@
   "keywords_must": [
    "왜도(Skewness)",
    "첨도(Kurtosis)",
-   "3차 적률(Third Moment)",
-   "4차 적률(Fourth Moment)",
+   "3차 표준화 적률(Third Standardized Moment)",
+   "4차 표준화 적률(Fourth Standardized Moment)",
    "양의 왜도(Positive Skew)",
    "음의 왜도(Negative Skew)",
    "초과첨도(Excess Kurtosis)",
@@ -566,8 +574,9 @@
    "중첨 분포(Mesokurtic)",
    "두꺼운 꼬리(Fat Tail)",
    "로그 변환(Log Transformation)",
-   "자크-베라 검정(Jarque-Bera Test)",
-   "Q-Q 플롯(Q-Q Plot)"
+   "Q-Q 플롯(Q-Q Plot)",
+   "판단: S=0 평균=중앙값=최빈값",
+   "초과첨도 K>0 뾰족 · K<0 완만"
   ],
   "outline": [
    "왜도·첨도의 개념",
@@ -632,8 +641,8 @@
   "quiz_terms": [
    "왜도(Skewness)",
    "첨도(Kurtosis)",
-   "3차 적률(Third Moment)",
-   "4차 적률(Fourth Moment)",
+   "3차 표준화 적률(Third Standardized Moment)",
+   "4차 표준화 적률(Fourth Standardized Moment)",
    "양의 왜도(Positive Skew)",
    "음의 왜도(Negative Skew)",
    "초과첨도(Excess Kurtosis)",
@@ -669,14 +678,14 @@
    "재검사 신뢰도(Test-Retest)",
    "반분 신뢰도(Split-half)",
    "크론바흐 알파(Cronbach's α)",
-   "필요조건(Necessary Condition)"
+   "신뢰도는 타당도의 필요조건(Necessary Condition)"
   ],
   "keywords_ref": [
    "수렴·판별 타당도(Convergent·Discriminant)",
    "동형검사 신뢰도(Parallel Forms)",
    "요인분석(Factor Analysis)",
-   "측정오차(Measurement Error)",
-   "α ≥ 0.7 기준"
+   "α ≥ 0.7 기준",
+   "스피어만-브라운 공식(Spearman-Brown, 반분 신뢰도 보정)"
   ],
   "outline": [
    "타당도",
@@ -741,7 +750,7 @@
    "재검사 신뢰도(Test-Retest)",
    "반분 신뢰도(Split-half)",
    "크론바흐 알파(Cronbach's α)",
-   "필요조건(Necessary Condition)"
+   "신뢰도는 타당도의 필요조건(Necessary Condition)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -777,8 +786,8 @@
    "평균 정밀도(Average Precision)",
    "특이도(Specificity)",
    "무작위 분류기 대각선(AUC=0.5)",
-   "혼동행렬(Confusion Matrix)",
-   "F1 점수(F1-score)"
+   "PR-AUC(소수 클래스 성능)",
+   "ROC-AUC(전체 분류 성능)"
   ],
   "outline": [
    "PR·ROC 곡선의 정의",
@@ -878,14 +887,17 @@
    "조건부확률(Conditional Probability)",
    "독립사건(Independent Events)",
    "배반사건(Mutually Exclusive Events)",
-   "전확률 정리(Law of Total Probability)"
+   "전확률 정리(Law of Total Probability)",
+   "여사건(Complement)",
+   "합집합·교집합(Union·Intersection)"
   ],
   "keywords_ref": [
    "고전적 확률(Classical)",
    "상대빈도 확률(Relative Frequency)",
    "주관적 확률(Subjective)",
    "큰 수의 법칙(Law of Large Numbers)",
-   "여사건(Complement)"
+   "P(A) = n(A)/n(S)",
+   "상대도수의 극한 lim n(A)/n"
   ],
   "outline": [
    "확률의 개념",
@@ -950,7 +962,9 @@
    "조건부확률(Conditional Probability)",
    "독립사건(Independent Events)",
    "배반사건(Mutually Exclusive Events)",
-   "전확률 정리(Law of Total Probability)"
+   "전확률 정리(Law of Total Probability)",
+   "여사건(Complement)",
+   "합집합·교집합(Union·Intersection)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -1026,7 +1040,7 @@
      {
       "title": "예",
       "items": [
-       "1,000건 중 빵 200, 우유 300, 둘 다 100 → 지지도 0.1, 신뢰도(빵→우유) 0.5, 향상도 0.5/0.3≈1.67"
+       "5건 중 계란 3건, 우유 3건(전체 지지도 0.6), 계란·우유 동시 2건 → 지지도 0.4, 신뢰도 2/3≈0.667, 향상도 0.667/0.6≈1.111"
       ]
      }
     ]
@@ -1093,7 +1107,8 @@
    "기저율 오류(Base Rate Fallacy)",
    "베이지안 갱신(Bayesian Updating)",
    "최대 사후확률 추정(MAP, Maximum A Posteriori)",
-   "켤레 사전분포(Conjugate Prior)"
+   "곱셈정리 P(A∩B) = P(A)P(B|A)",
+   "스팸 메일 필터링·패턴 인식"
   ],
   "outline": [
    "베이즈 정리의 개요",
@@ -1186,7 +1201,7 @@
   ],
   "keywords_must": [
    "가능도 함수(Likelihood Function)",
-   "확률(Probability)",
+   "확률 vs 우도(Probability vs Likelihood)",
    "모수(Parameter)",
    "로그우도(Log-likelihood)",
    "최대우도추정(MLE, Maximum Likelihood Estimation)",
@@ -1256,7 +1271,7 @@
   "warnings": [],
   "quiz_terms": [
    "가능도 함수(Likelihood Function)",
-   "확률(Probability)",
+   "확률 vs 우도(Probability vs Likelihood)",
    "모수(Parameter)",
    "로그우도(Log-likelihood)",
    "최대우도추정(MLE, Maximum Likelihood Estimation)",
@@ -1387,17 +1402,18 @@
    "이항분포(Binomial Distribution)",
    "포아송분포(Poisson Distribution)",
    "정규분포(Normal Distribution)",
-   "지수분포(Exponential Distribution)",
    "t분포(t-Distribution)",
    "카이제곱분포(Chi-square Distribution)",
-   "F분포(F-Distribution)"
+   "F분포(F-Distribution)",
+   "균일분포(Uniform Distribution)",
+   "표준정규분포(Standard Normal Distribution)"
   ],
   "keywords_ref": [
    "베르누이분포(Bernoulli)",
    "기하분포(Geometric)",
-   "초기하분포(Hypergeometric)",
-   "균등분포(Uniform)",
-   "표본분포(Sampling Distribution)"
+   "표본분포(Sampling Distribution)",
+   "지수분포(Exponential)",
+   "68-95-99.7 규칙"
   ],
   "outline": [
    "확률분포의 개념",
@@ -1457,10 +1473,11 @@
    "이항분포(Binomial Distribution)",
    "포아송분포(Poisson Distribution)",
    "정규분포(Normal Distribution)",
-   "지수분포(Exponential Distribution)",
    "t분포(t-Distribution)",
    "카이제곱분포(Chi-square Distribution)",
-   "F분포(F-Distribution)"
+   "F분포(F-Distribution)",
+   "균일분포(Uniform Distribution)",
+   "표준정규분포(Standard Normal Distribution)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -1496,7 +1513,8 @@
    "왜도 0·첨도 3",
    "정규성 검정(샤피로-윌크, Shapiro-Wilk)",
    "Q-Q 플롯(Q-Q Plot)",
-   "6시그마(Six Sigma)"
+   "Φ(z) 표준정규 누적분포표",
+   "이항·포아송의 정규근사"
   ],
   "outline": [
    "정규분포의 정의",
@@ -1595,8 +1613,8 @@
    "단일표본 Z 검정(One-sample Z-test)",
    "두 독립표본 Z 검정(Two-sample Z-test)",
    "비율 검정(Proportion Z-test)",
-   "유의수준(Significance Level)",
-   "p-값(p-value)"
+   "두 종속표본 Z 검정(상관계수 ρ 반영)",
+   "등분산 검정(Levene·Bartlett)"
   ],
   "outline": [
    "표준정규분포의 개요",
@@ -1628,7 +1646,7 @@
      {
       "title": null,
       "items": [
-       "단일표본: Z=(x̄−μ0)/(σ/√n)로 모평균이 특정 값인지 검정",
+       "단일표본: Z=(x̄−μ0)/(σ/√n), 예) μ0=300, σ=20, n=100, x̄=306 → Z=3 > 1.96 → H0 기각",
        "두 독립표본: Z=(x̄1−x̄2)/√(σ1²/n1+σ2²/n2), 두 모분산을 알 때",
        "비율: Z=(p̂−p0)/√(p0(1−p0)/n)"
       ]
@@ -1796,10 +1814,10 @@
   ],
   "keywords_ref": [
    "σ/√n",
-   "유한 분산(Finite Variance)",
-   "이항분포의 정규근사(np≥5)",
+   "이항분포의 정규근사(np≥5, n(1−p)≥5)",
    "신뢰구간(Confidence Interval)",
-   "부트스트랩(Bootstrap)"
+   "z-test(모분산 σ² 기지) · t-test(미지) 선택",
+   "특징: 정규분포 근사·모집단 분포 독립성·실험 재현성"
   ],
   "outline": [
    "중심극한정리의 개념",
@@ -2088,7 +2106,7 @@
    "추정량(Estimator)",
    "추정치(Estimate)",
    "불편성(Unbiasedness)",
-   "효율성(Efficiency)",
+   "유효성·효율성(Efficiency)",
    "일치성(Consistency)",
    "충분성(Sufficiency)",
    "최대우도추정(MLE, Maximum Likelihood Estimation)",
@@ -2099,7 +2117,7 @@
    "편향(Bias)",
    "최소분산 불편추정량(MVUE)",
    "최소제곱법(Least Squares)",
-   "크래머-라오 하한(Cramér-Rao Bound)"
+   "충분통계량(Sufficient Statistic)"
   ],
   "outline": [
    "점추정의 개요",
@@ -2160,7 +2178,7 @@
    "추정량(Estimator)",
    "추정치(Estimate)",
    "불편성(Unbiasedness)",
-   "효율성(Efficiency)",
+   "유효성·효율성(Efficiency)",
    "일치성(Consistency)",
    "충분성(Sufficiency)",
    "최대우도추정(MLE, Maximum Likelihood Estimation)",
@@ -2196,7 +2214,7 @@
    "표본 크기(Sample Size)"
   ],
   "keywords_ref": [
-   "95% → z=1.96 · 99% → z=2.58",
+   "90%·95%·99% → z = 1.645·1.96·2.58",
    "모비율 구간 p̂ ± z√(p̂(1−p̂)/n)",
    "모분산 구간(χ²분포)",
    "신뢰구간의 해석(반복 추출 시 95%가 모수 포함)"
@@ -2230,7 +2248,7 @@
       "title": null,
       "items": [
        "x̄ ± z(α/2)·σ/√n, 95%는 z=1.96",
-       "예: n=100, x̄=50, σ=10 → 50 ± 1.96 → (48.04, 51.96)"
+       "예: 형광등 σ=120, n=100, x̄=2,000 → 2,000 ± 1.96×12 = (1,976.48, 2,023.52)"
       ]
      }
     ]
@@ -2241,7 +2259,7 @@
      {
       "title": null,
       "items": [
-       "s로 σ 대체 → x̄ ± t(α/2, n−1)·s/√n (소표본에서 Z보다 넓음)",
+       "s로 σ 대체 → x̄ ± t(α/2, n−1)·s/√n, 예) n=9, x̄=42, s=7.5, t=2.306 → (36.235, 47.765)",
        "해석: 같은 방법으로 반복 추출하면 구간의 95%가 모수를 포함(모수가 95% 확률로 들어 있다는 뜻 아님)",
        "구간 폭 축소: n 증가, 신뢰수준 낮춤, 산포 감소"
       ]
@@ -2299,7 +2317,7 @@
    "충분성(Sufficiency)",
    "최대우도추정(MLE)",
    "베이지안 추정(Bayesian Estimation)",
-   "칼만 필터(Kalman Filter, 신호처리)"
+   "대표본(n≥30): s로 σ 근사해 Z 사용"
   ],
   "outline": [
    "추정이론의 개요",
@@ -2598,8 +2616,8 @@
    "양측 검정(Two-tailed Test)",
    "단측 검정(One-tailed Test)",
    "임계값(Critical Value)",
-   "모수·비모수 검정",
-   "효과 크기(Effect Size)"
+   "효과 크기(Effect Size)",
+   "검정 방법: 양측·단측(좌·우)"
   ],
   "outline": [
    "가설검정의 개요",
@@ -2645,7 +2663,7 @@
       "title": null,
       "items": [
        "p ≤ α → H0 기각(통계적으로 유의), p > α → H0 기각 못 함(채택이 아니라 증거 부족)",
-       "예: 전구 평균 수명 1,000시간 → 새 공법 표본 평균 1,050, p=0.01 < 0.05 → 수명 증가 결론"
+       "예: H0 μ=50, n=25, σ=5, x̄=52 → Z=(52−50)/(5/√25)=2, p≈0.0228 < 0.05 → H0 기각"
       ]
      }
     ]
@@ -2697,12 +2715,12 @@
    "양측 검정(Two-tailed Test)",
    "단측 검정(One-tailed Test)",
    "1종 오류(Type I Error)",
-   "2종 오류(Type II Error)"
+   "2종 오류(Type II Error)",
+   "임계값(Critical Value)"
   ],
   "keywords_ref": [
-   "영가설(Null Hypothesis 다른 이름)",
+   "영가설(귀무가설의 다른 이름)",
    "p-값(p-value)",
-   "임계값(Critical Value)",
    "입증 책임(Burden of Proof)"
   ],
   "outline": [
@@ -2734,7 +2752,7 @@
      {
       "title": null,
       "items": [
-       "① 가설 설정 ② 유의수준 α 결정 ③ 검정통계량 계산 ④ 임계값·p-값과 비교 ⑤ H0 기각 여부 결론"
+       "① 가설 수립 ② 유의수준 설정(0.05·0.01·0.1) ③ 임계값 설정(표준정규·t분포) ④ 분석(통계량 vs 임계값) ⑤ 결과 해석"
       ]
      }
     ]
@@ -2745,8 +2763,8 @@
      {
       "title": null,
       "items": [
-       "기존 전구 평균 수명 μ0=1,500시간·σ=200, 새 공법 n=100 표본 평균 1,550",
-       "H0: μ = 1,500, H1: μ > 1,500(우측 단측), Z = (1,550−1,500)/(200/10) = 2.5 > 1.645 → H0 기각, 수명 개선"
+       "기존 전구 평균 수명 1,000시간, 새 공법 n=100 표본 평균 1,030·s=100",
+       "H0: μ = 1,000, H1: μ > 1,000(우측 단측), Z = 30/(100/10) = 3.0 > 1.645 → H0 기각, 수명 개선"
       ]
      }
     ]
@@ -2767,7 +2785,8 @@
    "양측 검정(Two-tailed Test)",
    "단측 검정(One-tailed Test)",
    "1종 오류(Type I Error)",
-   "2종 오류(Type II Error)"
+   "2종 오류(Type II Error)",
+   "임계값(Critical Value)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -2793,7 +2812,7 @@
    "검정통계량(Test Statistic)",
    "극단값(More Extreme Result)",
    "유의수준(Significance Level, α)",
-   "기각(Reject)",
+   "p ≤ α → H0 기각(Reject)",
    "통계적 유의성(Statistical Significance)",
    "효과 크기(Effect Size)",
    "ASA 성명(ASA Statement, 2016)"
@@ -2865,7 +2884,7 @@
    "검정통계량(Test Statistic)",
    "극단값(More Extreme Result)",
    "유의수준(Significance Level, α)",
-   "기각(Reject)",
+   "p ≤ α → H0 기각(Reject)",
    "통계적 유의성(Statistical Significance)",
    "효과 크기(Effect Size)",
    "ASA 성명(ASA Statement, 2016)"
@@ -2898,14 +2917,15 @@
    "정규성(Normality)",
    "등분산성(Homoscedasticity)",
    "독립성(Independence)",
-   "사후검정(Post-hoc Test)"
+   "사후검정(Post-hoc Test)",
+   "반복측정 분산분석(Repeated Measures ANOVA)"
   ],
   "keywords_ref": [
    "일원배치 분산분석(One-way ANOVA)",
    "이원배치 분산분석(Two-way ANOVA)",
    "튜키 HSD(Tukey's HSD)",
-   "크러스컬-월리스 검정(비모수)",
-   "다변량 분산분석(MANOVA)"
+   "다변량 분산분석(MANOVA)",
+   "예: 타이어 온도 4수준, F=31.38 > F(0.05;3,8)=4.07 → 기각"
   ],
   "outline": [
    "ANOVA의 개요",
@@ -2985,7 +3005,8 @@
    "정규성(Normality)",
    "등분산성(Homoscedasticity)",
    "독립성(Independence)",
-   "사후검정(Post-hoc Test)"
+   "사후검정(Post-hoc Test)",
+   "반복측정 분산분석(Repeated Measures ANOVA)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -3019,8 +3040,9 @@
   "keywords_ref": [
    "로지스틱 회귀(Logistic Regression)",
    "로짓 변환(Logit Transformation)",
-   "교차표(Contingency Table)",
-   "상관 ≠ 인과(Correlation is not Causation)"
+   "상관 ≠ 인과(Correlation is not Causation)",
+   "직교회귀(Orthogonal Regression)",
+   "단변량·다변량 회귀(Univariate·Multivariate)"
   ],
   "outline": [
    "관계검정의 개요",
@@ -3215,14 +3237,15 @@
    "결정계수(R², Coefficient of Determination)",
    "선형회귀(Linear Regression)",
    "로지스틱 회귀(Logistic Regression)",
-   "다중회귀(Multiple Regression)"
+   "회귀방정식(Regression Equation)"
   ],
   "keywords_ref": [
    "등분산성(Homoscedasticity)",
    "다중공선성(Multicollinearity)",
    "수정 결정계수(Adjusted R²)",
-   "릿지·라쏘(Ridge·Lasso)",
-   "더빈-왓슨 검정(Durbin-Watson)"
+   "더빈-왓슨 검정(Durbin-Watson)",
+   "단순회귀·다중회귀(Simple·Multiple)",
+   "오즈(Odds)·로짓(Logit)"
   ],
   "outline": [
    "회귀분석의 개념",
@@ -3256,7 +3279,7 @@
       "items": [
        "가정(LINE): 선형성, 잔차의 독립성·정규성·등분산성",
        "절차: 변수 선정 → 산점도 → OLS로 SSE 최소화 추정 → 유의성(F·t) → 잔차 진단 → 예측",
-       "적합성: R² = SSR/SST, 다중회귀는 수정 R², 다중공선성은 VIF로 확인"
+       "적합성: 결정계수 R²(설명된 변동/총변동), 잔차 정규성·선형성(p-value)·등분산성·독립성 검증, 다중공선성은 VIF"
       ]
      }
     ]
@@ -3288,7 +3311,7 @@
    "결정계수(R², Coefficient of Determination)",
    "선형회귀(Linear Regression)",
    "로지스틱 회귀(Logistic Regression)",
-   "다중회귀(Multiple Regression)"
+   "회귀방정식(Regression Equation)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -3326,7 +3349,8 @@
    "ADF 단위근 검정(Augmented Dickey-Fuller)",
    "백색잡음(White Noise)",
    "지수평활법(Exponential Smoothing)",
-   "시계열 분해(Decomposition)"
+   "AR(1)·AR(2)",
+   "DBN·오토인코더·CNN(심층신경망)"
   ],
   "outline": [
    "시계열 분석의 개요",
@@ -3428,9 +3452,9 @@
   "keywords_ref": [
    "SARIMA(Seasonal ARIMA)",
    "ARIMAX(외생변수 포함)",
-   "공적분(Cointegration)",
    "AIC·BIC 모형 선택",
-   "융-박스 검정(Ljung-Box Test)"
+   "융-박스 검정(Ljung-Box Test)",
+   "상관관계(Correlation)·공적분(Cointegration)"
   ],
   "outline": [
    "ARIMA 모형의 개요",
@@ -3511,35 +3535,35 @@
   "en": "Time Series Anomaly Detection",
   "definition": "시간 순서로 수집되는 데이터에서 정상 패턴(추세·계절성)에서 벗어난 점·구간·패턴을 통계·기계학습·딥러닝 기법으로 실시간 또는 사후에 찾아내는 기술.",
   "keywords": [
-   "유형: 점 이상치(Point) · 맥락 이상치(Contextual) · 집단 이상치(Collective)",
-   "통계: 이동평균·Z-점수 · 시계열 분해 잔차 · ARIMA 예측 오차",
-   "기계학습: Isolation Forest · One-Class SVM · LOF",
-   "딥러닝: LSTM 예측 오차 · 오토인코더 재구성 오차 · Transformer"
+   "유형: 점(Point) · 구간(Contextual) · 패턴(Collective) · 추세(Trend) 이상치",
+   "방식: 임계값 · 통계(ARIMA·Holt-Winters·STL) · 거리(k-NN·LOF) · 밀도(Isolation Forest) · 예측 기반",
+   "임계값: 이동평균(Moving Average) · Z-점수 · 동적 임계값",
+   "딥러닝: RNN/LSTM · Autoencoder · CNN/TCN · Attention · Transformer"
   ],
   "keywords_must": [
    "이상치 탐지(Anomaly Detection)",
    "점 이상치(Point Anomaly)",
-   "맥락 이상치(Contextual Anomaly)",
-   "집단 이상치(Collective Anomaly)",
-   "시계열 분해(STL Decomposition)",
+   "구간 이상치(Contextual Anomaly)",
+   "패턴 이상치(Collective Anomaly)",
    "예측 기반 탐지(Prediction-based)",
    "재구성 오차(Reconstruction Error)",
    "오토인코더(Autoencoder)",
    "LSTM(Long Short-Term Memory)",
-   "Isolation Forest"
+   "Isolation Forest",
+   "추세 이상치(Trend Anomaly)"
   ],
   "keywords_ref": [
-   "개념 드리프트(Concept Drift)",
    "동적 임계값(Dynamic Threshold)",
    "One-Class SVM",
    "LOF(Local Outlier Factor)",
-   "비지도 학습(Unsupervised Learning)"
+   "Holt-Winters·STL 분해",
+   "Anomaly Transformer·TranAD"
   ],
   "outline": [
    "실시간 시계열 이상치 탐지의 개요",
    "- 정의·필요성",
    "시계열 이상치 유형",
-   "- 점·맥락·집단 이상치",
+   "- 점·구간·패턴·추세 이상치",
    "시계열 이상치 탐지 방식",
    "- 통계 기반",
    "- 기계학습 기반",
@@ -3565,8 +3589,8 @@
       "title": null,
       "items": [
        "점: 단일 시점이 급격히 튐(센서 스파이크)",
-       "맥락: 값 자체는 정상 범위지만 시점상 비정상(새벽 3시 대량 트래픽)",
-       "집단: 개별은 정상이나 연속 구간 패턴이 비정상(심전도 평탄 구간)"
+       "구간: 특정 시간·상황 맥락에서만 비정상(새벽 3시 대량 트래픽)",
+       "패턴: 개별은 정상이나 연속 구간 패턴이 비정상(심전도 평탄 구간), 추세: 장기 추세가 지속적으로 이탈(Drift)"
       ]
      }
     ]
@@ -3593,14 +3617,14 @@
   "quiz_terms": [
    "이상치 탐지(Anomaly Detection)",
    "점 이상치(Point Anomaly)",
-   "맥락 이상치(Contextual Anomaly)",
-   "집단 이상치(Collective Anomaly)",
-   "시계열 분해(STL Decomposition)",
+   "구간 이상치(Contextual Anomaly)",
+   "패턴 이상치(Collective Anomaly)",
    "예측 기반 탐지(Prediction-based)",
    "재구성 오차(Reconstruction Error)",
    "오토인코더(Autoencoder)",
    "LSTM(Long Short-Term Memory)",
-   "Isolation Forest"
+   "Isolation Forest",
+   "추세 이상치(Trend Anomaly)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -3636,7 +3660,8 @@
    "VIF = 1/(1−Rj²)",
    "라쏘(Lasso)",
    "단계적 선택법(Stepwise)",
-   "완전 공선성(Perfect Collinearity)"
+   "상관계수 |r| ≥ 0.7 의심",
+   "다른 모델: 편향 허용 MSE 최소화(릿지)"
   ],
   "outline": [
    "다중공선성의 개요",
