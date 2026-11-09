@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""콘텐츠 품질 검사: 템플릿 문구·제목 번호·중복 정의 등을 잡는다.
+"""콘텐츠 품질 검사: 템플릿 문구·제목 번호·중복 정의·빈약한 키워드/목차를 잡는다.
 사용: python3 tools/validate_content.py [도메인키 ...]   (예: sv sw). 인자 없으면 전체. 실패 시 exit 1."""
 import json, re, sys, glob, os
 from collections import defaultdict
@@ -8,12 +8,30 @@ FILLER = re.compile(r'^\s*(핵심:?\s*)?(개념|정의|개념\s*·\s*정의|핵�
 SEC_FILLER = re.compile(r'^\s*(개념\s*·\s*정의|핵심\s*구성\s*요소|핵심\s*기술|활용\s*사례|관련\s*표준(\s*·\s*기법)?|적용\s*효과|한계\s*·\s*(이슈|주의점)|절차/유형|구성\s*·\s*유형|활용\s*·\s*시사점)\s*$')
 ANY_FILLER = re.compile(r'답안\s*구조로\s*정리|표준\s*·\s*비교\s*·\s*한계|(^|\s)(구성|핵심):\s*(핵심|개념)')
 TITLE_NUM = re.compile(r'\([A-Z]{2}\s?_?\d')
+# Outline sub-items that are ONLY these bare labels (with optional leading "- ")
+OL_BARE = re.compile(r'^\s*-?\s*(정의|필요성|특징|핵심\s*요소|유형\s*·\s*동작|목적|구성\s*요소|한계|효과)\s*$')
+# Generic short keywords (whole token)
+GENERIC_KW = re.compile(r'^(AI|AX|ICT|IT|FMS|Service|PC|OS|HTML|WWW|SV|CDN|JSON|API|SW|HW|UI|UX|DB|NW|SE|PM|MG)$', re.I)
+# Fragment definitions
+FRAG_DEF = re.compile(r'^(Mass\s|소품종|→)|다루는\s*토픽|디지털서비스\s*영역')
+
 def texts(x):
     if isinstance(x, str): yield x
     elif isinstance(x, list):
         for i in x: yield from texts(i)
     elif isinstance(x, dict):
         for v in x.values(): yield from texts(v)
+
+def name_bases(title):
+    title = (title or '').strip()
+    bases = {title}
+    m = re.match(r'^(.+?)\((.+)\)$', title)
+    if m:
+        bases.add(m.group(1).strip())
+        bases.add(m.group(2).strip())
+    # strip spaces for compare
+    return {re.sub(r'\s+', '', b).lower() for b in bases if b}
+
 def main(keys):
     files = [f'{ROOT}/_data/{k}.json' for k in keys] if keys else sorted(glob.glob(f'{ROOT}/_data/*.json'))
     errs = []; defs = defaultdict(list)
@@ -27,7 +45,19 @@ def main(keys):
             m = re.match(r'^(.+?)\((.+)\)$', title.strip())
             if m and m.group(1).strip().replace(' ', '').lower() == m.group(2).strip().replace(' ', '').lower():
                 errs.append(f'{tid}: 제목 중복 표기 "{title}"')
-            if not (t.get('keywords_must') or []): errs.append(f'{tid}: 필수 키워드 없음')
+            must = t.get('keywords_must') or []
+            if not must: errs.append(f'{tid}: 필수 키워드 없음')
+            if must and (len(must) < 6 or len(must) > 12):
+                errs.append(f'{tid}: 필수 키워드 개수 {len(must)} (6–10 권장, 허용 6–12)')
+            bases = name_bases(title)
+            for k in must:
+                if len(k) > 60: errs.append(f'{tid}: 키워드가 문장 조각 "{k[:40]}"')
+                kk = re.sub(r'\s+', '', k).lower()
+                kb = re.sub(r'\s+', '', re.sub(r'\([^)]*\)', '', k)).lower()
+                if kk in bases or kb in bases:
+                    errs.append(f'{tid}: 필수 키워드가 토픽명과 동일 "{k}"')
+                if GENERIC_KW.match(k.strip()) or GENERIC_KW.match(re.sub(r'\([^)]*\)', '', k).strip()):
+                    errs.append(f'{tid}: 너무 일반적 필수 키워드 "{k}"')
             for fld in ('keywords_must', 'keywords_ref', 'keywords', 'outline', 'sections'):
                 for s in texts(t.get(fld)):
                     parts = re.split(r'[·/]', s) + [s] if fld != 'sections' else [s]
@@ -37,10 +67,18 @@ def main(keys):
                             errs.append(f'{tid}: {fld} 템플릿 문구 "{s[:40]}"'); break
                     else: continue
                     break
-            for k in (t.get('keywords_must') or []):
-                if len(k) > 60: errs.append(f'{tid}: 키워드가 문장 조각 "{k[:40]}"')
+            for s in (t.get('outline') or []):
+                if OL_BARE.match(s.strip()):
+                    errs.append(f'{tid}: outline 빈약한 소항목 "{s}"')
             df = (t.get('definition') or '').strip()
+            if not df: errs.append(f'{tid}: 정의 없음')
+            elif len(df) < 35: errs.append(f'{tid}: 정의가 너무 짧음')
+            elif FRAG_DEF.search(df): errs.append(f'{tid}: 정의가 조각/템플릿 "{df[:40]}"')
             if df: defs[df].append(tid)
+            # sections substance
+            secs = t.get('sections') or []
+            items = sum(len(ss.get('items') or []) for s in secs for ss in (s.get('subsections') or []))
+            if items < 4: errs.append(f'{tid}: 자세히 항목 부족 ({items})')
     for df, ids in defs.items():
         if len(ids) > 1: errs.append(f'정의 중복 {ids}: "{df[:40]}"')
     for e in errs: print(e)
