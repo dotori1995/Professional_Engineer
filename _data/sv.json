@@ -24882,82 +24882,96 @@
   "dueum": null,
   "name": "서비타이제이션(Servitization)",
   "title": "서비타이제이션(Servitization)",
-  "definition": "제품 판매에서 제품-서비스 결합 체계로 전환해 부가가치를 창출하는 기업의 경쟁력 혁신 전략이다.",
+  "definition": "제조기업이 제품 판매에서 나아가 제품에 유지보수·운영·성과 보장 등의 서비스를 결합하거나 사용량·성과 기준으로 판매해 고객 가치와 지속 수익을 창출하는 제조업의 서비스화 전략",
   "keywords_must": [
-   "Product-Service System(PSS)",
-   "구독/성과기반 계약",
-   "예지보전(PdM)",
-   "XaaS",
-   "고객생애가치(CLV)",
-   "애프터서비스 고도화",
-   "디지털 트윈 연계",
-   "Product Servitization",
-   "Service System Product Productization",
-   "Service System",
-   "Productization"
+   "제품-서비스 시스템(PSS)",
+   "제품 지향 서비스",
+   "사용 지향 서비스",
+   "결과 지향 서비스",
+   "성과 기반 계약(Power by the Hour)",
+   "사용량 기반 과금",
+   "원격 모니터링·예지 보전",
+   "서비스의 제품화(Productization)",
+   "반데르메르베·라다(1988)"
   ],
   "keywords_ref": [
-   "IoT 원격모니터링",
-   "제품-서비스 결합",
-   "부가가치 창출",
-   "PSS",
-   "제조의 서비스화(XaaS) 수익모델 다변화",
-   "CLV"
+   "구독 경제",
+   "XaaS",
+   "디지털 트윈",
+   "서비타이제이션 패러독스",
+   "프로비스(Provice)"
   ],
   "keywords": [
-   "핵심: Product-Service System(PSS) · 구독/성과기반 계약 · 예지보전(PdM)",
-   "기술: XaaS · 고객생애가치(CLV) · 애프터서비스 고도화",
-   "운영: 디지털 트윈 연계 · Product Servitization · Service System Product Productization",
-   "참고: IoT 원격모니터링 · 제품-서비스 결합 · 부가가치 창출"
+   "방향: 제품의 서비스화(Product Servitization) ↔ 서비스의 제품화(Service Productization)",
+   "PSS 3유형: 제품 지향(판매 + 유지보수) · 사용 지향(리스·공유) · 결과 지향(성과 판매)",
+   "사례: 롤스로이스 Power by the Hour · 힐티 공구 관리 · 미쉐린 주행거리 과금 · 제록스 출력량 과금"
   ],
   "outline": [
-   "서비타이제이션의 개요",
-   "- 서비타이제이션의 정의",
-   "- 등장 배경",
-   "서비타이제이션의 개념도와 구성 요소",
-   "- 개념도",
-   "- 서비타이제이션의 구성 요소",
-   "서비타이제이션의 사례",
-   "- 서비타이제이션 요점"
+   "개념과 등장 배경",
+   "- 개념: 제품 + 서비스",
+   "- 배경: 제품 범용화",
+   "3가지 유형",
+   "- 제품 지향: 판매 + 지원",
+   "- 사용 지향: 이용권",
+   "- 결과 지향: 성과 판매",
+   "효과와 과제",
+   "- 효과: 안정 수익",
+   "- 과제: 패러독스"
   ],
   "sections": [
    {
-    "title": "서비타이제이션 핵심",
+    "title": "개념과 등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 제품 + 서비스",
       "items": [
-       "Product-Service System(PSS): 서비타이제이션에서 Product-Service System(PSS)를 다루는 핵심 암기 포인트",
-       "구독/성과기반 계약: 서비타이제이션에서 구독/성과기반 계약을 다루는 핵심 암기 포인트",
-       "예지보전(PdM): 서비타이제이션에서 예지보전(PdM)을 다루는 핵심 암기 포인트",
-       "XaaS: XaaS를 서비타이제이션 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "1988년 반데르메르베·라다가 제시, 제품 단품 판매에서 제품-서비스 시스템(PSS)으로 가치 제안을 전환"
+      ]
+     },
+     {
+      "title": "배경: 제품 범용화",
+      "items": [
+       "제품 차별화 한계와 가격 경쟁 심화, IoT 원격 모니터링으로 사용 데이터 확보가 가능해져 서비스 수익 확대"
       ]
      }
     ]
    },
    {
-    "title": "서비타이제이션 구성·기술",
+    "title": "3가지 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "제품 지향: 판매 + 지원",
       "items": [
-       "고객생애가치(CLV): 서비타이제이션에서 고객생애가치(CLV)를 다루는 핵심 암기 포인트",
-       "애프터서비스 고도화: 서비타이제이션에서 애프터서비스 고도화를 다루는 핵심 암기 포인트",
-       "디지털 트윈 연계: 서비타이제이션에서 디지털 트윈 연계를 다루는 핵심 암기 포인트",
-       "Product Servitization: 서비타이제이션에서 Product Servitization를 다루는 핵심 암기 포인트"
+       "제품 지향 서비스: 소유권은 고객에게, 유지보수·교육·보증 연장으로 부가 수익"
+      ]
+     },
+     {
+      "title": "사용 지향: 이용권",
+      "items": [
+       "사용 지향 서비스: 리스·공유·구독으로 제품 사용권 판매, 사용량 기반 과금"
+      ]
+     },
+     {
+      "title": "결과 지향: 성과 판매",
+      "items": [
+       "성과 기반 계약(Power by the Hour): 롤스로이스가 엔진 대신 비행 시간당 추력을 판매하는 방식"
       ]
      }
     ]
    },
    {
-    "title": "서비타이제이션 운영",
+    "title": "효과와 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "효과: 안정 수익",
       "items": [
-       "Service System Product Productization: 서비타이제이션에서 Service System Product Productization를 다루는 핵심 암기 포인트",
-       "Service System: 서비타이제이션에서 Service System를 다루는 핵심 암기 포인트",
-       "Productization: Productization를 서비타이제이션 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "장기 계약 기반 반복 수익, 고객 사용 데이터로 제품 개선, 원격 모니터링·예지 보전으로 가동률 보장"
+      ]
+     },
+     {
+      "title": "과제: 패러독스",
+      "items": [
+       "서비스 조직·역량 부족으로 투자 대비 수익이 늦게 나는 서비타이제이션 패러독스, 성과 위험을 제조사가 부담"
       ]
      }
     ]
@@ -24966,24 +24980,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Product-Service System(PSS)",
-   "구독/성과기반 계약",
-   "예지보전(PdM)",
-   "XaaS",
-   "고객생애가치(CLV)",
-   "애프터서비스 고도화",
-   "디지털 트윈 연계",
-   "Product Servitization",
-   "Service System Product Productization",
-   "Service System",
-   "Productization"
+   "제품-서비스 시스템(PSS)",
+   "제품 지향 서비스",
+   "사용 지향 서비스",
+   "결과 지향 서비스",
+   "성과 기반 계약(Power by the Hour)",
+   "사용량 기반 과금",
+   "원격 모니터링·예지 보전",
+   "서비스의 제품화(Productization)",
+   "반데르메르베·라다(1988)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_300_0",
@@ -24996,54 +25009,98 @@
   ],
   "en": "Untact Technology",
   "dueum": null,
-  "name": "비대면 기술(Untact Technology)의 종류",
-  "title": "비대면 기술(Untact Technology)의 종류",
-  "definition": "부정의 의미를 지닌 영어 접두사 un과 접촉을 의미하는 영어 단어 contact의 합성어로 수요자와 공급자가 접촉하지 않고도 온/오프라인에서 재화 또는 서비스를 제공받을 수 있도록 하는 기술",
+  "name": "비대면 기술(Untact Technology) 유형",
+  "title": "비대면 기술(Untact Technology) 유형",
+  "definition": "공급자와 수요자가 직접 대면하지 않고도 온·오프라인에서 재화·서비스를 주고받게 하는 원격 협업·무인 주문·원격 교육·원격 의료·비대면 금융 등의 기술로, 팬데믹을 계기로 전 분야에 확산됨",
   "keywords_must": [
-   "원격 협업",
-   "서비스 로봇",
-   "비대면 거래",
-   "비대면 기술의 역사",
-   "현재 비대면 기술의 종류",
-   "FinOps(Financial Operations)"
+   "원격 협업 플랫폼",
+   "화상회의·메신저",
+   "키오스크 비대면 주문",
+   "무인 매장(컴퓨터 비전·센서 결제)",
+   "서빙·배송 로봇",
+   "원격 교육(실시간 수업)",
+   "원격 의료·비대면 진료",
+   "비대면 본인 확인(eKYC)",
+   "디지털 접근성"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "온택트(Ontact)",
+   "스마트 러닝",
+   "디지털 헬스케어",
+   "메타버스 협업",
+   "디지털 소외 계층"
+  ],
   "keywords": [
-   "핵심: 원격 협업 · 서비스 로봇 · 비대면 거래",
-   "기술: 비대면 기술의 역사 · 현재 비대면 기술의 종류 · FinOps(Financial Operations)"
+   "분야: 업무(원격 협업·화상회의) · 서비스(키오스크·무인 매장·로봇) · 교육 · 의료 · 금융",
+   "기반 기술: 클라우드 · 5G · AI 비전 · 생체 인증 · 로봇",
+   "미래: 원격 진료 · 감염병 동선 모니터링 · 초실감 미디어 · 메타버스 협업"
   ],
   "outline": [
-   "포스트 코로나 시대의 핵심 기술, 비대면 기술의 개요",
-   "- 비대면 기술 (Untact Technology )의 정의",
-   "- 비대면 기술의 역사",
-   "비대면 기술의 종류",
-   "- 현재 비대면 기술의 종류",
-   "비대면 기술의 시사점",
-   "- 비대면 기술 요점"
+   "개념과 확산",
+   "- 어원: 언택트",
+   "- 확산: 팬데믹 이후",
+   "분야별 기술",
+   "- 업무·서비스: 협업·무인",
+   "- 교육·의료: 원격화",
+   "- 금융: 비대면 인증",
+   "과제",
+   "- 포용: 디지털 소외",
+   "- 신뢰: 보안·제도"
   ],
   "sections": [
    {
-    "title": "비대면 기술 핵심",
+    "title": "개념과 확산",
     "subsections": [
      {
-      "title": null,
+      "title": "어원: 언택트",
       "items": [
-       "원격 협업: 비대면 기술에서 원격 협업을 다루는 핵심 암기 포인트",
-       "서비스 로봇: 비대면 기술에서 서비스 로봇을 다루는 핵심 암기 포인트",
-       "비대면 거래: 비대면 기술에서 비대면 거래를 다루는 핵심 암기 포인트",
-       "비대면 기술의 역사: 비대면 기술에서 비대면 기술의 역사를 다루는 핵심 암기 포인트"
+       "'un'과 'contact'를 합친 국내 신조어로, 디지털로 연결된 비대면은 온택트(Ontact)라고도 함"
+      ]
+     },
+     {
+      "title": "확산: 팬데믹 이후",
+      "items": [
+       "코로나19로 전방위 확산 후 일상화, 인건비 절감과 편의성으로 포스트 코로나에도 유지"
       ]
      }
     ]
    },
    {
-    "title": "비대면 기술 구성·기술",
+    "title": "분야별 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "업무·서비스: 협업·무인",
       "items": [
-       "현재 비대면 기술의 종류: 비대면 기술에서 현재 비대면 기술의 종류를 다루는 핵심 암기 포인트",
-       "FinOps(Financial Operations): FinOps를 비대면 기술 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "원격 협업 플랫폼·화상회의로 분산 근무, 키오스크 비대면 주문과 무인 매장(컴퓨터 비전·센서 결제), 서빙·배송 로봇"
+      ]
+     },
+     {
+      "title": "교육·의료: 원격화",
+      "items": [
+       "원격 교육은 실시간 수업 플랫폼, 원격 의료·비대면 진료는 스마트 기기 생체 정보 수집과 화상 진료"
+      ]
+     },
+     {
+      "title": "금융: 비대면 인증",
+      "items": [
+       "비대면 본인 확인(eKYC): 신분증 촬영·영상 통화·생체 인증으로 계좌 개설과 대출을 원격 처리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "과제",
+    "subsections": [
+     {
+      "title": "포용: 디지털 소외",
+      "items": [
+       "고령층·장애인의 키오스크 이용 어려움 등 디지털 접근성 확보와 대면 채널 병행 필요"
+      ]
+     },
+     {
+      "title": "신뢰: 보안·제도",
+      "items": [
+       "비대면 인증 도용·딥페이크 위험, 비대면 진료 제도화와 원격 근무 보안(제로 트러스트) 정비"
       ]
      }
     ]
@@ -25052,19 +25109,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "원격 협업",
-   "서비스 로봇",
-   "비대면 거래",
-   "비대면 기술의 역사",
-   "현재 비대면 기술의 종류",
-   "FinOps(Financial Operations)"
+   "원격 협업 플랫폼",
+   "화상회의·메신저",
+   "키오스크 비대면 주문",
+   "무인 매장(컴퓨터 비전·센서 결제)",
+   "서빙·배송 로봇",
+   "원격 교육(실시간 수업)",
+   "원격 의료·비대면 진료",
+   "비대면 본인 확인(eKYC)",
+   "디지털 접근성"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_300_1",
@@ -25075,60 +25136,101 @@
    320,
    322
   ],
-  "en": "FinOps Financial Operations",
+  "en": "Financial Operations",
   "dueum": null,
-  "name": "핀옵스(FinOps(Financial Operations))",
-  "title": "핀옵스(FinOps(Financial Operations))",
-  "definition": "기업의 재무와 운영을 긴밀히 통합하여 클라우드 비용을 효율적으로 최적화해서 관리하고 통제하는 방법",
+  "name": "핀옵스(FinOps, Financial Operations)",
+  "title": "핀옵스(FinOps, Financial Operations)",
+  "definition": "클라우드의 사용량 기반 가변 비용을 재무·엔지니어링·비즈니스 조직이 공동 책임으로 관리하도록 비용 가시화·최적화·운영 통제를 반복하는 클라우드 재무 관리 문화이자 운영 체계",
   "keywords_must": [
-   "사용량 기반 요금모델",
-   "클라우드 전환",
-   "비용 최적화",
-   "약정기반할인구매",
-   "클라우드 재무관리",
-   "CUD(Committed Use Discounts)",
-   "AWS"
+   "사용량 기반 요금",
+   "비용 가시화·할당(태깅)",
+   "쇼백·차지백(Showback·Chargeback)",
+   "적정 크기 조정(Rightsizing)",
+   "약정 할인(RI·Savings Plans·CUD)",
+   "스팟 인스턴스",
+   "단위 경제(Unit Economics)",
+   "정보 제공·최적화·운영 3단계",
+   "FinOps Foundation 원칙",
+   "FOCUS(비용 데이터 표준)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "클라우드 우수성 센터(CCoE)",
+   "예산·이상 비용 알림",
+   "클라우드 회귀(Repatriation)",
+   "DevOps",
+   "지속가능성(GreenOps)"
+  ],
   "keywords": [
-   "핵심: 사용량 기반 요금모델 · 클라우드 전환 · 비용 최적화",
-   "기술: 약정기반할인구매 · 클라우드 재무관리 · CUD(Committed Use Discounts)",
-   "운영: AWS"
+   "3단계 수명주기: 정보 제공(Inform) → 최적화(Optimize) → 운영(Operate) 반복",
+   "최적화 수단: 태깅·할당 · 적정 크기 조정 · 약정 할인(RI·Savings Plans·CUD) · 스팟 · 미사용 자원 정리",
+   "원칙: 팀 협업 · 비즈니스 가치 기반 결정 · 사용자 비용 책임 · 적시 정확한 데이터 · 중앙 지원 · 가변 비용 활용"
   ],
   "outline": [
-   "\"Finance\"와 \"DevOps\"를 결합한 FinOps 의 개요",
-   "- 핀옵스 요점",
-   "FinOps 의 프로세스",
-   "- 핀옵스 요점",
-   "FinOps 의 프로세스 상세설명",
-   "- 핀옵스 요점",
-   "FinOps 의 핵심원칙",
-   "- 핀옵스 요점"
+   "등장 배경과 개념",
+   "- 배경: 예상 밖 비용",
+   "- 개념: 재무 + DevOps",
+   "3단계 수명주기",
+   "- 정보 제공: 가시화",
+   "- 최적화: 절감",
+   "- 운영: 지속 통제",
+   "핵심 원칙과 효과",
+   "- 원칙: 공동 책임",
+   "- 표준·효과: FOCUS"
   ],
   "sections": [
    {
-    "title": "핀옵스 핵심",
+    "title": "등장 배경과 개념",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 예상 밖 비용",
       "items": [
-       "사용량 기반 요금모델: 핀옵스에서 사용량 기반 요금모델을 다루는 핵심 암기 포인트",
-       "클라우드 전환: 핀옵스에서 클라우드 전환을 다루는 핵심 암기 포인트",
-       "비용 최적화: 핀옵스에서 비용 최적화를 다루는 핵심 암기 포인트",
-       "약정기반할인구매: 핀옵스에서 약정기반할인구매를 다루는 핵심 암기 포인트"
+       "쓴 만큼 낸다는 기대와 달리 엔지니어가 만든 자원이 즉시 비용이 되어 과다 청구와 클라우드 회귀(Repatriation) 발생"
+      ]
+     },
+     {
+      "title": "개념: 재무 + DevOps",
+      "items": [
+       "재무와 DevOps를 결합해 속도·비용·품질 균형을 팀 공동 책임으로 관리, 클라우드 우수성 센터(CCoE)가 지원"
       ]
      }
     ]
    },
    {
-    "title": "핀옵스 구성·기술",
+    "title": "3단계 수명주기",
     "subsections": [
      {
-      "title": null,
+      "title": "정보 제공: 가시화",
       "items": [
-       "클라우드 재무관리: 핀옵스에서 클라우드 재무관리를 다루는 핵심 암기 포인트",
-       "CUD(Committed Use Discounts): CUD를 핀옵스 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "AWS: AWS를 핀옵스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "비용 가시화·할당(태깅)으로 팀·서비스별 비용 파악, 쇼백·차지백(Showback·Chargeback)과 단위 경제(Unit Economics) 지표 산출"
+      ]
+     },
+     {
+      "title": "최적화: 절감",
+      "items": [
+       "적정 크기 조정(Rightsizing)과 미사용 자원 정리, 약정 할인(RI·Savings Plans·CUD)과 스팟 인스턴스로 단가 절감"
+      ]
+     },
+     {
+      "title": "운영: 지속 통제",
+      "items": [
+       "예산·이상 비용 알림과 정책 자동화로 목표 대비 성과를 측정하고 다시 정보 제공 단계로 순환"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "핵심 원칙과 효과",
+    "subsections": [
+     {
+      "title": "원칙: 공동 책임",
+      "items": [
+       "FinOps Foundation 원칙: 협업, 비즈니스 가치 기반 결정, 사용자 비용 책임, 적시·정확한 데이터, 중앙 지원, 가변 비용 모델 활용"
+      ]
+     },
+     {
+      "title": "표준·효과: FOCUS",
+      "items": [
+       "FOCUS(비용 데이터 표준)로 멀티 클라우드 청구 데이터를 통일, 비용 예측 정확도 향상과 낭비 절감"
       ]
      }
     ]
@@ -25137,20 +25239,30 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "사용량 기반 요금모델",
-   "클라우드 전환",
-   "비용 최적화",
-   "약정기반할인구매",
-   "클라우드 재무관리",
-   "CUD(Committed Use Discounts)",
-   "AWS"
+   "사용량 기반 요금",
+   "비용 가시화·할당(태깅)",
+   "쇼백·차지백(Showback·Chargeback)",
+   "적정 크기 조정(Rightsizing)",
+   "약정 할인(RI·Savings Plans·CUD)",
+   "스팟 인스턴스",
+   "단위 경제(Unit Economics)",
+   "정보 제공·최적화·운영 3단계",
+   "FinOps Foundation 원칙",
+   "FOCUS(비용 데이터 표준)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CUD": "Committed Use Discount",
+   "CCoE": "Cloud Center of Excellence",
+   "FOCUS": "FinOps Open Cost and Usage Specification",
+   "RI": "Reserved Instance"
+  },
+  "hand": true
  },
  {
   "id": "SV_302",
@@ -25165,76 +25277,90 @@
   "dueum": null,
   "name": "비트코인(Bitcoin)",
   "title": "비트코인(Bitcoin)",
-  "definition": "P2P 분산원장과 작업증명으로 이중지불을 막는 암호화폐로, 공개키·해시·타임스탬프 기반 블록체인의 최초 실용 구현이다.",
+  "definition": "2008년 사토시 나카모토가 백서로 제안하고 2009년 가동된 최초의 블록체인 기반 암호화폐로, 중앙 기관 없이 P2P 네트워크 참여자가 작업증명 합의로 거래 장부를 공동 검증·기록하며 총발행량이 2,100만 개로 제한됨",
   "keywords_must": [
-   "P2P",
-   "분산",
-   "공개키 암호화 방식",
-   "Hash",
-   "Timestamp",
-   "Proof-of-Work",
-   "PoW(Proof of Work)",
-   "공개키 암호",
-   "해시(Hash)",
-   "타임스탬프"
+   "P2P 네트워크",
+   "작업증명(PoW, Proof of Work)",
+   "SHA-256 해시",
+   "블록 헤더(이전 해시·머클 루트·논스)",
+   "미사용 거래 출력(UTXO)",
+   "전자서명(ECDSA·Schnorr)",
+   "이중 지불 방지",
+   "난이도 조정(2,016블록)",
+   "반감기(21만 블록)",
+   "최장 체인 규칙"
   ],
   "keywords_ref": [
-   "ECDSA",
-   "UTXO"
+   "세그윗(SegWit)",
+   "탭루트(Taproot)",
+   "라이트닝 네트워크",
+   "51% 공격",
+   "현물 ETF"
   ],
   "keywords": [
-   "핵심: P2P · 분산 · 공개키 암호화 방식",
-   "기술: Hash · Timestamp · Proof-of-Work",
-   "운영: PoW(Proof of Work) · 공개키 암호 · 해시(Hash)",
-   "참고: ECDSA · UTXO"
+   "구조: 블록 헤더(버전·이전 블록 해시·머클 루트·타임스탬프·난이도·논스) + 거래 목록",
+   "합의: 작업증명 · 약 10분 블록 · 2,016블록마다 난이도 조정 · 최장(최대 작업량) 체인 채택",
+   "통화 정책: 총 2,100만 BTC · 21만 블록(약 4년)마다 보상 반감(2024년 3.125 BTC)"
   ],
   "outline": [
-   "비트코인의 개요",
-   "- 비트코인의 정의",
-   "- 등장 배경",
-   "비트코인 핵심 기술 요소",
-   "- 블록체인·PoW",
-   "- 키·트랜잭션",
-   "한계와 확장",
-   "- 비트코인 요점"
+   "개념과 특징",
+   "- 개념: 탈중앙 전자화폐",
+   "- 특징: 희소성·공개성",
+   "블록 구조와 거래",
+   "- 블록: 해시 연결",
+   "- 거래: UTXO 모델",
+   "합의와 한계",
+   "- 합의: 작업증명",
+   "- 한계: 처리량·에너지"
   ],
   "sections": [
    {
-    "title": "비트코인 핵심",
+    "title": "개념과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 탈중앙 전자화폐",
       "items": [
-       "P2P: P2P를 비트코인 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "분산: 비트코인에서 분산을 다루는 핵심 암기 포인트",
-       "공개키 암호화 방식: 비트코인에서 공개키 암호화 방식을 다루는 핵심 암기 포인트",
-       "Hash: Hash를 비트코인 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "P2P 네트워크에서 신뢰할 제3자 없이 이중 지불 방지를 해결한 전자 현금 시스템"
+      ]
+     },
+     {
+      "title": "특징: 희소성·공개성",
+      "items": [
+       "총발행량 2,100만 개와 반감기(21만 블록)로 공급 감소, 모든 거래가 공개 장부에 영구 기록"
       ]
      }
     ]
    },
    {
-    "title": "비트코인 구성·기술",
+    "title": "블록 구조와 거래",
     "subsections": [
      {
-      "title": null,
+      "title": "블록: 해시 연결",
       "items": [
-       "Timestamp: Timestamp를 비트코인 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Proof-of-Work: Proof-of-Work를 비트코인 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "PoW(Proof of Work): 연산 증명으로 블록 생성권을 경쟁",
-       "공개키 암호: 비트코인에서 공개키 암호를 다루는 핵심 암기 포인트"
+       "블록 헤더(이전 해시·머클 루트·논스): 이전 블록 해시로 체인을 이어 위변조 시 이후 블록 전체 재계산 필요"
+      ]
+     },
+     {
+      "title": "거래: UTXO 모델",
+      "items": [
+       "미사용 거래 출력(UTXO): 계좌 잔고 대신 미사용 출력을 입력으로 소비하고 잔액은 거스름 출력으로 반환, 전자서명(ECDSA·Schnorr)으로 소유 증명"
       ]
      }
     ]
    },
    {
-    "title": "비트코인 운영",
+    "title": "합의와 한계",
     "subsections": [
      {
-      "title": null,
+      "title": "합의: 작업증명",
       "items": [
-       "해시(Hash): 일방향 고정길이 값으로 무결성을 검증",
-       "타임스탬프: 비트코인에서 타임스탬프를 다루는 핵심 암기 포인트"
+       "작업증명(PoW, Proof of Work): 목표값 이하 SHA-256 해시를 찾는 채굴 경쟁, 난이도 조정(2,016블록)으로 약 10분 간격 유지"
+      ]
+     },
+     {
+      "title": "한계: 처리량·에너지",
+      "items": [
+       "초당 약 7건 처리와 막대한 전력 소모, 세그윗(SegWit)·탭루트(Taproot)·라이트닝 네트워크로 확장성·프라이버시 보완"
       ]
      }
     ]
@@ -25243,23 +25369,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "P2P",
-   "분산",
-   "공개키 암호화 방식",
-   "Hash",
-   "Timestamp",
-   "Proof-of-Work",
-   "PoW(Proof of Work)",
-   "공개키 암호",
-   "해시(Hash)",
-   "타임스탬프"
+   "P2P 네트워크",
+   "작업증명(PoW, Proof of Work)",
+   "SHA-256 해시",
+   "블록 헤더(이전 해시·머클 루트·논스)",
+   "미사용 거래 출력(UTXO)",
+   "전자서명(ECDSA·Schnorr)",
+   "이중 지불 방지",
+   "난이도 조정(2,016블록)",
+   "반감기(21만 블록)",
+   "최장 체인 규칙"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_308",
