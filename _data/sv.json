@@ -12,85 +12,91 @@
   "dueum": null,
   "name": "다크 웹(Dark Web)",
   "title": "다크 웹(Dark Web)",
-  "definition": "다크웹(Dark Web)은 암호화된 네트워크에 존재하며 전통적인 검색 엔진을 이용해 발견하거나 전통적인브라우저를 이용해 방문할 수 없는 일련의 웹사이트 집합체",
+  "definition": "일반 검색엔진에 색인되지 않고 Tor·I2P 같은 익명 오버레이 네트워크와 전용 브라우저로만 접속할 수 있는, 다중 암호화로 접속자와 서버 위치를 숨기는 웹 영역",
   "keywords_must": [
-   "토르(Tor)",
+   "토르(Tor, The Onion Router)",
    "어니언 라우팅(Onion Routing)",
    "히든 서비스(.onion)",
-   "딥웹(Deep Web)",
-   "표면웹(Surface Web)",
-   "익명성",
-   "다단 암호화",
-   "출구 노드(Exit Node)",
-   "범죄",
-   "딥웹",
-   "Tor NW",
-   "Onion router"
+   "다중 암호화(Layered Encryption)",
+   "진입·중계·출구 노드(Guard·Middle·Exit Relay)",
+   "I2P(Invisible Internet Project)",
+   "표면 웹·딥 웹·다크 웹 구분",
+   "익명성(Anonymity)"
   ],
   "keywords_ref": [
-   "I2P",
-   "VPN 대비",
-   "F2F",
-   "접속허가",
-   "히든 서비스",
-   "VPN",
-   "F2F(Friend to Friend)"
+   "프리넷(Freenet)",
+   "F2F(Friend-to-Friend) 네트워크",
+   "다크넷 마켓(실크로드)",
+   "랜섬웨어 유출 사이트",
+   "다크웹 모니터링(Threat Intelligence)"
   ],
   "keywords": [
-   "핵심: 토르(Tor) · 어니언 라우팅(Onion Routing) · 히든 서비스(.onion)",
-   "기술: 딥웹(Deep Web) · 표면웹(Surface Web) · 익명성",
-   "운영: 다단 암호화 · 출구 노드(Exit Node) · 범죄",
-   "참고: I2P · VPN 대비 · F2F"
+   "기술: 토르(Tor) · 어니언 라우팅 · 3홉 회로 · 히든 서비스(.onion) · I2P",
+   "역기능·대응: 불법 거래 · 개인정보 유출 · 랜섬웨어 · 다크웹 모니터링"
   ],
   "outline": [
-   "폐쇄적 검은망 Dark Web 의 개요",
-   "- Dark Web 의 정의",
-   "- Dark Web 의 특징",
-   "Dark Web 구성도 및 설명",
-   "- 구성도",
-   "- Dark Web 의 상세설명",
-   "Dark Web 의 순기능과 역기능",
-   "- 다크 웹 요점"
+   "개념과 웹 계층 구분",
+   "- 웹 3계층: 표면·딥·심층 익명 영역",
+   "- 특징: 익명성·의도적 접속",
+   "구성과 동작 원리",
+   "- 어니언 라우팅: 3홉 회로·다중 암호화",
+   "- 은닉 서비스: .onion·I2P",
+   "순기능·역기능과 대응",
+   "- 순기능·역기능: 내부고발 보호·불법 거래",
+   "- 대응: 위협 인텔리전스 모니터링"
   ],
   "sections": [
    {
-    "title": "다크 웹 핵심",
+    "title": "개념과 웹 계층 구분",
     "subsections": [
      {
-      "title": null,
+      "title": "웹 3계층: 표면·딥·심층 익명 영역",
       "items": [
-       "토르(Tor): 분산 릴레이로 통신 경로를 숨기는 익명 네트워크 클라이언트/네트워크",
-       "어니언 라우팅(Onion Routing): 3개 이상 릴레이에 다중 암호화 계층을 씌워 경로를 은닉",
-       "히든 서비스(.onion): 출구 노드 없이 .onion 주소로만 도달하는 은닉 서비스",
-       "딥웹(Deep Web): 검색엔진에 색인되지 않는 비공개·로그인 웹 영역"
+       "표면 웹(Surface Web): 검색엔진이 색인하는 공개 웹, 전체 웹의 약 4%",
+       "딥 웹(Deep Web): 로그인·유료벽 뒤 DB·웹메일 등 비색인 영역, 다크 웹을 포함"
+      ]
+     },
+     {
+      "title": "특징: 익명성·의도적 접속",
+      "items": [
+       "익명성(Anonymity): 접속자 IP와 서버 위치를 모두 은닉, 의도적 접속만 가능"
       ]
      }
     ]
    },
    {
-    "title": "다크 웹 구성·기술",
+    "title": "구성과 동작 원리",
     "subsections": [
      {
-      "title": null,
+      "title": "어니언 라우팅: 3홉 회로·다중 암호화",
       "items": [
-       "표면웹(Surface Web): 일반 검색엔진이 크롤·색인하는 공개 웹",
-       "익명성: 통신 주체·경로를 추적하기 어렵게 만드는 속성",
-       "다단 암호화: 구간마다 다른 키로 겹겹이 암호화해 중간 노드 노출을 차단",
-       "출구 노드(Exit Node): Tor 회로의 마지막 릴레이로 일반 인터넷에 접속하는 지점"
+       "토르(Tor): 진입(Guard)→중계(Middle)→출구(Exit) 3개 릴레이 회로를 무작위 구성",
+       "다중 암호화(Layered Encryption): 릴레이별 키로 3겹 암호화, 각 노드는 한 겹만 복호화해 이전·다음 홉만 인지"
+      ]
+     },
+     {
+      "title": "은닉 서비스: .onion·I2P",
+      "items": [
+       "히든 서비스(.onion): 출구 노드 없이 랑데부 포인트(Rendezvous Point)에서 연결, v3 주소는 56자",
+       "I2P(Invisible Internet Project): 단방향 터널과 갈릭 라우팅(Garlic Routing)을 쓰는 P2P 익명망"
       ]
      }
     ]
    },
    {
-    "title": "다크 웹 운영",
+    "title": "순기능·역기능과 대응",
     "subsections": [
      {
-      "title": null,
+      "title": "순기능·역기능: 내부고발 보호·불법 거래",
       "items": [
-       "범죄: 다크 웹에서 범죄를 다루는 핵심 암기 포인트",
-       "딥웹: 다크 웹에서 딥웹을 다루는 핵심 암기 포인트",
-       "Tor NW: 다크 웹에서 Tor NW를 다루는 핵심 암기 포인트",
-       "Onion router: 다크 웹에서 Onion router를 다루는 핵심 암기 포인트"
+       "순기능: 검열 국가의 내부고발·언론 취재원 보호(SecureDrop)",
+       "역기능: 마약·무기 거래 마켓(실크로드), 유출 개인정보 판매, 랜섬웨어 협상·유출 사이트"
+      ]
+     },
+     {
+      "title": "대응: 위협 인텔리전스 모니터링",
+      "items": [
+       "다크웹 모니터링(Threat Intelligence): 유출 계정·내부정보 거래를 탐지하고 수사기관과 공조"
       ]
      }
     ]
@@ -99,25 +105,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "토르(Tor)",
+   "토르(Tor, The Onion Router)",
    "어니언 라우팅(Onion Routing)",
    "히든 서비스(.onion)",
-   "딥웹(Deep Web)",
-   "표면웹(Surface Web)",
-   "익명성",
-   "다단 암호화",
-   "출구 노드(Exit Node)",
-   "범죄",
-   "딥웹",
-   "Tor NW",
-   "Onion router"
+   "다중 암호화(Layered Encryption)",
+   "진입·중계·출구 노드(Guard·Middle·Exit Relay)",
+   "I2P(Invisible Internet Project)",
+   "표면 웹·딥 웹·다크 웹 구분",
+   "익명성(Anonymity)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_003",
@@ -132,54 +135,90 @@
   "dueum": null,
   "name": "딥 웹(Deep Web)",
   "title": "딥 웹(Deep Web)",
-  "definition": "검색엔진이 찾지 못하는 웹페이지를 말하며, 딥웹은 다크웹을 포함 데이터 베이스, 웹메일 페이지, 등록이 필요한 웹양식, 유료결제를 통과해야 하는 페이지 포함",
+  "definition": "로그인·유료 결제·동적 질의가 필요해 일반 검색엔진 크롤러가 색인하지 못하는 웹 영역으로, 웹메일·DB·인트라넷 등을 포함하며 다크 웹은 그 일부임",
   "keywords_must": [
-   "딥 웹의 핵심 요소",
-   "딥 웹의 구조",
-   "딥 웹 아키텍처",
-   "다크웹(Dark Web)",
-   "F2F(Friend to Friend)",
-   "HTTP",
-   "REST"
+   "표면 웹(Surface Web)",
+   "다크 웹(Dark Web)",
+   "비색인 콘텐츠(Non-indexed Content)",
+   "인증 필요 페이지(Login·Paywall)",
+   "동적 생성 페이지(DB 질의 결과)",
+   "robots.txt 차단",
+   "크롤러(Crawler) 한계",
+   "웹 규모 비율(표면 4%·딥 90% 이상)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "인트라넷(Intranet)",
+   "웹메일·의료기록·구독 서비스",
+   "토르(Tor)",
+   "딥웹 검색(Federated Search)",
+   "실크로드·히든 위키"
+  ],
   "keywords": [
-   "핵심: 딥 웹의 핵심 요소 · 딥 웹의 구조 · 딥 웹 아키텍처",
-   "기술: 다크웹(Dark Web) · F2F(Friend to Friend) · HTTP",
-   "운영: REST"
+   "웹 구분: 표면 웹(약 4%) · 딥 웹(90% 이상) · 다크 웹",
+   "딥 웹 원인: 로그인·유료벽 · 동적 DB 질의 · robots.txt 차단 · 링크 없는 페이지"
   ],
   "outline": [
-   "웹의 유형 비교 및 설명",
-   "- 딥 웹의 정의",
-   "- 딥 웹의 등장 배경",
-   "Dark Web 의 순기능과 역기능",
-   "- 딥 웹의 핵심 요소",
-   "- 딥 웹의 구조"
+   "개념과 비색인 원인",
+   "- 범위: 다크 웹을 포함하는 비색인 영역",
+   "- 비색인 원인: 로그인·동적 질의·robots.txt",
+   "웹 3계층 비교",
+   "- 접근 방식: 검색·계정 인증·전용 브라우저",
+   "- 규모: 4% · 90% 이상 · 수 %",
+   "활용과 이슈",
+   "- 활용: 페더레이티드 검색",
+   "- 이슈: 의료·금융정보 보호"
   ],
   "sections": [
    {
-    "title": "딥 웹 핵심",
+    "title": "개념과 비색인 원인",
     "subsections": [
      {
-      "title": null,
+      "title": "범위: 다크 웹을 포함하는 비색인 영역",
       "items": [
-       "딥 웹의 핵심 요소: 딥 웹에서 딥 웹의 핵심 요소를 다루는 핵심 암기 포인트",
-       "딥 웹의 구조: 딥 웹에서 딥 웹의 구조를 다루는 핵심 암기 포인트",
-       "딥 웹 아키텍처: 딥 웹의 계층·모듈 배치와 상호작용 구조",
-       "다크웹(Dark Web): 딥 웹에서 다크웹(Dark Web)을 다루는 핵심 암기 포인트"
+       "비색인 콘텐츠(Non-indexed Content): 크롤러가 링크를 따라가도 도달하지 못하는 페이지, 다크 웹을 포함하는 상위 개념"
+      ]
+     },
+     {
+      "title": "비색인 원인: 로그인·동적 질의·robots.txt",
+      "items": [
+       "인증 필요 페이지(Login·Paywall): 웹메일, 인터넷뱅킹, 유료 구독 기사",
+       "동적 생성 페이지: 검색 폼 입력으로만 생성되는 DB 질의 결과, robots.txt로 수집 거부한 페이지"
       ]
      }
     ]
    },
    {
-    "title": "딥 웹 구성·기술",
+    "title": "웹 3계층 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "접근 방식: 검색·계정 인증·전용 브라우저",
       "items": [
-       "F2F(Friend to Friend): F2F를 딥 웹 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HTTP: 요청/응답 기반의 웹 응용 계층 프로토콜",
-       "REST: 자원·동사·무상태로 웹 API를 설계하는 아키텍처 스타일"
+       "표면 웹(Surface Web): 구글·네이버 검색으로 즉시 접근, 블로그·포털 뉴스",
+       "딥 웹(Deep Web): 계정 인증 후 일반 브라우저로 접근, 넷플릭스·네이버 메일",
+       "다크 웹(Dark Web): 토르(Tor) 등 전용 브라우저와 .onion 주소 필요, 실크로드·히든 위키"
+      ]
+     },
+     {
+      "title": "규모: 4% · 90% 이상 · 수 %",
+      "items": [
+       "웹 규모 비율: 표면 웹 약 4%, 딥 웹 90% 이상, 다크 웹은 딥 웹 안의 수 % 수준"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용과 이슈",
+    "subsections": [
+     {
+      "title": "활용: 페더레이티드 검색",
+      "items": [
+       "딥웹 검색(Federated Search): 여러 DB 검색 폼에 질의를 동시에 보내 결과를 통합하는 학술·특허 검색"
+      ]
+     },
+     {
+      "title": "이슈: 의료·금융정보 보호",
+      "items": [
+       "개인정보 보호: 의료기록·금융정보가 집중된 영역이라 접근통제·암호화가 필수"
       ]
      }
     ]
@@ -188,20 +227,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "딥 웹의 핵심 요소",
-   "딥 웹의 구조",
-   "딥 웹 아키텍처",
-   "다크웹(Dark Web)",
-   "F2F(Friend to Friend)",
-   "HTTP",
-   "REST"
+   "표면 웹(Surface Web)",
+   "다크 웹(Dark Web)",
+   "비색인 콘텐츠(Non-indexed Content)",
+   "인증 필요 페이지(Login·Paywall)",
+   "동적 생성 페이지(DB 질의 결과)",
+   "robots.txt 차단",
+   "크롤러(Crawler) 한계",
+   "웹 규모 비율(표면 4%·딥 90% 이상)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_004",
@@ -216,85 +257,93 @@
   "dueum": null,
   "name": "쿠키(Cookie)",
   "title": "쿠키(Cookie)",
-  "definition": "HTTP의 비상태성(Stateless)을 보완하기 위해 서버가 브라우저에 저장하는 4KB 이하 텍스트 정보로, 세션 유지·개인화에 사용된다.",
+  "definition": "HTTP의 무상태성(Stateless)을 보완하기 위해 서버가 Set-Cookie 헤더로 내려보내고 브라우저가 저장해 이후 요청의 Cookie 헤더로 되돌려 보내는 최대 4KB의 이름=값 데이터 (RFC 6265)",
   "keywords_must": [
-   "세션 쿠키",
-   "영속 쿠키",
-   "Set-Cookie",
-   "HttpOnly",
-   "Secure",
-   "SameSite",
-   "제3자 쿠키",
-   "Stateless 보완",
-   "Server Side",
-   "영구쿠키",
-   "영구쿠키(Persistent)",
-   "Netscape 도입"
+   "무상태성(Stateless) 보완",
+   "Set-Cookie 헤더",
+   "Cookie 요청 헤더",
+   "세션 쿠키(Session Cookie)",
+   "영구 쿠키(Persistent Cookie, Expires·Max-Age)",
+   "퍼스트파티·서드파티 쿠키(1st·3rd Party)",
+   "HttpOnly·Secure 속성",
+   "SameSite 속성(Strict·Lax·None)",
+   "4KB 크기 제한"
   ],
   "keywords_ref": [
-   "로컬스토리지",
-   "ITP",
-   "CSRF",
-   "4096 byte",
-   "Client/Server Side",
-   "HTTP",
-   "세션"
+   "RFC 6265",
+   "웹 스토리지(localStorage·sessionStorage)",
+   "좀비 쿠키(Zombie Cookie)",
+   "세션 하이재킹(Session Hijacking)",
+   "쿠키 동의(GDPR·ePrivacy)",
+   "서드파티 쿠키 폐지"
   ],
   "keywords": [
-   "핵심: 세션 쿠키 · 영속 쿠키 · Set-Cookie",
-   "기술: HttpOnly · Secure · SameSite",
-   "운영: 제3자 쿠키 · Stateless 보완 · Server Side",
-   "참고: 로컬스토리지 · ITP · CSRF"
+   "동작: Set-Cookie 응답 · Cookie 요청 · Domain·Path 범위",
+   "유형: 세션 쿠키 · 영구 쿠키 · 1st·3rd Party · 좀비 쿠키",
+   "보안: HttpOnly · Secure · SameSite · XSS·스니핑 탈취"
   ],
   "outline": [
-   "쿠키의 개요",
-   "- 쿠키의 정의",
-   "- 쿠키의 특징",
-   "쿠키의 유형과 속성",
-   "- 세션·영구 쿠키",
-   "- 보안 속성",
-   "쿠키의 활용과 주의점",
-   "- 쿠키 요점"
+   "등장 배경과 저장 구조",
+   "- 배경: HTTP 무상태성 보완",
+   "- 제한: 4KB·도메인별 개수",
+   "동작 절차와 유형",
+   "- 동작: 응답 헤더 저장 → 요청 헤더 자동 첨부",
+   "- 유형: 세션·영구·서드파티",
+   "보안 위협과 대응",
+   "- 위협: XSS 탈취·스니핑",
+   "- 대응: HttpOnly·Secure·SameSite"
   ],
   "sections": [
    {
-    "title": "쿠키 핵심",
+    "title": "등장 배경과 저장 구조",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: HTTP 무상태성 보완",
       "items": [
-       "세션 쿠키: 쿠키에서 세션 쿠키를 다루는 핵심 암기 포인트",
-       "영속 쿠키: 쿠키에서 영속 쿠키를 다루는 핵심 암기 포인트",
-       "Set-Cookie: Set-Cookie를 쿠키 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HttpOnly: HttpOnly를 쿠키 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "무상태성(Stateless) 보완: 1994년 넷스케이프가 도입, 로그인 상태·장바구니를 요청 간에 유지"
+      ]
+     },
+     {
+      "title": "제한: 4KB·도메인별 개수",
+      "items": [
+       "4KB 크기 제한: 쿠키 1개 4,096바이트, 도메인별 개수 제한, 브라우저가 저장·만료·삭제 관리"
       ]
      }
     ]
    },
    {
-    "title": "쿠키 구성·기술",
+    "title": "동작 절차와 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "동작: 응답 헤더 저장 → 요청 헤더 자동 첨부",
       "items": [
-       "Secure: Secure를 쿠키 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "SameSite: SameSite를 쿠키 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "제3자 쿠키: 쿠키에서 제3자 쿠키를 다루는 핵심 암기 포인트",
-       "Stateless 보완: 쿠키에서 Stateless 보완을 다루는 핵심 암기 포인트"
+       "Set-Cookie 헤더: 첫 응답에서 서버가 이름=값과 Domain·Path·Expires 속성을 전달",
+       "Cookie 요청 헤더: 이후 같은 Domain·Path 요청마다 브라우저가 자동 첨부, 서버가 값 갱신"
+      ]
+     },
+     {
+      "title": "유형: 세션·영구·서드파티",
+      "items": [
+       "세션 쿠키·영구 쿠키: 브라우저 종료 시 삭제 vs Expires·Max-Age까지 디스크 보관",
+       "서드파티 쿠키(3rd Party): 광고·추적 도메인이 심는 쿠키, 크롬 등에서 단계적 제한"
       ]
      }
     ]
    },
    {
-    "title": "쿠키 운영",
+    "title": "보안 위협과 대응",
     "subsections": [
      {
-      "title": null,
+      "title": "위협: XSS 탈취·스니핑",
       "items": [
-       "Server Side: 쿠키에서 Server Side를 다루는 핵심 암기 포인트",
-       "영구쿠키: 쿠키에서 영구쿠키를 다루는 핵심 암기 포인트",
-       "영구쿠키(Persistent): 쿠키에서 영구쿠키(Persistent)를 다루는 핵심 암기 포인트",
-       "Netscape 도입: 쿠키에서 Netscape 도입을 다루는 핵심 암기 포인트"
+       "XSS(Cross-Site Scripting): document.cookie 스크립트로 세션 쿠키 탈취 → 세션 하이재킹",
+       "스니핑(Sniffing): 평문 HTTP 구간에서 쿠키 도청, 공용 PC 잔존 쿠키 유출"
+      ]
+     },
+     {
+      "title": "대응: HttpOnly·Secure·SameSite",
+      "items": [
+       "HttpOnly·Secure·SameSite: 스크립트 접근 차단, HTTPS 전용 전송, 교차 사이트 요청 시 전송 제한(CSRF 방어)"
       ]
      }
     ]
@@ -303,25 +352,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "세션 쿠키",
-   "영속 쿠키",
-   "Set-Cookie",
-   "HttpOnly",
-   "Secure",
-   "SameSite",
-   "제3자 쿠키",
-   "Stateless 보완",
-   "Server Side",
-   "영구쿠키",
-   "영구쿠키(Persistent)",
-   "Netscape 도입"
+   "무상태성(Stateless) 보완",
+   "Set-Cookie 헤더",
+   "Cookie 요청 헤더",
+   "세션 쿠키(Session Cookie)",
+   "영구 쿠키(Persistent Cookie, Expires·Max-Age)",
+   "퍼스트파티·서드파티 쿠키(1st·3rd Party)",
+   "HttpOnly·Secure 속성",
+   "SameSite 속성(Strict·Lax·None)",
+   "4KB 크기 제한"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_005",
@@ -336,72 +383,89 @@
   "dueum": null,
   "name": "세컨드 라이프(Second Life)",
   "title": "세컨드 라이프(Second Life)",
-  "definition": "린든랩이 제공하는 영속적 온라인 3D 가상세계로, 사용자가 아바타로 참여·창조하며 가상 경제 활동이 이루어진다.",
+  "definition": "2003년 린든랩(Linden Lab)이 출시한 영속형 3D 가상세계로, 사용자가 아바타로 활동하며 콘텐츠를 직접 창작하고 린든 달러로 거래·현금 환전까지 할 수 있는 초기 메타버스 플랫폼",
   "keywords_must": [
-   "3D 가상세계",
-   "아바타",
-   "가상 상거래",
+   "린든랩(Linden Lab)",
    "아바타(Avatar)",
-   "린든 달러",
-   "UGC",
-   "가상부동산",
-   "영속성",
-   "그리드",
-   "메타버스"
+   "3D 가상세계(Virtual World)",
+   "사용자 생성 콘텐츠(UGC)",
+   "린든 달러(Linden Dollar, L$)",
+   "가상 상거래(Virtual Commerce)",
+   "현금 환전(LindeX)",
+   "가상 토지(Virtual Land)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "메타버스(Metaverse)",
+   "스노크래시(Snow Crash)",
+   "제페토·로블록스",
+   "가상 자산 과세",
+   "디지털 트윈"
+  ],
   "keywords": [
-   "핵심: 3D 가상세계 · 아바타 · 가상 상거래",
-   "기술: 아바타(Avatar) · 린든 달러 · UGC",
-   "운영: 가상부동산 · 영속성 · 그리드"
+   "구성: 아바타 · 3D 가상세계 · 사용자 생성 콘텐츠(UGC)",
+   "경제: 린든 달러(L$) · LindeX 환전 · 가상 토지 · 가상 상거래"
   ],
   "outline": [
-   "세컨드 라이프의 개요",
-   "- 세컨드 라이프의 정의",
-   "- 세컨드 라이프의 특징",
-   "세컨드 라이프의 구성",
-   "- 아바타·랜드",
-   "- 가상경제",
-   "메타버스 관점 시사점",
-   "- 세컨드 라이프 요점"
+   "출시 배경과 성격",
+   "- 출시: 2003년 린든랩",
+   "- 성격: 영속형 3D 가상세계",
+   "구성요소와 경제 시스템",
+   "- 구성: 아바타·UGC 빌드 도구",
+   "- 경제: 린든 달러·LindeX·가상 토지",
+   "의의와 한계",
+   "- 의의: 메타버스 비즈니스 원형",
+   "- 한계: 고사양 PC·가상자산 규제"
   ],
   "sections": [
    {
-    "title": "세컨드 라이프 핵심",
+    "title": "출시 배경과 성격",
     "subsections": [
      {
-      "title": null,
+      "title": "출시: 2003년 린든랩",
       "items": [
-       "3D 가상세계: 세컨드 라이프에서 3D 가상세계를 다루는 핵심 암기 포인트",
-       "아바타: 세컨드 라이프에서 아바타를 다루는 핵심 암기 포인트",
-       "가상 상거래: 세컨드 라이프에서 가상 상거래를 다루는 핵심 암기 포인트",
-       "아바타(Avatar): 세컨드 라이프에서 아바타(Avatar)를 다루는 핵심 암기 포인트"
+       "린든랩(Linden Lab): 2003년 6월 출시, 게임 목표 없이 사용자가 생활·창작하는 가상세계"
+      ]
+     },
+     {
+      "title": "성격: 영속형 3D 가상세계",
+      "items": [
+       "영속성(Persistence): 사용자가 접속하지 않아도 세계와 소유물이 유지되는 서버 기반 공간"
       ]
      }
     ]
    },
    {
-    "title": "세컨드 라이프 구성·기술",
+    "title": "구성요소와 경제 시스템",
     "subsections": [
      {
-      "title": null,
+      "title": "구성: 아바타·UGC 빌드 도구",
       "items": [
-       "린든 달러: 세컨드 라이프에서 린든 달러를 다루는 핵심 암기 포인트",
-       "UGC: UGC를 세컨드 라이프 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "가상부동산: 세컨드 라이프에서 가상부동산을 다루는 핵심 암기 포인트",
-       "영속성: 세컨드 라이프에서 영속성을 다루는 핵심 암기 포인트"
+       "아바타(Avatar): 외형·의상을 꾸며 다른 사용자와 음성·채팅으로 교류하는 자기 표현체",
+       "사용자 생성 콘텐츠(UGC): 내장 3D 빌드 도구와 LSL 스크립트로 건물·아이템을 제작, 저작권은 창작자 소유"
+      ]
+     },
+     {
+      "title": "경제: 린든 달러·LindeX·가상 토지",
+      "items": [
+       "린든 달러(L$): 가상 통화, LindeX 거래소에서 미국 달러로 환전 가능",
+       "가상 토지(Virtual Land): 린든랩에서 섬(Region)을 구매·임대해 상점·전시관 운영"
       ]
      }
     ]
    },
    {
-    "title": "세컨드 라이프 운영",
+    "title": "의의와 한계",
     "subsections": [
      {
-      "title": null,
+      "title": "의의: 메타버스 비즈니스 원형",
       "items": [
-       "그리드: 세컨드 라이프에서 그리드를 다루는 핵심 암기 포인트",
-       "메타버스: 가상·현실 융합의 몰입형 디지털 공간"
+       "메타버스 원형: 기업 가상매장·대학 가상캠퍼스·가상 공연 등 현 메타버스 비즈니스 모델을 선행"
+      ]
+     },
+     {
+      "title": "한계: 고사양 PC·가상자산 규제",
+      "items": [
+       "고사양 PC 요구와 모바일 미지원, 가상자산 사기·도박 규제 문제로 2010년 이후 이용자 정체"
       ]
      }
     ]
@@ -410,23 +474,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "3D 가상세계",
-   "아바타",
-   "가상 상거래",
+   "린든랩(Linden Lab)",
    "아바타(Avatar)",
-   "린든 달러",
-   "UGC",
-   "가상부동산",
-   "영속성",
-   "그리드",
-   "메타버스"
+   "3D 가상세계(Virtual World)",
+   "사용자 생성 콘텐츠(UGC)",
+   "린든 달러(Linden Dollar, L$)",
+   "가상 상거래(Virtual Commerce)",
+   "현금 환전(LindeX)",
+   "가상 토지(Virtual Land)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_006",
@@ -441,71 +504,91 @@
   "dueum": null,
   "name": "소셜 네트워크 서비스(SNS)",
   "title": "소셜 네트워크 서비스(SNS)",
-  "definition": "개인 프로필과 인맥을 기반으로 콘텐츠를 공유·확산하는 온라인 소셜 네트워크 플랫폼 서비스이다.",
+  "definition": "온라인에서 이용자가 프로필을 만들고 다른 이용자와 관계를 맺어 콘텐츠를 공유·소통하며 인맥을 형성·강화하는 서비스로, 특정 관심사에 특화한 버티컬 SNS로 분화되고 있음",
   "keywords_must": [
-   "프로필",
-   "소셜 그래프",
-   "타임라인",
-   "UGC",
-   "네트워크 효과",
-   "바이럴",
-   "개인정보",
-   "추천 알고리즘",
-   "오픈그래프",
-   "소셜 로그인"
+   "소셜 그래프(Social Graph)",
+   "프로필·관계·공유(Profile·Connection·Sharing)",
+   "버티컬 SNS(Vertical SNS)",
+   "소셜 커머스(Social Commerce)",
+   "네트워크 효과(Network Effect)",
+   "사용자 생성 콘텐츠(UGC)",
+   "추천 알고리즘·피드(Feed)",
+   "필터 버블(Filter Bubble)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "약한 연결(Weak Ties)",
+   "인플루언서 마케팅",
+   "가짜뉴스·사이버불링",
+   "개인정보 노출",
+   "핀터레스트·링크드인·스트라바"
+  ],
   "keywords": [
-   "핵심: 프로필 · 소셜 그래프 · 타임라인",
-   "기술: UGC · 네트워크 효과 · 바이럴",
-   "운영: 개인정보 · 추천 알고리즘 · 오픈그래프"
+   "구성: 프로필 · 관계(소셜 그래프) · 공유 · 피드",
+   "유형: 범용 SNS(페이스북·X) · 버티컬 SNS(링크드인·핀터레스트) · 소셜 커머스",
+   "이슈: 필터 버블 · 가짜뉴스 · 개인정보 노출"
   ],
   "outline": [
-   "SNS 의 개요",
-   "- 소셜 네트워크 서비스의 정의",
-   "- 소셜 네트워크 서비스의 특징",
-   "SNS 의 구성 요소",
-   "- 프로필·관계·피드",
-   "효과와 역기능",
-   "- 소셜 네트워크 서비스 요점"
+   "구성요소와 특성",
+   "- 관계망: 소셜 그래프·네트워크 효과",
+   "- 콘텐츠: UGC·피드 확산",
+   "서비스 유형과 수익 모델",
+   "- 주제 특화형: 링크드인·핀터레스트",
+   "- 수익 모델: 소셜 커머스·타깃 광고",
+   "사회적 영향",
+   "- 긍정: 약한 연결·재난 소통",
+   "- 부정: 필터 버블·가짜뉴스"
   ],
   "sections": [
    {
-    "title": "소셜 네트워크 서비스 핵심",
+    "title": "구성요소와 특성",
     "subsections": [
      {
-      "title": null,
+      "title": "관계망: 소셜 그래프·네트워크 효과",
       "items": [
-       "프로필: 소셜 네트워크 서비스에서 프로필을 다루는 핵심 암기 포인트",
-       "소셜 그래프: 소셜 네트워크 서비스에서 소셜 그래프를 다루는 핵심 암기 포인트",
-       "타임라인: 소셜 네트워크 서비스에서 타임라인을 다루는 핵심 암기 포인트",
-       "UGC: UGC를 소셜 네트워크 서비스 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "소셜 그래프(Social Graph): 이용자 간 팔로우·친구 관계를 노드·엣지로 표현한 관계망",
+       "네트워크 효과(Network Effect): 이용자가 늘수록 서비스 가치가 커져 플랫폼 독점이 강화"
+      ]
+     },
+     {
+      "title": "콘텐츠: UGC·피드 확산",
+      "items": [
+       "사용자 생성 콘텐츠(UGC): 이용자가 직접 생산한 글·사진·영상이 피드로 확산"
       ]
      }
     ]
    },
    {
-    "title": "소셜 네트워크 서비스 구성·기술",
+    "title": "서비스 유형과 수익 모델",
     "subsections": [
      {
-      "title": null,
+      "title": "주제 특화형: 링크드인·핀터레스트",
       "items": [
-       "네트워크 효과: 이용자 증가가 서비스 가치를 높이는 현상",
-       "바이럴: 소셜 네트워크 서비스에서 바이럴을 다루는 핵심 암기 포인트",
-       "개인정보: 소셜 네트워크 서비스에서 개인정보를 다루는 핵심 암기 포인트",
-       "추천 알고리즘: 소셜 네트워크 서비스에서 추천 알고리즘을 다루는 핵심 암기 포인트"
+       "버티컬 SNS(Vertical SNS): 사진(핀터레스트)·커리어(링크드인)·운동(스트라바) 등 한 주제에 집중, 정보 공개 부담이 적고 충성도 높음"
+      ]
+     },
+     {
+      "title": "수익 모델: 소셜 커머스·타깃 광고",
+      "items": [
+       "소셜 커머스(Social Commerce): SNS 관계망을 활용한 공동구매·라이브 커머스",
+       "광고 모델: 관심사·행동 데이터 기반 타깃 광고, 인플루언서 협찬"
       ]
      }
     ]
    },
    {
-    "title": "소셜 네트워크 서비스 운영",
+    "title": "사회적 영향",
     "subsections": [
      {
-      "title": null,
+      "title": "긍정: 약한 연결·재난 소통",
       "items": [
-       "오픈그래프: 소셜 네트워크 서비스에서 오픈그래프를 다루는 핵심 암기 포인트",
-       "소셜 로그인: 소셜 네트워크 서비스에서 소셜 로그인을 다루는 핵심 암기 포인트"
+       "약한 연결(Weak Ties) 확장으로 정보 확산 가속, 재난 시 실시간 소통 채널"
+      ]
+     },
+     {
+      "title": "부정: 필터 버블·가짜뉴스",
+      "items": [
+       "필터 버블(Filter Bubble): 추천 알고리즘이 성향에 맞는 콘텐츠만 노출해 확증편향 강화",
+       "가짜뉴스·사이버불링·개인정보 노출로 인한 프라이버시 침해"
       ]
      }
     ]
@@ -514,23 +597,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "프로필",
-   "소셜 그래프",
-   "타임라인",
-   "UGC",
-   "네트워크 효과",
-   "바이럴",
-   "개인정보",
-   "추천 알고리즘",
-   "오픈그래프",
-   "소셜 로그인"
+   "소셜 그래프(Social Graph)",
+   "프로필·관계·공유(Profile·Connection·Sharing)",
+   "버티컬 SNS(Vertical SNS)",
+   "소셜 커머스(Social Commerce)",
+   "네트워크 효과(Network Effect)",
+   "사용자 생성 콘텐츠(UGC)",
+   "추천 알고리즘·피드(Feed)",
+   "필터 버블(Filter Bubble)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_007_00",
@@ -545,82 +627,85 @@
   "dueum": null,
   "name": "메타버스(Metaverse)",
   "title": "메타버스(Metaverse)",
-  "definition": "1992년 닐 스티븐슨 소설에서 유래한 용어로, 다감각 3D 가상세계에서 아바타로 소통·거래하며 현실과 공존하는 지속적 디지털 세계를 말한다.",
+  "definition": "가상(Meta)과 세계(Universe)의 합성어로, 현실과 가상이 상호작용하는 3차원 공간에서 사용자가 아바타를 통해 사회·경제·문화 활동을 하는 실감형 디지털 세계 (어원: 1992년 닐 스티븐슨 「스노 크래시」)",
   "keywords_must": [
-   "증강현실(AR)",
-   "라이프로깅(Life Logging)",
-   "미러월드(Mirror World)",
+   "ASF 4대 범주(Acceleration Studies Foundation)",
+   "증강현실(Augmented Reality)",
+   "라이프로깅(Lifelogging)",
+   "거울세계(Mirror World)",
    "가상세계(Virtual World)",
    "아바타(Avatar)",
-   "상호운용성",
-   "지속성(Persistence)",
-   "가상경제/NFT",
-   "가상세계",
-   "증강현실",
-   "라이프로깅"
+   "디지털 트윈(Digital Twin)",
+   "가상경제(Virtual Economy, NFT·가상화폐)",
+   "XR 기기(HMD)"
   ],
   "keywords_ref": [
-   "디지털 트윈",
-   "Web3",
-   "공간컴퓨팅",
-   "미러월드",
-   "다감각 3D 환경",
-   "NFT"
+   "스노 크래시(Snow Crash)",
+   "증강-시뮬레이션·내적-외적 축",
+   "로블록스·제페토·이프랜드",
+   "가상 오피스·가상 홈",
+   "메타버스 윤리원칙(과기정통부)"
   ],
   "keywords": [
-   "핵심: 증강현실(AR) · 라이프로깅(Life Logging) · 미러월드(Mirror World)",
-   "기술: 가상세계(Virtual World) · 아바타(Avatar) · 상호운용성",
-   "운영: 지속성(Persistence) · 가상경제/NFT · 가상세계",
-   "참고: 디지털 트윈 · Web3 · 공간컴퓨팅"
+   "4대 범주(ASF): 증강현실 · 라이프로깅 · 거울세계 · 가상세계",
+   "기술: XR·HMD · 디지털 트윈 · 아바타 · NFT 가상경제"
   ],
   "outline": [
-   "메타버스의 정의",
-   "- 용어 유래",
-   "- 개념적 특징",
-   "메타버스의 4가지 범주",
-   "- 증강현실·라이프로깅",
-   "- 미러월드·가상세계",
-   "메타버스 서비스 유형",
-   "- 메타버스 요점"
+   "어원과 특징",
+   "- 어원: 1992년 소설 스노 크래시",
+   "4대 범주(ASF, 2007)",
+   "- 증강 축: 증강현실·가상세계",
+   "- 기록·복제 축: 라이프로깅·거울세계",
+   "서비스 유형과 과제",
+   "- 서비스: 가상 오피스·가상경제",
+   "- 과제: 기기 한계·아바타 범죄·과세"
   ],
   "sections": [
    {
-    "title": "메타버스 핵심",
+    "title": "어원과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "어원: 1992년 소설 스노 크래시",
       "items": [
-       "증강현실(AR): 메타버스에서 증강현실(AR)을 다루는 핵심 암기 포인트",
-       "라이프로깅(Life Logging): 메타버스에서 라이프로깅(Life Logging)을 다루는 핵심 암기 포인트",
-       "미러월드(Mirror World): 메타버스에서 미러월드(Mirror World)를 다루는 핵심 암기 포인트",
-       "가상세계(Virtual World): 메타버스에서 가상세계(Virtual World)를 다루는 핵심 암기 포인트"
+       "스노 크래시(Snow Crash): 1992년 닐 스티븐슨 소설에서 아바타로 들어가는 3D 가상공간으로 첫 등장",
+       "특징: 실시간 지속성, 경제 시스템, 현실-가상 상호연동, 사용자 창작(UGC)"
       ]
      }
     ]
    },
    {
-    "title": "메타버스 구성·기술",
+    "title": "4대 범주(ASF, 2007)",
     "subsections": [
      {
-      "title": null,
+      "title": "증강 축: 증강현실·가상세계",
       "items": [
-       "아바타(Avatar): 메타버스에서 아바타(Avatar)를 다루는 핵심 암기 포인트",
-       "상호운용성: 메타버스에서 상호운용성을 다루는 핵심 암기 포인트",
-       "지속성(Persistence): 메타버스에서 지속성(Persistence)을 다루는 핵심 암기 포인트",
-       "가상경제/NFT: 메타버스에서 가상경제/NFT를 다루는 핵심 암기 포인트"
+       "증강현실(Augmented Reality): 현실 위에 가상 정보를 겹침, 예: 포켓몬 GO",
+       "가상세계(Virtual World): 현실과 다른 3D 세계를 구현, 예: 세컨드 라이프·로블록스"
+      ]
+     },
+     {
+      "title": "기록·복제 축: 라이프로깅·거울세계",
+      "items": [
+       "라이프로깅(Lifelogging): 일상 경험을 센서로 기록·공유, 예: 나이키+애플 워치 운동 기록",
+       "거울세계(Mirror World): 현실을 정보적으로 복제·확장, 예: 구글 어스·배달앱 지도"
       ]
      }
     ]
    },
    {
-    "title": "메타버스 운영",
+    "title": "서비스 유형과 과제",
     "subsections": [
      {
-      "title": null,
+      "title": "서비스: 가상 오피스·가상경제",
       "items": [
-       "가상세계: 메타버스에서 가상세계를 다루는 핵심 암기 포인트",
-       "증강현실: 메타버스에서 증강현실을 다루는 핵심 암기 포인트",
-       "라이프로깅: 메타버스에서 라이프로깅을 다루는 핵심 암기 포인트"
+       "가상 오피스(Virtual Office): 아바타로 출근·회의, 예: 게더타운·이프랜드",
+       "가상경제(Virtual Economy): 아이템·토지를 NFT·가상화폐로 거래, 크리에이터 수익화"
+      ]
+     },
+     {
+      "title": "과제: 기기 한계·아바타 범죄·과세",
+      "items": [
+       "HMD 무게·멀미 등 기기 한계, 아바타 성범죄·사기, 가상자산 과세·저작권 제도 정비"
       ]
      }
     ]
@@ -629,24 +714,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "증강현실(AR)",
-   "라이프로깅(Life Logging)",
-   "미러월드(Mirror World)",
+   "ASF 4대 범주(Acceleration Studies Foundation)",
+   "증강현실(Augmented Reality)",
+   "라이프로깅(Lifelogging)",
+   "거울세계(Mirror World)",
    "가상세계(Virtual World)",
    "아바타(Avatar)",
-   "상호운용성",
-   "지속성(Persistence)",
-   "가상경제/NFT",
-   "가상세계",
-   "증강현실",
-   "라이프로깅"
+   "디지털 트윈(Digital Twin)",
+   "가상경제(Virtual Economy, NFT·가상화폐)",
+   "XR 기기(HMD)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_008",
@@ -661,70 +745,84 @@
   "dueum": null,
   "name": "웹 스크래핑(Web Scraping)",
   "title": "웹 스크래핑(Web Scraping)",
-  "definition": "고객의 인증정보를 기반으로, 다양한 금융 및 공공기관, 기타 사이트의 데이터를 추출해 가공하거나 분석한 뒤정제된 결과를 제공하는 기술",
+  "definition": "고객이 위임한 인증정보로 금융·공공기관 등의 웹 화면이나 통신 데이터에 대신 접속해 필요한 정보를 추출·가공해 제공하는 기술로, 보안 문제로 표준 API 방식으로 대체되는 추세",
   "keywords_must": [
-   "인증정보",
-   "중계서버",
-   "추출",
-   "스크래핑의 개념도",
-   "스크래핑의 유형",
-   "웹 스크래핑 아키텍처",
-   "HTTP",
-   "REST",
-   "인증",
-   "상태코드"
+   "인증정보 위임(Credential Sharing)",
+   "중계서버 기반(Server-side)",
+   "클라이언트 기반(Client-side)",
+   "브라우저 기반 스크래핑",
+   "프로토콜 기반 스크래핑",
+   "스크린 스크래핑(Screen Scraping)",
+   "표준 API 방식(Open API)",
+   "마이데이터(MyData)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "데이터 스크래핑",
+   "헤드리스 브라우저(Headless Browser)",
+   "토큰 기반 인증(OAuth 2.0)",
+   "신용정보법",
+   "웹 크롤링과 차이"
+  ],
   "keywords": [
-   "핵심: 인증정보 · 중계서버 · 추출",
-   "기술: 스크래핑의 개념도 · 스크래핑의 유형 · 웹 스크래핑 아키텍처",
-   "운영: HTTP · REST · 인증"
+   "유형: 중계서버 기반 · 클라이언트 기반 · 브라우저 기반 · 프로토콜 기반",
+   "비교: 스크래핑(ID·PW 위임) ↔ 표준 API(OAuth 토큰) · 마이데이터"
   ],
   "outline": [
-   "웹 스크래핑의 개념",
-   "- 웹 스크래핑 핵심 키워드",
-   "웹 스크래핑의 구성·기술",
-   "- 구성요소·표준",
-   "웹 스크래핑의 운영 가치·시사점",
-   "- 웹 스크래핑 요점"
+   "동작 방식",
+   "- 대리 로그인: 인증정보 위임·화면 파싱",
+   "유형",
+   "- 엔진 위치: 중계서버·클라이언트",
+   "- 수집 방식: 브라우저·프로토콜",
+   "표준 API 방식과 비교",
+   "- 인증: ID·PW 저장 vs OAuth 토큰",
+   "- 표준화: 화면 의존 vs JSON·마이데이터"
   ],
   "sections": [
    {
-    "title": "웹 스크래핑 핵심",
+    "title": "동작 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "대리 로그인: 인증정보 위임·화면 파싱",
       "items": [
-       "인증정보: 웹 스크래핑에서 인증정보를 다루는 핵심 암기 포인트",
-       "중계서버: 웹 스크래핑에서 중계서버를 다루는 핵심 암기 포인트",
-       "추출: 웹 스크래핑에서 추출을 다루는 핵심 암기 포인트",
-       "스크래핑의 개념도: 웹 스크래핑의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램"
+       "인증정보 위임(Credential Sharing): 고객 ID·비밀번호·공인인증서를 사업자가 보관해 기관 사이트에 대리 로그인",
+       "스크린 스크래핑(Screen Scraping): 화면에 표시된 HTML을 파싱해 계좌·거래내역 추출"
       ]
      }
     ]
    },
    {
-    "title": "웹 스크래핑 구성·기술",
+    "title": "유형",
     "subsections": [
      {
-      "title": null,
+      "title": "엔진 위치: 중계서버·클라이언트",
       "items": [
-       "스크래핑의 유형: 웹 스크래핑에서 스크래핑의 유형을 다루는 핵심 암기 포인트",
-       "웹 스크래핑 아키텍처: 웹 스크래핑의 계층·모듈 배치와 상호작용 구조",
-       "HTTP: 요청/응답 기반의 웹 응용 계층 프로토콜 (웹 스크래핑/4d8c)",
-       "REST: 자원·동사·무상태로 웹 API를 설계하는 아키텍처 스타일 (웹 스크래핑/a693)"
+       "중계서버 기반(Server-side): 중계서버가 주기적으로 수집·저장, 빠르고 대용량 처리 가능하나 인증정보 집중 위험",
+       "클라이언트 기반(Client-side): 사용자 PC·앱에서 직접 실행, 인증정보가 단말에 남아 상대적으로 안전하나 느림"
+      ]
+     },
+     {
+      "title": "수집 방식: 브라우저·프로토콜",
+      "items": [
+       "브라우저 기반: 헤드리스 브라우저로 화면을 렌더링해 표시 데이터 수집",
+       "프로토콜 기반: 브라우저 없이 HTTP 요청·응답을 통신 모듈 단계에서 직접 수집"
       ]
      }
     ]
    },
    {
-    "title": "웹 스크래핑 운영",
+    "title": "표준 API 방식과 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "인증: ID·PW 저장 vs OAuth 토큰",
       "items": [
-       "인증: 웹 스크래핑에서 인증을 다루는 핵심 암기 포인트",
-       "상태코드: 웹 스크래핑에서 상태코드를 다루는 핵심 암기 포인트"
+       "스크래핑은 ID·PW 저장으로 유출 시 전 계좌 위험, 표준 API는 OAuth 2.0 토큰으로 범위·기간 제한"
+      ]
+     },
+     {
+      "title": "표준화: 화면 의존 vs JSON·마이데이터",
+      "items": [
+       "스크래핑은 화면 개편 시 수집 오류·기관 서버 과부하, 표준 API는 정형 JSON 응답",
+       "마이데이터(MyData): 2022년 1월 금융 마이데이터 전면 시행으로 스크래핑 금지, 표준 API 의무화"
       ]
      }
     ]
@@ -733,23 +831,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "인증정보",
-   "중계서버",
-   "추출",
-   "스크래핑의 개념도",
-   "스크래핑의 유형",
-   "웹 스크래핑 아키텍처",
-   "HTTP",
-   "REST",
-   "인증",
-   "상태코드"
+   "인증정보 위임(Credential Sharing)",
+   "중계서버 기반(Server-side)",
+   "클라이언트 기반(Client-side)",
+   "브라우저 기반 스크래핑",
+   "프로토콜 기반 스크래핑",
+   "스크린 스크래핑(Screen Scraping)",
+   "표준 API 방식(Open API)",
+   "마이데이터(MyData)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_009",
@@ -764,85 +861,86 @@
   "dueum": null,
   "name": "웹 크롤링(Web Crawling)",
   "title": "웹 크롤링(Web Crawling)",
-  "definition": "인터넷 웹사이트의 URL 주소를 통해 HTML 페이지를 웹크롤러 이용 접속해서 HTML/CSS 파싱하고 Web Data를 자동으로 수집하는 데이터 수집 기술",
+  "definition": "크롤러가 시드 URL에서 출발해 HTML을 내려받고 파싱해 링크를 따라가며 웹 페이지를 자동으로 수집·저장하는 기술로, 검색엔진 색인과 데이터 분석의 기반이 됨",
   "keywords_must": [
-   "크롤러(Crawler)",
-   "Frontier",
-   "시드 URL",
-   "URL Filter",
-   "robots.txt",
-   "Politeness",
-   "중복 제거(Dedup)",
-   "BFS/우선순위 탐색",
-   "Web Data",
-   "Open API",
-   "Python",
-   "Selenium"
+   "시드 URL(Seed URL)",
+   "URL 프런티어(Frontier)",
+   "페처·파서(Fetcher·Parser)",
+   "URL 정규화(URL Normalization)",
+   "중복 제거(Duplicate Detection)",
+   "로봇 배제 표준(robots.txt)",
+   "너비 우선 탐색(BFS)",
+   "크롤링 정책(재방문·정중성)"
   ],
   "keywords_ref": [
-   "스크래핑 대비",
-   "사이트맵",
-   "변경 탐지",
-   "Master/Slave/Monitor",
-   "크롤 지연(Politeness)",
-   "웹스크래핑",
-   "URL",
-   "HTTP"
+   "파이썬·셀레늄(Selenium)",
+   "스크래피(Scrapy)",
+   "크롤러 트랩(Crawler Trap)",
+   "Fish Search·Shark Search",
+   "사이트맵(sitemap.xml)"
   ],
   "keywords": [
-   "핵심: 크롤러(Crawler) · Frontier · 시드 URL",
-   "기술: URL Filter · robots.txt · Politeness",
-   "운영: 중복 제거(Dedup) · BFS/우선순위 탐색 · Web Data",
-   "참고: 스크래핑 대비 · 사이트맵 · 변경 탐지"
+   "구성: 시드 URL · 프런티어(Master) · 에이전트(Fetcher·Parser) · 모니터",
+   "기술: URL 정규화 · 중복 제거 · robots.txt · 크롤러 트랩 회피",
+   "탐색: BFS · DFS · Fish Search · 중요도 순(PageRank)"
   ],
   "outline": [
-   "웹크롤링의 아키텍처 및 기술요소",
-   "- 웹크롤링의 아키텍처",
-   "- 웹크롤링의 기술요소",
-   "웹크롤링 검색 알고리즘",
-   "- 기본 웹크롤링 검색 알고리즘",
-   "웹크롤링과 웹스크래핑 비교",
-   "- 웹 크롤링 요점"
+   "수집 절차",
+   "- 반복 구조: 다운로드·파싱·링크 큐잉",
+   "크롤러 구성요소",
+   "- 마스터: 프런티어·URL 정규화",
+   "- 에이전트·모니터: 페처·파서·이상 감지",
+   "탐색 알고리즘과 정책",
+   "- 탐색: BFS·Fish Search",
+   "- 정책: robots.txt·재방문"
   ],
   "sections": [
    {
-    "title": "웹 크롤링 핵심",
+    "title": "수집 절차",
     "subsections": [
      {
-      "title": null,
+      "title": "반복 구조: 다운로드·파싱·링크 큐잉",
       "items": [
-       "크롤러(Crawler): 웹 크롤링에서 크롤러(Crawler)를 다루는 핵심 암기 포인트",
-       "Frontier: Frontier를 웹 크롤링 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "시드 URL: 웹 크롤링에서 시드 URL를 다루는 핵심 암기 포인트",
-       "URL Filter: 웹 크롤링에서 URL Filter를 다루는 핵심 암기 포인트"
+       "시드 URL(Seed URL): 초기 URL을 큐에 넣고 다운로드 → HTML 파싱 → 추출 링크를 큐에 추가하는 반복 구조",
+       "구현 도구: 파이썬 requests·BeautifulSoup, 동적 페이지는 셀레늄(Selenium) 브라우저 제어"
       ]
      }
     ]
    },
    {
-    "title": "웹 크롤링 구성·기술",
+    "title": "크롤러 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "마스터: 프런티어·URL 정규화",
       "items": [
-       "robots.txt: robots.txt를 웹 크롤링 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Politeness: Politeness를 웹 크롤링 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "중복 제거(Dedup): 웹 크롤링에서 중복 제거(Dedup)를 다루는 핵심 암기 포인트",
-       "BFS/우선순위 탐색: 웹 크롤링에서 BFS/우선순위 탐색을 다루는 핵심 암기 포인트"
+       "URL 프런티어(Frontier): 방문할 URL 큐와 우선순위를 관리, 그룹별 시드 지정",
+       "URL 정규화(URL Normalization): 대소문자·인코딩·끝 슬래시를 통일해 같은 페이지 중복 수집 방지"
+      ]
+     },
+     {
+      "title": "에이전트·모니터: 페처·파서·이상 감지",
+      "items": [
+       "페처·파서(Fetcher·Parser): HTTP 요청으로 문서를 받아 헤더·본문·링크 추출",
+       "모니터: 크롤링 이상 감지, 특정 서버 과다 트래픽 시 우선순위 조정"
       ]
      }
     ]
    },
    {
-    "title": "웹 크롤링 운영",
+    "title": "탐색 알고리즘과 정책",
     "subsections": [
      {
-      "title": null,
+      "title": "탐색: BFS·Fish Search",
       "items": [
-       "Web Data: 웹 크롤링에서 Web Data를 다루는 핵심 암기 포인트",
-       "Open API: 웹 크롤링에서 Open API를 다루는 핵심 암기 포인트",
-       "Python: Python를 웹 크롤링 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Selenium: Selenium를 웹 크롤링 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "너비 우선 탐색(BFS): 같은 깊이 URL부터 수집, 넓은 범위를 고르게 커버",
+       "Fish Search: 질의와 관련된 페이지 주변만 고정 깊이로 탐색하는 주제 중심 크롤링"
+      ]
+     },
+     {
+      "title": "정책: robots.txt·재방문",
+      "items": [
+       "로봇 배제 표준(robots.txt): 수집 금지 경로 준수, Crawl-delay로 서버 부하 제한(정중성)",
+       "재방문 정책: 변경 빈도 높은 페이지를 자주 재수집해 색인 신선도 유지"
       ]
      }
     ]
@@ -851,25 +949,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "크롤러(Crawler)",
-   "Frontier",
-   "시드 URL",
-   "URL Filter",
-   "robots.txt",
-   "Politeness",
-   "중복 제거(Dedup)",
-   "BFS/우선순위 탐색",
-   "Web Data",
-   "Open API",
-   "Python",
-   "Selenium"
+   "시드 URL(Seed URL)",
+   "URL 프런티어(Frontier)",
+   "페처·파서(Fetcher·Parser)",
+   "URL 정규화(URL Normalization)",
+   "중복 제거(Duplicate Detection)",
+   "로봇 배제 표준(robots.txt)",
+   "너비 우선 탐색(BFS)",
+   "크롤링 정책(재방문·정중성)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_010",
@@ -884,81 +979,86 @@
   "dueum": null,
   "name": "오픈 API(Open API)",
   "title": "오픈 API(Open API)",
-  "definition": "소프트웨어가 서로 의사 소통하는 규약 일반적으로는 운영체제, 어플리케이션, 라이브러리등 다양한 수준의 인터페이스를 총칭",
+  "definition": "포털·공공기관 등 플랫폼이 보유한 데이터와 기능을 외부 개발자가 활용할 수 있도록 공개한 API로, 주로 HTTP 기반 REST 방식과 JSON·XML 데이터 형식으로 제공되어 매시업(Mashup) 서비스를 가능하게 함",
   "keywords_must": [
-   "REST",
-   "OpenAPI/Swagger",
-   "OAuth 2.0",
-   "API 키",
-   "쿼터/Rate Limit",
-   "엔드포인트",
-   "버전관리",
-   "개발자 포털",
-   "OPEN API의 개념도",
-   "Open API 핵심기술",
-   "오픈 API 아키텍처",
-   "API 호출시 허가된 거래인지 확인"
+   "매시업(Mashup)",
+   "REST(Representational State Transfer)",
+   "JSON·XML 데이터 포맷",
+   "API 키(API Key)",
+   "OAuth 2.0 인증",
+   "트래픽 제어(Rate Limiting)",
+   "API 포털(Developer Portal)",
+   "공공데이터포털(data.go.kr)"
   ],
   "keywords_ref": [
-   "GraphQL",
-   "웹훅",
-   "API Gateway",
-   "KEY",
-   "API KEY 발급, OAuth 인증",
-   "API 허용량 만큼 쓰도록 제어"
+   "SOAP·XML-RPC",
+   "API 게이트웨이",
+   "사용량 과금(Metering)",
+   "웹 플랫폼(Web as Platform)",
+   "API 이코노미"
   ],
   "keywords": [
-   "핵심: REST · OpenAPI/Swagger · OAuth 2.0",
-   "기술: API 키 · 쿼터/Rate Limit · 엔드포인트",
-   "운영: 버전관리 · 개발자 포털 · OPEN API의 개념도",
-   "참고: GraphQL · 웹훅 · API Gateway"
+   "기술: REST · JSON·XML · API 키 · OAuth 2.0",
+   "운영: API 게이트웨이(트래픽 제어·통계) · API 포털(개발자 등록·키 발급)",
+   "활용: 매시업 · 공공데이터포털 · 지도·결제·소셜 로그인 API"
   ],
   "outline": [
-   "플랫폼의 기능을 외부에서 쓸수 있도록 개방한 API, Open API",
-   "- Open API (Open Application Programming…",
-   "Open API 개념도 및 유형",
-   "- OPEN API 의 개념도",
-   "- Open API 핵심기술"
+   "개방 전략",
+   "- 웹 플랫폼·매시업",
+   "프로토콜과 관리 기술",
+   "- 프로토콜: REST·JSON·XML",
+   "- 관리: API 키·트래픽 제어·API 포털",
+   "장단점과 활용",
+   "- 장점: 개발 단축 / 단점: 종속 위험",
+   "- 공공 개방: data.go.kr"
   ],
   "sections": [
    {
-    "title": "오픈 API 핵심",
+    "title": "개방 전략",
     "subsections": [
      {
-      "title": null,
+      "title": "웹 플랫폼·매시업",
       "items": [
-       "REST: 자원·동사·무상태로 웹 API를 설계하는 아키텍처 스타일 (오픈 API/33cf)",
-       "OpenAPI/Swagger: OpenAPI/Swagger를 오픈 API 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OAuth 2.0: 오픈 API에서 OAuth 2.0를 다루는 핵심 암기 포인트",
-       "API 키: 오픈 API에서 API 키를 다루는 핵심 암기 포인트"
+       "웹 플랫폼(Web as Platform): 서비스 기능을 외부에 개방해 생태계를 확장하는 웹 2.0 핵심 개념",
+       "매시업(Mashup): 지도 API에 부동산 매물 정보를 결합하듯 여러 API를 조합한 새 서비스"
       ]
      }
     ]
    },
    {
-    "title": "오픈 API 구성·기술",
+    "title": "프로토콜과 관리 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "프로토콜: REST·JSON·XML",
       "items": [
-       "쿼터/Rate Limit: 오픈 API에서 쿼터/Rate Limit를 다루는 핵심 암기 포인트",
-       "엔드포인트: 오픈 API에서 엔드포인트를 다루는 핵심 암기 포인트",
-       "버전관리: 오픈 API에서 버전관리를 다루는 핵심 암기 포인트",
-       "개발자 포털: 오픈 API에서 개발자 포털을 다루는 핵심 암기 포인트"
+       "REST(Representational State Transfer): URI로 자원을 식별하고 GET·POST·PUT·DELETE로 조작",
+       "JSON·XML 데이터 포맷: JSON이 가볍고 파싱이 빨라 대부분 표준으로 사용"
+      ]
+     },
+     {
+      "title": "관리: API 키·트래픽 제어·API 포털",
+      "items": [
+       "API 키(API Key)·OAuth 2.0: 호출자 식별과 사용자 권한 위임 인증",
+       "트래픽 제어(Rate Limiting): 일일 호출 한도 설정, 사용량 통계로 과금·어뷰징 감지",
+       "API 포털(Developer Portal): 개발자 등록, 앱별 키 발급, 문서·테스트 콘솔 제공"
       ]
      }
     ]
    },
    {
-    "title": "오픈 API 운영",
+    "title": "장단점과 활용",
     "subsections": [
      {
-      "title": null,
+      "title": "장점: 개발 단축 / 단점: 종속 위험",
       "items": [
-       "OPEN API의 개념도: 오픈 API의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "Open API 핵심기술: 오픈 API에서 Open API 핵심기술을 다루는 핵심 암기 포인트",
-       "오픈 API 아키텍처: 오픈 API의 계층·모듈 배치와 상호작용 구조",
-       "API 호출시 허가된 거래인지 확인: 오픈 API에서 API 호출시 허가된 거래인지 확인을 다루는 핵심 암기 포인트"
+       "장점: 개발 기간 단축, 데이터 개방으로 신규 서비스 창출, 플랫폼 영향력 확대",
+       "단점: 제공사 정책 변경·중단 시 종속 위험, 호출 과다 시 성능 저하"
+      ]
+     },
+     {
+      "title": "공공 개방: data.go.kr",
+      "items": [
+       "공공데이터포털(data.go.kr): 날씨·교통·부동산 실거래가 등 공공데이터 API 무료 개방"
       ]
      }
     ]
@@ -967,25 +1067,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "REST",
-   "OpenAPI/Swagger",
-   "OAuth 2.0",
-   "API 키",
-   "쿼터/Rate Limit",
-   "엔드포인트",
-   "버전관리",
-   "개발자 포털",
-   "OPEN API의 개념도",
-   "Open API 핵심기술",
-   "오픈 API 아키텍처",
-   "API 호출시 허가된 거래인지 확인"
+   "매시업(Mashup)",
+   "REST(Representational State Transfer)",
+   "JSON·XML 데이터 포맷",
+   "API 키(API Key)",
+   "OAuth 2.0 인증",
+   "트래픽 제어(Rate Limiting)",
+   "API 포털(Developer Portal)",
+   "공공데이터포털(data.go.kr)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_011",
@@ -998,78 +1095,95 @@
   ],
   "en": "OpenAPI Specification",
   "dueum": null,
-  "name": "오픈API 명세(OpenAPI Specification)",
-  "title": "오픈API 명세(OpenAPI Specification)",
-  "definition": "OPEN API 사양 표준, 언어에 구애받지 않는 인터페이스를 정의하여 사람과 컴퓨터가 소스 코드, 문서에 액세스하거나 네트워크 트래픽 검사를 통해 서비스의 기능을 검색하고 이해할 수 있는 명세서",
+  "name": "오픈API 명세(OAS, OpenAPI Specification)",
+  "title": "오픈API 명세(OAS, OpenAPI Specification)",
+  "definition": "REST API의 엔드포인트·파라미터·응답·인증 방식을 언어 중립적인 JSON 또는 YAML 문서로 기술하는 표준 명세로, Swagger 2.0을 계승해 OpenAPI Initiative(리눅스 재단)가 관리함",
   "keywords_must": [
-   "REST API 사양 표준",
-   "엔드포인트",
-   "메타정보",
-   "yaml",
-   "Info",
-   "OAuth2.0",
-   "OAS(Open API Specification)의 개념",
-   "OAS의 이점",
-   "OAS",
-   "URL"
+   "OpenAPI Initiative(OAI)",
+   "스웨거(Swagger)",
+   "JSON·YAML 작성",
+   "info 객체(제목·버전)",
+   "servers 객체",
+   "paths(엔드포인트·HTTP 메서드)",
+   "components(재사용 스키마)",
+   "securitySchemes(API Key·OAuth2·OIDC)",
+   "코드 생성·문서화(Swagger UI·Codegen)"
   ],
   "keywords_ref": [
-   "REST",
-   "OAS(Open API Specification)"
+   "OAS 3.0(2017)·3.1(2021)",
+   "JSON Schema",
+   "목 서버(Mock Server)",
+   "API 우선 설계(API-First)",
+   "계약 테스트(Contract Test)"
   ],
   "keywords": [
-   "핵심: REST API 사양 표준 · 엔드포인트 · 메타정보",
-   "기술: yaml · Info · OAuth2.0",
-   "운영: OAS(Open API Specification)의 개념 · OAS의 이점 · OAS",
-   "참고: REST · OAS(Open API Specification)"
+   "구조: openapi · info · servers · paths · components · security",
+   "인증: HTTP Basic·Bearer · API Key · OAuth 2.0 플로우 · OpenID Connect",
+   "활용: Swagger UI 문서 · Codegen 스텁 · 목 서버 · 계약 테스트"
   ],
   "outline": [
-   "협업 설계를 위한 OPEN API 표준",
-   "- OAS(Open API Specification)의 개념",
-   "- OAS 의 이점",
-   "OAS(OpenAPI Specification)의 구성도 및 구성요소",
-   "- OAS(OpenAPI Specification)의 구성도",
-   "- OAS(OpenAPI Specification)의 구성요소",
-   "OAS(OpenAPI Specification)의 주요 인증방법",
-   "- 오픈 API 명세 요점"
+   "표준화 경위와 효과",
+   "- 경위: Swagger 2.0 기증 → 3.0·3.1",
+   "- 효과: API 우선 설계",
+   "문서 구성요소",
+   "- 메타정보: info·servers",
+   "- 엔드포인트·재사용: paths·components",
+   "인증 방식과 활용 도구",
+   "- 인증: API Key·OAuth2·OIDC",
+   "- 도구: Swagger UI·Codegen·목 서버"
   ],
   "sections": [
    {
-    "title": "오픈API 명세 핵심",
+    "title": "표준화 경위와 효과",
     "subsections": [
      {
-      "title": null,
+      "title": "경위: Swagger 2.0 기증 → 3.0·3.1",
       "items": [
-       "REST API 사양 표준: 오픈API 명세 상호운용·품질을 맞추는 규격·기준",
-       "엔드포인트: 오픈API 명세에서 엔드포인트를 다루는 핵심 암기 포인트",
-       "메타정보: 오픈API 명세에서 메타정보를 다루는 핵심 암기 포인트",
-       "yaml: yaml를 오픈API 명세 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "스웨거(Swagger): 2015년 스마트베어가 Swagger 2.0을 OpenAPI Initiative에 기증, 2017년 OAS 3.0 발표",
+       "OAS 3.1(2021): JSON Schema 2020-12와 완전 호환, 웹훅(webhooks) 정의 추가"
+      ]
+     },
+     {
+      "title": "효과: API 우선 설계",
+      "items": [
+       "API 우선 설계(API-First): 명세를 먼저 합의하고 프론트·백엔드가 병렬 개발"
       ]
      }
     ]
    },
    {
-    "title": "오픈API 명세 구성·기술",
+    "title": "문서 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "메타정보: info·servers",
       "items": [
-       "Info: Info를 오픈API 명세 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OAuth2.0: OAuth2.0를 오픈API 명세 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OAS(Open API Specification)의 개념: 오픈API 명세에서 OAS(Open API Specification)의 개념을 다루는 핵심 암기 포인트",
-       "OAS의 이점: 오픈API 명세에서 OAS의 이점을 다루는 핵심 암기 포인트"
+       "info 객체: API 제목·설명·버전, openapi 필드에 명세 버전(예: 3.0.3) 표기",
+       "servers 객체: 운영·스테이징 등 여러 기본 URL 정의(3.0부터 다중 URL 지원)"
+      ]
+     },
+     {
+      "title": "엔드포인트·재사용: paths·components",
+      "items": [
+       "paths: /users/{id} 경로별 HTTP 메서드, 파라미터, 요청 본문, 응답 코드 정의",
+       "components: 공통 스키마·파라미터·응답을 정의하고 $ref로 참조"
       ]
      }
     ]
    },
    {
-    "title": "오픈API 명세 운영",
+    "title": "인증 방식과 활용 도구",
     "subsections": [
      {
-      "title": null,
+      "title": "인증: API Key·OAuth2·OIDC",
       "items": [
-       "OAS: OAS를 오픈API 명세 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "URL: URL를 오픈API 명세 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "HTTP 기본·Bearer 인증, API 키(헤더·쿼리·쿠키), OAuth 2.0 플로우, OpenID Connect Discovery"
+      ]
+     },
+     {
+      "title": "도구: Swagger UI·Codegen·목 서버",
+      "items": [
+       "코드 생성·문서화: Swagger UI로 대화형 문서, OpenAPI Generator로 클라이언트·서버 스텁 생성",
+       "목 서버(Mock Server)·계약 테스트: 명세 기반으로 요청·응답 일치 여부 자동 검증"
       ]
      }
     ]
@@ -1078,23 +1192,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "REST API 사양 표준",
-   "엔드포인트",
-   "메타정보",
-   "yaml",
-   "Info",
-   "OAuth2.0",
-   "OAS(Open API Specification)의 개념",
-   "OAS의 이점",
-   "OAS",
-   "URL"
+   "OpenAPI Initiative(OAI)",
+   "스웨거(Swagger)",
+   "JSON·YAML 작성",
+   "info 객체(제목·버전)",
+   "servers 객체",
+   "paths(엔드포인트·HTTP 메서드)",
+   "components(재사용 스키마)",
+   "securitySchemes(API Key·OAuth2·OIDC)",
+   "코드 생성·문서화(Swagger UI·Codegen)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_012",
@@ -1109,82 +1223,93 @@
   "dueum": null,
   "name": "API 게이트웨이(API Gateway)",
   "title": "API 게이트웨이(API Gateway)",
-  "definition": "클라이언트가 요청한 API 서비스를 내부에서 처리 가능한 API 형태로 변환, 전달하는 Gateway",
+  "definition": "클라이언트와 백엔드 마이크로서비스 사이의 단일 진입점(Single Entry Point)으로, 요청 라우팅·인증·트래픽 제어·프로토콜 변환·모니터링을 대행하는 리버스 프록시",
   "keywords_must": [
-   "인증·인가",
-   "라우팅",
-   "Rate Limiting",
-   "서킷브레이커",
-   "요청/응답 변환",
-   "관측성(로깅·메트릭)",
-   "BFF",
-   "API GW 주요 기능",
-   "API GW 정의",
-   "API GW 구성도",
-   "API 게이트웨이 아키텍처"
+   "단일 진입점(Single Entry Point)",
+   "리버스 프록시(Reverse Proxy)",
+   "라우팅(Routing)",
+   "인증·인가(JWT·OAuth 2.0)",
+   "속도 제한(Rate Limiting·Throttling)",
+   "프로토콜 변환(REST↔gRPC)",
+   "서비스 디스커버리(Service Discovery)",
+   "로드밸런싱(Load Balancing)",
+   "SPOF(Single Point of Failure)"
   ],
   "keywords_ref": [
-   "Ingress",
-   "서비스메시",
-   "보안성",
-   "SSL"
+   "BFF(Backend for Frontend)",
+   "서킷 브레이커(Circuit Breaker)",
+   "넷플릭스 Zuul·Spring Cloud Gateway",
+   "Kong·AWS API Gateway",
+   "카나리 배포(Canary Release)"
   ],
   "keywords": [
-   "핵심: 인증·인가 · 라우팅 · Rate Limiting",
-   "기술: 서킷브레이커 · 요청/응답 변환 · 관측성(로깅·메트릭)",
-   "운영: BFF · API GW 주요 기능 · API GW 정의",
-   "참고: Ingress · 서비스메시 · 보안성"
+   "보안: 인증·인가(JWT) · TLS 종료 · 접근통제",
+   "중계: 라우팅 · 로드밸런싱 · 서비스 디스커버리 · 프로토콜 변환",
+   "관리: 속도 제한 · 캐싱 · 미터링·로깅 · 서킷 브레이커"
   ],
   "outline": [
-   "Endpoint 와 Backend 서비스 간 Proxy, API GW 개요",
-   "- API GW 정의",
-   "- API GW 역할 및 특징",
-   "API GW 구성도 및 주요기능",
-   "- API GW 구성도",
-   "- API GW 주요 기능",
-   "API GW 적용 시 고려사항",
-   "- API 게이트웨이 요점",
-   "API GW 적용 사례",
-   "- API 게이트웨이 요점"
+   "도입 배경",
+   "- 배경: 단일 진입점·공통 기능 분리",
+   "주요 기능",
+   "- 보안: JWT 검증·TLS 종료",
+   "- 중계: 라우팅·프로토콜 변환",
+   "- 관리: 속도 제한·서킷 브레이커",
+   "고려사항과 사례",
+   "- 고려사항: SPOF·지연·비대화",
+   "- 사례: 넷플릭스 Zuul·AWS"
   ],
   "sections": [
    {
-    "title": "API 게이트웨이 핵심",
+    "title": "도입 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 단일 진입점·공통 기능 분리",
       "items": [
-       "인증·인가: API 게이트웨이에서 인증·인가를 다루는 핵심 암기 포인트",
-       "라우팅: API 게이트웨이에서 라우팅을 다루는 핵심 암기 포인트",
-       "Rate Limiting: 요청 속도를 제한해 과부하·남용을 통제",
-       "서킷브레이커: 장애 연쇄를 막기 위해 호출을 차단·반개방하는 패턴"
+       "단일 진입점(Single Entry Point): 수십 개 마이크로서비스 주소를 클라이언트에 숨기고 접점을 일원화",
+       "공통 기능 분리: 인증·로깅·속도 제한을 각 서비스가 아닌 게이트웨이에서 일괄 처리"
       ]
      }
     ]
    },
    {
-    "title": "API 게이트웨이 구성·기술",
+    "title": "주요 기능",
     "subsections": [
      {
-      "title": null,
+      "title": "보안: JWT 검증·TLS 종료",
       "items": [
-       "요청/응답 변환: API 게이트웨이에서 요청/응답 변환을 다루는 핵심 암기 포인트",
-       "관측성(로깅·메트릭): 메트릭·로그·트레이스로 시스템 내부를 파악",
-       "BFF: 프론트 맞춤 API를 두는 Backend for Frontend",
-       "API GW 주요 기능: API 게이트웨이에서 API GW 주요 기능을 다루는 핵심 암기 포인트"
+       "인증·인가(JWT·OAuth 2.0): 토큰 검증 후 내부 서비스로 전달, TLS 종료(SSL Offloading)"
+      ]
+     },
+     {
+      "title": "중계: 라우팅·프로토콜 변환",
+      "items": [
+       "라우팅·로드밸런싱: 경로·헤더 기반으로 서비스 인스턴스에 분산",
+       "프로토콜 변환(REST↔gRPC): 외부 HTTP/JSON 요청을 내부 gRPC·메시지 큐 호출로 변환"
+      ]
+     },
+     {
+      "title": "관리: 속도 제한·서킷 브레이커",
+      "items": [
+       "속도 제한(Rate Limiting): 클라이언트별 초당 호출 수 제한, 초과 시 HTTP 429 응답",
+       "서킷 브레이커(Circuit Breaker): 장애 서비스 호출을 차단해 연쇄 장애 방지"
       ]
      }
     ]
    },
    {
-    "title": "API 게이트웨이 운영",
+    "title": "고려사항과 사례",
     "subsections": [
      {
-      "title": null,
+      "title": "고려사항: SPOF·지연·비대화",
       "items": [
-       "API GW 정의: API 게이트웨이에서 API GW 정의를 다루는 핵심 암기 포인트",
-       "API GW 구성도: API 게이트웨이의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "API 게이트웨이 아키텍처: API 게이트웨이의 계층·모듈 배치와 상호작용 구조"
+       "SPOF(Single Point of Failure): 게이트웨이 장애 시 전체 중단, 이중화·오토스케일 필요",
+       "추가 홉으로 인한 지연 증가, 게이트웨이에 비즈니스 로직이 쌓이는 비대화 주의"
+      ]
+     },
+     {
+      "title": "사례: 넷플릭스 Zuul·AWS",
+      "items": [
+       "넷플릭스 Zuul: 마이크로서비스 인증·동적 라우팅, AWS API Gateway는 카나리 배포 라우팅 지원"
       ]
      }
     ]
@@ -1193,24 +1318,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "인증·인가",
-   "라우팅",
-   "Rate Limiting",
-   "서킷브레이커",
-   "요청/응답 변환",
-   "관측성(로깅·메트릭)",
-   "BFF",
-   "API GW 주요 기능",
-   "API GW 정의",
-   "API GW 구성도",
-   "API 게이트웨이 아키텍처"
+   "단일 진입점(Single Entry Point)",
+   "리버스 프록시(Reverse Proxy)",
+   "라우팅(Routing)",
+   "인증·인가(JWT·OAuth 2.0)",
+   "속도 제한(Rate Limiting·Throttling)",
+   "프로토콜 변환(REST↔gRPC)",
+   "서비스 디스커버리(Service Discovery)",
+   "로드밸런싱(Load Balancing)",
+   "SPOF(Single Point of Failure)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_013",
@@ -1225,67 +1349,85 @@
   "dueum": null,
   "name": "API 관리(APIM, API Management)",
   "title": "API 관리(APIM, API Management)",
-  "definition": "기업 및 클라우드 전반에서 어플리케이션과 데이터를 연결하는 API 를 배포, 제어, 분석하고 중앙집중식으로관리하는 시스템",
+  "definition": "기업과 클라우드 전반의 API를 설계·배포·보안·모니터링·분석까지 수명주기 전체에 걸쳐 중앙에서 관리하는 체계로, API 게이트웨이·개발자 포털·분석·저장소로 구성됨",
   "keywords_must": [
-   "API Gateway",
-   "API Portal",
-   "API 서버",
-   "API Repository",
-   "보안",
-   "부하분산",
-   "문서화",
-   "커뮤니티",
-   "APIM"
+   "API 게이트웨이(API Gateway)",
+   "개발자 포털(API Portal)",
+   "API 저장소(API Repository)",
+   "API 수명주기 관리(Lifecycle Management)",
+   "접근통제·인증(API Key·OAuth 2.0)",
+   "트래픽 관리(Throttling·Quota)",
+   "API 분석·과금(Analytics·Monetization)",
+   "API 거버넌스(Governance)",
+   "API 오케스트레이션(Orchestration)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "RAML·OAS 3.0 문서화",
+   "버전 관리(Versioning)",
+   "개발자 커뮤니티",
+   "Apigee·Azure APIM·Kong",
+   "API 플랫폼·API 이코노미"
+  ],
   "keywords": [
-   "핵심: API Gateway · API Portal · API 서버",
-   "기술: API Repository · 보안 · 부하분산",
-   "운영: 문서화 · 커뮤니티 · APIM"
+   "구성: API 게이트웨이 · 개발자 포털 · API 서버 · API 저장소",
+   "기능: 인증·접근통제 · 트래픽 관리 · 분석·과금 · 수명주기·거버넌스"
   ],
   "outline": [
-   "APIM 의 구성도 및 구성요소",
-   "- APIM 구성도",
-   "- APIM 의 구성요소",
-   "APIM 의 확장, API 플랫폼",
-   "- API 관리 요점"
+   "등장 배경과 범위",
+   "- 범위: 설계→배포→운영→폐기 수명주기",
+   "게이트웨이·포털 구성",
+   "- 게이트웨이: 변환·보안·부하분산",
+   "- 포털·저장소: 문서화·사용자 등록",
+   "운영 기능과 발전 방향",
+   "- 운영: 트래픽·분석·과금",
+   "- 발전: API 플랫폼"
   ],
   "sections": [
    {
-    "title": "API 관리 핵심",
+    "title": "등장 배경과 범위",
     "subsections": [
      {
-      "title": null,
+      "title": "범위: 설계→배포→운영→폐기 수명주기",
       "items": [
-       "API Gateway: 인증·라우팅·제한을 모아 백엔드 진입점을 일원화",
-       "API Portal: API 관리에서 API Portal를 다루는 핵심 암기 포인트",
-       "API 서버: API 관리에서 API 서버를 다루는 핵심 암기 포인트",
-       "API Repository: API 관리에서 API Repository를 다루는 핵심 암기 포인트"
+       "API 수명주기 관리(Lifecycle Management): 설계·게시·버전 관리·사용 중지까지 단계별 통제",
+       "API 거버넌스(Governance): 명명 규칙·보안 정책·명세 표준을 조직 전체에 일관 적용"
       ]
      }
     ]
    },
    {
-    "title": "API 관리 구성·기술",
+    "title": "게이트웨이·포털 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "게이트웨이: 변환·보안·부하분산",
       "items": [
-       "보안: API 관리에서 보안을 다루는 핵심 암기 포인트",
-       "부하분산: API 관리에서 부하분산을 다루는 핵심 암기 포인트",
-       "문서화: API 관리에서 문서화를 다루는 핵심 암기 포인트",
-       "커뮤니티: API 관리에서 커뮤니티를 다루는 핵심 암기 포인트"
+       "API 게이트웨이(API Gateway): 요청·응답 변환, 호출 인증, 위변조 방지, 백엔드 API 서버 부하 분산",
+       "API 오케스트레이션(Orchestration): 여러 API를 조합해 하나의 복합 API로 제공"
+      ]
+     },
+     {
+      "title": "포털·저장소: 문서화·사용자 등록",
+      "items": [
+       "개발자 포털(API Portal): RAML·OAS 3.0 명세 게시, 역할 기반 사용자 등록, 키 발급, 커뮤니티",
+       "API 저장소(API Repository): 등록 API의 수정·변경·삭제 이력을 관리"
       ]
      }
     ]
    },
    {
-    "title": "API 관리 운영",
+    "title": "운영 기능과 발전 방향",
     "subsections": [
      {
-      "title": null,
+      "title": "운영: 트래픽·분석·과금",
       "items": [
-       "APIM: APIM를 API 관리 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "트래픽 관리(Throttling·Quota): 소비자별 초당 호출·월간 할당량 제한",
+       "API 분석·과금(Analytics·Monetization): 기간별 사용량 분석, 종량제·구독형 과금"
+      ]
+     },
+     {
+      "title": "발전: API 플랫폼",
+      "items": [
+       "API 이코노미: 외부 파트너가 API로 신규 서비스를 만드는 생태계, 제품: Apigee·Azure APIM·Kong"
       ]
      }
     ]
@@ -1294,22 +1436,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "API Gateway",
-   "API Portal",
-   "API 서버",
-   "API Repository",
-   "보안",
-   "부하분산",
-   "문서화",
-   "커뮤니티",
-   "APIM"
+   "API 게이트웨이(API Gateway)",
+   "개발자 포털(API Portal)",
+   "API 저장소(API Repository)",
+   "API 수명주기 관리(Lifecycle Management)",
+   "접근통제·인증(API Key·OAuth 2.0)",
+   "트래픽 관리(Throttling·Quota)",
+   "API 분석·과금(Analytics·Monetization)",
+   "API 거버넌스(Governance)",
+   "API 오케스트레이션(Orchestration)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_014_0",
@@ -1324,52 +1467,85 @@
   "dueum": null,
   "name": "서비스 메시(Service Mesh)",
   "title": "서비스 메시(Service Mesh)",
-  "definition": "서비스 앞 단에 경량화된 프록시를 배치하여 서비스 간의 통신을 제어하는 아키텍처 패턴",
+  "definition": "마이크로서비스 간 통신을 각 서비스 옆에 배치한 사이드카 프록시로 처리하고 컨트롤 플레인이 이를 중앙에서 설정해, 트래픽 제어·보안(mTLS)·관측성을 애플리케이션 코드 밖 인프라 계층에서 제공하는 구조",
   "keywords_must": [
-   "Microservice",
-   "Sidecar proxy",
-   "Circuit breaker",
-   "Service discovery",
-   "API Gateway",
-   "서비스 내 Sidecar 구성 (Internal)"
+   "사이드카 프록시(Sidecar Proxy)",
+   "데이터 플레인(Data Plane)",
+   "컨트롤 플레인(Control Plane)",
+   "서비스 디스커버리(Service Discovery)",
+   "서킷 브레이커(Circuit Breaker)",
+   "mTLS(Mutual TLS)",
+   "트래픽 분할(Canary·Blue-Green)",
+   "관측성(Observability, 메트릭·분산 추적)",
+   "이스티오·엔보이(Istio·Envoy)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "Linkerd",
+   "동서 트래픽(East-West)",
+   "재시도·타임아웃",
+   "앰비언트 메시(Ambient Mesh, 사이드카리스)",
+   "API 게이트웨이(남북 트래픽)"
+  ],
   "keywords": [
-   "핵심: Microservice · Sidecar proxy · Circuit breaker",
-   "기술: Service discovery · API Gateway · 서비스 내 Sidecar 구성 (Internal)"
+   "구조: 데이터 플레인(사이드카 프록시) · 컨트롤 플레인",
+   "기능: 서비스 디스커버리 · 로드밸런싱 · 서킷 브레이커 · mTLS · 분산 추적",
+   "비교: 서비스 메시(동서·분산) ↔ API 게이트웨이(남북·중앙)"
   ],
   "outline": [
-   "효과적인 MSA 배치 구성환경, Service Mesh 개요",
-   "- Service Mesh 정의",
-   "Service Mesh 구성도 및 구성요소",
-   "- Service Mesh 구성도",
-   "- Service Mesh 구성요소",
-   "Service Mesh 와 API Gateway 비교",
-   "- 서비스 메시 요점"
+   "등장 배경",
+   "- MSA 통신 복잡성: 서비스 수백 개 간 호출",
+   "데이터 플레인과 컨트롤 플레인",
+   "- 데이터 플레인: 사이드카 프록시",
+   "- 컨트롤 플레인: 정책·인증서 배포",
+   "주요 기능과 API 게이트웨이 비교",
+   "- 기능: mTLS·트래픽 분할·관측성",
+   "- 비교: 동서 트래픽 vs 남북 트래픽"
   ],
   "sections": [
    {
-    "title": "서비스 메시 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "MSA 통신 복잡성: 서비스 수백 개 간 호출",
       "items": [
-       "Microservice: Microservice를 서비스 메시 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "Sidecar proxy: 서비스 옆에 붙어 트래픽·정책을 대행하는 프록시 패턴",
-       "Circuit breaker: 장애 연쇄를 막기 위해 호출을 차단·반개방하는 패턴 (서비스 메시/ff8d)",
-       "Service discovery: 서비스 메시에서 Service discovery를 다루는 핵심 암기 포인트"
+       "통신 로직 분리: 재시도·타임아웃·암호화를 라이브러리 대신 프록시로 추출, 비즈니스 로직만 남겨 경량화"
       ]
      }
     ]
    },
    {
-    "title": "서비스 메시 구성·기술",
+    "title": "데이터 플레인과 컨트롤 플레인",
     "subsections": [
      {
-      "title": null,
+      "title": "데이터 플레인: 사이드카 프록시",
       "items": [
-       "API Gateway: 인증·라우팅·제한을 모아 백엔드 진입점을 일원화 (서비스 메시/cb18)",
-       "서비스 내 Sidecar 구성 (Internal): 서비스 옆에 붙어 트래픽·정책을 대행하는 프록시 패턴 (서비스 메시/33a2)"
+       "사이드카 프록시(Sidecar Proxy): 서비스 컨테이너와 같은 파드에 엔보이(Envoy)를 주입, 모든 입출력 트래픽 경유",
+       "서킷 브레이커(Circuit Breaker): Destination Rule로 연속 오류 인스턴스를 격리해 장애 전파 차단"
+      ]
+     },
+     {
+      "title": "컨트롤 플레인: 정책·인증서 배포",
+      "items": [
+       "컨트롤 플레인(Control Plane): 이스티오 istiod가 라우팅 규칙·인증서를 프록시에 배포(xDS API)",
+       "서비스 디스커버리(Service Discovery): 서비스 기동 시 레지스트리에 등록, 프록시가 엔드포인트 목록 수신"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 기능과 API 게이트웨이 비교",
+    "subsections": [
+     {
+      "title": "기능: mTLS·트래픽 분할·관측성",
+      "items": [
+       "mTLS(Mutual TLS): 서비스 간 상호 인증서 인증과 암호화로 제로 트러스트 구현",
+       "트래픽 분할(Canary): 신규 버전에 5%만 라우팅하는 가중치 배포, 분산 추적으로 지연 구간 확인"
+      ]
+     },
+     {
+      "title": "비교: 동서 트래픽 vs 남북 트래픽",
+      "items": [
+       "서비스 메시는 내부 서비스 간 분산 제어, API 게이트웨이는 외부 클라이언트 진입점 중앙 제어"
       ]
      }
     ]
@@ -1378,19 +1554,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Microservice",
-   "Sidecar proxy",
-   "Circuit breaker",
-   "Service discovery",
-   "API Gateway",
-   "서비스 내 Sidecar 구성 (Internal)"
+   "사이드카 프록시(Sidecar Proxy)",
+   "데이터 플레인(Data Plane)",
+   "컨트롤 플레인(Control Plane)",
+   "서비스 디스커버리(Service Discovery)",
+   "서킷 브레이커(Circuit Breaker)",
+   "mTLS(Mutual TLS)",
+   "트래픽 분할(Canary·Blue-Green)",
+   "관측성(Observability, 메트릭·분산 추적)",
+   "이스티오·엔보이(Istio·Envoy)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_017",
@@ -1405,56 +1585,90 @@
   "dueum": null,
   "name": "웹 3.0(Web 3.0)",
   "title": "웹 3.0(Web 3.0)",
-  "definition": "2006 년 뉴욕 타임즈 기자 존 마코프가 처음 사용한 개념으로 “웹 3.0 은 사용자가 원하는 정보를 즉직관적인 경험을 제공하는 시멘틱 웹(Sementic Web) 기반의 지능형 웹”",
+  "definition": "시맨틱 웹 기술로 컴퓨터가 정보의 의미를 이해해 상황에 맞는 지능형 맞춤 서비스를 제공하는 차세대 웹 개념이며, 최근에는 블록체인 기반으로 사용자가 데이터를 소유하는 탈중앙화 웹(Web3)을 함께 일컬음",
   "keywords_must": [
-   "Semantic Web",
-   "검색서비스 구조",
-   "지능형 Agent",
-   "상황인식 컴퓨팅 소통",
-   "융합",
-   "공유",
-   "Web 3.0 의 개념도",
-   "Web 3.0 대표적인 기반기술"
+   "시맨틱 웹(Semantic Web)",
+   "지능형 에이전트(Intelligent Agent)",
+   "상황인식(Context Awareness)",
+   "개인화(Personalization)",
+   "온톨로지(Ontology)",
+   "RDF·OWL·SPARQL",
+   "탈중앙화(Decentralization, Web3)",
+   "블록체인·스마트 계약(Smart Contract)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "존 마코프(2006, NYT)",
+   "개빈 우드(2014, Web3)",
+   "웹 1.0 읽기·웹 2.0 참여·공유·개방",
+   "DAO·NFT",
+   "실시간 웹"
+  ],
   "keywords": [
-   "핵심: Semantic Web · 검색서비스 구조 · 지능형 Agent",
-   "기술: 상황인식 컴퓨팅 소통 · 융합 · 공유",
-   "운영: Web 3.0 의 개념도 · Web 3.0 대표적인 기반기술"
+   "웹 진화: 1.0 읽기 · 2.0 참여·공유·개방 · 3.0 지능·개인화",
+   "기반기술: 시맨틱 웹(RDF·OWL·SPARQL) · 지능형 에이전트 · 상황인식",
+   "Web3: 블록체인 · 스마트 계약 · DAO · 데이터 주권"
   ],
   "outline": [
-   "지능형 웹, Web 3.0 의 개요",
-   "- Web 3.0 의 정의",
-   "- Web 3.0 의 특징",
-   "Web 3.0 개념도 및 대표적인 기반기술",
-   "- Web 3.0 의 개념도",
-   "- Web 3.0 대표적인 기반기술"
+   "개념과 웹의 진화",
+   "- 용어 기원: 2006년 존 마코프",
+   "- 특징: 지능화·개인화·상황인식",
+   "기반기술",
+   "- 시맨틱 웹: 메타데이터·추론",
+   "- 탈중앙화: 블록체인 Web3",
+   "서비스와 과제",
+   "- 서비스: 지능형 검색·DAO",
+   "- 과제: 온톨로지 구축 비용·규제"
   ],
   "sections": [
    {
-    "title": "웹 3.0 핵심",
+    "title": "개념과 웹의 진화",
     "subsections": [
      {
-      "title": null,
+      "title": "용어 기원: 2006년 존 마코프",
       "items": [
-       "Semantic Web: 웹 3.0에서 Semantic Web를 다루는 핵심 암기 포인트",
-       "검색서비스 구조: 웹 3.0에서 검색서비스 구조를 다루는 핵심 암기 포인트",
-       "지능형 Agent: 웹 3.0 단말·노드에서 상태 수집·제어를 수행하는 에이전트",
-       "상황인식 컴퓨팅 소통: 웹 3.0에서 상황인식 컴퓨팅 소통을 다루는 핵심 암기 포인트"
+       "웹 진화: 웹 1.0 단방향 읽기 → 웹 2.0 참여·공유·개방 → 웹 3.0 의미 이해·개인화"
+      ]
+     },
+     {
+      "title": "특징: 지능화·개인화·상황인식",
+      "items": [
+       "상황인식(Context Awareness): 위치·시간·이용 이력을 인식해 필요한 정보를 재배치",
+       "개인화(Personalization): 대량 정보 중 이용자에게 필요한 것만 추천하는 맞춤형 웹"
       ]
      }
     ]
    },
    {
-    "title": "웹 3.0 구성·기술",
+    "title": "기반기술",
     "subsections": [
      {
-      "title": null,
+      "title": "시맨틱 웹: 메타데이터·추론",
       "items": [
-       "융합: 웹 3.0에서 융합을 다루는 핵심 암기 포인트",
-       "공유: 웹 3.0에서 공유를 다루는 핵심 암기 포인트",
-       "Web 3.0 의 개념도: 웹 3.0의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "Web 3.0 대표적인 기반기술: 웹 3.0에서 Web 3.0 대표적인 기반기술을 다루는 핵심 암기 포인트"
+       "시맨틱 웹(Semantic Web): RDF 트리플로 의미를 기술, OWL 온톨로지로 추론, SPARQL로 질의(W3C)",
+       "지능형 에이전트(Intelligent Agent): 사용자 대신 정보를 찾아 비교·예약까지 수행"
+      ]
+     },
+     {
+      "title": "탈중앙화: 블록체인 Web3",
+      "items": [
+       "블록체인·스마트 계약(Smart Contract): 플랫폼 중개 없이 사용자 간 거래, 2014년 개빈 우드가 Web3 제시"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "서비스와 과제",
+    "subsections": [
+     {
+      "title": "서비스: 지능형 검색·DAO",
+      "items": [
+       "지능형 검색: 질의 의도를 이해해 답을 직접 제시, DAO는 토큰 투표로 운영되는 탈중앙 조직"
+      ]
+     },
+     {
+      "title": "과제: 온톨로지 구축 비용·규제",
+      "items": [
+       "도메인별 온톨로지 구축·유지 비용, Web3는 확장성 한계와 가상자산 투기·규제 불확실성"
       ]
      }
     ]
@@ -1463,21 +1677,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Semantic Web",
-   "검색서비스 구조",
-   "지능형 Agent",
-   "상황인식 컴퓨팅 소통",
-   "융합",
-   "공유",
-   "Web 3.0 의 개념도",
-   "Web 3.0 대표적인 기반기술"
+   "시맨틱 웹(Semantic Web)",
+   "지능형 에이전트(Intelligent Agent)",
+   "상황인식(Context Awareness)",
+   "개인화(Personalization)",
+   "온톨로지(Ontology)",
+   "RDF·OWL·SPARQL",
+   "탈중앙화(Decentralization, Web3)",
+   "블록체인·스마트 계약(Smart Contract)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_018",
@@ -1489,53 +1704,86 @@
    19
   ],
   "en": "Web 4.0",
-  "dueum": "symbiotic/심비어틱 웹, 가상/현실 연결, 속도와 안정성, RFID",
+  "dueum": null,
   "name": "웹 4.0(Web 4.0)",
   "title": "웹 4.0(Web 4.0)",
-  "definition": "웹이 사람의 말을 이해하고 웹과 사람이 항상 연결되어 상호작용이 될수 있는 차세대 웹.",
+  "definition": "인공지능과 사물인터넷으로 사람과 기계가 상시 연결되어 웹이 사용자의 말과 의도를 이해하고 능동적으로 대행하는 인간-기계 공생형(Symbiotic) 차세대 웹",
   "keywords_must": [
-   "인간과 기계의 공생",
-   "Symbiotic",
-   "웹 4.0 아키텍처",
-   "RFID",
-   "기계(machine)",
-   "HTTP"
+   "공생 웹(Symbiotic Web)",
+   "유비쿼터스 웹(Ubiquitous Web)",
+   "AI 에이전트(AI Agent)",
+   "사물인터넷(IoT)",
+   "음성·얼굴 인식 인터페이스",
+   "가상-현실 연결(Virtual-Real Integration)",
+   "생체의학 칩·BCI(Brain-Computer Interface)",
+   "RFID 태그"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "웹 3.0 시맨틱 웹",
+   "지능형 빌딩",
+   "자가 학습(Self-Learning)",
+   "속도·안정성 요구",
+   "EU Web 4.0 전략(2023)"
+  ],
   "keywords": [
-   "핵심: 인간과 기계의 공생 · Symbiotic · 웹 4.0 아키텍처",
-   "기술: RFID · 기계(machine) · HTTP"
+   "특징: 인간-기계 공생 · 상시 연결 · 능동적 대행",
+   "적용: 사업(기업 연계) · 사물(지능형 빌딩·RFID) · 사람(AI 에이전트) · 의학(생체칩·BCI)"
   ],
   "outline": [
-   "컴퓨터가 사람이 되는 시대 Web 4.0 의 개요",
-   "- 스마트워크의 정의",
-   "- 스마트워크의 특징",
-   "인터넷의 미래",
-   "- 웹 4.0 요점"
+   "개념과 특징",
+   "- 공생: 웹이 사람의 말을 이해",
+   "적용 분야별 요소",
+   "- 사업·사물: 기업 연계·지능형 빌딩",
+   "- 사람·의학: AI 에이전트·BCI",
+   "전망과 과제",
+   "- 전망: EU 가상세계 전략(2023)",
+   "- 과제: 프라이버시·AI 신뢰"
   ],
   "sections": [
    {
-    "title": "웹 4.0 핵심",
+    "title": "개념과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "공생: 웹이 사람의 말을 이해",
       "items": [
-       "인간과 기계의 공생: 웹 4.0에서 인간과 기계의 공생을 다루는 핵심 암기 포인트",
-       "Symbiotic: Symbiotic를 웹 4.0 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "웹 4.0 아키텍처: 웹 4.0의 계층·모듈 배치와 상호작용 구조",
-       "RFID: RFID를 웹 4.0 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "공생 웹(Symbiotic Web): 웹이 사용자의 의도를 학습해 먼저 제안·실행, 웹 3.0의 지능화를 넘어선 상호작용",
+       "상시 연결: 모바일·웨어러블·IoT 모든 기기에서 끊김 없는 접속, 속도와 안정성이 핵심 요건"
       ]
      }
     ]
    },
    {
-    "title": "웹 4.0 구성·기술",
+    "title": "적용 분야별 요소",
     "subsections": [
      {
-      "title": null,
+      "title": "사업·사물: 기업 연계·지능형 빌딩",
       "items": [
-       "기계(machine): 웹 4.0에서 기계(machine)를 다루는 핵심 암기 포인트",
-       "HTTP: 요청/응답 기반의 웹 응용 계층 프로토콜 (웹 4.0/8ef7)"
+       "사물인터넷(IoT): 건물 모든 장치에 IP를 부여해 센서 변화에 시스템이 자동 대응하는 지능형 빌딩",
+       "RFID 태그: 제품 이력·위치를 실시간 식별해 고객 경험 개선"
+      ]
+     },
+     {
+      "title": "사람·의학: AI 에이전트·BCI",
+      "items": [
+       "AI 에이전트(AI Agent): 음성·얼굴 인식으로 사용자를 식별하고 일정·구매를 대행",
+       "생체의학 칩·BCI(Brain-Computer Interface): 이식형 칩으로 뇌 신호를 읽어 커서·가상 키보드 제어"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "전망과 과제",
+    "subsections": [
+     {
+      "title": "전망: EU 가상세계 전략(2023)",
+      "items": [
+       "EU Web 4.0 전략(2023): 가상세계와 현실이 융합된 개방형 웹 4.0 주도권 확보 정책"
+      ]
+     },
+     {
+      "title": "과제: 프라이버시·AI 신뢰",
+      "items": [
+       "상시 수집되는 생체·행동 데이터의 프라이버시 보호와 에이전트 판단의 책임성 확보"
       ]
      }
     ]
@@ -1544,19 +1792,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "인간과 기계의 공생",
-   "Symbiotic",
-   "웹 4.0 아키텍처",
-   "RFID",
-   "기계(machine)",
-   "HTTP"
+   "공생 웹(Symbiotic Web)",
+   "유비쿼터스 웹(Ubiquitous Web)",
+   "AI 에이전트(AI Agent)",
+   "사물인터넷(IoT)",
+   "음성·얼굴 인식 인터페이스",
+   "가상-현실 연결(Virtual-Real Integration)",
+   "생체의학 칩·BCI(Brain-Computer Interface)",
+   "RFID 태그"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_019_00",
@@ -1571,64 +1822,93 @@
   "dueum": null,
   "name": "웹 접근성(Web Accessibility)",
   "title": "웹 접근성(Web Accessibility)",
-  "definition": "웹페이지 또는 웹 애플리케이션에 있는 정보 텍스트, 이미지, 소리 정보와 같은 자연적인 정보",
+  "definition": "장애인·고령자 등 모든 사용자가 어떤 기기·브라우저 환경에서도 웹 콘텐츠를 동등하게 인식·운용·이해할 수 있도록 보장하는 것으로, W3C WCAG와 국내 KWCAG(한국형 웹 콘텐츠 접근성 지침)를 기준으로 함",
   "keywords_must": [
-   "암기",
-   "WCAG2",
-   "웹 접근성 아키텍처",
-   "웹 접근성 표준",
-   "웹 접근성 보안",
-   "디자이너, 코더(Coder), 저작자 등",
-   "사용자(장애인, 노인 등)",
-   "장애인차별금지 및 권리구제 등에 관한 법률(장차법)"
+   "WCAG 2.x(W3C)",
+   "KWCAG 2.2(KS X OT0003)",
+   "인식의 용이성(Perceivable)",
+   "운용의 용이성(Operable)",
+   "이해의 용이성(Understandable)",
+   "견고성(Robust)",
+   "대체 텍스트(alt)",
+   "보조기술(Assistive Technology, 스크린 리더)",
+   "장애인차별금지법",
+   "웹 접근성 품질인증"
   ],
   "keywords_ref": [
-   "공공기관의 웹 접근성 확보",
-   "민관기관의 웹 접근성 확보",
-   "접근성 관련 장애인 차별 시정 기구"
+   "WAI-ARIA",
+   "명도 대비 4.5:1",
+   "키보드 접근성",
+   "적합성 수준 A·AA·AAA",
+   "지능정보화기본법"
   ],
   "keywords": [
-   "핵심: 암기 · WCAG2 · 웹 접근성 아키텍처",
-   "기술: 웹 접근성 표준 · 웹 접근성 보안 · 디자이너, 코더(Coder), 저작자 등",
-   "운영: 사용자(장애인, 노인 등) · 장애인차별금지 및 권리구제 등에 관한 법률(장차법)",
-   "참고: 공공기관의 웹 접근성 확보 · 민관기관의 웹 접근성 확보 · 접근성 관련 장애인 차별 시정 기구"
+   "4대 원칙(POUR): 인식 · 운용 · 이해 · 견고성",
+   "지침: WCAG 2.2 · KWCAG 2.2(4원칙 14지침 33검사항목)",
+   "실무·제도: 대체 텍스트 · 명도 대비 · 키보드 접근 · WAI-ARIA · 품질인증"
   ],
   "outline": [
-   "웹 접근성의 구성요소 및 가이드 라인",
-   "- 웹 접근성 요점",
-   "WCAG2.0",
-   "- 웹 접근성의 특징",
-   "- WCAG2.0 등장배경",
-   "웹 표준화",
-   "- 웹 접근성의 정의",
-   "접근성 정책 등의 적용 범위 제한",
-   "- 웹 접근성 요점"
+   "필요성과 구성요소",
+   "- 필요성: 이용자 확대·법적 의무",
+   "- 구성요소: 콘텐츠·사용자 도구·보조기술",
+   "접근성 지침",
+   "- WCAG 2.x: POUR 4원칙",
+   "- KWCAG 2.2: 4원칙 14지침 33검사항목",
+   "평가와 인증",
+   "- 평가: 자동 도구 + 전문가 검사",
+   "- 인증: 품질인증 마크(유효 1년)"
   ],
   "sections": [
    {
-    "title": "웹 접근성 핵심",
+    "title": "필요성과 구성요소",
     "subsections": [
      {
-      "title": null,
+      "title": "필요성: 이용자 확대·법적 의무",
       "items": [
-       "암기: 웹 접근성에서 암기를 다루는 핵심 암기 포인트",
-       "WCAG2: WCAG2를 웹 접근성 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "웹 접근성 아키텍처: 웹 접근성의 계층·모듈 배치와 상호작용 구조",
-       "웹 접근성 표준: 웹 접근성 상호운용·품질을 맞추는 규격·기준"
+       "장애인차별금지법: 2008년 시행, 공공·민간 웹사이트의 접근성 제공 의무화",
+       "경제·사회 효과: 고령자·장애인 이용자 확보, 다양한 기기 호환으로 개발·유지 비용 절감"
+      ]
+     },
+     {
+      "title": "구성요소: 콘텐츠·사용자 도구·보조기술",
+      "items": [
+       "보조기술(Assistive Technology): 스크린 리더(센스리더·NVDA), 화면 확대기, 대체 키보드"
       ]
      }
     ]
    },
    {
-    "title": "웹 접근성 구성·기술",
+    "title": "접근성 지침",
     "subsections": [
      {
-      "title": null,
+      "title": "WCAG 2.x: POUR 4원칙",
       "items": [
-       "웹 접근성 보안: 웹 접근성에서 웹 접근성 보안을 다루는 핵심 암기 포인트",
-       "디자이너, 코더(Coder), 저작자 등: 웹 접근성에서 디자이너, 코더(Coder), 저작자 등을 다루는 핵심 암기 포인트",
-       "사용자(장애인, 노인 등): 웹 접근성에서 사용자(장애인, 노인 등)를 다루는 핵심 암기 포인트",
-       "장애인차별금지 및 권리구제 등에 관한 법률(장차법): 웹 접근성에서 장애인차별금지 및 권리구제 등에 관한 법률(장차법)을 다루는 핵심 암기 포인트"
+       "인식의 용이성(Perceivable): 대체 텍스트(alt), 자막, 명도 대비 4.5:1 이상",
+       "운용의 용이성(Operable): 키보드만으로 모든 기능 사용, 깜빡임 초당 3회 이하",
+       "이해의 용이성·견고성: 일관된 내비게이션과 오류 안내, 표준 마크업과 WAI-ARIA로 보조기술 호환"
+      ]
+     },
+     {
+      "title": "KWCAG 2.2: 4원칙 14지침 33검사항목",
+      "items": [
+       "KWCAG 2.2(KS X OT0003): 2022년 개정, WCAG 2.1을 반영한 국가표준"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "평가와 인증",
+    "subsections": [
+     {
+      "title": "평가: 자동 도구 + 전문가 검사",
+      "items": [
+       "평가 도구: K-WAH·WAVE·Lighthouse 자동 점검 후 스크린 리더로 수동 검증"
+      ]
+     },
+     {
+      "title": "인증: 품질인증 마크(유효 1년)",
+      "items": [
+       "웹 접근성 품질인증: 과기정통부 지정 인증기관 심사, 유효기간 1년"
       ]
      }
     ]
@@ -1637,21 +1917,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "암기",
-   "WCAG2",
-   "웹 접근성 아키텍처",
-   "웹 접근성 표준",
-   "웹 접근성 보안",
-   "디자이너, 코더(Coder), 저작자 등",
-   "사용자(장애인, 노인 등)",
-   "장애인차별금지 및 권리구제 등에 관한 법률(장차법)"
+   "WCAG 2.x(W3C)",
+   "KWCAG 2.2(KS X OT0003)",
+   "인식의 용이성(Perceivable)",
+   "운용의 용이성(Operable)",
+   "이해의 용이성(Understandable)",
+   "견고성(Robust)",
+   "대체 텍스트(alt)",
+   "보조기술(Assistive Technology, 스크린 리더)",
+   "장애인차별금지법",
+   "웹 접근성 품질인증"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_019_01",
@@ -1666,71 +1949,85 @@
   "dueum": null,
   "name": "전자정부 웹사이트 품질관리 지침(e-Government Website Quality Guideline)",
   "title": "전자정부 웹사이트 품질관리 지침(e-Government Website Quality Guideline)",
-  "definition": "전자정부법 제16조, 제19조, 제23조 및 제50조와 전자정부법 시행령 제19조 및 제59조에 따른 전자정부 웹사이트의 품질관리에 관한 사항을 규정하는 것을 목적으로 지침",
+  "definition": "전자정부법 시행에 따라 행정기관·공공기관 웹사이트가 호환성·접근성·개방성·접속성·편의성·효율성·신뢰성을 확보하도록 품질관리 원칙과 계획·진단·개선 절차를 정한 행정안전부 고시",
   "keywords_must": [
-   "웹사이트 호환성",
-   "접근성",
-   "개방성",
-   "접속성",
-   "편의성",
-   "효율성",
-   "신뢰성",
-   "전자정부 웹사이트 품질관리 지침 아키텍처",
-   "전자정부 웹사이트 품질관리 지침 표준",
-   "HTTP"
+   "전자정부법(제16·19·23·50조)",
+   "웹사이트 호환성(Compatibility)",
+   "웹사이트 접근성(Accessibility)",
+   "웹사이트 개방성(Openness, 검색엔진 수집 허용)",
+   "웹사이트 접속성(Connectivity, 응답속도)",
+   "웹사이트 편의성(Usability)",
+   "웹사이트 효율성(유사·중복 통폐합)",
+   "웹사이트 신뢰성(Reliability)",
+   "품질관리자 지정·품질관리계획",
+   "품질진단·개선 권고"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "행정안전부 고시",
+   "웹 표준·비표준(ActiveX) 제거",
+   "검색엔진 최적화·robots.txt 개방",
+   "개인정보 노출 점검",
+   "웹사이트 통폐합"
+  ],
   "keywords": [
-   "핵심: 웹사이트 호환성 · 접근성 · 개방성",
-   "기술: 접속성 · 편의성 · 효율성",
-   "운영: 신뢰성 · 전자정부 웹사이트 품질관리 지침 아키텍처 · 전자정부 웹사이트 품질관리 지침 표준"
+   "7대 원칙: 호환성 · 접근성 · 개방성 · 접속성 · 편의성 · 효율성 · 신뢰성",
+   "절차: 품질관리자 지정 → 품질관리계획 → 자체 품질진단 → 개선·통폐합 권고"
   ],
   "outline": [
-   "전자정부 웹사이트 품질관리 지침의 개요",
-   "- 전자정부 웹사이트 품질관리 지침 요점",
-   "전자정부 웹사이트 품질관리 원칙",
-   "- 전자정부 웹사이트 품질관리 지침 요점",
-   "전자정부 웹사이트 품질진단 기준",
-   "- 웹사이트 호환성, 접근성, 개방성, 접속성 측면 품질진단 기준",
-   "- 웹사이트 편의성, 효율성, 신뢰성 측면 진단 기준"
+   "제정 배경",
+   "- 근거: 전자정부법 제16·19·23·50조",
+   "7대 품질관리 원칙",
+   "- 기술 품질: 호환성·접근성·개방성·접속성",
+   "- 운영 품질: 편의성·효율성·신뢰성",
+   "품질관리 절차",
+   "- 계획: 품질관리자 지정·연간 계획",
+   "- 진단·개선: 자체 진단·행안부 권고"
   ],
   "sections": [
    {
-    "title": "전자정부 웹사이트 품질관리 지침 핵심",
+    "title": "제정 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "근거: 전자정부법 제16·19·23·50조",
       "items": [
-       "웹사이트 호환성: 전자정부 웹사이트 품질관리 지침에서 웹사이트 호환성을 다루는 핵심 암기 포인트",
-       "접근성: 전자정부 웹사이트 품질관리 지침에서 접근성을 다루는 핵심 암기 포인트",
-       "개방성: 전자정부 웹사이트 품질관리 지침에서 개방성을 다루는 핵심 암기 포인트",
-       "접속성: 전자정부 웹사이트 품질관리 지침에서 접속성을 다루는 핵심 암기 포인트"
+       "개정 사유: 기존 기준은 웹 표준 준수와 브라우저 호환에만 집중, 국민 이용 편의를 포괄하는 종합 품질기준 필요"
       ]
      }
     ]
    },
    {
-    "title": "전자정부 웹사이트 품질관리 지침 구성·기술",
+    "title": "7대 품질관리 원칙",
     "subsections": [
      {
-      "title": null,
+      "title": "기술 품질: 호환성·접근성·개방성·접속성",
       "items": [
-       "편의성: 전자정부 웹사이트 품질관리 지침에서 편의성을 다루는 핵심 암기 포인트",
-       "효율성: 전자정부 웹사이트 품질관리 지침에서 효율성을 다루는 핵심 암기 포인트",
-       "신뢰성: 전자정부 웹사이트 품질관리 지침에서 신뢰성을 다루는 핵심 암기 포인트",
-       "전자정부 웹사이트 품질관리 지침 아키텍처: 전자정부 웹사이트 품질관리 지침의 계층·모듈 배치와 상호작용 구조"
+       "웹사이트 호환성: 웹 표준 기술로 다양한 브라우저에서 동등 서비스, ActiveX 등 비표준 제거",
+       "웹사이트 개방성: 특정 검색엔진에 제약 없이 공개 정보가 수집·검색되도록 robots.txt 개방",
+       "웹사이트 접속성: 응답시간·페이지 용량·링크 연결 상태를 최적으로 유지"
+      ]
+     },
+     {
+      "title": "운영 품질: 편의성·효율성·신뢰성",
+      "items": [
+       "웹사이트 효율성: 유사·중복 사이트나 이용률이 낮은 사이트는 통합·폐기",
+       "웹사이트 신뢰성: 공개 정보 오류, 개인정보 노출, 게시판 불법 게시물 점검·개선"
       ]
      }
     ]
    },
    {
-    "title": "전자정부 웹사이트 품질관리 지침 운영",
+    "title": "품질관리 절차",
     "subsections": [
      {
-      "title": null,
+      "title": "계획: 품질관리자 지정·연간 계획",
       "items": [
-       "전자정부 웹사이트 품질관리 지침 표준: 전자정부 웹사이트 품질관리 지침 상호운용·품질을 맞추는 규격·기준",
-       "HTTP: 요청/응답 기반의 웹 응용 계층 프로토콜 (전자정부 웹사이트 품질관리 지침/82be)"
+       "품질관리계획: 기관별 품질관리자를 지정하고 개별 기관 중심의 품질관리체계로 전환"
+      ]
+     },
+     {
+      "title": "진단·개선: 자체 진단·행안부 권고",
+      "items": [
+       "품질진단: 기관 자체 진단과 행정안전부의 주요 웹사이트 진단, 결과에 따라 개선·통폐합 권고 후 이행"
       ]
      }
     ]
@@ -1739,23 +2036,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "웹사이트 호환성",
-   "접근성",
-   "개방성",
-   "접속성",
-   "편의성",
-   "효율성",
-   "신뢰성",
-   "전자정부 웹사이트 품질관리 지침 아키텍처",
-   "전자정부 웹사이트 품질관리 지침 표준",
-   "HTTP"
+   "전자정부법(제16·19·23·50조)",
+   "웹사이트 호환성(Compatibility)",
+   "웹사이트 접근성(Accessibility)",
+   "웹사이트 개방성(Openness, 검색엔진 수집 허용)",
+   "웹사이트 접속성(Connectivity, 응답속도)",
+   "웹사이트 편의성(Usability)",
+   "웹사이트 효율성(유사·중복 통폐합)",
+   "웹사이트 신뢰성(Reliability)",
+   "품질관리자 지정·품질관리계획",
+   "품질진단·개선 권고"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_020_0",
@@ -1770,69 +2068,84 @@
   "dueum": null,
   "name": "반응형 웹(Responsive Web)",
   "title": "반응형 웹(Responsive Web)",
-  "definition": "사용자의 다양한 디바이스 환경에 따라 해상도나 화면이 최적화된 환경으로 자동 변환되는 기술",
+  "definition": "하나의 HTML 소스에 CSS3 미디어 쿼리·유동형 그리드·유동형 이미지를 적용해 기기의 화면 폭에 따라 레이아웃이 자동으로 재배치되도록 만드는 웹 설계 기법 (2010년 이선 마콧 제안)",
   "keywords_must": [
-   "CSS 3의 미디어 쿼리",
-   "유동형 그리드",
-   "유동형 이미지",
-   "뷰포트",
-   "반응형 웹의 부각 이유",
-   "CSS",
-   "OSMU(One Source Multi Use)",
-   "CSS2",
-   "CSS3",
-   "HTTP"
+   "미디어 쿼리(Media Query, CSS3)",
+   "유동형 그리드(Fluid Grid)",
+   "유동형 이미지(Flexible Image)",
+   "뷰포트 메타 태그(Viewport)",
+   "브레이크포인트(Breakpoint)",
+   "모바일 퍼스트(Mobile First)",
+   "적응형 웹(Adaptive Web)",
+   "OSMU(One Source Multi Use)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "이선 마콧(Ethan Marcotte, 2010)",
+   "Flexbox·CSS Grid",
+   "상대 단위(%, em, rem, vw)",
+   "srcset·picture 요소",
+   "N-스크린"
+  ],
   "keywords": [
-   "핵심: CSS 3의 미디어 쿼리 · 유동형 그리드 · 유동형 이미지",
-   "기술: 뷰포트 · 반응형 웹의 부각 이유 · CSS",
-   "운영: OSMU(One Source Multi Use) · CSS2 · CSS3"
+   "3대 기술: 미디어 쿼리 · 유동형 그리드 · 유동형 이미지 (+뷰포트)",
+   "설계: 브레이크포인트 · 모바일 퍼스트 · Flexbox·CSS Grid",
+   "비교: 반응형(단일 유동 레이아웃) ↔ 적응형(기기별 고정 레이아웃)"
   ],
   "outline": [
-   "N_Screen 환경에 최적화된 UI 구현, 반응형 웹의 개요",
-   "- 반응형 웹(Responsive Web)의 정의",
-   "- 반응형 웹의 부각 이유",
-   "디바이스의 특성 정보에 따라 최적화된 화면 스타일을 구성하여 제공",
-   "- 반응형 웹 요점"
+   "등장 배경",
+   "- N-스크린 확산: 단일 소스 다중 기기",
+   "구현 기술",
+   "- 미디어 쿼리: 화면 조건별 CSS 적용",
+   "- 유동형 레이아웃: 그리드·이미지·뷰포트",
+   "적응형 웹 비교와 고려사항",
+   "- 비교: 유동 레이아웃 vs 고정 레이아웃 세트",
+   "- 고려사항: 모바일 퍼스트·성능"
   ],
   "sections": [
    {
-    "title": "반응형 웹 핵심",
+    "title": "등장 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "N-스크린 확산: 단일 소스 다중 기기",
       "items": [
-       "CSS 3의 미디어 쿼리: 반응형 웹에서 CSS 3의 미디어 쿼리를 다루는 핵심 암기 포인트",
-       "유동형 그리드: 반응형 웹에서 유동형 그리드를 다루는 핵심 암기 포인트",
-       "유동형 이미지: 반응형 웹에서 유동형 이미지를 다루는 핵심 암기 포인트",
-       "뷰포트: 반응형 웹에서 뷰포트를 다루는 핵심 암기 포인트"
+       "OSMU(One Source Multi Use): 하나의 URL·소스로 PC·태블릿·스마트폰을 지원해 구축·유지보수 비용 절감"
       ]
      }
     ]
    },
    {
-    "title": "반응형 웹 구성·기술",
+    "title": "구현 기술",
     "subsections": [
      {
-      "title": null,
+      "title": "미디어 쿼리: 화면 조건별 CSS 적용",
       "items": [
-       "반응형 웹의 부각 이유: 반응형 웹에서 반응형 웹의 부각 이유를 다루는 핵심 암기 포인트",
-       "CSS: CSS를 반응형 웹 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "OSMU(One Source Multi Use): OSMU를 반응형 웹 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "CSS2: CSS2를 반응형 웹 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "미디어 쿼리(Media Query): @media (max-width: 768px) 처럼 width·orientation·resolution 조건별 스타일 전환",
+       "브레이크포인트(Breakpoint): 레이아웃이 바뀌는 폭 기준, 예: 576·768·992·1200px"
+      ]
+     },
+     {
+      "title": "유동형 레이아웃: 그리드·이미지·뷰포트",
+      "items": [
+       "유동형 그리드(Fluid Grid): px 대신 %·fr·rem 상대 단위 열 폭, Flexbox·CSS Grid로 구현",
+       "유동형 이미지(Flexible Image): max-width:100%와 srcset으로 해상도별 이미지 제공",
+       "뷰포트 메타 태그(Viewport): width=device-width, initial-scale=1로 모바일 축소 표시 방지"
       ]
      }
     ]
    },
    {
-    "title": "반응형 웹 운영",
+    "title": "적응형 웹 비교와 고려사항",
     "subsections": [
      {
-      "title": null,
+      "title": "비교: 유동 레이아웃 vs 고정 레이아웃 세트",
       "items": [
-       "CSS3: CSS3를 반응형 웹 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HTTP: 요청/응답 기반의 웹 응용 계층 프로토콜 (반응형 웹/8359)"
+       "적응형 웹(Adaptive Web): 서버·클라이언트가 기기를 감지해 미리 만든 고정 레이아웃 중 하나를 제공"
+      ]
+     },
+     {
+      "title": "고려사항: 모바일 퍼스트·성능",
+      "items": [
+       "모바일 퍼스트(Mobile First): 작은 화면부터 설계해 min-width로 확장, 모바일에서 불필요한 대용량 리소스 로딩 주의"
       ]
      }
     ]
@@ -1841,23 +2154,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "CSS 3의 미디어 쿼리",
-   "유동형 그리드",
-   "유동형 이미지",
-   "뷰포트",
-   "반응형 웹의 부각 이유",
-   "CSS",
-   "OSMU(One Source Multi Use)",
-   "CSS2",
-   "CSS3",
-   "HTTP"
+   "미디어 쿼리(Media Query, CSS3)",
+   "유동형 그리드(Fluid Grid)",
+   "유동형 이미지(Flexible Image)",
+   "뷰포트 메타 태그(Viewport)",
+   "브레이크포인트(Breakpoint)",
+   "모바일 퍼스트(Mobile First)",
+   "적응형 웹(Adaptive Web)",
+   "OSMU(One Source Multi Use)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_020_1",
@@ -1872,50 +2184,84 @@
   "dueum": null,
   "name": "슈퍼 앱(Super App)",
   "title": "슈퍼 앱(Super App)",
-  "definition": "하나의 앱 안에서 별도의 다른 앱을 설치하지 않아도 수많은 서비스를 이용할 수 있는 앱",
+  "definition": "메신저·검색·결제 등 핵심 서비스를 기반으로 금융·쇼핑·배달·모빌리티 등 다양한 서비스를 별도 앱 설치 없이 하나의 앱 안에서 미니 프로그램 형태로 제공하는 통합 플랫폼 앱",
   "keywords_must": [
-   "하나의 앱에서 모든 서비스 이용",
-   "슈퍼앱의 개념도",
-   "슈퍼앱의 기술요소 및 서비스 설명",
-   "슈퍼 앱 아키텍처",
-   "슈퍼 앱 표준",
-   "OTT"
+   "미니 프로그램(Mini Program)",
+   "앵커 서비스(Anchor Service, 메신저·결제)",
+   "간편 결제·인증",
+   "단일 계정(SSO)",
+   "플랫폼 생태계(3rd Party 입점)",
+   "데이터 통합·추천 알고리즘",
+   "MSA(Microservice Architecture)",
+   "위챗(WeChat)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "알리페이·그랩·고젝",
+   "카카오톡·토스·네이버",
+   "슈퍼앱 SDK",
+   "플랫폼 독점 규제",
+   "클라우드 네이티브"
+  ],
   "keywords": [
-   "핵심: 하나의 앱에서 모든 서비스 이용 · 슈퍼앱의 개념도 · 슈퍼앱의 기술요소 및 서비스 설명",
-   "기술: 슈퍼 앱 아키텍처 · 슈퍼 앱 표준 · OTT"
+   "구조: 앵커 서비스 · 미니 프로그램 · 단일 계정 · 간편 결제",
+   "기술: 프론트(React)·백엔드(Spring Boot·Node.js) · MSA·클라우드 · AI 추천",
+   "사례: 위챗 · 그랩 · 카카오 · 토스 · 네이버"
   ],
   "outline": [
-   "슈퍼앱의 개념도 및 구성요소",
-   "- 슈퍼앱의 개념도",
-   "- 슈퍼앱의 기술요소 및 서비스 설명",
-   "슈퍼앱 활용 예시",
-   "- 슈퍼 앱 요점"
+   "등장 배경과 특징",
+   "- 배경: 앱 피로도·결제 데이터 선점",
+   "서비스와 기술요소",
+   "- 서비스: 검색·금융·주문·OTT",
+   "- 기술: MSA·클라우드·AI",
+   "사례와 과제",
+   "- 사례: 위챗·카카오·토스",
+   "- 과제: 독점·개인정보 집중"
   ],
   "sections": [
    {
-    "title": "슈퍼 앱 핵심",
+    "title": "등장 배경과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 앱 피로도·결제 데이터 선점",
       "items": [
-       "하나의 앱에서 모든 서비스 이용: 슈퍼 앱에서 하나의 앱에서 모든 서비스 이용을 다루는 핵심 암기 포인트",
-       "슈퍼앱의 개념도: 슈퍼 앱의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "슈퍼앱의 기술요소 및 서비스 설명: 슈퍼 앱에서 슈퍼앱의 기술요소 및 서비스 설명을 다루는 핵심 암기 포인트",
-       "슈퍼 앱 아키텍처: 슈퍼 앱의 계층·모듈 배치와 상호작용 구조"
+       "앵커 서비스(Anchor Service): 메신저·결제처럼 매일 쓰는 서비스로 사용자를 붙잡고 인접 서비스로 확장",
+       "미니 프로그램(Mini Program): 설치 없이 앱 안에서 실행되는 경량 앱, 위챗 미니프로그램 수백만 개"
       ]
      }
     ]
    },
    {
-    "title": "슈퍼 앱 구성·기술",
+    "title": "서비스와 기술요소",
     "subsections": [
      {
-      "title": null,
+      "title": "서비스: 검색·금융·주문·OTT",
       "items": [
-       "슈퍼 앱 표준: 슈퍼 앱 상호운용·품질을 맞추는 규격·기준",
-       "OTT: 인터넷으로 미디어를 직접 전송하는 스트리밍 서비스"
+       "간편 결제·인증: 한 번 등록한 결제수단과 인증으로 송금·대출·증권 이용",
+       "데이터 통합·추천 알고리즘: 서비스 간 이용 데이터를 결합한 개인화 추천"
+      ]
+     },
+     {
+      "title": "기술: MSA·클라우드·AI",
+      "items": [
+       "MSA(Microservice Architecture): 서비스별 독립 배포·확장, 프론트 React·백엔드 Spring Boot·Node.js",
+       "DB 구성: MySQL·MongoDB, 검색 ElasticSearch, 캐시 Redis"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "사례와 과제",
+    "subsections": [
+     {
+      "title": "사례: 위챗·카카오·토스",
+      "items": [
+       "위챗(WeChat): 메신저→결제(위챗페이)→미니프로그램, 카카오는 메신저→금융·모빌리티, 토스는 송금→증권·보험"
+      ]
+     },
+     {
+      "title": "과제: 독점·개인정보 집중",
+      "items": [
+       "플랫폼 독점 규제: 입점 사업자 수수료·자사 우대 문제, 개인정보 집중에 따른 유출 피해 확대 위험"
       ]
      }
     ]
@@ -1924,19 +2270,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "하나의 앱에서 모든 서비스 이용",
-   "슈퍼앱의 개념도",
-   "슈퍼앱의 기술요소 및 서비스 설명",
-   "슈퍼 앱 아키텍처",
-   "슈퍼 앱 표준",
-   "OTT"
+   "미니 프로그램(Mini Program)",
+   "앵커 서비스(Anchor Service, 메신저·결제)",
+   "간편 결제·인증",
+   "단일 계정(SSO)",
+   "플랫폼 생태계(3rd Party 입점)",
+   "데이터 통합·추천 알고리즘",
+   "MSA(Microservice Architecture)",
+   "위챗(WeChat)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_020_2",
@@ -1951,70 +2300,84 @@
   "dueum": null,
   "name": "프로그레시브 웹앱(PWA)",
   "title": "프로그레시브 웹앱(PWA)",
-  "definition": "모바일 기기에서 서비스워커, 웹 캐싱 등의 웹 기술을 적용하여 네이티브 앱과 유사한 사용자 경험을 제공하는웹 어플리케이션",
+  "definition": "서비스 워커·웹 앱 매니페스트·HTTPS를 적용해 웹 기술로 개발하면서도 설치·오프라인 실행·푸시 알림 등 네이티브 앱 수준의 경험을 제공하는 웹 애플리케이션 (2015년 구글 제안)",
   "keywords_must": [
-   "네이티브 앱",
-   "서비스 워커",
-   "Manifest",
-   "HTTPS",
-   "푸시 알림",
-   "오프라인 캐싱",
-   "백그라운드 동기화",
-   "PWA의 개념도",
-   "PWA 의 기술요소"
+   "서비스 워커(Service Worker)",
+   "웹 앱 매니페스트(Web App Manifest)",
+   "HTTPS 필수",
+   "오프라인 캐싱(Cache API)",
+   "푸시 알림(Push API)",
+   "백그라운드 동기화(Background Sync)",
+   "홈 화면 설치(Add to Home Screen)",
+   "앱 셸 모델(App Shell)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "캐시 우선·네트워크 우선 전략",
+   "Lighthouse PWA 점검",
+   "iOS 16.4 웹 푸시 지원",
+   "네이티브 앱·하이브리드 앱 비교",
+   "Workbox"
+  ],
   "keywords": [
-   "핵심: 네이티브 앱 · 서비스 워커 · Manifest",
-   "기술: HTTPS · 푸시 알림 · 오프라인 캐싱",
-   "운영: 백그라운드 동기화 · PWA의 개념도 · PWA 의 기술요소"
+   "3요소: 서비스 워커 · 매니페스트 · HTTPS",
+   "기능: 오프라인 캐싱 · 푸시 알림 · 백그라운드 동기화 · 홈 화면 설치",
+   "비교: PWA(플랫폼 비종속·스토어 불필요) ↔ 네이티브 앱(HW 접근·성능)"
   ],
   "outline": [
-   "네이티브 앱 수준의 모바일 웹, PWA 의 개요",
-   "- PWA(Progressive Web App)의 정의",
-   "- PWA 의 특징",
-   "PWA 의 개념도와 기술요소",
-   "- PWA 의 개념도",
-   "- PWA 의 기술요소",
-   "PWA 와 Native App 의 비교",
-   "- 프로그레시브 웹앱 요점"
+   "앱 수준 사용자 경험",
+   "- 설치·즉시 실행: 스토어 없는 배포",
+   "기술요소와 동작",
+   "- 서비스 워커: 요청 가로채기·캐시",
+   "- 매니페스트·보안",
+   "네이티브 앱 비교",
+   "- 비교: 플랫폼 종속성·HW 접근",
+   "- 한계: iOS 지원 제약"
   ],
   "sections": [
    {
-    "title": "프로그레시브 웹앱 핵심",
+    "title": "앱 수준 사용자 경험",
     "subsections": [
      {
-      "title": null,
+      "title": "설치·즉시 실행: 스토어 없는 배포",
       "items": [
-       "네이티브 앱: 프로그레시브 웹앱에서 네이티브 앱을 다루는 핵심 암기 포인트",
-       "서비스 워커: 프로그레시브 웹앱에서 서비스 워커를 다루는 핵심 암기 포인트",
-       "Manifest: Manifest를 프로그레시브 웹앱 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HTTPS: HTTPS를 프로그레시브 웹앱 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "홈 화면 설치(Add to Home Screen): 앱스토어 없이 URL로 배포·설치, 검색엔진으로 발견 가능",
+       "앱 셸 모델(App Shell): UI 골격을 캐시해 재방문 시 즉시 표시, 콘텐츠만 네트워크로 갱신"
       ]
      }
     ]
    },
    {
-    "title": "프로그레시브 웹앱 구성·기술",
+    "title": "기술요소와 동작",
     "subsections": [
      {
-      "title": null,
+      "title": "서비스 워커: 요청 가로채기·캐시",
       "items": [
-       "푸시 알림: 프로그레시브 웹앱에서 푸시 알림을 다루는 핵심 암기 포인트",
-       "오프라인 캐싱: 프로그레시브 웹앱에서 오프라인 캐싱을 다루는 핵심 암기 포인트",
-       "백그라운드 동기화: 프로그레시브 웹앱에서 백그라운드 동기화를 다루는 핵심 암기 포인트",
-       "PWA의 개념도: 프로그레시브 웹앱의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램"
+       "서비스 워커(Service Worker): 페이지와 별도 스레드로 동작하는 프록시 스크립트, fetch 이벤트로 요청을 가로채 Cache API 응답",
+       "오프라인 캐싱(Cache API): 온라인 불가 시 캐시 검색 후 응답, 캐시 우선·네트워크 우선 전략 선택"
+      ]
+     },
+     {
+      "title": "매니페스트·보안",
+      "items": [
+       "웹 앱 매니페스트(Web App Manifest): JSON으로 name·icons·start_url·display(standalone)·theme_color 지정",
+       "HTTPS 필수: 서비스 워커는 중간자 공격 방지를 위해 보안 컨텍스트에서만 등록"
       ]
      }
     ]
    },
    {
-    "title": "프로그레시브 웹앱 운영",
+    "title": "네이티브 앱 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "비교: 플랫폼 종속성·HW 접근",
       "items": [
-       "PWA 의 기술요소: 프로그레시브 웹앱에서 PWA 의 기술요소를 다루는 핵심 암기 포인트"
+       "PWA는 단일 코드로 Android·iOS·데스크톱 지원, 네이티브 앱은 플랫폼별 개발이나 블루투스·NFC 등 HW 접근 우수"
+      ]
+     },
+     {
+      "title": "한계: iOS 지원 제약",
+      "items": [
+       "iOS는 16.4부터 웹 푸시 지원, 백그라운드 동기화 등 일부 API 미지원으로 기능 편차 존재"
       ]
      }
     ]
@@ -2023,22 +2386,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "네이티브 앱",
-   "서비스 워커",
-   "Manifest",
-   "HTTPS",
-   "푸시 알림",
-   "오프라인 캐싱",
-   "백그라운드 동기화",
-   "PWA의 개념도",
-   "PWA 의 기술요소"
+   "서비스 워커(Service Worker)",
+   "웹 앱 매니페스트(Web App Manifest)",
+   "HTTPS 필수",
+   "오프라인 캐싱(Cache API)",
+   "푸시 알림(Push API)",
+   "백그라운드 동기화(Background Sync)",
+   "홈 화면 설치(Add to Home Screen)",
+   "앱 셸 모델(App Shell)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_020_3",
@@ -2051,61 +2414,86 @@
   ],
   "en": "WebAssembly",
   "dueum": null,
-  "name": "웹어셈블리(WebAssembly)",
-  "title": "웹어셈블리(WebAssembly)",
-  "definition": "웹 클라이언트 환경에서 하드웨어 리소스 활용도를 극대화하기 위해 네이티브 언어와 유사한 수준의 성능을 제공할 수 있도록 컴팩트한 바이너리 포맷을 기반으로 웹 브라우저에서 실행 가능한 어셈블리 코드",
+  "name": "웹어셈블리(WebAssembly, WASM)",
+  "title": "웹어셈블리(WebAssembly, WASM)",
+  "definition": "C·C++·Rust 등으로 작성한 코드를 컴팩트한 바이너리 형식으로 컴파일해 브라우저의 샌드박스 가상머신에서 네이티브에 가까운 속도로 실행하는 W3C 표준 저수준 코드 형식 (2019년 W3C 권고)",
   "keywords_must": [
-   "웹 환경 어셈블리 코드",
-   "바이너리 포맷",
-   "WASM Runtime",
-   "WASI",
-   "WASM Module",
-   "WASM",
-   "LLM"
+   "바이너리 포맷(.wasm)",
+   "스택 기반 가상머신(Stack-based VM)",
+   "모듈·인스턴스(Module·Instance)",
+   "선형 메모리(Linear Memory)",
+   "샌드박스(Sandbox)",
+   "자바스크립트 연동(JS API)",
+   "WASI(WebAssembly System Interface)",
+   "Emscripten·Rust 컴파일 툴체인",
+   "AOT·JIT 컴파일"
   ],
   "keywords_ref": [
-   "UE(User Equipment)"
+   "WAT 텍스트 포맷",
+   "컴포넌트 모델(Component Model)",
+   "Wasmtime·WasmEdge 런타임",
+   "엣지·서버리스 활용",
+   "Figma·Google Earth 사례"
   ],
   "keywords": [
-   "핵심: 웹 환경 어셈블리 코드 · 바이너리 포맷 · WASM Runtime",
-   "기술: WASI · WASM Module · WASM",
-   "운영: LLM",
-   "참고: UE(User Equipment)"
+   "구성: 모듈 · 함수 · 선형 메모리 · 테이블 · 런타임",
+   "동작: 소스 → 컴파일(Emscripten·Rust) → .wasm 로딩 → AOT·JIT 실행",
+   "확장: WASI · 컴포넌트 모델 · 엣지·서버리스"
   ],
   "outline": [
-   "웹 환경 로우 레벨 어셈블리 언어",
-   "- 웹 어셈블리 정의",
-   "- 웹 어셈블리 특징",
-   "웹 어셈블리 구성도, 구성요소",
-   "- 웹 어셈블리 구성도",
-   "- 웹 어셈블리 구성요소",
-   "웹 어셈블리 활용 방안",
-   "- 웹어셈블리 요점"
+   "등장 배경과 특징",
+   "- 배경: 자바스크립트 성능 한계",
+   "구성요소와 동작",
+   "- 구성: 모듈·선형 메모리·테이블",
+   "- 동작: 컴파일 → 로딩 → 최적화",
+   "확장과 활용",
+   "- WASI: 브라우저 밖 실행",
+   "- 활용: 그래픽·엣지"
   ],
   "sections": [
    {
-    "title": "웹어셈블리 핵심",
+    "title": "등장 배경과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 자바스크립트 성능 한계",
       "items": [
-       "웹 환경 어셈블리 코드: 웹어셈블리에서 웹 환경 어셈블리 코드를 다루는 핵심 암기 포인트",
-       "바이너리 포맷: 웹어셈블리에서 바이너리 포맷을 다루는 핵심 암기 포인트",
-       "WASM Runtime: 웹어셈블리에서 WASM Runtime를 다루는 핵심 암기 포인트",
-       "WASI: WASI를 웹어셈블리 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "바이너리 포맷(.wasm): 파싱이 빠른 컴팩트 바이트코드로 다운로드·시작 시간 단축",
+       "자바스크립트 연동(JS API): JS를 대체하지 않고 wasm 모듈을 임포트해 연산 집약 부분만 담당"
       ]
      }
     ]
    },
    {
-    "title": "웹어셈블리 구성·기술",
+    "title": "구성요소와 동작",
     "subsections": [
      {
-      "title": null,
+      "title": "구성: 모듈·선형 메모리·테이블",
       "items": [
-       "WASM Module: 웹어셈블리에서 WASM Module를 다루는 핵심 암기 포인트",
-       "WASM: 웹에서 네이티브급으로 실행되는 저수준 바이트코드",
-       "LLM: 대규모 텍스트로 사전학습된 거대 언어 모델"
+       "모듈·인스턴스(Module·Instance): 함수·임포트·익스포트를 담은 배포 단위, 런타임에 인스턴스화",
+       "선형 메모리(Linear Memory): 범위 검사되는 연속 바이트 배열, 샌드박스 밖 메모리 접근 불가"
+      ]
+     },
+     {
+      "title": "동작: 컴파일 → 로딩 → 최적화",
+      "items": [
+       "Emscripten·Rust 컴파일 툴체인: 소스를 .wasm으로 컴파일, 브라우저가 AOT·JIT로 기계어 변환 후 프로파일링 최적화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "확장과 활용",
+    "subsections": [
+     {
+      "title": "WASI: 브라우저 밖 실행",
+      "items": [
+       "WASI(WebAssembly System Interface): 파일·네트워크 등 OS 기능에 대한 표준 시스템 인터페이스, Wasmtime·WasmEdge 런타임"
+      ]
+     },
+     {
+      "title": "활용: 그래픽·엣지",
+      "items": [
+       "활용: Figma 렌더링, Google Earth, 영상 편집·게임 엔진, 엣지·서버리스 경량 함수"
       ]
      }
     ]
@@ -2114,20 +2502,23 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "웹 환경 어셈블리 코드",
-   "바이너리 포맷",
-   "WASM Runtime",
-   "WASI",
-   "WASM Module",
-   "WASM",
-   "LLM"
+   "바이너리 포맷(.wasm)",
+   "스택 기반 가상머신(Stack-based VM)",
+   "모듈·인스턴스(Module·Instance)",
+   "선형 메모리(Linear Memory)",
+   "샌드박스(Sandbox)",
+   "자바스크립트 연동(JS API)",
+   "WASI(WebAssembly System Interface)",
+   "Emscripten·Rust 컴파일 툴체인",
+   "AOT·JIT 컴파일"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_021",
@@ -2142,55 +2533,83 @@
   "dueum": null,
   "name": "단일 페이지 애플리케이션(SPA)",
   "title": "단일 페이지 애플리케이션(SPA)",
-  "definition": "전통적인 새로고침 방식의 웹과는 달리 브라우저에서 페이지 간 이동 없이 자바스크립트를 이용하여 동적으로 페이지를 변경할 수 있는 웹 애플리케이션",
+  "definition": "최초에 하나의 HTML 문서만 받고 이후 화면 전환은 페이지 새로고침 없이 자바스크립트가 API로 받은 JSON 데이터로 DOM을 동적으로 갱신하는 웹 애플리케이션 구조",
   "keywords_must": [
-   "자바스크립트",
-   "Ajax",
-   "비동기",
-   "UX향상",
-   "동적 페이지 변경",
-   "SEO 문제",
-   "SEO"
+   "클라이언트 사이드 렌더링(CSR)",
+   "비동기 통신(Ajax·Fetch API)",
+   "JSON 데이터 교환",
+   "클라이언트 라우팅(History API)",
+   "가상 DOM(Virtual DOM)",
+   "SPA 프레임워크(React·Vue·Angular)",
+   "검색엔진 최적화(SEO) 문제",
+   "초기 로딩 지연"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "서버 사이드 렌더링(SSR)",
+   "코드 스플리팅(Code Splitting)",
+   "하이드레이션(Hydration)",
+   "MPA(Multi Page Application)",
+   "Next.js·Nuxt"
+  ],
   "keywords": [
-   "핵심: 자바스크립트 · Ajax · 비동기",
-   "기술: UX향상 · 동적 페이지 변경 · SEO 문제",
-   "운영: SEO"
+   "동작: 최초 HTML·JS 로딩 → Ajax로 JSON 수신 → DOM 갱신 · 클라이언트 라우팅",
+   "기술: CSR · 가상 DOM · History API · React·Vue·Angular",
+   "고려사항: SEO → SSR·프리렌더링 · 초기 로딩 → 코드 스플리팅"
   ],
   "outline": [
-   "단일 페이지 애플리케이션의 개요",
-   "- 단일 페이지 애플리케이션의 정의",
-   "- 단일 페이지 애플리케이션의 특징",
-   "단일 페이지 애플리케이션의 구성과 기술",
-   "- 단일 페이지 애플리케이션의 핵심 요소",
-   "단일 페이지 애플리케이션의 적용",
-   "- 단일 페이지 애플리케이션 요점"
+   "페이지 전환 방식의 변화",
+   "- 부분 갱신: 비동기·UX 향상",
+   "동작 방식과 기술요소",
+   "- 동작: 최초 로딩 후 부분 갱신",
+   "- 프레임워크: React·Vue·Angular",
+   "적용 시 고려사항",
+   "- SEO: 빈 HTML 문제",
+   "- 성능: 초기 번들 크기"
   ],
   "sections": [
    {
-    "title": "단일 페이지 애플리케이션 핵심",
+    "title": "페이지 전환 방식의 변화",
     "subsections": [
      {
-      "title": null,
+      "title": "부분 갱신: 비동기·UX 향상",
       "items": [
-       "자바스크립트: 단일 페이지 애플리케이션에서 자바스크립트를 다루는 핵심 암기 포인트",
-       "Ajax: Ajax를 단일 페이지 애플리케이션 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "비동기: 단일 페이지 애플리케이션에서 비동기를 다루는 핵심 암기 포인트",
-       "UX향상: 단일 페이지 애플리케이션에서 UX향상을 다루는 핵심 암기 포인트"
+       "비동기 통신(Ajax·Fetch API): 필요한 데이터만 JSON으로 받아 부분 갱신, 서버 부하와 트래픽 감소",
+       "네이티브 앱 같은 UX: 화면 깜빡임 없는 전환, 오프라인 캐시와 결합 용이"
       ]
      }
     ]
    },
    {
-    "title": "단일 페이지 애플리케이션 구성·기술",
+    "title": "동작 방식과 기술요소",
     "subsections": [
      {
-      "title": null,
+      "title": "동작: 최초 로딩 후 부분 갱신",
       "items": [
-       "동적 페이지 변경: 단일 페이지 애플리케이션에서 동적 페이지 변경을 다루는 핵심 암기 포인트",
-       "SEO 문제: 단일 페이지 애플리케이션에서 SEO 문제를 다루는 핵심 암기 포인트",
-       "SEO: 검색엔진 가시성을 높이는 최적화"
+       "클라이언트 사이드 렌더링(CSR): 브라우저가 JS로 화면을 그림, 서버는 REST·GraphQL API만 제공",
+       "클라이언트 라우팅(History API): pushState로 URL을 바꾸고 해당 컴포넌트만 렌더링"
+      ]
+     },
+     {
+      "title": "프레임워크: React·Vue·Angular",
+      "items": [
+       "가상 DOM(Virtual DOM): 변경 전후 가상 트리를 비교(diff)해 실제 DOM 변경을 최소화(React·Vue)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 시 고려사항",
+    "subsections": [
+     {
+      "title": "SEO: 빈 HTML 문제",
+      "items": [
+       "검색엔진 최적화(SEO) 문제: 크롤러가 JS 실행 전 빈 HTML을 수집, SSR·프리렌더링(Next.js·Nuxt)으로 보완"
+      ]
+     },
+     {
+      "title": "성능: 초기 번들 크기",
+      "items": [
+       "초기 로딩 지연: 큰 JS 번들로 첫 화면이 늦음, 코드 스플리팅·지연 로딩으로 개선"
       ]
      }
     ]
@@ -2199,20 +2618,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "자바스크립트",
-   "Ajax",
-   "비동기",
-   "UX향상",
-   "동적 페이지 변경",
-   "SEO 문제",
-   "SEO"
+   "클라이언트 사이드 렌더링(CSR)",
+   "비동기 통신(Ajax·Fetch API)",
+   "JSON 데이터 교환",
+   "클라이언트 라우팅(History API)",
+   "가상 DOM(Virtual DOM)",
+   "SPA 프레임워크(React·Vue·Angular)",
+   "검색엔진 최적화(SEO) 문제",
+   "초기 로딩 지연"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_022",
@@ -2227,55 +2648,89 @@
   "dueum": null,
   "name": "딥링크(Deep Link)",
   "title": "딥링크(Deep Link)",
-  "definition": "딥링크란 상세콘텐츠로 사용자를 랜딩시키키는 링크, 대부분의 웹링크가 딥링크에 속함.",
+  "definition": "웹사이트나 앱의 첫 화면이 아니라 특정 상세 콘텐츠로 사용자를 바로 이동시키는 링크로, 모바일에서는 URI 스킴·유니버설 링크·앱 링크로 설치된 앱의 특정 화면을 직접 실행함",
   "keywords_must": [
-   "딥링크 (Deep Link) 정의",
-   "딥링크 동작",
-   "딥링크 주목 이유",
-   "딥링크 아키텍처",
-   "딥링크 표준",
-   "SNS",
-   "URL"
+   "URI 스킴(URI Scheme, youtube://)",
+   "유니버설 링크(Universal Links, iOS)",
+   "앱 링크(App Links, Android)",
+   "디퍼드 딥링크(Deferred Deep Link)",
+   "앱 미설치 시 스토어 이동",
+   "앱 인덱싱(App Indexing)",
+   "랜딩 페이지(Landing Page)",
+   "모바일 마케팅 어트리뷰션(Attribution)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "apple-app-site-association",
+   "assetlinks.json",
+   "Firebase Dynamic Links 종료(2025)",
+   "앱스플라이어·브랜치",
+   "모바일 콘텐츠 검색"
+  ],
   "keywords": [
-   "핵심: 딥링크 (Deep Link) 정의 · 딥링크 동작 · 딥링크 주목 이유",
-   "기술: 딥링크 아키텍처 · 딥링크 표준 · SNS",
-   "운영: URL"
+   "방식: URI 스킴 · 유니버설 링크(iOS) · 앱 링크(Android)",
+   "확장: 디퍼드 딥링크 · 앱 인덱싱 · 마케팅 어트리뷰션"
   ],
   "outline": [
-   "딥링크 (Deep Link) 개요",
-   "- 딥링크 (Deep Link) 정의",
-   "딥링크 동작 및 주목 이유",
-   "- 딥링크 동작",
-   "- 딥링크 주목 이유",
-   "딥링크 나아가야할 방안",
-   "- 딥링크 요점"
+   "개념과 동작",
+   "- 동작: 설치 여부에 따른 분기",
+   "구현 방식",
+   "- URI 스킴: youtube://·melon://",
+   "- 검증형 링크: 유니버설 링크·앱 링크",
+   "- 지연 연결: 설치 후 목적지 복원",
+   "주목 이유와 과제",
+   "- 주목 이유: 모바일 콘텐츠 검색",
+   "- 과제: 단일 엔드포인트 부재"
   ],
   "sections": [
    {
-    "title": "딥링크 핵심",
+    "title": "개념과 동작",
     "subsections": [
      {
-      "title": null,
+      "title": "동작: 설치 여부에 따른 분기",
       "items": [
-       "딥링크 (Deep Link) 정의: 딥링크에서 딥링크 (Deep Link) 정의를 다루는 핵심 암기 포인트",
-       "딥링크 동작: 딥링크에서 딥링크 동작을 다루는 핵심 암기 포인트",
-       "딥링크 주목 이유: 딥링크에서 딥링크 주목 이유를 다루는 핵심 암기 포인트",
-       "딥링크 아키텍처: 딥링크의 계층·모듈 배치와 상호작용 구조"
+       "앱 미설치 시 스토어 이동: 설치돼 있으면 해당 콘텐츠 화면 실행, 없으면 앱스토어·웹 페이지로 이동",
+       "랜딩 페이지(Landing Page): 홈이 아닌 상품·기사 상세로 바로 진입해 이탈률 감소"
       ]
      }
     ]
    },
    {
-    "title": "딥링크 구성·기술",
+    "title": "구현 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "URI 스킴: youtube://·melon://",
       "items": [
-       "딥링크 표준: 딥링크 상호운용·품질을 맞추는 규격·기준",
-       "SNS: SNS를 딥링크 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "URL: URL를 딥링크 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "URI 스킴(URI Scheme): 앱 고유 스킴 등록, 구현이 쉬우나 스킴 중복·미설치 시 오류 문제"
+      ]
+     },
+     {
+      "title": "검증형 링크: 유니버설 링크·앱 링크",
+      "items": [
+       "유니버설 링크(Universal Links, iOS): https 링크와 apple-app-site-association 파일로 도메인 소유 검증",
+       "앱 링크(App Links, Android): assetlinks.json으로 도메인 검증 후 앱을 기본 처리기로 실행"
+      ]
+     },
+     {
+      "title": "지연 연결: 설치 후 목적지 복원",
+      "items": [
+       "디퍼드 딥링크(Deferred Deep Link): 미설치 사용자가 설치 후 첫 실행 시 원래 링크 콘텐츠로 이동"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주목 이유와 과제",
+    "subsections": [
+     {
+      "title": "주목 이유: 모바일 콘텐츠 검색",
+      "items": [
+       "앱 인덱싱(App Indexing): 검색엔진이 앱 내부 콘텐츠를 색인해 검색 결과에서 앱 화면으로 연결"
+      ]
+     },
+     {
+      "title": "과제: 단일 엔드포인트 부재",
+      "items": [
+       "기기·OS·설치 여부별 동작이 달라 통합 링크 관리가 필요, Firebase Dynamic Links는 2025년 서비스 종료"
       ]
      }
     ]
@@ -2284,20 +2739,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "딥링크 (Deep Link) 정의",
-   "딥링크 동작",
-   "딥링크 주목 이유",
-   "딥링크 아키텍처",
-   "딥링크 표준",
-   "SNS",
-   "URL"
+   "URI 스킴(URI Scheme, youtube://)",
+   "유니버설 링크(Universal Links, iOS)",
+   "앱 링크(App Links, Android)",
+   "디퍼드 딥링크(Deferred Deep Link)",
+   "앱 미설치 시 스토어 이동",
+   "앱 인덱싱(App Indexing)",
+   "랜딩 페이지(Landing Page)",
+   "모바일 마케팅 어트리뷰션(Attribution)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_023",
@@ -26609,51 +27066,87 @@
   ],
   "en": "Digital Footprint",
   "dueum": null,
-  "name": "디지탈발자국(Digital Footprint)",
-  "title": "디지탈발자국(Digital Footprint)",
-  "definition": "디지털 발자국 혹은 디지털 흔적이라고 하며, 소비자가 온라인 활동을 하면서 남긴 속성, 구매패턴, 지불방법, SNS 등 다양한 형태의 디지털 기록",
+  "name": "디지털 발자국(Digital Footprint)",
+  "title": "디지털 발자국(Digital Footprint)",
+  "definition": "이용자가 웹 검색·SNS·구매·위치 이용 등 온라인 활동 중 의도적 또는 비의도적으로 남기는 모든 디지털 기록으로, 맞춤형 서비스에 활용되지만 프라이버시 침해 위험이 있어 삭제권 등 통제수단이 요구됨",
   "keywords_must": [
-   "옵트아웃 방식",
-   "디지털세탁소",
-   "잊혀질 권리",
-   "디지털장례식",
-   "디지탈발자국 아키텍처",
-   "SNS"
+   "능동적 발자국(Active Footprint)",
+   "수동적 발자국(Passive Footprint)",
+   "옵트아웃(Opt-out)",
+   "옵트인(Opt-in)",
+   "잊혀질 권리(Right to be Forgotten)",
+   "디지털 세탁소(Digital Laundry)",
+   "디지털 장례식(Digital Funeral)",
+   "맞춤형 광고(Behavioral Targeting)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "GDPR 제17조 삭제권",
+   "개인정보 보호법",
+   "지우개 서비스(아동·청소년 게시물 삭제)",
+   "쿠키·트래커(Tracker)",
+   "사이버 스토킹(Cyber Stalking)"
+  ],
   "keywords": [
-   "핵심: 옵트아웃 방식 · 디지털세탁소 · 잊혀질 권리",
-   "기술: 디지털장례식 · 디지탈발자국 아키텍처 · SNS"
+   "유형: 능동적 발자국(게시물·댓글) · 수동적 발자국(쿠키·위치·로그)",
+   "대응: 옵트인 전환 · 잊혀질 권리 · 디지털 세탁소 · 디지털 장례식"
   ],
   "outline": [
-   "디지털 발자국의 긍정적/부정적 활용 사례",
-   "- 디지탈발자국 요점",
-   "디지털 발자국의 부작용 대응방안",
-   "- 디지탈발자국 요점"
+   "유형",
+   "- 능동·수동: 게시물 vs 쿠키·위치 로그",
+   "활용 사례와 부작용",
+   "- 긍정: 맞춤형 광고·범죄 수사",
+   "- 부정: 옵트아웃 스팸·사이버 스토킹",
+   "대응방안",
+   "- 제도: 옵트인·잊혀질 권리",
+   "- 개인: 디지털 세탁소·디지털 장례식"
   ],
   "sections": [
    {
-    "title": "디지탈발자국 핵심",
+    "title": "유형",
     "subsections": [
      {
-      "title": null,
+      "title": "능동·수동: 게시물 vs 쿠키·위치 로그",
       "items": [
-       "옵트아웃 방식: 디지탈발자국에서 옵트아웃 방식을 다루는 핵심 암기 포인트",
-       "디지털세탁소: 디지탈발자국에서 디지털세탁소를 다루는 핵심 암기 포인트",
-       "잊혀질 권리: 디지탈발자국에서 잊혀질 권리를 다루는 핵심 암기 포인트",
-       "디지털장례식: 디지탈발자국에서 디지털장례식을 다루는 핵심 암기 포인트"
+       "능동적 발자국(Active Footprint): 이용자가 의도적으로 남긴 SNS 게시물·댓글·리뷰",
+       "수동적 발자국(Passive Footprint): 쿠키·IP·위치·검색 로그처럼 모르는 사이 수집되는 기록"
       ]
      }
     ]
    },
    {
-    "title": "디지탈발자국 구성·기술",
+    "title": "활용 사례와 부작용",
     "subsections": [
      {
-      "title": null,
+      "title": "긍정: 맞춤형 광고·범죄 수사",
       "items": [
-       "디지탈발자국 아키텍처: 디지탈발자국의 계층·모듈 배치와 상호작용 구조",
-       "SNS: SNS를 디지탈발자국 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "맞춤형 광고(Behavioral Targeting): 행동 패턴 분석으로 최적 시점·경로에 광고 메시지 제공",
+       "범죄 수사: 명예훼손·사기 범죄자의 계정 이용 내역을 추적 증거로 활용"
+      ]
+     },
+     {
+      "title": "부정: 옵트아웃 스팸·사이버 스토킹",
+      "items": [
+       "옵트아웃(Opt-out): 거부하지 않으면 동의로 간주하는 방식이라 웹서핑 정보가 스팸 광고에 이용",
+       "사이버 스토킹(Cyber Stalking): 공개 게시물·위치 정보를 조합해 특정 개인을 추적"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응방안",
+    "subsections": [
+     {
+      "title": "제도: 옵트인·잊혀질 권리",
+      "items": [
+       "옵트인(Opt-in): 사전 명시적 동의 후 수집, 수집 목적·활용 내역을 이용자에게 고지",
+       "잊혀질 권리(Right to be Forgotten): EU GDPR 제17조 삭제권, 2014년 EU 사법재판소 구글 판결로 검색결과 삭제 요청 인정"
+      ]
+     },
+     {
+      "title": "개인: 디지털 세탁소·디지털 장례식",
+      "items": [
+       "디지털 세탁소(Digital Laundry): 온라인 평판·흔적 삭제 대행 서비스",
+       "디지털 장례식(Digital Funeral): 사망자의 계정·게시물을 정리하는 디지털 유산 관리 서비스"
       ]
      }
     ]
@@ -26662,19 +27155,22 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "옵트아웃 방식",
-   "디지털세탁소",
-   "잊혀질 권리",
-   "디지털장례식",
-   "디지탈발자국 아키텍처",
-   "SNS"
+   "능동적 발자국(Active Footprint)",
+   "수동적 발자국(Passive Footprint)",
+   "옵트아웃(Opt-out)",
+   "옵트인(Opt-in)",
+   "잊혀질 권리(Right to be Forgotten)",
+   "디지털 세탁소(Digital Laundry)",
+   "디지털 장례식(Digital Funeral)",
+   "맞춤형 광고(Behavioral Targeting)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_411",

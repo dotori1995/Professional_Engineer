@@ -15,6 +15,7 @@ GENERIC_KW = re.compile(r'^(AI|AX|ICT|IT|FMS|Service|PC|OS|HTML|WWW|SV|CDN|JSON|
 # Fragment definitions
 FRAG_DEF = re.compile(r'^(Mass\s|소품종|→)|다루는\s*토픽|디지털서비스\s*영역')
 KW_HEADING = re.compile(r'의\s*(정의|특징|개요|배경|등장|필요성|구성요소|기대효과)|(개요|배경|특징)$')
+BANNED = ['다루는 핵심', '핵심 암기 포인트', '핵심 기술 요소', '계층·모듈 배치', '요점', '시험 답안', '- -', '디지탈']
 KW_DEF_PHRASE = re.compile(r'(위한\s+오픈소스|오케스트레이션\s*플랫폼$|^오픈소스\s)')
 
 def texts(x):
@@ -38,6 +39,7 @@ def main(keys):
     files = [f'{ROOT}/_data/{k}.json' for k in keys] if keys else sorted(glob.glob(f'{ROOT}/_data/*.json'))
     errs = []; defs = defaultdict(list); dom_descs = defaultdict(list)
     for f in files:
+        file_descs = defaultdict(set)
         try: d = json.load(open(f))
         except Exception: continue
         if not isinstance(d, list): continue
@@ -85,10 +87,12 @@ def main(keys):
             secs = t.get('sections') or []
             items = sum(len(ss.get('items') or []) for s in secs for ss in (s.get('subsections') or []))
             if items < 4: errs.append(f'{tid}: 자세히 항목 부족 ({items})')
-            # (b) banned phrase 시험 답안
+            # (b) banned template phrases anywhere in the topic
+            hit = set()
             for s in texts(t):
-                if '시험 답안' in s:
-                    errs.append(f'{tid}: 금지 문구 "시험 답안"'); break
+                for b in BANNED:
+                    if b in s and b not in hit:
+                        hit.add(b); errs.append(f'{tid}: 금지 문구 "{b}" in "{s[:40]}"')
             # section description quality
             descs = []
             for s in secs:
@@ -107,13 +111,27 @@ def main(keys):
                     break
             # collect domain-level descs
             for d in descs:
-                if d: dom_descs[d].append(tid)
+                if d: dom_descs[d].append(tid); file_descs[d].add(tid)
+            # (d) outline must not repeat the topic title / its expansion
+            tb = set()
+            for b in [title, t.get('en') or ''] + list(re.findall(r'\(([^()]*)\)', title)) + [re.sub(r'\(.*\)', '', title)]:
+                for x in re.split(r',\s*', b):
+                    x = re.sub(r'\s+', '', x).lower()
+                    if len(x) >= 2: tb.add(x)
+            for o in (t.get('outline') or []):
+                oo = re.sub(r'\s+', '', o).lower()
+                hitb = [b for b in tb if b in oo]
+                if hitb: errs.append(f'{tid}: outline에 토픽명 반복 "{o[:40]}" ({hitb[0]})')
             # (c) outline length / glued
             for o in (t.get('outline') or []):
                 if len(o) > 45:
                     errs.append(f'{tid}: outline 과장 "{o[:40]}" ({len(o)}자)')
-                if re.search(r'[가-힣][A-Za-zA-Z]|[a-zA-Z][가-힣]|개요[가-힣A-Za-z]|정의[가-힣A-Za-z]|특징[가-힣A-Za-z]', o):
+                if re.search(r'[가-힣][A-Za-z]|개요[가-힣A-Za-z]|정의[가-힣A-Za-z]|특징[가-힣A-Za-z]', o):
                     errs.append(f'{tid}: outline 붙음 "{o[:40]}"')
+        # same description in 3+ topics of one domain = template text
+        for d, ids in file_descs.items():
+            if len(ids) >= 3 and len(d) >= 8:
+                errs.append(f'설명 3개+ 토픽 반복 {len(ids)}개 "{d[:40]}" (예: {sorted(ids)[:3]})')
     # (a) description repeated 20+ in a domain
     for d, ids in dom_descs.items():
         if len(ids) >= 20:
