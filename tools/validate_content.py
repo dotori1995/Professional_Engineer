@@ -14,6 +14,8 @@ OL_BARE = re.compile(r'^\s*-?\s*(정의|필요성|특징|핵심\s*요소|유형\
 GENERIC_KW = re.compile(r'^(AI|AX|ICT|IT|FMS|Service|PC|OS|HTML|WWW|SV|CDN|JSON|API|SW|HW|UI|UX|DB|NW|SE|PM|MG)$', re.I)
 # Fragment definitions
 FRAG_DEF = re.compile(r'^(Mass\s|소품종|→)|다루는\s*토픽|디지털서비스\s*영역')
+KW_HEADING = re.compile(r'의\s*(정의|특징|개요|배경|등장|필요성|구성요소|기대효과)|(개요|배경|특징)$')
+KW_DEF_PHRASE = re.compile(r'(위한\s+오픈소스|오케스트레이션\s*플랫폼$|^오픈소스\s)')
 
 def texts(x):
     if isinstance(x, str): yield x
@@ -50,8 +52,12 @@ def main(keys):
             if must and (len(must) < 6 or len(must) > 12):
                 errs.append(f'{tid}: 필수 키워드 개수 {len(must)} (6–10 권장, 허용 6–12)')
             bases = name_bases(title)
+            for fld in ('keywords_must', 'keywords_ref'):
+                for k in (t.get(fld) or []):
+                    if KW_HEADING.search(k) or KW_DEF_PHRASE.search(k):
+                        errs.append(f'{tid}: {fld}가 목차/정의 문구 "{k[:40]}"')
             for k in must:
-                if len(k) > 60: errs.append(f'{tid}: 키워드가 문장 조각 "{k[:40]}"')
+                if len(k) > 55: errs.append(f'{tid}: 키워드가 문장 조각 "{k[:40]}"')
                 kk = re.sub(r'\s+', '', k).lower()
                 kb = re.sub(r'\s+', '', re.sub(r'\([^)]*\)', '', k)).lower()
                 if kk in bases or kb in bases:
