@@ -18115,7 +18115,8 @@
   ],
   "reviewed": true,
   "gloss": {
-   "PS": "Public Safety"
+   "PS": "Public Safety",
+   "AS": "Application Server"
   }
  },
  {
@@ -18344,7 +18345,8 @@
   ],
   "quiz_groups": [],
   "gloss": {
-   "PS": "Public Safety"
+   "PS": "Public Safety",
+   "IMS": "IP Multimedia Subsystem"
   }
  },
  {
@@ -18586,7 +18588,8 @@
    "TDD": "Time Division Duplex",
    "SA": "Standalone",
    "NSA": "Non-Standalone",
-   "SMF": "Session Management Function"
+   "SMF": "Session Management Function",
+   "PPP": "Public-Private Partnership"
   },
   "dueum": "전체주고지연에면(최고 전송속도·체감 전송속도·주파수 효율·고속 이동성·전송 지연·연결 밀도·에너지 효율·면적당 용량)"
  },
@@ -18937,7 +18940,8 @@
   "reviewed": true,
   "gloss": {
    "SA": "Standalone",
-   "DC": "Dual Connectivity"
+   "DC": "Dual Connectivity",
+   "SMF": "Session Management Function"
   }
  },
  {
@@ -19665,7 +19669,8 @@
   "reviewed": true,
   "gloss": {
    "SMF": "Session Management Function",
-   "DX": "Digital Transformation"
+   "DX": "Digital Transformation",
+   "SA": "Standalone"
   }
  },
  {
@@ -21291,7 +21296,8 @@
   ],
   "reviewed": true,
   "gloss": {
-   "AD": "Administrative Distance"
+   "AD": "Administrative Distance",
+   "ISP": "Internet Service Provider"
   }
  },
  {
@@ -22098,7 +22104,8 @@
   ],
   "reviewed": true,
   "gloss": {
-   "AD": "Administrative Distance"
+   "AD": "Administrative Distance",
+   "AS": "Autonomous System"
   }
  },
  {
@@ -24084,7 +24091,8 @@
   ],
   "reviewed": true,
   "gloss": {
-   "CMP": "Cloud Management Platform"
+   "CMP": "Cloud Management Platform",
+   "HCI": "Hyper-Converged Infrastructure"
   }
  },
  {
@@ -25019,7 +25027,8 @@
   "gloss": {
    "FEC": "Forward Error Correction",
    "SR": "Selective Repeat",
-   "IR": "Incremental Redundancy"
+   "IR": "Incremental Redundancy",
+   "MAC": "Medium Access Control"
   }
  },
  {
@@ -26646,7 +26655,8 @@
   ],
   "reviewed": true,
   "gloss": {
-   "GPS": "Global Positioning System"
+   "GPS": "Global Positioning System",
+   "CSS": "Chirp Spread Spectrum"
   }
  },
  {
