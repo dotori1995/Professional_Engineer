@@ -6869,68 +6869,95 @@
     "name": "현저성 모델(Stakeholder Salience Model)",
     "en": "Stakeholder Salience Model",
     "title": "현저성 모델(Stakeholder Salience Model)",
-    "definition": "권력·합법성·긴급성 세 속성으로 이해관계자를 7유형으로 분류해 관심 우선순위를 정하는 모델 (Mitchell et al.)",
+    "definition": "미첼(Mitchell) 등이 제시한 이해관계자 분류 모델로, 권력·합법성·긴급성 세 속성의 보유 조합에 따라 이해관계자를 7가지 유형으로 나누고 관리 우선순위를 정함",
     "outline": [
-      "현저성의 개념",
-      "세 속성",
+      "3속성 기반 분류",
+      "- 속성",
       "7가지 유형",
-      "관리 시사점"
+      "- 잠재형",
+      "- 기대형",
+      "- 확정형",
+      "관리 전략",
+      "- 전략"
     ],
     "keywords_must": [
-      "현저성(Salience)",
       "권력(Power)",
       "합법성(Legitimacy)",
       "긴급성(Urgency)",
-      "확정적(Definitive)",
+      "휴면형(Dormant)",
+      "재량형(Discretionary)",
+      "요구형(Demanding)",
+      "지배형(Dominant)",
       "위험형(Dangerous)",
       "의존형(Dependent)",
-      "잠재형(Dormant/Discretionary/Demanding)"
+      "확정형(Definitive)"
     ],
     "keywords_ref": [
-      "권력/관심 격자",
-      "참여 전략",
-      "스폰서",
-      "규제기관"
+      "미첼·애글·우드(1997)",
+      "비이해관계자(속성 없음)",
+      "속성은 시간에 따라 변화",
+      "권력-관심 격자와 비교",
+      "근접성 추가 확장 모델",
+      "이해관계자 등록부 분류"
     ],
     "keywords": [
-      "속성: Power·Legitimacy·Urgency",
-      "3속성=Definitive 최우선",
-      "2속성: Dangerous/Dependent/Dominant",
-      "1속성: Dormant 등"
+      "3대 속성: 권력(Power) · 합법성(Legitimacy) · 긴급성(Urgency)",
+      "잠재형(1속성): 휴면형(Dormant) · 재량형(Discretionary) · 요구형(Demanding)",
+      "기대형(2속성): 지배형(Dominant) · 위험형(Dangerous) · 의존형(Dependent)",
+      "확정형(3속성): 확정형(Definitive)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "3속성 기반 분류",
         "subsections": [
           {
-            "title": null,
+            "title": "속성",
             "items": [
-              "누가 ‘눈에 띄게’ 관리되어야 하는지를 속성으로 설명"
+              "권력: 인도물·조직에 영향을 강제할 수 있는 힘",
+              "합법성: 관여가 계약·법·규범상 정당함",
+              "긴급성: 즉각 대응을 요구하는 시간 민감성·중요성"
             ]
           }
         ]
       },
       {
-        "title": "속성",
+        "title": "7가지 유형",
         "subsections": [
           {
-            "title": null,
+            "title": "잠재형",
             "items": [
-              "Power: 영향력",
-              "Legitimacy: 정당성",
-              "Urgency: 즉시 대응 요구"
+              "휴면: 권력만, 잠재 영향",
+              "재량: 합법성만, 자선적 관심",
+              "요구: 긴급성만, 소음 유발"
+            ]
+          },
+          {
+            "title": "기대형",
+            "items": [
+              "지배: 권력+합법성",
+              "위험: 권력+긴급성, 강압 가능",
+              "의존: 합법성+긴급성, 타인 권력 의존"
+            ]
+          },
+          {
+            "title": "확정형",
+            "items": [
+              "3속성 모두, 최우선 관리"
             ]
           }
         ]
       },
       {
-        "title": "유형",
+        "title": "관리 전략",
         "subsections": [
           {
-            "title": null,
+            "title": "전략",
             "items": [
-              "1속성 3종, 2속성 3종, 3속성 Definitive",
-              "비이해관계자(속성 0) 구분"
+              "확정형: 즉시·적극 참여",
+              "지배형: 기대 충족·정기 보고",
+              "위험형: 감시·갈등 예방",
+              "의존형: 옹호자 연결",
+              "잠재형: 속성 변화 감시"
             ]
           }
         ]
@@ -6942,84 +6969,107 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "현저성(Salience)",
       "권력(Power)",
       "합법성(Legitimacy)",
       "긴급성(Urgency)",
-      "확정적(Definitive)",
+      "휴면형(Dormant)",
+      "재량형(Discretionary)",
+      "요구형(Demanding)",
+      "지배형(Dominant)",
       "위험형(Dangerous)",
       "의존형(Dependent)",
-      "잠재형(Dormant/Discretionary/Demanding)"
+      "확정형(Definitive)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_069": {
     "name": "이해관계자 참여수준 평가 매트릭스(Engagement Assessment Matrix)",
     "en": "Stakeholder Engagement Assessment Matrix",
     "title": "이해관계자 참여수준 평가 매트릭스(Engagement Assessment Matrix)",
-    "definition": "현재 참여(C)와 바람직한 참여(D)를 비인지·저항·중립·지원·주도의 5단계로 비교해 갭을 메우는 분석 도구",
+    "definition": "이해관계자별 현재 참여 수준과 프로젝트 성공에 필요한 목표 참여 수준을 비교 표시하여 차이를 줄이는 참여 전략을 수립하는 데이터 표현 도구",
     "outline": [
-      "매트릭스의 개념",
-      "5단계",
-      "C와 D",
-      "활용"
+      "참여 수준 평가 개념",
+      "- 도입 목적",
+      "참여 수준 5단계",
+      "- 단계",
+      "매트릭스 작성과 활용",
+      "- 작성 예",
+      "- 활용"
     ],
     "keywords_must": [
-      "참여수준 평가 매트릭스",
       "비인지(Unaware)",
       "저항(Resistant)",
       "중립(Neutral)",
       "지원(Supportive)",
       "주도(Leading)",
-      "현재(C) vs 기대(D)",
-      "갭 분석(Gap Analysis)"
+      "현재(C, Current)",
+      "목표(D, Desired)",
+      "갭 분석(Gap Analysis)",
+      "참여 계획(Plan Stakeholder Engagement)"
     ],
     "keywords_ref": [
-      "참여 계획",
+      "이해관계자 참여 계획서",
+      "참여 감시",
       "의사소통 전략",
-      "저항 관리",
-      "스폰서십"
+      "권력-관심 격자 병행",
+      "이해관계자 등록부",
+      "C=D 시 유지"
     ],
     "keywords": [
-      "5수준: Unaware→Leading",
-      "C/D 표시로 갭 식별",
-      "갭만큼 전략 강화",
-      "주기적 재평가"
+      "참여 수준 5단계: 비인지(Unaware) · 저항(Resistant) · 중립(Neutral) · 지원(Supportive) · 주도(Leading)",
+      "표기: 현재(C, Current) · 목표(D, Desired)",
+      "활용: 갭 분석(Gap Analysis) · 참여 계획(Plan Stakeholder Engagement)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "참여 수준 평가 개념",
         "subsections": [
           {
-            "title": null,
+            "title": "도입 목적",
             "items": [
-              "참여 현황과 목표를 표로 대비"
+              "참여 격차 식별",
+              "맞춤 소통 전략",
+              "저항 조기 해소",
+              "지원 세력 확보"
             ]
           }
         ]
       },
       {
-        "title": "5단계",
+        "title": "참여 수준 5단계",
         "subsections": [
           {
-            "title": null,
+            "title": "단계",
             "items": [
-              "Unaware, Resistant, Neutral, Supportive, Leading"
+              "비인지: 프로젝트·영향 모름",
+              "저항: 영향 인지, 변화에 저항",
+              "중립: 인지했으나 무관심",
+              "지원: 영향 인지, 변화 지지",
+              "주도: 적극 참여·성공 견인"
             ]
           }
         ]
       },
       {
-        "title": "활용",
+        "title": "매트릭스 작성과 활용",
         "subsections": [
           {
-            "title": null,
+            "title": "작성 예",
             "items": [
-              "C→D 이동 전략(교육·설득·권한·인센티브)",
-              "고영향 이해관계자 우선"
+              "스폰서: C=지원, D=주도",
+              "현업 부서장: C=저항, D=지원",
+              "사용자: C=비인지, D=지원"
+            ]
+          },
+          {
+            "title": "활용",
+            "items": [
+              "격차 큰 이해관계자 우선",
+              "교육·설득·워크숍",
+              "정기 재평가"
             ]
           }
         ]
@@ -7031,87 +7081,117 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "참여수준 평가 매트릭스",
       "비인지(Unaware)",
       "저항(Resistant)",
       "중립(Neutral)",
       "지원(Supportive)",
       "주도(Leading)",
-      "현재(C) vs 기대(D)",
-      "갭 분석(Gap Analysis)"
+      "현재(C, Current)",
+      "목표(D, Desired)",
+      "갭 분석(Gap Analysis)",
+      "참여 계획(Plan Stakeholder Engagement)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_070": {
     "name": "애자일 선언문과 원칙(Agile Manifesto & Principles)",
-    "en": "Agile Manifesto and Principles",
+    "en": "Manifesto for Agile Software Development",
     "title": "애자일 선언문과 원칙(Agile Manifesto & Principles)",
-    "definition": "절차·문서보다 사람과 작동하는 소프트웨어, 고객 협업, 변화에의 대응을 가치로 두는 선언(4가치)과 12원칙",
+    "definition": "2001년 스노버드 회의에서 17명의 경량 방법론 실무자가 발표한 애자일 소프트웨어 개발 선언으로, 4가지 핵심 가치와 12가지 원칙으로 구성됨",
     "outline": [
-      "애자일의 개념",
-      "4가지 가치",
-      "12원칙 요약",
-      "전통 대비"
+      "선언 배경",
+      "- 배경",
+      "4대 가치",
+      "- 가치",
+      "12원칙",
+      "- 인도",
+      "- 협업·팀",
+      "- 품질·개선"
     ],
     "keywords_must": [
-      "애자일 선언문(Agile Manifesto)",
-      "개인과 상호작용",
-      "작동하는 소프트웨어",
-      "고객과의 협력",
-      "변화에의 대응",
-      "12원칙(12 Principles)",
-      "반복·점증(Iterative & Incremental)",
-      "지속 가능한 개발"
+      "프로세스·도구보다 개인과 상호작용",
+      "포괄적 문서보다 작동하는 소프트웨어",
+      "계약 협상보다 고객과의 협력",
+      "계획 준수보다 변화에 대응",
+      "가치 있는 소프트웨어 조기·지속 인도",
+      "변화 요구 환영",
+      "짧은 주기 인도(2주~2개월)",
+      "지속 가능한 개발 속도",
+      "자기 조직화 팀",
+      "정기 회고"
     ],
     "keywords_ref": [
-      "스크럼",
-      "XP",
-      "린",
-      "하이브리드"
+      "대면 대화",
+      "작동하는 SW가 진척 척도",
+      "기술적 탁월성·좋은 설계",
+      "단순성(안 할 일 극대화)",
+      "매일 비즈니스–개발자 협업",
+      "스크럼·XP·칸반",
+      "왼쪽도 가치 있음"
     ],
     "keywords": [
-      "4가치: 사람>프로세스, SW>문서, 협업>계약, 변화>계획",
-      "왼쪽도 가치 있으나 오른쪽보다 중시",
-      "12원칙: 조기·지속 인도 등",
-      "문서·계약을 버리라는 뜻 아님"
+      "4대 가치: 프로세스·도구보다 개인과 상호작용 · 포괄적 문서보다 작동하는 소프트웨어 · 계약 협상보다 고객과의 협력 · 계획 준수보다 변화에 대응",
+      "12원칙 주요: 가치 있는 소프트웨어 조기·지속 인도 · 변화 요구 환영 · 짧은 주기 인도(2주~2개월) · 지속 가능한 개발 속도 · 자기 조직화 팀 · 정기 회고"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "선언 배경",
         "subsections": [
           {
-            "title": null,
+            "title": "배경",
             "items": [
-              "2001 애자일 선언 — 경량·적응적 개발 가치"
+              "문서·계획 중심 중량 방법론 한계",
+              "요구 변화 대응 필요",
+              "2001년 스노버드 17인"
             ]
           }
         ]
       },
       {
-        "title": "4가치",
+        "title": "4대 가치",
         "subsections": [
           {
-            "title": null,
+            "title": "가치",
             "items": [
-              "Individuals and interactions over processes and tools",
-              "Working software over comprehensive documentation",
-              "Customer collaboration over contract negotiation",
-              "Responding to change over following a plan"
+              "개인과 상호작용: 협업 중시",
+              "작동하는 SW: 가치 인도",
+              "고객 협력: 함께 문제 해결",
+              "변화 대응: 적응 계획"
             ]
           }
         ]
       },
       {
-        "title": "원칙 요지",
+        "title": "12원칙",
         "subsections": [
           {
-            "title": null,
+            "title": "인도",
             "items": [
-              "조기·연속 인도, 요구 변경 환영, 짧은 반복, 일일 협업, 동기부여된 팀",
-              "대면 소통, 작동 SW가 진척 척도, 기술 탁월성, 단순성, 자기조직화, 정기 회고"
+              "고객 만족 위한 조기·지속 인도",
+              "늦은 변경 환영",
+              "짧은 주기",
+              "작동 SW로 진척 측정"
+            ]
+          },
+          {
+            "title": "협업·팀",
+            "items": [
+              "매일 협업",
+              "동기 부여된 개인",
+              "대면 대화",
+              "자기 조직화"
+            ]
+          },
+          {
+            "title": "품질·개선",
+            "items": [
+              "지속 가능 속도",
+              "기술적 탁월성",
+              "단순성",
+              "정기 회고·조정"
             ]
           }
         ]
@@ -7123,86 +7203,95 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "애자일 선언문(Agile Manifesto)",
-      "개인과 상호작용",
-      "작동하는 소프트웨어",
-      "고객과의 협력",
-      "변화에의 대응",
-      "12원칙(12 Principles)",
-      "반복·점증(Iterative & Incremental)",
-      "지속 가능한 개발"
+      "프로세스·도구보다 개인과 상호작용",
+      "포괄적 문서보다 작동하는 소프트웨어",
+      "계약 협상보다 고객과의 협력",
+      "계획 준수보다 변화에 대응",
+      "가치 있는 소프트웨어 조기·지속 인도",
+      "변화 요구 환영",
+      "짧은 주기 인도(2주~2개월)",
+      "지속 가능한 개발 속도",
+      "자기 조직화 팀",
+      "정기 회고"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_072": {
     "name": "스테이시 복잡도 모델(Stacey Complexity Model)",
-    "en": "Stacey Complexity Model",
+    "en": "Stacey Matrix",
     "title": "스테이시 복잡도 모델(Stacey Complexity Model)",
-    "definition": "요구(What)와 기술(How)의 확실성 축으로 Simple·Complicated·Complex·Chaos를 구분해 접근법을 고르는 모델",
+    "definition": "랄프 스테이시가 제시한 매트릭스로, 요구사항 합의도와 기술 확실성 두 축으로 프로젝트 복잡도를 단순·난해·복잡·혼돈 영역으로 나누어 적합한 개발 접근법 선택에 활용함",
     "outline": [
-      "모델의 개념",
-      "네 영역",
-      "접근법 매핑",
-      "애자일과의 관계"
+      "복잡도 2축 개념",
+      "- 축",
+      "4영역 특징",
+      "- 영역",
+      "개발 접근법 선택",
+      "- 선택"
     ],
     "keywords_must": [
-      "스테이시 모델(Stacey Model)",
-      "Simple(명확)",
-      "Complicated(난해)",
-      "Complex(복잡)",
-      "Chaos(혼돈)",
-      "요구 불확실성",
-      "기술 불확실성",
-      "사이언-워터폴 선택"
+      "요구사항 합의도(Agreement)",
+      "기술 확실성(Certainty)",
+      "단순(Simple)",
+      "난해(Complicated)",
+      "복잡(Complex)",
+      "혼돈(Chaos)",
+      "개발 방법론 선택(예측형·적응형·하이브리드)"
     ],
     "keywords_ref": [
-      "Cynefin",
-      "애자일",
-      "하이브리드",
-      "실험(Probe-Sense-Respond)"
+      "단순 → 폭포수(예측형)",
+      "난해 → 하이브리드·계획 기반",
+      "복잡 → 애자일(스크럼)",
+      "혼돈 → 프로토타입·실험",
+      "커네빈(Cynefin) 프레임워크와 유사",
+      "PMBOK 7판 개발 접근법 성과 영역"
     ],
     "keywords": [
-      "축: What 확실성 × How 확실성",
-      "Simple→모범절차",
-      "Complicated→전문가",
-      "Complex→실험·애자일",
-      "Chaos→즉시 안정화"
+      "2축: 요구사항 합의도(Agreement) · 기술 확실성(Certainty)",
+      "4영역: 단순(Simple) · 난해(Complicated) · 복잡(Complex) · 혼돈(Chaos)",
+      "활용: 개발 방법론 선택(예측형·적응형·하이브리드)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "복잡도 2축 개념",
         "subsections": [
           {
-            "title": null,
+            "title": "축",
             "items": [
-              "불확실성 수준에 따라 의사결정·방법론을 달리함"
+              "요구사항 합의도: 이해관계자 간 무엇을 만들지 합의 정도",
+              "기술 확실성: 어떻게 만들지 기술 성숙·경험 정도"
             ]
           }
         ]
       },
       {
-        "title": "영역",
+        "title": "4영역 특징",
         "subsections": [
           {
-            "title": null,
+            "title": "영역",
             "items": [
-              "Simple, Complicated, Complex, Chaotic (혼란)"
+              "단순: 합의·확실 모두 높음, 모범 사례",
+              "난해: 하나 낮음, 전문가 분석",
+              "복잡: 둘 다 중간 이하, 탐색·적응",
+              "혼돈: 둘 다 매우 낮음, 즉각 행동"
             ]
           }
         ]
       },
       {
-        "title": "매핑",
+        "title": "개발 접근법 선택",
         "subsections": [
           {
-            "title": null,
+            "title": "선택",
             "items": [
-              "명확→워터폴성",
-              "복잡→애자일·린 실험",
-              "혼돈→응급 조치 후 이동"
+              "단순: 예측형(폭포수)",
+              "난해: 예측형 또는 하이브리드",
+              "복잡: 적응형(스크럼·XP)",
+              "혼돈: 실험·프로토타입·단기 반복",
+              "프로젝트 중 영역 이동 재평가"
             ]
           }
         ]
@@ -7214,86 +7303,112 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "스테이시 모델(Stacey Model)",
-      "Simple(명확)",
-      "Complicated(난해)",
-      "Complex(복잡)",
-      "Chaos(혼돈)",
-      "요구 불확실성",
-      "기술 불확실성",
-      "사이언-워터폴 선택"
+      "요구사항 합의도(Agreement)",
+      "기술 확실성(Certainty)",
+      "단순(Simple)",
+      "난해(Complicated)",
+      "복잡(Complex)",
+      "혼돈(Chaos)",
+      "개발 방법론 선택(예측형·적응형·하이브리드)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_073": {
     "name": "스크럼(Scrum)",
     "en": "Scrum",
     "title": "스크럼(Scrum)",
-    "definition": "짧은 스프린트로 점증 인도하는 애자일 프레임워크. PO·SM·Dev Team 역할과 이벤트·아티팩트로 구성",
+    "definition": "켄 슈와버와 제프 서덜랜드가 정립한 애자일 프레임워크로, 경험주의와 린 사고에 기반해 짧은 스프린트 반복으로 가치 있는 증분을 만들고 투명성·검사·적응으로 개선함",
     "outline": [
-      "스크럼의 개념",
-      "역할",
-      "이벤트",
-      "아티팩트"
+      "경험주의 프레임워크",
+      "- 3대 기둥",
+      "역할·이벤트·산출물",
+      "- 역할",
+      "- 이벤트",
+      "- 산출물",
+      "수행 흐름",
+      "- 흐름"
     ],
     "keywords_must": [
-      "스크럼(Scrum)",
       "제품 책임자(PO, Product Owner)",
-      "스크럼 마스터(SM)",
+      "스크럼 마스터(SM, Scrum Master)",
       "개발자(Developers)",
       "스프린트(Sprint)",
+      "스프린트 계획",
       "일일 스크럼(Daily Scrum)",
-      "스프린트 계획·리뷰·회고",
-      "제품·스프린트 백로그·증분"
+      "스프린트 리뷰",
+      "스프린트 회고",
+      "제품 백로그",
+      "스프린트 백로그",
+      "증분(Increment)"
     ],
     "keywords_ref": [
-      "완료 정의(DoD)",
-      "번다운",
-      "벨로시티",
-      "스크럼 가이드"
+      "3대 기둥: 투명성·검사·적응",
+      "5가치: 확약·집중·개방·존중·용기",
+      "확약: 제품 목표·스프린트 목표·완료 정의(DoD)",
+      "스크럼 가이드 2020",
+      "타임박스 1개월 이하",
+      "번다운 차트·벨로시티",
+      "백로그 정제"
     ],
     "keywords": [
-      "3역할·5이벤트·3아티팩트",
-      "스프린트=타임박스",
-      "PO=가치, SM=촉진, Dev=인도",
-      "투명·검열·적응"
+      "3대 역할: 제품 책임자(PO, Product Owner) · 스크럼 마스터(SM, Scrum Master) · 개발자(Developers)",
+      "5대 이벤트: 스프린트(Sprint) · 스프린트 계획 · 일일 스크럼(Daily Scrum) · 스프린트 리뷰 · 스프린트 회고",
+      "3대 산출물: 제품 백로그 · 스프린트 백로그 · 증분(Increment)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "경험주의 프레임워크",
         "subsections": [
           {
-            "title": null,
+            "title": "3대 기둥",
             "items": [
-              "경험주의(투명·검열·적응) 기반의 경량 프레임워크"
+              "투명성: 작업·진척 공개",
+              "검사: 정기 점검",
+              "적응: 편차 즉시 조정"
             ]
           }
         ]
       },
       {
-        "title": "역할",
+        "title": "역할·이벤트·산출물",
         "subsections": [
           {
-            "title": null,
+            "title": "역할",
             "items": [
-              "PO: 백로그·가치",
-              "SM: 스크럼 촉진·장애제거",
-              "Developers: 증분 인도"
+              "PO: 백로그 우선순위·가치 극대화",
+              "SM: 스크럼 촉진·장애 제거, 서번트 리더",
+              "개발자: 증분 생성·자기 관리"
+            ]
+          },
+          {
+            "title": "이벤트",
+            "items": [
+              "계획: 목표·백로그 선정",
+              "일일 스크럼: 15분 동기화",
+              "리뷰: 증분 시연·피드백",
+              "회고: 프로세스 개선"
+            ]
+          },
+          {
+            "title": "산출물",
+            "items": [
+              "제품 백로그: 제품 목표",
+              "스프린트 백로그: 스프린트 목표",
+              "증분: 완료 정의 충족"
             ]
           }
         ]
       },
       {
-        "title": "이벤트·아티팩트",
+        "title": "수행 흐름",
         "subsections": [
           {
-            "title": null,
+            "title": "흐름",
             "items": [
-              "Sprint, Planning, Daily, Review, Retrospective",
-              "Product Backlog, Sprint Backlog, Increment"
+              "제품 백로그 정제 → 스프린트 계획 → 1~4주 개발·일일 스크럼 → 리뷰 → 회고 → 다음 스프린트"
             ]
           }
         ]
@@ -7305,83 +7420,105 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "스크럼(Scrum)",
       "제품 책임자(PO, Product Owner)",
-      "스크럼 마스터(SM)",
+      "스크럼 마스터(SM, Scrum Master)",
       "개발자(Developers)",
       "스프린트(Sprint)",
+      "스프린트 계획",
       "일일 스크럼(Daily Scrum)",
-      "스프린트 계획·리뷰·회고",
-      "제품·스프린트 백로그·증분"
+      "스프린트 리뷰",
+      "스프린트 회고",
+      "제품 백로그",
+      "스프린트 백로그",
+      "증분(Increment)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "SM": "Scrum Master"
+    }
   },
   "PM_074": {
     "name": "익스트림 프로그래밍(XP, Extreme Programming)",
     "en": "Extreme Programming",
     "title": "익스트림 프로그래밍(XP, Extreme Programming)",
-    "definition": "짧은 주기·피드백·단순성·테스트로 고품질 SW를 만드는 애자일 방법론. TDD·페어·CI 등 기술 프랙티스가 강점",
+    "definition": "켄트 벡이 제안한 애자일 방법론으로, 짧은 반복 개발과 고객 참여, 테스트 주도 개발·페어 프로그래밍 등 공학적 실천법을 극단적으로 적용해 변화에 대응하며 고품질 SW를 개발함",
     "outline": [
-      "XP의 개념",
-      "가치",
-      "핵심 프랙티스",
-      "스크럼과의 관계"
+      "공학 중심 애자일 개념",
+      "- 주요 특징",
+      "가치와 실천법",
+      "- 실천법",
+      "개발 프로세스",
+      "- 프로세스"
     ],
     "keywords_must": [
-      "익스트림 프로그래밍(XP)",
-      "TDD(Test-Driven Development)",
+      "의사소통",
+      "단순성",
+      "피드백",
+      "용기",
+      "존중",
+      "테스트 주도 개발(TDD)",
       "페어 프로그래밍(Pair Programming)",
       "지속적 통합(CI)",
       "리팩토링(Refactoring)",
-      "단순 설계(Simple Design)",
-      "고객 상주(On-site Customer)",
-      "작은 릴리스(Small Releases)"
+      "작은 릴리스(Small Releases)",
+      "고객 상주(On-site Customer)"
     ],
     "keywords_ref": [
-      "용기·단순성·피드백·존중·소통",
-      "스토리",
-      "스파이크",
-      "집단 코드 소유"
+      "계획 게임(Planning Game)",
+      "단순 설계",
+      "공동 코드 소유",
+      "코딩 표준",
+      "주 40시간",
+      "메타포(Metaphor)",
+      "사용자 스토리",
+      "1~3주 반복",
+      "스크럼과 결합"
     ],
     "keywords": [
-      "가치: 소통·단순·피드백·용기·존중",
-      "TDD→Red-Green-Refactor",
-      "페어·CI·리팩토링",
-      "기술 실천 중심"
+      "5대 가치: 의사소통 · 단순성 · 피드백 · 용기 · 존중",
+      "핵심 실천법: 테스트 주도 개발(TDD) · 페어 프로그래밍(Pair Programming) · 지속적 통합(CI) · 리팩토링(Refactoring) · 작은 릴리스(Small Releases) · 고객 상주(On-site Customer)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "공학 중심 애자일 개념",
         "subsections": [
           {
-            "title": null,
+            "title": "주요 특징",
             "items": [
-              "엔지니어링 실천을 ‘극단적으로’ 적용하는 애자일"
+              "개발자 공학 실천 중심",
+              "짧은 반복",
+              "고객 피드백",
+              "변경 비용 곡선 평탄화"
             ]
           }
         ]
       },
       {
-        "title": "가치",
+        "title": "가치와 실천법",
         "subsections": [
           {
-            "title": null,
+            "title": "실천법",
             "items": [
-              "Communication, Simplicity, Feedback, Courage, Respect"
+              "TDD: 테스트 먼저 작성",
+              "페어: 2인 1컴퓨터 실시간 검토",
+              "CI: 하루 여러 번 통합",
+              "리팩토링: 기능 유지·구조 개선",
+              "작은 릴리스: 짧은 주기 배포",
+              "고객 상주: 즉시 의사결정"
             ]
           }
         ]
       },
       {
-        "title": "프랙티스",
+        "title": "개발 프로세스",
         "subsections": [
           {
-            "title": null,
+            "title": "프로세스",
             "items": [
-              "TDD, Pair, CI, Refactoring, Collective Ownership, Sustainable Pace 등"
+              "사용자 스토리 작성 → 릴리스 계획 → 반복(이터레이션) 계획 → 개발(TDD·페어·CI) → 인수 테스트 → 작은 릴리스"
             ]
           }
         ]
@@ -7393,83 +7530,104 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "익스트림 프로그래밍(XP)",
-      "TDD(Test-Driven Development)",
+      "의사소통",
+      "단순성",
+      "피드백",
+      "용기",
+      "존중",
+      "테스트 주도 개발(TDD)",
       "페어 프로그래밍(Pair Programming)",
       "지속적 통합(CI)",
       "리팩토링(Refactoring)",
-      "단순 설계(Simple Design)",
-      "고객 상주(On-site Customer)",
-      "작은 릴리스(Small Releases)"
+      "작은 릴리스(Small Releases)",
+      "고객 상주(On-site Customer)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "TDD": "Test-Driven Development",
+      "CI": "Continuous Integration"
+    }
   },
   "PM_075": {
     "name": "칸반(Kanban)",
-    "en": "Kanban",
+    "en": "Kanban Method",
     "title": "칸반(Kanban)",
-    "definition": "워크플로를 시각화하고 WIP를 제한해 흐름·리드타임을 최적화하는 방법. 린·JIT에서 유래",
+    "definition": "도요타 생산 방식의 칸반을 지식 작업에 적용한 방법으로, 작업 흐름을 보드로 시각화하고 진행 중 작업(WIP)을 제한해 흐름을 관리하며 점진적·진화적으로 개선함",
     "outline": [
-      "칸반의 개념",
-      "핵심 실천",
-      "지표",
-      "스크럼과의 차이"
+      "흐름 중심 방법 개념",
+      "- 원칙",
+      "핵심 실천법",
+      "- 실천",
+      "측정 지표",
+      "- 지표"
     ],
     "keywords_must": [
-      "칸반(Kanban)",
-      "시각화(Visualization)",
-      "WIP 제한(Work In Progress Limit)",
+      "시각화(Visualize)",
+      "WIP 제한(Limit Work In Progress)",
       "흐름 관리(Manage Flow)",
       "명시적 정책(Explicit Policies)",
-      "리드타임(Lead Time)",
-      "사이클타임(Cycle Time)",
-      "JIT(Just-In-Time)"
+      "피드백 루프",
+      "협업적 개선",
+      "리드 타임(Lead Time)",
+      "사이클 타임(Cycle Time)",
+      "처리량(Throughput)"
     ],
     "keywords_ref": [
+      "당김(Pull) 방식",
       "누적 흐름도(CFD)",
-      "병목(Bottleneck)",
-      "풀 시스템(Pull)",
-      "Scrumban"
+      "데이비드 앤더슨(2010)",
+      "리틀의 법칙(WIP = 처리량 × 사이클 타임)",
+      "서비스 등급(Class of Service)",
+      "타임박스 없음",
+      "스크럼반"
     ],
     "keywords": [
-      "보드로 시각화",
-      "WIP Limit로 과부하 방지",
-      "풀 방식",
-      "스프린트 없이도 운영 가능"
+      "핵심 실천: 시각화(Visualize) · WIP 제한(Limit Work In Progress) · 흐름 관리(Manage Flow) · 명시적 정책(Explicit Policies) · 피드백 루프 · 협업적 개선",
+      "측정 지표: 리드 타임(Lead Time) · 사이클 타임(Cycle Time) · 처리량(Throughput)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "흐름 중심 방법 개념",
         "subsections": [
           {
-            "title": null,
+            "title": "원칙",
             "items": [
-              "카드를 단계 열로 옮겨 흐름을 관리하는 풀 시스템"
+              "현재 프로세스에서 시작",
+              "점진적 변화 합의",
+              "기존 역할 존중",
+              "모든 수준의 리더십"
             ]
           }
         ]
       },
       {
-        "title": "실천",
+        "title": "핵심 실천법",
         "subsections": [
           {
-            "title": null,
+            "title": "실천",
             "items": [
-              "시각화, WIP 제한, 흐름 관리, 정책 명시, 피드백 루프, 협업 개선"
+              "시각화: 할 일·진행·완료 컬럼",
+              "WIP 제한: 컬럼별 상한, 병목 노출",
+              "흐름 관리: 대기 감소",
+              "명시적 정책: 완료 기준 공개",
+              "피드백: 정기 리뷰"
             ]
           }
         ]
       },
       {
-        "title": "지표",
+        "title": "측정 지표",
         "subsections": [
           {
-            "title": null,
+            "title": "지표",
             "items": [
-              "Lead/Cycle Time, Throughput, CFD"
+              "리드 타임: 요청~완료",
+              "사이클 타임: 착수~완료",
+              "처리량: 단위 기간 완료 수",
+              "누적 흐름도: WIP·병목 추세"
             ]
           }
         ]
@@ -7481,74 +7639,88 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "칸반(Kanban)",
-      "시각화(Visualization)",
-      "WIP 제한(Work In Progress Limit)",
+      "시각화(Visualize)",
+      "WIP 제한(Limit Work In Progress)",
       "흐름 관리(Manage Flow)",
       "명시적 정책(Explicit Policies)",
-      "리드타임(Lead Time)",
-      "사이클타임(Cycle Time)",
-      "JIT(Just-In-Time)"
+      "피드백 루프",
+      "협업적 개선",
+      "리드 타임(Lead Time)",
+      "사이클 타임(Cycle Time)",
+      "처리량(Throughput)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_076": {
     "name": "스크럼 보드와 칸반 보드 비교(Scrum Board vs Kanban Board)",
     "en": "Scrum Board vs Kanban Board",
     "title": "스크럼 보드와 칸반 보드 비교(Scrum Board vs Kanban Board)",
-    "definition": "스크럼 보드는 스프린트 백로그를 타임박스 단위로, 칸반 보드는 WIP 제한·연속 흐름으로 관리. 목적·규칙이 다름",
+    "definition": "스크럼 보드는 스프린트 단위로 확약한 스프린트 백로그의 진척을 보여주고, 칸반 보드는 타임박스 없이 WIP 제한으로 연속 흐름을 관리하는 작업 시각화 도구",
     "outline": [
-      "두 보드의 개념",
-      "스크럼 보드",
-      "칸반 보드",
-      "선택 기준"
+      "작업 시각화 도구",
+      "- 공통점",
+      "보드별 특징",
+      "- 스크럼 보드",
+      "- 칸반 보드",
+      "비교",
+      "- 비교 항목"
     ],
     "keywords_must": [
-      "스크럼 보드(Scrum Board)",
-      "칸반 보드(Kanban Board)",
       "스프린트 백로그",
-      "WIP 제한",
+      "타임박스(Timebox)",
       "벨로시티(Velocity)",
-      "리드타임",
-      "타임박스",
-      "연속 흐름(Continuous Flow)"
+      "스프린트 종료 시 초기화",
+      "WIP 제한",
+      "연속 흐름(Continuous Flow)",
+      "리드 타임(Lead Time)",
+      "지속 유지"
     ],
     "keywords_ref": [
-      "스토리 포인트",
-      "번다운",
-      "CFD",
-      "Scrumban"
+      "역할: 스크럼 PO·SM 필수 vs 칸반 역할 규정 없음",
+      "변경: 스프린트 중 제한 vs 언제든",
+      "지표: 번다운 vs 누적 흐름도",
+      "스크럼반(Scrumban)",
+      "컬럼: To Do·In Progress·Done"
     ],
     "keywords": [
-      "Scrum: 스프린트 종료 시 보드 리셋 느낌",
-      "Kanban: WIP·흐름 지속",
-      "Scrum=속도, Kanban=리드타임",
-      "혼합(Scrumban) 가능"
+      "스크럼 보드: 스프린트 백로그 · 타임박스(Timebox) · 벨로시티(Velocity) · 스프린트 종료 시 초기화",
+      "칸반 보드: WIP 제한 · 연속 흐름(Continuous Flow) · 리드 타임(Lead Time) · 지속 유지"
     ],
     "sections": [
       {
-        "title": "스크럼 보드",
+        "title": "작업 시각화 도구",
         "subsections": [
           {
-            "title": null,
+            "title": "공통점",
             "items": [
-              "To Do/Doing/Done + 스프린트 범위",
-              "Velocity·Burndown 중심"
+              "작업 투명성",
+              "컬럼 기반 상태 표시",
+              "당김 방식",
+              "팀 자기 조직화"
             ]
           }
         ]
       },
       {
-        "title": "칸반 보드",
+        "title": "보드별 특징",
         "subsections": [
           {
-            "title": null,
+            "title": "스크럼 보드",
             "items": [
-              "열=워크플로, WIP Limit 필수",
-              "Lead Time·CFD 중심"
+              "스프린트 시작 시 항목 확정",
+              "종료 시 비움",
+              "번다운으로 진척"
+            ]
+          },
+          {
+            "title": "칸반 보드",
+            "items": [
+              "컬럼별 WIP 상한",
+              "항목 지속 유입",
+              "흐름 지표로 개선"
             ]
           }
         ]
@@ -7557,10 +7729,13 @@
         "title": "비교",
         "subsections": [
           {
-            "title": null,
+            "title": "비교 항목",
             "items": [
-              "변경: 스크럼은 스프린트 중 동결 경향, 칸반은 수시",
-              "역할·이벤트 유무 차이"
+              "주기: 고정 스프린트 vs 연속",
+              "제한: 스프린트 용량 vs WIP 상한",
+              "변경: 스프린트 중 지양 vs 수시",
+              "지표: 벨로시티 vs 리드 타임",
+              "적합: 신규 개발 vs 운영·유지보수"
             ]
           }
         ]
@@ -7572,61 +7747,65 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "스크럼 보드(Scrum Board)",
-      "칸반 보드(Kanban Board)",
       "스프린트 백로그",
-      "WIP 제한",
+      "타임박스(Timebox)",
       "벨로시티(Velocity)",
-      "리드타임",
-      "타임박스",
-      "연속 흐름(Continuous Flow)"
+      "스프린트 종료 시 초기화",
+      "WIP 제한",
+      "연속 흐름(Continuous Flow)",
+      "리드 타임(Lead Time)",
+      "지속 유지"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_077": {
     "name": "린 소프트웨어 개발(Lean Software Development)",
     "en": "Lean Software Development",
     "title": "린 소프트웨어 개발(Lean Software Development)",
-    "definition": "낭비 제거와 빠른 학습·인도를 목표로 하는 사상·원칙. 도요타 생산시스템에서 SW로 이식된 7대 원칙이 핵심",
+    "definition": "메리·톰 포펜딕이 도요타 린 생산 원리를 소프트웨어 개발에 적용한 애자일 접근법으로, 7가지 원칙에 따라 고객 가치를 극대화하고 낭비를 제거함",
     "outline": [
-      "린의 개념",
-      "7대 원칙",
-      "낭비 유형",
-      "애자일과의 관계"
+      "린 원리의 SW 적용",
+      "- 배경",
+      "7원칙",
+      "- 원칙",
+      "SW 7대 낭비",
+      "- 낭비"
     ],
     "keywords_must": [
-      "린(Lean)",
       "낭비 제거(Eliminate Waste)",
-      "학습 증폭(Amplify Learning)",
-      "가능한 한 늦은 결정",
-      "가능한 한 빠른 인도",
-      "팀 권한 부여",
-      "통합성 구축",
-      "전체를 보라(See the Whole)"
+      "품질 내재화(Build Quality In)",
+      "지식 창출(Create Knowledge)",
+      "늦은 결정(Defer Commitment)",
+      "빠른 인도(Deliver Fast)",
+      "사람 존중(Respect People)",
+      "전체 최적화(Optimize the Whole)",
+      "부분 완료·추가 기능·재학습·이관·지연·작업 전환·결함"
     ],
     "keywords_ref": [
-      "TPS",
-      "JIT",
-      "가치 흐름 맵(VSM)",
-      "Muda/Muri/Mura"
+      "초판(2003): 학습 증폭·팀 권한 부여·통합성 구축·전체를 보라",
+      "가치 흐름 지도(VSM)",
+      "당김 시스템",
+      "제조 7대 낭비 대응(재고→부분 완료, 과잉 생산→추가 기능)",
+      "칸반",
+      "카이젠"
     ],
     "keywords": [
-      "7원칙 암기",
-      "낭비: 미완성·여분기능·재학습 등",
-      "사상·원칙 (특정 프로세스 틀 아님)",
-      "칸반·린스타트업과 연결"
+      "7원칙: 낭비 제거(Eliminate Waste) · 품질 내재화(Build Quality In) · 지식 창출(Create Knowledge) · 늦은 결정(Defer Commitment) · 빠른 인도(Deliver Fast) · 사람 존중(Respect People) · 전체 최적화(Optimize the Whole)",
+      "7대 낭비: 부분 완료·추가 기능·재학습·이관·지연·작업 전환·결함"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "린 원리의 SW 적용",
         "subsections": [
           {
-            "title": null,
+            "title": "배경",
             "items": [
-              "가치 창출에 불필요한 낭비를 줄이는 사고방식"
+              "도요타 생산 방식",
+              "가치 흐름 중심",
+              "고객 가치 외 활동 = 낭비"
             ]
           }
         ]
@@ -7635,21 +7814,32 @@
         "title": "7원칙",
         "subsections": [
           {
-            "title": null,
+            "title": "원칙",
             "items": [
-              "Eliminate waste, Amplify learning, Decide as late as possible",
-              "Deliver as fast as possible, Empower the team, Build integrity in, See the whole"
+              "낭비 제거: 가치 없는 활동 제거",
+              "품질 내재화: TDD·CI",
+              "지식 창출: 반복 학습",
+              "늦은 결정: 최후 책임 시점까지 결정 유보",
+              "빠른 인도: 짧은 주기",
+              "사람 존중: 팀 권한",
+              "전체 최적화: 가치 흐름 전체"
             ]
           }
         ]
       },
       {
-        "title": "낭비",
+        "title": "SW 7대 낭비",
         "subsections": [
           {
-            "title": null,
+            "title": "낭비",
             "items": [
-              "부분 완료, 추가 기능, 재학습, 이관, 지연, 과다 이동, 결함"
+              "부분 완료: 미배포 코드",
+              "추가 기능: 요구 외 기능",
+              "재학습: 지식 손실",
+              "이관: 인계 손실",
+              "지연: 대기",
+              "작업 전환: 멀티태스킹",
+              "결함: 재작업"
             ]
           }
         ]
@@ -7661,83 +7851,110 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "린(Lean)",
       "낭비 제거(Eliminate Waste)",
-      "학습 증폭(Amplify Learning)",
-      "가능한 한 늦은 결정",
-      "가능한 한 빠른 인도",
-      "팀 권한 부여",
-      "통합성 구축",
-      "전체를 보라(See the Whole)"
+      "품질 내재화(Build Quality In)",
+      "지식 창출(Create Knowledge)",
+      "늦은 결정(Defer Commitment)",
+      "빠른 인도(Deliver Fast)",
+      "사람 존중(Respect People)",
+      "전체 최적화(Optimize the Whole)",
+      "부분 완료·추가 기능·재학습·이관·지연·작업 전환·결함"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "TDD": "Test-Driven Development",
+      "CI": "Continuous Integration"
+    }
   },
   "PM_078": {
     "name": "린 UX(Lean UX)",
     "en": "Lean UX",
     "title": "린 UX(Lean UX)",
-    "definition": "가설·프로토타입·사용자 피드백을 짧은 사이클로 반복해 핵심 가치를 검증하는 UX 접근. 문서보다 학습을 중시",
+    "definition": "린 스타트업과 애자일 원리를 UX 설계에 적용해 산출물 문서 대신 가설 수립·최소 실험·사용자 검증의 빠른 반복으로 결과(Outcome) 중심의 사용자 경험을 만드는 방법",
     "outline": [
-      "Lean UX의 개념",
-      "사이클",
-      "핵심 요소",
-      "산출"
+      "가설 기반 UX 설계",
+      "- 배경",
+      "사이클과 원칙",
+      "- 사이클",
+      "- 원칙",
+      "전통 UX 비교",
+      "- 비교 항목"
     ],
     "keywords_must": [
-      "린 UX(Lean UX)",
+      "생각(Think)",
+      "만들기(Make)",
+      "확인(Check)",
       "가설(Hypothesis)",
       "MVP·프로토타입",
       "사용자 검증(User Validation)",
-      "학습(Learning)",
-      "핵심 지표",
-      "크로스기능 팀",
-      "결과(Outcome) 중심"
+      "결과 중심(Outcome over Output)",
+      "교차 기능 팀(Cross-functional Team)",
+      "공유된 이해(Shared Understanding)"
     ],
     "keywords_ref": [
+      "제프 고델프(2013)",
+      "가정 선언(Assumptions)",
+      "프로토 퍼소나",
+      "디자인 스튜디오",
+      "산출물 최소화",
       "디자인 씽킹",
-      "린 스타트업",
       "A/B 테스트",
-      "사용성 테스트"
+      "지속적 발견"
     ],
     "keywords": [
-      "Think→Make→Check 반복",
-      "가설 선언→실험→학습",
-      "산출물보다 Outcome",
-      "애자일 팀과 동시 진행"
+      "사이클: 생각(Think) · 만들기(Make) · 확인(Check)",
+      "핵심 요소: 가설(Hypothesis) · MVP·프로토타입 · 사용자 검증(User Validation) · 결과 중심(Outcome over Output)",
+      "조직: 교차 기능 팀(Cross-functional Team) · 공유된 이해(Shared Understanding)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "가설 기반 UX 설계",
         "subsections": [
           {
-            "title": null,
+            "title": "배경",
             "items": [
-              "UX를 린·애자일 방식으로 실험·검증"
+              "무거운 UX 산출물",
+              "애자일 속도와 괴리",
+              "검증 없는 설계 위험"
             ]
           }
         ]
       },
       {
-        "title": "사이클",
+        "title": "사이클과 원칙",
         "subsections": [
           {
-            "title": null,
+            "title": "사이클",
             "items": [
-              "선언(가설) → 구축(프로토타입) → 측정·학습"
+              "생각: 가정·가설 수립",
+              "만들기: 최소 실험물(MVP)",
+              "확인: 사용자 테스트·지표 측정 → 학습"
+            ]
+          },
+          {
+            "title": "원칙",
+            "items": [
+              "교차 기능 협업",
+              "문제 중심",
+              "실패 허용",
+              "결과 측정"
             ]
           }
         ]
       },
       {
-        "title": "요소",
+        "title": "전통 UX 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "비교 항목",
             "items": [
-              "공동 설계, 초기 프로토타이핑, 지속적 사용자 피드백, 지표"
+              "초점: 산출물 문서 vs 결과·학습",
+              "주기: 단계적 vs 짧은 반복",
+              "검증: 출시 후 vs 지속",
+              "팀: 디자이너 단독 vs 교차 기능"
             ]
           }
         ]
@@ -7749,83 +7966,107 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "린 UX(Lean UX)",
+      "생각(Think)",
+      "만들기(Make)",
+      "확인(Check)",
       "가설(Hypothesis)",
       "MVP·프로토타입",
       "사용자 검증(User Validation)",
-      "학습(Learning)",
-      "핵심 지표",
-      "크로스기능 팀",
-      "결과(Outcome) 중심"
+      "결과 중심(Outcome over Output)",
+      "교차 기능 팀(Cross-functional Team)",
+      "공유된 이해(Shared Understanding)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "MVP": "Minimum Viable Product"
+    }
   },
   "PM_079": {
     "name": "린 스타트업(Lean Startup)",
     "en": "Lean Startup",
     "title": "린 스타트업(Lean Startup)",
-    "definition": "아이디어를 MVP로 빠르게 만들어 측정·학습하고, 지속(persevere) 또는 피벗(pivot)을 결정하는 경영 접근 (Eric Ries)",
+    "definition": "에릭 리스가 제시한 창업·신제품 개발 방법론으로, 최소 기능 제품(MVP)을 빠르게 만들어 구축-측정-학습 순환으로 가설을 검증하고 방향 전환 여부를 결정함",
     "outline": [
-      "린 스타트업의 개념",
-      "BML 루프",
-      "MVP",
-      "피벗"
+      "가설 검증 창업 방법",
+      "- 배경",
+      "피드백 루프",
+      "- 순환",
+      "혁신 회계와 피벗",
+      "- 혁신 회계",
+      "- 피벗 유형"
     ],
     "keywords_must": [
-      "린 스타트업(Lean Startup)",
-      "MVP(Minimum Viable Product)",
       "구축-측정-학습(Build-Measure-Learn)",
-      "피벗(Pivot)",
-      "지속(Persevere)",
+      "최소 기능 제품(MVP)",
       "검증된 학습(Validated Learning)",
-      "혁신회계(Innovation Accounting)",
-      "가설 검증"
+      "혁신 회계(Innovation Accounting)",
+      "피벗(Pivot) 또는 유지(Persevere)",
+      "실행 가능 지표(Actionable Metrics) vs 허무 지표(Vanity Metrics)",
+      "코호트 분석",
+      "A/B 테스트"
     ],
     "keywords_ref": [
-      "린 UX",
-      "CI/CD",
-      "A/B 테스트",
-      "PMF(Product-Market Fit)"
+      "에릭 리스(2011)",
+      "가치 가설·성장 가설",
+      "작은 배치(Small Batches)",
+      "5 Whys",
+      "고객 개발(스티브 블랭크)",
+      "지속적 배포",
+      "린 캔버스"
     ],
     "keywords": [
-      "BML 루프",
-      "MVP로 학습 최대화",
-      "Pivot vs Persevere",
-      "지표로 검증된 학습"
+      "피드백 루프: 구축-측정-학습(Build-Measure-Learn) · 최소 기능 제품(MVP)",
+      "핵심 개념: 검증된 학습(Validated Learning) · 혁신 회계(Innovation Accounting) · 피벗(Pivot) 또는 유지(Persevere)",
+      "지표: 실행 가능 지표(Actionable Metrics) vs 허무 지표(Vanity Metrics) · 코호트 분석 · A/B 테스트"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "가설 검증 창업 방법",
         "subsections": [
           {
-            "title": null,
+            "title": "배경",
             "items": [
-              "불확실 시장에서 실험으로 사업 모델을 찾음"
+              "극심한 불확실성",
+              "계획 기반 사업 실패",
+              "빠른 학습 필요"
             ]
           }
         ]
       },
       {
-        "title": "루프",
+        "title": "피드백 루프",
         "subsections": [
           {
-            "title": null,
+            "title": "순환",
             "items": [
-              "Build(MVP) → Measure → Learn → 다음 실험"
+              "구축: 최소 비용 MVP",
+              "측정: 실행 가능 지표 수집",
+              "학습: 가설 검증 → 피벗 또는 유지 결정",
+              "루프 주기 최소화가 핵심"
             ]
           }
         ]
       },
       {
-        "title": "결정",
+        "title": "혁신 회계와 피벗",
         "subsections": [
           {
-            "title": null,
+            "title": "혁신 회계",
             "items": [
-              "학습 결과에 따라 방향 유지 또는 피벗"
+              "기준선 설정 → 엔진 튜닝 → 피벗·유지 판단"
+            ]
+          },
+          {
+            "title": "피벗 유형",
+            "items": [
+              "줌인·줌아웃",
+              "고객 세그먼트",
+              "플랫폼",
+              "수익 모델",
+              "채널"
             ]
           }
         ]
@@ -7837,85 +8078,105 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "린 스타트업(Lean Startup)",
-      "MVP(Minimum Viable Product)",
       "구축-측정-학습(Build-Measure-Learn)",
-      "피벗(Pivot)",
-      "지속(Persevere)",
+      "최소 기능 제품(MVP)",
       "검증된 학습(Validated Learning)",
-      "혁신회계(Innovation Accounting)",
-      "가설 검증"
+      "혁신 회계(Innovation Accounting)",
+      "피벗(Pivot) 또는 유지(Persevere)",
+      "실행 가능 지표(Actionable Metrics) vs 허무 지표(Vanity Metrics)",
+      "코호트 분석",
+      "A/B 테스트"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "MVP": "Minimum Viable Product"
+    }
   },
   "PM_080": {
     "name": "페어 프로그래밍(Pair Programming)",
     "en": "Pair Programming",
     "title": "페어 프로그래밍(Pair Programming)",
-    "definition": "두 개발자가 한 워크스테이션에서 Driver와 Navigator 역할로 함께 코드를 작성하는 XP 프랙티스",
+    "definition": "두 명의 개발자가 하나의 작업 공간에서 한 명은 코드를 작성하고 다른 한 명은 실시간 검토·방향을 제시하며 역할을 주기적으로 교대하는 XP의 핵심 실천법",
     "outline": [
-      "페어 프로그래밍의 개념",
-      "역할",
+      "실시간 협업 코딩 개념",
+      "- 주요 특징",
+      "역할 구성",
+      "- 역할",
       "장단점",
-      "운영 팁"
+      "- 장점",
+      "- 단점"
     ],
     "keywords_must": [
-      "페어 프로그래밍(Pair Programming)",
-      "드라이버(Driver)",
-      "네비게이터(Navigator/Observer)",
-      "역할 교대",
-      "지식 공유",
+      "드라이버(Driver): 코드 작성·키보드 조작",
+      "네비게이터(Navigator): 실시간 검토·전략 제시",
+      "역할 교대(Switching)",
+      "짝 교체(Pair Rotation)",
       "결함 조기 발견",
-      "XP 프랙티스",
-      "집단 코드 소유"
+      "지식 공유·공동 코드 소유",
+      "설계 품질 향상"
     ],
     "keywords_ref": [
-      "몹 프로그래밍(Mob Programming)",
-      "코드 리뷰",
-      "TDD",
-      "심리 안전"
+      "핑퐁 페어링(TDD 결합)",
+      "원격 페어(화면 공유)",
+      "몹 프로그래밍(Mob)",
+      "비용 15% 증가 대비 결함 감소 연구",
+      "숙련도 차이 조합(전문가–초보)",
+      "피로도"
     ],
     "keywords": [
-      "Driver=입력, Navigator=전략·리뷰",
-      "자주 교대",
-      "장: 품질·공유 / 단: 인건비",
-      "난이도 높은 구간에 집중 투입"
+      "역할: 드라이버(Driver): 코드 작성·키보드 조작 · 네비게이터(Navigator): 실시간 검토·전략 제시",
+      "운영: 역할 교대(Switching) · 짝 교체(Pair Rotation)",
+      "효과: 결함 조기 발견 · 지식 공유·공동 코드 소유 · 설계 품질 향상"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "실시간 협업 코딩 개념",
         "subsections": [
           {
-            "title": null,
+            "title": "주요 특징",
             "items": [
-              "실시간 협업·리뷰가 결합된 프로그래밍"
+              "XP 실천법",
+              "지속적 코드 리뷰",
+              "2인 1작업"
             ]
           }
         ]
       },
       {
-        "title": "역할",
+        "title": "역할 구성",
         "subsections": [
           {
-            "title": null,
+            "title": "역할",
             "items": [
-              "Driver: 키보드",
-              "Navigator: 방향·결함·대안",
-              "주기적 교대"
+              "드라이버: 세부 구현에 집중",
+              "네비게이터: 큰 그림·결함·대안 검토",
+              "15~30분 단위 교대"
             ]
           }
         ]
       },
       {
-        "title": "효과",
+        "title": "장단점",
         "subsections": [
           {
-            "title": null,
+            "title": "장점",
             "items": [
-              "결함↓, 공유↑, 온보딩 가속 / 비용·피로 관리 필요"
+              "결함 감소",
+              "지식 전파",
+              "버스 팩터 완화",
+              "집중도 향상"
+            ]
+          },
+          {
+            "title": "단점",
+            "items": [
+              "인력 비용 증가",
+              "성향 충돌",
+              "피로",
+              "단순 작업에는 비효율"
             ]
           }
         ]
@@ -7927,84 +8188,100 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "페어 프로그래밍(Pair Programming)",
-      "드라이버(Driver)",
-      "네비게이터(Navigator/Observer)",
-      "역할 교대",
-      "지식 공유",
+      "드라이버(Driver): 코드 작성·키보드 조작",
+      "네비게이터(Navigator): 실시간 검토·전략 제시",
+      "역할 교대(Switching)",
+      "짝 교체(Pair Rotation)",
       "결함 조기 발견",
-      "XP 프랙티스",
-      "집단 코드 소유"
+      "지식 공유·공동 코드 소유",
+      "설계 품질 향상"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "TDD": "Time Division Duplex"
+    }
   },
   "PM_081": {
     "name": "지속적 통합·배포(CI/CD)",
-    "en": "Continuous Integration / Continuous Delivery (Deployment)",
+    "en": "Continuous Integration / Continuous Delivery·Deployment",
     "title": "지속적 통합·배포(CI/CD)",
-    "definition": "잦은 통합과 자동 빌드·시험으로 빠르게 검증하고(CI), 자동화된 파이프라인으로 릴리스 가능하게 만드는(CD) 실천",
+    "definition": "개발자의 코드 변경을 자주 공유 저장소에 통합해 자동 빌드·시험하고(CI), 검증된 변경을 자동으로 배포 가능한 상태로 유지(지속적 전달)하거나 운영까지 자동 배포(지속적 배포)하는 개발·운영 방식",
     "outline": [
-      "CI/CD의 개념",
-      "CI",
-      "CD(Delivery/Deployment)",
-      "전제 조건"
+      "자동화 통합·배포 개념",
+      "- 기대 효과",
+      "파이프라인 구성",
+      "- 단계",
+      "전달과 배포 비교",
+      "- 비교 항목"
     ],
     "keywords_must": [
       "지속적 통합(CI, Continuous Integration)",
       "지속적 전달(Continuous Delivery)",
       "지속적 배포(Continuous Deployment)",
-      "자동 빌드(Automated Build)",
-      "자동 시험(Automated Test)",
-      "파이프라인(Pipeline)",
-      "형상관리",
-      "피드백 루프"
+      "소스 커밋",
+      "자동 빌드(Build)",
+      "자동 시험(Test)",
+      "배포(Deploy)",
+      "형상 관리(SCM)",
+      "파이프라인(Pipeline)"
     ],
     "keywords_ref": [
-      "Jenkins·GitHub Actions 등",
-      "Trunk-based Development",
-      "Feature Flag",
-      "DevOps"
+      "지속적 전달: 운영 배포는 수동 승인",
+      "지속적 배포: 운영까지 자동",
+      "Jenkins·GitHub Actions·GitLab CI",
+      "블루그린·카나리 배포",
+      "IaC",
+      "DevOps",
+      "빠른 피드백 루프"
     ],
     "keywords": [
-      "CI: 자주 머지+자동 검증",
-      "Delivery: 언제든 릴리스 가능",
-      "Deployment: 자동 생산 반영",
-      "테스트·SCM 필수"
+      "구성: 지속적 통합(CI, Continuous Integration) · 지속적 전달(Continuous Delivery) · 지속적 배포(Continuous Deployment)",
+      "파이프라인 단계: 소스 커밋 · 자동 빌드(Build) · 자동 시험(Test) · 배포(Deploy)",
+      "기반: 형상 관리(SCM) · 파이프라인(Pipeline)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "자동화 통합·배포 개념",
         "subsections": [
           {
-            "title": null,
+            "title": "기대 효과",
             "items": [
-              "통합·검증·릴리스를 자동화해 리드타임·위험을 줄임"
+              "통합 지옥 방지",
+              "결함 조기 발견",
+              "빠른 출시",
+              "배포 위험 감소"
             ]
           }
         ]
       },
       {
-        "title": "CI",
+        "title": "파이프라인 구성",
         "subsections": [
           {
-            "title": null,
+            "title": "단계",
             "items": [
-              "소규모 잦은 커밋, 자동 빌드·단위/통합 시험, 빠른 피드백"
+              "커밋: 형상 관리 저장소",
+              "빌드: 컴파일·패키징",
+              "시험: 단위·통합·정적 분석",
+              "스테이징 배포",
+              "운영 배포"
             ]
           }
         ]
       },
       {
-        "title": "CD",
+        "title": "전달과 배포 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "비교 항목",
             "items": [
-              "Delivery: 수동 승인 후 배포 가능 상태 유지",
-              "Deployment: 생산 배포까지 자동"
+              "CI: 통합·시험 자동화",
+              "지속적 전달: 배포 준비 자동, 운영 반영은 승인",
+              "지속적 배포: 운영 반영까지 자동",
+              "전제: 높은 테스트 자동화"
             ]
           }
         ]
@@ -8019,81 +8296,107 @@
       "지속적 통합(CI, Continuous Integration)",
       "지속적 전달(Continuous Delivery)",
       "지속적 배포(Continuous Deployment)",
-      "자동 빌드(Automated Build)",
-      "자동 시험(Automated Test)",
-      "파이프라인(Pipeline)",
-      "형상관리",
-      "피드백 루프"
+      "소스 커밋",
+      "자동 빌드(Build)",
+      "자동 시험(Test)",
+      "배포(Deploy)",
+      "형상 관리(SCM)",
+      "파이프라인(Pipeline)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "SCM": "Software Configuration Management",
+      "CI": "Continuous Integration",
+      "CD": "Continuous Delivery/Deployment"
+    }
   },
   "PM_082": {
     "name": "제품 백로그(Product Backlog)",
     "en": "Product Backlog",
     "title": "제품 백로그(Product Backlog)",
-    "definition": "제품에 필요한 모든 항목을 우선순위화한 단일 목록. PO가 소유·정제하며 스프린트 백로그의 원천",
+    "definition": "제품 목표 달성에 필요한 모든 작업을 우선순위대로 정렬한 살아 있는 목록으로, 제품 책임자가 책임지며 스크럼 팀의 유일한 작업 원천임",
     "outline": [
-      "제품 백로그의 개념",
-      "특성(DEEP)",
-      "스프린트 백로그와 비교",
-      "정제"
+      "단일 작업 원천",
+      "- 주요 특징",
+      "구성과 관리",
+      "- 관리",
+      "DEEP 원칙과 비교",
+      "- DEEP",
+      "- 스프린트 백로그 비교"
     ],
     "keywords_must": [
-      "제품 백로그(Product Backlog)",
-      "제품 책임자(PO)",
-      "백로그 항목(PBI)",
+      "제품 책임자(PO, Product Owner)",
+      "제품 백로그 항목(PBI)",
       "사용자 스토리(User Story)",
-      "우선순위(Ordering)",
+      "제품 목표(Product Goal)",
+      "우선순위 정렬(Ordering)",
       "백로그 정제(Refinement)",
-      "스프린트 백로그(Sprint Backlog)",
-      "DEEP"
+      "추정(스토리 포인트)",
+      "DEEP(적절한 상세·추정됨·창발적·우선순위화)"
     ],
     "keywords_ref": [
-      "스토리 포인트",
-      "DoR(Definition of Ready)",
-      "로드맵",
-      "에픽(Epic)"
+      "스프린트 백로그와 구분",
+      "INVEST(스토리 품질)",
+      "MoSCoW 우선순위",
+      "준비 완료 정의(DoR)",
+      "에픽·피처·스토리 계층",
+      "가치·위험·의존성 기준"
     ],
     "keywords": [
-      "단일 소스·PO 소유",
-      "DEEP: Detailed appropriately, Emergent, Estimated, Prioritized",
-      "상위만 상세",
-      "정제 회의로 준비"
+      "관리 주체: 제품 책임자(PO, Product Owner)",
+      "구성: 제품 백로그 항목(PBI) · 사용자 스토리(User Story) · 제품 목표(Product Goal)",
+      "관리 활동: 우선순위 정렬(Ordering) · 백로그 정제(Refinement) · 추정(스토리 포인트)",
+      "좋은 백로그: DEEP(적절한 상세·추정됨·창발적·우선순위화)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "단일 작업 원천",
         "subsections": [
           {
-            "title": null,
+            "title": "주요 특징",
             "items": [
-              "가치 순으로 정렬된 살아 있는 요구 목록"
+              "동적 변화",
+              "투명 공개",
+              "상위 항목일수록 상세",
+              "완료 시점 없음"
             ]
           }
         ]
       },
       {
-        "title": "DEEP",
+        "title": "구성과 관리",
         "subsections": [
           {
-            "title": null,
+            "title": "관리",
             "items": [
-              "적절히 상세, 창발적, 추정됨, 우선순위화"
+              "PO: 정렬·가치 극대화",
+              "정제: 분할·상세화·추정, 스프린트 용량의 10% 이내",
+              "우선순위: 가치·위험·의존성"
             ]
           }
         ]
       },
       {
-        "title": "비교",
+        "title": "DEEP 원칙과 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "DEEP",
             "items": [
-              "Product Backlog: 제품 전체",
-              "Sprint Backlog: 이번 스프린트 계획·예측"
+              "적절한 상세(Detailed Appropriately)",
+              "추정됨(Estimated)",
+              "창발적(Emergent)",
+              "우선순위화(Prioritized)"
+            ]
+          },
+          {
+            "title": "스프린트 백로그 비교",
+            "items": [
+              "범위: 제품 전체 vs 스프린트",
+              "소유: PO vs 개발자",
+              "확약: 제품 목표 vs 스프린트 목표"
             ]
           }
         ]
@@ -8105,84 +8408,99 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "제품 백로그(Product Backlog)",
-      "제품 책임자(PO)",
-      "백로그 항목(PBI)",
+      "제품 책임자(PO, Product Owner)",
+      "제품 백로그 항목(PBI)",
       "사용자 스토리(User Story)",
-      "우선순위(Ordering)",
+      "제품 목표(Product Goal)",
+      "우선순위 정렬(Ordering)",
       "백로그 정제(Refinement)",
-      "스프린트 백로그(Sprint Backlog)",
-      "DEEP"
+      "추정(스토리 포인트)",
+      "DEEP(적절한 상세·추정됨·창발적·우선순위화)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_083": {
     "name": "플래닝 포커(Planning Poker)",
     "en": "Planning Poker",
     "title": "플래닝 포커(Planning Poker)",
-    "definition": "팀이 카드로 상대 추정값을 동시에 공개해 스토리 포인트를 합의하는 추정 기법. 앵커링을 줄임",
+    "definition": "팀원이 사용자 스토리별로 상대 크기를 숫자 카드로 동시에 제시하고, 차이가 크면 근거를 토론해 합의에 이를 때까지 반복하는 애자일 상대 추정 기법",
     "outline": [
-      "플래닝 포커의 개념",
-      "진행 절차",
-      "카드 구성",
-      "장점"
+      "합의 기반 상대 추정",
+      "- 기대 효과",
+      "구성 요소와 역할",
+      "- 구성",
+      "수행 절차",
+      "- 절차"
     ],
     "keywords_must": [
-      "플래닝 포커(Planning Poker)",
-      "상대 추정(Relative Estimation)",
-      "스토리 포인트",
-      "피보나치 수열",
-      "앵커링 방지",
-      "합의(Consensus)",
-      "전문가 편향 완화",
-      "팀 추정"
+      "사용자 스토리(User Story)",
+      "스토리 포인트(Story Point)",
+      "수정 피보나치 수열(0·1·2·3·5·8·13·20·40·100·?)",
+      "스크럼 마스터(촉진자)",
+      "제품 책임자(스토리 설명)",
+      "팀원(추정)",
+      "동시 공개(앵커링 방지)",
+      "최고·최저 근거 토론",
+      "합의(Consensus)"
     ],
     "keywords_ref": [
-      "와이드밴드 델파이",
+      "제임스 그레닝(2002)·마이크 콘 보급",
+      "와이드밴드 델파이 변형",
+      "상대 추정",
+      "기준 스토리",
       "티셔츠 사이징",
-      "버킷 시스템",
-      "벨로시티"
+      "벨로시티 산정",
+      "원격 도구"
     ],
     "keywords": [
-      "이야기 설명→질문→카드 비공개 선택→공개",
-      "차이 크면 토론 후 재추정",
-      "카드: 0,1,2,3,5,8,13…",
-      "동시 공개로 앵커링↓"
+      "추정 대상: 사용자 스토리(User Story) · 스토리 포인트(Story Point)",
+      "카드: 수정 피보나치 수열(0·1·2·3·5·8·13·20·40·100·?)",
+      "역할: 스크럼 마스터(촉진자) · 제품 책임자(스토리 설명) · 팀원(추정)",
+      "절차 원칙: 동시 공개(앵커링 방지) · 최고·최저 근거 토론 · 합의(Consensus)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "합의 기반 상대 추정",
         "subsections": [
           {
-            "title": null,
+            "title": "기대 효과",
             "items": [
-              "게임화한 집단 상대 추정"
+              "전문가 편향·앵커링 방지",
+              "팀 공동 이해",
+              "숨은 위험 발견",
+              "빠른 추정"
             ]
           }
         ]
       },
       {
-        "title": "절차",
+        "title": "구성 요소와 역할",
         "subsections": [
           {
-            "title": null,
+            "title": "구성",
             "items": [
-              "PO 설명 → 질의 → 개인 선택 → 동시 공개 → 토론·재추정 → 합의"
+              "카드: 피보나치 숫자(불확실성 반영)",
+              "스토리: PO가 설명",
+              "촉진: 스크럼 마스터가 진행",
+              "추정자: 개발 팀원 전원"
             ]
           }
         ]
       },
       {
-        "title": "카드",
+        "title": "수행 절차",
         "subsections": [
           {
-            "title": null,
+            "title": "절차",
             "items": [
-              "피보나치·수정 피보나치 흔함",
-              "?/∞/커피 카드 사용 가능"
+              "1. PO 스토리 설명·질의",
+              "2. 각자 카드 선택",
+              "3. 동시 공개",
+              "4. 최고·최저 추정자 근거 설명",
+              "5. 재추정 반복 → 합의"
             ]
           }
         ]
@@ -8194,86 +8512,105 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "플래닝 포커(Planning Poker)",
-      "상대 추정(Relative Estimation)",
-      "스토리 포인트",
-      "피보나치 수열",
-      "앵커링 방지",
-      "합의(Consensus)",
-      "전문가 편향 완화",
-      "팀 추정"
+      "사용자 스토리(User Story)",
+      "스토리 포인트(Story Point)",
+      "수정 피보나치 수열(0·1·2·3·5·8·13·20·40·100·?)",
+      "스크럼 마스터(촉진자)",
+      "제품 책임자(스토리 설명)",
+      "팀원(추정)",
+      "동시 공개(앵커링 방지)",
+      "최고·최저 근거 토론",
+      "합의(Consensus)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_084": {
     "name": "스토리 포인트(Story Point)",
     "en": "Story Point",
     "title": "스토리 포인트(Story Point)",
-    "definition": "사용자 스토리의 상대적 노력·복잡도·위험을 나타내는 추상 단위. 시간 직접 추정보다 팀 벨로시티와 함께 씀",
+    "definition": "사용자 스토리를 완료하는 데 필요한 노력·복잡도·불확실성을 종합해 기준 스토리 대비 상대적 크기로 나타낸 애자일 추정 단위로, 벨로시티 산정에 활용됨",
     "outline": [
-      "스토리 포인트의 개념",
-      "상대 추정",
-      "벨로시티",
-      "주의점"
+      "상대 크기 추정 단위",
+      "- 주요 특징",
+      "추정 방법",
+      "- 방법",
+      "활용과 유의점",
+      "- 활용",
+      "- 유의점"
     ],
     "keywords_must": [
-      "스토리 포인트(Story Point)",
-      "상대 복잡도",
       "노력(Effort)",
-      "위험·불확실성",
-      "벨로시티(Velocity)",
+      "복잡도(Complexity)",
+      "위험·불확실성(Uncertainty)",
       "기준 스토리(Baseline Story)",
+      "상대 추정",
+      "피보나치 수열",
       "플래닝 포커",
-      "이상일(Ideal Day)과 구분"
+      "벨로시티(Velocity)",
+      "릴리스 계획"
     ],
     "keywords_ref": [
-      "번다운",
-      "약속 vs 예측",
-      "팀 변경 시 재보정",
-      "시간 환산 남용 주의"
+      "이상일(Ideal Day)과 구분",
+      "팀 간 비교 불가",
+      "인플레이션 주의",
+      "번다운 차트",
+      "티셔츠 사이징",
+      "#NoEstimates"
     ],
     "keywords": [
-      "상대값(절대시간 아님)",
-      "노력+복잡도+위험",
-      "Velocity=스프린트 완료 SP합",
-      "팀 고유 척도"
+      "구성 요소: 노력(Effort) · 복잡도(Complexity) · 위험·불확실성(Uncertainty)",
+      "추정: 기준 스토리(Baseline Story) · 상대 추정 · 피보나치 수열 · 플래닝 포커",
+      "활용: 벨로시티(Velocity) · 릴리스 계획"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "상대 크기 추정 단위",
         "subsections": [
           {
-            "title": null,
+            "title": "주요 특징",
             "items": [
-              "스토리 간 상대 크기를 나타내는 점수"
+              "시간 아닌 상대 크기",
+              "팀 고유 척도",
+              "불확실성 반영",
+              "추정 속도 향상"
             ]
           }
         ]
       },
       {
-        "title": "사용",
+        "title": "추정 방법",
         "subsections": [
           {
-            "title": null,
+            "title": "방법",
             "items": [
-              "기준 스토리 대비 배율",
-              "합의 후 백로그 추정",
-              "Velocity로 용량 예측"
+              "기준 스토리(예: 2점) 선정",
+              "비교해 상대 크기 결정",
+              "피보나치로 큰 값일수록 간격 확대",
+              "플래닝 포커로 합의"
             ]
           }
         ]
       },
       {
-        "title": "주의",
+        "title": "활용과 유의점",
         "subsections": [
           {
-            "title": null,
+            "title": "활용",
             "items": [
-              "타 팀과 점수 비교 무의미",
-              "시간으로 강제 환산 지양"
+              "벨로시티: 스프린트당 완료 포인트 평균",
+              "릴리스 기간 = 총 포인트 ÷ 벨로시티",
+              "번다운 진척"
+            ]
+          },
+          {
+            "title": "유의점",
+            "items": [
+              "성과 평가 지표로 사용 금지",
+              "팀 간 비교 금지",
+              "시간 환산 지양"
             ]
           }
         ]
@@ -8285,86 +8622,101 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "스토리 포인트(Story Point)",
-      "상대 복잡도",
       "노력(Effort)",
-      "위험·불확실성",
-      "벨로시티(Velocity)",
+      "복잡도(Complexity)",
+      "위험·불확실성(Uncertainty)",
       "기준 스토리(Baseline Story)",
+      "상대 추정",
+      "피보나치 수열",
       "플래닝 포커",
-      "이상일(Ideal Day)과 구분"
+      "벨로시티(Velocity)",
+      "릴리스 계획"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_085": {
     "name": "번다운 차트(Burndown Chart)",
     "en": "Burndown Chart",
     "title": "번다운 차트(Burndown Chart)",
-    "definition": "남은 작업(스토리 포인트·시간)이 시간에 따라 줄어드는 모습을 보여주는 차트. 스프린트·릴리스 진척 가시화에 사용",
+    "definition": "스프린트나 릴리스의 남은 작업량을 시간 축에 따라 표시하여 이상적 진척선과 비교함으로써 목표 달성 가능성을 시각적으로 보여주는 애자일 진척 관리 도구",
     "outline": [
-      "번다운의 개념",
-      "구성",
-      "해석",
-      "번업·기타"
+      "남은 작업 시각화",
+      "- 도입 목적",
+      "구성과 유형",
+      "- 구성",
+      "패턴 해석과 번업 비교",
+      "- 해석",
+      "- 번업 비교"
     ],
     "keywords_must": [
-      "번다운 차트(Burndown Chart)",
-      "남은 작업(Remaining Work)",
+      "가로축 시간(일·스프린트)",
+      "세로축 남은 작업(Remaining Work)",
       "이상선(Ideal Line)",
+      "실제선(Actual Line)",
       "스프린트 번다운",
-      "릴리스 번다운",
-      "스토리 포인트",
-      "진척 가시화",
-      "범위 변경 영향"
+      "릴리스 번다운"
     ],
     "keywords_ref": [
-      "번업 차트(Burnup)",
-      "CFD",
-      "벨로시티",
-      "EVM"
+      "단위: 스토리 포인트·시간·작업 수",
+      "번업 차트(범위 변경 가시화)",
+      "실제선이 위: 지연·아래: 앞섬",
+      "평평한 구간: 정체·미갱신",
+      "일일 스크럼 활용",
+      "정보 방열기(Information Radiator)"
     ],
     "keywords": [
-      "X=시간, Y=잔여",
-      "이상선 대비 실제",
-      "평탄=정체, 상승=범위증가",
-      "Burnup은 완료+범위선"
+      "축 구성: 가로축 시간(일·스프린트) · 세로축 남은 작업(Remaining Work)",
+      "선: 이상선(Ideal Line) · 실제선(Actual Line)",
+      "유형: 스프린트 번다운 · 릴리스 번다운"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "남은 작업 시각화",
         "subsections": [
           {
-            "title": null,
+            "title": "도입 목적",
             "items": [
-              "잔여 작업량의 감소 추세를 시각화"
+              "진척 투명성",
+              "지연 조기 인지",
+              "팀 자기 관리",
+              "이해관계자 소통"
             ]
           }
         ]
       },
       {
-        "title": "해석",
+        "title": "구성과 유형",
         "subsections": [
           {
-            "title": null,
+            "title": "구성",
             "items": [
-              "이상선보다 위: 지연 위험",
-              "급상승: 범위 추가",
-              "조기 0: 추정 과다·범위 축소"
+              "이상선: 시작~종료 직선",
+              "실제선: 매일 남은 작업",
+              "유형: 스프린트 번다운: 일 단위",
+              "릴리스 번다운: 스프린트 단위"
             ]
           }
         ]
       },
       {
-        "title": "관련",
+        "title": "패턴 해석과 번업 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "해석",
             "items": [
-              "Burnup: 완료량과 총범위 동시 표시",
-              "칸반은 CFD 선호"
+              "실제선 이상선 위: 지연 위험",
+              "아래: 조기 완료",
+              "급락: 큰 항목 완료·범위 축소",
+              "상승: 범위 추가"
+            ]
+          },
+          {
+            "title": "번업 비교",
+            "items": [
+              "번업은 완료 작업·총 범위선 분리로 범위 변경 표시"
             ]
           }
         ]
@@ -8376,83 +8728,89 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "번다운 차트(Burndown Chart)",
-      "남은 작업(Remaining Work)",
+      "가로축 시간(일·스프린트)",
+      "세로축 남은 작업(Remaining Work)",
       "이상선(Ideal Line)",
+      "실제선(Actual Line)",
       "스프린트 번다운",
-      "릴리스 번다운",
-      "스토리 포인트",
-      "진척 가시화",
-      "범위 변경 영향"
+      "릴리스 번다운"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_086": {
     "name": "기능 차트(Feature Chart)",
     "en": "Feature Chart",
     "title": "기능 차트(Feature Chart)",
-    "definition": "전체·완료·잔여 기능 수를 추적해 기능 처리 속도를 관리하는 차트. 릴리스 단위 진행 파악에 유용",
+    "definition": "릴리스 단위로 전체 기능 수, 완료 기능 수, 잔여 기능 수를 함께 누적 표시해 범위 변경과 진척을 동시에 보여주는 애자일 진척 관리 차트",
     "outline": [
-      "기능 차트의 개념",
-      "지표",
-      "활용",
-      "관련 차트"
+      "기능 단위 진척 개념",
+      "- 도입 목적",
+      "차트 구성",
+      "- 구성",
+      "번다운과 비교",
+      "- 비교 항목"
     ],
     "keywords_must": [
-      "기능 차트(Feature Chart)",
       "전체 기능(#Total)",
-      "완료(#Complete)",
-      "잔여(#Remaining)",
-      "기능 처리 속도",
+      "완료 기능(#Complete)",
+      "잔여 기능(#Remaining)",
+      "범위 변경 가시화",
       "릴리스 계획",
-      "범위 가시성",
-      "완료율"
+      "완료율 추적"
     ],
     "keywords_ref": [
-      "번다운·번업",
-      "로드맵",
-      "스토리 포인트",
+      "번업 차트와 유사",
+      "번다운 한계 보완(범위 변경)",
+      "기능 처리 속도",
+      "스토리 포인트 단위 가능",
+      "FDD(기능 주도 개발) 진척 보고",
       "누적 흐름도"
     ],
     "keywords": [
-      "Total/Complete/Remaining",
-      "속도=기간당 완료 기능",
-      "범위 증가 즉시 반영",
-      "포인트 대신 기능 수 관점"
+      "구성: 전체 기능(#Total) · 완료 기능(#Complete) · 잔여 기능(#Remaining)",
+      "활용: 범위 변경 가시화 · 릴리스 계획 · 완료율 추적"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "기능 단위 진척 개념",
         "subsections": [
           {
-            "title": null,
+            "title": "도입 목적",
             "items": [
-              "기능 개수 기준으로 진행을 추적"
+              "범위와 진척 동시 표시",
+              "고객 관점 기능 단위",
+              "릴리스 예측"
             ]
           }
         ]
       },
       {
-        "title": "지표",
+        "title": "차트 구성",
         "subsections": [
           {
-            "title": null,
+            "title": "구성",
             "items": [
-              "Total, Complete, Remaining, Throughput"
+              "전체선: 범위 증감 반영",
+              "완료선: 누적 완료",
+              "잔여 = 전체 − 완료",
+              "가로축: 이터레이션"
             ]
           }
         ]
       },
       {
-        "title": "활용",
+        "title": "번다운과 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "비교 항목",
             "items": [
-              "릴리스 가능성 판단, 범위 조정 논의"
+              "표시: 잔여만 vs 전체·완료·잔여",
+              "범위 변경: 숨겨짐 vs 드러남",
+              "단위: 작업량 vs 기능 수",
+              "용도: 스프린트 vs 릴리스"
             ]
           }
         ]
@@ -8464,85 +8822,94 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "기능 차트(Feature Chart)",
       "전체 기능(#Total)",
-      "완료(#Complete)",
-      "잔여(#Remaining)",
-      "기능 처리 속도",
+      "완료 기능(#Complete)",
+      "잔여 기능(#Remaining)",
+      "범위 변경 가시화",
       "릴리스 계획",
-      "범위 가시성",
-      "완료율"
+      "완료율 추적"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_087": {
     "name": "애자일 아키텍처(Agile Architecture)",
     "en": "Agile Architecture",
     "title": "애자일 아키텍처(Agile Architecture)",
-    "definition": "큰 설계를 미리 고정하지 않고, 점증적으로 진화하는 아키텍처. 모놀리스에서 마이크로서비스로의 전환과도 연계",
+    "definition": "초기에 모든 설계를 확정하지 않고 최소한의 의도적 아키텍처 위에 반복 개발 중 진화적으로 설계를 개선하여 변화에 유연하게 대응하는 아키텍처 접근법",
     "outline": [
-      "개념",
-      "모놀리식 vs MSA",
-      "진화적 설계",
-      "실천"
+      "진화적 아키텍처 개념",
+      "- 배경",
+      "설계 원칙과 실천",
+      "- 원칙",
+      "구조 비교",
+      "- 비교 항목"
     ],
     "keywords_must": [
-      "애자일 아키텍처",
       "진화적 설계(Evolutionary Design)",
-      "모놀리식(Monolithic)",
+      "의도적 아키텍처(Intentional Architecture)",
+      "창발적 설계(Emergent Design)",
+      "YAGNI(필요할 때 구현)",
       "마이크로서비스(Microservices)",
-      "YAGNI",
-      "아키텍처 스파이크",
       "느슨한 결합(Loose Coupling)",
-      "지속적 리팩토링"
+      "아키텍처 스파이크(Spike)",
+      "지속적 리팩토링",
+      "아키텍처 런웨이(Architectural Runway)"
     ],
     "keywords_ref": [
-      "도메인 주도 설계(DDD)",
-      "API 게이트웨이",
-      "CI/CD",
-      "피처 토글"
+      "SAFe 아키텍처 런웨이",
+      "최후 책임 시점(Last Responsible Moment)",
+      "모놀리식과 비교",
+      "피트니스 함수",
+      "ADR(Architecture Decision Record)",
+      "기술 부채 관리",
+      "콘웨이 법칙"
     ],
     "keywords": [
-      "전기획 BDUF 지양",
-      "작은 결정·피드백",
-      "모놀리스↔MSA 트레이드오프",
-      "테스트·자동화로 안전히 진화"
+      "설계 원칙: 진화적 설계(Evolutionary Design) · 의도적 아키텍처(Intentional Architecture) · 창발적 설계(Emergent Design) · YAGNI(필요할 때 구현)",
+      "구조: 마이크로서비스(Microservices) · 느슨한 결합(Loose Coupling)",
+      "실천: 아키텍처 스파이크(Spike) · 지속적 리팩토링 · 아키텍처 런웨이(Architectural Runway)"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "진화적 아키텍처 개념",
         "subsections": [
           {
-            "title": null,
+            "title": "배경",
             "items": [
-              "필요에 따라 아키텍처를 점진적으로 다듬음"
+              "BDUF(사전 대규모 설계) 한계",
+              "요구 변화",
+              "빠른 인도"
             ]
           }
         ]
       },
       {
-        "title": "구조",
+        "title": "설계 원칙과 실천",
         "subsections": [
           {
-            "title": null,
+            "title": "원칙",
             "items": [
-              "Monolith: 단순 초기, 결합↑",
-              "MSA: 독립 배포, 운영 복잡도↑"
+              "진화적 설계: 반복마다 개선",
+              "의도적 아키텍처: 최소 공통 구조",
+              "YAGNI: 불필요한 선행 설계 배제",
+              "스파이크: 기술 불확실성 탐색",
+              "런웨이: 다음 기능 위한 기반"
             ]
           }
         ]
       },
       {
-        "title": "실천",
+        "title": "구조 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "비교 항목",
             "items": [
-              "스파이크로 불확실성 제거",
-              "리팩토링·자동화 시험 필수"
+              "모놀리식: 단일 배포·결합도 높음",
+              "마이크로서비스: 독립 배포·느슨한 결합",
+              "애자일 적합: 독립 팀·빠른 변경"
             ]
           }
         ]
@@ -8554,84 +8921,104 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "애자일 아키텍처",
       "진화적 설계(Evolutionary Design)",
-      "모놀리식(Monolithic)",
+      "의도적 아키텍처(Intentional Architecture)",
+      "창발적 설계(Emergent Design)",
+      "YAGNI(필요할 때 구현)",
       "마이크로서비스(Microservices)",
-      "YAGNI",
-      "아키텍처 스파이크",
       "느슨한 결합(Loose Coupling)",
-      "지속적 리팩토링"
+      "아키텍처 스파이크(Spike)",
+      "지속적 리팩토링",
+      "아키텍처 런웨이(Architectural Runway)"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "ADR": "Architecture Decision Record"
+    }
   },
   "PM_089": {
     "name": "PMO와 감리 비교(PMO vs IT Audit)",
-    "en": "PMO vs IT Audit (Supervision)",
+    "en": "PMO vs Information System Audit",
     "title": "PMO와 감리 비교(PMO vs IT Audit)",
-    "definition": "PMO는 프로젝트 수행을 지원·통제하는 상시 조직, 감리는 독립적으로 절차·산출물·성과를 점검하는 사후·단계 심사",
+    "definition": "PMO는 조직 내 프로젝트 관리를 표준화·지원·통제하는 상시 조직이고, 정보시스템 감리는 제3자가 독립적 관점에서 특정 시점에 사업의 적정성을 점검하고 개선을 권고하는 활동",
     "outline": [
-      "개념 비교",
-      "PMO",
-      "감리",
-      "상호 관계"
+      "관리와 점검 개념",
+      "- 공통 목적",
+      "PMO 유형과 감리 절차",
+      "- PMO 유형",
+      "- 감리 절차",
+      "상세 비교",
+      "- 비교 항목"
     ],
     "keywords_must": [
-      "PMO(Project Management Office)",
-      "정보시스템 감리",
+      "지원형(Supportive)",
+      "통제형(Controlling)",
+      "지시형(Directive)",
       "독립성(Independence)",
-      "지원·통제·지시형 PMO",
-      "절차·산출물·성과 점검",
-      "품질·위험 최소화",
+      "점검 시점: 요구정의·설계·종료 단계",
+      "시정 조치 권고",
       "상시 vs 시점",
-      "권고·시정"
+      "내부 관리 vs 제3자 점검"
     ],
     "keywords_ref": [
-      "EPMO",
-      "공공 PMO",
-      "감사(Audit)",
-      "거버넌스"
+      "전자정부법 정보시스템 감리",
+      "감리 대상: 절차·산출물·성과",
+      "감리원·수석 감리원",
+      "공공 PMO(전자정부법 64조의2)",
+      "품질·위험 최소화",
+      "상호 보완"
     ],
     "keywords": [
-      "PMO: 수행 중 지원·표준·가시성",
-      "감리: 독립 점검·평가",
-      "목적 공통=위험↓품질↑",
-      "역할·시점·권한 다름"
+      "PMO 유형: 지원형(Supportive) · 통제형(Controlling) · 지시형(Directive)",
+      "감리: 독립성(Independence) · 점검 시점: 요구정의·설계·종료 단계 · 시정 조치 권고",
+      "비교 기준: 상시 vs 시점 · 내부 관리 vs 제3자 점검"
     ],
     "sections": [
       {
-        "title": "PMO",
+        "title": "관리와 점검 개념",
         "subsections": [
           {
-            "title": null,
+            "title": "공통 목적",
             "items": [
-              "방법론·교육·자원·대시보드로 프로젝트 성공 지원"
+              "사업 품질 확보",
+              "위험 최소화",
+              "발주자 의사결정 지원"
             ]
           }
         ]
       },
       {
-        "title": "감리",
+        "title": "PMO 유형과 감리 절차",
         "subsections": [
           {
-            "title": null,
+            "title": "PMO 유형",
             "items": [
-              "독립 관점에서 계획·절차·산출물·성과 준수성 평가"
+              "지원형: 템플릿·교육, 통제 낮음",
+              "통제형: 방법론 준수 요구",
+              "지시형: 프로젝트 직접 관리"
+            ]
+          },
+          {
+            "title": "감리 절차",
+            "items": [
+              "계획 수립 → 현장 점검(단계별) → 감리 보고서 → 시정 조치 확인"
             ]
           }
         ]
       },
       {
-        "title": "비교",
+        "title": "상세 비교",
         "subsections": [
           {
-            "title": null,
+            "title": "비교 항목",
             "items": [
-              "상시 내재(PMO) vs 독립 심사(감리)",
-              "지원·통제 vs 평가·권고"
+              "주체: 발주자 측 관리 조직 vs 독립 감리 법인",
+              "시점: 사업 전 기간 상시 vs 단계별 시점",
+              "역할: 관리·지원·조정 vs 점검·권고",
+              "근거: 조직 정책·공공 PMO vs 전자정부법 감리"
             ]
           }
         ]
@@ -8643,84 +9030,94 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "PMO(Project Management Office)",
-      "정보시스템 감리",
+      "지원형(Supportive)",
+      "통제형(Controlling)",
+      "지시형(Directive)",
       "독립성(Independence)",
-      "지원·통제·지시형 PMO",
-      "절차·산출물·성과 점검",
-      "품질·위험 최소화",
+      "점검 시점: 요구정의·설계·종료 단계",
+      "시정 조치 권고",
       "상시 vs 시점",
-      "권고·시정"
+      "내부 관리 vs 제3자 점검"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_090_0": {
     "name": "EPMO·공공 PMO(EPMO & Public PMO)",
-    "en": "EPMO and Public-sector PMO",
+    "en": "Enterprise PMO and Public PMO",
     "title": "EPMO·공공 PMO(EPMO & Public PMO)",
-    "definition": "EPMO는 전사 포트폴리오·프로그램을 통합 관리하는 상위 PMO. 공공 PMO는 공공사업의 관리·감독·표준을 담당",
+    "definition": "EPMO는 전사 차원에서 포트폴리오·프로그램을 전략과 정렬해 관리하는 최상위 PMO이고, 공공 PMO는 전자정부법에 따라 공공기관 정보화 사업의 관리·감독을 전문 사업자에게 위탁하는 제도",
     "outline": [
-      "PMO 유형",
-      "EPMO",
-      "공공 PMO",
-      "주요 기능"
+      "전사·공공 PMO 개념",
+      "- 등장 배경",
+      "EPMO 기능",
+      "- 기능",
+      "공공 PMO 업무",
+      "- 업무"
     ],
     "keywords_must": [
-      "EPMO(Enterprise PMO)",
-      "공공 PMO",
+      "전략 정렬",
       "포트폴리오 관리",
+      "거버넌스(Governance)",
       "표준·방법론",
-      "거버넌스",
-      "자원·우선순위",
-      "성과 가시성",
-      "교육·코칭"
+      "자원·우선순위 조정",
+      "전자정부법 제64조의2",
+      "발주 관리 지원",
+      "사업 관리·감독 위탁"
     ],
     "keywords_ref": [
-      "PMO 유형: Supportive/Controlling/Directive",
-      "PMC",
-      "감리",
-      "사업수행계획"
+      "공공 PMO 업무: 사업 계획·발주 지원·진척·품질·위험·변경 관리",
+      "감리와 차이",
+      "PMO 성숙도",
+      "교육·코칭",
+      "성과 가시성(대시보드)",
+      "지원형·통제형·지시형"
     ],
     "keywords": [
-      "EPMO=전사 통합",
-      "공공PMO=공공 사업 관리 고도화",
-      "기능: 표준·통제·인력·도구",
-      "전략 정렬"
+      "EPMO 기능: 전략 정렬 · 포트폴리오 관리 · 거버넌스(Governance) · 표준·방법론 · 자원·우선순위 조정",
+      "공공 PMO: 전자정부법 제64조의2 · 발주 관리 지원 · 사업 관리·감독 위탁"
     ],
     "sections": [
       {
-        "title": "유형",
+        "title": "전사·공공 PMO 개념",
         "subsections": [
           {
-            "title": null,
+            "title": "등장 배경",
             "items": [
-              "Supportive, Controlling, Directive",
-              "EPMO는 포트폴리오 레벨"
+              "다수 사업 동시 추진",
+              "전략 정렬 필요",
+              "공공 발주 역량 부족"
             ]
           }
         ]
       },
       {
-        "title": "EPMO",
+        "title": "EPMO 기능",
         "subsections": [
           {
-            "title": null,
+            "title": "기능",
             "items": [
-              "전사 프로젝트 가시성, 우선순위, 자원 최적화"
+              "전략: 투자 우선순위",
+              "거버넌스: 의사결정 체계",
+              "표준: 방법론·템플릿",
+              "자원: 전사 인력 배분",
+              "성과: 포트폴리오 보고"
             ]
           }
         ]
       },
       {
-        "title": "공공 PMO",
+        "title": "공공 PMO 업무",
         "subsections": [
           {
-            "title": null,
+            "title": "업무",
             "items": [
-              "공공 정보화 사업의 관리 체계·감독·역량 지원"
+              "사업 착수: 계획·RFP 지원",
+              "수행: 진척·품질·위험·이슈 관리",
+              "변경: 과업 변경 검토",
+              "종료: 검사·인수 지원"
             ]
           }
         ]
@@ -8732,72 +9129,86 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "EPMO(Enterprise PMO)",
-      "공공 PMO",
+      "전략 정렬",
       "포트폴리오 관리",
+      "거버넌스(Governance)",
       "표준·방법론",
-      "거버넌스",
-      "자원·우선순위",
-      "성과 가시성",
-      "교육·코칭"
+      "자원·우선순위 조정",
+      "전자정부법 제64조의2",
+      "발주 관리 지원",
+      "사업 관리·감독 위탁"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_090_1": {
     "name": "PMO와 PMC 비교(PMO vs PMC)",
     "en": "PMO vs PMC",
     "title": "PMO와 PMC 비교(PMO vs PMC)",
-    "definition": "PMO는 조직 내부의 표준·통합 관리 조직, PMC는 외부에서 전문 관리·자문 서비스를 제공하는 형태",
+    "definition": "PMO는 조직 내부에서 프로젝트 관리 표준화와 통합 관리를 수행하는 상시 조직이고, PMC는 외부 전문 업체가 계약에 따라 특정 사업의 관리 업무를 자문·대행하는 서비스",
     "outline": [
-      "개념",
-      "PMO",
-      "PMC",
-      "선택 관점"
+      "관리 주체 구분",
+      "- 공통점",
+      "PMO·PMC 비교 특징",
+      "- PMO",
+      "- PMC",
+      "비교",
+      "- 비교 항목"
     ],
     "keywords_must": [
-      "PMO(Project Management Office)",
-      "PMC(Project Management Consulting/Contractor)",
       "내부 조직",
+      "표준화·통합 관리",
+      "지식 축적(조직 자산)",
       "외부 서비스",
-      "표준화·통합",
-      "전문 자문",
-      "지식 축적",
-      "이해상충"
+      "전문 자문·관리 대행",
+      "계약 기반 기간 한정",
+      "이해상충 방지",
+      "독립성"
     ],
     "keywords_ref": [
-      "EPMO",
-      "아웃소싱",
-      "감리",
-      "역량 이전"
+      "PMC: 건설 CM과 유사",
+      "공공 PMO 위탁 사업자",
+      "비용: 고정 인건비 vs 용역비",
+      "노하우 내재화 차이",
+      "하이브리드 운영",
+      "감리와 비교"
     ],
     "keywords": [
-      "PMO: 내부·지속·표준",
-      "PMC: 외부·계약·전문성",
-      "지식 잔존은 PMO 유리",
-      "대규모 시 병행"
+      "PMO: 내부 조직 · 표준화·통합 관리 · 지식 축적(조직 자산)",
+      "PMC: 외부 서비스 · 전문 자문·관리 대행 · 계약 기반 기간 한정",
+      "고려: 이해상충 방지 · 독립성"
     ],
     "sections": [
       {
-        "title": "PMO",
+        "title": "관리 주체 구분",
         "subsections": [
           {
-            "title": null,
+            "title": "공통점",
             "items": [
-              "기업 내부에서 방법론·거버넌스·지원을 상시 수행"
+              "프로젝트 성공 지원",
+              "일정·품질·위험 관리",
+              "발주자 역량 보완"
             ]
           }
         ]
       },
       {
-        "title": "PMC",
+        "title": "PMO·PMC 비교 특징",
         "subsections": [
           {
-            "title": null,
+            "title": "PMO",
             "items": [
-              "외부 전문인력이 관리·자문을 계약으로 제공"
+              "장점: 조직 지식 축적·일관성",
+              "단점: 고정 비용·전문성 한계"
+            ]
+          },
+          {
+            "title": "PMC",
+            "items": [
+              "장점: 전문성·객관성",
+              "단점: 노하우 외부 유출·이해상충"
             ]
           }
         ]
@@ -8806,10 +9217,13 @@
         "title": "비교",
         "subsections": [
           {
-            "title": null,
+            "title": "비교 항목",
             "items": [
-              "지식 축적·문화는 PMO, 즉시 전문성은 PMC",
-              "공공·대규모는 혼합 모델"
+              "소속: 내부 vs 외부",
+              "기간: 상시 vs 계약 기간",
+              "범위: 다수 프로젝트 vs 특정 사업",
+              "목적: 표준화 vs 전문 관리",
+              "지식: 내재화 vs 이전 필요"
             ]
           }
         ]
@@ -8821,83 +9235,98 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "PMO(Project Management Office)",
-      "PMC(Project Management Consulting/Contractor)",
       "내부 조직",
+      "표준화·통합 관리",
+      "지식 축적(조직 자산)",
       "외부 서비스",
-      "표준화·통합",
-      "전문 자문",
-      "지식 축적",
-      "이해상충"
+      "전문 자문·관리 대행",
+      "계약 기반 기간 한정",
+      "이해상충 방지",
+      "독립성"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "CM": "Construction Management"
+    }
   },
   "PM_090_2": {
     "name": "개발자 관계(DevRel, Developer Relations)",
     "en": "Developer Relations",
     "title": "개발자 관계(DevRel, Developer Relations)",
-    "definition": "개발자 생태계와 제품을 연결해 채택·피드백·커뮤니티를 성장시키는 활동. Advocacy·DX·교육·콘텐츠가 축",
+    "definition": "기업의 플랫폼·API·제품을 외부 개발자가 쉽게 채택하고 성공하도록 커뮤니티·콘텐츠·교육·피드백 활동으로 개발자 생태계를 구축하는 전략적 활동",
     "outline": [
-      "DevRel의 개념",
-      "핵심 영역",
-      "성과",
-      "관련 역할"
+      "개발자 생태계 구축",
+      "- 도입 필요성",
+      "구성 요소별 역할",
+      "- 구성",
+      "성과 측정",
+      "- 지표"
     ],
     "keywords_must": [
-      "DevRel(Developer Relations)",
-      "개발자 애드보커시(Advocacy)",
+      "개발자 애드보커시(Developer Advocacy)",
       "개발자 경험(DX, Developer Experience)",
       "커뮤니티(Community)",
-      "기술 콘텐츠",
-      "개발자 교육",
-      "피드백 루프",
-      "채택(Adoption)"
+      "기술 콘텐츠·문서",
+      "개발자 교육·컨퍼런스",
+      "피드백 루프(제품팀 전달)",
+      "채택(Adoption)",
+      "개발자 활성도"
     ],
     "keywords_ref": [
-      "개발자 마케팅",
-      "오픈소스",
-      "API 문서",
-      "해커톤"
+      "개발자 퍼널(인지·학습·사용·옹호)",
+      "SDK·샘플 코드",
+      "해커톤·밋업",
+      "API 문서 품질",
+      "성과 측정 어려움",
+      "마케팅과 차이"
     ],
     "keywords": [
-      "Advocacy·DX·Community·Content·Education",
-      "제품↔개발자 가교",
-      "채택·유지·피드백",
-      "성공지표: 활성 개발자·기여"
+      "3대 축: 개발자 애드보커시(Developer Advocacy) · 개발자 경험(DX, Developer Experience) · 커뮤니티(Community)",
+      "활동: 기술 콘텐츠·문서 · 개발자 교육·컨퍼런스 · 피드백 루프(제품팀 전달)",
+      "성과: 채택(Adoption) · 개발자 활성도"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "개발자 생태계 구축",
         "subsections": [
           {
-            "title": null,
+            "title": "도입 필요성",
             "items": [
-              "개발자를 고객·파트너로 보고 관계를 설계"
+              "플랫폼 경쟁",
+              "API 경제",
+              "개발자가 구매 결정 영향"
             ]
           }
         ]
       },
       {
-        "title": "영역",
+        "title": "구성 요소별 역할",
         "subsections": [
           {
-            "title": null,
+            "title": "구성",
             "items": [
-              "Advocacy, DX, Community, Technical Content, Education"
+              "애드보커시: 외부 개발자 대변·옹호",
+              "DX: 문서·SDK·온보딩 품질",
+              "커뮤니티: 포럼·밋업 운영",
+              "피드백: 개발자 의견 제품 반영"
             ]
           }
         ]
       },
       {
-        "title": "성과",
+        "title": "성과 측정",
         "subsections": [
           {
-            "title": null,
+            "title": "지표",
             "items": [
-              "온보딩 시간↓, API 채택↑, 커뮤니티 기여·신뢰↑"
+              "가입·API 호출 수",
+              "활성 개발자",
+              "첫 호출까지 시간(TTFC)",
+              "커뮤니티 참여",
+              "콘텐츠 도달"
             ]
           }
         ]
@@ -8909,84 +9338,106 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "DevRel(Developer Relations)",
-      "개발자 애드보커시(Advocacy)",
+      "개발자 애드보커시(Developer Advocacy)",
       "개발자 경험(DX, Developer Experience)",
       "커뮤니티(Community)",
-      "기술 콘텐츠",
-      "개발자 교육",
-      "피드백 루프",
-      "채택(Adoption)"
+      "기술 콘텐츠·문서",
+      "개발자 교육·컨퍼런스",
+      "피드백 루프(제품팀 전달)",
+      "채택(Adoption)",
+      "개발자 활성도"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "DX": "Developer Experience"
+    }
   },
   "PM_091": {
     "name": "프로젝트 관리자와 촉진자 비교(PM vs Facilitator)",
     "en": "Project Manager vs Facilitator",
     "title": "프로젝트 관리자와 촉진자 비교(PM vs Facilitator)",
-    "definition": "PM은 목표 달성의 관리 책임과 권한을 갖고, 촉진자는 중립적으로 회의·합의·협업 과정을 돕는 역할",
+    "definition": "프로젝트 관리자는 프로젝트 목표 달성에 책임을 지고 의사결정 권한을 가진 관리자이고, 촉진자는 중립적 위치에서 팀이 스스로 합의와 결정을 이끌도록 프로세스를 돕는 역할",
     "outline": [
-      "역할 정의",
-      "PM",
-      "촉진자",
-      "리더십 스타일"
+      "역할 개념",
+      "- 배경",
+      "역할별 특징",
+      "- PM",
+      "- 촉진자",
+      "비교",
+      "- 비교 항목"
     ],
     "keywords_must": [
-      "프로젝트 관리자(PM)",
-      "촉진자(Facilitator)",
       "목표 책임(Accountability)",
-      "중립성(Neutrality)",
       "의사결정 권한",
-      "섬김형 리더십(Servant Leadership)",
+      "계획·통제",
+      "중립성(Neutrality)",
       "프로세스 촉진",
-      "합의 도출"
+      "합의 도출(Consensus)",
+      "섬김형 리더십(Servant Leadership)",
+      "스크럼 마스터"
     ],
     "keywords_ref": [
-      "스크럼 마스터",
-      "코치",
-      "중재(Mediation)",
-      "수평 리더십"
+      "퍼실리테이션 기법: 브레인스토밍·명목 집단·타임박스",
+      "촉진자 역량: 경청·질문·갈등 중재",
+      "애자일에서 PM 역할 변화",
+      "지시형 vs 코칭형",
+      "워크숍 운영"
     ],
     "keywords": [
-      "PM: What/When·성과 책임",
-      "Facilitator: How we discuss·과정",
-      "SM은 촉진에 가까움",
-      "현대 PM도 촉진 스킬 필수"
+      "PM: 목표 책임(Accountability) · 의사결정 권한 · 계획·통제",
+      "촉진자: 중립성(Neutrality) · 프로세스 촉진 · 합의 도출(Consensus)",
+      "리더십: 섬김형 리더십(Servant Leadership) · 스크럼 마스터"
     ],
     "sections": [
       {
-        "title": "PM",
+        "title": "역할 개념",
         "subsections": [
           {
-            "title": null,
+            "title": "배경",
             "items": [
-              "범위·일정·원가·위험 등 목표 달성 책임, 의사결정·보고"
+              "애자일 확산",
+              "자기 조직화 팀",
+              "지시보다 촉진 필요"
             ]
           }
         ]
       },
       {
-        "title": "촉진자",
+        "title": "역할별 특징",
         "subsections": [
           {
-            "title": null,
+            "title": "PM",
             "items": [
-              "의제·시간·발언·합의 도구로 집단 지성 도출, 내용 소유 안 함"
+              "범위·일정·원가 책임",
+              "자원 배분",
+              "최종 의사결정"
+            ]
+          },
+          {
+            "title": "촉진자",
+            "items": [
+              "내용 중립",
+              "회의·워크숍 진행",
+              "참여 균형",
+              "장애 제거"
             ]
           }
         ]
       },
       {
-        "title": "접점",
+        "title": "비교",
         "subsections": [
           {
-            "title": null,
+            "title": "비교 항목",
             "items": [
-              "애자일에서 SM·코치는 촉진, PM은 가치·제약 관리",
-              "역할 분리 시 이해충돌↓"
+              "책임: 결과 vs 과정",
+              "권한: 결정 vs 촉진",
+              "관점: 목표 지향 vs 중립",
+              "리더십: 지시·통제 vs 섬김",
+              "예: 전통 PM vs 스크럼 마스터"
             ]
           }
         ]
@@ -8998,83 +9449,102 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "프로젝트 관리자(PM)",
-      "촉진자(Facilitator)",
       "목표 책임(Accountability)",
-      "중립성(Neutrality)",
       "의사결정 권한",
-      "섬김형 리더십(Servant Leadership)",
+      "계획·통제",
+      "중립성(Neutrality)",
       "프로세스 촉진",
-      "합의 도출"
+      "합의 도출(Consensus)",
+      "섬김형 리더십(Servant Leadership)",
+      "스크럼 마스터"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true
   },
   "PM_092": {
     "name": "하드 스킬과 소프트 스킬(Hard Skills & Soft Skills)",
     "en": "Hard Skills and Soft Skills",
     "title": "하드 스킬과 소프트 스킬(Hard Skills & Soft Skills)",
-    "definition": "하드 스킬은 측정 가능한 전문 기술, 소프트 스킬은 소통·리더십·협상 등 대인·행동 역량. PM은 둘의 균형이 필요",
+    "definition": "하드 스킬은 교육·훈련으로 습득해 측정 가능한 기술적 역량이고, 소프트 스킬은 대인 관계·리더십 등 사람과 협업하는 행동적 역량으로, PM은 두 역량의 균형이 필요함",
     "outline": [
-      "개념",
-      "하드 스킬",
-      "소프트 스킬",
-      "PM에의 함의"
+      "역량 구분",
+      "- 구분",
+      "PMI 인재 삼각형",
+      "- 구성",
+      "비교와 개발 방안",
+      "- 비교 항목",
+      "- 개발"
     ],
     "keywords_must": [
-      "하드 스킬(Hard Skills)",
-      "소프트 스킬(Soft Skills)",
-      "기술 전문성",
-      "의사소통",
-      "리더십",
-      "협상·갈등관리",
-      "감성지능(EQ)",
-      "측정 가능성"
+      "업무 방식(Ways of Working)",
+      "파워 스킬(Power Skills)",
+      "비즈니스 통찰(Business Acumen)",
+      "EVM·일정 도구",
+      "위험 분석·예산",
+      "방법론(예측·애자일)",
+      "협상·갈등 관리",
+      "감성 지능(EI)",
+      "의사소통·리더십"
     ],
     "keywords_ref": [
-      "PMI Talent Triangle",
-      "서번트 리더십",
-      "코칭",
-      "스토리텔링"
+      "2015 인재 삼각형: 기술적 PM·리더십·전략 비즈니스",
+      "파워 스킬 상위: 소통·문제 해결·협업·전략적 사고",
+      "측정·인증 가능(하드)",
+      "경험·피드백 개발(소프트)",
+      "7판 팀·이해관계자 성과 영역"
     ],
     "keywords": [
-      "Hard: 도구·도메인·분석",
-      "Soft: 소통·촉진·리더십",
-      "Talent Triangle: 방식+기술+비즈니스",
-      "고성과 PM=소프트 비중↑"
+      "PMI 인재 삼각형(2022): 업무 방식(Ways of Working) · 파워 스킬(Power Skills) · 비즈니스 통찰(Business Acumen)",
+      "하드 스킬: EVM·일정 도구 · 위험 분석·예산 · 방법론(예측·애자일)",
+      "소프트 스킬: 협상·갈등 관리 · 감성 지능(EI) · 의사소통·리더십"
     ],
     "sections": [
       {
-        "title": "하드",
+        "title": "역량 구분",
         "subsections": [
           {
-            "title": null,
+            "title": "구분",
             "items": [
-              "일정·원가·EVM·도구·도메인 지식 — 정량 평가 용이"
+              "하드 스킬: 지식·도구 활용",
+              "소프트 스킬: 사람·관계 관리",
+              "프로젝트 실패 원인 다수가 소프트 영역"
             ]
           }
         ]
       },
       {
-        "title": "소프트",
+        "title": "PMI 인재 삼각형",
         "subsections": [
           {
-            "title": null,
+            "title": "구성",
             "items": [
-              "경청, 설득, 갈등조정, 동기부여, 정치적 민감성"
+              "업무 방식: 예측·애자일·하이브리드 방법",
+              "파워 스킬: 소통·협업·공감",
+              "비즈니스 통찰: 전략·조직 목표 이해"
             ]
           }
         ]
       },
       {
-        "title": "균형",
+        "title": "비교와 개발 방안",
         "subsections": [
           {
-            "title": null,
+            "title": "비교 항목",
             "items": [
-              "기술만으로는 이해관계자·팀 성과를 못 끌어냄"
+              "습득: 교육·자격 vs 경험·코칭",
+              "측정: 쉬움 vs 어려움",
+              "예: EVM·스케줄링 vs 협상·감성 지능"
+            ]
+          },
+          {
+            "title": "개발",
+            "items": [
+              "자격 취득(PMP)",
+              "멘토링",
+              "360도 피드백",
+              "회고"
             ]
           }
         ]
@@ -9086,83 +9556,107 @@
     "note": null,
     "review": null,
     "quiz_terms": [
-      "하드 스킬(Hard Skills)",
-      "소프트 스킬(Soft Skills)",
-      "기술 전문성",
-      "의사소통",
-      "리더십",
-      "협상·갈등관리",
-      "감성지능(EQ)",
-      "측정 가능성"
+      "업무 방식(Ways of Working)",
+      "파워 스킬(Power Skills)",
+      "비즈니스 통찰(Business Acumen)",
+      "EVM·일정 도구",
+      "위험 분석·예산",
+      "방법론(예측·애자일)",
+      "협상·갈등 관리",
+      "감성 지능(EI)",
+      "의사소통·리더십"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "EVM": "Earned Value Management",
+      "EI": "Emotional Intelligence"
+    }
   },
   "PM_093": {
     "name": "오픈소스 프로젝트 관리 도구(Open-source PM Tools)",
     "en": "Open-source Project Management Tools",
     "title": "오픈소스 프로젝트 관리 도구(Open-source PM Tools)",
-    "definition": "이슈·칸반·위키·저장소를 제공하는 오픈소스·협업 도구로 계획·추적·소통을 지원. Redmine·GitLab 등이 대표적",
+    "definition": "프로젝트 일정·이슈·형상·협업을 관리하는 소스 공개 도구로, 라이선스 비용 없이 설치·커스터마이징할 수 있어 공공·중소 조직의 프로젝트 관리 시스템으로 활용됨",
     "outline": [
-      "개념",
+      "오픈소스 도구 특징",
+      "- 장점",
       "대표 도구",
-      "선택 기준",
-      "주의점"
+      "- 도구",
+      "도입 시 고려사항",
+      "- 고려"
     ],
     "keywords_must": [
       "Redmine",
       "GitLab",
-      "GitHub Projects",
-      "Trello류 칸반",
-      "Wiki",
+      "OpenProject",
+      "Taiga",
+      "Wekan(칸반)",
       "이슈 트래킹(Issue Tracking)",
-      "저장소 연동",
-      "권한·감사 로그"
+      "간트·일정 관리",
+      "위키(Wiki)",
+      "저장소 연동(Git)",
+      "라이선스(GPL·MIT)",
+      "커뮤니티 활성도"
     ],
     "keywords_ref": [
-      "Jira(상용)",
-      "Slack/Mattermost",
-      "CI 연동",
-      "데이터 이전"
+      "Jira·MS Project(상용)와 비교",
+      "권한·감사 로그",
+      "플러그인 확장",
+      "설치형 vs SaaS",
+      "유지보수 책임",
+      "데이터 주권",
+      "GitHub Projects"
     ],
     "keywords": [
-      "이슈+보드+Wiki+저장소",
-      "선택: 규모·보안·통합",
-      "온프레미스 vs SaaS",
-      "프로세스 없는 도구는 낭비"
+      "대표 도구: Redmine · GitLab · OpenProject · Taiga · Wekan(칸반)",
+      "핵심 기능: 이슈 트래킹(Issue Tracking) · 간트·일정 관리 · 위키(Wiki) · 저장소 연동(Git)",
+      "선정 기준: 라이선스(GPL·MIT) · 커뮤니티 활성도"
     ],
     "sections": [
       {
-        "title": "개념",
+        "title": "오픈소스 도구 특징",
         "subsections": [
           {
-            "title": null,
+            "title": "장점",
             "items": [
-              "PM 프로세스를 뒷받침하는 협업·추적 도구"
+              "비용 절감",
+              "커스터마이징",
+              "데이터 내부 보관",
+              "단점: 기술 지원 부족",
+              "운영 인력 필요"
             ]
           }
         ]
       },
       {
-        "title": "도구 예",
+        "title": "대표 도구",
         "subsections": [
           {
-            "title": null,
+            "title": "도구",
             "items": [
-              "Redmine, GitLab, GitHub, 칸반 보드, Wiki, 메신저"
+              "Redmine: 이슈·간트·위키, Ruby on Rails",
+              "GitLab: 저장소·이슈·CI/CD 통합",
+              "OpenProject: 간트·애자일 보드",
+              "Taiga: 스크럼·칸반",
+              "Wekan: 칸반 보드"
             ]
           }
         ]
       },
       {
-        "title": "선택",
+        "title": "도입 시 고려사항",
         "subsections": [
           {
-            "title": null,
+            "title": "고려",
             "items": [
-              "보안·접근통제, 플러그인, CI/CD 연동, 학습비용, 라이선스"
+              "라이선스 의무",
+              "커뮤니티·업데이트 주기",
+              "보안 패치",
+              "기존 시스템 연동",
+              "백업·권한 관리"
             ]
           }
         ]
@@ -9176,17 +9670,24 @@
     "quiz_terms": [
       "Redmine",
       "GitLab",
-      "GitHub Projects",
-      "Trello류 칸반",
-      "Wiki",
+      "OpenProject",
+      "Taiga",
+      "Wekan(칸반)",
       "이슈 트래킹(Issue Tracking)",
-      "저장소 연동",
-      "권한·감사 로그"
+      "간트·일정 관리",
+      "위키(Wiki)",
+      "저장소 연동(Git)",
+      "라이선스(GPL·MIT)",
+      "커뮤니티 활성도"
     ],
     "quiz_groups": [
       "pm"
     ],
-    "quiz_avoid": []
+    "reviewed": true,
+    "gloss": {
+      "CI": "Continuous Integration",
+      "CD": "Continuous Delivery/Deployment"
+    }
   },
   "PM_094": {
     "name": "기업환경요인(EEF, Enterprise Environmental Factors)",

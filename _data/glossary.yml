@@ -88,6 +88,7 @@ BCP: Business Continuity Plan
 BCR: Benefit-Cost Ratio
 BDP: Bandwidth-Delay Product
 BDR: Backup Designated Router
+BDUF: Big Design Up Front
 BEC: Backward Error Correction
 BECN: Backward Explicit Congestion Notification
 BEMS: Building Energy Management System
@@ -195,6 +196,7 @@ DBD: Database Description
 DCE: [Data Circuit-terminating Equipment, Distributed Computing Environment]
 DCF: [Distributed Coordination Function, Discounted Cash Flow]
 DCT: Discrete Cosine Transform
+DEEP: Detailed appropriately, Estimated, Emergent, Prioritized
 DEMUX: Demultiplexer
 DENM: Decentralized Environmental Notification Message
 DER: [Distinguished Encoding Rules, Distributed Energy Resources]
@@ -225,6 +227,7 @@ DoD: Definition of Done
 DOE: Design of Experiments
 DoH: DNS over HTTPS
 DoQ: DNS over QUIC
+DoR: Definition of Ready
 DoT: DNS over TLS
 DPCM: Differential Pulse Code Modulation
 DPDK: Data Plane Development Kit
@@ -428,6 +431,7 @@ IMT: International Mobile Telecommunications
 IMT-2020: International Mobile Telecommunications-2020
 IMT-Advanced: International Mobile Telecommunications-Advanced
 IntServ: Integrated Services
+INVEST: Independent, Negotiable, Valuable, Estimable, Small, Testable
 IoB: Internet of Behavior
 IoC: Inversion of Control
 IoE: Internet of Everything
@@ -570,6 +574,7 @@ MOF: Meta-Object Facility
 MORAN: Multi-Operator Radio Access Network
 MoS: Mean Opinion Score
 MOS: Mean Opinion Score
+MoSCoW: Must, Should, Could, Won't
 MOSPF: Multicast Open Shortest Path First
 MOT: Management of Technology
 MOU: Memorandum of Understanding
@@ -699,6 +704,7 @@ PAPR: Peak-to-Average Power Ratio
 PAT: Port Address Translation
 PAwR: Periodic Advertising with Responses
 PBB: Provider Backbone Bridge
+PBI: Product Backlog Item
 PC5: ProSe Communication 5 (Sidelink Interface)
 PCA: Principal Component Analysis
 PCell: Primary Cell
@@ -735,6 +741,7 @@ PMP: Project Management Professional
 PMTUD: Path MTU Discovery
 PN: Pseudo-Noise
 PNG: Portable Network Graphics
+PO: Product Owner
 PoE: Power over Ethernet
 POLQA: Perceptual Objective Listening Quality Analysis
 POP: [Point of Presence, Point of Purchase, Point of Production]
@@ -843,6 +850,7 @@ SA: [Standalone, Single Agent]
 SABM: Set Asynchronous Balanced Mode
 SACK: Selective Acknowledgment
 SAE: Society of Automotive Engineers
+SAFe: Scaled Agile Framework
 SAI: Switch Abstraction Interface
 SAM: [Slot Availability Mask, Spatial Access Method, Software Asset Management, Serviceable Addressable Market]
 SAP: [Service Access Point]
@@ -977,6 +985,7 @@ TSDSI: Telecommunications Standards Development Society, India
 TSN: Time-Sensitive Networking
 TTA: Telecommunications Technology Association
 TTC: Telecommunication Technology Committee
+TTFC: Time To First Call
 TTI: Transmission Time Interval
 TTL: Time To Live
 TURN: Traversal Using Relays around NAT
@@ -1011,6 +1020,7 @@ UTRA: UMTS Terrestrial Radio Access
 UTRAN: UMTS Terrestrial Radio Access Network
 UUID: Universally Unique Identifier
 UWB: Ultra-Wideband
+UX: User Experience
 V2I: Vehicle-to-Infrastructure
 V2N: Vehicle-to-Network
 V2P: Vehicle-to-Pedestrian
@@ -1047,6 +1057,7 @@ VRID: Virtual Router Identifier
 VRM: Vendor Relationship Management
 VRRP: Virtual Router Redundancy Protocol
 VRS: Virtual Reference Station
+VSM: Value Stream Mapping
 VXLAN: Virtual Extensible LAN
 W3C: World Wide Web Consortium
 WAL: Write-Ahead Logging
@@ -1077,6 +1088,8 @@ XEP: XMPP Extension Protocol
 XML: eXtensible Markup Language
 XMPP: eXtensible Messaging and Presence Protocol
 XOR: Exclusive OR
+XP: Extreme Programming
+YAGNI: You Aren't Gonna Need It
 ZRP: Zone Routing Protocol
 ZSK: Zone Signing Key
 ZSM: Zero-touch network and Service Management
