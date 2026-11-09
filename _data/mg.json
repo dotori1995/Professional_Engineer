@@ -297,7 +297,11 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": "토셀자코(Total·Selective·자회사·Co-sourcing)"
+  "dueum": "토셀자코(Total·Selective·자회사·Co-sourcing)",
+  "gloss": {
+   "AS": null,
+   "TFT": "Task Force Team"
+  }
  },
  {
   "id": "MG_003",
@@ -706,7 +710,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SIP": "Service Improvement Plan"
+  }
  },
  {
   "id": "MG_006",
@@ -855,7 +862,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": "AS 분데특신의(연관성·연속성·분류·데이터 군집화·특성화·신경망·의사결정나무)"
+  "dueum": "AS 분데특신의(연관성·연속성·분류·데이터 군집화·특성화·신경망·의사결정나무)",
+  "gloss": {
+   "AS": null
+  }
  },
  {
   "id": "MG_007",
@@ -1127,7 +1137,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SCM": "Supply Chain Management"
+  }
  },
  {
   "id": "MG_009",
@@ -1682,7 +1695,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SOM": "Self-Organizing Map"
+  }
  },
  {
   "id": "MG_013",
@@ -1810,7 +1826,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SFD": "Stock and Flow Diagram"
+  }
  },
  {
   "id": "MG_015",
@@ -1958,7 +1977,8 @@
   "reviewed": true,
   "dueum": null,
   "gloss": {
-   "RTO": "Recovery Time Objective"
+   "RTO": "Recovery Time Objective",
+   "CMP": "Crisis Management Plan"
   }
  },
  {
@@ -2085,7 +2105,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "HLS": "High Level Structure"
+  }
  },
  {
   "id": "MG_017",
@@ -2882,7 +2905,8 @@
   "reviewed": true,
   "dueum": null,
   "gloss": {
-   "RTO": "Recovery Time Objective"
+   "RTO": "Recovery Time Objective",
+   "CDP": "Continuous Data Protection"
   }
  },
  {
@@ -3515,7 +3539,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "STP": "Segmentation·Targeting·Positioning"
+  }
  },
  {
   "id": "MG_030",
@@ -4364,7 +4391,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "STP": "Segmentation·Targeting·Positioning"
+  }
  },
  {
   "id": "MG_037_0",
@@ -4986,7 +5016,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": "수명주기 5단계: 전설전운지(전략·설계·전환·운영·지속적 개선)"
+  "dueum": "수명주기 5단계: 전설전운지(전략·설계·전환·운영·지속적 개선)",
+  "gloss": {
+   "CSI": "Continual Service Improvement"
+  }
  },
  {
   "id": "MG_040",
@@ -5110,7 +5143,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SVC": "Service Value Chain"
+  }
  },
  {
   "id": "MG_045",
@@ -5236,7 +5272,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "CDP": "Customer Data Platform"
+  }
  },
  {
   "id": "MG_046",
@@ -5480,7 +5519,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SAP": null
+  }
  },
  {
   "id": "MG_048",
@@ -5618,7 +5660,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "ABM": "Activity-Based Management"
+  }
  },
  {
   "id": "MG_049",
@@ -5999,7 +6044,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SOA": "Service-Oriented Architecture"
+  }
  },
  {
   "id": "MG_053",
@@ -6267,7 +6315,11 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SOA": "Service-Oriented Architecture",
+   "EDA": "Event-Driven Architecture"
+  }
  },
  {
   "id": "MG_055",
@@ -6407,7 +6459,11 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": "수행 절차: 환현정목통(환경 분석·현황 분석·정보화 비전·목표모델·통합 이행계획)"
+  "dueum": "수행 절차: 환현정목통(환경 분석·현황 분석·정보화 비전·목표모델·통합 이행계획)",
+  "gloss": {
+   "ISP": "Information Strategy Planning",
+   "FP": "Function Point"
+  }
  },
  {
   "id": "MG_056",
@@ -6563,7 +6619,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "MG_057",
@@ -6941,7 +7000,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SCM": "Supply Chain Management"
+  }
  },
  {
   "id": "MG_060",
@@ -7702,7 +7764,12 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "ADM": "Architecture Development Method",
+   "PRM": "Performance Reference Model",
+   "TRM": "Technical Reference Model"
+  }
  },
  {
   "id": "MG_067",
@@ -7952,7 +8019,11 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "PRM": "Performance Reference Model",
+   "TRM": "Technical Reference Model"
+  }
  },
  {
   "id": "MG_069",
@@ -8201,7 +8272,11 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "CPM": "Corporate Performance Management",
+   "ABM": "Activity-Based Management"
+  }
  },
  {
   "id": "MG_071",
@@ -8582,7 +8657,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": "목적: 가자최통(가시화·자동화·최적화·통합)"
+  "dueum": "목적: 가자최통(가시화·자동화·최적화·통합)",
+  "gloss": {
+   "SOA": "Service-Oriented Architecture"
+  }
  },
  {
   "id": "MG_075",
@@ -8831,7 +8909,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SOA": "Service-Oriented Architecture"
+  }
  },
  {
   "id": "MG_077_0",
@@ -9074,7 +9155,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SCM": "Supply Chain Management"
+  }
  },
  {
   "id": "MG_078",
@@ -9584,7 +9668,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SCM": "Supply Chain Management"
+  }
  },
  {
   "id": "MG_082",
@@ -9712,7 +9799,11 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "PRM": "Partner Relationship Management",
+   "SCM": "Supply Chain Management"
+  }
  },
  {
   "id": "MG_083",
@@ -9838,7 +9929,13 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "ECM": "Engineering Change Management",
+   "BOM": "Bill of Materials",
+   "SCM": "Supply Chain Management",
+   "CAM": "Computer-Aided Manufacturing"
+  }
  },
  {
   "id": "MG_084",
@@ -9964,7 +10061,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "ALM": "Application Lifecycle Management"
+  }
  },
  {
   "id": "MG_085",
@@ -10211,7 +10311,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SCM": "Supply Chain Management"
+  }
  },
  {
   "id": "MG_087",
@@ -10465,7 +10568,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SOA": "Service-Oriented Architecture"
+  }
  },
  {
   "id": "MG_089",
@@ -10998,7 +11104,12 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "PPM": "Project Portfolio Management",
+   "EDM": "Evaluate, Direct and Monitor",
+   "SCM": "Supply Chain Management"
+  }
  },
  {
   "id": "MG_098",
@@ -11124,7 +11235,11 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": "5원칙: 통이비인거, 7 Enabler: 원프조문 정서인, 프로세스: EDM·APO·BAI·DSS·MEA"
+  "dueum": "5원칙: 통이비인거, 7 Enabler: 원프조문 정서인, 프로세스: EDM·APO·BAI·DSS·MEA",
+  "gloss": {
+   "EDM": "Evaluate, Direct and Monitor",
+   "DSS": "Deliver, Service and Support"
+  }
  },
  {
   "id": "MG_099_0",
@@ -11528,7 +11643,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": "6원칙: 책준전구성인(책임·준거·전략·획득·성과·인간 행동)"
+  "dueum": "6원칙: 책준전구성인(책임·준거·전략·획득·성과·인간 행동)",
+  "gloss": {
+   "EDM": "Evaluate, Direct and Monitor"
+  }
  },
  {
   "id": "MG_101",
@@ -12356,7 +12474,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "PMS": "Patch Management System"
+  }
  },
  {
   "id": "MG_107",
@@ -12600,7 +12721,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "MVP": "Minimum Viable Product"
+  }
  },
  {
   "id": "MG_110_1",
@@ -12844,7 +12968,12 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SAM": "Serviceable Addressable Market",
+   "TAM": "Total Addressable Market",
+   "SOM": "Serviceable Obtainable Market"
+  }
  },
  {
   "id": "MG_111",
@@ -14649,7 +14778,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SOA": "Service-Oriented Architecture"
+  }
  },
  {
   "id": "MG_131",
@@ -15432,7 +15564,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "TFT": "Task Force Team"
+  }
  },
  {
   "id": "MG_138",
@@ -16087,7 +16222,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "PC": "Personal Computer"
+  }
  },
  {
   "id": "MG_143",
@@ -16590,7 +16728,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "GS": null
+  }
  },
  {
   "id": "MG_151",
@@ -16849,7 +16990,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "MG_155",
@@ -17377,7 +17521,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "TRM": "Technology Roadmap"
+  }
  },
  {
   "id": "MG_159",
@@ -17638,7 +17785,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "STP": "Segmentation·Targeting·Positioning"
+  }
  },
  {
   "id": "MG_163",
@@ -18141,7 +18291,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "DCF": "Discounted Cash Flow"
+  }
  },
  {
   "id": "MG_166",
@@ -19007,7 +19160,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "MVP": "Minimum Viable Product"
+  }
  },
  {
   "id": "MG_175",
@@ -19665,6 +19821,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "PLC": "Programmable Logic Controller",
+   "POP": "Point of Production"
+  }
  }
 ]

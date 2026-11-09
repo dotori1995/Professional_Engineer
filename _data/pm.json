@@ -973,7 +973,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "RAM": "Responsibility Assignment Matrix"
+  }
  },
  {
   "id": "PM_013",
@@ -2913,7 +2916,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "CPM": "Critical Path Method"
+  }
  },
  {
   "id": "PM_032",
@@ -3011,7 +3017,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "EVM": "Earned Value Management"
+  }
  },
  {
   "id": "PM_033",
@@ -3304,7 +3313,11 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "CPM": "Critical Path Method",
+   "EF": "Early Finish"
+  }
  },
  {
   "id": "PM_036",
@@ -3401,7 +3414,11 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "CPM": "Critical Path Method",
+   "EF": "Early Finish"
+  }
  },
  {
   "id": "PM_037",
@@ -3504,7 +3521,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "CPM": "Critical Path Method"
+  }
  },
  {
   "id": "PM_038",
@@ -3606,7 +3626,11 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "CPM": "Critical Path Method",
+   "EF": "Early Finish"
+  }
  },
  {
   "id": "PM_040",
@@ -4093,7 +4117,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "EVM": "Earned Value Management"
+  }
  },
  {
   "id": "PM_045_1",
@@ -4189,7 +4216,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "PM_045_2",
@@ -4288,7 +4318,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "PM_046",
@@ -4390,7 +4423,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "EVM": "Earned Value Management"
+  }
  },
  {
   "id": "PM_047",
@@ -4966,7 +5002,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "RAM": "Responsibility Assignment Matrix"
+  }
  },
  {
   "id": "PM_053",
@@ -5066,7 +5105,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "RAM": "Responsibility Assignment Matrix"
+  }
  },
  {
   "id": "PM_054",
@@ -6123,7 +6165,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "PM_065",
@@ -6232,7 +6277,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "PM_066",
@@ -6911,7 +6959,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TDD": "Test-Driven Development"
+  }
  },
  {
   "id": "PM_075",
@@ -7200,7 +7251,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TPS": "Toyota Production System"
+  }
  },
  {
   "id": "PM_078",
@@ -7295,7 +7349,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MVP": "Minimum Viable Product"
+  }
  },
  {
   "id": "PM_079",
@@ -7390,7 +7447,11 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "PMF": "Product-Market Fit",
+   "MVP": "Minimum Viable Product"
+  }
  },
  {
   "id": "PM_080",
@@ -7487,7 +7548,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TDD": "Test-Driven Development"
+  }
  },
  {
   "id": "PM_081",
@@ -7583,7 +7647,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SCM": "Software Configuration Management"
+  }
  },
  {
   "id": "PM_082",
@@ -7971,7 +8038,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "EVM": "Earned Value Management"
+  }
  },
  {
   "id": "PM_086",
@@ -8546,7 +8616,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "DX": "Developer Experience"
+  }
  },
  {
   "id": "PM_091",
@@ -8737,7 +8810,10 @@
    "pm"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "EVM": "Earned Value Management"
+  }
  },
  {
   "id": "PM_093",

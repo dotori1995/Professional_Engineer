@@ -540,7 +540,10 @@
    "상충 관계(Trade-off)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "FP": "False Positive"
+  }
  },
  {
   "id": "ST_006",
@@ -860,7 +863,11 @@
    "클래스 불균형(Class Imbalance)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "FP": "False Positive",
+   "AP": "Average Precision"
+  }
  },
  {
   "id": "ST_008",
@@ -1075,7 +1082,10 @@
    "비지도학습(Unsupervised Learning)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "FP": "Frequent Pattern"
+  }
  },
  {
   "id": "ST_010",
@@ -1378,7 +1388,10 @@
    "분산(Variance)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "PMF": "Probability Mass Function"
+  }
  },
  {
   "id": "ST_016",

@@ -964,7 +964,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "CSS": "Cascading Style Sheets"
+  }
  },
  {
   "id": "SV_010",
@@ -2169,7 +2172,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "CSS": "Cascading Style Sheets"
+  }
  },
  {
   "id": "SV_020_1",
@@ -2964,7 +2970,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CSS": "Cascading Style Sheets"
+  }
  },
  {
   "id": "SV_028",
@@ -3976,7 +3985,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CMP": "Cloud Management Platform"
+  }
  },
  {
   "id": "SV_037",
@@ -6620,7 +6632,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "HCI": "Hyper-Converged Infrastructure"
+  }
  },
  {
   "id": "SV_067",
@@ -7300,7 +7315,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "FEC": "Fabric-Enabled Computer"
+  }
  },
  {
   "id": "SV_071",
@@ -8427,7 +8445,11 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "ESS": "Energy Storage System",
+   "PLC": "Programmable Logic Controller"
+  }
  },
  {
   "id": "SV_083",
@@ -8530,7 +8552,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "BOM": "Build-Operate-Manage"
+  }
  },
  {
   "id": "SV_084",
@@ -9740,7 +9765,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "SCM": "Supply Chain Management"
+  }
  },
  {
   "id": "SV_126",
@@ -10890,7 +10918,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PRM": "Partner Relationship Management"
+  }
  },
  {
   "id": "SV_153",
@@ -11771,7 +11802,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PC": "Personal Computer"
+  }
  },
  {
   "id": "SV_162",
@@ -11958,7 +11992,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PC": "Personal Computer"
+  }
  },
  {
   "id": "SV_164",
@@ -12644,7 +12681,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "HCI": "Hyper-Converged Infrastructure"
+  }
  },
  {
   "id": "SV_170",
@@ -12918,7 +12958,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_180",
@@ -13489,7 +13532,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_187",
@@ -13594,7 +13640,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_188",
@@ -13679,7 +13728,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_189",
@@ -13872,7 +13924,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_191",
@@ -14256,7 +14311,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_197",
@@ -14339,7 +14397,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_198",
@@ -15412,7 +15473,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "DX": "Digital Transformation"
+  }
  },
  {
   "id": "SV_215",
@@ -15517,7 +15581,11 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "EMS": "Energy Management System",
+   "PLC": "Programmable Logic Controller"
+  }
  },
  {
   "id": "SV_216",
@@ -15820,7 +15888,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PLC": "Programmable Logic Controller"
+  }
  },
  {
   "id": "SV_219",
@@ -15912,7 +15983,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PLC": "Programmable Logic Controller"
+  }
  },
  {
   "id": "SV_220",
@@ -16120,7 +16194,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PLC": "Programmable Logic Controller"
+  }
  },
  {
   "id": "SV_222",
@@ -16207,7 +16284,11 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "EMS": "Energy Management System",
+   "ESS": "Energy Storage System"
+  }
  },
  {
   "id": "SV_223",
@@ -16405,7 +16486,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PLC": "Programmable Logic Controller"
+  }
  },
  {
   "id": "SV_224_01",
@@ -16525,7 +16609,11 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PLC": "Programmable Logic Controller",
+   "FMS": "Flexible Manufacturing System"
+  }
  },
  {
   "id": "SV_225",
@@ -16630,7 +16718,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "HCI": "Human-Computer Interaction"
+  }
  },
  {
   "id": "SV_226",
@@ -16823,7 +16914,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "HCI": "Human-Computer Interaction"
+  }
  },
  {
   "id": "SV_230",
@@ -17507,7 +17601,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PLC": "Power Line Communication"
+  }
  },
  {
   "id": "SV_261",
@@ -17616,7 +17713,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "EMS": "Energy Management System"
+  }
  },
  {
   "id": "SV_262",
@@ -17727,7 +17827,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "ESS": "Energy Storage System"
+  }
  },
  {
   "id": "SV_263",
@@ -17830,7 +17933,11 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "ESS": "Energy Storage System",
+   "PMS": "Power Management System"
+  }
  },
  {
   "id": "SV_265",
@@ -17920,7 +18027,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "ESS": "Energy Storage System"
+  }
  },
  {
   "id": "SV_267",
@@ -18004,7 +18114,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "DER": "Distributed Energy Resources"
+  }
  },
  {
   "id": "SV_268",
@@ -18568,7 +18681,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_274",
@@ -19309,7 +19425,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "TAM": "Technology Acceptance Model"
+  }
  },
  {
   "id": "SV_282",
@@ -19836,7 +19955,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CAM": "Content Aggregation Model"
+  }
  },
  {
   "id": "SV_287",
@@ -21185,7 +21307,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "TPS": "Transactions Per Second"
+  }
  },
  {
   "id": "SV_325_00",
@@ -21585,7 +21710,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "IMS": "IMS Global Learning Consortium"
+  }
  },
  {
   "id": "SV_327_3",
@@ -21868,7 +21996,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "POP": "Point of Purchase"
+  }
  },
  {
   "id": "SV_333_01",
@@ -23788,7 +23919,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_352",
@@ -24366,7 +24500,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "DSP": "Digital Signal Processing"
+  }
  },
  {
   "id": "SV_364",
@@ -24749,7 +24886,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "MCU": "Microcontroller Unit"
+  }
  },
  {
   "id": "SV_366_2",
@@ -25114,7 +25254,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_370",
@@ -25193,7 +25336,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "IMS": "IMS Global Learning Consortium"
+  }
  },
  {
   "id": "SV_373_0",
@@ -25364,7 +25510,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "RAM": "Regional Air Mobility"
+  }
  },
  {
   "id": "SV_382",
@@ -25684,7 +25833,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CSS": "Cascading Style Sheets"
+  }
  },
  {
   "id": "SV_387",
@@ -26149,7 +26301,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "TFT": "Thin Film Transistor"
+  }
  },
  {
   "id": "SV_398",
@@ -26781,7 +26936,10 @@
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CAM": "Content Aggregation Model"
+  }
  },
  {
   "id": "SV_405_0",

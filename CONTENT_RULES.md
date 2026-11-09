@@ -111,3 +111,5 @@
 - 뜻이 여러 개인 약어는 glossary.yml에 목록으로 적는다(예: `RTO: [Recovery Time Objective, Retransmission TimeOut]`). 목록 약어는 자동 풀이를 하지 않는다.
 - 토픽에서 풀이가 필요하면 토픽 JSON에 `"gloss": {"RTO": "Recovery Time Objective"}`를 넣는다. 토픽 gloss가 사전보다 우선한다.
 - 사전에 하나로 등록된 약어도 그 토픽 문맥에서 뜻이 다르면 토픽 gloss로 덮어쓴다.
+- 풀이를 막으려면 gloss 값을 `null`로 둔다(예: 제품·회사명 SAP, CAP 조합 AP).
+- `AS-IS`·`PIM-SM`처럼 하이픈으로 붙은 약어와 `GS리테일`처럼 회사명 꼬리가 붙은 약어는 자동 풀이하지 않는다.

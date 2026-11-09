@@ -32,7 +32,7 @@ AIMD: Additive Increase Multiplicative Decrease
 AIoE: Ambient Internet of Everything
 ALB: Application Load Balancer
 ALG: Application Level Gateway
-ALM: Application Lifecycle Management
+ALM: [Application Lifecycle Management, Application Layer Multicast]
 AMC: Adaptive Modulation and Coding
 AMF: Access and Mobility Management Function
 AMI: Advanced Metering Infrastructure
@@ -44,7 +44,7 @@ ANSI: American National Standards Institute
 AoA: Angle of Arrival
 AODV: Ad hoc On-demand Distance Vector
 AOP: Aspect-Oriented Programming
-AP: [Access Point, Application Processor, Action Priority]
+AP: [Access Point, Application Processor, Action Priority, Average Precision]
 APIPA: Automatic Private IP Addressing
 APS: Automatic Protection Switching
 APTEEN: Adaptive Periodic Threshold-sensitive Energy Efficient sensor Network
@@ -98,11 +98,11 @@ BPR: Business Process Reengineering
 BPSK: Binary Phase Shift Keying
 BSC: Balanced Scorecard
 BSM: Basic Safety Message
-BSS: Business Support System
+BSS: [Basic Service Set, Business Support System]
 BWS: Broadcast Website
 C-V2X: Cellular Vehicle-to-Everything
 CALM: Communications Access for Land Mobiles
-CAM: Cooperative Awareness Message
+CAM: [Cooperative Awareness Message, Computer-Aided Manufacturing, Content Aggregation Model]
 CAN: Controller Area Network
 CAPEX: Capital Expenditure
 CATV: Community Antenna Television
@@ -141,7 +141,7 @@ COQ: Cost of Quality
 CoRE: Constrained RESTful Environments
 CORS: Continuously Operating Reference Station
 CPE: Customer Premises Equipment
-CPM: [Critical Path Method, Counting Practices Manual]
+CPM: [Critical Path Method, Counting Practices Manual, Corporate Performance Management]
 CPU: Central Processing Unit
 CQ: Custom Queuing
 CQI: Channel Quality Indicator
@@ -151,13 +151,13 @@ CRM: Customer Relationship Management
 CSA: Connectivity Standards Alliance
 CSCF: Call Session Control Function
 CSE: Common Services Entity
-CSI: Channel State Information
+CSI: [Channel State Information, Continual Service Improvement]
 CSMA: Carrier Sense Multiple Access
 CSMA/CA: Carrier Sense Multiple Access with Collision Avoidance
 CSMA/CD: Carrier Sense Multiple Access with Collision Detection
 CSMS: Cyber Security Management System
 CSRC: Contributing Source
-CSS: Chirp Spread Spectrum
+CSS: [Cascading Style Sheets, Chirp Spread Spectrum]
 CTS: Clear To Send
 CU: Central Unit
 CUBIC: CUBIC TCP Congestion Control
@@ -167,11 +167,11 @@ DAC: Device Attestation Certificate
 DAI: Dynamic ARP Inspection
 DASH: Dynamic Adaptive Streaming over HTTP
 DCE: [Data Circuit-terminating Equipment, Distributed Computing Environment]
-DCF: Distributed Coordination Function
+DCF: [Distributed Coordination Function, Discounted Cash Flow]
 DCT: Discrete Cosine Transform
 DEMUX: Demultiplexer
 DENM: Decentralized Environmental Notification Message
-DER: Distinguished Encoding Rules
+DER: [Distinguished Encoding Rules, Distributed Energy Resources]
 DevRel: Developer Relations
 DF: ["Don't Fragment", Degrees of Freedom]
 DFT: Discrete Fourier Transform
@@ -212,20 +212,20 @@ DSCP: Differentiated Services Code Point
 DSDV: Destination-Sequenced Distance Vector
 DSN: Data Sequence Number
 DSO: Dynamic Subchannel Operation
-DSP: Demand-Side Platform
-DSR: Dynamic Source Routing
+DSP: Digital Signal Processing
+DSR: [Dynamic Source Routing, Direct Server Return]
 DSRC: Dedicated Short-Range Communications
 DSSS: Direct Sequence Spread Spectrum
 DST: Digital Services Tax
 DTE: Data Terminal Equipment
 DTLS: Datagram Transport Layer Security
-DTN: Digital Twin Network
+DTN: [Delay/Disruption-Tolerant Networking, Digital Twin Network]
 DU: Distributed Unit
 DVA: Distance Vector Algorithm
 DVB-T: Digital Video Broadcasting – Terrestrial
 DVMRP: Distance Vector Multicast Routing Protocol
 DWDM: Dense Wavelength Division Multiplexing
-DX: Developer Experience
+DX: [Digital Transformation, Developer Experience]
 E2E: End-to-End
 EA: Enterprise Architecture
 EAC: Estimate at Completion
@@ -234,7 +234,7 @@ EAP: Extensible Authentication Protocol
 EBCDIC: Extended Binary Coded Decimal Interchange Code
 EBS: Excess Burst Size
 eCall: Emergency Call
-ECC: Elliptic Curve Cryptography
+ECC: [Elliptic Curve Cryptography, Error-Correcting Code]
 ECDH: Elliptic Curve Diffie-Hellman
 ECDSA: Elliptic Curve Digital Signature Algorithm
 ECG: Electrocardiogram
@@ -247,14 +247,14 @@ EDNS0: Extension Mechanisms for DNS version 0
 EEBL: Emergency Electronic Brake Light
 EEF: Enterprise Environmental Factors
 EERD: Enhanced Entity Relationship Diagram
-EF: Expedited Forwarding
+EF: [Expedited Forwarding, Early Finish]
 EGP: Exterior Gateway Protocol
 EHT: Extremely High Throughput
 EIF: External Interface File
 EIFS: Extended Inter-Frame Space
 EIGRP: Enhanced Interior Gateway Routing Protocol
 EMI: Electromagnetic Interference
-EMS: Element Management System
+EMS: [Element Management System, Energy Management System]
 EMV: Expected Monetary Value
 EN-DC: E-UTRA NR Dual Connectivity
 EPC: Evolved Packet Core
@@ -265,11 +265,11 @@ ERPS: Ethernet Ring Protection Switching
 ESG: Environment Social Governance
 ESM: Enterprise Security Management
 ESP: Encapsulating Security Payload
-ESS: Extended Service Set
+ESS: [Extended Service Set, Energy Storage System]
 ETC: Estimate to Complete
 ETL: Extract Transform Load
 EVC: Ethernet Virtual Connection
-EVM: Earned Value Management
+EVM: [Earned Value Management, Error Vector Magnitude]
 FANET: Flying Ad-hoc Network
 FCC: Federal Communications Commission
 FCS: Frame Check Sequence
@@ -277,7 +277,7 @@ FCW: Forward Collision Warning
 FDDI: Fiber Distributed Data Interface
 FDM: Frequency Division Multiplexing
 FDMA: Frequency Division Multiple Access
-FEC: Forward Error Correction
+FEC: [Forward Error Correction, Forwarding Equivalence Class, Fabric-Enabled Computer]
 FECN: Forward Explicit Congestion Notification
 FEMS: Factory Energy Management System
 FFP: Firm Fixed Price
@@ -288,7 +288,7 @@ FIN: Finish
 FKP: Flächenkorrekturparameter
 FMC: Fixed Mobile Convergence
 FMEA: Failure Mode and Effects Analysis
-FMS: Fixed Mobile Substitution
+FMS: Flexible Manufacturing System
 FOTA: Firmware Over-The-Air
 FP: [Function Point, False Positive, Frequent Pattern]
 FPC: Finite Population Correction
@@ -314,7 +314,7 @@ GIF: Graphics Interchange Format
 GloBE: Global Anti-Base Erosion
 GLONASS: Global Navigation Satellite System (Russia)
 GNSS: Global Navigation Satellite System
-GPS: Global Positioning System
+GPS: [Global Positioning System, Generalized Processor Sharing]
 GPSR: Greedy Perimeter Stateless Routing
 GRE: Generic Routing Encapsulation
 GRU: Gated Recurrent Unit
@@ -327,7 +327,7 @@ HARQ: Hybrid Automatic Repeat reQuest
 HAZOP: Hazard and Operability Study
 HBC: Human Body Communication
 HCE: Host Card Emulation
-HCI: Hyper-Converged Infrastructure
+HCI: [Hyper-Converged Infrastructure, Human-Computer Interaction]
 HDLC: High-level Data Link Control
 HEMS: Home Energy Management System
 HMAC: Hash-based Message Authentication Code
@@ -344,7 +344,7 @@ HTTPS: HTTP Secure
 IASB: International Accounting Standards Board
 IBN: Intent-Based Networking
 IBSS: Independent Basic Service Set
-ICE: Interactive Connectivity Establishment
+ICE: [Interactive Connectivity Establishment, In-Circuit Emulator]
 ICMP: Internet Control Message Protocol
 ICMPv6: Internet Control Message Protocol for IPv6
 IDS: Intrusion Detection System
@@ -364,7 +364,7 @@ ILF: Internal Logical File
 ILM: Information Lifecycle Management
 IMA: Intersection Movement Assist
 IMAP: Internet Message Access Protocol
-IMS: IP Multimedia Subsystem
+IMS: [IP Multimedia Subsystem, IMS Global Learning Consortium]
 IMT-2020: International Mobile Telecommunications-2020
 IMT-Advanced: International Mobile Telecommunications-Advanced
 IntServ: Integrated Services
@@ -444,7 +444,7 @@ LSH: Locality-Sensitive Hashing
 LSN: Log Sequence Number
 LSNAT: Load Sharing Network Address Translation
 LSP: [Label Switched Path, Liskov Substitution Principle]
-LSR: Label Switching Router
+LSR: [Label Switching Router, Link State Request]
 LSTM: Long Short-Term Memory
 LTE: Long Term Evolution
 LTE-R: LTE-Railway
@@ -453,7 +453,7 @@ LwM2M: Lightweight Machine-to-Machine
 LWT: Last Will and Testament
 LZW: Lempel-Ziv-Welch
 M2M: Machine-to-Machine
-MAC: Medium Access Control
+MAC: [Medium Access Control, Message Authentication Code, Master-Auxiliary Concept]
 MADD: Mobile Agent-based Directed Diffusion
 MAN: Metropolitan Area Network
 MANET: Mobile Ad hoc Network
@@ -463,12 +463,12 @@ MBAP: Modbus Application Protocol
 MBR: Minimum Bounding Rectangle
 MCL: Maximum Coupling Loss
 MCPTT: Mission Critical Push-To-Talk
-MCU: Multipoint Control Unit
+MCU: [Microcontroller Unit, Multipoint Control Unit]
 MDA: Model-Driven Architecture
 MDD: Model-Driven Development
 MEC: Multi-access Edge Computing
 MEF: Metro Ethernet Forum
-MEO: MEC Orchestrator
+MEO: [Medium Earth Orbit, MEC Orchestrator]
 MES: Manufacturing Execution System
 MF: More Fragments
 MGF: Moment Generating Function
@@ -507,7 +507,7 @@ MTC: Machine-Type Communication
 MTU: Maximum Transmission Unit
 MU-MIMO: Multi-User MIMO
 MUX: Multiplexer
-MVC: [Multiview Video Coding, Model-View-Controller]
+MVC: Model-View-Controller
 MVCC: Multi-Version Concurrency Control
 MVD: Multi-Valued Dependency
 MVNO: Mobile Virtual Network Operator
@@ -603,7 +603,7 @@ OTN: Optical Transport Network
 OWE: Opportunistic Wireless Encryption
 P2P: Peer-to-Peer
 PACF: Partial Autocorrelation Function
-PAM: [Pulse Amplitude Modulation, Process Assessment Model]
+PAM: [Pulse Amplitude Modulation, Process Assessment Model, Point Access Method]
 PAT: Port Address Translation
 PAwR: Periodic Advertising with Responses
 PBB: Provider Backbone Bridge
@@ -626,31 +626,31 @@ PITR: Point-in-Time Recovery
 PJNF: Project-Join Normal Form
 PKI: Public Key Infrastructure
 PLAT: Provider-side Translator
-PLC: Programmable Logic Controller
+PLC: [Programmable Logic Controller, Power Line Communication]
 PLM: Product Lifecycle Management
 PLMN: Public Land Mobile Network
 PMB: Performance Measurement Baseline
 PMBOK: Project Management Body of Knowledge
 PMC: Project Management Consulting
-PMF: Protected Management Frames
+PMF: [Protected Management Frames, Product-Market Fit, Probability Mass Function]
 PMI: Project Management Institute
 PMO: Project Management Office
 PMTUD: Path MTU Discovery
 PNG: Portable Network Graphics
 PoE: Power over Ethernet
 POLQA: Perceptual Objective Listening Quality Analysis
-POP: Point of Presence
+POP: [Point of Presence, Point of Purchase, Point of Production]
 POP3: Post Office Protocol version 3
 POTN: Packet Optical Transport Network
 PPP: [Point-to-Point Protocol, Public Private Partnership]
 PQ: Priority Queuing
 PRB: Physical Resource Block
-PRM: Partner Relationship Management
+PRM: [Performance Reference Model, Partner Relationship Management]
 ProSe: Proximity Services
 PS-LTE: Public Safety LTE
 PSAP: Public Safety Answering Point
 PSH: Push
-PSK: Phase Shift Keying
+PSK: [Phase Shift Keying, Pre-Shared Key]
 PSM: [Power Saving Mode, Platform Specific Model]
 PSTN: Public Switched Telephone Network
 PTR: Pointer
@@ -666,7 +666,7 @@ QUIC: Quick UDP Internet Connections
 RACI: Responsible Accountable Consulted Informed
 RAD: Rapid Application Development
 RADIUS: Remote Authentication Dial-In User Service
-RAM: [Random Access Memory, Responsibility Assignment Matrix]
+RAM: [Random Access Memory, Responsibility Assignment Matrix, Regional Air Mobility]
 RAN: Radio Access Network
 RARP: Reverse Address Resolution Protocol
 RCSI: Read Committed Snapshot Isolation
@@ -694,7 +694,7 @@ ROAS: Return on Ad Spend
 ROC: Receiver Operating Characteristic
 RPC: Remote Procedure Call
 RPF: Reverse Path Forwarding
-RPL: Ring Protection Link
+RPL: [Ring Protection Link, IPv6 Routing Protocol for Low-Power and Lossy Networks]
 RPO: Recovery Point Objective
 RR: Resource Record
 RREP: Route Reply
@@ -723,12 +723,12 @@ RTU: Remote Terminal Unit
 RU: Radio Unit
 RZ: Return to Zero
 S1AP: S1 Application Protocol
-SA: Standalone
+SA: [Standalone, Single Agent]
 SABM: Set Asynchronous Balanced Mode
 SACK: Selective Acknowledgment
 SAE: Society of Automotive Engineers
-SAM: [Slot Availability Mask, Spatial Access Method, Software Asset Management]
-SAP: Service Access Point
+SAM: [Slot Availability Mask, Spatial Access Method, Software Asset Management, Serviceable Addressable Market]
+SAP: [Service Access Point]
 SAR: Specific Absorption Rate
 SARIMA: Seasonal ARIMA
 SASE: Secure Access Service Edge
@@ -739,7 +739,7 @@ SBOM: Software Bill of Materials
 SCADA: Supervisory Control And Data Acquisition
 SCell: Secondary Cell
 SCH: Service Channel
-SCM: Supply Chain Management
+SCM: [Supply Chain Management, Software Configuration Management]
 SCMA: Sparse Code Multiple Access
 SCMS: Security Credential Management System
 SCTP: Stream Control Transmission Protocol
@@ -773,15 +773,15 @@ SLB: Server Load Balancing
 SLD: Second-Level Domain
 SLM: Service Level Management
 SMDS: Switched Multimegabit Data Service
-SMF: Session Management Function
+SMF: [Session Management Function, Single-Mode Fiber]
 SMO: Service Management and Orchestration
 SNAT: Source Network Address Translation
 SNMP: Simple Network Management Protocol
 SNPN: Standalone Non-Public Network
 SNR: Signal-to-Noise Ratio
 SNS: Social Networking Service
-SOA: Service-Oriented Architecture
-SOM: Serviceable Obtainable Market
+SOA: [Service-Oriented Architecture, Start of Authority]
+SOM: [Serviceable Obtainable Market, Self-Organizing Map]
 SON: Self-Organizing Network
 SONET: Synchronous Optical Network
 SoW: Statement of Work
@@ -806,25 +806,25 @@ SSRC: Synchronization Source
 SST: [Slice/Service Type, Total Sum of Squares]
 STL: Seasonal-Trend decomposition using Loess
 STM: Synchronous Transport Module
-STP: Spanning Tree Protocol
+STP: [Spanning Tree Protocol, Shielded Twisted Pair, Segmentation·Targeting·Positioning]
 STS: Synchronous Transport Signal
 STUN: Session Traversal Utilities for NAT
 SUMS: Software Update Management System
 SupTech: Supervisory Technology
-SVC: Switched Virtual Circuit
+SVC: [Switched Virtual Circuit, Service Value Chain, CMMI for Services]
 SVI: Switch Virtual Interface
 SVM: Support Vector Machine
 SWEBOK: Software Engineering Body of Knowledge
 SYN: Synchronize
 T&M: Time and Materials
-TAM: Total Addressable Market
+TAM: [Total Addressable Market, Technology Acceptance Model]
 TBID: Tree-Based Itinerary Design
 TCA: Traffic Conditioning Agreement
 TCO: Total Cost of Ownership
 TCP: Transmission Control Protocol
 TCPI: To-Complete Performance Index
 TCU: Telematics Control Unit
-TDD: Test-Driven Development
+TDD: [Test-Driven Development, Time Division Duplex]
 TDM: Time Division Multiplexing
 TDMA: Time Division Multiple Access
 TDoA: Time Difference of Arrival
@@ -940,18 +940,18 @@ BI: Business Intelligence
 BPMN: Business Process Model and Notation
 CART: Classification and Regression Tree
 CBAP: Certified Business Analysis Professional
-CDP: Customer Data Platform
+CDP: [Customer Data Platform, Continuous Data Protection]
 CHAID: Chi-squared Automatic Interaction Detection
 CLD: Causal Loop Diagram
 CMDB: Configuration Management Database
-CMP: Crisis Management Plan
+CMP: [Crisis Management Plan, Cloud Management Platform]
 CPND: Content, Platform, Network, Device
 DTM: Document-Term Matrix
 DTO: Digital Twin of an Organization
 DW: Data Warehouse
 FCIP: Fibre Channel over IP
 HITS: Hyperlink-Induced Topic Search
-HLS: High Level Structure
+HLS: [High Level Structure, HTTP Live Streaming]
 IFR: Ideal Final Result
 ISMP: Information System Master Plan
 KDD: Knowledge Discovery in Databases
@@ -985,8 +985,8 @@ RSO: Recovery Scope Objective
 SEMMA: Sample, Explore, Modify, Model, Assess
 SEO: Search Engine Optimization
 SFA: Sales Force Automation
-SFD: Stock and Flow Diagram
-SIP: Service Improvement Plan
+SFD: [Stock and Flow Diagram, Start Frame Delimiter]
+SIP: [Session Initiation Protocol, Service Improvement Plan]
 SLI: Service Level Indicator
 SLO: Service Level Objective
 SLR: Service Level Requirements
@@ -1000,13 +1000,13 @@ TRIZ: Theory of Inventive Problem Solving
 VOC: Voice of Customer
 XAI: Explainable AI
 ABC: Activity-Based Costing
-ABM: Activity-Based Management
-ADM: Architecture Development Method
+ABM: [Activity-Based Management, Asynchronous Balanced Mode]
+ADM: [Architecture Development Method, Add-Drop Multiplexer]
 APO: Align, Plan and Organise
 BAI: Build, Acquire and Implement
 BCG: Boston Consulting Group
 BOD: Board of Directors
-BOM: Bill of Materials
+BOM: [Bill of Materials, Build-Operate-Manage]
 BPA: Business Process Analysis
 BPEL: Business Process Execution Language
 BRE: Business Rule Engine
@@ -1021,7 +1021,7 @@ DMAIC: Define, Measure, Analyze, Improve, Control
 DQM: Data Quality Management
 DoDAF: Department of Defense Architecture Framework
 EAMS: Enterprise Architecture Management System
-ECM: Enterprise Content Management
+ECM: [Enterprise Content Management, Engineering Change Management]
 EDM: ["Evaluate, Direct and Monitor", Event-Driven Microservice]
 EIP: Enterprise Information Portal
 EKP: Enterprise Knowledge Portal
@@ -1043,7 +1043,7 @@ MEA: Monitor, Evaluate and Assess
 MVA: Market Value Added
 NIH: Not Invented Here
 PDSA: Plan-Do-Study-Act
-PPM: Project Portfolio Management
+PPM: [Project Portfolio Management, Pulse Position Modulation]
 ROIC: Return on Invested Capital
 SBU: Strategic Business Unit
 SCE: Supply Chain Execution
@@ -1054,7 +1054,7 @@ SOX: Sarbanes-Oxley Act
 TEAF: Treasury Enterprise Architecture Framework
 TOGAF: The Open Group Architecture Framework
 TRL: Technology Readiness Level
-TRM: Technical Reference Model
+TRM: [Technical Reference Model, Technology Roadmap]
 VBM: Value-Based Management
 VMI: Vendor Managed Inventory
 WACC: Weighted Average Cost of Capital
@@ -1096,7 +1096,7 @@ ETSI: European Telecommunications Standards Institute
 LCA: Life Cycle Assessment
 MBB: Master Black Belt
 QMS: Quality Management System
-TFT: Task Force Team
+TFT: [Task Force Team, Thin Film Transistor]
 B2B: Business to Business
 B2C: Business to Consumer
 C2C: Consumer to Consumer
@@ -1120,7 +1120,7 @@ MMP: Minimum Marketable Product
 MMR: Minimum Marketable Release
 PRI: Principles for Responsible Investment
 TCFD: Task Force on Climate-related Financial Disclosures
-PMS: Patch Management System
+PMS: [Patch Management System, Power Management System]
 API: Application Programming Interface
 AVR: Automatic Voltage Regulator
 AWS: Amazon Web Services
@@ -1130,7 +1130,7 @@ CDC: Change Data Capture
 DBMS: Database Management System
 DOLAP: Desktop OLAP
 WOLAP: Web OLAP
-DSS: Decision Support System
+DSS: [Decision Support System, "Deliver, Service and Support"]
 EII: Enterprise Information Integration
 FAQ: Frequently Asked Questions
 HSM: Hardware Security Module

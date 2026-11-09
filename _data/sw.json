@@ -260,7 +260,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SOA": "Service-Oriented Architecture"
+  }
  },
  {
   "id": "SW_003",
@@ -2353,7 +2356,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SOA": "Service-Oriented Architecture"
+  }
  },
  {
   "id": "SW_024",
@@ -3543,7 +3549,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TDD": "Test-Driven Development"
+  }
  },
  {
   "id": "SW_033",
@@ -3690,7 +3699,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TDD": "Test-Driven Development"
+  }
  },
  {
   "id": "SW_034",
@@ -4236,7 +4248,8 @@
   ],
   "reviewed": true,
   "gloss": {
-   "TPS": "Transactions Per Second"
+   "TPS": "Transactions Per Second",
+   "FP": "Function Point"
   }
  },
  {
@@ -4376,7 +4389,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "GS": "Good Software"
+  }
  },
  {
   "id": "SW_039",
@@ -5024,7 +5040,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SOA": "Service-Oriented Architecture"
+  }
  },
  {
   "id": "SW_045",
@@ -5152,7 +5171,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SOA": "Service-Oriented Architecture"
+  }
  },
  {
   "id": "SW_046",
@@ -5284,7 +5306,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SOA": "Service-Oriented Architecture"
+  }
  },
  {
   "id": "SW_047",
@@ -7869,7 +7894,8 @@
   ],
   "reviewed": true,
   "gloss": {
-   "EDM": "Event-Driven Microservice"
+   "EDM": "Event-Driven Microservice",
+   "EDA": "Event-Driven Architecture"
   }
  },
  {
@@ -10872,7 +10898,8 @@
   ],
   "reviewed": true,
   "gloss": {
-   "UTP": "UML Testing Profile"
+   "UTP": "UML Testing Profile",
+   "SOA": "Service-Oriented Architecture"
   }
  },
  {
@@ -15028,7 +15055,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TDD": "Test-Driven Development"
+  }
  },
  {
   "id": "SW_119",
@@ -15307,7 +15337,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TDD": "Test-Driven Development"
+  }
  },
  {
   "id": "SW_121",
@@ -15429,7 +15462,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TDD": "Test-Driven Development"
+  }
  },
  {
   "id": "SW_122",
@@ -19622,7 +19658,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "GS": "Good Software"
+  }
  },
  {
   "id": "SW_151_0",
@@ -19751,7 +19790,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "PC": "Personal Computer"
+  }
  },
  {
   "id": "SW_151_1",
@@ -19882,7 +19924,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ICE": "In-Circuit Emulator"
+  }
  },
  {
   "id": "SW_152_0",
@@ -22773,7 +22818,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "PC": "Personal Computer"
+  }
  },
  {
   "id": "SW_170",
@@ -24591,7 +24639,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TDD": "Test-Driven Development"
+  }
  },
  {
   "id": "SW_188",
@@ -25656,7 +25707,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "GS": "Good Software"
+  }
  },
  {
   "id": "SW_196",
@@ -25775,7 +25829,10 @@
    "sw"
   ],
   "reviewed": true,
-  "dueum": "구패요시"
+  "dueum": "구패요시",
+  "gloss": {
+   "GS": "Good Software"
+  }
  },
  {
   "id": "SW_197",
@@ -25901,7 +25958,10 @@
    "sw"
   ],
   "reviewed": true,
-  "dueum": "요모관측평"
+  "dueum": "요모관측평",
+  "gloss": {
+   "GS": "Good Software"
+  }
  },
  {
   "id": "SW_198",
@@ -26701,7 +26761,10 @@
    "sw"
   ],
   "reviewed": true,
-  "dueum": "불수관확예최"
+  "dueum": "불수관확예최",
+  "gloss": {
+   "GS": "Good Software"
+  }
  },
  {
   "id": "SW_204",
@@ -26971,7 +27034,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "GS": "Good Software"
+  }
  },
  {
   "id": "SW_206",
@@ -27104,7 +27170,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "HLS": "High Level Structure"
+  }
  },
  {
   "id": "SW_207",
@@ -27776,7 +27845,10 @@
    "sw"
   ],
   "reviewed": true,
-  "dueum": "조프프개지"
+  "dueum": "조프프개지",
+  "gloss": {
+   "GS": "Good Software"
+  }
  },
  {
   "id": "SW_212",
@@ -31406,7 +31478,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "SW_241",
@@ -31519,7 +31594,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "SW_242",
@@ -31667,7 +31745,10 @@
    "sw"
   ],
   "reviewed": true,
-  "dueum": "유범이의 데이트"
+  "dueum": "유범이의 데이트",
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "SW_243",
@@ -31800,7 +31881,10 @@
    "sw"
   ],
   "reviewed": true,
-  "dueum": "유범이의 데이트"
+  "dueum": "유범이의 데이트",
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "SW_244",
@@ -32038,7 +32122,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "SW_246",
@@ -32308,7 +32395,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "SW_249",
@@ -32424,7 +32514,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "SW_250",
@@ -32540,7 +32633,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "SW_251",
@@ -33031,7 +33127,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FP": "Function Point"
+  }
  },
  {
   "id": "SW_255_0",
@@ -33153,7 +33252,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "GS": "Good Software"
+  }
  },
  {
   "id": "SW_255_1",
@@ -33394,7 +33496,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "GS": "Good Software"
+  }
  },
  {
   "id": "SW_258",
@@ -33773,7 +33878,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "GS": "Good Software"
+  }
  },
  {
   "id": "SW_262",
@@ -35024,7 +35132,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "GS": "Good Software"
+  }
  },
  {
   "id": "SW_282",
@@ -35272,6 +35383,9 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FP": "Function Point"
+  }
  }
 ]

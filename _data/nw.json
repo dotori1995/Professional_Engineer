@@ -114,7 +114,10 @@
    "오류 정정 부호(FEC, LDPC·Turbo·Polar)",
    "나이퀴스트 대역폭(Nyquist)"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FEC": "Forward Error Correction"
+  }
  },
  {
   "id": "NW_002",
@@ -670,7 +673,10 @@
    "양자화 잡음(Quantization Noise)",
    "64kbps(8kHz × 8bit)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "PAM": "Pulse Amplitude Modulation"
+  }
  },
  {
   "id": "NW_006",
@@ -903,7 +909,9 @@
   ],
   "quiz_groups": [],
   "gloss": {
-   "PPM": "Pulse Position Modulation"
+   "PPM": "Pulse Position Modulation",
+   "PSK": "Phase Shift Keying",
+   "PAM": "Pulse Amplitude Modulation"
   }
  },
  {
@@ -1010,7 +1018,10 @@
    "낮은 전력 효율",
    "DSRC·광통신·RFID"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "PSK": "Phase Shift Keying"
+  }
  },
  {
   "id": "NW_009",
@@ -1118,7 +1129,10 @@
    "동기 검파(Coherent Detection)",
    "심볼당 log₂M 비트"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "PSK": "Phase Shift Keying"
+  }
  },
  {
   "id": "NW_010",
@@ -1227,7 +1241,10 @@
    "케이블 모뎀(DOCSIS)",
    "QPSK = 4-QAM"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "EVM": "Error Vector Magnitude"
+  }
  },
  {
   "id": "NW_011",
@@ -1455,7 +1472,12 @@
    "가상 반송파 감지(Virtual Carrier Sense)",
    "CW 2배 증가(CWmin~CWmax)"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "AP": "Access Point",
+   "MAC": "Medium Access Control",
+   "DCF": "Distributed Coordination Function"
+  }
  },
  {
   "id": "NW_013",
@@ -1564,7 +1586,10 @@
    "라우팅(Routing)",
    "공통 프로토콜(IP)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_014",
@@ -1675,7 +1700,8 @@
   ],
   "quiz_groups": [],
   "gloss": {
-   "SFD": "Start Frame Delimiter"
+   "SFD": "Start Frame Delimiter",
+   "MAC": "Medium Access Control"
   }
  },
  {
@@ -1786,7 +1812,11 @@
    "DTE·DCE",
    "LMI(Local Management Interface)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "SVC": "Switched Virtual Circuit",
+   "DCE": "Data Circuit-terminating Equipment"
+  }
  },
  {
   "id": "NW_016",
@@ -1884,7 +1914,11 @@
    "RPL(Ring Protection Link)",
    "50ms 절체"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "RPL": "Ring Protection Link",
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_017",
@@ -1995,7 +2029,10 @@
    "통계적 다중화(Statistical Multiplexing)",
    "메시지 교환(Message Switching)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "SVC": "Switched Virtual Circuit"
+  }
  },
  {
   "id": "NW_019",
@@ -2117,7 +2154,10 @@
    "토큰 패싱(Token Passing, 802.5)",
    "CSMA/CA(802.11 무선 LAN)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_020",
@@ -2326,7 +2366,10 @@
    "SD-WAN(Software Defined WAN)",
    "WAN 가속(WAN Optimization)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "PPP": "Point-to-Point Protocol"
+  }
  },
  {
   "id": "NW_022",
@@ -2559,7 +2602,11 @@
    "보안(블랙홀·웜홀 공격)",
    "재난·군 통신"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "AP": "Access Point",
+   "DSR": "Dynamic Source Routing"
+  }
  },
  {
   "id": "NW_023_01",
@@ -2671,7 +2718,9 @@
   ],
   "quiz_groups": [],
   "gloss": {
-   "DTN": "Delay-Tolerant Networking"
+   "DTN": "Delay-Tolerant Networking",
+   "DSR": "Dynamic Source Routing",
+   "GPS": "Global Positioning System"
   }
  },
  {
@@ -2783,7 +2832,11 @@
    "NB-IoT(Narrowband IoT)",
    "LTE-M(eMTC)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "PSM": "Power Saving Mode",
+   "CSS": "Chirp Spread Spectrum"
+  }
  },
  {
   "id": "NW_025",
@@ -3835,7 +3888,11 @@
    "IPTV",
    "UDP 기반"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "PIM": "Protocol Independent Multicast",
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_033",
@@ -4047,7 +4104,10 @@
    "유니캐스트 플러딩(Unicast Flooding)",
    "에이징 타임(Aging Time)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_035",
@@ -4160,7 +4220,11 @@
    "브로드캐스트 스톰(Broadcast Storm)",
    "VLAN 분리"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "STP": "Spanning Tree Protocol",
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_036",
@@ -4273,7 +4337,10 @@
    "논리적 링크(Logical Link)",
    "유니캐스트 터널(Unicast Tunnel)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "ALM": "Application Layer Multicast"
+  }
  },
  {
   "id": "NW_037",
@@ -4581,7 +4648,10 @@
    "MIME",
    "ASCII·EBCDIC·Unicode"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "DER": "Distinguished Encoding Rules"
+  }
  },
  {
   "id": "NW_040",
@@ -4943,7 +5013,10 @@
    "ARP 스푸핑(Spoofing)",
    "QoS(DiffServ)"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_043",
@@ -5060,7 +5133,10 @@
   ],
   "reviewed": true,
   "gloss": {
-   "ABM": "Asynchronous Balanced Mode"
+   "ABM": "Asynchronous Balanced Mode",
+   "FEC": "Forward Error Correction",
+   "PPP": "Point-to-Point Protocol",
+   "MAC": "Medium Access Control"
   }
  },
  {
@@ -5172,7 +5248,11 @@
    "광섬유(SMF(Single-Mode Fiber)·MMF)",
    "성형·버스형·링형·메시형(Star/Bus/Ring/Mesh)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "SMF": "Single-Mode Fiber",
+   "STP": "Shielded Twisted Pair"
+  }
  },
  {
   "id": "NW_045",
@@ -5277,7 +5357,10 @@
    "확인형 서비스(Confirmed)",
    "비확인형 서비스(Unconfirmed)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "SAP": "Service Access Point"
+  }
  },
  {
   "id": "NW_046",
@@ -6063,7 +6146,10 @@
    "IPv6(128비트)",
    "주소 고갈(Address Exhaustion)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_053",
@@ -6380,7 +6466,10 @@
    "IPv6도 프리픽스 기반",
    "NAT와 함께 IPv4 수명 연장"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ISP": "Internet Service Provider"
+  }
  },
  {
   "id": "NW_056",
@@ -6583,7 +6672,10 @@
    "자동 요약(Auto Summary)",
    "수동 요약(Manual Summary)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "ABR": "Area Border Router"
+  }
  },
  {
   "id": "NW_058",
@@ -6691,7 +6783,10 @@
    "포트 포워딩(Port Forwarding)",
    "NAT 변환 테이블(Translation Table)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "ICE": "Interactive Connectivity Establishment"
+  }
  },
  {
   "id": "NW_059",
@@ -6797,7 +6892,10 @@
    "MSS 클램핑",
    "이더넷 MTU 1500"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "DF": "Don't Fragment"
+  }
  },
  {
   "id": "NW_060",
@@ -7120,7 +7218,10 @@
    "PIM과의 관계",
    "IPTV 채널 전환"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "PIM": "Protocol Independent Multicast"
+  }
  },
  {
   "id": "NW_063",
@@ -7459,7 +7560,10 @@
    "이더타입 0x0806",
    "포트 보안"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_066",
@@ -7567,7 +7671,10 @@
    "DHCP 릴레이",
    "역방향 해석"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_067",
@@ -7692,7 +7799,10 @@
    "monlist 증폭 공격(NTP Amplification)",
    "NTS(Network Time Security)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "NW_068",
@@ -7800,7 +7910,8 @@
   ],
   "quiz_groups": [],
   "gloss": {
-   "ABM": "Asynchronous Balanced Mode"
+   "ABM": "Asynchronous Balanced Mode",
+   "PPP": "Point-to-Point Protocol"
   }
  },
  {
@@ -7926,7 +8037,10 @@
    "APIPA(169.254/16)",
    "IP 풀(Scope)"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_070",
@@ -8050,7 +8164,11 @@
    "VP8·VP9·Opus 코덱",
    "오퍼/앤서(Offer/Answer)"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ICE": "Interactive Connectivity Establishment",
+   "MCU": "Multipoint Control Unit"
+  }
  },
  {
   "id": "NW_071",
@@ -8277,7 +8395,10 @@
    "인터페이스 추적(Tracking)",
    "기본 게이트웨이 단일 장애점 해소"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_073",
@@ -8614,7 +8735,10 @@
    "NAT 기반 전달",
    "이중화(VRRP)"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "DSR": "Direct Server Return"
+  }
  },
  {
   "id": "NW_076",
@@ -8713,7 +8837,10 @@
    "FIB(Forwarding Information Base)",
    "와이어 스피드(Wire Speed)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_077",
@@ -8822,7 +8949,11 @@
    "VLAN(802.1Q)",
    "STP(Spanning Tree Protocol)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "STP": "Spanning Tree Protocol",
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_078",
@@ -8931,7 +9062,10 @@
    "DNS 기반 부하 분산",
    "이중화(Active-Standby)"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "DSR": "Dynamic Source Routing"
+  }
  },
  {
   "id": "NW_079",
@@ -9173,7 +9307,10 @@
    "UNECE R155·R156",
    "eCall"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "NW_081",
@@ -9278,7 +9415,10 @@
    "차량 클라우드·엣지(MEC)",
    "C-ITS(협력 지능형 교통체계)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "NW_082",
@@ -9615,7 +9755,11 @@
    "C-V2X 경쟁",
    "SAE J2735(BSM)"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "BSS": "Basic Service Set",
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_085_00",
@@ -9727,7 +9871,10 @@
    "사고 판단 장치(AECD)",
    "소방·경찰·의료 기관 연계"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "IMS": "IP Multimedia Subsystem"
+  }
  },
  {
   "id": "NW_085_01",
@@ -10068,7 +10215,10 @@
    "브로드캐스트 도메인 분리(Broadcast Domain)",
    "VLAN 간 라우팅(Inter-VLAN Routing)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_088",
@@ -10194,7 +10344,12 @@
    "지향성·무지향성 안테나",
    "MU-MIMO·OFDMA"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "AP": "Access Point",
+   "ESS": "Extended Service Set",
+   "BSS": "Basic Service Set"
+  }
  },
  {
   "id": "NW_095",
@@ -10304,7 +10459,11 @@
    "IEEE 802.11ac(5GHz)",
    "IEEE 802.11ad(60GHz, WiGig)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "AP": "Access Point",
+   "BSS": "Basic Service Set"
+  }
  },
  {
   "id": "NW_098",
@@ -10415,7 +10574,11 @@
    "6GHz 대역",
    "16 공간 스트림 MU-MIMO(R2)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "AP": "Access Point",
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_099",
@@ -10531,7 +10694,10 @@
    "MLO 계승",
    "Wi-Fi 7 대비 신뢰성 중심"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "AP": "Access Point"
+  }
  },
  {
   "id": "NW_100",
@@ -10648,7 +10814,12 @@
    "하이브리드 측위",
    "실내 위치 서비스(LBS)"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "AP": "Access Point",
+   "GPS": "Global Positioning System",
+   "MAC": "Master-Auxiliary Concept"
+  }
  },
  {
   "id": "NW_101",
@@ -10752,7 +10923,13 @@
    "레거시 프로토콜(WEP·TKIP) 차단",
    "ECC 기반"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "AP": "Access Point",
+   "PMF": "Protected Management Frames",
+   "PSK": "Pre-Shared Key",
+   "ECC": "Elliptic Curve Cryptography"
+  }
  },
  {
   "id": "NW_102_0",
@@ -10866,7 +11043,11 @@
    "정확도·비용·인프라 트레이드오프",
    "프라이버시"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "AP": "Access Point",
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "NW_102_1",
@@ -10967,7 +11148,10 @@
    "국토지리정보원 서비스",
    "자율주행·드론·측량"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MAC": "Master-Auxiliary Concept"
+  }
  },
  {
   "id": "NW_103",
@@ -11322,7 +11506,10 @@
    "IEEE 802.15.4·ZigBee·Thread",
    "LoRaWAN"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "RPL": "IPv6 Routing Protocol for Low-Power and Lossy Networks"
+  }
  },
  {
   "id": "NW_106",
@@ -11448,7 +11635,10 @@
    "MQTT 비교",
    "URI(coap://)"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "PLC": "Power Line Communication"
+  }
  },
  {
   "id": "NW_107",
@@ -12144,7 +12334,11 @@
    "응용 서버(Application Server)",
    "Class A·B·C"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "CSS": "Chirp Spread Spectrum",
+   "ADR": "Adaptive Data Rate"
+  }
  },
  {
   "id": "NW_113",
@@ -12370,7 +12564,10 @@
    "VoLTE 지원",
    "커버리지 향상(CE, 반복 전송)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "PSM": "Power Saving Mode"
+  }
  },
  {
   "id": "NW_115",
@@ -12489,7 +12686,10 @@
    "PSM",
    "eDRX"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "PSM": "Power Saving Mode"
+  }
  },
  {
   "id": "NW_117",
@@ -12599,7 +12799,10 @@
    "사이드링크(Sidelink, PC5)",
    "인밴드·아웃밴드(Inband/Outband)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "AP": "Access Point"
+  }
  },
  {
   "id": "NW_118",
@@ -12946,7 +13149,12 @@
    "에너지 데이터 표준",
    "제어 시스템 보안"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "EMS": "Energy Management System",
+   "ESS": "Energy Storage System",
+   "DER": "Distributed Energy Resources"
+  }
  },
  {
   "id": "NW_122",
@@ -13168,7 +13376,11 @@
    "RPL(IETF, 6LoWPAN)",
    "망 수명(Network Lifetime)"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "GPS": "Global Positioning System",
+   "RPL": "IPv6 Routing Protocol for Low-Power and Lossy Networks"
+  }
  },
  {
   "id": "NW_124_00",
@@ -13277,7 +13489,10 @@
    "에너지 소모 최소화",
    "데이터 융합(Data Fusion)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "SA": "Single Agent"
+  }
  },
  {
   "id": "NW_124_01",
@@ -13752,7 +13967,10 @@
    "방화벽 우회 위험",
    "VXLAN"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ISP": "Internet Service Provider"
+  }
  },
  {
   "id": "NW_128",
@@ -14082,7 +14300,10 @@
    "대역 보장",
    "지연 상한 보장"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "GPS": "Generalized Processor Sharing"
+  }
  },
  {
   "id": "NW_134",
@@ -14198,7 +14419,10 @@
    "ISP 접속 속도 제한",
    "PIR(Peak Information Rate)"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ISP": "Internet Service Provider"
+  }
  },
  {
   "id": "NW_135",
@@ -14751,7 +14975,11 @@
    "IntServ와 비교",
    "MPLS EXP·TC 매핑"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ISP": "Internet Service Provider",
+   "EF": "Expedited Forwarding"
+  }
  },
  {
   "id": "NW_140",
@@ -14859,7 +15087,12 @@
    "세그먼트 라우팅(SR-MPLS)",
    "MPLS-TP"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FEC": "Forwarding Equivalence Class",
+   "LSP": "Label Switched Path",
+   "LSR": "Label Switching Router"
+  }
  },
  {
   "id": "NW_141",
@@ -15422,7 +15655,11 @@
    "5.4 PAwR",
    "비콘"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SAM": "Slot Availability Mask",
+   "FEC": "Forward Error Correction"
+  }
  },
  {
   "id": "NW_148",
@@ -15651,7 +15888,10 @@
    "메시(Mesh)",
    "클러스터 트리(Cluster-Tree)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_150",
@@ -16032,7 +16272,10 @@
    "D2D"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "AP": "Access Point"
+  }
  },
  {
   "id": "NW_155",
@@ -16199,7 +16442,10 @@
    "하이브리드 빔포밍"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "TDD": "Time Division Duplex"
+  }
  },
  {
   "id": "NW_157",
@@ -16512,7 +16758,10 @@
    "TS·TR 규격"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "SA": "Standalone"
+  }
  },
  {
   "id": "NW_162",
@@ -16807,7 +17056,10 @@
    "재구성 가능성"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "DSP": "Digital Signal Processing"
+  }
  },
  {
   "id": "NW_165",
@@ -17141,7 +17393,10 @@
    "mobile"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TDD": "Time Division Duplex"
+  }
  },
  {
   "id": "NW_168",
@@ -17319,7 +17574,10 @@
    "가드 기간(TDD)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "TDD": "Time Division Duplex"
+  }
  },
  {
   "id": "NW_178",
@@ -17435,7 +17693,10 @@
    "mobile"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "EMS": "Element Management System"
+  }
  },
  {
   "id": "NW_181",
@@ -17557,7 +17818,10 @@
    "mobile"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "AS": "Application Server"
+  }
  },
  {
   "id": "NW_182",
@@ -17738,7 +18002,10 @@
    "TRS 연동"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "IMS": "IP Multimedia Subsystem"
+  }
  },
  {
   "id": "NW_184",
@@ -17997,7 +18264,12 @@
    "5g",
    "mobile"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TDD": "Time Division Duplex",
+   "PPP": "Public-Private Partnership",
+   "SA": "Standalone"
+  }
  },
  {
   "id": "NW_186",
@@ -18121,7 +18393,11 @@
    "sdn"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SMF": "Session Management Function",
+   "SST": "Slice/Service Type"
+  }
  },
  {
   "id": "NW_187",
@@ -18247,7 +18523,10 @@
    "mobile"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "CSI": "Channel State Information"
+  }
  },
  {
   "id": "NW_188",
@@ -18368,7 +18647,11 @@
    "mobile"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SMF": "Session Management Function",
+   "SA": "Standalone"
+  }
  },
  {
   "id": "NW_189",
@@ -18492,7 +18775,10 @@
    "mobile"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MEO": "MEC Orchestrator"
+  }
  },
  {
   "id": "NW_190_00",
@@ -19069,7 +19355,11 @@
    "mobile"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SMF": "Session Management Function",
+   "SA": "Standalone"
+  }
  },
  {
   "id": "NW_193_00",
@@ -19272,7 +19562,10 @@
    "mobile"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "DTN": "Digital Twin Network"
+  }
  },
  {
   "id": "NW_194",
@@ -19544,7 +19837,10 @@
    "IP폰·카메라·AP"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "AP": "Access Point"
+  }
  },
  {
   "id": "NW_197",
@@ -19655,7 +19951,10 @@
    "policy"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ISP": "Internet Service Provider"
+  }
  },
  {
   "id": "NW_198",
@@ -20125,7 +20424,11 @@
    "edge"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ISP": "Internet Service Provider",
+   "IX": "Internet eXchange"
+  }
  },
  {
   "id": "NW_202",
@@ -20337,7 +20640,10 @@
    "routing"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "AS": "Autonomous System"
+  }
  },
  {
   "id": "NW_204",
@@ -20559,7 +20865,10 @@
    "routing"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ISP": "Internet Service Provider"
+  }
  },
  {
   "id": "NW_206",
@@ -20684,7 +20993,11 @@
    "routing"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ISP": "Internet Service Provider",
+   "AS": "Autonomous System"
+  }
  },
  {
   "id": "NW_207",
@@ -21311,7 +21624,13 @@
    "routing"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "BDR": "Backup Designated Router",
+   "LSR": "Link State Request",
+   "ABR": "Area Border Router",
+   "AS": "Autonomous System"
+  }
  },
  {
   "id": "NW_212_00",
@@ -21425,7 +21744,10 @@
    "routing"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "AS": "Autonomous System"
+  }
  },
  {
   "id": "NW_212_01",
@@ -21551,7 +21873,11 @@
    "mac"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "STP": "Spanning Tree Protocol",
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_213",
@@ -21672,7 +21998,10 @@
    "iot"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "PLC": "Power Line Communication"
+  }
  },
  {
   "id": "NW_216",
@@ -21773,7 +22102,10 @@
    "기존 배선 활용"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "PLC": "Power Line Communication"
+  }
  },
  {
   "id": "NW_217",
@@ -22249,7 +22581,10 @@
    "iot"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "PLC": "Power Line Communication"
+  }
  },
  {
   "id": "NW_223",
@@ -22676,7 +23011,10 @@
    "sdn"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_235",
@@ -22797,7 +23135,10 @@
    "sdn"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FEC": "Forward Error Correction"
+  }
  },
  {
   "id": "NW_236",
@@ -23029,7 +23370,11 @@
    "sdn"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "OSS": "Operations Support System",
+   "BSS": "Business Support System"
+  }
  },
  {
   "id": "NW_238",
@@ -23260,7 +23605,10 @@
    "sdn"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "HCI": "Hyper-Converged Infrastructure"
+  }
  },
  {
   "id": "NW_240",
@@ -23391,7 +23739,10 @@
    "mobile"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_241",
@@ -23779,7 +24130,10 @@
    "err"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FEC": "Forward Error Correction"
+  }
  },
  {
   "id": "NW_245",
@@ -23890,7 +24244,10 @@
    "err"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FEC": "Forward Error Correction"
+  }
  },
  {
   "id": "NW_246",
@@ -24143,7 +24500,11 @@
    "mac"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FEC": "Forward Error Correction",
+   "MAC": "Medium Access Control"
+  }
  },
  {
   "id": "NW_248",
@@ -24381,7 +24742,11 @@
    "err"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FEC": "Forward Error Correction",
+   "ECC": "Error-Correcting Code"
+  }
  },
  {
   "id": "NW_250",
@@ -25436,7 +25801,10 @@
    "프로토콜 데이터 정의"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "DER": "Distinguished Encoding Rules"
+  }
  },
  {
   "id": "NW_270",
@@ -25647,7 +26015,11 @@
    "mux"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "GPS": "Global Positioning System",
+   "CSS": "Chirp Spread Spectrum"
+  }
  },
  {
   "id": "NW_272",
@@ -25869,7 +26241,10 @@
    "app"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ISP": "Internet Service Provider"
+  }
  },
  {
   "id": "NW_274",
@@ -26060,7 +26435,10 @@
    "mobile"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MEO": "Medium Earth Orbit"
+  }
  },
  {
   "id": "NW_276",
@@ -26421,6 +26799,9 @@
    "iot"
   ],
   "quiz_avoid": [],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "PLC": "Programmable Logic Controller"
+  }
  }
 ]

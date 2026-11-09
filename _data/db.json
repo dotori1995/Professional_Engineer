@@ -615,7 +615,10 @@
    "랜덤 액세스(Random Access)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "SAP": null
+  }
  },
  {
   "id": "DB_016",
@@ -718,7 +721,10 @@
    "Brewer 정리(Brewer's Theorem)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "AP": null
+  }
  },
  {
   "id": "DB_017",
@@ -1128,7 +1134,10 @@
    "NVRAM(Non-Volatile Memory)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "SAP": null
+  }
  },
  {
   "id": "DB_031_1",
@@ -1947,7 +1956,10 @@
    "계층형 질의(Hierarchical Query)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "BOM": "Bill of Materials"
+  }
  },
  {
   "id": "DB_042",
@@ -2542,7 +2554,10 @@
    "불완전 복구(Incomplete Recovery)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "RTO": "Recovery Time Objective"
+  }
  },
  {
   "id": "DB_047",
@@ -5360,7 +5375,11 @@
    "MBR(Minimum Bounding Rectangle)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "SAM": "Spatial Access Method",
+   "PAM": "Point Access Method"
+  }
  },
  {
   "id": "DB_098_01",

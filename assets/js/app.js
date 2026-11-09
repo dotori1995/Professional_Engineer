@@ -6,7 +6,7 @@
   let GL = {}, GLRE = null;
   PE.loadGlossary = () => fetch(PE.base + '/glossary.json').then(r => r.json()).then(g => {
     GL = g || {}; const keys = Object.keys(GL).sort((a, b) => b.length - a.length).map(k => k.replace(/[.*+?^${}()|[\]\\\/-]/g, '\\$&'));
-    GLRE = keys.length ? new RegExp('(?<![A-Za-z0-9])(' + keys.join('|') + ')(?![A-Za-z0-9])', 'g') : null;
+    GLRE = keys.length ? new RegExp('(?<![A-Za-z0-9-])(' + keys.join('|') + ')(?![A-Za-z0-9-])', 'g') : null;
   }).catch(() => {});
   PE.glTopic = null; // 지금 그리는 토픽(문맥별 약어 풀이용)
   PE.important = {};
@@ -51,7 +51,9 @@
       const paren = after.startsWith('(') ? (after.match(/^\(([^)]*)\)/) || [, ''])[1] : null;
       const expanded = paren != null && new RegExp('(^|[^A-Za-z])' + k[0] + '[a-z]', 'i').test(paren);
       const slash = !k.includes('/') && (raw[off - 1] === '/' || raw[off + m.length] === '/');
-      if (full && !seen.has(k) && !expanded && !slash && !raw.toLowerCase().includes(String(full).toLowerCase())) { out += `<small class="gl">(${PE.esc(full)})</small>`; seen.add(k); }
+      // GS리테일·LG전자처럼 약어 바로 뒤에 회사명 꼬리가 붙으면 회사명이라 풀이 생략
+      const corp = /^(리테일|그룹|전자|텔레콤|유플러스|칼텍스|화학|에너지|디스플레이|이노텍|건설|홈쇼핑|증권|은행|생명|헬로비전|홀딩스)/.test(raw.slice(off + m.length));
+      if (full && !seen.has(k) && !expanded && !slash && !corp && !raw.toLowerCase().includes(String(full).toLowerCase())) { out += `<small class="gl">(${PE.esc(full)})</small>`; seen.add(k); }
       return m;
     });
     return out + PE.esc(raw.slice(last));
