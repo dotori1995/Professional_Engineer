@@ -13,6 +13,9 @@ domains:
   - key: pm
     code: PM
     name: 프로젝트관리
+  - key: mg
+    code: MG
+    name: 경영전략
 
 markdown: kramdown
 exclude:
