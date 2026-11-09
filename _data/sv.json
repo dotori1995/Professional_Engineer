@@ -27471,74 +27471,101 @@
    390,
    391
   ],
-  "en": "DID Digital Information Display",
+  "en": "Digital Information Display",
   "dueum": null,
-  "name": "디지털(DID(Digital Information Display))",
-  "title": "디지털(DID(Digital Information Display))",
-  "definition": "공항, 지하철역, 기차역, 대형 쇼핑몰, 극장 등 공공장소에서 광고와 정보 등을 표시하는 장치로 퍼블릭 디스플레이",
+  "name": "디지털 정보 디스플레이(DID, Digital Information Display)",
+  "title": "디지털 정보 디스플레이(DID, Digital Information Display)",
+  "definition": "공항·역·쇼핑몰·극장 등 공공장소에서 광고와 정보를 표시하도록 상시 구동·고휘도·원격 관리 기능을 갖춘 상업용 디스플레이 장치로, 디지털 사이니지의 하드웨어 단말 역할을 함",
   "keywords_must": [
-   "디지털정보 디스플레이",
-   "광고",
-   "광고주",
-   "유동인구",
-   "DID의 요소기술",
-   "DID의 구성도",
-   "USB",
-   "POPAI",
-   "DID"
+   "퍼블릭 디스플레이",
+   "상업용 패널(LCD·LED·OLED)",
+   "고휘도(nit)",
+   "24시간 연속 구동",
+   "비디오 월(Video Wall)",
+   "초슬림 베젤",
+   "투명 디스플레이",
+   "터치 오버레이",
+   "콘텐츠 입력(네트워크·USB)",
+   "CDN 전송"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "디지털 사이니지",
+   "내장 SoC 플레이어",
+   "POPAI 프로파일",
+   "웹DAV(WebDAV)",
+   "번인(Burn-in)"
+  ],
   "keywords": [
-   "핵심: 디지털정보 디스플레이 · 광고 · 광고주",
-   "기술: 유동인구 · DID의 요소기술 · DID의 구성도",
-   "운영: USB · POPAI · DID"
+   "패널: LCD(실내 주력) · LED(옥외 대형·고휘도) · OLED·투명(쇼윈도) · 비디오 월(베젤 최소화)",
+   "상업용 요건: 24시간 연속 구동 · 실내 약 500nit / 옥외 2,500nit 이상 · 방진·방수 · 원격 전원·화면 제어",
+   "콘텐츠 경로: 유·무선 네트워크(FTP·WebDAV·CDN·클라우드) · USB·메모리카드"
   ],
   "outline": [
-   "디스플레이를 통한 정보 전달",
-   "- DID(Digital Information Display)의 정의",
-   "- DID(Digital Information Display)의 특징",
-   "DID 의 구성도 및 구성요소",
-   "- DID 의 구성도",
-   "- DID 의 요소기술",
-   "DID 의 적용 사례",
-   "- 디지털 요점"
+   "개념과 사이니지 관계",
+   "- 개념: 공공 디스플레이",
+   "- 관계: 하드웨어 단말",
+   "하드웨어 요건",
+   "- 패널: 장소별 선택",
+   "- 구동: 고휘도·내구",
+   "- 확장: 비디오 월",
+   "콘텐츠 운영",
+   "- 입력: 다중 경로",
+   "- 전송: 대용량 배포"
   ],
   "sections": [
    {
-    "title": "디지털 핵심",
+    "title": "개념과 사이니지 관계",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 공공 디스플레이",
       "items": [
-       "디지털정보 디스플레이: 디지털에서 디지털정보 디스플레이를 다루는 핵심 암기 포인트",
-       "광고: 디지털에서 광고를 다루는 핵심 암기 포인트",
-       "광고주: 디지털에서 광고주를 다루는 핵심 암기 포인트",
-       "유동인구: 디지털에서 유동인구를 다루는 핵심 암기 포인트"
+       "퍼블릭 디스플레이: 가정용 TV와 달리 공공장소에서 불특정 다수에게 광고·안내 정보를 노출"
+      ]
+     },
+     {
+      "title": "관계: 하드웨어 단말",
+      "items": [
+       "디지털 사이니지가 CMS·네트워크·콘텐츠를 포함한 서비스 체계라면 DID는 그 표시 장치"
       ]
      }
     ]
    },
    {
-    "title": "디지털 구성·기술",
+    "title": "하드웨어 요건",
     "subsections": [
      {
-      "title": null,
+      "title": "패널: 장소별 선택",
       "items": [
-       "DID의 요소기술: 디지털에서 DID의 요소기술을 다루는 핵심 암기 포인트",
-       "DID의 구성도: 디지털의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "USB: USB를 디지털 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "POPAI: POPAI를 디지털 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "상업용 패널(LCD·LED·OLED): 실내는 LCD, 옥외 대형 전광판은 LED, 쇼윈도는 투명 디스플레이"
+      ]
+     },
+     {
+      "title": "구동: 고휘도·내구",
+      "items": [
+       "고휘도(nit)와 24시간 연속 구동 설계, 고정 화면 장시간 표시로 생기는 번인 방지 기능"
+      ]
+     },
+     {
+      "title": "확장: 비디오 월",
+      "items": [
+       "비디오 월(Video Wall): 초슬림 베젤 패널 여러 장을 이어 대형 화면 구성, 터치 오버레이로 상호작용"
       ]
      }
     ]
    },
    {
-    "title": "디지털 운영",
+    "title": "콘텐츠 운영",
     "subsections": [
      {
-      "title": null,
+      "title": "입력: 다중 경로",
       "items": [
-       "DID: DID를 디지털 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "콘텐츠 입력(네트워크·USB): 원격 배포가 기본, 소규모 매장은 USB·메모리카드로 갱신"
+      ]
+     },
+     {
+      "title": "전송: 대용량 배포",
+      "items": [
+       "FTP·WebDAV·캐시 서버와 CDN 전송으로 다수 단말에 고해상도 영상 배포, 재생 결과 원격 모니터링"
       ]
      }
     ]
@@ -27547,22 +27574,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "디지털정보 디스플레이",
-   "광고",
-   "광고주",
-   "유동인구",
-   "DID의 요소기술",
-   "DID의 구성도",
-   "USB",
-   "POPAI",
-   "DID"
+   "퍼블릭 디스플레이",
+   "상업용 패널(LCD·LED·OLED)",
+   "고휘도(nit)",
+   "24시간 연속 구동",
+   "비디오 월(Video Wall)",
+   "초슬림 베젤",
+   "투명 디스플레이",
+   "터치 오버레이",
+   "콘텐츠 입력(네트워크·USB)",
+   "CDN 전송"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_334",
@@ -27577,63 +27606,90 @@
   "dueum": null,
   "name": "오픈아이디(OpenID)",
   "title": "오픈아이디(OpenID)",
-  "definition": "단일 ID로 각 웹사이트에서 개별적인 ID를 발급받지 않고도 공통된 인증 서비스를 제공하는 ID 관리 기술.",
+  "definition": "사용자가 사이트마다 계정을 만들지 않고 신뢰하는 아이디 제공자(OP)에서 한 번 인증한 결과를 여러 신뢰 당사자(RP) 사이트가 받아들이게 하는 분산형 사용자 중심 인증 표준으로, 현재는 OAuth 2.0 기반 OpenID Connect로 발전함",
   "keywords_must": [
-   "Open ID의 장점",
-   "Open ID의 동작과정",
-   "Open ID의 피싱공격 절차",
-   "Open ID의 피싱공격 해결방안",
-   "SSO",
-   "여러 사이트에서 사용자의 일관된 Identity유지",
-   "URL",
-   "IDP(서버)"
+   "신뢰 당사자(RP)",
+   "아이디 제공자(OP·IdP)",
+   "사용자 식별자(URL·XRI)",
+   "디스커버리(Discovery)",
+   "연관(Association) 공유 키",
+   "브라우저 리디렉션",
+   "인증 어서션",
+   "OpenID Connect(OIDC)",
+   "ID 토큰(JWT)",
+   "사용자 정보 엔드포인트(UserInfo)"
   ],
   "keywords_ref": [
-   "IDP"
+   "OAuth 2.0",
+   "SAML 2.0",
+   "소셜 로그인",
+   "피싱 위험",
+   "패스키"
   ],
   "keywords": [
-   "핵심: Open ID의 장점 · Open ID의 동작과정 · Open ID의 피싱공격 절차",
-   "기술: Open ID의 피싱공격 해결방안 · SSO · 여러 사이트에서 사용자의 일관된 Identity유지",
-   "운영: URL · IDP(서버)",
-   "참고: IDP"
+   "구성: 사용자·브라우저(User Agent) · 신뢰 당사자(RP, 서비스 사이트) · 아이디 제공자(OP, 인증 서버)",
+   "OpenID 2.0 흐름: 식별자 입력 → 디스커버리 → 연관(공유 키) → OP로 리디렉션·인증 → 서명된 어서션 → RP 검증",
+   "진화: OpenID 1.0(2005) → 2.0(2007) → OpenID Connect(2014, OAuth 2.0 + ID 토큰)"
   ],
   "outline": [
-   "사용자 중심의 ID 관리 방식, Open ID 의 개요",
-   "- Open ID 의 정의",
-   "- Open ID 의 장점",
-   "Open ID 의 동작과정 및 구성요소",
-   "- Open ID 의 동작과정",
-   "Open ID 와 SSO 의 비교",
-   "- 오픈아이디 요점",
-   "Open ID 의 피싱공격 및 해결방안",
-   "- Open ID 의 피싱공격 절차",
-   "- Open ID 의 피싱공격 해결방안"
+   "개념과 필요성",
+   "- 개념: 사용자 중심 인증",
+   "- 필요성: 계정 난립 해소",
+   "동작 과정",
+   "- 탐색: 디스커버리",
+   "- 인증: 리디렉션",
+   "OAuth 기반 후속 표준(OIDC)",
+   "- 구조: OAuth 위 인증 계층",
+   "- 토큰: ID 토큰"
   ],
   "sections": [
    {
-    "title": "오픈아이디 핵심",
+    "title": "개념과 필요성",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 사용자 중심 인증",
       "items": [
-       "Open ID의 장점: 오픈아이디에서 Open ID의 장점을 다루는 핵심 암기 포인트",
-       "Open ID의 동작과정: 오픈아이디에서 Open ID의 동작과정을 다루는 핵심 암기 포인트",
-       "Open ID의 피싱공격 절차: 오픈아이디를 단계적으로 수행·이행하는 절차",
-       "Open ID의 피싱공격 해결방안: 오픈아이디에서 Open ID의 피싱공격 해결방안을 다루는 핵심 암기 포인트"
+       "블로그 주소 같은 URL을 식별자로 삼아 하나의 신원으로 여러 사이트에 로그인, 인증은 사용자가 고른 OP가 수행"
+      ]
+     },
+     {
+      "title": "필요성: 계정 난립 해소",
+      "items": [
+       "사이트별 가입·비밀번호 관리 부담 감소, 서비스 제공자는 인증 구현 부담과 비밀번호 저장 위험 감소"
       ]
      }
     ]
    },
    {
-    "title": "오픈아이디 구성·기술",
+    "title": "동작 과정",
     "subsections": [
      {
-      "title": null,
+      "title": "탐색: 디스커버리",
       "items": [
-       "SSO: 한 번 로그인으로 다중 시스템에 접근하는 인증 (오픈아이디/1b81)",
-       "여러 사이트에서 사용자의 일관된 Identity유지: 오픈아이디에서 여러 사이트에서 사용자의 일관된 Identity유지를 다루는 핵심 암기 포인트",
-       "URL: URL를 오픈아이디 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "IDP(서버): IDP를 오픈아이디 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "사용자 식별자(URL·XRI) 입력 시 RP가 디스커버리(Discovery)로 OP 주소를 찾고 연관(Association) 공유 키 설정"
+      ]
+     },
+     {
+      "title": "인증: 리디렉션",
+      "items": [
+       "브라우저 리디렉션으로 OP에서 로그인 후 서명된 인증 어서션을 RP에 전달, RP가 서명 검증 후 서비스 제공"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "OAuth 기반 후속 표준(OIDC)",
+    "subsections": [
+     {
+      "title": "구조: OAuth 위 인증 계층",
+      "items": [
+       "OpenID Connect(OIDC): OAuth 2.0 권한 부여 흐름에 openid 범위를 추가해 인증 결과를 표준화"
+      ]
+     },
+     {
+      "title": "토큰: ID 토큰",
+      "items": [
+       "ID 토큰(JWT)에 사용자 식별자·발급자·대상·만료 정보를 서명해 담고, 추가 속성은 사용자 정보 엔드포인트(UserInfo)로 조회"
       ]
      }
     ]
@@ -27642,21 +27698,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Open ID의 장점",
-   "Open ID의 동작과정",
-   "Open ID의 피싱공격 절차",
-   "Open ID의 피싱공격 해결방안",
-   "SSO",
-   "여러 사이트에서 사용자의 일관된 Identity유지",
-   "URL",
-   "IDP(서버)"
+   "신뢰 당사자(RP)",
+   "아이디 제공자(OP·IdP)",
+   "사용자 식별자(URL·XRI)",
+   "디스커버리(Discovery)",
+   "연관(Association) 공유 키",
+   "브라우저 리디렉션",
+   "인증 어서션",
+   "OpenID Connect(OIDC)",
+   "ID 토큰(JWT)",
+   "사용자 정보 엔드포인트(UserInfo)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_335",
@@ -27667,59 +27726,101 @@
    396,
    398
   ],
-  "en": "OAuth 2.0",
-  "dueum": "NA",
+  "en": "Open Authorization 2.0",
+  "dueum": null,
   "name": "오오스 2.0(OAuth 2.0)",
   "title": "오오스 2.0(OAuth 2.0)",
-  "definition": "제 3의 앱이 자원의 소유자인 서비스 이용자를 대신하여 서비스를 요청할 수 있도록 자원 접근권한을 위임하는 OpenAPI기반 보안 인증기술 - Access token을 통해 3rd party 리소스에 대한 제한적접근권한 및 인증을 위한 범용적인 인증표준",
+  "definition": "사용자가 비밀번호를 제3자 앱에 넘기지 않고 권한 서버가 발급한 범위·기간 제한 접근 토큰으로 자신의 보호 자원에 대한 접근 권한을 위임하도록 하는 RFC 6749·6750 기반 권한 부여 프레임워크",
   "keywords_must": [
-   "Resource Owner",
-   "Authorization Server",
-   "Resource Server",
-   "OAUTH",
-   "OAuth 2.0 인증절차",
-   "OAUTH 2.0의 변경된 용어",
-   "OAuth1.0과 2.0의 차이점",
-   "OAUTH 1.0A의 문제점"
+   "자원 소유자(Resource Owner)",
+   "클라이언트(Client)",
+   "권한 서버(Authorization Server)",
+   "자원 서버(Resource Server)",
+   "접근 토큰(Access Token)",
+   "갱신 토큰(Refresh Token)",
+   "범위(Scope)",
+   "인가 코드 그랜트",
+   "PKCE(RFC 7636)",
+   "클라이언트 자격증명 그랜트"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "베어러 토큰(RFC 6750)",
+   "디바이스 코드 그랜트(RFC 8628)",
+   "OAuth 2.0 보안 모범 사례(RFC 9700)",
+   "OAuth 2.1",
+   "OpenID Connect"
+  ],
   "keywords": [
-   "핵심: Resource Owner · Authorization Server · Resource Server",
-   "기술: OAUTH · OAuth 2.0 인증절차 · OAUTH 2.0의 변경된 용어",
-   "운영: OAuth1.0과 2.0의 차이점 · OAUTH 1.0A의 문제점"
+   "4역할: 자원 소유자(사용자) · 클라이언트(제3자 앱) · 권한 서버(토큰 발급) · 자원 서버(API)",
+   "그랜트: 인가 코드(+PKCE) · 클라이언트 자격증명(서버 간) · 디바이스 코드(TV) · 갱신 토큰 / 암묵적·비밀번호 방식은 폐기 권고",
+   "위치: 권한 부여(Authorization) 표준 → 인증은 OpenID Connect가 담당"
   ],
   "outline": [
-   "OAuth 의 인증절차 및 구성요소",
-   "- OAuth 2.0 인증절차",
-   "OAuth2.0의 개선사항 및 1.0과 비교",
-   "- OAUTH 2.0의 변경된 용어",
-   "- OAuth1.0과 2.0의 차이점"
+   "개념과 특징",
+   "- 개념: 권한 위임",
+   "- 특징: 비밀번호 비노출",
+   "역할과 인가 코드 흐름",
+   "- 역할: 4주체",
+   "- 흐름: 코드 교환",
+   "- 갱신: 장기 접근",
+   "그랜트 유형과 보안",
+   "- 유형: 용도별",
+   "- 보안: 모범 사례"
   ],
   "sections": [
    {
-    "title": "오오스 2.0 핵심",
+    "title": "개념과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 권한 위임",
       "items": [
-       "Resource Owner: 오오스 2.0에서 Resource Owner를 다루는 핵심 암기 포인트",
-       "Authorization Server: 오오스 2.0에서 Authorization Server를 다루는 핵심 암기 포인트",
-       "Resource Server: 오오스 2.0에서 Resource Server를 다루는 핵심 암기 포인트",
-       "OAUTH: OAUTH를 오오스 2.0 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "클라이언트가 사용자 대신 API를 호출하도록 범위(Scope)와 만료가 정해진 접근 토큰(Access Token)만 받음"
+      ]
+     },
+     {
+      "title": "특징: 비밀번호 비노출",
+      "items": [
+       "비밀번호 제공 불필요, 필요한 권한만 부여, 클라이언트별 권한 철회 가능, 인증이 아닌 권한 부여 표준"
       ]
      }
     ]
    },
    {
-    "title": "오오스 2.0 구성·기술",
+    "title": "역할과 인가 코드 흐름",
     "subsections": [
      {
-      "title": null,
+      "title": "역할: 4주체",
       "items": [
-       "OAuth 2.0 인증절차: 오오스 2.0를 단계적으로 수행·이행하는 절차",
-       "OAUTH 2.0의 변경된 용어: 오오스 2.0에서 OAUTH 2.0의 변경된 용어를 다루는 핵심 암기 포인트",
-       "OAuth1.0과 2.0의 차이점: 오오스 2.0에서 OAuth1.0과 2.0의 차이점을 다루는 핵심 암기 포인트",
-       "OAUTH 1.0A의 문제점: 오오스 2.0에서 OAUTH 1.0A의 문제점을 다루는 핵심 암기 포인트"
+       "자원 소유자(Resource Owner)·클라이언트(Client)·권한 서버(Authorization Server)·자원 서버(Resource Server)로 구성"
+      ]
+     },
+     {
+      "title": "흐름: 코드 교환",
+      "items": [
+       "인가 코드 그랜트: 사용자 동의 → 인가 코드 발급 → 클라이언트가 코드로 토큰 교환 → 토큰으로 자원 요청"
+      ]
+     },
+     {
+      "title": "갱신: 장기 접근",
+      "items": [
+       "갱신 토큰(Refresh Token)으로 사용자 재동의 없이 짧은 수명의 접근 토큰을 재발급"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "그랜트 유형과 보안",
+    "subsections": [
+     {
+      "title": "유형: 용도별",
+      "items": [
+       "클라이언트 자격증명 그랜트는 사용자 없는 서버 간 호출, 디바이스 코드 그랜트는 입력이 어려운 TV·IoT용"
+      ]
+     },
+     {
+      "title": "보안: 모범 사례",
+      "items": [
+       "모바일·SPA는 PKCE(RFC 7636)로 코드 가로채기 방지, 암묵적·비밀번호 그랜트는 RFC 9700에서 사용 중단 권고"
       ]
      }
     ]
@@ -27728,21 +27829,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Resource Owner",
-   "Authorization Server",
-   "Resource Server",
-   "OAUTH",
-   "OAuth 2.0 인증절차",
-   "OAUTH 2.0의 변경된 용어",
-   "OAuth1.0과 2.0의 차이점",
-   "OAUTH 1.0A의 문제점"
+   "자원 소유자(Resource Owner)",
+   "클라이언트(Client)",
+   "권한 서버(Authorization Server)",
+   "자원 서버(Resource Server)",
+   "접근 토큰(Access Token)",
+   "갱신 토큰(Refresh Token)",
+   "범위(Scope)",
+   "인가 코드 그랜트",
+   "PKCE(RFC 7636)",
+   "클라이언트 자격증명 그랜트"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_336",
@@ -27755,74 +27859,99 @@
   ],
   "en": "Single Sign-On",
   "dueum": null,
-  "name": "단일 인증(SSO)",
-  "title": "단일 인증(SSO)",
-  "definition": "한 번의 시스템 인증을 통하여 여러 정보시스템에 재인증 절차 없이 접근할 수 있도록 하는 통합 로그인솔루션",
+  "name": "단일 인증(SSO, Single Sign-On)",
+  "title": "단일 인증(SSO, Single Sign-On)",
+  "definition": "한 번의 인증으로 발급된 인증 정보를 신뢰 관계에 있는 여러 정보시스템이 공유해 재로그인 없이 접근하게 하는 통합 인증 체계로, 인증 대행 방식과 인증 정보 전달 방식으로 구현됨",
   "keywords_must": [
-   "데이터",
-   "디자인",
-   "단순 시각화",
-   "CCL",
-   "인증대행 모델(Delegation)",
-   "SSO의 활용 현황",
-   "PKI",
-   "C/S나 패키지 소프트웨어도 SSO통합가능",
-   "기밀성·무결성·가용성"
+   "통합 인증 서버",
+   "SSO 에이전트",
+   "디렉터리 서비스(LDAP)",
+   "인증 대행 모델(Delegation)",
+   "인증 정보 전달 모델(Propagation)",
+   "인증 토큰·쿠키",
+   "커버로스(Kerberos)",
+   "SAML 2.0",
+   "단일 로그아웃(SLO)",
+   "단일 장애점"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "OpenID Connect",
+   "다중 요소 인증(MFA)",
+   "기업 접근 관리(EAM)",
+   "계정·접근 관리(IAM)",
+   "리버스 프록시"
+  ],
   "keywords": [
-   "핵심: 데이터 · 디자인 · 단순 시각화",
-   "기술: CCL · 인증대행 모델(Delegation) · SSO의 활용 현황",
-   "운영: PKI · C/S나 패키지 소프트웨어도 SSO통합가능 · 기밀성·무결성·가용성"
+   "구성: 사용자 → 통합 인증 서버(정책·ACL) ↔ 디렉터리(LDAP) → 각 시스템의 SSO 에이전트",
+   "구축 유형: 인증 대행(에이전트가 대신 ID·비밀번호 입력) · 인증 정보 전달(토큰을 각 시스템이 검증)",
+   "확장: SSO(통합 인증) ⊂ EAM(+통합 권한, RBAC) ⊂ IAM(+계정 프로비저닝·워크플로)"
   ],
   "outline": [
-   "정보시스템에 대한 통합인증관리, SSO 의 개요",
-   "- SSO(Single Sign-On)의 정의",
-   "- SSO 의 등장배경",
-   "SSO(Single Sign-On)의 구성",
-   "- SSO 의 구성도",
-   "SSO 구축 유형",
-   "- 인증대행 모델(Delegation)",
-   "SSO 의 기대효과, 활용 현황 및 향후 전망",
-   "- SSO 의 기대효과",
-   "- SSO 의 활용 현황"
+   "등장 배경과 구성",
+   "- 배경: 시스템 증가",
+   "- 구성: 서버·에이전트",
+   "구축 유형과 표준",
+   "- 대행: 기존 시스템용",
+   "- 전달: 토큰 기반",
+   "- 표준: 사내·웹",
+   "장단점과 보완",
+   "- 장점: 편의·관리",
+   "- 단점: 집중 위험"
   ],
   "sections": [
    {
-    "title": "단일 인증 핵심",
+    "title": "등장 배경과 구성",
     "subsections": [
      {
-      "title": null,
+      "title": "배경: 시스템 증가",
       "items": [
-       "데이터: 단일 인증에서 데이터를 다루는 핵심 암기 포인트",
-       "디자인: 단일 인증에서 디자인을 다루는 핵심 암기 포인트",
-       "단순 시각화: 단일 인증에서 단순 시각화를 다루는 핵심 암기 포인트",
-       "CCL: CCL를 단일 인증 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "업무 시스템마다 계정이 달라 관리 복잡·비밀번호 재사용 증가, 중앙 집중 사용자 관리로 보안 정책 일원화 필요"
+      ]
+     },
+     {
+      "title": "구성: 서버·에이전트",
+      "items": [
+       "통합 인증 서버가 디렉터리 서비스(LDAP)로 사용자를 검증하고 SSO 에이전트가 각 시스템 접근을 처리"
       ]
      }
     ]
    },
    {
-    "title": "단일 인증 구성·기술",
+    "title": "구축 유형과 표준",
     "subsections": [
      {
-      "title": null,
+      "title": "대행: 기존 시스템용",
       "items": [
-       "인증대행 모델(Delegation): 단일 인증에서 인증대행 모델(Delegation)을 다루는 핵심 암기 포인트",
-       "SSO의 활용 현황: 단일 인증에서 SSO의 활용 현황을 다루는 핵심 암기 포인트",
-       "PKI: 인증서·CA로 공개키 신뢰를 유통하는 인프라",
-       "C/S나 패키지 소프트웨어도 SSO통합가능: 단일 인증에서 C/S나 패키지 소프트웨어도 SSO통합가능을 다루는 핵심 암기 포인트"
+       "인증 대행 모델(Delegation): 인증 방식을 바꾸기 어려운 레거시·패키지 SW에 적용, 저장된 자격정보 집중으로 유출 피해 큼"
+      ]
+     },
+     {
+      "title": "전달: 토큰 기반",
+      "items": [
+       "인증 정보 전달 모델(Propagation): 인증 토큰·쿠키를 각 시스템이 검증, 웹 환경에 적합하고 도메인 간에는 표준 필요"
+      ]
+     },
+     {
+      "title": "표준: 사내·웹",
+      "items": [
+       "사내망은 커버로스(Kerberos) 티켓, 기업 간·클라우드는 SAML 2.0 어서션과 OpenID Connect 사용"
       ]
      }
     ]
    },
    {
-    "title": "단일 인증 운영",
+    "title": "장단점과 보완",
     "subsections": [
      {
-      "title": null,
+      "title": "장점: 편의·관리",
       "items": [
-       "기밀성·무결성·가용성: 단일 인증에서 기밀성·무결성·가용성을 다루는 핵심 암기 포인트"
+       "비밀번호 기억 부담 감소, 계정 일괄 회수와 접근 로그 통합, 단일 로그아웃(SLO)으로 세션 일괄 종료"
+      ]
+     },
+     {
+      "title": "단점: 집중 위험",
+      "items": [
+       "단일 장애점: 인증 서버 장애·계정 탈취 시 전 시스템 노출, 다중 요소 인증(MFA)과 이중화로 보완"
       ]
      }
     ]
@@ -27831,22 +27960,24 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "데이터",
-   "디자인",
-   "단순 시각화",
-   "CCL",
-   "인증대행 모델(Delegation)",
-   "SSO의 활용 현황",
-   "PKI",
-   "C/S나 패키지 소프트웨어도 SSO통합가능",
-   "기밀성·무결성·가용성"
+   "통합 인증 서버",
+   "SSO 에이전트",
+   "디렉터리 서비스(LDAP)",
+   "인증 대행 모델(Delegation)",
+   "인증 정보 전달 모델(Propagation)",
+   "인증 토큰·쿠키",
+   "커버로스(Kerberos)",
+   "SAML 2.0",
+   "단일 로그아웃(SLO)",
+   "단일 장애점"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true
  },
  {
   "id": "SV_337",
