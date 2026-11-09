@@ -26,6 +26,7 @@ ARQ: Automatic Repeat reQuest
 AS: Autonomous System
 ASBR: Autonomous System Boundary Router
 ASK: Amplitude Shift Keying
+ASN.1: Abstract Syntax Notation One
 AXFR: Full Zone Transfer
 BAC: Budget at Completion
 BBR: Bottleneck Bandwidth and Round-trip propagation time
@@ -60,6 +61,7 @@ CNAME: Canonical Name
 CNF: Cloud-native Network Function
 CoAP: Constrained Application Protocol
 CoDel: Controlled Delay
+CoMP: Coordinated Multi-Point
 COQ: Cost of Quality
 CoRE: Constrained RESTful Environments
 CPM: Critical Path Method
@@ -129,6 +131,7 @@ EPMO: Enterprise Project Management Office
 ESS: Extended Service Set
 ETC: Estimate to Complete
 EVM: Earned Value Management
+FANET: Flying Ad-hoc Network
 FCS: Frame Check Sequence
 FDM: Frequency Division Multiplexing
 FDMA: Frequency Division Multiple Access
@@ -138,6 +141,8 @@ FHSS: Frequency Hopping Spread Spectrum
 FIN: Finish
 FKP: Flächenkorrekturparameter
 FQDN: Fully Qualified Domain Name
+FSK: Frequency Shift Keying
+FSO: Free Space Optics
 FTM: Fine Timing Measurement
 GAF: Geographic Adaptive Fidelity
 GARP: Gratuitous ARP
@@ -174,6 +179,7 @@ ILF: Internal Logical File
 IMT-2020: International Mobile Telecommunications-2020
 IMT-Advanced: International Mobile Telecommunications-Advanced
 IntServ: Integrated Services
+IoB: Internet of Behavior
 IoE: Internet of Everything
 IOPS: Isolated E-UTRAN Operation for Public Safety
 IoT: Internet of Things
@@ -206,8 +212,10 @@ LIB: Label Information Base
 LLC: Logical Link Control
 LLM: Large Language Model
 LLQ: Low Latency Queuing
+LoRa: Long Range
 LOS: Line of Sight
 LPWA: Low Power Wide Area
+LPWAN: Low-Power Wide-Area Network
 LSA: Link State Advertisement
 LSDB: Link State Database
 LSP: Label Switched Path
@@ -230,6 +238,7 @@ MF: More Fragments
 MIMO: Multiple-Input Multiple-Output
 MLD: Multicast Listener Discovery
 MLO: Multi-Link Operation
+MNO: Mobile Network Operator
 MOCN: Multi-Operator Core Network
 MORAN: Multi-Operator Radio Access Network
 MoS: Mean Opinion Score
@@ -246,6 +255,7 @@ MSTP: Multiple Spanning Tree Protocol
 MTU: Maximum Transmission Unit
 MU-MIMO: Multi-User MIMO
 MUX: Multiplexer
+MVNO: Mobile Virtual Network Operator
 MVP: Minimum Viable Product
 MX: Mail Exchanger
 NAK: Negative Acknowledgment
@@ -254,6 +264,7 @@ NAT64: Network Address Translation IPv6-to-IPv4
 NAV: Network Allocation Vector
 NB-IoT: Narrowband IoT
 NDEF: NFC Data Exchange Format
+NDN: Named Data Networking
 NDP: Neighbor Discovery Protocol
 NETCONF: Network Configuration Protocol
 NFC: Near Field Communication
@@ -262,6 +273,7 @@ NFVI: NFV Infrastructure
 NFVO: NFV Orchestrator
 NGT: Nominal Group Technique
 NMRG: Network Management Research Group
+NMS: Network Management System
 NOMA: Non-Orthogonal Multiple Access
 NPN: Non-Public Network
 NPV: Net Present Value
@@ -274,6 +286,7 @@ NSSA: Not-So-Stubby Area
 NSSAI: Network Slice Selection Assistance Information
 NSSF: Network Slice Selection Function
 NTN: Non-Terrestrial Network
+NTP: Network Time Protocol
 NTRIP: Networked Transport of RTCM via Internet Protocol
 O-CU: O-RAN Central Unit
 O-DU: O-RAN Distributed Unit
@@ -288,15 +301,19 @@ OLSR: Optimized Link State Routing
 OMA: Orthogonal Multiple Access
 ONF: Open Networking Foundation
 ONOS: Open Network Operating System
+OOK: On-Off Keying
 OPA: Organizational Process Assets
 OPNFV: Open Platform for NFV
+OSGi: Open Services Gateway initiative
 OSPF: Open Shortest Path First
 OSS: Operations Support System
 OTA: Over-The-Air
 OWE: Opportunistic Wireless Encryption
 P2P: Peer-to-Peer
+PAT: Port Address Translation
 PCell: Primary Cell
 PCF: Point Coordination Function
+PCM: Pulse Code Modulation
 PDR: Pedestrian Dead Reckoning
 PERT: Program Evaluation and Review Technique
 PESQ: Perceptual Evaluation of Speech Quality
@@ -315,6 +332,7 @@ PMF: Protected Management Frames
 PMI: Project Management Institute
 PMO: Project Management Office
 PMTUD: Path MTU Discovery
+PoE: Power over Ethernet
 POLQA: Perceptual Objective Listening Quality Analysis
 POP: Point of Presence
 PPP: Point-to-Point Protocol
@@ -328,6 +346,7 @@ QAM: Quadrature Amplitude Modulation
 QDMTT: Qualified Domestic Minimum Top-up Tax
 QoE: Quality of Experience
 QoS: Quality of Service
+QUIC: Quick UDP Internet Connections
 RACI: Responsible Accountable Consulted Informed
 RAM: Responsibility Assignment Matrix
 RAN: Radio Access Network
@@ -348,10 +367,13 @@ RST: Reset
 RSTP: Rapid Spanning Tree Protocol
 RSU: Road Side Unit
 RSVP: Resource Reservation Protocol
+RTCP: RTP Control Protocol
 RTK: Real-Time Kinematic
 RTM: Requirements Traceability Matrix
 RTO: Retransmission TimeOut
+RTP: Real-time Transport Protocol
 RTS: Request To Send
+RTSP: Real Time Streaming Protocol
 RTT: Round Trip Time
 RTTVAR: Round-Trip Time Variation
 RTU: Remote Terminal Unit
@@ -370,6 +392,7 @@ SCTP: Stream Control Transmission Protocol
 SD-WAN: Software-Defined Wide Area Network
 SDDC: Software-Defined Data Center
 SDE: Software-Defined Everything
+SDH: Synchronous Digital Hierarchy
 SDM: Space Division Multiplexing
 SDMA: Space Division Multiple Access
 SDN: Software-Defined Networking
@@ -388,7 +411,9 @@ SLAAC: Stateless Address Autoconfiguration
 SLD: Second-Level Domain
 SMF: Session Management Function
 SMO: Service Management and Orchestration
+SNMP: Simple Network Management Protocol
 SNPN: Standalone Non-Public Network
+SONET: Synchronous Optical Network
 SoW: Statement of Work
 SPF: Shortest Path First
 SPIN: Sensor Protocols for Information via Negotiation
@@ -439,6 +464,7 @@ VAC: Variance at Completion
 VANET: Vehicular Ad-hoc Network
 VIM: Virtualized Infrastructure Manager
 VIP: Virtual IP
+VLAN: Virtual LAN
 VLSM: Variable Length Subnet Mask
 VMAF: Video Multimethod Assessment Fusion
 VNF: Virtualized Network Function
@@ -447,6 +473,7 @@ VPN: Virtual Private Network
 VRRP: Virtual Router Redundancy Protocol
 VRS: Virtual Reference Station
 WAVE: Wireless Access in Vehicular Environments
+WBAN: Wireless Body Area Network
 WBS: Work Breakdown Structure
 WCDMA: Wideband Code Division Multiple Access
 WDM: Wavelength Division Multiplexing

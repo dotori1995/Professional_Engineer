@@ -34,7 +34,7 @@ bundle exec jekyll serve      # http://localhost:4000/Professional_Engineer/
 
 ## 데이터 구조
 ```
-_data/nw.json             # 네트워크(NW) 토픽 127개 (파서 출력물)
+_data/nw.json             # 네트워크(NW) 토픽 239개 (Sprint1+2) (파서 출력물)
 _data/pm.json             # 프로젝트관리(PM) 토픽 89개 (파서+큐레이션)
 _data/overrides/nw.json   # 수동 보정(name/en 표시 제목, 검수한 정의·키워드·목차·자세히)
 _data/glossary.yml        # 약어 → 풀네임
