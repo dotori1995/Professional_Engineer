@@ -11644,7 +11644,7 @@
   "id": "NW_107",
   "code": "NW_107",
   "title": "MQTT(MQ Telemetry Transport)",
-  "subtitle": "MQTT (Message Queue Telemetry Transport)",
+  "subtitle": "MQTT(MQ Telemetry Transport)",
   "domain": "NW",
   "category": "네트워크 > 사물지능통신/IoT > MQTT",
   "definition": "브로커를 중심으로 토픽 기반 발행/구독 방식으로 메시지를 전달하는 TCP 기반 경량 메시징 프로토콜로, 저대역·불안정 네트워크의 IoT에 적합함 (OASIS 표준)",
@@ -13498,7 +13498,7 @@
   "id": "NW_124_01",
   "code": "NW_124_01",
   "title": "매터 표준과 스레드 프로토콜(Matter & Thread)",
-  "subtitle": "메터(Matter) 표준과 쓰레드(Thread) 프로토콜",
+  "subtitle": "메터(Matter) 표준과 스레드(Thread) 프로토콜",
   "domain": "NW",
   "category": "DS > 신토픽",
   "definition": "매터는 CSA가 제정한 IP 기반 개방형 스마트홈 응용 계층 표준이고, 스레드는 IEEE 802.15.4 위에서 IPv6(6LoWPAN) 저전력 메시 네트워크를 제공하는 전송 프로토콜임",
@@ -16490,7 +16490,7 @@
      {
       "title": "주요적용기술",
       "items": [
-       "설치 파라메터 자동생성, 인접기지국 식별/관계설정",
+       "설치 파라미터 자동생성, 인접기지국 식별/관계설정",
        "인접 기지국간 신호 및 트래픽 유형 정보를 활용하여 기지국",
        "beam-forming(주파수 재사용, 공간방향성 안테나 기술),"
       ]
@@ -16913,7 +16913,7 @@
      {
       "title": "MIMO의 동작원리",
       "items": [
-       "MIMO의 매커니즘을 수행하는 핵심 기술은 동일 데이터 전송과 채널 정보 귀환 여부에 따라 분류"
+       "MIMO의 메커니즘을 수행하는 핵심 기술은 동일 데이터 전송과 채널 정보 귀환 여부에 따라 분류"
       ]
      },
      {
@@ -17551,7 +17551,7 @@
       "title": null,
       "items": [
        "WMC에서 하나의 초소형 기지국(펨토셀)으로 LTE-TDD 방식과 LTE-FDD 방식, 그리고 WIFI주파수까지 서비스 할수 있는 '트리플 모드 셀' 기술 등장",
-       "국내 이동통신 트래픽 폭증대안으로 급부상 상향(업로드)과 하향(다운로드)을 정해놓는 FDD와 달리 TDD는데이터 이용환경에 맞게 상향과 하향을 자유롭게 활용할 수 있어 트래픽 폭증 상황에 대비하는 데 효과적이다."
+       "국내 이동통신 트래픽 폭증대안으로 급부상 상향(업로드)과 하향(다운로드)을 정해놓는 FDD와 달리 TDD는 데이터 이용환경에 맞게 상향과 하향을 자유롭게 활용할 수 있어 트래픽 폭증 상황에 대비하는 데 효과적이다."
       ]
      }
     ]
@@ -18206,7 +18206,7 @@
    }
   ],
   "warnings": [],
-  "dueum": "전체주고지연에면",
+  "dueum": "전체주고지연에면(최고 전송속도·체감 전송속도·주파수 효율·고속 이동성·전송 지연·연결 밀도·에너지 효율·면적당 용량)",
   "pages": [
    273,
    277
@@ -20263,7 +20263,7 @@
       "items": [
        "네트워크 자원에 위치(Management Information Base)",
        "각 자원의 상태를 저장하는 저장 공간업체별 MIB 표준 필요",
-       "Manager와 Agent간 정보 교환 수단으로 디렉토리 형태의계층 구조관리 대상자원과 NMS의 통신 프로토콜 벤더에 독립적 Agent로부터 상태 정보를 수집 및 분석, 장애복구 Repository 등록"
+       "Manager와 Agent간 정보 교환 수단으로 디렉터리 형태의 계층 구조관리 대상자원과 NMS의 통신 프로토콜 벤더에 독립적 Agent로부터 상태 정보를 수집 및 분석, 장애복구 Repository 등록"
       ]
      }
     ]
@@ -20473,7 +20473,7 @@
      {
       "title": "ADN (Application Delivery Network) 정의",
       "items": [
-       "L4/L7 스위치, 웹 어플리케이션 가속, 가상화, SSL VPN을 결합, 인터넷 서비스를 신속/효율/저렴/보안성 있게전달하는 네트워크 기술"
+       "L4/L7 스위치, 웹 애플리케이션 가속, 가상화, SSL VPN을 결합, 인터넷 서비스를 신속/효율/저렴/보안성 있게전달하는 네트워크 기술"
       ]
      }
     ]
@@ -20484,8 +20484,8 @@
      {
       "title": null,
       "items": [
-       "Page Dowon Time= First Mile+Middle Mile+Last Mile",
-       "어플리케이션 로직(데이터베이스 쿼리) , -3rd Party 호출(Cross-Tier/ 웹 서비스 호출)",
+       "Page Download Time= First Mile+Middle Mile+Last Mile",
+       "애플리케이션 로직(데이터베이스 쿼리) , -3rd Party 호출(Cross-Tier/ 웹 서비스 호출)",
        "페이지 크기/ 내용 생성 서버 프로세싱 부하"
       ]
      }
@@ -21752,7 +21752,7 @@
  {
   "id": "NW_212_01",
   "code": "NW_212_01",
-  "title": "STP(Spinning Tree Protocol)",
+  "title": "STP(Spanning Tree Protocol)",
   "subtitle": "",
   "domain": "NW",
   "category": "NW> 라우팅 프로토콜",
@@ -22064,7 +22064,7 @@
      {
       "title": "PLC의 핵심기술",
       "items": [
-       "신호를 전력선에 실어주거나 신호를 전력선으로부터 분리해 내는 기술 (Band-pass Filtering, Impendence Matching)",
+       "신호를 전력선에 실어주거나 신호를 전력선으로부터 분리해 내는 기술 (Band-pass Filtering, Impedance Matching)",
        "전송할 신호에 따라 Code/ Decode화 방법",
        "신호 패킷의 충돌로 인해 낭비되는 시간과 대역폭을 줄이기 위해 사용 (CSMA/CD, CDMA, CDMA/CDCA, CSMA/CA, Token Pass)"
       ]
@@ -22282,9 +22282,9 @@
   "code": "NW_220",
   "domain": "NW",
   "category": "네트워크 > 표준 동향 > OSGi",
-  "title": "OSGi(Open Service Gateway initiative)",
+  "title": "OSGi(Open Services Gateway initiative)",
   "subtitle": "",
-  "name": "OSGi(Open Service Gateway initiative)",
+  "name": "OSGi(Open Services Gateway initiative)",
   "en": "OSGi",
   "definition": "자바 기반 모듈·서비스 플랫폼. 번들 생명주기·서비스 레지스트리로 게이트웨이·임베디드 응용의 동적 배포를 지원한다.",
   "keywords": [
@@ -22331,7 +22331,7 @@
      {
       "title": "OSGi 구성요소",
       "items": [
-       "OSGI의 Component로 어플리케이션 조립의 단위",
+       "OSGi의 Component로 애플리케이션 조립의 단위",
        "실행코드, 리소스, manifest파일을 포함하는 jar 파일 형태",
        "서비스를 제공하기 위한 기능적 배포 단위"
       ]
@@ -25373,7 +25373,7 @@
       "items": [
        "통신을 하는 주체 즉, 송신자와 수신자가 누군지 모름",
        "암호화 키 여러 개를 차례로 이용하여, 암호화 하는 방식",
-       "각 OR(Onion Router)들의 대칭키를 디피헬만 핸드쉐이크(Diffie-Hellman handshake) 기법 사용하여 클라이언트와 각 라우터 사이에 대칭키 공유하여암호화"
+       "각 OR(Onion Router)들의 대칭키를 디피헬만 핸드셰이크(Diffie-Hellman handshake) 기법 사용하여 클라이언트와 각 라우터 사이에 대칭키 공유하여암호화"
       ]
      }
     ]
@@ -25666,7 +25666,7 @@
      {
       "title": "리버스 프록시 동작 원리",
       "items": [
-       "외부에 Proxy Server 노출하여 Client의 서비스 요청시 Rerverse Proxy 서버가 요청을 받아 실제 처리결과를전달"
+       "외부에 Proxy Server 노출하여 Client의 서비스 요청시 Reverse Proxy 서버가 요청을 받아 실제 처리결과를전달"
       ]
      },
      {

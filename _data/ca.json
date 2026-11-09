@@ -250,7 +250,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "PC": "Personal Computer"
+    }
   },
   {
     "id": "CA_003",
@@ -1629,7 +1632,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "PIM": "Processing-In-Memory"
+    }
   },
   {
     "id": "CA_016",
@@ -2051,7 +2057,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "AP": "Application Processor"
+    }
   },
   {
     "id": "CA_019_0",
@@ -2465,7 +2474,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "MAC": "Multiply-Accumulate"
+    }
   },
   {
     "id": "CA_021",
@@ -2787,7 +2799,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "ECC": "Error-Correcting Code"
+    }
   },
   {
     "id": "CA_047",
@@ -3391,7 +3406,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "PIM": "Processing-In-Memory"
+    }
   },
   {
     "id": "CA_013",
@@ -4601,7 +4619,8 @@
     "dueum": null,
     "gloss": {
       "MBR": "Master Boot Record",
-      "GPT": "GUID Partition Table"
+      "GPT": "GUID Partition Table",
+      "RAM": "Random Access Memory"
     }
   },
   {
@@ -17914,7 +17933,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "RTO": "Recovery Time Objective"
+    }
   },
   {
     "id": "CA_135",
@@ -18626,7 +18648,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "SAP": null
+    }
   },
   {
     "id": "CA_199",
@@ -18893,7 +18918,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "PIM": "Processing-In-Memory"
+    }
   },
   {
     "id": "CA_203",
@@ -19029,7 +19057,9 @@
     "reviewed": true,
     "dueum": null,
     "gloss": {
-      "ISP": "Image Signal Processor"
+      "ISP": "Image Signal Processor",
+      "AP": "Application Processor",
+      "VPU": "Video Processing Unit"
     }
   },
   {
@@ -19465,6 +19495,9 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "SCM": "Storage Class Memory"
+    }
   }
 ]
