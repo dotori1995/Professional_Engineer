@@ -256,3 +256,7 @@ body{padding-bottom:env(safe-area-inset-bottom)}
 .dr-topics a.on{background:var(--accent-soft);font-weight:700}
 .dr-id{font-size:11px;color:var(--muted);margin-right:2px}
 html.dr-open,html.dr-open body{overflow:hidden}
+
+/* 상단 텍스트 메뉴 */
+.topnav a,.page-topic .topnav a,.page-cards .topnav a,.page-quiz .topnav a{font-size:13px;font-weight:600;padding:6px 7px;line-height:1.2}
+@media (max-width:370px){.topnav a,.page-topic .topnav a,.page-cards .topnav a,.page-quiz .topnav a{font-size:12px;padding:5px 4px}.topnav{gap:2px}}

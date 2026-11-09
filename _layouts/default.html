@@ -25,9 +25,9 @@
     <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="메뉴 열기" aria-controls="drawer" aria-expanded="false">☰</button>
     <a class="brand" href="{{ '/' | relative_url }}">📘 {{ site.short_name }}<span class="cur-dom" id="curDom"></span></a>
     <nav class="topnav" aria-label="바로가기">
-      <a href="{{ '/' | relative_url }}" data-nav="home" class="{% if page.page_id == 'home' %}on{% endif %}" aria-label="목록" title="목록">📚</a>
-      <a href="{{ '/cards/' | relative_url }}" data-nav="cards" class="{% if page.page_id == 'cards' %}on{% endif %}" aria-label="카드" title="카드">🃏</a>
-      <a href="{{ '/quiz/' | relative_url }}" data-nav="quiz" class="{% if page.page_id == 'quiz' %}on{% endif %}" aria-label="문제" title="문제">📝</a>
+      <a href="{{ '/' | relative_url }}" data-nav="home" class="{% if page.page_id == 'home' %}on{% endif %}" >목록</a>
+      <a href="{{ '/cards/' | relative_url }}" data-nav="cards" class="{% if page.page_id == 'cards' %}on{% endif %}" >카드</a>
+      <a href="{{ '/quiz/' | relative_url }}" data-nav="quiz" class="{% if page.page_id == 'quiz' %}on{% endif %}" >문제</a>
       <button class="icon-btn" id="themeBtn" type="button" aria-label="다크 모드 전환">🌓</button>
     </nav>
   </header>
