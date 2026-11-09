@@ -1159,3 +1159,81 @@ UI: User Interface
 WAS: Web Application Server
 HA: High Availability
 RTO: [Recovery Time Objective, Retransmission TimeOut]
+AHCI: Advanced Host Controller Interface
+AMAT: Average Memory Access Time
+BIOS: Basic Input/Output System
+BTB: Branch Target Buffer
+CORBA: Common Object Request Broker Architecture
+CUDA: Compute Unified Device Architecture
+CXL: Compute Express Link
+DCOM: Distributed Component Object Model
+DDR: Double Data Rate
+DIMM: Dual In-line Memory Module
+DMA: Direct Memory Access
+DMAC: Direct Memory Access Controller
+DRAM: Dynamic Random Access Memory
+EDSAC: Electronic Delay Storage Automatic Calculator
+EDVAC: Electronic Discrete Variable Automatic Computer
+EEPROM: Electrically Erasable Programmable Read-Only Memory
+EFI: Extensible Firmware Interface
+ENIAC: Electronic Numerical Integrator and Computer
+EPROM: Erasable Programmable Read-Only Memory
+FPU: Floating Point Unit
+FSB: Front Side Bus
+FTL: Flash Translation Layer
+GAA: Gate-All-Around
+GDDR: Graphics Double Data Rate
+GFN: Group-Forming Network
+GPGPU: General-Purpose computing on Graphics Processing Units
+GPR: General Purpose Register
+GPT: [GUID Partition Table, Generative Pre-trained Transformer]
+GRUB: GRand Unified Bootloader
+GUID: Globally Unique Identifier
+HBM: High Bandwidth Memory
+HPC: High Performance Computing
+IMDB: In-Memory Database
+IMDG: In-Memory Data Grid
+JEDEC: Joint Electron Device Engineering Council
+LFU: Least Frequently Used
+LILO: LInux LOader
+LPDDR: Low Power Double Data Rate
+LRU: Least Recently Used
+MAR: Memory Address Register
+MFT: Multiprogramming with a Fixed number of Tasks
+MFU: Most Frequently Used
+MLC: Multi-Level Cell
+MMU: Memory Management Unit
+MTBF: Mean Time Between Failures
+MVT: Multiprogramming with a Variable number of Tasks
+NCCL: NVIDIA Collective Communications Library
+NPU: Neural Processing Unit
+NTLDR: NT Loader
+NVDIMM: Non-Volatile Dual In-line Memory Module
+NVMe: Non-Volatile Memory Express
+OTP: [One-Time Programmable, One-Time Password]
+PC: [Personal Computer, Program Counter]
+PCIe: Peripheral Component Interconnect Express
+PNM: Processing-Near-Memory
+PROM: Programmable Read-Only Memory
+PSW: Program Status Word
+PTE: Page Table Entry
+QLC: Quad-Level Cell
+QPI: QuickPath Interconnect
+RDMA: Remote Direct Memory Access
+SATA: Serial Advanced Technology Attachment
+SIMD: Single Instruction Multiple Data
+SISD: Single Instruction Single Data
+SLC: Single-Level Cell
+SMP: Symmetric Multi-Processing
+SNN: Spiking Neural Network
+SRAM: Static Random Access Memory
+STDP: Spike-Timing-Dependent Plasticity
+TLB: Translation Lookaside Buffer
+TLC: Triple-Level Cell
+TMR: Triple Modular Redundancy
+TOPS: Tera Operations Per Second
+TSV: Through-Silicon Via
+UASP: USB Attached SCSI Protocol
+UEFI: Unified Extensible Firmware Interface
+UPI: Ultra Path Interconnect
+VPU: [Video Processing Unit, Vision Processing Unit]
