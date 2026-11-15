@@ -36,12 +36,14 @@ AGV: Automated Guided Vehicle
 AH: Authentication Header
 AI: Artificial Intelligence
 AIC: Akaike Information Criterion
+AICC: AI Contact Center
 AIFS: Arbitration Inter-Frame Space
 AIMD: Additive Increase Multiplicative Decrease
 AIoE: Ambient Internet of Everything
 ALB: Application Load Balancer
 ALBERT: A Lite BERT
 ALG: Application Level Gateway
+ALICE: Artificial Linguistic Internet Computer Entity
 ALM: [Application Lifecycle Management, Application Layer Multicast]
 AMC: Adaptive Modulation and Coding
 AMF: Access and Mobility Management Function
@@ -88,6 +90,7 @@ ATM: Asynchronous Transfer Mode
 ATSC: Advanced Television Systems Committee
 ATSSS: Access Traffic Steering, Switching and Splitting
 AUC: Area Under the Curve
+AutoML: Automated Machine Learning
 AV: Audio/Video
 AV1: AOMedia Video 1
 AVC: Advanced Video Coding
@@ -120,6 +123,7 @@ BGP: Border Gateway Protocol
 BIA: Business Impact Analysis
 BIC: Bayesian Information Criterion
 BID: Bridge ID
+BLAS: Basic Linear Algebra Subprograms
 BLAST: Bell Laboratories Layered Space-Time
 BLE: Bluetooth Low Energy
 BLOB: Binary Large Object
@@ -128,6 +132,7 @@ BM25: Best Matching 25
 BML: Build-Measure-Learn
 BMP: Bitmap
 BMT: Benchmark Test
+BOHB: Bayesian Optimization and HyperBand
 BOOTP: Bootstrap Protocol
 BOSH: Bidirectional-streams Over Synchronous HTTP
 BoW: Bag of Words
@@ -187,6 +192,7 @@ CKAN: Comprehensive Knowledge Archive Network
 CKPT: Checkpoint Process
 CLAT: Customer-side Translator
 CLI: Command-Line Interface
+CLIP: Contrastive Language-Image Pre-training
 CLOB: Character Large Object
 CLR: Compensation Log Record
 CLT: Central Limit Theorem
@@ -253,6 +259,7 @@ DAG: Directed Acyclic Graph
 DAI: Dynamic ARP Inspection
 DAM: Database Activity Monitoring
 DASH: Dynamic Adaptive Streaming over HTTP
+DataOps: Data Operations
 DAWEX: Data Exchange
 DBA: Database Administrator
 DBD: Database Description
@@ -269,8 +276,10 @@ DDL: Data Definition Language
 DEEP: Detailed appropriately, Estimated, Emergent, Prioritized
 DEMUX: Demultiplexer
 DENM: Decentralized Environmental Notification Message
+DenseNet: Densely Connected Convolutional Network
 DER: [Distinguished Encoding Rules, Distributed Energy Resources]
 DET: Data Element Type
+DevOps: Development and Operations
 DevRel: Developer Relations
 DF: ["Don't Fragment", Degrees of Freedom]
 DFS: Dynamic Frequency Selection
@@ -282,6 +291,7 @@ DHCPv6: Dynamic Host Configuration Protocol for IPv6
 DHT: Distributed Hash Table
 DiffServ: Differentiated Services
 DIFS: DCF Inter-Frame Space
+DistilBERT: Distilled BERT
 DKNF: Domain-Key Normal Form
 DLCI: Data Link Connection Identifier
 DLL: Dynamic Link Library
@@ -419,6 +429,8 @@ FDM: Frequency Division Multiplexing
 FDMA: Frequency Division Multiple Access
 FEC: [Forward Error Correction, Forwarding Equivalence Class, Fabric-Enabled Computer]
 FECN: Forward Explicit Congestion Notification
+FedAvg: Federated Averaging
+FedSGD: Federated Stochastic Gradient Descent
 FEMS: Factory Energy Management System
 FFN: Feed-Forward Network
 FFP: Firm Fixed Price
@@ -429,11 +441,14 @@ FIFO: First In, First Out
 FIN: Finish
 FK: Foreign Key
 FKP: Flächenkorrekturparameter
+FLOPs: Floating Point Operations
 FLWOR: For, Let, Where, Order by, Return
 FMC: Fixed Mobile Convergence
 FMEA: Failure Mode and Effects Analysis
+FMOps: Foundation Model Operations
 FMS: Flexible Manufacturing System
 FOD: Foreign Object Detection
+FOMAML: First-Order MAML
 FOTA: Firmware Over-The-Air
 FP: [Function Point, False Positive, Frequent Pattern]
 FP-EPA: Fixed Price with Economic Price Adjustment
@@ -472,11 +487,13 @@ GFP: Generic Framing Procedure
 GFS: Google File System
 GFSK: Gaussian Frequency Shift Keying
 GIF: Graphics Interchange Format
+GIGO: "Garbage In, Garbage Out"
 GIS: Geographic Information System
 GiST: Generalized Search Tree
 GloBE: Global Anti-Base Erosion
 GLONASS: Global Navigation Satellite System (Russia)
 GloVe: Global Vectors for Word Representation
+GLUE: General Language Understanding Evaluation
 GMM: Gaussian Mixture Model
 GNN: Graph Neural Network
 GNSS: Global Navigation Satellite System
@@ -505,6 +522,7 @@ HDFS: Hadoop Distributed File System
 HDLC: High-level Data Link Control
 HEMS: Home Energy Management System
 HEVC: High Efficiency Video Coding
+HITL: Human in the Loop
 HLR: Home Location Register
 HMAC: Hash-based Message Authentication Code
 HMD: Head-Mounted Display
@@ -516,6 +534,7 @@ HOA: Higher Order Ambisonics
 HOL: Head-of-Line
 HOLAP: Hybrid OLAP
 HPACK: HTTP/2 Header Compression
+HPO: Hyper Parameter Optimization
 HQL: Hive Query Language
 HR: Human Resources
 HRN: Highest Response-ratio Next
@@ -563,6 +582,7 @@ IMS: [IP Multimedia Subsystem, IMS Global Learning Consortium]
 IMT: International Mobile Telecommunications
 IMT-2020: International Mobile Telecommunications-2020
 IMT-Advanced: International Mobile Telecommunications-Advanced
+INT8: 8-bit Integer
 IntServ: Integrated Services
 INVEST: Independent, Negotiable, Valuable, Estimable, Small, Testable
 IoB: Internet of Behavior
@@ -579,6 +599,7 @@ IPSO: IP for Smart Objects
 IPTV: Internet Protocol Television
 IPv4: Internet Protocol version 4
 IPv6: Internet Protocol version 6
+IQR: Interquartile Range
 IRI: Internationalized Resource Identifier
 IRR: Internal Rate of Return
 IS-IS: Intermediate System to Intermediate System
@@ -643,6 +664,7 @@ LBT: Listen Before Talk
 LC3: Low Complexity Communication Codec
 LCAS: Link Capacity Adjustment Scheme
 LCC: Life Cycle Cost
+LCEL: LangChain Expression Language
 LCEVC: Low Complexity Enhancement Video Coding
 LCF: Local Closest First
 LCFS: Last-Come, First-Served
@@ -664,9 +686,12 @@ LIF: Leaky Integrate-and-Fire
 LIN: Local Interconnect Network
 LISP: LISt Processing
 LKM: Loadable Kernel Module
+LLaMA: Large Language Model Meta AI
+LLaVA: Large Language and Vision Assistant
 LLC: Logical Link Control
 LLF: Least Laxity First
 LLM: Large Language Model
+LLMOps: Large Language Model Operations
 LLQ: Low Latency Queuing
 LOB: Large Object
 LOC: Lines of Code
@@ -674,6 +699,7 @@ LOE: Level of Effort
 LOF: Local Outlier Factor
 LOOCV: Leave-One-Out Cross-Validation
 LoRa: Long Range
+LoRA: Low-Rank Adaptation
 LOS: Line of Sight
 LPF: Low-Pass Filter
 LPI: Low Probability of Intercept
@@ -697,14 +723,17 @@ LTE: Long Term Evolution
 LTE-R: LTE-Railway
 LTE-V2X: LTE Vehicle-to-Everything
 LTP: Long-Term Potentiation
+LUT: Look-Up Table
 LwM2M: Lightweight Machine-to-Machine
 LWT: Last Will and Testament
 LZW: Lempel-Ziv-Welch
 M2M: Machine-to-Machine
 MAC: [Medium Access Control, Message Authentication Code, Master-Auxiliary Concept]
 MADD: Mobile Agent-based Directed Diffusion
+MAML: Model-Agnostic Meta-Learning
 MAN: Metropolitan Area Network
 MANET: Mobile Ad hoc Network
+MANN: Memory-Augmented Neural Network
 MANO: Management and Orchestration
 MANOVA: Multivariate Analysis of Variance
 MBAP: Modbus Application Protocol
@@ -741,6 +770,7 @@ MLFQ: Multi-Level Feedback Queue
 MLGF: Multi-Level Grid File
 MLM: Masked Language Model
 MLO: Multi-Link Operation
+MLOps: Machine Learning Operations
 MLQ: Multi-Level Queue
 MMDB: Main Memory Database
 MMDBMS: Main Memory Database Management System
@@ -749,6 +779,7 @@ MMF: Multi-Mode Fiber
 MMH: Maximum Margin Hyperplane
 MMIO: Memory-Mapped I/O
 MMT: MPEG Media Transport
+MnasNet: Mobile Neural Architecture Search Network
 MNO: Mobile Network Operator
 MOCN: Multi-Operator Core Network
 MoE: Mixture of Experts
@@ -818,7 +849,9 @@ NGV: Next Generation V2X
 NIC: Network Interface Card
 NISO: National Information Standards Organization
 NLB: Network Load Balancer
+NLG: Natural Language Generation
 NLOS: Non-Line-of-Sight
+NLU: Natural Language Understanding
 NMF: Non-negative Matrix Factorization
 NMRG: Network Management Research Group
 NMS: Network Management System
@@ -879,6 +912,7 @@ OMA: Orthogonal Multiple Access
 OMAF: Omnidirectional Media Format
 OMG: Object Management Group
 ONF: Open Networking Foundation
+ONNX: Open Neural Network Exchange
 ONOS: Open Network Operating System
 ONVIF: Open Network Video Interface Forum
 OO: Object-Oriented
@@ -886,6 +920,8 @@ OODB: Object-Oriented Database
 OODBMS: Object-Oriented Database Management System
 OOK: On-Off Keying
 OPA: Organizational Process Assets
+OpenCL: Open Computing Language
+OpenCV: Open Source Computer Vision Library
 OPEX: Operating Expenditure
 OPNFV: Open Platform for NFV
 OPTICS: Ordering Points To Identify the Clustering Structure
@@ -925,6 +961,7 @@ PDM: Precedence Diagramming Method
 PDN: Packet Data Network
 PDR: Pedestrian Dead Reckoning
 PDU: Protocol Data Unit
+PEFT: Parameter-Efficient Fine-Tuning
 PERT: Program Evaluation and Review Technique
 PESQ: Perceptual Evaluation of Speech Quality
 PFF: Page Fault Frequency
@@ -990,6 +1027,7 @@ PWM: Pulse Width Modulation
 QA: Quality Assurance
 QAM: Quadrature Amplitude Modulation
 QAOA: Quantum Approximate Optimization Algorithm
+QBC: Query by Committee
 QBE: Query By Example
 QBM: Quantum Boltzmann Machine
 QC: Quality Control
@@ -997,6 +1035,7 @@ QCI: QoS Class Identifier
 QDMTT: Qualified Domestic Minimum Top-up Tax
 QEP: Query Execution Plan
 QFD: Quality Function Deployment
+QLoRA: Quantized Low-Rank Adaptation
 QML: Quantum Machine Learning
 QNN: Quantum Neural Network
 QoE: Quality of Experience
@@ -1024,6 +1063,7 @@ RCSI: Read Committed Snapshot Isolation
 RDBMS: Relational Database Management System
 RDD: Resilient Distributed Dataset
 RDFS: RDF Schema
+ReAct: Reasoning and Acting
 RED: Random Early Detection
 RegTech: Regulatory Technology
 REJ: Reject
@@ -1053,6 +1093,7 @@ RLE: Run-Length Encoding
 RLHF: Reinforcement Learning from Human Feedback
 RMA: Rate Monotonic Analysis
 RMAN: Recovery Manager
+RMF: Risk Management Framework
 RMON: Remote Network Monitoring
 RMSE: Root Mean Squared Error
 RMSProp: Root Mean Square Propagation
@@ -1152,6 +1193,7 @@ SHVC: Scalable High Efficiency Video Coding
 SI: System Integration
 SIC: Successive Interference Cancellation
 SIFS: Short Inter-Frame Space
+SIFT: Scale-Invariant Feature Transform
 SIGTRAN: Signaling Transport
 SIIT: Stateless IP/ICMP Translation
 SIM: Subscriber Identity Module
@@ -1163,12 +1205,14 @@ SLA: Service Level Agreement
 SLAAC: Stateless Address Autoconfiguration
 SLB: Server Load Balancing
 SLD: Second-Level Domain
+sLLM: small Large Language Model
 SLM: Service Level Management
 SLTF: Shortest Latency Time First
 SMDS: Switched Multimegabit Data Service
 SMF: [Session Management Function, Single-Mode Fiber]
 SMO: Service Management and Orchestration
 SMON: System Monitor
+SMPC: Secure Multi-Party Computation
 SMT: Simultaneous Multi-Threading
 SNAT: Source Network Address Translation
 SNMP: Simple Network Management Protocol
@@ -1262,11 +1306,15 @@ TMMi: Test Maturity Model integration
 ToA: Time of Arrival
 TOC: Theory of Constraints
 TOS: Type of Service
+ToT: Tree of Thoughts
 TPC: Transaction Processing Performance Council
+TPE: Tree-structured Parzen Estimator
 TPID: Tag Protocol Identifier
 tpmC: Transactions per Minute (TPC-C)
+TPOT: Time Per Output Token
 TPR: True Positive Rate
 TPS: [Toyota Production System, Transactions Per Second]
+TPU: Tensor Processing Unit
 TRC: Tuple Relational Calculus
 TRON: The Real-time Operating system Nucleus
 TRS: Trunked Radio System
@@ -1275,6 +1323,7 @@ TSN: Time-Sensitive Networking
 TTA: Telecommunications Technology Association
 TTC: Telecommunication Technology Committee
 TTFC: Time To First Call
+TTFT: Time To First Token
 TTI: Transmission Time Interval
 TTL: Time To Live
 TU: Transform Unit
@@ -1356,6 +1405,7 @@ VPLS: Virtual Private LAN Service
 VPN: Virtual Private Network
 VPP: Virtual Power Plant
 VPWS: Virtual Private Wire Service
+VQA: Visual Question Answering
 VQE: Variational Quantum Eigensolver
 VR: Virtual Reality
 VRF: Virtual Routing and Forwarding
