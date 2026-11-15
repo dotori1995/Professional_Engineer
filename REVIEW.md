@@ -97,3 +97,11 @@ NW_023_00(HTTP/PDA 문장 섞임), NW_073 제목 MTCP→MPTCP, NW_072 VRRS/HSRP 
 - AL_035 대기행렬 M/M/1 톨게이트 사례: 서비스율 μ = 60/14 → 60/15 = 4대/분으로 정정, 누락된 L·W·Wq 값을 계산해 보충(L = 1대, W = 30초, Wq = 15초). "시간당 240대 이상이 아닌 경우 증설 불필요" 문장은 ρ → 1(시간당 240대 근접) 시 대기 급증으로 해석을 명확화.
 - 별표(★): 시트 '9주차_AIgorithm' 37개 중 36개를 PDF 토픽에 매핑(시트의 'DAG' 항목은 PDF 토픽이 없어 미생성).
 - 약어: 영상 부호화·탐색·대기행렬 약어 43개 glossary 추가, 문맥 의존 약어(CPM, SMA, TS, DS, MPU, MV, DC)는 토픽별 gloss로 지정.
+
+## SV 수작업 재작성 7차 (2026-11-16) — 원문 대비 바로잡은 사항
+- SV_389 간편결제: FIDO2.0 → FIDO2(WebAuthn·CTAP), 공인인증서 → 공동인증서(2020.12 전자서명법 개정), 근거 없는 'MST 한국/미국 90%' 삭제
+- SV_392_01 토큰화: 토근화 오타, Generalized-Fiestel → Feistel, 'WPRNG' 표기 삭제(PRNG), FPE 표준 NIST SP 800-38G(FF1·FF3-1) 명시
+- SV_397 OLED: 'LCD의 약 1,000배 응답속도' → μs 수준(LCD는 ms 수준)으로 정리, 키워드 '유기재표' → 유기재료
+- SV_398 플렉서블: 박망봉지 → 박막 봉지(TFE), PI 기판 = 폴리이미드(polyarylate는 별개 소재), Polycrystaline 오타
+- SV_399 3D 터치: 정저닉 → 정전식, Forece → Force, 2019년 iPhone 11부터 햅틱 터치로 대체된 사실 추가
+- SV_085 분류 표기 '디지털서비스(SV)>RFID' → '디지털서비스 > RFID'

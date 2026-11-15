@@ -10175,7 +10175,7 @@
   "id": "SV_085",
   "code": "SV_085",
   "domain": "SV",
-  "category": "디지털서비스(SV)>RFID",
+  "category": "디지털서비스 > RFID",
   "pages": [
    143,
    147
@@ -32926,74 +32926,112 @@
   ],
   "en": "Simple Payment",
   "dueum": null,
-  "name": "간편결제(Mobile Simple Payment)",
-  "title": "간편결제(Mobile Simple Payment)",
-  "definition": "카드 정보 등을 한번 입력해 두고 결제 시 카드 정보 입력과 공인인증서 등록 없이 비밀번호 입력과 같은간단한 인증만으로 결제를 하는 서비스.",
+  "name": "간편결제(Simple Payment)",
+  "title": "간편결제(Simple Payment)",
+  "definition": "카드·계좌 정보를 최초 1회 등록해 토큰으로 대체 보관하고, 결제 시에는 비밀번호·생체 인증 등 간단한 인증만으로 온·오프라인 결제를 완료하는 전자 지급결제 서비스",
   "keywords_must": [
-   "MST",
-   "NFC",
-   "HCE",
-   "생체 인식",
-   "FIDO2.0",
-   "TEE",
-   "토큰화 기술",
-   "간편결제의 개념도",
-   "간편결제의 기술요소"
+   "토큰화(Tokenization)",
+   "근거리 무선 통신(NFC)",
+   "마그네틱 보안 전송(MST)",
+   "QR·바코드 결제",
+   "보안 요소(SE)",
+   "호스트 카드 에뮬레이션(HCE)",
+   "신뢰 실행 환경(TEE)",
+   "생체 인증",
+   "FIDO2(WebAuthn·CTAP)",
+   "형태 보존 암호화(FPE)"
   ],
   "keywords_ref": [
-   "FIDO2"
+   "EMV 결제 토큰화(EMVCo)",
+   "앱카드",
+   "전자금융거래법",
+   "선불충전금 보호",
+   "공동인증서"
   ],
   "keywords": [
-   "핵심: MST · NFC · HCE",
-   "기술: 생체 인식 · FIDO2.0 · TEE",
-   "운영: 토큰화 기술 · 간편결제의 개념도 · 간편결제의 기술요소",
-   "참고: FIDO2"
+   "결제 방식: MST(기존 마그네틱 단말 호환) · NFC(SE·HCE) · 앱카드(1회용 가상 카드번호) · QR·바코드",
+   "인증: 비밀번호·패턴 · 지문·얼굴·홍채·정맥 · FIDO2(공개키 기반, 서버에 생체정보 미저장)",
+   "정보 저장: SE(UICC·eSE·microSD) · TEE(일반/보안 실행 환경 분리) · HCE(클라우드·토큰을 단말에 저장)",
+   "토큰화: 실제 카드번호 대신 토큰 사용 · 난수·의사난수 생성 · FPE(형식 유지)",
+   "개선 방향: 간편성(가맹점 찾기) · 보안성(다중 인증 선택) · 범용성(가맹점 정보 제공) · 사업자 책임 범위 명확화"
   ],
   "outline": [
-   "온라인과 오프라인에서 빠르고 간편한 결제, 간편결제 개요",
-   "- 간편결제의 정의",
-   "간편결제의 개념도 및 기술요소",
-   "- 간편결제의 개념도",
-   "- 간편결제의 기술요소",
-   "간편성, 보안성, 범용성 제고를 통한 간편 결제 서비스 개선",
-   "- 간편결제 요점"
+   "개념과 필요성",
+   "- 개념: 1회 등록 후 간단 인증",
+   "- 필요성: 사용자·사업자 측면",
+   "구성과 기술 요소",
+   "- 결제 방식: MST·NFC·QR",
+   "- 인증: 생체·FIDO2",
+   "- 정보 저장: SE·TEE·HCE",
+   "- 토큰화: 형태 보존",
+   "개선 방안",
+   "- 서비스: 간편성·보안성·범용성",
+   "- 제도: 책임 범위"
   ],
   "sections": [
    {
-    "title": "간편결제 핵심",
+    "title": "개념과 필요성",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 1회 등록 후 간단 인증",
       "items": [
-       "MST: MST를 간편결제 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "NFC: NFC를 간편결제 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "HCE: HCE를 간편결제 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "생체 인식: 간편결제에서 생체 인식을 다루는 핵심 암기 포인트"
+       "최초 등록한 결제 정보를 토큰으로 바꿔 두고 이후 결제는 비밀번호·생체 인증만으로 처리"
+      ]
+     },
+     {
+      "title": "필요성: 사용자·사업자 측면",
+      "items": [
+       "사용자는 결제 단계 단순화와 연계 혜택, 사업자는 결제 포기율 감소와 결제 데이터 활용"
       ]
      }
     ]
    },
    {
-    "title": "간편결제 구성·기술",
+    "title": "구성과 기술 요소",
     "subsections": [
      {
-      "title": null,
+      "title": "결제 방식: MST·NFC·QR",
       "items": [
-       "FIDO2.0: FIDO2.0를 간편결제 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "TEE: TEE를 간편결제 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "토큰화 기술: 간편결제에서 토큰화 기술을 다루는 핵심 암기 포인트",
-       "간편결제의 개념도: 간편결제의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램"
+       "마그네틱 보안 전송(MST): 자기장을 발생시켜 기존 마그네틱 카드 단말에서도 결제",
+       "근거리 무선 통신(NFC): 13.56MHz 비접촉 결제, 카드 정보 보관 방식에 따라 SE·HCE로 구분",
+       "QR·바코드 결제와 앱카드는 1회용 가상 카드번호를 화면에 띄워 단말이 읽는 방식"
+      ]
+     },
+     {
+      "title": "인증: 생체·FIDO2",
+      "items": [
+       "생체 인증(지문·얼굴·홍채·정맥)을 단말에서 검증하고 FIDO2(WebAuthn·CTAP)로 공개키 서명만 서버에 전달"
+      ]
+     },
+     {
+      "title": "정보 저장: SE·TEE·HCE",
+      "items": [
+       "보안 요소(SE): USIM(UICC)·내장형 eSE·microSD에 카드 정보를 하드웨어로 격리 보관",
+       "신뢰 실행 환경(TEE): 프로세서 안에 보안 영역을 분리해 추가 칩 없이 민감 연산 보호",
+       "호스트 카드 에뮬레이션(HCE): SE 없이 소프트웨어로 카드를 흉내 내고 토큰·클라우드로 정보 보호"
+      ]
+     },
+     {
+      "title": "토큰화: 형태 보존",
+      "items": [
+       "토큰화(Tokenization)로 실제 카드번호를 노출하지 않고, 형태 보존 암호화(FPE)로 자릿수·형식 유지"
       ]
      }
     ]
    },
    {
-    "title": "간편결제 운영",
+    "title": "개선 방안",
     "subsections": [
      {
-      "title": null,
+      "title": "서비스: 간편성·보안성·범용성",
       "items": [
-       "간편결제의 기술요소: 간편결제에서 간편결제의 기술요소를 다루는 핵심 암기 포인트"
+       "가맹점 찾기·위치 연계 안내, 비밀번호 외 생체·ARS 등 인증 선택, 가입 시 가맹점 정보 제공"
+      ]
+     },
+     {
+      "title": "제도: 책임 범위",
+      "items": [
+       "전자금융거래법상 간편결제 사업자의 사고 책임과 선불충전금 보호 의무를 명확히 해 이용자 보호"
       ]
      }
     ]
@@ -33002,22 +33040,33 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "MST",
-   "NFC",
-   "HCE",
-   "생체 인식",
-   "FIDO2.0",
-   "TEE",
-   "토큰화 기술",
-   "간편결제의 개념도",
-   "간편결제의 기술요소"
+   "토큰화(Tokenization)",
+   "근거리 무선 통신(NFC)",
+   "마그네틱 보안 전송(MST)",
+   "QR·바코드 결제",
+   "보안 요소(SE)",
+   "호스트 카드 에뮬레이션(HCE)",
+   "신뢰 실행 환경(TEE)",
+   "생체 인증",
+   "FIDO2(WebAuthn·CTAP)",
+   "형태 보존 암호화(FPE)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true,
+  "gloss": {
+   "MST": "Magnetic Secure Transmission",
+   "SE": "Secure Element",
+   "TEE": "Trusted Execution Environment",
+   "FPE": "Format-Preserving Encryption",
+   "EMV": "Europay Mastercard Visa",
+   "QR": "Quick Response",
+   "UICC": "Universal Integrated Circuit Card"
+  }
  },
  {
   "id": "SV_392_01",
@@ -33032,56 +33081,113 @@
   "dueum": null,
   "name": "토큰화(Tokenization)",
   "title": "토큰화(Tokenization)",
-  "definition": "개인정보의 유출 위험이 있는 전송 과정과 저장 단계에서 개인정보 데이터를 치환한 토큰 데이터만을 전송하고 저장함으로써개인정보를 보호하는 접근법",
+  "definition": "카드번호·주민등록번호 같은 민감 데이터를 의미 없는 대체값(토큰)으로 바꿔 전송·저장하고, 원본과 토큰의 매핑은 토큰 서버(토큰 볼트)에서만 관리해 유출 시 피해를 줄이는 데이터 보호 기법",
   "keywords_must": [
-   "Token 조회기",
-   "응용서버",
-   "거래서버",
-   "FPE",
-   "POS",
-   "WPRNG",
-   "MDES"
+   "토큰 서버",
+   "토큰 생성기",
+   "토큰 저장소(Token Vault)",
+   "토큰 조회(디토큰화)",
+   "응용 서버",
+   "거래 서버",
+   "형태 보존 암호화(FPE)",
+   "결제 토큰(EMVCo)",
+   "MDES(Mastercard Digital Enablement Service)",
+   "PCI DSS 범위 축소"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "NIST SP 800-38G(FF1·FF3-1)",
+   "Visa Token Service(VTS)",
+   "가명처리",
+   "의사 난수 생성기(PRNG)",
+   "볼트리스 토큰화"
+  ],
   "keywords": [
-   "핵심: Token 조회기 · 응용서버 · 거래서버",
-   "기술: FPE · POS · WPRNG",
-   "운영: MDES"
+   "구성: 토큰 서버(생성기·조회기·저장소) · POS 단말 · 응용 서버 · 거래 서버",
+   "처리: 카드번호 전송 → 토큰 생성·저장 → 토큰 반환 → 응용 서버는 토큰만 사용 → 필요 시 토큰 서버에 원본 조회",
+   "장점: 취약한 가맹점 단말에 카드번호 미저장 · 개인정보 통합 관리 · PCI DSS 적용 범위 축소",
+   "단점: 토큰 서버에 위험 집중 · 토큰 서버 가용성·보안이 핵심",
+   "강화 기술: FPE(블록 암호 기반, 형식 유지) · MDES·VTS(결제망 토큰 서비스) · 단말·가맹점 한정 토큰"
   ],
   "outline": [
-   "안전한 정보로 치환 후 전달, 토근화 기술의 개념",
-   "- 토큰화(Tokenization) 기술의 정의",
-   "- 토큰화 기술의 장단점",
-   "토큰화 기술 처리 과정",
-   "- 토큰화 기술 처리 프로세스",
-   "- 토큰화 기술 처리 과정 상세 설명",
-   "토큰화 보안 및 안정성 강화를 위한 기술 사례",
-   "- 토큰화 요점"
+   "개념과 장단점",
+   "- 개념: 대체값 치환",
+   "- 장점: 노출 지점 축소",
+   "- 단점: 위험 집중",
+   "처리 절차",
+   "- 1단계: 원본 전송",
+   "- 2·3단계: 생성·저장",
+   "- 4·5단계: 토큰 사용",
+   "- 6~9단계: 디토큰화",
+   "보안 강화 기술",
+   "- 생성: FPE",
+   "- 결제망: MDES·VTS"
   ],
   "sections": [
    {
-    "title": "토큰화 핵심",
+    "title": "개념과 장단점",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 대체값 치환",
       "items": [
-       "Token 조회기: 토큰화에서 Token 조회기를 다루는 핵심 암기 포인트",
-       "응용서버: 토큰화에서 응용서버를 다루는 핵심 암기 포인트",
-       "거래서버: 토큰화에서 거래서버를 다루는 핵심 암기 포인트",
-       "FPE: FPE를 토큰화 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "전송·저장 단계에서 원본 대신 토큰만 다뤄, 탈취돼도 토큰 서버 없이는 원본을 복원할 수 없게 함"
+      ]
+     },
+     {
+      "title": "장점: 노출 지점 축소",
+      "items": [
+       "보안이 약한 가맹점 단말·응용 서버에 원본이 남지 않고 PCI DSS 범위 축소로 인증·감사 부담 감소"
+      ]
+     },
+     {
+      "title": "단점: 위험 집중",
+      "items": [
+       "원본이 토큰 서버(토큰 저장소)에 모이므로 토큰 서버 침해 시 대규모 유출, 강한 접근 통제 필요"
       ]
      }
     ]
    },
    {
-    "title": "토큰화 구성·기술",
+    "title": "처리 절차",
     "subsections": [
      {
-      "title": null,
+      "title": "1단계: 원본 전송",
       "items": [
-       "POS: POS를 토큰화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "WPRNG: WPRNG를 토큰화 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "MDES: MDES를 토큰화 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "POS 단말이 암호화 채널로 카드번호를 토큰 서버에 전송"
+      ]
+     },
+     {
+      "title": "2·3단계: 생성·저장",
+      "items": [
+       "토큰 생성기가 토큰을 만들고 원본-토큰 쌍을 토큰 저장소(Token Vault)에 보관한 뒤 단말에 반환"
+      ]
+     },
+     {
+      "title": "4·5단계: 토큰 사용",
+      "items": [
+       "단말은 응용 서버·거래 서버에 토큰만 전달하고 서버들은 토큰으로 업무 처리"
+      ]
+     },
+     {
+      "title": "6~9단계: 디토큰화",
+      "items": [
+       "실제 번호가 필요할 때만 권한 있는 서버가 토큰 서버에 조회(디토큰화)해 원본 확인"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 강화 기술",
+    "subsections": [
+     {
+      "title": "생성: FPE",
+      "items": [
+       "형태 보존 암호화(FPE): 블록 암호 기반(NIST SP 800-38G FF1·FF3-1)으로 자릿수·형식을 유지해 기존 시스템 수정 최소화"
+      ]
+     },
+     {
+      "title": "결제망: MDES·VTS",
+      "items": [
+       "MDES(Mastercard Digital Enablement Service)·VTS: 카드사가 단말·가맹점별 결제 토큰을 발급, 유출 토큰만 폐기 가능"
       ]
      }
     ]
@@ -33090,20 +33196,32 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "Token 조회기",
-   "응용서버",
-   "거래서버",
-   "FPE",
-   "POS",
-   "WPRNG",
-   "MDES"
+   "토큰 서버",
+   "토큰 생성기",
+   "토큰 저장소(Token Vault)",
+   "토큰 조회(디토큰화)",
+   "응용 서버",
+   "거래 서버",
+   "형태 보존 암호화(FPE)",
+   "결제 토큰(EMVCo)",
+   "MDES(Mastercard Digital Enablement Service)",
+   "PCI DSS 범위 축소"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true,
+  "gloss": {
+   "FPE": "Format-Preserving Encryption",
+   "PCI": "Payment Card Industry",
+   "DSS": "Data Security Standard",
+   "VTS": "Visa Token Service",
+   "PRNG": "Pseudo-Random Number Generator",
+   "POS": "Point of Sale"
+  }
  },
  {
   "id": "SV_397",
@@ -33116,78 +33234,115 @@
   ],
   "en": "Organic Light-Emitting Diode",
   "dueum": null,
-  "name": "OLED(Organic Light-Emitting Diode)",
-  "title": "OLED(Organic Light-Emitting Diode)",
-  "definition": "유기물 박막에 양극과 음극을 통하여 주입된 전자(Electron)와 정공(Hole)이 재결합(Recombination)하여 여기자 (Exciton)를 형성하고, 형성된 여기자로부터 에너지에 의해 특정한 파장의 빛이 발생하는 형상을 이용한 자체 발광형 디스플레이 소자 * 디스플레이 발달史 참고: PDP(플라즈마) -> LED/LCD -> OLED -> AMOLED(능동형)",
+  "name": "유기 발광 다이오드(OLED, Organic Light-Emitting Diode)",
+  "title": "유기 발광 다이오드(OLED, Organic Light-Emitting Diode)",
+  "definition": "양극에서 주입된 정공과 음극에서 주입된 전자가 유기물 발광층에서 재결합해 여기자를 만들고, 여기자가 바닥 상태로 돌아가며 빛을 내는 원리를 이용한 자체 발광형 디스플레이 소자",
   "keywords_must": [
-   "자체발광형 디스플레이 소자",
-   "편광판(polarizer)",
-   "유기재표",
-   "유리",
-   "AMOLED",
-   "PMOLED",
-   "LCD와 OLED 발광구조적 차이",
-   "OLED 발광방식",
-   "PDP",
-   "LCD"
+   "자체 발광",
+   "정공·전자 재결합",
+   "여기자(Exciton)",
+   "유기 발광층(EML)",
+   "정공·전자 수송층(HTL·ETL)",
+   "박막 트랜지스터(TFT)",
+   "능동형(AMOLED)",
+   "수동형(PMOLED)",
+   "배면 발광·전면 발광",
+   "편광판(Polarizer)"
   ],
   "keywords_ref": [
-   "TFT(Thin Film Transistor)",
-   "TFT"
+   "LTPS·산화물 TFT",
+   "번인(Burn-in)",
+   "플렉서블 OLED",
+   "박막 봉지(TFE)",
+   "QD-OLED"
   ],
   "keywords": [
-   "핵심: 자체발광형 디스플레이 소자 · 편광판(polarizer) · 유기재표",
-   "기술: 유리 · AMOLED · PMOLED",
-   "운영: LCD와 OLED 발광구조적 차이 · OLED 발광방식 · PDP",
-   "참고: TFT(Thin Film Transistor) · TFT"
+   "원리: 정공·전자 주입 → 발광층 재결합 → 여기자 → 빛 방출(유기물에 따라 파장 결정)",
+   "장점: 백라이트 불필요(얇고 가벼움) · 넓은 시야각 · 빠른 응답속도(μs 수준) · 높은 명암비 · 플렉서블 구현",
+   "구조: 기판 · 양극(ITO) · HTL · EML · ETL · 음극 · 봉지층 · 편광판",
+   "발광 방향: 배면 발광(기판 쪽, 공정 쉬움) ↔ 전면 발광(개구율 높음, 공정 어려움)",
+   "구동: PMOLED(행·열 매트릭스 순차 점등, 소형) ↔ AMOLED(화소별 TFT, 대형·고해상도)"
   ],
   "outline": [
-   "디지털 디스플레이, OLED 개요",
-   "- OLED (Organic Light Emitting Diode) 정의",
-   "- OLED 특징",
-   "OLED 구조 및 발광방식",
-   "- LCD 와 OLED 발광구조적 차이",
-   "- OLED 발광방식",
-   "추가자료",
-   "- OLED 의 구동방식에 따른 AMOLED 와 PMOLED 의 비교"
+   "개념과 특징",
+   "- 원리: 재결합 발광",
+   "- 특징: 자체 발광",
+   "- 한계: 수명·번인",
+   "구조와 발광 방식",
+   "- 적층: 유기층",
+   "- LCD 비교: 구성 단순",
+   "- 발광 방향: 배면·전면",
+   "구동 방식 비교",
+   "- 수동형: PMOLED",
+   "- 능동형: AMOLED",
+   "- 동향: 폼팩터"
   ],
   "sections": [
    {
-    "title": "OLED 핵심",
+    "title": "개념과 특징",
     "subsections": [
      {
-      "title": null,
+      "title": "원리: 재결합 발광",
       "items": [
-       "자체발광형 디스플레이 소자: OLED에서 자체발광형 디스플레이 소자를 다루는 핵심 암기 포인트",
-       "편광판(polarizer): OLED에서 편광판(polarizer)을 다루는 핵심 암기 포인트",
-       "유기재표: OLED에서 유기재표를 다루는 핵심 암기 포인트",
-       "유리: OLED에서 유리를 다루는 핵심 암기 포인트"
+       "정공·전자 재결합으로 생긴 여기자(Exciton)가 에너지를 빛으로 내놓고, 유기 재료에 따라 색이 결정됨"
+      ]
+     },
+     {
+      "title": "특징: 자체 발광",
+      "items": [
+       "백라이트·액정이 없어 LCD보다 얇고 가벼우며 시야각이 넓고 응답속도가 μs 수준으로 빠름"
+      ]
+     },
+     {
+      "title": "한계: 수명·번인",
+      "items": [
+       "유기물 열화로 장시간 같은 화면을 표시하면 번인(Burn-in), 청색 소자 수명이 상대적으로 짧음"
       ]
      }
     ]
    },
    {
-    "title": "OLED 구성·기술",
+    "title": "구조와 발광 방식",
     "subsections": [
      {
-      "title": null,
+      "title": "적층: 유기층",
       "items": [
-       "AMOLED: AMOLED를 OLED 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "PMOLED: PMOLED를 OLED 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "LCD와 OLED 발광구조적 차이: OLED에서 LCD와 OLED 발광구조적 차이를 다루는 핵심 암기 포인트",
-       "OLED 발광방식: OLED에서 OLED 발광방식을 다루는 핵심 암기 포인트"
+       "양극(ITO)–정공 수송층(HTL)–유기 발광층(EML)–전자 수송층(ETL)–음극 순으로 쌓고 봉지층으로 수분 차단"
+      ]
+     },
+     {
+      "title": "LCD 비교: 구성 단순",
+      "items": [
+       "LCD는 백라이트·액정·컬러필터가 필요하지만 OLED는 화소가 직접 발광해 구성 요소가 적음"
+      ]
+     },
+     {
+      "title": "발광 방향: 배면·전면",
+      "items": [
+       "배면 발광은 TFT 쪽으로 빛을 내 공정이 쉽고, 전면 발광은 TFT에 가리지 않아 개구율·해상도에 유리"
       ]
      }
     ]
    },
    {
-    "title": "OLED 운영",
+    "title": "구동 방식 비교",
     "subsections": [
      {
-      "title": null,
+      "title": "수동형: PMOLED",
       "items": [
-       "PDP: PDP를 OLED 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "LCD: LCD를 OLED 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "행·열 전극을 교차시켜 선택된 행만 순간 고휘도로 점등, 구조·공정이 단순하나 대형화 시 전력·수명 불리"
+      ]
+     },
+     {
+      "title": "능동형: AMOLED",
+      "items": [
+       "화소마다 박막 트랜지스터(TFT)와 저장 커패시터로 지속 발광, 저전력·대화면·고해상도 가능하나 공정 복잡"
+      ]
+     },
+     {
+      "title": "동향: 폼팩터",
+      "items": [
+       "스마트폰의 플렉서블·폴더블 AMOLED, TV의 QD-OLED·WOLED, IT 기기용 탠덤 OLED로 확대"
       ]
      }
     ]
@@ -33196,16 +33351,16 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "자체발광형 디스플레이 소자",
-   "편광판(polarizer)",
-   "유기재표",
-   "유리",
-   "AMOLED",
-   "PMOLED",
-   "LCD와 OLED 발광구조적 차이",
-   "OLED 발광방식",
-   "PDP",
-   "LCD"
+   "자체 발광",
+   "정공·전자 재결합",
+   "여기자(Exciton)",
+   "유기 발광층(EML)",
+   "정공·전자 수송층(HTL·ETL)",
+   "박막 트랜지스터(TFT)",
+   "능동형(AMOLED)",
+   "수동형(PMOLED)",
+   "배면 발광·전면 발광",
+   "편광판(Polarizer)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -33214,8 +33369,16 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "TFT": "Thin Film Transistor"
-  }
+   "TFT": "Thin Film Transistor",
+   "ETL": "Electron Transport Layer",
+   "HTL": "Hole Transport Layer",
+   "EML": "Emissive Layer",
+   "ITO": "Indium Tin Oxide",
+   "LTPS": "Low-Temperature Polycrystalline Silicon",
+   "TFE": "Thin Film Encapsulation",
+   "QD": "Quantum Dot"
+  },
+  "hand": true
  },
  {
   "id": "SV_398",
@@ -33226,57 +33389,116 @@
    377,
    378
   ],
-  "en": "flexible display",
+  "en": "Flexible Display",
   "dueum": null,
-  "name": "디스플레이(flexible display)",
-  "title": "디스플레이(flexible display)",
-  "definition": "디스플레이 장치가 폴더 형태, 롤 형태등으로 휘어질 수 있는 디스플레이 장치",
+  "name": "플렉서블 디스플레이(Flexible Display)",
+  "title": "플렉서블 디스플레이(Flexible Display)",
+  "definition": "유리 대신 폴리이미드 같은 얇은 플라스틱 기판과 박막 봉지를 사용해 휘거나 접거나 말아도 화면 기능을 유지하는 차세대 디스플레이",
   "keywords_must": [
-   "TFE 층",
-   "EL 층",
-   "LTPS",
-   "PI 기판",
-   "플렉서블 디스플레이 개념도",
-   "OLED",
-   "TFE"
+   "폴리이미드(PI) 기판",
+   "박막 봉지(TFE)",
+   "유기 발광층(EL)",
+   "저온 폴리실리콘(LTPS) TFT",
+   "커버 윈도(UTG·CPI)",
+   "곡률 반경",
+   "폴더블",
+   "롤러블",
+   "스트레처블",
+   "레이저 리프트 오프(LLO)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "커브드 디스플레이",
+   "벤더블",
+   "중립면 설계",
+   "터치 일체형(Y-OCTA)",
+   "전자 종이"
+  ],
   "keywords": [
-   "핵심: TFE 층 · EL 층 · LTPS",
-   "기술: PI 기판 · 플렉서블 디스플레이 개념도 · OLED",
-   "운영: TFE"
+   "구성: 커버 윈도 · 편광판·터치 · TFE · EL(OLED) · LTPS TFT · PI 기판",
+   "진화: 커브드 → 벤더블 → 폴더블 → 롤러블·슬라이더블 → 스트레처블",
+   "핵심 기술: 플렉서블 기판 · 저온 공정 TFT · 수분·산소 차단 봉지 · 접힘 내구 커버 윈도",
+   "과제: 접힘 주름 · 반복 굽힘 피로 · 투습 · 곡률 반경 축소"
   ],
   "outline": [
-   "휘어지는 디스플레이, 플렉서블 디스플레이 개요",
-   "- 디스플레이 요점",
-   "플렉서블 디스플레이 개념도 및 구성요소",
-   "- 플렉서블 디스플레이 개념도",
-   "- 플렉서블 디스플레이 구성요소"
+   "개념과 유형",
+   "- 개념: 휘는 화면",
+   "- 유형: 변형 정도",
+   "구조와 구성 요소",
+   "- 봉지: TFE",
+   "- 발광: EL층",
+   "- 구동: LTPS",
+   "- 기판: PI",
+   "- 보호: 커버 윈도",
+   "과제와 동향",
+   "- 과제: 내구성",
+   "- 동향: 폼팩터 확대"
   ],
   "sections": [
    {
-    "title": "디스플레이 핵심",
+    "title": "개념과 유형",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 휘는 화면",
       "items": [
-       "TFE 층: 디스플레이에서 TFE 층을 다루는 핵심 암기 포인트",
-       "EL 층: 디스플레이에서 EL 층을 다루는 핵심 암기 포인트",
-       "LTPS: LTPS를 디스플레이 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "PI 기판: 디스플레이에서 PI 기판을 다루는 핵심 암기 포인트"
+       "딱딱한 유리 기판 대신 유연한 기판을 써서 형태를 바꿔도 화소가 정상 동작하는 디스플레이"
+      ]
+     },
+     {
+      "title": "유형: 변형 정도",
+      "items": [
+       "고정된 곡면(커브드) → 휘어짐(벤더블) → 접힘(폴더블) → 말림(롤러블) → 늘어남(스트레처블)"
       ]
      }
     ]
    },
    {
-    "title": "디스플레이 구성·기술",
+    "title": "구조와 구성 요소",
     "subsections": [
      {
-      "title": null,
+      "title": "봉지: TFE",
       "items": [
-       "플렉서블 디스플레이 개념도: 디스플레이의 구성요소·데이터 흐름을 한눈에 정리한 다이어그램",
-       "OLED: OLED를 디스플레이 설계·구현·운영에 쓰는 핵심 기술 요소",
-       "TFE: TFE를 디스플레이 설계·구현·운영에 쓰는 핵심 기술 요소"
+       "박막 봉지(TFE): 무기막·유기막을 번갈아 쌓아 유리 봉지 없이 수분·산소 침투를 차단"
+      ]
+     },
+     {
+      "title": "발광: EL층",
+      "items": [
+       "유기 발광층(EL): 자체 발광 OLED 소자가 화소를 이루어 백라이트 없이 굽힘 가능"
+      ]
+     },
+     {
+      "title": "구동: LTPS",
+      "items": [
+       "저온 폴리실리콘(LTPS) TFT: 이동도가 높아 작은 화소를 빠르게 구동, 플라스틱 기판이 견디는 온도에서 공정"
+      ]
+     },
+     {
+      "title": "기판: PI",
+      "items": [
+       "폴리이미드(PI) 기판: 내열성이 높아 TFT 공정을 견디며, 유리 캐리어 위에서 만든 뒤 레이저 리프트 오프(LLO)로 분리"
+      ]
+     },
+     {
+      "title": "보호: 커버 윈도",
+      "items": [
+       "초박형 유리(UTG)나 투명 폴리이미드(CPI) 커버 윈도로 접힘 내구성과 표면 경도 확보"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "과제와 동향",
+    "subsections": [
+     {
+      "title": "과제: 내구성",
+      "items": [
+       "접힘부 주름, 수십만 회 반복 굽힘 피로, 곡률 반경을 줄일수록 커지는 응력 관리"
+      ]
+     },
+     {
+      "title": "동향: 폼팩터 확대",
+      "items": [
+       "폴더블 스마트폰·노트북, 롤러블 TV, 차량용 곡면 디스플레이, 웨어러블 스트레처블 소자로 확대"
       ]
      }
     ]
@@ -33285,20 +33507,33 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
-   "TFE 층",
-   "EL 층",
-   "LTPS",
-   "PI 기판",
-   "플렉서블 디스플레이 개념도",
-   "OLED",
-   "TFE"
+   "폴리이미드(PI) 기판",
+   "박막 봉지(TFE)",
+   "유기 발광층(EL)",
+   "저온 폴리실리콘(LTPS) TFT",
+   "커버 윈도(UTG·CPI)",
+   "곡률 반경",
+   "폴더블",
+   "롤러블",
+   "스트레처블",
+   "레이저 리프트 오프(LLO)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true,
+  "gloss": {
+   "PI": "Polyimide",
+   "TFE": "Thin Film Encapsulation",
+   "EL": "Electroluminescence",
+   "LTPS": "Low-Temperature Polycrystalline Silicon",
+   "UTG": "Ultra Thin Glass",
+   "CPI": "Colorless Polyimide",
+   "LLO": "Laser Lift-Off"
+  }
  },
  {
   "id": "SV_399",
@@ -33309,55 +33544,110 @@
    379,
    380
   ],
-  "en": "D",
+  "en": "3D Touch",
   "dueum": null,
-  "name": "터치기술(D)",
-  "title": "터치기술(D)",
-  "definition": "스크린에 가해지는 손가락의 압력 정도를 지능적으로 감지하는 기술 입력 기능을 단순화하여 정보의 접근 속도를 높임",
+  "name": "3D 터치(3D Touch)",
+  "title": "3D 터치(3D Touch)",
+  "definition": "화면 위 터치 위치(X·Y)에 더해 손가락이 누르는 힘의 세기(Z축)를 감지해 압력 단계별로 다른 기능을 실행하고 진동으로 촉각 피드백을 주는 압력 감지 터치 기술",
   "keywords_must": [
+   "포스 터치(Force Touch)",
+   "압력 감지(Z축)",
+   "정전식 터치 유리",
+   "압력(포스) 센서",
+   "탭틱 엔진(Taptic Engine)",
+   "햅틱 피드백",
    "3차원 인터페이스",
-   "동작방식",
-   "Force 센서",
-   "포스(Forece)",
-   "터치기술 표준",
-   "터치기술 아키텍처"
+   "픽 앤 팝(Peek and Pop)",
+   "퀵 액션",
+   "햅틱 터치(Haptic Touch)"
   ],
-  "keywords_ref": [],
+  "keywords_ref": [
+   "리니어 공진 액추에이터(LRA)",
+   "스트레인 게이지",
+   "애플워치·맥북 트랙패드",
+   "iPhone 6s(2015)",
+   "웨어러블 공간 제약"
+  ],
   "keywords": [
-   "핵심: 3차원 인터페이스 · 동작방식 · Force 센서",
-   "기술: 포스(Forece) · 터치기술 표준 · 터치기술 아키텍처"
+   "개념: 위치(X·Y) + 누르는 힘(Z) 인식 → 압력 단계별 다른 동작",
+   "구성: 정전식 유리 표면(위치) · 포스 센서(압력) · 탭틱 엔진(진동 피드백)",
+   "동작: 누름 → 포스 센서가 압력 측정 → 단계 판단 → 기능 실행 → 탭틱 엔진 촉각 응답",
+   "활용: 픽 앤 팝(미리보기) · 퀵 액션(바로가기) · 필압 드로잉 · 소형 웨어러블 입력",
+   "동향: 원가·두께 부담으로 iPhone 11(2019)부터 길게 누르기 기반 햅틱 터치로 대체"
   ],
   "outline": [
-   "포스터치를 기반으로 하는 3D 터치 기술의 개요",
-   "- 터치기술의 정의",
-   "- 터치기술의 등장 배경",
-   "3D 터치 기술의 동작방식 및 주요 구성요소",
-   "- 터치기술의 핵심 요소",
-   "- 터치기술의 구조"
+   "개념과 배경",
+   "- 개념: 압력 인식",
+   "- 특징: 3차원 인터페이스",
+   "- 배경: 입력 단순화",
+   "동작 방식과 구성 요소",
+   "- 위치: 정전식 터치 유리",
+   "- 압력: 포스 센서",
+   "- 피드백: 탭틱 엔진",
+   "활용과 동향",
+   "- 활용: 단축 동작",
+   "- 동향: 햅틱 터치 전환"
   ],
   "sections": [
    {
-    "title": "터치기술 핵심",
+    "title": "개념과 배경",
     "subsections": [
      {
-      "title": null,
+      "title": "개념: 압력 인식",
       "items": [
-       "3차원 인터페이스: 터치기술에서 3차원 인터페이스를 다루는 핵심 암기 포인트",
-       "동작방식: 터치기술에서 동작방식을 다루는 핵심 암기 포인트",
-       "Force 센서: 터치기술에서 Force 센서를 다루는 핵심 암기 포인트",
-       "포스(Forece): 터치기술에서 포스(Forece)를 다루는 핵심 암기 포인트"
+       "화면을 누르는 힘의 세기를 단계별로 인식해 같은 위치에서도 다른 명령을 실행하는 입력 방식"
+      ]
+     },
+     {
+      "title": "특징: 3차원 인터페이스",
+      "items": [
+       "기존 X·Y 좌표에 Z축 압력 정보를 더해 메뉴 진입 없이 미리보기·바로가기 실행"
+      ]
+     },
+     {
+      "title": "배경: 입력 단순화",
+      "items": [
+       "메뉴 단계를 줄여 정보 접근 속도를 높이고, 애플워치 같은 초소형 화면의 입력 공간 제약 해소"
       ]
      }
     ]
    },
    {
-    "title": "터치기술 구성·기술",
+    "title": "동작 방식과 구성 요소",
     "subsections": [
      {
-      "title": null,
+      "title": "위치: 정전식 터치 유리",
       "items": [
-       "터치기술 표준: 터치기술 상호운용·품질을 맞추는 규격·기준",
-       "터치기술 아키텍처: 터치기술의 계층·모듈 배치와 상호작용 구조"
+       "정전식 터치 유리가 손가락 접촉 위치를 감지"
+      ]
+     },
+     {
+      "title": "압력: 포스 센서",
+      "items": [
+       "압력(포스) 센서가 유리의 미세한 휘어짐을 정전 용량 변화로 측정해 누름 세기 판단"
+      ]
+     },
+     {
+      "title": "피드백: 탭틱 엔진",
+      "items": [
+       "탭틱 엔진(Taptic Engine)이 리니어 공진 액추에이터로 짧고 정밀한 진동을 내 눌림 감각 전달"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용과 동향",
+    "subsections": [
+     {
+      "title": "활용: 단축 동작",
+      "items": [
+       "픽 앤 팝(Peek and Pop)으로 내용 미리보기, 앱 아이콘 퀵 액션, 필압에 따른 선 굵기 조절"
+      ]
+     },
+     {
+      "title": "동향: 햅틱 터치 전환",
+      "items": [
+       "2015년 애플워치(포스 터치)·iPhone 6s(3D 터치)에 도입, 2019년 iPhone 11부터 햅틱 터치(Haptic Touch)로 대체"
       ]
      }
     ]
@@ -33366,19 +33656,27 @@
   "curated": true,
   "reviewed": true,
   "quiz_terms": [
+   "포스 터치(Force Touch)",
+   "압력 감지(Z축)",
+   "정전식 터치 유리",
+   "압력(포스) 센서",
+   "탭틱 엔진(Taptic Engine)",
+   "햅틱 피드백",
    "3차원 인터페이스",
-   "동작방식",
-   "Force 센서",
-   "포스(Forece)",
-   "터치기술 표준",
-   "터치기술 아키텍처"
+   "픽 앤 팝(Peek and Pop)",
+   "퀵 액션",
+   "햅틱 터치(Haptic Touch)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
   "keywords_note": null,
   "note": null,
   "review": null,
-  "warnings": []
+  "warnings": [],
+  "hand": true,
+  "gloss": {
+   "LRA": "Linear Resonant Actuator"
+  }
  },
  {
   "id": "SV_400",
