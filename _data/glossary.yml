@@ -10,6 +10,7 @@
 5GC: 5G Core
 5NF: Fifth Normal Form
 6rd: IPv6 Rapid Deployment
+A2A: Agent-to-Agent
 A4WP: Alliance for Wireless Power
 ABP: Activation By Personalization
 ABR: Area Border Router
@@ -17,6 +18,7 @@ ACF: Autocorrelation Function
 ACID: Atomicity, Consistency, Isolation, Durability
 ACK: Acknowledgment
 ACL: Access Control List
+ACO: Ant Colony Optimization
 AdaGrad: Adaptive Gradient
 Adam: Adaptive Moment Estimation
 ADAS: Advanced Driver Assistance System
@@ -37,9 +39,13 @@ AH: Authentication Header
 AI: Artificial Intelligence
 AIC: Akaike Information Criterion
 AICC: AI Contact Center
+AIFL: AI Fairness Level
 AIFS: Arbitration Inter-Frame Space
 AIMD: Additive Increase Multiplicative Decrease
+AIMS: Artificial Intelligence Management System
 AIoE: Ambient Internet of Everything
+AIPL: AI Performance Level
+AISL: AI Safety Level
 ALB: Application Load Balancer
 ALBERT: A Lite BERT
 ALG: Application Level Gateway
@@ -80,6 +86,7 @@ ASCII: American Standard Code for Information Interchange
 ASI: Artificial Super Intelligence
 ASIC: Application-Specific Integrated Circuit
 ASID: Address Space Identifier
+ASIL: Automotive Safety Integrity Level
 ASK: Amplitude Shift Keying
 ASN.1: Abstract Syntax Notation One
 ASP: Active Server Pages
@@ -95,6 +102,7 @@ AV: Audio/Video
 AV1: AOMedia Video 1
 AVC: Advanced Video Coding
 AVL: Adelson-Velsky and Landis
+AX: AI Transformation
 AXFR: Full Zone Transfer
 BAC: Budget at Completion
 BAM: Business Activity Monitoring
@@ -127,6 +135,7 @@ BLAS: Basic Linear Algebra Subprograms
 BLAST: Bell Laboratories Layered Space-Time
 BLE: Bluetooth Low Energy
 BLOB: Binary Large Object
+BLOOM: BigScience Large Open-science Open-access Multilingual Language Model
 BLSR: Bidirectional Line-Switched Ring
 BM25: Best Matching 25
 BML: Build-Measure-Learn
@@ -153,7 +162,9 @@ BWS: Broadcast Website
 C-LOOK: Circular LOOK
 C-SCAN: Circular SCAN
 C-V2X: Cellular Vehicle-to-Everything
+C2PA: Coalition for Content Provenance and Authenticity
 CABAC: Context-Adaptive Binary Arithmetic Coding
+CACE: Changing Anything Changes Everything
 CALM: Communications Access for Land Mobiles
 CAM: [Cooperative Awareness Message, Computer-Aided Manufacturing, Content Aggregation Model]
 CAN: Controller Area Network
@@ -171,6 +182,7 @@ CCH: Control Channel
 CCITT: Consultative Committee for International Telephony and Telegraphy
 CCM: Critical Chain Method
 CCMP: Counter Mode CBC-MAC Protocol
+CCPA: California Consumer Privacy Act
 CCSA: China Communications Standards Association
 CCTV: Closed-Circuit Television
 CDA: Confirmatory Data Analysis
@@ -185,6 +197,7 @@ CFS: Completely Fair Scheduler
 CG: Computer Graphics
 cGAN: Conditional GAN
 CGI: Common Gateway Interface
+CI/CD: Continuous Integration/Continuous Delivery
 CIDR: Classless Inter-Domain Routing
 CIFS: Common Internet File System
 CIR: Committed Information Rate
@@ -269,6 +282,7 @@ DBWR: Database Writer
 DCE: [Data Circuit-terminating Equipment, Distributed Computing Environment]
 DCF: [Distributed Coordination Function, Discounted Cash Flow]
 DCGAN: Deep Convolutional GAN
+DCIM: Data Center Infrastructure Management
 DCL: Data Control Language
 DCMI: Dublin Core Metadata Initiative
 DCT: Discrete Cosine Transform
@@ -440,6 +454,7 @@ FIB: Forwarding Information Base
 FIFO: First In, First Out
 FIN: Finish
 FK: Foreign Key
+FKII: Federation of Korean Information Industries
 FKP: Flächenkorrekturparameter
 FLOPs: Floating Point Operations
 FLWOR: For, Let, Where, Order by, Return
@@ -501,6 +516,7 @@ GOP: Group of Pictures
 GPOS: General Purpose Operating System
 GPS: [Global Positioning System, Generalized Processor Sharing]
 GPSR: Greedy Perimeter Stateless Routing
+GQA: Grouped-Query Attention
 GraphSAGE: Graph Sample and Aggregate
 GRE: Generic Routing Encapsulation
 GRU: Gated Recurrent Unit
@@ -548,6 +564,7 @@ HTTPS: HTTP Secure
 HW: Hardware
 HWM: High Water Mark
 HWP: Hangul Word Processor (한글 문서 형식)
+IAM: Identity and Access Management
 IASB: International Accounting Standards Board
 IBN: Intent-Based Networking
 IBSS: Independent Basic Service Set
@@ -632,6 +649,7 @@ JCA: Java EE Connector Architecture
 JDBC: Java Database Connectivity
 JDK: Java Development Kit
 JDO: Java Data Objects
+JEPA: Joint Embedding Predictive Architecture
 JID: Jabber ID
 JIT: Just In Time
 JMS: Java Message Service
@@ -647,6 +665,7 @@ JTS: Java Transaction Service
 JVM: Java Virtual Machine
 KL: Kullback-Leibler
 KNN: K-Nearest Neighbors
+KOLAS: Korea Laboratory Accreditation Scheme
 KRACK: Key Reinstallation Attack
 KSK: Key Signing Key
 KSM: Kernel Samepage Merging
@@ -655,6 +674,7 @@ KVM: Kernel-based Virtual Machine
 L2TP: Layer 2 Tunneling Protocol
 L3VPN: Layer 3 Virtual Private Network
 LACP: Link Aggregation Control Protocol
+LAION: Large-scale Artificial Intelligence Open Network
 LALR: Look-Ahead LR
 LAN: Local Area Network
 LAPF: Link Access Procedure for Frame Mode Bearer Services
@@ -672,6 +692,7 @@ LCL: Lower Control Limit
 LCP: Link Control Protocol
 LCS: Longest Common Subsequence
 LDAP: Lightweight Directory Access Protocol
+LDM: Latent Diffusion Model
 LDP: Label Distribution Protocol
 LDPC: Low-Density Parity-Check
 LEACH: Low-Energy Adaptive Clustering Hierarchy
@@ -739,6 +760,7 @@ MANOVA: Multivariate Analysis of Variance
 MBAP: Modbus Application Protocol
 MBR: Minimum Bounding Rectangle
 MCL: Maximum Coupling Loss
+MCMC: Markov Chain Monte Carlo
 MCP: Model Context Protocol
 MCPTT: Mission Critical Push-To-Talk
 MCTS: Monte-Carlo Tree Search
@@ -756,6 +778,7 @@ MF: More Fragments
 MGF: Moment Generating Function
 MIB: Management Information Base
 MICS: Medical Implant Communication Service
+MIG: Multi-Instance GPU
 MIME: Multipurpose Internet Mail Extensions
 MIMO: Multiple-Input Multiple-Output
 MIPS: Million Instructions Per Second
@@ -795,11 +818,13 @@ MOU: Memorandum of Understanding
 MP3: MPEG-1 Audio Layer III
 MPDU: MAC Protocol Data Unit
 MPEG: Moving Picture Experts Group
+MPI: Message Passing Interface
 MPLS: Multi-Protocol Label Switching
 MPLS-TP: MPLS Transport Profile
 MPP: Magnetic Power Profile
 MPR: Multipoint Relay
 MPTCP: Multipath TCP
+MQA: Multi-Query Attention
 MQMS: Multiple Queue Multiple Server
 MQTT: MQ Telemetry Transport (현재 OASIS 표준명은 약어 아님)
 mRMR: minimum Redundancy Maximum Relevance
@@ -876,6 +901,7 @@ NTN: Non-Terrestrial Network
 NTP: Network Time Protocol
 NTRIP: Networked Transport of RTCM via Internet Protocol
 NTS: Network Time Security
+NVMe-oF: NVMe over Fabrics
 NVR: Network Video Recorder
 NVRAM: Non-Volatile Random Access Memory
 O-CU: O-RAN Central Unit
@@ -895,6 +921,7 @@ OCF: Open Connectivity Foundation
 OCI: Oracle Call Interface
 OCL: Object Constraint Language
 ODBC: Open Database Connectivity
+ODD: Operational Design Domain
 ODL: Object Definition Language
 ODMG: Object Data Management Group
 OECD: Organisation for Economic Co-operation and Development
@@ -906,6 +933,7 @@ OISL: Optical Inter-Satellite Link
 OKR: Objectives and Key Results
 OLAP: Online Analytical Processing
 OLIA: Opportunistic Linked Increases Algorithm
+OLMo: Open Language Model
 OLS: Ordinary Least Squares
 OLSR: Optimized Link State Routing
 OMA: Orthogonal Multiple Access
@@ -916,6 +944,7 @@ ONNX: Open Neural Network Exchange
 ONOS: Open Network Operating System
 ONVIF: Open Network Video Interface Forum
 OO: Object-Oriented
+OOD: Out-Of-Distribution
 OODB: Object-Oriented Database
 OODBMS: Object-Oriented Database Management System
 OOK: On-Off Keying
@@ -930,6 +959,7 @@ OQPSK: Offset Quadrature Phase Shift Keying
 ORDBMS: Object-Relational Database Management System
 ORPO: Odds Ratio Preference Optimization
 OS: Operating System
+OSAID: Open Source AI Definition
 OSGi: Open Services Gateway initiative
 OSI: Open Systems Interconnection
 OSPF: Open Shortest Path First
@@ -1014,11 +1044,13 @@ PSD2: Revised Payment Service Directive 2
 PSH: Push
 PSK: [Phase Shift Keying, Pre-Shared Key]
 PSM: [Power Saving Mode, Platform Specific Model]
+PSO: Particle Swarm Optimization
 PSTN: Public Switched Telephone Network
 PTA: Point of Total Assumption
 PTR: Pointer
 PTT: Push To Talk
 PU: Prediction Unit
+PUE: Power Usage Effectiveness
 PV: Present Value
 PVC: Permanent Virtual Circuit
 PVI: Performance Value of Information
@@ -1052,6 +1084,7 @@ RAC: Real Application Clusters
 RACI: Responsible Accountable Consulted Informed
 RAD: Rapid Application Development
 RADIUS: Remote Authentication Dial-In User Service
+RAFT: Retrieval-Augmented Fine-Tuning
 RAM: [Random Access Memory, Responsibility Assignment Matrix, Regional Air Mobility]
 RAN: Radio Access Network
 RARP: Reverse Address Resolution Protocol
@@ -1199,6 +1232,7 @@ SIIT: Stateless IP/ICMP Translation
 SIM: Subscriber Identity Module
 SINR: Signal-to-Interference-plus-Noise Ratio
 SIRO: Service In Random Order
+SISA: "Sharded, Isolated, Sliced, Aggregated"
 SIX: Shared Intention Exclusive
 SJF: Shortest Job First
 SLA: Service Level Agreement
@@ -1224,6 +1258,7 @@ SOM: [Serviceable Obtainable Market, Self-Organizing Map]
 SON: Self-Organizing Network
 SONET: Synchronous Optical Network
 SONiC: Software for Open Networking in the Cloud
+SOTIF: Safety Of The Intended Functionality
 SoW: Statement of Work
 SOW: Statement of Work
 SPARQL: SPARQL Protocol and RDF Query Language
@@ -1292,6 +1327,7 @@ TDE: Transparent Data Encryption
 TDM: Time Division Multiplexing
 TDMA: Time Division Multiple Access
 TDoA: Time Difference of Arrival
+TEE: Trusted Execution Environment
 TEEN: Threshold-sensitive Energy Efficient sensor Network
 TETRA: Terrestrial Trunked Radio
 TF-IDF: Term Frequency–Inverse Document Frequency
@@ -1316,6 +1352,7 @@ TPR: True Positive Rate
 TPS: [Toyota Production System, Transactions Per Second]
 TPU: Tensor Processing Unit
 TRC: Tuple Relational Calculus
+TRiSM: "Trust, Risk and Security Management"
 TRON: The Real-time Operating system Nucleus
 TRS: Trunked Radio System
 TSDSI: Telecommunications Standards Development Society, India
@@ -1326,6 +1363,7 @@ TTFC: Time To First Call
 TTFT: Time To First Token
 TTI: Transmission Time Interval
 TTL: Time To Live
+TTS: Text To Speech
 TU: Transform Unit
 TURN: Traversal Using Relays around NAT
 TVWS: TV White Space
@@ -1408,6 +1446,7 @@ VPWS: Virtual Private Wire Service
 VQA: Visual Question Answering
 VQE: Variational Quantum Eigensolver
 VR: Virtual Reality
+VRAM: Video Random Access Memory
 VRF: Virtual Routing and Forwarding
 VRID: Virtual Router Identifier
 VRM: Vendor Relationship Management
@@ -1424,10 +1463,12 @@ WAVE: Wireless Access in Vehicular Environments
 WBAN: Wireless Body Area Network
 WBS: Work Breakdown Structure
 WCDMA: Wideband Code Division Multiple Access
+WCET: Worst-Case Execution Time
 WCSS: Within-Cluster Sum of Squares
 WDM: Wavelength Division Multiplexing
 WDT: Watchdog Timer
 WEP: Wired Equivalent Privacy
+WFM: World Foundation Model
 WFQ: Weighted Fair Queuing
 WGAN: Wasserstein GAN
 WIP: Work In Progress
@@ -1445,6 +1486,7 @@ WRAN: Wireless Regional Area Network
 WRED: Weighted Random Early Detection
 WSMP: WAVE Short Message Protocol
 WSN: Wireless Sensor Network
+WUE: Water Usage Effectiveness
 XDR: [External Data Representation, Extended Detection and Response]
 XEP: XMPP Extension Protocol
 XLS: Microsoft Excel Spreadsheet format
