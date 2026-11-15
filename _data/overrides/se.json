@@ -262,7 +262,8 @@
    "혼돈·확산(Confusion·Diffusion)"
   ],
   "gloss": {
-   "ECC": "Elliptic Curve Cryptography"
+   "ECC": "Elliptic Curve Cryptography",
+   "DSA": "Digital Signature Algorithm"
   }
  },
  "SE_003": {
@@ -525,7 +526,7 @@
    "초기화 벡터(IV)",
    "패딩(Padding)"
   ],
-  "dueum": "이씨씨오씨",
+  "dueum": "이씨씨오씨(ECB·CBC·CFB·OFB·CTR)",
   "gloss": {
    "IV": "Initialization Vector"
   }
@@ -806,7 +807,10 @@
    "전자서명",
    "디지털 포렌식 증거 무결성",
    "패스워드 저장"
-  ]
+  ],
+  "gloss": {
+   "MAC": "Message Authentication Code"
+  }
  },
  "SE_008_00": {
   "title": "해시 기반 메시지 인증 코드(HMAC, Hash-based Message Authentication Code)",
@@ -1237,7 +1241,8 @@
    "ECDLP": "Elliptic Curve Discrete Logarithm Problem",
    "ECDH": "Elliptic Curve Diffie-Hellman",
    "ECDSA": "Elliptic Curve Digital Signature Algorithm",
-   "EdDSA": "Edwards-curve Digital Signature Algorithm"
+   "EdDSA": "Edwards-curve Digital Signature Algorithm",
+   "ECC": "Elliptic Curve Cryptography"
   }
  },
  "SE_010": {
@@ -1687,7 +1692,11 @@
    "이산대수 문제(DLP)",
    "중간자 공격(MITM) 취약",
    "인증 부재"
-  ]
+  ],
+  "gloss": {
+   "DLP": "Discrete Logarithm Problem",
+   "STS": "Station-to-Station"
+  }
  },
  "SE_013": {
   "title": "SEED 블록 암호",
@@ -2252,7 +2261,7 @@
    "ML-DSA(FIPS 204, Dilithium)",
    "SLH-DSA(FIPS 205, SPHINCS+)"
   ],
-  "dueum": "다코격아해",
+  "dueum": "다코격아해(다변수·코드·격자·아이소제니·해시 기반)",
   "gloss": {
    "ECC": "Elliptic Curve Cryptography"
   }
@@ -3312,7 +3321,10 @@
    "RSA-PSS",
    "DSA",
    "ECDSA"
-  ]
+  ],
+  "gloss": {
+   "DSA": "Digital Signature Algorithm"
+  }
  },
  "SE_022": {
   "title": "메시지 인증(Message Authentication)",
@@ -4132,7 +4144,10 @@
    "진입 필터링(Ingress Filtering, BCP 38)",
    "출구 필터링(Egress Filtering)",
    "uRPF(Unicast Reverse Path Forwarding)"
-  ]
+  ],
+  "gloss": {
+   "BCP": "Best Current Practice"
+  }
  },
  "SE_027": {
   "title": "ARP 스푸핑(ARP Spoofing)",
@@ -4893,7 +4908,10 @@
    "fprintf",
    "sprintf",
    "vprintf·vsprintf"
-  ]
+  ],
+  "gloss": {
+   "RET": null
+  }
  },
  "SE_033": {
   "title": "스머핑(Smurfing)",
@@ -5138,7 +5156,10 @@
    "스택 카나리(Stack Canary)",
    "ASLR(Address Space Layout Randomization)",
    "DEP·NX(No-eXecute)"
-  ]
+  ],
+  "gloss": {
+   "RET": null
+  }
  },
  "SE_035": {
   "title": "서비스 거부 공격(DoS·DDoS, Denial of Service·Distributed DoS)",
@@ -5280,7 +5301,8 @@
   ],
   "gloss": {
    "ISP": "Internet Service Provider",
-   "PC": "Personal Computer"
+   "PC": "Personal Computer",
+   "BCP": "Best Current Practice"
   }
  },
  "SE_036": {
@@ -5652,7 +5674,7 @@
    "샌드박스",
    "EDR(Endpoint Detection and Response)"
   ],
-  "dueum": "침탐수유"
+  "dueum": "침탐수유(침투·탐색·수집·유출)"
  },
  "SE_039": {
   "title": "드라이브 바이 다운로드(Drive-by Download)",
@@ -5911,7 +5933,8 @@
    "안티 익스플로잇(Anti-Exploit)"
   ],
   "gloss": {
-   "IPS": "Intrusion Prevention System"
+   "IPS": "Intrusion Prevention System",
+   "CFG": "Control Flow Guard"
   }
  },
  "SE_041": {
@@ -8027,7 +8050,10 @@
    "루트킷 은닉",
    "탈취한 디지털 인증서 서명",
    "망분리 운영 관리"
-  ]
+  ],
+  "gloss": {
+   "PLC": "Programmable Logic Controller"
+  }
  },
  "SE_052": {
   "title": "컴퓨터 바이러스(Computer Virus)",
@@ -10029,7 +10055,8 @@
   "gloss": {
    "IPS": "Intrusion Prevention System",
    "RFI": "Remote File Inclusion",
-   "WHISTL": "Web Hacking Incident & Sign Tracking Logger"
+   "WHISTL": "Web Hacking Incident & Sign Tracking Logger",
+   "PHP": "PHP: Hypertext Preprocessor"
   }
  },
  "SE_066": {
@@ -10446,7 +10473,8 @@
   "gloss": {
    "SAST": "Static Application Security Testing",
    "DAST": "Dynamic Application Security Testing",
-   "PE": "Portable Executable"
+   "PE": "Portable Executable",
+   "IDA": null
   }
  },
  "SE_069": {
@@ -10737,7 +10765,8 @@
   "gloss": {
    "PE": "Portable Executable",
    "API": "Application Programming Interface",
-   "DB": "Database"
+   "DB": "Database",
+   "IDA": null
   }
  },
  "SE_070_01": {
@@ -11367,7 +11396,7 @@
    "ORM 사용",
    "에러 메시지 노출 금지",
    "sqlmap",
-   "OWASP Top 10 A03 Injection",
+   "OWASP Top 10:2025 A05 Injection(2021판 A03)",
    "서블릿 필터"
   ],
   "curated": true,
@@ -11494,7 +11523,7 @@
    "크로스 사이트 요청 위조(CSRF) 비교",
    "블라인드 XSS",
    "DOMPurify",
-   "OWASP Top 10 A03 Injection",
+   "OWASP Top 10:2025 A05 Injection(2021판 A03)",
    "lucy-xss-filter",
    "X-XSS-Protection(폐지)"
   ],
@@ -12392,7 +12421,10 @@
    "대응(Respond)",
    "복구(Recover)"
   ],
-  "dueum": "개구보관문"
+  "dueum": "0123 032 개구보관문(27100 개념·27101 프레임워크 구축·27102 사이버 보험·27103 관련 표준 활용·27032 인터넷 보안 문제 해결 지침)",
+  "gloss": {
+   "CSF": "Cybersecurity Framework"
+  }
  },
  "SE_082_1": {
   "title": "산업 제어 시스템 보안 표준(ISA/IEC 62443)",
@@ -12677,7 +12709,7 @@
    "파기 시",
    "정보주체 권리보호"
   ],
-  "dueum": "관보개 ; 관리체계 기위운점 ; 개인정보 수보제파정",
+  "dueum": "관보개(관리체계 수립·운영 16 / 보호대책 64 / 개인정보 처리 단계 21) ; 관리체계 기위운점(기반 마련·위험 관리·운영·점검 및 개선) ; 개인정보 수보제파정(수집·보유·이용·제공·파기·정보주체 권리보호)",
   "gloss": {
    "PIMS": "Personal Information Management System",
    "ISP": "Internet Service Provider",
@@ -13918,7 +13950,8 @@
   ],
   "gloss": {
    "PC": "Personal Computer",
-   "XDR": "Extended Detection and Response"
+   "XDR": "Extended Detection and Response",
+   "IoC": "Indicator of Compromise"
   }
  },
  "SE_095": {
@@ -14627,7 +14660,10 @@
    "파일 디스크립터 기반 검사(fstat)",
    "동기화(Lock·Mutex)",
    "최소 권한"
-  ]
+  ],
+  "gloss": {
+   "TOC": "Time of Check"
+  }
  },
  "SE_099": {
   "title": "프라이버시 중심 설계 7대 원칙(Privacy by Design 7 Foundational Principles)",
@@ -16253,7 +16289,7 @@
    "분석",
    "보고"
   ],
-  "dueum": "정재신연무 ; 준획보분보"
+  "dueum": "원칙 정재신연무(정당성·재현성·신속성·연계 보관성·무결성) ; 절차 준획보분보(준비·획득·보관·분석·보고)"
  },
  "SE_112": {
   "title": "모바일 포렌식(Mobile Forensics)",
@@ -16680,10 +16716,11 @@
    "ADS(Alternate Data Stream)",
    "타임스탬프 변조(Timestomping)"
   ],
-  "dueum": "와이프가 다가오면 스테가노그래피를 암호화해야지",
+  "dueum": "와이프가 다가오면 스테가노그래피를 암호화해야지(와이핑·디가우징·스테가노그래피·암호화)",
   "gloss": {
    "ADS": "Alternate Data Stream",
-   "HPA": "Host Protected Area"
+   "HPA": "Host Protected Area",
+   "MFT": "Master File Table"
   }
  },
  "SE_115_00": {
@@ -17198,7 +17235,8 @@
    "브라우저 분석"
   ],
   "gloss": {
-   "MAC": "Modified, Accessed, Changed"
+   "MAC": "Modified, Accessed, Changed",
+   "MFT": "Master File Table"
   }
  },
  "SE_116": {
@@ -17208,7 +17246,8 @@
   "keywords": [
    "3대 기능: 인증(Authentication) · 권한부여(Authorization) · 계정관리(Accounting)",
    "구조: NAS(AAA 클라이언트) · AAA 서버 · 사용자 DB",
-   "프로토콜: RADIUS · Diameter · TACACS+"
+   "프로토콜: RADIUS · Diameter · TACACS+",
+   "동작: 접근 요청 → 인증 전달 → 접속 통지 → 연결 설정"
   ],
   "sections": [
    {
@@ -17320,7 +17359,8 @@
    "사용자 DB",
    "RADIUS",
    "Diameter",
-   "TACACS+"
+   "TACACS+",
+   "동작: 요청 → 전달 → 통지 → 설정"
   ],
   "keywords_ref": [
    "동작 단계 요청·전달·통지·설정",
@@ -17344,7 +17384,7 @@
    "Diameter",
    "TACACS+"
   ],
-  "dueum": "요전통설",
+  "dueum": "요전통설(접근 요청 → 인증 전달 → 접속 통지 → 연결 설정)",
   "gloss": {
    "OTP": "One-Time Password",
    "NAS": "Network Access Server",
@@ -19760,7 +19800,8 @@
    "UTM": "Unified Threat Management",
    "AP": "Access Point",
    "NAT": "Network Address Translation",
-   "IDS": "Intrusion Detection System"
+   "IDS": "Intrusion Detection System",
+   "IPS": "Intrusion Prevention System"
   }
  },
  "SE_134": {
@@ -23145,7 +23186,8 @@
    "AA": "Attribute Authority",
    "PKI": "Public Key Infrastructure",
    "EAM": "Extranet Access Management",
-   "ITU-T": "International Telecommunication Union Telecommunication Standardization Sector"
+   "ITU-T": "International Telecommunication Union Telecommunication Standardization Sector",
+   "PMI": "Privilege Management Infrastructure"
   }
  },
  "SE_161": {
@@ -23446,7 +23488,8 @@
    "USIM": "Universal Subscriber Identity Module",
    "FIDO": "Fast Identity Online",
    "NFC": "Near Field Communication",
-   "IC": "Integrated Circuit"
+   "IC": "Integrated Circuit",
+   "OTP": "One-Time Password"
   }
  },
  "SE_164": {
@@ -25359,7 +25402,8 @@
    "DCAS": "Downloadable CAS",
    "XCAS": "eXchangeable CAS",
    "DRM": "Digital Rights Management",
-   "OTT": "Over-the-Top"
+   "OTT": "Over-the-Top",
+   "CAS": "Conditional Access System"
   }
  },
  "SE_181": {
@@ -26188,7 +26232,7 @@
    "배경지식 공격",
    "쏠림·유사성 공격(Skewness·Similarity)"
   ],
-  "dueum": "케익 엘다 티근",
+  "dueum": "케익 엘다 티근(k-익명성·l-다양성·t-근접성)",
   "gloss": {
    "EMD": "Earth Mover's Distance"
   }
@@ -34300,7 +34344,7 @@
    "산출",
    "제시"
   ],
-  "dueum": "정식보수 처검분 산제",
+  "dueum": "원칙: 당사자주의·신의성실 / 절차 정식보수 처검분 산제(정보 관리·식별·보존·수집 → 처리·검토·분석 → 산출·제시)",
   "gloss": {
    "ESI": "Electronically Stored Information",
    "FRCP": "Federal Rules of Civil Procedure",
@@ -35395,7 +35439,9 @@
    "ASV": "Approved Scanning Vendor",
    "PAN": "Primary Account Number",
    "P2PE": "Point-to-Point Encryption",
-   "POS": "Point of Sale"
+   "POS": "Point of Sale",
+   "PCI": "Payment Card Industry",
+   "SSC": "Security Standards Council"
   }
  },
  "SE_249": {
@@ -40133,7 +40179,8 @@
    "ZTNA": "Zero Trust Network Access",
    "SPA": "Single Packet Authorization",
    "CSA": "Cloud Security Alliance",
-   "SAML": "Security Assertion Markup Language"
+   "SAML": "Security Assertion Markup Language",
+   "SDP": "Software Defined Perimeter"
   }
  },
  "SE_288_5": {
@@ -41052,7 +41099,8 @@
    "HVCI": "Hypervisor-protected Code Integrity",
    "WDAC": "Windows Defender Application Control",
    "DSE": "Driver Signature Enforcement",
-   "EDR": "Endpoint Detection and Response"
+   "EDR": "Endpoint Detection and Response",
+   "IoC": "Indicator of Compromise"
   }
  },
  "SE_294": {
@@ -42078,7 +42126,8 @@
    "NDR": "Network Detection and Response",
    "IDS": "Intrusion Detection System",
    "C2": "Command and Control",
-   "CSIRT": "Computer Security Incident Response Team"
+   "CSIRT": "Computer Security Incident Response Team",
+   "IoC": "Indicator of Compromise"
   }
  }
 }

@@ -3327,7 +3327,8 @@
   "reviewed": true,
   "gloss": {
    "ISP": "Interface Segregation Principle",
-   "LSP": "Liskov Substitution Principle"
+   "LSP": "Liskov Substitution Principle",
+   "SRP": "Single Responsibility Principle"
   }
  },
  "SW_026": {
@@ -8279,7 +8280,7 @@
     ]
    }
   ],
-  "dueum": "화제루",
+  "dueum": "화제루(화이트박스: 제어 구조·루프 테스트)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -10225,7 +10226,7 @@
     ]
    }
   ],
-  "dueum": "참발수심",
+  "dueum": "참발수심(참여 업체·발주기관·수행기관(TTA)·심의위원회)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -10821,7 +10822,7 @@
     ]
    }
   ],
-  "dueum": "상전반무조테",
+  "dueum": "상전반무조테(상태 전이 다이어그램·전이 테이블·트리·반응(유효) TC·무반응(무효) TC·가드 조건·테스트 프로시저)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -10963,7 +10964,11 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MVT": "Multivariate Testing",
+   "CTR": "Click-Through Rate"
+  }
  },
  "SW_169_01": {
   "name": "메타모픽 테스팅(Metamorphic Testing)",
@@ -11420,7 +11425,7 @@
     ]
    }
   ],
-  "dueum": "데프도테키",
+  "dueum": "데프도테키(Part 1 개념·용어(Definitions)·Part 2 프로세스·Part 3 도큐먼트·Part 4 테크닉·Part 5 키워드 기반)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -12160,7 +12165,7 @@
     ]
    }
   ],
-  "dueum": "수완이의 예적",
+  "dueum": "수완이의 예적(원인별: 수정·완전화·예방·적응)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -12928,7 +12933,7 @@
     ]
    }
   ],
-  "dueum": "초관정정최",
+  "dueum": "초관정정최(초기·관리·정의·정량적 관리·최적화)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -13183,7 +13188,7 @@
     ]
    }
   ],
-  "dueum": "불수관확예최",
+  "dueum": "불수관확예최(불완전 0·수행 1·관리 2·확립 3·예측 4·혁신 5, SPICE의 최적화에 해당)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -15480,7 +15485,7 @@
     ]
    }
   ],
-  "dueum": "유범이의 데이트",
+  "dueum": "유범이의 데이트(측정 유형 결정·범위·경계 식별·데이터 기능·트랜잭션 기능)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -15606,7 +15611,7 @@
     ]
    }
   ],
-  "dueum": "유범이의 데이트",
+  "dueum": "유범이의 데이트(측정 유형 결정·범위·경계 식별·데이터 기능·트랜잭션 기능)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -19745,7 +19750,7 @@
     ]
    }
   ],
-  "dueum": "명완검일수추개",
+  "dueum": "명완검일수추개(명확·완전·검증 가능·일관·수정 용이·추적 가능·개발 후 운영·유지보수 활용, IEEE 830-1984 7특성)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -24999,7 +25004,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SRP": "Single Responsibility Principle"
+  }
  },
  "SW_120": {
   "name": "클린 코드(Clean Code)",
@@ -25130,7 +25138,11 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "TDD": "Test-Driven Development",
+   "SRP": "Single Responsibility Principle"
+  }
  },
  "SW_121": {
   "name": "레드·그린·클린 코드(Red, Green and Clean Code)",
@@ -27229,7 +27241,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "DFS": "Depth-First Search"
+  }
  },
  "SW_160": {
   "name": "스모크 테스트(Smoke Test)",
@@ -28159,7 +28174,7 @@
     ]
    }
   ],
-  "dueum": "범참용오성",
+  "dueum": "범참용오성(범위·참조 표준·용어·Overview(심사 모델 개요)·프로세스/능력 성과 지표)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -29155,7 +29170,7 @@
     ]
    }
   ],
-  "dueum": "특파관히체산층",
+  "dueum": "특파관히체산층(특성요인도·파레토·관리도·히스토그램·체크 시트·산점도·층별)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -29507,7 +29522,7 @@
     ]
    }
   ],
-  "dueum": "요모관측평",
+  "dueum": "요모관측평(품질 요구 2503n·모델 2501n·관리 2500n·측정 2502n·평가 2504n)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -29886,7 +29901,7 @@
     ]
    }
   ],
-  "dueum": "불수관확예최",
+  "dueum": "불수관확예최(불완전 0·수행 1·관리 2·확립 3·예측 4·최적화 5)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -29952,8 +29967,8 @@
    "우수 조달 제품"
   ],
   "keywords": [
-   "품질 특성: 기능 적합성 · 성능 효율성 · 사용성 · 신뢰성",
-   "일반 요구사항: 제품 설명서 · 사용자 문서 · 식별 및 표시 · 안전성",
+   "품질 특성(ISO/IEC 25010:2011 8대, 25023으로 측정): 기능 적합성·성능 효율성·호환성·사용성 · 신뢰성·보안성·유지보수성·이식성",
+   "일반 요구사항: ISO/IEC 25051(제품 설명서·사용자 문서·SW)",
    "등급: 1등급 · 2등급",
    "근거: 소프트웨어 진흥법 제20조 · TTA·KTL 등 시험기관"
   ],
@@ -30516,7 +30531,7 @@
     ]
    }
   ],
-  "dueum": "초관정측최",
+  "dueum": "초관정측최(초기·관리·정의·측정·최적화)",
   "curated": true,
   "keywords_note": null,
   "note": null,
@@ -32802,7 +32817,9 @@
   "reviewed": true,
   "gloss": {
    "SAM": "Software Asset Management"
-  }
+  },
+  "subtitle": "ISO/IEC 19770-1",
+  "category": "SW공학 > SAM > ISO/IEC 19770-1"
  },
  "SW_254": {
   "name": "SW 개발 생산성 향상 방안(Software Development Productivity Improvement)",

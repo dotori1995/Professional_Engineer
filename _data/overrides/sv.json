@@ -217,7 +217,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CSS": "Cascading Style Sheets",
+   "DFS": "Depth-First Search"
+  }
  },
  "SV_010": {
   "name": "오픈 API(Open API)",
@@ -1076,7 +1080,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CSR": "Client-Side Rendering"
+  }
  },
  "SV_022": {
   "name": "딥링크(Deep Link)",
@@ -1347,7 +1354,12 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CSS": "Cascading Style Sheets",
+   "ISP": "Internet Service Provider",
+   "LCP": "Largest Contentful Paint"
+  }
  },
  "SV_033": {
   "name": "퍼블릭 클라우드 서비스 분류(Public Cloud)",
@@ -2210,7 +2222,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CMP": "Cloud Management Platform"
+  }
  },
  "SV_057": {
   "name": "사용자경험(LXC(Linux Contatiner))",
@@ -2998,7 +3013,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CCM": "Cloud Controls Matrix"
+  }
  },
  "SV_064": {
   "name": "U2L(Unix to Linux)",
@@ -3151,7 +3169,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "OPA": "Open Policy Agent"
+  }
  },
  "SV_066": {
   "name": "하이퍼컨버지드 인프라(HCI)",
@@ -3321,7 +3342,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CMP": "Cloud Management Platform"
+  }
  },
  "SV_068_00": {
   "name": "클라우드 상호운용성(Cloud Interoperability)",
@@ -3865,7 +3889,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "SDM": "Software-Defined Machine"
+  }
  },
  "SV_078": {
   "name": "앰비언트 컴퓨팅(Ambient Computing)",
@@ -4027,7 +4054,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "MCU": "Microcontroller Unit"
+  }
  },
  "SV_079_1": {
   "name": "디지털서비스(HPC(High-Performance Computing))",
@@ -4318,7 +4348,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  "SV_096": {
   "name": "가상현실(VR, Virtual Reality)",
@@ -6021,7 +6054,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System",
+   "HLS": "HTTP Live Streaming"
+  }
  },
  "SV_185": {
   "name": "측위기술(Positioning Technology)",
@@ -6103,7 +6140,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  "SV_207": {
   "name": "스마트팩토리(Smart Factory)",
@@ -6181,7 +6221,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PLC": "Programmable Logic Controller",
+   "SCM": "Supply Chain Management"
+  }
  },
  "SV_208": {
   "name": "사이버물리시스템(CPS)",
@@ -6547,7 +6591,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PLC": "Programmable Logic Controller",
+   "EMS": "Energy Management System"
+  }
  },
  "SV_219": {
   "name": "지능형 SCADA(SCADA)",
@@ -6631,7 +6679,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PLC": "Programmable Logic Controller",
+   "EMS": "Energy Management System"
+  }
  },
  "SV_224_01": {
   "name": "M.AX(Manufacturing AI Transformation, 제조 AX)",
@@ -7225,7 +7277,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "EMS": "Energy Management System",
+   "ESS": "Energy Storage System"
+  }
  },
  "SV_262": {
   "name": "건물에너지관리(BEMS)",
@@ -7328,7 +7384,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "ESS": "Energy Storage System",
+   "EMS": "Energy Management System"
+  }
  },
  "SV_263": {
   "name": "에너지저장장치(ESS)",
@@ -7423,7 +7483,12 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "ESS": "Energy Storage System",
+   "PMS": "Power Management System",
+   "EMS": "Energy Management System"
+  }
  },
  "SV_265": {
   "name": "그리드(Micro Grid)",
@@ -7505,7 +7570,13 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "ESS": "Energy Storage System",
+   "STS": "Static Transfer Switch",
+   "EMS": "Energy Management System",
+   "DER": "Distributed Energy Resources"
+  }
  },
  "SV_267": {
   "name": "가상발전소(VPP)",
@@ -7581,7 +7652,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "DER": "Distributed Energy Resources",
+   "ESS": "Energy Storage System"
+  }
  },
  "SV_268": {
   "name": "그리드 패리티(Grid Parity)",
@@ -7654,7 +7729,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "ESS": "Energy Storage System"
+  }
  },
  "SV_271": {
   "name": "시스템온칩(SoC)",
@@ -7757,7 +7835,12 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "IP": "Intellectual Property",
+   "AP": "Application Processor",
+   "ISP": "Image Signal Processor"
+  }
  },
  "SV_272": {
   "name": "멤스(MEMS)",
@@ -8365,7 +8448,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "DX": "Digital Transformation"
+  }
  },
  "SV_281_1": {
   "name": "기술수용모델(TAM Technology Acceptance Model) 133회",
@@ -8459,7 +8545,14 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "TAM": "Technology Acceptance Model",
+   "TAM2": "Extended Technology Acceptance Model",
+   "UTAUT": "Unified Theory of Acceptance and Use of Technology",
+   "TRA": "Theory of Reasoned Action",
+   "PU": "Perceived Usefulness"
+  }
  },
  "SV_282": {
   "name": "가트너 전략기술 동향(Gartner Strategic Technology Trends)",
@@ -9969,7 +10062,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "IMS": "IMS Global Learning Consortium",
+   "CLR": "Comprehensive Learner Record"
+  }
  },
  "SV_327_3": {
   "name": "블록체인(Block-chain) Layer 1 Layer 2",
@@ -11149,7 +11246,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "RTE": "Run-Time Environment"
+  }
  },
  "SV_348": {
   "name": "커넥티드 카(Connected Car)",
@@ -11355,7 +11455,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  "SV_351": {
   "name": "첨단운전자지원(ADAS)",
@@ -11609,7 +11712,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "OPA": "Optical Phased Array"
+  }
  },
  "SV_354": {
   "name": "차량사물인터넷(IoV)",
@@ -11967,7 +12073,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "DSP": "Digital Signal Processing",
+   "ISP": "Image Signal Processor"
+  }
  },
  "SV_365": {
   "name": "동시적 위치추정과 지도작성(SLAM)",
@@ -12047,7 +12157,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  "SV_366_0": {
   "name": "디지털서비스(AMI LDM Local Dynamic Map LDM Local Dynamic Map)",
@@ -12139,7 +12252,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CAM": "Cooperative Awareness Message"
+  }
  },
  "SV_366_1": {
   "name": "센서퓨전(Sensor Fusion)",
@@ -12340,7 +12456,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "SOA": "Service-Oriented Architecture"
+  }
  },
  "SV_368": {
   "name": "코드(QR)",
@@ -12649,7 +12768,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "RAM": "Regional Air Mobility"
+  }
  },
  "SV_373_1": {
   "name": "인공지능(AAM(Advanced Air Mobility))",
@@ -13412,7 +13534,19 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "UUID": "Universally Unique Identifier",
+   "DID": "Decentralized Identifier",
+   "EXIF": "Exchangeable Image File Format",
+   "XMP": "Extensible Metadata Platform",
+   "SBOM": "Software Bill of Materials",
+   "PKI": "Public Key Infrastructure",
+   "WORM": "Write Once Read Many",
+   "C2PA": "Coalition for Content Provenance and Authenticity",
+   "ETL": "Extract Transform Load",
+   "BOM": "Bill of Materials"
+  }
  },
  "SV_419": {
   "name": "다크패턴(Dark Pattern)",
@@ -15573,7 +15707,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "EBS": "Elastic Block Store"
+  }
  },
  "SV_045": {
   "name": "플랫폼 서비스(PaaS)",
@@ -15915,7 +16052,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "IPS": "Intrusion Prevention System"
+  }
  },
  "SV_051": {
   "name": "클라우드(Intercloud)",
@@ -16349,7 +16489,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "FEC": "Fabric-Enabled Computer",
+   "MPP": "Massively Parallel Processing"
+  }
  },
  "SV_071": {
   "name": "회(Utility Computing)",
@@ -16509,7 +16653,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  "SV_074": {
   "name": "자율공장(Autonomous Factory)",
@@ -16823,7 +16970,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "AP": "Access Point"
+  }
  },
  "SV_081": {
   "name": "스마트(Smart City)",
@@ -17194,7 +17344,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CFD": "Computational Fluid Dynamics"
+  }
  },
  "SV_095": {
   "name": "증강현실 유형(AR Types)",
@@ -17289,7 +17442,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "AV": "Augmented Virtuality"
+  }
  },
  "SV_097": {
   "name": "VR 미디어 획득(VR Media Capture)",
@@ -17441,7 +17597,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "AV": "Augmented Virtuality"
+  }
  },
  "SV_102": {
   "name": "혼합현실(MR, Mixed Reality)",
@@ -17518,7 +17677,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "AV": "Augmented Virtuality"
+  }
  },
  "SV_126": {
   "name": "디지털서비스(Folksonomy)",
@@ -18172,7 +18334,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPT": "Generative Pre-trained Transformer"
+  }
  },
  "SV_136": {
   "name": "디지털서비스(AR SPARQL SPARQL)",
@@ -18430,7 +18595,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "IOPS": "Input/Output Operations Per Second"
+  }
  },
  "SV_157": {
   "name": "리눅스 가상화 방식(Linux Virtualization)",
@@ -19345,7 +19513,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "BIS": "Bus Information System"
+  }
  },
  "SV_181": {
   "name": "협력형 ITS(C-ITS)",
@@ -19625,7 +19796,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  "SV_186": {
   "name": "GPS(Global Positioning System)",
@@ -19954,7 +20128,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "AP": "Access Point"
+  }
  },
  "SV_190": {
   "name": "디지털서비스(LAS)",
@@ -20214,7 +20391,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "AP": "Access Point",
+   "CSI": "Channel State Information"
+  }
  },
  "SV_193": {
   "name": "디지털서비스(GML)",
@@ -20407,7 +20588,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "GPS": "Global Positioning System",
+   "AP": "Access Point"
+  }
  },
  "SV_197": {
   "name": "디지털서비스(Geofencing)",
@@ -20814,7 +20999,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PLC": "Programmable Logic Controller"
+  }
  },
  "SV_205": {
   "name": "퍼팩트 스톰(Perfect Storm)",
@@ -20889,7 +21077,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "DX": "Digital Transformation"
+  }
  },
  "SV_209_00": {
   "name": "디지털서비스(CPPS)",
@@ -21312,7 +21503,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PLC": "Programmable Logic Controller"
+  }
  },
  "SV_217": {
   "name": "디지털서비스(HMI)",
@@ -21391,7 +21585,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "SPC": "Statistical Process Control",
+   "PLC": "Programmable Logic Controller"
+  }
  },
  "SV_220": {
   "name": "분산제어시스템(DCS)",
@@ -21484,7 +21682,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "DDC": "Direct Digital Control",
+   "PLC": "Programmable Logic Controller"
+  }
  },
  "SV_221": {
   "name": "프로그래머블논리제어기(PLC)",
@@ -22365,7 +22567,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CDA": "Clinical Document Architecture"
+  }
  },
  "SV_269_01": {
   "name": "RE100, 직접 전력구매계약(PPA) 제도",
@@ -22443,7 +22648,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CDP": "Carbon Disclosure Project"
+  }
  },
  "SV_273_1": {
   "name": "서비스 로봇(Service Robot)",
@@ -22680,7 +22888,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PLC": "Product Life Cycle"
+  }
  },
  "SV_283": {
   "name": "전문성의 민주화(Democratization)",
@@ -22851,7 +23062,11 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "CAM": "Content Aggregation Model",
+   "RTE": "Run-Time Environment"
+  }
  },
  "SV_300_0": {
   "name": "비대면 기술(Untact Technology)의 종류",
@@ -23727,7 +23942,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "RAM": "Random Access Memory"
+  }
  },
  "SV_350": {
   "name": "자율주행 수준분류(SAE J3016 Levels)",
@@ -23880,7 +24098,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "AV": "Automated Vehicles"
+  }
  },
  "SV_367": {
   "name": "바코드(Barcode)",
@@ -24050,7 +24271,10 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "BOM": "Browser Object Model"
+  }
  },
  "SV_384": {
   "name": "제이슨(JSON)",
@@ -24671,7 +24895,17 @@
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
-  "warnings": []
+  "warnings": [],
+  "gloss": {
+   "PI": "Polyimide",
+   "TFE": "Thin Film Encapsulation",
+   "EL": "Electroluminescence",
+   "LTPS": "Low-Temperature Polycrystalline Silicon",
+   "UTG": "Ultra Thin Glass",
+   "CPI": "Colorless Polyimide",
+   "LLO": "Laser Lift-Off",
+   "TFT": "Thin Film Transistor"
+  }
  },
  "SV_399": {
   "name": "터치기술(D)",

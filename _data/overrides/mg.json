@@ -536,7 +536,11 @@
     "quiz_groups": [
       "mg"
     ],
-    "quiz_avoid": []
+    "quiz_avoid": [],
+    "gloss": {
+      "AS": null,
+      "SAS": null
+    }
   },
   "MG_007": {
     "name": "데이터 마이닝 표준 프로세스(CRISP-DM)",
@@ -625,7 +629,10 @@
     "quiz_groups": [
       "mg"
     ],
-    "quiz_avoid": []
+    "quiz_avoid": [],
+    "gloss": {
+      "SAS": null
+    }
   },
   "MG_008": {
     "name": "프로세스 마이닝(Process Mining)",
@@ -2071,7 +2078,10 @@
     "quiz_groups": [
       "mg"
     ],
-    "quiz_avoid": []
+    "quiz_avoid": [],
+    "gloss": {
+      "STS": "Static Transfer Switch"
+    }
   },
   "MG_026": {
     "name": "5 Forces 분석(Porter's Five Forces)",
@@ -6049,7 +6059,12 @@
     "quiz_groups": [
       "mg"
     ],
-    "quiz_avoid": []
+    "quiz_avoid": [],
+    "gloss": {
+      "PRM": "Performance Reference Model",
+      "TRM": "Technical Reference Model",
+      "ARM": "Application Reference Model"
+    }
   },
   "MG_069": {
     "name": "정보자원관리(IRM, Information Resource Management)",
@@ -11761,7 +11776,10 @@
     "quiz_groups": [
       "mg"
     ],
-    "quiz_avoid": []
+    "quiz_avoid": [],
+    "gloss": {
+      "IP": "Intellectual Property"
+    }
   },
   "MG_137_0": {
     "name": "사회책임·환경경영(ISO 26000·ISO 14001)",

@@ -276,7 +276,8 @@
    "se"
   ],
   "gloss": {
-   "ECC": "Elliptic Curve Cryptography"
+   "ECC": "Elliptic Curve Cryptography",
+   "DSA": "Digital Signature Algorithm"
   }
  },
  {
@@ -553,7 +554,7 @@
   "quiz_groups": [
    "se"
   ],
-  "dueum": "이씨씨오씨",
+  "dueum": "이씨씨오씨(ECB·CBC·CFB·OFB·CTR)",
   "gloss": {
    "IV": "Initialization Vector"
   }
@@ -848,7 +849,10 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "MAC": "Message Authentication Code"
+  }
  },
  {
   "id": "SE_008_00",
@@ -1300,7 +1304,8 @@
    "ECDLP": "Elliptic Curve Discrete Logarithm Problem",
    "ECDH": "Elliptic Curve Diffie-Hellman",
    "ECDSA": "Elliptic Curve Digital Signature Algorithm",
-   "EdDSA": "Edwards-curve Digital Signature Algorithm"
+   "EdDSA": "Edwards-curve Digital Signature Algorithm",
+   "ECC": "Elliptic Curve Cryptography"
   }
  },
  {
@@ -1771,7 +1776,11 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "DLP": "Discrete Logarithm Problem",
+   "STS": "Station-to-Station"
+  }
  },
  {
   "id": "SE_013",
@@ -2364,7 +2373,7 @@
   "quiz_groups": [
    "se"
   ],
-  "dueum": "다코격아해",
+  "dueum": "다코격아해(다변수·코드·격자·아이소제니·해시 기반)",
   "gloss": {
    "ECC": "Elliptic Curve Cryptography"
   }
@@ -3480,7 +3489,10 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "DSA": "Digital Signature Algorithm"
+  }
  },
  {
   "id": "SE_022",
@@ -4342,7 +4354,10 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "BCP": "Best Current Practice"
+  }
  },
  {
   "id": "SE_027",
@@ -5145,7 +5160,10 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "RET": null
+  }
  },
  {
   "id": "SE_033",
@@ -5404,7 +5422,10 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "RET": null
+  }
  },
  {
   "id": "SE_035",
@@ -5553,7 +5574,8 @@
   ],
   "gloss": {
    "ISP": "Internet Service Provider",
-   "PC": "Personal Computer"
+   "PC": "Personal Computer",
+   "BCP": "Best Current Practice"
   }
  },
  {
@@ -5946,7 +5968,7 @@
   "quiz_groups": [
    "se"
   ],
-  "dueum": "침탐수유"
+  "dueum": "침탐수유(침투·탐색·수집·유출)"
  },
  {
   "id": "SE_039",
@@ -6219,7 +6241,8 @@
    "se"
   ],
   "gloss": {
-   "IPS": "Intrusion Prevention System"
+   "IPS": "Intrusion Prevention System",
+   "CFG": "Control Flow Guard"
   }
  },
  {
@@ -8440,7 +8463,10 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "PLC": "Programmable Logic Controller"
+  }
  },
  {
   "id": "SE_052",
@@ -10540,7 +10566,8 @@
   "gloss": {
    "IPS": "Intrusion Prevention System",
    "RFI": "Remote File Inclusion",
-   "WHISTL": "Web Hacking Incident & Sign Tracking Logger"
+   "WHISTL": "Web Hacking Incident & Sign Tracking Logger",
+   "PHP": "PHP: Hypertext Preprocessor"
   }
  },
  {
@@ -10978,7 +11005,8 @@
   "gloss": {
    "SAST": "Static Application Security Testing",
    "DAST": "Dynamic Application Security Testing",
-   "PE": "Portable Executable"
+   "PE": "Portable Executable",
+   "IDA": null
   }
  },
  {
@@ -11283,7 +11311,8 @@
   "gloss": {
    "PE": "Portable Executable",
    "API": "Application Programming Interface",
-   "DB": "Database"
+   "DB": "Database",
+   "IDA": null
   }
  },
  {
@@ -11945,7 +11974,7 @@
    "ORM 사용",
    "에러 메시지 노출 금지",
    "sqlmap",
-   "OWASP Top 10 A03 Injection",
+   "OWASP Top 10:2025 A05 Injection(2021판 A03)",
    "서블릿 필터"
   ],
   "curated": true,
@@ -12079,7 +12108,7 @@
    "크로스 사이트 요청 위조(CSRF) 비교",
    "블라인드 XSS",
    "DOMPurify",
-   "OWASP Top 10 A03 Injection",
+   "OWASP Top 10:2025 A05 Injection(2021판 A03)",
    "lucy-xss-filter",
    "X-XSS-Protection(폐지)"
   ],
@@ -13022,7 +13051,10 @@
   "quiz_groups": [
    "se"
   ],
-  "dueum": "개구보관문"
+  "dueum": "0123 032 개구보관문(27100 개념·27101 프레임워크 구축·27102 사이버 보험·27103 관련 표준 활용·27032 인터넷 보안 문제 해결 지침)",
+  "gloss": {
+   "CSF": "Cybersecurity Framework"
+  }
  },
  {
   "id": "SE_082_1",
@@ -13321,7 +13353,7 @@
   "quiz_groups": [
    "se"
   ],
-  "dueum": "관보개 ; 관리체계 기위운점 ; 개인정보 수보제파정",
+  "dueum": "관보개(관리체계 수립·운영 16 / 보호대책 64 / 개인정보 처리 단계 21) ; 관리체계 기위운점(기반 마련·위험 관리·운영·점검 및 개선) ; 개인정보 수보제파정(수집·보유·이용·제공·파기·정보주체 권리보호)",
   "gloss": {
    "PIMS": "Personal Information Management System",
    "ISP": "Internet Service Provider",
@@ -14618,7 +14650,8 @@
   ],
   "gloss": {
    "PC": "Personal Computer",
-   "XDR": "Extended Detection and Response"
+   "XDR": "Extended Detection and Response",
+   "IoC": "Indicator of Compromise"
   }
  },
  {
@@ -15362,7 +15395,10 @@
   ],
   "quiz_groups": [
    "se"
-  ]
+  ],
+  "gloss": {
+   "TOC": "Time of Check"
+  }
  },
  {
   "id": "SE_099",
@@ -17065,7 +17101,7 @@
   "quiz_groups": [
    "se"
   ],
-  "dueum": "정재신연무 ; 준획보분보"
+  "dueum": "원칙 정재신연무(정당성·재현성·신속성·연계 보관성·무결성) ; 절차 준획보분보(준비·획득·보관·분석·보고)"
  },
  {
   "id": "SE_112",
@@ -17513,10 +17549,11 @@
   "quiz_groups": [
    "se"
   ],
-  "dueum": "와이프가 다가오면 스테가노그래피를 암호화해야지",
+  "dueum": "와이프가 다가오면 스테가노그래피를 암호화해야지(와이핑·디가우징·스테가노그래피·암호화)",
   "gloss": {
    "ADS": "Alternate Data Stream",
-   "HPA": "Host Protected Area"
+   "HPA": "Host Protected Area",
+   "MFT": "Master File Table"
   }
  },
  {
@@ -18059,7 +18096,8 @@
    "se"
   ],
   "gloss": {
-   "MAC": "Modified, Accessed, Changed"
+   "MAC": "Modified, Accessed, Changed",
+   "MFT": "Master File Table"
   }
  },
  {
@@ -18073,7 +18111,8 @@
   "keywords": [
    "3대 기능: 인증(Authentication) · 권한부여(Authorization) · 계정관리(Accounting)",
    "구조: NAS(AAA 클라이언트) · AAA 서버 · 사용자 DB",
-   "프로토콜: RADIUS · Diameter · TACACS+"
+   "프로토콜: RADIUS · Diameter · TACACS+",
+   "동작: 접근 요청 → 인증 전달 → 접속 통지 → 연결 설정"
   ],
   "sections": [
    {
@@ -18185,7 +18224,8 @@
    "사용자 DB",
    "RADIUS",
    "Diameter",
-   "TACACS+"
+   "TACACS+",
+   "동작: 요청 → 전달 → 통지 → 설정"
   ],
   "keywords_ref": [
    "동작 단계 요청·전달·통지·설정",
@@ -18212,7 +18252,7 @@
   "quiz_groups": [
    "se"
   ],
-  "dueum": "요전통설",
+  "dueum": "요전통설(접근 요청 → 인증 전달 → 접속 통지 → 연결 설정)",
   "gloss": {
    "OTP": "One-Time Password",
    "NAS": "Network Access Server",
@@ -20740,7 +20780,8 @@
    "UTM": "Unified Threat Management",
    "AP": "Access Point",
    "NAT": "Network Address Translation",
-   "IDS": "Intrusion Detection System"
+   "IDS": "Intrusion Detection System",
+   "IPS": "Intrusion Prevention System"
   }
  },
  {
@@ -24293,7 +24334,8 @@
    "AA": "Attribute Authority",
    "PKI": "Public Key Infrastructure",
    "EAM": "Extranet Access Management",
-   "ITU-T": "International Telecommunication Union Telecommunication Standardization Sector"
+   "ITU-T": "International Telecommunication Union Telecommunication Standardization Sector",
+   "PMI": "Privilege Management Infrastructure"
   }
  },
  {
@@ -24608,7 +24650,8 @@
    "USIM": "Universal Subscriber Identity Module",
    "FIDO": "Fast Identity Online",
    "NFC": "Near Field Communication",
-   "IC": "Integrated Circuit"
+   "IC": "Integrated Circuit",
+   "OTP": "One-Time Password"
   }
  },
  {
@@ -26612,7 +26655,8 @@
    "DCAS": "Downloadable CAS",
    "XCAS": "eXchangeable CAS",
    "DRM": "Digital Rights Management",
-   "OTT": "Over-the-Top"
+   "OTT": "Over-the-Top",
+   "CAS": "Conditional Access System"
   }
  },
  {
@@ -27483,7 +27527,7 @@
   "quiz_groups": [
    "se"
   ],
-  "dueum": "케익 엘다 티근",
+  "dueum": "케익 엘다 티근(k-익명성·l-다양성·t-근접성)",
   "gloss": {
    "EMD": "Earth Mover's Distance"
   }
@@ -35987,7 +36031,7 @@
   "quiz_groups": [
    "se"
   ],
-  "dueum": "정식보수 처검분 산제",
+  "dueum": "원칙: 당사자주의·신의성실 / 절차 정식보수 처검분 산제(정보 관리·식별·보존·수집 → 처리·검토·분석 → 산출·제시)",
   "gloss": {
    "ESI": "Electronically Stored Information",
    "FRCP": "Federal Rules of Civil Procedure",
@@ -37131,7 +37175,9 @@
    "ASV": "Approved Scanning Vendor",
    "PAN": "Primary Account Number",
    "P2PE": "Point-to-Point Encryption",
-   "POS": "Point of Sale"
+   "POS": "Point of Sale",
+   "PCI": "Payment Card Industry",
+   "SSC": "Security Standards Council"
   }
  },
  {
@@ -42093,7 +42139,8 @@
    "ZTNA": "Zero Trust Network Access",
    "SPA": "Single Packet Authorization",
    "CSA": "Cloud Security Alliance",
-   "SAML": "Security Assertion Markup Language"
+   "SAML": "Security Assertion Markup Language",
+   "SDP": "Software Defined Perimeter"
   }
  },
  {
@@ -43054,7 +43101,8 @@
    "HVCI": "Hypervisor-protected Code Integrity",
    "WDAC": "Windows Defender Application Control",
    "DSE": "Driver Signature Enforcement",
-   "EDR": "Endpoint Detection and Response"
+   "EDR": "Endpoint Detection and Response",
+   "IoC": "Indicator of Compromise"
   }
  },
  {
@@ -44129,7 +44177,8 @@
    "NDR": "Network Detection and Response",
    "IDS": "Intrusion Detection System",
    "C2": "Command and Control",
-   "CSIRT": "Computer Security Incident Response Team"
+   "CSIRT": "Computer Security Incident Response Team",
+   "IoC": "Indicator of Compromise"
   }
  }
 ]

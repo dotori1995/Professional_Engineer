@@ -8286,7 +8286,11 @@
     "title": "데이터 링크 계층(Data Link Layer, OSI 2계층)",
     "reviewed": true,
     "gloss": {
-      "ABM": "Asynchronous Balanced Mode"
+      "ABM": "Asynchronous Balanced Mode",
+      "FEC": "Forward Error Correction",
+      "PPP": "Point-to-Point Protocol",
+      "MAC": "Medium Access Control",
+      "ARM": "Asynchronous Response Mode"
     }
   },
   "NW_046": {
@@ -9688,7 +9692,10 @@
       "짧은 통신 시간"
     ],
     "title": "DSRC(Dedicated Short Range Communications, 단거리 전용 통신)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "ETC": "Electronic Toll Collection"
+    }
   },
   "NW_085_00": {
     "name": "차량 긴급구난체계(eCall, Emergency Call)",
@@ -17309,7 +17316,8 @@
     "gloss": {
       "SMF": "Single-Mode Fiber",
       "STP": "Shielded Twisted Pair",
-      "FTP": "Foiled Twisted Pair"
+      "FTP": "Foiled Twisted Pair",
+      "MMF": "Multi-Mode Fiber"
     }
   },
   "NW_045": {
@@ -18549,7 +18557,9 @@
       "ABM(Asynchronous Balanced Mode)"
     ],
     "gloss": {
-      "ABM": "Asynchronous Balanced Mode"
+      "ABM": "Asynchronous Balanced Mode",
+      "PPP": "Point-to-Point Protocol",
+      "ARM": "Asynchronous Response Mode"
     }
   },
   "NW_074": {
@@ -20860,7 +20870,10 @@
       "AoA",
       "IEEE 802.15.4z(보안 거리 측정)",
       "FiRa Consortium"
-    ]
+    ],
+    "gloss": {
+      "STS": "Scrambled Timestamp Sequence"
+    }
   },
   "NW_149": {
     "name": "지그비(Zigbee)",
@@ -23235,7 +23248,7 @@
         ]
       }
     ],
-    "dueum": "라우터에 탄 승객(IP·IPX·AppleTalk·DECnet)",
+    "dueum": null,
     "curated": true,
     "keywords_note": null,
     "note": null,
@@ -23467,7 +23480,10 @@
       "레지스트리",
       "DCM(Device Control Module)·DCM 관리자",
       "FAV·IAV·BAV·LAV(Full·Intermediate·Base·Legacy AV)"
-    ]
+    ],
+    "gloss": {
+      "CSR": "Control and Status Register"
+    }
   },
   "NW_219": {
     "name": "UPnP(Universal Plug and Play)",
@@ -24472,7 +24488,10 @@
       "정보 전달 중심",
       "멧칼프의 법칙(N²)",
       "리드의 법칙(2ᴺ)"
-    ]
+    ],
+    "gloss": {
+      "RCA": "Radio Corporation of America"
+    }
   },
   "NW_255": {
     "name": "리드의 법칙(Reed's Law)",

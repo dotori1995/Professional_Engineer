@@ -32,7 +32,7 @@
       "예측형·적응형·하이브리드",
       "PMIstandards+",
       "6판 49개 프로세스·10개 지식 영역 → 7판 원칙",
-      "8판(2025) 7원칙·7성과 영역·40프로세스 재도입"
+      "8판(2025.11) 6원칙·7성과 영역(거버넌스·범위·일정·재무·이해관계자·자원·리스크)·5중점 영역 40프로세스 재도입"
     ],
     "keywords": [
       "구조: 가치 전달 시스템(Value Delivery System) · 12원칙(Principles) · 8개 성과 영역(Performance Domains)",
@@ -3158,7 +3158,8 @@
     "gloss": {
       "EVM": "Earned Value Management",
       "EV": "Earned Value",
-      "LOE": "Level of Effort"
+      "LOE": "Level of Effort",
+      "CPI": "Cost Performance Index"
     }
   },
   "PM_033": {
@@ -5235,7 +5236,9 @@
     "reviewed": true,
     "gloss": {
       "SCM": "Software Configuration Management",
-      "CI": "Configuration Item"
+      "CI": "Configuration Item",
+      "FCA": "Functional Configuration Audit",
+      "PCA": "Physical Configuration Audit"
     }
   },
   "PM_052": {
@@ -8833,7 +8836,10 @@
     "quiz_groups": [
       "pm"
     ],
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "FDD": "Feature-Driven Development"
+    }
   },
   "PM_087": {
     "name": "애자일 아키텍처(Agile Architecture)",

@@ -1520,7 +1520,10 @@
     ],
     "keywords_note": null,
     "note": null,
-    "review": null
+    "review": null,
+    "gloss": {
+      "MSD": "Most Significant Digit"
+    }
   },
   "AL_013": {
     "name": "계수 정렬(Counting Sort)",
@@ -1919,7 +1922,8 @@
     "note": null,
     "review": null,
     "gloss": {
-      "CPM": "Critical Path Method"
+      "CPM": "Critical Path Method",
+      "DFS": "Depth-First Search"
     }
   },
   "AL_015_01": {
@@ -3261,7 +3265,10 @@
     ],
     "keywords_note": null,
     "note": null,
-    "review": null
+    "review": null,
+    "gloss": {
+      "DFS": "Depth-First Search"
+    }
   },
   "AL_023": {
     "name": "최소 신장 트리(Minimum Spanning Tree)",
@@ -3628,7 +3635,7 @@
         ]
       }
     ],
-    "dueum": "해적검",
+    "dueum": "해적검(해 선택·적합성 검사·해 검사)",
     "curated": true,
     "reviewed": true,
     "quiz_terms": [
@@ -3890,7 +3897,10 @@
     ],
     "keywords_note": null,
     "note": null,
-    "review": null
+    "review": null,
+    "gloss": {
+      "DFS": "Depth-First Search"
+    }
   },
   "AL_025": {
     "name": "허프만 부호화(Huffman Coding)",
@@ -4017,7 +4027,10 @@
     ],
     "keywords_note": null,
     "note": null,
-    "review": null
+    "review": null,
+    "gloss": {
+      "VLC": "Variable Length Coding"
+    }
   },
   "AL_026": {
     "name": "런 길이 부호화(Run-Length Coding)",
@@ -4118,7 +4131,10 @@
     ],
     "keywords_note": null,
     "note": null,
-    "review": null
+    "review": null,
+    "gloss": {
+      "ABC": null
+    }
   },
   "AL_027": {
     "name": "MPEG 표준(Moving Picture Experts Group Standards)",
@@ -4661,7 +4677,11 @@
     ],
     "keywords_note": null,
     "note": null,
-    "review": null
+    "review": null,
+    "gloss": {
+      "RLC": "Run-Length Coding",
+      "EVC": "Essential Video Coding"
+    }
   },
   "AL_030": {
     "name": "고효율 비디오 부호화(High Efficiency Video Coding)",
@@ -5605,6 +5625,10 @@
     ],
     "keywords_note": null,
     "note": null,
-    "review": null
+    "review": null,
+    "gloss": {
+      "DFS": "Depth-First Search",
+      "IDS": "Iterative Deepening Search"
+    }
   }
 }

@@ -146,3 +146,30 @@ NW_023_00(HTTP/PDA 문장 섞임), NW_073 제목 MTCP→MPTCP, NW_072 VRRS/HSRP 
 
 ### D. 남은 검사기 참고 경고(오류 아님)
 - pdf_not_located 40건(제목 매칭 휴리스틱), soft_generic 3건(CAP의 가용성, IOT 등 정당한 용어), dropped_component_table 2건(DB_051·DB_131은 구성 항목을 다른 절 제목으로 수록), heading_as_keyword 1건(DB_034_1 '업무 필요성'은 엔티티 자격요건 용어)
+
+## 2차 전체 검토 — MG·PM·SW·SV·NW·DB·CA·OS·DS·AL·ST·SE (2026-11-16, AI 제외)
+수정은 `_data/<domain>.json`과 `_data/overrides/<domain>.json`(있는 도메인)에 같이 반영.
+
+### A. 약어 풀이(화면 PE.gl 기준) 문맥 오류 정정
+- 전역 값이 토픽 문맥과 다른 경우 토픽 gloss 지정: CAS(OS 동기화 = Compare-and-Swap, SE_180 = Conditional Access System), DFS(AL·SW·SV 탐색 = Depth-First Search), SRP(SW = Single Responsibility Principle), MPP(SV·CA = Massively Parallel Processing), STS(MG·SV = Static Transfer Switch, NW_148 = Scrambled Timestamp Sequence, SE_012 = Station-to-Station), CPI(PM = Cost Performance Index), IOPS·IDS·SSE·SPC·RLC·VLC·MSD·FDD·FCA/PCA·CLR·CDA·CCM·CFD·UBI·ETC·MMF·SFU·SDM·DDC·STL/BML·SSI·CSR·BIS·RTE·ESP·AV·IP(지식재산)·RCA·OPA·LCP·EBS·EVC·MVT·CTR·MOS(Metal-Oxide-Semiconductor)·PU 등
+- ARM 전역 값 Asynchronous Response Mode → Advanced RISC Machines(대부분 CPU 문맥), NW_043·NW_068은 HDLC 응답 모드, MG_068은 FEAF Application Reference Model
+- 다의어 목록형 약어에 토픽 풀이 지정: AP·PLC·EMS·ESS·GPS·CDP·RAM·BOM·ECC·SCM·SOA·DX·ISP·CMP·IPS·PC(Program Counter)·SVC·MAC·CSS 등
+- 브랜드·제품명이라 풀이를 막음(null): AVR(CA_014), SAS(MG 분석 도구), XP(Windows XP), IDA(IDA Pro), RET(반환 주소), ABC(AL_026 문자열)
+- SE: BCP 38(Best Current Practice), DLP(SE_012 이산대수 문제), DSA(Digital Signature Algorithm), IoC(Inversion of Control로 잘못 풀리던 3곳), PMI(Privilege Management Infrastructure), SDP(Software Defined Perimeter), CFG(Control Flow Guard), PHP, TOC(Time of Check), MFT(Master File Table), PCI·SSC, CSF(NIST Cybersecurity Framework)
+
+### B. 시트 전용 토픽
+- OS_084 호송 효과와 에이징: OS PDF 목차에 없는 시트 전용 토픽 → 삭제(important.json 별표도 제거)
+- 확인: OS_064는 PDF OS_065 '디스크 블록 할당 기법', DS_021은 PDF DS_999 '데이터구조' — 원문 토픽(번호만 다름)
+
+### C. 두음
+- 풀이 없는 두음에 원문 기준 풀이 추가: SW_028·136·157·166·171·172·188·193·197·200·203·204·210·242·243, AL_032, SE_004·016_00·038·082_0·084·111·114·116·186·236
+- NW_204 '라우터에 탄 승객'은 원문에 없는 두음이라 삭제
+- SW_204 A-SPICE 5단계는 Innovating(혁신)으로 표기(SPICE의 최적화와 구분)
+- SE_116 AAA: 원문 동작 과정(요청 → 전달 → 통지 → 설정)을 필수 키워드에 추가
+
+### D. 사실·최신화
+- PM_001: PMBOK 8판(2025.11)은 7원칙이 아니라 6원칙·7성과 영역(거버넌스·범위·일정·재무·이해관계자·자원·리스크)·5중점 영역 40프로세스
+- SE_074·SE_075: OWASP Top 10:2025에서 Injection은 A05(2021판 A03)
+- SW_205: '25023 8대 품질 특성' → ISO/IEC 25010:2011 8대 특성(25023으로 측정)
+- SW_252_0: 'ISO/IEC19770-1' 띄어쓰기
+- CA_061: 목차 '읽기 전용 메모리 개념'(토픽명 반복) → '비휘발성과 분류 기준', 종류 소제목에 PROM·EPROM·EEPROM 병기
