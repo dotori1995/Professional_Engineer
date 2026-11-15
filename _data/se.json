@@ -23217,6 +23217,466 @@
   }
  },
  {
+  "id": "SE_150",
+  "code": "SE_150",
+  "title": "IP 터널링(IP Tunneling)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 네트워크보안 > IP 터널링",
+  "definition": "한 프로토콜의 패킷을 다른 프로토콜의 페이로드로 캡슐화해 IP 망 위에 두 종단 사이의 가상 점대점 통로를 만드는 기술로, VPN·IPv6 전환·모바일 IP 이동성 지원에 쓰인다",
+  "keywords": [
+   "핵심 원리: 캡슐화 · 역캡슐화",
+   "구성 프로토콜: 승객(Passenger) · 운반(Carrier) · 전송(Transport)",
+   "구현 기술: IPSec 터널 모드 · IPv6-in-IPv4 터널링 · 모바일 IP 터널링"
+  ],
+  "sections": [
+   {
+    "title": "캡슐화 구조",
+    "subsections": [
+     {
+      "title": "승객 프로토콜",
+      "items": [
+       "운반할 원래 패킷(IP·IPX 등)"
+      ]
+     },
+     {
+      "title": "운반 프로토콜",
+      "items": [
+       "승객 패킷을 감싸는 프로토콜(GRE·IPSec·L2TP)"
+      ]
+     },
+     {
+      "title": "전송 프로토콜",
+      "items": [
+       "운반 패킷을 실어 나르는 IP"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "입구에서 헤더를 덧붙이고 출구에서 벗겨 원래 패킷 전달"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구현 기술",
+    "subsections": [
+     {
+      "title": "IPSec",
+      "items": [
+       "터널 모드로 원래 패킷 전체를 암호화하고 새 IP 헤더 부착, VPN 구성"
+      ]
+     },
+     {
+      "title": "IPv6 전환",
+      "items": [
+       "IPv4 라우팅 망으로 IPv6 패킷 전달, 수동 설정 터널과 자동 터널"
+      ]
+     },
+     {
+      "title": "모바일 IP",
+      "items": [
+       "단말 이동 시 기지국·코어 장비 간 터널로 주소 유지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 고려",
+    "subsections": [
+     {
+      "title": "기밀성",
+      "items": [
+       "암호화 없는 터널은 IPSec과 결합"
+      ]
+     },
+     {
+      "title": "우회",
+      "items": [
+       "터널 트래픽이 방화벽·IDS 검사를 피하지 않도록 종단 통제"
+      ]
+     },
+     {
+      "title": "자동 터널",
+      "items": [
+       "6to4·Teredo 남용 위험, 불필요 시 차단"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "캡슐화 구조",
+   "- 승객 프로토콜",
+   "- 운반 프로토콜",
+   "- 전송 프로토콜",
+   "- 동작",
+   "구현 기술",
+   "- IPSec",
+   "- IPv6 전환",
+   "- 모바일 IP",
+   "보안 고려",
+   "- 기밀성",
+   "- 우회",
+   "- 자동 터널"
+  ],
+  "name": "IP 터널링(IP Tunneling)",
+  "en": "IP Tunneling",
+  "keywords_must": [
+   "캡슐화",
+   "역캡슐화",
+   "승객(Passenger)",
+   "운반(Carrier)",
+   "전송(Transport)",
+   "IPSec 터널 모드",
+   "IPv6-in-IPv4 터널링",
+   "모바일 IP 터널링"
+  ],
+  "keywords_ref": [
+   "운반 프로토콜 예: GRE·IPSec·IP-in-IP·L2TP·MPLS",
+   "설정 터널(수동)·자동 터널(6to4·ISATAP·Teredo·터널 브로커)",
+   "모바일 IP의 홈 에이전트↔외부 에이전트 터널",
+   "오버레이 네트워크",
+   "보안: 암호화 없는 터널(GRE)은 기밀성 없음, 터널을 통한 방화벽 우회 위험"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "캡슐화",
+   "역캡슐화",
+   "승객(Passenger)",
+   "운반(Carrier)",
+   "전송(Transport)",
+   "IPSec 터널 모드",
+   "IPv6-in-IPv4 터널링",
+   "모바일 IP 터널링"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "GRE": "Generic Routing Encapsulation",
+   "ISATAP": "Intra-Site Automatic Tunnel Addressing Protocol",
+   "L2TP": "Layer 2 Tunneling Protocol",
+   "MPLS": "Multiprotocol Label Switching",
+   "VPN": "Virtual Private Network",
+   "IDS": "Intrusion Detection System"
+  }
+ },
+ {
+  "id": "SE_153",
+  "code": "SE_153",
+  "title": "전송 계층 보안(TLS, Transport Layer Security)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 터널링 네트워크 보안 > 전송계층보안",
+  "definition": "SSL 3.0을 바탕으로 IETF가 표준화한 전송 계층 암호 통신 프로토콜로, 핸드셰이크로 암호 알고리즘 협상·서버 인증·키 교환을 수행한 뒤 레코드 계층에서 대칭키 암호와 메시지 인증으로 기밀성·무결성을 제공하며 HTTPS의 기반이다",
+  "keywords": [
+   "프로토콜 구조: 핸드셰이크 · 암호 명세 변경 · 경보 · 레코드",
+   "버전: TLS 1.0(1999) · TLS 1.2(2008) · TLS 1.3(2018)",
+   "TLS 1.3 변화: 1-RTT 핸드셰이크 · 0-RTT 재개 · 전방 비밀성 필수 · AEAD만 허용"
+  ],
+  "sections": [
+   {
+    "title": "TLS 1.2 핸드셰이크",
+    "subsections": [
+     {
+      "title": "1 Hello 교환",
+      "items": [
+       "버전·암호 스위트·난수 협상"
+      ]
+     },
+     {
+      "title": "2 인증·키 교환",
+      "items": [
+       "서버 인증서, (EC)DHE 파라미터 교환"
+      ]
+     },
+     {
+      "title": "3 키 생성",
+      "items": [
+       "프리마스터 시크릿으로 세션 키 유도"
+      ]
+     },
+     {
+      "title": "4 완료",
+      "items": [
+       "Change Cipher Spec·Finished 교환 후 암호 통신(2-RTT)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "TLS 1.3 개선",
+    "subsections": [
+     {
+      "title": "속도",
+      "items": [
+       "ClientHello에 키 공유 포함해 1-RTT, 재접속은 0-RTT"
+      ]
+     },
+     {
+      "title": "안전성",
+      "items": [
+       "정적 RSA·DH 키 교환 제거로 전방 비밀성 보장"
+      ]
+     },
+     {
+      "title": "알고리즘",
+      "items": [
+       "AES-GCM·ChaCha20-Poly1305 등 AEAD만 허용"
+      ]
+     },
+     {
+      "title": "은닉",
+      "items": [
+       "ServerHello 이후 인증서까지 암호화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "운영 고려",
+    "subsections": [
+     {
+      "title": "버전",
+      "items": [
+       "1.2 이상만 허용, 1.3 우선"
+      ]
+     },
+     {
+      "title": "인증서",
+      "items": [
+       "유효 기간·체인·폐지 확인, HSTS 적용"
+      ]
+     },
+     {
+      "title": "취약점 대응",
+      "items": [
+       "다운그레이드 방지, 약한 스위트 비활성화"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "TLS 1.2 핸드셰이크",
+   "- 1 Hello 교환",
+   "- 2 인증·키 교환",
+   "- 3 키 생성",
+   "- 4 완료",
+   "TLS 1.3 개선",
+   "- 속도",
+   "- 안전성",
+   "- 알고리즘",
+   "- 은닉",
+   "운영 고려",
+   "- 버전",
+   "- 인증서",
+   "- 취약점 대응"
+  ],
+  "name": "전송 계층 보안(TLS, Transport Layer Security)",
+  "en": "Transport Layer Security",
+  "keywords_must": [
+   "핸드셰이크",
+   "암호 명세 변경",
+   "경보",
+   "레코드",
+   "TLS 1.0(1999)",
+   "TLS 1.2(2008)",
+   "TLS 1.3(2018)",
+   "1-RTT 핸드셰이크",
+   "0-RTT 재개",
+   "전방 비밀성 필수",
+   "AEAD만 허용"
+  ],
+  "keywords_ref": [
+   "보안 서비스: 서버(상호) 인증·기밀성·무결성",
+   "TLS 1.0은 SSL 3.1 해당(RFC 2246)",
+   "TLS 1.0·1.1 폐기(RFC 8996, 2021)",
+   "TLS 1.3(RFC 8446): RSA 키 교환·CBC·RC4·SHA-1 제거, ServerHello 이후 핸드셰이크 암호화",
+   "0-RTT는 재전송 공격 주의",
+   "암호 스위트",
+   "서버 이름 표시(SNI)·ECH",
+   "인증서 검증",
+   "DTLS(UDP용)",
+   "QUIC에 내장"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "핸드셰이크",
+   "암호 명세 변경",
+   "경보",
+   "레코드",
+   "TLS 1.0(1999)",
+   "TLS 1.2(2008)",
+   "TLS 1.3(2018)",
+   "1-RTT 핸드셰이크",
+   "0-RTT 재개",
+   "전방 비밀성 필수",
+   "AEAD만 허용"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "AEAD": "Authenticated Encryption with Associated Data",
+   "RTT": "Round Trip Time",
+   "SNI": "Server Name Indication",
+   "ECH": "Encrypted Client Hello",
+   "DTLS": "Datagram TLS",
+   "QUIC": "Quick UDP Internet Connections",
+   "IETF": "Internet Engineering Task Force",
+   "HSTS": "HTTP Strict Transport Security"
+  }
+ },
+ {
+  "id": "SE_156",
+  "code": "SE_156",
+  "title": "통합 인증(SSO, Single Sign-On)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 기업 접근 관리 보안 > SSO(Single Sign-On)",
+  "definition": "한 번의 인증으로 여러 정보시스템에 재인증 없이 접근하도록 하는 통합 인증 체계로, 인증 서버가 사용자를 확인하고 각 시스템에는 인증 토큰이나 대행 로그인을 제공한다",
+  "keywords": [
+   "구성: 사용자 · 인증 서버 · SSO 에이전트 · 디렉터리(LDAP)",
+   "구축 모델: 인증 대행(Delegation) · 인증 정보 전달(Propagation)",
+   "표준 프로토콜: SAML · OAuth 2.0·OIDC · 커버로스",
+   "장단점: 편의성·중앙 관리 · 단일 장애점·연쇄 노출"
+  ],
+  "sections": [
+   {
+    "title": "동작",
+    "subsections": [
+     {
+      "title": "1 로그인",
+      "items": [
+       "사용자가 통합 로그인에서 인증"
+      ]
+     },
+     {
+      "title": "2 검증",
+      "items": [
+       "인증 서버가 디렉터리·접근 권한 확인 후 토큰 발급"
+      ]
+     },
+     {
+      "title": "3 접근",
+      "items": [
+       "각 업무 시스템이 토큰을 확인하거나 에이전트가 대신 로그인"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구축 모델",
+    "subsections": [
+     {
+      "title": "인증 대행",
+      "items": [
+       "에이전트가 앱별 ID·비밀번호를 보관해 대신 로그인, 인증 방식 변경이 어려운 C/S·ERP에 적합, 집중 보관 위험"
+      ]
+     },
+     {
+      "title": "인증 정보 전달",
+      "items": [
+       "통합 인증 후 토큰을 쿠키 등으로 전달, 웹 시스템 대부분"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유사 기술 비교",
+    "subsections": [
+     {
+      "title": "SSO",
+      "items": [
+       "단일 로그인·통합 인증, 편의성"
+      ]
+     },
+     {
+      "title": "EAM",
+      "items": [
+       "SSO + 정책 기반 통합 권한 관리"
+      ]
+     },
+     {
+      "title": "IAM",
+      "items": [
+       "EAM + 워크플로 기반 계정 생성·변경·삭제 자동화"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "동작",
+   "- 1 로그인",
+   "- 2 검증",
+   "- 3 접근",
+   "구축 모델",
+   "- 인증 대행",
+   "- 인증 정보 전달",
+   "유사 기술 비교",
+   "- SSO",
+   "- EAM",
+   "- IAM"
+  ],
+  "name": "통합 인증(SSO, Single Sign-On)",
+  "en": "Single Sign-On",
+  "keywords_must": [
+   "사용자",
+   "인증 서버",
+   "SSO 에이전트",
+   "디렉터리(LDAP)",
+   "인증 대행(Delegation)",
+   "인증 정보 전달(Propagation)",
+   "SAML",
+   "OAuth 2.0·OIDC",
+   "커버로스",
+   "편의성·중앙 관리",
+   "단일 장애점·연쇄 노출"
+  ],
+  "keywords_ref": [
+   "요소 기술: PKI·OTP·생체 인증, 쿠키, SSL·IPSec",
+   "확장: SSO → EAM(통합 권한 관리) → IAM(계정 프로비저닝)",
+   "위임 모델은 C/S·패키지, 전달 모델은 웹 쿠키 토큰",
+   "다중 인증(MFA) 결합 필수",
+   "세션 타임아웃·단일 로그아웃"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "사용자",
+   "인증 서버",
+   "SSO 에이전트",
+   "디렉터리(LDAP)",
+   "인증 대행(Delegation)",
+   "인증 정보 전달(Propagation)",
+   "SAML",
+   "OAuth 2.0·OIDC",
+   "커버로스",
+   "편의성·중앙 관리",
+   "단일 장애점·연쇄 노출"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "LDAP": "Lightweight Directory Access Protocol",
+   "SAML": "Security Assertion Markup Language",
+   "OIDC": "OpenID Connect",
+   "EAM": "Extranet Access Management",
+   "IAM": "Identity and Access Management",
+   "MFA": "Multi-Factor Authentication",
+   "PKI": "Public Key Infrastructure",
+   "OTP": "One-Time Password",
+   "ERP": "Enterprise Resource Planning"
+  }
+ },
+ {
   "id": "SE_172",
   "code": "SE_172",
   "title": "디지털 콘텐츠 보호 기술(Digital Content Protection Technologies)",
