@@ -36574,6 +36574,183 @@
    "IPS": "Intrusion Prevention System"
   }
  },
+ "SE_260": {
+  "title": "공통 약점 목록(CWE, Common Weakness Enumeration)",
+  "category": "SE > 키워드(암기)",
+  "definition": "MITRE가 미국 국토안보부 지원으로 관리하는 소프트웨어·하드웨어 보안 약점의 표준 분류 체계로, 개별 제품의 취약점 사례(CVE)가 아니라 그 원인이 되는 코드·설계상의 약점 유형을 계층적으로 정의해 시큐어 코딩과 진단 도구의 공통 언어로 쓰인다",
+  "keywords": [
+   "연관 체계: CVE · CVSS · CWSS · CAPEC",
+   "7 Pernicious Kingdoms: 입력 데이터 검증·표현 · 보안 기능 · 시간·상태 · 에러 처리 · 코드 품질 · 캡슐화 · API 오용",
+   "대표 목록: CWE Top 25"
+  ],
+  "sections": [
+   {
+    "title": "연관 체계",
+    "subsections": [
+     {
+      "title": "원인 계층",
+      "items": [
+       "CWE로 약점 유형 정의"
+      ]
+     },
+     {
+      "title": "사례 계층",
+      "items": [
+       "CVE로 제품별 취약점 식별, CVSS로 심각도 산정"
+      ]
+     },
+     {
+      "title": "공격 계층",
+      "items": [
+       "CAPEC으로 약점 악용 패턴 정리"
+      ]
+     },
+     {
+      "title": "위험 계층",
+      "items": [
+       "CWSS로 약점 우선순위 산정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "7대 분류",
+    "subsections": [
+     {
+      "title": "입력 검증·표현",
+      "items": [
+       "XSS, SQL 삽입, 버퍼 오버플로"
+      ]
+     },
+     {
+      "title": "보안 기능",
+      "items": [
+       "인증·권한·암호 결함, 평문 저장"
+      ]
+     },
+     {
+      "title": "시간·상태",
+      "items": [
+       "병렬 처리 경쟁 조건, 교착 상태"
+      ]
+     },
+     {
+      "title": "에러 처리",
+      "items": [
+       "누락 또는 과다 오류 정보 노출"
+      ]
+     },
+     {
+      "title": "코드 품질",
+      "items": [
+       "널 포인터 역참조, 자원 미해제"
+      ]
+     },
+     {
+      "title": "캡슐화",
+      "items": [
+       "디버그 코드·시스템 데이터 노출"
+      ]
+     },
+     {
+      "title": "API 오용",
+      "items": [
+       "의도와 다른 API 사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "국내 적용",
+    "subsections": [
+     {
+      "title": "공개 DB 연계",
+      "items": [
+       "국제 약점·취약점 정보 신속 반영"
+      ]
+     },
+     {
+      "title": "개발 단계",
+      "items": [
+       "보안 약점 진단 기준으로 시큐어 코딩 의무화"
+      ]
+     },
+     {
+      "title": "능동 대응",
+      "items": [
+       "공격·약점·이력 연계 DB와 빅데이터 분석"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "연관 체계",
+   "- 원인 계층",
+   "- 사례 계층",
+   "- 공격 계층",
+   "- 위험 계층",
+   "7대 분류",
+   "- 입력 검증·표현",
+   "- 보안 기능",
+   "- 시간·상태",
+   "- 에러 처리",
+   "- 코드 품질",
+   "- 캡슐화",
+   "- API 오용",
+   "국내 적용",
+   "- 공개 DB 연계",
+   "- 개발 단계",
+   "- 능동 대응"
+  ],
+  "name": "공통 약점 목록(CWE, Common Weakness Enumeration)",
+  "en": "Common Weakness Enumeration",
+  "keywords_must": [
+   "CVE",
+   "CVSS",
+   "CWSS",
+   "CAPEC",
+   "입력 데이터 검증·표현",
+   "보안 기능",
+   "시간·상태",
+   "에러 처리",
+   "코드 품질",
+   "캡슐화",
+   "API 오용",
+   "CWE Top 25"
+  ],
+  "keywords_ref": [
+   "CWE는 약점(원인), CVE는 실제 제품 취약점(사례), CAPEC은 약점을 공략하는 공격 패턴, CWSS는 약점 점수, CVSS는 취약점 점수",
+   "Top 25는 SANS와 공동 발표하다 현재 MITRE·CISA가 매년 갱신",
+   "예: 입력 검증(XSS·SQL 삽입·버퍼 오버플로), 보안 기능(평문 저장·하드코딩 패스워드), 시간·상태(경쟁 조건·교착), 에러 처리(오류 정보 노출), 코드 품질(널 포인터 역참조·자원 미해제), 캡슐화(디버그 코드 잔존), API 오용(DNS 조회 결과 의존 보안 결정)",
+   "국내 SW 보안 약점 7개 유형의 근거",
+   "공격·약점·취약점·이력을 연결한 DB와 빅데이터 대응 필요"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "CVE",
+   "CVSS",
+   "CWSS",
+   "CAPEC",
+   "입력 데이터 검증·표현",
+   "보안 기능",
+   "시간·상태",
+   "에러 처리",
+   "코드 품질",
+   "캡슐화",
+   "API 오용",
+   "CWE Top 25"
+  ],
+  "gloss": {
+   "CVE": "Common Vulnerabilities and Exposures",
+   "CVSS": "Common Vulnerability Scoring System",
+   "CWSS": "Common Weakness Scoring System",
+   "CAPEC": "Common Attack Pattern Enumeration and Classification",
+   "CISA": "Cybersecurity and Infrastructure Security Agency",
+   "SANS": "SysAdmin, Audit, Network and Security"
+  }
+ },
  "SE_261": {
   "title": "악성 광고(Malvertising)",
   "category": "SE > 보안 출제 예상 토픽",
@@ -37159,6 +37336,154 @@
    "CA": "Certificate Authority",
    "HSM": "Hardware Security Module",
    "EV": "Extended Validation"
+  }
+ },
+ "SE_266": {
+  "title": "쇼단(Shodan)",
+  "category": "SE > 기타 > 쇼단(Shodan)",
+  "definition": "인터넷에 연결된 웹캠·CCTV·라우터·산업 제어 장치 등의 IP와 포트를 스캔해 서비스 배너를 수집·색인하는 사물인터넷 검색 엔진으로, 노출 기기와 취약 버전을 손쉽게 찾게 해 IoT 보안 취약점의 심각성을 드러냈다",
+  "keywords": [
+   "검색 방법: 웹 기반 검색 · API 기반 검색",
+   "동작 원리: 무작위 IP 생성 · 포트 선택 · 배너 수집",
+   "검색 필터: country · city · net · org · port · product · vuln"
+  ],
+  "sections": [
+   {
+    "title": "동작",
+    "subsections": [
+     {
+      "title": "1 주소 생성",
+      "items": [
+       "무작위 IPv4 주소 선택"
+      ]
+     },
+     {
+      "title": "2 포트 선택",
+      "items": [
+       "알려진 서비스 포트 목록에서 선택"
+      ]
+     },
+     {
+      "title": "3 배너 수집",
+      "items": [
+       "응답 배너와 메타데이터 색인"
+      ]
+     },
+     {
+      "title": "반복",
+      "items": [
+       "전 인터넷을 지속 스캔해 이력 축적"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "노출 위협",
+    "subsections": [
+     {
+      "title": "기본 설정",
+      "items": [
+       "기본 비밀번호 장치의 원격 장악"
+      ]
+     },
+     {
+      "title": "기반 시설",
+      "items": [
+       "산업 제어·스마트시티 관제 교란"
+      ]
+     },
+     {
+      "title": "사생활",
+      "items": [
+       "웹캠·CCTV 영상 노출"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "IoT 공통 보안 7대 원칙",
+    "subsections": [
+     {
+      "title": "설계·개발",
+      "items": [
+       "1 보안·프라이버시 중심 설계, 2 검증된 SW·HW 보안 기술"
+      ]
+     },
+     {
+      "title": "배포·설치",
+      "items": [
+       "3 안전한 초기 설정, 4 보안 프로토콜과 안전한 파라미터"
+      ]
+     },
+     {
+      "title": "운영·폐기",
+      "items": [
+       "5 취약점 패치·업데이트, 6 운영 보호 관리 체계, 7 침해 대응과 책임 추적성"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "동작",
+   "- 1 주소 생성",
+   "- 2 포트 선택",
+   "- 3 배너 수집",
+   "- 반복",
+   "노출 위협",
+   "- 기본 설정",
+   "- 기반 시설",
+   "- 사생활",
+   "IoT 공통 보안 7대 원칙",
+   "- 설계·개발",
+   "- 배포·설치",
+   "- 운영·폐기"
+  ],
+  "name": "쇼단(Shodan)",
+  "en": "Shodan IoT Search Engine",
+  "keywords_must": [
+   "웹 기반 검색",
+   "API 기반 검색",
+   "무작위 IP 생성",
+   "포트 선택",
+   "배너 수집",
+   "country",
+   "city",
+   "net",
+   "org",
+   "port",
+   "product",
+   "vuln"
+  ],
+  "keywords_ref": [
+   "대응: IoT 공통 보안 7대 원칙",
+   "구글은 크롤러로 웹 콘텐츠를 색인, 쇼단은 포트 응답 배너(서비스·버전·OS)를 색인",
+   "API는 Python·Ruby·Node.js·Go 등 라이브러리 제공",
+   "필터 예: category:ics, net:192.168.1.0/24, vuln:CVE-ID",
+   "침해 사례: 기본 비밀번호 주유소 펌프 조작, 병원 기기, 스마트시티 교통·홍수 관제, 아파트 난방 DDoS, 스마트 토이 협박",
+   "유사 엔진 Censys·ZoomEye",
+   "기업은 자사 노출 자산 점검(공격 표면 관리)에 활용"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "웹 기반 검색",
+   "API 기반 검색",
+   "무작위 IP 생성",
+   "포트 선택",
+   "배너 수집",
+   "country",
+   "city",
+   "net",
+   "org",
+   "port",
+   "product",
+   "vuln"
+  ],
+  "gloss": {
+   "IoT": "Internet of Things",
+   "ICS": "Industrial Control System",
+   "API": "Application Programming Interface"
   }
  },
  "SE_267": {
@@ -38038,6 +38363,151 @@
   ],
   "gloss": {
    "RAM": "Random Access Memory"
+  }
+ },
+ "SE_277": {
+  "title": "이메일 보안 프로토콜(Email Security Protocol)",
+  "category": "SE > 기타/시사 > 이메일보안 프로토콜",
+  "definition": "전자우편의 도청·변조·위장을 막기 위해 메시지 기밀성·무결성·사용자 인증·송신 부인 방지를 제공하는 응용 계층 보안 프로토콜로, 신뢰망 기반 PGP와 X.509 인증서 기반 S/MIME이 대표적이며 도메인 위장 방지를 위해 SPF·DKIM·DMARC를 함께 쓴다",
+  "keywords": [
+   "대표 프로토콜: PGP · S/MIME",
+   "보안 서비스: 기밀성 · 무결성 · 사용자 인증 · 송신 부인 방지",
+   "신뢰 모델: 신뢰망(Web of Trust) · X.509 PKI",
+   "발신 도메인 인증: SPF · DKIM · DMARC"
+  ],
+  "sections": [
+   {
+    "title": "PGP와 S/MIME",
+    "subsections": [
+     {
+      "title": "PGP",
+      "items": [
+       "개인 간 분산 신뢰망, 압축·암호·서명 결합"
+      ]
+     },
+     {
+      "title": "S/MIME",
+      "items": [
+       "MIME 표준 확장, CA 발급 X.509 인증서로 기업 환경 적합"
+      ]
+     },
+     {
+      "title": "공통점",
+      "items": [
+       "응용 계층 종단 간 보호, 네트워크 계층 보호는 제공 안 함"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 서비스 매핑",
+    "subsections": [
+     {
+      "title": "기밀성",
+      "items": [
+       "세션 키 대칭 암호, 수신자 공개키로 키 전달"
+      ]
+     },
+     {
+      "title": "무결성",
+      "items": [
+       "해시로 변조 탐지"
+      ]
+     },
+     {
+      "title": "인증·부인 방지",
+      "items": [
+       "송신자 개인 키 전자 서명과 인증서"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "발신 위장 방지",
+    "subsections": [
+     {
+      "title": "SPF",
+      "items": [
+       "도메인이 허용한 발신 서버 IP 목록 공개"
+      ]
+     },
+     {
+      "title": "DKIM",
+      "items": [
+       "발신 서버가 헤더·본문에 도메인 서명 부착"
+      ]
+     },
+     {
+      "title": "DMARC",
+      "items": [
+       "SPF·DKIM 정렬 검사 후 거부·격리 정책과 보고"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "PGP와 S/MIME",
+   "- PGP",
+   "- S/MIME",
+   "- 공통점",
+   "보안 서비스 매핑",
+   "- 기밀성",
+   "- 무결성",
+   "- 인증·부인 방지",
+   "발신 위장 방지",
+   "- SPF",
+   "- DKIM",
+   "- DMARC"
+  ],
+  "name": "이메일 보안 프로토콜(Email Security Protocol)",
+  "en": "Email Security Protocols",
+  "keywords_must": [
+   "PGP",
+   "S/MIME",
+   "기밀성",
+   "무결성",
+   "사용자 인증",
+   "송신 부인 방지",
+   "신뢰망(Web of Trust)",
+   "X.509 PKI",
+   "SPF",
+   "DKIM",
+   "DMARC"
+  ],
+  "keywords_ref": [
+   "MIME: ASCII만 보내는 SMTP(RFC 822)에 다국어·이진 첨부를 실어 보내는 인코딩",
+   "S/MIME 초기 알고리즘: 기밀성 3DES+DH 키 교환, 무결성 SHA-1, 인증 X.509 v3, 부인 방지 DSS",
+   "현행 S/MIME 4.0은 AES-GCM·SHA-256·RSA/ECDSA 권장",
+   "S/MIME 확장 보안 서비스: 서명된 수령증, 보안 레이블, 보안 메일링 리스트, 서명 인증서",
+   "PGP는 분산 신뢰망(친구의 친구 신뢰), 개방형 표준 OpenPGP",
+   "전송 구간은 STARTTLS·MTA-STS"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "PGP",
+   "S/MIME",
+   "기밀성",
+   "무결성",
+   "사용자 인증",
+   "송신 부인 방지",
+   "신뢰망(Web of Trust)",
+   "X.509 PKI",
+   "SPF",
+   "DKIM",
+   "DMARC"
+  ],
+  "gloss": {
+   "PGP": "Pretty Good Privacy",
+   "S/MIME": "Secure/Multipurpose Internet Mail Extensions",
+   "SPF": "Sender Policy Framework",
+   "DKIM": "DomainKeys Identified Mail",
+   "DMARC": "Domain-based Message Authentication, Reporting and Conformance",
+   "PKI": "Public Key Infrastructure",
+   "DH": "Diffie-Hellman",
+   "DSS": "Digital Signature Standard",
+   "MTA-STS": "Mail Transfer Agent Strict Transport Security"
   }
  },
  "SE_279": {
