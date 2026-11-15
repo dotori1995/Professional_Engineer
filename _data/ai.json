@@ -341,7 +341,7 @@
       "title": "침체기",
       "items": [
        "간단한 문제에도 막대한 컴퓨팅 자원 필요",
-       "민스키·패퍼트가 단층 퍼셉트론의 XOR 문제 불가를 증명하며 연구 자금 중단"
+       "민스키·페퍼트가 단층 퍼셉트론의 XOR 문제 불가를 증명하며 연구 자금 중단"
       ]
      },
      {
@@ -707,7 +707,8 @@
    "KNN": "K-Nearest Neighbor",
    "CNN": "Convolutional Neural Network",
    "OCR": "Optical Character Recognition"
-  }
+  },
+  "dueum": "클라큰신의(Classification·KNN·신경망·의사결정 트리)"
  },
  {
   "id": "AI_006",
@@ -1132,7 +1133,8 @@
   "gloss": {
    "MLM": "Masked Language Model",
    "MAE": "Masked Autoencoder",
-   "CNN": "Convolutional Neural Network"
+   "CNN": "Convolutional Neural Network",
+   "GPT": "Generative Pre-trained Transformer"
   }
  },
  {
@@ -2686,7 +2688,7 @@
    "오류 역전파",
    "시그모이드·tanh·ReLU",
    "순전파(Feed Forward)",
-   "민스키·패퍼트 『Perceptrons』(1969)"
+   "민스키·페퍼트 『Perceptrons』(1969)"
   ],
   "outline": [
    "개념과 구조",
@@ -2791,7 +2793,7 @@
   "name": "단층 퍼셉트론(Single-layer Perceptron)",
   "title": "단층 퍼셉트론(Single-layer Perceptron)",
   "en": "Single-layer Perceptron",
-  "definition": "입력층과 하나의 출력 뉴런으로 구성되어 입력의 가중합이 임계치를 넘으면 1, 아니면 0을 출력하는 가장 단순한 신경망으로, 1958년 로젠블랫이 제안한 선형 이진 분류기",
+  "definition": "입력층과 하나의 출력 뉴런으로 구성되어 입력의 가중합이 임계치를 넘으면 1, 아니면 0을 출력하는 가장 단순한 신경망으로, 1957년 로젠블랫이 제안한 선형 이진 분류기",
   "keywords": [
    "구성 요소: 가중치(Weight) · 바이어스(Bias) · 임계치(Threshold) · 순입력(Net) · 계단 함수",
    "학습 규칙: 퍼셉트론 학습 규칙 · 델타 규칙(Delta Rule)",
@@ -6573,7 +6575,8 @@
    "IB": "Identity Block",
    "CNOT": "Controlled NOT",
    "SWAP": "SWAP gate",
-   "SVM": "Support Vector Machine"
+   "SVM": "Support Vector Machine",
+   "RZ": null
   }
  },
  {
@@ -7007,7 +7010,8 @@
   "warnings": [],
   "quiz_groups": [],
   "gloss": {
-   "BMU": "Best Matching Unit"
+   "BMU": "Best Matching Unit",
+   "SOM": "Self-Organizing Map"
   }
  },
  {
@@ -14080,7 +14084,8 @@
    "SIMD": "Single Instruction Multiple Data",
    "DNN": "Deep Neural Network",
    "CNN": "Convolutional Neural Network",
-   "RNN": "Recurrent Neural Network"
+   "RNN": "Recurrent Neural Network",
+   "PC": "Personal Computer"
   }
  },
  {
@@ -15775,7 +15780,7 @@
   "keywords": [
    "프롬프트 기술: 프롬프트 엔지니어링 · 프롬프트 체이닝(Chaining)",
    "데이터·모델 기술: 데이터 임베딩·벡터 DB · 검색 증강 생성(RAG) · 기반 모델 파인튜닝 · 모델 모니터링",
-   "특징: 다양한 모달리티 · 엔드투엔드 풀스택 플랫폼",
+   "특징: 멀티모달(텍스트·이미지·음성) 모델 지원 · 엔드투엔드 풀스택 플랫폼",
    "비교 대상: MLOps · LLMOps"
   ],
   "keywords_must": [
@@ -15785,7 +15790,7 @@
    "검색 증강 생성(RAG)",
    "기반 모델 파인튜닝",
    "모델 모니터링",
-   "다양한 모달리티",
+   "멀티모달(텍스트·이미지·음성) 모델 지원",
    "엔드투엔드 풀스택 플랫폼",
    "MLOps",
    "LLMOps"
@@ -23403,7 +23408,8 @@
    "UPS": "Uninterruptible Power Supply",
    "STS": "Static Transfer Switch",
    "PDU": "Power Distribution Unit",
-   "ITSM": "IT Service Management"
+   "ITSM": "IT Service Management",
+   "TPS": "Transactions Per Second"
   }
  }
 ]
