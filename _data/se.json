@@ -32325,6 +32325,357 @@
   }
  },
  {
+  "id": "SE_217",
+  "code": "SE_217",
+  "title": "오픈소스 취약점(Open Source Vulnerability)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 취약점 및 대응 > 오픈소스 취약점",
+  "definition": "널리 재사용되는 오픈소스 라이브러리·플랫폼의 결함이 한 번 발견되면 이를 포함한 수많은 시스템이 동시에 위험해지므로, 퍼징·코드 검수로 취약점을 찾고 SBOM 기반 구성 관리와 신속한 패치, OSS 거버넌스로 대응해야 하는 공급망 보안 이슈",
+  "keywords": [
+   "대표 사례: 하트블리드(Heartbleed) · 셸쇼크(Shellshock) · 고스트(GHOST) · NTP 반사 DDoS · Log4Shell",
+   "도출 방법: 퍼징 · 소스 코드 검수 · SCA",
+   "대응: SBOM · 신속 패치 · OSS 거버넌스"
+  ],
+  "sections": [
+   {
+    "title": "주요 사례",
+    "subsections": [
+     {
+      "title": "하트블리드",
+      "items": [
+       "TLS 하트비트 길이 미검증으로 메모리 64KB씩 노출"
+      ]
+     },
+     {
+      "title": "셸쇼크",
+      "items": [
+       "bash 환경 변수에 덧붙인 명령 실행"
+      ]
+     },
+     {
+      "title": "고스트",
+      "items": [
+       "glibc 이름 해석 함수 오버플로"
+      ]
+     },
+     {
+      "title": "반사 DDoS",
+      "items": [
+       "NTP monlist 응답 증폭"
+      ]
+     },
+     {
+      "title": "프레임워크",
+      "items": [
+       "스트럿츠·Log4j 원격 코드 실행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "취약점 도출",
+    "subsections": [
+     {
+      "title": "퍼징",
+      "items": [
+       "변조 입력·파일·프로토콜 주입으로 비정상 동작 관찰"
+      ]
+     },
+     {
+      "title": "코드 검수",
+      "items": [
+       "소스 수준 정적 분석과 수동 리뷰"
+      ]
+     },
+     {
+      "title": "구성 분석",
+      "items": [
+       "SCA로 포함 컴포넌트와 알려진 CVE 대조"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응 체계",
+    "subsections": [
+     {
+      "title": "모니터링",
+      "items": [
+       "사용 OSS 목록화, 보안 권고 상시 확인"
+      ]
+     },
+     {
+      "title": "패치",
+      "items": [
+       "절차 문서화, 제로데이 대비 긴급 적용 체계"
+      ]
+     },
+     {
+      "title": "도입 검증",
+      "items": [
+       "커뮤니티 활성도·최신 버전 확인"
+      ]
+     },
+     {
+      "title": "시큐어 코딩",
+      "items": [
+       "취약 함수 금지, OWASP Top 10 반영"
+      ]
+     },
+     {
+      "title": "거버넌스",
+      "items": [
+       "SDLC 전 단계 OSS 정책, SBOM 관리"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "주요 사례",
+   "- 하트블리드",
+   "- 셸쇼크",
+   "- 고스트",
+   "- 반사 DDoS",
+   "- 프레임워크",
+   "취약점 도출",
+   "- 퍼징",
+   "- 코드 검수",
+   "- 구성 분석",
+   "대응 체계",
+   "- 모니터링",
+   "- 패치",
+   "- 도입 검증",
+   "- 시큐어 코딩",
+   "- 거버넌스"
+  ],
+  "name": "오픈소스 취약점(Open Source Vulnerability)",
+  "en": "Open Source Software Vulnerabilities",
+  "keywords_must": [
+   "하트블리드(Heartbleed)",
+   "셸쇼크(Shellshock)",
+   "고스트(GHOST)",
+   "NTP 반사 DDoS",
+   "Log4Shell",
+   "퍼징",
+   "소스 코드 검수",
+   "SCA",
+   "SBOM",
+   "신속 패치",
+   "OSS 거버넌스"
+  ],
+  "keywords_ref": [
+   "하트블리드: OpenSSL HeartBeat 확장 경계 검사 누락으로 서버 메모리(개인 키·세션) 유출",
+   "셸쇼크: bash 환경 변수 함수 정의 뒤 명령 실행, CGI 서버 원격 명령",
+   "고스트: glibc gethostbyname 버퍼 오버플로로 임의 코드 실행",
+   "NTP monlist 증폭 DDoS",
+   "아파치 스트럿츠 원격 코드 실행, CMS(워드프레스·드루팔) SQL 삽입·XSS, 미디어 라이브러리 취약점",
+   "2021년 Log4j JNDI 원격 코드 실행",
+   "거버넌스: 사용 명세서→자동 사용 확인→취약점 모니터링·패치"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "하트블리드(Heartbleed)",
+   "셸쇼크(Shellshock)",
+   "고스트(GHOST)",
+   "NTP 반사 DDoS",
+   "Log4Shell",
+   "퍼징",
+   "소스 코드 검수",
+   "SCA",
+   "SBOM",
+   "신속 패치",
+   "OSS 거버넌스"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "dueum": "하쉘고(하트블리드·셸쇼크·고스트)",
+  "gloss": {
+   "NTP": "Network Time Protocol",
+   "SCA": "Software Composition Analysis",
+   "SBOM": "Software Bill of Materials",
+   "OSS": "Open Source Software",
+   "CGI": "Common Gateway Interface",
+   "JNDI": "Java Naming and Directory Interface",
+   "CVE": "Common Vulnerabilities and Exposures",
+   "OWASP": "Open Worldwide Application Security Project",
+   "SDLC": "Software Development Life Cycle"
+  }
+ },
+ {
+  "id": "SE_220",
+  "code": "SE_220",
+  "title": "스마트 팩토리 보안(Smart Factory Security)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 취약점 및 대응 > 스마트팩토리 취약점 및 대응방안",
+  "definition": "IoT·CPS·빅데이터로 설비와 공정을 연결한 스마트 팩토리는 폐쇄망이 외부와 연동되면서 디바이스·네트워크·인증·데이터 영역의 취약점이 생기므로, 보안 칩 기반 키 관리, 보안 채널, PKI 인증, 데이터 검증으로 대응하는 보안 체계",
+  "keywords": [
+   "취약 영역: 디바이스 · 네트워크 · 인증 · 데이터",
+   "공격 유형: ID 스푸핑 · 스니핑 · 데이터 템퍼링 · 부인(Repudiation)",
+   "대응 기술: HSM·보안 칩 · 보안 채널 · PKI 인증서 · KMS"
+  ],
+  "sections": [
+   {
+    "title": "취약점",
+    "subsections": [
+     {
+      "title": "디바이스",
+      "items": [
+       "ID 중복, 데이터 유실·훼손, DoS"
+      ]
+     },
+     {
+      "title": "네트워크",
+      "items": [
+       "산업용 직렬·근거리 통신 도청, 기기 위장"
+      ]
+     },
+     {
+      "title": "인증",
+      "items": [
+       "패킷 가로채기로 무인증 접근, 세션 만료 부재"
+      ]
+     },
+     {
+      "title": "데이터",
+      "items": [
+       "위변조 API 조작, 중복 데이터로 무결성 훼손"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응 기술",
+    "subsections": [
+     {
+      "title": "디바이스 보안",
+      "items": [
+       "HSM·임베디드 보안 칩, 안전 저장소, 신뢰 펌웨어"
+      ]
+     },
+     {
+      "title": "네트워크 보안",
+      "items": [
+       "보안 채널, 망 필터링, 세션 관리, 감사 로그"
+      ]
+     },
+     {
+      "title": "인증 보안",
+      "items": [
+       "기기·사용자 PKI 인증서, RADIUS 강한 인증"
+      ]
+     },
+     {
+      "title": "데이터 보안",
+      "items": [
+       "KMS 키 관리, 입력 검증"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "운영 관리",
+    "subsections": [
+     {
+      "title": "망 경계",
+      "items": [
+       "OT·IT 분리, 단방향 게이트웨이"
+      ]
+     },
+     {
+      "title": "매체·인원",
+      "items": [
+       "USB 통제, 악의적 내부자 감시, 폐기 절차"
+      ]
+     },
+     {
+      "title": "표준",
+      "items": [
+       "IEC 62443 기반 영역·도관 설계"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "취약점",
+   "- 디바이스",
+   "- 네트워크",
+   "- 인증",
+   "- 데이터",
+   "대응 기술",
+   "- 디바이스 보안",
+   "- 네트워크 보안",
+   "- 인증 보안",
+   "- 데이터 보안",
+   "운영 관리",
+   "- 망 경계",
+   "- 매체·인원",
+   "- 표준"
+  ],
+  "name": "스마트 팩토리 보안(Smart Factory Security)",
+  "en": "Smart Factory Vulnerabilities and Countermeasures",
+  "keywords_must": [
+   "디바이스",
+   "네트워크",
+   "인증",
+   "데이터",
+   "ID 스푸핑",
+   "스니핑",
+   "데이터 템퍼링",
+   "부인(Repudiation)",
+   "HSM·보안 칩",
+   "보안 채널",
+   "PKI 인증서",
+   "KMS"
+  ],
+  "keywords_ref": [
+   "유출 방지: USB 매체 통제·단방향 게이트웨이·내부자 관리",
+   "디바이스: 분산 시스템 ID 중복, 잡음·혼선 데이터 유실, DoS",
+   "네트워크: WPAN·RS-232C·RS-485 보안 공백",
+   "인증 우회: 만료 시간 없는 접근 정책 악용",
+   "응용: 위변조 API로 데이터 조작",
+   "국산 암호 ARIA·SEED·LEA·HIGHT, AES-256",
+   "RADIUS·LDAP 인증 서버",
+   "패치 없이 장기 운용되는 설비",
+   "보안 표준 IEC 62443",
+   "불완전 폐기 방지"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "디바이스",
+   "네트워크",
+   "인증",
+   "데이터",
+   "ID 스푸핑",
+   "스니핑",
+   "데이터 템퍼링",
+   "부인(Repudiation)",
+   "HSM·보안 칩",
+   "보안 채널",
+   "PKI 인증서",
+   "KMS"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "CPS": "Cyber-Physical System",
+   "HSM": "Hardware Security Module",
+   "PKI": "Public Key Infrastructure",
+   "KMS": "Key Management Server",
+   "WPAN": "Wireless Personal Area Network",
+   "RADIUS": "Remote Authentication Dial-In User Service",
+   "LDAP": "Lightweight Directory Access Protocol",
+   "OT": "Operational Technology"
+  }
+ },
+ {
   "id": "SE_221",
   "code": "SE_221",
   "title": "운영 기술 보안 위협(OT Security Threats)",
@@ -32760,6 +33111,159 @@
    "GPS": "Global Positioning System",
    "GCS": "Ground Control Station",
    "RF": "Radio Frequency"
+  }
+ },
+ {
+  "id": "SE_224",
+  "code": "SE_224",
+  "title": "IPv6 보안 취약점과 대응(IPv6 Security)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 암호화 > IPv6 취약점 및 대응",
+  "definition": "128비트 주소의 IPv6로 전환하는 과정에서 IPv4와 공존하는 듀얼 스택·터널링 구간의 보안 수준 차이, 6to4 릴레이 악용, 주소 자동 설정(DAD·RA) 악용 같은 새로운 위협이 생기므로, 양 프로토콜 동등 정책과 터널 필터링, RA Guard 등으로 대응하는 보안 과제",
+  "keywords": [
+   "전환 기술: 듀얼 스택 · 6to4 · 터널링",
+   "전환 위협: 보안 수준 불일치 · 비인가 터널 · 6to4 릴레이 악용",
+   "자동 설정 위협: DAD 서비스 거부 · RA 스푸핑",
+   "대응: 동등 보안 정책 · 터널 필터링 · RA Guard · SEND"
+  ],
+  "sections": [
+   {
+    "title": "도입 문제와 해결",
+    "subsections": [
+     {
+      "title": "전환 지연",
+      "items": [
+       "국가 지원, 공존 모델·테스트베드"
+      ]
+     },
+     {
+      "title": "모바일 IPv6",
+      "items": [
+       "홈 주소 악용 DoS·방화벽 우회 → IPSec, RR 바인딩 갱신"
+      ]
+     },
+     {
+      "title": "활성화",
+      "items": [
+       "킬러 서비스 발굴, 법·제도 정책"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "전환 구간 위협과 대응",
+    "subsections": [
+     {
+      "title": "듀얼 스택",
+      "items": [
+       "두 프로토콜에 동일 수준의 접근 통제·탐지 적용"
+      ]
+     },
+     {
+      "title": "6to4",
+      "items": [
+       "오용 릴레이 차단, 인가 릴레이 인증"
+      ]
+     },
+     {
+      "title": "터널링",
+      "items": [
+       "터널 패킷을 IDS·방화벽에서 검사, 비인가 터널 차단"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "자동 설정 위협과 대응",
+    "subsections": [
+     {
+      "title": "DAD 공격",
+      "items": [
+       "중복 응답 위조로 주소 할당 방해 → 실패 처리·DoS 방안"
+      ]
+     },
+     {
+      "title": "RA 스푸핑",
+      "items": [
+       "가짜 라우터 광고로 트래픽 가로채기 → RA Guard, SEND"
+      ]
+     },
+     {
+      "title": "확장 헤더",
+      "items": [
+       "필터 우회 → 비정상 헤더 차단"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "도입 문제와 해결",
+   "- 전환 지연",
+   "- 모바일 IPv6",
+   "- 활성화",
+   "전환 구간 위협과 대응",
+   "- 듀얼 스택",
+   "- 6to4",
+   "- 터널링",
+   "자동 설정 위협과 대응",
+   "- DAD 공격",
+   "- RA 스푸핑",
+   "- 확장 헤더"
+  ],
+  "name": "IPv6 보안 취약점과 대응(IPv6 Security)",
+  "en": "IPv6 Security Vulnerabilities and Countermeasures",
+  "keywords_must": [
+   "듀얼 스택",
+   "6to4",
+   "터널링",
+   "보안 수준 불일치",
+   "비인가 터널",
+   "6to4 릴레이 악용",
+   "DAD 서비스 거부",
+   "RA 스푸핑",
+   "동등 보안 정책",
+   "터널 필터링",
+   "RA Guard",
+   "SEND"
+  ],
+  "keywords_ref": [
+   "듀얼 스택: 의도치 않은 터널, 라우터 위장, 조작 패킷",
+   "6to4: PC 단 구현·릴레이 오용 → 관리자가 오용 차단, 인가 릴레이만 인증",
+   "DAD 공격: 모든 주소 사용 중이라고 응답해 주소 설정 방해",
+   "모바일 IPv6: HoA 악용 DoS, 라우팅 헤더로 방화벽 우회 → 바인딩 갱신 RR 절차, IPSec",
+   "IPv6 IPSec 지원은 초기 필수에서 권고로 완화",
+   "확장 헤더 남용",
+   "ICMPv6 필수 메시지 선별 허용"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "듀얼 스택",
+   "6to4",
+   "터널링",
+   "보안 수준 불일치",
+   "비인가 터널",
+   "6to4 릴레이 악용",
+   "DAD 서비스 거부",
+   "RA 스푸핑",
+   "동등 보안 정책",
+   "터널 필터링",
+   "RA Guard",
+   "SEND"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "PC": "Personal Computer",
+   "DAD": "Duplicate Address Detection",
+   "RA": "Router Advertisement",
+   "SEND": "Secure Neighbor Discovery",
+   "HoA": "Home Address",
+   "RR": "Return Routability",
+   "ICMPv6": "Internet Control Message Protocol for IPv6"
   }
  },
  {
