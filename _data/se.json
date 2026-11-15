@@ -30502,6 +30502,174 @@
   }
  },
  {
+  "id": "SE_206",
+  "code": "SE_206",
+  "title": "데이터베이스 보안 취약점과 대응 기술(DB Security)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 취약점 및 대응 > DB 보안 취약점 및 대응기술",
+  "definition": "데이터베이스에 저장된 기밀 정보를 비인가 접근·노출·변경·서비스 거부로부터 보호하기 위해 접근 통제, 추론 통제, 암호화, 감사를 결합하고 취약점 평가부터 위협 모니터링까지 주기적으로 관리하는 보안 체계",
+  "keywords": [
+   "위협: 불법 접근 · 데이터 노출 · 집적(Aggregation) · 추론(Inference) · 부적절한 변경 · 서비스 거부",
+   "구현 수단: 접근 통제(MAC·DAC·RBAC) · 뷰(View) · DB 암호화 · DAM"
+  ],
+  "sections": [
+   {
+    "title": "위협 요소",
+    "subsections": [
+     {
+      "title": "불법 접근",
+      "items": [
+       "비인가자 접근, 인가자의 권한 범위 밖 접근"
+      ]
+     },
+     {
+      "title": "데이터 노출",
+      "items": [
+       "낮은 등급 정보 조각 결합(집적), 일반 정보로 기밀 유추(추론)"
+      ]
+     },
+     {
+      "title": "부적절한 변경",
+      "items": [
+       "부당 절차에 의한 고의 변조"
+      ]
+     },
+     {
+      "title": "서비스 거부",
+      "items": [
+       "세션 자원 고갈로 접속 불능·중단"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보호 수단",
+    "subsections": [
+     {
+      "title": "접근 통제",
+      "items": [
+       "계정·암호, MAC·DAC·RBAC 정책"
+      ]
+     },
+     {
+      "title": "허가 규칙·뷰",
+      "items": [
+       "로그인 사용자도 허가 데이터만 노출"
+      ]
+     },
+     {
+      "title": "암호화",
+      "items": [
+       "노출돼도 해독 불가, 칼럼·파일 단위 적용"
+      ]
+     },
+     {
+      "title": "감사·모니터링",
+      "items": [
+       "트랜잭션 로그, DAM으로 SQL 이력 기록"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 프로세스",
+    "subsections": [
+     {
+      "title": "1 취약점 평가",
+      "items": [
+       "모의 해킹, 보안 진단, 버그 분석"
+      ]
+     },
+     {
+      "title": "2 우선순위 선정",
+      "items": [
+       "취약점별 위험도로 교정 순서 결정"
+      ]
+     },
+     {
+      "title": "3 교정",
+      "items": [
+       "패치, 보안 설정, 컴플라이언스 반영"
+      ]
+     },
+     {
+      "title": "4 모니터링",
+      "items": [
+       "침입·SQL 공격 탐지, 포렌식 대비 기록"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "위협 요소",
+   "- 불법 접근",
+   "- 데이터 노출",
+   "- 부적절한 변경",
+   "- 서비스 거부",
+   "보호 수단",
+   "- 접근 통제",
+   "- 허가 규칙·뷰",
+   "- 암호화",
+   "- 감사·모니터링",
+   "보안 프로세스",
+   "- 1 취약점 평가",
+   "- 2 우선순위 선정",
+   "- 3 교정",
+   "- 4 모니터링"
+  ],
+  "name": "데이터베이스 보안 취약점과 대응 기술(DB Security)",
+  "en": "Database Security Vulnerabilities and Countermeasures",
+  "keywords_must": [
+   "불법 접근",
+   "데이터 노출",
+   "집적(Aggregation)",
+   "추론(Inference)",
+   "부적절한 변경",
+   "서비스 거부",
+   "접근 통제(MAC·DAC·RBAC)",
+   "뷰(View)",
+   "DB 암호화",
+   "DAM"
+  ],
+  "keywords_ref": [
+   "보안 특성: 인증·기밀성·무결성·가용성",
+   "암호화 방식: API·플러그인·커널(TDE)·하이브리드",
+   "요구 사항: 정당 사용자 접근 보장, 추론 방지, 무결성, 의미 무결성(PK·FK·Unique·Check·Not Null), 감사 지원, 사용자 인증, 기밀 데이터 권한 전파 통제, 다단계 보호",
+   "보안 프로세스: 취약점 평가→우선순위 선정→취약점 교정→위협 모니터링",
+   "접근 통제 요소: 주체·객체·조치·규칙",
+   "객체 단위가 작을수록 세밀하지만 오버헤드 증가",
+   "접근 제어 방식: 에이전트형·게이트웨이(프록시)형·스니핑형"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "불법 접근",
+   "데이터 노출",
+   "집적(Aggregation)",
+   "추론(Inference)",
+   "부적절한 변경",
+   "서비스 거부",
+   "접근 통제(MAC·DAC·RBAC)",
+   "뷰(View)",
+   "DB 암호화",
+   "DAM"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "MAC": "Mandatory Access Control",
+   "DAC": "Discretionary Access Control",
+   "RBAC": "Role Based Access Control",
+   "DAM": "Database Activity Monitoring",
+   "TDE": "Transparent Data Encryption",
+   "PK": "Primary Key",
+   "FK": "Foreign Key"
+  }
+ },
+ {
   "id": "SE_207",
   "code": "SE_207",
   "title": "클라우드 컴퓨팅 보안 위협과 대응(Cloud Computing Security Threats and Countermeasures)",
@@ -31239,6 +31407,159 @@
   }
  },
  {
+  "id": "SE_211",
+  "code": "SE_211",
+  "title": "스마트 그리드 보안(Smart Grid Security)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 취약점 및 대응 > 스마트그리드 취약점, 대응기술",
+  "definition": "전력망에 정보통신 기술을 결합한 스마트 그리드에서 제어 시스템·네트워크·소비자 정보를 노리는 공격이 대규모 정전과 사생활 침해로 이어질 수 있어, 정책·조직 대책과 암호·무결성·기기 인증·침입 탐지 기술로 대응하는 보안 체계",
+  "keywords": [
+   "위협: 제어 시스템 · 네트워크 · 소비자 정보",
+   "기술 대책: 암호화 · 해시 무결성 · 기기 인증 · RBAC · 침입 탐지",
+   "핵심 자산: AMI · 스마트 미터 · SCADA"
+  ],
+  "sections": [
+   {
+    "title": "보안 위협",
+    "subsections": [
+     {
+      "title": "제어 시스템",
+      "items": [
+       "미터기·제어 장치 악성코드 감염과 DDoS로 정전 유발"
+      ]
+     },
+     {
+      "title": "네트워크",
+      "items": [
+       "인터넷 연동 지점으로 침투해 제어 명령 조작"
+      ]
+     },
+     {
+      "title": "소비자",
+      "items": [
+       "가정별 전력 사용 정보로 재실·생활 패턴 노출"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기술 대책",
+    "subsections": [
+     {
+      "title": "암호 기술",
+      "items": [
+       "개인·과금 정보와 사용량 조회 데이터 암호화"
+      ]
+     },
+     {
+      "title": "위변조 방지",
+      "items": [
+       "실행 파일·설정 정보 해시 검증"
+      ]
+     },
+     {
+      "title": "인증·접근 통제",
+      "items": [
+       "기기 인증으로 비인가 제어 명령 차단, RBAC 적용"
+      ]
+     },
+     {
+      "title": "침입 탐지",
+      "items": [
+       "멀티 패턴 매칭으로 유입 트래픽 실시간 분석"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "정책 대책",
+    "subsections": [
+     {
+      "title": "법제",
+      "items": [
+       "정보통신기반 보호법 적용, 사각지대 법 개정"
+      ]
+     },
+     {
+      "title": "조직",
+      "items": [
+       "전력 분야 보안 전담 조직"
+      ]
+     },
+     {
+      "title": "협력",
+      "items": [
+       "정부·민간 역할 분담과 정보 공유"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "보안 위협",
+   "- 제어 시스템",
+   "- 네트워크",
+   "- 소비자",
+   "기술 대책",
+   "- 암호 기술",
+   "- 위변조 방지",
+   "- 인증·접근 통제",
+   "- 침입 탐지",
+   "정책 대책",
+   "- 법제",
+   "- 조직",
+   "- 협력"
+  ],
+  "name": "스마트 그리드 보안(Smart Grid Security)",
+  "en": "Smart Grid Security Threats and Countermeasures",
+  "keywords_must": [
+   "제어 시스템",
+   "네트워크",
+   "소비자 정보",
+   "암호화",
+   "해시 무결성",
+   "기기 인증",
+   "RBAC",
+   "침입 탐지",
+   "AMI",
+   "스마트 미터",
+   "SCADA"
+  ],
+  "keywords_ref": [
+   "정책 대책: 기반 보호법·전담 조직·민관 협력",
+   "제어 시스템 위협: 미터기 정교 공격, 봇·웜 감염, DDoS 시 대규모 정전",
+   "네트워크 위협: 인터넷 연동 시 원격 제어 명령 조작",
+   "소비자 위협: 에너지 사용 패턴으로 생활 정보 노출",
+   "침입 탐지는 Trie 기반 멀티 패턴 매칭(Aho-Corasick)으로 한 번에 패턴 검출",
+   "국내 체계: 전력 분야 주요정보통신기반시설 지정·보안 인증"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "제어 시스템",
+   "네트워크",
+   "소비자 정보",
+   "암호화",
+   "해시 무결성",
+   "기기 인증",
+   "RBAC",
+   "침입 탐지",
+   "AMI",
+   "스마트 미터",
+   "SCADA"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "RBAC": "Role Based Access Control",
+   "AMI": "Advanced Metering Infrastructure",
+   "SCADA": "Supervisory Control And Data Acquisition",
+   "DDoS": "Distributed Denial of Service"
+  }
+ },
+ {
   "id": "SE_212",
   "code": "SE_212",
   "title": "사이버 범죄 유형과 대응(Cybercrime Types and Countermeasures)",
@@ -31835,6 +32156,173 @@
   "quiz_groups": [
    "se"
   ]
+ },
+ {
+  "id": "SE_216",
+  "code": "SE_216",
+  "title": "무선랜 보안(Wireless LAN Security)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 취약점 및 대응 > 무선랜 보안",
+  "definition": "브로드캐스트 매체인 무선랜에서 AP 수신 범위 안의 누구나 전파를 수신할 수 있으므로, 상호 인증과 데이터 암호화를 위해 IEEE 802.11i 기반 WPA2·WPA3와 802.1X 인증 서버를 적용하고 불법 AP·도청 등 위협에 대응하는 보안 기술",
+  "keywords": [
+   "표준 진화: WEP · WPA · WPA2(802.11i) · WPA3",
+   "암호화: RC4 · TKIP · AES-CCMP · GCMP",
+   "인증: PSK · 802.1X·EAP·RADIUS · SAE"
+  ],
+  "sections": [
+   {
+    "title": "표준 진화",
+    "subsections": [
+     {
+      "title": "WEP",
+      "items": [
+       "RC4 정적 키, IV 재사용으로 이미 해독 가능"
+      ]
+     },
+     {
+      "title": "WPA",
+      "items": [
+       "TKIP로 키 동적 변경, 인증 서버 연동"
+      ]
+     },
+     {
+      "title": "WPA2",
+      "items": [
+       "802.11i 정식, AES-CCMP 필수"
+      ]
+     },
+     {
+      "title": "WPA3",
+      "items": [
+       "SAE 핸드셰이크, 전방 비밀성, 관리 프레임 보호 의무"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "위협",
+    "subsections": [
+     {
+      "title": "물리·관리",
+      "items": [
+       "불법 AP 설치, 기본 설정 방치, 단말 분실"
+      ]
+     },
+     {
+      "title": "기술",
+      "items": [
+       "도청, 세션 하이재킹, 핸드셰이크 공격, WPS PIN 무차별 대입"
+      ]
+     },
+     {
+      "title": "연동",
+      "items": [
+       "무선 구간을 통한 내부 유선망 침투"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "기술",
+      "items": [
+       "WPA3 또는 WPA2-Enterprise, 802.1X 인증, WIPS"
+      ]
+     },
+     {
+      "title": "물리",
+      "items": [
+       "AP 설치 위치·출력 관리, 비인가 AP 점검"
+      ]
+     },
+     {
+      "title": "관리",
+      "items": [
+       "보안 정책, WPS 비활성화, 펌웨어 갱신"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "표준 진화",
+   "- WEP",
+   "- WPA",
+   "- WPA2",
+   "- WPA3",
+   "위협",
+   "- 물리·관리",
+   "- 기술",
+   "- 연동",
+   "대응",
+   "- 기술",
+   "- 물리",
+   "- 관리"
+  ],
+  "name": "무선랜 보안(Wireless LAN Security)",
+  "en": "Wireless LAN Security",
+  "keywords_must": [
+   "WEP",
+   "WPA",
+   "WPA2(802.11i)",
+   "WPA3",
+   "RC4",
+   "TKIP",
+   "AES-CCMP",
+   "GCMP",
+   "PSK",
+   "802.1X·EAP·RADIUS",
+   "SAE"
+  ],
+  "keywords_ref": [
+   "위협: 도청·불법 AP(Rogue AP)·WPS PIN 공격·KRACK",
+   "구분표: WEP=PSK·RC4, WPA=PSK/인증 서버·RC4-TKIP, WPA2=PSK/인증 서버·AES-CCMP",
+   "WEP는 24비트 IV 재사용으로 수분 내 키 복구",
+   "WPA2는 2017년 KRACK(4-way 핸드셰이크 재설치) 공격 발견",
+   "WPA3는 SAE로 오프라인 사전 공격 차단, Enterprise 192비트 모드, OWE 개방망 암호화",
+   "802.11r 고속 로밍",
+   "WIPS로 불법 AP 탐지",
+   "SSID 숨김·MAC 필터링은 보조 수단"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "WEP",
+   "WPA",
+   "WPA2(802.11i)",
+   "WPA3",
+   "RC4",
+   "TKIP",
+   "AES-CCMP",
+   "GCMP",
+   "PSK",
+   "802.1X·EAP·RADIUS",
+   "SAE"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "MAC": "Media Access Control",
+   "AP": "Access Point",
+   "WEP": "Wired Equivalent Privacy",
+   "WPA": "Wi-Fi Protected Access",
+   "TKIP": "Temporal Key Integrity Protocol",
+   "CCMP": "Counter Mode with CBC-MAC Protocol",
+   "GCMP": "Galois/Counter Mode Protocol",
+   "PSK": "Pre-Shared Key",
+   "EAP": "Extensible Authentication Protocol",
+   "RADIUS": "Remote Authentication Dial-In User Service",
+   "SAE": "Simultaneous Authentication of Equals",
+   "WPS": "Wi-Fi Protected Setup",
+   "KRACK": "Key Reinstallation Attack",
+   "OWE": "Opportunistic Wireless Encryption",
+   "WIPS": "Wireless Intrusion Prevention System",
+   "IV": "Initialization Vector"
+  }
  },
  {
   "id": "SE_221",
