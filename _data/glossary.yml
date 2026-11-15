@@ -382,6 +382,7 @@ EVI: Economic Value of Information
 EVM: [Earned Value Management, Error Vector Magnitude]
 FANET: Flying Ad-hoc Network
 FAR: False Acceptance Rate
+FAT: File Allocation Table
 FCC: Federal Communications Commission
 FCFS: First-Come, First-Served
 FCS: Frame Check Sequence
@@ -447,6 +448,7 @@ GloBE: Global Anti-Base Erosion
 GLONASS: Global Navigation Satellite System (Russia)
 GNSS: Global Navigation Satellite System
 GOP: Group of Pictures
+GPOS: General Purpose Operating System
 GPS: [Global Positioning System, Generalized Processor Sharing]
 GPSR: Greedy Perimeter Stateless Routing
 GRE: Generic Routing Encapsulation
@@ -589,6 +591,7 @@ KL: Kullback-Leibler
 KNN: K-Nearest Neighbors
 KRACK: Key Reinstallation Attack
 KSK: Key Signing Key
+KSM: Kernel Samepage Merging
 KVM: Kernel-based Virtual Machine
 L2TP: Layer 2 Tunneling Protocol
 L3VPN: Layer 3 Virtual Private Network
@@ -1185,6 +1188,7 @@ tpmC: Transactions per Minute (TPC-C)
 TPR: True Positive Rate
 TPS: [Toyota Production System, Transactions Per Second]
 TRC: Tuple Relational Calculus
+TRON: The Real-time Operating system Nucleus
 TRS: Trunked Radio System
 TSDSI: Telecommunications Standards Development Society, India
 TSN: Time-Sensitive Networking
@@ -1284,6 +1288,7 @@ WBAN: Wireless Body Area Network
 WBS: Work Breakdown Structure
 WCDMA: Wideband Code Division Multiple Access
 WDM: Wavelength Division Multiplexing
+WDT: Watchdog Timer
 WEP: Wired Equivalent Privacy
 WFQ: Weighted Fair Queuing
 WIP: Work In Progress
@@ -1310,6 +1315,7 @@ XOR: Exclusive OR
 XP: Extreme Programming
 YAGNI: You Aren't Gonna Need It
 YARN: Yet Another Resource Negotiator
+ZFS: Zettabyte File System
 ZRP: Zone Routing Protocol
 ZSK: Zone Signing Key
 ZSM: Zero-touch network and Service Management

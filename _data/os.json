@@ -7321,6 +7321,2655 @@
   }
  },
  {
+  "id": "OS_059",
+  "code": "OS_059",
+  "domain": "OS",
+  "category": "OS > 인터럽트",
+  "title": "인터럽트 종류(Interrupt Types)",
+  "subtitle": "",
+  "name": "인터럽트 종류(Interrupt Types)",
+  "en": "Interrupt Types",
+  "definition": "실행 중인 프로그램을 중단시키는 원인에 따라 인터럽트를 외부(하드웨어 신호)·내부(프로그램 오류·트랩)·소프트웨어(SVC) 인터럽트로 분류한 체계로, 분류 순서가 곧 처리 우선순위",
+  "keywords": [
+   "처리 우선순위: 전원 이상 → 기계 착오 → 외부 신호 → 입출력 → 프로그램 검사 → SVC",
+   "외부 인터럽트: 전원 이상 · 기계 착오 · 외부 신호(타이머·키보드) · 입출력",
+   "내부 인터럽트(트랩·예외): 0으로 나누기 · 오버플로 · 잘못된 메모리 참조",
+   "SW 인터럽트: SVC(Supervisor Call) · 시스템 호출 · 명령어로 의도적 발생",
+   "확인 방식: 벡터 인터럽트 · 폴링 인터럽트 · 마스크 가능/불가(NMI)"
+  ],
+  "keywords_must": [
+   "외부 인터럽트(External)",
+   "전원 이상 인터럽트(Power Fail)",
+   "기계 착오 인터럽트(Machine Check)",
+   "외부 신호 인터럽트(타이머·키보드)",
+   "입출력 인터럽트(I/O)",
+   "내부 인터럽트(Trap·Exception)",
+   "프로그램 검사 인터럽트",
+   "SVC 인터럽트(Supervisor Call)",
+   "벡터 인터럽트(Vectored)",
+   "NMI(Non-Maskable Interrupt)"
+  ],
+  "keywords_ref": [
+   "하드웨어 인터럽트 = 외부 · 소프트웨어 인터럽트 = SVC",
+   "동기(내부·SW)·비동기(외부) 구분",
+   "마스크 가능 인터럽트(Maskable)",
+   "페이지 폴트(Page Fault)도 예외",
+   "x86 INT·syscall 명령"
+  ],
+  "outline": [
+   "개념과 필요성",
+   "- 예외 우선 처리 메커니즘",
+   "- 효율·우선 처리·이상 복구",
+   "발생 원인별 분류",
+   "- 외부 인터럽트",
+   "- 내부 인터럽트",
+   "- 소프트웨어 인터럽트",
+   "우선순위와 확인 방식",
+   "- 처리 순서",
+   "- 인터럽트원 확인"
+  ],
+  "sections": [
+   {
+    "title": "개념과 필요성",
+    "subsections": [
+     {
+      "title": "예외 우선 처리 메커니즘",
+      "items": [
+       "예기치 않은 사건 발생 시 작업을 즉시 중단",
+       "사건 처리 후 원래 작업으로 복귀"
+      ]
+     },
+     {
+      "title": "효율·우선 처리·이상 복구",
+      "items": [
+       "고속 CPU·저속 장치 간 효율 향상",
+       "다중 입출력 장치 우선 처리",
+       "정전 등 이상 시 상태 저장·복구"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "발생 원인별 분류",
+    "subsections": [
+     {
+      "title": "외부 인터럽트",
+      "items": [
+       "전원 이상: 정전·전원 장애",
+       "기계 착오: CPU 기능 오류",
+       "외부 신호: 타이머 만료·키보드 조작",
+       "입출력: 전송 요구·완료·오류"
+      ]
+     },
+     {
+      "title": "내부 인터럽트",
+      "items": [
+       "0으로 나누기·오버플로·언더플로",
+       "부당한 기억 장소 참조·잘못된 명령",
+       "명령 실행과 동기적으로 발생"
+      ]
+     },
+     {
+      "title": "소프트웨어 인터럽트",
+      "items": [
+       "SVC 명령으로 의도적 발생",
+       "기억 장치 할당·입출력 요청을 감독자에 위임"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "우선순위와 확인 방식",
+    "subsections": [
+     {
+      "title": "처리 순서",
+      "items": [
+       "외부 → 내부 → 소프트웨어 순",
+       "전원 이상이 최우선, SVC가 최하위"
+      ]
+     },
+     {
+      "title": "인터럽트원 확인",
+      "items": [
+       "벡터형: 장치가 벡터 번호를 전달",
+       "폴링형: CPU가 플래그를 차례로 검사",
+       "NMI는 마스크 불가, 치명적 오류용"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "외부 인터럽트(External)",
+   "전원 이상 인터럽트(Power Fail)",
+   "기계 착오 인터럽트(Machine Check)",
+   "외부 신호 인터럽트(타이머·키보드)",
+   "입출력 인터럽트(I/O)",
+   "내부 인터럽트(Trap·Exception)",
+   "프로그램 검사 인터럽트",
+   "SVC 인터럽트(Supervisor Call)",
+   "벡터 인터럽트(Vectored)",
+   "NMI(Non-Maskable Interrupt)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "SVC": "Supervisor Call",
+   "NMI": "Non-Maskable Interrupt"
+  }
+ },
+ {
+  "id": "OS_060",
+  "code": "OS_060",
+  "domain": "OS",
+  "category": "OS > 인터럽트",
+  "title": "인터럽트 사이클(Interrupt Cycle)",
+  "subtitle": "",
+  "name": "인터럽트 사이클(Interrupt Cycle)",
+  "en": "Interrupt Cycle",
+  "definition": "인터럽트 요청이 검출되면 현재 상태를 저장하고 인터럽트 벡터 테이블(IVT)에서 서비스 루틴(ISR) 주소를 찾아 분기·처리한 뒤, 저장한 상태를 복구해 원래 작업으로 돌아오는 처리 과정",
+  "keywords": [
+   "3단계: IVT 조회·분기 → ISR 수행 → 복귀",
+   "세부 절차: IRQ 검출 → 벡터 조회 → 인터럽트 금지 → 상태 저장 → 처리 → 상태 복구 → 인터럽트 허용",
+   "CPU 동작: 현재 명령 완료 후 PC·PSW를 스택에 저장 → ISR 주소를 PC에 적재",
+   "IVT: 인터럽트 번호별 ISR 시작 주소(·우선순위) 테이블",
+   "복귀: IRET·RETI로 PC·상태 레지스터 복원"
+  ],
+  "keywords_must": [
+   "인터럽트 요청(IRQ, Interrupt Request)",
+   "인터럽트 벡터 테이블(IVT)",
+   "인터럽트 서비스 루틴(ISR)",
+   "인터럽트 금지(Disable)",
+   "상태 저장(PC·PSW·레지스터)",
+   "스택(Stack)",
+   "상태 복구(Restore)",
+   "인터럽트 허용(Enable)",
+   "인터럽트 복귀 명령(IRET·RETI)"
+  ],
+  "keywords_ref": [
+   "명령어 사이클: 인출 → 해독 → 실행 → 인터럽트 사이클",
+   "PSW(Program Status Word)",
+   "인터럽트 응답 지연(Latency)",
+   "중첩 인터럽트(Nested Interrupt)",
+   "IDT(x86 Interrupt Descriptor Table)"
+  ],
+  "outline": [
+   "명령어 사이클 속 인터럽트",
+   "- 발생 확인 시점",
+   "처리 흐름 3단계",
+   "- 벡터 테이블 조회",
+   "- ISR 수행",
+   "- 복귀",
+   "IVT의 역할",
+   "- 벡터 테이블 구성"
+  ],
+  "sections": [
+   {
+    "title": "명령어 사이클 속 인터럽트",
+    "subsections": [
+     {
+      "title": "발생 확인 시점",
+      "items": [
+       "실행 사이클 종료 후 인터럽트 플래그 검사",
+       "요청이 있으면 인터럽트 사이클 진입"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "처리 흐름 3단계",
+    "subsections": [
+     {
+      "title": "벡터 테이블 조회",
+      "items": [
+       "IRQ 신호 모니터링·검출",
+       "IVT에서 인터럽트 ID에 대응하는 ISR 주소 조회",
+       "해당 ISR로 분기"
+      ]
+     },
+     {
+      "title": "ISR 수행",
+      "items": [
+       "인터럽트 금지로 처리 중 방해 차단",
+       "이전 프로세스 상태(PC·레지스터) 저장",
+       "요청 작업 처리"
+      ]
+     },
+     {
+      "title": "복귀",
+      "items": [
+       "저장 상태 복구",
+       "인터럽트 허용 후 루틴 종료",
+       "중단 지점부터 재실행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "IVT의 역할",
+    "subsections": [
+     {
+      "title": "벡터 테이블 구성",
+      "items": [
+       "인터럽트 번호별 ISR 시작 주소",
+       "우선순위 정보와 함께 관리",
+       "x86은 IDT, ARM은 벡터 테이블"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "인터럽트 요청(IRQ, Interrupt Request)",
+   "인터럽트 벡터 테이블(IVT)",
+   "인터럽트 서비스 루틴(ISR)",
+   "인터럽트 금지(Disable)",
+   "상태 저장(PC·PSW·레지스터)",
+   "스택(Stack)",
+   "상태 복구(Restore)",
+   "인터럽트 허용(Enable)",
+   "인터럽트 복귀 명령(IRET·RETI)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "IRQ": "Interrupt Request",
+   "IVT": "Interrupt Vector Table",
+   "ISR": "Interrupt Service Routine",
+   "PSW": "Program Status Word",
+   "IRET": "Interrupt Return",
+   "RETI": "Return from Interrupt",
+   "IDT": "Interrupt Descriptor Table",
+   "PC": "Program Counter"
+  }
+ },
+ {
+  "id": "OS_061",
+  "code": "OS_061",
+  "domain": "OS",
+  "category": "OS > 인터럽트",
+  "title": "인터럽트 우선순위 체계(Interrupt Priority Scheme)",
+  "subtitle": "",
+  "name": "인터럽트 우선순위 체계(Interrupt Priority Scheme)",
+  "en": "Interrupt Priority Scheme",
+  "definition": "여러 인터럽트가 동시에 CPU에 도달할 때 어느 요청을 먼저 처리할지 결정하는 방식으로, 하드웨어의 직렬(데이지 체인)·병렬 방식과 소프트웨어의 폴링 방식으로 구분",
+  "keywords": [
+   "종류별 순위: 전원 이상 → 기계 착오 → 외부 신호 → 입출력 → 프로그램 검사 → SVC",
+   "HW 직렬(Daisy Chain): 우선순위 순으로 장치 직렬 연결 · 인터럽트 승인 신호 전파",
+   "HW 병렬(Parallel): 장치별 IRQ 회선 · 마스크 레지스터 · 우선순위 인코더",
+   "SW 폴링(Polling): 높은 우선순위부터 플래그 차례 검사",
+   "비교: HW = 고속·비유연 · SW = 저비용·유연·느림"
+  ],
+  "keywords_must": [
+   "직렬 우선순위(Daisy Chain)",
+   "인터럽트 승인 신호(INTA)",
+   "병렬 우선순위(Parallel Priority)",
+   "마스크 레지스터(Mask Register)",
+   "우선순위 인코더(Priority Encoder)",
+   "폴링(Polling)",
+   "인터럽트 요청 플래그",
+   "PIC(Programmable Interrupt Controller)",
+   "중첩 인터럽트(Nested Interrupt)"
+  ],
+  "keywords_ref": [
+   "APIC·GIC(ARM)",
+   "FCFS·LCFS 판별 기준",
+   "하드웨어 방식은 회선 수만큼 설계 복잡",
+   "변경 적은 인터럽트는 HW, 동적 관리는 SW"
+  ],
+  "outline": [
+   "개념과 기능",
+   "- 동시 요청 처리 순서",
+   "- 3가지 기능",
+   "하드웨어 방식",
+   "- 직렬(데이지 체인)",
+   "- 병렬",
+   "소프트웨어 방식과 비교",
+   "- 폴링",
+   "- HW·SW 비교"
+  ],
+  "sections": [
+   {
+    "title": "개념과 기능",
+    "subsections": [
+     {
+      "title": "동시 요청 처리 순서",
+      "items": [
+       "한 명령 사이클 중 여러 요청 도달 시 처리 대상 결정"
+      ]
+     },
+     {
+      "title": "3가지 기능",
+      "items": [
+       "장치별 우선순위 부여",
+       "요청 장치의 우선순위 판별",
+       "높은 우선순위 먼저 처리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "하드웨어 방식",
+    "subsections": [
+     {
+      "title": "직렬(데이지 체인)",
+      "items": [
+       "모든 장치를 하나의 회선에 체인으로 연결",
+       "가장 높은 장치를 CPU 쪽 첫 위치에 배치",
+       "INTA 신호를 받은 장치가 전달을 멈추고 벡터 전송"
+      ]
+     },
+     {
+      "title": "병렬",
+      "items": [
+       "장치마다 개별 IRQ 회선",
+       "마스크 레지스터 비트로 허용·차단",
+       "우선순위 인코더가 최고 요청 선택"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "소프트웨어 방식과 비교",
+    "subsections": [
+     {
+      "title": "폴링",
+      "items": [
+       "높은 우선순위 장치부터 요청 플래그 검사",
+       "우선순위를 프로그램으로 쉽게 변경",
+       "하드웨어 단순, 반응 느림"
+      ]
+     },
+     {
+      "title": "HW·SW 비교",
+      "items": [
+       "회로: HW는 장치 수에 비례해 복잡",
+       "비용: SW가 저렴",
+       "속도: HW가 빠름",
+       "유연성: SW가 우수"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "직렬 우선순위(Daisy Chain)",
+   "인터럽트 승인 신호(INTA)",
+   "병렬 우선순위(Parallel Priority)",
+   "마스크 레지스터(Mask Register)",
+   "우선순위 인코더(Priority Encoder)",
+   "폴링(Polling)",
+   "인터럽트 요청 플래그",
+   "PIC(Programmable Interrupt Controller)",
+   "중첩 인터럽트(Nested Interrupt)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "INTA": "Interrupt Acknowledge",
+   "PIC": "Programmable Interrupt Controller",
+   "APIC": "Advanced Programmable Interrupt Controller",
+   "GIC": "Generic Interrupt Controller",
+   "LCFS": "Last-Come, First-Served"
+  }
+ },
+ {
+  "id": "OS_062",
+  "code": "OS_062",
+  "domain": "OS",
+  "category": "OS > 인터럽트",
+  "title": "인터럽트(Interrupt)",
+  "subtitle": "",
+  "name": "인터럽트(Interrupt)",
+  "en": "Interrupt",
+  "definition": "외부 장치·내부 오류·소프트웨어 명령 등의 원인으로 CPU가 실행 중인 프로그램을 중단하고 해당 사건을 처리하는 루틴으로 제어를 넘긴 뒤, 처리 후 원래 작업을 재개하게 하는 제어 신호와 그 처리 메커니즘",
+  "keywords": [
+   "종류: 외부(HW) · 내부(트랩·예외) · 소프트웨어(SVC)",
+   "처리: 요청 → 현재 명령 완료 → 문맥 저장(스택·PCB) → IVT → ISR → 문맥 복원 → 재개",
+   "우선순위 체계: 직렬(데이지 체인) · 병렬 · 폴링",
+   "중첩 인터럽트: ISR 수행 중 더 높은 우선순위 요청 선점 처리",
+   "분할 처리: Top Half(즉시·인터럽트 금지) · Bottom Half(지연 처리)"
+  ],
+  "keywords_must": [
+   "인터럽트 요청(IRQ)",
+   "인터럽트 벡터 테이블(IVT)",
+   "인터럽트 서비스 루틴(ISR)",
+   "문맥 저장·복원",
+   "스택 포인터(SP)",
+   "중첩 인터럽트(Nested Interrupt)",
+   "Top Half",
+   "Bottom Half(softirq·tasklet·workqueue)",
+   "폴링(Polling) 비교",
+   "DMA(Direct Memory Access)"
+  ],
+  "keywords_ref": [
+   "인터럽트 지연(Interrupt Latency)",
+   "RTOS ISR 최소화 원칙",
+   "인터럽트 스톰(Interrupt Storm)",
+   "NAPI(인터럽트·폴링 혼합)",
+   "MSI·MSI-X"
+  ],
+  "outline": [
+   "개념과 구현 방식",
+   "- 제어 흐름 전환 신호",
+   "- HW·SW 구현",
+   "태스크 → ISR → 복귀 과정",
+   "- ISR 진입",
+   "- 복귀",
+   "중첩과 분할 처리",
+   "- 중첩 인터럽트",
+   "- Top·Bottom Half",
+   "- 폴링과 비교"
+  ],
+  "sections": [
+   {
+    "title": "개념과 구현 방식",
+    "subsections": [
+     {
+      "title": "제어 흐름 전환 신호",
+      "items": [
+       "외부·내부·소프트웨어 원인으로 실행 중단",
+       "특수 사건 처리 루틴으로 제어 이동"
+      ]
+     },
+     {
+      "title": "HW·SW 구현",
+      "items": [
+       "하드웨어 인터럽트를 우선 처리",
+       "소프트웨어 인터럽트는 명령 실행으로 동기적 발생"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "태스크 → ISR → 복귀 과정",
+    "subsections": [
+     {
+      "title": "ISR 진입",
+      "items": [
+       "① 태스크 실행 중 IRQ 발생, 현재 명령 완료",
+       "② PC·상태 레지스터·범용 레지스터를 스택에 저장",
+       "③ IVT 조회 후 ISR 시작 주소로 분기",
+       "④ ISR 수행, 필요 시 상위 우선순위 태스크 준비"
+      ]
+     },
+     {
+      "title": "복귀",
+      "items": [
+       "⑤ 스택에서 레지스터 복원",
+       "⑥ RTOS는 더 높은 우선순위 태스크가 있으면 그쪽으로 문맥 교환",
+       "⑦ 없으면 중단된 태스크 재개"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "중첩과 분할 처리",
+    "subsections": [
+     {
+      "title": "중첩 인터럽트",
+      "items": [
+       "ISR 중 더 높은 우선순위 요청 시 현재 ISR 상태 저장 후 선점",
+       "낮은 요청은 마스크 후 나중에 처리"
+      ]
+     },
+     {
+      "title": "Top·Bottom Half",
+      "items": [
+       "Top Half: 데이터 수신 등 필수 작업을 즉시 수행",
+       "Bottom Half: 후속 처리를 지연 실행해 응답성 확보"
+      ]
+     },
+     {
+      "title": "폴링과 비교",
+      "items": [
+       "인터럽트: CPU 대기 낭비 없음, 문맥 저장 비용",
+       "폴링: 구현 단순, 빈번한 이벤트에 유리하나 CPU 낭비"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "인터럽트 요청(IRQ)",
+   "인터럽트 벡터 테이블(IVT)",
+   "인터럽트 서비스 루틴(ISR)",
+   "문맥 저장·복원",
+   "스택 포인터(SP)",
+   "중첩 인터럽트(Nested Interrupt)",
+   "Top Half",
+   "Bottom Half(softirq·tasklet·workqueue)",
+   "폴링(Polling) 비교",
+   "DMA(Direct Memory Access)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "IRQ": "Interrupt Request",
+   "IVT": "Interrupt Vector Table",
+   "ISR": "Interrupt Service Routine",
+   "SP": "Stack Pointer",
+   "NAPI": "New API",
+   "MSI": "Message Signaled Interrupts",
+   "PCB": "Process Control Block"
+  }
+ },
+ {
+  "id": "OS_063",
+  "code": "OS_063",
+  "domain": "OS",
+  "category": "OS > 입출력 관리",
+  "title": "메모리 사상 입출력(MMIO, Memory-Mapped I/O)",
+  "subtitle": "",
+  "name": "메모리 사상 입출력(MMIO, Memory-Mapped I/O)",
+  "en": "Memory-Mapped I/O",
+  "definition": "주기억장치 주소 공간의 일부를 입출력 장치의 제어·상태·데이터 레지스터에 할당해, CPU가 별도 I/O 명령 없이 LOAD·STORE 같은 메모리 접근 명령으로 장치를 제어하는 입출력 주소 지정 방식",
+  "keywords": [
+   "주소 공간: 메모리와 I/O가 하나의 주소 공간 공유",
+   "명령어: LOAD·STORE 등 메모리 명령으로 접근",
+   "하드웨어: 별도 I/O 제어 신호선 불필요 · 주소 디코딩으로 분기",
+   "사례: ARM · MIPS · PowerPC(RISC 계열)",
+   "비교 대상: I/O 사상 입출력(Isolated I/O, IN·OUT 명령 · 별도 주소 공간)"
+  ],
+  "keywords_must": [
+   "단일 주소 공간",
+   "장치 레지스터(상태·제어·데이터)",
+   "LOAD·STORE 명령",
+   "주소 디코딩(Address Decoding)",
+   "I/O 사상 입출력(Isolated I/O)",
+   "IN·OUT 명령",
+   "메모리 가용 주소 감소",
+   "Non-cacheable 영역",
+   "volatile 선언"
+  ],
+  "keywords_ref": [
+   "x86 포트 I/O(64K 포트)",
+   "PCIe BAR(Base Address Register)",
+   "메모리 배리어(Memory Barrier)",
+   "DMA와 병행 사용",
+   "RISC 설계에 유리"
+  ],
+  "outline": [
+   "단일 주소 공간 구조",
+   "- 주소 공간 공유",
+   "하드웨어·명령어 관점",
+   "- 하드웨어",
+   "- 명령어",
+   "I/O 사상 입출력 비교",
+   "- 비교 항목",
+   "- 프로그래밍 고려"
+  ],
+  "sections": [
+   {
+    "title": "단일 주소 공간 구조",
+    "subsections": [
+     {
+      "title": "주소 공간 공유",
+      "items": [
+       "메모리 주소 일부를 I/O 레지스터에 할당",
+       "10비트 주소 1024개 중 512개를 I/O에 배정하는 식",
+       "I/O에 쓴 만큼 메모리 주소 공간 감소"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "하드웨어·명령어 관점",
+    "subsections": [
+     {
+      "title": "하드웨어",
+      "items": [
+       "별도 제어 신호 없이 주소선으로 장치 선택",
+       "구성이 단순하나 주소·데이터 버스 사용 증가",
+       "RISC 기반 설계에 유리"
+      ]
+     },
+     {
+      "title": "명령어",
+      "items": [
+       "메모리와 동일한 LOAD·STORE로 접근",
+       "상태 레지스터 LOAD 확인 → 데이터 STORE → 제어 레지스터에 명령 STORE",
+       "명령어 수가 적고 프로그래밍 용이"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "I/O 사상 입출력 비교",
+    "subsections": [
+     {
+      "title": "비교 항목",
+      "items": [
+       "주소 공간: 공유 vs 메모리·I/O 별도",
+       "명령어: LOAD·STORE vs IN·OUT 전용",
+       "하드웨어: 단순 vs 별도 I/O 신호 핀 필요",
+       "메모리 효율: 감소 vs 전체 사용"
+      ]
+     },
+     {
+      "title": "프로그래밍 고려",
+      "items": [
+       "I/O 영역은 Non-cacheable로 설정",
+       "변수는 volatile로 선언해 최적화 제거",
+       "쓰기 순서 보장에 메모리 배리어 사용"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "단일 주소 공간",
+   "장치 레지스터(상태·제어·데이터)",
+   "LOAD·STORE 명령",
+   "주소 디코딩(Address Decoding)",
+   "I/O 사상 입출력(Isolated I/O)",
+   "IN·OUT 명령",
+   "메모리 가용 주소 감소",
+   "Non-cacheable 영역",
+   "volatile 선언"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "BAR": "Base Address Register"
+  }
+ },
+ {
+  "id": "OS_064",
+  "code": "OS_064",
+  "domain": "OS",
+  "category": "OS > 파일 시스템",
+  "title": "디스크 블록 할당 기법(File Allocation)",
+  "subtitle": "",
+  "name": "디스크 블록 할당 기법(File Allocation)",
+  "en": "File Allocation",
+  "definition": "파일을 일정 크기의 블록으로 나누어 디스크 공간에 어떻게 배치할지 결정하는 파일 시스템 기법으로, 연속된 공간에 저장하는 연속 할당과 흩어진 블록을 연결·색인으로 관리하는 불연속 할당으로 나뉨",
+  "keywords": [
+   "연속 할당: 인접 블록에 저장 → 접근 빠름, 외부 단편화",
+   "불연속 할당: 섹터 단위 · 블록 단위(블록 체인 · 색인 블록 체인 · 블록 지향 사상)",
+   "일반 분류: 연속 · 연결 · 색인 할당",
+   "디렉터리 정보: 시작 주소 · 길이(연속) / 첫 블록 포인터(연결) / 색인 블록 주소(색인)",
+   "UNIX 수퍼 블록: 블록 크기 · 가용 블록 목록 · i-node 정보 관리"
+  ],
+  "keywords_must": [
+   "연속 할당(Contiguous Allocation)",
+   "불연속 할당(Non-contiguous Allocation)",
+   "연결 할당(Linked Allocation)",
+   "색인 할당(Indexed Allocation)",
+   "블록(Block)",
+   "섹터(Sector)",
+   "외부 단편화(External Fragmentation)",
+   "가용 공간 리스트(Free Space List)"
+  ],
+  "keywords_ref": [
+   "파일 할당 테이블(FAT, File Allocation Table)",
+   "수퍼 블록(Super Block)",
+   "i-node 직접·간접 블록",
+   "순차·직접 접근(Sequential·Direct Access)",
+   "익스텐트(Extent) 할당"
+  ],
+  "outline": [
+   "개념과 할당 유형",
+   "- 파일의 디스크 배치 결정",
+   "- 연속·불연속 구분",
+   "기법별 특징 비교",
+   "- 연속 할당",
+   "- 연결 할당",
+   "- 색인 할당",
+   "UNIX 적용",
+   "- 수퍼 블록 관리 정보",
+   "- i-node 블록 주소"
+  ],
+  "sections": [
+   {
+    "title": "개념과 할당 유형",
+    "subsections": [
+     {
+      "title": "파일의 디스크 배치 결정",
+      "items": [
+       "파일을 일정 크기 블록으로 분할해 저장",
+       "저장 효율과 접근 속도를 함께 고려"
+      ]
+     },
+     {
+      "title": "연속·불연속 구분",
+      "items": [
+       "연속: 생성 크기만큼 인접 공간을 확보해야 함",
+       "불연속: 일정 단위로 흩어 할당, 크기 변경에 유연"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기법별 특징 비교",
+    "subsections": [
+     {
+      "title": "연속 할당",
+      "items": [
+       "인접 블록으로 순차·직접 접근 모두 빠름",
+       "외부 단편화·사전 크기 지정 부담"
+      ]
+     },
+     {
+      "title": "연결 할당",
+      "items": [
+       "블록마다 다음 블록 포인터 보관",
+       "단편화 없음, 직접 접근은 느림"
+      ]
+     },
+     {
+      "title": "색인 할당",
+      "items": [
+       "파일별 색인 블록에 블록 주소 집중",
+       "직접 접근 가능, 색인 블록 공간 부담"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "UNIX 적용",
+    "subsections": [
+     {
+      "title": "수퍼 블록 관리 정보",
+      "items": [
+       "파일 시스템 크기·블록 크기",
+       "가용 블록·가용 i-node 목록"
+      ]
+     },
+     {
+      "title": "i-node 블록 주소",
+      "items": [
+       "직접 블록 + 단일·이중·삼중 간접 블록",
+       "작은 파일은 빠르게, 큰 파일도 수용"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "연속 할당(Contiguous Allocation)",
+   "불연속 할당(Non-contiguous Allocation)",
+   "연결 할당(Linked Allocation)",
+   "색인 할당(Indexed Allocation)",
+   "블록(Block)",
+   "섹터(Sector)",
+   "외부 단편화(External Fragmentation)",
+   "가용 공간 리스트(Free Space List)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "OS_065",
+  "code": "OS_065",
+  "domain": "OS",
+  "category": "OS > 파일 시스템",
+  "title": "연속 할당 기법(Contiguous Allocation)",
+  "subtitle": "",
+  "name": "연속 할당 기법(Contiguous Allocation)",
+  "en": "Contiguous Allocation",
+  "definition": "파일을 디스크의 물리적으로 인접한 연속 블록에 할당하는 기법으로, 디렉터리에 시작 주소와 길이만 두면 되어 접근이 빠르지만 생성 시 크기를 알아야 하고 외부 단편화가 생김",
+  "keywords": [
+   "디렉터리 항목: 파일명 · 시작 블록 주소 · 길이",
+   "장점: 인접 블록 → 탐색 시간 최소 · 순차·직접 접근 용이",
+   "단점: 사전 크기 지정 · 외부 단편화 · 확장 시 재배치",
+   "배치 전략: 최초 적합 · 최적 적합 · 최악 적합",
+   "대응: 압축(Compaction) · 익스텐트 방식"
+  ],
+  "keywords_must": [
+   "인접 블록(Adjacent Block)",
+   "시작 주소·길이(Start·Length)",
+   "외부 단편화(External Fragmentation)",
+   "사전 크기 지정",
+   "압축(Compaction)",
+   "직접 접근(Direct Access)"
+  ],
+  "keywords_ref": [
+   "최초 적합(First Fit)",
+   "최적 적합(Best Fit)",
+   "최악 적합(Worst Fit)",
+   "익스텐트(Extent)",
+   "CD-ROM·DVD 파일 시스템 적용"
+  ],
+  "outline": [
+   "개념과 장점",
+   "- 인접 공간 할당",
+   "- 빠른 접근·단순 디렉터리",
+   "단점",
+   "- 공간 확보 문제",
+   "- 단편화와 낭비",
+   "- 확장의 어려움",
+   "보완 방안",
+   "- 배치 전략",
+   "- 익스텐트 방식"
+  ],
+  "sections": [
+   {
+    "title": "개념과 장점",
+    "subsections": [
+     {
+      "title": "인접 공간 할당",
+      "items": [
+       "파일의 논리 블록을 물리적으로 연속 배치",
+       "인접 섹터를 읽어 최소 시간으로 입출력"
+      ]
+     },
+     {
+      "title": "빠른 접근·단순 디렉터리",
+      "items": [
+       "헤드 이동이 적어 순차·직접 접근 모두 빠름",
+       "디렉터리는 시작 주소와 길이만 유지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "단점",
+    "subsections": [
+     {
+      "title": "공간 확보 문제",
+      "items": [
+       "생성 시 필요한 크기를 미리 명시",
+       "연속 공간이 없으면 파일 생성 불가"
+      ]
+     },
+     {
+      "title": "단편화와 낭비",
+      "items": [
+       "생성·삭제 반복으로 가용 공간 조각화",
+       "확장 대비 여분 확보로 공간 낭비"
+      ]
+     },
+     {
+      "title": "확장의 어려움",
+      "items": [
+       "할당 공간보다 커지면 새 영역으로 이동",
+       "크기가 자주 변하는 파일에 부적합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보완 방안",
+    "subsections": [
+     {
+      "title": "배치 전략",
+      "items": [
+       "최초·최적·최악 적합으로 가용 공간 선택",
+       "압축으로 흩어진 가용 공간 통합"
+      ]
+     },
+     {
+      "title": "익스텐트 방식",
+      "items": [
+       "연속 구간 여러 개를 연결해 확장 허용",
+       "ext4·NTFS 등 현대 파일 시스템 적용"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "인접 블록(Adjacent Block)",
+   "시작 주소·길이(Start·Length)",
+   "외부 단편화(External Fragmentation)",
+   "사전 크기 지정",
+   "압축(Compaction)",
+   "직접 접근(Direct Access)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "OS_066",
+  "code": "OS_066",
+  "domain": "OS",
+  "category": "OS > 파일 시스템",
+  "title": "불연속 할당 기법(Non-contiguous Allocation)",
+  "subtitle": "",
+  "name": "불연속 할당 기법(Non-contiguous Allocation)",
+  "en": "Non-contiguous Allocation",
+  "definition": "디스크 공간을 섹터나 블록 단위로 나누어 흩어진 위치에 할당하고 포인터·색인·파일 사상표로 연결하는 기법으로, 연속 할당의 크기 변경 문제와 단편화를 보완",
+  "keywords": [
+   "섹터 단위 할당: 섹터를 연결 리스트로 연결",
+   "블록 단위 할당: 블록 체인 · 색인 블록 체인 · 블록 지향 파일 사상",
+   "블록 체인: 블록마다 다음 블록 포인터",
+   "색인 블록 체인: 파일별 색인 블록에 블록 주소 집중 → 직접 접근",
+   "블록 지향 파일 사상: 파일 사상표(FAT)의 블록 번호로 연결"
+  ],
+  "keywords_must": [
+   "섹터 단위 할당(Sector Allocation)",
+   "블록 단위 할당(Block Allocation)",
+   "연결 리스트(Linked List)",
+   "블록 체인(Block Chaining)",
+   "색인 블록 체인(Index Block Chaining)",
+   "블록 지향 파일 사상(Block-Oriented File Mapping)",
+   "파일 할당 테이블(FAT, File Allocation Table)",
+   "가용 공간 리스트(Free Space List)"
+  ],
+  "keywords_ref": [
+   "압축 불필요",
+   "포인터 공간 오버헤드",
+   "색인 블록 재구성",
+   "다단계 색인(Multi-level Index)",
+   "FAT32·exFAT"
+  ],
+  "outline": [
+   "개념과 유형",
+   "- 흩어진 블록 할당",
+   "- 섹터·블록 단위",
+   "섹터 단위 할당",
+   "- 연결 리스트 구조",
+   "- 장단점",
+   "블록 단위 할당",
+   "- 블록 체인",
+   "- 색인 블록 체인",
+   "- 블록 지향 파일 사상"
+  ],
+  "sections": [
+   {
+    "title": "개념과 유형",
+    "subsections": [
+     {
+      "title": "흩어진 블록 할당",
+      "items": [
+       "일정 단위로 나누어 디스크 곳곳에 할당",
+       "파일 크기 변경에 유연하게 대응"
+      ]
+     },
+     {
+      "title": "섹터·블록 단위",
+      "items": [
+       "섹터 단위: 섹터들을 연결 리스트로 구성",
+       "블록 단위: 여러 섹터를 묶은 블록으로 할당(절충형)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "섹터 단위 할당",
+    "subsections": [
+     {
+      "title": "연결 리스트 구조",
+      "items": [
+       "섹터마다 다음 섹터 포인터 보관",
+       "가용 공간 리스트에서 섹터를 받아 확장"
+      ]
+     },
+     {
+      "title": "장단점",
+      "items": [
+       "압축 불필요, 확장 용이",
+       "분산 배치로 검색 느림·포인터 공간 낭비"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "블록 단위 할당",
+    "subsections": [
+     {
+      "title": "블록 체인",
+      "items": [
+       "섹터 대신 고정 크기 블록을 포인터로 연결",
+       "보통 한 트랙을 한 블록으로 사용"
+      ]
+     },
+     {
+      "title": "색인 블록 체인",
+      "items": [
+       "파일별 색인 블록에 블록 번호·포인터 집중",
+       "직접 접근 가능, 삽입 시 색인 블록 재구성"
+      ]
+     },
+     {
+      "title": "블록 지향 파일 사상",
+      "items": [
+       "포인터 대신 파일 사상표의 블록 번호 사용",
+       "각 항목이 다음 블록 번호를 보관, 삽입·삭제 간단"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "섹터 단위 할당(Sector Allocation)",
+   "블록 단위 할당(Block Allocation)",
+   "연결 리스트(Linked List)",
+   "블록 체인(Block Chaining)",
+   "색인 블록 체인(Index Block Chaining)",
+   "블록 지향 파일 사상(Block-Oriented File Mapping)",
+   "파일 할당 테이블(FAT, File Allocation Table)",
+   "가용 공간 리스트(Free Space List)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "FAT": "File Allocation Table"
+  }
+ },
+ {
+  "id": "OS_068",
+  "code": "OS_068",
+  "domain": "OS",
+  "category": "OS > 메모리 관리",
+  "title": "시간 지역성과 공간 지역성(Temporal and Spatial Locality)",
+  "subtitle": "",
+  "name": "시간 지역성과 공간 지역성(Temporal and Spatial Locality)",
+  "en": "Temporal and Spatial Locality",
+  "definition": "프로그램이 기억 장치를 균일하게 접근하지 않고 한 순간 특정 영역을 집중 참조하는 참조 지역성(Locality of Reference) 중, 최근 참조한 위치를 다시 참조하는 시간 지역성과 그 인접 위치를 참조하는 공간 지역성",
+  "keywords": [
+   "유형: 시간 지역성 · 공간 지역성 · 순차 지역성",
+   "시간 지역성: 최근 참조 위치 재참조 → 루프 · 서브루틴 · 스택 · 카운터 변수",
+   "공간 지역성: 인접 위치 참조 → 배열 · 순차 코드 · 선인출(Prefetch)",
+   "활용: 캐시(LRU·선인출) · 가상 메모리(워킹 세트·페이지 교체) · CDN",
+   "효과: 캐시 적중률(Hit Ratio)↑ · 평균 접근 시간↓ · 계층 메모리 가격 대비 성능"
+  ],
+  "keywords_must": [
+   "참조 지역성(Locality of Reference)",
+   "시간 지역성(Temporal Locality)",
+   "공간 지역성(Spatial Locality)",
+   "순차 지역성(Sequential Locality)",
+   "캐시 적중률(Hit Ratio)",
+   "선인출(Prefetch)",
+   "LRU(Least Recently Used)",
+   "워킹 세트(Working Set)",
+   "기억 장치 계층 구조(Memory Hierarchy)"
+  ],
+  "keywords_ref": [
+   "캐시 사상(직접·연관·집합 연관)",
+   "스레싱(Thrashing) 예방",
+   "페이지 교체 알고리즘",
+   "CDN(Content Delivery Network) 캐시 서버",
+   "루프 타일링(Loop Tiling)"
+  ],
+  "outline": [
+   "개념과 원리",
+   "- 특정 영역 집중 참조 특성",
+   "- 캐시 성능 원리",
+   "지역성 유형",
+   "- 시간 지역성",
+   "- 공간 지역성",
+   "- 순차 지역성",
+   "캐시·가상 메모리·CDN 활용",
+   "- 캐시 메모리",
+   "- 가상 메모리",
+   "- CDN·계층 메모리"
+  ],
+  "sections": [
+   {
+    "title": "개념과 원리",
+    "subsections": [
+     {
+      "title": "특정 영역 집중 참조 특성",
+      "items": [
+       "기억 장치를 균일하게 접근하지 않음",
+       "한 순간 일부 영역을 집중적으로 참조"
+      ]
+     },
+     {
+      "title": "캐시 성능 원리",
+      "items": [
+       "적중률 = 적중 수 / 전체 메모리 접근 수",
+       "적중률 최대화로 평균 접근 시간 최소화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "지역성 유형",
+    "subsections": [
+     {
+      "title": "시간 지역성",
+      "items": [
+       "최근 참조한 위치를 가까운 미래에 다시 참조",
+       "루프·서브루틴·스택·카운터·합계 변수"
+      ]
+     },
+     {
+      "title": "공간 지역성",
+      "items": [
+       "최근 참조 위치의 인접 위치를 곧 참조",
+       "배열 순회·순차 코드 실행·관련 변수 묶음"
+      ]
+     },
+     {
+      "title": "순차 지역성",
+      "items": [
+       "분기가 없으면 저장 순서대로 인출·실행",
+       "순차 처리·명령어 흐름"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "캐시·가상 메모리·CDN 활용",
+    "subsections": [
+     {
+      "title": "캐시 메모리",
+      "items": [
+       "시간 지역성: LRU로 가장 오래 사용하지 않은 블록 교체",
+       "공간 지역성: 블록 단위 적재·선인출"
+      ]
+     },
+     {
+      "title": "가상 메모리",
+      "items": [
+       "워킹 세트를 주기억 장치에 유지해 페이지 부재 감소",
+       "지역성 기반 교체로 스레싱 예방"
+      ]
+     },
+     {
+      "title": "CDN·계층 메모리",
+      "items": [
+       "사용자 가까운 캐시 서버에 콘텐츠 저장",
+       "레지스터–L1~L3–주기억–디스크 계층 최적화"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": "시공순(시간·공간·순차)",
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "참조 지역성(Locality of Reference)",
+   "시간 지역성(Temporal Locality)",
+   "공간 지역성(Spatial Locality)",
+   "순차 지역성(Sequential Locality)",
+   "캐시 적중률(Hit Ratio)",
+   "선인출(Prefetch)",
+   "LRU(Least Recently Used)",
+   "워킹 세트(Working Set)",
+   "기억 장치 계층 구조(Memory Hierarchy)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "LRU": "Least Recently Used",
+   "CDN": "Content Delivery Network"
+  }
+ },
+ {
+  "id": "OS_069",
+  "code": "OS_069",
+  "domain": "OS",
+  "category": "OS > 메모리 관리",
+  "title": "스레싱(Thrashing)",
+  "subtitle": "",
+  "name": "스레싱(Thrashing)",
+  "en": "Thrashing",
+  "definition": "다중 프로그래밍 정도가 지나치거나 프레임이 부족해 페이지 부재가 연쇄적으로 발생하면서, CPU가 프로세스 실행보다 페이지 교체에 더 많은 시간을 쓰게 되어 처리율이 급감하는 현상",
+  "keywords": [
+   "원인: 과도한 다중 프로그래밍 · 프레임 부족 · 지역성 무시 교체 정책",
+   "발생 과정: 페이지 부재↑ → CPU 이용률↓ → 프로세스 추가 투입 → 부재 폭증",
+   "탐지: 페이지 부재 빈도 측정 · 스와핑 빈도 조사",
+   "해결: 워킹 세트(Working Set) · PFF(Page Fault Frequency) · 다중 프로그래밍 정도 축소",
+   "고려: 지역 교체 · 선페이징(Prepaging) · 페이지 크기"
+  ],
+  "keywords_must": [
+   "페이지 부재(Page Fault)",
+   "다중 프로그래밍 정도(Degree of Multiprogramming)",
+   "CPU 이용률 급감",
+   "워킹 세트(Working Set)",
+   "PFF(Page Fault Frequency)",
+   "지역성(Locality)",
+   "스와핑(Swapping)",
+   "지역 교체(Local Replacement)"
+  ],
+  "keywords_ref": [
+   "전역 교체(Global Replacement)",
+   "선페이징(Prepaging)",
+   "페이지 크기와 내부 단편화",
+   "중기 스케줄러 스왑 아웃",
+   "메모리 과다 할당(Overcommit)"
+  ],
+  "outline": [
+   "개념과 영향",
+   "- 페이지 교체 과다 현상",
+   "- 시스템 영향",
+   "원인과 탐지",
+   "- 발생 원인",
+   "- 발생 과정",
+   "- 탐지 방법",
+   "해결 방안",
+   "- 워킹 세트와 PFF",
+   "- 페이지 교체 고려사항",
+   "- 페이지 크기"
+  ],
+  "sections": [
+   {
+    "title": "개념과 영향",
+    "subsections": [
+     {
+      "title": "페이지 교체 과다 현상",
+      "items": [
+       "실행보다 페이지 교체에 더 많은 시간 소비",
+       "페이지 부재 처리 대기로 CPU 유휴"
+      ]
+     },
+     {
+      "title": "시스템 영향",
+      "items": [
+       "처리율·응답 시간 급격히 악화",
+       "심하면 시스템 비정상 종료 위험"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "원인과 탐지",
+    "subsections": [
+     {
+      "title": "발생 원인",
+      "items": [
+       "자원(메모리·CPU) 부족",
+       "지역성·참조 빈도를 고려하지 않은 교체 정책",
+       "다중 프로그래밍 정도 과다"
+      ]
+     },
+     {
+      "title": "발생 과정",
+      "items": [
+       "CPU 이용률 저하를 보고 스케줄러가 프로세스 추가",
+       "프레임 경쟁 심화로 페이지 부재 폭증"
+      ]
+     },
+     {
+      "title": "탐지 방법",
+      "items": [
+       "프로세스별 페이지 부재 빈도 측정",
+       "주기억–보조 기억 간 스와핑 빈도 조사"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "해결 방안",
+    "subsections": [
+     {
+      "title": "워킹 세트와 PFF",
+      "items": [
+       "워킹 세트: 일정 시간 참조 페이지 집합을 상주, 오버헤드 큼",
+       "PFF: 부재 발생 시에만 프레임 조정, 오버헤드 적음"
+      ]
+     },
+     {
+      "title": "페이지 교체 고려사항",
+      "items": [
+       "전역보다 지역 교체로 다른 프로세스 영향 차단",
+       "선페이징으로 초기 대량 부재 방지"
+      ]
+     },
+     {
+      "title": "페이지 크기",
+      "items": [
+       "작으면 내부 단편화↓, 페이지 테이블·부재 횟수↑",
+       "크면 부재·전송 횟수↓, 내부 단편화↑"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "페이지 부재(Page Fault)",
+   "다중 프로그래밍 정도(Degree of Multiprogramming)",
+   "CPU 이용률 급감",
+   "워킹 세트(Working Set)",
+   "PFF(Page Fault Frequency)",
+   "지역성(Locality)",
+   "스와핑(Swapping)",
+   "지역 교체(Local Replacement)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "PFF": "Page Fault Frequency"
+  }
+ },
+ {
+  "id": "OS_070",
+  "code": "OS_070",
+  "domain": "OS",
+  "category": "OS > 메모리 관리",
+  "title": "워킹 세트(WS, Working Set)",
+  "subtitle": "",
+  "name": "워킹 세트(WS, Working Set)",
+  "en": "Working Set",
+  "definition": "지역성 가정에 따라 일정 시간 창(Window) 동안 프로세스가 참조한 페이지 집합을 워킹 세트로 정의하고, 이를 주기억 장치에 상주시켜 페이지 부재와 스레싱을 줄이는 메모리 관리 기법",
+  "keywords": [
+   "표기: WS(t, Δ) = 시각 t 기준 직전 Δ회 참조된 페이지 집합",
+   "원칙: 워킹 세트 크기만큼 프레임 할당 · 워킹 세트 페이지는 교체 대상 제외",
+   "창 크기 Δ: 작으면 지역성 미충족 · 크면 여러 지역성 중첩",
+   "스레싱 판단: ∑WSᵢ(전체 요구 프레임) > 가용 프레임 → 프로세스 중지",
+   "구현: 타이머 인터럽트 + 참조 비트로 근사 추적"
+  ],
+  "keywords_must": [
+   "워킹 세트 창(Working Set Window)",
+   "창 크기(Window Size, Δ)",
+   "지역성(Locality)",
+   "상주 집합(Resident Set)",
+   "전체 요구 프레임(Total Demand Frames)",
+   "참조 비트(Reference Bit)",
+   "타이머 인터럽트(Timer Interrupt)",
+   "스레싱(Thrashing) 방지"
+  ],
+  "keywords_ref": [
+   "선페이징(Prepaging) 활용",
+   "다중 프로그래밍 정도 조절",
+   "프로세스 중지(Suspend)·재시작",
+   "PFF(Page Fault Frequency) 비교",
+   "Denning 워킹 세트 모델"
+  ],
+  "outline": [
+   "개념과 특징",
+   "- 참조 페이지 집합 관리",
+   "- 운영 원칙",
+   "구성 요소와 동작",
+   "- 창 크기",
+   "- 프레임 수요 판단",
+   "- 운영 절차",
+   "추적 방법과 한계",
+   "- 근사 추적",
+   "- 장점",
+   "- 오버헤드·창 크기 결정 한계"
+  ],
+  "sections": [
+   {
+    "title": "개념과 특징",
+    "subsections": [
+     {
+      "title": "참조 페이지 집합 관리",
+      "items": [
+       "일정 시간 창 안에서 참조된 페이지 집합",
+       "지역성 관리로 페이지 부재 최소화"
+      ]
+     },
+     {
+      "title": "운영 원칙",
+      "items": [
+       "운영체제가 프로세스별 워킹 세트 감시",
+       "크기만큼 프레임 할당, 워킹 세트 페이지는 희생자 제외"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성 요소와 동작",
+    "subsections": [
+     {
+      "title": "창 크기",
+      "items": [
+       "너무 작으면 지역성 전체를 담지 못함",
+       "너무 크면 여러 지역성 중첩, 무한대면 실행 중 모든 페이지"
+      ]
+     },
+     {
+      "title": "프레임 수요 판단",
+      "items": [
+       "각 워킹 세트 크기의 합이 전체 요구 프레임",
+       "가용 프레임보다 크면 스레싱 발생"
+      ]
+     },
+     {
+      "title": "운영 절차",
+      "items": [
+       "워킹 세트 추적 → 충분한 프레임 할당",
+       "여유 시 프로세스 추가, 부족 시 프로세스 중지·페이지 회수"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "추적 방법과 한계",
+    "subsections": [
+     {
+      "title": "근사 추적",
+      "items": [
+       "새 참조는 추가, 가장 오래된 참조는 제거",
+       "타이머 인터럽트마다 참조 비트 복사·초기화"
+      ]
+     },
+     {
+      "title": "장점",
+      "items": [
+       "다중 프로그래밍 정도 향상",
+       "스레싱 방지·CPU 이용률 최적화"
+      ]
+     },
+     {
+      "title": "오버헤드·창 크기 결정 한계",
+      "items": [
+       "참조마다 상주 집합 조정 오버헤드 큼",
+       "창 크기 결정 원칙 부재·변경 시점 예측 곤란"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "워킹 세트 창(Working Set Window)",
+   "창 크기(Window Size, Δ)",
+   "지역성(Locality)",
+   "상주 집합(Resident Set)",
+   "전체 요구 프레임(Total Demand Frames)",
+   "참조 비트(Reference Bit)",
+   "타이머 인터럽트(Timer Interrupt)",
+   "스레싱(Thrashing) 방지"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "WS": "Working Set",
+   "PFF": "Page Fault Frequency"
+  }
+ },
+ {
+  "id": "OS_071",
+  "code": "OS_071",
+  "domain": "OS",
+  "category": "OS > 메모리 관리",
+  "title": "페이지 부재 빈도(PFF, Page Fault Frequency)",
+  "subtitle": "",
+  "name": "페이지 부재 빈도(PFF, Page Fault Frequency)",
+  "en": "Page Fault Frequency",
+  "definition": "프로세스의 페이지 부재율에 상한과 하한을 정해 두고, 부재율이 상한을 넘으면 프레임을 더 주고 하한보다 낮으면 회수해 스레싱을 직접 조절하는 프레임 할당 기법",
+  "keywords": [
+   "기준: 부재율 상한(Upper Bound) · 하한(Lower Bound)",
+   "상한 초과 → 프레임 추가 할당 / 하한 미만 → 프레임 회수",
+   "가용 프레임 부족 → 프로세스 중지 후 프레임 재분배",
+   "임계값 τ: 부재 발생 간격과 비교하는 시스템 파라미터",
+   "워킹 세트 대비: 부재 발생 시에만 조정 → 오버헤드 적음"
+  ],
+  "keywords_must": [
+   "페이지 부재율(Page Fault Rate)",
+   "상한(Upper Bound)",
+   "하한(Lower Bound)",
+   "프레임 추가 할당",
+   "프레임 회수",
+   "상주 집합(Resident Set) 조정",
+   "임계값(Threshold)",
+   "스레싱(Thrashing) 직접 제어"
+  ],
+  "keywords_ref": [
+   "워킹 세트(Working Set) 비교",
+   "프로세스 중지(Suspend)",
+   "가변 할당(Variable Allocation)",
+   "지역 교체(Local Replacement)",
+   "다중 프로그래밍 정도 조절"
+  ],
+  "outline": [
+   "개념과 특징",
+   "- 부재율 상·하한 조절",
+   "- 적용 특징",
+   "- 임계값",
+   "관리 절차",
+   "- 프레임 조정",
+   "- 가용 프레임 부족 시",
+   "워킹 세트와 비교",
+   "- 수정 시점",
+   "- 스레싱 조절·오버헤드"
+  ],
+  "sections": [
+   {
+    "title": "개념과 특징",
+    "subsections": [
+     {
+      "title": "부재율 상·하한 조절",
+      "items": [
+       "부재율 범위를 정해 직접 예측·조절",
+       "스레싱을 직접 겨냥하는 접근"
+      ]
+     },
+     {
+      "title": "적용 특징",
+      "items": [
+       "상주 집합 크기를 동적으로 조정",
+       "페이지 부재 발생 시에만 실행해 오버헤드 감소"
+      ]
+     },
+     {
+      "title": "임계값",
+      "items": [
+       "미리 정한 시간 간격의 시스템 파라미터",
+       "부재 발생 간격과 비교해 높고 낮음 판단"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "관리 절차",
+    "subsections": [
+     {
+      "title": "프레임 조정",
+      "items": [
+       "상한보다 높으면 프레임 추가 할당",
+       "하한보다 낮으면 프레임 회수"
+      ]
+     },
+     {
+      "title": "가용 프레임 부족 시",
+      "items": [
+       "중지할 프로세스를 골라 프레임 회수",
+       "부재율 높은 프로세스에 재분배"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "워킹 세트와 비교",
+    "subsections": [
+     {
+      "title": "수정 시점",
+      "items": [
+       "워킹 세트: 참조마다 집합 수정",
+       "PFF: 부재 발생 시에만 수정"
+      ]
+     },
+     {
+      "title": "스레싱 조절·오버헤드",
+      "items": [
+       "워킹 세트: 선페이징에 유용, 조절 어렵고 오버헤드 큼",
+       "PFF: 직접 조절, 오버헤드 적음"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "페이지 부재율(Page Fault Rate)",
+   "상한(Upper Bound)",
+   "하한(Lower Bound)",
+   "프레임 추가 할당",
+   "프레임 회수",
+   "상주 집합(Resident Set) 조정",
+   "임계값(Threshold)",
+   "스레싱(Thrashing) 직접 제어"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": []
+ },
+ {
+  "id": "OS_072",
+  "code": "OS_072",
+  "domain": "OS",
+  "category": "OS > 임베디드 시스템",
+  "title": "임베디드 시스템(Embedded System)",
+  "subtitle": "",
+  "name": "임베디드 시스템(Embedded System)",
+  "en": "Embedded System",
+  "definition": "마이크로프로세서나 마이크로컨트롤러를 내장하고, 미리 정해진 특정 기능을 수행하도록 하드웨어와 소프트웨어를 결합해 제품이나 장치 안에 탑재한 시스템",
+  "keywords": [
+   "특성: 특정 목적 · HW/SW 동시 설계 · 강한 제약(소형·저전력·제한 자원) · 반응성 · 실시간성",
+   "HW 구성: 프로세서(MCU·MPU) · 메모리(플래시·RAM) · 입출력·센서·액추에이터 · 통신 인터페이스",
+   "SW 구성: 부트로더 · 임베디드 OS(RTOS) · 디바이스 드라이버 · 미들웨어 · 응용 SW",
+   "분류: 경성·연성 실시간 · 가정·공장·사무 자동화 · 정보 단말 · 물류·금융·의료 · 센서 네트워크",
+   "개발 특징: 호스트–타깃 교차 개발 · HW/SW 공동 설계 · 제한 자원 안정 운영"
+  ],
+  "keywords_must": [
+   "특정 목적(Application Specific)",
+   "HW/SW 동시 설계(Co-design)",
+   "강한 제약성(Constraint)",
+   "반응성(Reactive)",
+   "실시간성(Real-time)",
+   "마이크로컨트롤러(MCU, Micro Controller Unit)",
+   "경성 실시간 시스템(Hard Real-time)",
+   "연성 실시간 시스템(Soft Real-time)",
+   "호스트–타깃 교차 개발(Cross Development)"
+  ],
+  "keywords_ref": [
+   "실시간 운영체제(RTOS, Real-Time Operating System)",
+   "펌웨어(Firmware)·부트로더",
+   "워치독 타이머(Watchdog Timer)",
+   "이중화(Redundancy) 신뢰성 향상",
+   "테스트베드(Testbed)"
+  ],
+  "outline": [
+   "개념과 특성",
+   "- 특정 기능 결합 시스템",
+   "- 주요 특성",
+   "- 실시간성",
+   "HW·SW 구성",
+   "- 하드웨어",
+   "- 소프트웨어",
+   "분류와 개발 특징",
+   "- 특성별 분류",
+   "- 개발 특징",
+   "- 신뢰성 향상 방안"
+  ],
+  "sections": [
+   {
+    "title": "개념과 특성",
+    "subsections": [
+     {
+      "title": "특정 기능 결합 시스템",
+      "items": [
+       "프로세서를 내장해 제작자가 의도한 기능 수행",
+       "HW와 SW를 미리 정한 기능에 맞춰 결합"
+      ]
+     },
+     {
+      "title": "주요 특성",
+      "items": [
+       "실시간 처리·저전력 등 물리적 제약 반영",
+       "특정 목적 HW와 시스템 SW 동시 설계",
+       "외부 사건(주기·비주기)에 반응하는 반응성"
+      ]
+     },
+     {
+      "title": "실시간성",
+      "items": [
+       "정해진 마감 시간(Deadline) 안에 처리",
+       "최대뿐 아니라 최소 시간 제약도 가능"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "HW·SW 구성",
+    "subsections": [
+     {
+      "title": "하드웨어",
+      "items": [
+       "프로세서(MCU·MPU·DSP)와 메모리(ROM·플래시·RAM)",
+       "입출력·센서·액추에이터·통신 인터페이스"
+      ]
+     },
+     {
+      "title": "소프트웨어",
+      "items": [
+       "부트로더·펌웨어와 임베디드 OS(RTOS)",
+       "디바이스 드라이버·미들웨어·응용 SW"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분류와 개발 특징",
+    "subsections": [
+     {
+      "title": "특성별 분류",
+      "items": [
+       "물리 특성: 경성 실시간(원전·항공·미사일)·연성 실시간(정보 단말)",
+       "HW/SW 일체형: 가정·공장·사무 자동화, 물류·금융",
+       "강한 제약: 의료(캡슐형 카메라)·센서 네트워크"
+      ]
+     },
+     {
+      "title": "개발 특징",
+      "items": [
+       "설계 단계에서 HW·SW·인터페이스 영역 구분",
+       "호스트와 다른 타깃 환경에 탑재해 운영"
+      ]
+     },
+     {
+      "title": "신뢰성 향상 방안",
+      "items": [
+       "워치독 타이머·이중화로 장애 감지·복구",
+       "실시간 이벤트 중에도 위험 제어하며 안정 실행"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "특정 목적(Application Specific)",
+   "HW/SW 동시 설계(Co-design)",
+   "강한 제약성(Constraint)",
+   "반응성(Reactive)",
+   "실시간성(Real-time)",
+   "마이크로컨트롤러(MCU, Micro Controller Unit)",
+   "경성 실시간 시스템(Hard Real-time)",
+   "연성 실시간 시스템(Soft Real-time)",
+   "호스트–타깃 교차 개발(Cross Development)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "MCU": "Micro Controller Unit",
+   "MPU": "Micro Processor Unit",
+   "DSP": "Digital Signal Processor",
+   "RTOS": "Real-Time Operating System"
+  }
+ },
+ {
+  "id": "OS_073",
+  "code": "OS_073",
+  "domain": "OS",
+  "category": "OS > 임베디드 시스템",
+  "title": "임베디드 운영체제(Embedded OS)",
+  "subtitle": "",
+  "name": "임베디드 운영체제(Embedded OS)",
+  "en": "Embedded Operating System",
+  "definition": "임베디드 시스템이 특정 작업을 수행하도록 마이크로프로세서와 응용 프로그램 사이를 중재하는 운영체제로, 제한된 자원에서 실시간 처리·멀티태스킹·태스크 간 통신 같은 특화 기능만 갖추어 시스템에 내장됨",
+  "keywords": [
+   "주요 기능: 실시간 처리 · 멀티태스킹 · 태스크 간 통신·동기화 · 제한 자원의 효율적 사용",
+   "구조: 우선순위 스케줄러 · 선점형 커널 · 상호 배제 · 태스크 커뮤니케이션",
+   "기술 요소: 메모리 잠금 · 빠른 부팅 · XIP · 저전력 · 경량 파일 시스템·GUI",
+   "유형: 멀티 프로세스 모델 · 멀티 스레드(태스크) 모델 / 연성·경성 RTOS",
+   "대표 종류: TRON · VxWorks · FreeRTOS · 임베디드 리눅스"
+  ],
+  "keywords_must": [
+   "제한된 자원(Limited Resource)",
+   "실시간 처리(Real-time)",
+   "멀티태스킹(Multitasking)",
+   "태스크 간 통신(Inter-task Communication)",
+   "선점형 커널(Preemptive Kernel)",
+   "우선순위 기반 스케줄링",
+   "메시지 전달(Message Passing)",
+   "XIP(eXecute In Place)",
+   "TRON(The Real-time Operating system Nucleus)",
+   "VxWorks"
+  ],
+  "keywords_ref": [
+   "실시간 운영체제(RTOS, Real-Time Operating System)",
+   "범용 운영체제(GPOS, General Purpose OS)",
+   "메모리 잠금(Memory Locking)",
+   "메일박스(Mailbox)·메시지 큐",
+   "FreeRTOS·Zephyr"
+  ],
+  "outline": [
+   "개념과 기능",
+   "- 프로세서·응용 간 중재 OS",
+   "- 주요 기능",
+   "- 범용 OS와 구분",
+   "구조와 기술 요소",
+   "- 커널 구조",
+   "- 상호 배제·태스크 통신",
+   "- 주요 기술",
+   "유형과 대표 종류",
+   "- 실행 환경·실시간 유형",
+   "- 대표 종류"
+  ],
+  "sections": [
+   {
+    "title": "개념과 기능",
+    "subsections": [
+     {
+      "title": "프로세서·응용 간 중재 OS",
+      "items": [
+       "특정 작업 수행을 위해 프로세서와 응용 사이를 중재",
+       "특화된 기능만 갖추어 시스템에 내장"
+      ]
+     },
+     {
+      "title": "주요 기능",
+      "items": [
+       "제한 시간 내 처리·동시 다중 작업",
+       "태스크 간 통신·동기화와 제한 자원 효율 사용"
+      ]
+     },
+     {
+      "title": "범용 OS와 구분",
+      "items": [
+       "범용 OS보다 실시간 운영체제를 주로 사용",
+       "결정적 응답 시간 보장이 핵심"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구조와 기술 요소",
+    "subsections": [
+     {
+      "title": "커널 구조",
+      "items": [
+       "우선순위 기반 스케줄러, 전환 시 문맥 교환",
+       "선점형 커널로 높은 우선순위 태스크 즉시 실행"
+      ]
+     },
+     {
+      "title": "상호 배제·태스크 통신",
+      "items": [
+       "인터럽트 금지/허용·세마포어로 임계 영역 보호",
+       "전역 변수 대신 큐·파이프·메일박스로 메시지 전달"
+      ]
+     },
+     {
+      "title": "주요 기술",
+      "items": [
+       "메모리 잠금으로 실시간 영역 스왑 방지",
+       "빠른 부팅·XIP(플래시에서 직접 실행)·저전력"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "유형과 대표 종류",
+    "subsections": [
+     {
+      "title": "실행 환경·실시간 유형",
+      "items": [
+       "멀티 프로세스 모델과 커널 공유 멀티 스레드 모델",
+       "연성 RTOS(지연 허용)·경성 RTOS(시간 엄수)"
+      ]
+     },
+     {
+      "title": "대표 종류",
+      "items": [
+       "TRON: 공개 규격, 소형·고속, 휴대폰·자동차",
+       "VxWorks: 다수 CPU 지원 상용 RTOS(마이크로커널)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "제한된 자원(Limited Resource)",
+   "실시간 처리(Real-time)",
+   "멀티태스킹(Multitasking)",
+   "태스크 간 통신(Inter-task Communication)",
+   "선점형 커널(Preemptive Kernel)",
+   "우선순위 기반 스케줄링",
+   "메시지 전달(Message Passing)",
+   "XIP(eXecute In Place)",
+   "TRON(The Real-time Operating system Nucleus)",
+   "VxWorks"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "XIP": "eXecute In Place",
+   "TRON": "The Real-time Operating system Nucleus",
+   "RTOS": "Real-Time Operating System",
+   "GPOS": "General Purpose Operating System"
+  }
+ },
+ {
+  "id": "OS_074",
+  "code": "OS_074",
+  "domain": "OS",
+  "category": "OS > 임베디드 시스템",
+  "title": "실시간 운영체제(RTOS, Real-Time Operating System)",
+  "subtitle": "",
+  "name": "실시간 운영체제(RTOS, Real-Time Operating System)",
+  "en": "Real-Time Operating System",
+  "definition": "주어진 작업을 정해진 마감 시간(Deadline) 안에 처리하도록 예측 가능하고 일정한 응답 시간을 보장하는 운영체제로, 선점형 우선순위 스케줄링과 짧은 인터럽트 지연이 핵심",
+  "keywords": [
+   "분류: 경성 실시간(Hard Real-time, 마감 위반 = 실패) · 연성 실시간(Soft Real-time, 성능 저하 수준)",
+   "구조: 응용 → RTOS 커널 → BSP(Board Support Package) → 하드웨어",
+   "요구사항: 멀티태스킹 · 짧은 인터럽트 지연(Interrupt Latency) · 선점형 스케줄링 · 마이크로커널 · 신뢰성",
+   "선정 절차: 선정 기준 도출 → 평가 명세 → 평가 설계 → 평가 수행(ISO/IEC 14598 활용)",
+   "GPOS 대비: 시간 제약·예측성 중심 vs 자원 효율·공평성 중심"
+  ],
+  "keywords_must": [
+   "마감 시간(Deadline)",
+   "경성 실시간(Hard Real-time)",
+   "연성 실시간(Soft Real-time)",
+   "선점형 스케줄링(Preemptive Scheduling)",
+   "인터럽트 지연(Interrupt Latency)",
+   "멀티태스킹(Multitasking)",
+   "마이크로커널(Micro Kernel)",
+   "BSP(Board Support Package)",
+   "범용 운영체제(GPOS, General Purpose OS)"
+  ],
+  "keywords_ref": [
+   "예측 가능성(Determinism)",
+   "우선순위 역전(Priority Inversion)과 우선순위 상속",
+   "RM·EDF 스케줄링",
+   "ISO/IEC 9126·14598 품질 평가",
+   "VxWorks·FreeRTOS·TRON"
+  ],
+  "outline": [
+   "개념과 분류",
+   "- 마감 시간 보장 OS",
+   "- 경성·연성 실시간",
+   "구조와 선정 절차",
+   "- 계층 구조",
+   "- 구성 모듈",
+   "- 기술적 선정 절차",
+   "범용 운영체제와 비교",
+   "- 목적 차이",
+   "- 작업 처리 방식",
+   "- 요구사항·종류"
+  ],
+  "sections": [
+   {
+    "title": "개념과 분류",
+    "subsections": [
+     {
+      "title": "마감 시간 보장 OS",
+      "items": [
+       "정해진 시간 안에 작업 수행 환경 제공",
+       "예측 가능하고 일정한 응답 시간 지원"
+      ]
+     },
+     {
+      "title": "경성·연성 실시간",
+      "items": [
+       "경성: 마감 시간을 넘기면 실패(국방·철도·항공·의료)",
+       "연성: 마감을 못 지켜도 치명적이지 않음(실시간 비디오)"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구조와 선정 절차",
+    "subsections": [
+     {
+      "title": "계층 구조",
+      "items": [
+       "응용 – RTOS 커널 – BSP – 하드웨어",
+       "BSP는 보드·프로세서 특화 코드"
+      ]
+     },
+     {
+      "title": "구성 모듈",
+      "items": [
+       "커널을 중심으로 네트워크 프로토콜·POSIX 지원",
+       "파일 시스템·장치 드라이버·디버깅 기능"
+      ]
+     },
+     {
+      "title": "기술적 선정 절차",
+      "items": [
+       "선정 기준 도출: 도입 목적·유형 식별·품질 모델 명세",
+       "평가 명세화·평가 설계 후 측정·결과 분석으로 선정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "범용 운영체제와 비교",
+    "subsections": [
+     {
+      "title": "목적 차이",
+      "items": [
+       "RTOS: 시간 제약 해결·동작 예측·최적화 구성",
+       "GPOS: 자원 효율성·공평성·일반 요구 지원"
+      ]
+     },
+     {
+      "title": "작업 처리 방식",
+      "items": [
+       "RTOS: 작업별 마감 시간 기반 자원 할당, 불가 시 즉시 통보",
+       "GPOS: 최선 노력(Best Effort), 시간 내 처리 보장 없음"
+      ]
+     },
+     {
+      "title": "요구사항·종류",
+      "items": [
+       "RTOS: 짧은 인터럽트 지연·선점형·확장성(REX·TRON)",
+       "GPOS: 풍부한 응용·GUI·멀티미디어(Windows·UNIX)"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "마감 시간(Deadline)",
+   "경성 실시간(Hard Real-time)",
+   "연성 실시간(Soft Real-time)",
+   "선점형 스케줄링(Preemptive Scheduling)",
+   "인터럽트 지연(Interrupt Latency)",
+   "멀티태스킹(Multitasking)",
+   "마이크로커널(Micro Kernel)",
+   "BSP(Board Support Package)",
+   "범용 운영체제(GPOS, General Purpose OS)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "RTOS": "Real-Time Operating System",
+   "BSP": "Board Support Package",
+   "GPOS": "General Purpose Operating System",
+   "POSIX": "Portable Operating System Interface",
+   "RM": "Rate Monotonic",
+   "EDF": "Earliest Deadline First"
+  }
+ },
+ {
+  "id": "OS_075",
+  "code": "OS_075",
+  "domain": "OS",
+  "category": "OS > 임베디드 시스템",
+  "title": "워치독 타이머(WDT, Watchdog Timer)",
+  "subtitle": "",
+  "name": "워치독 타이머(WDT, Watchdog Timer)",
+  "en": "Watchdog Timer",
+  "definition": "프로세서가 정상 동작하면 주기적으로 타이머를 재시작(Kick)하고, 외부 잡음이나 소프트웨어 폭주로 재시작이 끊겨 타이머가 만료(Timeout)되면 MCU를 리셋해 시스템을 자동 복구하는 감시 장치",
+  "keywords": [
+   "구성 요소: Kick · Timeout · 교정 동작(Corrective Action) · Enable · Reset · Clock · 장애 감지(Fault Detection)",
+   "동작: 초기값 설정 → 카운트다운 시작 → 주기적 Kick → 태스크 폭주 → 타이머 만료 → MCU 리셋",
+   "교정 동작: 프로세서 리셋 · 인터럽트 · 전원 재투입 · 안전 모드(Fail-safe) 전환",
+   "중요성: 제어 실패 방지 · 사람 개입 없는 자동 복구 · 고신뢰 시스템 필수",
+   "구현 구분: 위치(내부·외부) · 단계(단단계·다단계)"
+  ],
+  "keywords_must": [
+   "킥(Kick)",
+   "타임아웃(Timeout)",
+   "카운트다운(Count Down)",
+   "교정 동작(Corrective Action)",
+   "MCU 리셋(Reset)",
+   "클럭(Clock)",
+   "장애 감지(Fault Detection)",
+   "태스크 폭주(Task Runaway)",
+   "안전 모드(Fail-safe State)"
+  ],
+  "keywords_ref": [
+   "내부·외부 워치독",
+   "단단계·다단계 워치독",
+   "리눅스 /dev/watchdog",
+   "하트비트(Heartbeat) 감시",
+   "기능 안전(IEC 61508)"
+  ],
+  "outline": [
+   "개념과 중요성",
+   "- 자동 복구 감시 장치",
+   "- 중요성",
+   "Kick·Timeout 등 구성 요소",
+   "- Kick·Timeout",
+   "- 교정 동작·Enable·Reset",
+   "- Clock·장애 감지",
+   "동작 메커니즘",
+   "- 정상 동작",
+   "- 장애 복구"
+  ],
+  "sections": [
+   {
+    "title": "개념과 중요성",
+    "subsections": [
+     {
+      "title": "자동 복구 감시 장치",
+      "items": [
+       "프로세서 동작을 감시해 오작동 시 MCU 리셋",
+       "외부 잡음·비정상 동작에서 시스템 복구"
+      ]
+     },
+     {
+      "title": "중요성",
+      "items": [
+       "불필요한 반복·제어 실패 방지 메커니즘",
+       "예상치 못한 실패 시 안전 모드로 전환"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Kick·Timeout 등 구성 요소",
+    "subsections": [
+     {
+      "title": "Kick·Timeout",
+      "items": [
+       "Kick: 정상 동작 시 타이머를 재시작",
+       "Timeout: 카운트다운 시간, 0이 되면 지정 동작 수행"
+      ]
+     },
+     {
+      "title": "교정 동작·Enable·Reset",
+      "items": [
+       "교정 동작: 리셋·인터럽트·전원 재투입·안전 모드",
+       "Enable: 앞 단계 만료 시 다음 단계 가동, Reset: 최종 단계의 재시작 지시"
+      ]
+     },
+     {
+      "title": "Clock·장애 감지",
+      "items": [
+       "CPU와 공유하거나 독립된 클럭으로 카운트",
+       "정상 판정 테스트로 타이머를 재설정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작 메커니즘",
+    "subsections": [
+     {
+      "title": "정상 동작",
+      "items": [
+       "초기값 설정 후 0까지 카운트다운 시작",
+       "태스크가 주기적으로 Kick해 만료 방지"
+      ]
+     },
+     {
+      "title": "장애 복구",
+      "items": [
+       "태스크 폭주로 갱신 루틴 미수행",
+       "타이머 만료 → 리셋 신호 → MCU 재시작"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "킥(Kick)",
+   "타임아웃(Timeout)",
+   "카운트다운(Count Down)",
+   "교정 동작(Corrective Action)",
+   "MCU 리셋(Reset)",
+   "클럭(Clock)",
+   "장애 감지(Fault Detection)",
+   "태스크 폭주(Task Runaway)",
+   "안전 모드(Fail-safe State)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "WDT": "Watchdog Timer",
+   "MCU": "Micro Controller Unit"
+  }
+ },
+ {
+  "id": "OS_076",
+  "code": "OS_076",
+  "domain": "OS",
+  "category": "OS > 임베디드 시스템",
+  "title": "워치독 타이머 하드웨어 구현 방법(Watchdog Timer Hardware Implementation)",
+  "subtitle": "",
+  "name": "워치독 타이머 하드웨어 구현 방법(Watchdog Timer Hardware Implementation)",
+  "en": "Watchdog Timer Hardware Implementation",
+  "definition": "요구 신뢰도와 비용에 따라 워치독 타이머를 MCU 내부·외부 중 어디에 둘지, 타이머를 한 단계·여러 단계로 구성할지 정하고, 프리스케일러·제어 비트로 만료 시 리셋·인터럽트를 발생시키는 회로를 설계하는 방법",
+  "keywords": [
+   "위치별: 내부 워치독(MCU 내장, 저비용·낮은 신뢰성) · 외부 워치독(별도 IC, 고비용·높은 신뢰성)",
+   "단계별: 단단계(Single-stage, 리셋 전용) · 다단계(Multi-stage, 단계별 교정 후 최종 리셋)",
+   "회로: 발진기 → 프리스케일러 → 주기 선택(WDP 비트) → 리셋·인터럽트 출력",
+   "제어 레지스터: WDE(활성화) · WDIE(인터럽트 활성화) · WDIF(인터럽트 플래그)",
+   "SW 역할: 주기적 Kick 루틴 · 초기화 시 타임아웃 설정"
+  ],
+  "keywords_must": [
+   "내부 워치독(Internal WDT)",
+   "외부 워치독(External WDT)",
+   "단단계 워치독(Single-stage)",
+   "다단계 워치독(Multi-stage)",
+   "리셋 핀(Reset Pin)",
+   "프리스케일러(Prescaler)",
+   "주기 선택 비트(WDP)",
+   "WDE(Watchdog Enable)",
+   "WDIE(Watchdog Interrupt Enable)"
+  ],
+  "keywords_ref": [
+   "WDTCSR(Watchdog Timer Control and Status Register)",
+   "128kHz 발진기",
+   "교정 동작(Corrective Action)",
+   "윈도우 워치독(Window Watchdog)",
+   "IBM 메인프레임 /dev/watchdog"
+  ],
+  "outline": [
+   "개념과 설계 기준",
+   "- 워치독 구현 방식 결정",
+   "- 설계 목표",
+   "위치·단계별 구현",
+   "- 내부 워치독",
+   "- 외부 워치독",
+   "- 단단계·다단계",
+   "회로 설계",
+   "- 타이머 회로",
+   "- 제어 비트",
+   "- 동작"
+  ],
+  "sections": [
+   {
+    "title": "개념과 설계 기준",
+    "subsections": [
+     {
+      "title": "워치독 구현 방식 결정",
+      "items": [
+       "감시 회로의 위치·단계 수를 정함",
+       "요구 신뢰도·안전성·비용을 함께 고려"
+      ]
+     },
+     {
+      "title": "설계 목표",
+      "items": [
+       "사람 개입 없이 오류 감지·리셋",
+       "재부팅으로 시스템 자동 복구"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "위치·단계별 구현",
+    "subsections": [
+     {
+      "title": "내부 워치독",
+      "items": [
+       "대부분의 MCU에 내장, 별도 비용 없음",
+       "SW 문제로 함께 멈출 수 있어 신뢰성 낮음"
+      ]
+     },
+     {
+      "title": "외부 워치독",
+      "items": [
+       "MCU 외부 별도 IC, 물리적 리셋 핀으로 연결",
+       "비용 증가, 고신뢰 시스템에 사용"
+      ]
+     },
+     {
+      "title": "단단계·다단계",
+      "items": [
+       "단단계: 리셋 목적, 온칩·외부 확장 카드 형태",
+       "다단계: 둘 이상 타이머가 차례로 교정 동작, 마지막 단계에서 리셋"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "회로 설계",
+    "subsections": [
+     {
+      "title": "타이머 회로",
+      "items": [
+       "발진기 클럭을 프리스케일러로 분주",
+       "WDP 비트로 카운터 주기 설정"
+      ]
+     },
+     {
+      "title": "제어 비트",
+      "items": [
+       "제어 레지스터로 시간·클럭 펄스 설정",
+       "WDE로 활성/비활성, WDIE로 리셋 전 인터럽트 선택"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "레지스터가 갱신되지 않으면 만료",
+       "MCU 리셋 출력으로 프로세서 즉시 재시작"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "내부 워치독(Internal WDT)",
+   "외부 워치독(External WDT)",
+   "단단계 워치독(Single-stage)",
+   "다단계 워치독(Multi-stage)",
+   "리셋 핀(Reset Pin)",
+   "프리스케일러(Prescaler)",
+   "주기 선택 비트(WDP)",
+   "WDE(Watchdog Enable)",
+   "WDIE(Watchdog Interrupt Enable)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "WDT": "Watchdog Timer",
+   "MCU": "Micro Controller Unit",
+   "WDP": "Watchdog Timer Prescaler",
+   "WDE": "Watchdog Enable",
+   "WDIE": "Watchdog Interrupt Enable",
+   "WDIF": "Watchdog Interrupt Flag",
+   "WDTCSR": "Watchdog Timer Control and Status Register",
+   "IC": "Integrated Circuit"
+  }
+ },
+ {
+  "id": "OS_077",
+  "code": "OS_077",
+  "domain": "OS",
+  "category": "OS > 시간 동기화",
+  "title": "타임 서버(Time Server)",
+  "subtitle": "",
+  "name": "타임 서버(Time Server)",
+  "en": "Time Server",
+  "definition": "GPS 신호나 원자시계 같은 기준 시각원에서 정확한 표준 시각을 받아 유지하고, NTP(Network Time Protocol)로 네트워크의 서버·단말 시각을 계층적으로 동기화해 주는 서버",
+  "keywords": [
+   "필요성: 로그 상관 분석 · 인증서·인증 토큰 유효 시간 · 분산 트랜잭션 순서 · 감사 증적",
+   "NTP 계층(Stratum): 0(GPS·세슘 원자시계) → 1(직접 동기 서버) → 2·3(하위 트리)",
+   "취약점: UDP 123 반사·증폭 공격 · monlist 질의(최근 접속 600개 IP 응답) 악용 DDoS",
+   "대응: ntpd 4.2.7 이상 업그레이드 · disable monitor · restrict noquery · UDP 123 접근 제한",
+   "도입 고려: 기준 시각원 이중화 · 내부망 전용 NTP 서버 · 계층 설계"
+  ],
+  "keywords_must": [
+   "NTP(Network Time Protocol)",
+   "계층(Stratum)",
+   "GPS 수신 기준 시각",
+   "원자시계(Atomic Clock)",
+   "UDP 123 포트",
+   "monlist 명령",
+   "NTP 증폭 공격(Amplification)",
+   "반사 공격(Reflection Attack)",
+   "disable monitor 설정"
+  ],
+  "keywords_ref": [
+   "restrict default noquery",
+   "IP 위조(IP Spoofing)",
+   "IDS·IPS 시그니처 필터링",
+   "PTP(Precision Time Protocol)",
+   "rdate·chrony 시각 동기"
+  ],
+  "outline": [
+   "개념과 필요성",
+   "- 표준 시각 유지·배포 서버",
+   "- 도입 필요성",
+   "NTP 계층 구조",
+   "- Stratum 계층",
+   "- 계층 구조의 목적",
+   "보안 취약점과 대응",
+   "- 취약점",
+   "- 관리·물리적 대응",
+   "- 기술적 대응"
+  ],
+  "sections": [
+   {
+    "title": "개념과 필요성",
+    "subsections": [
+     {
+      "title": "표준 시각 유지·배포 서버",
+      "items": [
+       "GPS 신호를 직접 수신해 정확한 시각 유지",
+       "네트워크 장비·서버에 표준 시각 배포"
+      ]
+     },
+     {
+      "title": "도입 필요성",
+      "items": [
+       "로그·감사 증적의 시간 일관성",
+       "인증·인증서 유효 시간과 분산 처리 순서 보장"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "NTP 계층 구조",
+    "subsections": [
+     {
+      "title": "Stratum 계층",
+      "items": [
+       "Stratum 0: GPS·세슘 원자시계 등 기준 장비",
+       "Stratum 1: 기준 장비와 직접 동기화하는 서버",
+       "Stratum 2 이하: 상위 서버를 따라 트리 구조로 확장"
+      ]
+     },
+     {
+      "title": "계층 구조의 목적",
+      "items": [
+       "상위 서버 부하 분산",
+       "오류 시 다른 상위 서버로 유연하게 전환"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 취약점과 대응",
+    "subsections": [
+     {
+      "title": "취약점",
+      "items": [
+       "UDP 123을 클라이언트·서버 모두 수신 대기",
+       "IP를 위조한 요청에 증폭된 응답이 피해자로 전송",
+       "monlist가 최근 접속 600개 IP를 반환해 대량 응답 유발"
+      ]
+     },
+     {
+      "title": "관리·물리적 대응",
+      "items": [
+       "NTP 실행 서버 파악, 불필요 시 서비스 제거",
+       "망 분리로 외부 접속 차단, 내부 전용 NTP 서버 도입"
+      ]
+     },
+     {
+      "title": "기술적 대응",
+      "items": [
+       "ntpd 4.2.7 이상 업그레이드, disable monitor·noquery 설정",
+       "방화벽·IPS에서 UDP 123 허용 대상 제한, 응답률 제한"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "NTP(Network Time Protocol)",
+   "계층(Stratum)",
+   "GPS 수신 기준 시각",
+   "원자시계(Atomic Clock)",
+   "UDP 123 포트",
+   "monlist 명령",
+   "NTP 증폭 공격(Amplification)",
+   "반사 공격(Reflection Attack)",
+   "disable monitor 설정"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "NTP": "Network Time Protocol",
+   "GPS": "Global Positioning System",
+   "UDP": "User Datagram Protocol",
+   "DDoS": "Distributed Denial of Service",
+   "PTP": "Precision Time Protocol",
+   "IDS": "Intrusion Detection System",
+   "IPS": "Intrusion Prevention System"
+  }
+ },
+ {
+  "id": "OS_078",
+  "code": "OS_078",
+  "domain": "OS",
+  "category": "OS > 임베디드 시스템",
+  "title": "타이니 OS(TinyOS)",
+  "subtitle": "",
+  "name": "타이니 OS(TinyOS)",
+  "en": "TinyOS",
+  "definition": "UC 버클리의 스마트 더스트(Smart Dust) 프로젝트를 위해 만든 BSD 라이선스의 컴포넌트 기반 초소형 운영체제로, 이벤트 구동·저전력 구조로 센서 네트워크·IoT 노드에 쓰임",
+  "keywords": [
+   "특징: 컴포넌트 기반 · 이벤트 구동(Event-driven) · 상태 머신 · 저전력 · 초소형(코드 4KB·데이터 256B 미만)",
+   "스케줄러: FIFO 태스크 실행 → 슬립 → 인터럽트 대기 반복",
+   "구조: Main(스케줄러) → 응용(사용자 컴포넌트) → 구동·센싱·통신 → 하드웨어 추상화",
+   "HAA(Hardware Abstraction Architecture): HIL · HAL · HPL (TinyOS 2.0~)",
+   "빌드: OS와 응용을 함께 컴파일(nesC)해 단일 이미지로 탑재"
+  ],
+  "keywords_must": [
+   "스마트 더스트(Smart Dust)",
+   "컴포넌트 기반(Component-based)",
+   "이벤트 구동(Event-driven)",
+   "상태 머신(State Machine)",
+   "비차단(Non-blocking)",
+   "FIFO 스케줄러",
+   "저전력 휴지(Sleep) 상태",
+   "하드웨어 추상화 아키텍처(HAA)",
+   "nesC 언어"
+  ],
+  "keywords_ref": [
+   "HIL(Hardware Interface Layer)",
+   "HAL(Hardware Adaptation Layer)",
+   "HPL(Hardware Presentation Layer)",
+   "TinyDB·TinySec 확장",
+   "Nano-Qplus·Contiki·RIOT"
+  ],
+  "outline": [
+   "개념과 특징",
+   "- 센서 노드용 초소형 OS",
+   "- 구조적 특징",
+   "- 자원 특징",
+   "실행 방식",
+   "- FIFO 스케줄러",
+   "- 단일 응용 실행",
+   "구조와 구성",
+   "- 계층 구조",
+   "- Main·응용 컴포넌트",
+   "- 하드웨어 추상화(HAA)"
+  ],
+  "sections": [
+   {
+    "title": "개념과 특징",
+    "subsections": [
+     {
+      "title": "센서 노드용 초소형 OS",
+      "items": [
+       "UC 버클리 스마트 더스트 프로젝트용 개발",
+       "BSD 라이선스의 컴포넌트 기반 임베디드 OS"
+      ]
+     },
+     {
+      "title": "구조적 특징",
+      "items": [
+       "상태 머신: 명령·이벤트 처리기가 상태 전이 유발",
+       "컴포넌트 기반: 인터페이스로 입출력을 연결해 응용 작성",
+       "이벤트 구동: 타이머·센서·통신 인터럽트로 태스크 호출"
+      ]
+     },
+     {
+      "title": "자원 특징",
+      "items": [
+       "코드 4KB·데이터 256B 미만, 50µW 미만 전력",
+       "유휴 사이클에 휴지 상태로 전력 절감"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "실행 방식",
+    "subsections": [
+     {
+      "title": "FIFO 스케줄러",
+      "items": [
+       "태스크 실행 → 슬립 → 인터럽트 대기 무한 반복",
+       "실시간성·복잡한 응용에는 한계"
+      ]
+     },
+     {
+      "title": "단일 응용 실행",
+      "items": [
+       "한 번에 하나의 응용만 실행해 전력·메모리 절약",
+       "여러 기능은 태스크로 세분화해 실행"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구조와 구성",
+    "subsections": [
+     {
+      "title": "계층 구조",
+      "items": [
+       "Main(스케줄러 포함) – 응용 – 구동·센싱·통신",
+       "OS와 응용을 함께 컴파일해 하드웨어에 다운로드"
+      ]
+     },
+     {
+      "title": "Main·응용 컴포넌트",
+      "items": [
+       "Main: 플랫폼 초기화·태스크 스케줄러 실행",
+       "응용: 사용자 컴포넌트를 단일 실행 파일로 컴파일"
+      ]
+     },
+     {
+      "title": "하드웨어 추상화(HAA)",
+      "items": [
+       "HPL: 입출력 핀·레지스터 등 하드웨어 종속 계층",
+       "HAL: 중간 적응 계층, HIL: 플랫폼 독립 인터페이스"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "스마트 더스트(Smart Dust)",
+   "컴포넌트 기반(Component-based)",
+   "이벤트 구동(Event-driven)",
+   "상태 머신(State Machine)",
+   "비차단(Non-blocking)",
+   "FIFO 스케줄러",
+   "저전력 휴지(Sleep) 상태",
+   "하드웨어 추상화 아키텍처(HAA)",
+   "nesC 언어"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "HAA": "Hardware Abstraction Architecture",
+   "HIL": "Hardware Interface Layer",
+   "HAL": "Hardware Adaptation Layer",
+   "HPL": "Hardware Presentation Layer",
+   "FIFO": "First In First Out",
+   "IoT": "Internet of Things",
+   "BSD": "Berkeley Software Distribution"
+  }
+ },
+ {
   "id": "OS_079",
   "code": "OS_079",
   "domain": "OS",
@@ -7462,6 +10111,277 @@
    "NX": "No-eXecute",
    "GC": "Garbage Collection",
    "BSS": "Block Started by Symbol"
+  }
+ },
+ {
+  "id": "OS_080",
+  "code": "OS_080",
+  "domain": "OS",
+  "category": "OS > 메모리 관리",
+  "title": "쓰기 시 복사(COW, Copy On Write)",
+  "subtitle": "",
+  "name": "쓰기 시 복사(COW, Copy On Write)",
+  "en": "Copy On Write",
+  "definition": "fork()로 자식 프로세스를 만들 때 부모의 메모리를 바로 복사하지 않고 같은 페이지를 읽기 전용으로 공유하다가, 어느 한쪽이 페이지에 쓰기를 시도하는 순간에만 그 페이지를 복사하는 메모리 관리 기법",
+  "keywords": [
+   "동작: fork() → 페이지 테이블만 복제·읽기 전용 공유 → 쓰기 시 보호 폴트 → 해당 페이지만 복사",
+   "효과: 프로세스 생성 시간·메모리 절감 · 수정되지 않은 페이지는 계속 공유",
+   "fork()+exec(): exec가 주소 공간을 교체하므로 불필요한 복사 회피",
+   "적용: 프로세스 생성 · 파일 시스템(ZFS·Btrfs) 스냅숏 · 가상 머신 메모리 · 문자열·컬렉션 구현",
+   "주의: 쓰기가 많으면 폴트 처리 오버헤드 · 참조 카운트 관리"
+  ],
+  "keywords_must": [
+   "fork() 시스템 호출",
+   "페이지 공유(Page Sharing)",
+   "읽기 전용 보호(Read-only Protection)",
+   "보호 폴트(Protection Fault)",
+   "지연 복사(Lazy Copy)",
+   "페이지 테이블 복제",
+   "exec() 주소 공간 교체",
+   "참조 카운트(Reference Count)"
+  ],
+  "keywords_ref": [
+   "vfork()",
+   "공유 메모리(Shared Memory)",
+   "COW 파일 시스템(ZFS·Btrfs) 스냅숏",
+   "Dirty COW 취약점(CVE-2016-5195)",
+   "KSM(Kernel Samepage Merging)"
+  ],
+  "outline": [
+   "개념과 목적",
+   "- 쓰기 시점 지연 복사",
+   "- 도입 목적",
+   "동작 방식",
+   "- fork() 시점",
+   "- 쓰기 발생 시",
+   "- exec() 연계",
+   "활용과 고려사항",
+   "- 활용 분야",
+   "- 고려사항"
+  ],
+  "sections": [
+   {
+    "title": "개념과 목적",
+    "subsections": [
+     {
+      "title": "쓰기 시점 지연 복사",
+      "items": [
+       "자식 생성 시 부모 페이지를 복사하지 않고 공유",
+       "쓰기가 발생한 페이지만 그때 복사"
+      ]
+     },
+     {
+      "title": "도입 목적",
+      "items": [
+       "fork()의 전체 메모리 복사 비용 제거",
+       "수정되지 않은 페이지를 부모·자식이 계속 공유"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작 방식",
+    "subsections": [
+     {
+      "title": "fork() 시점",
+      "items": [
+       "페이지 테이블만 복제하고 페이지를 읽기 전용 표시",
+       "물리 페이지는 부모·자식이 함께 참조"
+      ]
+     },
+     {
+      "title": "쓰기 발생 시",
+      "items": [
+       "읽기 전용 페이지 쓰기로 보호 폴트 발생",
+       "커널이 새 프레임에 복사 후 쓰기 허용으로 매핑"
+      ]
+     },
+     {
+      "title": "exec() 연계",
+      "items": [
+       "자식이 exec()를 호출하면 주소 공간 교체",
+       "복사 없이 새 프로그램 적재, 공유 페이지 참조만 해제"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용과 고려사항",
+    "subsections": [
+     {
+      "title": "활용 분야",
+      "items": [
+       "UNIX·리눅스 프로세스 생성",
+       "ZFS·Btrfs 스냅숏, 가상 머신 메모리 관리"
+      ]
+     },
+     {
+      "title": "고려사항",
+      "items": [
+       "쓰기가 잦으면 폴트 처리 오버헤드 증가",
+       "경쟁 조건 결함 사례: Dirty COW 권한 상승 취약점"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "fork() 시스템 호출",
+   "페이지 공유(Page Sharing)",
+   "읽기 전용 보호(Read-only Protection)",
+   "보호 폴트(Protection Fault)",
+   "지연 복사(Lazy Copy)",
+   "페이지 테이블 복제",
+   "exec() 주소 공간 교체",
+   "참조 카운트(Reference Count)"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "COW": "Copy On Write",
+   "ZFS": "Zettabyte File System",
+   "KSM": "Kernel Samepage Merging",
+   "CVE": "Common Vulnerabilities and Exposures"
+  }
+ },
+ {
+  "id": "OS_081",
+  "code": "OS_081",
+  "domain": "OS",
+  "category": "OS > 메모리 관리",
+  "title": "빅 엔디언과 리틀 엔디언(Big Endian and Little Endian)",
+  "subtitle": "",
+  "name": "빅 엔디언과 리틀 엔디언(Big Endian and Little Endian)",
+  "en": "Big Endian and Little Endian",
+  "definition": "여러 바이트로 된 데이터를 메모리에 저장하는 바이트 순서(Byte Order)로, 최상위 바이트(MSB)를 낮은 주소에 먼저 두는 빅 엔디언과 최하위 바이트(LSB)를 낮은 주소에 먼저 두는 리틀 엔디언으로 구분",
+  "keywords": [
+   "빅 엔디언: MSB부터 저장 → 사람이 읽는 순서와 같음 · 네트워크 바이트 순서 · SPARC·구형 PowerPC",
+   "리틀 엔디언: LSB부터 저장 → 하위 바이트 바로 접근 · x86·대부분 ARM",
+   "예: 0x12345678 → 빅 12 34 56 78 / 리틀 78 56 34 12",
+   "변환: htonl()·htons()(호스트→네트워크) · ntohl()·ntohs()(네트워크→호스트) · Java는 빅 엔디언",
+   "기타: 바이 엔디언(ARM·PowerPC·MIPS·IA-64 선택형) · 미들 엔디언(PDP-11)"
+  ],
+  "keywords_must": [
+   "바이트 순서(Byte Order)",
+   "빅 엔디언(Big Endian)",
+   "리틀 엔디언(Little Endian)",
+   "MSB(Most Significant Byte)",
+   "LSB(Least Significant Byte)",
+   "네트워크 바이트 순서(Network Byte Order)",
+   "htonl()·htons()",
+   "ntohl()·ntohs()"
+  ],
+  "keywords_ref": [
+   "바이 엔디언(Bi-Endian)",
+   "미들 엔디언(Middle Endian)",
+   "호스트 바이트 순서(Host Byte Order)",
+   "직렬화(Serialization)·마샬링",
+   "BOM(Byte Order Mark)"
+  ],
+  "outline": [
+   "개념과 구분",
+   "- 다중 바이트 저장 순서",
+   "- 두 방식 구분",
+   "특성 비교",
+   "- 빅 엔디언",
+   "- 리틀 엔디언",
+   "- 이기종 간 전송",
+   "바이트 순서 변환",
+   "- 네트워크 변환 함수",
+   "- 언어·기타 방식"
+  ],
+  "sections": [
+   {
+    "title": "개념과 구분",
+    "subsections": [
+     {
+      "title": "다중 바이트 저장 순서",
+      "items": [
+       "연속된 바이트 데이터를 메모리에 배열하는 규칙",
+       "CPU 아키텍처에 따라 저장 순서가 다름"
+      ]
+     },
+     {
+      "title": "두 방식 구분",
+      "items": [
+       "빅 엔디언: 낮은 주소에 최상위 바이트",
+       "리틀 엔디언: 낮은 주소에 최하위 바이트"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "특성 비교",
+    "subsections": [
+     {
+      "title": "빅 엔디언",
+      "items": [
+       "사람이 읽는 순서와 같아 메모리 덤프·디버깅 용이",
+       "네트워크 프로토콜 표준 순서, SPARC·IBM 메인프레임"
+      ]
+     },
+     {
+      "title": "리틀 엔디언",
+      "items": [
+       "하위 바이트 주소가 같아 크기 변환(형 변환) 간편",
+       "하위 바이트부터 연산하는 자리올림 처리에 유리, x86·ARM"
+      ]
+     },
+     {
+      "title": "이기종 간 전송",
+      "items": [
+       "다른 엔디언 시스템 간 전송 시 순서 변환 필요",
+       "변환 누락 시 값이 뒤바뀌는 오류"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "바이트 순서 변환",
+    "subsections": [
+     {
+      "title": "네트워크 변환 함수",
+      "items": [
+       "htonl()·htons(): 호스트 → 네트워크(빅 엔디언)",
+       "ntohl()·ntohs(): 네트워크 → 호스트"
+      ]
+     },
+     {
+      "title": "언어·기타 방식",
+      "items": [
+       "Java는 정수를 빅 엔디언으로 다뤄 별도 변환 불필요",
+       "바이 엔디언은 선택형, 미들 엔디언은 PDP-11 등 혼합형"
+      ]
+     }
+    ]
+   }
+  ],
+  "dueum": null,
+  "curated": true,
+  "reviewed": true,
+  "pages": [],
+  "warnings": [],
+  "quiz_terms": [
+   "바이트 순서(Byte Order)",
+   "빅 엔디언(Big Endian)",
+   "리틀 엔디언(Little Endian)",
+   "MSB(Most Significant Byte)",
+   "LSB(Least Significant Byte)",
+   "네트워크 바이트 순서(Network Byte Order)",
+   "htonl()·htons()",
+   "ntohl()·ntohs()"
+  ],
+  "quiz_groups": [],
+  "quiz_avoid": [],
+  "gloss": {
+   "MSB": "Most Significant Byte",
+   "LSB": "Least Significant Byte",
+   "BOM": "Byte Order Mark"
   }
  },
  {
