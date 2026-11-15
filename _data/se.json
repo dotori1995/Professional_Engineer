@@ -24916,6 +24916,312 @@
   }
  },
  {
+  "id": "SE_166",
+  "code": "SE_166",
+  "title": "보안 위험 관리(Security Risk Management)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 인증 > 보안위험관리(SRM)",
+  "definition": "조직의 자산을 보호하기 위해 자산 가치·위협·취약점을 분석해 위험을 평가하고, 비용 대비 효과에 근거한 관리적·물리적·기술적 보호 대책을 선택·이행·감시하는 지속적 관리 프로세스",
+  "keywords": [
+   "위험 구성 요소: 자산 · 위협 · 취약점",
+   "분석 기법: 정성적(델파이·순위 결정·퍼지 행렬) · 정량적(연간 기대 손실·몬테카를로)",
+   "대응 전략: 회피 · 전가 · 감소(완화) · 수용",
+   "통제 유형: 관리적 · 물리적 · 기술적"
+  ],
+  "sections": [
+   {
+    "title": "관리 절차",
+    "subsections": [
+     {
+      "title": "1 계획",
+      "items": [
+       "범위·방법·책임 정의"
+      ]
+     },
+     {
+      "title": "2 식별",
+      "items": [
+       "자산과 관련 위협·취약점 도출"
+      ]
+     },
+     {
+      "title": "3 분석·평가",
+      "items": [
+       "정성·정량으로 위험도와 우선순위 산정"
+      ]
+     },
+     {
+      "title": "4 대응",
+      "items": [
+       "비용 대비 효과로 대책 선택, 잔여 위험 승인"
+      ]
+     },
+     {
+      "title": "5 감시·통제",
+      "items": [
+       "위험 노출 지속 모니터링과 재평가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분석 기법 비교",
+    "subsections": [
+     {
+      "title": "정성적",
+      "items": [
+       "순위·점수로 표현, 빠르고 금액화 어려운 자산 평가",
+       "주관적"
+      ]
+     },
+     {
+      "title": "정량적",
+      "items": [
+       "기대 손실 금액으로 표현, 예산·비용 분석에 유리",
+       "시간·비용 큼"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "통제 유형",
+    "subsections": [
+     {
+      "title": "관리적",
+      "items": [
+       "정책·절차, 교육, 데이터 분류, 비상 계획"
+      ]
+     },
+     {
+      "title": "물리적",
+      "items": [
+       "경비, 출입 통제, CCTV"
+      ]
+     },
+     {
+      "title": "기술적",
+      "items": [
+       "암호화, 방화벽, 침입 탐지·방지"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "관리 절차",
+   "- 1 계획",
+   "- 2 식별",
+   "- 3 분석·평가",
+   "- 4 대응",
+   "- 5 감시·통제",
+   "분석 기법 비교",
+   "- 정성적",
+   "- 정량적",
+   "통제 유형",
+   "- 관리적",
+   "- 물리적",
+   "- 기술적"
+  ],
+  "name": "보안 위험 관리(Security Risk Management)",
+  "en": "Security Risk Management",
+  "keywords_must": [
+   "자산",
+   "위협",
+   "취약점",
+   "정성적(델파이·순위 결정·퍼지 행렬)",
+   "정량적(연간 기대 손실·몬테카를로)",
+   "회피",
+   "전가",
+   "감소(완화)",
+   "수용",
+   "관리적",
+   "물리적",
+   "기술적"
+  ],
+  "keywords_ref": [
+   "절차: 계획 → 식별 → 분석 → 대응 계획 → 감시·통제",
+   "위험 = 자산 가치 × 위협 × 취약점",
+   "연간 기대 손실(ALE) = 단일 손실 기대값(SLE) × 연간 발생률(ARO)",
+   "잔여 위험·수용 가능 위험 수준(DoA)",
+   "기준선·비정형·상세·복합 접근법",
+   "ISO/IEC 27005·ISO 31000"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "자산",
+   "위협",
+   "취약점",
+   "정성적(델파이·순위 결정·퍼지 행렬)",
+   "정량적(연간 기대 손실·몬테카를로)",
+   "회피",
+   "전가",
+   "감소(완화)",
+   "수용",
+   "관리적",
+   "물리적",
+   "기술적"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "ALE": "Annualized Loss Expectancy",
+   "SLE": "Single Loss Expectancy",
+   "ARO": "Annualized Rate of Occurrence",
+   "DoA": "Degree of Assurance"
+  }
+ },
+ {
+  "id": "SE_170",
+  "code": "SE_170",
+  "title": "서비스형 신원 관리(IDaaS, Identity as a Service)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > IDaaS(Identity as a Service)",
+  "definition": "사용자 인증, SSO, 다중 인증, 계정 수명 주기 관리, 접근 권한 관리를 클라우드 서비스로 제공해 온프레미스·SaaS 자원에 대해 어디서나 어떤 단말로든 안전하고 끊김 없는 접근을 지원하는 클라우드 기반 신원·접근 관리",
+  "keywords": [
+   "주요 기능: SSO · 다중 인증(MFA) · 계정 관리 자동화 · 접근 권한 관리 · 감사 로깅",
+   "접근 목표: 안전한 접근(Secure Access) · 끊김 없는 접근(Seamless Access)",
+   "표준 연동: SAML · OpenID Connect · SCIM"
+  ],
+  "sections": [
+   {
+    "title": "동작 구조",
+    "subsections": [
+     {
+      "title": "신원 검증",
+      "items": [
+       "접근 시 경계와 무관하게 허가 사용자 확인"
+      ]
+     },
+     {
+      "title": "정책 적용",
+      "items": [
+       "허가된 권한 범위 안에서 자원 접근 허용"
+      ]
+     },
+     {
+      "title": "연동",
+      "items": [
+       "온프레미스·클라우드 앱을 표준 프로토콜로 연결"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 기능",
+    "subsections": [
+     {
+      "title": "안전한 접근",
+      "items": [
+       "신원 검증, 직무 분리 기반 접근 통제, 활동 로깅·위반 탐지"
+      ]
+     },
+     {
+      "title": "끊김 없는 접근",
+      "items": [
+       "단일 ID SSO, 클라우드 워크스페이스, 간편 인증·MFA"
+      ]
+     },
+     {
+      "title": "계정 자동화",
+      "items": [
+       "SCIM 프로비저닝으로 입퇴사 권한 동기화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "도입 고려",
+    "subsections": [
+     {
+      "title": "기대 이익",
+      "items": [
+       "신원 침해 사고 감소, 구축·운영 비용 절감"
+      ]
+     },
+     {
+      "title": "위험",
+      "items": [
+       "서비스 장애 시 전체 로그인 불가, 사업자 종속"
+      ]
+     },
+     {
+      "title": "보호",
+      "items": [
+       "관리자 계정 강화, 기존 디렉터리와의 동기화 설계"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "동작 구조",
+   "- 신원 검증",
+   "- 정책 적용",
+   "- 연동",
+   "주요 기능",
+   "- 안전한 접근",
+   "- 끊김 없는 접근",
+   "- 계정 자동화",
+   "도입 고려",
+   "- 기대 이익",
+   "- 위험",
+   "- 보호"
+  ],
+  "name": "서비스형 신원 관리(IDaaS, Identity as a Service)",
+  "en": "Identity as a Service",
+  "keywords_must": [
+   "SSO",
+   "다중 인증(MFA)",
+   "계정 관리 자동화",
+   "접근 권한 관리",
+   "감사 로깅",
+   "안전한 접근(Secure Access)",
+   "끊김 없는 접근(Seamless Access)",
+   "SAML",
+   "OpenID Connect",
+   "SCIM"
+  ],
+  "keywords_ref": [
+   "등장 배경: 계정 탈취 위협 증가, 자산·사용자 다양화, 네트워크 경계 보안 한계, 관리 복잡성",
+   "직무 분리 기반 접근 통제",
+   "CASB와 결합한 클라우드 워크스페이스",
+   "제로 트러스트 기반",
+   "비용 절감(CAPEX·OPEX)",
+   "사업자 장애·종속 위험"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "SSO",
+   "다중 인증(MFA)",
+   "계정 관리 자동화",
+   "접근 권한 관리",
+   "감사 로깅",
+   "안전한 접근(Secure Access)",
+   "끊김 없는 접근(Seamless Access)",
+   "SAML",
+   "OpenID Connect",
+   "SCIM"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "MFA": "Multi-Factor Authentication",
+   "SCIM": "System for Cross-domain Identity Management",
+   "CASB": "Cloud Access Security Broker",
+   "CAPEX": "Capital Expenditure",
+   "OPEX": "Operating Expenditure",
+   "SAML": "Security Assertion Markup Language",
+   "SSO": "Single Sign-On",
+   "SaaS": "Software as a Service"
+  }
+ },
+ {
   "id": "SE_172",
   "code": "SE_172",
   "title": "디지털 콘텐츠 보호 기술(Digital Content Protection Technologies)",
@@ -27314,7 +27620,8 @@
    "하 등급 논리적 망분리 허용",
    "인증 유효기간 5년",
    "디지털플랫폼정부",
-   "한국판 뉴딜 공공 클라우드 전환"
+   "한국판 뉴딜 공공 클라우드 전환",
+   "DaaS 분야 2020년 11월 추가: IaaS 공통 통제에 가상 PC 저장 데이터 초기화·비인가 접속 차단 등 특화 항목, 인터넷·업무용 PC 이중 운영 대체"
   ],
   "curated": true,
   "reviewed": true,
@@ -27335,6 +27642,7 @@
    "se"
   ],
   "gloss": {
+   "PC": "Personal Computer",
    "DaaS": "Desktop as a Service"
   }
  },
