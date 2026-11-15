@@ -23148,6 +23148,597 @@
    "ITU-T": "International Telecommunication Union Telecommunication Standardization Sector"
   }
  },
+ "SE_161": {
+  "title": "OAuth 2.0(Open Authorization)",
+  "category": "SE > Oauth",
+  "definition": "사용자(자원 소유자)가 비밀번호를 제3자 앱에 넘기지 않고, 권한 서버가 발급한 범위·만료가 제한된 접근 토큰으로 자원 서버의 보호 자원에 대한 접근 권한을 위임하는 권한 부여 프레임워크(RFC 6749·6750)",
+  "keywords": [
+   "구성: 자원 소유자 · 클라이언트 · 권한 서버 · 자원 서버",
+   "토큰: 접근 토큰 · 갱신 토큰 · 범위(Scope)",
+   "권한 부여 방식: 인가 코드(PKCE) · 클라이언트 자격 증명 · 디바이스 코드"
+  ],
+  "sections": [
+   {
+    "title": "인가 코드 흐름",
+    "subsections": [
+     {
+      "title": "1 권한 요청",
+      "items": [
+       "클라이언트가 사용자를 권한 서버로 리다이렉트"
+      ]
+     },
+     {
+      "title": "2 승인",
+      "items": [
+       "사용자 로그인·동의 후 인가 코드 반환"
+      ]
+     },
+     {
+      "title": "3 토큰 교환",
+      "items": [
+       "클라이언트가 코드와 PKCE 검증값으로 접근 토큰 수령"
+      ]
+     },
+     {
+      "title": "4 자원 접근",
+      "items": [
+       "접근 토큰으로 자원 서버 API 호출, 만료 시 갱신 토큰 사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "위임 이점",
+    "subsections": [
+     {
+      "title": "비밀번호 비공유",
+      "items": [
+       "제3자 앱에 자격 증명 노출 없음"
+      ]
+     },
+     {
+      "title": "최소 권한",
+      "items": [
+       "범위로 필요한 권한만 위임"
+      ]
+     },
+     {
+      "title": "통제",
+      "items": [
+       "클라이언트별 접근 차단과 토큰 폐기"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "1.0과 비교",
+    "subsections": [
+     {
+      "title": "보안",
+      "items": [
+       "1.0은 요청마다 디지털 서명",
+       "2.0은 TLS에 의존해 간소화"
+      ]
+     },
+     {
+      "title": "토큰",
+      "items": [
+       "1.0은 2개 토큰",
+       "2.0은 접근 토큰 1개와 만료 시간"
+      ]
+     },
+     {
+      "title": "구조",
+      "items": [
+       "2.0은 권한 서버와 자원 서버 분리로 대규모 구현 유리"
+      ]
+     },
+     {
+      "title": "환경",
+      "items": [
+       "2.0은 웹·모바일·기기 등 다양한 흐름 지원"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "인가 코드 흐름",
+   "- 1 권한 요청",
+   "- 2 승인",
+   "- 3 토큰 교환",
+   "- 4 자원 접근",
+   "위임 이점",
+   "- 비밀번호 비공유",
+   "- 최소 권한",
+   "- 통제",
+   "1.0과 비교",
+   "- 보안",
+   "- 토큰",
+   "- 구조",
+   "- 환경"
+  ],
+  "name": "OAuth 2.0(Open Authorization)",
+  "en": "OAuth 2.0",
+  "keywords_must": [
+   "자원 소유자",
+   "클라이언트",
+   "권한 서버",
+   "자원 서버",
+   "접근 토큰",
+   "갱신 토큰",
+   "범위(Scope)",
+   "인가 코드(PKCE)",
+   "클라이언트 자격 증명",
+   "디바이스 코드"
+  ],
+  "keywords_ref": [
+   "1.0 대비 개선: HTTPS 전제·서명 절차 간소화·모바일·앱 지원·권한·자원 서버 분리",
+   "절차: 권한 요청 → 승인 → 토큰 요청 → 발급 → 자원 요청 → 제공",
+   "암묵적·비밀번호 방식은 보안 권고(RFC 9700)로 사용 중단",
+   "OAuth는 권한 위임이며 인증은 OpenID Connect(ID 토큰)",
+   "베어러 토큰 탈취 위험 → 짧은 만료·송신자 제약 토큰",
+   "리다이렉트 URI 엄격 검증·state 파라미터",
+   "OAuth 2.1 통합"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "자원 소유자",
+   "클라이언트",
+   "권한 서버",
+   "자원 서버",
+   "접근 토큰",
+   "갱신 토큰",
+   "범위(Scope)",
+   "인가 코드(PKCE)",
+   "클라이언트 자격 증명",
+   "디바이스 코드"
+  ],
+  "gloss": {
+   "PKCE": "Proof Key for Code Exchange",
+   "HTTPS": "HTTP Secure",
+   "TLS": "Transport Layer Security"
+  }
+ },
+ "SE_162": {
+  "title": "일회용 비밀번호(OTP, One-Time Password)",
+  "category": "SE > 인증 > OTP",
+  "definition": "사용자와 인증 서버가 공유한 비밀값과 시간·카운터·질의값을 일방향 함수에 넣어 인증할 때마다 새로운 비밀번호를 생성함으로써, 비밀번호 재사용·도청 공격을 막는 인증 수단",
+  "keywords": [
+   "생성 요소: 공유 비밀(Secret) · 시드(Seed) · 일방향 함수",
+   "비동기 방식: 질의-응답(Challenge-Response)",
+   "동기 방식: 시간 동기화 · 이벤트 동기화 · 시간·이벤트 조합",
+   "활용 기술: 모바일 OTP · USIM OTP · 거래 연동 OTP · 스마트 OTP"
+  ],
+  "sections": [
+   {
+    "title": "생성 원리",
+    "subsections": [
+     {
+      "title": "입력",
+      "items": [
+       "공유 비밀과 변동값(시간·카운터·질의)"
+      ]
+     },
+     {
+      "title": "함수",
+      "items": [
+       "해시·대칭키 기반 일방향 함수로 역산 불가"
+      ]
+     },
+     {
+      "title": "출력",
+      "items": [
+       "결과에서 6~8자리 숫자 추출"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "방식 비교",
+    "subsections": [
+     {
+      "title": "질의-응답",
+      "items": [
+       "서버 난수를 토큰에 입력해 응답, 보안성 높으나 번거로움"
+      ]
+     },
+     {
+      "title": "시간 동기화",
+      "items": [
+       "일정 간격마다 자동 생성, 시계 오차 보정 필요"
+      ]
+     },
+     {
+      "title": "이벤트 동기화",
+      "items": [
+       "버튼을 누를 때 카운터 증가, 카운터 불일치 재동기화"
+      ]
+     },
+     {
+      "title": "조합",
+      "items": [
+       "시간 구간 안에서도 이벤트로 값 변경"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용 기술",
+    "subsections": [
+     {
+      "title": "모바일·USIM",
+      "items": [
+       "전용 기기 없이 휴대폰, 비밀정보는 USIM 내부 보관"
+      ]
+     },
+     {
+      "title": "거래 연동",
+      "items": [
+       "수신 계좌·금액을 함께 넣어 생성, 메모리 해킹 대응"
+      ]
+     },
+     {
+      "title": "스마트 OTP",
+      "items": [
+       "IC 카드를 스마트폰 NFC에 태깅해 생성"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "생성 원리",
+   "- 입력",
+   "- 함수",
+   "- 출력",
+   "방식 비교",
+   "- 질의-응답",
+   "- 시간 동기화",
+   "- 이벤트 동기화",
+   "- 조합",
+   "활용 기술",
+   "- 모바일·USIM",
+   "- 거래 연동",
+   "- 스마트 OTP"
+  ],
+  "name": "일회용 비밀번호(OTP, One-Time Password)",
+  "en": "One-Time Password",
+  "keywords_must": [
+   "공유 비밀(Secret)",
+   "시드(Seed)",
+   "일방향 함수",
+   "질의-응답(Challenge-Response)",
+   "시간 동기화",
+   "이벤트 동기화",
+   "시간·이벤트 조합",
+   "모바일 OTP",
+   "USIM OTP",
+   "거래 연동 OTP",
+   "스마트 OTP"
+  ],
+  "keywords_ref": [
+   "표준: HOTP(RFC 4226, 카운터), TOTP(RFC 6238, 보통 30초)",
+   "토큰형·카드형 하드웨어 OTP",
+   "2008 전자금융감독규정 보안 1등급 매체",
+   "비동기는 책임 소재 명확·입력 번거로움, 동기는 편의·호환·동기화 필요",
+   "실시간 피싱(중간자) 중계에는 취약 → FIDO"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "공유 비밀(Secret)",
+   "시드(Seed)",
+   "일방향 함수",
+   "질의-응답(Challenge-Response)",
+   "시간 동기화",
+   "이벤트 동기화",
+   "시간·이벤트 조합",
+   "모바일 OTP",
+   "USIM OTP",
+   "거래 연동 OTP",
+   "스마트 OTP"
+  ],
+  "gloss": {
+   "HOTP": "HMAC-based One-Time Password",
+   "TOTP": "Time-based One-Time Password",
+   "USIM": "Universal Subscriber Identity Module",
+   "FIDO": "Fast Identity Online",
+   "NFC": "Near Field Communication",
+   "IC": "Integrated Circuit"
+  }
+ },
+ "SE_164": {
+  "title": "스마트 OTP(Smart OTP)",
+  "category": "SE > 인증 > 스마트OTP",
+  "definition": "OTP 생성 IC 칩을 내장한 비접촉식 스마트카드를 NFC 스마트폰에 태깅하면 카드가 OTP를 생성해 금융 앱에 직접 전달하는 인증 방식으로, 배터리 없이 반영구적으로 쓰고 거래 연동으로 메모리 해킹에 대응한다",
+  "keywords": [
+   "특징: 반영구 사용(무전원) · 앱 직접 입력 · 복제·위변조 방지 · 거래 연동",
+   "기술 요소: OTP 생성·추출 알고리즘 · 동기화 · NFC 통신(13.56MHz·ISO 14443) · IC 카드 컨트롤러",
+   "비교 대상: 일반 OTP · 거래 연동 OTP"
+  ],
+  "sections": [
+   {
+    "title": "동작",
+    "subsections": [
+     {
+      "title": "1 거래 입력",
+      "items": [
+       "금융 앱에서 이체 정보 입력"
+      ]
+     },
+     {
+      "title": "2 태깅",
+      "items": [
+       "IC 카드를 스마트폰에 접촉"
+      ]
+     },
+     {
+      "title": "3 생성",
+      "items": [
+       "카드 칩이 거래 정보·시간으로 OTP 생성"
+      ]
+     },
+     {
+      "title": "4 전달",
+      "items": [
+       "OTP를 앱에 직접 전달, 서버 검증"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기존 OTP 비교",
+    "subsections": [
+     {
+      "title": "일반 OTP",
+      "items": [
+       "전용 기기, 화면 값 수동 입력, 휴대 불편"
+      ]
+     },
+     {
+      "title": "거래 연동 OTP",
+      "items": [
+       "전용 기기에 거래 정보 입력, 메모리 해킹 대응"
+      ]
+     },
+     {
+      "title": "카드 태깅형",
+      "items": [
+       "카드와 스마트폰, 편의성과 IC 칩 보안 결합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 이슈와 대응",
+    "subsections": [
+     {
+      "title": "시간 변조",
+      "items": [
+       "스마트폰 시간을 조작한 OTP 생성 → 서버 시간 검증"
+      ]
+     },
+     {
+      "title": "악성 앱",
+      "items": [
+       "거래 정보 노출 → 단말 무결성 점검"
+      ]
+     },
+     {
+      "title": "동시 분실",
+      "items": [
+       "카드·폰 함께 분실 → PIN·생체 추가 인증"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "동작",
+   "- 1 거래 입력",
+   "- 2 태깅",
+   "- 3 생성",
+   "- 4 전달",
+   "기존 OTP 비교",
+   "- 일반 OTP",
+   "- 거래 연동 OTP",
+   "- 카드 태깅형",
+   "보안 이슈와 대응",
+   "- 시간 변조",
+   "- 악성 앱",
+   "- 동시 분실"
+  ],
+  "name": "스마트 OTP(Smart OTP)",
+  "en": "Smart One-Time Password",
+  "keywords_must": [
+   "반영구 사용(무전원)",
+   "앱 직접 입력",
+   "복제·위변조 방지",
+   "거래 연동",
+   "OTP 생성·추출 알고리즘",
+   "동기화",
+   "NFC 통신(13.56MHz·ISO 14443)",
+   "IC 카드 컨트롤러",
+   "일반 OTP",
+   "거래 연동 OTP"
+  ],
+  "keywords_ref": [
+   "NFC 유도 전력으로 IC 구동",
+   "생성은 일방향 해시·대칭키, 추출은 6~8자리",
+   "10cm 이내 통신",
+   "보안 이슈: 스마트폰 시간 변조, 악성코드 감염 단말, 휴대폰·카드 동시 분실 → 단말 보안·생체 인증 추가",
+   "2015 매체 분리 원칙 폐지로 확산"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "반영구 사용(무전원)",
+   "앱 직접 입력",
+   "복제·위변조 방지",
+   "거래 연동",
+   "OTP 생성·추출 알고리즘",
+   "동기화",
+   "NFC 통신(13.56MHz·ISO 14443)",
+   "IC 카드 컨트롤러",
+   "일반 OTP",
+   "거래 연동 OTP"
+  ],
+  "gloss": {
+   "NFC": "Near Field Communication",
+   "IC": "Integrated Circuit",
+   "OTP": "One-Time Password"
+  }
+ },
+ "SE_165": {
+  "title": "질의-응답 인증(Challenge-Response Authentication)",
+  "category": "SE > 인증 > Challenge-Response",
+  "definition": "검증자가 매번 새로운 난수(챌린지)를 보내면 증명자가 공유 비밀이나 개인키로 이를 계산·서명한 응답을 돌려주고, 검증자가 같은 계산이나 공개키로 확인하는 인증 방식으로, 비밀 자체를 전송하지 않아 도청·재전송 공격에 강하다",
+  "keywords": [
+   "구성 요소: 챌린지(Nonce) · 응답 · 공유 비밀·개인키",
+   "응답 계산: 대칭키 암호 · 해시(HMAC) · 전자서명",
+   "방어 효과: 재전송 공격 방지 · 비밀 비전송",
+   "적용 사례: CHAP · 비동기 OTP · FIDO · 스마트카드"
+  ],
+  "sections": [
+   {
+    "title": "절차",
+    "subsections": [
+     {
+      "title": "1 요청",
+      "items": [
+       "사용자가 인증 요청"
+      ]
+     },
+     {
+      "title": "2 챌린지",
+      "items": [
+       "서버가 일회용 난수 전송"
+      ]
+     },
+     {
+      "title": "3 응답",
+      "items": [
+       "사용자가 비밀값으로 난수를 변환해 전송"
+      ]
+     },
+     {
+      "title": "4 검증",
+      "items": [
+       "서버가 기대값과 비교해 승인"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "응답 방식",
+    "subsections": [
+     {
+      "title": "대칭키",
+      "items": [
+       "공유 키로 난수 암호화, 서버가 동일 계산"
+      ]
+     },
+     {
+      "title": "해시",
+      "items": [
+       "비밀과 난수를 결합한 해시값(CHAP)"
+      ]
+     },
+     {
+      "title": "공개키",
+      "items": [
+       "개인키 서명을 공개키로 검증(FIDO), 서버에 비밀 미보관"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 고려",
+    "subsections": [
+     {
+      "title": "장점",
+      "items": [
+       "매번 응답이 달라 도청 값 재사용 불가"
+      ]
+     },
+     {
+      "title": "약점",
+      "items": [
+       "실시간 중계 공격, 오프라인 사전 공격(약한 비밀)"
+      ]
+     },
+     {
+      "title": "보완",
+      "items": [
+       "상호 인증, 강한 비밀·공개키 사용"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "절차",
+   "- 1 요청",
+   "- 2 챌린지",
+   "- 3 응답",
+   "- 4 검증",
+   "응답 방식",
+   "- 대칭키",
+   "- 해시",
+   "- 공개키",
+   "보안 고려",
+   "- 장점",
+   "- 약점",
+   "- 보완"
+  ],
+  "name": "질의-응답 인증(Challenge-Response Authentication)",
+  "en": "Challenge-Response Authentication",
+  "keywords_must": [
+   "챌린지(Nonce)",
+   "응답",
+   "공유 비밀·개인키",
+   "대칭키 암호",
+   "해시(HMAC)",
+   "전자서명",
+   "재전송 공격 방지",
+   "비밀 비전송",
+   "CHAP",
+   "비동기 OTP",
+   "FIDO",
+   "스마트카드"
+  ],
+  "keywords_ref": [
+   "난수는 예측 불가·재사용 금지",
+   "단방향·상호 인증",
+   "중간자 공격에는 채널 바인딩·상호 인증 필요",
+   "타임스탬프 방식과 비교: 시간 동기화 불필요",
+   "영지식 증명으로 확장"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "챌린지(Nonce)",
+   "응답",
+   "공유 비밀·개인키",
+   "대칭키 암호",
+   "해시(HMAC)",
+   "전자서명",
+   "재전송 공격 방지",
+   "비밀 비전송",
+   "CHAP",
+   "비동기 OTP",
+   "FIDO",
+   "스마트카드"
+  ],
+  "gloss": {
+   "CHAP": "Challenge Handshake Authentication Protocol",
+   "HMAC": "Hash-based Message Authentication Code",
+   "FIDO": "Fast Identity Online",
+   "OTP": "One-Time Password"
+  }
+ },
  "SE_172": {
   "title": "디지털 콘텐츠 보호 기술(Digital Content Protection Technologies)",
   "category": "SE > 컨텐츠 보안 > 컨텐츠 보안",
