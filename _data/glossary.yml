@@ -44,6 +44,7 @@ AMI: Advanced Metering Infrastructure
 AMPS: Advanced Mobile Phone System
 AMQP: Advanced Message Queuing Protocol
 AMR: Automatic Meter Reading
+AMVP: Advanced Motion Vector Prediction
 ANOVA: Analysis of Variance
 ANR: Automatic Neighbor Relation
 ANSI: American National Standards Institute
@@ -77,9 +78,12 @@ AST: Abstract Syntax Tree
 ATAM: Architecture Tradeoff Analysis Method
 ATIS: Alliance for Telecommunications Industry Solutions
 ATM: Asynchronous Transfer Mode
+ATSC: Advanced Television Systems Committee
 ATSSS: Access Traffic Steering, Switching and Splitting
 AUC: Area Under the Curve
 AV: Audio/Video
+AV1: AOMedia Video 1
+AVC: Advanced Video Coding
 AVL: Adelson-Velsky and Landis
 AXFR: Full Zone Transfer
 BAC: Budget at Completion
@@ -112,6 +116,7 @@ BLE: Bluetooth Low Energy
 BLOB: Binary Large Object
 BLSR: Bidirectional Line-Switched Ring
 BML: Build-Measure-Learn
+BMP: Bitmap
 BMT: Benchmark Test
 BOOTP: Bootstrap Protocol
 BOSH: Bidirectional-streams Over Synchronous HTTP
@@ -131,6 +136,7 @@ BWS: Broadcast Website
 C-LOOK: Circular LOOK
 C-SCAN: Circular SCAN
 C-V2X: Cellular Vehicle-to-Everything
+CABAC: Context-Adaptive Binary Arithmetic Coding
 CALM: Communications Access for Land Mobiles
 CAM: [Cooperative Awareness Message, Computer-Aided Manufacturing, Content Aggregation Model]
 CAN: Controller Area Network
@@ -154,9 +160,11 @@ CDF: Cumulative Distribution Function
 CDM: Code Division Multiplexing
 CDMA: Code Division Multiple Access
 CDN: Content Delivery Network
+CDVS: Compact Descriptors for Visual Search
 CF: Cash Flow
 CFD: Cumulative Flow Diagram
 CFS: Completely Fair Scheduler
+CG: Computer Graphics
 CGI: Common Gateway Interface
 CIDR: Classless Inter-Domain Routing
 CIFS: Common Internet File System
@@ -216,6 +224,7 @@ CSSI: Console Subsystem Interface
 CSV: Comma-Separated Values
 CTE: Common Table Expression
 CTS: Clear To Send
+CTU: Coding Tree Unit
 CU: Central Unit
 CUBIC: CUBIC TCP Congestion Control
 CVI: Cost Value of Information
@@ -257,6 +266,7 @@ DKNF: Domain-Key Normal Form
 DLCI: Data Link Connection Identifier
 DLL: Dynamic Link Library
 DLNA: Digital Living Network Alliance
+DLS: Depth-Limited Search
 DML: Data Manipulation Language
 DMO: Direct Mode Operation
 DMP: Data Management Platform
@@ -308,8 +318,10 @@ DU: Distributed Unit
 DUAL: Diffusing Update Algorithm
 DVA: Distance Vector Algorithm
 DVB-T: Digital Video Broadcasting – Terrestrial
+DVD: Digital Versatile Disc
 DVMRP: Distance Vector Multicast Routing Protocol
 DWDM: Dense Wavelength Division Multiplexing
+DWT: Discrete Wavelet Transform
 DX: [Digital Transformation, Developer Experience]
 E2E: End-to-End
 EA: Enterprise Architecture
@@ -434,6 +446,7 @@ GiST: Generalized Search Tree
 GloBE: Global Anti-Base Erosion
 GLONASS: Global Navigation Satellite System (Russia)
 GNSS: Global Navigation Satellite System
+GOP: Group of Pictures
 GPS: [Global Positioning System, Generalized Processor Sharing]
 GPSR: Greedy Perimeter Stateless Routing
 GRE: Generic Routing Encapsulation
@@ -450,20 +463,25 @@ HAZOP: Hazard and Operability Study
 HBC: Human Body Communication
 HCE: Host Card Emulation
 HCI: [Hyper-Converged Infrastructure, Human-Computer Interaction]
+HD: High Definition
 HDFS: Hadoop Distributed File System
 HDLC: High-level Data Link Control
 HEMS: Home Energy Management System
+HEVC: High Efficiency Video Coding
 HLR: Home Location Register
 HMAC: Hash-based Message Authentication Code
+HMD: Head-Mounted Display
 HMS: HNB Management System
 HNB: Home NodeB
 HNSW: Hierarchical Navigable Small World
+HOA: Higher Order Ambisonics
 HOL: Head-of-Line
 HOLAP: Hybrid OLAP
 HPACK: HTTP/2 Header Compression
 HQL: Hive Query Language
 HR: Human Resources
 HRN: Highest Response-ratio Next
+HRTF: Head-Related Transfer Function
 HSD: Honestly Significant Difference
 HSRP: Hot Standby Router Protocol
 HSS: Home Subscriber Server
@@ -482,6 +500,7 @@ ICMP: Internet Control Message Protocol
 ICMPv6: Internet Control Message Protocol for IPv6
 ICN: Information-Centric Networking
 ID3: Iterative Dichotomiser 3
+IDA: Iterative Deepening A*
 IDS: Intrusion Detection System
 IEC: International Electrotechnical Commission
 IEEE: Institute of Electrical and Electronics Engineers
@@ -582,9 +601,12 @@ LBT: Listen Before Talk
 LC3: Low Complexity Communication Codec
 LCAS: Link Capacity Adjustment Scheme
 LCC: Life Cycle Cost
+LCEVC: Low Complexity Enhancement Video Coding
 LCF: Local Closest First
+LCFS: Last-Come, First-Served
 LCL: Lower Control Limit
 LCP: Link Control Protocol
+LCS: Longest Common Subsequence
 LDAP: Lightweight Directory Access Protocol
 LDP: Label Distribution Protocol
 LDPC: Low-Density Parity-Check
@@ -617,6 +639,7 @@ LPWA: Low Power Wide Area
 LPWAN: Low-Power Wide-Area Network
 LRC: Longitudinal Redundancy Check
 LSA: Link State Advertisement
+LSD: Least Significant Digit
 LSDB: Link State Database
 LSH: Locality-Sensitive Hashing
 LSN: Log Sequence Number
@@ -660,6 +683,7 @@ MIMO: Multiple-Input Multiple-Output
 MIPS: Million Instructions Per Second
 MIRR: Modified Internal Rate of Return
 MITM: Man-in-the-Middle
+MIV: MPEG Immersive Video
 ML: Machine Learning
 MLD: Multicast Listener Discovery
 MLE: Maximum Likelihood Estimation
@@ -672,6 +696,7 @@ MMDBMS: Main Memory Database Management System
 MME: Mobility Management Entity
 MMF: Multi-Mode Fiber
 MMIO: Memory-Mapped I/O
+MMT: MPEG Media Transport
 MNO: Mobile Network Operator
 MOCN: Multi-Operator Core Network
 MOF: Meta-Object Facility
@@ -683,6 +708,7 @@ MoSCoW: Must, Should, Could, Won't
 MOSPF: Multicast Open Shortest Path First
 MOT: Management of Technology
 MOU: Memorandum of Understanding
+MP3: MPEG-1 Audio Layer III
 MPDU: MAC Protocol Data Unit
 MPEG: Moving Picture Experts Group
 MPLS: Multi-Protocol Label Switching
@@ -795,6 +821,7 @@ OLIA: Opportunistic Linked Increases Algorithm
 OLS: Ordinary Least Squares
 OLSR: Optimized Link State Routing
 OMA: Orthogonal Multiple Access
+OMAF: Omnidirectional Media Format
 OMG: Object Management Group
 ONF: Open Networking Foundation
 ONOS: Open Network Operating System
@@ -895,6 +922,7 @@ PSTN: Public Switched Telephone Network
 PTA: Point of Total Assumption
 PTR: Pointer
 PTT: Push To Talk
+PU: Prediction Unit
 PV: Present Value
 PVC: Permanent Virtual Circuit
 PVI: Performance Value of Information
@@ -915,6 +943,7 @@ QPSK: Quadrature Phase Shift Keying
 QR: Quick Response
 QUEL: Query Language (Ingres)
 QUIC: Quick UDP Internet Connections
+QVGA: Quarter Video Graphics Array
 R2RML: RDB to RDF Mapping Language
 RAC: Real Application Clusters
 RACI: Responsible Accountable Consulted Informed
@@ -932,6 +961,7 @@ RDFS: RDF Schema
 RED: Random Early Detection
 RegTech: Regulatory Technology
 REJ: Reject
+REL: Rights Expression Language
 REST: Representational State Transfer
 RET: Record Element Type
 RF: Radio Frequency
@@ -1000,6 +1030,7 @@ SAE: Society of Automotive Engineers
 SAFe: Scaled Agile Framework
 SAI: Switch Abstraction Interface
 SAM: [Slot Availability Mask, Spatial Access Method, Software Asset Management, Serviceable Addressable Market]
+SAO: Sample Adaptive Offset
 SAP: [Service Access Point]
 SAR: Specific Absorption Rate
 SARIMA: Seasonal ARIMA
@@ -1040,6 +1071,7 @@ SFTP: SSH File Transfer Protocol
 SFU: Selective Forwarding Unit
 SGA: System Global Area
 SHAP: SHapley Additive exPlanations
+SHVC: Scalable High Efficiency Video Coding
 SI: System Integration
 SIC: Successive Interference Cancellation
 SIFS: Short Inter-Frame Space
@@ -1047,6 +1079,7 @@ SIGTRAN: Signaling Transport
 SIIT: Stateless IP/ICMP Translation
 SIM: Subscriber Identity Module
 SINR: Signal-to-Interference-plus-Noise Ratio
+SIRO: Service In Random Order
 SIX: Shared Intention Exclusive
 SJF: Shortest Job First
 SLA: Service Level Agreement
@@ -1136,10 +1169,12 @@ TDoA: Time Difference of Arrival
 TEEN: Threshold-sensitive Energy Efficient sensor Network
 TETRA: Terrestrial Trunked Radio
 THz: Terahertz
+TIFF: Tagged Image File Format
 TKIP: Temporal Key Integrity Protocol
 TLD: Top-Level Domain
 TLS: Transport Layer Security
 TLV: Type-Length-Value
+TMIV: Test Model for MPEG Immersive Video
 TMMi: Test Maturity Model integration
 ToA: Time of Arrival
 TOC: Theory of Constraints
@@ -1158,16 +1193,19 @@ TTC: Telecommunication Technology Committee
 TTFC: Time To First Call
 TTI: Transmission Time Interval
 TTL: Time To Live
+TU: Transform Unit
 TURN: Traversal Using Relays around NAT
 TVWS: TV White Space
 TWR: Two-Way Ranging
 TWT: Target Wake Time
 UAV: Unmanned Aerial Vehicle
 UCL: Upper Control Limit
+UCS: Uniform-Cost Search
 UDM: Unified Data Management
 UDP: User Datagram Protocol
 UDT: User-Defined Type
 UE: User Equipment
+UHD: Ultra High Definition
 UHR: Ultra High Reliability
 ULA: Unique Local Address
 ULCL: Uplink Classifier
@@ -1202,6 +1240,7 @@ VAC: Variance at Completion
 VAF: Value Adjustment Factor
 VANET: Vehicular Ad-hoc Network
 VCAT: Virtual Concatenation
+VCD: Video CD
 VCF: VMware Cloud Foundation
 VDBE: Virtual Database Engine
 VFS: Virtual File System
@@ -1212,6 +1251,7 @@ VIN: Vehicle Identification Number
 VIP: Virtual IP
 VLAN: Virtual LAN
 VLC: Visible Light Communication
+VLSI: Very Large Scale Integration
 VLSM: Variable Length Subnet Mask
 VM: Virtual Machine
 VMAC: Virtual MAC Address
@@ -1234,6 +1274,7 @@ VRRP: Virtual Router Redundancy Protocol
 VRS: Virtual Reference Station
 VSAM: Virtual Storage Access Method
 VSM: Value Stream Mapping
+VVC: Versatile Video Coding
 VXLAN: Virtual Extensible LAN
 W3C: World Wide Web Consortium
 WAL: Write-Ahead Logging
@@ -1254,6 +1295,7 @@ WPA2: Wi-Fi Protected Access 2
 WPA3: Wi-Fi Protected Access 3
 WPAN: Wireless Personal Area Network
 WPC: Wireless Power Consortium
+WPP: Wavefront Parallel Processing
 WPS: Wi-Fi Protected Setup
 WRAN: Wireless Regional Area Network
 WRED: Weighted Random Early Detection
