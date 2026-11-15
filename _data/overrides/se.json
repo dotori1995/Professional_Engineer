@@ -17686,6 +17686,456 @@
    "PPP": "Point-to-Point Protocol"
   }
  },
+ "SE_120": {
+  "title": "강제적 접근 통제(MAC, Mandatory Access Control)",
+  "category": "SE > 접근제어(AC) > MAC(Mandatory Access Control)",
+  "definition": "관리자가 주체에는 보안 인가 등급, 객체에는 분류 등급(민감도 레이블)을 부여하고, 시스템이 두 레이블을 비교해 규칙에 따라 접근을 일괄 강제하는 접근 통제 모델로, 객체 소유자라도 권한을 바꿀 수 없다",
+  "keywords": [
+   "레이블: 주체 보안 인가 등급 · 객체 분류(민감도) 등급 · 범주(Category)",
+   "규칙 방식: 다중 수준 정책(MLP) · 범주 기반 정책(CBP)",
+   "기반 모델: 벨-라파둘라(BLP) · 비바(Biba)",
+   "BLP 규칙: No Read Up · No Write Down",
+   "적용: 군사·정부 기밀 · SELinux"
+  ],
+  "sections": [
+   {
+    "title": "접근 방식",
+    "subsections": [
+     {
+      "title": "읽기",
+      "items": [
+       "주체 인가 등급이 객체 분류 등급 이상일 때 허용"
+      ]
+     },
+     {
+      "title": "쓰기",
+      "items": [
+       "기밀성 모델에서는 하위 등급 객체로 쓰기 금지"
+      ]
+     },
+     {
+      "title": "결정 주체",
+      "items": [
+       "소유자가 아닌 시스템 정책과 관리자"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "규칙 유형",
+    "subsections": [
+     {
+      "title": "다중 수준 정책",
+      "items": [
+       "등급 레이블을 자동 강제, BLP 수학 모델로 표현"
+      ]
+     },
+     {
+      "title": "범주 기반 정책",
+      "items": [
+       "부서·프로젝트 범주를 분리해 해당 범주 허가를 가진 사용자만 접근"
+      ]
+     },
+     {
+      "title": "관계 기반",
+      "items": [
+       "관리자가 주체-객체 관계로 통제"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "사례",
+    "subsections": [
+     {
+      "title": "군사 문서",
+      "items": [
+       "2등급 인가자는 3등급 객체를 읽을 수 있으나 쓰기는 불가해 비밀 하향 유출 방지"
+      ]
+     },
+     {
+      "title": "운영체제",
+      "items": [
+       "SELinux·AppArmor 정책 기반 강제 통제"
+      ]
+     },
+     {
+      "title": "DB",
+      "items": [
+       "행 단위 레이블 보안"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "접근 방식",
+   "- 읽기",
+   "- 쓰기",
+   "- 결정 주체",
+   "규칙 유형",
+   "- 다중 수준 정책",
+   "- 범주 기반 정책",
+   "- 관계 기반",
+   "사례",
+   "- 군사 문서",
+   "- 운영체제",
+   "- DB"
+  ],
+  "name": "강제적 접근 통제(MAC, Mandatory Access Control)",
+  "en": "Mandatory Access Control",
+  "keywords_must": [
+   "주체 보안 인가 등급",
+   "객체 분류(민감도) 등급",
+   "범주(Category)",
+   "다중 수준 정책(MLP)",
+   "범주 기반 정책(CBP)",
+   "벨-라파둘라(BLP)",
+   "비바(Biba)",
+   "No Read Up",
+   "No Write Down",
+   "군사·정부 기밀",
+   "SELinux"
+  ],
+  "keywords_ref": [
+   "미국 등급 예: 1급 비밀(Top Secret)·2급(Secret)·3급(Confidential)·평문(Unclassified)",
+   "중앙 집중 관리, 높은 보안성",
+   "단점: 구현 복잡, 성능 부담, 유연성 부족",
+   "다중 수준 보안(MLS)",
+   "시스템 카탈로그 수정은 시스템 관리자만"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "주체 보안 인가 등급",
+   "객체 분류(민감도) 등급",
+   "범주(Category)",
+   "다중 수준 정책(MLP)",
+   "범주 기반 정책(CBP)",
+   "벨-라파둘라(BLP)",
+   "비바(Biba)",
+   "No Read Up",
+   "No Write Down",
+   "군사·정부 기밀",
+   "SELinux"
+  ],
+  "gloss": {
+   "MLP": "Multi-Level Policy",
+   "CBP": "Compartment-Based Policy",
+   "BLP": "Bell-LaPadula",
+   "SELinux": "Security-Enhanced Linux",
+   "MLS": "Multi-Level Security",
+   "DB": "Database"
+  }
+ },
+ "SE_121": {
+  "title": "임의적 접근 통제(DAC, Discretionary Access Control)",
+  "category": "SE > 접근제어(AC) > DAC(Discretionary Access Control)",
+  "definition": "주체의 신원(ID)이나 소속 그룹을 기준으로, 객체의 소유자가 다른 사용자에게 접근 권한을 임의로 부여·회수할 수 있는 접근 통제 모델",
+  "keywords": [
+   "구현 방식: 접근 제어 목록(ACL) · 권한 리스트(Capability List) · 접근 제어 행렬",
+   "분류: 신원 기반 · 사용자 기반 · 혼합",
+   "정책 종류: 개인 기반 정책(IBP) · 그룹 기반 정책(GBP)",
+   "장단점: 유연한 권한 위임 · 트로이 목마·ID 도용 취약 · 권한 전파 통제 불가"
+  ],
+  "sections": [
+   {
+    "title": "구현 방식",
+    "subsections": [
+     {
+      "title": "접근 제어 행렬",
+      "items": [
+       "행은 주체, 열은 객체, 칸은 허용 연산"
+      ]
+     },
+     {
+      "title": "ACL",
+      "items": [
+       "객체별로 접근 가능한 주체와 권한을 기록, 가장 널리 사용"
+      ]
+     },
+     {
+      "title": "권한 리스트",
+      "items": [
+       "주체별로 접근 가능한 객체와 권한 목록, 객체가 적을 때 적합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분류",
+    "subsections": [
+     {
+      "title": "신원 기반",
+      "items": [
+       "주체·객체 ID로 통제, 유닉스에서 주로 사용"
+      ]
+     },
+     {
+      "title": "사용자 기반",
+      "items": [
+       "객체 소유자가 권한 설정·변경"
+      ]
+     },
+     {
+      "title": "혼합",
+      "items": [
+       "신원 기반과 사용자 기반 병행"
+      ]
+     },
+     {
+      "title": "그룹 기반",
+      "items": [
+       "그룹에 동일 권한 부여로 조직 단위 관리 용이"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "사례와 한계",
+    "subsections": [
+     {
+      "title": "유닉스",
+      "items": [
+       "파일 생성자가 소유자·그룹·기타 권한 지정"
+      ]
+     },
+     {
+      "title": "DB",
+      "items": [
+       "테이블 생성자가 조회 권한을 GRANT로 부여"
+      ]
+     },
+     {
+      "title": "트로이 목마 취약",
+      "items": [
+       "사용자를 가장한 악성코드가 소유자 권한을 그대로 행사"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "구현 방식",
+   "- 접근 제어 행렬",
+   "- ACL",
+   "- 권한 리스트",
+   "분류",
+   "- 신원 기반",
+   "- 사용자 기반",
+   "- 혼합",
+   "- 그룹 기반",
+   "사례와 한계",
+   "- 유닉스",
+   "- DB",
+   "- 트로이 목마 취약"
+  ],
+  "name": "임의적 접근 통제(DAC, Discretionary Access Control)",
+  "en": "Discretionary Access Control",
+  "keywords_must": [
+   "접근 제어 목록(ACL)",
+   "권한 리스트(Capability List)",
+   "접근 제어 행렬",
+   "신원 기반",
+   "사용자 기반",
+   "혼합",
+   "개인 기반 정책(IBP)",
+   "그룹 기반 정책(GBP)",
+   "유연한 권한 위임",
+   "트로이 목마·ID 도용 취약",
+   "권한 전파 통제 불가"
+  ],
+  "keywords_ref": [
+   "ACL은 객체(열) 중심, 권한 리스트는 주체(행) 중심",
+   "유닉스 파일 권한(소유자·그룹·기타 rwx)",
+   "SQL GRANT·REVOKE",
+   "복사 시 원본 접근 통제 정보가 전파되지 않음",
+   "퇴사자 권한 회수 어려움"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "접근 제어 목록(ACL)",
+   "권한 리스트(Capability List)",
+   "접근 제어 행렬",
+   "신원 기반",
+   "사용자 기반",
+   "혼합",
+   "개인 기반 정책(IBP)",
+   "그룹 기반 정책(GBP)",
+   "유연한 권한 위임",
+   "트로이 목마·ID 도용 취약",
+   "권한 전파 통제 불가"
+  ],
+  "gloss": {
+   "ACL": "Access Control List",
+   "IBP": "Individual-Based Policy",
+   "GBP": "Group-Based Policy",
+   "DB": "Database"
+  }
+ },
+ "SE_122": {
+  "title": "역할 기반 접근 통제(RBAC, Role-Based Access Control)",
+  "category": "SE > 접근제어(AC) > RBAC(Role Based Access Control)",
+  "definition": "권한을 개인이 아닌 조직 내 직무·역할에 부여하고 사용자를 역할에 할당해, 사용자-역할 할당(UA)과 권한-역할 할당(PA)으로 접근을 통제하는 중앙 관리형 모델로 MAC·DAC의 관리 한계를 보완한다",
+  "keywords": [
+   "구성: 사용자 · 역할 · 권한 · 세션",
+   "할당: 사용자-역할 할당(UA) · 권한-역할 할당(PA)",
+   "모델 단계: RBAC0 기본 · RBAC1 역할 계층 · RBAC2 제약 조건 · RBAC3 통합"
+  ],
+  "sections": [
+   {
+    "title": "관리 방식",
+    "subsections": [
+     {
+      "title": "권한 관리",
+      "items": [
+       "역할 단위로 할당·회수해 인사 이동 시 관리 단순"
+      ]
+     },
+     {
+      "title": "역할 계층",
+      "items": [
+       "상위 역할이 하위 역할 권한 상속"
+      ]
+     },
+     {
+      "title": "최소 권한",
+      "items": [
+       "업무에 필요한 권한만 부여"
+      ]
+     },
+     {
+      "title": "직무 분리",
+      "items": [
+       "상충 역할 동시 보유·활성 금지로 오용 방지"
+      ]
+     },
+     {
+      "title": "데이터 추상화",
+      "items": [
+       "읽기·쓰기 대신 생성·이체 같은 업무 연산 단위 권한"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "모델 단계",
+    "subsections": [
+     {
+      "title": "RBAC0",
+      "items": [
+       "사용자·역할·권한·세션의 기본 모델"
+      ]
+     },
+     {
+      "title": "RBAC1",
+      "items": [
+       "RBAC0에 역할 계층 추가"
+      ]
+     },
+     {
+      "title": "RBAC2",
+      "items": [
+       "RBAC0에 직무 분리 등 제약 조건 추가"
+      ]
+     },
+     {
+      "title": "RBAC3",
+      "items": [
+       "계층과 제약을 모두 포함"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "비교",
+    "subsections": [
+     {
+      "title": "MAC",
+      "items": [
+       "시스템이 등급으로 강제, 군사용"
+      ]
+     },
+     {
+      "title": "DAC",
+      "items": [
+       "소유자가 임의 위임, 유연하나 통제 약함"
+      ]
+     },
+     {
+      "title": "RBAC",
+      "items": [
+       "중앙 관리자가 역할로 통제, 기업 업무 시스템에 적합"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "관리 방식",
+   "- 권한 관리",
+   "- 역할 계층",
+   "- 최소 권한",
+   "- 직무 분리",
+   "- 데이터 추상화",
+   "모델 단계",
+   "- RBAC0",
+   "- RBAC1",
+   "- RBAC2",
+   "- RBAC3",
+   "비교",
+   "- MAC",
+   "- DAC",
+   "- RBAC"
+  ],
+  "name": "역할 기반 접근 통제(RBAC, Role-Based Access Control)",
+  "en": "Role-Based Access Control",
+  "keywords_must": [
+   "사용자",
+   "역할",
+   "권한",
+   "세션",
+   "사용자-역할 할당(UA)",
+   "권한-역할 할당(PA)",
+   "RBAC0 기본",
+   "RBAC1 역할 계층",
+   "RBAC2 제약 조건",
+   "RBAC3 통합"
+  ],
+  "keywords_ref": [
+   "원칙: 최소 권한·직무 분리·데이터 추상화",
+   "정적 직무 분리(SSD)·동적 직무 분리(DSD)",
+   "NIST·ANSI INCITS 359 표준",
+   "역할 계층 상속",
+   "권한 관리 단순화",
+   "역할 폭증 문제 → 속성 기반 접근 통제(ABAC)",
+   "등장 배경: MAC 등급 설정 한계, DAC 관리성 부족"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "사용자",
+   "역할",
+   "권한",
+   "세션",
+   "사용자-역할 할당(UA)",
+   "권한-역할 할당(PA)",
+   "RBAC0 기본",
+   "RBAC1 역할 계층",
+   "RBAC2 제약 조건",
+   "RBAC3 통합"
+  ],
+  "gloss": {
+   "UA": "User Assignment",
+   "PA": "Permission Assignment",
+   "SSD": "Static Separation of Duty",
+   "DSD": "Dynamic Separation of Duty",
+   "ABAC": "Attribute-Based Access Control",
+   "MAC": "Mandatory Access Control",
+   "DAC": "Discretionary Access Control"
+  }
+ },
  "SE_123": {
   "title": "접근통제 모델(Access Control Models)",
   "category": "SE > 보안 > 접근통제 > AC(접근통제) 모델(Access Control Model)",
