@@ -20997,6 +20997,144 @@
    "FFIEC": "Federal Financial Institutions Examination Council"
   }
  },
+ "SE_143_00": {
+  "title": "엔드포인트 보안(Endpoint Security)",
+  "category": "SE > 기업 보안 시스템(기술적 보안) > End Point 보안",
+  "definition": "PC·노트북·모바일·서버 등 사용자와 연결된 단말을 보안 위협의 최종 접점으로 보고, 단말 단위 솔루션을 넘어 접속 통제·통합 관리·구성 분리로 단말 전체를 보호하는 통합 보안 관리 체계",
+  "keywords": [
+   "보안 이슈: 패치 미설치 · 비인가 단말 접속 · 내부 정보 유출 · 제로데이",
+   "실행 기술: 네트워크 접근 제어(NAC) · 통합 위협 관리(UTM) · 서버 기반 컴퓨팅(SBC) · 망 분리",
+   "진화: 백신(EPP) · 엔드포인트 탐지·대응(EDR) · 확장 탐지·대응(XDR)"
+  ],
+  "sections": [
+   {
+    "title": "보안 이슈",
+    "subsections": [
+     {
+      "title": "사용자",
+      "items": [
+       "보안 패치 미설치, 비인가 접속, 정보 유출"
+      ]
+     },
+     {
+      "title": "단말",
+      "items": [
+       "제로데이 공격, 보안 정책 미적용 단말의 내부 접속, 악성코드 감염"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "실행 기술",
+    "subsections": [
+     {
+      "title": "정책 기반",
+      "items": [
+       "NAC로 비인가 단말 차단, 정책 위반 단말 격리·치료"
+      ]
+     },
+     {
+      "title": "통합 기반",
+      "items": [
+       "단말 보안 솔루션 통합 운영"
+      ]
+     },
+     {
+      "title": "구성 기반",
+      "items": [
+       "중앙 서버에 데이터·앱 집중(SBC), 물리·논리 망 분리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "운영 고려",
+    "subsections": [
+     {
+      "title": "탐지·대응",
+      "items": [
+       "EDR로 행위 기반 탐지와 사후 분석"
+      ]
+     },
+     {
+      "title": "예외 관리",
+      "items": [
+       "임원·관리자 예외 없이 중점 관리"
+      ]
+     },
+     {
+      "title": "인식",
+      "items": [
+       "단말 사용자 교육이 가장 중요"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "보안 이슈",
+   "- 사용자",
+   "- 단말",
+   "실행 기술",
+   "- 정책 기반",
+   "- 통합 기반",
+   "- 구성 기반",
+   "운영 고려",
+   "- 탐지·대응",
+   "- 예외 관리",
+   "- 인식"
+  ],
+  "name": "엔드포인트 보안(Endpoint Security)",
+  "en": "Endpoint Security",
+  "keywords_must": [
+   "패치 미설치",
+   "비인가 단말 접속",
+   "내부 정보 유출",
+   "제로데이",
+   "네트워크 접근 제어(NAC)",
+   "통합 위협 관리(UTM)",
+   "서버 기반 컴퓨팅(SBC)",
+   "망 분리",
+   "백신(EPP)",
+   "엔드포인트 탐지·대응(EDR)",
+   "확장 탐지·대응(XDR)"
+  ],
+  "keywords_ref": [
+   "APT·사회공학 공격의 주 진입점",
+   "매체 제어·DLP·패치 관리",
+   "모바일 단말 관리(MDM)",
+   "임원·관리자 정책 예외 금지",
+   "사용자 보안 인식 교육",
+   "제로 트러스트의 단말 상태 검증"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "패치 미설치",
+   "비인가 단말 접속",
+   "내부 정보 유출",
+   "제로데이",
+   "네트워크 접근 제어(NAC)",
+   "통합 위협 관리(UTM)",
+   "서버 기반 컴퓨팅(SBC)",
+   "망 분리",
+   "백신(EPP)",
+   "엔드포인트 탐지·대응(EDR)",
+   "확장 탐지·대응(XDR)"
+  ],
+  "gloss": {
+   "PC": "Personal Computer",
+   "NAC": "Network Access Control",
+   "UTM": "Unified Threat Management",
+   "SBC": "Server Based Computing",
+   "EPP": "Endpoint Protection Platform",
+   "EDR": "Endpoint Detection and Response",
+   "XDR": "Extended Detection and Response",
+   "MDM": "Mobile Device Management",
+   "DLP": "Data Loss Prevention",
+   "APT": "Advanced Persistent Threat"
+  }
+ },
  "SE_143_01": {
   "title": "사이버보안 메시(Cybersecurity Mesh)",
   "category": "SE > 해킹공격 방어",
@@ -21393,6 +21531,304 @@
    "FRR": "False Rejection Rate",
    "EER": "Equal Error Rate",
    "CER": "Crossover Error Rate"
+  }
+ },
+ "SE_145": {
+  "title": "모바일 바이오 인식(Mobile Biometrics)",
+  "category": "SE > 생체인식기술 > 모바일 바이오인식(Mobile Biometrics)",
+  "definition": "스마트폰 등 모바일 단말의 센서로 지문·얼굴·홍채·음성 같은 신체 고유 정보를 취득해 저장된 특징과 1:1 비교함으로써 본인을 확인하는 인증 기술",
+  "keywords": [
+   "인식 유형: 지문 · 얼굴 · 홍채 · 음성 · 정맥",
+   "보안 요소: 단말 내 안전 영역(TEE·SE) 저장 · 위조 탐지(Liveness)",
+   "활용: 모바일 결제 · 온라인 뱅킹(공인인증서 대체) · 공공(원격 진료·출입국)"
+  ],
+  "sections": [
+   {
+    "title": "유형별 장단점",
+    "subsections": [
+     {
+      "title": "지문",
+      "items": [
+       "인식률·보안성 우수, 저비용",
+       "센서 필요"
+      ]
+     },
+     {
+      "title": "얼굴",
+      "items": [
+       "자연스럽고 비접촉",
+       "조명·표정·노화 변화에 취약"
+      ]
+     },
+     {
+      "title": "음성",
+      "items": [
+       "마이크 기본 탑재",
+       "주변 소음, 오류율 높음"
+      ]
+     },
+     {
+      "title": "홍채",
+      "items": [
+       "보안성 최고",
+       "고품질 촬영과 전처리 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "바이오 보안 토큰",
+    "subsections": [
+     {
+      "title": "구조",
+      "items": [
+       "생체 센서, 처리용 MCU, 개인키·인증서 저장 토큰"
+      ]
+     },
+     {
+      "title": "동작",
+      "items": [
+       "토큰 내부에서 정합해 생체 정보가 밖으로 나가지 않음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 고려",
+    "subsections": [
+     {
+      "title": "저장",
+      "items": [
+       "원본 대신 템플릿을 단말 안전 영역에 저장"
+      ]
+     },
+     {
+      "title": "위조 방지",
+      "items": [
+       "실리콘 지문·사진 공격에 대한 생체 활성 탐지"
+      ]
+     },
+     {
+      "title": "표준",
+      "items": [
+       "FIDO 연동으로 서버에 생체 정보 미전송"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "유형별 장단점",
+   "- 지문",
+   "- 얼굴",
+   "- 음성",
+   "- 홍채",
+   "바이오 보안 토큰",
+   "- 구조",
+   "- 동작",
+   "보안 고려",
+   "- 저장",
+   "- 위조 방지",
+   "- 표준"
+  ],
+  "name": "모바일 바이오 인식(Mobile Biometrics)",
+  "en": "Mobile Biometrics",
+  "keywords_must": [
+   "지문",
+   "얼굴",
+   "홍채",
+   "음성",
+   "정맥",
+   "단말 내 안전 영역(TEE·SE) 저장",
+   "위조 탐지(Liveness)",
+   "모바일 결제",
+   "온라인 뱅킹(공인인증서 대체)",
+   "공공(원격 진료·출입국)"
+  ],
+  "keywords_ref": [
+   "처리 과정: 취득·특징 추출·정합(1:1 검증)·판정",
+   "지문은 인식률·저비용, 얼굴은 비접촉·조명 민감, 음성은 마이크 기본 탑재·오류율 높음, 홍채는 보안성 최고·고품질 이미지 필요",
+   "바이오 보안 토큰(BHSM): 센서·MCU·보안 토큰, 내부 매칭",
+   "FIDO 연동",
+   "오거부율(FRR)·오수락율(FAR)",
+   "생체 정보는 변경 불가 → 서버 저장 지양"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "지문",
+   "얼굴",
+   "홍채",
+   "음성",
+   "정맥",
+   "단말 내 안전 영역(TEE·SE) 저장",
+   "위조 탐지(Liveness)",
+   "모바일 결제",
+   "온라인 뱅킹(공인인증서 대체)",
+   "공공(원격 진료·출입국)"
+  ],
+  "gloss": {
+   "TEE": "Trusted Execution Environment",
+   "SE": "Secure Element",
+   "BHSM": "Biometric Hardware Security Module",
+   "MCU": "Microcontroller Unit",
+   "FRR": "False Rejection Rate",
+   "FAR": "False Acceptance Rate",
+   "FIDO": "Fast Identity Online"
+  }
+ },
+ "SE_146_147": {
+  "title": "FIDO(Fast Identity Online) 1.0·2.0",
+  "category": "SE > 생체인식기술 > FIDO",
+  "definition": "비밀번호 대신 단말에서 생체·PIN 등으로 사용자를 로컬 인증한 뒤, 서비스별로 생성한 개인키로 서버의 챌린지에 서명하고 서버는 등록된 공개키로 검증하는 FIDO 얼라이언스의 공개키 기반 인증 표준",
+  "keywords": [
+   "FIDO 1.0: UAF(비밀번호 없는 인증) · U2F(2차 인증 보안키)",
+   "FIDO 2.0: WebAuthn(W3C 웹 API) · CTAP(인증 장치 연동)",
+   "구성: FIDO 클라이언트 · FIDO 서버(RP) · 인증 장치(Authenticator) · ASM",
+   "처리 과정: 등록 · 인증 · 거래 확인"
+  ],
+  "sections": [
+   {
+    "title": "처리 과정",
+    "subsections": [
+     {
+      "title": "1 등록",
+      "items": [
+       "사용자 로컬 인증 후 인증 장치가 서비스별 키 쌍 생성, 공개키를 서버에 등록"
+      ]
+     },
+     {
+      "title": "2 인증",
+      "items": [
+       "서버가 챌린지 전송 → 로컬 인증 → 개인키 서명 → 서버가 공개키로 검증"
+      ]
+     },
+     {
+      "title": "3 거래 확인",
+      "items": [
+       "특정 거래 내용에 대한 전자서명으로 안전 거래 확인"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "1.0과 2.0 비교",
+    "subsections": [
+     {
+      "title": "1.0 UAF",
+      "items": [
+       "모바일 중심, 생체로 비밀번호 대체"
+      ]
+     },
+     {
+      "title": "1.0 U2F",
+      "items": [
+       "PC 중심, 비밀번호 1차 후 USB 보안키 2차 인증"
+      ]
+     },
+     {
+      "title": "2.0",
+      "items": [
+       "브라우저·OS 플랫폼 내장, WebAuthn으로 웹 표준화"
+      ]
+     },
+     {
+      "title": "2.0 CTAP",
+      "items": [
+       "외부 보안키·스마트폰을 인증 장치로 연동"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 효과",
+    "subsections": [
+     {
+      "title": "서버 유출 대응",
+      "items": [
+       "서버에는 공개키만 있어 탈취돼도 무용"
+      ]
+     },
+     {
+      "title": "피싱 저항",
+      "items": [
+       "출처(도메인)에 묶인 키로 가짜 사이트 서명 거부"
+      ]
+     },
+     {
+      "title": "프라이버시",
+      "items": [
+       "생체 정보는 단말 안전 영역에만 보관"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "처리 과정",
+   "- 1 등록",
+   "- 2 인증",
+   "- 3 거래 확인",
+   "1.0과 2.0 비교",
+   "- 1.0 UAF",
+   "- 1.0 U2F",
+   "- 2.0",
+   "- 2.0 CTAP",
+   "보안 효과",
+   "- 서버 유출 대응",
+   "- 피싱 저항",
+   "- 프라이버시"
+  ],
+  "name": "FIDO(Fast Identity Online) 1.0·2.0",
+  "en": "FIDO 1.0 and FIDO 2.0",
+  "keywords_must": [
+   "UAF(비밀번호 없는 인증)",
+   "U2F(2차 인증 보안키)",
+   "WebAuthn(W3C 웹 API)",
+   "CTAP(인증 장치 연동)",
+   "FIDO 클라이언트",
+   "FIDO 서버(RP)",
+   "인증 장치(Authenticator)",
+   "ASM",
+   "등록",
+   "인증",
+   "거래 확인"
+  ],
+  "keywords_ref": [
+   "생체 정보는 단말 밖으로 나가지 않음",
+   "서비스별 키 쌍으로 피싱·재사용 방지",
+   "챌린지-응답",
+   "CTAP은 USB·NFC·BLE",
+   "플랫폼 인증 장치(내장)·로밍 인증 장치(보안키)",
+   "패스키로 발전(멀티 디바이스 동기화)",
+   "증명(Attestation)"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "UAF(비밀번호 없는 인증)",
+   "U2F(2차 인증 보안키)",
+   "WebAuthn(W3C 웹 API)",
+   "CTAP(인증 장치 연동)",
+   "FIDO 클라이언트",
+   "FIDO 서버(RP)",
+   "인증 장치(Authenticator)",
+   "ASM",
+   "등록",
+   "인증",
+   "거래 확인"
+  ],
+  "gloss": {
+   "PC": "Personal Computer",
+   "UAF": "Universal Authentication Framework",
+   "U2F": "Universal 2nd Factor",
+   "WebAuthn": "Web Authentication",
+   "CTAP": "Client to Authenticator Protocol",
+   "RP": "Relying Party",
+   "ASM": "Authenticator Specific Module",
+   "BLE": "Bluetooth Low Energy",
+   "NFC": "Near Field Communication",
+   "PIN": "Personal Identification Number"
   }
  },
  "SE_147_1": {
