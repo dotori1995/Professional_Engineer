@@ -975,7 +975,8 @@
   "warnings": [],
   "hand": true,
   "gloss": {
-   "CSS": "Cascading Style Sheets"
+   "CSS": "Cascading Style Sheets",
+   "DFS": "Depth-First Search"
   }
  },
  {
@@ -2649,7 +2650,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "CSR": "Client-Side Rendering"
+  }
  },
  {
   "id": "SV_022",
@@ -3009,7 +3013,8 @@
   "hand": true,
   "gloss": {
    "CSS": "Cascading Style Sheets",
-   "ISP": "Internet Service Provider"
+   "ISP": "Internet Service Provider",
+   "LCP": "Largest Contentful Paint"
   }
  },
  {
@@ -4647,7 +4652,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "EBS": "Elastic Block Store"
+  }
  },
  {
   "id": "SV_043",
@@ -5489,7 +5497,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "IPS": "Intrusion Prevention System"
+  }
  },
  {
   "id": "SV_050_1",
@@ -5942,7 +5953,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "CMP": "Cloud Management Platform"
+  }
  },
  {
   "id": "SV_055",
@@ -7235,7 +7249,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "CCM": "Cloud Controls Matrix"
+  }
  },
  {
   "id": "SV_064",
@@ -7478,7 +7495,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "OPA": "Open Policy Agent"
+  }
  },
  {
   "id": "SV_066",
@@ -7721,7 +7741,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "CMP": "Cloud Management Platform"
+  }
  },
  {
   "id": "SV_068_00",
@@ -8453,7 +8476,8 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "FEC": "Fabric-Enabled Computer"
+   "FEC": "Fabric-Enabled Computer",
+   "MPP": "Massively Parallel Processing"
   },
   "hand": true
  },
@@ -8692,7 +8716,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_074",
@@ -9193,7 +9220,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "AP": "Access Point"
+  }
  },
  {
   "id": "SV_077_1",
@@ -9317,7 +9347,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "SDM": "Software-Defined Machine"
+  }
  },
  {
   "id": "SV_078",
@@ -9557,7 +9590,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "MCU": "Microcontroller Unit"
+  }
  },
  {
   "id": "SV_079_1",
@@ -10169,7 +10205,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "CFD": "Computational Fluid Dynamics"
+  }
  },
  {
   "id": "SV_085",
@@ -10412,7 +10451,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_095",
@@ -10527,7 +10569,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "AV": "Augmented Virtuality"
+  }
  },
  {
   "id": "SV_096",
@@ -10893,7 +10938,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "AV": "Augmented Virtuality"
+  }
  },
  {
   "id": "SV_102",
@@ -11025,7 +11073,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "AV": "Augmented Virtuality"
+  }
  },
  {
   "id": "SV_108",
@@ -12738,7 +12789,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "GPT": "Generative Pre-trained Transformer"
+  }
  },
  {
   "id": "SV_136",
@@ -13489,7 +13543,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "IOPS": "Input/Output Operations Per Second"
+  }
  },
  {
   "id": "SV_157",
@@ -15418,7 +15475,8 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "GPS": "Global Positioning System"
+   "GPS": "Global Positioning System",
+   "HLS": "HTTP Live Streaming"
   },
   "hand": true
  },
@@ -15551,7 +15609,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "BIS": "Bus Information System"
+  }
  },
  {
   "id": "SV_181",
@@ -15929,7 +15990,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_185",
@@ -16058,7 +16122,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_186",
@@ -16569,7 +16636,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "AP": "Access Point"
+  }
  },
  {
   "id": "SV_190",
@@ -16946,7 +17016,11 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "AP": "Access Point",
+   "CSI": "Channel State Information"
+  }
  },
  {
   "id": "SV_193",
@@ -17199,7 +17273,8 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "GPS": "Global Positioning System"
+   "GPS": "Global Positioning System",
+   "AP": "Access Point"
   },
   "hand": true
  },
@@ -17823,7 +17898,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "PLC": "Programmable Logic Controller"
+  }
  },
  {
   "id": "SV_205",
@@ -17946,7 +18024,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "DX": "Digital Transformation"
+  }
  },
  {
   "id": "SV_207",
@@ -18078,7 +18159,11 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "PLC": "Programmable Logic Controller",
+   "SCM": "Supply Chain Management"
+  }
  },
  {
   "id": "SV_208",
@@ -19075,7 +19160,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "PLC": "Programmable Logic Controller"
+  }
  },
  {
   "id": "SV_217",
@@ -19199,7 +19287,11 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "SPC": "Statistical Process Control",
+   "PLC": "Programmable Logic Controller"
+  }
  },
  {
   "id": "SV_218",
@@ -19324,7 +19416,8 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "PLC": "Programmable Logic Controller"
+   "PLC": "Programmable Logic Controller",
+   "EMS": "Energy Management System"
   },
   "hand": true
  },
@@ -19456,7 +19549,8 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "PLC": "Programmable Logic Controller"
+   "PLC": "Programmable Logic Controller",
+   "EMS": "Energy Management System"
   },
   "hand": true
  },
@@ -19580,7 +19674,11 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "DDC": "Direct Digital Control",
+   "PLC": "Programmable Logic Controller"
+  }
  },
  {
   "id": "SV_221",
@@ -21376,7 +21474,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "CDA": "Clinical Document Architecture"
+  }
  },
  {
   "id": "SV_260",
@@ -21640,7 +21741,8 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "EMS": "Energy Management System"
+   "EMS": "Energy Management System",
+   "ESS": "Energy Storage System"
   },
   "hand": true
  },
@@ -21768,7 +21870,8 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "ESS": "Energy Storage System"
+   "ESS": "Energy Storage System",
+   "EMS": "Energy Management System"
   },
   "hand": true
  },
@@ -21896,7 +21999,8 @@
   "warnings": [],
   "gloss": {
    "ESS": "Energy Storage System",
-   "PMS": "Power Management System"
+   "PMS": "Power Management System",
+   "EMS": "Energy Management System"
   },
   "hand": true
  },
@@ -22023,7 +22127,10 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "ESS": "Energy Storage System"
+   "ESS": "Energy Storage System",
+   "STS": "Static Transfer Switch",
+   "EMS": "Energy Management System",
+   "DER": "Distributed Energy Resources"
   },
   "hand": true
  },
@@ -22148,7 +22255,8 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "DER": "Distributed Energy Resources"
+   "DER": "Distributed Energy Resources",
+   "ESS": "Energy Storage System"
   },
   "hand": true
  },
@@ -22272,7 +22380,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "ESS": "Energy Storage System"
+  }
  },
  {
   "id": "SV_269_01",
@@ -22404,7 +22515,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "CDP": "Carbon Disclosure Project"
+  }
  },
  {
   "id": "SV_271",
@@ -22533,7 +22647,12 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "IP": "Intellectual Property",
+   "AP": "Application Processor",
+   "ISP": "Image Signal Processor"
+  }
  },
  {
   "id": "SV_272",
@@ -23690,7 +23809,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "PLC": "Product Life Cycle"
+  }
  },
  {
   "id": "SV_281_0",
@@ -23812,7 +23934,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "DX": "Digital Transformation"
+  }
  },
  {
   "id": "SV_281_1",
@@ -23945,7 +24070,8 @@
    "TAM": "Technology Acceptance Model",
    "TAM2": "Extended Technology Acceptance Model",
    "UTAUT": "Unified Theory of Acceptance and Use of Technology",
-   "TRA": "Theory of Reasoned Action"
+   "TRA": "Theory of Reasoned Action",
+   "PU": "Perceived Usefulness"
   },
   "hand": true
  },
@@ -24734,7 +24860,8 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "CAM": "Content Aggregation Model"
+   "CAM": "Content Aggregation Model",
+   "RTE": "Run-Time Environment"
   },
   "hand": true
  },
@@ -27071,7 +27198,8 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "IMS": "IMS Global Learning Consortium"
+   "IMS": "IMS Global Learning Consortium",
+   "CLR": "Comprehensive Learner Record"
   },
   "hand": true
  },
@@ -28986,7 +29114,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "RAM": "Random Access Memory"
+  }
  },
  {
   "id": "SV_344_1",
@@ -29489,7 +29620,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "RTE": "Run-Time Environment"
+  }
  },
  {
   "id": "SV_348",
@@ -29749,7 +29883,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_350",
@@ -30274,7 +30411,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "OPA": "Optical Phased Array"
+  }
  },
  {
   "id": "SV_354",
@@ -30795,7 +30935,8 @@
   "review": null,
   "warnings": [],
   "gloss": {
-   "DSP": "Digital Signal Processing"
+   "DSP": "Digital Signal Processing",
+   "ISP": "Image Signal Processor"
   },
   "hand": true
  },
@@ -30928,7 +31069,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "AV": "Automated Vehicles"
+  }
  },
  {
   "id": "SV_365",
@@ -31059,7 +31203,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "GPS": "Global Positioning System"
+  }
  },
  {
   "id": "SV_366_0",
@@ -31190,7 +31337,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "CAM": "Cooperative Awareness Message"
+  }
  },
  {
   "id": "SV_366_1",
@@ -31455,7 +31605,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "SOA": "Service-Oriented Architecture"
+  }
  },
  {
   "id": "SV_367",
@@ -32114,7 +32267,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "RAM": "Regional Air Mobility"
+  }
  },
  {
   "id": "SV_373_1",
@@ -32386,7 +32542,10 @@
   "note": null,
   "review": null,
   "warnings": [],
-  "hand": true
+  "hand": true,
+  "gloss": {
+   "BOM": "Browser Object Model"
+  }
  },
  {
   "id": "SV_384",
@@ -33532,7 +33691,8 @@
    "LTPS": "Low-Temperature Polycrystalline Silicon",
    "UTG": "Ultra Thin Glass",
    "CPI": "Colorless Polyimide",
-   "LLO": "Laser Lift-Off"
+   "LLO": "Laser Lift-Off",
+   "TFT": "Thin Film Transistor"
   }
  },
  {
@@ -36282,7 +36442,8 @@
    "PKI": "Public Key Infrastructure",
    "WORM": "Write Once Read Many",
    "C2PA": "Coalition for Content Provenance and Authenticity",
-   "ETL": "Extract Transform Load"
+   "ETL": "Extract Transform Load",
+   "BOM": "Bill of Materials"
   },
   "hand": true
  },

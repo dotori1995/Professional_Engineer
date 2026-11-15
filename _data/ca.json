@@ -1128,7 +1128,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "RCA": "Radio Corporation of America"
+    }
   },
   {
     "id": "CA_010",
@@ -2204,7 +2207,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "SFU": "Special Function Unit"
+    }
   },
   {
     "id": "CA_019_1",
@@ -3680,7 +3686,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "AVR": null
+    }
   },
   {
     "id": "CA_015",
@@ -4166,7 +4175,8 @@
       "PC": "Program Counter",
       "IR": "Instruction Register",
       "AC": "Accumulator",
-      "MBR": "Memory Buffer Register"
+      "MBR": "Memory Buffer Register",
+      "ESP": "Extended Stack Pointer"
     }
   },
   {
@@ -4627,7 +4637,8 @@
     "gloss": {
       "MBR": "Master Boot Record",
       "GPT": "GUID Partition Table",
-      "RAM": "Random Access Memory"
+      "RAM": "Random Access Memory",
+      "XP": null
     }
   },
   {
@@ -5035,7 +5046,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "UBI": "Unsorted Block Images"
+    }
   },
   {
     "id": "CA_030",
@@ -5318,7 +5332,11 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": null
+    "dueum": null,
+    "gloss": {
+      "STL": "Sector Translation Layer",
+      "BML": "Block Management Layer"
+    }
   },
   {
     "id": "CA_032",
@@ -12019,7 +12037,8 @@
       "MISD": "Multiple Instruction Single Data",
       "MIMD": "Multiple Instruction Multiple Data",
       "SIMT": "Single Instruction Multiple Threads",
-      "AVX": "Advanced Vector Extensions"
+      "AVX": "Advanced Vector Extensions",
+      "MPP": "Massively Parallel Processing"
     }
   },
   {
@@ -12172,7 +12191,8 @@
       "UMA": "Uniform Memory Access",
       "NORMA": "No Remote Memory Access",
       "DSM": "Distributed Shared Memory",
-      "MPI": "Message Passing Interface"
+      "MPI": "Message Passing Interface",
+      "MPP": "Massively Parallel Processing"
     }
   },
   {
@@ -13073,7 +13093,9 @@
     "dueum": null,
     "gloss": {
       "RVV": "RISC-V Vector Extension",
-      "XLEN": "Register Width"
+      "XLEN": "Register Width",
+      "IP": "Intellectual Property",
+      "AP": "Application Processor"
     }
   },
   {
@@ -13229,7 +13251,8 @@
       "APB": "Advanced Peripheral Bus",
       "AXI": "Advanced eXtensible Interface",
       "GIC": "Generic Interrupt Controller",
-      "VIC": "Vectored Interrupt Controller"
+      "VIC": "Vectored Interrupt Controller",
+      "IP": "Intellectual Property"
     }
   },
   {
@@ -13571,7 +13594,8 @@
     "dueum": null,
     "gloss": {
       "AMP": "Asymmetric Multi-Processing",
-      "LLC": "Last Level Cache"
+      "LLC": "Last Level Cache",
+      "TLP": "Thread-Level Parallelism"
     }
   },
   {
@@ -14171,7 +14195,8 @@
     "reviewed": true,
     "dueum": null,
     "gloss": {
-      "EA": "Effective Address"
+      "EA": "Effective Address",
+      "PC": "Program Counter"
     }
   },
   {
@@ -17573,7 +17598,9 @@
       "LUT": "Look-Up Table",
       "IOB": "Input/Output Block",
       "BRAM": "Block RAM",
-      "SerDes": "Serializer/Deserializer"
+      "SerDes": "Serializer/Deserializer",
+      "IP": "Intellectual Property",
+      "RAM": "Random Access Memory"
     }
   },
   {
@@ -17719,7 +17746,8 @@
       "TTL": "Transistor-Transistor Logic",
       "CMOS": "Complementary Metal-Oxide-Semiconductor",
       "TR": "Transistor",
-      "RTL": "Resistor-Transistor Logic"
+      "RTL": "Resistor-Transistor Logic",
+      "MOS": "Metal-Oxide-Semiconductor"
     }
   },
   {
@@ -19092,7 +19120,8 @@
     "dueum": null,
     "gloss": {
       "D2D": "Disk to Disk",
-      "D2D2T": "Disk to Disk to Tape"
+      "D2D2T": "Disk to Disk to Tape",
+      "CDP": "Continuous Data Protection"
     }
   },
   {
@@ -19239,7 +19268,8 @@
       "RPO": "Recovery Point Objective",
       "RTO": "Recovery Time Objective",
       "BMR": "Bare Metal Recovery",
-      "BCP": "Business Continuity Planning"
+      "BCP": "Business Continuity Planning",
+      "CDP": "Continuous Data Protection"
     }
   },
   {
@@ -19388,7 +19418,8 @@
       "HBA": "Host Bus Adapter",
       "MSI-X": "Message Signaled Interrupts Extended",
       "NVMe-oF": "NVMe over Fabrics",
-      "ZNS": "Zoned Namespace"
+      "ZNS": "Zoned Namespace",
+      "IOPS": "Input/Output Operations Per Second"
     }
   },
   {
@@ -21659,7 +21690,8 @@
     "dueum": null,
     "gloss": {
       "DFA": "Deterministic Finite Automaton",
-      "NFA": "Nondeterministic Finite Automaton"
+      "NFA": "Nondeterministic Finite Automaton",
+      "PLC": "Programmable Logic Controller"
     }
   },
   {
@@ -21957,7 +21989,8 @@
       "BGA": "Ball Grid Array",
       "JEDEC": "Joint Electron Device Engineering Council",
       "UFS": "Universal Flash Storage",
-      "BBM": "Bad Block Management"
+      "BBM": "Bad Block Management",
+      "ECC": "Error-Correcting Code"
     }
   },
   {
@@ -23499,7 +23532,10 @@
     ],
     "quiz_avoid": [],
     "reviewed": true,
-    "dueum": "베부고(베어울프·부하 분산·고가용성 클러스터)"
+    "dueum": "베부고(베어울프·부하 분산·고가용성 클러스터)",
+    "gloss": {
+      "SSI": "Single System Image"
+    }
   },
   {
     "id": "CA_132",
@@ -24092,7 +24128,8 @@
     "reviewed": true,
     "dueum": null,
     "gloss": {
-      "OSF": "Open Software Foundation"
+      "OSF": "Open Software Foundation",
+      "DCE": "Distributed Computing Environment"
     }
   },
   {

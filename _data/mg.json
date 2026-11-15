@@ -864,7 +864,8 @@
   "reviewed": true,
   "dueum": "AS 분데특신의(연관성·연속성·분류·데이터 군집화·특성화·신경망·의사결정나무)",
   "gloss": {
-   "AS": null
+   "AS": null,
+   "SAS": null
   }
  },
  {
@@ -1002,7 +1003,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "SAS": null
+  }
  },
  {
   "id": "MG_008",
@@ -3038,7 +3042,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "STS": "Static Transfer Switch"
+  }
  },
  {
   "id": "MG_026",
@@ -8037,7 +8044,8 @@
   "dueum": null,
   "gloss": {
    "PRM": "Performance Reference Model",
-   "TRM": "Technical Reference Model"
+   "TRM": "Technical Reference Model",
+   "ARM": "Application Reference Model"
   }
  },
  {
@@ -15315,7 +15323,10 @@
   ],
   "quiz_avoid": [],
   "reviewed": true,
-  "dueum": null
+  "dueum": null,
+  "gloss": {
+   "IP": "Intellectual Property"
+  }
  },
  {
   "id": "MG_137_0",

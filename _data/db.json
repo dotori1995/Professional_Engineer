@@ -2675,7 +2675,10 @@
    "단말 DB 암호화"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "ECC": "Elliptic Curve Cryptography"
+  }
  },
  {
   "id": "DB_027",
@@ -4188,7 +4191,10 @@
    "참조 무결성(Referential Integrity)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "BOM": "Bill of Materials"
+  }
  },
  {
   "id": "DB_040",
@@ -5769,7 +5775,10 @@
    "Lock Escalation"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "IX": "Intention Exclusive"
+  }
  },
  {
   "id": "DB_054",
@@ -15774,7 +15783,9 @@
   "gloss": {
    "MDS": "Master Data Server",
    "MDC": "Master Data Client",
-   "DA": "Data Architecture"
+   "DA": "Data Architecture",
+   "SCM": "Supply Chain Management",
+   "SOA": "Service-Oriented Architecture"
   }
  },
  {
@@ -17790,7 +17801,10 @@
    "TPC-C·SPECjbb2015"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "AP": "Application Server"
+  }
  },
  {
   "id": "DB_157",
@@ -18120,7 +18134,8 @@
   "quiz_groups": [],
   "quiz_avoid": [],
   "gloss": {
-   "KMS": "Key Management System"
+   "KMS": "Key Management System",
+   "AP": "Application"
   }
  },
  {

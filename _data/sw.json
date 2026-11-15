@@ -1937,7 +1937,8 @@
   "reviewed": true,
   "gloss": {
    "ISP": "Interface Segregation Principle",
-   "LSP": "Liskov Substitution Principle"
+   "LSP": "Liskov Substitution Principle",
+   "SRP": "Single Responsibility Principle"
   }
  },
  {
@@ -15176,7 +15177,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "SRP": "Single Responsibility Principle"
+  }
  },
  {
   "id": "SW_120",
@@ -15315,7 +15319,8 @@
   ],
   "reviewed": true,
   "gloss": {
-   "TDD": "Test-Driven Development"
+   "TDD": "Test-Driven Development",
+   "SRP": "Single Responsibility Principle"
   }
  },
  {
@@ -21035,7 +21040,10 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "DFS": "Depth-First Search"
+  }
  },
  {
   "id": "SW_159",
@@ -22148,7 +22156,11 @@
   "quiz_groups": [
    "sw"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "MVT": "Multivariate Testing",
+   "CTR": "Click-Through Rate"
+  }
  },
  {
   "id": "SW_169_00",

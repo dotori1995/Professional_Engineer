@@ -3336,7 +3336,8 @@
   "gloss": {
    "EVM": "Earned Value Management",
    "EV": "Earned Value",
-   "LOE": "Level of Effort"
+   "LOE": "Level of Effort",
+   "CPI": "Cost Performance Index"
   }
  },
  {
@@ -5529,7 +5530,9 @@
   "reviewed": true,
   "gloss": {
    "SCM": "Software Configuration Management",
-   "CI": "Configuration Item"
+   "CI": "Configuration Item",
+   "FCA": "Functional Configuration Audit",
+   "PCA": "Physical Configuration Audit"
   }
  },
  {
@@ -9325,7 +9328,10 @@
   "quiz_groups": [
    "pm"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "FDD": "Feature-Driven Development"
+  }
  },
  {
   "id": "PM_087",

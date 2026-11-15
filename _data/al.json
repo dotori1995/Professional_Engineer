@@ -1568,7 +1568,10 @@
    "안정 정렬",
    "버킷용 추가 메모리"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "MSD": "Most Significant Digit"
+  }
  },
  {
   "id": "AL_013",
@@ -1979,7 +1982,8 @@
   ],
   "quiz_groups": [],
   "gloss": {
-   "CPM": "Critical Path Method"
+   "CPM": "Critical Path Method",
+   "DFS": "Depth-First Search"
   }
  },
  {
@@ -3361,7 +3365,10 @@
    "인접 리스트 O(V + E)",
    "인접 행렬 O(V²)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "DFS": "Depth-First Search"
+  }
  },
  {
   "id": "AL_023",
@@ -3756,7 +3763,10 @@
    "엔트로피(Entropy)",
    "평균 부호 길이 최소화"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "VLC": "Variable Length Coding"
+  }
  },
  {
   "id": "AL_026",
@@ -3861,7 +3871,10 @@
    "연속 반복 데이터에 효과적",
    "반복이 적으면 역효과"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "ABC": null
+  }
  },
  {
   "id": "AL_027",
@@ -4420,7 +4433,11 @@
    "H.265/HEVC",
    "H.266/VVC"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "RLC": "Run-Length Coding",
+   "EVC": "Essential Video Coding"
+  }
  },
  {
   "id": "AL_030",
@@ -5103,7 +5120,10 @@
    "그래프 색칠",
    "해밀턴 회로"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "DFS": "Depth-First Search"
+  }
  },
  {
   "id": "AL_035",
@@ -5778,6 +5798,10 @@
    "최적성(Optimality)",
    "시간·공간 복잡도"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "DFS": "Depth-First Search",
+   "IDS": "Iterative Deepening Search"
+  }
  }
 ]

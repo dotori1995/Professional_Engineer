@@ -1025,7 +1025,8 @@
   "gloss": {
    "CL": "Capability List",
    "LKM": "Loadable Kernel Module",
-   "TCB": "Thread Control Block"
+   "TCB": "Thread Control Block",
+   "MAC": "Mandatory Access Control"
   }
  },
  {
@@ -1160,7 +1161,8 @@
   "quiz_groups": [],
   "quiz_avoid": [],
   "gloss": {
-   "GPOS": "General Purpose OS"
+   "GPOS": "General Purpose OS",
+   "CSS": "Cascading Style Sheets"
   }
  },
  {
@@ -3213,7 +3215,10 @@
    "바쁜 대기(Busy Waiting)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "CAS": "Compare-and-Swap"
+  }
  },
  {
   "id": "OS_026",
@@ -3454,7 +3459,10 @@
    "스핀락(Spinlock)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "CAS": "Compare-and-Swap"
+  }
  },
  {
   "id": "OS_028",
@@ -4855,7 +4863,8 @@
   "quiz_avoid": [],
   "gloss": {
    "RCU": "Read-Copy-Update",
-   "MCS": "Mellor-Crummey and Scott lock"
+   "MCS": "Mellor-Crummey and Scott lock",
+   "CAS": "Compare-and-Swap"
   }
  },
  {
@@ -7725,7 +7734,8 @@
    "PIC": "Programmable Interrupt Controller",
    "APIC": "Advanced Programmable Interrupt Controller",
    "GIC": "Generic Interrupt Controller",
-   "LCFS": "Last-Come, First-Served"
+   "LCFS": "Last-Come, First-Served",
+   "SVC": "Supervisor Call"
   }
  },
  {
@@ -7871,7 +7881,9 @@
    "SP": "Stack Pointer",
    "NAPI": "New API",
    "MSI": "Message Signaled Interrupts",
-   "PCB": "Process Control Block"
+   "PCB": "Process Control Block",
+   "PC": "Program Counter",
+   "SVC": "Supervisor Call"
   }
  },
  {
@@ -9091,7 +9103,8 @@
    "MCU": "Micro Controller Unit",
    "MPU": "Micro Processor Unit",
    "DSP": "Digital Signal Processor",
-   "RTOS": "Real-Time Operating System"
+   "RTOS": "Real-Time Operating System",
+   "RAM": "Random Access Memory"
   }
  },
  {

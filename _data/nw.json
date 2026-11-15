@@ -5137,7 +5137,8 @@
    "ABM": "Asynchronous Balanced Mode",
    "FEC": "Forward Error Correction",
    "PPP": "Point-to-Point Protocol",
-   "MAC": "Medium Access Control"
+   "MAC": "Medium Access Control",
+   "ARM": "Asynchronous Response Mode"
   }
  },
  {
@@ -5253,7 +5254,8 @@
   "gloss": {
    "SMF": "Single-Mode Fiber",
    "STP": "Shielded Twisted Pair",
-   "FTP": "Foiled Twisted Pair"
+   "FTP": "Foiled Twisted Pair",
+   "MMF": "Multi-Mode Fiber"
   }
  },
  {
@@ -7914,7 +7916,8 @@
   "quiz_groups": [],
   "gloss": {
    "ABM": "Asynchronous Balanced Mode",
-   "PPP": "Point-to-Point Protocol"
+   "PPP": "Point-to-Point Protocol",
+   "ARM": "Asynchronous Response Mode"
   }
  },
  {
@@ -9645,7 +9648,10 @@
    "차량 단말 소형·저가화",
    "짧은 통신 시간"
   ],
-  "reviewed": true
+  "reviewed": true,
+  "gloss": {
+   "ETC": "Electronic Toll Collection"
+  }
  },
  {
   "id": "NW_084",
@@ -15784,7 +15790,10 @@
    "IEEE 802.15.4z(보안 거리 측정)",
    "FiRa Consortium"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "STS": "Scrambled Timestamp Sequence"
+  }
  },
  {
   "id": "NW_149",
@@ -22595,7 +22604,10 @@
    "DCM(Device Control Module)·DCM 관리자",
    "FAV·IAV·BAV·LAV(Full·Intermediate·Base·Legacy AV)"
   ],
-  "quiz_groups": []
+  "quiz_groups": [],
+  "gloss": {
+   "CSR": "Control and Status Register"
+  }
  },
  {
   "id": "NW_219",
@@ -25455,7 +25467,10 @@
    "리드의 법칙(2ᴺ)"
   ],
   "quiz_groups": [],
-  "dueum": "샤방(사노프=방송, 시청자 수 비례)"
+  "dueum": "샤방(사노프=방송, 시청자 수 비례)",
+  "gloss": {
+   "RCA": "Radio Corporation of America"
+  }
  },
  {
   "id": "NW_255",

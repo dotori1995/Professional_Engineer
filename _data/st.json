@@ -110,7 +110,10 @@
    "표본추출(Sampling)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "SPC": "Statistical Process Control"
+  }
  },
  {
   "id": "ST_002",
@@ -3326,7 +3329,10 @@
    "회귀방정식(Regression Equation)"
   ],
   "quiz_groups": [],
-  "quiz_avoid": []
+  "quiz_avoid": [],
+  "gloss": {
+   "SSE": "Sum of Squared Errors"
+  }
  },
  {
   "id": "ST_041",
