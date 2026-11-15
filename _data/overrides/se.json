@@ -35833,6 +35833,292 @@
    "RASP": "Runtime Application Self-Protection"
   }
  },
+ "SE_254": {
+  "title": "사이버 게놈(Cyber Genome)",
+  "category": "SE > 보안 > 기타/시사 > 사이버 게놈(Cyber Genome)",
+  "definition": "인간 유전체를 분석하듯 대량의 악성코드 샘플에서 API 호출 시퀀스 등 고유 특성 인자를 추출하고 서열 정렬로 유사도를 측정해, 변종을 계통별로 분류하고 공격 배후와 목적을 추적하는 악성코드 분석 기술",
+  "keywords": [
+   "분석 관점: 아티팩트 중심 · 케이스 중심 · 휴먼 중심",
+   "API 시퀀스 추출: PE 파일 IAT 분석 · API 후킹",
+   "특성 인자 추출: 화이트리스트 생성 · 고유 특성 인자",
+   "유사도 분석: 전역 정렬 · 국소 정렬 · LCS"
+  ],
+  "sections": [
+   {
+    "title": "분석 효용",
+    "subsections": [
+     {
+      "title": "보안 프로파일링",
+      "items": [
+       "은밀한 악성코드의 배후와 공격 의도 파악"
+      ]
+     },
+     {
+      "title": "빠른 추적",
+      "items": [
+       "특징별 분류로 신규 출현 시 제작자·유포지 즉시 추적"
+      ]
+     },
+     {
+      "title": "APT 대응",
+      "items": [
+       "IP와 기법을 바꾸는 공격의 계통 연결로 사전 차단"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분석 관점",
+    "subsections": [
+     {
+      "title": "아티팩트 중심",
+      "items": [
+       "언어·컴파일러, C&C 주소, 시스템 콜 등 흔적 DB화"
+      ]
+     },
+     {
+      "title": "케이스 중심",
+      "items": [
+       "사건별 기능·행위를 육하원칙으로 정리해 유사 사건 예방"
+      ]
+     },
+     {
+      "title": "휴먼 중심",
+      "items": [
+       "해커의 활동 기록과 관심 주제로 연관 관계 추적"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "분석 절차",
+    "subsections": [
+     {
+      "title": "1 시퀀스 추출",
+      "items": [
+       "IAT 정적 분석 또는 실행 중 API 후킹"
+      ]
+     },
+     {
+      "title": "2 특성 인자 추출",
+      "items": [
+       "정상 프로그램 API 화이트리스트 제거"
+      ]
+     },
+     {
+      "title": "3 문자열 치환",
+      "items": [
+       "주요 API를 알파벳 서열로 변환"
+      ]
+     },
+     {
+      "title": "4 유사도 측정",
+      "items": [
+       "국소·전역 정렬과 LCS로 변종 그룹화"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "분석 효용",
+   "- 보안 프로파일링",
+   "- 빠른 추적",
+   "- APT 대응",
+   "분석 관점",
+   "- 아티팩트 중심",
+   "- 케이스 중심",
+   "- 휴먼 중심",
+   "분석 절차",
+   "- 1 시퀀스 추출",
+   "- 2 특성 인자 추출",
+   "- 3 문자열 치환",
+   "- 4 유사도 측정"
+  ],
+  "name": "사이버 게놈(Cyber Genome)",
+  "en": "Cyber Genome",
+  "keywords_must": [
+   "아티팩트 중심",
+   "케이스 중심",
+   "휴먼 중심",
+   "PE 파일 IAT 분석",
+   "API 후킹",
+   "화이트리스트 생성",
+   "고유 특성 인자",
+   "전역 정렬",
+   "국소 정렬",
+   "LCS"
+  ],
+  "keywords_ref": [
+   "목적: 보안 프로파일링(배후·의도 파악), 빠른 추적 분석(제작자·유포지·목적), APT 사전 대응",
+   "성공 요인은 최대한 많은 샘플 확보",
+   "아티팩트: 언어·컴파일러·C&C IP·URL·시스템 콜 문자열화",
+   "케이스: 범죄 수사 프로파일링처럼 육하원칙 정리",
+   "휴먼: 해커 프로필·게시글·관심 주제 분석",
+   "API 리스트를 문자로 치환해 DNA 서열 정렬 적용, 변종은 길이가 달라 국소 정렬(Smith-Waterman) 선호",
+   "DARPA 사이버 게놈 프로그램, HBGary Digital DNA, Invincea Cynomix, ETRI 사이버 유전체 분석"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "아티팩트 중심",
+   "케이스 중심",
+   "휴먼 중심",
+   "PE 파일 IAT 분석",
+   "API 후킹",
+   "화이트리스트 생성",
+   "고유 특성 인자",
+   "전역 정렬",
+   "국소 정렬",
+   "LCS"
+  ],
+  "gloss": {
+   "PE": "Portable Executable",
+   "IAT": "Import Address Table",
+   "LCS": "Longest Common Subsequence",
+   "APT": "Advanced Persistent Threat",
+   "C&C": "Command and Control",
+   "DARPA": "Defense Advanced Research Projects Agency"
+  }
+ },
+ "SE_255": {
+  "title": "화이트 해커(White Hat Hacker)",
+  "category": "SE > 보안 > 기타/시사 > 화이트 해커",
+  "definition": "침입·탈취·교란에 쓰이는 해킹 기술을 모의 해킹과 취약점 진단에 합법적으로 활용해 공격을 사전에 저지하고 대응 전략을 세우는 윤리적 보안 전문가로, 블랙 해커의 수법을 이해하고 응용할 수 있어야 한다",
+  "keywords": [
+   "해커 구분: 화이트 햇 · 블랙 햇 · 그레이 햇",
+   "활동: 모의 해킹 · 취약점 진단 · 버그 바운티 · 레드팀",
+   "공격 기술 이해: OWASP Top 10 · 사회공학 · APT · 클라우드·IoT 해킹"
+  ],
+  "sections": [
+   {
+    "title": "의미와 자질",
+    "subsections": [
+     {
+      "title": "역할",
+      "items": [
+       "해킹 기술로 방어 전략을 세우는 보안 전문가"
+      ]
+     },
+     {
+      "title": "윤리",
+      "items": [
+       "승인된 범위에서만 활동, 발견 취약점 책임 있게 공개"
+      ]
+     },
+     {
+      "title": "대비",
+      "items": [
+       "이익을 노리는 블랙 해커와 끊임없는 경쟁"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용 기술",
+    "subsections": [
+     {
+      "title": "웹·애플리케이션",
+      "items": [
+       "OWASP Top 10, 시큐어 코딩 결함 공격"
+      ]
+     },
+     {
+      "title": "신기술 환경",
+      "items": [
+       "모바일·IoT·가상화·클라우드 취약점"
+      ]
+     },
+     {
+      "title": "공격 기법",
+      "items": [
+       "사회공학, APT, AI 도구 활용 해킹"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "육성 방안",
+    "subsections": [
+     {
+      "title": "처우",
+      "items": [
+       "안정적 생활 기반과 경력 경로 제공"
+      ]
+     },
+     {
+      "title": "양성",
+      "items": [
+       "군 연계 교육, 전문 교육 과정"
+      ]
+     },
+     {
+      "title": "생태계",
+      "items": [
+       "동아리 지원, 버그 바운티·해킹 대회 활성화"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "의미와 자질",
+   "- 역할",
+   "- 윤리",
+   "- 대비",
+   "활용 기술",
+   "- 웹·애플리케이션",
+   "- 신기술 환경",
+   "- 공격 기법",
+   "육성 방안",
+   "- 처우",
+   "- 양성",
+   "- 생태계"
+  ],
+  "name": "화이트 해커(White Hat Hacker)",
+  "en": "White Hat Hacker",
+  "keywords_must": [
+   "화이트 햇",
+   "블랙 햇",
+   "그레이 햇",
+   "모의 해킹",
+   "취약점 진단",
+   "버그 바운티",
+   "레드팀",
+   "OWASP Top 10",
+   "사회공학",
+   "APT",
+   "클라우드·IoT 해킹"
+  ],
+  "keywords_ref": [
+   "역량: 윤리 의식·기술 역량",
+   "명칭 유래: 서부 영화 선역의 흰 모자, 악역의 검은 모자",
+   "사용 기술: AI 도구 활용 해킹, 실전 모의 해킹, 웹·모바일·IoT·가상화 취약점 공격",
+   "육성: 안정적 생활 기반, 군 복무 연계 양성, 동아리·그룹 정부 지원, BoB(차세대 보안 리더 양성)",
+   "책임 있는 공개(Responsible Disclosure) 원칙",
+   "사전 서면 승인과 범위 합의가 합법성의 전제"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "화이트 햇",
+   "블랙 햇",
+   "그레이 햇",
+   "모의 해킹",
+   "취약점 진단",
+   "버그 바운티",
+   "레드팀",
+   "OWASP Top 10",
+   "사회공학",
+   "APT",
+   "클라우드·IoT 해킹"
+  ],
+  "gloss": {
+   "OWASP": "Open Worldwide Application Security Project",
+   "APT": "Advanced Persistent Threat",
+   "BoB": "Best of the Best"
+  }
+ },
  "SE_257_1": {
   "title": "신뢰 플랫폼 모듈(TPM, Trusted Platform Module)",
   "category": "SE > CA",
@@ -35981,6 +36267,166 @@
    "EK": "Endorsement Key",
    "SRK": "Storage Root Key",
    "PCR": "Platform Configuration Register"
+  }
+ },
+ "SE_258": {
+  "title": "섀도 IT(Shadow IT)",
+  "category": "SE > 기타/시사 > 쉐도우IT",
+  "definition": "직원이나 부서가 IT 부서의 승인 없이 SaaS·개인 기기·애플리케이션을 업무에 도입해 기업 자산 관리 밖에 놓인 미인가 IT 환경으로, 정보 유출·규제 위반·연속성·비용 측면의 위협을 가져오므로 가시성 확보와 거버넌스로 관리해야 한다",
+  "keywords": [
+   "등장 배경: SaaS 확산 · BYOD · BYOA · IT 소비재화",
+   "위협 영역: 데이터 보안 · 규제 준수 · 비즈니스 연속성 · 비용",
+   "대응 수단: CASB · DLP·DRM · NAC · 승인 서비스 카탈로그"
+  ],
+  "sections": [
+   {
+    "title": "발생 원인",
+    "subsections": [
+     {
+      "title": "SaaS 협업 도구",
+      "items": [
+       "가입만으로 즉시 사용 가능"
+      ]
+     },
+     {
+      "title": "개인 기기",
+      "items": [
+       "스마트폰·태블릿으로 업무 접근"
+      ]
+     },
+     {
+      "title": "속도 요구",
+      "items": [
+       "현업이 생산성 높은 신기술 직접 도입"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "위협",
+    "subsections": [
+     {
+      "title": "데이터",
+      "items": [
+       "내부 정보 유출, 내부 통제 우회"
+      ]
+     },
+     {
+      "title": "규제",
+      "items": [
+       "개인정보 처리 위반, 국외 이전 문제"
+      ]
+     },
+     {
+      "title": "연속성",
+      "items": [
+       "제공 업체 중단 시 데이터 유실"
+      ]
+     },
+     {
+      "title": "비용",
+      "items": [
+       "중복 구매, 라이선스 낭비"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대응",
+    "subsections": [
+     {
+      "title": "가시성",
+      "items": [
+       "CASB로 클라우드 사용 탐지·통제"
+      ]
+     },
+     {
+      "title": "데이터 보호",
+      "items": [
+       "DLP·DRM·NAC, 망 분리"
+      ]
+     },
+     {
+      "title": "거버넌스",
+      "items": [
+       "승인 서비스 목록, 교육과 제재, BCP·업체 관리"
+      ]
+     },
+     {
+      "title": "구매 관리",
+      "items": [
+       "수요 조사와 일괄 구매"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "발생 원인",
+   "- SaaS 협업 도구",
+   "- 개인 기기",
+   "- 속도 요구",
+   "위협",
+   "- 데이터",
+   "- 규제",
+   "- 연속성",
+   "- 비용",
+   "대응",
+   "- 가시성",
+   "- 데이터 보호",
+   "- 거버넌스",
+   "- 구매 관리"
+  ],
+  "name": "섀도 IT(Shadow IT)",
+  "en": "Shadow IT",
+  "keywords_must": [
+   "SaaS 확산",
+   "BYOD",
+   "BYOA",
+   "IT 소비재화",
+   "데이터 보안",
+   "규제 준수",
+   "비즈니스 연속성",
+   "비용",
+   "CASB",
+   "DLP·DRM",
+   "NAC",
+   "승인 서비스 카탈로그"
+  ],
+  "keywords_ref": [
+   "데이터 위협: 외부 클라우드 관리 수단 부재, DRM 정책 우회",
+   "규제: 개인정보보호법·GDPR, 민감정보 퍼블릭 클라우드 저장",
+   "연속성: 제공 업체 경영 위기로 데이터 유실, 업체 의존",
+   "비용: 중복 구매, 대량 할인 협상 기회 상실",
+   "대응: 망 분리 업·다운링크 통제, 민감정보 분류와 교육·제재, 백업·BCP, 업체 모니터링, 수요 조사와 일괄 구매",
+   "생성형 AI 무단 사용(섀도 AI)으로 확대"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "SaaS 확산",
+   "BYOD",
+   "BYOA",
+   "IT 소비재화",
+   "데이터 보안",
+   "규제 준수",
+   "비즈니스 연속성",
+   "비용",
+   "CASB",
+   "DLP·DRM",
+   "NAC",
+   "승인 서비스 카탈로그"
+  ],
+  "gloss": {
+   "SaaS": "Software as a Service",
+   "BYOD": "Bring Your Own Device",
+   "BYOA": "Bring Your Own Application",
+   "CASB": "Cloud Access Security Broker",
+   "DLP": "Data Loss Prevention",
+   "DRM": "Digital Rights Management",
+   "NAC": "Network Access Control",
+   "BCP": "Business Continuity Planning",
+   "GDPR": "General Data Protection Regulation"
   }
  },
  "SE_259": {
