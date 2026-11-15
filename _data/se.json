@@ -25831,6 +25831,478 @@
   }
  },
  {
+  "id": "SE_176",
+  "code": "SE_176",
+  "title": "핑거프린팅(Fingerprinting)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 컨텐츠 보안 > Finger Printing",
+  "definition": "디지털 콘텐츠에 저작권 정보와 함께 구매자마다 다른 고유 정보를 지각되지 않게 삽입해, 불법 유통본이 발견되면 이를 추출해 유출한 구매자를 추적하는 개인화 워터마킹 기술",
+  "keywords": [
+   "요구 사항: 비가시성 · 견고성 · 유일성 · 공모 허용 · 비대칭성 · 익명성 · 조건부 추적성",
+   "공모 공격: 평균화 · 최대·최소 · 상관계수 음수화·제로화 · 모자이크"
+  ],
+  "sections": [
+   {
+    "title": "요구 사항",
+    "subsections": [
+     {
+      "title": "품질",
+      "items": [
+       "비가시성, 원본 품질 유지"
+      ]
+     },
+     {
+      "title": "견고성",
+      "items": [
+       "압축·재샘플링·기하 변환에도 유지"
+      ]
+     },
+     {
+      "title": "유일성·공모 허용",
+      "items": [
+       "구매자 특정, 여러 사본 비교로 제거·생성 불가"
+      ]
+     },
+     {
+      "title": "비대칭성·익명성",
+      "items": [
+       "판매자는 결과를 모르고, 합법 구매자는 익명, 불법 배포자만 추적"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "공모 공격",
+    "subsections": [
+     {
+      "title": "평균화",
+      "items": [
+       "여러 사본 평균으로 새 콘텐츠 생성"
+      ]
+     },
+     {
+      "title": "최대·최소",
+      "items": [
+       "사본 간 최대·최소 평균으로 생성"
+      ]
+     },
+     {
+      "title": "상관계수 공격",
+      "items": [
+       "상관값을 음수·0으로 유도해 검출 방해"
+      ]
+     },
+     {
+      "title": "모자이크",
+      "items": [
+       "기하학적으로 잘게 나눠 재조합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 강화",
+    "subsections": [
+     {
+      "title": "비대칭 프로토콜",
+      "items": [
+       "구매자만 최종 콘텐츠 보유, 분쟁 시 증명"
+      ]
+     },
+     {
+      "title": "공모 보안 코드",
+      "items": [
+       "중복성을 이용해 공모자 일부를 식별하는 코드 설계"
+      ]
+     },
+     {
+      "title": "검출키 분리",
+      "items": [
+       "동일 워터마크에 구매자별 검출키 부여"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "요구 사항",
+   "- 품질",
+   "- 견고성",
+   "- 유일성·공모 허용",
+   "- 비대칭성·익명성",
+   "공모 공격",
+   "- 평균화",
+   "- 최대·최소",
+   "- 상관계수 공격",
+   "- 모자이크",
+   "보안 강화",
+   "- 비대칭 프로토콜",
+   "- 공모 보안 코드",
+   "- 검출키 분리"
+  ],
+  "name": "핑거프린팅(Fingerprinting)",
+  "en": "Digital Fingerprinting",
+  "keywords_must": [
+   "비가시성",
+   "견고성",
+   "유일성",
+   "공모 허용",
+   "비대칭성",
+   "익명성",
+   "조건부 추적성",
+   "평균화",
+   "최대·최소",
+   "상관계수 음수화·제로화",
+   "모자이크"
+  ],
+  "keywords_ref": [
+   "보안 강화: 비대칭 핑거프린팅·공모 보안 코드(c-secure)",
+   "대칭형은 판매자도 핑거프린트 콘텐츠를 가져 누명 가능 → 비대칭형은 2자 프로토콜로 구매자만 접근, 키 생성·핑거프린팅·판별·분쟁 해결 4알고리즘",
+   "3-secure 코드",
+   "워터마킹 비교: 동일 저작권 정보 대 구매자별 정보, 원본 증명 대 유통 추적",
+   "무선·브라우저 핑거프린팅(장치 식별)과 구분",
+   "DRM 연계"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "비가시성",
+   "견고성",
+   "유일성",
+   "공모 허용",
+   "비대칭성",
+   "익명성",
+   "조건부 추적성",
+   "평균화",
+   "최대·최소",
+   "상관계수 음수화·제로화",
+   "모자이크"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "DRM": "Digital Rights Management"
+  }
+ },
+ {
+  "id": "SE_177",
+  "code": "SE_177",
+  "title": "디지털 객체 식별자(DOI, Digital Object Identifier)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 > 컨텐츠보안 > DOI",
+  "definition": "ISBN처럼 디지털 콘텐츠마다 영구적인 고유 식별번호를 부여하고 핸들 시스템으로 현재 위치(URL)와 연결해, 위치가 바뀌어도 콘텐츠를 찾을 수 있게 하는 식별 체계(ISO 26324)",
+  "keywords": [
+   "구조: 접두부(Prefix) · 접미부(Suffix)",
+   "구성 요소: 번호 체계 · 메타데이터 · 해석 시스템(핸들) · 운영 정책",
+   "특징: 인식성 · 권리 표기 · 운용성 · 영구 식별 · 응용성 · 변환 용이성"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "유통 증가",
+      "items": [
+       "대량 디지털 콘텐츠의 효율적 식별 필요"
+      ]
+     },
+     {
+      "title": "URL 한계",
+      "items": [
+       "위치가 바뀌면 링크가 끊김"
+      ]
+     },
+     {
+      "title": "권리 관리",
+      "items": [
+       "유료 콘텐츠의 소유·분배 표기"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작 절차",
+    "subsections": [
+     {
+      "title": "1 선택",
+      "items": [
+       "이용자가 DOI 링크 클릭"
+      ]
+     },
+     {
+      "title": "2 해석",
+      "items": [
+       "DOI 시스템이 DOI에 연결된 현재 URL 조회"
+      ]
+     },
+     {
+      "title": "3 전달",
+      "items": [
+       "브라우저에 URL 반환"
+      ]
+     },
+     {
+      "title": "4 접근",
+      "items": [
+       "실제 콘텐츠 위치로 이동, 위치 변경 시 등록 정보만 갱신"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "식별 체계 성질",
+    "subsections": [
+     {
+      "title": "인식·영구 식별",
+      "items": [
+       "위치·시스템 변경과 무관한 고유 번호"
+      ]
+     },
+     {
+      "title": "권리 표기·운용성",
+      "items": [
+       "소유권 이전 표기, 메타데이터 상호 운용"
+      ]
+     },
+     {
+      "title": "응용·변환",
+      "items": [
+       "ISBN 등 기존 체계 수용, URL 변환 용이"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 유통 증가",
+   "- URL 한계",
+   "- 권리 관리",
+   "동작 절차",
+   "- 1 선택",
+   "- 2 해석",
+   "- 3 전달",
+   "- 4 접근",
+   "식별 체계 성질",
+   "- 인식·영구 식별",
+   "- 권리 표기·운용성",
+   "- 응용·변환"
+  ],
+  "name": "디지털 객체 식별자(DOI, Digital Object Identifier)",
+  "en": "Digital Object Identifier",
+  "keywords_must": [
+   "접두부(Prefix)",
+   "접미부(Suffix)",
+   "번호 체계",
+   "메타데이터",
+   "해석 시스템(핸들)",
+   "운영 정책",
+   "인식성",
+   "권리 표기",
+   "운용성",
+   "영구 식별",
+   "응용성",
+   "변환 용이성"
+  ],
+  "keywords_ref": [
+   "예: 10.1002/… (10 디렉터리, 1002 등록 기관, 이후 아이템 ID)",
+   "URL은 위치 식별자라 주소 변경 시 링크 단절",
+   "국내 식별 체계: UCI·COI·KOI",
+   "INDECS 메타데이터와 연동",
+   "DNS처럼 질의·응답으로 위치 해석"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "접두부(Prefix)",
+   "접미부(Suffix)",
+   "번호 체계",
+   "메타데이터",
+   "해석 시스템(핸들)",
+   "운영 정책",
+   "인식성",
+   "권리 표기",
+   "운용성",
+   "영구 식별",
+   "응용성",
+   "변환 용이성"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "dueum": "인권 운영 응변(인식성·권리 표기·운용성·영구 식별·응용성·변환 용이성)",
+  "gloss": {
+   "ISBN": "International Standard Book Number",
+   "URL": "Uniform Resource Locator",
+   "UCI": "Universal Content Identifier",
+   "COI": "Content Object Identifier",
+   "KOI": "Knowledge Object Identifier",
+   "INDECS": "Interoperability of Data in E-Commerce Systems"
+  }
+ },
+ {
+  "id": "SE_178",
+  "code": "SE_178",
+  "title": "전자상거래 데이터 상호 운용(INDECS, Interoperability of Data in E-Commerce Systems)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 콘텐츠보안",
+  "definition": "디지털 콘텐츠의 저작권 관리와 전자상거래를 위해 엔티티·창작물·관계·주체 등의 메타데이터를 공통 모델로 정의해 시스템 간 상호 운용을 가능하게 하는 유럽 중심의 메타데이터 프레임워크",
+  "keywords": [
+   "구성 요소: 엔티티(Entity) · 창작물(Creation) · 관계(Relation) · 주체(Parties)",
+   "4대 원칙: 유일 식별 · 기능적 세분화 · 지정된 권위 · 적절한 접근",
+   "관점(View): 일반 · 창작 · 상거래 · 법적 권리"
+  ],
+  "sections": [
+   {
+    "title": "데이터 모델",
+    "subsections": [
+     {
+      "title": "엔티티",
+      "items": [
+       "식별되는 모든 대상(사람·사물·개념·사건)"
+      ]
+     },
+     {
+      "title": "창작물",
+      "items": [
+       "실현물·아이템·표현물·추상물로 구분"
+      ]
+     },
+     {
+      "title": "관계",
+      "items": [
+       "엔티티 간 이벤트·상황을 표현하는 핵심 구조"
+      ]
+     },
+     {
+      "title": "주체",
+      "items": [
+       "무엇을 하는 주체인가로 정의되는 당사자"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "4대 원칙",
+    "subsections": [
+     {
+      "title": "유일 식별",
+      "items": [
+       "모든 엔티티는 유일·불변 식별자"
+      ]
+     },
+     {
+      "title": "기능적 세분화",
+      "items": [
+       "구별이 필요할 때마다 엔티티 식별"
+      ]
+     },
+     {
+      "title": "지정된 권위",
+      "items": [
+       "메타데이터 작성자가 확실히 식별·신뢰"
+      ]
+     },
+     {
+      "title": "적절한 접근",
+      "items": [
+       "분산 환경 어디서나 접근"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "관점",
+    "subsections": [
+     {
+      "title": "창작",
+      "items": [
+       "객체가 어떻게 만들어지는가"
+      ]
+     },
+     {
+      "title": "상거래",
+      "items": [
+       "매매·생산·출판 거래 내역"
+      ]
+     },
+     {
+      "title": "법적 권리",
+      "items": [
+       "저작권 소유·이용·위임"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "데이터 모델",
+   "- 엔티티",
+   "- 창작물",
+   "- 관계",
+   "- 주체",
+   "4대 원칙",
+   "- 유일 식별",
+   "- 기능적 세분화",
+   "- 지정된 권위",
+   "- 적절한 접근",
+   "관점",
+   "- 창작",
+   "- 상거래",
+   "- 법적 권리"
+  ],
+  "name": "전자상거래 데이터 상호 운용(INDECS, Interoperability of Data in E-Commerce Systems)",
+  "en": "Interoperability of Data in E-Commerce Systems",
+  "keywords_must": [
+   "엔티티(Entity)",
+   "창작물(Creation)",
+   "관계(Relation)",
+   "주체(Parties)",
+   "유일 식별",
+   "기능적 세분화",
+   "지정된 권위",
+   "적절한 접근",
+   "일반",
+   "창작",
+   "상거래",
+   "법적 권리"
+  ],
+  "keywords_ref": [
+   "창작물은 실현물·아이템·표현물·추상물",
+   "관계가 가장 중요(이벤트·상황)",
+   "DOI 비교: DOI는 콘텐츠 식별·위치 추적·코드 형식·미국 중심, INDECS는 저작권 메타데이터·XML·상거래 이벤트·유럽 중심",
+   "DOI와 연동"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "엔티티(Entity)",
+   "창작물(Creation)",
+   "관계(Relation)",
+   "주체(Parties)",
+   "유일 식별",
+   "기능적 세분화",
+   "지정된 권위",
+   "적절한 접근",
+   "일반",
+   "창작",
+   "상거래",
+   "법적 권리"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "dueum": "엔 크레파(Entity·Creation·Relation·Parties)",
+  "gloss": {
+   "DOI": "Digital Object Identifier",
+   "XML": "eXtensible Markup Language"
+  }
+ },
+ {
   "id": "SE_179",
   "code": "SE_179",
   "title": "디지털 저작권 관리(DRM, Digital Rights Management)",
@@ -25995,6 +26467,152 @@
    "ODRL": "Open Digital Rights Language",
    "OMA": "Open Mobile Alliance",
    "URI": "Uniform Resource Identifier"
+  }
+ },
+ {
+  "id": "SE_180",
+  "code": "SE_180",
+  "title": "수신 제한 시스템(CAS, Conditional Access System)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 > 컨텐츠보안 > CAS (Conditional Access System)",
+  "definition": "유료 방송 사업자가 방송 신호를 스크램블링해 송출하고 수신 자격을 가진 가입자의 셋톱박스·스마트카드만 디스크램블링하도록 해 시청을 통제하는 방송 콘텐츠 보호 시스템",
+  "keywords": [
+   "구성: 자격 제어 메시지(ECM) · 자격 관리 메시지(EMM) · 스마트카드 · 셋톱박스(STB)",
+   "기능: 수신 제한 · 스크램블링(CSA) · 사이멀크립트",
+   "발전: 다운로드형 CAS(DCAS·XCAS) · DRM 연계"
+  ],
+  "sections": [
+   {
+    "title": "동작",
+    "subsections": [
+     {
+      "title": "1 스크램블링",
+      "items": [
+       "송출 측이 제어 단어로 방송 신호 암호화"
+      ]
+     },
+     {
+      "title": "2 ECM 송출",
+      "items": [
+       "암호화된 제어 단어와 수신 조건 전송"
+      ]
+     },
+     {
+      "title": "3 EMM 송출",
+      "items": [
+       "가입자별 수신 자격 갱신"
+      ]
+     },
+     {
+      "title": "4 디스크램블링",
+      "items": [
+       "스마트카드가 자격 확인 후 제어 단어 복호, STB가 신호 복원"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기능",
+    "subsections": [
+     {
+      "title": "수신 제한",
+      "items": [
+       "프로그램·채널별 자격 통제"
+      ]
+     },
+     {
+      "title": "정보 보호",
+      "items": [
+       "공통 스크램블링 알고리즘"
+      ]
+     },
+     {
+      "title": "사이멀크립트",
+      "items": [
+       "여러 CAS를 동시 운용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "다운로드형 CAS",
+    "subsections": [
+     {
+      "title": "개념",
+      "items": [
+       "망 연결 시 서버에서 보안 칩으로 CAS를 내려받아 실행"
+      ]
+     },
+     {
+      "title": "도입 이점",
+      "items": [
+       "하드웨어 교체 없이 CAS 변경, 비용·관리 부담 감소"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "동작",
+   "- 1 스크램블링",
+   "- 2 ECM 송출",
+   "- 3 EMM 송출",
+   "- 4 디스크램블링",
+   "기능",
+   "- 수신 제한",
+   "- 정보 보호",
+   "- 사이멀크립트",
+   "다운로드형 CAS",
+   "- 개념",
+   "- 도입 이점"
+  ],
+  "name": "수신 제한 시스템(CAS, Conditional Access System)",
+  "en": "Conditional Access System",
+  "keywords_must": [
+   "자격 제어 메시지(ECM)",
+   "자격 관리 메시지(EMM)",
+   "스마트카드",
+   "셋톱박스(STB)",
+   "수신 제한",
+   "스크램블링(CSA)",
+   "사이멀크립트",
+   "다운로드형 CAS(DCAS·XCAS)",
+   "DRM 연계"
+  ],
+  "keywords_ref": [
+   "ECM은 암호화된 제어 단어(CW)와 프로그램 수신 조건, EMM은 가입자 수신 자격",
+   "키 계층: CW→서비스 키→가입자 키",
+   "다운로드형은 보안 칩에 CAS를 내려받아 STB 로열티·유지보수 비용 절감, CAS 종속 탈피",
+   "카드 공유(카드 셰어링) 공격",
+   "IPTV·OTT는 DRM으로 전환"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "자격 제어 메시지(ECM)",
+   "자격 관리 메시지(EMM)",
+   "스마트카드",
+   "셋톱박스(STB)",
+   "수신 제한",
+   "스크램블링(CSA)",
+   "사이멀크립트",
+   "다운로드형 CAS(DCAS·XCAS)",
+   "DRM 연계"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "ECM": "Entitlement Control Message",
+   "EMM": "Entitlement Management Message",
+   "STB": "Set-Top Box",
+   "CSA": "Common Scrambling Algorithm",
+   "CW": "Control Word",
+   "DCAS": "Downloadable CAS",
+   "XCAS": "eXchangeable CAS",
+   "DRM": "Digital Rights Management",
+   "OTT": "Over-the-Top"
   }
  },
  {
