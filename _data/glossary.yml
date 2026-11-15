@@ -18,8 +18,11 @@ ACF: Autocorrelation Function
 ACID: Atomicity, Consistency, Isolation, Durability
 ACK: Acknowledgment
 ACL: Access Control List
+ACM: Association for Computing Machinery
 ACO: Ant Colony Optimization
+AdaBoost: Adaptive Boosting
 AdaGrad: Adaptive Gradient
+ADALINE: Adaptive Linear Neuron
 Adam: Adaptive Moment Estimation
 ADAS: Advanced Driver Assistance System
 ADC: Application Delivery Controller
@@ -29,6 +32,7 @@ ADO: ActiveX Data Objects
 ADPCM: Adaptive Differential Pulse Code Modulation
 ADR: [Adaptive Data Rate, Architecture Decision Record, Active Design Review]
 ADT: Abstract Data Type
+ADWIN: ADaptive WINdowing
 AE: Autoencoder
 AECD: Automatic Emergency Call Device
 AES: Advanced Encryption Standard
@@ -37,6 +41,7 @@ AGI: Artificial General Intelligence
 AGV: Automated Guided Vehicle
 AH: Authentication Header
 AI: Artificial Intelligence
+AIaaS: AI as a Service
 AIC: Akaike Information Criterion
 AICC: AI Contact Center
 AIFL: AI Fairness Level
@@ -131,6 +136,8 @@ BGP: Border Gateway Protocol
 BIA: Business Impact Analysis
 BIC: Bayesian Information Criterion
 BID: Bridge ID
+BiFPN: Bidirectional Feature Pyramid Network
+BiGRU: Bidirectional GRU
 BLAS: Basic Linear Algebra Subprograms
 BLAST: Bell Laboratories Layered Space-Time
 BLE: Bluetooth Low Energy
@@ -141,6 +148,7 @@ BM25: Best Matching 25
 BML: Build-Measure-Learn
 BMP: Bitmap
 BMT: Benchmark Test
+BMU: Best Matching Unit
 BOHB: Bayesian Optimization and HyperBand
 BOOTP: Bootstrap Protocol
 BOSH: Bidirectional-streams Over Synchronous HTTP
@@ -163,6 +171,7 @@ C-LOOK: Circular LOOK
 C-SCAN: Circular SCAN
 C-V2X: Cellular Vehicle-to-Everything
 C2PA: Coalition for Content Provenance and Authenticity
+C4: Colossal Clean Crawled Corpus
 CABAC: Context-Adaptive Binary Arithmetic Coding
 CACE: Changing Anything Changes Everything
 CALM: Communications Access for Land Mobiles
@@ -200,6 +209,7 @@ CGI: Common Gateway Interface
 CI/CD: Continuous Integration/Continuous Delivery
 CIDR: Classless Inter-Domain Routing
 CIFS: Common Internet File System
+CIoU: Complete IoU
 CIR: Committed Information Rate
 CKAN: Comprehensive Knowledge Archive Network
 CKPT: Checkpoint Process
@@ -242,6 +252,7 @@ CQI: Channel Quality Indicator
 CQL: Continuous Query Language
 CRAN: Comprehensive R Archive Network
 CRC: Cyclic Redundancy Check
+CRF: Conditional Random Field
 CRISP-DM: Cross-Industry Standard Process for Data Mining
 CRM: Customer Relationship Management
 CRUD: Create, Read, Update, Delete
@@ -288,11 +299,14 @@ DCMI: Dublin Core Metadata Initiative
 DCT: Discrete Cosine Transform
 DDL: Data Definition Language
 DEEP: Detailed appropriately, Estimated, Emergent, Prioritized
+DeepQA: Deep Question Answering
 DEMUX: Demultiplexer
+DENDRAL: Dendritic Algorithm
 DENM: Decentralized Environmental Notification Message
 DenseNet: Densely Connected Convolutional Network
 DER: [Distinguished Encoding Rules, Distributed Energy Resources]
 DET: Data Element Type
+DETR: DEtection TRansformer
 DevOps: Development and Operations
 DevRel: Developer Relations
 DF: ["Don't Fragment", Degrees of Freedom]
@@ -305,6 +319,7 @@ DHCPv6: Dynamic Host Configuration Protocol for IPv6
 DHT: Distributed Hash Table
 DiffServ: Differentiated Services
 DIFS: DCF Inter-Frame Space
+DIoU: Distance IoU
 DistilBERT: Distilled BERT
 DKNF: Domain-Key Normal Form
 DLCI: Data Link Connection Identifier
@@ -379,6 +394,7 @@ EAP: Extensible Authentication Protocol
 EBCDIC: Extended Binary Coded Decimal Interchange Code
 EBP: Extended Base Pointer
 EBS: Excess Burst Size
+EC2: Elastic Compute Cloud
 eCall: Emergency Call
 ECC: [Elliptic Curve Cryptography, Error-Correcting Code]
 ECDH: Elliptic Curve Diffie-Hellman
@@ -428,6 +444,7 @@ ETC: Estimate to Complete
 ETL: Extract Transform Load
 ETRI: Electronics and Telecommunications Research Institute
 EVC: Ethernet Virtual Connection
+EVD: Eigenvalue Decomposition
 EVI: Economic Value of Information
 EVM: [Earned Value Management, Error Vector Magnitude]
 FANET: Flying Ad-hoc Network
@@ -449,6 +466,7 @@ FEMS: Factory Energy Management System
 FFN: Feed-Forward Network
 FFP: Firm Fixed Price
 FFT: Fast Fourier Transform
+FGSM: Fast Gradient Sign Method
 FHSS: Frequency Hopping Spread Spectrum
 FIB: Forwarding Information Base
 FIFO: First In, First Out
@@ -470,6 +488,7 @@ FP-EPA: Fixed Price with Economic Price Adjustment
 FPC: Finite Population Correction
 FPGA: Field-Programmable Gate Array
 FPIF: Fixed Price Incentive Fee
+FPN: Feature Pyramid Network
 FPR: False Positive Rate
 FQDN: Fully Qualified Domain Name
 FRAND: Fair Reasonable And Non-Discriminatory
@@ -503,6 +522,7 @@ GFS: Google File System
 GFSK: Gaussian Frequency Shift Keying
 GIF: Graphics Interchange Format
 GIGO: "Garbage In, Garbage Out"
+GIoU: Generalized IoU
 GIS: Geographic Information System
 GiST: Generalized Search Tree
 GloBE: Global Anti-Base Erosion
@@ -638,6 +658,7 @@ ITTO: Inputs, Tools & Techniques, Outputs
 ITU: International Telecommunication Union
 IVI: In-Vehicle Infotainment
 IVN: In-Vehicle Network
+IVR: Interactive Voice Response
 IVS: In-Vehicle System
 IVT: Interrupt Vector Table
 IX: [Internet eXchange, Intention Exclusive Lock]
@@ -663,6 +684,7 @@ JSP: Jakarta Server Pages (JavaServer Pages)
 JTRS: Joint Tactical Radio System
 JTS: Java Transaction Service
 JVM: Java Virtual Machine
+KAIST: Korea Advanced Institute of Science and Technology
 KL: Kullback-Leibler
 KNN: K-Nearest Neighbors
 KOLAS: Korea Laboratory Accreditation Scheme
@@ -758,6 +780,8 @@ MANN: Memory-Augmented Neural Network
 MANO: Management and Orchestration
 MANOVA: Multivariate Analysis of Variance
 MBAP: Modbus Application Protocol
+mBART: multilingual BART
+MBConv: Mobile Inverted Bottleneck Convolution
 MBR: Minimum Bounding Rectangle
 MCL: Maximum Coupling Loss
 MCMC: Markov Chain Monte Carlo
@@ -781,6 +805,7 @@ MICS: Medical Implant Communication Service
 MIG: Multi-Instance GPU
 MIME: Multipurpose Internet Mail Extensions
 MIMO: Multiple-Input Multiple-Output
+mIoU: mean IoU
 MIPS: Million Instructions Per Second
 MIRR: Modified Internal Rate of Return
 MiT: Mix Transformer
@@ -974,6 +999,7 @@ P2P: Peer-to-Peer
 PACF: Partial Autocorrelation Function
 PACS: Picture Archiving and Communication System
 PAM: [Pulse Amplitude Modulation, Process Assessment Model, Point Access Method]
+PANet: Path Aggregation Network
 PAPR: Peak-to-Average Power Ratio
 PAT: Port Address Translation
 PAwR: Periodic Advertising with Responses
@@ -995,6 +1021,7 @@ PEFT: Parameter-Efficient Fine-Tuning
 PERT: Program Evaluation and Review Technique
 PESQ: Perceptual Evaluation of Speech Quality
 PFF: Page Fault Frequency
+PGD: Projected Gradient Descent
 PHB: Per-Hop Behavior
 PHP: Penultimate Hop Popping
 PHR: Personal Health Record
@@ -1120,6 +1147,7 @@ RIPng: RIP next generation
 RIR: Regional Internet Registry
 RIS: Reconfigurable Intelligent Surface
 RJ: Registered Jack
+RL: Reinforcement Learning
 RLAIF: Reinforcement Learning from AI Feedback
 RLC: Radio Link Control
 RLE: Run-Length Encoding
@@ -1136,9 +1164,11 @@ ROADM: Reconfigurable Optical Add-Drop Multiplexer
 ROAS: Return on Ad Spend
 RoBERTa: Robustly Optimized BERT Approach
 ROC: Receiver Operating Characteristic
+RoI: Region of Interest
 RPC: Remote Procedure Call
 RPF: Reverse Path Forwarding
 RPL: [Ring Protection Link, IPv6 Routing Protocol for Low-Power and Lossy Networks]
+RPN: Region Proposal Network
 RPO: Recovery Point Objective
 RR: Resource Record
 RRC: Radio Resource Control
@@ -1215,6 +1245,7 @@ SecOC: Secure Onboard Communication
 SEND: Secure Neighbor Discovery
 SEP: Standard-Essential Patent
 Seq2Seq: Sequence to Sequence
+seq2seq: sequence-to-sequence
 SFC: Service Function Chaining
 SFT: Supervised Fine-Tuning
 SFTP: SSH File Transfer Protocol
@@ -1274,6 +1305,7 @@ SQMS: Single Queue Multiple Server
 SQNR: Signal-to-Quantization-Noise Ratio
 SRE: Site Reliability Engineering
 SREJ: Selective Reject
+SRGAN: Super-Resolution GAN
 SRS: Software Requirements Specification
 SRT: Shortest Remaining Time
 SRTF: Shortest Remaining Time First
@@ -1454,11 +1486,13 @@ VRRP: Virtual Router Redundancy Protocol
 VRS: Virtual Reference Station
 VSAM: Virtual Storage Access Method
 VSM: Value Stream Mapping
+VT-SNN: Visual-Tactile Spiking Neural Network
 VVC: Versatile Video Coding
 VXLAN: Virtual Extensible LAN
 W3C: World Wide Web Consortium
 WAL: Write-Ahead Logging
 WAN: Wide Area Network
+WARC: Web ARChive
 WAVE: Wireless Access in Vehicular Environments
 WBAN: Wireless Body Area Network
 WBS: Work Breakdown Structure
@@ -1487,8 +1521,10 @@ WRED: Weighted Random Early Detection
 WSMP: WAVE Short Message Protocol
 WSN: Wireless Sensor Network
 WUE: Water Usage Effectiveness
+XCON: eXpert CONfigurer
 XDR: [External Data Representation, Extended Detection and Response]
 XEP: XMPP Extension Protocol
+XGBoost: eXtreme Gradient Boosting
 XLS: Microsoft Excel Spreadsheet format
 XML: eXtensible Markup Language
 XMPP: eXtensible Messaging and Presence Protocol

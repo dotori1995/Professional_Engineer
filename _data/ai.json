@@ -1557,6 +1557,167 @@
   }
  },
  {
+  "id": "AI_012",
+  "code": "AI_012",
+  "domain": "AI",
+  "category": "AI > 기계학습",
+  "subtitle": "",
+  "name": "주성분 분석(PCA, Principal Component Analysis)",
+  "title": "주성분 분석(PCA, Principal Component Analysis)",
+  "en": "Principal Component Analysis",
+  "definition": "데이터의 공분산 행렬을 고유값 분해해 분산이 가장 큰 직교 방향(주성분)을 찾고, 상위 주성분으로 데이터를 사영해 상관이 높은 변수들을 서로 독립적인 소수의 변수로 줄이는 비지도 선형 차원 축소 기법",
+  "keywords": [
+   "핵심 개념: 공분산 행렬(Covariance Matrix) · 고유값 분해(EVD) · 직교 변환 · 설명된 분산 비율",
+   "처리 절차: 평균·공분산 계산 · 고유벡터 계산 · 고유값 선택 · 변환 행렬 생성 · 선형 변환",
+   "얼굴 인식 기법: 고유 얼굴(Eigenface) · 피셔 판별 분석(FDA) · 독립 성분 분석(ICA)"
+  ],
+  "keywords_must": [
+   "공분산 행렬(Covariance Matrix)",
+   "고유값 분해(EVD)",
+   "직교 변환",
+   "설명된 분산 비율",
+   "평균·공분산 계산",
+   "고유벡터 계산",
+   "고유값 선택",
+   "변환 행렬 생성",
+   "선형 변환",
+   "고유 얼굴(Eigenface)",
+   "피셔 판별 분석(FDA)",
+   "독립 성분 분석(ICA)"
+  ],
+  "keywords_ref": [
+   "고유값·고유벡터",
+   "특이값 분해(SVD)",
+   "표준화",
+   "스크리 도표",
+   "누적 기여율",
+   "커널 PCA",
+   "LDA",
+   "차원의 저주"
+  ],
+  "outline": [
+   "개념과 원리",
+   "- 분산 최대 방향 탐색",
+   "- 공분산 행렬",
+   "- 고유값 분해·직교 변환",
+   "처리 절차",
+   "- 평균·공분산 계산",
+   "- 고유벡터 계산·고유값 선택",
+   "- 변환 행렬·선형 변환",
+   "얼굴 인식 응용과 비교",
+   "- 고유 얼굴",
+   "- PCA·FDA·ICA 비교",
+   "- 장단점"
+  ],
+  "sections": [
+   {
+    "title": "개념과 원리",
+    "subsections": [
+     {
+      "title": "분산 최대 방향 탐색",
+      "items": [
+       "첫 주성분은 데이터 분산이 가장 큰 방향, 다음 주성분은 이전 주성분과 직교하면서 남은 분산이 가장 큰 방향",
+       "상관이 높은 변수들을 소수 주성분으로 요약"
+      ]
+     },
+     {
+      "title": "공분산 행렬",
+      "items": [
+       "변수 간 함께 흩어지는 정도를 원소로 하는 대칭 행렬",
+       "상관이 없으면 공분산은 0"
+      ]
+     },
+     {
+      "title": "고유값 분해·직교 변환",
+      "items": [
+       "Σ=UΛUᵀ로 직교 고유벡터와 고유값으로 분해",
+       "고유값은 해당 주성분이 설명하는 분산 크기, 선형 상관이 없는 저차원 공간으로 사영"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "처리 절차",
+    "subsections": [
+     {
+      "title": "평균·공분산 계산",
+      "items": [
+       "입력 X의 평균 μ를 빼서 중심화",
+       "Σ=1/N·Σ(xᵢ−μ)(xᵢ−μ)ᵀ 계산, 단위가 다르면 먼저 표준화"
+      ]
+     },
+     {
+      "title": "고유벡터 계산·고유값 선택",
+      "items": [
+       "공분산 행렬의 고유값과 고유벡터 계산",
+       "고유값이 큰 순서로 m개 선택, 누적 설명 분산 비율(예: 90%)이나 스크리 도표로 m 결정"
+      ]
+     },
+     {
+      "title": "변환 행렬·선형 변환",
+      "items": [
+       "선택한 고유벡터를 열로 하는 W=[u₁…uₘ] 생성",
+       "Y=Wᵀ(X−μ)로 특징 데이터 생성, 실무는 SVD로 계산"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "얼굴 인식 응용과 비교",
+    "subsections": [
+     {
+      "title": "고유 얼굴",
+      "items": [
+       "N장의 K×K 얼굴 이미지를 K² 차원 벡터로 펼쳐 PCA 수행",
+       "주성분을 이미지로 되돌린 고유 얼굴의 조합으로 얼굴 표현, m이 작을수록 공통 특징만 남음"
+      ]
+     },
+     {
+      "title": "PCA·FDA·ICA 비교",
+      "items": [
+       "PCA는 전체 얼굴을 가장 잘 표현하나 조명·표정 변화와 개인 차이 구분이 약함",
+       "FDA는 클래스 간 분리를 최대화해 조명 변화에 강하고, ICA는 통계적으로 독립인 성분을 추출하며 PCA 전처리 필요"
+      ]
+     },
+     {
+      "title": "장단점",
+      "items": [
+       "계산이 간단하고 잡음 제거·시각화에 유용",
+       "선형 관계만 포착하고 주성분 해석이 어려워 비선형은 커널 PCA·t-SNE 사용"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "공분산 행렬(Covariance Matrix)",
+   "고유값 분해(EVD)",
+   "직교 변환",
+   "설명된 분산 비율",
+   "평균·공분산 계산",
+   "고유벡터 계산",
+   "고유값 선택",
+   "변환 행렬 생성",
+   "선형 변환",
+   "고유 얼굴(Eigenface)",
+   "피셔 판별 분석(FDA)",
+   "독립 성분 분석(ICA)"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "EVD": "Eigenvalue Decomposition",
+   "FDA": "Fisher Discriminant Analysis",
+   "ICA": "Independent Component Analysis",
+   "SVD": "Singular Value Decomposition",
+   "LDA": "Linear Discriminant Analysis",
+   "t-SNE": "t-distributed Stochastic Neighbor Embedding"
+  }
+ },
+ {
   "id": "AI_013",
   "code": "AI_013",
   "domain": "AI",
@@ -1709,6 +1870,790 @@
   }
  },
  {
+  "id": "AI_014",
+  "code": "AI_014",
+  "domain": "AI",
+  "category": "AI > 인공지능 기초",
+  "subtitle": "",
+  "name": "전문가 시스템(Expert System)",
+  "title": "전문가 시스템(Expert System)",
+  "en": "Expert System",
+  "definition": "특정 분야 전문가의 지식을 IF-THEN 규칙 등으로 지식 베이스에 축적하고, 추론 기관이 전방향·역방향 추론으로 질의에 답하거나 문제를 해결해 주는 지식 기반 자문형 AI 시스템",
+  "keywords": [
+   "구성 요소: 지식 베이스 · 추론 기관(Inference Engine) · 작업 메모리 · 설명 부시스템 · 지식 습득 부시스템 · 사용자 인터페이스",
+   "추론 기법: 전방향 추론(Forward Chaining) · 역방향 추론(Backward Chaining)",
+   "고려 사항: 충돌 해법(Conflict Resolution) · 메타 지식"
+  ],
+  "keywords_must": [
+   "지식 베이스",
+   "추론 기관(Inference Engine)",
+   "작업 메모리",
+   "설명 부시스템",
+   "지식 습득 부시스템",
+   "사용자 인터페이스",
+   "전방향 추론(Forward Chaining)",
+   "역방향 추론(Backward Chaining)",
+   "충돌 해법(Conflict Resolution)",
+   "메타 지식"
+  ],
+  "keywords_ref": [
+   "IF-THEN 규칙",
+   "휴리스틱",
+   "확신도(Certainty Factor)",
+   "지식 공학자",
+   "MYCIN",
+   "DENDRAL",
+   "XCON",
+   "신경망 전문가 시스템",
+   "지식 획득 병목"
+  ],
+  "outline": [
+   "개념과 특징",
+   "- 지식 기반 자문 시스템",
+   "- 규칙 기반 표현",
+   "- 진리 유지",
+   "구성과 추론 기법",
+   "- 지식 베이스·작업 메모리",
+   "- 추론 기관",
+   "- 설명·지식 습득 부시스템",
+   "- 전방향 추론",
+   "- 역방향 추론",
+   "활용 시 고려 사항과 발전",
+   "- 충돌 해법",
+   "- 메타 지식",
+   "- 한계와 발전"
+  ],
+  "sections": [
+   {
+    "title": "개념과 특징",
+    "subsections": [
+     {
+      "title": "지식 기반 자문 시스템",
+      "items": [
+       "1970~80년대 대표 AI 응용",
+       "분자 구조 분석 DENDRAL, 감염 진단 MYCIN, 컴퓨터 구성 XCON"
+      ]
+     },
+     {
+      "title": "규칙 기반 표현",
+      "items": [
+       "IF 조건 THEN 결론 구조",
+       "경험적 휴리스틱과 확신도로 불확실한 지식 처리"
+      ]
+     },
+     {
+      "title": "진리 유지",
+      "items": [
+       "새 사실이 들어오면 모순을 감지해 결론 수정",
+       "결론 도출 과정을 설명할 수 있음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성과 추론 기법",
+    "subsections": [
+     {
+      "title": "지식 베이스·작업 메모리",
+      "items": [
+       "문제 영역 전문가 지식을 규칙·사실로 표현",
+       "작업 메모리는 현재 문제의 사실과 중간 결과 저장"
+      ]
+     },
+     {
+      "title": "추론 기관",
+      "items": [
+       "규칙 해석기와 실행 순서를 정하는 스케줄러로 구성",
+       "사실과 규칙을 매칭해 새 사실 도출"
+      ]
+     },
+     {
+      "title": "설명·지식 습득 부시스템",
+      "items": [
+       "왜(Why)·어떻게(How) 그 결론에 이르렀는지 설명",
+       "지식 공학자가 전문가 지식을 추출해 지식 베이스에 반영"
+      ]
+     },
+     {
+      "title": "전방향 추론",
+      "items": [
+       "주어진 데이터에서 출발해 규칙을 순방향으로 적용",
+       "가능한 결론이 많은 계획·감시에 적합하나 목표와 무관한 규칙도 실행"
+      ]
+     },
+     {
+      "title": "역방향 추론",
+      "items": [
+       "목표(가설)에서 출발해 이를 뒷받침하는 사실을 역으로 확인",
+       "진단처럼 가설이 정해진 문제에 효율적이나 초기 목표 설정이 어려움"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용 시 고려 사항과 발전",
+    "subsections": [
+     {
+      "title": "충돌 해법",
+      "items": [
+       "여러 규칙이 동시에 만족될 때 하나 선택",
+       "우선순위 높은 규칙, 가장 최근 사실과 관련된 규칙, 가장 구체적인 규칙 우선"
+      ]
+     },
+     {
+      "title": "메타 지식",
+      "items": [
+       "지식의 사용·제어 방법에 관한 지식",
+       "메타 정보를 지속 갱신해 시스템 개선"
+      ]
+     },
+     {
+      "title": "한계와 발전",
+      "items": [
+       "지식 획득 병목, 학습 불가, 대규모 규칙의 성능 저하",
+       "학습 데이터로 규칙을 개선하는 신경망 전문가 시스템과 LLM·지식 그래프 결합으로 발전"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "지식 베이스",
+   "추론 기관(Inference Engine)",
+   "작업 메모리",
+   "설명 부시스템",
+   "지식 습득 부시스템",
+   "사용자 인터페이스",
+   "전방향 추론(Forward Chaining)",
+   "역방향 추론(Backward Chaining)",
+   "충돌 해법(Conflict Resolution)",
+   "메타 지식"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "DENDRAL": "Dendritic Algorithm",
+   "XCON": "eXpert CONfigurer",
+   "LLM": "Large Language Model"
+  }
+ },
+ {
+  "id": "AI_015",
+  "code": "AI_015",
+  "domain": "AI",
+  "category": "AI > 인공지능 기초",
+  "subtitle": "",
+  "name": "인공지능(Artificial Intelligence)",
+  "title": "인공지능(Artificial Intelligence)",
+  "en": "Artificial Intelligence",
+  "definition": "인간의 학습·추론·지각·언어 이해 등 지적 능력을 컴퓨터로 구현하는 기술과 학문 분야로, 1956년 다트머스 회의에서 존 매카시가 용어를 처음 사용",
+  "keywords": [
+   "분류: 약인공지능(Weak AI) · 강인공지능(Strong AI·AGI) · 초인공지능(ASI)",
+   "접근 방식: 기호주의(Symbolic AI) · 연결주의(Connectionism) · 행동주의(강화 학습)",
+   "구성 요소: 데이터 · 알고리즘(판별력) · 대용량 처리 아키텍처",
+   "대표 사례: 알파고(AlphaGo) · IBM 왓슨(Watson)"
+  ],
+  "keywords_must": [
+   "약인공지능(Weak AI)",
+   "강인공지능(Strong AI·AGI)",
+   "초인공지능(ASI)",
+   "기호주의(Symbolic AI)",
+   "연결주의(Connectionism)",
+   "행동주의(강화 학습)",
+   "데이터",
+   "알고리즘(판별력)",
+   "대용량 처리 아키텍처",
+   "알파고(AlphaGo)",
+   "IBM 왓슨(Watson)"
+  ],
+  "keywords_ref": [
+   "다트머스 회의",
+   "AI 겨울",
+   "튜링 테스트",
+   "머신러닝·딥러닝",
+   "MCTS",
+   "정책망·가치망",
+   "DeepQA",
+   "생성형 AI"
+  ],
+  "outline": [
+   "개념과 분류",
+   "- 지능을 구현하는 기술",
+   "- 수준별 분류",
+   "- 접근 방식",
+   "발전 과정과 구성 요소",
+   "- 발전 과정",
+   "- 데이터·알고리즘·인프라",
+   "대표 사례",
+   "- 알파고",
+   "- IBM 왓슨",
+   "- 비교와 시사점"
+  ],
+  "sections": [
+   {
+    "title": "개념과 분류",
+    "subsections": [
+     {
+      "title": "지능을 구현하는 기술",
+      "items": [
+       "데이터에서 패턴을 학습해 예측·판단",
+       "인공지능 ⊃ 머신러닝 ⊃ 딥러닝의 포함 관계"
+      ]
+     },
+     {
+      "title": "수준별 분류",
+      "items": [
+       "약인공지능은 특정 작업에 특화",
+       "강인공지능(AGI)은 사람처럼 범용 지능, 초인공지능은 모든 영역에서 인간을 능가"
+      ]
+     },
+     {
+      "title": "접근 방식",
+      "items": [
+       "기호주의는 규칙·논리로 지식 표현(전문가 시스템)",
+       "연결주의는 신경망으로 데이터에서 학습, 행동주의는 환경과 상호작용하며 보상으로 학습"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "발전 과정과 구성 요소",
+    "subsections": [
+     {
+      "title": "발전 과정",
+      "items": [
+       "1950년대 탐색·추론기와 1970년대 첫 AI 겨울, 1980년대 전문가 시스템 붐과 두 번째 겨울",
+       "2012년 딥러닝 부활, 2016년 알파고, 2022년 이후 생성형 AI"
+      ]
+     },
+     {
+      "title": "데이터·알고리즘·인프라",
+      "items": [
+       "학습에 필요한 대규모 데이터와 검증된 판별력을 가진 알고리즘",
+       "대용량 데이터를 분산 처리하는 확장 가능한 IT 아키텍처"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "대표 사례",
+    "subsections": [
+     {
+      "title": "알파고",
+      "items": [
+       "몬테카를로 트리 탐색(MCTS)에 심층 신경망과 강화 학습 결합",
+       "48개 특징 평면 입력, 기보로 학습한 SL 정책망·자기 대국 RL 정책망·승률 평가 가치망 구성"
+      ]
+     },
+     {
+      "title": "IBM 왓슨",
+      "items": [
+       "DeepQA 기반 자연어 질의응답 시스템으로 2011년 퀴즈쇼 제퍼디 우승",
+       "질문·문서의 확률 분포를 비교하는 정보 검색 언어 모델로 후보 답을 평가"
+      ]
+     },
+     {
+      "title": "비교와 시사점",
+      "items": [
+       "알파고는 탐색·강화 학습, 왓슨은 자연어 처리에 특화",
+       "이후 범용 파운데이션 모델로 패러다임 전환, 신뢰성·윤리 확보 과제"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "약인공지능(Weak AI)",
+   "강인공지능(Strong AI·AGI)",
+   "초인공지능(ASI)",
+   "기호주의(Symbolic AI)",
+   "연결주의(Connectionism)",
+   "행동주의(강화 학습)",
+   "데이터",
+   "알고리즘(판별력)",
+   "대용량 처리 아키텍처",
+   "알파고(AlphaGo)",
+   "IBM 왓슨(Watson)"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "AGI": "Artificial General Intelligence",
+   "ASI": "Artificial Super Intelligence",
+   "MCTS": "Monte Carlo Tree Search",
+   "SL": "Supervised Learning",
+   "RL": "Reinforcement Learning",
+   "DeepQA": "Deep Question Answering"
+  }
+ },
+ {
+  "id": "AI_016",
+  "code": "AI_016",
+  "domain": "AI",
+  "category": "AI > 인공지능 기초",
+  "subtitle": "",
+  "name": "베이즈 정리(Bayes' Theorem)",
+  "title": "베이즈 정리(Bayes' Theorem)",
+  "en": "Bayes' Theorem",
+  "definition": "사건 B가 관측되었을 때 그 원인이 Aᵢ일 확률(사후 확률)을, 사전 확률 P(Aᵢ)와 우도 P(B|Aᵢ)로부터 구하는 조건부 확률 정리로 P(Aᵢ|B)=P(Aᵢ)P(B|Aᵢ)/ΣP(Aⱼ)P(B|Aⱼ)",
+  "keywords": [
+   "구성 요소: 사전 확률(Prior) · 우도(Likelihood) · 사후 확률(Posterior) · 증거(Evidence)",
+   "기반 정리: 조건부 확률 · 곱셈 정리 · 전확률의 정리",
+   "활용: 나이브 베이즈 분류기 · 베이지안 스팸 필터 · 베이즈 결정 규칙"
+  ],
+  "keywords_must": [
+   "사전 확률(Prior)",
+   "우도(Likelihood)",
+   "사후 확률(Posterior)",
+   "증거(Evidence)",
+   "조건부 확률",
+   "곱셈 정리",
+   "전확률의 정리",
+   "나이브 베이즈 분류기",
+   "베이지안 스팸 필터",
+   "베이즈 결정 규칙"
+  ],
+  "keywords_ref": [
+   "배반 사건 분할",
+   "결과로부터 원인 추론",
+   "베이지안 네트워크",
+   "베이지안 최적화",
+   "기저율 오류",
+   "최대 사후 확률(MAP)",
+   "최대 우도 추정(MLE)"
+  ],
+  "outline": [
+   "개념과 구성 요소",
+   "- 결과로 원인을 추론",
+   "- 사전·사후 확률",
+   "- 우도",
+   "정리와 계산 사례",
+   "- 조건부 확률·전확률",
+   "- 단일 원인 사례",
+   "- 다중 원인 사례",
+   "- 진단 검사 사례",
+   "활용",
+   "- 분류·필터링",
+   "- 패턴 인식·의사 결정",
+   "- 머신러닝 응용"
+  ],
+  "sections": [
+   {
+    "title": "개념과 구성 요소",
+    "subsections": [
+     {
+      "title": "결과로 원인을 추론",
+      "items": [
+       "직접 관측하기 어려운 원인의 가능성을 관측된 결과로 갱신",
+       "불확실성 추론의 기본 원리"
+      ]
+     },
+     {
+      "title": "사전·사후 확률",
+      "items": [
+       "사전 확률은 관측 전 기존 경험에 따른 원인 확률",
+       "사후 확률은 관측 후 갱신된 원인 확률"
+      ]
+     },
+     {
+      "title": "우도",
+      "items": [
+       "원인이 주어졌을 때 그 결과가 관측될 가능성 P(B|A)",
+       "관측값을 고정하고 이를 가장 잘 설명하는 모수를 찾는 척도로, 확률과 방향이 반대"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "정리와 계산 사례",
+    "subsections": [
+     {
+      "title": "조건부 확률·전확률",
+      "items": [
+       "P(A|B)=P(A∩B)/P(B)",
+       "A₁…Aₙ이 표본 공간을 나누는 배반 사건이면 P(B)=ΣP(Aᵢ)P(B|Aᵢ)"
+      ]
+     },
+     {
+      "title": "단일 원인 사례",
+      "items": [
+       "구제역 P(M)=0.3, 수포 P(S)=0.6, P(S|M)=0.5",
+       "P(M|S)=0.3×0.5/0.6=0.25"
+      ]
+     },
+     {
+      "title": "다중 원인 사례",
+      "items": [
+       "기계 A·B·C 생산 비율 50·30·20%, 불량률 3·2·1%",
+       "P(불량)=0.015+0.006+0.002=0.023, P(A|불량)=0.015/0.023≈0.652"
+      ]
+     },
+     {
+      "title": "진단 검사 사례",
+      "items": [
+       "유병률 2%, 민감도 0.8, 위양성률 0.05면 P(양성)=0.016+0.049=0.065",
+       "P(질병|양성)=0.016/0.065≈0.246으로 기저율이 낮으면 양성이어도 확률이 낮음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용",
+    "subsections": [
+     {
+      "title": "분류·필터링",
+      "items": [
+       "특징이 독립이라 가정한 나이브 베이즈로 문서 분류",
+       "스팸 단어 출현 확률로 스팸 여부를 계산하는 베이지안 스팸 필터"
+      ]
+     },
+     {
+      "title": "패턴 인식·의사 결정",
+      "items": [
+       "클래스별 확률 밀도로 사후 확률이 최대인 클래스를 고르는 베이즈 결정 규칙",
+       "베이지안 네트워크로 변수 간 인과 추론"
+      ]
+     },
+     {
+      "title": "머신러닝 응용",
+      "items": [
+       "사전 분포를 반영한 MAP 추정과 정규화",
+       "베이지안 최적화로 하이퍼파라미터 탐색, 임상 시험·기상 예보·품질 관리"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "사전 확률(Prior)",
+   "우도(Likelihood)",
+   "사후 확률(Posterior)",
+   "증거(Evidence)",
+   "조건부 확률",
+   "곱셈 정리",
+   "전확률의 정리",
+   "나이브 베이즈 분류기",
+   "베이지안 스팸 필터",
+   "베이즈 결정 규칙"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "MAP": "Maximum A Posteriori",
+   "MLE": "Maximum Likelihood Estimation"
+  }
+ },
+ {
+  "id": "AI_017",
+  "code": "AI_017",
+  "domain": "AI",
+  "category": "AI > 인공지능 기초",
+  "subtitle": "",
+  "name": "퍼지 이론(Fuzzy Theory)",
+  "title": "퍼지 이론(Fuzzy Theory)",
+  "en": "Fuzzy Theory",
+  "definition": "참·거짓의 이분법 대신 0과 1 사이의 소속 정도로 애매하고 불분명한 개념을 수치화해 사람의 판단 과정을 수학적으로 다루는 이론으로, 1965년 로트피 자데가 퍼지 집합을 제안",
+  "keywords": [
+   "집합 구분: 크리스프 집합(Crisp Set) · 퍼지 집합(Fuzzy Set) · 소속 함수(Membership Function)",
+   "퍼지 연산: 합집합(max) · 교집합(min) · 여집합(1−μ) · 지지 집합(μ>0)",
+   "퍼지 시스템 구성: 퍼지화기(Fuzzifier) · 규칙 베이스·추론 엔진 · 비퍼지화기(Defuzzifier)"
+  ],
+  "keywords_must": [
+   "크리스프 집합(Crisp Set)",
+   "퍼지 집합(Fuzzy Set)",
+   "소속 함수(Membership Function)",
+   "합집합(max)",
+   "교집합(min)",
+   "여집합(1−μ)",
+   "지지 집합(μ>0)",
+   "퍼지화기(Fuzzifier)",
+   "규칙 베이스·추론 엔진",
+   "비퍼지화기(Defuzzifier)"
+  ],
+  "keywords_ref": [
+   "언어 변수",
+   "삼각형·사다리꼴 소속 함수",
+   "맘다니 추론",
+   "무게 중심법",
+   "알파 컷",
+   "핵심 영역·경계 영역",
+   "퍼지 제어",
+   "뉴로 퍼지"
+  ],
+  "outline": [
+   "개념과 필요성",
+   "- 애매함의 수학적 표현",
+   "- 불확실성 처리 요구",
+   "- 퍼지 집합 표현",
+   "퍼지 연산과 소속 함수",
+   "- 기본 연산",
+   "- 연산 예",
+   "- 소속 함수 예",
+   "퍼지 시스템과 응용",
+   "- 퍼지 추론 과정",
+   "- 제어 사례",
+   "- 응용 분야"
+  ],
+  "sections": [
+   {
+    "title": "개념과 필요성",
+    "subsections": [
+     {
+      "title": "애매함의 수학적 표현",
+      "items": [
+       "'덥다'·'젊다' 같은 언어 변수를 소속 함수로 수치화",
+       "경계가 분명한 크리스프 집합은 {0,1}, 퍼지 집합은 [0,1]의 소속 정도"
+      ]
+     },
+     {
+      "title": "불확실성 처리 요구",
+      "items": [
+       "시스템이 복잡할수록 정밀한 수학 모델의 유용성 감소",
+       "파라미터·입출력 잡음, 부정확한 초기 정보, 고도 비선형 공정의 불확실성 처리"
+      ]
+     },
+     {
+      "title": "퍼지 집합 표현",
+      "items": [
+       "이산형은 A={μ(x₁)/x₁,…,μ(xₙ)/xₙ}, 연속형은 A=∫μ(x)/x",
+       "μ=1인 핵심 영역과 0<μ<1인 경계 영역으로 구분"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "퍼지 연산과 소속 함수",
+    "subsections": [
+     {
+      "title": "기본 연산",
+      "items": [
+       "합집합 μA∪B=max(μA,μB), 교집합 μA∩B=min(μA,μB)",
+       "여집합 μĀ=1−μA, 소속도가 0보다 큰 원소의 집합이 지지 집합"
+      ]
+     },
+     {
+      "title": "연산 예",
+      "items": [
+       "A=(0.2,0.7,1,0), B=(0.5,0.3,1,0.1)일 때 A∪B=(0.5,0.7,1,0.1)",
+       "A∩B=(0.2,0.3,1,0), Ā=(0.8,0.3,0,1)"
+      ]
+     },
+     {
+      "title": "소속 함수 예",
+      "items": [
+       "HOT=사다리꼴(50,75,100,100)이면 65도의 HOT 소속도는 (65−50)/25=0.6",
+       "삼각형·가우시안 함수도 사용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "퍼지 시스템과 응용",
+    "subsections": [
+     {
+      "title": "퍼지 추론 과정",
+      "items": [
+       "퍼지화기가 입력을 소속도로 변환",
+       "IF-THEN 규칙의 AND는 min으로 평가, 규칙 결과를 max로 통합 후 비퍼지화기가 무게 중심법으로 수치 출력"
+      ]
+     },
+     {
+      "title": "제어 사례",
+      "items": [
+       "'IF 거리가 멀고 AND 속도가 느리면 THEN 가속 높임' 등 규칙을 동시에 적용",
+       "각 규칙의 min 결과를 합집합해 가속도 결정"
+      ]
+     },
+     {
+      "title": "응용 분야",
+      "items": [
+       "세탁기·에어컨·카메라 등 가전, 지하철 자동 운전·엘리베이터 제어",
+       "퍼지 전문가 시스템과 신경망을 결합한 뉴로 퍼지"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "크리스프 집합(Crisp Set)",
+   "퍼지 집합(Fuzzy Set)",
+   "소속 함수(Membership Function)",
+   "합집합(max)",
+   "교집합(min)",
+   "여집합(1−μ)",
+   "지지 집합(μ>0)",
+   "퍼지화기(Fuzzifier)",
+   "규칙 베이스·추론 엔진",
+   "비퍼지화기(Defuzzifier)"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": []
+ },
+ {
+  "id": "AI_018",
+  "code": "AI_018",
+  "domain": "AI",
+  "category": "AI > 인공지능 기초",
+  "subtitle": "",
+  "name": "유전 알고리즘(GA, Genetic Algorithm)",
+  "title": "유전 알고리즘(GA, Genetic Algorithm)",
+  "en": "Genetic Algorithm",
+  "definition": "자연 선택과 유전 원리를 모방해, 해를 염색체로 표현한 개체군을 선택·교차·변이·대체로 세대마다 진화시키며 적합도가 높은 해를 탐색하는 확률적 최적화 알고리즘으로 1975년 존 홀런드가 체계화",
+  "keywords": [
+   "주요 용어: 염색체(Chromosome) · 개체군(Population) · 자손(Offspring) · 적합도(Fitness)",
+   "진행 절차: 초기화 · 선택 · 교차 · 변이 · 대체",
+   "선택 기법: 룰렛 휠 선택(Roulette Wheel) · 순위 선택 · 토너먼트 선택"
+  ],
+  "keywords_must": [
+   "염색체(Chromosome)",
+   "개체군(Population)",
+   "자손(Offspring)",
+   "적합도(Fitness)",
+   "초기화",
+   "선택",
+   "교차",
+   "변이",
+   "대체",
+   "룰렛 휠 선택(Roulette Wheel)",
+   "순위 선택",
+   "토너먼트 선택"
+  ],
+  "keywords_ref": [
+   "인코딩(이진·실수·순열)",
+   "단일점·다점·균등·산술 교차",
+   "변이 확률",
+   "엘리트 보존",
+   "조기 수렴",
+   "적합도 함수",
+   "다목적 최적화"
+  ],
+  "outline": [
+   "개념과 주요 용어",
+   "- 진화 기반 최적화",
+   "- 염색체·개체군",
+   "- 자손·적합도",
+   "진행 절차",
+   "- 초기화·선택",
+   "- 교차·변이",
+   "- 대체·반복",
+   "선택 기법과 활용",
+   "- 룰렛 휠 선택",
+   "- 순위·토너먼트 선택",
+   "- 활용 분야"
+  ],
+  "sections": [
+   {
+    "title": "개념과 주요 용어",
+    "subsections": [
+     {
+      "title": "진화 기반 최적화",
+      "items": [
+       "해 공간이 넓고 최적해가 알려지지 않은 복잡한 문제에 근사 최적해 제공",
+       "기울기 정보가 필요 없는 전역 탐색"
+      ]
+     },
+     {
+      "title": "염색체·개체군",
+      "items": [
+       "염색체는 하나의 해를 이진·실수·순열 등으로 인코딩한 것",
+       "개체군은 여러 염색체의 집합"
+      ]
+     },
+     {
+      "title": "자손·적합도",
+      "items": [
+       "자손은 부모 염색체로부터 생성된 새 염색체",
+       "적합도는 해가 문제에 얼마나 적합한지 나타내는 평가 척도"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "진행 절차",
+    "subsections": [
+     {
+      "title": "초기화·선택",
+      "items": [
+       "무작위 염색체로 초기 개체군 생성",
+       "적합도에 따라 다음 세대에 전달할 부모 선택"
+      ]
+     },
+     {
+      "title": "교차·변이",
+      "items": [
+       "교차는 부모 유전자를 섞어 자손 생성(단일점·다점·균등·산술)",
+       "변이는 낮은 확률로 일부 유전자를 바꿔 다양성 유지와 지역 최적 탈출"
+      ]
+     },
+     {
+      "title": "대체·반복",
+      "items": [
+       "자손으로 개체군을 교체하고 우수 개체는 엘리트로 보존",
+       "적합도 수렴이나 세대 수 등 종료 조건까지 반복"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "선택 기법과 활용",
+    "subsections": [
+     {
+      "title": "룰렛 휠 선택",
+      "items": [
+       "적합도에 비례하는 선택 확률",
+       "우수 개체가 지나치게 많이 뽑혀 조기 수렴 위험"
+      ]
+     },
+     {
+      "title": "순위·토너먼트 선택",
+      "items": [
+       "순위 선택은 적합도 순위로 확률 부여",
+       "토너먼트 선택은 임의로 뽑은 소집단에서 가장 우수한 개체 선택"
+      ]
+     },
+     {
+      "title": "활용 분야",
+      "items": [
+       "최단 경로·배차·일정·재고 최적화",
+       "하이퍼파라미터·신경망 구조 탐색, 이족 보행 로봇 제어, 신약·재료 설계"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "염색체(Chromosome)",
+   "개체군(Population)",
+   "자손(Offspring)",
+   "적합도(Fitness)",
+   "초기화",
+   "선택",
+   "교차",
+   "변이",
+   "대체",
+   "룰렛 휠 선택(Roulette Wheel)",
+   "순위 선택",
+   "토너먼트 선택"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": []
+ },
+ {
   "id": "AI_019",
   "code": "AI_019",
   "domain": "AI",
@@ -1835,6 +2780,151 @@
    "MLP": "Multi-Layer Perceptron",
    "ReLU": "Rectified Linear Unit",
    "tanh": "hyperbolic tangent"
+  }
+ },
+ {
+  "id": "AI_020",
+  "code": "AI_020",
+  "domain": "AI",
+  "category": "AI > 신경망·딥러닝",
+  "subtitle": "",
+  "name": "단층 퍼셉트론(Single-layer Perceptron)",
+  "title": "단층 퍼셉트론(Single-layer Perceptron)",
+  "en": "Single-layer Perceptron",
+  "definition": "입력층과 하나의 출력 뉴런으로 구성되어 입력의 가중합이 임계치를 넘으면 1, 아니면 0을 출력하는 가장 단순한 신경망으로, 1958년 로젠블랫이 제안한 선형 이진 분류기",
+  "keywords": [
+   "구성 요소: 가중치(Weight) · 바이어스(Bias) · 임계치(Threshold) · 순입력(Net) · 계단 함수",
+   "학습 규칙: 퍼셉트론 학습 규칙 · 델타 규칙(Delta Rule)",
+   "논리 게이트: AND 게이트 · NAND 게이트 · OR 게이트 · XOR 연산 불가"
+  ],
+  "keywords_must": [
+   "가중치(Weight)",
+   "바이어스(Bias)",
+   "임계치(Threshold)",
+   "순입력(Net)",
+   "계단 함수",
+   "퍼셉트론 학습 규칙",
+   "델타 규칙(Delta Rule)",
+   "AND 게이트",
+   "NAND 게이트",
+   "OR 게이트",
+   "XOR 연산 불가"
+  ],
+  "keywords_ref": [
+   "선형 분리 가능성",
+   "결정 경계",
+   "수렴 정리",
+   "아달라인(ADALINE)",
+   "민스키·페퍼트",
+   "다층 퍼셉트론",
+   "첫 번째 AI 겨울"
+  ],
+  "outline": [
+   "개념과 학습 규칙",
+   "- 선형 분류기",
+   "- 퍼셉트론 학습 규칙",
+   "- 델타 규칙",
+   "구조와 구성 요소",
+   "- 입력층",
+   "- 출력층",
+   "논리 게이트 표현과 한계",
+   "- AND·OR 게이트",
+   "- NAND 게이트",
+   "- XOR 한계"
+  ],
+  "sections": [
+   {
+    "title": "개념과 학습 규칙",
+    "subsections": [
+     {
+      "title": "선형 분류기",
+      "items": [
+       "입력 벡터를 두 부류로 나누는 결정 경계 w·x+b=0 학습",
+       "생물 뉴런을 모방한 인공 신경망의 기원"
+      ]
+     },
+     {
+      "title": "퍼셉트론 학습 규칙",
+      "items": [
+       "w←w+η(t−y)x로 오분류 시에만 가중치 수정",
+       "선형 분리 가능한 데이터면 유한 번 안에 수렴"
+      ]
+     },
+     {
+      "title": "델타 규칙",
+      "items": [
+       "출력 오차와 입력에 비례해 가중치를 조절하는 경사 하강 규칙",
+       "아달라인에서 사용되어 다층 신경망 역전파의 토대"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구조와 구성 요소",
+    "subsections": [
+     {
+      "title": "입력층",
+      "items": [
+       "가중치는 결정 경계의 방향, 바이어스는 절편",
+       "입력 신호의 중요도 표현"
+      ]
+     },
+     {
+      "title": "출력층",
+      "items": [
+       "순입력은 입력과 가중치의 곱을 모두 더한 값",
+       "순입력이 임계치 이상이면 1을 출력하는 계단 활성화 함수"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "논리 게이트 표현과 한계",
+    "subsections": [
+     {
+      "title": "AND·OR 게이트",
+      "items": [
+       "AND는 두 입력이 모두 1일 때만 1(예: w₁=w₂=0.5, θ=0.7)",
+       "OR는 하나 이상이 1이면 1"
+      ]
+     },
+     {
+      "title": "NAND 게이트",
+      "items": [
+       "AND의 결과를 반전",
+       "가중치와 임계치의 부호를 바꿔 구현"
+      ]
+     },
+     {
+      "title": "XOR 한계",
+      "items": [
+       "XOR은 직선 하나로 나눌 수 없는 선형 분리 불가능 문제",
+       "1969년 민스키·페퍼트가 지적해 첫 AI 겨울로 이어졌고, NAND·OR·AND를 쌓은 다층 퍼셉트론으로 해결"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "가중치(Weight)",
+   "바이어스(Bias)",
+   "임계치(Threshold)",
+   "순입력(Net)",
+   "계단 함수",
+   "퍼셉트론 학습 규칙",
+   "델타 규칙(Delta Rule)",
+   "AND 게이트",
+   "NAND 게이트",
+   "OR 게이트",
+   "XOR 연산 불가"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "ADALINE": "Adaptive Linear Neuron"
   }
  },
  {
@@ -2358,6 +3448,157 @@
   "gloss": {
    "MLP": "Multi-Layer Perceptron",
    "Adam": "Adaptive Moment Estimation",
+   "ReLU": "Rectified Linear Unit"
+  }
+ },
+ {
+  "id": "AI_024",
+  "code": "AI_024",
+  "domain": "AI",
+  "category": "AI > 신경망·딥러닝",
+  "subtitle": "",
+  "name": "오류 역전파의 연쇄 법칙(Chain Rule)",
+  "title": "오류 역전파의 연쇄 법칙(Chain Rule)",
+  "en": "Chain Rule in Backpropagation",
+  "definition": "합성 함수의 미분을 각 단계 미분의 곱으로 계산하는 미분 법칙으로, 역전파에서 출력층 손실을 각 가중치로 편미분해 기여도(기울기)를 구하고 경사 하강으로 가중치를 갱신하는 수학적 원리",
+  "keywords": [
+   "수식: z=G(F(x)) → dz/dx=dz/dy·dy/dx · ∂L/∂w=∂L/∂ŷ·∂ŷ/∂net·∂net/∂w",
+   "학습 절차: 순전파 · 손실 함수 계산 · 편미분(연쇄 법칙) · 가중치 갱신(w←w−α∂L/∂w)",
+   "기울기 문제: 기울기 소실 · 기울기 폭주"
+  ],
+  "keywords_must": [
+   "z=G(F(x)) → dz/dx=dz/dy·dy/dx",
+   "∂L/∂w=∂L/∂ŷ·∂ŷ/∂net·∂net/∂w",
+   "순전파",
+   "손실 함수 계산",
+   "편미분(연쇄 법칙)",
+   "가중치 갱신(w←w−α∂L/∂w)",
+   "기울기 소실",
+   "기울기 폭주"
+  ],
+  "keywords_ref": [
+   "합성 함수",
+   "편미분",
+   "국소 기울기",
+   "계산 그래프",
+   "자동 미분",
+   "학습률",
+   "ReLU",
+   "그래디언트 클리핑",
+   "배치 정규화",
+   "잔차 연결"
+  ],
+  "outline": [
+   "개념과 수식",
+   "- 합성 함수 미분",
+   "- 신경망 적용",
+   "- 계산 그래프",
+   "학습 절차",
+   "- 순전파·손실 계산",
+   "- 역전파",
+   "- 파라미터 갱신",
+   "기울기 문제와 해결 방안",
+   "- 기울기 소실",
+   "- 기울기 폭주",
+   "- 공통 해결책"
+  ],
+  "sections": [
+   {
+    "title": "개념과 수식",
+    "subsections": [
+     {
+      "title": "합성 함수 미분",
+      "items": [
+       "y=F(x), z=G(y)이면 dz/dx=G′(F(x))·F′(x)",
+       "바깥 함수 미분과 안쪽 함수 미분의 곱"
+      ]
+     },
+     {
+      "title": "신경망 적용",
+      "items": [
+       "손실이 출력→활성화→순입력→가중치로 이어진 합성 함수",
+       "출력층에서 입력층 방향으로 국소 기울기를 곱해 전달"
+      ]
+     },
+     {
+      "title": "계산 그래프",
+      "items": [
+       "각 연산 노드가 자신의 국소 미분만 알면 전체 기울기 계산 가능",
+       "딥러닝 프레임워크의 자동 미분 원리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "학습 절차",
+    "subsections": [
+     {
+      "title": "순전파·손실 계산",
+      "items": [
+       "입력과 파라미터를 연산해 활성화 함수로 다음 층에 전달",
+       "MSE=1/N·Σ(yᵢ−ŷᵢ)² 등 손실 계산"
+      ]
+     },
+     {
+      "title": "역전파",
+      "items": [
+       "연쇄 법칙으로 손실을 각 가중치·편향에 대해 편미분",
+       "가중치별 오차 기여도 도출"
+      ]
+     },
+     {
+      "title": "파라미터 갱신",
+      "items": [
+       "학습률 α만큼 기울기 반대 방향으로 w←w−α·∂L/∂w",
+       "손실이 최소가 될 때까지 순전파·역전파 반복"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기울기 문제와 해결 방안",
+    "subsections": [
+     {
+      "title": "기울기 소실",
+      "items": [
+       "1보다 작은 미분값(시그모이드 최대 0.25)이 층마다 곱해져 앞쪽 층 기울기가 0에 수렴",
+       "ReLU·Leaky ReLU, 잔차 연결로 완화"
+      ]
+     },
+     {
+      "title": "기울기 폭주",
+      "items": [
+       "1보다 큰 값이 반복 곱해져 기울기가 발산",
+       "임계치를 넘으면 잘라내는 그래디언트 클리핑"
+      ]
+     },
+     {
+      "title": "공통 해결책",
+      "items": [
+       "Xavier·He 가중치 초기화",
+       "배치 정규화·층 정규화로 층별 입력 분포 안정화"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "z=G(F(x)) → dz/dx=dz/dy·dy/dx",
+   "∂L/∂w=∂L/∂ŷ·∂ŷ/∂net·∂net/∂w",
+   "순전파",
+   "손실 함수 계산",
+   "편미분(연쇄 법칙)",
+   "가중치 갱신(w←w−α∂L/∂w)",
+   "기울기 소실",
+   "기울기 폭주"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "MSE": "Mean Squared Error",
    "ReLU": "Rectified Linear Unit"
   }
  },
@@ -2900,6 +4141,151 @@
   "quiz_groups": [],
   "gloss": {
    "CNN": "Convolutional Neural Network"
+  }
+ },
+ {
+  "id": "AI_027_01",
+  "code": "AI_027_01",
+  "domain": "AI",
+  "category": "AI > AI 운영·평가",
+  "subtitle": "",
+  "name": "개념 드리프트(Concept Drift)와 데이터 드리프트(Data Drift)",
+  "title": "개념 드리프트(Concept Drift)와 데이터 드리프트(Data Drift)",
+  "en": "Concept Drift vs Data Drift",
+  "definition": "배포 후 모델 성능이 떨어지는 두 원인으로, 개념 드리프트는 입력과 정답 레이블의 관계 P(y|x)가 바뀌는 현상이고 데이터 드리프트는 입력 데이터의 분포 P(x)가 학습 때와 달라지는 현상",
+  "keywords": [
+   "드리프트 유형: 개념 드리프트(P(y · x) 변화) · 데이터 드리프트(P(x) 변화) · 레이블 드리프트(P(y) 변화) · 예측 드리프트",
+   "변화 양상: 급격한(Sudden) · 점진적(Gradual) · 증분적(Incremental) · 반복적(Recurring)",
+   "대응 방안: 드리프트 모니터링 · 온라인 학습 · 재학습·재배포"
+  ],
+  "keywords_must": [
+   "개념 드리프트(P(y",
+   "x) 변화)",
+   "데이터 드리프트(P(x) 변화)",
+   "레이블 드리프트(P(y) 변화)",
+   "예측 드리프트",
+   "급격한(Sudden)",
+   "점진적(Gradual)",
+   "증분적(Incremental)",
+   "반복적(Recurring)",
+   "드리프트 모니터링",
+   "온라인 학습",
+   "재학습·재배포"
+  ],
+  "keywords_ref": [
+   "공변량 이동(Covariate Shift)",
+   "KS 검정",
+   "PSI",
+   "KL 발산",
+   "DDM·ADWIN",
+   "슬라이딩 윈도 학습",
+   "MLOps 지속 학습(CT)"
+  ],
+  "outline": [
+   "입력-레이블 관계의 변화",
+   "- 레이블 관계 변화",
+   "- 사례",
+   "입력 분포의 변화",
+   "- 입력 분포 변화",
+   "- 사례",
+   "비교와 대응",
+   "- 원인 비교",
+   "- 탐지 방법",
+   "- 대응 방안"
+  ],
+  "sections": [
+   {
+    "title": "입력-레이블 관계의 변화",
+    "subsections": [
+     {
+      "title": "레이블 관계 변화",
+      "items": [
+       "같은 입력이라도 정답의 의미가 사회·기술 변화로 달라짐",
+       "학습 때 배운 규칙이 더 이상 맞지 않아 정확도 저하"
+      ]
+     },
+     {
+      "title": "사례",
+      "items": [
+       "금융 사기의 정의나 수법이 바뀌어 사기 탐지 모델 성능 하락",
+       "코로나19로 소비 패턴과 수요 예측 관계 급변"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "입력 분포의 변화",
+    "subsections": [
+     {
+      "title": "입력 분포 변화",
+      "items": [
+       "학습 데이터와 운영 환경 입력의 통계적 분포 차이",
+       "공변량 이동이라고도 하며 입력과 레이블 관계는 유지될 수 있음"
+      ]
+     },
+     {
+      "title": "사례",
+      "items": [
+       "여름 데이터로 학습한 모델이 겨울에 성능 저하",
+       "신규 고객층 유입, 센서 교체로 측정값 범위 변화"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "비교와 대응",
+    "subsections": [
+     {
+      "title": "원인 비교",
+      "items": [
+       "개념 드리프트는 데이터와 레이블의 관계 변화",
+       "데이터 드리프트는 입력 데이터 분포 변화로 정답 없이도 감지 가능"
+      ]
+     },
+     {
+      "title": "탐지 방법",
+      "items": [
+       "KS 검정·PSI·KL 발산으로 입력 분포 비교",
+       "DDM·ADWIN 등 오류율 변화 감지로 개념 드리프트 탐지"
+      ]
+     },
+     {
+      "title": "대응 방안",
+      "items": [
+       "개념 드리프트는 최신 데이터 중심 온라인 학습·윈도 학습과 레이블 재정의",
+       "데이터 드리프트는 모니터링 후 재학습·재배포, MLOps 지속 학습 파이프라인으로 자동화"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "개념 드리프트(P(y",
+   "x) 변화)",
+   "데이터 드리프트(P(x) 변화)",
+   "레이블 드리프트(P(y) 변화)",
+   "예측 드리프트",
+   "급격한(Sudden)",
+   "점진적(Gradual)",
+   "증분적(Incremental)",
+   "반복적(Recurring)",
+   "드리프트 모니터링",
+   "온라인 학습",
+   "재학습·재배포"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "KS": "Kolmogorov-Smirnov",
+   "PSI": "Population Stability Index",
+   "KL": "Kullback-Leibler",
+   "DDM": "Drift Detection Method",
+   "ADWIN": "ADaptive WINdowing",
+   "CT": "Continuous Training",
+   "MLOps": "Machine Learning Operations"
   }
  },
  {
@@ -3713,6 +5099,142 @@
   "quiz_groups": []
  },
  {
+  "id": "AI_033",
+  "code": "AI_033",
+  "domain": "AI",
+  "category": "AI > 기계학습",
+  "subtitle": "",
+  "name": "아프리오리 알고리즘(Apriori Algorithm)",
+  "title": "아프리오리 알고리즘(Apriori Algorithm)",
+  "en": "Apriori Algorithm",
+  "definition": "빈발 항목 집합의 모든 부분 집합도 빈발하다는 선험적 규칙으로 후보를 가지치기하며, k-항목 집합에서 (k+1)-항목 집합으로 수준별로 빈발 항목 집합을 찾아 연관 규칙을 도출하는 연관 분석 알고리즘으로 1994년 아그라왈이 제안",
+  "keywords": [
+   "선험적 규칙: 빈발 집합의 부분 집합은 빈발 · 비빈발 집합의 상위 집합은 비빈발",
+   "연관 척도: 지지도(Support) · 신뢰도(Confidence) · 향상도(Lift)",
+   "탐색 원칙: 최소 지지도 · 최소 신뢰도"
+  ],
+  "keywords_must": [
+   "빈발 집합의 부분 집합은 빈발",
+   "비빈발 집합의 상위 집합은 비빈발",
+   "지지도(Support)",
+   "신뢰도(Confidence)",
+   "향상도(Lift)",
+   "최소 지지도",
+   "최소 신뢰도"
+  ],
+  "keywords_ref": [
+   "빈발 항목 집합",
+   "후보 생성·검사(Generate-and-Test)",
+   "Ck·Lk",
+   "장바구니 분석",
+   "FP-Growth·FP-Tree",
+   "교차 판매"
+  ],
+  "outline": [
+   "개념과 선험적 규칙",
+   "- 수준별 빈발 집합 탐색",
+   "- 선험적 규칙",
+   "연관 규칙과 척도",
+   "- 연관 규칙",
+   "- 지지도·신뢰도",
+   "- 향상도",
+   "계산 사례와 한계",
+   "- 빈발 집합 선정",
+   "- 척도 계산",
+   "- 한계와 대안"
+  ],
+  "sections": [
+   {
+    "title": "개념과 선험적 규칙",
+    "subsections": [
+     {
+      "title": "수준별 빈발 집합 탐색",
+      "items": [
+       "1-항목 집합부터 지지도를 계산해 최소 지지도 미달 항목 제거",
+       "남은 집합으로 다음 단계 후보 Ck를 만들고 검사해 빈발 집합 Lk 확정"
+      ]
+     },
+     {
+      "title": "선험적 규칙",
+      "items": [
+       "{b,c,d}가 빈발하면 {b,c}·{b}도 빈발",
+       "{a,b}가 비빈발이면 {a,b,c}는 검사 없이 제외"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "연관 규칙과 척도",
+    "subsections": [
+     {
+      "title": "연관 규칙",
+      "items": [
+       "서로소인 항목 집합 X, Y에 대해 'X가 발생하면 Y도 발생'하는 X→Y",
+       "최소 지지도·최소 신뢰도를 넘는 규칙만 채택"
+      ]
+     },
+     {
+      "title": "지지도·신뢰도",
+      "items": [
+       "지지도=P(X∩Y)로 전체 중 함께 발생한 비율",
+       "신뢰도=P(Y|X)=P(X∩Y)/P(X)"
+      ]
+     },
+     {
+      "title": "향상도",
+      "items": [
+       "P(Y|X)/P(Y)",
+       "1보다 크면 양의 연관, 1이면 독립, 1보다 작으면 음의 연관"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "계산 사례와 한계",
+    "subsections": [
+     {
+      "title": "빈발 집합 선정",
+      "items": [
+       "5건 거래(우유·빵·버터 / 우유·버터·콜라 / 빵·버터·콜라 / 우유·콜라·라면 / 빵·버터·라면)에서 최소 지지도 50%",
+       "2-항목 중 {빵,버터}만 지지도 60%로 빈발"
+      ]
+     },
+     {
+      "title": "척도 계산",
+      "items": [
+       "빵→버터 신뢰도 3/3=1.0, 버터→빵 신뢰도 3/4=0.75",
+       "향상도는 1.0/0.8=0.75/0.6=1.25로 양의 연관"
+      ]
+     },
+     {
+      "title": "한계와 대안",
+      "items": [
+       "후보 집합이 많고 데이터베이스를 여러 번 스캔해 대용량에서 느림",
+       "FP-Tree로 2회 스캔만 하는 FP-Growth로 개선"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "빈발 집합의 부분 집합은 빈발",
+   "비빈발 집합의 상위 집합은 비빈발",
+   "지지도(Support)",
+   "신뢰도(Confidence)",
+   "향상도(Lift)",
+   "최소 지지도",
+   "최소 신뢰도"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "FP": "Frequent Pattern"
+  }
+ },
+ {
   "id": "AI_034",
   "code": "AI_034",
   "domain": "AI",
@@ -4012,6 +5534,164 @@
    "VGG": "Visual Geometry Group",
    "ResNet": "Residual Network",
    "RNN": "Recurrent Neural Network"
+  }
+ },
+ {
+  "id": "AI_036",
+  "code": "AI_036",
+  "domain": "AI",
+  "category": "AI > 신경망·딥러닝",
+  "subtitle": "",
+  "name": "R-CNN(Regions with CNN features)",
+  "title": "R-CNN(Regions with CNN features)",
+  "en": "Region-based Convolutional Neural Network",
+  "definition": "선택적 탐색으로 물체가 있을 만한 후보 영역을 제안한 뒤 각 영역을 CNN으로 특징 추출하고 SVM으로 분류하는 2단계 객체 탐지 기법으로, 2014년 제안되어 탐지 정확도를 크게 높임",
+  "keywords": [
+   "처리 절차: 영역 제안(선택적 탐색) · 영역 리사이징(Warp) · CNN 특징 추출 · SVM 분류 · 바운딩 박스 회귀",
+   "핵심 기법: 비최대 억제(NMS) · RoI 풀링 · 영역 제안 네트워크(RPN)",
+   "발전 계보: R-CNN → Fast R-CNN → Faster R-CNN → YOLO"
+  ],
+  "keywords_must": [
+   "영역 제안(선택적 탐색)",
+   "영역 리사이징(Warp)",
+   "CNN 특징 추출",
+   "SVM 분류",
+   "바운딩 박스 회귀",
+   "비최대 억제(NMS)",
+   "RoI 풀링",
+   "영역 제안 네트워크(RPN)",
+   "R-CNN → Fast R-CNN → Faster R-CNN → YOLO"
+  ],
+  "keywords_ref": [
+   "2단계·1단계 탐지기",
+   "앵커 박스",
+   "신뢰도 점수",
+   "IoU",
+   "mAP",
+   "전이 학습",
+   "Mask R-CNN",
+   "S×S 그리드"
+  ],
+  "outline": [
+   "개념과 절차",
+   "- 2단계 객체 탐지",
+   "- 절차",
+   "- 비최대 억제",
+   "- 속도·학습 구조 한계",
+   "Fast R-CNN과 Faster R-CNN",
+   "- Fast R-CNN",
+   "- Faster R-CNN",
+   "YOLO와 비교",
+   "- YOLO 절차",
+   "- 2단계와 1단계 비교",
+   "- 발전"
+  ],
+  "sections": [
+   {
+    "title": "개념과 절차",
+    "subsections": [
+     {
+      "title": "2단계 객체 탐지",
+      "items": [
+       "영역 제안 후 분류",
+       "이미지넷으로 사전 학습한 CNN을 전이 학습해 탐지 정확도 향상"
+      ]
+     },
+     {
+      "title": "절차",
+      "items": [
+       "선택적 탐색으로 후보 영역 약 2,000개 추출, 227×227로 비율 무시하고 변형",
+       "CNN으로 4,096차원 특징 추출, 클래스별 SVM 분류, 바운딩 박스 회귀로 위치 보정"
+      ]
+     },
+     {
+      "title": "비최대 억제",
+      "items": [
+       "같은 물체에 겹친 여러 박스 중 점수가 가장 높은 박스만 남김",
+       "IoU가 임계값 이상인 박스 제거"
+      ]
+     },
+     {
+      "title": "속도·학습 구조 한계",
+      "items": [
+       "후보 영역마다 CNN을 따로 돌려 이미지당 수십 초 소요",
+       "CNN·SVM·회귀를 따로 학습하는 복잡한 구조"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Fast R-CNN과 Faster R-CNN",
+    "subsections": [
+     {
+      "title": "Fast R-CNN",
+      "items": [
+       "전체 이미지에 CNN을 한 번만 적용해 특징 맵 생성",
+       "RoI 풀링으로 고정 길이 특징을 만들고 소프트맥스 분류와 박스 회귀를 한 번에 학습"
+      ]
+     },
+     {
+      "title": "Faster R-CNN",
+      "items": [
+       "병목이던 선택적 탐색을 영역 제안 네트워크(RPN)로 대체",
+       "특징 맵 위 앵커 박스로 객체 여부와 후보 영역을 함께 예측해 종단 간 학습"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "YOLO와 비교",
+    "subsections": [
+     {
+      "title": "YOLO 절차",
+      "items": [
+       "이미지를 S×S 그리드로 나누고 셀마다 B개 박스와 신뢰도 예측",
+       "신뢰도=Pr(Object)×IoU, 클래스 확률 Pr(Class|Object)와 곱해 최종 판별"
+      ]
+     },
+     {
+      "title": "2단계와 1단계 비교",
+      "items": [
+       "R-CNN 계열은 정확도가 높으나 느림",
+       "YOLO는 전체 이미지를 한 번에 처리해 실시간 탐지 가능하나 한 셀의 작은 객체 여러 개 탐지가 약함"
+      ]
+     },
+     {
+      "title": "발전",
+      "items": [
+       "Mask R-CNN으로 인스턴스 분할 확장",
+       "YOLO 후속 버전과 트랜스포머 기반 DETR로 발전"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "영역 제안(선택적 탐색)",
+   "영역 리사이징(Warp)",
+   "CNN 특징 추출",
+   "SVM 분류",
+   "바운딩 박스 회귀",
+   "비최대 억제(NMS)",
+   "RoI 풀링",
+   "영역 제안 네트워크(RPN)",
+   "R-CNN → Fast R-CNN → Faster R-CNN → YOLO"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "CNN": "Convolutional Neural Network",
+   "SVM": "Support Vector Machine",
+   "NMS": "Non-Maximum Suppression",
+   "RoI": "Region of Interest",
+   "RPN": "Region Proposal Network",
+   "YOLO": "You Only Look Once",
+   "IoU": "Intersection over Union",
+   "mAP": "mean Average Precision",
+   "DETR": "DEtection TRansformer"
   }
  },
  {
@@ -4444,6 +6124,145 @@
    "GAN": "Generative Adversarial Network",
    "ReLU": "Rectified Linear Unit",
    "Adam": "Adaptive Moment Estimation"
+  }
+ },
+ {
+  "id": "AI_039_01",
+  "code": "AI_039_01",
+  "domain": "AI",
+  "category": "AI > 신경망·딥러닝",
+  "subtitle": "",
+  "name": "디펜스 GAN(Defense-GAN)",
+  "title": "디펜스 GAN(Defense-GAN)",
+  "en": "Defense-GAN",
+  "definition": "정상 데이터로 학습한 GAN 생성자를 이용해, 입력과 가장 비슷한 이미지를 생성자의 잠재 공간에서 찾아 재구성한 뒤 분류기에 넣음으로써 적대적 예제의 노이즈를 제거하는 방어 기법으로 2018년 제안",
+  "keywords": [
+   "적대적 공격 구분: 화이트박스(White-box) 공격 · 블랙박스(Black-box) 공격",
+   "방어 기법: 적대적 훈련(Adversarial Training) · 입력 정화(Input Purification)",
+   "디펜스 GAN 원리: 정상 데이터 GAN 학습 · 잠재 벡터 z* 탐색 · 재구성 이미지 G(z*) 분류"
+  ],
+  "keywords_must": [
+   "화이트박스(White-box) 공격",
+   "블랙박스(Black-box) 공격",
+   "적대적 훈련(Adversarial Training)",
+   "입력 정화(Input Purification)",
+   "정상 데이터 GAN 학습",
+   "잠재 벡터 z* 탐색",
+   "재구성 이미지 G(z*) 분류"
+  ],
+  "keywords_ref": [
+   "적대적 예제",
+   "FGSM·PGD",
+   "전이성(Transferability)",
+   "질의 기반 공격",
+   "경사 하강",
+   "무작위 재시작",
+   "분류기 무수정"
+  ],
+  "outline": [
+   "적대적 공격 구분",
+   "- 적대적 예제",
+   "- 화이트박스 공격",
+   "- 블랙박스 공격",
+   "적대적 훈련",
+   "- 적대적 샘플 추가 학습",
+   "- 장단점",
+   "생성자 기반 입력 재구성 방어",
+   "- 동작 원리",
+   "- 노이즈 제거",
+   "- 장점과 한계"
+  ],
+  "sections": [
+   {
+    "title": "적대적 공격 구분",
+    "subsections": [
+     {
+      "title": "적대적 예제",
+      "items": [
+       "사람이 식별하지 못할 작은 노이즈로 모델 오분류 유도",
+       "학습·추론 단계 취약점을 노린 AI 공격"
+      ]
+     },
+     {
+      "title": "화이트박스 공격",
+      "items": [
+       "모델 구조·가중치·기울기를 모두 안다고 가정",
+       "FGSM·PGD처럼 기울기로 정교하고 강력한 공격이 가능하나 현실에서 전체 접근은 어려움"
+      ]
+     },
+     {
+      "title": "블랙박스 공격",
+      "items": [
+       "입력과 출력만 접근 가능하다고 가정",
+       "대리 모델의 전이성이나 반복 질의로 공격해 현실적이나 많은 질의가 필요하고 효율이 낮음"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적대적 훈련",
+    "subsections": [
+     {
+      "title": "적대적 샘플 추가 학습",
+      "items": [
+       "학습 데이터에 적대적 예제를 섞어 강건성 확보",
+       "화이트박스·블랙박스 공격 모두 일정 수준 대응"
+      ]
+     },
+     {
+      "title": "장단점",
+      "items": [
+       "기존 학습 절차를 재활용해 간편",
+       "학습 비용이 크고 학습에 쓰지 않은 새 공격 유형에는 약함"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "생성자 기반 입력 재구성 방어",
+    "subsections": [
+     {
+      "title": "동작 원리",
+      "items": [
+       "정상 데이터로 GAN을 학습해 정상 데이터 분포를 표현",
+       "입력 x에 대해 ‖G(z)−x‖²를 최소화하는 z*를 경사 하강과 무작위 재시작으로 탐색"
+      ]
+     },
+     {
+      "title": "노이즈 제거",
+      "items": [
+       "생성자는 정상 분포의 이미지만 만들 수 있어 G(z*)에는 적대적 노이즈가 거의 남지 않음",
+       "재구성 이미지를 원래 분류기에 입력"
+      ]
+     },
+     {
+      "title": "장점과 한계",
+      "items": [
+       "분류기 수정 없이 공격 유형에 무관하게 적용",
+       "추론마다 반복 탐색이 필요해 느리고 GAN 품질에 성능이 좌우"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "화이트박스(White-box) 공격",
+   "블랙박스(Black-box) 공격",
+   "적대적 훈련(Adversarial Training)",
+   "입력 정화(Input Purification)",
+   "정상 데이터 GAN 학습",
+   "잠재 벡터 z* 탐색",
+   "재구성 이미지 G(z*) 분류"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "GAN": "Generative Adversarial Network",
+   "FGSM": "Fast Gradient Sign Method",
+   "PGD": "Projected Gradient Descent"
   }
  },
  {
@@ -5029,6 +6848,315 @@
   "quiz_groups": []
  },
  {
+  "id": "AI_042",
+  "code": "AI_042",
+  "domain": "AI",
+  "category": "AI > 신경망·딥러닝",
+  "subtitle": "",
+  "name": "자기 조직화 지도(SOM, Self-Organizing Map)",
+  "title": "자기 조직화 지도(SOM, Self-Organizing Map)",
+  "en": "Self-Organizing Map",
+  "definition": "입력층과 2차원 격자형 경쟁층으로 구성되어 경쟁 학습으로 고차원 데이터를 위상 관계를 보존한 채 저차원 지도에 매핑하는 비지도 신경망으로, 1982년 코호넨이 제안해 군집화·시각화에 활용",
+  "keywords": [
+   "구성 요소: 입력층(Input Layer) · 경쟁층(Competitive Layer) · 가중치 벡터 · BMU(Best Matching Unit) · 이웃 함수 · 학습률",
+   "학습 절차: 초기화 · 경쟁 · 이웃 함수 적용 · 가중치 갱신",
+   "특징: 경쟁 학습 · 위상 보존(Topology Preservation)"
+  ],
+  "keywords_must": [
+   "입력층(Input Layer)",
+   "경쟁층(Competitive Layer)",
+   "가중치 벡터",
+   "BMU(Best Matching Unit)",
+   "이웃 함수",
+   "학습률",
+   "초기화",
+   "경쟁",
+   "이웃 함수 적용",
+   "가중치 갱신",
+   "경쟁 학습",
+   "위상 보존(Topology Preservation)"
+  ],
+  "keywords_ref": [
+   "코호넨 네트워크",
+   "승자 독식",
+   "가우시안 이웃 함수",
+   "U-매트릭스",
+   "양자화 오차",
+   "K-평균 비교",
+   "실루엣 계수"
+  ],
+  "outline": [
+   "개념과 특징",
+   "- 위상 보존 차원 축소",
+   "- 경쟁 학습",
+   "- 유연성",
+   "구성과 학습 절차",
+   "- 구조",
+   "- 초기화·경쟁",
+   "- 이웃 함수·갱신",
+   "- 반복",
+   "일반 신경망과 비교",
+   "- 목적·학습",
+   "- 구조·출력",
+   "- 활용"
+  ],
+  "sections": [
+   {
+    "title": "개념과 특징",
+    "subsections": [
+     {
+      "title": "위상 보존 차원 축소",
+      "items": [
+       "고차원에서 가까운 데이터가 지도에서도 인접하도록 배치",
+       "군집화와 시각화를 동시에 수행"
+      ]
+     },
+     {
+      "title": "경쟁 학습",
+      "items": [
+       "입력과 가장 가까운 뉴런(BMU)이 승자로 선택되고 그 주변 뉴런도 함께 학습",
+       "오차 역전파 없이 학습"
+      ]
+     },
+     {
+      "title": "유연성",
+      "items": [
+       "데이터 분포에 대한 가정이 필요 없음",
+       "군집 수를 미리 정해야 하는 K-평균의 단점 보완"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구성과 학습 절차",
+    "subsections": [
+     {
+      "title": "구조",
+      "items": [
+       "입력층과 격자형 경쟁층이 가중치로 완전 연결",
+       "경쟁층의 각 뉴런은 입력과 같은 차원의 가중치 벡터 보유"
+      ]
+     },
+     {
+      "title": "초기화·경쟁",
+      "items": [
+       "가중치를 입력 범위 안에서 무작위 초기화",
+       "입력과 각 뉴런 가중치의 유클리드 거리로 BMU 선택"
+      ]
+     },
+     {
+      "title": "이웃 함수·갱신",
+      "items": [
+       "BMU와의 격자 거리가 가까울수록 크게 영향",
+       "w←w+η(t)·h(t)·(x−w)로 가중치를 입력 쪽으로 이동"
+      ]
+     },
+     {
+      "title": "반복",
+      "items": [
+       "학습률과 이웃 반경을 점차 줄이며 반복",
+       "유사한 입력이 인접 뉴런에 매핑되도록 수렴, 결과는 U-매트릭스·실루엣 계수로 평가"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "일반 신경망과 비교",
+    "subsections": [
+     {
+      "title": "목적·학습",
+      "items": [
+       "SOM은 시각화·군집화를 위한 비지도 경쟁 학습",
+       "일반 신경망은 분류·회귀를 위한 지도 학습과 역전파"
+      ]
+     },
+     {
+      "title": "구조·출력",
+      "items": [
+       "SOM은 2차원 격자 지도와 유사성 기반 표현",
+       "일반 신경망은 입력·은닉·출력 다층 구조와 예측값 출력"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "고객 세분화, 패턴 인식, 특징 추출, 이상 탐지",
+       "고차원 데이터의 탐색적 시각화"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "입력층(Input Layer)",
+   "경쟁층(Competitive Layer)",
+   "가중치 벡터",
+   "BMU(Best Matching Unit)",
+   "이웃 함수",
+   "학습률",
+   "초기화",
+   "경쟁",
+   "이웃 함수 적용",
+   "가중치 갱신",
+   "경쟁 학습",
+   "위상 보존(Topology Preservation)"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "BMU": "Best Matching Unit"
+  }
+ },
+ {
+  "id": "AI_043",
+  "code": "AI_043",
+  "domain": "AI",
+  "category": "AI > 신경망·딥러닝",
+  "subtitle": "",
+  "name": "이피션트넷(EfficientNet)과 이피션트뎃(EfficientDet)",
+  "title": "이피션트넷(EfficientNet)과 이피션트뎃(EfficientDet)",
+  "en": "EfficientNet and EfficientDet",
+  "definition": "이피션트넷은 네트워크의 깊이·너비·해상도를 하나의 계수로 균형 있게 늘리는 복합 스케일링으로 적은 파라미터로 높은 정확도를 얻는 이미지 분류 모델이고, 이피션트뎃은 이를 백본으로 BiFPN과 복합 스케일링을 결합한 객체 탐지 모델로 2019년 구글이 발표",
+  "keywords": [
+   "이피션트넷 기법: 복합 스케일링(Compound Scaling) · 깊이·너비·해상도 스케일링 · NAS 기반 기준 모델(B0)",
+   "이피션트뎃 기법: BiFPN(가중 양방향 특징 피라미드) · 백본·특징망·예측망 동시 스케일링",
+   "비교 관점: 이미지 분류 · 객체 탐지 · 파라미터·FLOPs 절감"
+  ],
+  "keywords_must": [
+   "복합 스케일링(Compound Scaling)",
+   "깊이·너비·해상도 스케일링",
+   "NAS 기반 기준 모델(B0)",
+   "BiFPN(가중 양방향 특징 피라미드)",
+   "백본·특징망·예측망 동시 스케일링",
+   "이미지 분류",
+   "객체 탐지",
+   "파라미터·FLOPs 절감"
+  ],
+  "keywords_ref": [
+   "α·β²·γ²≈2",
+   "복합 계수 φ",
+   "MBConv",
+   "SE 블록",
+   "AutoML",
+   "FPN·PANet",
+   "D0~D7",
+   "정확도-효율 트레이드오프"
+  ],
+  "outline": [
+   "개념 비교",
+   "- 분류 모델",
+   "- 탐지 모델",
+   "복합 스케일링 분류 모델 구조",
+   "- 단일 차원 확장의 한계",
+   "- 복합 스케일링",
+   "- 기준 모델",
+   "BiFPN 탐지 모델 구조와 비교",
+   "- BiFPN",
+   "- 복합 스케일링 확장",
+   "- 특징 비교"
+  ],
+  "sections": [
+   {
+    "title": "개념 비교",
+    "subsections": [
+     {
+      "title": "분류 모델",
+      "items": [
+       "복합 스케일링과 AutoML로 정확도·효율을 함께 향상",
+       "이미지 분류 대상"
+      ]
+     },
+     {
+      "title": "탐지 모델",
+      "items": [
+       "이미지넷 사전 학습 이피션트넷을 백본으로 사용",
+       "객체 탐지 대상"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "복합 스케일링 분류 모델 구조",
+    "subsections": [
+     {
+      "title": "단일 차원 확장의 한계",
+      "items": [
+       "깊이(층 수)·너비(채널 수)·해상도 중 하나만 키우면 정확도 향상이 빨리 포화",
+       "세 요소의 균형이 중요"
+      ]
+     },
+     {
+      "title": "복합 스케일링",
+      "items": [
+       "깊이 α^φ, 너비 β^φ, 해상도 γ^φ로 함께 확장하고 α·β²·γ²≈2로 제약",
+       "φ가 1 늘 때 연산량은 약 2배"
+      ]
+     },
+     {
+      "title": "기준 모델",
+      "items": [
+       "NAS로 찾은 B0(MBConv·SE 블록)를 B1~B7로 확장",
+       "당시 이미지넷 최고 정확도를 훨씬 적은 파라미터·FLOPs로 달성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "BiFPN 탐지 모델 구조와 비교",
+    "subsections": [
+     {
+      "title": "BiFPN",
+      "items": [
+       "상향·하향 양방향 특징 융합을 반복 적용",
+       "해상도별 입력 특징에 학습 가능한 가중치를 두어 중요도 반영"
+      ]
+     },
+     {
+      "title": "복합 스케일링 확장",
+      "items": [
+       "백본·BiFPN·박스·클래스 예측망·입력 해상도를 함께 조정",
+       "D0~D7로 정확도와 지연 시간 선택"
+      ]
+     },
+     {
+      "title": "특징 비교",
+      "items": [
+       "이피션트넷은 분류용 복합 스케일링",
+       "이피션트뎃은 탐지용 BiFPN으로 작은 모델 크기와 낮은 지연에 높은 정확도, 분할 백본으로도 활용"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "복합 스케일링(Compound Scaling)",
+   "깊이·너비·해상도 스케일링",
+   "NAS 기반 기준 모델(B0)",
+   "BiFPN(가중 양방향 특징 피라미드)",
+   "백본·특징망·예측망 동시 스케일링",
+   "이미지 분류",
+   "객체 탐지",
+   "파라미터·FLOPs 절감"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "BiFPN": "Bidirectional Feature Pyramid Network",
+   "NAS": "Neural Architecture Search",
+   "FLOPs": "Floating Point Operations",
+   "MBConv": "Mobile Inverted Bottleneck Convolution",
+   "SE": "Squeeze-and-Excitation",
+   "FPN": "Feature Pyramid Network",
+   "PANet": "Path Aggregation Network"
+  }
+ },
+ {
   "id": "AI_045",
   "code": "AI_045",
   "domain": "AI",
@@ -5168,6 +7296,164 @@
    "ELMo": "Embeddings from Language Models",
    "BERT": "Bidirectional Encoder Representations from Transformers",
    "LSA": "Latent Semantic Analysis"
+  }
+ },
+ {
+  "id": "AI_046",
+  "code": "AI_046",
+  "domain": "AI",
+  "category": "AI > 자연어·생성형 AI",
+  "subtitle": "",
+  "name": "개체명 인식(NER)과 워드 임베딩",
+  "title": "개체명 인식(NER)과 워드 임베딩",
+  "en": "Named Entity Recognition and Word Embedding",
+  "definition": "개체명 인식은 텍스트에서 인명·지명·기관명·날짜 등 사전 정의된 범주의 고유 개체를 찾아 분류하는 기법이고, 워드 임베딩은 이를 위해 단어를 의미가 비슷할수록 가까운 저차원 실수 벡터로 표현하는 기술",
+  "keywords": [
+   "NER 요소: 개체 범주(인명·지명·기관명) · BIO 태깅 · 시퀀스 레이블링",
+   "정적 임베딩: Word2Vec(CBOW·Skip-gram) · GloVe · FastText",
+   "문맥 임베딩: BERT(양방향 인코더) · GPT-3(단방향 디코더)"
+  ],
+  "keywords_must": [
+   "개체 범주(인명·지명·기관명)",
+   "BIO 태깅",
+   "시퀀스 레이블링",
+   "Word2Vec(CBOW·Skip-gram)",
+   "GloVe",
+   "FastText",
+   "BERT(양방향 인코더)",
+   "GPT-3(단방향 디코더)"
+  ],
+  "keywords_ref": [
+   "원-핫 인코딩",
+   "LSA",
+   "부분 단어(Subword)",
+   "다의어",
+   "CRF",
+   "BiLSTM-CRF",
+   "정보 검색·질의응답",
+   "NLU",
+   "KoBERT"
+  ],
+  "outline": [
+   "개체명 인식",
+   "- 고유 개체 탐지",
+   "- 처리 방식",
+   "- 활용",
+   "워드 임베딩",
+   "- 밀집 벡터 표현",
+   "- Word2Vec",
+   "- GloVe·FastText",
+   "문맥 임베딩: BERT와 GPT-3",
+   "- 정적 임베딩 한계",
+   "- BERT",
+   "- GPT-3"
+  ],
+  "sections": [
+   {
+    "title": "개체명 인식",
+    "subsections": [
+     {
+      "title": "고유 개체 탐지",
+      "items": [
+       "문장에서 고유한 의미를 갖는 단어·구를 찾아 범주 지정",
+       "예: '삼성전자(기관)가 서울(지명)에서'"
+      ]
+     },
+     {
+      "title": "처리 방식",
+      "items": [
+       "토큰마다 B(시작)·I(내부)·O(외부) 태그를 붙이는 시퀀스 레이블링",
+       "CRF·BiLSTM-CRF에서 BERT 미세 조정으로 발전"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "정보 검색·질의응답·챗봇",
+       "목적 지향 대화 시스템의 슬롯 추출 등 자연어 이해의 핵심 요소"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "워드 임베딩",
+    "subsections": [
+     {
+      "title": "밀집 벡터 표현",
+      "items": [
+       "희소한 원-핫 벡터 대신 밀집 벡터로 단어 간 유사도 표현",
+       "'왕−남자+여자≈여왕' 같은 의미 연산 가능"
+      ]
+     },
+     {
+      "title": "Word2Vec",
+      "items": [
+       "2013년 구글이 만든 예측 기반 임베딩",
+       "CBOW는 주변 단어로 중심 단어를, Skip-gram은 중심 단어로 주변 단어 예측"
+      ]
+     },
+     {
+      "title": "GloVe·FastText",
+      "items": [
+       "GloVe는 스탠퍼드가 전체 동시 출현 통계(LSA의 장점)와 예측 방식을 결합",
+       "FastText는 페이스북이 부분 단어 n-gram 벡터로 표현해 미등록 단어·형태 변화에 강함"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "문맥 임베딩: BERT와 GPT-3",
+    "subsections": [
+     {
+      "title": "정적 임베딩 한계",
+      "items": [
+       "같은 단어는 문맥과 무관하게 같은 벡터라 다의어 구분 불가",
+       "문장 속 다른 단어를 반영해 동적으로 표현하는 문맥 임베딩 등장"
+      ]
+     },
+     {
+      "title": "BERT",
+      "items": [
+       "구글의 트랜스포머 인코더 기반 양방향 모델",
+       "빈칸 단어 예측(MLM)으로 사전 학습해 문장 의미 추출·분류·NER에 강점"
+      ]
+     },
+     {
+      "title": "GPT-3",
+      "items": [
+       "OpenAI의 트랜스포머 디코더 기반 단방향 모델",
+       "다음 단어 예측으로 학습해 문장 생성과 제로샷·퓨샷 수행에 강점"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "개체 범주(인명·지명·기관명)",
+   "BIO 태깅",
+   "시퀀스 레이블링",
+   "Word2Vec(CBOW·Skip-gram)",
+   "GloVe",
+   "FastText",
+   "BERT(양방향 인코더)",
+   "GPT-3(단방향 디코더)"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "NER": "Named Entity Recognition",
+   "CBOW": "Continuous Bag of Words",
+   "GloVe": "Global Vectors for Word Representation",
+   "BERT": "Bidirectional Encoder Representations from Transformers",
+   "GPT": "Generative Pre-trained Transformer",
+   "BIO": "Begin-Inside-Outside",
+   "CRF": "Conditional Random Field",
+   "LSA": "Latent Semantic Analysis",
+   "MLM": "Masked Language Model",
+   "NLU": "Natural Language Understanding"
   }
  },
  {
@@ -5317,6 +7603,151 @@
    "RNN": "Recurrent Neural Network",
    "RoBERTa": "Robustly Optimized BERT Approach",
    "ALBERT": "A Lite BERT"
+  }
+ },
+ {
+  "id": "AI_048_0",
+  "code": "AI_048_0",
+  "domain": "AI",
+  "category": "AI > 자연어·생성형 AI",
+  "subtitle": "",
+  "name": "지피티-3(GPT-3, Generative Pre-trained Transformer 3)",
+  "title": "지피티-3(GPT-3, Generative Pre-trained Transformer 3)",
+  "en": "GPT-3",
+  "definition": "OpenAI가 2020년 발표한 1,750억 파라미터의 트랜스포머 디코더 기반 자기회귀 언어 모델로, 약 3천억 토큰으로 사전 학습해 별도 미세 조정 없이 프롬프트 속 예시만으로 과제를 수행하는 퓨샷 학습 능력을 보임",
+  "keywords": [
+   "모델 구조: 트랜스포머 디코더 · 마스크드 셀프 어텐션 · 96개 층 · 2,048 토큰 문맥",
+   "학습 방식: 다음 단어 예측(자기회귀) · 대규모 비지도 사전 학습",
+   "문맥 내 학습: 제로샷(Zero-shot) · 원샷(One-shot) · 퓨샷(Few-shot)"
+  ],
+  "keywords_must": [
+   "트랜스포머 디코더",
+   "마스크드 셀프 어텐션",
+   "96개 층",
+   "2,048 토큰 문맥",
+   "다음 단어 예측(자기회귀)",
+   "대규모 비지도 사전 학습",
+   "제로샷(Zero-shot)",
+   "원샷(One-shot)",
+   "퓨샷(Few-shot)"
+  ],
+  "keywords_ref": [
+   "GPT-1·GPT-2",
+   "커먼 크롤",
+   "스케일링 법칙",
+   "API 서비스",
+   "InstructGPT",
+   "RLHF",
+   "BERT 비교",
+   "KoGPT"
+  ],
+  "outline": [
+   "개념과 계보",
+   "- 초대규모 언어 모델",
+   "- 계보",
+   "구조와 학습 방식",
+   "- 디코더 전용 구조",
+   "- 자기회귀 사전 학습",
+   "- 문맥 내 학습",
+   "BERT 비교와 한계",
+   "- 구조 비교",
+   "- 강점 비교",
+   "- 신뢰성·비용 문제"
+  ],
+  "sections": [
+   {
+    "title": "개념과 계보",
+    "subsections": [
+     {
+      "title": "초대규모 언어 모델",
+      "items": [
+       "이전 GPT-2(15억) 대비 100배 이상 규모",
+       "커먼 크롤·웹텍스트·도서·위키백과로 학습"
+      ]
+     },
+     {
+      "title": "계보",
+      "items": [
+       "GPT-1(2018)이 사전 학습+미세 조정 제시, GPT-2(2019)가 제로샷 가능성",
+       "GPT-3 이후 InstructGPT·ChatGPT로 지시 따르기와 RLHF 적용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구조와 학습 방식",
+    "subsections": [
+     {
+      "title": "디코더 전용 구조",
+      "items": [
+       "트랜스포머 인코더 없이 디코더 블록만 96개 적층",
+       "미래 단어를 가리는 마스크드 셀프 어텐션으로 왼쪽 문맥만 참조"
+      ]
+     },
+     {
+      "title": "자기회귀 사전 학습",
+      "items": [
+       "앞 단어들로 다음 단어를 맞히는 방식",
+       "레이블 없이 대규모 텍스트로 학습"
+      ]
+     },
+     {
+      "title": "문맥 내 학습",
+      "items": [
+       "가중치 갱신 없이 프롬프트의 예시 수에 따라 제로샷·원샷·퓨샷",
+       "일부 과제에서 미세 조정 모델에 필적"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "BERT 비교와 한계",
+    "subsections": [
+     {
+      "title": "구조 비교",
+      "items": [
+       "BERT는 인코더만 쓰는 양방향 빈칸 예측 모델",
+       "GPT-3는 디코더만 쓰는 단방향 다음 단어 예측 모델"
+      ]
+     },
+     {
+      "title": "강점 비교",
+      "items": [
+       "BERT는 문장 이해·분류에 강점",
+       "GPT-3는 기사 작성·코드 생성·대화 등 생성에 강점, 유료 API로 제공"
+      ]
+     },
+     {
+      "title": "신뢰성·비용 문제",
+      "items": [
+       "사실과 다른 내용 생성과 편향",
+       "막대한 학습 비용과 모델 비공개, 짧은 문맥 길이"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "트랜스포머 디코더",
+   "마스크드 셀프 어텐션",
+   "96개 층",
+   "2,048 토큰 문맥",
+   "다음 단어 예측(자기회귀)",
+   "대규모 비지도 사전 학습",
+   "제로샷(Zero-shot)",
+   "원샷(One-shot)",
+   "퓨샷(Few-shot)"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "GPT": "Generative Pre-trained Transformer",
+   "RLHF": "Reinforcement Learning from Human Feedback",
+   "BERT": "Bidirectional Encoder Representations from Transformers",
+   "API": "Application Programming Interface"
   }
  },
  {
@@ -6057,6 +8488,315 @@
   }
  },
  {
+  "id": "AI_051_00",
+  "code": "AI_051_00",
+  "domain": "AI",
+  "category": "AI > 자연어·생성형 AI",
+  "subtitle": "",
+  "name": "트랜스포머(Transformer)",
+  "title": "트랜스포머(Transformer)",
+  "en": "Transformer",
+  "definition": "순환 구조 없이 셀프 어텐션만으로 인코더-디코더를 구성해 시퀀스 전체를 병렬 처리하는 신경망 구조로, 2017년 구글이 논문 'Attention Is All You Need'로 발표해 BERT·GPT 등 현대 언어 모델의 기반이 됨",
+  "keywords": [
+   "입력 처리: 임베딩 · 위치 인코딩(Positional Encoding)",
+   "인코더: 멀티 헤드 셀프 어텐션 · 위치별 피드 포워드 신경망 · 잔차 연결·층 정규화",
+   "디코더: 마스크드 셀프 어텐션 · 인코더-디코더 어텐션 · 선형층·소프트맥스"
+  ],
+  "keywords_must": [
+   "임베딩",
+   "위치 인코딩(Positional Encoding)",
+   "멀티 헤드 셀프 어텐션",
+   "위치별 피드 포워드 신경망",
+   "잔차 연결·층 정규화",
+   "마스크드 셀프 어텐션",
+   "인코더-디코더 어텐션",
+   "선형층·소프트맥스"
+  ],
+  "keywords_ref": [
+   "Query·Key·Value",
+   "스케일드 닷-프로덕트 어텐션",
+   "6개 층 적층",
+   "병렬 학습",
+   "장기 의존성",
+   "O(n²) 복잡도",
+   "인코더 전용(BERT)·디코더 전용(GPT)"
+  ],
+  "outline": [
+   "개념과 등장 배경",
+   "- RNN 탈피",
+   "- 병렬화·확장성",
+   "인코더·디코더 구조",
+   "- 입력",
+   "- 인코더",
+   "- 디코더",
+   "- 출력",
+   "어텐션 연산과 한계",
+   "- 스케일드 닷-프로덕트 어텐션",
+   "- 멀티 헤드 어텐션",
+   "- 한계와 개선"
+  ],
+  "sections": [
+   {
+    "title": "개념과 등장 배경",
+    "subsections": [
+     {
+      "title": "RNN 탈피",
+      "items": [
+       "순차 처리로 병렬화가 어렵고 장기 의존성이 약한 RNN·seq2seq 한계 극복",
+       "모든 단어 쌍의 관계를 한 번에 계산"
+      ]
+     },
+     {
+      "title": "병렬화·확장성",
+      "items": [
+       "병렬 학습으로 학습 속도와 성능 향상",
+       "인코더 전용 BERT, 디코더 전용 GPT, 비전의 ViT로 확장"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "인코더·디코더 구조",
+    "subsections": [
+     {
+      "title": "입력",
+      "items": [
+       "단어 임베딩에 사인·코사인 위치 인코딩을 더함",
+       "순환 구조가 없어 생기는 순서 정보 문제 해결"
+      ]
+     },
+     {
+      "title": "인코더",
+      "items": [
+       "원 논문은 6개 층 적층, 각 층은 Q=K=V인 멀티 헤드 셀프 어텐션과 위치별 피드 포워드 신경망",
+       "하위 층마다 잔차 연결과 층 정규화"
+      ]
+     },
+     {
+      "title": "디코더",
+      "items": [
+       "마스크드 셀프 어텐션으로 현재 이후 단어를 가림",
+       "인코더-디코더 어텐션은 디코더 출력을 Query, 인코더 출력을 Key·Value로 사용"
+      ]
+     },
+     {
+      "title": "출력",
+      "items": [
+       "선형층으로 어휘 크기 벡터로 변환",
+       "소프트맥스로 다음 단어 확률 예측"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "어텐션 연산과 한계",
+    "subsections": [
+     {
+      "title": "스케일드 닷-프로덕트 어텐션",
+      "items": [
+       "softmax(QKᵀ/√dₖ)V",
+       "√dₖ로 나눠 내적이 커져 기울기가 작아지는 문제 방지"
+      ]
+     },
+     {
+      "title": "멀티 헤드 어텐션",
+      "items": [
+       "여러 헤드가 서로 다른 관계를 병렬로 학습 후 결합",
+       "문법·의미 관계를 다양하게 포착"
+      ]
+     },
+     {
+      "title": "한계와 개선",
+      "items": [
+       "시퀀스 길이 n에 대해 O(n²) 연산·메모리",
+       "희소 어텐션·플래시 어텐션·KV 캐시로 효율화"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "임베딩",
+   "위치 인코딩(Positional Encoding)",
+   "멀티 헤드 셀프 어텐션",
+   "위치별 피드 포워드 신경망",
+   "잔차 연결·층 정규화",
+   "마스크드 셀프 어텐션",
+   "인코더-디코더 어텐션",
+   "선형층·소프트맥스"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "RNN": "Recurrent Neural Network",
+   "seq2seq": "sequence-to-sequence",
+   "BERT": "Bidirectional Encoder Representations from Transformers",
+   "GPT": "Generative Pre-trained Transformer",
+   "ViT": "Vision Transformer"
+  }
+ },
+ {
+  "id": "AI_051_01",
+  "code": "AI_051_01",
+  "domain": "AI",
+  "category": "AI > 자연어·생성형 AI",
+  "subtitle": "",
+  "name": "어텐션 메커니즘(Attention)과 T5",
+  "title": "어텐션 메커니즘(Attention)과 T5",
+  "en": "Attention Mechanism and T5",
+  "definition": "어텐션은 디코더가 출력 단어를 예측하는 매 시점마다 인코더의 전체 입력을 다시 참조해 관련 높은 부분에 가중치를 집중하는 기법이고, T5는 모든 자연어 처리 과제를 텍스트 입력-텍스트 출력 형식으로 통일한 구글의 트랜스포머 인코더-디코더 모델",
+  "keywords": [
+   "어텐션 절차: 어텐션 점수 · 소프트맥스 가중치 · 컨텍스트 벡터 · 출력 예측",
+   "어텐션 해결 과제: 고정 길이 컨텍스트 벡터 병목 · 장기 의존성·기울기 소실",
+   "T5 요소: 텍스트-투-텍스트(Text-to-Text) · 인코더-디코더 · C4 말뭉치 · 스팬 마스킹 · 멀티태스크 학습"
+  ],
+  "keywords_must": [
+   "어텐션 점수",
+   "소프트맥스 가중치",
+   "컨텍스트 벡터",
+   "출력 예측",
+   "고정 길이 컨텍스트 벡터 병목",
+   "장기 의존성·기울기 소실",
+   "텍스트-투-텍스트(Text-to-Text)",
+   "인코더-디코더",
+   "C4 말뭉치",
+   "스팬 마스킹",
+   "멀티태스크 학습"
+  ],
+  "keywords_ref": [
+   "seq2seq",
+   "시점(Time Step)",
+   "바다나우·루옹 어텐션",
+   "Query·Key·Value",
+   "태스크 접두어",
+   "전이 학습",
+   "BERT·GPT-3 비교"
+  ],
+  "outline": [
+   "어텐션 메커니즘",
+   "- 등장 배경",
+   "- 절차",
+   "- 발전",
+   "T5",
+   "- 개념",
+   "- 모델·학습",
+   "- 활용 방식",
+   "BERT·GPT-3·T5 비교",
+   "- 개발·구조",
+   "- 학습·강점",
+   "- 선택 기준"
+  ],
+  "sections": [
+   {
+    "title": "어텐션 메커니즘",
+    "subsections": [
+     {
+      "title": "등장 배경",
+      "items": [
+       "seq2seq는 입력 전체를 고정 길이 벡터 하나로 압축해 긴 문장에서 정보 손실",
+       "RNN 순차 처리의 장기 의존성 문제"
+      ]
+     },
+     {
+      "title": "절차",
+      "items": [
+       "디코더 은닉 상태와 인코더 각 시점 은닉 상태의 유사도로 어텐션 점수 계산",
+       "소프트맥스로 가중치를 만들고 가중합한 컨텍스트 벡터를 디코더 상태와 결합해 단어 예측"
+      ]
+     },
+     {
+      "title": "발전",
+      "items": [
+       "2014년 바다나우의 번역용 어텐션에서 시작",
+       "셀프 어텐션만으로 구성한 트랜스포머로 발전"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "T5",
+    "subsections": [
+     {
+      "title": "개념",
+      "items": [
+       "2019년 구글이 공개",
+       "번역·요약·분류·질의응답을 모두 '접두어+입력 텍스트→출력 텍스트'로 처리"
+      ]
+     },
+     {
+      "title": "모델·학습",
+      "items": [
+       "트랜스포머 인코더와 디코더를 모두 사용",
+       "약 750GB의 정제 웹 말뭉치 C4로 연속 구간을 가려 복원하는 스팬 마스킹 사전 학습"
+      ]
+     },
+     {
+      "title": "활용 방식",
+      "items": [
+       "사전 학습 모델을 과제별로 미세 조정",
+       "여러 과제를 같은 형식으로 함께 학습하는 멀티태스크 학습"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "BERT·GPT-3·T5 비교",
+    "subsections": [
+     {
+      "title": "개발·구조",
+      "items": [
+       "BERT는 구글의 인코더 전용",
+       "GPT-3는 OpenAI의 디코더 전용, T5는 구글의 인코더-디코더"
+      ]
+     },
+     {
+      "title": "학습·강점",
+      "items": [
+       "BERT는 미세 조정으로 문장 의미 추출",
+       "GPT-3는 퓨샷 학습으로 문장 생성, T5는 미세 조정으로 번역·요약 등 텍스트 변환"
+      ]
+     },
+     {
+      "title": "선택 기준",
+      "items": [
+       "이해 과제는 BERT, 생성 과제는 GPT 계열",
+       "다양한 과제를 하나의 틀로 실험하는 연구에는 T5"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "어텐션 점수",
+   "소프트맥스 가중치",
+   "컨텍스트 벡터",
+   "출력 예측",
+   "고정 길이 컨텍스트 벡터 병목",
+   "장기 의존성·기울기 소실",
+   "텍스트-투-텍스트(Text-to-Text)",
+   "인코더-디코더",
+   "C4 말뭉치",
+   "스팬 마스킹",
+   "멀티태스크 학습"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "T5": "Text-to-Text Transfer Transformer",
+   "C4": "Colossal Clean Crawled Corpus",
+   "seq2seq": "sequence-to-sequence",
+   "RNN": "Recurrent Neural Network",
+   "BERT": "Bidirectional Encoder Representations from Transformers",
+   "GPT": "Generative Pre-trained Transformer"
+  }
+ },
+ {
   "id": "AI_051_2",
   "code": "AI_051_2",
   "domain": "AI",
@@ -6198,6 +8938,156 @@
    "RNN": "Recurrent Neural Network",
    "BERT": "Bidirectional Encoder Representations from Transformers",
    "GPT": "Generative Pre-trained Transformer"
+  }
+ },
+ {
+  "id": "AI_051_03",
+  "code": "AI_051_03",
+  "domain": "AI",
+  "category": "AI > 자연어·생성형 AI",
+  "subtitle": "",
+  "name": "바트(BART, Bidirectional and Auto-Regressive Transformers)",
+  "title": "바트(BART, Bidirectional and Auto-Regressive Transformers)",
+  "en": "BART",
+  "definition": "BERT식 양방향 인코더와 GPT식 자기회귀 디코더를 결합한 트랜스포머 seq2seq 모델로, 다양한 노이즈로 훼손한 문장을 원문으로 복원하는 디노이징 자기 지도 학습으로 사전 학습하며 2019년 페이스북 AI가 제안",
+  "keywords": [
+   "구조: 양방향 인코더 · 자기회귀 디코더 · 교차 엔트로피 손실 · GELU 활성화",
+   "노이즈 기법: 토큰 마스킹 · 토큰 삭제 · 텍스트 채우기(Text Infilling) · 문장 순서 섞기 · 문서 회전",
+   "극복한 한계: BERT의 생성 한계 · GPT의 단방향 문맥 한계"
+  ],
+  "keywords_must": [
+   "양방향 인코더",
+   "자기회귀 디코더",
+   "교차 엔트로피 손실",
+   "GELU 활성화",
+   "토큰 마스킹",
+   "토큰 삭제",
+   "텍스트 채우기(Text Infilling)",
+   "문장 순서 섞기",
+   "문서 회전",
+   "BERT의 생성 한계",
+   "GPT의 단방향 문맥 한계"
+  ],
+  "keywords_ref": [
+   "디노이징 오토인코더",
+   "자기 지도 학습",
+   "푸아송 분포 스팬",
+   "base 6층·large 12층",
+   "요약·번역",
+   "mBART",
+   "모델 경량화"
+  ],
+  "outline": [
+   "등장 배경",
+   "- BERT 한계",
+   "- GPT 한계",
+   "구조와 사전 학습",
+   "- 표준 seq2seq 구조",
+   "- 층 구성·활성화",
+   "- 노이즈 기법",
+   "활용 성과와 경량화 과제",
+   "- 강점",
+   "- 대규모 모델 문제",
+   "- 해결 방안"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "BERT 한계",
+      "items": [
+       "마스크 토큰을 서로 독립적으로 예측",
+       "인코더 전용이라 문장 생성에 부적합"
+      ]
+     },
+     {
+      "title": "GPT 한계",
+      "items": [
+       "다음 단어 예측은 우수",
+       "왼쪽 문맥만 써서 뒤쪽 맥락을 활용하지 못함"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구조와 사전 학습",
+    "subsections": [
+     {
+      "title": "표준 seq2seq 구조",
+      "items": [
+       "훼손된 입력을 양방향 인코더가 읽고 자기회귀 디코더가 원문 생성",
+       "디코더 출력과 원문 사이 교차 엔트로피 손실"
+      ]
+     },
+     {
+      "title": "층 구성·활성화",
+      "items": [
+       "base는 인코더·디코더 각 6층, large는 각 12층",
+       "GPT처럼 ReLU 대신 GELU 사용"
+      ]
+     },
+     {
+      "title": "노이즈 기법",
+      "items": [
+       "토큰을 [MASK]로 바꾸는 마스킹과 임의 삭제",
+       "푸아송 분포 길이의 구간을 [MASK] 하나로 바꾸는 텍스트 채우기, 문장 순서 섞기, 임의 토큰에서 시작하도록 문서 회전"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용 성과와 경량화 과제",
+    "subsections": [
+     {
+      "title": "강점",
+      "items": [
+       "이해와 생성 모두 우수",
+       "특히 요약·번역·대화 생성에서 높은 성능, 다국어 mBART로 확장"
+      ]
+     },
+     {
+      "title": "대규모 모델 문제",
+      "items": [
+       "막대한 학습 데이터와 메모리·GPU 성능 제약",
+       "학습 시간과 서비스 비용 증가"
+      ]
+     },
+     {
+      "title": "해결 방안",
+      "items": [
+       "양자화·가지치기·지식 증류",
+       "ALBERT처럼 파라미터 공유로 경량화"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "양방향 인코더",
+   "자기회귀 디코더",
+   "교차 엔트로피 손실",
+   "GELU 활성화",
+   "토큰 마스킹",
+   "토큰 삭제",
+   "텍스트 채우기(Text Infilling)",
+   "문장 순서 섞기",
+   "문서 회전",
+   "BERT의 생성 한계",
+   "GPT의 단방향 문맥 한계"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "BART": "Bidirectional and Auto-Regressive Transformers",
+   "GELU": "Gaussian Error Linear Unit",
+   "ReLU": "Rectified Linear Unit",
+   "mBART": "multilingual BART",
+   "ALBERT": "A Lite BERT",
+   "GPU": "Graphics Processing Unit"
   }
  },
  {
@@ -7391,6 +10281,161 @@
   }
  },
  {
+  "id": "AI_053_0",
+  "code": "AI_053_0",
+  "domain": "AI",
+  "category": "AI > 신경망·딥러닝",
+  "subtitle": "",
+  "name": "딥러닝 파라미터(Parameter)와 하이퍼파라미터(Hyperparameter)",
+  "title": "딥러닝 파라미터(Parameter)와 하이퍼파라미터(Hyperparameter)",
+  "en": "Parameter vs Hyperparameter",
+  "definition": "파라미터는 가중치·편향처럼 데이터로부터 학습을 통해 모델 내부에서 결정되는 변수이고, 하이퍼파라미터는 학습률·은닉층 수·배치 크기처럼 학습 전에 사람이 설정해 학습 과정과 모델 구조를 제어하는 변수",
+  "keywords": [
+   "파라미터: 가중치(Weight) · 편향(Bias)",
+   "하이퍼파라미터: 학습률 · 은닉층 개수 · 배치 크기 · 에포크 · 정규화 계수",
+   "튜닝 방법: 수동 탐색(Manual Search) · 그리드 탐색(Grid Search) · 랜덤 탐색(Random Search) · 베이지안 최적화"
+  ],
+  "keywords_must": [
+   "가중치(Weight)",
+   "편향(Bias)",
+   "학습률",
+   "은닉층 개수",
+   "배치 크기",
+   "에포크",
+   "정규화 계수",
+   "수동 탐색(Manual Search)",
+   "그리드 탐색(Grid Search)",
+   "랜덤 탐색(Random Search)",
+   "베이지안 최적화"
+  ],
+  "keywords_ref": [
+   "경사 하강법",
+   "검증 데이터",
+   "교차 검증",
+   "드롭아웃 비율",
+   "옵티마이저",
+   "조기 종료",
+   "AutoML",
+   "HPO"
+  ],
+  "outline": [
+   "개념 비교",
+   "- 파라미터",
+   "- 하이퍼파라미터",
+   "- 관계",
+   "특징 비교",
+   "- 결정 주체·시점",
+   "- 개수·예시",
+   "- 학습률 영향",
+   "튜닝 방법",
+   "- 수동·그리드 탐색",
+   "- 랜덤 탐색",
+   "- 베이지안 최적화"
+  ],
+  "sections": [
+   {
+    "title": "개념 비교",
+    "subsections": [
+     {
+      "title": "파라미터",
+      "items": [
+       "경사 하강법·역전파로 손실을 줄이도록 자동 갱신",
+       "학습이 끝나면 모델에 저장되어 추론에 사용"
+      ]
+     },
+     {
+      "title": "하이퍼파라미터",
+      "items": [
+       "사용자가 직접 정하는 설정값",
+       "튜닝 결과가 최적 파라미터 도출과 일반화 성능을 좌우"
+      ]
+     },
+     {
+      "title": "관계",
+      "items": [
+       "하이퍼파라미터 설정→학습→최적 파라미터 생성",
+       "검증 성능을 보고 하이퍼파라미터를 다시 조정하는 반복"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "특징 비교",
+    "subsections": [
+     {
+      "title": "결정 주체·시점",
+      "items": [
+       "파라미터는 학습 중 데이터가 결정",
+       "하이퍼파라미터는 학습 전 사람이나 탐색 알고리즘이 결정"
+      ]
+     },
+     {
+      "title": "개수·예시",
+      "items": [
+       "파라미터는 수백만~수천억 개의 가중치·편향",
+       "하이퍼파라미터는 학습률·층 수·배치 크기·에포크·드롭아웃 비율 등 수십 개"
+      ]
+     },
+     {
+      "title": "학습률 영향",
+      "items": [
+       "너무 크면 발산·진동",
+       "너무 작으면 수렴이 느리고 지역 최솟값에 머묾"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "튜닝 방법",
+    "subsections": [
+     {
+      "title": "수동·그리드 탐색",
+      "items": [
+       "수동은 경험 기반 시행착오",
+       "그리드는 후보 조합을 모두 시험해 확실하나 조합 수가 지수적으로 증가"
+      ]
+     },
+     {
+      "title": "랜덤 탐색",
+      "items": [
+       "범위 안에서 무작위 조합 시험",
+       "중요한 하이퍼파라미터를 더 다양하게 시도해 그리드보다 효율적"
+      ]
+     },
+     {
+      "title": "베이지안 최적화",
+      "items": [
+       "이전 결과로 성능 대리 모델을 만들고 다음 탐색점을 획득 함수로 선택",
+       "대규모 학습에서 탐색 시간이 가장 짧아 SageMaker 등 클라우드 AutoML에서 활용"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "가중치(Weight)",
+   "편향(Bias)",
+   "학습률",
+   "은닉층 개수",
+   "배치 크기",
+   "에포크",
+   "정규화 계수",
+   "수동 탐색(Manual Search)",
+   "그리드 탐색(Grid Search)",
+   "랜덤 탐색(Random Search)",
+   "베이지안 최적화"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "HPO": "Hyperparameter Optimization",
+   "AutoML": "Automated Machine Learning"
+  }
+ },
+ {
   "id": "AI_053_1",
   "code": "AI_053_1",
   "domain": "AI",
@@ -8113,6 +11158,163 @@
   }
  },
  {
+  "id": "AI_054",
+  "code": "AI_054",
+  "domain": "AI",
+  "category": "AI > 신경망·딥러닝",
+  "subtitle": "",
+  "name": "퓨샷 러닝(Few-Shot Learning)",
+  "title": "퓨샷 러닝(Few-Shot Learning)",
+  "en": "Few-Shot Learning",
+  "definition": "범주마다 몇 개뿐인 예시만으로 새로운 범주나 작업을 학습하도록, 많은 작은 과제에서 '학습하는 방법'을 익히는 메타 러닝과 거리 기반 메트릭 러닝을 활용하는 기계 학습 방식",
+  "keywords": [
+   "과제 구성: N-way K-shot · 서포트 셋(Support Set) · 쿼리 셋(Query Set) · 에피소딕 학습",
+   "접근 방식: 메타 러닝 · 메트릭 러닝(거리 학습) · 그래프 신경망(GNN)",
+   "대표 모델: 샴 네트워크 · 매칭 네트워크 · 프로토타입 네트워크 · TPN"
+  ],
+  "keywords_must": [
+   "N-way K-shot",
+   "서포트 셋(Support Set)",
+   "쿼리 셋(Query Set)",
+   "에피소딕 학습",
+   "메타 러닝",
+   "메트릭 러닝(거리 학습)",
+   "그래프 신경망(GNN)",
+   "샴 네트워크",
+   "매칭 네트워크",
+   "프로토타입 네트워크",
+   "TPN"
+  ],
+  "keywords_ref": [
+   "원샷·제로샷 러닝",
+   "MAML",
+   "유클리드 거리",
+   "코사인 유사도",
+   "과적합",
+   "전이 학습",
+   "데이터 증강",
+   "LLM 인컨텍스트 퓨샷"
+  ],
+  "outline": [
+   "학습 과제 구조",
+   "- N-way K-shot",
+   "- 에피소딕 학습",
+   "- 필요 배경",
+   "주요 기법",
+   "- 메타 러닝",
+   "- 메트릭 러닝",
+   "- 그래프 신경망 방식",
+   "연구 동향",
+   "- 샴·매칭 네트워크",
+   "- 프로토타입 네트워크",
+   "- TPN"
+  ],
+  "sections": [
+   {
+    "title": "학습 과제 구조",
+    "subsections": [
+     {
+      "title": "N-way K-shot",
+      "items": [
+       "N은 범주 수, K는 범주별 서포트 예시 수",
+       "K가 1이면 원샷, 0이면 제로샷"
+      ]
+     },
+     {
+      "title": "에피소딕 학습",
+      "items": [
+       "전체 범주를 작은 N-way 과제(에피소드)로 나눠 반복 학습",
+       "매 에피소드마다 서포트 셋으로 배우고 쿼리 셋으로 평가해 처음 보는 범주에 일반화"
+      ]
+     },
+     {
+      "title": "필요 배경",
+      "items": [
+       "일반 학습을 적은 샷에 적용하면 훈련 데이터에 과적합",
+       "희귀 질환·신제품 결함처럼 라벨 데이터가 적은 분야에 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 기법",
+    "subsections": [
+     {
+      "title": "메타 러닝",
+      "items": [
+       "여러 과제에서 공통 학습 규칙을 습득",
+       "MAML처럼 몇 번의 갱신만으로 새 과제에 적응하는 초기 파라미터 학습"
+      ]
+     },
+     {
+      "title": "메트릭 러닝",
+      "items": [
+       "같은 범주는 가깝고 다른 범주는 멀도록 특징 공간을 학습",
+       "쿼리와 서포트 사이 유클리드·코사인 거리로 분류"
+      ]
+     },
+     {
+      "title": "그래프 신경망 방식",
+      "items": [
+       "서포트·쿼리 샘플을 노드로 하는 밀집 그래프 구성",
+       "노드 간 유사도 가중 평균으로 특징과 라벨 정보를 전파"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "연구 동향",
+    "subsections": [
+     {
+      "title": "샴·매칭 네트워크",
+      "items": [
+       "샴은 두 입력이 같은 범주인지 판별하는 쌍둥이 딥러닝 구조",
+       "매칭은 어텐션으로 최근접 이웃 선택을 미분 가능하게 구현"
+      ]
+     },
+     {
+      "title": "프로토타입 네트워크",
+      "items": [
+       "범주별 서포트 임베딩 평균을 프로토타입으로 사용",
+       "쿼리와 각 프로토타입 거리만 계산해 단순·효율적"
+      ]
+     },
+     {
+      "title": "TPN",
+      "items": [
+       "서포트와 쿼리 전체를 하나의 그래프로 묶음",
+       "라벨을 쿼리 쪽으로 전파하는 전이적(Transductive) 추론, 최근에는 LLM 프롬프트 속 예시로 푸는 인컨텍스트 퓨샷으로 확장"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "N-way K-shot",
+   "서포트 셋(Support Set)",
+   "쿼리 셋(Query Set)",
+   "에피소딕 학습",
+   "메타 러닝",
+   "메트릭 러닝(거리 학습)",
+   "그래프 신경망(GNN)",
+   "샴 네트워크",
+   "매칭 네트워크",
+   "프로토타입 네트워크",
+   "TPN"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "GNN": "Graph Neural Network",
+   "TPN": "Transductive Propagation Network",
+   "MAML": "Model-Agnostic Meta-Learning",
+   "LLM": "Large Language Model"
+  }
+ },
+ {
   "id": "AI_055",
   "code": "AI_055",
   "domain": "AI",
@@ -8698,6 +11900,447 @@
    "CAPTCHA": "Completely Automated Public Turing test to tell Computers and Humans Apart",
    "ALICE": "Artificial Linguistic Internet Computer Entity",
    "LLM": "Large Language Model"
+  }
+ },
+ {
+  "id": "AI_059",
+  "code": "AI_059",
+  "domain": "AI",
+  "category": "AI > 인공지능 기초",
+  "subtitle": "",
+  "name": "엑소브레인(Exobrain)",
+  "title": "엑소브레인(Exobrain)",
+  "en": "Exobrain",
+  "definition": "'몸 바깥의 인공 두뇌'라는 뜻으로, 기계가 자연어를 이해하고 지식을 스스로 학습·축적하며 자연어 질문에 정답을 추론해 제시하는 한국형 언어 지능 소프트웨어로, ETRI 주관 국가 SW 그랜드 챌린지 과제",
+  "keywords": [
+   "핵심 기술: 자연어 이해 · 질의응답 · 자가학습 지식베이스 · 추론 기술 · 인간 모사형 학습 · 자율 협업",
+   "처리 흐름: 질문 분석 · 의도 이해 · 해답 후보 검색 · 정답 선정"
+  ],
+  "keywords_must": [
+   "자연어 이해",
+   "질의응답",
+   "자가학습 지식베이스",
+   "추론 기술",
+   "인간 모사형 학습",
+   "자율 협업",
+   "질문 분석",
+   "의도 이해",
+   "해답 후보 검색",
+   "정답 선정"
+  ],
+  "keywords_ref": [
+   "지식베이스",
+   "정형·비정형 빅데이터",
+   "지식 큐레이션",
+   "복합 추론",
+   "엑소브레인 장학퀴즈",
+   "WiseQA",
+   "ETRI·솔트룩스·KAIST"
+  ],
+  "outline": [
+   "개념과 목표",
+   "- 목표",
+   "- 추진",
+   "처리 구조",
+   "- 질의응답 흐름",
+   "- 지식 축적",
+   "- 서비스 연계",
+   "기술 요소",
+   "- 자연어 이해·질의응답 (ETRI)",
+   "- 자가학습 지식베이스·추론 (솔트룩스)",
+   "- 인간 모사형 학습·자율 협업"
+  ],
+  "sections": [
+   {
+    "title": "개념과 목표",
+    "subsections": [
+     {
+      "title": "목표",
+      "items": [
+       "언어 처리 인공지능 분야 세계 최고 수준 기술 확보",
+       "사람과 기계의 의사소통을 넘어 지식 소통"
+      ]
+     },
+     {
+      "title": "추진",
+      "items": [
+       "ETRI 총괄로 솔트룩스·KAIST 등이 참여한 장기 과제",
+       "2016년 장학퀴즈에서 우승자들과 겨뤄 우승"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "처리 구조",
+    "subsections": [
+     {
+      "title": "질의응답 흐름",
+      "items": [
+       "질문 분석과 질의 해석",
+       "사용자 의도 이해→해답 후보 검색·추론→정답 선정·생성"
+      ]
+     },
+     {
+      "title": "지식 축적",
+      "items": [
+       "정형·비정형 빅데이터에서 지식 자원 수집·관리",
+       "자연어 이해로 지식을 학습해 지식베이스에 저장하고 복합 추론으로 지식 증강"
+      ]
+     },
+     {
+      "title": "서비스 연계",
+      "items": [
+       "질의응답·전문가 서비스",
+       "상황 정보를 판단·예측해 자율 협업·자율 주행 등에 활용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기술 요소",
+    "subsections": [
+     {
+      "title": "자연어 이해·질의응답 (ETRI)",
+      "items": [
+       "빅데이터 기반 형태소 분석과 언어 지식 학습",
+       "사람처럼 자연어 질문에 최적 정답 제시"
+      ]
+     },
+     {
+      "title": "자가학습 지식베이스·추론 (솔트룩스)",
+      "items": [
+       "지식 생산 기반 지식베이스 자동 구축",
+       "지식베이스로 스스로 예측·추론"
+      ]
+     },
+     {
+      "title": "인간 모사형 학습·자율 협업",
+      "items": [
+       "사람의 학습 방식을 닮은 지능화 기술로 지식 영역 확장",
+       "지식·기기 협업 프레임워크와 도메인 지식 공유로 대규모 불완전 추론"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "자연어 이해",
+   "질의응답",
+   "자가학습 지식베이스",
+   "추론 기술",
+   "인간 모사형 학습",
+   "자율 협업",
+   "질문 분석",
+   "의도 이해",
+   "해답 후보 검색",
+   "정답 선정"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "ETRI": "Electronics and Telecommunications Research Institute",
+   "KAIST": "Korea Advanced Institute of Science and Technology",
+   "QA": "Question Answering"
+  }
+ },
+ {
+  "id": "AI_060",
+  "code": "AI_060",
+  "domain": "AI",
+  "category": "AI > 인공지능 기초",
+  "subtitle": "",
+  "name": "딥뷰(DeepView)",
+  "title": "딥뷰(DeepView)",
+  "en": "DeepView",
+  "definition": "대규모 이미지·동영상을 실시간으로 분석해 사람처럼 사물과 상황을 시공간적으로 이해하고 앞으로 일어날 상황을 예측하는 시각 지능 소프트웨어로, 엑소브레인과 함께 추진된 국가 SW 그랜드 챌린지 과제",
+  "keywords": [
+   "기술 영역: 시각 데이터 수집 · 대규모 처리 파이프라인 · 내용 분석 · 예측형 응용",
+   "핵심 요소: 시각 택소노미 · 시맨틱 추론 · 하이브리드 스케줄러 · 비주얼 디스커버리 플랫폼"
+  ],
+  "keywords_must": [
+   "시각 데이터 수집",
+   "대규모 처리 파이프라인",
+   "내용 분석",
+   "예측형 응용",
+   "시각 택소노미",
+   "시맨틱 추론",
+   "하이브리드 스케줄러",
+   "비주얼 디스커버리 플랫폼"
+  ],
+  "keywords_ref": [
+   "시각 데이터 뱅크",
+   "비정형 대용량 저장",
+   "GPU 분산 처리",
+   "객체·움직임 분석",
+   "온톨로지",
+   "재난·재해 예측",
+   "만리안 서비스",
+   "Open Data·Open API·Open Platform"
+  ],
+  "outline": [
+   "개념과 목표",
+   "- 개념",
+   "- 추진 목적",
+   "- 3단계 추진",
+   "기술 요소",
+   "- 시각 데이터 수집·저장",
+   "- 대규모 처리",
+   "- 내용 분석·예측",
+   "활용 분야",
+   "- 지능형 영상 보안",
+   "- 교통·유통 서비스",
+   "- 콘텐츠 분야"
+  ],
+  "sections": [
+   {
+    "title": "개념과 목표",
+    "subsections": [
+     {
+      "title": "개념",
+      "items": [
+       "사람이 직관적으로 사물을 알아보고 상황을 파악하듯 영상을 인지",
+       "시각 빅데이터를 분석해 내용 이해와 상황 예측"
+      ]
+     },
+     {
+      "title": "추진 목적",
+      "items": [
+       "만리안 서비스와 재난·재해 조기 감지·예측 서비스 개발",
+       "영상 처리 신산업 창출과 글로벌 시장 진출"
+      ]
+     },
+     {
+      "title": "3단계 추진",
+      "items": [
+       "1단계 다중 객체·행동 동시 분석 핵심 기술과 Open Data",
+       "2단계 도시 규모 영상 이해와 Open API, 3단계 복합 상황 예측과 Open Platform"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기술 요소",
+    "subsections": [
+     {
+      "title": "시각 데이터 수집·저장",
+      "items": [
+       "시각 데이터 뱅크 중심의 실시간 대규모 수집",
+       "비정형 대용량 저장과 외부 서비스 API 연계"
+      ]
+     },
+     {
+      "title": "대규모 처리",
+      "items": [
+       "시각 데이터 처리 파이프라인 규격화로 병렬·분산 처리",
+       "하이브리드 스케줄러로 워크플로 분산과 GPU 극대화"
+      ]
+     },
+     {
+      "title": "내용 분석·예측",
+      "items": [
+       "이미지 분석으로 객체와 움직임의 상호 관계 파악, 시각 택소노미로 지식 체계 구축",
+       "온톨로지 기반 시맨틱 추론으로 재난·재해 선제 예측과 실시간 대응"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용 분야",
+    "subsections": [
+     {
+      "title": "지능형 영상 보안",
+      "items": [
+       "CCTV 이상 행동 감지",
+       "도시 위험 조기 감지와 예측형 영상 관제"
+      ]
+     },
+     {
+      "title": "교통·유통 서비스",
+      "items": [
+       "교통 흐름 분석과 자율 주행 인지",
+       "매장 고객 행동 분석"
+      ]
+     },
+     {
+      "title": "콘텐츠 분야",
+      "items": [
+       "영상 검색·자동 태깅",
+       "고성능 비주얼 디스커버리 플랫폼으로 유사 영상 검색"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "시각 데이터 수집",
+   "대규모 처리 파이프라인",
+   "내용 분석",
+   "예측형 응용",
+   "시각 택소노미",
+   "시맨틱 추론",
+   "하이브리드 스케줄러",
+   "비주얼 디스커버리 플랫폼"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "API": "Application Programming Interface",
+   "CCTV": "Closed-Circuit Television"
+  }
+ },
+ {
+  "id": "AI_062",
+  "code": "AI_062",
+  "domain": "AI",
+  "category": "AI > 신경망·딥러닝",
+  "subtitle": "",
+  "name": "텐서플로(TensorFlow)",
+  "title": "텐서플로(TensorFlow)",
+  "en": "TensorFlow",
+  "definition": "2015년 11월 구글이 아파치 2.0 라이선스로 공개한 머신러닝 오픈소스 플랫폼으로, 다차원 배열인 텐서가 연산 노드 사이를 흐르는 데이터 흐름 그래프로 계산을 표현하고 CPU·GPU·TPU와 모바일까지 확장 실행",
+  "keywords": [
+   "구성 요소: 텐서(Tensor) · 오퍼레이션(Operation) · 커널(Kernel) · 변수(Variable) · 세션(Session) · 노드(Node)",
+   "핵심 개념: 데이터 흐름 그래프 · 다중 디바이스 실행"
+  ],
+  "keywords_must": [
+   "텐서(Tensor)",
+   "오퍼레이션(Operation)",
+   "커널(Kernel)",
+   "변수(Variable)",
+   "세션(Session)",
+   "노드(Node)",
+   "데이터 흐름 그래프",
+   "다중 디바이스 실행"
+  ],
+  "keywords_ref": [
+   "제어 종속성",
+   "케라스(Keras)",
+   "즉시 실행(Eager Execution)",
+   "텐서보드",
+   "TF Lite",
+   "TF Serving",
+   "파이토치 비교",
+   "TCP·RDMA"
+  ],
+  "outline": [
+   "개요",
+   "- 데이터 흐름 그래프",
+   "- 확장성",
+   "- 개발 편의",
+   "아키텍처 구성 요소",
+   "- 텐서·오퍼레이션",
+   "- 커널·변수",
+   "- 세션·노드·제어 종속성",
+   "실행 방식",
+   "- 단일 디바이스 실행",
+   "- 다중 디바이스 실행",
+   "- 설계 이슈"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": "데이터 흐름 그래프",
+      "items": [
+       "노드는 연산, 간선은 그 사이를 흐르는 텐서",
+       "그래프를 최적화해 다양한 장치에서 실행"
+      ]
+     },
+     {
+      "title": "확장성",
+      "items": [
+       "리눅스·맥OS·윈도·안드로이드·iOS와 여러 CPU·GPU 지원",
+       "TF Lite로 모바일·임베디드, TF Serving으로 서비스 배포"
+      ]
+     },
+     {
+      "title": "개발 편의",
+      "items": [
+       "파이썬 중심 API와 고수준 케라스",
+       "2.0부터 즉시 실행이 기본이 되어 세션 없이 직관적 코딩"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "아키텍처 구성 요소",
+    "subsections": [
+     {
+      "title": "텐서·오퍼레이션",
+      "items": [
+       "텐서는 8~64비트 실수·정수·문자열 등을 담는 다차원 배열",
+       "오퍼레이션은 속성을 갖는 추상 연산"
+      ]
+     },
+     {
+      "title": "커널·변수",
+      "items": [
+       "커널은 오퍼레이션을 CPU·GPU 등 장치별로 실제 구현한 것",
+       "변수는 학습으로 바뀌는 가중치를 보관"
+      ]
+     },
+     {
+      "title": "세션·노드·제어 종속성",
+      "items": [
+       "1.x에서 클라이언트가 세션을 만들어 그래프를 실행",
+       "노드는 0개 이상의 입출력을 가진 그래프 구성 단위, 제어 종속성은 실행 순서를 강제하는 특수 간선"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "실행 방식",
+    "subsections": [
+     {
+      "title": "단일 디바이스 실행",
+      "items": [
+       "하나의 워커가 하나의 장치에서 그래프를 의존 순서대로 실행"
+      ]
+     },
+     {
+      "title": "다중 디바이스 실행",
+      "items": [
+       "한 시스템의 여러 장치에 노드를 배치하고 장치 간 통신",
+       "원격 분산 실행은 TCP·RDMA로 데이터 교환"
+      ]
+     },
+     {
+      "title": "설계 이슈",
+      "items": [
+       "각 노드를 어느 장치에 배치할지 결정",
+       "장치 경계에 송수신 노드를 넣어 데이터 통신 경계 관리"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "텐서(Tensor)",
+   "오퍼레이션(Operation)",
+   "커널(Kernel)",
+   "변수(Variable)",
+   "세션(Session)",
+   "노드(Node)",
+   "데이터 흐름 그래프",
+   "다중 디바이스 실행"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "TPU": "Tensor Processing Unit",
+   "RDMA": "Remote Direct Memory Access",
+   "TCP": "Transmission Control Protocol",
+   "TF": "TensorFlow"
   }
  },
  {
@@ -9422,6 +13065,302 @@
    "NAS": "Neural Architecture Search",
    "EDA": "Exploratory Data Analysis",
    "PCA": "Principal Component Analysis"
+  }
+ },
+ {
+  "id": "AI_067",
+  "code": "AI_067",
+  "domain": "AI",
+  "category": "AI > 신경망·딥러닝",
+  "subtitle": "",
+  "name": "GRU(Gated Recurrent Unit)",
+  "title": "GRU(Gated Recurrent Unit)",
+  "en": "Gated Recurrent Unit",
+  "definition": "리셋 게이트와 업데이트 게이트 두 개로 과거 정보를 얼마나 잊고 얼마나 반영할지 조절해 RNN의 기울기 소실과 장기 의존성 문제를 완화한, LSTM보다 구조가 간결한 순환 신경망 셀(2014년 조경현 등 제안)",
+  "keywords": [
+   "게이트·단계: 리셋 게이트(Reset Gate) · 업데이트 게이트(Update Gate) · 후보 은닉 상태(Candidate) · 은닉 상태 계산",
+   "해결 문제: 기울기 소실 · 장기 의존성",
+   "LSTM 대비: 셀 상태 없음 · 적은 파라미터"
+  ],
+  "keywords_must": [
+   "리셋 게이트(Reset Gate)",
+   "업데이트 게이트(Update Gate)",
+   "후보 은닉 상태(Candidate)",
+   "은닉 상태 계산",
+   "기울기 소실",
+   "장기 의존성",
+   "셀 상태 없음",
+   "적은 파라미터"
+  ],
+  "keywords_ref": [
+   "시그모이드",
+   "tanh",
+   "아다마르 곱",
+   "(1−z)·h(t−1)+z·h̃",
+   "입력·망각·출력 게이트",
+   "시계열·음성·번역",
+   "BiGRU"
+  ],
+  "outline": [
+   "개요",
+   "- 등장 배경",
+   "- 핵심 아이디어",
+   "동작 메커니즘",
+   "- 리셋 게이트",
+   "- 업데이트 게이트",
+   "- 후보·은닉 상태 계산",
+   "LSTM과 비교",
+   "- 구조",
+   "- 성능·효율",
+   "- 선택·활용"
+  ],
+  "sections": [
+   {
+    "title": "개요",
+    "subsections": [
+     {
+      "title": "등장 배경",
+      "items": [
+       "기본 RNN은 시퀀스가 길어지면 역전파 기울기가 사라져 먼 과거를 잊음",
+       "LSTM의 세 게이트와 셀 상태 구조를 단순화"
+      ]
+     },
+     {
+      "title": "핵심 아이디어",
+      "items": [
+       "은닉 상태 하나로 정보 전달",
+       "이전 정보를 선택적으로 유지·갱신해 기울기 흐름 보존"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "동작 메커니즘",
+    "subsections": [
+     {
+      "title": "리셋 게이트",
+      "items": [
+       "시그모이드로 0~1 값을 만들어 이전 은닉 상태에 곱함",
+       "새 후보를 만들 때 과거 정보를 얼마나 무시할지 결정"
+      ]
+     },
+     {
+      "title": "업데이트 게이트",
+      "items": [
+       "시그모이드 값 z로 현재 후보 반영 비율 결정",
+       "1−z만큼 직전 은닉 상태를 유지해 LSTM의 입력·망각 게이트 역할을 통합"
+      ]
+     },
+     {
+      "title": "후보·은닉 상태 계산",
+      "items": [
+       "리셋된 이전 상태와 현재 입력에 tanh를 적용해 후보 h̃ 계산",
+       "h(t) = (1−z)·h(t−1) + z·h̃로 결합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "LSTM과 비교",
+    "subsections": [
+     {
+      "title": "구조",
+      "items": [
+       "LSTM은 입력·망각·출력 게이트와 별도 셀 상태",
+       "GRU는 리셋·업데이트 두 게이트와 은닉 상태만 사용"
+      ]
+     },
+     {
+      "title": "성능·효율",
+      "items": [
+       "GRU는 파라미터가 적어 학습이 빠르고 적은 데이터에 유리",
+       "데이터가 충분하고 긴 의존성이 중요하면 LSTM이 더 나은 경우가 많음"
+      ]
+     },
+     {
+      "title": "선택·활용",
+      "items": [
+       "성능 차이가 과제마다 달라 실험으로 선택",
+       "시계열 예측·음성 인식·기계 번역, 경량 모델에 활용"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "리셋 게이트(Reset Gate)",
+   "업데이트 게이트(Update Gate)",
+   "후보 은닉 상태(Candidate)",
+   "은닉 상태 계산",
+   "기울기 소실",
+   "장기 의존성",
+   "셀 상태 없음",
+   "적은 파라미터"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "GRU": "Gated Recurrent Unit",
+   "LSTM": "Long Short-Term Memory",
+   "RNN": "Recurrent Neural Network",
+   "BiGRU": "Bidirectional GRU"
+  }
+ },
+ {
+  "id": "AI_068",
+  "code": "AI_068",
+  "domain": "AI",
+  "category": "AI > 기계학습",
+  "subtitle": "",
+  "name": "이상치(Outlier)",
+  "title": "이상치(Outlier)",
+  "en": "Outlier",
+  "definition": "데이터의 일반적인 분포나 패턴에서 크게 벗어난 관측값으로, 측정·입력 오류이거나 사기·고장 같은 의미 있는 사건일 수 있어 통계 모델링과 머신러닝으로 탐지한 뒤 원인에 따라 제거·대체·별도 분석",
+  "keywords": [
+   "탐지 방법: 분산(정규분포) 기반 · 우도 기반 · 최근접 이웃 거리 · 밀도 기반 LOF · 군집 기반",
+   "상자 수염 그림: IQR(Q3−Q1) · 안쪽 울타리(Q1−1.5IQR, Q3+1.5IQR) · 바깥 울타리(Q1−3IQR, Q3+3IQR)",
+   "대체 방법: 3시그마 · 극 백분위수"
+  ],
+  "keywords_must": [
+   "분산(정규분포) 기반",
+   "우도 기반",
+   "최근접 이웃 거리",
+   "밀도 기반 LOF",
+   "군집 기반",
+   "IQR(Q3−Q1)",
+   "안쪽 울타리(Q1−1.5IQR, Q3+1.5IQR)",
+   "바깥 울타리(Q1−3IQR, Q3+3IQR)",
+   "3시그마",
+   "극 백분위수"
+  ],
+  "keywords_ref": [
+   "5가지 요약 수치",
+   "경미한 이상치(Mild)",
+   "극단 이상치(Extreme)",
+   "중위수 절대 편차(MAD)",
+   "깊이·편차 기반",
+   "고차원 접근",
+   "Isolation Forest",
+   "이상 탐지"
+  ],
+  "outline": [
+   "탐지 방법",
+   "- 모형 기반",
+   "- 근접 기반",
+   "- 군집·고차원",
+   "상자 수염 그림 판별",
+   "- 5가지 요약 수치",
+   "- 울타리 계산 예",
+   "- 판정",
+   "처리·대체 방법",
+   "- 상·하한 대체",
+   "- 3시그마",
+   "- MAD·극 백분위수"
+  ],
+  "sections": [
+   {
+    "title": "탐지 방법",
+    "subsections": [
+     {
+      "title": "모형 기반",
+      "items": [
+       "정규분포 양끝 2.5%(평균±1.96σ) 밖을 이상치로 보는 분산 방식",
+       "베이즈 정리로 정상·이상 집단의 발생 우도를 비교하는 우도 방식, 깊이·편차 기반 접근"
+      ]
+     },
+     {
+      "title": "근접 기반",
+      "items": [
+       "데이터 쌍 거리를 계산해 이웃과 먼 점을 찾는 최근접 이웃 방식",
+       "주변보다 밀도가 낮을수록 커지는 LOF 값으로 판별하는 밀도 방식"
+      ]
+     },
+     {
+      "title": "군집·고차원",
+      "items": [
+       "군집 후 크기가 매우 작거나 다른 군집과 멀리 떨어진 군집을 이상치로 판단",
+       "고차원에서는 부분 공간·Isolation Forest 활용"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "상자 수염 그림 판별",
+    "subsections": [
+     {
+      "title": "5가지 요약 수치",
+      "items": [
+       "최솟값·제1사분위수(Q1)·중앙값·제3사분위수(Q3)·최댓값",
+       "IQR = Q3 − Q1"
+      ]
+     },
+     {
+      "title": "울타리 계산 예",
+      "items": [
+       "Q1=262, Q3=543이면 IQR=281",
+       "안쪽 울타리 (−159.5, 964.5), 바깥 울타리 (−581, 1386)"
+      ]
+     },
+     {
+      "title": "판정",
+      "items": [
+       "수염은 안쪽 울타리 안의 최대·최소 관측값까지 그림",
+       "안쪽 울타리 밖은 경미한 이상치, 바깥 울타리 밖은 극단 이상치로 점·별표 표시"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "처리·대체 방법",
+    "subsections": [
+     {
+      "title": "상·하한 대체",
+      "items": [
+       "하한보다 작으면 하한, 상한보다 크면 상한으로 대체",
+       "제거 전 오류인지 의미 있는 사건인지 먼저 확인"
+      ]
+     },
+     {
+      "title": "3시그마",
+      "items": [
+       "평균 ± 3×표준편차를 경계로 설정",
+       "정규분포에서 이 범위 밖 약 0.3% 값을 제거·대체"
+      ]
+     },
+     {
+      "title": "MAD·극 백분위수",
+      "items": [
+       "중위수에서 n배 MAD 이상 떨어진 값 대체",
+       "상위·하위 p 백분위수를 넘는 값을 그 경계값으로 대체"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "분산(정규분포) 기반",
+   "우도 기반",
+   "최근접 이웃 거리",
+   "밀도 기반 LOF",
+   "군집 기반",
+   "IQR(Q3−Q1)",
+   "안쪽 울타리(Q1−1.5IQR, Q3+1.5IQR)",
+   "바깥 울타리(Q1−3IQR, Q3+3IQR)",
+   "3시그마",
+   "극 백분위수"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "LOF": "Local Outlier Factor",
+   "IQR": "Interquartile Range",
+   "MAD": "Median Absolute Deviation"
   }
  },
  {
@@ -10453,6 +14392,315 @@
    "CD": "Continuous Delivery",
    "CT": "Continuous Training",
    "GPU": "Graphics Processing Unit"
+  }
+ },
+ {
+  "id": "AI_077",
+  "code": "AI_077",
+  "domain": "AI",
+  "category": "AI > AI 윤리·정책",
+  "subtitle": "",
+  "name": "인공지능 윤리(AI Ethics)",
+  "title": "인공지능 윤리(AI Ethics)",
+  "en": "AI Ethics",
+  "definition": "자율주행차·로보어드바이저·지능형 개인비서 같은 인공지능을 연구·개발·활용하는 이해관계자가 지켜야 할 보편적 사회 규범과, 이를 뒷받침하는 안전성 확보 기술을 함께 다루는 분야",
+  "keywords": [
+   "기업 대응: AI 원칙 · AI 윤리 전문가 · AI 윤리 전담 부서",
+   "제도 대응: 데이터 3법 · EU GDPR · 설명 요구권",
+   "기술 대응: 설명 가능한 AI(XAI) · AI 킬 스위치 · 안전한 AI(Safety AI)"
+  ],
+  "keywords_must": [
+   "AI 원칙",
+   "AI 윤리 전문가",
+   "AI 윤리 전담 부서",
+   "데이터 3법",
+   "EU GDPR",
+   "설명 요구권",
+   "설명 가능한 AI(XAI)",
+   "AI 킬 스위치",
+   "안전한 AI(Safety AI)"
+  ],
+  "keywords_ref": [
+   "인공지능 안전성",
+   "구글 AI 원칙",
+   "MS 6대 원칙",
+   "딥마인드 윤리·사회팀",
+   "카카오 알고리즘 윤리 헌장",
+   "로봇 윤리",
+   "ACM 윤리 강령",
+   "살상 로봇 금지"
+  ],
+  "outline": [
+   "범위와 해외 사례",
+   "- 개념적 범위",
+   "- AI 원칙 사례",
+   "- 조직·인력 사례",
+   "국내 사례",
+   "- 기업 원칙",
+   "- 학계·협회",
+   "- 정부",
+   "주체별 고려사항",
+   "- 정부",
+   "- 기업",
+   "- 학계·국제기구"
+  ],
+  "sections": [
+   {
+    "title": "범위와 해외 사례",
+    "subsections": [
+     {
+      "title": "개념적 범위",
+      "items": [
+       "인간 존엄·공정·책임 같은 윤리 규범",
+       "오작동·악용을 막는 인공지능 안전성까지 포함해 대응 방안 수립"
+      ]
+     },
+     {
+      "title": "AI 원칙 사례",
+      "items": [
+       "구글 AI 원칙 발표, MS 6대 개발 원칙",
+       "IBM의 일상 윤리 개발자 가이드"
+      ]
+     },
+     {
+      "title": "조직·인력 사례",
+      "items": [
+       "딥마인드 윤리·사회팀, MS 내부 AI 윤리 위원회",
+       "KPMG 등 AI 윤리 전문가 채용과 최고 준법·윤리 책임자 임명"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "국내 사례",
+    "subsections": [
+     {
+      "title": "기업 원칙",
+      "items": [
+       "카카오 알고리즘 윤리 헌장",
+       "네이버 프라이버시 중심 설계 원칙"
+      ]
+     },
+     {
+      "title": "학계·협회",
+      "items": [
+       "인공지능 기술·법제·정책 이슈 분석과 AI 윤리 공동 선언",
+       "한국로봇학회 로봇 윤리 가이드라인"
+      ]
+     },
+     {
+      "title": "정부",
+      "items": [
+       "지능정보사회 윤리 가이드라인",
+       "사람 중심 인공지능 윤리 기준으로 발전"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주체별 고려사항",
+    "subsections": [
+     {
+      "title": "정부",
+      "items": [
+       "데이터 3법·빅데이터 윤리 등 데이터 관련 법 정비",
+       "GDPR식 개인정보 이동권과 알고리즘 설명 요구권, 기초·원천 기술 투자"
+      ]
+     },
+     {
+      "title": "기업",
+      "items": [
+       "내부 윤리 헌장과 개발 가이드",
+       "XAI·킬 스위치·안전 AI로 기술적 예방, AI 보안 거버넌스와 상벌 제도"
+      ]
+     },
+     {
+      "title": "학계·국제기구",
+      "items": [
+       "ACM 윤리 강령과 UN 살상 로봇 금지 논의",
+       "정기 윤리 교육과 프라이버시 보호·블랙박스 방지 방법론"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "AI 원칙",
+   "AI 윤리 전문가",
+   "AI 윤리 전담 부서",
+   "데이터 3법",
+   "EU GDPR",
+   "설명 요구권",
+   "설명 가능한 AI(XAI)",
+   "AI 킬 스위치",
+   "안전한 AI(Safety AI)"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "XAI": "Explainable AI",
+   "GDPR": "General Data Protection Regulation",
+   "ACM": "Association for Computing Machinery",
+   "MS": "Microsoft",
+   "UN": "United Nations"
+  }
+ },
+ {
+  "id": "AI_078_0",
+  "code": "AI_078_0",
+  "domain": "AI",
+  "category": "AI > AI 운영·평가",
+  "subtitle": "",
+  "name": "인공지능 데이터 평가 고려사항",
+  "title": "인공지능 데이터 평가 고려사항",
+  "en": "AI Data Evaluation Considerations",
+  "definition": "인공지능 학습용 데이터가 목적한 모델과 서비스 성능을 낼 수 있도록 데이터 유형별 구축 기준과 거버넌스·품질·정합성·보안 같은 관리 측면을 함께 점검하는 평가 기준",
+  "keywords": [
+   "유형별 점검: 자연어 · 이미지 · 영상 · 지식베이스 · 오픈 데이터",
+   "관리 측면: AI 데이터 거버넌스 · 품질 평가 · 데이터 정합성 · 보안·비식별",
+   "전처리 핵심: 라벨링 · 큐레이션"
+  ],
+  "keywords_must": [
+   "자연어",
+   "이미지",
+   "영상",
+   "지식베이스",
+   "오픈 데이터",
+   "AI 데이터 거버넌스",
+   "품질 평가",
+   "데이터 정합성",
+   "보안·비식별",
+   "라벨링",
+   "큐레이션"
+  ],
+  "keywords_ref": [
+   "저작권 확인",
+   "데이터 아키텍처",
+   "데이터 편향 검증",
+   "표준화",
+   "국립국어원 표기법",
+   "기계 판독",
+   "AI 허브",
+   "EU 데이터 전략"
+  ],
+  "outline": [
+   "데이터 유형별 고려사항",
+   "- 자연어·이미지",
+   "- 영상",
+   "- 지식베이스·오픈 데이터",
+   "관리 측면 고려사항",
+   "- AI 데이터 거버넌스",
+   "- 품질·정합성",
+   "- 보안",
+   "활용 동향",
+   "- AI 허브",
+   "- EU 데이터 전략",
+   "- 시사점"
+  ],
+  "sections": [
+   {
+    "title": "데이터 유형별 고려사항",
+    "subsections": [
+     {
+      "title": "자연어·이미지",
+      "items": [
+       "기계 번역 후 편집 시 국립국어원 표기법 준수와 이전 단계 오류 조치",
+       "이미지 분류 체계와 검수 자동화 도구 지원 확인"
+      ]
+     },
+     {
+      "title": "영상",
+      "items": [
+       "원시 영상 속성 지침 준수",
+       "위·변조 기법을 다양하게 반영하고 탐지 방해 가능성 고려"
+      ]
+     },
+     {
+      "title": "지식베이스·오픈 데이터",
+      "items": [
+       "법령 상·하위 체계 준수와 질의응답형 데이터의 기계 판독 지원",
+       "사용자 접근 용이성과 허브 공개·관리"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "관리 측면 고려사항",
+    "subsections": [
+     {
+      "title": "AI 데이터 거버넌스",
+      "items": [
+       "원천 데이터 선정·수집 시 저작권 확인",
+       "모델링과 요건 변화에 유연한 데이터 아키텍처 구축·유지"
+      ]
+     },
+     {
+      "title": "품질·정합성",
+      "items": [
+       "데이터 편향 검증 절차와 품질 평가 방법론 적용",
+       "표준화·큐레이션·라벨링 전처리 후 학습 모델로 성능 평가"
+      ]
+     },
+     {
+      "title": "보안",
+      "items": [
+       "데이터 접근과 사용자별 보안 통제 거버넌스",
+       "민감정보는 암호화와 비식별 처리 절차 준수"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용 동향",
+    "subsections": [
+     {
+      "title": "AI 허브",
+      "items": [
+       "AI 데이터·AI SW API·컴퓨팅 자원을 통합 제공",
+       "국가 학습용 데이터 구축 사업 결과 공개"
+      ]
+     },
+     {
+      "title": "EU 데이터 전략",
+      "items": [
+       "인공지능 백서와 연계한 AI 정책 프레임워크",
+       "데이터 공유·활용 생태계 조성"
+      ]
+     },
+     {
+      "title": "시사점",
+      "items": [
+       "데이터 관리 수준이 모델 성능과 서비스 품질로 직결",
+       "빅데이터 생애주기 전반의 포괄적 관리 필요"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "자연어",
+   "이미지",
+   "영상",
+   "지식베이스",
+   "오픈 데이터",
+   "AI 데이터 거버넌스",
+   "품질 평가",
+   "데이터 정합성",
+   "보안·비식별",
+   "라벨링",
+   "큐레이션"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "EU": "European Union",
+   "API": "Application Programming Interface"
   }
  },
  {
@@ -13148,6 +17396,158 @@
   }
  },
  {
+  "id": "AI_084",
+  "code": "AI_084",
+  "domain": "AI",
+  "category": "AI > 기계학습",
+  "subtitle": "",
+  "name": "에이다부스트(AdaBoost)",
+  "title": "에이다부스트(AdaBoost)",
+  "en": "Adaptive Boosting",
+  "definition": "약한 분류기를 순차적으로 학습시키면서 앞선 분류기가 틀린 데이터의 가중치를 높여 다음 분류기가 집중하게 하고, 오류율이 낮은 분류기일수록 큰 투표 가중치를 주어 결합하는 부스팅 앙상블 기법",
+  "keywords": [
+   "구성 요소: 약한 분류기(Weak Classifier) · 강한 분류기(Strong Classifier) · 데이터 가중치 · 분류기 가중치(α)",
+   "학습 절차: 약한 분류기 훈련 · 오분류 데이터 가중치 증가 · 가중 투표 결합",
+   "랜덤 포레스트 대비: 순차 학습 · 편향 감소 · 결정 그루터기(Decision Stump)"
+  ],
+  "keywords_must": [
+   "약한 분류기(Weak Classifier)",
+   "강한 분류기(Strong Classifier)",
+   "데이터 가중치",
+   "분류기 가중치(α)",
+   "약한 분류기 훈련",
+   "오분류 데이터 가중치 증가",
+   "가중 투표 결합",
+   "순차 학습",
+   "편향 감소",
+   "결정 그루터기(Decision Stump)"
+  ],
+  "keywords_ref": [
+   "부스팅",
+   "배깅",
+   "α = ½·ln((1−ε)/ε)",
+   "지수 손실",
+   "이상치 민감",
+   "그래디언트 부스팅",
+   "XGBoost"
+  ],
+  "outline": [
+   "앙상블 구성 원리",
+   "- 약한 분류기",
+   "- 데이터 가중치",
+   "- 강한 분류기",
+   "학습 절차",
+   "- 1단계 훈련",
+   "- 가중치 갱신",
+   "- 반복·결합",
+   "랜덤 포레스트와 비교",
+   "- 구조",
+   "- 목적·기본 모델",
+   "- 가중치·주의점"
+  ],
+  "sections": [
+   {
+    "title": "앙상블 구성 원리",
+    "subsections": [
+     {
+      "title": "약한 분류기",
+      "items": [
+       "무작위 추측보다 조금 나은 단순 모델",
+       "주로 분할이 한 번뿐인 결정 그루터기 사용"
+      ]
+     },
+     {
+      "title": "데이터 가중치",
+      "items": [
+       "처음에는 모든 훈련 데이터에 같은 값 부여",
+       "각 라운드 예측 결과에 따라 개별 갱신"
+      ]
+     },
+     {
+      "title": "강한 분류기",
+      "items": [
+       "약한 분류기들의 출력을 분류기 가중치 α로 가중 투표",
+       "오류율 ε이 낮을수록 α가 커짐"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "학습 절차",
+    "subsections": [
+     {
+      "title": "1단계 훈련",
+      "items": [
+       "가중치가 적용된 훈련 데이터로 첫 약한 분류기 학습",
+       "가중 오류율 ε과 분류기 가중치 α 계산"
+      ]
+     },
+     {
+      "title": "가중치 갱신",
+      "items": [
+       "틀린 데이터의 가중치는 키우고 맞힌 데이터는 줄인 뒤 정규화",
+       "다음 분류기는 어려운 데이터에 집중"
+      ]
+     },
+     {
+      "title": "반복·결합",
+      "items": [
+       "정해진 횟수나 목표 오류에 도달할 때까지 반복",
+       "모든 분류기를 α로 가중 합산해 최종 강한 분류기 생성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "랜덤 포레스트와 비교",
+    "subsections": [
+     {
+      "title": "구조",
+      "items": [
+       "랜덤 포레스트는 독립 트리를 병렬 학습하는 배깅",
+       "에이다부스트는 앞 결과에 의존하는 순차 학습"
+      ]
+     },
+     {
+      "title": "목적·기본 모델",
+      "items": [
+       "랜덤 포레스트는 깊은 트리(저편향·고분산)로 분산 감소",
+       "에이다부스트는 그루터기(고편향·저분산)로 편향 감소"
+      ]
+     },
+     {
+      "title": "가중치·주의점",
+      "items": [
+       "랜덤 포레스트는 데이터·트리 가중치가 동일",
+       "에이다부스트는 가중치가 계속 변해 잡음·이상치에 민감, 그래디언트 부스팅으로 일반화"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "약한 분류기(Weak Classifier)",
+   "강한 분류기(Strong Classifier)",
+   "데이터 가중치",
+   "분류기 가중치(α)",
+   "약한 분류기 훈련",
+   "오분류 데이터 가중치 증가",
+   "가중 투표 결합",
+   "순차 학습",
+   "편향 감소",
+   "결정 그루터기(Decision Stump)"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "AdaBoost": "Adaptive Boosting",
+   "XGBoost": "eXtreme Gradient Boosting"
+  }
+ },
+ {
   "id": "AI_085",
   "code": "AI_085",
   "domain": "AI",
@@ -13285,6 +17685,315 @@
    "CNN": "Convolutional Neural Network",
    "GAT": "Graph Attention Network",
    "GraphSAGE": "Graph SAmple and aggreGatE"
+  }
+ },
+ {
+  "id": "AI_086",
+  "code": "AI_086",
+  "domain": "AI",
+  "category": "AI > 신경망·딥러닝",
+  "subtitle": "",
+  "name": "IoU(Intersection over Union)",
+  "title": "IoU(Intersection over Union)",
+  "en": "Intersection over Union",
+  "definition": "객체 탐지에서 모델이 예측한 경계 상자와 정답 경계 상자가 얼마나 겹치는지를, 두 영역의 교집합 넓이를 합집합 넓이로 나눠 0~1 사이 값으로 나타내는 평가 지표",
+  "keywords": [
+   "구성 요소: 정답 경계 상자(Ground-Truth Box) · 예측 경계 상자(Predicted Box)",
+   "계산식: 교집합 영역 · 합집합 영역(A+B−교집합) · 임계값 0.5",
+   "확장 지표: GIoU · mAP"
+  ],
+  "keywords_must": [
+   "정답 경계 상자(Ground-Truth Box)",
+   "예측 경계 상자(Predicted Box)",
+   "교집합 영역",
+   "합집합 영역(A+B−교집합)",
+   "임계값 0.5",
+   "GIoU",
+   "mAP"
+  ],
+  "keywords_ref": [
+   "자카드 지수",
+   "라벨링 품질",
+   "비최대 억제(NMS)",
+   "DIoU·CIoU",
+   "정밀도·재현율",
+   "시맨틱 분할 mIoU"
+  ],
+  "outline": [
+   "정답 상자·예측 상자",
+   "- 겹침 정도 수치화",
+   "- 정답 경계 상자",
+   "- 예측 경계 상자",
+   "계산 방법",
+   "- 계산식",
+   "- 판정 기준",
+   "- 계산 예",
+   "활용과 확장",
+   "- 평가 지표",
+   "- 탐지 후처리",
+   "- GIoU·DIoU"
+  ],
+  "sections": [
+   {
+    "title": "정답 상자·예측 상자",
+    "subsections": [
+     {
+      "title": "겹침 정도 수치화",
+      "items": [
+       "두 상자 위치의 일치 정도를 수치화",
+       "집합 유사도인 자카드 지수를 영역에 적용"
+      ]
+     },
+     {
+      "title": "정답 경계 상자",
+      "items": [
+       "테스트 데이터에서 객체 위치를 직접 라벨링한 영역",
+       "라벨링 품질이 평가 신뢰도를 좌우"
+      ]
+     },
+     {
+      "title": "예측 경계 상자",
+      "items": [
+       "모델이 출력한 객체 위치",
+       "임계값 이상이면 맞은 탐지(TP)로 판정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "계산 방법",
+    "subsections": [
+     {
+      "title": "계산식",
+      "items": [
+       "IoU = 교집합 넓이 ÷ 합집합 넓이",
+       "합집합은 A+B−교집합으로 중복 픽셀을 한 번만 셈"
+      ]
+     },
+     {
+      "title": "판정 기준",
+      "items": [
+       "완전히 겹치면 1, 겹치지 않으면 0",
+       "보통 0.5 이상이면 맞은 탐지로 봄"
+      ]
+     },
+     {
+      "title": "계산 예",
+      "items": [
+       "넓이 100인 두 상자가 50만큼 겹치면 50 ÷ 150 ≈ 0.33",
+       "임계값 0.5 미만이라 오탐지"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용과 확장",
+    "subsections": [
+     {
+      "title": "평가 지표",
+      "items": [
+       "IoU 임계값별 정밀도·재현율로 mAP 계산",
+       "분할 모델은 클래스별 평균 mIoU 사용"
+      ]
+     },
+     {
+      "title": "탐지 후처리",
+      "items": [
+       "겹치는 예측 상자 중 IoU가 큰 중복 상자를 제거하는 비최대 억제",
+       "학습 시 손실 함수로 활용"
+      ]
+     },
+     {
+      "title": "GIoU·DIoU",
+      "items": [
+       "겹치지 않으면 IoU가 항상 0이라 기울기가 없음",
+       "GIoU는 두 상자를 감싸는 최소 상자 C를 써서 −1~1 값으로 거리까지 반영, DIoU·CIoU는 중심 거리·종횡비 추가"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "정답 경계 상자(Ground-Truth Box)",
+   "예측 경계 상자(Predicted Box)",
+   "교집합 영역",
+   "합집합 영역(A+B−교집합)",
+   "임계값 0.5",
+   "GIoU",
+   "mAP"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "IoU": "Intersection over Union",
+   "GIoU": "Generalized IoU",
+   "mAP": "mean Average Precision",
+   "NMS": "Non-Maximum Suppression",
+   "DIoU": "Distance IoU",
+   "CIoU": "Complete IoU",
+   "mIoU": "mean IoU",
+   "TP": "True Positive"
+  }
+ },
+ {
+  "id": "AI_087_0",
+  "code": "AI_087_0",
+  "domain": "AI",
+  "category": "AI > 신경망·딥러닝",
+  "subtitle": "",
+  "name": "시각지능 AI(Visual Intelligence AI)",
+  "title": "시각지능 AI(Visual Intelligence AI)",
+  "en": "Visual Intelligence AI",
+  "definition": "사람이 눈으로 사물을 보고 이해하듯, 학습한 특징으로 사물을 알아보는 직관적 인식 능력과 낯선 장면이나 가려진 사물을 주변 상황으로 유추하는 심층적 인지 능력을 인공 신경망으로 구현한 기술",
+  "keywords": [
+   "인지 능력: 직관적 인식 · 심층적 인지",
+   "핵심 기술: CNN · GAN · 관계 추론(Relational Network) · VT-SNN",
+   "활용 분야: 의료 영상 분석 · 자율주행 · 제조 품질 · 지능형 CCTV"
+  ],
+  "keywords_must": [
+   "직관적 인식",
+   "심층적 인지",
+   "CNN",
+   "GAN",
+   "관계 추론(Relational Network)",
+   "VT-SNN",
+   "의료 영상 분석",
+   "자율주행",
+   "제조 품질",
+   "지능형 CCTV"
+  ],
+  "keywords_ref": [
+   "인공 신경망",
+   "활성화 함수",
+   "DCGAN·CycleGAN·SRGAN",
+   "스파이크 타이밍",
+   "뉴로모픽",
+   "대뇌 신피질 모델링",
+   "영상 데이터 비식별화"
+  ],
+  "outline": [
+   "개념과 발전",
+   "- 인식·인지 능력",
+   "- 기반 기술",
+   "- 발전 과정",
+   "기술 유형",
+   "- CNN",
+   "- GAN 계열",
+   "- 관계 추론·VT-SNN",
+   "활용과 과제",
+   "- 의료·자율주행",
+   "- 제조·안전",
+   "- 발전 과제"
+  ],
+  "sections": [
+   {
+    "title": "개념과 발전",
+    "subsections": [
+     {
+      "title": "인식·인지 능력",
+      "items": [
+       "직관적 인식은 학습으로 사물의 특징과 내용을 이해하는 기본 능력",
+       "심층적 인지는 주변 상황으로 추론하는 고차원 능력"
+      ]
+     },
+     {
+      "title": "기반 기술",
+      "items": [
+       "뉴런 연결 강도를 가중치로 표현하는 인공 신경망",
+       "활성화 함수로 뇌의 임계치 반응을 모사"
+      ]
+     },
+     {
+      "title": "발전 과정",
+      "items": [
+       "딥러닝 알고리즘과 GPU 인프라 발전",
+       "2010년대 이미지 인식 정확도가 사람 수준을 넘고 의료·제조·자율주행으로 융합"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기술 유형",
+    "subsections": [
+     {
+      "title": "CNN",
+      "items": [
+       "시신경 구조를 모방해 합성곱으로 색상·형상 특징 추출",
+       "특징을 요약·변환한 뒤 분류 함수로 예측"
+      ]
+     },
+     {
+      "title": "GAN 계열",
+      "items": [
+       "DCGAN은 CNN 결합, CycleGAN은 스타일 변환",
+       "SRGAN은 초해상도, StackGAN은 텍스트로 이미지 생성, DiscoGAN은 도메인 간 관계 학습"
+      ]
+     },
+     {
+      "title": "관계 추론·VT-SNN",
+      "items": [
+       "관계 추론은 이미지 속 객체 간 관계를 질의응답으로 추론",
+       "VT-SNN은 뉴런 스파이크 발생 시간으로 시각·촉각을 함께 분석"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "활용과 과제",
+    "subsections": [
+     {
+      "title": "의료·자율주행",
+      "items": [
+       "영상 분류·검출·분할·정합과 판독 보조, GAN으로 저선량 CT 화질 개선",
+       "카메라·라이다 인식으로 충돌·차선 이탈 방지"
+      ]
+     },
+     {
+      "title": "제조·안전",
+      "items": [
+       "강판 도금 품질 제어와 열화상 분석",
+       "지능형 CCTV로 위험 상황 실시간 대응과 보행자 추적"
+      ]
+     },
+     {
+      "title": "발전 과제",
+      "items": [
+       "뇌 과학 융합과 뉴로모픽 칩 연구",
+       "오픈소스 기반 인력 양성, 비식별화된 라벨링 영상 데이터 확보"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "직관적 인식",
+   "심층적 인지",
+   "CNN",
+   "GAN",
+   "관계 추론(Relational Network)",
+   "VT-SNN",
+   "의료 영상 분석",
+   "자율주행",
+   "제조 품질",
+   "지능형 CCTV"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "CNN": "Convolutional Neural Network",
+   "GAN": "Generative Adversarial Network",
+   "VT-SNN": "Visual-Tactile Spiking Neural Network",
+   "DCGAN": "Deep Convolutional GAN",
+   "SRGAN": "Super-Resolution GAN",
+   "CT": "Computed Tomography",
+   "CCTV": "Closed-Circuit Television",
+   "GPU": "Graphics Processing Unit"
   }
  },
  {
@@ -13445,6 +18154,172 @@
    "STT": "Speech To Text",
    "SaaS": "Software as a Service",
    "IoT": "Internet of Things"
+  }
+ },
+ {
+  "id": "AI_088",
+  "code": "AI_088",
+  "domain": "AI",
+  "category": "AI > AI 운영·평가",
+  "subtitle": "",
+  "name": "서비스형 인공지능(AIaaS, AI as a Service)",
+  "title": "서비스형 인공지능(AIaaS, AI as a Service)",
+  "en": "AI as a Service",
+  "definition": "클라우드 서비스 사업자(CSP) 등 외부 벤더가 AI 인프라·알고리즘·API·도구를 구독형 서비스로 제공해, 기업이 전문 인력과 대규모 초기 투자 없이 필요한 인공지능 기능을 바로 활용하게 하는 서비스 모델",
+  "keywords": [
+   "서비스 유형: H/W 인프라(GPU·NPU) · 인지 컴퓨팅 API · ML 프레임워크 · 완전 관리형 ML",
+   "구조: AI 데이터 · AI 컴퓨트 · AI 서비스 · AI 도구",
+   "대표 서비스: 대화형 AI · AWS 렉스(Lex)"
+  ],
+  "keywords_must": [
+   "H/W 인프라(GPU·NPU)",
+   "인지 컴퓨팅 API",
+   "ML 프레임워크",
+   "완전 관리형 ML",
+   "AI 데이터",
+   "AI 컴퓨트",
+   "AI 서비스",
+   "AI 도구",
+   "대화형 AI",
+   "AWS 렉스(Lex)"
+  ],
+  "keywords_ref": [
+   "IaaS·PaaS·SaaS",
+   "서버리스 컴퓨팅",
+   "REST API",
+   "마법사(Wizard)",
+   "IDE",
+   "데이터 준비 도구",
+   "CAPEX 절감",
+   "Rekognition",
+   "벤더 종속"
+  ],
+  "outline": [
+   "서비스·비즈니스 이점",
+   "- 서비스 측면",
+   "- 비즈니스 측면",
+   "- 도입 확산",
+   "계층 구조",
+   "- AI 인프라",
+   "- AI 서비스",
+   "- AI 도구",
+   "AWS와 렉스 사례",
+   "- AWS AI 서비스",
+   "- 렉스(Lex)",
+   "- 렉스 적용 분야"
+  ],
+  "sections": [
+   {
+    "title": "서비스·비즈니스 이점",
+    "subsections": [
+     {
+      "title": "서비스 측면",
+      "items": [
+       "GPU·NPU 인프라를 온디맨드 제공",
+       "음성·비전·번역·감정 분석 API와 사전 구축 모델·노코드 인터페이스의 완전 관리형 ML"
+      ]
+     },
+     {
+      "title": "비즈니스 측면",
+      "items": [
+       "초기 투자(CAPEX)와 실패 위험 감소",
+       "전문 인력·인프라 없이 도메인 업무에 집중하며 신규 시장 진출"
+      ]
+     },
+     {
+      "title": "도입 확산",
+      "items": [
+       "금융·공공·의료 중심으로 증가",
+       "데이터 보안과 특정 CSP 종속은 도입 시 검토 사항"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "계층 구조",
+    "subsections": [
+     {
+      "title": "AI 인프라",
+      "items": [
+       "데이터 레이크·RDBMS·NoSQL의 AI 데이터",
+       "가상 머신·서버리스·배치 처리로 병렬 학습과 ML 작업 자동화를 지원하는 AI 컴퓨트"
+      ]
+     },
+     {
+      "title": "AI 서비스",
+      "items": [
+       "단일 REST API 호출로 쓰는 인지 컴퓨팅",
+       "사용자 데이터로 학습하는 맞춤형 모델과 챗봇·가상 비서용 대화형 AI"
+      ]
+     },
+     {
+      "title": "AI 도구",
+      "items": [
+       "모델 학습을 안내하는 마법사와 테스트·관리용 IDE",
+       "ETL 데이터 준비 도구와 TensorFlow·PyTorch 등 프레임워크 템플릿"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "AWS와 렉스 사례",
+    "subsections": [
+     {
+      "title": "AWS AI 서비스",
+      "items": [
+       "EC2·Lambda·S3 등 클라우드 위에서 제공",
+       "대화형 렉스, 이미지 분석 Rekognition, ML 플랫폼 SageMaker"
+      ]
+     },
+     {
+      "title": "렉스(Lex)",
+      "items": [
+       "음성 인식과 자연어 이해로 대화형 인터페이스를 설계·구축·배포하는 완전 관리형 서비스",
+       "서울 리전 출시와 한국어 지원"
+      ]
+     },
+     {
+      "title": "렉스 적용 분야",
+      "items": [
+       "가상 상담원과 음성 응답(IVR), FAQ 자동 응답",
+       "Lambda로 기업 시스템과 연동하는 애플리케이션 봇, 상담 기록 기반 챗봇"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "H/W 인프라(GPU·NPU)",
+   "인지 컴퓨팅 API",
+   "ML 프레임워크",
+   "완전 관리형 ML",
+   "AI 데이터",
+   "AI 컴퓨트",
+   "AI 서비스",
+   "AI 도구",
+   "대화형 AI",
+   "AWS 렉스(Lex)"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "AIaaS": "AI as a Service",
+   "CSP": "Cloud Service Provider",
+   "NPU": "Neural Processing Unit",
+   "ML": "Machine Learning",
+   "CAPEX": "Capital Expenditure",
+   "IDE": "Integrated Development Environment",
+   "ETL": "Extract, Transform, Load",
+   "IVR": "Interactive Voice Response",
+   "EC2": "Elastic Compute Cloud",
+   "IaaS": "Infrastructure as a Service",
+   "PaaS": "Platform as a Service",
+   "SaaS": "Software as a Service",
+   "REST": "Representational State Transfer",
+   "RDBMS": "Relational Database Management System"
   }
  },
  {
@@ -13872,6 +18747,161 @@
   "pages": [],
   "warnings": [],
   "quiz_groups": []
+ },
+ {
+  "id": "AI_091_01",
+  "code": "AI_091_01",
+  "domain": "AI",
+  "category": "AI > AI 윤리·정책",
+  "subtitle": "",
+  "name": "커먼크롤(Common Crawl)",
+  "title": "커먼크롤(Common Crawl)",
+  "en": "Common Crawl",
+  "definition": "웹 페이지를 주기적으로 크롤링한 대규모 원시 데이터를 누구나 무료로 내려받아 연구·분석할 수 있도록 공개 저장소에 유지·관리하는 미국 비영리 조직이자 개방형 데이터 플랫폼(2007년 설립)",
+  "keywords": [
+   "특징: 자유로운 데이터 활용 · 개방형 플랫폼 · 쉬운 접근성 · 월 단위 수집 · 클라우드(AWS S3) 제공",
+   "활용 대상: 중소기업·스타트업·개인 · 거대 언어 모델 학습",
+   "한국 과제: 한국어 비중 1% 미만 · 한국형 커먼크롤"
+  ],
+  "keywords_must": [
+   "자유로운 데이터 활용",
+   "개방형 플랫폼",
+   "쉬운 접근성",
+   "월 단위 수집",
+   "클라우드(AWS S3) 제공",
+   "중소기업·스타트업·개인",
+   "거대 언어 모델 학습",
+   "한국어 비중 1% 미만",
+   "한국형 커먼크롤"
+  ],
+  "keywords_ref": [
+   "웹 크롤링",
+   "WARC·WAT·WET",
+   "페타바이트급",
+   "C4·GPT-3 학습",
+   "인터넷 아카이브",
+   "AI 허브",
+   "국립국어원 말뭉치",
+   "저작권·적법성"
+  ],
+  "outline": [
+   "등장 배경과 정의",
+   "- 등장 배경",
+   "- 비영리 개방 플랫폼",
+   "- 활용",
+   "데이터 구성·제공 방식",
+   "- 언어 분포",
+   "- 수집 주기·개방성",
+   "- 제공 방식",
+   "국내외 현황과 과제",
+   "- 해외",
+   "- 국내",
+   "- 한국형 커먼크롤"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경과 정의",
+    "subsections": [
+     {
+      "title": "등장 배경",
+      "items": [
+       "인공지능 고도화의 핵심은 데이터 양",
+       "대기업만 가진 고품질 크롤링 데이터를 누구나 쓰게 하려는 요구"
+      ]
+     },
+     {
+      "title": "비영리 개방 플랫폼",
+      "items": [
+       "디지털 지식에 대한 보편적 접근으로 자유로운 학습·이용·협업을 지원",
+       "크롤링 데이터를 공개 저장소에서 무료 제공하는 비영리 조직"
+      ]
+     },
+     {
+      "title": "활용",
+      "items": [
+       "GPT-3·T5(C4) 등 거대 언어 모델 사전 학습 데이터의 주요 원천",
+       "API·예제 공개와 활용 대회로 이용 확산"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "데이터 구성·제공 방식",
+    "subsections": [
+     {
+      "title": "언어 분포",
+      "items": [
+       "영어·러시아어·일본어 등 비중이 높음",
+       "한국어는 1% 미만으로 부족"
+      ]
+     },
+     {
+      "title": "수집 주기·개방성",
+      "items": [
+       "대체로 매월 새 크롤링 공개",
+       "국내 민간 크롤링 데이터는 대부분 비공개이나 커먼크롤은 일반 공개"
+      ]
+     },
+     {
+      "title": "제공 방식",
+      "items": [
+       "AWS S3 공개 데이터셋으로 저장·배포",
+       "원본 응답 WARC, 메타데이터 WAT, 추출 텍스트 WET 형식"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "국내외 현황과 과제",
+    "subsections": [
+     {
+      "title": "해외",
+      "items": [
+       "미국 인터넷 아카이브의 대규모 웹 보관",
+       "영국 웹 아카이브의 주제별 사이트 수집·보존"
+      ]
+     },
+     {
+      "title": "국내",
+      "items": [
+       "ETRI 말뭉치와 KorBERT, AI 허브 언어 데이터, 국립국어원 말뭉치 공개",
+       "네이버 하이퍼클로바의 대규모 한국어 데이터는 비공개"
+      ]
+     },
+     {
+      "title": "한국형 커먼크롤",
+      "items": [
+       "한국어 중심 대규모 웹 데이터 수집·공개",
+       "저작권·개인정보 적법성 검토와 품질 정제 체계 필요"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "자유로운 데이터 활용",
+   "개방형 플랫폼",
+   "쉬운 접근성",
+   "월 단위 수집",
+   "클라우드(AWS S3) 제공",
+   "중소기업·스타트업·개인",
+   "거대 언어 모델 학습",
+   "한국어 비중 1% 미만",
+   "한국형 커먼크롤"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "WARC": "Web ARChive",
+   "WAT": "Web Archive Transformation",
+   "WET": "WARC Encapsulated Text",
+   "S3": "Simple Storage Service",
+   "C4": "Colossal Clean Crawled Corpus",
+   "ETRI": "Electronics and Telecommunications Research Institute"
+  }
  },
  {
   "id": "AI_091_02",
@@ -14333,6 +19363,155 @@
    "WCET": "Worst-Case Execution Time",
    "OTA": "Over-The-Air",
    "ECU": "Electronic Control Unit"
+  }
+ },
+ {
+  "id": "AI_092",
+  "code": "AI_092",
+  "domain": "AI",
+  "category": "AI > 자연어·생성형 AI",
+  "subtitle": "",
+  "name": "알파코드(AlphaCode)",
+  "title": "알파코드(AlphaCode)",
+  "en": "AlphaCode",
+  "definition": "자연어로 쓰인 알고리즘 경진 대회 문제를 읽고 답안 프로그램을 직접 생성하는 딥마인드의 트랜스포머 기반 코드 생성 AI로, 대량 샘플링·필터링·클러스터링으로 제출할 답안을 고르며 2022년 코드포스 대회에서 상위 약 54% 수준을 기록",
+  "keywords": [
+   "학습: 사전 학습(Pre-Training) · 미세 조정(Fine-Tuning) · 트랜스포머 인코더-디코더",
+   "답안 선정: 대규모 샘플링 · 예제 테스트 필터링 · 클러스터링 · 최대 10개 제출",
+   "보안 대응: AI 생성 코드 취약점 · 적대적 공격 방어"
+  ],
+  "keywords_must": [
+   "사전 학습(Pre-Training)",
+   "미세 조정(Fine-Tuning)",
+   "트랜스포머 인코더-디코더",
+   "대규모 샘플링",
+   "예제 테스트 필터링",
+   "클러스터링",
+   "최대 10개 제출",
+   "AI 생성 코드 취약점",
+   "적대적 공격 방어"
+  ],
+  "keywords_ref": [
+   "깃허브 코드",
+   "CodeContests 데이터셋",
+   "전이 학습",
+   "코드포스(Codeforces)",
+   "코파일럿(Copilot)",
+   "코덱스(Codex)",
+   "학습 데이터 오염"
+  ],
+  "outline": [
+   "학습 구조",
+   "- 모델",
+   "- 사전 학습",
+   "- 자원 요구",
+   "답안 선정 절차",
+   "- 샘플링",
+   "- 필터링",
+   "- 클러스터링·제출",
+   "코파일럿 비교와 보안",
+   "- 목적 비교",
+   "- 보안 위협",
+   "- 방어 방안"
+  ],
+  "sections": [
+   {
+    "title": "학습 구조",
+    "subsections": [
+     {
+      "title": "모델",
+      "items": [
+       "문제 설명을 읽는 인코더와 코드를 생성하는 디코더의 트랜스포머",
+       "수십억 파라미터 규모"
+      ]
+     },
+     {
+      "title": "사전 학습",
+      "items": [
+       "깃허브 공개 코드로 프로그래밍 언어 일반 학습",
+       "경진 대회 문제·정답 데이터셋 CodeContests로 미세 조정하는 전이 학습"
+      ]
+     },
+     {
+      "title": "자원 요구",
+      "items": [
+       "문제마다 수백만 개 후보를 생성·검사",
+       "대규모 연산 자원 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "답안 선정 절차",
+    "subsections": [
+     {
+      "title": "샘플링",
+      "items": [
+       "다양한 언어·온도·메타데이터 조건으로 대량의 후보 코드 생성",
+       "정답 가능성이 있는 다양성 확보"
+      ]
+     },
+     {
+      "title": "필터링",
+      "items": [
+       "문제에 주어진 예제 입출력으로 실행",
+       "통과하지 못한 후보 대부분 제거"
+      ]
+     },
+     {
+      "title": "클러스터링·제출",
+      "items": [
+       "생성한 추가 입력에 같은 출력을 내는 코드끼리 묶음",
+       "큰 군집부터 최대 10개를 골라 제출"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "코파일럿 비교와 보안",
+    "subsections": [
+     {
+      "title": "목적 비교",
+      "items": [
+       "알파코드는 문제 전체를 푸는 연구용 모델",
+       "코파일럿은 IDE에서 코드를 자동 완성하는 상용 도구(코덱스 기반)"
+      ]
+     },
+     {
+      "title": "보안 위협",
+      "items": [
+       "AI 생성 코드의 상당수(연구에서 약 40%)가 보안 취약점 포함",
+       "학습 데이터 오염과 소스 코드 생성 모델에 대한 적대적 공격"
+      ]
+     },
+     {
+      "title": "방어 방안",
+      "items": [
+       "학습 데이터 검증과 위협 탐지",
+       "생성 코드 정적 분석·보안 리뷰와 적대적 공격 방어 기법 적용"
+      ]
+     }
+    ]
+   }
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "사전 학습(Pre-Training)",
+   "미세 조정(Fine-Tuning)",
+   "트랜스포머 인코더-디코더",
+   "대규모 샘플링",
+   "예제 테스트 필터링",
+   "클러스터링",
+   "최대 10개 제출",
+   "AI 생성 코드 취약점",
+   "적대적 공격 방어"
+  ],
+  "pages": [],
+  "warnings": [],
+  "quiz_groups": [],
+  "gloss": {
+   "IDE": "Integrated Development Environment"
   }
  },
  {
