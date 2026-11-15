@@ -34153,6 +34153,161 @@
    "수사 공조 곤란"
   ]
  },
+ "SE_236": {
+  "title": "전자 증거 개시(E-Discovery)",
+  "category": "SE > 법적 대응 > E-Discovery",
+  "definition": "소송 전 당사자가 보유한 전자 저장 정보(ESI)를 식별·보존·수집·검토해 상대방에게 공개하는 증거 개시 절차와 이를 뒷받침하는 정보 관리 체계로, 미국 FRCP 개정으로 본격화되었으며 EDRM 참조 모델로 단계를 정의한다",
+  "keywords": [
+   "기본 원칙: 당사자주의 · 신의성실",
+   "EDRM 단계: 정보 관리 · 식별 · 보존 · 수집 · 처리 · 검토 · 분석 · 산출 · 제시"
+  ],
+  "sections": [
+   {
+    "title": "원칙과 필요성",
+    "subsections": [
+     {
+      "title": "당사자주의",
+      "items": [
+       "개시는 양 당사자 사이에서, 판사는 조정 역할"
+      ]
+     },
+     {
+      "title": "신의성실",
+      "items": [
+       "관련 자료를 보존하고 성실히 제공"
+      ]
+     },
+     {
+      "title": "기업 영향",
+      "items": [
+       "특허 분쟁에서 미제출 시 패소·거액 제재"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "EDRM 절차",
+    "subsections": [
+     {
+      "title": "1 정보 관리",
+      "items": [
+       "보존 기간·폐기 정책과 저장소 정비"
+      ]
+     },
+     {
+      "title": "2 식별",
+      "items": [
+       "관련 ESI의 범위와 보관자 결정"
+      ]
+     },
+     {
+      "title": "3 보존·수집",
+      "items": [
+       "변경·삭제 방지 후 원본성 유지하며 취합"
+      ]
+     },
+     {
+      "title": "4 처리·검토·분석",
+      "items": [
+       "중복 제거, 관련성·면책 판단, 맥락 분석"
+      ]
+     },
+     {
+      "title": "5 산출·제시",
+      "items": [
+       "합의 양식으로 제공, 법정에서 원형 제시"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구축 고려",
+    "subsections": [
+     {
+      "title": "내재화 판단",
+      "items": [
+       "보존·수집·처리 단계의 사내 구축과 외부 위탁 선택"
+      ]
+     },
+     {
+      "title": "도구 표준화",
+      "items": [
+       "리뷰 도구 통일, 데이터 재사용"
+      ]
+     },
+     {
+      "title": "대응 체계",
+      "items": [
+       "아카이빙·포렌식 도구 투자, 법무·IT 기준 정렬, 전문 인력"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "원칙과 필요성",
+   "- 당사자주의",
+   "- 신의성실",
+   "- 기업 영향",
+   "EDRM 절차",
+   "- 1 정보 관리",
+   "- 2 식별",
+   "- 3 보존·수집",
+   "- 4 처리·검토·분석",
+   "- 5 산출·제시",
+   "구축 고려",
+   "- 내재화 판단",
+   "- 도구 표준화",
+   "- 대응 체계"
+  ],
+  "name": "전자 증거 개시(E-Discovery)",
+  "en": "Electronic Discovery",
+  "keywords_must": [
+   "당사자주의",
+   "신의성실",
+   "정보 관리",
+   "식별",
+   "보존",
+   "수집",
+   "처리",
+   "검토",
+   "분석",
+   "산출",
+   "제시"
+  ],
+  "keywords_ref": [
+   "지원 기술: 아카이빙·저널링·스토리지 최적화·데이터 마이그레이션",
+   "대상: 증거 능력 있는 증거를 찾아낼 수 있는 모든 문서·물건·관련자 정보",
+   "소송 보존 조치(Legal Hold) 발효 후 삭제 금지",
+   "처리 단계는 중복 제거·포맷 변환으로 검토량 축소",
+   "검토는 관련성·면책 특권 판단, TAR(기술 지원 검토) 활용",
+   "디지털 포렌식은 사후 사실 규명, e-Discovery는 소송 대비 자료 공개",
+   "국내는 2008년 형사소송법 증거 개시 도입",
+   "미공개 시 제재로 기업 존폐 영향"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "당사자주의",
+   "신의성실",
+   "정보 관리",
+   "식별",
+   "보존",
+   "수집",
+   "처리",
+   "검토",
+   "분석",
+   "산출",
+   "제시"
+  ],
+  "dueum": "정식보수 처검분 산제",
+  "gloss": {
+   "ESI": "Electronically Stored Information",
+   "FRCP": "Federal Rules of Civil Procedure",
+   "EDRM": "Electronic Discovery Reference Model",
+   "TAR": "Technology Assisted Review"
+  }
+ },
  "SE_238": {
   "title": "개인정보 보호법(Personal Information Protection Act)",
   "category": "SE > 디지털 보안 > 법적 대응 > 개인정보보호법",
@@ -35080,6 +35235,169 @@
    "CPO": "Chief Privacy Officer"
   }
  },
+ "SE_248": {
+  "title": "PCI DSS(Payment Card Industry Data Security Standard)",
+  "category": "SE > 기타/시사 > PCI DSS",
+  "definition": "카드 회원 정보와 거래 정보를 안전하게 보호하기 위해 VISA·MasterCard·American Express·Discover·JCB 5개 국제 카드 브랜드가 설립한 PCI SSC가 제정한 카드 업계 글로벌 보안 표준으로, 6대 목표 12개 요구 사항으로 구성된다",
+  "keywords": [
+   "6대 목표: 안전한 네트워크 · 카드 소유자 데이터 보호 · 취약점 관리 · 강력한 접근 통제 · 정기 모니터링·테스트 · 정보보호 정책",
+   "검증 수단: QSA 현장 심사 · 자체 평가서(SAQ) · ASV 분기 스캔",
+   "핵심 통제: PAN 마스킹·암호화 · 다중 인증 · 로그 1년 보관"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "결제 확산",
+      "items": [
+       "핀테크·모바일 결제로 카드 정보 노출면 확대"
+      ]
+     },
+     {
+      "title": "유출 사고",
+      "items": [
+       "대량 카드 정보 유출과 POS 해킹"
+      ]
+     },
+     {
+      "title": "준수 효과",
+      "items": [
+       "컴플라이언스 대응, 분쟁 예방, 고객 신뢰"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "12개 요구 사항",
+    "subsections": [
+     {
+      "title": "네트워크",
+      "items": [
+       "1 보안 통제 설치, 2 벤더 기본값 변경"
+      ]
+     },
+     {
+      "title": "데이터",
+      "items": [
+       "3 최소 저장·PAN 판독 불가, 4 전송 암호화"
+      ]
+     },
+     {
+      "title": "취약점",
+      "items": [
+       "5 악성코드 방지, 6 패치·안전한 개발"
+      ]
+     },
+     {
+      "title": "접근 통제",
+      "items": [
+       "7 알 필요 원칙, 8 고유 ID·다중 인증, 9 물리 통제"
+      ]
+     },
+     {
+      "title": "모니터링",
+      "items": [
+       "10 감사 로그·시각 동기화, 11 분기 스캔·연 1회 모의 해킹"
+      ]
+     },
+     {
+      "title": "정책",
+      "items": [
+       "12 연 1회 정책 검토와 임직원 교육"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용 방안",
+    "subsections": [
+     {
+      "title": "등급별 검증",
+      "items": [
+       "레벨에 따라 QSA 심사 또는 자체 평가서와 분기 스캔"
+      ]
+     },
+     {
+      "title": "범위 축소",
+      "items": [
+       "토큰화·P2PE로 카드 데이터 환경 최소화"
+      ]
+     },
+     {
+      "title": "미취급 기업",
+      "items": [
+       "개인정보 보호 체계 참고 기준으로 활용"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 결제 확산",
+   "- 유출 사고",
+   "- 준수 효과",
+   "12개 요구 사항",
+   "- 네트워크",
+   "- 데이터",
+   "- 취약점",
+   "- 접근 통제",
+   "- 모니터링",
+   "- 정책",
+   "적용 방안",
+   "- 등급별 검증",
+   "- 범위 축소",
+   "- 미취급 기업"
+  ],
+  "name": "PCI DSS(Payment Card Industry Data Security Standard)",
+  "en": "Payment Card Industry Data Security Standard",
+  "keywords_must": [
+   "안전한 네트워크",
+   "카드 소유자 데이터 보호",
+   "취약점 관리",
+   "강력한 접근 통제",
+   "정기 모니터링·테스트",
+   "정보보호 정책",
+   "QSA 현장 심사",
+   "자체 평가서(SAQ)",
+   "ASV 분기 스캔",
+   "PAN 마스킹·암호화",
+   "다중 인증",
+   "로그 1년 보관"
+  ],
+  "keywords_ref": [
+   "가맹점 등급: 레벨 1~4(연간 거래 건수)",
+   "12개 요구 사항: 1 네트워크 보안 통제 2 안전한 구성(기본 패스워드 변경) 3 저장 데이터 보호 4 공중망 전송 암호화 5 악성코드 방지 6 안전한 시스템·소프트웨어 개발 7 업무상 알 필요 접근 제한 8 사용자 식별·인증 9 물리적 접근 제한 10 로그·모니터링 11 정기 보안 테스트 12 정책·조직",
+   "레벨 1은 연 600만 건 이상(QSA 연간 심사), 레벨 2는 100만~600만, 레벨 3은 전자상거래 2만~100만, 레벨 4는 그 외",
+   "현행 v4.0.1(2024), v3.2.1은 2024년 3월 폐기, v4.0 신규 요구 사항은 2025년 3월 의무화"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "안전한 네트워크",
+   "카드 소유자 데이터 보호",
+   "취약점 관리",
+   "강력한 접근 통제",
+   "정기 모니터링·테스트",
+   "정보보호 정책",
+   "QSA 현장 심사",
+   "자체 평가서(SAQ)",
+   "ASV 분기 스캔",
+   "PAN 마스킹·암호화",
+   "다중 인증",
+   "로그 1년 보관"
+  ],
+  "gloss": {
+   "PCI SSC": "Payment Card Industry Security Standards Council",
+   "QSA": "Qualified Security Assessor",
+   "SAQ": "Self-Assessment Questionnaire",
+   "ASV": "Approved Scanning Vendor",
+   "PAN": "Primary Account Number",
+   "P2PE": "Point-to-Point Encryption",
+   "POS": "Point of Sale"
+  }
+ },
  "SE_249": {
   "title": "전자기파 이용 공격",
   "category": "SE > 기타/시사 > 전자기파 공격",
@@ -35218,6 +35536,152 @@
    "EMP": "Electromagnetic Pulse",
    "HPM": "High Power Microwave",
    "CISPR": "Comité International Spécial des Perturbations Radioélectriques"
+  }
+ },
+ "SE_251": {
+  "title": "보안 인텔리전스(Security Intelligence)",
+  "category": "SE > 기타/시사 > Security Intelligence",
+  "definition": "사용자·애플리케이션·인프라가 생성하는 보안 데이터를 실시간 수집·정규화하고 상관관계와 행위를 분석해, 패턴 기반 탐지로 잡기 어려운 지능형 공격을 사전에 예방·감지하도록 지능·통합·자동화를 결합한 보안 기술 체계",
+  "keywords": [
+   "핵심: 지능 · 통합 · 자동화 · 예방과 감지",
+   "기술 특징: 상황 인지 보안 · 신종 공격 탐지 · 통합 보안 관리 · 빅데이터 분석",
+   "기능 계층: 수집·분석 · 예방·감지 · 대응·조치"
+  ],
+  "sections": [
+   {
+    "title": "등장 배경",
+    "subsections": [
+     {
+      "title": "위협 고도화",
+      "items": [
+       "은밀하고 정교한 표적 공격, 내부자 유출"
+      ]
+     },
+     {
+      "title": "공격면 확대",
+      "items": [
+       "연결 기기와 악성코드 급증"
+      ]
+     },
+     {
+      "title": "자원 한계",
+      "items": [
+       "제한된 인력으로 선제 대응 필요"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기술 특징",
+    "subsections": [
+     {
+      "title": "상황 인지",
+      "items": [
+       "단일 이벤트가 아닌 상관관계로 은밀한 공격 탐지"
+      ]
+     },
+     {
+      "title": "신종 탐지",
+      "items": [
+       "프로세스·활동·트랜잭션 특성 분석으로 미지 공격 식별"
+      ]
+     },
+     {
+      "title": "통합 관리",
+      "items": [
+       "네트워크·시스템 보안 이벤트를 하나로 통합"
+      ]
+     },
+     {
+      "title": "빅데이터",
+      "items": [
+       "대용량 정형·비정형 데이터로 행위 분석"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기능 계층",
+    "subsections": [
+     {
+      "title": "수집·분석",
+      "items": [
+       "SIEM 로그 통합, 프로파일링, 실시간 상관 분석"
+      ]
+     },
+     {
+      "title": "예방·감지",
+      "items": [
+       "침입 방지, 이상 징후 탐지, DB 행위 감시"
+      ]
+     },
+     {
+      "title": "대응·조치",
+      "items": [
+       "우선 조치 대상 선별, 자동화된 사고 대응"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "등장 배경",
+   "- 위협 고도화",
+   "- 공격면 확대",
+   "- 자원 한계",
+   "기술 특징",
+   "- 상황 인지",
+   "- 신종 탐지",
+   "- 통합 관리",
+   "- 빅데이터",
+   "기능 계층",
+   "- 수집·분석",
+   "- 예방·감지",
+   "- 대응·조치"
+  ],
+  "name": "보안 인텔리전스(Security Intelligence)",
+  "en": "Security Intelligence",
+  "keywords_must": [
+   "지능",
+   "통합",
+   "자동화",
+   "예방과 감지",
+   "상황 인지 보안",
+   "신종 공격 탐지",
+   "통합 보안 관리",
+   "빅데이터 분석",
+   "수집·분석",
+   "예방·감지",
+   "대응·조치"
+  ],
+  "keywords_ref": [
+   "구성 요소: SIEM·UEBA·위협 인텔리전스·SOAR",
+   "수집·분석: 로그 통합, 자산·취약점 프로파일링, 이벤트 상관 분석, 내부자 행위 분석",
+   "예방·감지: 네트워크·호스트 침입 방지, 이상 트래픽 탐지, DB 행위 모니터링, 패킷 포렌식, 유출 방지",
+   "대응·조치: 즉시 조치 대상(Offense) 식별, 인시던트 대응",
+   "필요성: 공격 지능화, 연결 기기 폭증, 보안 인력·비용 제약",
+   "최근 XDR·AI 기반 탐지로 진화"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "지능",
+   "통합",
+   "자동화",
+   "예방과 감지",
+   "상황 인지 보안",
+   "신종 공격 탐지",
+   "통합 보안 관리",
+   "빅데이터 분석",
+   "수집·분석",
+   "예방·감지",
+   "대응·조치"
+  ],
+  "gloss": {
+   "SIEM": "Security Information and Event Management",
+   "UEBA": "User and Entity Behavior Analytics",
+   "SOAR": "Security Orchestration, Automation and Response",
+   "XDR": "Extended Detection and Response"
   }
  },
  "SE_253": {
