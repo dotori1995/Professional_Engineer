@@ -442,7 +442,7 @@
    "공유 Lock(Shared Lock)",
    "MVCC(Multi-Version Concurrency Control)",
    "Snapshot Isolation",
-   "Oracle 기본 Read Committed · MySQL InnoDB 기본 Repeatable Read"
+   "DBMS별 기본 격리 수준"
   ],
   "outline": [
    "SQL-92 표준",
@@ -1194,10 +1194,10 @@
    "Berkeley DB"
   ],
   "keywords_ref": [
-   "RDBMS 비교",
    "모바일 DB",
    "IoT 디바이스",
-   "전원 장애 복구"
+   "전원 장애 복구",
+   "클라이언트-서버 RDBMS"
   ],
   "outline": [
    "임베디드 시스템용 DBMS",
@@ -1307,9 +1307,9 @@
   ],
   "keywords_ref": [
    "Altibase",
-   "디스크 기반 DB 비교(버퍼만 메모리)",
    "NVRAM 활용",
-   "데이터 계층화(Tiering)"
+   "데이터 계층화(Tiering)",
+   "디스크 상주 DB(Disk-Resident DB)"
   ],
   "outline": [
    "MMDB 개요",
@@ -2064,7 +2064,7 @@
    "Shredding(분해 저장)",
    "DOM(Document Object Model)",
    "XMLType",
-   "JSON 문서 DB와 비교"
+   "JSON 문서 DB"
   ],
   "outline": [
    "XML DB 개요",
@@ -2487,7 +2487,7 @@
    "Oracle RAC(공유 디스크)",
    "MPP(Massively Parallel Processing)",
    "Teradata·Greenplum",
-   "분산 DB 비교"
+   "분산 DB(Distributed DB)"
   ],
   "outline": [
    "병렬 DB · 분산 DB 개념 비교",
@@ -3575,7 +3575,7 @@
    "사건 엔티티(Event Entity)",
    "기본 엔티티(Fundamental/Key Entity)",
    "중심 엔티티(Main Entity)",
-   "행위 엔티티(Active Entity)"
+   "행위 엔티티(Action Entity)"
   ],
   "keywords_ref": [
    "인스턴스(Instance)",
@@ -3645,7 +3645,7 @@
    "사건 엔티티(Event Entity)",
    "기본 엔티티(Fundamental/Key Entity)",
    "중심 엔티티(Main Entity)",
-   "행위 엔티티(Active Entity)"
+   "행위 엔티티(Action Entity)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -4642,8 +4642,8 @@
   "keywords_ref": [
    "ASSERTION",
    "DEFERRABLE INITIALLY DEFERRED",
-   "OLD·NEW 값 비교",
-   "도메인 무결성(Domain Integrity)"
+   "도메인 무결성(Domain Integrity)",
+   "OLD·NEW 전이 변수"
   ],
   "outline": [
    "연산 전후 정확성 유지 규칙",
@@ -6641,7 +6641,7 @@
    "종속성 보존(Dependency Preservation)",
    "무손실 분해(Lossless Decomposition)",
    "2NF 이상현상",
-   "BCNF 비교"
+   "BCNF(Boyce-Codd Normal Form)"
   ],
   "keywords_ref": [
    "3NF 합성 알고리즘(Synthesis)",
@@ -6709,7 +6709,7 @@
    "종속성 보존(Dependency Preservation)",
    "무손실 분해(Lossless Decomposition)",
    "2NF 이상현상",
-   "BCNF 비교"
+   "BCNF(Boyce-Codd Normal Form)"
   ],
   "quiz_groups": [],
   "quiz_avoid": [],
@@ -8120,7 +8120,7 @@
    "SQL Injection 방지",
    "시큐어 코딩(Secure Coding)",
    "소프트 파싱(Soft Parse)",
-   "Statement 비교"
+   "Statement(매번 파싱)"
   ],
   "keywords_ref": [
    "Bind Peeking",
@@ -8190,7 +8190,7 @@
    "SQL Injection 방지",
    "시큐어 코딩(Secure Coding)",
    "소프트 파싱(Soft Parse)",
-   "Statement 비교"
+   "Statement(매번 파싱)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -8667,10 +8667,10 @@
    "클러스터링 검토",
    "인덱스 시험 생성",
    "부정 연산자(<>, NOT)",
-   "NULL 비교(IS NULL)",
    "인덱스 컬럼 변형(함수·연산)",
    "묵시적 형변환",
-   "Index Range Scan"
+   "Index Range Scan",
+   "IS NULL 조건"
   ],
   "keywords_ref": [
    "분포도 10~15% 이내",
@@ -8741,10 +8741,10 @@
    "클러스터링 검토",
    "인덱스 시험 생성",
    "부정 연산자(<>, NOT)",
-   "NULL 비교(IS NULL)",
    "인덱스 컬럼 변형(함수·연산)",
    "묵시적 형변환",
-   "Index Range Scan"
+   "Index Range Scan",
+   "IS NULL 조건"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -9537,10 +9537,10 @@
    "Star Transformation"
   ],
   "keywords_ref": [
-   "B-Tree 인덱스 비교",
    "분포도 나쁜 컬럼(15% 이상)",
    "Run-Length 압축",
-   "Bitmap Merge"
+   "Bitmap Merge",
+   "B-Tree 인덱스"
   ],
   "outline": [
    "비트로 컬럼 값 저장",
@@ -9848,7 +9848,7 @@
    "Adaptive Hash Index(InnoDB)",
    "해시 조인(Hash Join)",
    "정적·동적 해싱",
-   "B-Tree 인덱스 비교"
+   "B-Tree 인덱스"
   ],
   "outline": [
    "키 연산으로 버킷 주소 계산",
@@ -10492,7 +10492,7 @@
    "Random Forest",
    "병렬 학습",
    "약 63.2% 표본 포함 확률",
-   "부스팅 비교"
+   "부스팅(Boosting)"
   ],
   "outline": [
    "부트스트랩 표본 모델 결합",
@@ -10907,8 +10907,8 @@
   "keywords_ref": [
    "VotingClassifier(scikit-learn)",
    "확률 보정(Calibration)",
-   "배깅 비교(같은 알고리즘)",
-   "스태킹 비교(메타 모델)"
+   "배깅(Bagging)",
+   "스태킹(Stacking)"
   ],
   "outline": [
    "보팅의 개요",
@@ -11102,7 +11102,7 @@
    "의사값(Pseudo-value)",
    "비모수성(Nonparametric)",
    "소표본(Small Sample)",
-   "부트스트랩(Bootstrap) 비교"
+   "부트스트랩(Bootstrap)"
   ],
   "keywords_ref": [
    "LOOCV(Leave-One-Out Cross-Validation)",
@@ -11180,7 +11180,7 @@
    "의사값(Pseudo-value)",
    "비모수성(Nonparametric)",
    "소표본(Small Sample)",
-   "부트스트랩(Bootstrap) 비교"
+   "부트스트랩(Bootstrap)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -11727,10 +11727,10 @@
    "HBase·Druid"
   ],
   "keywords_ref": [
-   "카파 아키텍처(Kappa) 비교",
    "Hive·Pig",
    "ElephantDB·Voldemort",
-   "Apache Samza"
+   "Apache Samza",
+   "카파 아키텍처(Kappa Architecture)"
   ],
   "outline": [
    "배치·실시간 결합 아키텍처",
@@ -16824,7 +16824,7 @@
    "시맨틱 지식 그래프(Semantic Knowledge Graph)",
    "메타데이터 활성화(Metadata Activation)",
    "추천 엔진(Recommendation Engine)",
-   "데이터 준비 및 제공(Data Preparation and Integration)",
+   "데이터 준비 및 제공(Data Preparation and Delivery)",
    "DataOps",
    "데이터 가상화(Data Virtualization)"
   ],
@@ -16902,7 +16902,7 @@
    "시맨틱 지식 그래프(Semantic Knowledge Graph)",
    "메타데이터 활성화(Metadata Activation)",
    "추천 엔진(Recommendation Engine)",
-   "데이터 준비 및 제공(Data Preparation and Integration)",
+   "데이터 준비 및 제공(Data Preparation and Delivery)",
    "DataOps",
    "데이터 가상화(Data Virtualization)"
   ],
@@ -19238,8 +19238,8 @@
   "keywords_ref": [
    "E. F. Codd 제안",
    "안전한 식(Safe Expression)",
-   "관계대수 비교",
-   "{t | P(t)} 표기"
+   "{t | P(t)} 표기",
+   "관계대수(Relational Algebra)"
   ],
   "outline": [
    "무엇을 검색할지 선언",
@@ -19855,7 +19855,7 @@
    "저장 공간 반환(REUSE·DROP STORAGE)",
    "FK 참조 시 실행 불가",
    "트리거 미발생",
-   "DELETE 비교"
+   "DELETE(DML, 롤백 가능)"
   ],
   "keywords_ref": [
    "TRUNCATE … CASCADE(PostgreSQL)",
@@ -19925,7 +19925,7 @@
    "저장 공간 반환(REUSE·DROP STORAGE)",
    "FK 참조 시 실행 불가",
    "트리거 미발생",
-   "DELETE 비교"
+   "DELETE(DML, 롤백 가능)"
   ],
   "quiz_groups": [],
   "quiz_avoid": []
@@ -20038,9 +20038,9 @@
   "code": "DB_181",
   "domain": "DB",
   "category": "DB > DB 유형",
-  "title": "NewSQL(New Structured Query Language)",
+  "title": "NewSQL",
   "subtitle": "",
-  "name": "NewSQL(New Structured Query Language)",
+  "name": "NewSQL",
   "en": "NewSQL",
   "definition": "RDBMS의 SQL·ACID 트랜잭션을 유지하면서 NoSQL 수준의 수평 확장성과 고성능을 제공하는 분산 관계형 DBMS 계열.",
   "keywords": [
@@ -20065,7 +20065,7 @@
    "Google Spanner(TrueTime)",
    "CockroachDB",
    "VoltDB",
-   "RDBMS·NoSQL·NewSQL 비교"
+   "NoSQL"
   ],
   "outline": [
    "SQL·ACID + 확장성",

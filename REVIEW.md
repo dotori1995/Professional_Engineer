@@ -121,3 +121,28 @@ NW_023_00(HTTP/PDA 문장 섞임), NW_073 제목 MTCP→MPTCP, NW_072 VRRS/HSRP 
 - SV_422 제론테크놀로지: 원문 암기법 '노인모실헬메에'를 키워드 순서대로 풀이해 유지, 초고령 사회 진입(2024년 말) 반영
 - SV_424 디지털서비스 전문계약제도: 시행일(2020.10.1)과 근거(클라우드컴퓨팅법 제20조, 조달사업법 시행령 제16조 카탈로그 계약) 확인, 불명확한 '국가계약법 시행령 제26조·30조' 표기 대신 국가계약법 시행령으로 정리
 - SV_425 다크 팩토리: '인가+기계 협업' 오타 → 인간+기계
+
+## DB(데이터베이스/데이터 분석) 별도 사실·키워드 검토 (2026-11-16)
+대상: DB_1·DB_2 PDF 191토픽(PDF 세그먼트 195개 중 중복 4개 병합: DB_007→DB_034_1, DB_075→DB_068, DB_078→DB_179, DB_164→DB_109). 패치는 `rv.py`로 빌드 시 적용.
+
+### A. 원문 대비 바로잡은 사항(작성 단계)
+- DB_127 CQL: Rstream을 'updated'로 설명한 원문 → 매 시점 릴레이션 전체를 스트림으로 내보내는 Relation stream으로 정정
+- DB_138 JDBC: Type 2 'Native-API, Party-Java' → Partly Java로 정정, 4개 드라이버를 Type 1~4로 정리
+- DB_157 TPC: TPC-R·TPC-W도 이후 폐지됨을 명시(원문은 TPC-A·B·D만 폐지로 기재)
+- DB_172 더블린 코어: 15개 요소 3분류를 표준 분류(콘텐츠 7·지적 재산 4·구현 4, Type은 콘텐츠·Language는 구현)로 정정
+- DB_133 스몰 데이터: 장점 'Efficient(효율적)'는 일반어라 필수 키워드에서 제외
+- DB_154·DB_140~143: 'DA'를 토픽별로 Data Administrator / Data Architecture / Data Architect로 구분(토픽 gloss)
+- 약어 오확장 교정: PHP(→PHP: Hypertext Preprocessor), HCE(→Hierarchical Clustering Explorer), IOPS(→Input/Output Operations Per Second), SPC(DB_183은 Statistical Process Control, DB_157은 Storage Performance Council)
+
+### B. 별도 검토에서 수정(rv.py)
+- DB_034_1 엔티티: 행위 엔티티 영문 'Active Entity' → Action Entity
+- DB_181 NewSQL: 'New Structured Query Language'는 공식 확장 명칭이 아님 → 제목 NewSQL
+- DB_148 데이터 패브릭: 'Data Preparation and Integration' → Gartner 용어 Data Preparation and Delivery
+- 키워드: '~ 비교' 형태의 목차 제목형 키워드 18개(필수 4, 참고 14)를 실제 용어로 교체 (DB_005·013·014·021·025·043_1·063·081_0·088·096·098_01·104·106_02·106_04·112·171·179·181)
+- DB_005: 문장형 참고 키워드 → 'DBMS별 기본 격리 수준'
+
+### C. 확인 결과 이상 없음(주요 확인 항목)
+- 데이터 기본법 제14조(가치평가)·제20조(품질인증), 안전성 확보조치 기준(접근권한 내역 3년·접속기록 1년 이상), Oracle RBO 순위(12 = Sort Merge Join), 부트스트랩 포함 확률 약 63.2%, Kafka 2011년 공개, R 1993년(Ihaka·Gentleman), TPC·SPEC 1988년 설립, 인포노믹스 기본 지표(IVI·BVI·PVI)·재무 지표(CVI·MVI·EVI), Hadoop 3 다중 Standby NameNode·이레이저 코딩
+
+### D. 남은 검사기 참고 경고(오류 아님)
+- pdf_not_located 40건(제목 매칭 휴리스틱), soft_generic 3건(CAP의 가용성, IOT 등 정당한 용어), dropped_component_table 2건(DB_051·DB_131은 구성 항목을 다른 절 제목으로 수록), heading_as_keyword 1건(DB_034_1 '업무 필요성'은 엔티티 자격요건 용어)
