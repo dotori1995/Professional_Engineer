@@ -22556,6 +22556,598 @@
    "ERP": "Enterprise Resource Planning"
   }
  },
+ "SE_157": {
+  "title": "통합 접근 관리(EAM, Extranet Access Management)",
+  "category": "SE > 기업 접근 관리 보안 > EAM",
+  "definition": "내부 직원·협력사·고객 등 다양한 사용자가 여러 시스템에 접근할 때 SSO 기반 통합 인증에 역할·정책 기반 권한 관리와 감사를 더해 접근을 통합 통제하는 솔루션(EAM = SSO + 통합 권한 관리)",
+  "keywords": [
+   "구성: 사용자(Clients) · 인증(SSO) · 권한 관리(Authorization) · 대상 시스템(Legacy)",
+   "주요 기능: 인증 · 권한 관리 · 사용자 관리·감사",
+   "권한 기술: ACL · RBAC · PMI · LDAP"
+  ],
+  "sections": [
+   {
+    "title": "구성",
+    "subsections": [
+     {
+      "title": "사용자",
+      "items": [
+       "내부 직원·협력사·고객에게 웹 기반 서비스 제공"
+      ]
+     },
+     {
+      "title": "인증",
+      "items": [
+       "ID·비밀번호 또는 PKI 인증서 기반 SSO"
+      ]
+     },
+     {
+      "title": "권한",
+      "items": [
+       "ACL·PMI 기반, 사용자·서비스·역할별 접근 제어"
+      ]
+     },
+     {
+      "title": "대상",
+      "items": [
+       "그룹웨어·ERP·KMS 등 기간 시스템"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 기능",
+    "subsections": [
+     {
+      "title": "인증",
+      "items": [
+       "여러 서비스의 통합 인증"
+      ]
+     },
+     {
+      "title": "권한 관리",
+      "items": [
+       "사용자-역할, 역할-자원 매핑과 정책 관리"
+      ]
+     },
+     {
+      "title": "관리·감사",
+      "items": [
+       "접근 정책 설정, 로그인·세션·이용 현황 감사"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한계와 보완",
+    "subsections": [
+     {
+      "title": "계정 이원화",
+      "items": [
+       "통합 DB와 별개로 앱 계정 존재"
+      ]
+     },
+     {
+      "title": "관리 부담",
+      "items": [
+       "계정·권한 수작업 관리"
+      ]
+     },
+     {
+      "title": "보완",
+      "items": [
+       "인사 변동에 따라 계정·권한을 자동 처리하는 IAM으로 확장"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "구성",
+   "- 사용자",
+   "- 인증",
+   "- 권한",
+   "- 대상",
+   "주요 기능",
+   "- 인증",
+   "- 권한 관리",
+   "- 관리·감사",
+   "한계와 보완",
+   "- 계정 이원화",
+   "- 관리 부담",
+   "- 보완"
+  ],
+  "name": "통합 접근 관리(EAM, Extranet Access Management)",
+  "en": "Extranet Access Management",
+  "keywords_must": [
+   "사용자(Clients)",
+   "인증(SSO)",
+   "권한 관리(Authorization)",
+   "대상 시스템(Legacy)",
+   "인증",
+   "권한 관리",
+   "사용자 관리·감사",
+   "ACL",
+   "RBAC",
+   "PMI",
+   "LDAP"
+  ],
+  "keywords_ref": [
+   "Enterprise Access Management로도 부름",
+   "진화: SSO(통합 인증) → EAM(통합 권한) → IAM(계정 자동 관리)",
+   "사용자-역할 표와 역할-자원 표, 정책으로 권한 결정",
+   "한계: 앱 자체 계정 별도 유지, EAM 미연동 앱 별도 개발",
+   "EAI·EIP와 통합",
+   "모바일 사용자 통합 인증"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "사용자(Clients)",
+   "인증(SSO)",
+   "권한 관리(Authorization)",
+   "대상 시스템(Legacy)",
+   "인증",
+   "권한 관리",
+   "사용자 관리·감사",
+   "ACL",
+   "RBAC",
+   "PMI",
+   "LDAP"
+  ],
+  "gloss": {
+   "ACL": "Access Control List",
+   "RBAC": "Role-Based Access Control",
+   "PMI": "Privilege Management Infrastructure",
+   "LDAP": "Lightweight Directory Access Protocol",
+   "SSO": "Single Sign-On",
+   "IAM": "Identity and Access Management",
+   "EAI": "Enterprise Application Integration",
+   "EIP": "Enterprise Information Portal",
+   "ERP": "Enterprise Resource Planning",
+   "KMS": "Knowledge Management System",
+   "PKI": "Public Key Infrastructure"
+  }
+ },
+ "SE_158": {
+  "title": "신원·접근 관리(IAM, Identity and Access Management)",
+  "category": "SE > 기업 접근 관리 보안 > IAM",
+  "definition": "조직의 보안 정책에 따라 사용자 계정의 생성·변경·삭제와 접근 권한 부여를 인사 정보와 연동해 자동으로 처리하고, 인증·권한·감사를 통합 관리하는 체계(IAM = EAM + 프로비저닝)",
+  "keywords": [
+   "3A: 인증(Authentication) · 권한(Authorization) · 관리(Administration)",
+   "핵심 기능: 계정 프로비저닝 · 워크플로 · 디프로비저닝",
+   "계정 수명 주기: 입사 · 직무 변경 · 퇴사"
+  ],
+  "sections": [
+   {
+    "title": "4대 영역",
+    "subsections": [
+     {
+      "title": "인증",
+      "items": [
+       "SSO·PKI·스마트카드·생체 등 인증 수단 중앙 결정"
+      ]
+     },
+     {
+      "title": "권한",
+      "items": [
+       "기업 정책을 유연하게 반영, 프로필 기반 위임"
+      ]
+     },
+     {
+      "title": "관리",
+      "items": [
+       "통합 로깅·감사 보고"
+      ]
+     },
+     {
+      "title": "프로비저닝",
+      "items": [
+       "인사 이동·직무 변경 시 계정·권한 자동 변경"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "주요 기능",
+    "subsections": [
+     {
+      "title": "계정 프로비저닝",
+      "items": [
+       "신규 사용자 등록과 역할 부여, 변경 정책 반영"
+      ]
+     },
+     {
+      "title": "워크플로",
+      "items": [
+       "신청·승인·거부·통보 절차 정의와 진행"
+      ]
+     },
+     {
+      "title": "디프로비저닝",
+      "items": [
+       "퇴사·이동 시 권한 즉시 회수"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "도입 고려",
+    "subsections": [
+     {
+      "title": "연동",
+      "items": [
+       "기존 시스템 동작 방식을 존중하며 최소 비용 통합"
+      ]
+     },
+     {
+      "title": "디렉터리",
+      "items": [
+       "통합 DB와 스키마로 인증·동기화 문제 해결"
+      ]
+     },
+     {
+      "title": "발전",
+      "items": [
+       "연합 신원 관리, 클라우드 IDaaS, 신원 거버넌스"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "4대 영역",
+   "- 인증",
+   "- 권한",
+   "- 관리",
+   "- 프로비저닝",
+   "주요 기능",
+   "- 계정 프로비저닝",
+   "- 워크플로",
+   "- 디프로비저닝",
+   "도입 고려",
+   "- 연동",
+   "- 디렉터리",
+   "- 발전"
+  ],
+  "name": "신원·접근 관리(IAM, Identity and Access Management)",
+  "en": "Identity and Access Management",
+  "keywords_must": [
+   "인증(Authentication)",
+   "권한(Authorization)",
+   "관리(Administration)",
+   "계정 프로비저닝",
+   "워크플로",
+   "디프로비저닝",
+   "입사",
+   "직무 변경",
+   "퇴사"
+  ],
+  "keywords_ref": [
+   "등장 배경: 인사 변화에 따른 권한 변경, 관리 비용 증가",
+   "통합 디렉터리·스키마로 동기화",
+   "연합 신원 관리(FIM): 도메인 간 SSO·속성 공유",
+   "클라우드형 IDaaS",
+   "특권 계정 관리(PAM)·신원 거버넌스(IGA)",
+   "권한 검토(Access Review)·최소 권한",
+   "퇴사자 계정 방치 방지"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "인증(Authentication)",
+   "권한(Authorization)",
+   "관리(Administration)",
+   "계정 프로비저닝",
+   "워크플로",
+   "디프로비저닝",
+   "입사",
+   "직무 변경",
+   "퇴사"
+  ],
+  "gloss": {
+   "FIM": "Federated Identity Management",
+   "IDaaS": "Identity as a Service",
+   "PAM": "Privileged Access Management",
+   "IGA": "Identity Governance and Administration",
+   "EAM": "Extranet Access Management",
+   "PKI": "Public Key Infrastructure",
+   "SSO": "Single Sign-On"
+  }
+ },
+ "SE_159": {
+  "title": "커버로스(Kerberos)",
+  "category": "SE > 인증 > 커버로스(Kerberos)",
+  "definition": "MIT가 개발한 대칭키 암호 기반의 티켓 방식 네트워크 인증 프로토콜로, 키 분배 센터(KDC)가 발급한 티켓으로 사용자와 서비스가 비밀번호를 네트워크에 보내지 않고 상호 인증하며 SSO를 제공한다",
+  "keywords": [
+   "구성: 키 분배 센터(KDC) · 인증 서버(AS) · 티켓 발급 서버(TGS) · 서비스 서버",
+   "티켓: 티켓 발급 티켓(TGT) · 서비스 티켓 · 세션 키",
+   "인증 3단계: AS 교환 · TGS 교환 · 클라이언트-서버 교환"
+  ],
+  "sections": [
+   {
+    "title": "인증 절차",
+    "subsections": [
+     {
+      "title": "1 AS 요청·응답",
+      "items": [
+       "사용자가 AS에 인증 요청, 사용자 키로 암호화된 TGT와 세션 키 수신"
+      ]
+     },
+     {
+      "title": "2 TGS 요청·응답",
+      "items": [
+       "TGT와 인증자를 제시해 서비스 티켓 발급"
+      ]
+     },
+     {
+      "title": "3 서비스 요청",
+      "items": [
+       "서비스 티켓과 인증자로 서버 접근, 선택적 상호 인증"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 특성",
+    "subsections": [
+     {
+      "title": "비밀번호 비전송",
+      "items": [
+       "사용자 키는 로컬에서만 사용"
+      ]
+     },
+     {
+      "title": "재전송 방지",
+      "items": [
+       "타임스탬프 인증자, 티켓 유효 시간"
+      ]
+     },
+     {
+      "title": "상호 인증",
+      "items": [
+       "서버도 세션 키로 신원 증명"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "한계와 공격",
+    "subsections": [
+     {
+      "title": "가용성",
+      "items": [
+       "KDC 장애 시 전체 인증 불가 → 복제 운영"
+      ]
+     },
+     {
+      "title": "시간",
+      "items": [
+       "클라이언트·서버 시계 오차 허용 범위 필요"
+      ]
+     },
+     {
+      "title": "공격",
+      "items": [
+       "TGT 위조(골든 티켓), 서비스 계정 해시 크래킹(커버로스팅)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "인증 절차",
+   "- 1 AS 요청·응답",
+   "- 2 TGS 요청·응답",
+   "- 3 서비스 요청",
+   "보안 특성",
+   "- 비밀번호 비전송",
+   "- 재전송 방지",
+   "- 상호 인증",
+   "한계와 공격",
+   "- 가용성",
+   "- 시간",
+   "- 공격"
+  ],
+  "name": "커버로스(Kerberos)",
+  "en": "Kerberos",
+  "keywords_must": [
+   "키 분배 센터(KDC)",
+   "인증 서버(AS)",
+   "티켓 발급 서버(TGS)",
+   "서비스 서버",
+   "티켓 발급 티켓(TGT)",
+   "서비스 티켓",
+   "세션 키",
+   "AS 교환",
+   "TGS 교환",
+   "클라이언트-서버 교환"
+  ],
+  "keywords_ref": [
+   "한계: KDC 단일 장애점·시간 동기화 필요·비밀번호 추측 공격",
+   "버전 4는 DES, 버전 5(RFC 4120)는 AES 등 지원·위임 가능",
+   "타임스탬프 인증자로 재전송 방지",
+   "렐름(Realm)",
+   "윈도 액티브 디렉터리 기본 인증",
+   "골든 티켓·실버 티켓·커버로스팅 공격"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "키 분배 센터(KDC)",
+   "인증 서버(AS)",
+   "티켓 발급 서버(TGS)",
+   "서비스 서버",
+   "티켓 발급 티켓(TGT)",
+   "서비스 티켓",
+   "세션 키",
+   "AS 교환",
+   "TGS 교환",
+   "클라이언트-서버 교환"
+  ],
+  "gloss": {
+   "KDC": "Key Distribution Center",
+   "AS": "Authentication Server",
+   "TGS": "Ticket Granting Server",
+   "TGT": "Ticket Granting Ticket",
+   "DES": "Data Encryption Standard",
+   "AES": "Advanced Encryption Standard"
+  }
+ },
+ "SE_160": {
+  "title": "권한 관리 기반 구조(PMI, Privilege Management Infrastructure)",
+  "category": "SE > 인증 > PMI",
+  "definition": "공개키 인증서가 신원만 보증하는 PKI의 한계를 보완해, 사용자의 직위·역할·권한 같은 속성을 속성 인증서(AC)로 발급·위임·검증해 권한 자원과 소유자의 관계를 신뢰기관이 보증하는 구조",
+  "keywords": [
+   "구성: 속성 인증서(AC) · 권한 근원(SOA) · 속성 기관(AA) · 권한 소유자 · 권한 검증자",
+   "모델: 기본 모델 · 권한 위임 모델 · 역할 모델 · 제어 모델",
+   "속성 관리 방식: X.509 확장 필드 · 별도 속성 인증서"
+  ],
+  "sections": [
+   {
+    "title": "처리 과정",
+    "subsections": [
+     {
+      "title": "1 발급",
+      "items": [
+       "SOA가 권한 소유자에게 속성 인증서 발급"
+      ]
+     },
+     {
+      "title": "2 위임",
+      "items": [
+       "허가받은 경우 AA를 통해 다른 개체에 권한 위임"
+      ]
+     },
+     {
+      "title": "3 주장",
+      "items": [
+       "소유자가 특정 환경에서 권한 제시"
+      ]
+     },
+     {
+      "title": "4 검증",
+      "items": [
+       "검증자가 정책에 비춰 권한 적절성 판단"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "모델",
+    "subsections": [
+     {
+      "title": "기본",
+      "items": [
+       "SOA가 소유자에게 직접 발급"
+      ]
+     },
+     {
+      "title": "권한 위임",
+      "items": [
+       "SOA가 AA를 지정하고 재위임 허용"
+      ]
+     },
+     {
+      "title": "역할",
+      "items": [
+       "권한 묶음을 역할로 정의해 부여, 속성 변경 시 역할만 수정"
+      ]
+     },
+     {
+      "title": "제어",
+      "items": [
+       "소유자·검증자·대상·권한 정책·환경 변수로 접근 결정"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "속성 관리와 PKI 비교",
+    "subsections": [
+     {
+      "title": "확장 필드",
+      "items": [
+       "공개키 인증서에 속성 저장, 속성 변경 시 인증서 재발급"
+      ]
+     },
+     {
+      "title": "별도 인증서",
+      "items": [
+       "신원은 공개키 인증서, 속성은 속성 인증서로 분리"
+      ]
+     },
+     {
+      "title": "PKI와 차이",
+      "items": [
+       "신원은 잘 안 바뀌고 권한은 자주 바뀌어 수명 주기 분리"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "처리 과정",
+   "- 1 발급",
+   "- 2 위임",
+   "- 3 주장",
+   "- 4 검증",
+   "모델",
+   "- 기본",
+   "- 권한 위임",
+   "- 역할",
+   "- 제어",
+   "속성 관리와 PKI 비교",
+   "- 확장 필드",
+   "- 별도 인증서",
+   "- PKI와 차이"
+  ],
+  "name": "권한 관리 기반 구조(PMI, Privilege Management Infrastructure)",
+  "en": "Privilege Management Infrastructure",
+  "keywords_must": [
+   "속성 인증서(AC)",
+   "권한 근원(SOA)",
+   "속성 기관(AA)",
+   "권한 소유자",
+   "권한 검증자",
+   "기본 모델",
+   "권한 위임 모델",
+   "역할 모델",
+   "제어 모델",
+   "X.509 확장 필드",
+   "별도 속성 인증서"
+  ],
+  "keywords_ref": [
+   "ITU-T X.509 속성 인증서 표준",
+   "처리 과정: 발급 → 위임 → 주장 → 검증",
+   "PKI 비교: PKI는 신원·장기, PMI는 권한·단기",
+   "공개키 인증서와 연결해 신원 확인",
+   "EAM 권한 관리 기반"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "속성 인증서(AC)",
+   "권한 근원(SOA)",
+   "속성 기관(AA)",
+   "권한 소유자",
+   "권한 검증자",
+   "기본 모델",
+   "권한 위임 모델",
+   "역할 모델",
+   "제어 모델",
+   "X.509 확장 필드",
+   "별도 속성 인증서"
+  ],
+  "gloss": {
+   "AC": "Attribute Certificate",
+   "SOA": "Source of Authority",
+   "AA": "Attribute Authority",
+   "PKI": "Public Key Infrastructure",
+   "EAM": "Extranet Access Management",
+   "ITU-T": "International Telecommunication Union Telecommunication Standardization Sector"
+  }
+ },
  "SE_172": {
   "title": "디지털 콘텐츠 보호 기술(Digital Content Protection Technologies)",
   "category": "SE > 컨텐츠 보안 > 컨텐츠 보안",
