@@ -19313,6 +19313,332 @@
   }
  },
  {
+  "id": "SE_125",
+  "code": "SE_125",
+  "title": "XML 보안(XML Security)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 취약점 및 대응 > XML 보안",
+  "definition": "XML 문서와 XML 기반 웹 서비스 메시지에 서명·암호화·키 관리·인증 정보 교환·접근 정책을 적용해 무결성·기밀성·인증·부인 방지를 제공하는 W3C·OASIS 보안 표준군",
+  "keywords": [
+   "구성 표준: XML 서명 · XML 암호화 · XKMS · SAML · XACML",
+   "보안 서비스: 무결성·인증(서명) · 기밀성(암호화) · 부인 방지(키 관리) · 접근 통제(XACML)",
+   "적용 분야: 웹 서비스(SOAP·WSDL·UDDI) · ebXML · 싱글 사인온(SSO)"
+  ],
+  "sections": [
+   {
+    "title": "구성 표준",
+    "subsections": [
+     {
+      "title": "XML 서명",
+      "items": [
+       "문서 전체나 일부에 대한 디지털 서명, 인증·무결성"
+      ]
+     },
+     {
+      "title": "XML 암호화",
+      "items": [
+       "문서 전체나 특정 요소만 암복호화, 기밀성"
+      ]
+     },
+     {
+      "title": "XKMS",
+      "items": [
+       "공개키 등록·검증을 웹 서비스 메시지로 위임, PKI 복잡성 감소"
+      ]
+     },
+     {
+      "title": "SAML",
+      "items": [
+       "인증·속성·인가 정보를 주고받는 형식, 도메인 간 SSO"
+      ]
+     },
+     {
+      "title": "XACML",
+      "items": [
+       "접근 정책과 요청·응답을 XML로 표현"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기존 보안 기술 대응",
+    "subsections": [
+     {
+      "title": "기반 구조",
+      "items": [
+       "PKI → XKMS"
+      ]
+     },
+     {
+      "title": "서명·암호",
+      "items": [
+       "전자서명·대칭·공개키 → XML 서명·XML 암호화"
+      ]
+     },
+     {
+      "title": "접근 통제",
+      "items": [
+       "MAC·DAC·RBAC → XACML"
+      ]
+     },
+     {
+      "title": "무결성",
+      "items": [
+       "해시 → 정규화 후 해시"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "적용과 위협",
+    "subsections": [
+     {
+      "title": "웹 서비스",
+      "items": [
+       "SOAP 메시지 서명·암호화(WS-Security), UDDI 접근 통제"
+      ]
+     },
+     {
+      "title": "ebXML",
+      "items": [
+       "레지스트리 접근 통제, 문서 서명·암호화"
+      ]
+     },
+     {
+      "title": "위협",
+      "items": [
+       "외부 개체 참조, 서명 래핑, 대용량 XML 서비스 거부 → 파서 설정, 스키마 검증"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "구성 표준",
+   "- XML 서명",
+   "- XML 암호화",
+   "- XKMS",
+   "- SAML",
+   "- XACML",
+   "기존 보안 기술 대응",
+   "- 기반 구조",
+   "- 서명·암호",
+   "- 접근 통제",
+   "- 무결성",
+   "적용과 위협",
+   "- 웹 서비스",
+   "- ebXML",
+   "- 위협"
+  ],
+  "name": "XML 보안(XML Security)",
+  "en": "XML Security",
+  "keywords_must": [
+   "XML 서명",
+   "XML 암호화",
+   "XKMS",
+   "SAML",
+   "XACML",
+   "무결성·인증(서명)",
+   "기밀성(암호화)",
+   "부인 방지(키 관리)",
+   "접근 통제(XACML)",
+   "웹 서비스(SOAP·WSDL·UDDI)",
+   "ebXML",
+   "싱글 사인온(SSO)"
+  ],
+  "keywords_ref": [
+   "부분 서명·부분 암호화 가능",
+   "정규화(Canonicalization) 후 해시",
+   "기존 기술 대응: PKI→XKMS, 전자서명→XML 서명, MAC·DAC·RBAC→XACML, 해시→정규화+해시",
+   "WS-Security(OASIS)",
+   "XML 외부 개체(XXE)·XML 서명 래핑 공격",
+   "JSON 기반 JWT·JWS로 확장"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "XML 서명",
+   "XML 암호화",
+   "XKMS",
+   "SAML",
+   "XACML",
+   "무결성·인증(서명)",
+   "기밀성(암호화)",
+   "부인 방지(키 관리)",
+   "접근 통제(XACML)",
+   "웹 서비스(SOAP·WSDL·UDDI)",
+   "ebXML",
+   "싱글 사인온(SSO)"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "MAC": "Mandatory Access Control",
+   "DAC": "Discretionary Access Control",
+   "RBAC": "Role-Based Access Control",
+   "XKMS": "XML Key Management Specification",
+   "SAML": "Security Assertion Markup Language",
+   "XACML": "eXtensible Access Control Markup Language",
+   "SOAP": "Simple Object Access Protocol",
+   "WSDL": "Web Services Description Language",
+   "UDDI": "Universal Description, Discovery and Integration",
+   "ebXML": "electronic business XML",
+   "XXE": "XML External Entity",
+   "JWT": "JSON Web Token",
+   "JWS": "JSON Web Signature",
+   "SSO": "Single Sign-On",
+   "PKI": "Public Key Infrastructure"
+  }
+ },
+ {
+  "id": "SE_126",
+  "code": "SE_126",
+  "title": "TCP 래퍼(TCP Wrapper)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 보안 취약점 및 대응",
+  "definition": "유닉스 계열에서 inetd가 실행하는 네트워크 서비스 앞단에 tcpd 데몬을 두어, 접속 요청 호스트와 서비스를 hosts.allow·hosts.deny 규칙으로 검사해 허용·거부하고 로그를 남기는 호스트 기반 접근 통제 도구",
+  "keywords": [
+   "구성: tcpd 데몬 · inetd(xinetd) · /etc/hosts.allow · /etc/hosts.deny",
+   "판단 순서: hosts.allow 일치 시 허용 · hosts.deny 일치 시 거부 · 둘 다 없으면 허용",
+   "기능: 호스트 기반 접근 통제 · 접속 로깅"
+  ],
+  "sections": [
+   {
+    "title": "동작 과정",
+    "subsections": [
+     {
+      "title": "1 접속 요청",
+      "items": [
+       "클라이언트가 서비스 포트로 연결"
+      ]
+     },
+     {
+      "title": "2 위임",
+      "items": [
+       "inetd가 실제 데몬 대신 tcpd 실행"
+      ]
+     },
+     {
+      "title": "3 검사",
+      "items": [
+       "클라이언트 주소·서비스명을 규칙과 대조, syslog 기록"
+      ]
+     },
+     {
+      "title": "4 연결",
+      "items": [
+       "허용되면 실제 서비스 데몬 실행, 아니면 차단"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "설정",
+    "subsections": [
+     {
+      "title": "허용 파일",
+      "items": [
+       "접근을 허용할 서비스와 호스트 정의"
+      ]
+     },
+     {
+      "title": "거부 파일",
+      "items": [
+       "허용 파일에 없을 때 거부 규칙 확인"
+      ]
+     },
+     {
+      "title": "안전 정책",
+      "items": [
+       "거부 파일에 전체 거부, 허용 파일에 필요한 것만 명시"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "보안 관점",
+    "subsections": [
+     {
+      "title": "강점",
+      "items": [
+       "데몬 수정 없이 접근 통제·로그 추가"
+      ]
+     },
+     {
+      "title": "적용 범위",
+      "items": [
+       "inetd 기반 서비스와 libwrap 연동 데몬에 한정"
+      ]
+     },
+     {
+      "title": "보완",
+      "items": [
+       "커널 패킷 필터, 암호화 서비스(SSH)로 대체"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "동작 과정",
+   "- 1 접속 요청",
+   "- 2 위임",
+   "- 3 검사",
+   "- 4 연결",
+   "설정",
+   "- 허용 파일",
+   "- 거부 파일",
+   "- 안전 정책",
+   "보안 관점",
+   "- 강점",
+   "- 적용 범위",
+   "- 보완"
+  ],
+  "name": "TCP 래퍼(TCP Wrapper)",
+  "en": "TCP Wrapper",
+  "keywords_must": [
+   "tcpd 데몬",
+   "inetd(xinetd)",
+   "/etc/hosts.allow",
+   "/etc/hosts.deny",
+   "hosts.allow 일치 시 허용",
+   "hosts.deny 일치 시 거부",
+   "둘 다 없으면 허용",
+   "호스트 기반 접근 통제",
+   "접속 로깅"
+  ],
+  "keywords_ref": [
+   "보호 대상: telnet·ftp·finger·rlogin·rsh",
+   "libwrap 라이브러리 연동 시 독립 실행 데몬(sshd)도 적용",
+   "기본 거부 정책: hosts.deny에 ALL:ALL",
+   "standalone 데몬은 직접 보호 안 됨",
+   "패킷 필터링 방화벽(iptables·firewalld)과 보완",
+   "최신 배포판에서 지원 축소"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "tcpd 데몬",
+   "inetd(xinetd)",
+   "/etc/hosts.allow",
+   "/etc/hosts.deny",
+   "hosts.allow 일치 시 허용",
+   "hosts.deny 일치 시 거부",
+   "둘 다 없으면 허용",
+   "호스트 기반 접근 통제",
+   "접속 로깅"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "inetd": "Internet Service Daemon"
+  }
+ },
+ {
   "id": "SE_127",
   "code": "SE_127",
   "title": "허니팟(Honeypot)",
@@ -19454,6 +19780,178 @@
   "quiz_groups": [
    "se"
   ]
+ },
+ {
+  "id": "SE_128",
+  "code": "SE_128",
+  "title": "방화벽(Firewall)",
+  "subtitle": "",
+  "domain": "SE",
+  "category": "SE > 기업 보안 시스템(기술적 보안) > Firewall",
+  "definition": "내부망과 외부망 사이에 위치해 보안 정책에 따라 트래픽을 허용·차단하고 외부 침입과 내부 정보 유출을 막는 하드웨어·소프트웨어 보안 시스템",
+  "keywords": [
+   "주요 기능: 접근 통제(패킷 필터링) · 사용자 인증 · 감사·로그 · 프록시 · 주소 변환(NAT)",
+   "구축 형태: 스크리닝 라우터 · 베스천 호스트 · 듀얼 홈드 게이트웨이 · 스크린드 호스트 게이트웨이 · 스크린드 서브넷"
+  ],
+  "sections": [
+   {
+    "title": "주요 기능",
+    "subsections": [
+     {
+      "title": "접근 통제",
+      "items": [
+       "송수신 IP·포트·프로토콜로 패킷 허용·차단"
+      ]
+     },
+     {
+      "title": "인증·감사",
+      "items": [
+       "사용자 신원 확인, 접속 기록·통계, 유출 경로 추적"
+      ]
+     },
+     {
+      "title": "프록시",
+      "items": [
+       "응용 계층 대리 연결로 내부 주소 은닉"
+      ]
+     },
+     {
+      "title": "주소 변환",
+      "items": [
+       "사설 주소와 공인 주소 매핑"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구축 형태",
+    "subsections": [
+     {
+      "title": "스크리닝 라우터",
+      "items": [
+       "라우터에 필터링 탑재, 저비용이나 로그·인증 약함"
+      ]
+     },
+     {
+      "title": "베스천 호스트",
+      "items": [
+       "강화된 호스트에서 인증·접근 통제·로그"
+      ]
+     },
+     {
+      "title": "듀얼 홈드",
+      "items": [
+       "네트워크 카드 2개로 내외부 완전 분리"
+      ]
+     },
+     {
+      "title": "스크린드 호스트",
+      "items": [
+       "스크리닝 라우터 + 베스천 호스트 이중 방어"
+      ]
+     },
+     {
+      "title": "스크린드 서브넷",
+      "items": [
+       "두 라우터 사이 DMZ에 베스천 호스트 배치"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "차세대 진화(NGFW)",
+    "subsections": [
+     {
+      "title": "애플리케이션 식별",
+      "items": [
+       "포트·암호화·회피 기법과 무관하게 앱 단위 정책"
+      ]
+     },
+     {
+      "title": "사용자 식별",
+      "items": [
+       "디렉터리 연동으로 사용자·그룹 기반 정책과 가시성"
+      ]
+     },
+     {
+      "title": "위협 차단",
+      "items": [
+       "침입 방지·악성코드·위험 URL 통합 차단"
+      ]
+     },
+     {
+      "title": "성능",
+      "items": [
+       "전용 하드웨어로 단일 장비 멀티 기가비트, 낮은 총소유비용"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "주요 기능",
+   "- 접근 통제",
+   "- 인증·감사",
+   "- 프록시",
+   "- 주소 변환",
+   "구축 형태",
+   "- 스크리닝 라우터",
+   "- 베스천 호스트",
+   "- 듀얼 홈드",
+   "- 스크린드 호스트",
+   "- 스크린드 서브넷",
+   "차세대 진화(NGFW)",
+   "- 애플리케이션 식별",
+   "- 사용자 식별",
+   "- 위협 차단",
+   "- 성능"
+  ],
+  "name": "방화벽(Firewall)",
+  "en": "Firewall",
+  "keywords_must": [
+   "접근 통제(패킷 필터링)",
+   "사용자 인증",
+   "감사·로그",
+   "프록시",
+   "주소 변환(NAT)",
+   "스크리닝 라우터",
+   "베스천 호스트",
+   "듀얼 홈드 게이트웨이",
+   "스크린드 호스트 게이트웨이",
+   "스크린드 서브넷"
+  ],
+  "keywords_ref": [
+   "차세대 방화벽: 애플리케이션 식별·사용자 식별·실시간 위협 차단",
+   "방식 발전: 패킷 필터링 → 상태 기반 검사(Stateful Inspection) → 애플리케이션 게이트웨이·회선 게이트웨이 → 차세대 방화벽(NGFW)",
+   "스크린드 서브넷은 DMZ 구성으로 가장 안전",
+   "트래픽 암호화(VPN) 기능",
+   "기본 거부 정책",
+   "내부자 공격·우회 경로·암호화 트래픽 검사에 한계",
+   "단일 장비 멀티 기가비트 처리"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "접근 통제(패킷 필터링)",
+   "사용자 인증",
+   "감사·로그",
+   "프록시",
+   "주소 변환(NAT)",
+   "스크리닝 라우터",
+   "베스천 호스트",
+   "듀얼 홈드 게이트웨이",
+   "스크린드 호스트 게이트웨이",
+   "스크린드 서브넷"
+  ],
+  "quiz_groups": [
+   "se"
+  ],
+  "gloss": {
+   "NAT": "Network Address Translation",
+   "NGFW": "Next-Generation Firewall",
+   "DMZ": "Demilitarized Zone",
+   "VPN": "Virtual Private Network"
+  }
  },
  {
   "id": "SE_129",
