@@ -4918,7 +4918,7 @@
   "keywords": [
    "핵심: 서비스 전략(Service Strategy) · 서비스 설계(Service Design) · 서비스 전환(Service Transition) · 서비스 운영(Service Operation)",
    "필수: 지속적 서비스 개선(CSI) · 서비스 수명주기 · 26개 프로세스 · CMDB",
-   "참고: ITIL v2(서비스 지원·제공) · 인시던트·문제 관리 · 변경·릴리스 관리 · 서비스 데스크 · ITIL 4 · 두음 전설전운지(전략·설계·전환·운영·지속적 개선) · 서비스 지식 관리 시스템(SKMS)"
+   "참고: ITIL v2(서비스 지원·제공) · 인시던트·문제 관리 · 변경·릴리스 관리 · 서비스 데스크 · ITIL 4 · 서비스 지식 관리 시스템(SKMS)"
   ],
   "sections": [
    {
@@ -5016,7 +5016,6 @@
    "변경·릴리스 관리",
    "서비스 데스크",
    "ITIL 4",
-   "두음 전설전운지(전략·설계·전환·운영·지속적 개선)",
    "서비스 지식 관리 시스템(SKMS)"
   ],
   "curated": true,
@@ -5051,7 +5050,7 @@
   "keywords": [
    "핵심: 서비스 가치 체계(SVS) · 서비스 가치 사슬(SVC) · 4차원 모델(Four Dimensions) · 34개 관행(Practices)",
    "필수: 7대 지도 원칙(Guiding Principles) · 가치 공동 창출(Value Co-creation) · 지속적 개선(Continual Improvement)",
-   "참고: 관행 3분류(일반 관리 14·서비스 관리 17·기술 관리 3) · v3 수명주기(전략·설계·전환·운영·CSI) · 애자일·데브옵스·린 연계 · 가치 흐름(Value Stream) · PESTLE 외부 요인"
+   "참고: 관행 3분류(일반 관리 14·서비스 관리 17·기술 관리 3) · v3 수명주기(전략·설계·전환·운영·CSI) · 애자일·데브옵스·린 연계 · 가치 흐름(Value Stream) · PESTLE 외부 요인 · ITIL (Version 5) 2026.2 출시(디지털 제품·AI 거버넌스), ITIL 4는 2027년 말 종료 예정"
   ],
   "sections": [
    {
@@ -5145,7 +5144,8 @@
    "v3 수명주기(전략·설계·전환·운영·CSI)",
    "애자일·데브옵스·린 연계",
    "가치 흐름(Value Stream)",
-   "PESTLE 외부 요인"
+   "PESTLE 외부 요인",
+   "ITIL (Version 5) 2026.2 출시(디지털 제품·AI 거버넌스), ITIL 4는 2027년 말 종료 예정"
   ],
   "curated": true,
   "quiz_terms": [

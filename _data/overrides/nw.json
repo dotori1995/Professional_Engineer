@@ -528,7 +528,11 @@
       "재난·군 통신"
     ],
     "title": "애드혹 네트워크(Ad hoc Network)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "AP": "Access Point",
+      "DSR": "Dynamic Source Routing"
+    }
   },
   "NW_026": {
     "title": "DNS(Domain Name System)",
@@ -890,7 +894,11 @@
       "UDP 기반"
     ],
     "title": "멀티캐스트(Multicast)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "PIM": "Protocol Independent Multicast",
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_041": {
     "keywords": [
@@ -1311,7 +1319,10 @@
       "NAT와 함께 IPv4 수명 연장"
     ],
     "title": "CIDR(Classless Inter-Domain Routing)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "ISP": "Internet Service Provider"
+    }
   },
   "NW_056": {
     "keywords": [
@@ -1507,7 +1518,10 @@
       "IPTV 채널 전환"
     ],
     "title": "IGMP(Internet Group Management Protocol)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "PIM": "Protocol Independent Multicast"
+    }
   },
   "NW_069": {
     "title": "DHCP(Dynamic Host Configuration Protocol)",
@@ -1626,7 +1640,10 @@
       "APIPA(169.254/16)",
       "IP 풀(Scope)"
     ],
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_075": {
     "keywords": [
@@ -1945,7 +1962,8 @@
     "title": "WAVE(Wireless Access in Vehicular Environments)",
     "reviewed": true,
     "gloss": {
-      "BSS": "Basic Service Set"
+      "BSS": "Basic Service Set",
+      "MAC": "Medium Access Control"
     }
   },
   "NW_088": {
@@ -2068,6 +2086,8 @@
     "title": "무선랜(Wireless LAN)",
     "reviewed": true,
     "gloss": {
+      "AP": "Access Point",
+      "ESS": "Extended Service Set",
       "BSS": "Basic Service Set"
     }
   },
@@ -2179,6 +2199,8 @@
     "title": "실내외 위치 측위 기술(Indoor/Outdoor Positioning)",
     "reviewed": true,
     "gloss": {
+      "AP": "Access Point",
+      "GPS": "Global Positioning System",
       "IPS": "Indoor Positioning System"
     }
   },
@@ -2751,6 +2773,7 @@
     "title": "센서 네트워크 라우팅(Sensor Network Routing)",
     "reviewed": true,
     "gloss": {
+      "GPS": "Global Positioning System",
       "RPL": "IPv6 Routing Protocol for Low-Power and Lossy Networks"
     }
   },
@@ -3415,7 +3438,10 @@
       "PIR(Peak Information Rate)"
     ],
     "title": "트래픽 폴리싱(Traffic Policing)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "ISP": "Internet Service Provider"
+    }
   },
   "NW_135": {
     "keywords": [
@@ -3726,7 +3752,11 @@
       "MPLS EXP·TC 매핑"
     ],
     "title": "DiffServ(Differentiated Services, 차등 서비스)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "ISP": "Internet Service Provider",
+      "EF": "Expedited Forwarding"
+    }
   },
   "NW_141": {
     "definition": "IP/MPLS는 IP 라우팅 제어 평면과 MPLS 라벨 전달을 결합한 사업자 백본 기술이고, 캐리어 이더넷은 MEF가 정의한 5대 속성을 갖춘 통신 사업자급 이더넷 서비스임",
@@ -4472,6 +4502,7 @@
     "title": "해상 재난망(LTE-Maritime)",
     "reviewed": true,
     "gloss": {
+      "EMS": "Element Management System",
       "MF": "Medium Frequency"
     }
   },
@@ -4588,7 +4619,8 @@
     "title": "재난안전통신망(PS-LTE, Public Safety LTE)",
     "reviewed": true,
     "gloss": {
-      "PS": "Public Safety"
+      "PS": "Public Safety",
+      "AS": "Application Server"
     }
   },
   "NW_185": {
@@ -4717,7 +4749,8 @@
       "TDD": "Time Division Duplex",
       "SA": "Standalone",
       "NSA": "Non-Standalone",
-      "SMF": "Session Management Function"
+      "SMF": "Session Management Function",
+      "PPP": "Public-Private Partnership"
     }
   },
   "NW_186": {
@@ -4820,7 +4853,11 @@
     "note": null,
     "review": null,
     "title": "네트워크 슬라이싱(Network Slicing)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "SMF": "Session Management Function",
+      "SST": "Slice/Service Type"
+    }
   },
   "NW_189": {
     "keywords": [
@@ -4939,6 +4976,7 @@
     "title": "멀티액세스 엣지 컴퓨팅(MEC, Multi-access Edge Computing)",
     "reviewed": true,
     "gloss": {
+      "MEO": "MEC Orchestrator",
       "ISG": "Industry Specification Group",
       "AP": "Access Point"
     }
@@ -5276,6 +5314,7 @@
     "title": "망 중립성(Network Neutrality)",
     "reviewed": true,
     "gloss": {
+      "ISP": "Internet Service Provider",
       "CP": "Content Provider"
     }
   },
@@ -5600,6 +5639,7 @@
     "title": "내부·외부 라우팅(IGP/EGP)",
     "reviewed": true,
     "gloss": {
+      "ISP": "Internet Service Provider",
       "AS": "Autonomous System",
       "ASN": "Autonomous System Number",
       "IS": "Intermediate System"
@@ -6710,7 +6750,10 @@
     "keywords_note": null,
     "review": null,
     "title": "FEC(Forward Error Correction, 전진 오류 수정)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "FEC": "Forward Error Correction"
+    }
   },
   "NW_246": {
     "keywords": [
@@ -6954,7 +6997,8 @@
     "gloss": {
       "FEC": "Forward Error Correction",
       "SR": "Selective Repeat",
-      "IR": "Incremental Redundancy"
+      "IR": "Incremental Redundancy",
+      "MAC": "Medium Access Control"
     }
   },
   "NW_248": {
@@ -7287,7 +7331,8 @@
     "title": "대역 확산(Spread Spectrum)",
     "reviewed": true,
     "gloss": {
-      "GPS": "Global Positioning System"
+      "GPS": "Global Positioning System",
+      "CSS": "Chirp Spread Spectrum"
     }
   },
   "NW_273": {
@@ -7395,7 +7440,10 @@
     "note": null,
     "review": null,
     "title": "P2P 네트워크(Peer-to-Peer)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "ISP": "Internet Service Provider"
+    }
   },
   "NW_278": {
     "definition": "마스터–슬레이브(클라이언트–서버) 방식으로 PLC·센서 등 산업 장비의 레지스터를 읽고 쓰는 산업용 응용 계층 메시징 프로토콜로, 직렬(RS-232·RS-485)과 TCP/IP에서 동작함",
@@ -7739,7 +7787,10 @@
       "UNECE R155·R156",
       "eCall"
     ],
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "GPS": "Global Positioning System"
+    }
   },
   "NW_001": {
     "name": "정보이론(Information Theory)",
@@ -7850,7 +7901,10 @@
       "나이퀴스트 대역폭(Nyquist)"
     ],
     "title": "정보이론(Information Theory)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "FEC": "Forward Error Correction"
+    }
   },
   "NW_012": {
     "name": "CSMA/CA(Carrier Sense Multiple Access with Collision Avoidance)",
@@ -7959,7 +8013,12 @@
       "CW 2배 증가(CWmin~CWmax)"
     ],
     "title": "CSMA/CA(Carrier Sense Multiple Access with Collision Avoidance)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "AP": "Access Point",
+      "MAC": "Medium Access Control",
+      "DCF": "Distributed Coordination Function"
+    }
   },
   "NW_031_02": {
     "name": "NOMA(Non-Orthogonal Multiple Access, 비직교 다중접속)",
@@ -8175,7 +8234,10 @@
       "QoS(DiffServ)"
     ],
     "title": "네트워크 계층(Network Layer, OSI 3계층)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_043": {
     "name": "데이터 링크 계층(Data Link Layer, OSI 2계층)",
@@ -8708,7 +8770,10 @@
       "이더넷 MTU 1500"
     ],
     "title": "패킷 단편화(Packet Fragmentation)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "DF": "Don't Fragment"
+    }
   },
   "NW_064": {
     "name": "SCTP(Stream Control Transmission Protocol)",
@@ -8929,7 +8994,10 @@
       "포트 보안"
     ],
     "title": "ARP(Address Resolution Protocol)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_066": {
     "name": "RARP(Reverse Address Resolution Protocol)",
@@ -9031,7 +9099,10 @@
       "역방향 해석"
     ],
     "title": "RARP(Reverse Address Resolution Protocol)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_070": {
     "name": "WebRTC(Web Real-Time Communication)",
@@ -9149,7 +9220,11 @@
       "오퍼/앤서(Offer/Answer)"
     ],
     "title": "WebRTC(Web Real-Time Communication)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "ICE": "Interactive Connectivity Establishment",
+      "MCU": "Multipoint Control Unit"
+    }
   },
   "NW_072": {
     "name": "VRRP(Virtual Router Redundancy Protocol)",
@@ -9257,7 +9332,10 @@
       "기본 게이트웨이 단일 장애점 해소"
     ],
     "title": "VRRP(Virtual Router Redundancy Protocol)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_073": {
     "name": "MPTCP(Multipath TCP, 다중 경로 TCP)",
@@ -9467,7 +9545,10 @@
       "이중화(Active-Standby)"
     ],
     "title": "로드밸런서(Load Balancer)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "DSR": "Dynamic Source Routing"
+    }
   },
   "NW_079": {
     "name": "V2V(Vehicle-to-Vehicle, 차량 간 통신)",
@@ -9801,7 +9882,10 @@
       "소방·경찰·의료 기관 연계"
     ],
     "title": "차량 긴급구난체계(eCall, Emergency Call)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "IMS": "IP Multimedia Subsystem"
+    }
   },
   "NW_085_01": {
     "name": "6G-V2X(6G Vehicle-to-Everything)",
@@ -10129,7 +10213,10 @@
       "Wi-Fi 7 대비 신뢰성 중심"
     ],
     "title": "와이파이 8(Wi-Fi 8, IEEE 802.11bn)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "AP": "Access Point"
+    }
   },
   "NW_100": {
     "name": "단말 위치 측위(Localization/Positioning)",
@@ -10242,6 +10329,8 @@
     "title": "단말 위치 측위(Localization/Positioning)",
     "reviewed": true,
     "gloss": {
+      "AP": "Access Point",
+      "GPS": "Global Positioning System",
       "MAC": "Master-Auxiliary Concept"
     }
   },
@@ -10343,7 +10432,10 @@
     "title": "WPA3(Wi-Fi Protected Access 3)",
     "reviewed": true,
     "gloss": {
-      "PSK": "Pre-Shared Key"
+      "AP": "Access Point",
+      "PMF": "Protected Management Frames",
+      "PSK": "Pre-Shared Key",
+      "ECC": "Elliptic Curve Cryptography"
     }
   },
   "NW_102_1": {
@@ -10797,7 +10889,10 @@
       "VXLAN"
     ],
     "title": "터널링(Tunneling)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "ISP": "Internet Service Provider"
+    }
   },
   "NW_133": {
     "name": "WFQ(Weighted Fair Queuing, 가중 공정 큐잉)",
@@ -11214,7 +11309,9 @@
     "title": "MPLS(Multi-Protocol Label Switching)",
     "reviewed": true,
     "gloss": {
-      "FEC": "Forwarding Equivalence Class"
+      "FEC": "Forwarding Equivalence Class",
+      "LSP": "Label Switched Path",
+      "LSR": "Label Switching Router"
     }
   },
   "NW_147": {
@@ -11317,7 +11414,11 @@
       "비콘"
     ],
     "title": "블루투스 5(Bluetooth 5)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "SAM": "Slot Availability Mask",
+      "FEC": "Forward Error Correction"
+    }
   },
   "NW_160": {
     "name": "인지 무선(Cognitive Radio)",
@@ -11650,6 +11751,7 @@
     "title": "5G NR과 NR-MIMO(New Radio & NR MIMO)",
     "reviewed": true,
     "gloss": {
+      "CSI": "Channel State Information",
       "SA": "Standalone",
       "NSA": "Non-Standalone",
       "RS": "Reference Signal",
@@ -11757,6 +11859,7 @@
     "title": "5G NSA·SA(Non-Standalone/Standalone)",
     "reviewed": true,
     "gloss": {
+      "SA": "Standalone",
       "DC": "Dual Connectivity"
     }
   },
@@ -12212,6 +12315,7 @@
     "title": "이음 5G(e-Um 5G)",
     "reviewed": true,
     "gloss": {
+      "SMF": "Session Management Function",
       "DX": "Digital Transformation"
     }
   },
@@ -12556,8 +12660,9 @@
     "title": "CDN(Content Delivery Network)",
     "reviewed": true,
     "gloss": {
-      "CP": "Content Provider",
-      "IX": "Internet eXchange"
+      "ISP": "Internet Service Provider",
+      "IX": "Internet eXchange",
+      "CP": "Content Provider"
     }
   },
   "NW_203": {
@@ -12886,9 +12991,11 @@
     "title": "OSPF(Open Shortest Path First)",
     "reviewed": true,
     "gloss": {
+      "BDR": "Backup Designated Router",
       "LSR": "Link State Request",
-      "DR": "Designated Router",
+      "ABR": "Area Border Router",
       "AS": "Autonomous System",
+      "DR": "Designated Router",
       "SPF": "Shortest Path First"
     }
   },
@@ -13005,7 +13112,11 @@
     "note": null,
     "review": null,
     "title": "STP(Spanning Tree Protocol, 스패닝 트리 프로토콜)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "STP": "Spanning Tree Protocol",
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_234": {
     "name": "오픈플로(OpenFlow)",
@@ -13118,7 +13229,10 @@
     "note": null,
     "review": null,
     "title": "오픈플로(OpenFlow)",
-    "reviewed": true
+    "reviewed": true,
+    "gloss": {
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_235": {
     "name": "SD-WAN(Software-Defined WAN)",
@@ -13442,6 +13556,8 @@
     "title": "NFV(Network Functions Virtualization)",
     "reviewed": true,
     "gloss": {
+      "OSS": "Operations Support System",
+      "BSS": "Business Support System",
       "ISG": "Industry Specification Group",
       "EMS": "Element Management System"
     }
@@ -13555,6 +13671,7 @@
     "title": "O-RAN(Open Radio Access Network)",
     "reviewed": true,
     "gloss": {
+      "MAC": "Medium Access Control",
       "RT": "Real-Time"
     }
   },
@@ -14315,7 +14432,10 @@
       "나이퀴스트 표본화 정리(fs ≥ 2fm)",
       "양자화 잡음(Quantization Noise)",
       "64kbps(8kHz × 8bit)"
-    ]
+    ],
+    "gloss": {
+      "PAM": "Pulse Amplitude Modulation"
+    }
   },
   "NW_006": {
     "name": "캡슐화(Encapsulation)",
@@ -14534,7 +14654,9 @@
       "PCM(Pulse Code Modulation)"
     ],
     "gloss": {
-      "PPM": "Pulse Position Modulation"
+      "PPM": "Pulse Position Modulation",
+      "PSK": "Phase Shift Keying",
+      "PAM": "Pulse Amplitude Modulation"
     }
   },
   "NW_008": {
@@ -14634,7 +14756,10 @@
       "잡음·페이딩 취약(Noise Sensitive)",
       "낮은 전력 효율",
       "DSRC·광통신·RFID"
-    ]
+    ],
+    "gloss": {
+      "PSK": "Phase Shift Keying"
+    }
   },
   "NW_009": {
     "name": "PSK(Phase Shift Keying, 위상 편이 변조)",
@@ -14735,7 +14860,10 @@
       "성상도(Constellation)",
       "동기 검파(Coherent Detection)",
       "심볼당 log₂M 비트"
-    ]
+    ],
+    "gloss": {
+      "PSK": "Phase Shift Keying"
+    }
   },
   "NW_013": {
     "name": "인터네트워킹(Internetworking)",
@@ -14837,7 +14965,10 @@
       "프로토콜 변환(Protocol Conversion)",
       "라우팅(Routing)",
       "공통 프로토콜(IP)"
-    ]
+    ],
+    "gloss": {
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_014": {
     "name": "이더넷(Ethernet)",
@@ -14941,7 +15072,8 @@
       "10BASE-T~400GbE"
     ],
     "gloss": {
-      "SFD": "Start Frame Delimiter"
+      "SFD": "Start Frame Delimiter",
+      "MAC": "Medium Access Control"
     }
   },
   "NW_015": {
@@ -15045,7 +15177,11 @@
       "CIR(Committed Information Rate)",
       "DTE·DCE",
       "LMI(Local Management Interface)"
-    ]
+    ],
+    "gloss": {
+      "SVC": "Switched Virtual Circuit",
+      "DCE": "Data Circuit-terminating Equipment"
+    }
   },
   "NW_016": {
     "name": "EoS(Ethernet over SDH/SONET)",
@@ -15136,7 +15272,11 @@
       "이더넷 링 보호 절체(G.8032 ERPS)",
       "RPL(Ring Protection Link)",
       "50ms 절체"
-    ]
+    ],
+    "gloss": {
+      "RPL": "Ring Protection Link",
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_017": {
     "name": "회선 교환과 패킷 교환(Circuit & Packet Switching)",
@@ -15240,7 +15380,10 @@
       "가상 회선(Virtual Circuit)",
       "통계적 다중화(Statistical Multiplexing)",
       "메시지 교환(Message Switching)"
-    ]
+    ],
+    "gloss": {
+      "SVC": "Switched Virtual Circuit"
+    }
   },
   "NW_019": {
     "name": "LAN(Local Area Network, 근거리 통신망)",
@@ -15355,7 +15498,10 @@
       "CSMA/CD(802.3 이더넷)",
       "토큰 패싱(Token Passing, 802.5)",
       "CSMA/CA(802.11 무선 LAN)"
-    ]
+    ],
+    "gloss": {
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_020": {
     "name": "MAN(Metropolitan Area Network, 도시권 통신망)",
@@ -15550,7 +15696,10 @@
       "VPN(Virtual Private Network)",
       "SD-WAN(Software Defined WAN)",
       "WAN 가속(WAN Optimization)"
-    ]
+    ],
+    "gloss": {
+      "PPP": "Point-to-Point Protocol"
+    }
   },
   "NW_022": {
     "name": "WBAN(Wireless Body Area Network, 인체 영역 네트워크)",
@@ -15764,7 +15913,9 @@
       "하이브리드(Hybrid)"
     ],
     "gloss": {
-      "DTN": "Delay-Tolerant Networking"
+      "DTN": "Delay-Tolerant Networking",
+      "DSR": "Dynamic Source Routing",
+      "GPS": "Global Positioning System"
     }
   },
   "NW_024": {
@@ -15869,7 +16020,11 @@
       "Sigfox",
       "NB-IoT(Narrowband IoT)",
       "LTE-M(eMTC)"
-    ]
+    ],
+    "gloss": {
+      "PSM": "Power Saving Mode",
+      "CSS": "Chirp Spread Spectrum"
+    }
   },
   "NW_025": {
     "name": "SONET(Synchronous Optical Network, 동기식 광통신망)",
@@ -16599,7 +16754,10 @@
       "MAC 주소 테이블(MAC Address Table)",
       "유니캐스트 플러딩(Unicast Flooding)",
       "에이징 타임(Aging Time)"
-    ]
+    ],
+    "gloss": {
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_035": {
     "name": "브로드캐스트(Broadcast)",
@@ -16705,7 +16863,11 @@
       "브로드캐스트 도메인(Broadcast Domain)",
       "브로드캐스트 스톰(Broadcast Storm)",
       "VLAN 분리"
-    ]
+    ],
+    "gloss": {
+      "STP": "Spanning Tree Protocol",
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_036": {
     "name": "오버레이 멀티캐스트(Overlay Multicast)",
@@ -17103,6 +17265,7 @@
       "ASCII·EBCDIC·Unicode"
     ],
     "gloss": {
+      "DER": "Distinguished Encoding Rules",
       "XDR": "External Data Representation"
     }
   },
@@ -17415,7 +17578,10 @@
       "파라미터(Parameter)",
       "확인형 서비스(Confirmed)",
       "비확인형 서비스(Unconfirmed)"
-    ]
+    ],
+    "gloss": {
+      "SAP": "Service Access Point"
+    }
   },
   "NW_048": {
     "name": "TCP 혼잡 제어(TCP Congestion Control)",
@@ -17841,7 +18007,10 @@
       "서브넷 마스크(Subnet Mask)",
       "IPv6(128비트)",
       "주소 고갈(Address Exhaustion)"
-    ]
+    ],
+    "gloss": {
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_057": {
     "name": "경로 요약(Route Summarization)",
@@ -17937,7 +18106,10 @@
       "라우터 CPU·메모리 절감",
       "자동 요약(Auto Summary)",
       "수동 요약(Manual Summary)"
-    ]
+    ],
+    "gloss": {
+      "ABR": "Area Border Router"
+    }
   },
   "NW_058": {
     "name": "NAT(Network Address Translation)",
@@ -18038,7 +18210,10 @@
       "IP 마스커레이딩(IP Masquerading)",
       "포트 포워딩(Port Forwarding)",
       "NAT 변환 테이블(Translation Table)"
-    ]
+    ],
+    "gloss": {
+      "ICE": "Interactive Connectivity Establishment"
+    }
   },
   "NW_060": {
     "name": "RTP(Real-time Transport Protocol)",
@@ -18456,7 +18631,10 @@
       "필터링·선택·클러스터링·결합(Filter/Selection/Clustering/Combine)",
       "monlist 증폭 공격(NTP Amplification)",
       "NTS(Network Time Security)"
-    ]
+    ],
+    "gloss": {
+      "GPS": "Global Positioning System"
+    }
   },
   "NW_068": {
     "name": "HDLC(High-Level Data Link Control)",
@@ -18754,7 +18932,10 @@
       "CEF(Cisco Express Forwarding)",
       "FIB(Forwarding Information Base)",
       "와이어 스피드(Wire Speed)"
-    ]
+    ],
+    "gloss": {
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_077": {
     "name": "L2 스위치(Layer 2 Switch)",
@@ -18856,7 +19037,11 @@
       "프래그먼트 프리(Fragment-Free)",
       "VLAN(802.1Q)",
       "STP(Spanning Tree Protocol)"
-    ]
+    ],
+    "gloss": {
+      "STP": "Spanning Tree Protocol",
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_081": {
     "name": "IoV(Internet of Vehicles, 차량 인터넷)",
@@ -18954,7 +19139,10 @@
       "자율주행(SAE 0~5단계)",
       "차량 클라우드·엣지(MEC)",
       "C-ITS(협력 지능형 교통체계)"
-    ]
+    ],
+    "gloss": {
+      "GPS": "Global Positioning System"
+    }
   },
   "NW_087_00": {
     "name": "VLAN(Virtual LAN)",
@@ -19058,7 +19246,10 @@
       "액세스 포트(Access)",
       "브로드캐스트 도메인 분리(Broadcast Domain)",
       "VLAN 간 라우팅(Inter-VLAN Routing)"
-    ]
+    ],
+    "gloss": {
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_095": {
     "name": "기가와이파이(Giga Wi-Fi, 기가비트 무선랜)",
@@ -19163,6 +19354,7 @@
       "IEEE 802.11ad(60GHz, WiGig)"
     ],
     "gloss": {
+      "AP": "Access Point",
       "BSS": "Basic Service Set"
     }
   },
@@ -19268,7 +19460,11 @@
       "최대 약 46Gbps(이론)",
       "6GHz 대역",
       "16 공간 스트림 MU-MIMO(R2)"
-    ]
+    ],
+    "gloss": {
+      "AP": "Access Point",
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_103": {
     "name": "M2M(Machine-to-Machine)",
@@ -19906,7 +20102,11 @@
       "네트워크 서버(Network Server)",
       "응용 서버(Application Server)",
       "Class A·B·C"
-    ]
+    ],
+    "gloss": {
+      "CSS": "Chirp Spread Spectrum",
+      "ADR": "Adaptive Data Rate"
+    }
   },
   "NW_113": {
     "name": "시그폭스(Sigfox)",
@@ -20118,7 +20318,10 @@
       "이동성·핸드오버 지원",
       "VoLTE 지원",
       "커버리지 향상(CE, 반복 전송)"
-    ]
+    ],
+    "gloss": {
+      "PSM": "Power Saving Mode"
+    }
   },
   "NW_115": {
     "name": "NB-IoT(Narrowband IoT)",
@@ -20230,7 +20433,10 @@
       "셀당 대규모 단말",
       "PSM",
       "eDRX"
-    ]
+    ],
+    "gloss": {
+      "PSM": "Power Saving Mode"
+    }
   },
   "NW_117": {
     "name": "D2D(Device-to-Device)",
@@ -20333,7 +20539,10 @@
       "DPWS(Devices Profile for Web Services)",
       "사이드링크(Sidelink, PC5)",
       "인밴드·아웃밴드(Inband/Outband)"
-    ]
+    ],
+    "gloss": {
+      "AP": "Access Point"
+    }
   },
   "NW_118": {
     "name": "소물인터넷(IoST, Internet of Small Things)",
@@ -20978,7 +21187,10 @@
       "성형(Star)",
       "메시(Mesh)",
       "클러스터 트리(Cluster-Tree)"
-    ]
+    ],
+    "gloss": {
+      "MAC": "Medium Access Control"
+    }
   },
   "NW_151": {
     "name": "비콘(Beacon)",
@@ -21288,6 +21500,7 @@
       "WPA2·WPA3 암호화"
     ],
     "gloss": {
+      "AP": "Access Point",
       "GO": "Group Owner"
     }
   },
@@ -22623,7 +22836,8 @@
       "공통 주파수(700MHz)"
     ],
     "gloss": {
-      "PS": "Public Safety"
+      "PS": "Public Safety",
+      "IMS": "IP Multimedia Subsystem"
     }
   },
   "NW_193_00": {
@@ -22970,6 +23184,7 @@
       "802.3bt(PoE++ 60·90W)"
     ],
     "gloss": {
+      "AP": "Access Point",
       "PD": "Powered Device",
       "PLC": "Power Line Communication"
     }

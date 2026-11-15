@@ -4698,6 +4698,7 @@
     ],
     "reviewed": true,
     "gloss": {
+      "EVM": "Earned Value Management",
       "PV": "Planned Value",
       "EV": "Earned Value",
       "AC": "Actual Cost",
