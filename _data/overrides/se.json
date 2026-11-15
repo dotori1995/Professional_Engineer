@@ -19763,6 +19763,153 @@
    "IDS": "Intrusion Detection System"
   }
  },
+ "SE_134": {
+  "title": "통합 위협 관리(UTM, Unified Threat Management)",
+  "category": "SE > 보안 > 기업 보안 시스템(기술적 보안) > UTMS",
+  "definition": "방화벽·VPN·IDS/IPS·안티바이러스·안티스팸·콘텐츠 필터링 등 여러 보안 기능을 하나의 장비에 통합해 단일 콘솔로 관리하는 보안 시스템으로, 중소 규모 조직의 비용과 운영 부담을 줄인다",
+  "keywords": [
+   "통합 기능: 방화벽 · VPN · IDS·IPS · 안티바이러스·안티스파이웨어 · 안티스팸 · 웹·콘텐츠 필터링",
+   "장점: 단일 관리 콘솔 · 도입·운영 비용 절감",
+   "단점: 단일 장애점 · 기능 동시 사용 시 성능 저하"
+  ],
+  "sections": [
+   {
+    "title": "통합 기능",
+    "subsections": [
+     {
+      "title": "방화벽",
+      "items": [
+       "유해 트래픽·사이트 차단, DoS 방어, NAT, 트래픽 셰이핑"
+      ]
+     },
+     {
+      "title": "VPN",
+      "items": [
+       "IPSec 기반 가상 전용 회선"
+      ]
+     },
+     {
+      "title": "침입 탐지·방지",
+      "items": [
+       "시그니처·행위 기반 탐지와 차단"
+      ]
+     },
+     {
+      "title": "악성코드·스팸",
+      "items": [
+       "시그니처 백신, 메일 콘텐츠 필터링"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "아키텍처",
+    "subsections": [
+     {
+      "title": "패킷 처리",
+      "items": [
+       "단일 경로에서 여러 검사 엔진을 순차·병렬 적용"
+      ]
+     },
+     {
+      "title": "관리",
+      "items": [
+       "통합 정책, 로그, 보고서"
+      ]
+     },
+     {
+      "title": "가속",
+      "items": [
+       "전용 칩으로 다중 기능 성능 확보"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "도입 고려",
+    "subsections": [
+     {
+      "title": "성능",
+      "items": [
+       "모든 기능 활성화 시 처리량 기준으로 선정"
+      ]
+     },
+     {
+      "title": "가용성",
+      "items": [
+       "이중화로 단일 장애점 해소"
+      ]
+     },
+     {
+      "title": "규모",
+      "items": [
+       "대규모 망은 전용 장비 분리, 중소 규모·지사에 적합"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "통합 기능",
+   "- 방화벽",
+   "- VPN",
+   "- 침입 탐지·방지",
+   "- 악성코드·스팸",
+   "아키텍처",
+   "- 패킷 처리",
+   "- 관리",
+   "- 가속",
+   "도입 고려",
+   "- 성능",
+   "- 가용성",
+   "- 규모"
+  ],
+  "name": "통합 위협 관리(UTM, Unified Threat Management)",
+  "en": "Unified Threat Management",
+  "keywords_must": [
+   "방화벽",
+   "VPN",
+   "IDS·IPS",
+   "안티바이러스·안티스파이웨어",
+   "안티스팸",
+   "웹·콘텐츠 필터링",
+   "단일 관리 콘솔",
+   "도입·운영 비용 절감",
+   "단일 장애점",
+   "기능 동시 사용 시 성능 저하"
+  ],
+  "keywords_ref": [
+   "등장 배경: DDoS·웜·스파이웨어 증가, 제로데이 공격, IPTV·VoIP 대상 공격",
+   "방화벽은 NAT·QoS·DoS 방어, VPN은 IPSec·AES·SEED",
+   "안티스팸은 MIME·콘텐츠 필터·스팸 DB 매칭",
+   "차세대 방화벽(NGFW)과 경계 모호",
+   "가상 UTM·클라우드형",
+   "다중 엔진 병렬 처리 하드웨어 가속"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "방화벽",
+   "VPN",
+   "IDS·IPS",
+   "안티바이러스·안티스파이웨어",
+   "안티스팸",
+   "웹·콘텐츠 필터링",
+   "단일 관리 콘솔",
+   "도입·운영 비용 절감",
+   "단일 장애점",
+   "기능 동시 사용 시 성능 저하"
+  ],
+  "gloss": {
+   "IDS": "Intrusion Detection System",
+   "IPS": "Intrusion Prevention System",
+   "NAT": "Network Address Translation",
+   "QoS": "Quality of Service",
+   "MIME": "Multipurpose Internet Mail Extensions",
+   "NGFW": "Next-Generation Firewall",
+   "VPN": "Virtual Private Network"
+  }
+ },
  "SE_135": {
   "title": "통합 보안 관리(ESM, Enterprise Security Management)",
   "category": "SE > 기업 보안 시스템(기술적 보안) > ESM",
@@ -20287,6 +20434,136 @@
    "CDN": "Content Delivery Network"
   }
  },
+ "SE_139": {
+  "title": "침입 감내 시스템(ITS, Intrusion Tolerance System)",
+  "category": "SE > 기업 보안 시스템(기술적 보안) > ITS",
+  "definition": "침입을 완전히 막을 수 없다는 전제에서 IDS·IPS, 가상화, 실시간 패치, 결함 감내 기술을 결합해 일부 구성 요소가 침해되어도 핵심 서비스를 중단 없이 계속 제공하는 시스템",
+  "keywords": [
+   "핵심 기능: 면역 기능 · 라이브 패치 · 결함 감내(FTS)",
+   "구성 기술: IDS·IPS · 가상화 · 중복·다양성 · 실시간 복구",
+   "단계: 예방 · 탐지 · 감내 · 복구"
+  ],
+  "sections": [
+   {
+    "title": "핵심 기능",
+    "subsections": [
+     {
+      "title": "면역",
+      "items": [
+       "침입 감지 시 문제 없는 시스템으로 서비스 이주, 알려진 침입은 자동 방어"
+      ]
+     },
+     {
+      "title": "라이브 패치",
+      "items": [
+       "탐지 결과를 실시간 분석해 서비스 중단 없이 패치"
+      ]
+     },
+     {
+      "title": "결함 감내",
+      "items": [
+       "장애가 나도 서비스가 계속 동작"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "구현 방법",
+    "subsections": [
+     {
+      "title": "중복",
+      "items": [
+       "동일 서비스를 여러 노드에 복제"
+      ]
+     },
+     {
+      "title": "다양성",
+      "items": [
+       "서로 다른 OS·소프트웨어로 동일 취약점 동시 침해 방지"
+      ]
+     },
+     {
+      "title": "가상화",
+      "items": [
+       "침해된 가상 머신 격리·재생성"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "기존 보안 비교",
+    "subsections": [
+     {
+      "title": "기존",
+      "items": [
+       "예방·탐지 중심으로 침입 시 서비스 중단"
+      ]
+     },
+     {
+      "title": "침입 감내",
+      "items": [
+       "침입을 가정하고 서비스 지속과 신속 복구에 초점"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "핵심 기능",
+   "- 면역",
+   "- 라이브 패치",
+   "- 결함 감내",
+   "구현 방법",
+   "- 중복",
+   "- 다양성",
+   "- 가상화",
+   "기존 보안 비교",
+   "- 기존",
+   "- 침입 감내"
+  ],
+  "name": "침입 감내 시스템(ITS, Intrusion Tolerance System)",
+  "en": "Intrusion Tolerance System",
+  "keywords_must": [
+   "면역 기능",
+   "라이브 패치",
+   "결함 감내(FTS)",
+   "IDS·IPS",
+   "가상화",
+   "중복·다양성",
+   "실시간 복구",
+   "예방",
+   "탐지",
+   "감내",
+   "복구"
+  ],
+  "keywords_ref": [
+   "감염 시 정상 시스템으로 서비스 이주",
+   "무중단 패치",
+   "다중 버전 서버로 공통 취약점 회피",
+   "사이버 레질리언스와 연계",
+   "정족수 투표·비잔틴 결함 감내"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "면역 기능",
+   "라이브 패치",
+   "결함 감내(FTS)",
+   "IDS·IPS",
+   "가상화",
+   "중복·다양성",
+   "실시간 복구",
+   "예방",
+   "탐지",
+   "감내",
+   "복구"
+  ],
+  "gloss": {
+   "FTS": "Fault Tolerant System",
+   "IDS": "Intrusion Detection System",
+   "IPS": "Intrusion Prevention System"
+  }
+ },
  "SE_140": {
   "title": "네트워크 접근 제어(NAC, Network Access Control)",
   "category": "SE > 기업 보안 시스템(기술적 보안) > NAC",
@@ -20565,6 +20842,159 @@
   "gloss": {
    "EDM": "Exact Data Matching",
    "DRM": "Digital Rights Management"
+  }
+ },
+ "SE_142": {
+  "title": "이상 금융거래 탐지 시스템(FDS, Fraud Detection System)",
+  "category": "SE > 기업 보안 시스템(기술적 보안) > FDS",
+  "definition": "전자금융거래의 이용자 단말·접속 환경 정보와 거래 정보를 수집·분석해 부정 거래를 실시간 탐지하고, 위험도에 따라 추가 인증·차단 등으로 대응하는 보안 시스템",
+  "keywords": [
+   "구성: 정보 수집 · 분석·탐지 · 대응 · 모니터링·감사",
+   "오용 탐지 모델: 패턴 탐지 · 상태 전이",
+   "이상 탐지 모델: 통계 · 데이터 마이닝(기계학습)",
+   "수집 정보: 이용자 매체 환경 · 거래 정보 · 사고 유형 정보"
+  ],
+  "sections": [
+   {
+    "title": "구성",
+    "subsections": [
+     {
+      "title": "정보 수집",
+      "items": [
+       "단말·IP·MAC 등 매체 환경, 사고 유형, 유관기관 공유 정보"
+      ]
+     },
+     {
+      "title": "분석·탐지",
+      "items": [
+       "이용자·거래 유형별 상관 분석, 규칙 검사"
+      ]
+     },
+     {
+      "title": "대응",
+      "items": [
+       "위험도에 따라 추가 인증, 거래 보류·차단"
+      ]
+     },
+     {
+      "title": "모니터링·감사",
+      "items": [
+       "전 과정 시각화, 민감 정보 보호와 감사 기록"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "탐지 모델",
+    "subsections": [
+     {
+      "title": "패턴 탐지",
+      "items": [
+       "사고로 등록된 IP·계좌와 일치하는 거래 탐지"
+      ]
+     },
+     {
+      "title": "상태 전이",
+      "items": [
+       "로그인→예비 거래→본 거래 절차를 건너뛴 자동화 거래 탐지"
+      ]
+     },
+     {
+      "title": "통계",
+      "items": [
+       "평소 접속 대역·시간·금액 프로파일에서 벗어난 거래 탐지"
+      ]
+     },
+     {
+      "title": "데이터 마이닝",
+      "items": [
+       "계좌·금액·관계 정보를 학습해 위험도 산출"
+      ]
+     }
+    ]
+   },
+   {
+    "title": "도입·운영",
+    "subsections": [
+     {
+      "title": "도입",
+      "items": [
+       "서비스 중요도·사용률로 대상 산정, 데이터 종류·환경 검토"
+      ]
+     },
+     {
+      "title": "운영",
+      "items": [
+       "전담 인력과 정기 분석, 탐지 규칙 갱신"
+      ]
+     },
+     {
+      "title": "보안",
+      "items": [
+       "수집 데이터 접근 통제, 감사 증적 유지"
+      ]
+     }
+    ]
+   }
+  ],
+  "outline": [
+   "구성",
+   "- 정보 수집",
+   "- 분석·탐지",
+   "- 대응",
+   "- 모니터링·감사",
+   "탐지 모델",
+   "- 패턴 탐지",
+   "- 상태 전이",
+   "- 통계",
+   "- 데이터 마이닝",
+   "도입·운영",
+   "- 도입",
+   "- 운영",
+   "- 보안"
+  ],
+  "name": "이상 금융거래 탐지 시스템(FDS, Fraud Detection System)",
+  "en": "Fraud Detection System",
+  "keywords_must": [
+   "정보 수집",
+   "분석·탐지",
+   "대응",
+   "모니터링·감사",
+   "패턴 탐지",
+   "상태 전이",
+   "통계",
+   "데이터 마이닝(기계학습)",
+   "이용자 매체 환경",
+   "거래 정보",
+   "사고 유형 정보"
+  ],
+  "keywords_ref": [
+   "위험도별 대응: 위험·의심·주의 → 차단·추가 인증·모니터링",
+   "미국 FFIEC 인터넷뱅킹 인증 가이드라인(2011)",
+   "금융보안원 FDS 가이드",
+   "금융권 정보 공유",
+   "오탐률 최소화 위한 신규 패턴 지속 반영",
+   "빅데이터·고가용성",
+   "보이스피싱·대포통장 탐지"
+  ],
+  "curated": true,
+  "reviewed": true,
+  "quiz_terms": [
+   "정보 수집",
+   "분석·탐지",
+   "대응",
+   "모니터링·감사",
+   "패턴 탐지",
+   "상태 전이",
+   "통계",
+   "데이터 마이닝(기계학습)",
+   "이용자 매체 환경",
+   "거래 정보",
+   "사고 유형 정보"
+  ],
+  "gloss": {
+   "MAC": "Media Access Control",
+   "FFIEC": "Federal Financial Institutions Examination Council"
   }
  },
  "SE_143_01": {
