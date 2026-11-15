@@ -105,3 +105,6 @@ NW_023_00(HTTP/PDA 문장 섞임), NW_073 제목 MTCP→MPTCP, NW_072 VRRS/HSRP 
 - SV_398 플렉서블: 박망봉지 → 박막 봉지(TFE), PI 기판 = 폴리이미드(polyarylate는 별개 소재), Polycrystaline 오타
 - SV_399 3D 터치: 정저닉 → 정전식, Forece → Force, 2019년 iPhone 11부터 햅틱 터치로 대체된 사실 추가
 - SV_085 분류 표기 '디지털서비스(SV)>RFID' → '디지털서비스 > RFID'
+- SV_401 지능형 영상분석: Loitering을 '잘못된 방향 움직임'으로 설명한 오류 → 배회(일정 구역 장시간 머묾), 역방향 이동은 별도 이벤트
+- SV_402 컴퓨터 비전: 민 시프트 → 평균 이동(Mean Shift)
+- SV_404 지능형 CCTV: '주택공사법 기준 최소 30일 녹화' 근거 불명 삭제 → 개인정보 보호법 제25조(고정형 영상정보처리기기) 기준으로 정리, 마르크포 → 마르코프, i-LDS → i-LIDS, 토픽 gloss CAM(Content Aggregation Model) 오풀이 해제
