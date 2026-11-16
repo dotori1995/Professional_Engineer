@@ -310,3 +310,107 @@ html.dr-open,html.dr-open body{overflow:hidden}
 .wtopic{margin-left:.6em;padding:.15em .6em;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font-size:.85em;text-decoration:none}
 .quiz.fitbox.scroll{overflow-y:auto;-webkit-overflow-scrolling:touch}
 .quiz.fitbox.scroll>*{flex-shrink:0}
+
+/* ===== 카드: 쇼츠 모드 ===== */
+.page-cards .card-tools .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+.page-cards .card-tools .chips::-webkit-scrollbar{display:none}
+.page-cards .chip{flex:none}
+.shorts{position:relative;flex:1;min-height:0;margin:6px 0 2px;border-radius:20px;overflow:hidden}
+.sh-bar{position:absolute;left:10px;right:10px;top:6px;height:4px;border-radius:4px;background:color-mix(in srgb,var(--muted) 25%,transparent);z-index:4;overflow:hidden;pointer-events:none}
+.sh-fill{height:100%;width:100%;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--accent),var(--dueum));border-radius:4px;box-shadow:0 0 8px var(--accent)}
+.shorts.no-timer .sh-bar{opacity:0}
+.shorts.paused .sh-fill{opacity:.45}
+.shorts.is-quiz .sh-fill{background:linear-gradient(90deg,#ffb800,#ff5a1f,#e5143c);box-shadow:0 0 10px #ff5a1f}
+.sh-pos{position:absolute;top:16px;right:14px;z-index:4;font-size:12px;font-weight:700;color:var(--muted);background:color-mix(in srgb,var(--surface) 80%,transparent);padding:2px 9px;border-radius:999px;pointer-events:none;font-variant-numeric:tabular-nums}
+.feed{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;scroll-snap-type:y mandatory;overscroll-behavior:contain;scrollbar-width:none;outline:none;touch-action:pan-y}
+.feed::-webkit-scrollbar{display:none}
+.slide{height:100%;scroll-snap-align:start;scroll-snap-stop:always;padding:0;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.slide textarea{-webkit-user-select:text;user-select:text}
+.sl-card{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;gap:.3em;padding:42px 16px 16px;border-radius:20px;border:1px solid var(--line);overflow:hidden;
+  background:radial-gradient(120% 60% at 0% 0%,var(--accent-soft),transparent 60%),radial-gradient(100% 60% at 100% 100%,var(--dueum-soft),transparent 60%),var(--surface)}
+.sl-card .code{font-size:.8em;color:var(--muted);font-weight:600;position:absolute;top:15px;left:16px;right:84px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sl-title{font-size:1.6em;line-height:1.3;margin:0;font-weight:800;text-align:center;transition:font-size .25s,margin .25s}
+.sl-tap{text-align:center;color:var(--muted);font-size:12px;margin-top:.6em}
+.ans{display:none;flex:1;min-height:0;overflow-y:auto;overscroll-behavior:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+.slide.open .sl-card{justify-content:flex-start}
+.slide.open .sl-title{font-size:1.15em;text-align:left;margin:.15em 0 .1em}
+.slide.open .sl-tap{display:none}
+.slide.open .ans{display:block;animation:ans-in .3s ease-out both}
+.ans .def{margin:.1em 0;line-height:1.45}
+.ans .kw li{animation:kw-pop .42s cubic-bezier(.2,1.6,.4,1) both;animation-delay:calc(var(--k) * 55ms + .1s)}
+.ans .more{display:inline-block;margin-top:.4em;min-height:2.2em;font-size:.85em}
+.sh-state{position:absolute;left:50%;top:50%;z-index:5;transform:translate(-50%,-50%) scale(.6);opacity:0;pointer-events:none;
+  font-size:30px;font-weight:800;color:#fff;background:rgba(0,0,0,.55);border-radius:999px;min-width:72px;height:72px;padding:0 18px;display:flex;align-items:center;justify-content:center;white-space:nowrap}
+.sh-state:empty{display:none}
+.sh-state.show{animation:state-pop .7s ease-out both}
+.shorts.paused .sh-state.show{animation:state-stay .25s ease-out both}
+.sh-nav{position:absolute;right:10px;bottom:12px;z-index:4;display:flex;flex-direction:column;gap:6px}
+.sh-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 85%,transparent);color:var(--text);font-size:14px;cursor:pointer}
+@media (hover:none) and (pointer:coarse){.sh-nav{display:none}}
+.sh-hint{flex:none;margin:2px 0 4px;text-align:center;font-size:11px;color:var(--muted)}
+
+/* 들어올 때: 슬라이드업 + 확대 + 반짝 */
+.slide.enter .sl-card{animation:card-in .45s cubic-bezier(.2,.9,.3,1.15) both}
+.slide.enter .sl-card::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+  background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.55) 45%,rgba(255,255,255,.1) 55%,transparent 70%);transform:translateX(-120%);animation:shimmer .9s .15s ease-out both;mix-blend-mode:soft-light}
+.slide.enter .sl-title{animation:title-in .5s .08s cubic-bezier(.2,1.5,.4,1) both}
+.spk{position:absolute;left:var(--x);top:var(--y);width:14px;height:14px;opacity:0;pointer-events:none;transform:scale(0)}
+.spk::before{content:"✦";position:absolute;inset:0;font-size:calc(14px * var(--s));line-height:1;color:var(--accent);text-shadow:0 0 8px var(--accent)}
+.spk:nth-child(even)::before{color:var(--dueum);text-shadow:0 0 8px var(--dueum)}
+.spk:nth-child(3n)::before{color:#f5b700;text-shadow:0 0 8px #f5b700}
+.slide.enter .spk{animation:twinkle .9s var(--d) ease-out both}
+@keyframes card-in{from{transform:translateY(40px) scale(.9);opacity:.2}to{transform:none;opacity:1}}
+@keyframes title-in{from{transform:scale(.7);opacity:0}to{transform:none;opacity:1}}
+@keyframes shimmer{to{transform:translateX(120%)}}
+@keyframes twinkle{0%{opacity:0;transform:scale(0) rotate(0)}40%{opacity:1;transform:scale(1.3) rotate(90deg)}100%{opacity:0;transform:scale(.2) rotate(180deg)}}
+@keyframes ans-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes kw-pop{0%{opacity:0;transform:scale(.6)}100%{opacity:1;transform:none}}
+@keyframes state-pop{0%{opacity:0;transform:translate(-50%,-50%) scale(.6)}25%{opacity:1;transform:translate(-50%,-50%) scale(1.08)}70%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(1)}}
+@keyframes state-stay{from{opacity:0;transform:translate(-50%,-50%) scale(.6)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+
+/* 🔥 돌발 문제 */
+.sl-card.pq{justify-content:flex-start;gap:.35em;padding:14px 16px 14px;border-color:#ff7a3d;
+  background:radial-gradient(120% 50% at 50% 0%,rgba(255,110,40,.22),transparent 65%),var(--surface)}
+.pq-head{display:flex;align-items:center;gap:.5em;font-size:.85em;margin-top:2px;padding-right:72px;min-height:26px}
+.pq-tag{font-weight:800;color:#fff;background:linear-gradient(90deg,#ff8a00,#e5143c);padding:.15em .6em;border-radius:999px}
+.pq-tag.done{background:var(--know)}
+.pq-time{font-weight:800;font-variant-numeric:tabular-nums;color:#ff5a1f;margin-right:auto;margin-left:.2em}
+.pq-time.hurry{color:#e5143c;animation:hurry .5s ease-in-out infinite alternate}
+.pq-head .wscore{margin-left:auto}
+.pq-head .wtopic{margin-left:auto;font-size:.9em}
+.pq-head .wscore+.wtopic{margin-left:.6em}
+.pq-body{flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.45em}
+.pq-q{margin:0;font-size:.95em}
+.pq-q b{color:#ff5a1f}
+.pq-body .wdump{min-height:4.5em;max-height:9em}
+.pq-reveal{flex:none!important;min-height:46px;width:100%;max-width:320px}
+.pq-ans{display:none;flex:1;min-height:0;overflow-y:auto;flex-direction:column;gap:.3em}
+.slide.open .pq-body,.slide.open .sl-card.pq>.pq-head{display:none}
+.slide.open .pq-ans{display:flex;animation:ans-in .3s ease-out both}
+.pq-ans .lbl{font-size:.78em;font-weight:700;color:var(--muted);margin-top:.3em}
+.pq-ans .lbl.must-lbl{color:#fff;font-size:.9em}
+.pq-ans mark{background:linear-gradient(transparent 45%,rgba(255,200,0,.65) 45%);color:inherit;padding:0 1px;border-radius:2px}
+.wkw.hl{cursor:default;border-color:#ff9a3d;background:rgba(255,160,40,.14);font-weight:600;animation:kw-pop .42s cubic-bezier(.2,1.6,.4,1) both;animation-delay:calc(var(--k) * 60ms + .1s)}
+.wkw.hl.on{border-color:var(--know);background:var(--know-soft)}
+.pq-next{margin:.5em 0 0;text-align:center;font-size:12px;color:var(--muted)}
+.pq-burst{position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:0;
+  background:radial-gradient(circle at 50% 50%,rgba(255,120,30,.55),rgba(229,20,60,.25) 45%,transparent 75%)}
+.pq-burst span{font-size:34px;font-weight:900;color:#fff;letter-spacing:-.02em;text-shadow:0 2px 0 #b3001b,0 0 18px #ff5a1f,0 0 36px #ffb800;white-space:nowrap}
+.slide.enter .pq-burst{animation:burst-bg 1.3s ease-out both}
+.slide.enter .pq-burst span{animation:burst-txt 1.3s cubic-bezier(.2,1.6,.4,1) both}
+.slide.enter .pq-body{animation:ans-in .35s 1s ease-out both}
+.slide.enter .sl-card.pq{animation:card-in .45s cubic-bezier(.2,.9,.3,1.15) both,shake .5s .25s ease-in-out}
+@keyframes burst-bg{0%{opacity:0}15%{opacity:1}75%{opacity:1}100%{opacity:0}}
+@keyframes burst-txt{0%{transform:scale(.2) rotate(-12deg);opacity:0}25%{transform:scale(1.25) rotate(3deg);opacity:1}40%{transform:scale(1) rotate(0)}80%{transform:scale(1);opacity:1}100%{transform:scale(.6) translateY(-120px);opacity:0}}
+@keyframes shake{0%,100%{transform:none}20%{transform:translateX(-6px) rotate(-1deg)}40%{transform:translateX(6px) rotate(1deg)}60%{transform:translateX(-4px)}80%{transform:translateX(3px)}}
+@keyframes hurry{to{transform:scale(1.15)}}
+
+@media (prefers-reduced-motion:reduce){
+  .feed{scroll-behavior:auto}
+  .slide.enter .sl-card,.slide.enter .sl-title,.slide.enter .spk,.slide.enter .sl-card::after,.slide.open .ans,.ans .kw li,
+  .slide.enter .pq-body,.slide.open .pq-ans,.wkw.hl,.pq-time.hurry,.sh-state.show,.shorts.paused .sh-state.show,.slide.enter .sl-card.pq{animation:none!important}
+  .slide.enter .sl-card::after,.spk{display:none}
+  .slide.enter .pq-burst{animation:none;opacity:0}
+  .sh-state.show{opacity:1;transform:translate(-50%,-50%)}
+  .sl-title{transition:none}
+}
