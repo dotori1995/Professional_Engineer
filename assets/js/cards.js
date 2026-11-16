@@ -1,4 +1,4 @@
-// 카드: 쇼츠처럼 세로로 넘기는 카드 + 자동 넘김 타이머 + 돌발 서술 문제
+// 카드: 쇼츠처럼 가로로 넘기는 카드 + 자동 넘김 타이머 + 돌발 서술 문제
 (function () {
   const PE = window.PE;
   const $ = id => document.getElementById(id);
@@ -52,7 +52,7 @@
       : '<div class="empty">카드가 없어요</div>';
     rendered.clear();
     idx = -1;
-    feed.scrollTop = start * feed.clientHeight;
+    feed.scrollLeft = start * feed.clientWidth;
     setCurrent(start, true);
   }
   function syncChips() {
@@ -150,7 +150,7 @@
       ${t.dueum ? `<div class="dueum-box">💡 ${PE.esc(t.dueum)}</div>` : ''}
       <div class="lbl must-lbl">★ 필수 키워드${n ? ' <span class="wnote">✓ = 내가 적은 것</span>' : ''}</div>
       <div class="wkws">${must.map((k, j) => `<span class="wkw hl${hit(k) ? ' on' : ''}" style="--k:${j}">${hit(k) ? '✓ ' : ''}${PE.gl(k)}</span>`).join('') || '<span class="meta">없음</span>'}</div>
-      <p class="pq-next">위로 밀거나 ▼ 눌러 계속 →</p>`;
+      <p class="pq-next">← 밀거나 ▶ 눌러 계속</p>`;
     s.classList.add('open');
     const ta = s.querySelector('textarea'); if (ta) ta.blur();
     if (i === idx) setFill(1);
@@ -226,32 +226,33 @@
     if (n >= items.length) n = 0;
     const jump = Math.abs(n - idx) > 1;
     navTarget = n; clearTimeout(navTimer); navTimer = setTimeout(() => { navTarget = null; }, 900);
-    feed.scrollTo({ top: n * feed.clientHeight, behavior: reduced.matches || jump ? 'auto' : 'smooth' });
+    feed.scrollTo({ left: n * feed.clientWidth, behavior: reduced.matches || jump ? 'auto' : 'smooth' });
     setCurrent(n);
   }
   let scrollT = 0;
   feed.addEventListener('scroll', () => {
     if (!items.length) return;
-    const h = feed.clientHeight || 1;
-    if (navTarget !== null) { if (Math.abs(feed.scrollTop - navTarget * h) < 2) navTarget = null; return; }
+    const h = feed.clientWidth || 1;
+    if (navTarget !== null) { if (Math.abs(feed.scrollLeft - navTarget * h) < 2) navTarget = null; return; }
     clearTimeout(scrollT);
-    scrollT = setTimeout(() => setCurrent(Math.round(feed.scrollTop / h)), 90);
+    scrollT = setTimeout(() => setCurrent(Math.round(feed.scrollLeft / h)), 90);
   }, { passive: true });
   addEventListener('resize', () => {           // 키보드가 올라와도 같은 카드에 고정
     if (!items.length) return;
     navTarget = idx; clearTimeout(navTimer); navTimer = setTimeout(() => { navTarget = null; }, 400);
-    feed.scrollTop = idx * feed.clientHeight;
+    feed.scrollLeft = idx * feed.clientWidth;
   });
 
   // 휠: 한 번에 한 장
   let lastNav = 0, lastWheel = 0;
   const canScroll = (el, dy) => { for (; el && el !== feed; el = el.parentElement) { if (el.scrollHeight > el.clientHeight + 1 && /(auto|scroll)/.test(getComputedStyle(el).overflowY)) { if (dy > 0 ? el.scrollTop + el.clientHeight < el.scrollHeight - 1 : el.scrollTop > 0) return true; } } return false; };
   feed.addEventListener('wheel', e => {
-    if (Math.abs(e.deltaY) < Math.abs(e.deltaX) || canScroll(e.target, e.deltaY)) return;
+    const vert = Math.abs(e.deltaY) >= Math.abs(e.deltaX), dd = vert ? e.deltaY : e.deltaX;
+    if (vert && canScroll(e.target, e.deltaY)) return;          // 긴 카드 안 세로 스크롤은 그대로
     e.preventDefault();
     const now = performance.now(), quiet = now - lastWheel > 200; lastWheel = now;
-    if (Math.abs(e.deltaY) < 4 || (now - lastNav < 650) || (!quiet && now - lastNav < 1200)) return;
-    lastNav = now; go(e.deltaY > 0 ? 1 : -1);
+    if (Math.abs(dd) < 4 || (now - lastNav < 650) || (!quiet && now - lastNav < 1200)) return;
+    lastNav = now; go(dd > 0 ? 1 : -1);
   }, { passive: false });
 
   // 탭 = 멈춤/재생, 길게 누르기 = 답 보기
@@ -284,8 +285,8 @@
 
   document.addEventListener('keydown', e => {
     if (e.target.closest && e.target.closest('textarea,input')) { if (e.key === 'Escape') e.target.blur(); return; }
-    if (['ArrowDown', 'ArrowRight', 'PageDown', 'j'].includes(e.key)) { e.preventDefault(); go(1); }
-    else if (['ArrowUp', 'ArrowLeft', 'PageUp', 'k'].includes(e.key)) { e.preventDefault(); go(-1); }
+    if (['ArrowRight', 'PageDown', 'j'].includes(e.key)) { e.preventDefault(); go(1); }
+    else if (['ArrowLeft', 'PageUp', 'k'].includes(e.key)) { e.preventDefault(); go(-1); }
     else if (e.key === ' ') { e.preventDefault(); togglePause(); }
     else if (e.key === 'Enter') { e.preventDefault(); const it = items[idx]; if (it) { it.manual = true; reveal(idx, true); } }
   });
