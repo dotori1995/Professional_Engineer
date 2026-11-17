@@ -198,7 +198,7 @@
       if (el) { el.textContent = left + '초'; el.classList.toggle('hurry', left <= 10); }
       if (p >= 1) { revealQuiz(idx); return; }       // 시간 끝 → 답 공개, 자동 넘김은 멈춤
     } else {
-      if (p >= 0.5 && !it.revealed && !it.manual) reveal(idx, true);  // 절반 지나면 답이 톡 튀어나옴
+      if (p >= 0.3 && !it.revealed && !it.manual) reveal(idx, true);  // 30% 지나면 답이 톡 튀어나옴
       if (p >= 1) { go(1); return; }
     }
     raf = requestAnimationFrame(tick);
